@@ -1,20 +1,22 @@
 ---
 title: Konfigurera IMS-integreringar för AEM
 description: Lär dig hur du konfigurerar IMS-integreringar för AEM
-source-git-commit: bca98907b79f12572879273ece41ec8d82fed1b8
+feature: Security
+role: Admin
+exl-id: 3c6dbb7e-847f-407b-ac9c-4676dba671a5
+source-git-commit: c2d996586d2ec7299e856a97ae1b744245c730bb
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '433'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera IMS-integreringar för AEM {#setting-up-ims-integrations-for-aem}
 
 
 >[!NOTE]
 >
->Adobe-kunder använder [Adobe Developer Console](https://developer.adobe.com/console) för att generera autentiseringsuppgifter som möjliggör åtkomst till olika API:er. Kunderna väljer mellan olika typer av autentiseringsuppgifter, från OAuth Server-to-Server till Single-Page App. En av dessa autentiseringstyper, JWT-referenser (Service Account), har ersatts med autentiseringsuppgifterna för OAuth Server-till-Server med Service Pack 20. Den här ändringen kan porteras tillbaka till äldre Service Pack, med början från Service Pack 11 till Service Pack 20 med hjälp av en snabbkorrigering som du kan hämta [här](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip).
+>Adobe-kunder använder [Adobe Developer Console](https://developer.adobe.com/console) för att generera autentiseringsuppgifter som möjliggör åtkomst till olika API:er. Kunderna väljer mellan olika typer av autentiseringsuppgifter, från OAuth Server-to-Server till Single-Page App. JWT (Credential Type Service Account) är nu föråldrat till förmån för OAuth Server-to-Server-autentiseringsuppgifterna med Service Pack 20. Den här ändringen kan porteras tillbaka till äldre Service Pack, med början från Service Pack 11 till Service Pack 20 med hjälp av en snabbkorrigering som du kan hämta [här](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip).
 
 Adobe Experience Manager (AEM) kan integreras med många andra Adobe-lösningar. Exempel: Adobe Target, Adobe Analytics med flera.
 
@@ -40,7 +42,7 @@ Integreringarna använder en IMS-integrering som konfigurerats med S2S OAuth.
 
 Som ett första steg måste du konfigurera OAuth-autentiseringsuppgifterna i Adobe Developer Console.
 
-Mer information om hur du gör detta finns i dokumentationen för Developer Console, beroende på dina krav:
+Mer information om hur du gör den här konfigurationen finns i dokumentationen för Developer Console, beroende på dina krav:
 
 * Översikt
 
@@ -101,4 +103,4 @@ Så här migrerar du en befintlig Adobe IMS-integrering baserad på JWT-autentis
    ![Fullständig OAuth-information](assets/ims-migrate-jwt-complete-oauth-details.png)
 
 1. Använd **Spara och stäng** för att behålla uppdateringarna.
-När du återgår till konsolen **JWT-autentiseringsuppgifter (borttagen)** varningen försvinner.
+När du återgår till konsolen **JWT-autentiseringsuppgifter (borttagen)** varningen är borta.
