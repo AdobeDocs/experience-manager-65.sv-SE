@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: c200f345-40ab-46fd-b6ed-f3af0a23796b
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '16917'
 ht-degree: 0%
@@ -294,7 +294,7 @@ Hämta namn på signaturfält med signatur-API (Java):
 
 [Hämtar namn på signaturfält](digitally-signing-certifying-documents.md#retrieving-signature-field-names)
 
-[Snabbstart (SOAP-läge): Hämta namn på signaturfält med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
+[Snabbstart (SOAP läge): Hämta signaturfältnamn med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-retrieving-signature-field-names-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -743,7 +743,7 @@ Signera ett PDF-dokument digitalt med signatur-API (Java):
 
 [Signera PDF-dokument digitalt](digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)
 
-[Snabbstart (SOAP-läge): Signera ett PDF-dokument digitalt med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[Snabbstart (SOAP): Signera ett PDF-dokument digitalt med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -963,7 +963,7 @@ Signera ett interaktivt formulär digitalt med Forms och Signature API (Java):
 
 [Digital Signing Interactive Forms](digitally-signing-certifying-documents.md#digitally-signing-interactive-forms)
 
-[Snabbstart (SOAP-läge): Signera ett PDF-dokument digitalt med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
+[Snabbstart (SOAP): Signera ett PDF-dokument digitalt med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-digitally-signing-a-pdf-document-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1207,7 +1207,7 @@ Certifiera ett PDF-dokument med signatur-API (Java):
 
 [Certifiera PDF-dokument](digitally-signing-certifying-documents.md#certifying-pdf-documents)
 
-[Snabbstart (SOAP-läge): certifiera ett PDF-dokument med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
+[Snabbstart (SOAP): certifiera ett PDF-dokument med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-certifying-a-pdf-document-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1444,7 +1444,7 @@ Verifiera en digital signatur med hjälp av Signature Service API (Java):
 
 [Verifierar digitala signaturer](#verify-digital-signatures-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Verifiera en digital signatur med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
+[Snabbstart (SOAP): Verifiera en digital signatur med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-a-digital-signature-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1657,7 +1657,7 @@ Verifiera flera digitala signaturer med Signature Service API (Java):
 
 [Verifierar flera digitala signaturer](#verifying-multiple-digital-signatures)
 
-[Snabbstart (SOAP-läge): Verifiera flera digitala signaturer med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
+[Snabbstart (SOAP): Verifiera flera digitala signaturer med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-verifying-multiple-digital-signatures-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1823,7 +1823,7 @@ Ta bort en digital signatur med signatur-API (Java):
 
 [Tar bort digitala signaturer](digitally-signing-certifying-documents.md#removing-digital-signatures)
 
-[Snabbstart (SOAP-läge): Ta bort en digital signatur med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
+[Snabbstart (SOAP): Ta bort en digital signatur med Java API](/help/forms/developing/signature-service-java-api-quick.md#quick-start-soap-mode-removing-a-digital-signature-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

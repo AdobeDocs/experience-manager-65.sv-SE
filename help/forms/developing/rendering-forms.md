@@ -9,7 +9,8 @@ topic-tags: operations
 role: Developer
 exl-id: ec9ccf04-7cec-493a-91ab-0e399a905338
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+feature: Adaptive Forms
+source-git-commit: 939a2efa64c853928a9082aa30d7338e98deb695
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -28,7 +29,7 @@ När en slutanvändare begär ett formulär skickar ett klientprogram begäran t
 
 Beroende på vilken typ av klientprogram du använder kan du skriva formuläret till en webbläsare eller spara formuläret som en PDF-fil. Ett webbaserat program kan skriva formuläret till webbläsaren. Ett skrivbordsprogram kan spara formuläret som en PDF-fil. Om du vill visa hur du skriver till en webbläsare och till en PDF-fil börjar snabbmenyerna i *Återger Forms* -avsnittet är organiserat på följande sätt:
 
-* Exemplen med Java API med stark typ (SOAP-läge) är en Java-servlet.
+* Exemplen med Java API med stark typ (SOAP) är en Java-servlet.
 * Webbtjänstens (Java Base64) exempel är en Java-server.
 * Webbtjänstexemplen (MTOM) är ett konsolprogram (alla snabbstarter har inte ett MTOM-exempel).
 

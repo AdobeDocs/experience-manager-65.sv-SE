@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/managing_endpoints
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 380cab7f-e7f7-4cb7-bd20-ea530a349fac
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '455'
 ht-degree: 0%
@@ -33,9 +34,9 @@ Följande typer av slutpunkter kan läggas till i tjänster. Alla tjänster har 
 
 **Remoting:** Gör att ett program som skapats med Flex kan anropa tjänsten med (borttaget för AEM formulär) AEM form Remoting. En fjärrslutpunkt skapas automatiskt för varje aktiverad tjänst. Ett Flex-mål som har samma namn som slutpunkten skapas, och Flex-klienter kan skapa fjärrobjekt som pekar på det här målet för att anropa åtgärder på den aktuella tjänsten.
 
-**SOAP:** Gör att ett klientprogram som utvecklats med AEM API:er för formulärprogrammering kan anropa tjänsten i SOAP-läge. En SOAP-slutpunkt skapas automatiskt för varje aktiverad tjänst.
+**SOAP:** Gör att ett klientprogram som utvecklats med AEM API:er för formulärprogrammering kan anropa tjänsten i SOAP läge. En SOAP slutpunkt skapas automatiskt för varje aktiverad tjänst.
 
-**anteckning**: *Dokumentskydd kan tas bort från dokumentsäkerhetsdokument när SOAP-slutpunkten används när dokumenten visas i Adobe Acrobat eller Adobe Reader. Mer information om hur du inaktiverar SOAP-punkter i dina LCRM-dokument finns i [Inaktivera SOAP-slutpunkter för dokumentsäkerhetsdokument](/help/forms/using/admin-help/configuring-client-server-options.md#disable-soap-endpoints-for-document-security-documents)*
+**anteckning**: *Dokumentskydd kan tas bort från dokumentsäkerhetsdokument när SOAP slutpunkt används vid visning av dokument i Adobe Acrobat eller Adobe Reader. Mer information om hur du inaktiverar SOAP i LCRM-dokument finns i [Inaktivera SOAP slutpunkter för dokumentsäkerhetsdokument](/help/forms/using/admin-help/configuring-client-server-options.md#disable-soap-endpoints-for-document-security-documents)*
 
 **EJB:** Gör att ett klientprogram som utvecklats med AEM API:er för formulärprogrammering kan anropa tjänsten i Enterprise JavaBeans-läge (EJB). En EJB-slutpunkt skapas automatiskt för varje aktiverad tjänst.
 

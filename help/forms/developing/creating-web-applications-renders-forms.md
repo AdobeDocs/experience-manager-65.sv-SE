@@ -9,7 +9,7 @@ topic-tags: operations
 role: Developer
 exl-id: 85e00003-8c8b-463a-b728-66af174be295
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '1832'
 ht-degree: 0%
@@ -50,7 +50,7 @@ På samma sätt, om användaren väljer kanadensiska data, innehåller det retur
 
 I det här avsnittet används exempelfiler som kan finnas på följande plats:
 
-&lt;*Installationskatalog för Forms Designer*>/Samples/Forms/Purchase Order/Form Fragments
+&lt;*Forms Designer installationskatalog*>/Samples/Forms/Purchase Order/Form Fragments
 
 där &lt;*installationskatalog*> är installationssökvägen. För klientprogrammet kopierades filen Purchase Order Dynamic.xdp från den här installationsplatsen och distribuerades till ett Forms-program med namnet *Program/FormsApplication*. Filen Purchase Order Dynamic.xdp placeras i en mapp som heter FormsFolder. På samma sätt placeras fragmenten i mappen Fragments, som på följande bild.
 

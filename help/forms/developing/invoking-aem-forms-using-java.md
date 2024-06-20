@@ -1,6 +1,6 @@
 ---
 title: Anropa AEM Forms med JavaAPI
-description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokalt anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
+description: Använd AEM Forms Java API för RMI-transportprotokoll för fjärranrop, VM-transport för lokala anrop, SOAP för fjärranrop, annan autentisering, till exempel användarnamn och lösenord, samt synkrona och asynkrona anropsbegäranden.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -8,7 +8,7 @@ topic-tags: coding
 role: Developer
 exl-id: 036c35c1-1be7-4825-bbb6-ea025e49c6f6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '5333'
 ht-degree: 0%
@@ -249,7 +249,7 @@ I följande tabell visas de JAR-filer som är beroende av anslutningsläget och 
      <li>xercesImpl.jar<br /> </li>
      <li>commons-httpclient-3.1.jar</li>
     </ul> <p> </p> </td>
-   <td><p>om AEM Forms anropas i SOAP-läge, inkludera dessa JAR-filer.</p> </td>
+   <td><p>om AEM Forms anropas i SOAP läge, inkludera dessa JAR-filer.</p> </td>
    <td><p>&lt;<em>installationskatalog</em>&gt;/sdk/client-libs/thirdparty</p> </td>
   </tr>
   <tr>
@@ -415,7 +415,7 @@ Anta att du uppgraderar till AEM Forms. Om du vill använda ett Java-program som
 
 Du anger anslutningsegenskaper som anropar AEM Forms när du använder Java API. När du anger anslutningsegenskaper anger du om tjänsterna ska anropas från fjärrdatorn eller lokalt, och anger även anslutnings- och autentiseringsvärden. Autentiseringsvärden krävs om tjänstsäkerhet är aktiverat. Om tjänstsäkerhet är inaktiverad behöver du inte ange autentiseringsvärden.
 
-Anslutningsläget kan antingen vara SOAP- eller EJB-läge. I EJB-läget används RMI/IIOP-protokollet, och prestanda för EJB-läget är bättre än för SOAP-läget. SOAP-läget används för att ta bort ett J2EE-serverberoende eller när en brandvägg finns mellan AEM Forms och klientprogrammet. SOAP-läget använder https-protokollet som underliggande transport och kan kommunicera över brandväggsgränserna. Om varken ett J2EE-programserverberoende eller en brandvägg är ett problem rekommenderar vi att du använder EJB-läget.
+Anslutningsläget kan antingen vara SOAP eller EJB-läge. I EJB-läget används RMI/IIOP-protokollet, och prestanda för EJB-läget är bättre än prestanda för SOAP. Läget SOAP används för att ta bort ett J2EE-serverberoende eller när en brandvägg finns mellan AEM Forms och klientprogrammet. SOAP använder https-protokollet som underliggande transport och kan kommunicera över brandväggsgränserna. Om varken ett J2EE-programserverberoende eller en brandvägg är ett problem rekommenderar vi att du använder EJB-läget.
 
 Om du vill anropa en AEM Forms-tjänst anger du följande anslutningsegenskaper:
 
@@ -425,11 +425,11 @@ Om du vill anropa en AEM Forms-tjänst anger du följande anslutningsegenskaper:
    * WebSphere: `iiop://<ServerName>:2809 (default port)`
    * WebLogic: `t3://<ServerName>:7001 (default port)`
 
-* **DSC_DEFAULT_SOAP_ENDPOINT**: Om du använder SOAP-anslutningsläget representerar det här värdet slutpunkten dit en anropsbegäran skickas. Om du vill fjärranropa AEM Forms anger du namnet på J2EE-programservern som AEM Forms distribueras på. Om klientprogrammet finns på samma J2EE-programserver kan du ange `localhost` (till exempel `http://localhost:8080`.)
+* **DSC_DEFAULT_SOAP_ENDPOINT**: Om du använder SOAP anslutningsläge representerar det här värdet slutpunkten dit en anropsbegäran skickas. Om du vill fjärranropa AEM Forms anger du namnet på J2EE-programservern som AEM Forms distribueras på. Om klientprogrammet finns på samma J2EE-programserver kan du ange `localhost` (till exempel `http://localhost:8080`.)
 
    * Portvärdet `8080` är tillämpligt om J2EE-programmet är JBoss. Om J2EE-programservern är IBM® WebSphere® ska du använda port `9080`. Om J2EE-programservern är WebLogic använder du port på samma sätt `7001`. (Dessa värden är standardportvärden. Om du ändrar portvärdet använder du det tillämpliga portnumret.)
 
-* **DSC_TRANSPORT_PROTOCOL**: Om du använder EJB-anslutningsläget anger du `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` för det här värdet. Om du använder SOAP-anslutningsläget anger du `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`.
+* **DSC_TRANSPORT_PROTOCOL**: Om du använder EJB-anslutningsläget anger du `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` för det här värdet. Om du använder SOAP anslutningsläge anger du `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`.
 * **DSC_SERVER_TYPE**: Anger J2EE-programservern som AEM Forms distribueras på. Giltiga värden är `JBoss`, `WebSphere`, `WebLogic`.
 
    * Om du ställer in den här anslutningsegenskapen på `WebSphere`, `java.naming.factory.initial` värdet är inställt på `com.ibm.ws.naming.util.WsnInitCtxFactory`.
@@ -443,9 +443,9 @@ Om du vill anropa en AEM Forms-tjänst anger du följande anslutningsegenskaper:
 
 * **DSC_CREDENTIAL_USERNAME:** Anger AEM användarnamn. För att en användare ska kunna anropa en AEM Forms-tjänst måste användaren ha användarrollen Tjänster. En användare kan även ha en annan roll som inkluderar behörigheten Tjänstanrop. Annars genereras ett undantag när de försöker anropa en tjänst. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
 * **DSC_CREDENTIAL_PASSWORD:** Anger motsvarande lösenordsvärde. Om tjänstsäkerhet är inaktiverad behöver du inte ange den här anslutningsegenskapen.
-* **DSC_REQUEST_TIMEOUT:** Standardtidsgränsen för SOAP-begäran är 1200000 millisekunder (20 minuter). Ibland kan en begäran ta längre tid att slutföra åtgärden. En SOAP-begäran som hämtar en stor uppsättning poster kan till exempel kräva en längre tidsgräns. Du kan använda `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` för att öka tidsgränsen för begärandeanrop för SOAP-begäranden.
+* **DSC_REQUEST_TIMEOUT:** Standardtidsgränsen för begäran för SOAP är 1200000 millisekunder (20 minuter). Ibland kan en begäran ta längre tid att slutföra åtgärden. En SOAP som hämtar en stor uppsättning poster kan till exempel kräva en längre tidsgräns. Du kan använda `ServiceClientFactoryProperties.DSC_REQUEST_TIMEOUT` för att öka tidsgränsen för begärandeanrop för SOAP.
 
-  **anteckning**: Endast SOAP-baserade anrop stöder egenskapen DSC_REQUEST_TIMEOUT.
+  **anteckning**: Endast SOAP anrop stöder egenskapen DSC_REQUEST_TIMEOUT.
 
 Utför följande åtgärder för att ange anslutningsegenskaper:
 
@@ -457,7 +457,7 @@ Utför följande åtgärder för att ange anslutningsegenskaper:
 
    >[!NOTE]
    >
-   >Om du använder SOAP-anslutningsläget anger du `ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT` uppräkningsvärde i stället för `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` uppräkningsvärde.
+   >Om du använder SOAP anslutningsläge anger du `ServiceClientFactoryProperties.DSC_DEFAULT_SOAP_ENDPOINT` uppräkningsvärde i stället för `ServiceClientFactoryProperties.DSC_DEFAULT_EJB_ENDPOINT` uppräkningsvärde.
 
 1. Så här anger du `DSC_TRANSPORT_PROTOCOL` connection, anropa `java.util.Properties` objektets `setProperty` och skicka följande värden:
 
@@ -466,7 +466,7 @@ Utför följande åtgärder för att ange anslutningsegenskaper:
 
    >[!NOTE]
    >
-   >Om du använder SOAP-anslutningsläget anger du `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`uppräkningsvärde i stället för `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` uppräkningsvärde.
+   >Om du använder SOAP anslutningsläge anger du `ServiceClientFactoryProperties.DSC_SOAP_PROTOCOL`uppräkningsvärde i stället för `ServiceClientFactoryProperties.DSC_EJB_PROTOCOL` uppräkningsvärde.
 
 1. Så här anger du `DSC_SERVER_TYPE` connection, anropa `java.util.Properties` objektets `setProperty` och skicka följande värden:
 
@@ -523,9 +523,9 @@ I följande Java-kodexempel ställs anslutningsegenskaperna in så att AEM Forms
  ConnectionProps.setProperty(ServiceClientFactoryProperties.DSC_CREDENTIAL_PASSWORD, "password");
 ```
 
-**Ställa in SOAP-anslutningsläget**
+**Ange SOAP anslutningsläge**
 
-I följande Java-kodexempel ställs anslutningsegenskaperna in i SOAP-läge så att AEM Forms anropas i JBoss.
+I följande Java-kodexempel ställs anslutningsegenskaperna in i SOAP läge så att AEM Forms anropas i JBoss.
 
 ```java
  Properties ConnectionProps = new Properties();
@@ -538,7 +538,7 @@ I följande Java-kodexempel ställs anslutningsegenskaperna in i SOAP-läge så 
 
 >[!NOTE]
 >
->Om du väljer SOAP-anslutningsläget måste du ta med ytterligare JAR-filer i klientprogrammets klasssökväg.
+>Om du väljer SOAP anslutningsläge måste du ta med ytterligare JAR-filer i klientprogrammets klasssökväg.
 
 **Ange anslutningsegenskaper när tjänstsäkerhet är inaktiverat**
 
@@ -553,9 +553,9 @@ I följande Java-kodexempel ställs anslutningsegenskaper in som krävs för att
 
 >[!NOTE]
 >
->Alla Java Quick Starts som är kopplade till Programmering med AEM Forms visar både EJB- och SOAP-anslutningsinställningar.
+>Alla Java Quick Starts som är kopplade till Programmering med AEM Forms visar både EJB- och SOAP.
 
-**Ställa in SOAP-anslutningsläget med tidsgräns för anpassad begäran**
+**Ställa in SOAP anslutningsläge med tidsgräns för anpassad begäran**
 
 ```java
  Properties ConnectionProps = new Properties();
@@ -639,7 +639,7 @@ Detta scenario liknar ett klientprogram som anropar en fristående AEM Forms-ins
 
 Du bör inte referera till en specifik J2EE-programserver eftersom anslutningen mellan klientprogrammet och AEM Forms avbryts om programservern avbryts. Vi rekommenderar att provider-URL refererar till en JNDI-hanterare på cellnivå i stället för en specifik J2EE-programserver.
 
-Klientprogram som använder SOAP-anslutningsläget kan använda HTTP-belastningsutjämnarporten för klustret. Klientprogram som använder EJB-anslutningsläget kan ansluta till EJB-porten för en viss J2EE-programserver. Den här åtgärden hanterar belastningsutjämning mellan klusternoder.
+Klientprogram som använder SOAP anslutningsläge kan använda HTTP-belastningsutjämnarporten för klustret. Klientprogram som använder EJB-anslutningsläget kan ansluta till EJB-porten för en viss J2EE-programserver. Den här åtgärden hanterar belastningsutjämning mellan klusternoder.
 
 **WebSphere**
 

@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/importing_and_managing_applications_and_archiv
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 0c15677a-ee17-425e-a261-fb3ae8688eb2
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 0%
@@ -42,7 +43,7 @@ Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Wor
    * Om du vill lägga till en bevakad mappslutpunkt klickar du på Lägg till bevakad mapp. Mer information om inställningarna för bevakad mapp finns i [Slutpunktsinställningar för bevakad mapp](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings).
    * Om du vill lägga till en e-postslutpunkt klickar du på Lägg till e-post. Mer information om e-postinställningarna finns i [Inställningar för e-postslutpunkt](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings).
    * Om du vill lägga till en EJB-slutpunkt klickar du på Lägg till EJB och anger ett namn och en beskrivning för slutpunkten.
-   * Om du vill lägga till en SOAP-slutpunkt klickar du på Lägg till SOAP och anger ett namn och en beskrivning för slutpunkten.
+   * Om du vill lägga till en SOAP slutpunkt klickar du på Lägg till SOAP och anger ett namn och en beskrivning för slutpunkten.
    * Om du vill lägga till en fjärrslutpunkt klickar du på Lägg till fjärranslutning. Mer information om fjärrinställningar finns i [Tar bort slutpunktsinställningar](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings).
    * Om du vill lägga till en REST-slutpunkt klickar du på Lägg till REST och anger ett namn och en beskrivning för slutpunkten. Anteckna den URL för REST-anrop som visas på sidan Lägg till REST-slutpunkt.
    * Om du vill ta bort en slutpunkt markerar du kryssrutan bredvid den och klickar på Ta bort.
@@ -109,7 +110,7 @@ Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Wor
    * Om du vill lägga till en bevakad mappslutpunkt klickar du på Lägg till bevakad mapp. Mer information om inställningarna för bevakad mapp finns i [Slutpunktsinställningar för bevakad mapp](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#watched-folder-endpoint-settings).
    * Om du vill lägga till en e-postslutpunkt klickar du på Lägg till e-post. Mer information om e-postinställningarna finns i [Inställningar för e-postslutpunkt](/help/forms/using/admin-help/configuring-email-endpoints.md#email-endpoint-settings).
    * Om du vill lägga till en EJB-slutpunkt klickar du på Lägg till EJB och anger ett namn och en beskrivning för slutpunkten.
-   * Om du vill lägga till en SOAP-slutpunkt klickar du på Lägg till SOAP och anger ett namn och en beskrivning för slutpunkten.
+   * Om du vill lägga till en SOAP slutpunkt klickar du på Lägg till SOAP och anger ett namn och en beskrivning för slutpunkten.
    * Om du vill lägga till en fjärrslutpunkt klickar du på Lägg till fjärranslutning. Mer information om fjärrinställningar finns i [Tar bort slutpunktsinställningar](/help/forms/using/admin-help/configuring-remoting-endpoints.md#remoting-endpoint-settings).
    * Om du vill lägga till en REST-slutpunkt klickar du på Lägg till REST och anger ett namn och en beskrivning för slutpunkten. Anteckna den URL för REST-anrop som visas på sidan Lägg till REST-slutpunkt.
    * Om du vill ta bort en slutpunkt markerar du kryssrutan bredvid den och klickar på Ta bort.

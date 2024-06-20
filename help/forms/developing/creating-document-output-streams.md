@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: a521bfac-f417-4002-9c5c-8d7794d3eec7
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '18860'
 ht-degree: 0%
@@ -282,7 +282,7 @@ Skapa ett PDF-dokument med hjälp av utdata-API (Java):
 
 [Snabbstart (EJB-läge): Skapa ett PDF-dokument med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Skapa ett PDF-dokument med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
+[Snabbstart (SOAP läge): Skapa ett PDF-dokument med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -540,7 +540,7 @@ Skapa ett PDF/A-dokument med hjälp av utdata-API (Java):
 
 [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-[Snabbstart (SOAP-läge): Skapa ett PDF/A-dokument med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
+[Snabbstart (SOAP): Skapa ett PDF/A-dokument med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-a-document-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -736,7 +736,7 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
 
 [Snabbstart (EJB-läge): skicka dokument till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
-[Snabbstart (SOAP-läge): skicka dokument till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
+[Snabbstart (SOAP): skicka dokument till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-documents-to-the-output-service-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1052,7 +1052,7 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
 
 [Snabbstart (EJB-läge): Skapa ett PDF-dokument baserat på fragment med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Skapa ett PDF-dokument baserat på fragment med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
+[Snabbstart (SOAP läge): Skapa ett PDF-dokument baserat på fragment med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-fragments-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1272,7 +1272,7 @@ Skriva ut till en fil med hjälp av utdata-API (Java):
 
 [Sammanfattning av steg](creating-document-output-streams.md#summary-of-steps)
 
-[Snabbstart (SOAP-läge): Skriva ut till en fil med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
+[Snabbstart (SOAP): Skriva ut till en fil med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-printing-to-a-file-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -2085,7 +2085,7 @@ Skapa sökregler med hjälp av utdata-API (Java):
 
 [Snabbstart (EJB-läge): Skapa sökregler med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Skapa sökregler med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
+[Snabbstart (SOAP): Skapa sökregler med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-search-rules-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -2299,7 +2299,7 @@ Förenkla ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument me
 
 [Snabbstart (EJB-läge): Omforma ett PDF-dokument med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Omforma ett PDF-dokument med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
+[Snabbstart (SOAP): Omforma ett PDF-dokument med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-transforming-a-pdf-document-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

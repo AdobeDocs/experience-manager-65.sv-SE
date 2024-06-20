@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 98c96349-f253-475f-b646-352269814a38
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
 source-wordcount: '1396'
 ht-degree: 0%
@@ -180,10 +181,10 @@ Utgivarnoden har ingen primär-sekundär relation i en klustrad miljö. Du kan s
 ### Återställa en enskild utgivarnod {#recover-a-single-publisher-node}
 
 1. Stäng noden som måste återställas och gör ingen publiceringsaktivitet förrän noden är uppe igen.
-1. Återställ publiceringsnoden med [Återställa säkerhetskopian](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
+1. Återställ Publish-noden med [Återställa säkerhetskopian](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
 
 ### Återställa ett kluster {#recover-a-cluster}
 
 1. Stäng av klustret.
-1. Återställ publiceringsnoden med [Återställa säkerhetskopian](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
+1. Återställ Publish-noden med [Återställa säkerhetskopian](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html).
 1. Starta den primära noden följt av den sekundära noden i utvecklarklustret.

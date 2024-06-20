@@ -8,26 +8,26 @@ topic-tags: develop
 role: Developer
 exl-id: e861d848-b0b7-4ae9-a56d-c0957ec95730
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
-# PDF Utilities Service Java API Quick Start (SOAP) {#pdf-utilities-service-java-apiquick-start-soap}
+# Java API-snabbstart för PDF Utilities Service (SOAP) {#pdf-utilities-service-java-apiquick-start-soap}
 
 Följande snabbstarter är tillgängliga för tjänsten PDF Utilities.
 
-[Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till ett XDP-dokument med Java API](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api)
+[Snabbstart (SOAP): Konvertera ett PDF-dokument till ett XDP-dokument med Java API](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Konvertera ett XDP-dokument till ett PDF-dokument med Java API](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api)
+[Snabbstart (SOAP): Konvertera ett XDP-dokument till ett PDF-dokument med Java API](pdf-utilities-service-java-api.md#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hämta dokumentegenskaper för PDF med Java API](pdf-utilities-service-java-api.md#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api)
+[Snabbstart (SOAP läge): Hämta dokumentegenskaper för PDF med Java API](pdf-utilities-service-java-api.md#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Ange format för att spara ett PDF-dokument med hjälp av Java API](pdf-utilities-service-java-api.md#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api)
+[Snabbstart (SOAP läge): Ange sparningsformat för ett PDF-dokument med Java API](pdf-utilities-service-java-api.md#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api)
 
-[Snabbstart (SOAP-läge): sanera PDF-dokument](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
+[Snabbstart (SOAP läge): Sanera PDF-dokument](pdf-utilities-service-java-api.md#quick-start-soap-mode-sanitizing-pdf-documents)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
@@ -35,7 +35,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 >
 >Snabbstart i programmering med AEM formulär baseras på operativsystemet Forms Server. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till ett XDP-dokument med Java API {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
+## Snabbstart (SOAP): Konvertera ett PDF-dokument till ett XDP-dokument med Java API {#quick-start-soap-mode-converting-a-pdf-document-to-an-xdp-document-using-the-java-api}
 
 I följande kodexempel konverteras ett PDF-dokument till ett XDP-dokument. (Se [Konvertera PDF-dokument till XDP-dokument](/help/forms/developing/pdf-utilities.md#converting-pdf-documents-into-xdp-documents).
 
@@ -136,7 +136,7 @@ I följande kodexempel konverteras ett PDF-dokument till ett XDP-dokument. (Se [
  
 ```
 
-## Snabbstart (SOAP-läge): Konvertera ett XDP-dokument till ett PDF-dokument med Java API {#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api}
+## Snabbstart (SOAP): Konvertera ett XDP-dokument till ett PDF-dokument med Java API {#quick-start-soap-mode-converting-an-xdp-document-to-a-pdf-document-using-the-java-api}
 
 I följande kodexempel konverteras ett XDP-dokument till ett PDF-dokument. (Se [Konvertera XDP-dokument till PDF-dokument](/help/forms/developing/pdf-utilities.md#converting-xdp-documents-into-pdf-documents).)
 
@@ -236,7 +236,7 @@ I följande kodexempel konverteras ett XDP-dokument till ett PDF-dokument. (Se [
  
 ```
 
-## Snabbstart (SOAP-läge): Hämta dokumentegenskaper för PDF med Java API {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}
+## Snabbstart (SOAP läge): Hämta dokumentegenskaper för PDF med Java API {#quick-start-soap-mode-retrieving-pdf-document-properties-using-the-java-api}
 
 I följande kodexempel avgörs om dokumentet är ett PDF-dokument och i så fall den tidigaste Acrobat-versionen som kan läsa det. (Se [Hämtar dokumentegenskaper för PDF](/help/forms/developing/pdf-utilities.md#retrieving-pdf-document-properties).)
 
@@ -353,7 +353,7 @@ I följande kodexempel avgörs om dokumentet är ett PDF-dokument och i så fall
  
 ```
 
-## Snabbstart (SOAP-läge): Ange format för att spara ett PDF-dokument med hjälp av Java API {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}
+## Snabbstart (SOAP läge): Ange sparningsformat för ett PDF-dokument med Java API {#quick-start-soap-mode-setting-the-save-style-for-a-pdf-document-using-the-java-api}
 
 Följande kodexempel ställer in sparningsläget för snabb webbvisning och skickar sedan PDF-dokumentet till krypteringstjänsten där det är krypterat. Det krypterade PDF-dokumentet som sparas för snabb webbvisning sparas som en PDF-fil med namnet* FastWebViewLoan.pdf*. (Se [Ange sparningslägen för PDF-dokument](/help/forms/developing/pdf-utilities.md#setting-pdf-document-save-modes).)
 
@@ -493,7 +493,7 @@ Följande kodexempel ställer in sparningsläget för snabb webbvisning och skic
  
 ```
 
-## Snabbstart (SOAP-läge): Konvertera ett dokument till ett PDF/A-2b-dokument med Java API {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-2b-document-using-the-java-api}
+## Snabbstart (SOAP): Konvertera ett dokument till ett PDF/A-2b-dokument med Java API {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-2b-document-using-the-java-api}
 
 I följande Java-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett PDF/A-2b-dokument som har sparats som en PDF-fil med namnet *LoanArchive.pdf*. (Se [Konvertera dokument till PDF/A-dokument](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents).)
 
@@ -581,7 +581,7 @@ public class CreatePDFADocument {
 }
 ```
 
-## Snabbstart (SOAP-läge): sanera PDF-dokument {#quick-start-soap-mode-sanitizing-pdf-documents}
+## Snabbstart (SOAP läge): Sanera PDF-dokument {#quick-start-soap-mode-sanitizing-pdf-documents}
 
 I följande Java-kodexempel rensas ett PDF-dokument med namnet *Loan.pdf*.
 

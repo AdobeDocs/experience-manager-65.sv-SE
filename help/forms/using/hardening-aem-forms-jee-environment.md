@@ -7,7 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.4
 role: Admin,User
 exl-id: 6fb260f9-d0f8-431e-8d4e-535b451e4124
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Security, Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '7608'
 ht-degree: 0%
@@ -264,7 +265,7 @@ Configuration Manager använde en serverlet som distribuerats på programservern
 
 **Låsa fjärråtkomst till Trust Store**
 
-Med Configuration Manager kan du överföra autentiseringsuppgifter för Acrobat Reader DC-tillägg till AEM Forms på JEE-förtroendearkivet. Detta innebär att åtkomst till Trust Store-autentiseringsuppgiftstjänsten via fjärrprotokoll (SOAP och EJB) har aktiverats som standard. Den här åtkomsten behövs inte längre när du har överfört rättighetsinformationen med Configuration Manager eller om du bestämmer dig för att använda administrationskonsolen senare för att hantera autentiseringsuppgifter.
+Med Configuration Manager kan du överföra autentiseringsuppgifter för Acrobat Reader DC-tillägg till AEM Forms på JEE-förtroendearkivet. Detta innebär att åtkomst till pålitlighetslagerautentiseringstjänsten via fjärrprotokoll (SOAP och EJB) har aktiverats som standard. Den här åtkomsten behövs inte längre när du har överfört rättighetsinformationen med Configuration Manager eller om du bestämmer dig för att använda administrationskonsolen senare för att hantera autentiseringsuppgifter.
 
 Du kan inaktivera fjärråtkomst till alla Trust Store-tjänster genom att följa stegen i avsnittet [Inaktiverar icke nödvändig fjärråtkomst till tjänster](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_remote_access_to_services).
 
@@ -652,7 +653,7 @@ Vissa URL:er markeras som användarvänliga webbprogram. Du bör undvika att exp
   </tr> 
   <tr> 
    <td><p>/DocumentManager/*</p> </td> 
-   <td><p>Överföra och ladda ned dokument som ska behandlas vid åtkomst av fjärrslutpunkter, SOAP WSDL-slutpunkter och Java SDK över SOAP-transport eller EJB-transport med HTTP-dokument aktiverade.</p> </td> 
+   <td><p>Överföra och ladda ned dokument som ska bearbetas vid åtkomst till fjärrslutpunkter, SOAP WSDL-slutpunkter och Java SDK över SOAP eller EJB-transport med HTTP-dokument aktiverade.</p> </td> 
    <td><p>Ja</p> </td> 
    <td><p>Ja</p> </td> 
   </tr> 
@@ -827,7 +828,7 @@ När du konfigurerar en säker nätverksarkitektur enligt beskrivningen i föreg
    <td> 
     <ul> 
      <li><p>Webbläsaren visar Configuration Manager och slutanvändarens webbprogram</p> </li> 
-     <li><p>Alla SOAP-anslutningar</p> </li> 
+     <li><p>Alla SOAP</p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
@@ -837,7 +838,7 @@ När du konfigurerar en säker nätverksarkitektur enligt beskrivningen i föreg
      <li><p>Webbtjänstklientprogram, t.ex. .NET-program</p> </li> 
      <li><p>Adobe Reader® använder SOAP för AEM Forms på JEE-serverns webbtjänster</p> </li> 
      <li><p>Adobe Flash®-program använder SOAP för Forms Server-webbtjänster</p> </li> 
-     <li><p>AEM Forms på JEE SDK-anrop när de används i SOAP-läge</p> </li> 
+     <li><p>AEM Forms på JEE SDK-anrop när de används i SOAP</p> </li> 
      <li><p>Workbench-designmiljö</p> </li> 
     </ul> </td> 
   </tr> 
@@ -954,7 +955,7 @@ Mer information om WebSphere-portar som krävs för AEM Forms på JEE finns i Po
 
 ### Konfigurerar SSL {#configuring-ssl}
 
-Referera till den fysiska arkitekturen som beskrivs i avsnittet [AEM Forms på JEE:s fysiska arkitektur](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)bör du konfigurera SSL för alla anslutningar som du tänker använda. I synnerhet måste alla SOAP-anslutningar utföras över SSL för att förhindra exponering av användarreferenser i ett nätverk.
+Referera till den fysiska arkitekturen som beskrivs i avsnittet [AEM Forms på JEE:s fysiska arkitektur](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)bör du konfigurera SSL för alla anslutningar som du tänker använda. Alla SOAP anslutningar måste göras via SSL för att förhindra exponering av användaruppgifter i ett nätverk.
 
 Instruktioner om hur du konfigurerar SSL på JBoss, WebLogic och WebSphere finns i&quot;Configuring SSL&quot; i [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_64).
 

@@ -8,7 +8,8 @@ geptopics: SG_AEMFORMS/categories/jee
 role: Admin
 exl-id: 621fe107-f4ac-42b1-8c7b-8abbcaac7380
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms, Foundation Components
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 1%
@@ -56,7 +57,7 @@ I följande tabell visas alla beständighetstyper som stöds tillsammans med oli
  </tbody>
 </table>
 
-tarMK är utformat för prestanda, medan MongoMK och RDBMK är utformade för skalbarhet. Adobe rekommenderar varmt att TARMK används som standardbeständighetsteknik för alla AEM Forms-distributionsscenarier, både för författare- och publiceringsinstanser, utom i de fall som beskrivs i avsnittet [Välja Mongo eller en relationsdatabasmikrokärna över tarMK](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p).
+tarMK är utformat för prestanda, medan MongoMK och RDBMK är utformade för skalbarhet. Adobe rekommenderar varmt att TARMK används som standardbeständighetsteknik för alla AEM Forms-distributionsscenarier, både för Author- och Publish-instanser, utom i de fall som beskrivs i avsnittet [Välja Mongo eller en relationsdatabasmikrokärna över tarMK](#p-choosing-mongo-or-a-relational-database-microkernel-over-tarmk-p).
 
 En lista över mikrokärnor som stöds finns på [AEM Forms on OSGi Technical Requirements](/help/sites-deploying/technical-requirements.md) eller [Plattformskombinationer som stöds av AEM Forms på JEE](/help/forms/using/aem-forms-jee-supported-platforms.md) artiklar.
 

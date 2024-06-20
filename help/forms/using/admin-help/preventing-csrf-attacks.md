@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/configuring_user_management
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: e17fc114-eba5-4e1b-8e70-ad6af7008018
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Security
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '955'
 ht-degree: 0%
@@ -31,8 +32,8 @@ Tänk dig till exempel ett scenario där du är inloggad på administrationskons
 
 **Null-referens:** När du öppnar ett nytt webbläsarfönster eller en ny flik, skriver en adress och trycker på Retur, är referenten null. Begäran är helt ny och kommer inte från en överordnad webbsida. Därför finns det ingen hänvisare för begäran. Forms Server kan ta emot en null-referens från:
 
-* begäranden som gjorts på SOAP- eller REST-slutpunkter från Acrobat
-* alla skrivbordsklienter som gör en HTTP-begäran på en AEM formulerar SOAP- eller REST-slutpunkt
+* begäranden som gjorts på SOAP eller REST-slutpunkter från Acrobat
+* alla skrivbordsklienter som gör en HTTP-begäran i AEM formulär SOAP eller REST-slutpunkt
 * när ett nytt webbläsarfönster öppnas och URL:en för AEM formulär, inloggningssida för webbprogram anges
 
 Tillåt en null-referens för SOAP- och REST-slutpunkter. Tillåt även en null-referens på alla URI-inloggningssidor som /adminui och /contentspace och deras motsvarande mappade resurser. Den mappade servern för /contentspace är till exempel /contentspace/faces/jsp/login.jsp, som bör vara ett null-referensundantag. Det här undantaget är bara nödvändigt om du aktiverar GET-filtrering för webbprogrammet. Programmen kan ange om null-referenser ska tillåtas. Se&quot;Skydda mot attacker med förfalskade förfrågningar på olika webbplatser&quot; i [Förbättring och säkerhet för AEM formulär](https://help.adobe.com/en_US/livecycle/11.0/HardeningSecurity/index.html).

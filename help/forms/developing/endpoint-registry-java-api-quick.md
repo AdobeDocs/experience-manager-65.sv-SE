@@ -8,20 +8,20 @@ topic-tags: develop
 role: Developer
 exl-id: 985a6fc5-6675-4c25-80e4-34dcb658de72
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
 
 ---
 
-# SOAP (Endpoint Registry Java™ API Quick Start) {#endpoint-registry-java-api-quickstart-soap}
+# Start av Java™ API i Endpoint Registry (SOAP) {#endpoint-registry-java-api-quickstart-soap}
 
-Java™ API Quick Start (SOAP) finns för Endpoint Registry.
+Java™ API Quick Start(SOAP) finns för Endpoint Registry.
 
 [QuickStart: Lägga till en EJB-slutpunkt med Java](endpoint-registry-java-api-quick.md#quickstart-adding-an-ejb-endpoint-using-the-java-api)
 
-[QuickStart: Lägga till en SOAP-slutpunkt med Java](endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
+[QuickStart: Lägga till en SOAP slutpunkt med Java](endpoint-registry-java-api-quick.md#quickstart-adding-a-soap-endpoint-using-the-java-api)
 
 [QuickStart: Lägga till en bevakad mappslutpunkt med Java](endpoint-registry-java-api-quick.md#quickstart-adding-a-watched-folder-endpoint-using-the-java-api)
 
@@ -148,7 +148,7 @@ I följande Java™-kodexempel läggs en EJB-slutpunkt till i en tjänst med nam
 
 ## QuickStart: Lägga till en SOAP-slutpunkt med Java™ API {#quickstart-adding-a-soap-endpoint-using-the-java-api}
 
-I följande Java™-kodexempel läggs en SOAP-slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. (Se [Lägga till SOAP-slutpunkter](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints).)
+I följande Java™-kodexempel läggs en SOAP slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. (Se [Lägga till SOAP](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints).)
 
 ```java
  /*

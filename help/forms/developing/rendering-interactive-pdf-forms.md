@@ -9,7 +9,7 @@ topic-tags: operations
 role: Developer
 exl-id: d9f32939-c2c0-4531-b15e-f63941c289e3
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '2455'
 ht-degree: 0%
@@ -146,7 +146,7 @@ Följande värden visar några exempel på URI-värden:
 
 När du återger ett interaktivt formulär kan du definiera URI-värden, t.ex. mål-URL:en som formulärdata ska skickas till. Mål-URL:en kan definieras på något av följande sätt:
 
-* Klicka på knappen Skicka när du designar formulärdesignen i Designer
+* Klicka på Skicka när du designar formulärdesignen i Designer
 * Genom att använda Forms klient-API för tjänster
 
 Om mål-URL:en definieras i formulärdesignen, ska du inte åsidosätta den med Forms klient-API. Det innebär att om du anger mål-URL:en med Forms API återställs den angivna URL:en i formulärdesignen till den som anges med API:t. Om du vill skicka formuläret PDF till den mål-URL som anges i formulärdesignen, anger du mål-URL:en automatiskt till en tom sträng.
@@ -159,7 +159,7 @@ Om du har ett formulär som innehåller en skicka-knapp och en beräkningsknapp 
 
 **Bifoga filer i formuläret**
 
-Du kan bifoga filer till ett formulär. När du återger ett PDF-formulär med bifogade filer kan användare hämta de bifogade filerna i Acrobat med hjälp av rutan för bifogade filer. Du kan bifoga olika filtyper till ett formulär, t.ex. en textfil, eller till en binär fil, t.ex. en JPG-fil.
+Du kan bifoga filer till ett formulär. När du återger ett PDF-formulär med bifogade filer kan användare hämta de bifogade filerna i Acrobat med hjälp av rutan för bifogade filer. Du kan bifoga olika filtyper till ett formulär, t.ex. en textfil, eller till en binär fil, t.ex. en JPG.
 
 >[!NOTE]
 >

@@ -8,8 +8,9 @@ content-strategy: max-2018
 docset: aem65
 exl-id: f26c4268-7885-4e61-a258-219d98288548
 solution: Experience Manager, Experience Manager Forms
+feature: Correspondence Management
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
 source-wordcount: '1374'
 ht-degree: 0%
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 Med AEM Forms kan du enkelt skapa, publicera och avpublicera formulär. Mer information om AEM Forms finns i [Introduktion till hantering av formulär](../../forms/using/introduction-managing-forms.md).
 
-AEM Forms-servern har två instanser: Författare och Publicera. Författarinstans används för att skapa och hantera formulärresurser och resurser. Publiceringsinstansen används för att hålla resurser och relaterade resurser tillgängliga för slutanvändare. Du kan importera XDP och PDF forms i redigeringsläget. Mer information finns i [Hämta XDP- och PDF-dokument i AEM Forms](../../forms/using/get-xdp-pdf-documents-aem.md).
+AEM Forms-servern har två instanser: Författare och Publish. Författarinstans används för att skapa och hantera formulärresurser och resurser. Publish-instans används för att hålla resurser och relaterade resurser tillgängliga för slutanvändare. Du kan importera XDP och PDF forms i redigeringsläget. Mer information finns i [Hämta XDP- och PDF-dokument i AEM Forms](../../forms/using/get-xdp-pdf-documents-aem.md).
 
 ## Resurser som stöds   {#supported-assets-nbsp}
 
@@ -59,16 +60,16 @@ Din adaptiva Forms kan använda vissa konfigurationer, inställningar och anpass
 En resurs kan ha följande lägen:
 
 * **Opublicerad:** En resurs som aldrig har publicerats (det opublicerade läget gäller endast för Forms-resurser. Resurser för korrespondenshantering har inte ett opublicerat läge.)
-* **Publicerad**: En resurs som har publicerats och är tillgänglig i publiceringsinstansen
+* **Publicerad**: En resurs som har publicerats och är tillgänglig på Publish-instansen
 * **Ändrad**: En resurs som ändras efter att ha publicerats
 
-## Publicera en resurs {#publish-an-asset}
+## Publish en mediefil {#publish-an-asset}
 
 1. Logga in på AEM Forms-servern.
 1. Använd något av följande för att välja och publicera en resurs.
 
    1. Flytta pekaren över en resurs och markera **[!UICONTROL Publish]** ![aem6forms_globe](assets/aem6forms_globe.pngasset.png).
-   1. Gör något av följande och välj sedan Publicera:
+   1. Gör något av följande och välj sedan Publish:
 
       * Om du är i kortvyn väljer du **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)och välj resursen. Resursen har valts.
       * Om du är i listvyn markerar du kryssrutan för en resurs. Resursen har valts.
@@ -79,7 +80,7 @@ En resurs kan ha följande lägen:
       >
       >Markera inte flera resurser. Det går inte att publicera flera resurser samtidigt.
 
-1. När publiceringsprocessen startar visas en bekräftelsedialogruta med alla relaterade resurser och resurser. I dialogrutan som innehåller relaterade resurser väljer du **[!UICONTROL Publish]**. Resursen publiceras och dialogrutan Publicera resurser har slutförts visas.
+1. När Publish-processen startar visas en bekräftelsedialogruta med alla relaterade resurser och resurser. I dialogrutan som innehåller relaterade resurser väljer du **[!UICONTROL Publish]**. Resursen publiceras och dialogrutan Publish Assets Success visas.
 
    >[!NOTE]
    >
@@ -91,13 +92,13 @@ En resurs kan ha följande lägen:
 
    >[!NOTE]
    >
-   >För Forms Manager är Publicera-åtgärden inaktiverad om användaren inte har behörighet att publicera resurserna i listan. En resurs som kräver extra behörigheter visas i rött.
+   >För Forms Manager är Publish-åtgärden inaktiverad om användaren inte har behörighet att publicera resurserna i listan. En resurs som kräver extra behörigheter visas i rött.
 
-   När en resurs har publicerats kopieras resursens metadataegenskaper till publiceringsinstansen och resursens status ändras till Publicerad. Statusen för beroende resurser som publiceras ändras också till Publicerad.
+   När en resurs har publicerats kopieras resursens metadataegenskaper till Publish-instansen och resursens status ändras till Publicerad. Statusen för beroende resurser som publiceras ändras också till Publicerad.
 
    När du har publicerat en resurs kan du använda Forms Portal för att visa alla resurser på en webbsida. Mer information finns i [Introduktion till att publicera formulär på en portal](../../forms/using/introduction-publishing-forms.md).
 
-## Publicera alla Correspondence Management Assets {#publish-all-the-correspondence-management-assets}
+## Publish alla Correspondence Management Assets {#publish-all-the-correspondence-management-assets}
 
 Med AEM Forms kan du publicera alla Correspondence Management-resurser på en server på en gång. De publicerade resurserna innehåller alla Correspondence Management-resurser och relaterade beroenden.
 
@@ -106,11 +107,11 @@ Följ de här stegen för att publicera alla Correspondence Management-resurser 
 1. Logga in på AEM Forms-servern.
 1. Välj **Adobe Experience Manager** i det globala navigeringsfältet.
 1. Välj ![verktyg](assets/tools.png)och sedan markera **Forms**.
-1. Välj **Publicera Correspondence Management Assets**.
+1. Välj **Publish Correspondence Management Assets**.
 
    ![publish-cmp-assets](assets/publish-cmp-assets.png)
 
-   Sidan Publicera alla resurser för hantering av korrespondenshantering visas och visar information om den senaste gången som processen Publicera resurser för korrespondenshantering försökte utföras.
+   Sidan Publish All Correspondence Management Assets visas och innehåller information om den senaste gången Publish Correspondence Management Assets-processen gjordes.
 
    ![publish-last-run-details](assets/publish-last-run-details.png)
 
@@ -120,7 +121,7 @@ Följ de här stegen för att publicera alla Correspondence Management-resurser 
 
    >[!NOTE]
    >
-   >Publiceringsprocessen kan inte avbrytas när den väl har initierats. När publiceringsåtgärden pågår ska du inte skapa, ta bort, ändra eller publicera några resurser eller initiera åtgärden Exportera alla resurser för korrespondenshantering.
+   >Publish-processen kan inte avbrytas när den väl har initierats. När Publish-åtgärden pågår ska du inte skapa, ta bort, ändra eller publicera några resurser eller initiera åtgärden Exportera alla Correspondence Management Assets.
 
 ## Automatisera publicering och avpublicering för Forms &amp; Documents {#automate-publishing-and-unpublishing-for-forms-amp-documents}
 

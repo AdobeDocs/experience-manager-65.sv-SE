@@ -3,8 +3,9 @@ title: Hur skapar och arbetar man med hasharna i dynamiska PDF forms?
 description: Generera och arbeta med hashvärden i dynamiska PDF forms.
 exl-id: 026f5686-39ea-4798-9d1f-031f15941060
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Document Security
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1182'
 ht-degree: 0%
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 ## Nödvändig kunskap {#prerequisite-knowledge}
 
-Det krävs viss erfarenhet av AEM Forms i JEE Designer, liksom möjligheten att komma åt och anropa funktioner i skriptobjekt.
+Det krävs viss erfarenhet av AEM Forms på JEE Designer, liksom möjligheten att komma åt och anropa funktioner i skriptobjekt.
 
 ## Användarnivå {#user-level}
 
@@ -27,7 +28,7 @@ Tanken är att dölja lösenordet genom att generera en unik hash och lagra hash
 
 En hash-funktion tar en lång sträng (eller ett meddelande) av valfri längd som indata och skapar en sträng med fast längd som utdata, vilket ibland kallas meddelandesammandrag eller ett digitalt fingeravtryck.
 
-Med AEM Forms i JEE Designer kan du implementera de olika hash-funktionerna i skriptobjekt som JavaScript och köra dem i ett dynamiskt PDF-dokument. PDF example som ingår i exempelfilerna för den här artikeln använder implementeringar med öppen källkod för följande hash-funktioner:
+Med AEM Forms på JEE Designer kan du implementera de olika hash-funktionerna i skriptobjekt som JavaScript och köra dem i ett dynamiskt PDF-dokument. PDF example som ingår i exempelfilerna för den här artikeln använder implementeringar med öppen källkod för följande hash-funktioner:
 
 * MD4 och MD5 - designade av Ronald Rivest
 
@@ -41,7 +42,7 @@ Den största fördelen med hash-kodning är att du inte behöver jämföra löse
 
 ## Undersöka skriptobjekten {#examining-script-objects}
 
-När du öppnar ett av de två exempelbilderna i AEM Forms i JEE Designer hittar du de fyra skriptobjekten på paletten Hierarki (se figur nedan).
+När du öppnar ett av de två exempelbilderna i AEM Forms på JEE Designer hittar du de fyra skriptobjekten på paletten Hierarki (se figur nedan).
 
 ![Variabel](assets/variables.jpg)
 
@@ -77,7 +78,7 @@ Exempelfilerna för den här artikeln är två PDF forms. I det första exemplet
 
 Prova det första exemplet genom att följa stegen nedan:
 
-1. När du har hämtat och packat upp exempelfilerna öppnar du hashing_forms_sample1.pdf med AEM Forms i JEE Designer. Du kan också använda Adobe Reader eller Adobe Acrobat Professional för att öppna och visa exemplet, men du kan inte se källkoden.
+1. När du har hämtat och packat upp exempelfilerna öppnar du hashing_forms_sample1.pdf med AEM Forms på JEE Designer. Du kan också använda Adobe Reader eller Adobe Acrobat Professional för att öppna och visa exemplet, men du kan inte se källkoden.
 1. I textfältet [!UICONTROL clear text] skriv ett lösenord eller något annat meddelande som du vill ska hashas.
 1. Klicka på någon av de fyra knapparna för att generera hash-taggen MD4, MD5, SHA-1 eller SHA-256. Beroende på vilken knapp du tryckte på anropas en av de fyra hash-funktionerna som skapar hexadecimala utdata och strängen eller meddelandet hashas.
 
@@ -91,7 +92,7 @@ Det andra exemplet visar hur hash-värden jämförs i bakgrunden utan att det ri
 
 Prova det andra exemplet genom att följa stegen nedan:
 
-1. Öppna `hashing_forms_sample2.pdf` med AEM Forms i JEE Designer. Du kan också använda Adobe Reader eller Adobe Acrobat Professional för att öppna och visa exemplet, men du kan inte se källkoden.
+1. Öppna `hashing_forms_sample2.pdf` med AEM Forms på JEE Designer. Du kan också använda Adobe Reader eller Adobe Acrobat Professional för att öppna och visa exemplet, men du kan inte se källkoden.
 1. Välj ett av de två lösenordsfälten [!UICONTROL Password MAN] eller [!UICONTROL Password WOMAN] och skriv in lösenorden:
    1. Lösenordet för mannen är `bob`
    1. Lösenordet för kvinnan är `alice`

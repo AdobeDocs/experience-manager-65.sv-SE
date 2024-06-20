@@ -7,8 +7,9 @@ topic-tags: forms-manager, introduction
 docset: aem65
 exl-id: 3e063456-7f96-483d-86a3-6a414746db8a
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: Admin, User
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 0%
@@ -98,7 +99,7 @@ AEM verktygspanelen innehåller verktyg för olika komponenter. Om du vill navig
   ![AEM Forms](assets/aem_forms_tools_new.png)
 
 * **Konfigurera PDF Generator:** En administratör kan konfigurera AEM [!DNL Forms] PDF Generator, lägg till användarkonton och importera eller exportera konfiguration till PDF Generator.
-* **Publicera Correspondence Management Assets:** AEM [!DNL Forms] Med kan du publicera alla bokstäver, dokumentfragment, datafält och relaterade beroenden från en författarinstans samtidigt. De publicerade resurserna innehåller alla Correspondence Management-resurser och relaterade beroenden. Mer information finns i [Publicera och avpublicera formulär och dokument](../../forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets).
+* **Publish Correspondence Management Assets:** AEM [!DNL Forms] Med kan du publicera alla bokstäver, dokumentfragment, datafält och relaterade beroenden från en författarinstans samtidigt. De publicerade resurserna innehåller alla Correspondence Management-resurser och relaterade beroenden. Mer information finns i [Publicera och avpublicera formulär och dokument](../../forms/using/publishing-unpublishing-forms.md#publishallthecorrespondencemanagementassets).
 * **Exportera Correspondence Management-resurser:** Du kan hämta alla Correspondence Management-resurser och relaterade beroenden som ett paket från en AEM [!DNL Forms] -instans. Detaljerade anvisningar finns i [Importera och exportera resurser till AEM Forms](../../forms/using/import-export-forms-templates.md#importandexportassetsincorrespondencemanagement)
 
 ## Gemensamma element i användargränssnittet {#commonelements}

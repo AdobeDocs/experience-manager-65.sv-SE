@@ -8,7 +8,7 @@ topic-tags: develop
 role: Developer
 exl-id: 7f622371-0f0f-4789-b2e7-e4b536a21c4d
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '493'
 ht-degree: 0%
@@ -17,21 +17,21 @@ ht-degree: 0%
 
 # Snabbstart för Java API för användarhanteraren (SOAP) {#user-manager-java-api-quick-start-soap}
 
-Java API Quick Start (SOAP) är tillgängligt för API:t för användarhanteraren.
+Java API Quick Start(SOAP) är tillgängligt för API:t för användarhanteraren.
 
-[Snabbstart (SOAP-läge): Lägga till användare med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
+[Snabbstart (SOAP): Lägga till användare med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Ta bort användare med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
+[Snabbstart (SOAP): Ta bort användare med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Skapa grupper med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-creating-groups-using-the-java-api)
+[Snabbstart (SOAP läge): Skapa grupper med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-creating-groups-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hantera användare och grupper med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-managing-users-and-groups-using-the-java-api)
+[Snabbstart (SOAP): Hantera användare och grupper med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-managing-users-and-groups-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hantera roller och behörigheter med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
+[Snabbstart (SOAP): Hantera roller och behörigheter med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Programmatiskt synkronisera användare med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api)
+[Snabbstart (SOAP): Programmatisk synkronisering av användare med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hantera inställningsnoder programmatiskt med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
+[Snabbstart (SOAP läge): Programmatiskt hantera inställningsnoderna med Java API](user-manager-java-api-quick.md#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
@@ -39,7 +39,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 >
 >Snabbstart vid programmering med AEM formulär baseras på dokumentet om du använder ett annat operativsystem, som Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Lägga till användare med Java API {#quick-start-soap-mode-adding-users-using-the-java-api}
+## Snabbstart (SOAP): Lägga till användare med Java API {#quick-start-soap-mode-adding-users-using-the-java-api}
 
 I följande kodexempel läggs en användare med namnet Wendy Blue till i AEM Forms. (Se [Lägga till användare](/help/forms/developing/users.md#adding-users).)
 
@@ -157,7 +157,7 @@ I följande kodexempel läggs en användare med namnet Wendy Blue till i AEM For
  
 ```
 
-## Snabbstart (SOAP-läge): Ta bort användare med Java API {#quick-start-soap-mode-deleting-users-using-the-java-api}
+## Snabbstart (SOAP): Ta bort användare med Java API {#quick-start-soap-mode-deleting-users-using-the-java-api}
 
 I följande kodexempel tas en användare med namnet Wendy Blue bort från AEM Forms. (Se [Ta bort användare](/help/forms/developing/users.md#deleting-users).)
 
@@ -253,7 +253,7 @@ I följande kodexempel tas en användare med namnet Wendy Blue bort från AEM Fo
  
 ```
 
-## Snabbstart (SOAP-läge): Hantera användare och grupper med Java API {#quick-start-soap-mode-managing-users-and-groups-using-the-java-api}
+## Snabbstart (SOAP): Hantera användare och grupper med Java API {#quick-start-soap-mode-managing-users-and-groups-using-the-java-api}
 
 I följande kodexempel hittas en lokal användare och den lokala grupp som användaren tillhör. (Se [Hantera användare och grupper](/help/forms/developing/users.md#managing-users-and-groups).)
 
@@ -377,7 +377,7 @@ I följande kodexempel hittas en lokal användare och den lokala grupp som anvä
  
 ```
 
-## Snabbstart (SOAP-läge): Hantera roller och behörigheter med Java API {#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api}
+## Snabbstart (SOAP): Hantera roller och behörigheter med Java API {#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api}
 
 I följande kodexempel tilldelas användarrollen Tjänster till ett huvudkonto, de roller huvudmannen har skrivs ut och rollen tas sedan bort från huvudkontot. Två tjänster anropas för den här snabbstarten: tjänsten DirectoryManager och tjänsten AuthorizationManager.(Se [Hantera roller och behörigheter](/help/forms/developing/users.md#managing-roles-and-permissions).)
 
@@ -520,7 +520,7 @@ I följande kodexempel tilldelas användarrollen Tjänster till ett huvudkonto, 
  
 ```
 
-## Snabbstart (SOAP-läge): Programmatiskt synkronisera användare med Java API {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
+## Snabbstart (SOAP): Programmatisk synkronisering av användare med Java API {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
 
 I följande Java-kodexempel synkroniseras användare med hjälp av API:er för användarhantering. (Se [Synkronisera användare programmatiskt](/help/forms/developing/users.md#programmatically-synchronizing-users).)
 
@@ -629,7 +629,7 @@ I följande Java-kodexempel synkroniseras användare med hjälp av API:er för a
  
 ```
 
-## Snabbstart (SOAP-läge): Lägga till användare med Java API {#quick_start_soap_mode_adding_users_using_the_java_api-1}
+## Snabbstart (SOAP): Lägga till användare med Java API {#quick_start_soap_mode_adding_users_using_the_java_api-1}
 
 I följande kodexempel läggs en användare med namnet Wendy Blue till i AEM Forms. (Se [Lägga till användare](/help/forms/developing/users.md#adding-users).)
 
@@ -747,7 +747,7 @@ I följande kodexempel läggs en användare med namnet Wendy Blue till i AEM For
  
 ```
 
-## Snabbstart (SOAP-läge): Skapa grupper med Java API {#quick-start-soap-mode-creating-groups-using-the-java-api}
+## Snabbstart (SOAP läge): Skapa grupper med Java API {#quick-start-soap-mode-creating-groups-using-the-java-api}
 
 I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se [Skapa grupper](/help/forms/developing/users.md#creating-groups).)
 
@@ -899,7 +899,7 @@ I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se
  }
 ```
 
-## Snabbstart (SOAP-läge) Hantera inställningsnoder {#quick-start-soap-mode-managing-preferences-nodes}
+## Snabbstart (SOAP) Hantera inställningsnoder {#quick-start-soap-mode-managing-preferences-nodes}
 
 Följande Java-kodsmodeller hanterar Preferences Nodes med API:erna för användarhantering. ( Se [Hantera inställningsnoderna programmatiskt](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
@@ -1002,7 +1002,7 @@ public class ManagePreferences {
 }
 ```
 
-## Snabbstart (SOAP-läge): Hantera inställningsnoder programmatiskt med Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
+## Snabbstart (SOAP läge): Programmatiskt hantera inställningsnoderna med Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
 
 Följande Java-kodmodeller hanterar Preferences Nodes med API:er för användarhantering ( Se [Hantera inställningsnoderna programmatiskt](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 

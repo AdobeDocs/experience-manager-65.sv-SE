@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/managing_services
 products: SG_EXPERIENCEMANAGER/6.4/FORMS
 exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Workbench
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '10702'
 ht-degree: 0%
@@ -451,7 +452,7 @@ Följande inställningar är tillgängliga för konfigurationstjänsten för Mic
 
 ## Inställningar för utdatatjänst {#output-service-settings}
 
-Utdatatjänsten `(OutputService)`Med kan du sammanfoga XML-formulärdata med en formulärdesign som skapats i AEM Designer för att skapa ett dokumentutdataflöde i något av följande format:
+Utdatatjänsten `(OutputService)`Med kan du sammanfoga XML-formulärdata med en formulärdesign som har skapats i AEM Designer för att skapa en dokumentutdataström i något av följande format:
 
 * Ett utdataflöde för PDF eller PDF/A-dokument.
 * En Adobe PostScript-utdataström.
@@ -749,7 +750,7 @@ Webbtjänsten ( `WebService`) används för att processer ska kunna starta webbt
 
 Med webbtjänsten kan processer starta webbtjänståtgärder. En organisation kan till exempel vilja integrera en process för att lagra och hämta information som kontakt- och kontoinformation genom att anropa en tjänsteleverantörs exponerade webbtjänster. Webbtjänsten anropar en angiven webbtjänst och skickar värden för var och en av dess parametrar. Returvärdena från åtgärden sparas sedan i en angiven variabel i en process.
 
-Webbtjänsten interagerar med webbtjänster genom att skicka och ta emot SOAP-meddelanden. Tjänsten stöder även sändning av MIME-, MTOM- och SwaRef-bilagor med SOAP-meddelanden med WS-Attachment-protokollet. Webbtjänstens interaktioner är kompatibla med SAP-system och .NET-webbtjänster.
+Webbtjänsten interagerar med webbtjänster genom att skicka och ta emot SOAP. Tjänsten stöder även sändning av MIME-, MTOM- och SwaRef-bilagor med SOAP meddelanden via protokollet WS-Attachment. Webbtjänstens interaktioner är kompatibla med SAP-system och .NET-webbtjänster.
 
 Följande inställningar är tillgängliga för webbtjänsten.
 

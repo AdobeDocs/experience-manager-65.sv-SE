@@ -8,7 +8,8 @@ topic-tags: operations
 role: Developer
 exl-id: 6af148eb-427a-4b54-9c5f-8750736882d8
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,  Document Services, Reader Extensions
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '3897'
 ht-degree: 0%
@@ -145,7 +146,7 @@ Använd användarrättigheter för ett PDF-dokument med hjälp av Acrobat Reader
 
 [Använda användningsbehörighet för PDF-dokument](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
 
-[Snabbstart (SOAP-läge):Tillämpa användningsrättigheter med Java API](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
+[Snabbstart (SOAP):Tillämpa användningsrättigheter med Java API](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -301,7 +302,7 @@ Ta bort användarrättigheter från ett rättighetsaktiverat PDF-dokument med hj
 
 [Ta bort användningsrättigheter från PDF-dokument](assigning-usage-rights.md#removing-usage-rights-from-pdf-documents)
 
-[Snabbstart (SOAP-läge): Ta bort användningsrättigheter från ett PDF-dokument med Java API](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
+[Snabbstart (SOAP läge): Ta bort användningsrättigheter från ett PDF-dokument med Java API](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -436,7 +437,7 @@ Hämta autentiseringsuppgifter med Acrobat Reader DC Extensions API (Java):
 
 [Hämtar information om autentiseringsuppgifter](assigning-usage-rights.md#retrieving-credential-information)
 
-[Snabbstart (SOAP-läge): Hämta inloggningsinformation med Java API](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[Snabbstart (SOAP läge): Hämtar autentiseringsinformation med Java API](/help/forms/developing/acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

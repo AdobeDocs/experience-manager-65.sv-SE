@@ -8,7 +8,8 @@ noindex: true
 role: Admin,User
 exl-id: b87e07b1-4a19-4888-bad0-c0f5327b9ad3
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 # Adobe Experience Manager (AEM) för AEM Forms {#aem-desktop-app-for-aem-forms}
 
-AEM kan du mappa Adobe Experience Manager (AEM) Assets-databasen och AEM Forms binära filer till en nätverkskatalog på datorn. Du kan visa synkroniserade resurser och binära filer i en filutforskare och använda olika program för att redigera filerna efter behov. Förutom att visa filerna kan du även skapa, överföra och ta bort de binära filerna. Du kan också öppna, redigera och spara filer direkt från programmet. Du kan till exempel öppna och redigera en XDP-fil direkt i Designer. De ändringar du gör av resurserna lokalt återspeglas i AEM Assets-databasen och AEM Forms användargränssnitt.
+AEM kan du mappa Adobe Experience Manager (AEM) Assets-databasen och AEM Forms binära filer till en nätverkskatalog på datorn. Du kan visa synkroniserade resurser och binära filer i en filutforskare och använda olika program för att redigera filerna efter behov. Förutom att visa filerna kan du även skapa, överföra och ta bort de binära filerna. Du kan också öppna, redigera och spara filer direkt från programmet. Du kan till exempel öppna och redigera en XDP-fil direkt från Designer. De ändringar du gör av resurserna lokalt återspeglas i AEM Assets-databasen och AEM Forms användargränssnitt.
 
 Du kan hämta programmet från en AEM. Mer information om hur du hämtar programmet finns i [Versionsinformation för AEM](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=en).
 

@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: 966c3554-25df-4467-866e-11c43cc15b58
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '2331'
 ht-degree: 0%
@@ -139,7 +139,7 @@ Konvertera ett PDF-dokument till ett PDF/A-dokument med Java API:
 
 [Arbeta med PDF/A-dokument](pdf-a-documents.md#working-with-pdf-a-documents)
 
-[Snabbstart (SOAP-läge): Konvertera ett dokument till ett PDF/A-dokument med Java API](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
+[Snabbstart (SOAP): Konvertera ett dokument till ett PDF/A-dokument med Java API](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -292,7 +292,7 @@ Kontrollera kompatibiliteten PDF/A med Java API:
 
 [Arbeta med PDF/A-dokument](pdf-a-documents.md#working-with-pdf-a-documents)
 
-[Snabbstart (SOAP-läge): Kontrollera PDF/A-kompatibilitet med Java API](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
+[Snabbstart (SOAP läge): fastställa kompatibiliteten PDF/A med Java API](/help/forms/developing/docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

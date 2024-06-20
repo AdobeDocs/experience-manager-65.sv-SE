@@ -9,7 +9,7 @@ topic-tags: operations
 role: Developer
 exl-id: 419335b2-2aae-4e83-98ff-18e61b7efa9c
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '2894'
 ht-degree: 0%
@@ -106,7 +106,7 @@ I följande tabell beskrivs stegen i det här diagrammet.
 
 ## Hantera skickade URL UTF-16-data {#handling-submitted-url-utf-16-data}
 
-Om formulärdata skickas som URL UTF-16-data kräver klientdatorn Adobe Reader eller Acrobat 8.1 eller senare. Om formulärdesignen innehåller en skicka-knapp med URL-kodade data (HTTP Post) och datakodningsalternativet är UTF-16, måste formulärdesignen ändras i en textredigerare som Anteckningar. Du kan ställa in kodningsalternativet på antingen `UTF-16LE` eller `UTF-16BE` för skicka-knappen. Designer har inte den här funktionen.
+Om formulärdata skickas som URL UTF-16-data kräver klientdatorn Adobe Reader eller Acrobat 8.1 eller senare. Om formulärdesignen innehåller en skicka-knapp med URL-kodade data (HTTP Post) och datakodningsalternativet är UTF-16, måste formulärdesignen ändras i en textredigerare som Anteckningar. Du kan ställa in kodningsalternativet på antingen `UTF-16LE` eller `UTF-16BE` för skicka-knappen. Designer tillhandahåller inte den här funktionen.
 
 >[!NOTE]
 >
@@ -251,11 +251,11 @@ Hantera inskickade formulär med Forms API (Java):
 
 **Se även**
 
-[Snabbstart (SOAP-läge): Hantera PDF forms som skickats som XML med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
+[Snabbstart (SOAP): Hantera PDF forms som har skickats som XML med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-xml-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hantera HTML-formulär som skickats som XML med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
+[Snabbstart (SOAP läge): Hantera HTML-formulär som skickats som XML med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-html-forms-submitted-as-xml-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hantera PDF forms som har skickats som PDF med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
+[Snabbstart (SOAP läge): Hantera PDF forms som skickats som PDF med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-handling-pdf-forms-submitted-as-pdf-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

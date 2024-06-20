@@ -10,7 +10,8 @@ docset: aem65
 role: Admin,User
 exl-id: 0f9aab7d-8e41-449a-804b-7e1bfa90befd
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1736'
 ht-degree: 0%
@@ -58,7 +59,7 @@ För Correspondence Management-resurser:
 * Listor i textmoduler har förbättrats och återges nu annorlunda. Det kan finnas skillnader i synen. Adobe rekommenderar att du återger och ser bokstäverna där du använder listor i textmoduler.
 * Eftersom bildinnehållsmoduler konverteras till DAM-resurser och layouter och fragment läggs till i formulär under migreringen ändras egenskapen Uppdaterat av för dessa moduler till admin.
 * Resursernas versionshistorik migreras inte och är inte tillgänglig efter migreringen. Den efterföljande versionshistoriken efter migreringen bevaras.
-* Läget Klar att publicera är föråldrat sedan AEM 6.1 Forms, så alla resurser i läget Klar att publicera ändras till läget Ändrat.
+* Tillståndet Ready to Publish har tagits bort sedan AEM 6.1 Forms, vilket innebär att alla resurser i läget Ready to Publish har ändrats till Modified.
 * Eftersom användargränssnittet uppdateras i AEM Forms 6.3 skiljer sig även stegen för att utföra anpassningarna. Gör om anpassningen om du migrerar från en version före 6.3.
 * Layoutfragment flyttas från `/content/apps/cm/layouts/fragmentlayouts/1001` till `/content/apps/cm/modules/fragmentlayouts`. Referens till datamordlista i resurser visar sökvägen till datamappningen i stället för dess namn.
 * Alla tabbavstånd som används för justering i textmoduler måste justeras om. Mer information finns i [Korrespondenshantering - Använda tabbavstånd för att ordna text](https://helpx.adobe.com/aem-forms/kb/cm-tab-spacing-limitations.html).
@@ -176,6 +177,6 @@ När du har kört migreringsverktyget ska du sköta följande uppgifter:
    1. Öppna XFA-filen i den senaste Designer-filen och spara den. Versionen av XFA uppdateras till den senaste.
    1. Överför XFA i Forms användargränssnitt.
 
-1. Publicera alla resurser som publicerades i det tidigare systemet före migreringen. Flyttningsverktyget uppdaterar bara resurserna på Author-instansen och för att uppdatera resurserna på Publish-instanserna måste du publicera resurserna.
+1. Publish alla resurser som publicerades i det tidigare systemet före migreringen. Flyttningsverktyget uppdaterar bara resurserna på författarinstansen och för att uppdatera resurserna på Publish-instanserna måste du publicera resurserna.
 
 1. I AEM Forms 6.4 och 6.5 ändras vissa rättigheter för användargrupperna. Om du vill att någon av dina användare ska kunna överföra XDP-filer och adaptiva Forms-skript eller använda en kodredigerare måste du lägga till dem i gruppen för användare med avancerade formulär. Mallförfattare kan inte heller längre använda kodredigeraren i regelredigeraren. För att användare ska kunna använda en kodredigerare lägger du till dem i gruppen af-template-script-writers. Instruktioner om hur du lägger till användare i grupper finns i [Hantera användare och användargrupper](/help/communities/users.md).

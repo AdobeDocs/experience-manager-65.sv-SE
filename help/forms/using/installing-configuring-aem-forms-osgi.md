@@ -7,7 +7,8 @@ docset: aem65
 role: Admin, User, Developer
 exl-id: 19b5765e-50bc-4fed-8af5-f6bb464516c8
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms, OSGI
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1867'
 ht-degree: 0%
@@ -30,7 +31,7 @@ AEM Forms är en kraftfull plattform i företagsklass och datainhämtning (adapt
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en AEM Author och AEM Publish-instans för att kunna köra AEM Forms datainhämtningsfunktioner. Följande topologi rekommenderas för att köra AEM Forms AEM Forms datainsamlingsfunktioner. Mer information om topologin finns i [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver bara minst en instans av AEM Author och AEM Publish för att kunna köra AEM Forms datainhämtningsfunktioner. Följande topologi rekommenderas för att köra AEM Forms AEM Forms datainsamlingsfunktioner. Mer information om topologin finns i [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
 ![rekommenderad topologi](assets/recommended-topology.png)
 
@@ -41,7 +42,7 @@ Innan du börjar installera och konfigurera datainhämtningsfunktionen i AEM For
 * Maskinvaru- och programvaruinfrastruktur finns på plats. En detaljerad lista över maskin- och programvara som stöds finns på [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
 * Installationssökvägen för AEM-instansen innehåller inte blanksteg.
-* En AEM-instans körs. För Windows-användare måste du installera AEM i förhöjt läge. I AEM är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du behöver minst två [AEM (en författare och en publicering)](/help/sites-deploying/deploy.md) för att köra AEM Forms datainhämtningsfunktioner:
+* En AEM-instans körs. För Windows-användare måste du installera AEM i förhöjt läge. I AEM är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. Du behöver minst två [AEM (en författare och en Publish)](/help/sites-deploying/deploy.md) för att köra AEM Forms datainhämtningsfunktioner:
 
    * **Upphovsman**: En AEM som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
    * **Publicera**: En AEM instans som skickar det publicerade innehållet till allmänheten via internet eller ett internt nätverk.
@@ -124,7 +125,7 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
    >
    > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
-1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
+1. Upprepa steg 1-7 för alla Author- och Publish-instanser.
 
 ### (Endast Windows) Automatisk installation av Visual Studio-omdistribuerbara filer {#automatic-installation-visual-studio-redistributables}
 
@@ -152,7 +153,7 @@ AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska
 
 #### Konfigurera RSA- och BouncyCastle-bibliotek  {#configure-rsa-and-bouncycastle-libraries}
 
-Utför följande steg på alla författare- och publiceringsinstanser för att starta delegeringen av biblioteken:
+Utför följande steg på alla författare- och Publish-instanser för att starta delegeringen av biblioteken:
 
 1. Stoppa den underliggande AEM.
 1. Öppna `[AEM installation directory]\crx-quickstart\conf\sling.properties` fil för redigering.
@@ -166,7 +167,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att s
    ```
 
 1. Spara och stäng filen och starta AEM.
-1. Upprepa steg 1-4 för alla författarinstanser och publiceringsinstanser.
+1. Upprepa steg 1-4 för alla författare och Publish-förekomster.
 
 #### Konfigurera serialiseringsagenten {#configure-the-serialization-agent}
 
@@ -175,7 +176,7 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är `https://'[server]:[port]'/system/console/configMgr`.
 1. Sök efter **com.adobe.cq.deserfw.impl.DeserializationFirewallImpl.name** och öppna konfigurationen.
 1. Lägg till **sun.util.calendar** till **tillåtelselista** fält. Klicka **Spara**.
-1. Upprepa steg 1-3 för alla författarinstanser och publiceringsinstanser.
+1. Upprepa steg 1-3 för alla författare och Publish-förekomster.
 
 ### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
 

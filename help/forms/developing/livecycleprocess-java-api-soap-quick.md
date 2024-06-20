@@ -8,7 +8,7 @@ topic-tags: develop
 role: Developer
 exl-id: 7b309743-10ea-4d10-adb6-be5ce9f03ce2
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '423'
 ht-degree: 0%
@@ -17,19 +17,19 @@ ht-degree: 0%
 
 # LiveCycleProcess Java API (SOAP) - snabbstart {#livecycleprocess-java-api-soap-quick-start}
 
-Java API(SOAP) Quick Start är tillgängligt för processer. A *processinstans* är en förekomst av en specifik process som startades av en anropsmetod som anrops-API:t eller från arbetsytan.
+Snabbstart för Java API(SOAP) är tillgängligt för processer. A *processinstans* är en förekomst av en specifik process som startades av en anropsmetod som anrops-API:t eller från arbetsytan.
 
-[Snabbstart (SOAP-läge): Söka efter processinstanser med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
+[Snabbstart (SOAP): Söka efter processinstanser med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Pausa processinstanser med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-suspending-process-instances-using-the-java-api)
+[Snabbstart (SOAP läge): Pausa processinstanser med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-suspending-process-instances-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Starta inaktiverade processinstanser med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api)
+[Snabbstart (SOAP läge): Starta inaktiverade processinstanser med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Avsluta processinstanser med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-terminating-process-instances-using-the-java-api)
+[Snabbstart (SOAP): Avsluta processinstanser med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-terminating-process-instances-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Rensa processdata med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-purging-process-data-using-the-java-api)
+[Snabbstart (SOAP): Rensa processdata med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-purging-process-data-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hämta status för ett jobb med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
+[Snabbstart (SOAP läge): Hämta status för ett jobb med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
@@ -37,7 +37,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 >
 >Snabbstart i Programmering med AEM Forms är baserat på Forms om du använder ett annat operativsystem, som Unix, och byter ut Windows-specifika sökvägar mot sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
 
-## Snabbstart (SOAP-läge): Söka efter processinstanser med Java API {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
+## Snabbstart (SOAP): Söka efter processinstanser med Java API {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
 
 I följande Java-kodexempel söks det efter processinstanser som är baserade på *Lån - fördefinierat* -processen.
 
@@ -155,7 +155,7 @@ I följande Java-kodexempel söks det efter processinstanser som är baserade p�
  
 ```
 
-## Snabbstart (SOAP-läge): Pausa processinstanser med Java API {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
+## Snabbstart (SOAP läge): Pausa processinstanser med Java API {#quick-start-soap-mode-suspending-process-instances-using-the-java-api}
 
 I följande Java-kodexempel pausas en processinstans. Om du vill göra uppehåll i en processinstans måste du ha den processanropsidentifierare som kan hämtas när en långvarig process anropas med API:t för anrop.
 
@@ -247,7 +247,7 @@ I följande Java-kodexempel pausas en processinstans. Om du vill göra uppehåll
  
 ```
 
-## Snabbstart (SOAP-läge): Starta inaktiverade processinstanser med Java API {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
+## Snabbstart (SOAP läge): Starta inaktiverade processinstanser med Java API {#quick-start-soap-mode-starting-suspended-process-instances-using-the-java-api}
 
 I följande Java-kodexempel startas en instans av en pausad process.
 
@@ -335,7 +335,7 @@ I följande Java-kodexempel startas en instans av en pausad process.
  
 ```
 
-## Snabbstart (SOAP-läge): Avsluta processinstanser med Java API {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}
+## Snabbstart (SOAP): Avsluta processinstanser med Java API {#quick-start-soap-mode-terminating-process-instances-using-the-java-api}
 
 I följande Java-kodexempel avslutas en processinstans med identifierarvärdet 756c2860a242fb101ec7a5bc0977fd6.
 
@@ -426,7 +426,7 @@ I följande Java-kodexempel avslutas en processinstans med identifierarvärdet 7
  
 ```
 
-## Snabbstart (SOAP-läge): Rensa processdata med Java API {#quick-start-soap-mode-purging-process-data-using-the-java-api}
+## Snabbstart (SOAP): Rensa processdata med Java API {#quick-start-soap-mode-purging-process-data-using-the-java-api}
 
 Följande Java-kod rensar data från en process med namnet *SecureDocument*. Ett filter används som anger att data ska rensas för de processinstanser där processvariabeln med namnet *inValue* är större än 200.
 
@@ -533,7 +533,7 @@ Följande Java-kod rensar data från en process med namnet *SecureDocument*. Ett
  
 ```
 
-## Snabbstart (SOAP-läge): Hämta status för ett jobb med Java API {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}
+## Snabbstart (SOAP läge): Hämta status för ett jobb med Java API {#quick-start-soap-mode-retrieving-the-status-of-a-job-using-the-java-api}
 
 I följande kodexempel hämtas statusen för 10 AEM Forms-jobb.
 

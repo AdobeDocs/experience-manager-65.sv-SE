@@ -9,7 +9,7 @@ topic-tags: operations
 role: Developer
 exl-id: febf5350-3fc5-48c0-8bc5-198daff15936
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '2189'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Återge Forms baserat på fragment {#rendering-forms-based-on-fragments-inner}
 
-Forms kan återge formulär som är baserade på fragment som du skapar med Designer. A *fragment* är en återanvändbar del av ett formulär och sparas som en separat XDP-fil som kan infogas i flera formulärdesigner. Ett fragment kan t.ex. innehålla ett adressblock eller juridisk text.
+Forms-tjänsten kan återge formulär som är baserade på fragment som du skapar med Designer. A *fragment* är en återanvändbar del av ett formulär och sparas som en separat XDP-fil som kan infogas i flera formulärdesigner. Ett fragment kan t.ex. innehålla ett adressblock eller juridisk text.
 
 Med fragment blir det enklare och snabbare att skapa och underhålla stora mängder formulär. När du skapar ett formulär infogar du en referens till det önskade fragmentet och fragmentet visas i formuläret. Fragmentreferensen innehåller ett delformulär som pekar på den fysiska XDP-filen. Mer information om hur du skapar formulärdesigner baserade på fragment finns i [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63)
 
@@ -36,7 +36,7 @@ Här är några fördelar med att använda fragment:
 * **Globala uppdateringar**: Du kan bara använda fragment för att göra globala ändringar i flera formulär en gång i en fil. Du kan ändra innehåll, skriptobjekt, databindningar, layout eller format i ett fragment, och alla XDP-formulär som refererar till fragmentet återger ändringarna.
 * Ett vanligt element i många formulär kan till exempel vara ett adressblock som innehåller ett nedrullningsbart listobjekt för landet. Om du behöver uppdatera värdena för listruteobjektet måste du öppna många formulär för att kunna göra ändringarna. Om du inkluderar adressblocket i ett fragment behöver du bara öppna en fragmentfil för att kunna göra ändringarna.
 * Om du vill uppdatera ett fragment i ett PDF-formulär måste du spara om formuläret i Designer.
-* **Skapa delade formulär**: Du kan använda fragment för att dela skapandet av formulär mellan flera resurser. Blankettutvecklare med expertis inom skript eller andra avancerade funktioner i Designer kan utveckla och dela fragment som utnyttjar skriptning och dynamiska egenskaper. Formulärdesigners kan använda dessa fragment för att utforma formulärdesigner och säkerställa att alla delar av ett formulär har ett konsekvent utseende och funktion i flera formulär som utformats av flera personer.
+* **Skapa delade formulär**: Du kan använda fragment för att dela skapandet av formulär mellan flera resurser. Blankettutvecklare med expertkunskaper inom skript eller andra avancerade funktioner i Designer kan utveckla och dela fragment som utnyttjar skriptfunktioner och dynamiska egenskaper. Formulärdesigners kan använda dessa fragment för att utforma formulärdesigner och säkerställa att alla delar av ett formulär har ett konsekvent utseende och funktion i flera formulär som utformats av flera personer.
 
 ### Sammanställa en formulärdesign med fragment {#assembling-a-form-design-assembled-using-fragments}
 
@@ -148,7 +148,7 @@ När Forms-tjänsten återger ett formulär returneras en formulärdataström so
 
 [Återge Forms baserat på fragment](#rendering-forms-based-on-fragments)
 
-[Snabbstart (SOAP-läge): Återge ett formulär baserat på fragment med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
+[Snabbstart (SOAP läge): Återge ett formulär baserat på fragment med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-based-on-fragments-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

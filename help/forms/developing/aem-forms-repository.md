@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: a07e51ca-fea0-4719-8071-1b7e805de2ae
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '9036'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Följande värden visar några exempel på URI-värden:
 
 >[!NOTE]
 >
->Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL i en webbläsare `https://[server name]:[server port]/repository`. Du kan verifiera snabbstartsresultat som är kopplade till avsnittet Arbeta med AEM Forms-databas med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare. (Se [Snabbstart (SOAP-läge): Skriva en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
+>Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL i en webbläsare `https://[server name]:[server port]/repository`. Du kan verifiera snabbstartsresultat som är kopplade till avsnittet Arbeta med AEM Forms-databas med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare. (Se [Snabbstart (SOAP): Skriva en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
 
 Databas-API:t innehåller flera åtgärder som du kan använda för att lagra och hämta information från databasen. Du kan till exempel få en lista med resurser eller hämta särskilda resurser som lagras i databasen när en resurs behövs som en del av bearbetningen av ett program.
 
@@ -162,7 +162,7 @@ Skapa en mapp med hjälp av Repository Service API (Java):
 
 [Skapar mappar](aem-forms-repository.md#creating-folders)
 
-[Snabbstart (SOAP-läge): Skapa en mapp med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api)
+[Snabbstart (SOAP): Skapa en mapp med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -308,7 +308,7 @@ Skriv en resurs med hjälp av Repository Service API (Java):
 
 [Skriver resurser](aem-forms-repository.md#writing-resources)
 
-[Snabbstart (SOAP-läge): Skriva en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)
+[Snabbstart (SOAP): Skriva en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -434,7 +434,7 @@ Visa resurser med hjälp av Repository Service API (Java):
 
 [Resurser listas](aem-forms-repository.md#listing-resources).
 
-[Snabbstart (SOAP-läge): Visa resurser med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-listing-resources-using-the-java-api)
+[Snabbstart (SOAP): Visa resurser med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-listing-resources-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -549,7 +549,7 @@ Läs en resurs med hjälp av Repository Service API (Java):
 
 [Läser resurser](aem-forms-repository.md#reading-resources)
 
-[Snabbstart (SOAP-läge): Läsa en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-reading-a-resource-using-the-java-api)
+[Snabbstart (SOAP): Läsa en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-reading-a-resource-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -665,7 +665,7 @@ Uppdatera en resurs med hjälp av Repository Service API (Java):
 
 [Uppdaterar resurser](aem-forms-repository.md#updating-resources)
 
-[Snabbstart (SOAP-läge): Uppdatera en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-updating-a-resource-using-the-java-api)
+[Snabbstart (SOAP): Uppdatera en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-updating-a-resource-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -845,7 +845,7 @@ Sök efter en resurs med hjälp av Repository Service API (Java):
 
 [Söker efter resurser](aem-forms-repository.md#searching-for-resources)
 
-[Snabbstart (SOAP-läge): Söka efter resurser med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-searching-for-resources-using-the-java-api)
+[Snabbstart (SOAP): Söka efter resurser med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-searching-for-resources-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -941,7 +941,7 @@ Skapa relationsresurser genom att använda Java API för databastjänsten och ut
 
 [Skapar resursrelationer](aem-forms-repository.md#creating-resource-relationships)
 
-[Snabbstart (SOAP-läge): Skapa relationer mellan resurser med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-creating-relationships-between-resources-using-the-java-api)
+[Snabbstart (SOAP läge): Skapa relationer mellan resurser med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-creating-relationships-between-resources-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1093,7 +1093,7 @@ Lås resurser med hjälp av Repository Service API (Java):
 
 [Låser resurser](aem-forms-repository.md#locking-resources)
 
-[Snabbstart (SOAP-läge): Låsa en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-locking-a-resource-using-the-java-api)
+[Snabbstart (SOAP): Låsa en resurs med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-locking-a-resource-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -1219,7 +1219,7 @@ Ta bort en resurs med Repository API (Java):
 
 [Resurser tas bort](aem-forms-repository.md#deleting-resources)
 
-[Snabbstart (SOAP-läge): Söka efter resurser med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-searching-for-resources-using-the-java-api)
+[Snabbstart (SOAP): Söka efter resurser med Java API](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-searching-for-resources-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

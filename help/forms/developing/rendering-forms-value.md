@@ -9,7 +9,7 @@ topic-tags: operations
 role: Developer
 exl-id: a3a6a06d-ec90-4147-a5f0-e776a086ee12
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '1822'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 **Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
 
-Vanligtvis skickas en formulärdesign som har skapats i Designer med referens till Forms-tjänsten. Formulärdesigner kan vara stora och därför är det mer effektivt att skicka dem med referens för att undvika att behöva konvertera byte för formulärdesign efter värde. Forms-tjänsten kan även cachelagra formulärdesignen så att den inte behöver läsa formulärdesignen kontinuerligt när den cache-lagras.
+Vanligtvis skickas en formulärdesign som har skapats i Designer med referens till tjänsten Forms. Formulärdesigner kan vara stora och därför är det mer effektivt att skicka dem med referens för att undvika att behöva konvertera byte för formulärdesign efter värde. Forms-tjänsten kan även cachelagra formulärdesignen så att den inte behöver läsa formulärdesignen kontinuerligt när den cache-lagras.
 
 Om en formulärdesign innehåller ett UUID-attribut cache-lagras den. UUID-värdet är unikt för alla formulärdesigner och används för att unikt identifiera ett formulär. När du återger ett formulär efter värde bör formuläret bara cachelagras när det används upprepade gånger. Om formuläret inte används upprepade gånger och måste vara unikt, kan du undvika att cache-lagra formuläret med cachelagringsalternativ som har angetts med AEM Forms API.
 
@@ -143,7 +143,7 @@ När Forms-tjänsten återger ett formulär efter värde returneras en formulär
 
 [Återger Forms efter värde](/help/forms/developing/rendering-forms.md)
 
-[Snabbstart (SOAP-läge): Återge efter värde med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
+[Snabbstart (SOAP): Återge efter värde med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-by-value-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

@@ -8,30 +8,30 @@ topic-tags: develop
 role: Developer
 exl-id: d61c20a9-27c6-4b57-ab00-dfaa77fe3f75
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '524'
 ht-degree: 0%
 
 ---
 
-# Java API-snabbstart (SOAP) för tjänsten Task Manager {#task-manager-service-java-api-quickstart-soap}
+# Snabbstart för Java API för tjänsten Task Manager (SOAP) {#task-manager-service-java-api-quickstart-soap}
 
 Följande snabbstarter är tillgängliga för tjänsten Task Manager.
 
-[Snabbstart (SOAP-läge): Tilldela uppgifter med Java API](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
+[Snabbstart (SOAP): Tilldela uppgifter med Java API](task-manager-service-java-api.md#quick-start-soap-mode-assigning-tasks-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Låsa uppgifter med Java API](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
+[Snabbstart (SOAP): Låsa uppgifter med Java API](task-manager-service-java-api.md#quick-start-soap-mode-locking-tasks-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hämta uppgifter som tilldelats användare med Java API](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
+[Snabbstart (SOAP läge): Hämta uppgifter som tilldelats användare med Java API](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hämta formulärdata från uppgifter med Java API](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
+[Snabbstart (SOAP läge): Hämta formulärdata från uppgifter med Java API](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Ändra formulärdata med Java API](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
+[Snabbstart (SOAP): Ändra formulärdata med Java API](task-manager-service-java-api.md#quick-start-soap-mode-modifying-form-data-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hämta bifogade filer från uppgifter med Java API](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
+[Snabbstart (SOAP): Hämta bifogade filer från uppgifter med Java API](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hämta aktivitetsinformation med Java API](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
+[Snabbstart (SOAP): Hämta aktivitetsinformation med Java API](task-manager-service-java-api.md#quick-start-soap-mode-retrieving-task-information-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
@@ -43,7 +43,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 >
 >Snabbstart i programmering med AEM Forms baseras på Forms serveroperativsystem. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Tilldela uppgifter med Java API {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
+## Snabbstart (SOAP): Tilldela uppgifter med Java API {#quick-start-soap-mode-assigning-tasks-using-the-java-api}
 
 I följande Java-kodexempel tilldelas en uppgift till användaren Tony Blue.
 
@@ -176,7 +176,7 @@ I följande Java-kodexempel tilldelas en uppgift till användaren Tony Blue.
  
 ```
 
-## Snabbstart (SOAP-läge): Låsa uppgifter med Java API {#quick-start-soap-mode-locking-tasks-using-the-java-api}
+## Snabbstart (SOAP): Låsa uppgifter med Java API {#quick-start-soap-mode-locking-tasks-using-the-java-api}
 
 I följande Java-kodexempel låses en aktivitet som motsvarar aktivitetsidentifierarvärdet 2.
 
@@ -265,7 +265,7 @@ I följande Java-kodexempel låses en aktivitet som motsvarar aktivitetsidentifi
  
 ```
 
-## Snabbstart (SOAP-läge): Hämta uppgifter som tilldelats användare med Java API {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
+## Snabbstart (SOAP läge): Hämta uppgifter som tilldelats användare med Java API {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
 
 I följande Java-kodexempel hämtas alla uppgifter som tilldelats en användare med namnet *tonblå*. Observera att den här användaren anges i anslutningsegenskaperna. Information om returnerade uppgifter, som identifierarvärde och beskrivning, visas.
 
@@ -391,7 +391,7 @@ I följande Java-kodexempel hämtas alla uppgifter som tilldelats en användare 
  }
 ```
 
-## Snabbstart (SOAP-läge): Hämta formulärdata från uppgifter med Java API {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
+## Snabbstart (SOAP läge): Hämta formulärdata från uppgifter med Java API {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
 
 I följande Java-kodexempel hämtas formulärdata från en uppgift med identifierarvärdet 304. Formulärdata skrivs till en XML-fil med namnet *FormData.xml* på C:\Adobe.
 
@@ -497,7 +497,7 @@ I följande Java-kodexempel hämtas formulärdata från en uppgift med identifie
  
 ```
 
-## Snabbstart (SOAP-läge): Ändra formulärdata med Java API {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
+## Snabbstart (SOAP): Ändra formulärdata med Java API {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
 
 I följande Java-kodexempel uppdateras ett formulär med data som finns i *FormData.xml* -fil.
 
@@ -607,7 +607,7 @@ I följande Java-kodexempel uppdateras ett formulär med data som finns i *FormD
  
 ```
 
-## Snabbstart (SOAP-läge): Hämta bifogade filer från uppgifter med Java API {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
+## Snabbstart (SOAP): Hämta bifogade filer från uppgifter med Java API {#quick-start-soap-mode-retrieving-file-attachments-from-tasks-using-the-java-api}
 
 Följande Java-kodexempel hämtar bifogade filer. Varje bifogad fil sparas som en TXT-fil.
 
@@ -711,7 +711,7 @@ Följande Java-kodexempel hämtar bifogade filer. Varje bifogad fil sparas som e
  
 ```
 
-## Snabbstart (SOAP-läge): Hämta aktivitetsinformation med Java API {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
+## Snabbstart (SOAP): Hämta aktivitetsinformation med Java API {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
 
 I följande Java-kodexempel hämtas alla uppgifter som är baserade på en process med namnet *Lån - fördefinierat*. Statusen för varje returnerad uppgift kontrolleras för att säkerställa att den är en slutförd uppgift. Information som namnet på den användare som slutförde uppgiften och datumet då uppgiften slutfördes hämtas och visas.
 

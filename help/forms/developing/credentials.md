@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: 1101c85a-6a90-471d-a7be-8d25765e84bf
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '1077'
 ht-degree: 0%
@@ -126,7 +126,7 @@ Importera en autentiseringsuppgift till AEM Forms med Trust Manager API (Java):
 
 [Importera autentiseringsuppgifter med Trust Manager API](credentials.md#importing-credentials-by-using-the-trust-manager-api)
 
-[Snabbstart (SOAP-läge): Importera autentiseringsuppgifter med Java API](/help/forms/developing/credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
+[Snabbstart (SOAP): Importera autentiseringsuppgifter med Java API](/help/forms/developing/credential-service-java-api-quick.md#quick-start-soap-mode-importing-credentials-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -199,7 +199,7 @@ Ta bort en autentiseringsuppgift från AEM Forms med Trust Manager API (Java):
 
 [Ta bort autentiseringsuppgifter med Trust Manager API](credentials.md#deleting-credentials-by-using-the-trust-manager-api)
 
-[Snabbstart (SOAP-läge): Ta bort autentiseringsuppgifter med Java API](/help/forms/developing/credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
+[Snabbstart (SOAP läge): Ta bort autentiseringsuppgifter med Java API](/help/forms/developing/credential-service-java-api-quick.md#quick-start-soap-mode-deleting-credentials-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

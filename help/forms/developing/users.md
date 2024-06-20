@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: d7c5bb84-a988-4b2e-a587-f4e5b50fea58
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '6201'
 ht-degree: 0%
@@ -82,7 +82,7 @@ I följande tabell beskrivs varje steg i autentiseringsprocessen.
 
 >[!NOTE]
 >
->Om serverns tidszon inte är densamma som klientens tidszon kan följande autentiseringsfel uppstå när WSDL för tjänsten AEM Forms Generate PDF används i en inbyggd SOAP-stack med en .NET-klient i ett WebSphere Application Server-kluster:
+>Om serverns tidszon skiljer sig från klientens tidszon kan följande autentiseringsfel uppstå när WSDL används för tjänsten AEM Forms Generate PDF i en intern SOAP med en .NET-klient i ett WebSphere Application Server-kluster:
 
 `[com.adobe.idp.um.webservices.WSSecurityHandler] errorCode:12803 errorCodeHEX:0x3203 message:WSSecurityHandler: UM authenticate returns exception : An error was discovered processing the <wsse:Security> header. (WSSecurityEngine: Invalid timestamp The security semantics of message have expired).`
 
@@ -202,7 +202,7 @@ Lägg till användare med hjälp av kataloghanterarens tjänst-API (Java):
 
 [Sammanfattning av steg](users.md#summary-of-steps)
 
-[Snabbstart (SOAP-läge): Lägga till användare med Java API](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
+[Snabbstart (SOAP): Lägga till användare med Java API](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-adding-users-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -335,7 +335,7 @@ Ta bort användare med hjälp av kataloghanterarens tjänst-API (Java):
 
 [Snabbstart (EJB-läge): Ta bort användare med Java API](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Ta bort användare med Java API](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
+[Snabbstart (SOAP): Ta bort användare med Java API](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-deleting-users-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -667,7 +667,7 @@ Så här hanterar du roller och behörigheter med Java (Authorization Manager Se
 
 [Sammanfattning av steg](users.md#summary-of-steps)
 
-[Snabbstart (SOAP-läge): Hantera roller och behörigheter med Java API](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
+[Snabbstart (SOAP): Hantera roller och behörigheter med Java API](/help/forms/developing/user-manager-java-api-quick.md#quick-start-soap-mode-managing-roles-and-permissions-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

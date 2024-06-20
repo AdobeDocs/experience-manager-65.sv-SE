@@ -8,7 +8,8 @@ geptopics: SG_AEMFORMS/categories/jee
 role: Admin,User
 exl-id: 1e39455e-f588-42a2-91f5-daefcfed82a0
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms, OSGI
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '965'
 ht-degree: 0%
@@ -101,7 +102,7 @@ Gör följande för att uppgradera från AEM 6.3 Forms eller AEM 6.4 Forms till 
 1. Kontrollera att servern har uppgraderats, att alla data har migrerats och att den fungerar som vanligt.
 
    * **Verifiera paketens status:** Kontrollera att alla paket är i aktivt läge.
-   * **Verifiera replikering och omvänd replikering:** Publicera, fyll i och skicka några migrerade formulär. Verifiera också skickade data.
+   * **Verifiera replikering och omvänd replikering:** Publish, fyll i och skicka in några blanketter. Verifiera också skickade data.
    * **Verifiera åtkomst till användargränssnitt för administratörer och utvecklare:** Logga in AEM instansen från ett administratörskonto och verifiera att du har åtkomst till följande URL:er:
 
       * `https://'[server]:[port]'/crx/packmgr`

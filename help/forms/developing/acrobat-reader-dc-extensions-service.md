@@ -1,5 +1,5 @@
 ---
-title: Acrobat Reader DC-tillägg ServiceJava API - snabbstart (SOAP)
+title: Acrobat Reader DC-tillägg ServiceJava API Quick Start(SOAP)
 description: Använd tjänsten Acrobat Reader DC Extensions för att lägga in användarrättigheter i ett PDF-dokument, ta bort användningsrättigheter från PDF-dokument och hämta information om de autentiseringsuppgifter som används för att lägga in användarrättigheter i ett rättighetsaktiverat PDF-dokument med namnet LoanUsageRights.pdf.
 contentOwner: admin
 content-type: reference
@@ -7,7 +7,7 @@ topic-tags: develop
 role: Developer
 exl-id: 82f0b6c1-ca0c-48c7-b7f6-b54704ac0830
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '310'
 ht-degree: 0%
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 Följande snabbstarter är tillgängliga för tjänsten Acrobat Reader DC Extensions.
 
-[Snabbstart (SOAP-läge):Tillämpa användningsrättigheter med Java API](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
+[Snabbstart (SOAP):Tillämpa användningsrättigheter med Java API](#quick-start-soap-mode-applying-usage-rights-using-the-java-api)
 
 [Ta bort användningsrättigheter från PDF-dokument](#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hämta inloggningsinformation med Java API](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
+[Snabbstart (SOAP läge): Hämtar autentiseringsinformation med Java API](acrobat-reader-dc-extensions-service.md#quick-start-soap-mode-retrieving-credential-information-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
@@ -30,7 +30,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 >
 >Snabbstart i programmering med AEM Forms baseras på Forms serveroperativsystem. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge):Tillämpa användningsrättigheter med Java API {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
+## Snabbstart (SOAP):Tillämpa användningsrättigheter med Java API {#quick-start-soap-mode-applying-usage-rights-using-the-java-api}
 
 I följande Java-kodexempel tillämpas användarrättigheter på ett PDF-dokument med namnet *Loan.pdf*. Det rättighetsaktiverade PDF-dokumentet sparas som en PDF-fil med namnet *LoanUsageRights.pdf*. Följande användarrättigheter gäller för det här PDF-dokumentet: `enabledComments`, `enabledFormFillIn`och `enabledDigitalSignatures`. (Se [Använda användningsbehörighet för PDF-dokument](/help/forms/developing/assigning-usage-rights.md).)
 
@@ -142,7 +142,7 @@ I följande Java-kodexempel tillämpas användarrättigheter på ett PDF-dokumen
   
 ```
 
-## Snabbstart (SOAP-läge): Ta bort användningsrättigheter från ett PDF-dokument med Java API {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
+## Snabbstart (SOAP läge): Ta bort användningsrättigheter från ett PDF-dokument med Java API {#quick-start-soap-mode-removing-usage-rights-from-a-pdf-document-using-the-java-api}
 
 I följande Java-kodexempel tas användarrättigheter bort från ett rättighetsaktiverat PDF-dokument med namnet *LoanUsageRights.pdf*. (Se [Ta bort användningsrättigheter från PDF-dokument](/help/forms/developing/assigning-usage-rights.md).)
 
@@ -242,7 +242,7 @@ I följande Java-kodexempel tas användarrättigheter bort från ett rättighets
  
 ```
 
-## Snabbstart (SOAP-läge): Hämta inloggningsinformation med Java API {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
+## Snabbstart (SOAP läge): Hämtar autentiseringsinformation med Java API {#quick-start-soap-mode-retrieving-credential-information-using-the-java-api}
 
 I följande Java-kodexempel hämtas information om de autentiseringsuppgifter som används för att tillämpa användarrättigheter på ett PDF-dokument med rättighetsaktiverade rättigheter som heter *LoanUsageRights.pdf*. (Se [Hämtar information om autentiseringsuppgifter](/help/forms/developing/assigning-usage-rights.md).)
 

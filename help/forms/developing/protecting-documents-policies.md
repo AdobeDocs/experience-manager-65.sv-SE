@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: ff42579e-6aaf-433d-8b5d-9e9dd0957250
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '15394'
 ht-degree: 0%
@@ -261,7 +261,7 @@ Skapa en profil med hjälp av API:t för dokumentsäkerhet (Java):
 
 Följande kodexempel innehåller information om hur du använder Document Security-tjänsten:
 
-* &quot;Snabbstart (SOAP-läge): Skapa en profil med Java API&quot;
+* &quot;Snabbstart (SOAP läge): Skapa en profil med Java API&quot;
 
 ### Skapa en profil med webbtjänstens API {#create-a-policy-using-the-web-service-api}
 
@@ -401,7 +401,7 @@ Innan de ändringar du gör i en profil börjar gälla måste du uppdatera den m
 
 **Exempel på koder**
 
-Exempel på kod som använder dokumentsäkerhetstjänsten finns i Snabbstart (SOAP-läge): Ändra en profil med hjälp av Java API-avsnittet.
+Exempel på kod som använder dokumentsäkerhetstjänsten finns i Snabbstart(SOAP): Ändra en profil med hjälp av Java API-avsnittet.
 
 ### Ändra befintliga profiler med webbtjänstens API {#modify-existing-policies-using-the-web-service-api}
 
@@ -504,7 +504,7 @@ Ta bort en profil med hjälp av dokumentsäkerhets-API (Java):
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (SOAP-läge): Ta bort en princip med Java API&quot;
+* &quot;Snabbstart (SOAP läge): Ta bort en princip med Java API&quot;
 
 ### Ta bort profiler med webbtjänstens API {#delete-policies-using-the-web-service-api}
 
@@ -640,7 +640,7 @@ Tillämpa en profil på ett PDF-dokument med hjälp av dokumentets säkerhets-AP
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
 * &quot;Snabbstart (EJB-läge): Tillämpa en princip på ett PDF-dokument med Java API&quot;
-* &quot;Snabbstart (SOAP-läge): Tillämpa en princip på ett PDF-dokument med Java API&quot;
+* &quot;Snabbstart (SOAP läge): Tillämpa en princip på ett PDF-dokument med Java API&quot;
 
 **Se även**
 
@@ -791,7 +791,7 @@ Ta bort en profil från ett principskyddat PDF-dokument med hjälp av dokuments�
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (SOAP-läge): Ta bort en princip från ett PDF-dokument med Java API&quot;
+* &quot;Snabbstart (SOAP läge): Ta bort en princip från ett PDF-dokument med Java API&quot;
 
 ### Ta bort en princip med webbtjänstens API {#remove-a-policy-using-the-web-service-api}
 
@@ -934,7 +934,7 @@ Om du vill återkalla ett profilskyddat dokument anger du ID för licensen för 
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (SOAP-läge): Återkalla ett dokument med Java API&quot;
+* &quot;Snabbstart (SOAP läge): Återkalla ett dokument med Java API&quot;
 
 ### Återkalla åtkomst till dokument med hjälp av webbtjänstens API {#revoke-access-to-documents-using-the-web-service-api}
 
@@ -1066,7 +1066,7 @@ Om du vill återupprätta åtkomsten till ett återkallat PDF-dokument måste du
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (SOAP-läge): Återställa åtkomst till ett återkallat dokument med hjälp av webbtjänstens API&quot;
+* &quot;Snabbstart (SOAP läge): Återställa åtkomst till ett återkallat dokument med hjälp av webbtjänstens API&quot;
 
 ### Återställa åtkomst till återkallade dokument med hjälp av webbtjänstens API {#reinstate-access-to-revoked-documents-using-the-web-service-api}
 
@@ -1200,7 +1200,7 @@ Inspect är ett policyskyddat PDF-dokument med hjälp av API:t för dokumentsäk
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (SOAP-läge): Inspektera principskyddade PDF-dokument med Java API&quot;
+* &quot;Snabbstart (SOAP läge): Inspektera principskyddade PDF-dokument med Java API&quot;
 
 ### Inspect Policy Protected PDF Documents med hjälp av webbtjänstens API {#inspect-policy-protected-pdf-documents-using-the-web-service-api}
 
@@ -1420,7 +1420,7 @@ Skapa en vattenstämpel med API:t för dokumentsäkerhet (Java):
 
 Följande snabbstarter innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (SOAP-läge): Skapa en vattenstämpel med Java API&quot;
+* &quot;Snabbstart (SOAP läge): Skapa en vattenstämpel med Java API&quot;
 
 ### Skapa vattenstämplar med webbtjänstens API {#create-watermarks-using-the-web-service-api}
 
@@ -1567,7 +1567,7 @@ När du har ändrat en vattenstämpels attribut måste du uppdatera vattenstämp
 
 **Exempel på koder**
 
-Exempel på kod som använder dokumentsäkerhetstjänsten finns i Snabbstart (SOAP-läge): Ändra en vattenstämpel med hjälp av Java API-avsnittet.
+Exempel på kod som använder dokumentsäkerhetstjänsten finns i Snabb start(SOAP): Ändra en vattenstämpel med hjälp av Java API-avsnittet.
 
 ### Ändra vattenstämplar med webbtjänstens API {#modify-watermarks-using-the-web-service-api}
 
@@ -2039,7 +2039,7 @@ Tillämpa en profil på ett Word-dokument med hjälp av dokumentets säkerhets-A
 
 Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (SOAP-läge): Tillämpa en princip på ett Word-dokument med Java API&quot;
+* &quot;Snabbstart (SOAP läge): Tillämpa en princip på ett Word-dokument med Java API&quot;
 
 ### Tillämpa en profil på ett Word-dokument med hjälp av webbtjänstens API {#apply-a-policy-to-a-word-document-using-the-web-service-api}
 
@@ -2183,7 +2183,7 @@ Ta bort en profil från ett principskyddat Word-dokument med hjälp av dokumente
 
 Följande snabbstart innehåller kodexempel på hur du använder dokumentsäkerhetstjänsten:
 
-* &quot;Snabbstart (SOAP-läge): Ta bort en princip från ett Word-dokument med Java API &quot;
+* &quot;Snabbstart (SOAP läge): Ta bort en princip från ett Word-dokument med Java API &quot;
 
 ### Ta bort en profil från ett Word-dokument med hjälp av webbtjänstens API {#remove-a-policy-from-a-word-document-using-the-web-service-api}
 

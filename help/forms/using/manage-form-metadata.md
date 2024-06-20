@@ -8,7 +8,8 @@ docset: aem65
 role: Admin,User
 exl-id: f82bbd39-b655-47a9-bca9-21d7cd30c082
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1952'
 ht-degree: 0%
@@ -113,12 +114,12 @@ Nedan följer en omfattande lista över metadataegenskaper som stöds i AEM Form
    <td>Ett skrivskyddat värde som anger när formuläret senast publicerades.</td> 
   </tr> 
   <tr> 
-   <td>Publicera på-/avaktiveringstid</td> 
+   <td>Publish på/av-tid</td> 
    <td>Alla utom resurser</td> 
    <td><p>Tidpunkt då formuläret schemaläggs att automatiskt publiceras/avpubliceras. Användaren anger det här värdet när metadata redigeras.</p> 
     <ul> 
-     <li>Både Publicera på- och Av-tid ska ligga efter aktuellt datum. </li> 
-     <li>Publiceringstiden för publicering ska vara längre än publiceringstiden i tid. </li> 
+     <li>Både På- och Av-tid för Publish ska ligga efter aktuellt datum. </li> 
+     <li>Publish off time ska vara bortom Publish On-time. </li> 
     </ul> </td> 
   </tr> 
   <tr> 

@@ -7,8 +7,9 @@ topic-tags: publish
 docset: aem65
 exl-id: aedf890c-a2f1-412f-8897-2492ffab335a
 solution: Experience Manager, Experience Manager Forms
+feature: Forms Portal
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 I en formulärcentrerad portaldistribution är formulärutveckling och portalutveckling två skilda aktiviteter. När formulärdesigners designar och lagrar formulär i en databas skapar webbutvecklare ett webbprogram som följer den listan och hanterar inskickade formulär. Forms kopieras sedan till webbnivån eftersom det inte finns någon kommunikation mellan formulärdatabasen och webbprogrammet.
 
-Detta leder ofta till problem med att hantera installations- och produktionsförseningar. Om det till exempel finns en nyare version av ett formulär i databasen ersätter Designer formuläret på webbnivån, ändrar webbprogrammet och distribuerar om formuläret på den offentliga webbplatsen. Omdistribuering av webbprogrammet kan orsaka serverdriftavbrott. Eftersom serverns driftstopp är en planerad aktivitet kan ändringarna inte skickas direkt till den offentliga webbplatsen.
+Detta leder ofta till problem med att hantera installations- och produktionsförseningar. Om det till exempel finns en nyare version av ett formulär i databasen ersätter formuläret Designer formuläret på webbnivån, ändrar webbprogrammet och distribuerar om formuläret på den offentliga webbplatsen. Omdistribuering av webbprogrammet kan orsaka serverdriftavbrott. Eftersom serverns driftstopp är en planerad aktivitet kan ändringarna inte skickas direkt till den offentliga webbplatsen.
 
 Forms Portal minskar omkostnaderna och förseningarna i produktionen. Den förser webbutvecklare med komponenter för att skapa och anpassa en Forms Portal på webbplatser som skapats med Adobe Experience Manager (AEM).
 
@@ -29,7 +30,7 @@ Mer information om Forms Portal och dess funktioner finns i [Introduktion till a
 
 Navigera till den publicerade Forms Portal-sidan. Mer information om hur du skapar en Forms Portal-sida finns i [Skapa en Forms Portal-sida](../../forms/using/creating-form-portal-page.md).
 
-Söknings- och listkomponenten i Forms Portal visar de formulär som är tillgängliga i publiceringsinstansen på AEM. Den här listan innehåller alla formulär eller de formulär som definieras i filtret vid redigeringen av Forms Portal-sidan. En Forms Portal-sida ser ut ungefär som i bilden nedan:
+Söknings- och listkomponenten i Forms Portal visar de formulär som är tillgängliga på Publish-instansen av AEM. Den här listan innehåller alla formulär eller de formulär som definieras i filtret vid redigeringen av Forms Portal-sidan. En Forms Portal-sida ser ut ungefär som i bilden nedan:
 
 ![En exempelformulärportalsida ](assets/forms-portal-page.png)
 

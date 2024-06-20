@@ -6,7 +6,8 @@ topic-tags: author
 role: Admin, User, Developer
 exl-id: d530dbb9-f95e-4329-9665-37faf8f7931b
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Workbench, Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '2184'
 ht-degree: 0%
@@ -102,8 +103,8 @@ Se hela listan över plattformar som stöds för Workbench på [Plattformar som 
 
 ## Installationsfrågor för Designer {#designer-installation-considerations}
 
-Workbench-installationen innehåller som standard en motsvarande version av Designer som endast finns på engelska. Om Workbench-installationsprogrammet upptäcker en befintlig version av Designer på datorn kan installationen avslutas och du måste ta bort den aktuella versionen av Designer innan du kan fortsätta.
-Tabellen nedan innehåller en fullständig lista över möjliga installationsscenarier för Designer som du kan stöta på, och alla åtgärder du måste vidta, när du installerar Workbench.
+Workbench-installationen innehåller som standard en motsvarande version av Designer som endast är för engelska. Om Workbench-installationsprogrammet upptäcker en befintlig version av Designer på datorn kan installationen avslutas och du måste ta bort den aktuella versionen av Designer innan du kan fortsätta.
+Tabellen nedan innehåller en fullständig lista över möjliga installationsscenarier för Designer som du kan stöta på, och eventuella åtgärder som du måste vidta, när du installerar Workbench.
 
 <table>
  <tbody>
@@ -115,7 +116,7 @@ Tabellen nedan innehåller en fullständig lista över möjliga installationssce
    <td><p>Acrobat Pro eller Acrobat Pro Extended (inkluderar Designer)</p> </td>
    <td><p>Ingen.<br /> 
 Workbench-installationen identifierar en instans av Designer på datorn som installerats med antingen Acrobat Pro eller Acrobat Pro Extended.<br />
-Olika versioner av Designer kan finnas samtidigt i samma system, till exempel Designer 6.4.x för Workbench 6.4 och Designer 6.5.0.x för Workbench 6.5. Du behöver inte avinstallera den version av Designer som har installerats med Acrobat 10 Pro eller Acrobat 10 Pro Extended eller senare.
+Olika versioner av Designer kan samexistera i samma system, till exempel Designer 6.4.x för Workbench 6.4 och Designer 6.5.0.x för Workbench 6.5. Du behöver inte avinstallera den version av Designer som har installerats med Acrobat 10 Pro eller Acrobat 10 Pro Extended eller senare.
 <br /></p> </td>
   </tr>
   <tr>
@@ -172,7 +173,7 @@ Innan du installerar Workbench måste du kontrollera att miljön innehåller den
 1. Granska versionsinformationen och klicka på Klar.
 1. Följande objekt är nu installerade på datorn:
    * **Workbench**: Om du vill köra Workbench från Start-menyn väljer du Alla program > AEM Forms > Workbench, om du väljer att spara genvägsmappen där. Mer information finns i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Använda Workbench</a> dokumentation.
-   * **Designer**: Du kan komma åt Designer inifrån Workbench. Mer information finns i avsnittet Komma igång i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer - hjälp</a>.
+   * **Designer**: Du kan komma åt Designer inifrån Workbench. Mer information finns i avsnittet Komma igång i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Hjälp om Designer</a>.
    * **AEM Forms SDK**: Mer information om hur du använder SDK finns i <a href="https://helpx.adobe.com/pdf/aem-forms/6-3/programming-with-aem-forms.pdf">Programmera med AEM Forms</a>.
 
 ## Uppgraderingsprocesser {#upgrading-processes}

@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: 96310e0a-8e95-4a55-9508-5298b8d67f83
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '2754'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 Tjänsten för integrering av formulärdata kan importera data till ett PDF-formulär och exportera data från ett PDF-formulär. Import- och exportåtgärderna stöder två typer av PDF forms:
 
 * Ett Acrobat-formulär (skapat i Acrobat) är ett PDF-dokument som innehåller formulärfält.
-* Ett Adobe XML-formulär (skapat i Designer) är ett PDF-dokument som överensstämmer med XML Forms Architecture (XFA) för XML Adobe.
+* Ett Adobe XML-formulär (som skapats i Designer) är ett PDF-dokument som överensstämmer med XML-arkitekturen i Forms (XFA) för XML Adobe.
 
 Formulärdata kan finnas i något av följande format beroende på vilken typ av PDF-formulär det är:
 
@@ -185,7 +185,7 @@ Importera formulärdata med hjälp av API:t för integrering av formulärdata (J
 
 [Sammanfattning av steg](importing-exporting-data.md#summary-of-steps)
 
-[Snabbstart (SOAP-läge): Importera formulärdata med Java API](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[Snabbstart (SOAP): Importera formulärdata med Java API](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -345,7 +345,7 @@ Exportera formulärdata med hjälp av API:t för integrering av formulärdata (J
 
 [Sammanfattning av steg](importing-exporting-data.md#summary-of-steps)
 
-[Snabbstart (SOAP-läge): Exportera formulärdata med Java API](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
+[Snabbstart (SOAP): exportera formulärdata med Java API](/help/forms/developing/form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

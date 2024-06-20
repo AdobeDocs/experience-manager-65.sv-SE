@@ -8,7 +8,8 @@ docset: aem65
 role: Admin,User
 exl-id: b5f6a54e-92d1-4631-a1d1-184f37d174b6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 0e2c9c911ae824c55d958180a84f23079bae8263
+feature: Adaptive Forms, Foundation Components
+source-git-commit: cf3247e437af7447fd6a6121c6a4e2ef750d06b7
 workflow-type: tm+mt
 source-wordcount: '2492'
 ht-degree: 0%
@@ -145,7 +146,7 @@ Så här hämtar du alla Correspondence Management-resurser och relaterade beroe
 
    >[!NOTE]
    >
-   >Processen Exportera alla resurser kan inte avbrytas när den har initierats. När exportåtgärden pågår ska du inte skapa, ta bort, ändra eller publicera några resurser eller initiera processen Publicera alla resurser.a
+   >Processen Exportera alla resurser kan inte avbrytas när den har initierats. Under tiden som exporten pågår ska du inte skapa, ta bort, ändra eller publicera något material eller starta Publish All Assets-processen.a
 
 1. Välj **Hämta exporterat paket** för att ladda ned paketfilen.
 

@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 01ec6ebc-6d80-4417-9604-c8571aebb57e
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1518'
 ht-degree: 0%
@@ -86,7 +87,7 @@ Innan du startar om Forms Server efter en återställning gör du följande:
    1. Klicka **Starta** för att synkronisera resurser från databasen.
 
 1. I en klustrad miljö ska den primära noden (med avseende på AEM) vara uppe före de sekundära noderna.
-1. Se till att inga processer initieras från interna eller externa källor som Web-, SOAP- eller EJB-processinitierare förrän systemets normala funktion har validerats.
+1. Se till att inga processer initieras från interna eller externa källor som webben, SOAP eller EJB-processinitierare förrän systemets normala funktion har validerats.
 
 Om huvuddatabasen AEM formulär flyttas eller ändras läser du de installationsguider som är relevanta för programservern för att få information om hur du uppdaterar databasanslutningsinformationen för AEM formulärdatakällor IDP_DS och EDC_DS.
 

@@ -10,7 +10,8 @@ docset: aem65
 role: Developer
 exl-id: 54d98c69-2b2e-46cb-9f6a-7e9bdbe5c378
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,  Document Services
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1859'
 ht-degree: 0%
@@ -73,7 +74,7 @@ DDX-dokumentet innehåller en XDP `result` -tagg som anger resultatets namn. I d
 
 The `XDP source` -taggen anger XDP-filen som representerar ett fullständigt XDP-dokument som kan användas som behållare för att lägga till XDP-fragment eller som ett av flera dokument som läggs ihop i ordning. I det här fallet används XDP-dokumentet bara som en behållare (den första bilden som visas i *Sammanställa flera XDP-fragment*). De andra XDP-filerna placeras alltså i XDP-behållaren.
 
-För varje delformulär kan du lägga till en `XDPContent` element (detta element är valfritt). I exemplet ovan är det tre delformulär: `subPatientContact`, `subPatientPhysical`och `subPatientHealth`. Båda `subPatientPhysical` delformulär och `subPatientHealth` delformuläret finns i samma XDP-fil, tuc018_patient.xdp. Fragmentelementet anger namnet på delformuläret, enligt Designer.
+För varje delformulär kan du lägga till en `XDPContent` element (detta element är valfritt). I exemplet ovan är det tre delformulär: `subPatientContact`, `subPatientPhysical`och `subPatientHealth`. Båda `subPatientPhysical` delformulär och `subPatientHealth` delformuläret finns i samma XDP-fil, tuc018_patient.xdp. Fragmentelementet anger delformulärets namn, enligt definitionen i Designer.
 
 >[!NOTE]
 >
@@ -204,7 +205,7 @@ Sammanställa flera XDP-fragment med Assembler Service API (Java):
 **Se även**
 
 [Sammanställa flera XDP-fragment](assembling-multiple-xdp-fragments.md#assembling-multiple-xdp-fragments)
-[Snabbstart (SOAP-läge): Sammanställa flera XDP-fragment med Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
+[Snabbstart (SOAP): Sammanställa flera XDP-fragment med Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-assembling-multiple-xdp-fragments-using-the-java-api)
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 

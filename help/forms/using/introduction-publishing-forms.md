@@ -7,8 +7,9 @@ topic-tags: publish
 docset: aem65
 exl-id: 240ed4d8-b21b-46eb-80a9-9e8093b77235
 solution: Experience Manager, Experience Manager Forms
+feature: Forms Portal
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 0%
@@ -80,7 +81,7 @@ Med Forms Portal kan du lista formulär från formulärdatabasen på din portals
 1. **Konfigurera lagring för formulärdata som skickas och skickas:** Som standard lagras utkast- och inskickningsdata i AEM. I en produktionsmiljö bör du inte lagra utkast eller skickade formulärdata i AEM. [Konfigurera Forms Portal-komponenten för att spara data på en säker plats](../../forms/using/draft-submission-component.md#customizing-the-storage).
 1. **(Valfritt) Anpassa komponenterna i Forms Portal:** [Anpassa sidmallar i Forms Portal](../../forms/using/customizing-templates-forms-portal-components.md) för att ge komponenterna ett distinkt utseende.
 1. **(Valfritt) Lägg till anpassade metadata i formulär:** [Lägga till anpassade metadata i formulär](../../forms/using/customizing-templates-forms-portal-components.md) för att förbättra listnings- och sökupplevelsen.
-1. **Publicera Forms Portal:** Nu är din Forms Portal-sida klar. Publicera sidan.
+1. **Publish Forms Portal-sidan:** Nu är din Forms Portal-sida klar. Publish sidan.
 
 ## Relaterade artiklar {#related-articles}
 

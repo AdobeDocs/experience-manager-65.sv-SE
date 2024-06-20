@@ -8,7 +8,8 @@ topic-tags: operations
 role: Developer
 exl-id: 62489194-82ca-44f6-b5be-4411c95f6f80
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms
+source-git-commit: 939a2efa64c853928a9082aa30d7338e98deb695
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%
@@ -21,6 +22,6 @@ ht-degree: 0%
 
 Innan du börjar utveckla klientprogram med AEM Forms API:er rekommenderar Adobe att du först läser Invoke AEM Forms, som beskriver olika sätt att anropa tjänster på. (Se [Tjänstbehållare](/help/forms/developing/service-container.md#service-container).)
 
-När du har lärt dig de olika anropsmetoderna kan du lära dig hur du interagerar programmatiskt med varje tjänst. Du kan utveckla ett klientprogram i Adobe Flex® Builder™, i en Java™-utvecklingsmiljö eller i en miljö som Microsoft® Visual Studio .NET som gör att du kan använda den exponerade WSDL-filen för användning i en inbyggd SOAP-stack.
+När du har lärt dig de olika anropsmetoderna kan du lära dig hur du interagerar programmatiskt med varje tjänst. Du kan utveckla ett klientprogram i Adobe Flex® Builder™, i en Java™-utvecklingsmiljö eller i en miljö som Microsoft® Visual Studio .NET som gör att du kan använda den exponerade WSDL-filen för att använda den i en intern SOAP.
 
 Varje avsnitt innehåller introduktionsinformation (inklusive en stegsammanfattning), genomgång av kod och kodexempel. Sammanfattningen av stegen förklarar de underaktiviteter som krävs och varje underaktivitet länkar till ett avsnitt i kodgenomgången. Alla avsnitt har länkar till snabbstarter, som är fullständiga kodexempel som hjälper dig att komma igång snabbt genom att kopiera och klistra in koden i ditt projekt.

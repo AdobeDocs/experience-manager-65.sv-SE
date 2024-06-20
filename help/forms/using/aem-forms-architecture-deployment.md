@@ -8,7 +8,8 @@ geptopics: SG_AEMFORMS/categories/jee
 role: Admin
 exl-id: d4421d46-cfc9-424e-8a88-9d0a2994a5cf
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms, Foundation Components
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '2469'
 ht-degree: 0%
@@ -38,7 +39,7 @@ Arkitekturen för AEM Forms innehåller följande komponenter:
    * **Formuläråtergivning och inskickande framsida**: Ett användargränssnitt som slutanvändare kan använda för AEM Forms (t.ex. medborgare som besöker en myndighets webbplats). Detta ger formuläråtergivning (visa formulär i en webbläsare) och funktioner för att skicka in formulär.
    * **REST API:er**: JSP:er och serverlets exporterar en delmängd av formulärtjänster för fjärrkonsumtion av HTTP-baserade klienter, t.ex. formulärets mobila SDK.
 
-**AEM Forms on OSGi:** En AEM Forms-miljö i OSGi är standard AEM Author eller AEM Publish med AEM Forms-paket som är distribuerat på den. Du kan köra AEM Forms på OSGi på en [servermiljö, servergrupp och grupperade inställningar](/help/sites-deploying/recommended-deploys.md). Klusterinställningar är bara tillgängliga för AEM Author-instanser.
+**AEM Forms on OSGi:** En AEM Forms on OSGi-miljö är standard AEM Author eller AEM Publish med AEM Forms-paket som är distribuerat på den. Du kan köra AEM Forms på OSGi på en [servermiljö, servergrupp och grupperade inställningar](/help/sites-deploying/recommended-deploys.md). Klusterinställningar är bara tillgängliga för AEM Author-instanser.
 
 **AEM Forms on JEE:** AEM Forms på JEE är en AEM Forms-server som körs på JEE-stacken. Den har AEM Author med AEM Forms tilläggspaket och ytterligare AEM Forms JEE-funktioner som kan användas samtidigt på en enda JEE-stack som körs på en programserver. Du kan köra AEM Forms på JEE i enserver- och gruppkonfigurationer. AEM Forms on JEE krävs endast för dokumentsäkerhet, processhantering och för LiveCyclen som uppgraderar till AEM Forms. Här är några ytterligare scenarier för användning av AEM Forms i JEE:
 
@@ -50,7 +51,7 @@ AEM Forms on JEE innehåller även följande stödtjänster till AEM:
 * **Integrerad användarhantering:** Tillåter användare av AEM Forms på JEE att identifieras som AEM formulär för OSGi-användare och möjliggör enkel inloggning för både OSGi- och JEE-användare. Detta krävs för scenarier där enkel inloggning mellan AEM på OSGi och AEM Forms på JEE krävs (till exempel arbetsytan HTML).
 * **Värdtjänst:** AEM Forms på JEE kan hantera resurser (t.ex. HTML5-formulär) som återges i AEM Forms på OSGi.
 
-AEM Forms redigeringsgränssnitt har inte stöd för att skapa Forms för Document of Record (DOR), PDF forms och HTML5. Sådana resurser är utformade med det fristående Forms Designer-programmet och överförs individuellt till AEM Forms Manager. För AEM Forms på JEE kan formulär även utformas som programresurser (i AEM Forms Workbench) och distribueras till AEM Forms på JEE-server.
+AEM Forms redigeringsgränssnitt har inte stöd för att skapa Forms för Document of Record (DOR), PDF forms och HTML5. Sådana resurser är utformade med den fristående Forms Designer-applikationen och överförs individuellt till AEM Forms Manager. För AEM Forms på JEE kan formulär även utformas som programresurser (i AEM Forms Workbench) och distribueras till AEM Forms på JEE-server.
 
 AEM Forms på OSGi och AEM Forms på JEE har båda arbetsflödesfunktioner. Du kan snabbt skapa och distribuera grundläggande arbetsflöden för olika uppgifter i AEM formulär på OSGi, utan att behöva installera AEM Forms fullständiga processhanteringsfunktion på JEE. Det finns en skillnad i [funktioner för formulärbaserat arbetsflöde i AEM Forms på OSGi och processhantering i AEM Forms på JEE](capabilities-osgi-jee-workflows.md). Utvecklandet och hanteringen av formulärcentrerade arbetsflöden i AEM Forms på OSGi använder de välbekanta AEM arbetsflödes- och AEM Inbox-funktionerna.
 
@@ -65,7 +66,7 @@ I följande bild visas olika AEM formulärserverkonfigurationer och deras kompon
 * **Ta fram och hantera blanketter och interaktiv kommunikation:** Designers och utvecklare kan skapa och redigera adaptiva formulär och interaktiv kommunikation, överföra andra typer av formulär som skapats externt, till exempel formulär som skapats i Adobe Forms Designer, och hantera dessa resurser med Forms Manager-konsolen.
 * **Publicering av blanketter och interaktivt material:** Resurser som lagras på en författarinstans kan publiceras till en publiceringsinstans för körningsåtgärder. Resurspublicering använder AEM replikeringsfunktioner. Adobe rekommenderar att en replikeringsagent konfigureras på alla författarinstanser för att manuellt skicka publicerade formulär till bearbetningsinstanser och att en annan replikeringsagent konfigureras för att bearbeta instanser med *Vid mottagning* som aktiveras för att automatiskt replikera mottagna formulär till publiceringsinstanser.
 
-**Publicera:** En publiceringsinstans är en AEM Forms-server som körs i standardläget Publicera. Publiceringsinstanser är avsedda för slutanvändare av formulärbaserade program, t.ex. användare som öppnar en offentlig webbplats och som skickar formulär. Det aktiverar följande funktioner:
+**Publicera:** En publiceringsinstans är en AEM Forms-server som körs i Publish standardkörningsläge. Publish-instanser är avsedda för användare av formulärbaserade program, t.ex. användare som öppnar en offentlig webbplats och skickar formulär. Det aktiverar följande funktioner:
 
 * Återge och skicka Forms för slutanvändare.
 * Transport av obearbetade inlämnade formulärdata till bearbetningsinstanser för vidare bearbetning och lagring i det slutliga databassystemet. Standardimplementeringen i AEM Forms uppnår detta med hjälp av AEM omvända replikeringsfunktioner. Det finns också en alternativ implementering för att skicka formulärdata direkt till bearbetningsservrar i stället för att spara dem lokalt först (det senare är en förutsättning för att omvänd replikering ska aktiveras). Kunder som oroar sig för lagring av potentiellt känsliga data i publiceringsinstanser kan gå in för detta [alternativt genomförande](/help/forms/using/configuring-draft-submission-storage.md)eftersom bearbetningsinstanser vanligtvis ligger i en säkrare zon.
@@ -73,8 +74,8 @@ I följande bild visas olika AEM formulärserverkonfigurationer och deras kompon
 
 **Bearbetar:** En instans av AEM Forms som körs i redigeringsläge utan användare tilldelade till formulärhanteringsgruppen. Du kan distribuera AEM Forms på JEE eller AEM Forms på OSGi som en bearbetningsinstans. Användarna är inte tilldelade att säkerställa att formulärredigerings- och hanteringsaktiviteter inte utförs på Bearbetning-instansen och bara inträffar på Author-instansen. En bearbetningsinstans aktiverar följande funktioner:
 
-* **Bearbetning av råformulärsdata som kommer från en Publish-instans:** Detta uppnås främst med en Processing-instans via AEM arbetsflöden som utlöser när data kommer fram. I arbetsflödena kan du använda steget Formulärdatamodell som du får när du vill arkivera data eller dokument i ett lämpligt datalager.
-* **Säker lagring av formulärdata**: Bearbetning utgör en databas bakom brandväggen för obearbetade formulärdata som är isolerade från användarna. Varken formulärdesigners på författarinstansen eller slutanvändare på publiceringsinstansen har åtkomst till den här databasen.
+* **Bearbetning av rådata från en Publish-instans:** Detta uppnås främst med en Processing-instans via AEM arbetsflöden som utlöser när data kommer fram. I arbetsflödena kan du använda steget Formulärdatamodell som du får när du vill arkivera data eller dokument i ett lämpligt datalager.
+* **Säker lagring av formulärdata**: Bearbetning utgör en databas bakom brandväggen för obearbetade formulärdata som är isolerade från användarna. Varken formulärdesigners på författarinstansen eller slutanvändare på Publish-instansen har åtkomst till den här databasen.
 
   >[!NOTE]
   >
@@ -86,8 +87,8 @@ I följande bild visas olika AEM formulärserverkonfigurationer och deras kompon
 
 En bearbetningsinstans har konfigurerats att köras i redigeringskörningsläget på grund av:
 
-* Det möjliggör omvänd replikering av råformulärdata från en Publish-instans. Standardhanteraren för datalagring kräver funktionen för omvänd replikering.
-* AEM arbetsflöden, som är det primära sättet att bearbeta råformulärsdata som kommer från en publiceringsinstans, rekommenderas för körning i ett system av utvecklartyp.
+* Det möjliggör omvänd replikering av rådata från en Publish-instans. Standardhanteraren för datalagring kräver funktionen för omvänd replikering.
+* AEM arbetsflöden, som är det primära sättet att bearbeta råformulärsdata som kommer från en Publish-instans, rekommenderas för körning i ett system av utvecklartyp.
 
 ## Exempel på fysiska topologier för AEM Forms på JEE {#sample-physical-topologies-for-aem-forms-on-jee}
 

@@ -7,8 +7,9 @@ geptopics: SG_AEMFORMS/categories/configuring_forms
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 6b57d00e-5ba0-41ee-8497-49ecfec5b9ed
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: e821be5233fd5f6688507096790d219d25903892
 workflow-type: tm+mt
 source-wordcount: '1611'
 ht-degree: 0%
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 # Konfigurera cachelagring för Forms{#configuring-caching-for-forms}
 
-Forms tar formulärdesigner som skapats i Designer och återger dem i olika format.
+Forms-tjänsten tar formulärdesigner som skapats i Designer och återger dem i olika format.
 
 Forms-sidan i administrationskonsolen innehåller inställningar som styr hur Forms-tjänsten cachelagrar objekt. Du kan justera de här inställningarna för att optimera prestandan för Forms-tjänsten.
 
@@ -93,7 +94,7 @@ Inställningarna i **Globala cacheinställningar** påverkar alla typer av cache
 
 **Maximal dokumentstorlek för cache (kB):** Den maximala storleken, i kilobyte, för en formulärdesign eller annan resurs som kan lagras i vilken cache som helst i minnet. Det här är en global inställning som gäller för alla cacheminnen i minnet. Om en resurs är större än det här värdet cachelagras den inte i minnet. Standardvärdet är 1 024 kB. Den här inställningen påverkar inte diskcachen.
 
-**Cache för formuläråtergivning aktiverad:** Som standard är det här alternativet markerat, vilket innebär att återgivna formulär cachelagras för efterföljande hämtning. Den här inställningen förbättrar prestanda eftersom Forms-tjänsten endast behöver återge ett visst formulär en gång och sedan använder den cachelagrade versionen. Det här alternativet fungerar med formulärdesignens cachelagringsegenskap. Information om hur du konfigurerar det här värdet i formulärdesignen finns i Designer-hjälpen.
+**Cache för formuläråtergivning aktiverad:** Som standard är det här alternativet markerat, vilket innebär att återgivna formulär cachelagras för efterföljande hämtning. Den här inställningen förbättrar prestanda eftersom Forms-tjänsten endast behöver återge ett visst formulär en gång och sedan använder den cachelagrade versionen. Det här alternativet fungerar med formulärdesignens cachelagringsegenskap. Information om hur du konfigurerar det här värdet i formulärdesignen finns i hjälpen för Designer.
 
 ### Cachelagra formulärdesigner {#caching-form-designs}
 

@@ -9,7 +9,7 @@ topic-tags: operations
 role: Developer
 exl-id: e485980d-f200-46b7-9284-c9996003aa47
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '1690'
 ht-degree: 0%
@@ -54,9 +54,9 @@ Ange körtidsalternativet för klientåtergivning för att återge ett formulär
 
 Ett valfritt körningsalternativ som du kan ange är `SeedPDF` alternativ. The `SeedPDF` används för att kombinera PDF-behållaren (dirigerat PDF-dokument) med formulärdesignen och XML-data. Både formulärdesignen och XML-data levereras till Acrobat eller Adobe Reader, där formuläret återges. The `SeedPDF` kan användas när klientdatorn inte har teckensnitt som används i formuläret, till exempel när en slutanvändare inte har licens att använda ett teckensnitt som formulärägaren har licens att använda.
 
-Du kan använda Designer för att skapa en enkel, dynamisk PDF-fil som kan användas som startvärdesfil för PDF. Följande steg krävs för att utföra den här uppgiften:
+Du kan använda Designer för att skapa en enkel dynamisk PDF-fil som du kan använda som startvärdesfil för PDF. Följande steg krävs för att utföra den här uppgiften:
 
-1. Ange om du behöver bädda in teckensnitt i startfilen för PDF. Filen för dirigerade PDF måste innehålla ytterligare teckensnitt som krävs för att formuläret ska kunna återges. När du bäddar in teckensnitt i startfilen måste du se till att du inte bryter mot några licensavtal för teckensnitt. I Designer kan du bestämma om du ska kunna bädda in teckensnitt som är juridiskt bindande. Om det finns teckensnitt som du inte kan bädda in i formuläret visas ett meddelande med en lista över de teckensnitt som du inte kan bädda in när du sparar. Det här meddelandet visas inte i Designer för statiska PDF-dokument.
+1. Ange om du behöver bädda in teckensnitt i startfilen för PDF. Filen för dirigerade PDF måste innehålla ytterligare teckensnitt som krävs för att formuläret ska kunna återges. När du bäddar in teckensnitt i startfilen måste du se till att du inte bryter mot några licensavtal för teckensnitt. I Designer kan du bestämma om du ska kunna bädda in teckensnitt som är juridiskt bindande. Om det finns teckensnitt som du inte kan bädda in i formuläret visas ett meddelande i Designer med en lista över de teckensnitt som du inte kan bädda in. Det här meddelandet visas inte i Designer för statiska PDF-dokument.
 1. Om du skapar startvärdesfilen PDF i Designer bör du åtminstone lägga till ett textfält som innehåller ett meddelande. Meddelandet bör riktas till användare av tidigare versioner av Adobe Reader som uppger att de behöver Acrobat 7.0 eller senare eller Adobe Reader 7.0 eller senare för att kunna visa dokumentet.
 1. Spara startvärdesfilen PDF som en dynamisk PDF-fil med filnamnstillägget PDF.
 
@@ -130,7 +130,7 @@ Forms skapar en formulärdataström som du måste skriva till klientens webbläs
 
 **Se även**
 
-[Snabbstart (SOAP-läge): Återge ett formulär på klienten med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
+[Snabbstart (SOAP): Återge ett formulär på klienten med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-a-form-at-the-client-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

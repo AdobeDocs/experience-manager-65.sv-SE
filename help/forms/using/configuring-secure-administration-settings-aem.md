@@ -7,7 +7,8 @@ products: SG_EXPERIENCEMANAGER/6.4
 role: Admin,User
 exl-id: 40bc01b4-a59e-4420-81d6-2887857bddce
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Security, Adaptive Forms
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 0%
@@ -24,11 +25,11 @@ I den här artikeln beskrivs metoder för att minska den totala attackytan med h
 
 ## Inaktiverar icke nödvändig fjärråtkomst till tjänster {#disabling-non-essential-remote-access-to-services}
 
-När AEM Forms har installerats och konfigurerats på JEE är många tjänster tillgängliga för fjärranrop via SOAP och Enterprise JavaBeans™ (EJB). Termen fjärranrop avser i det här fallet alla anropare som har nätverksåtkomst till SOAP-, EJB- eller AMF-portarna (Action Message Format) för programservern.
+När AEM Forms har installerats och konfigurerats på JEE är många tjänster tillgängliga för fjärranrop via SOAP och Enterprise JavaBeans™ (EJB). Termen fjärranrop avser i det här fallet alla anropare som har nätverksåtkomst till portarna SOAP, EJB eller Action Message Format (AMF) för programservern.
 
 Även om AEM Forms på JEE-tjänster kräver att giltiga autentiseringsuppgifter skickas för en auktoriserad anropare, bör du endast tillåta fjärråtkomst till de tjänster som du behöver för att kunna fjärråtkomst. För att uppnå begränsad tillgänglighet bör du minska uppsättningen fjärranslutna tjänster till minsta möjliga för ett fungerande system och sedan aktivera fjärranrop för de ytterligare tjänster du behöver.
 
-AEM Forms på JEE-tjänster behöver alltid minst SOAP-åtkomst. Dessa tjänster krävs vanligtvis för Workbench, men omfattar även tjänster som anropas av Workspace-webbprogrammet.
+AEM Forms på JEE-tjänster behöver alltid minst SOAP åtkomst. Dessa tjänster krävs vanligtvis för Workbench, men omfattar även tjänster som anropas av Workspace-webbprogrammet.
 
 Gör så här med webbsidan Program och tjänster i administrationskonsolen:
 
@@ -45,7 +46,7 @@ Gör så här med webbsidan Program och tjänster i administrationskonsolen:
 1. Om du vill inaktivera alla EJB-slutpunkter markerar du kryssrutan bredvid var och en av dem i listan och klickar på **Inaktivera**.
 1. Klicka **Nästa** och upprepa föregående steg för alla EJB-slutpunkter. Kontrollera att EJB finns med i leverantörskolumnen innan du inaktiverar slutpunkterna.
 1. Välj **SOAP** från **Provider** lista och klicka sedan på **Filter**.
-1. Om du vill ta bort SOAP-slutpunkter markerar du kryssrutan bredvid var och en av dem i listan och klickar på **Ta bort**. Ta inte bort följande slutpunkter:
+1. Om du vill ta bort SOAP slutpunkter markerar du kryssrutan bredvid var och en av dem i listan och klickar på **Ta bort**. Ta inte bort följande slutpunkter:
 
    * AuthenticationManagerService
    * DirectoryManagerService
@@ -61,7 +62,7 @@ Gör så här med webbsidan Program och tjänster i administrationskonsolen:
    * WorkspaceSingleSignOn
    * ApplicationManager
 
-1. Klicka **Nästa** och upprepa föregående steg för SOAP-slutpunkter som inte finns i ovanstående lista. Kontrollera att SOAP finns med i leverantörskolumnen innan du tar bort slutpunkterna.
+1. Klicka **Nästa** och upprepa föregående steg för SOAP slutpunkter som inte finns i ovanstående lista. Se till att SOAP finns med i leverantörskolumnen innan du tar bort slutpunkterna.
 
 ## Inaktiverar onödvändig anonym åtkomst till tjänster {#disabling-non-essential-anonymous-access-to-services}
 

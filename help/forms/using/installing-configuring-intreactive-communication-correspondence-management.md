@@ -6,7 +6,8 @@ docset: aem65
 role: Admin, User, Developer
 exl-id: 37fcfad9-2f84-4f0c-aed8-e4a5a3303a06
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Interactive Communication
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '1368'
 ht-degree: 0%
@@ -31,7 +32,7 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Du behöver 
 
 ![rekommenderad topologi](assets/recommended-topology.png)
 
-AEM Forms Interactive Communications kör administratörs-, redigerings- och agentanvändargränssnitt i Author-instanserna av AEM Forms. Publiceringsinstanserna är värdar för den slutliga versionen av interaktiv kommunikation som är klar att användas av slutanvändarna.
+AEM Forms Interactive Communications kör administratörs-, redigerings- och agentanvändargränssnitt i Author-instanserna av AEM Forms. Publish-instanserna är värdar för den slutliga versionen av interaktiv kommunikation som är klar att användas av slutanvändarna.
 
 ## Systemkrav {#system-requirements}
 
@@ -104,7 +105,7 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
    >
    > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
-1. Upprepa steg 1-7 för alla författare- och publiceringsinstanser.
+1. Upprepa steg 1-7 för alla Author- och Publish-instanser.
 
 ## Konfiguration efter installation {#post-installation-configurations}
 
@@ -114,7 +115,7 @@ AEM Forms har några obligatoriska och valfria konfigurationer. De obligatoriska
 
 #### Konfigurera RSA- och BouncyCastle-bibliotek  {#configure-rsa-and-bouncycastle-libraries}
 
-Utför följande steg på alla författare- och publiceringsinstanser för att starta delegeringen av biblioteken:
+Utför följande steg på alla författare- och Publish-instanser för att starta delegeringen av biblioteken:
 
 1. Stoppa den underliggande AEM.
 1. Öppna [AEM installationskatalog]\crx-quickstart\conf\sling.properties fil för redigering.
@@ -128,7 +129,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att s
    ```
 
 1. Spara och stäng filen och starta AEM.
-1. Upprepa steg 1-4 för alla författarinstanser och publiceringsinstanser.
+1. Upprepa steg 1-4 för alla författare och Publish-förekomster.
 
 #### Konfigurera serialiseringsagenten {#configure-the-serialization-agent}
 
@@ -137,7 +138,7 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 1. Öppna AEM Configuration Manager i ett webbläsarfönster. Standardwebbadressen är https://&#39;[server]:[port]&#39;/system/console/configMgr.
 1. Söka och öppna **Konfiguration av brandvägg för deserialisering**.
 1. Lägg till **sun.util.calendar** till **tillåtelselista** fält. Klicka på Spara.
-1. Upprepa steg 1-3 för alla författare- och publiceringsinstanser.
+1. Upprepa steg 1-3 för alla Author- och Publish-instanser.
 
 ### Ytterligare konfigurationer efter installation {#optional-post-installation-configurations}
 

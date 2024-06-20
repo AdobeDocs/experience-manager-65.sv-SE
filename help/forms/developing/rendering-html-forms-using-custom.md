@@ -9,7 +9,7 @@ topic-tags: operations
 role: Developer
 exl-id: 5fa385a7-f030-4c0c-8938-0991d02ef361
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '1682'
 ht-degree: 0%
@@ -136,7 +136,7 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 [Återge HTML Forms med anpassade CSS-filer](#rendering-html-forms-using-custom-css-files)
 
-[Snabbstart (SOAP-läge): Återge ett HTML-formulär som använder en CSS-fil med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api)
+[Snabbstart (SOAP läge): Återge ett HTML-formulär som använder en CSS-fil med Java API](/help/forms/developing/forms-service-api-quick-starts.md#quick-start-soap-mode-rendering-an-html-form-that-uses-a-css-file-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

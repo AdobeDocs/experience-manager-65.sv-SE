@@ -6,8 +6,9 @@ topic-tags: publish
 docset: aem65
 exl-id: 470fcfda-dfde-437c-b539-d5af1e13a7d6
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Foundation Components, Workflow
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '7512'
 ht-degree: 0%
@@ -395,7 +396,7 @@ Optimeringsinställningarna anger hur filerna optimeras. Här följer några exe
 
 ### Återge formulärsteg i PDF {#renderpdf}
 
-Återger ett formulär som skapats i Form Designer (XDP) till ett PDF-formulär.
+Återger ett formulär som har skapats i Form Designer (XDP) till ett PDF-formulär.
 
 >[!NOTE]
 >
@@ -459,7 +460,7 @@ Stegen Generera utskrift har följande egenskaper:
 * **[!UICONTROL Select XCI file using]**: XCI-filer används för att beskriva teckensnitt och andra egenskaper som används för formulärdesignelement. Du kan behålla en XCI-fil i förhållande till nyttolasten, på en absolut sökväg eller med en variabel av dokumentdatatypen.
 
 * **[!UICONTROL Locale]**: Anger vilket språk som ska användas för att generera PDF-dokumentet. Om du anger ett literalt värde väljer du ett språk i listan eller något av dessa värden:
-   * **Använd serverns standardinställningar**: (Standard) Använd språkinställningen som är konfigurerad på AEM Forms-servern. Inställningen Språk konfigureras med administrationskonsolen. (Se [Designer - hjälp](https://www.adobe.com/go/learn_aemforms_designer_65).)
+   * **Använd serverns standardinställningar**: (Standard) Använd språkinställningen som är konfigurerad på AEM Forms-servern. Inställningen Språk konfigureras med administrationskonsolen. (Se [Hjälp om Designer](https://www.adobe.com/go/learn_aemforms_designer_65).)
 
    * **Använda anpassat värde**: Ange språkkoden i den litterala rutan eller välj en strängvariabel som innehåller språkkoden. En fullständig lista över språkkoder som stöds finns på https://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html.
 

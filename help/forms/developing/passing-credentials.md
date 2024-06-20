@@ -3,8 +3,9 @@ title: Skicka inloggningsuppgifter med WS-security headers
 description: Lär dig hur du skickar inloggningsuppgifter med WS-security headers
 exl-id: 519d57ad-81ab-4caf-ae25-4390ae2eee13
 solution: Experience Manager, Experience Manager Forms
+feature: Adaptive Forms, Document Security
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
@@ -13,9 +14,9 @@ ht-degree: 0%
 
 # Skicka inloggningsuppgifter med WS-Security-huvuden {#using-execute-script-service-aem-forms-jee-workbench}
 
-När du anropar en AEM Forms på JEE-tjänst med hjälp av webbtjänster kan du använda WS-Security-huvuden för att skicka klientautentiseringsinformation som AEM Forms kräver på JEE. WS-Security definierar SOAP-tillägg som implementerar klientautentisering, meddelandesekretess och meddelandeintegritet. Det innebär att du kan anropa AEM Forms på JEE-tjänster när AEM Forms på JEE distribueras som en fristående server eller i en klustrad miljö.
+När du anropar en AEM Forms på JEE-tjänst med hjälp av webbtjänster kan du använda WS-Security-huvuden för att skicka klientautentiseringsinformation som AEM Forms kräver på JEE. WS-Security definierar SOAP tillägg som implementerar klientautentisering, meddelandesekretess och meddelandeintegritet. Det innebär att du kan anropa AEM Forms på JEE-tjänster när AEM Forms på JEE distribueras som en fristående server eller i en klustrad miljö.
 
-Hur du skickar WS-Security-huvuden till AEM Forms på JEE beror på om du använder axelgenererade Java-klasser eller en .NET-klientsammansättning som använder tjänstens inbyggda SOAP-stack.
+Hur du skickar WS-Security-huvuden till AEM Forms på JEE beror på om du använder axelgenererade Java-klasser eller en .NET-klientsammansättning som använder en SOAP.
 
 >[!NOTE]
 >

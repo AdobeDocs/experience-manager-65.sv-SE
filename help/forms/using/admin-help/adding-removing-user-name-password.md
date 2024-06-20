@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 exl-id: 1e2b82d6-ca1f-4421-9a51-ec97fdc315d3
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Lägga till och ta bort användarnamn och lösenord {#adding-and-removing-user-name-and-password-credentials}
 
-På sidan Hantering av betrodda lagringsplatser kan du lägga till och ta bort användarnamn och lösenord som används av Forms-tjänsten när den tar emot en begäran med SOAP-nivåsäkerhet.
+På sidan Hantering av betrodda lagringsplatser kan du lägga till och ta bort användarnamn och lösenord som används av Forms-tjänsten när den tar emot en begäran med SOAP.
 
 ## Lägga till användarnamn och lösenord {#add-a-user-name-and-password-credential}
 

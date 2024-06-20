@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: 31730c24-46c3-4111-9391-ccd4342740e9
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '2774'
 ht-degree: 0%
@@ -138,7 +138,7 @@ Konvertera ett PDF-dokument till PostScript med hjälp av Java (Convert PDF Serv
 
 [Sammanfattning av steg](converting-pdf-postscript-image-files.md#summary-of-steps)
 
-[Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till PostScript med Java API](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
+[Snabbstart (SOAP): Konvertera ett PDF-dokument till PostScript med Java API](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-postscript-using-the-java-api)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -249,9 +249,9 @@ När du har skapat tjänstklienten och angett körningsalternativ kan du konvert
 
 **Hämta bildfilerna från en samling**
 
-Du kan hämta bildfiler från ett samlingsobjekt som returneras av tjänsten Convert PDF. Varje element i samlingen är en `com.adobe.idp.Document` instans (eller en `BLOB` om du använder webbtjänster) som du kan spara som en bildfil, till exempel en JPG-fil.
+Du kan hämta bildfiler från ett samlingsobjekt som returneras av tjänsten Convert PDF. Varje element i samlingen är en `com.adobe.idp.Document` instans (eller en `BLOB` om du använder webbtjänster) som du kan spara som en bildfil, till exempel en JPG.
 
-Bildfilens format beror på `ImageConvertFormat` körningsalternativ. Det vill säga om du ställer in `ImageConvertFormat` körningsalternativ till `ImageConvertFormat.JPEG`kan du spara bildfiler som JPG.
+Bildfilens format beror på `ImageConvertFormat` körningsalternativ. Det vill säga om du ställer in `ImageConvertFormat` körningsalternativ till `ImageConvertFormat.JPEG`kan du spara bildfiler som JPG filer.
 
 **Se även**
 
@@ -303,7 +303,7 @@ Konvertera ett PDF-dokument till ett bildformat med hjälp av Java (Convert PDF 
 
 **Se även**
 
-[Snabbstart (SOAP-läge): Konvertera ett PDF-dokument till JPEG med Java API](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
+[Snabbstart (SOAP): Konvertera ett PDF-dokument till JPEG med Java API](/help/forms/developing/convert-pdf-service-java-api.md#quick-start-soap-mode-converting-a-pdf-document-to-jpeg-files-using-the-java-api)
 
 ### Konvertera ett PDF-dokument till bildfiler med hjälp av webbtjänstens API {#convert-a-pdf-document-to-image-files-using-the-web-service-api}
 

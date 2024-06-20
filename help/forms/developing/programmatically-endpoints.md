@@ -1,6 +1,6 @@
 ---
 title: Hantera slutpunkter programmatiskt
-description: Använd tjänsten Endpoint Registry för att lägga till EJB-slutpunkter, lägga till SOAP-slutpunkter, lägga till övervakade mappslutpunkter, lägga till e-postslutpunkter, lägga till fjärrslutpunkter, lägga till Task Manager-slutpunkter, ändra slutpunkter, ta bort slutpunkter och hämta slutpunktsanslutningsinformation.
+description: Använd tjänsten Endpoint Registry för att lägga till EJB-slutpunkter, lägga till SOAP slutpunkter, lägga till övervakade mappslutpunkter, lägga till e-postslutpunkter, lägga till fjärrslutpunkter, lägga till Task Manager-slutpunkter, ändra slutpunkter, ta bort slutpunkter och hämta slutpunktsanslutningsinformation.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -8,7 +8,7 @@ topic-tags: operations
 role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 872e2de411f51b5f0b26a2ff47cb49f01313d39f
 workflow-type: tm+mt
 source-wordcount: '10800'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Du kan ordna TaskManager-slutpunkter i grupper som kallas *kategorier*. Dessa ka
 Du kan utföra följande uppgifter med hjälp av tjänsten för slutpunktsregister:
 
 * Lägg till EJB-slutpunkter. (Se [Lägga till EJB-slutpunkter](programmatically-endpoints.md#adding-ejb-endpoints).)
-* Lägg till SOAP-slutpunkter. (Se [Lägga till SOAP-slutpunkter](programmatically-endpoints.md#adding-soap-endpoints).)
+* Lägg till SOAP slutpunkter. (Se [Lägga till SOAP](programmatically-endpoints.md#adding-soap-endpoints).)
 * Lägg till övervakade mappslutpunkter (se [Lägga till bevakade mappslutpunkter](programmatically-endpoints.md#adding-watched-folder-endpoints).)
 * Lägg till e-postslutpunkter. (Se [Lägga till e-postslutpunkter](programmatically-endpoints.md#adding-email-endpoints).)
 * Lägg till fjärrslutpunkter. (Se [Lägga till fjärrslutpunkter](programmatically-endpoints.md#adding-remoting-endpoints).)
@@ -155,26 +155,26 @@ Lägg till en EJB-slutpunkt med Java API:
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## Lägga till SOAP-slutpunkter {#adding-soap-endpoints}
+## Lägga till SOAP {#adding-soap-endpoints}
 
-Du kan programmässigt lägga till en SOAP-slutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en SOAP-slutpunkt aktiverar du ett klientprogram att anropa tjänsten i SOAP-läge. När du anger de anslutningsegenskaper som krävs för att anropa AEM Forms kan du alltså välja SOAP-läge.
-
->[!NOTE]
->
->Du kan inte lägga till en SOAP-slutpunkt med hjälp av webbtjänster.
+Du kan programmässigt lägga till en SOAP slutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en SOAP slutpunkt aktiverar du ett klientprogram att anropa tjänsten i SOAP. När du anger de anslutningsegenskaper som krävs för att anropa AEM Forms kan du alltså välja SOAP.
 
 >[!NOTE]
 >
->Vanligtvis läggs en SOAP-slutpunkt till i en tjänst som standard, men en SOAP-slutpunkt kan läggas till i en process som distribueras programmatiskt eller när en SOAP-slutpunkt togs bort och måste läggas till igen.
+>Du kan inte lägga till en SOAP slutpunkt med hjälp av webbtjänster.
+
+>[!NOTE]
+>
+>Vanligtvis läggs en SOAP slutpunkt till i en tjänst som standard, men en SOAP slutpunkt kan läggas till i en process som distribueras programmatiskt eller när en SOAP slutpunkt togs bort och måste läggas till igen.
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
-Utför följande åtgärder om du vill lägga till en SOAP-slutpunkt till en tjänst:
+Så här lägger du till en SOAP slutpunkt till en tjänst:
 
 1. Inkludera projektfiler.
 1. Skapa en `EndpointRegistryClient` -objekt.
-1. Ange SOAP-slutpunktsattribut.
-1. Skapa en SOAP-slutpunkt.
+1. Ange SOAP slutpunktsattribut.
+1. Skapa en SOAP slutpunkt.
 1. Aktivera slutpunkten.
 
 **Inkludera projektfiler**
@@ -188,25 +188,25 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
 * jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Dessa JAR-filer krävs för att skapa en SOAP-slutpunkt. Du behöver emellertid ytterligare JAR-filer om du använder SOAP-slutpunkten för att anropa tjänsten. Mer information om AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Dessa JAR-filer krävs för att skapa en SOAP slutpunkt. Du behöver emellertid ytterligare JAR-filer om du använder SOAP slutpunkt för att anropa tjänsten. Mer information om AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett EndpointRegistry-klientobjekt**
 
-Om du vill lägga till en SOAP-slutpunkt i en tjänst med programkod måste du skapa en `EndpointRegistryClient` -objekt.
+Om du vill lägga till en SOAP slutpunkt i en tjänst måste du skapa en `EndpointRegistryClient` -objekt.
 
-**Ange SOAP-slutpunktsattribut**
+**Ange SOAP för slutpunkter**
 
-Om du vill lägga till en SOAP-slutpunkt till en tjänst anger du följande värden:
+Om du vill lägga till en SOAP slutpunkt till en tjänst anger du följande värden:
 
-* **Identifieringsvärde för koppling**: Anger vilken typ av slutpunkt som ska skapas. Om du vill skapa en SOAP-slutpunkt anger du `SOAP`.
+* **Identifieringsvärde för koppling**: Anger vilken typ av slutpunkt som ska skapas. Om du vill skapa en SOAP slutpunkt anger du `SOAP`.
 * **Beskrivning**: Anger slutpunktsbeskrivningen.
 * **Namn**: Anger slutpunktens namn.
 * **Tjänstidentifierarvärde**: Anger den tjänst som slutpunkten tillhör.
-* **Åtgärdsnamn**: Anger namnet på åtgärden som anropas med slutpunkten. När du skapar en SOAP-slutpunkt anger du ett jokertecken ( `*`). Om du vill ange en viss åtgärd i stället för att anropa alla tjänståtgärder, anger du åtgärdens namn i stället för att använda jokertecknet ( `*`).
+* **Åtgärdsnamn**: Anger namnet på åtgärden som anropas med slutpunkten. När du skapar en SOAP slutpunkt anger du ett jokertecken ( `*`). Om du vill ange en viss åtgärd i stället för att anropa alla tjänståtgärder, anger du åtgärdens namn i stället för att använda jokertecknet ( `*`).
 
-**Skapa en SOAP-slutpunkt**
+**Skapa en SOAP**
 
-När du har angett SOAP-slutpunktsattribut kan du skapa en SOAP-slutpunkt.
+När du har angett SOAP slutpunktsattribut kan du skapa en SOAP slutpunkt.
 
 **Aktivera slutpunkten**
 
@@ -222,7 +222,7 @@ När du har skapat en slutpunkt måste du aktivera den. När slutpunkten är akt
 
 ### Lägga till en SOAP-slutpunkt med Java API {#add-a-soap-endpoint-using-the-java-api}
 
-Lägg till en SOAP-slutpunkt till en tjänst med hjälp av Java API:
+Lägg till en SOAP slutpunkt till en tjänst med hjälp av Java API:
 
 1. Inkludera projektfiler.
 
@@ -233,7 +233,7 @@ Lägg till en SOAP-slutpunkt till en tjänst med hjälp av Java API:
    * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
    * Skapa en `EndpointRegistryClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
 
-1. Ange SOAP-slutpunktsattribut.
+1. Ange SOAP slutpunktsattribut.
 
    * Skapa en `CreateEndpointInfo` genom att använda dess konstruktor.
    * Ange anslutnings-ID-värdet genom att anropa `CreateEndpointInfo` objektets `setConnectorId` metoden och skicka strängvärdet `SOAP`.
@@ -242,9 +242,9 @@ Lägg till en SOAP-slutpunkt till en tjänst med hjälp av Java API:
    * Ange tjänsten som slutpunkten tillhör genom att anropa `CreateEndpointInfo` objektets `setServiceId` och skickar ett strängvärde som anger tjänstnamnet.
    * Ange åtgärden som anropas genom att anropa `CreateEndpointInfo` objektets `setOperationName` och skickar ett strängvärde som anger åtgärdens namn. För SOAP- och EJB-slutpunkter anger du ett jokertecken ( `*`), vilket betyder alla operationer.
 
-1. Skapa en SOAP-slutpunkt.
+1. Skapa en SOAP slutpunkt.
 
-   Skapa slutpunkten genom att starta `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` objekt som representerar den nya SOAP-slutpunkten.
+   Skapa slutpunkten genom att starta `EndpointRegistryClient` objektets `createEndpoint` metoden och skicka `CreateEndpointInfo` -objekt. Den här metoden returnerar en `Endpoint` -objekt som representerar den nya SOAP-slutpunkten.
 
 1. Aktivera slutpunkten.
 
@@ -1083,7 +1083,7 @@ Ange nya konfigurationsvärden när du ändrar en slutpunkt. Om du till exempel 
 
 ## Tar bort slutpunkter {#removing-endpoints}
 
-Du kan ta bort en slutpunkt från en tjänst programmatiskt med AEM Forms Java API. När du har tagit bort en slutpunkt kan tjänsten inte anropas med den anropsmetod som slutpunkten aktiverade. Om du till exempel tar bort en SOAP-slutpunkt från en tjänst kan du inte anropa tjänsten i SOAP-läge.
+Du kan ta bort en slutpunkt från en tjänst programmatiskt med AEM Forms Java API. När du har tagit bort en slutpunkt kan tjänsten inte anropas med den anropsmetod som slutpunkten aktiverade. Om du till exempel tar bort en SOAP slutpunkt från en tjänst kan du inte anropa tjänsten i SOAP.
 
 För att visa hur du tar bort en slutpunkt från en tjänst tar det här avsnittet bort en EJB-slutpunkt från en tjänst med namnet *EncryptDocument*.
 
@@ -1214,7 +1214,7 @@ Skapa en `ConnectorRegistryClient` -objekt.
 Ange den typ av koppling som informationen ska hämtas från. Följande typer av anslutningar finns:
 
 * **EJB**: Gör att ett klientprogram kan anropa en tjänst i EJB-läge.
-* **SOAP**: Gör att ett klientprogram kan anropa en tjänst i SOAP-läge.
+* **SOAP**: Gör att ett klientprogram kan anropa en tjänst i SOAP läge.
 * **Bevakad mapp**: Gör att bevakade mappar kan anropa en tjänst.
 * **E-post**: Gör att e-postmeddelanden kan anropa en tjänst.
 * **Remoting**: Gör att ett Flex-klientprogram kan anropa en tjänst.
