@@ -9,9 +9,9 @@ exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms, Workbench
 role: User, Developer
-source-git-commit: 1e978cbece1401a18137ef98a3a9bf6cd666e48f
+source-git-commit: f1a18575e8b8f925f8adbe18e189f3916b5e353d
 workflow-type: tm+mt
-source-wordcount: '10828'
+source-wordcount: '10824'
 ht-degree: 0%
 
 ---
@@ -260,9 +260,9 @@ Följande inställningar är tillgängliga för tjänsten Generate PDF.
 
 **Reservkonverterare för konvertering från HTML till PDF:** Ange konverteraren för HTML till PDF om den primära konverteraren misslyckas. Som standard är WebCapture (endast Windows) markerad.
 
-**Använd Acrobat Image Conversion (endast Windows):** När den här inställningen är true använder Generate PDF-tjänsten Acrobat X Pro för alla Image-to-PDF-konverteringar. Den här inställningen är bara användbar om standardkonverteringsfunktionen för ren Java inte kan konvertera en stor del av indatabilderna korrekt. Standardvärdet är false.
+**Använd Acrobat Image Conversion (endast Windows):** När den här inställningen är true använder Generate PDF-tjänsten Acrobat för alla Image to PDF-konverteringar. Den här inställningen är bara användbar om standardkonverteringsfunktionen för ren Java inte kan konvertera en stor del av indatabilderna korrekt. Standardvärdet är false.
 
-**Aktivera Acrobat-baserade AutoCAD-konverteringar (endast Windows):** När den här inställningen är true använder Generate PDF-tjänsten Acrobat X Pro för alla DWG-konverteringar till PDF. Den här inställningen är bara användbar om AutoCAD inte är installerat på servern eller om AutoCAD-konverteringsfunktionen inte kan konvertera filer.
+**Aktivera Acrobat-baserade AutoCAD-konverteringar (endast Windows):** När den här inställningen är true använder tjänsten Generate PDF Acrobat för alla DWG-konverteringar till PDF. Den här inställningen är bara användbar om AutoCAD inte är installerat på servern eller om AutoCAD-konverteringsfunktionen inte kan konvertera filer.
 
 **Reguljära uttryck för att hitta förbjudna specialtecken i användarnamnet (endast Windows):** Anger tecken som stör åtgärderna Export PDF och Optimize PDF när tecknen visas i en användares namn.
 
