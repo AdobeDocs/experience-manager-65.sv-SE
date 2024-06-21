@@ -9,9 +9,9 @@ exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms, Workbench
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 1e978cbece1401a18137ef98a3a9bf6cd666e48f
 workflow-type: tm+mt
-source-wordcount: '10702'
+source-wordcount: '10828'
 ht-degree: 0%
 
 ---
@@ -226,7 +226,7 @@ Följande inställningar är tillgängliga för krypteringstjänsten.
 >
 >Använd endast enkel autentisering (användarnamn och lösenord) när anslutningen skyddas via SSL (med LDAPS).
 
-**Kompatibilitetsläge:**
+<!-- **Compatibility Mode:**-->
 
 ## FTP-tjänstinställningar {#ftp-service-settings}
 
@@ -254,7 +254,11 @@ Följande inställningar är tillgängliga för tjänsten Generate PDF.
 
 **Filtypsinställningar:** Namnet på den förkonfigurerade filtypsinställningen som ska användas för ett konverteringsjobb, om dessa inställningar inte anges som en del av API-anropsparametrarna. Filtypsinställningarna konfigureras i administrationskonsolen genom att klicka på Tjänster > PDF Generator> Filtypsinställningar.
 
-**Använd Acrobat WebCapture (endast Windows):** När den här inställningen är true använder Generate PDF-tjänsten Acrobat X Pro för alla HTML till PDF-konverteringar. Detta kan förbättra kvaliteten på PDF-filer som skapas från HTML, men prestandan kan vara något lägre. Standardvärdet är false.
+**Använd WebCapture (endast Windows):** När den här inställningen är true använder Generate PDF-tjänsten Acrobat för alla konverteringar från HTML till PDF. Detta kan förbättra kvaliteten på PDF-filer som skapas från HTML, men prestandan kan vara något lägre. Standardvärdet är false.
+
+**Primär konverterare för konvertering från HTML till PDF:** Tjänsten Generate PDF erbjuder flera vägar för att konvertera HTML-filer till PDF-dokument: Webkit, WebCapture (endast Windows) och WebToPDF. Med den här inställningen kan användaren välja den primära konverteraren för att konvertera HTML till PDF. Som standard är WebToPDF markerad.
+
+**Reservkonverterare för konvertering från HTML till PDF:** Ange konverteraren för HTML till PDF om den primära konverteraren misslyckas. Som standard är WebCapture (endast Windows) markerad.
 
 **Använd Acrobat Image Conversion (endast Windows):** När den här inställningen är true använder Generate PDF-tjänsten Acrobat X Pro för alla Image-to-PDF-konverteringar. Den här inställningen är bara användbar om standardkonverteringsfunktionen för ren Java inte kan konvertera en stor del av indatabilderna korrekt. Standardvärdet är false.
 
@@ -268,21 +272,23 @@ Följande inställningar är tillgängliga för tjänsten Generate PDF.
 
 **OCR-poolstorlek:** Poolstorleken för den PaperCaptureService som PDF Generator använder för OCR. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem. Den här inställningen är endast giltig i Windows-system.
 
+**ImageToPDF max pages in memory for TIFF conversions:** Med den här inställningen bestäms det maximala antalet sidor från en TIFF-bild som kan finnas kvar i minnet innan de rensas till disk under konverteringen till PDF. Standardvärdet för den här inställningen är 500, vilket kan ökas om ytterligare minne tilldelas ImageToPDF-konverteringsprocessen.
+
 **Reservteckensnittsfamilj för konverteringar från HTML till PDF:** Namnet på teckensnittsfamiljen som ska användas i PDF-dokument när teckensnittet som användes i det ursprungliga HTML inte är tillgängligt för AEM Forms Server. Ange en teckensnittsfamilj om du förväntar dig att konvertera HTML-sidor som använder otillgängliga teckensnitt. På sidor som skapats på regionala språk kan t.ex. otillgängliga teckensnitt användas.
 
 **Återförsökslogik för interna konverteringar** Regerar generering av PDF om det första konverteringsförsöket har misslyckats:
 
-**Inget nytt försök**
+* **Inget nytt försök**
 
-Försök inte konvertera PDF igen om det första konverteringsförsöket har misslyckats
+  Försök inte konvertera PDF igen om det första konverteringsförsöket har misslyckats
 
-**Försök igen**
+* **Försök igen**
 
-Försök konvertera PDF på nytt oavsett om tidsgränsen har nåtts eller inte. Standardtidsgränsen för det första försöket är 270-tal.
+  Försök konvertera PDF på nytt oavsett om tidsgränsen har nåtts eller inte. Standardtidsgränsen för det första försöket är 270-tal.
 
-**Försök igen om tiden tillåter**
+* **Försök igen om tiden tillåter**
 
-Försök konvertera PDF igen om den tid som förbrukats för det första konverteringsförsöket var kortare än den angivna tidsgränsen. Om tidsgränsen till exempel är 270 och det första försöket är 200-tal försöker PDF Generator konverteringen igen. Om det första försöket självt förbrukade 270-talet kommer konverteringen inte att försökas igen.
+  Försök konvertera PDF igen om den tid som förbrukats för det första konverteringsförsöket var kortare än den angivna tidsgränsen. Om tidsgränsen till exempel är 270 och det första försöket är 200-tal försöker PDF Generator konverteringen igen. Om det första försöket självt förbrukade 270-talet kommer konverteringen inte att försökas igen.
 
 ## Guides ES4 Utilities service settings {#guides-es4-utilities-service-settings}
 
