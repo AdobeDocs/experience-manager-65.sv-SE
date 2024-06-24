@@ -4,7 +4,9 @@ description: AEM Forms stöder anpassade funktioner som gör att användare kan 
 keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa en anpassad funktion, använd anpassad funktion i regelredigeraren.
 content-type: reference
 feature: Adaptive Forms, Core Components
-source-git-commit: f633fdfda531cc29ce6274e0367708cc4909a0cd
+roles: Admin, Developer
+exl-id: 00073e3a-f1b5-4c42-9fea-4a14b8a22c81
+source-git-commit: 6c902ca08b7689e428facdc4150f443dad089bff
 workflow-type: tm+mt
 source-wordcount: '3377'
 ht-degree: 0%
@@ -14,6 +16,7 @@ ht-degree: 0%
 # Anpassade funktioner i adaptiva Forms Core-komponenter
 
 I den här artikeln beskrivs hur du skapar anpassade funktioner med den senaste adaptiva Form Core-komponenten som har de senaste funktionerna, som:
+
 * Cachelagringsfunktion för anpassade funktioner
 * Globala omfångsobjekt och fältobjekt har stöd för anpassade funktioner
 * Stöd för moderna JavaScript-funktioner som låt- och pilfunktioner (ES10-stöd)
@@ -1003,5 +1006,3 @@ Om de anpassade funktionerna ändras blir cachningen ogiltig och den tolkas.
    * Klassmetoder
    * Standardparametrar
    * Restparametrar
-
-
