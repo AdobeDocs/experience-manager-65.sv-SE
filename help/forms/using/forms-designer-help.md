@@ -1,21 +1,21 @@
 ---
-title: Forms Designer - hjälp
+title: Hjälp för Forms Designer
 description: Forms Designer hjälper en användare att skicka in formuläret.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: publish
-feature: Forms Designer
+feature: Forms Designer,Designer
 exl-id: f962844a-f191-4505-bfc9-85c94d8faa46
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 0%
 
 ---
 
-# Forms Designer - hjälp {#form-designer-help}
+# Hjälp för Forms Designer {#form-designer-help}
 
 [Använda Designer](https://www.adobe.com/go/learn_aemforms_designer_65)
 [Snabbstart för Designer Tutorials](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)

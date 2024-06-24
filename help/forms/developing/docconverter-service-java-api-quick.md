@@ -8,7 +8,8 @@ topic-tags: develop
 role: Developer
 exl-id: 554b19d6-47c3-4171-b59d-343f1ad935b2
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 0%
@@ -19,9 +20,9 @@ ht-degree: 0%
 
 Java™ API Quick Start(SOAP) är tillgängligt för tjänsten DocConverter.
 
-[Snabbstart (SOAP-läge): Kontrollera PDF/A-kompatibilitet med Java](docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
+[Snabbstart (SOAP läge): Kontrollera PDF/A-kompatibilitet med Java](docconverter-service-java-api-quick.md#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Konvertera ett dokument till ett PDF/A-dokument med Java](docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
+[Snabbstart (SOAP): konvertera ett dokument till ett PDF/A-dokument med Java](docconverter-service-java-api-quick.md#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
@@ -29,7 +30,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 >
 >Snabbstart i programmering med AEM formulär baseras på Forms Server som distribueras på JBoss® Application Server och operativsystemet Microsoft® Windows. Om du använder ett annat operativsystem, till exempel UNIX®, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Konvertera ett dokument till ett PDF/A-dokument med Java™ API {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api}
+## Snabbstart (SOAP): Konvertera ett dokument till ett PDF/A-dokument med Java™ API {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api}
 
 I följande Java™-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett PDF/A-dokument som har sparats som en PDF-fil med namnet *LoanArchive.pdf*. (Se [Konvertera dokument till PDF/A-dokument](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents).)
 
@@ -132,7 +133,7 @@ I följande Java™-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf
  }
 ```
 
-## Snabbstart (SOAP-läge): Kontrollera PDF/A-kompatibilitet med Java™ API {#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api}
+## Snabbstart (SOAP läge): fastställa kompatibiliteten PDF/A med Java™ API {#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api}
 
 I följande Java™-kodexempel avgörs om indatadokumentet PDF är PDF/A-kompatibelt. Det inmatade PDF-dokumentet som skickas till tjänsten DocConverter har ett namn *LoanArchive.pdf*. Valideringsresultat skrivs till en XML-fil med namnet *ValidationResults.xml*. (Se [Programmerat fastställa PDF/A-överensstämmelse](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
 

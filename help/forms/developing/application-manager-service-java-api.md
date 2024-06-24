@@ -8,16 +8,17 @@ topic-tags: develop
 role: Developer
 exl-id: 1d2d6d64-f16e-4381-8691-f3c2744481ea
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,APIs & Integrations
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
 
 ---
 
-# JavaAPI-snabbstart (SOAP) för Application Manager-tjänsten {#application-manager-service-javaapi-quick-start-soap}
+# JavaAPI-snabbstart för Application Manager-tjänsten (SOAP) {#application-manager-service-javaapi-quick-start-soap}
 
-Java API Quick Start (SOAP) är tillgängligt för tjänsten Application Manager.
+Java API Quick Start(SOAP) är tillgängligt för Application Manager-tjänsten.
 
 [Snabbstart: Distribuera program med Java API(SOAP)](application-manager-service-java-api.md#quick-start-soap-mode-deploying-applications-using-the-java-api)
 
@@ -31,9 +32,9 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 >[!NOTE]
 >
->Java API(SOAP) Quick Start in Programming with AEM forms är baserat på Forms om du använder ett annat operativsystem, till exempel Unix, och ersätter Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+>Java API(SOAP) Quick Start in Programming with AEM forms är baserat på Forms om du använder ett annat operativsystem, som Unix, och byter ut Windows-specifika sökvägar mot sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Distribuera program med Java API {#quick-start-soap-mode-deploying-applications-using-the-java-api}
+## Snabbstart (SOAP): Distribuera program med Java API {#quick-start-soap-mode-deploying-applications-using-the-java-api}
 
 I följande Java-kodexempel importeras ett program baserat på en befintlig LCA-fil med namnet *EncryptDocument.lca*.
 
@@ -135,7 +136,7 @@ I följande Java-kodexempel importeras ett program baserat på en befintlig LCA-
  
 ```
 
-## Snabbstart (SOAP-läge): Ta bort ett program med Java API {#quick-start-soap-mode-removing-an-application-using-the-java-api}
+## Snabbstart (SOAP): Ta bort ett program med Java API {#quick-start-soap-mode-removing-an-application-using-the-java-api}
 
 I följande Java-kodexempel tas ett program med namnet bort *EncryptDocument*.
 

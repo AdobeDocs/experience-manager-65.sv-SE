@@ -4,10 +4,10 @@ description: AEM Forms stöder anpassade funktioner som gör att användare kan 
 keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa en anpassad funktion, använd anpassad funktion i regelredigeraren.
 contentOwner: Ruchita Srivastav
 content-type: reference
-feature: Adaptive Forms, Core Components
+feature: Adaptive Forms,Core Components
 exl-id: a328b4a8-e8dd-42a0-b73b-94e76c7692a8
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1111'
 ht-degree: 0%

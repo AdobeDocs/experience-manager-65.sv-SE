@@ -6,10 +6,10 @@ contentOwner: Khushwant Singh
 topic-tags: Adaptive Forms
 docset: aem65
 role: Admin, Developer
-feature: Adaptive Forms, Core Components
+feature: Adaptive Forms,Core Components
 exl-id: 6585ea71-6242-47d3-bc59-6f603cf507b6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Genom att aktivera adaptiva Forms Core-komponenter kan du börja skapa, publicera och leverera [Core Components based Adaptive Forms](create-an-adaptive-form-core-components.md) och [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) från din AEM 6.5 Forms-miljö.
 
-Om du vill aktivera adaptiva Forms Core-komponenter i din Forms-miljö med AEM 6.5 installerar och driftsätter du en [AEM Archetype 41 eller senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) baserat projekt (med formuläralternativ aktiverade) på alla dina författarinstanser och publiceringsinstanser.
+Om du vill aktivera adaptiva Forms Core-komponenter i din Forms-miljö med AEM 6.5 installerar och driftsätter du en [AEM Archetype 41 eller senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) baserat projekt (med formuläralternativ aktiverade) på alla instanser av författaren och Publish.
 
 I den här artikeln finns detaljerade anvisningar om hur du konfigurerar och distribuerar AEM Archetype 41 eller senare baserat på ditt projekt i Forms-miljön AEM 6.5 för att aktivera adaptiva Forms Core-komponenter. Du kan läsa listan nedan för **AEM 6.5** kompatibla versioner för aktivering av Forms Core Components:
 
@@ -43,7 +43,7 @@ Innan du aktiverar adaptiva Forms Core-komponenter i en AEM 6.5 Forms-miljö:
 
 ## Skapa och distribuera det senaste AEM Archetype-baserade projektet
 
-Så här skapar du en AEM Archetype 41 eller [senare](https://github.com/adobe/aem-project-archetype) -baserat projekt och distribuera det till alla dina författare- och publiceringsinstanser:
+Så här skapar du en AEM Archetype 41 eller [senare](https://github.com/adobe/aem-project-archetype) -baserat projekt och distribuera det till alla dina författare- och Publish-instanser:
 
 1. Logga in på datorn som värd och kör AEM 6.5 Forms-instansen som administratör.
 1. Öppna kommandotolken eller avsluta och kör följande kommando för att skapa AEM Archetype-projekt (med formuläralternativ aktiverade):
@@ -134,13 +134,13 @@ Så här skapar du en AEM Archetype 41 eller [senare](https://github.com/adobe/a
 
    När det AEM Archetype-projektet har skapats skapas ett AEM. Paketet finns på [AEM Archetype-projektmapp]\all\target\[appid].all-[version].zip
 
-1. Använd [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en) för att distribuera [AEM Archetype-projektmapp]\all\target\[appid].all-[version]ZIP-paket för alla författare- och publiceringsinstanser.
+1. Använd [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en) för att distribuera [AEM Archetype-projektmapp]\all\target\[appid].all-[version]ZIP-paket för alla författare och Publish-instanser.
 
 >[!NOTE]
 >
 >
 >
-> * Om du får problem med att komma åt inloggningsdialogrutan på en publiceringsinstans kan du försöka med att använda URL-adressen för att installera paketet via pakethanteraren: `http://[Publish Server URL]:[PORT]/system/console` för inloggning. På så sätt kan du komma åt inloggningssidan i en Publish-instans och fortsätta med installationsprocessen.
+> * Om du får problem med att komma åt inloggningsdialogrutan på en publiceringsinstans kan du försöka med att använda URL-adressen för att installera paketet via pakethanteraren: `http://[Publish Server URL]:[PORT]/system/console` för inloggning. På så sätt kan du komma åt inloggningssidan på en Publish-instans och fortsätta med installationsprocessen.
 > * Ta inte bort eller ignorera Arketype-projektet efter att du distribuerat det till din miljö. Arketype-projektet krävs för att du ska kunna lägga till anpassade och nya adaptiva Forms Core Components-teman i din miljö.
 
 Kärnkomponenterna är aktiverade för din miljö. En tom Core Components-baserad Adaptive Form-mall och Canvas 3.0-temat distribueras till din miljö, vilket gör att du kan [skapa baskomponentbaserade adaptiva Forms](create-an-adaptive-form-core-components.md).

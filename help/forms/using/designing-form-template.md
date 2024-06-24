@@ -5,11 +5,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 docset: aem65
-feature: HTML5 Forms
+feature: HTML5 Forms,Mobile Forms
 exl-id: 7c8d501f-c953-495e-8bac-1f66fd99c783
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Vanliga XFA-funktioner finns i följande metodtips och riktlinjer för att utfor
 
 De flesta stegen för att utforma en formulärmall, som schemabindningar eller skrivning av formulärlogik, är desamma. På grund av skillnader mellan återgivning och skriptmotor i en tjock klient som Adobe Reader och webbläsarbaserade formulär finns det dock vissa rekommendationer som beskrivs i [bästa praxis](/help/forms/using/design-accessible-html5-forms.md) artikel. De bästa sätten att utforma formulärmallar så att de fungerar som förväntat i båda formaten.
 
-### AEM Forms Designer för HTML5 Forms {#capabilities-in-aem-forms-designer-for-html-forms}
+### Funktioner i AEM Forms Designer för HTML5 Forms {#capabilities-in-aem-forms-designer-for-html-forms}
 
 #### Förhandsgranska HTML {#preview-html}
 
@@ -36,7 +36,7 @@ Fliken Förhandsgranska HTML har lagts till i designläget så att formulärdesi
 
 #### Klottra signaturer {#scribble-signature}
 
-Det främsta målet för HTML5-formulär är pekenheter. Därför har en ny kontroll för signering i klotter lagts till i AEM Forms Designer. Du kan klicka på eller dra och släppa kontrollen för signering av skript på formulärmallen och konfigurera den. Det återges som ett klottrigt fält i HTML5-renderingen och kan användas för att klottra signaturer på pekenheter. På stationära datorer kan den användas som ett klotterfält med hjälp av muskontroll. Mer information om hur du använder den här funktionen finns i [XFA-skriptfält](../../forms/using/scribble-signature.md).
+Det främsta målet för HTML5-formulär är pekenheter. Därför har en ny kontroll för klottra signaturer lagts till i AEM Forms Designer. Du kan klicka på eller dra och släppa kontrollen för signering av skript på formulärmallen och konfigurera den. Det återges som ett klottrigt fält i HTML5-renderingen och kan användas för att klottra signaturer på pekenheter. På stationära datorer kan den användas som ett klotterfält med hjälp av muskontroll. Mer information om hur du använder den här funktionen finns i [XFA-skriptfält](../../forms/using/scribble-signature.md).
 
 ![4](assets/4.png)
 

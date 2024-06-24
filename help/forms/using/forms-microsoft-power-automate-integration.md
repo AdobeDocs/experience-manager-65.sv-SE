@@ -2,11 +2,11 @@
 title: Hur ansluter och skickar man data i adaptiva blanketter till Microsoft&reg; Power Automate?
 description: Stegvisa instruktioner för att ansluta och skicka data i anpassade formulär till Microsoft&reg; Power Automate.
 keywords: Adaptiv Forms Microsoft Power Automate, skicka adaptiva Forms-data till Microsoft Power Automate
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 exl-id: 3fd26ddb-d247-462f-a0f6-8af6166516c1
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Utför följande åtgärder för att ansluta AEM Forms Author-instansen till Mic
 1. [Skapa en Microsoft](#ms-power-automate-application)
 1. [Skapa Microsoft](#microsoft-power-automate-dataverse-cloud-configuration)
 1. [Skapa Microsoft](#create-microsoft-power-automate-flow-cloud-configuration)
-1. [Publicera Microsoft](#publish-microsoft-power-automate-dataverse-cloud-configuration)
+1. [Publish Microsoft](#publish-microsoft-power-automate-dataverse-cloud-configuration)
 
 ### Skapa Microsoft® Azure Active Directory-program {#ms-power-automate-application}
 
@@ -106,11 +106,11 @@ Utför följande åtgärder för att ansluta AEM Forms Author-instansen till Mic
 1. På **[!UICONTROL Configure Dataverse for Microsoft®® Power Automate]** sida, ange **[!UICONTROL Client ID]** (kallas även program-ID), **[!UICONTROL Client Secret]**, **[!UICONTROL OAuth URL]** och **[!UICONTROL Dynamic Environment URL]**. Använd klient-ID, Klienthemlighet, OAuth URL och Dynamics Environment-ID. Använd alternativet Endpoints i användargränssnittet i Microsoft® Azure Active Directory för att hitta OAuth-URL:en. Öppna [Mina flöden](https://us.flow.microsoft.com) och väljer Mina flöden använder det ID som anges i URL:en som Dynamics Environment ID.
 1. Välj **[!UICONTROL Connect]**. Logga in på ditt Microsoft® Azure-konto om du blir tillfrågad. Välj **[!UICONTROL Save]**.
 
-### Publicera både Microsoft® Power Automate Dataverse och Microsoft® Power Automate Flow Service Cloud-konfigurationer {#publish-microsoft-power-automate-dataverse-cloud-configuration}
+### Publish både Microsoft® Power Automate Dataverse och Microsoft® Power Automate Flow Service Cloud-konfigurationer {#publish-microsoft-power-automate-dataverse-cloud-configuration}
 
 1. Navigera till **[!UICONTROL Tools]** ![hammare](assets/hammer.png) > **[!UICONTROL Cloud Services]** > **[!UICONTROL Microsoft®® Power Automate Dataverse]** och öppna konfigurationsbehållaren som du skapade i föregående [Skapa Microsoft® Power Automate Dataverse Cloud-konfiguration](#microsoft-power-automate-dataverse-cloud-configuration) -avsnitt.
 1. Välj `dataverse` konfigurera och välja **[!UICONTROL Publish]**.
-1. På sidan Publicera väljer du **[!UICONTROL All Configurations]** och markera **[!UICONTROL Publish]**. Publicera både Power Automate Dataverse och Power Automate Flow Service Cloud-konfigurationer.
+1. På Publish-sidan väljer du **[!UICONTROL All Configurations]** och markera **[!UICONTROL Publish]**. Publish både Power Automate Dataverse och Power Automate Flow Service Cloud Configurations.
 
 Din instans av AEM Forms Author är nu ansluten till Microsoft® Power Automate. Nu kan du skicka adaptiva Forms-data till ett Power Automate-flöde.
 

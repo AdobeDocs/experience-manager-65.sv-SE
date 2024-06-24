@@ -8,14 +8,15 @@ topic-tags: develop
 role: Developer
 exl-id: 38a90957-bdde-4f38-9edd-c59522e5f525
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# Document Management Service (utgått) Java API Quick Start (SOAP) {#document-management-service-deprecated-java-api-quick-start-soap}
+# Snabbstart för Java API (SOAP) för dokumenthanteringstjänsten (borttagen) {#document-management-service-deprecated-java-api-quick-start-soap}
 
 Följande snabbstarter är tillgängliga för dokumenthanteringstjänsten (borttagen).
 
@@ -23,21 +24,21 @@ Följande snabbstarter är tillgängliga för dokumenthanteringstjänsten (bortt
 >
 >Från och med den 5 augusti 2011 migrerar Adobe Content Services ES-kunder till Adobe Digital Enterprise Platform Experience Services. Produktens färdplan för kunder som använder Content Services är att gå över till den nya ADEP Experience Services - Core, som innehåller en inbyggd Content Repository som bygger på den moderna, modulära CRX-arkitekturen, som förvärvades under Adobe-förvärvet av Day Software.
 
-[Snabbstart (SOAP-läge): Skapa Content Services-utrymmen med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
+[Snabbstart (SOAP): Skapa Content Services-utrymmen med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
 
-[Snabbstart (SOAP-läge): Ta bort innehåll i Content Services med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated)
+[Snabbstart (SOAP läge): Ta bort innehåll i Content Services med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated)
 
-[Snabbstart (SOAP-läge): Lägg till innehåll i Content Services med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated)
+[Snabbstart (SOAP): Lägg till innehåll i Content Services med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated)
 
-[Snabbstart (SOAP-läge): Hämta innehåll från innehållstjänster med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated)
+[Snabbstart (SOAP): Hämta innehåll från Content Services med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated)
 
-[Snabbstart (SOAP-läge): Flytta innehåll för innehållstjänster med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated)
+[Snabbstart (SOAP läge): Flytta innehåll för innehållstjänster med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated)
 
-[Snabbstart (SOAP-läge): Lista innehåll i Content Services med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated)
+[Snabbstart (SOAP läge): Lista innehåll i Content Services med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated)
 
-[Snabbstart (SOAP-läge): Sök efter innehåll i Content Services med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated)
+[Snabbstart (SOAP): Sök efter innehåll i Content Services med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated)
 
-[Snabbstart (SOAP-läge): Ange behörigheter för innehållstjänster med hjälp av Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated)
+[Snabbstart (SOAP läge): ange behörigheter för innehållstjänster med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
@@ -45,7 +46,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 >
 >Snabbstart i programmering med AEM formulär baseras på den Forms-server som distribueras på JBoss och operativsystemet Windows. Om du använder ett annat operativsystem, t.ex. UNIX, kan du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Skapa innehållstjänstutrymmen med Java API (inaktuellt) {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
+## Snabbstart (SOAP): Skapa innehållstjänstutrymmen med Java API (inaktuellt) {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
 
 I följande Java-kodexempel skapas ett nytt blanksteg med namnet *Testkatalog* i företagshem. ID-värdet för det nya utrymmet skrivs till konsolen.
 
@@ -141,7 +142,7 @@ I följande Java-kodexempel skapas ett nytt blanksteg med namnet *Testkatalog* i
  
 ```
 
-## Snabbstart (SOAP-läge): Ta bort innehåll för innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated}
+## Snabbstart (SOAP läge): Ta bort innehåll i Content Services med Java API (inaktuellt) {#quick-start-soap-mode-delete-content-services-content-using-the-java-api-deprecated}
 
 I följande Java-kodexempel tas ett blanksteg med namnet /Company Home/Test Directory bort.
 
@@ -241,7 +242,7 @@ I följande Java-kodexempel tas ett blanksteg med namnet /Company Home/Test Dire
  
 ```
 
-## Snabbstart (SOAP-läge): Lägg till innehåll i innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
+## Snabbstart (SOAP): Lägg till innehåll i innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
 
 I följande Java-kodexempel läggs en PDF-fil till med namnet *MortgageForm.pdf* till en mapp med namnet /Company Home/Test Directory. Attributen creator och description har angetts. Identifieringsvärdet för det nya innehållet skrivs till konsolen.
 
@@ -364,7 +365,7 @@ I följande Java-kodexempel läggs en PDF-fil till med namnet *MortgageForm.pdf*
  
 ```
 
-## Snabbstart (SOAP-läge): Hämta innehåll från innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
+## Snabbstart (SOAP): Hämta innehåll från innehållstjänster med Java API (borttaget) {#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
 
 I följande Java-kodexempel hämtas en PDF-fil med namnet *MortgageForm.pdf* från /Company Home. PDF-filen sparas i det lokala filsystemet och får ett namn *UpdatedMortgageForm.pdf*.
 
@@ -470,7 +471,7 @@ I följande Java-kodexempel hämtas en PDF-fil med namnet *MortgageForm.pdf* fr�
  
 ```
 
-## Snabbstart (SOAP-läge): Flytta innehåll för innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated}
+## Snabbstart (SOAP): Flytta innehåll för innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-move-content-services-content-using-the-java-api-deprecated}
 
 I följande Java-kodexempel flyttas en PDF-fil med namnet *MortgageForm.pdf* från /Company Home/Test Directory till /Company Home. Identifieringsvärdet för det flyttade innehållet skrivs till konsolen.
 
@@ -571,7 +572,7 @@ I följande Java-kodexempel flyttas en PDF-fil med namnet *MortgageForm.pdf* fr�
  
 ```
 
-## Snabbstart (SOAP-läge): Lista innehåll i Content Services med Java API (inaktuellt) {#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated}
+## Snabbstart (SOAP): Visa innehåll i Content Services med Java API (inaktuellt) {#quick-start-soap-mode-list-content-services-content-using-the-java-api-deprecated}
 
 I följande Java-kodexempel visas innehåll som finns i /Company Home. Varje nodtyp och nodnamn visas.
 
@@ -684,7 +685,7 @@ I följande Java-kodexempel visas innehåll som finns i /Company Home. Varje nod
  
 ```
 
-## Snabbstart (SOAP-läge): Sök efter innehåll i innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated}
+## Snabbstart (SOAP): Sök efter innehåll i innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-search-content-services-content-using-the-java-api-deprecated}
 
 Följande Java-kod söker efter ett dokument som innehåller texten MortgageForm /Company Home. Undermapparna söks också igenom.
 
@@ -794,7 +795,7 @@ Följande Java-kod söker efter ett dokument som innehåller texten MortgageForm
  
 ```
 
-## Snabbstart (SOAP-läge): Ange behörigheter för innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
+## Snabbstart (SOAP läge): Ange behörigheter för innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
 
 I följande Java-kodexempel anges en behörighet för en användare med namnet tony blue. Den angivna domänen är standarddomän. Användarbehörighet anges och noden är `/Company Home/Test Directory`.
 
@@ -904,7 +905,7 @@ I följande Java-kodexempel anges en behörighet för en användare med namnet t
  
 ```
 
-## Snabbstart (SOAP-läge): Skapa associationer med Java API (inaktuellt) {#quick-start-soap-mode-creating-associations-using-the-java-api-deprecated}
+## Snabbstart (SOAP läge): Skapa associationer med Java API (inaktuellt) {#quick-start-soap-mode-creating-associations-using-the-java-api-deprecated}
 
 I följande Java-kod skapas en association för en XML-datafil och ett PDF-formulär. Den här associationstypen heter LinkedBy. Dokumentet PDF måste ha proportionslänkningsfunktionen tillämpad.
 

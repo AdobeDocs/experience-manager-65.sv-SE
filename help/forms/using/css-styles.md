@@ -6,11 +6,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 discoiquuid: a8d986ab-2a4c-488b-957e-4606f7391bd3
-feature: HTML5 Forms
+feature: HTML5 Forms,Mobile Forms
 exl-id: 8cc90ff7-284e-41cd-bfda-7fa09371e270
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 0%
@@ -124,7 +124,7 @@ Förutom klassen type och name innehåller fältkomponenten även en ytterligare
 
 ## CSS-klasser för olika fält {#css-classes-for-different-fields}
 
-AEM Forms Designer har stöd för olika typer av fält i ett formulär som NumericField, DecimalField och Date Field. Alla dessa fält i HTML innehåller de ovannämnda CSS-klasserna. De innehåller också vissa extra klasser beroende på fälttypen.
+AEM Forms Designer stöder olika typer av fält i ett formulär som NumericField, DecimalField och Date Field. Alla dessa fält i HTML innehåller de ovannämnda CSS-klasserna. De innehåller också vissa extra klasser beroende på fälttypen.
 
 Varje fält har en tillhörande widget som representerar gränssnittselementet. Klasserna för varje fält och de widgetar som är kopplade till varje fält listas nedan.
 

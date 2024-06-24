@@ -4,11 +4,11 @@ description: Lär dig bädda in ett anpassat formulär på en extern webbsida
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
 topic-tags: author
 docset: aem65
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 exl-id: 2a237f74-fdfc-4e28-841c-f69afb7b99cf
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1028'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Du kan [bädda in anpassningsbara formulär på en AEM Sites-sida](/help/forms/u
 
 Utför följande steg innan du bäddar in ett anpassat formulär på en extern webbplats
 
-* Publicera det adaptiva formulär som ska bäddas in i Publish-instansen av AEM Forms Server.
+* Publish det adaptiva formulär som ska bäddas in i Publish-instansen av AEM Forms Server.
 * Skapa eller identifiera en webbsida på webbplatsen där du kan lägga upp det adaptiva formuläret. Kontrollera att webbsidan kan [läsa jQuery-filer från ett CDN](https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js) eller har en lokal kopia av jQuery inbäddad. jQuery krävs för att återge ett anpassat formulär.
 * När AEM och webbsidan finns på olika domäner utför du stegen som anges i avsnittet, [göra det möjligt för AEM Forms att skicka adaptiva formulär till en domänövergripande webbplats](#cross-site).
 

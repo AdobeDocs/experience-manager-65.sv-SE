@@ -4,11 +4,11 @@ description: Fliken Förhandsgranska HTML i LiveCycle Designer kan användas fö
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 docset: aem65
-feature: HTML5 Forms
+feature: HTML5 Forms,Mobile Forms
 exl-id: 548f302b-57f0-4bdc-8a99-1a4967caa32f
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -66,7 +66,7 @@ The [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) är aktivera
 
 ### Ange information om AEM Forms-server {#provide-details-of-aem-forms-server}
 
-1. Gå till Designer **verktyg** > **Alternativ**.
+1. I Designer går du till **verktyg** > **Alternativ**.
 1. I fönstret Alternativ väljer du **Serveralternativ** sida, ange följande information och klicka på **OK**.
 
    * **Server-URL**: AEM Forms server-URL.
@@ -87,9 +87,9 @@ The [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) är aktivera
    >
    >Kontrollera att AEM Forms-servern är igång. HTML-förhandsvisningen ansluter till CRX-servern till *generera* en förhandsgranskning.
 
-   ![AEM Forms Designer-alternativ ](assets/server_options.png)
+   ![Alternativ för AEM Forms Designer ](assets/server_options.png)
 
-   AEM Forms Designer-alternativ
+   Alternativ för AEM Forms Designer
 
 1. Om du vill förhandsgranska ett formulär i HTML klickar du på **Förhandsgranska HTML** -fliken.
 
@@ -109,9 +109,9 @@ The [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) är aktivera
 
 ## Förhandsgranska ett formulär med exempeldata {#to-preview-a-form-using-sample-data}
 
-I Designer kan du förhandsgranska och testa formuläret med XML-exempeldata. Vi rekommenderar att du ofta testar formuläret med exempeldata för att säkerställa att formuläret återges korrekt.
+Med Designer kan du förhandsgranska och testa formuläret med XML-exempeldata. Vi rekommenderar att du ofta testar formuläret med exempeldata för att säkerställa att formuläret återges korrekt.
 
-Om du inte har några exempeldata kan Designer skapa dem, eller så kan du skapa dem själv. (Se [Generera exempeldata automatiskt för att förhandsgranska formuläret](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7efe.2) och [Skapa exempeldata för att förhandsgranska formuläret](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7eff.2).)
+Om du inte har några exempeldata kan Designer skapa dem eller så kan du skapa dem själv. (Se [Generera exempeldata automatiskt för att förhandsgranska formuläret](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7efe.2) och [Skapa exempeldata för att förhandsgranska formuläret](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7eff.2).)
 
 Om du testar formuläret med en exempeldatakälla ser du till att data och fält mappas och att upprepade delformulär upprepas som du förväntade dig. Du kan skapa en balanserad formulärlayout som ger rätt utrymme för varje objekt för att visa sammanfogade data.
 

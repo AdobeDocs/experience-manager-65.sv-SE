@@ -8,20 +8,21 @@ topic-tags: develop
 role: Developer
 exl-id: a2560c87-ae95-4d65-869a-8cba177a1cd6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
 
 ---
 
-# Java API snabbstart (SOAP) för integreringstjänsten för formulärdata {#form-data-integration-service-javaapi-quick-start-soap}
+# Java API - snabbstart (SOAP) för integreringstjänsten för formulärdata {#form-data-integration-service-javaapi-quick-start-soap}
 
 Följande snabbstarter är tillgängliga för integreringstjänsten för formulärdata.
 
-[Snabbstart (SOAP-läge): Importera formulärdata med Java API](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
+[Snabbstart (SOAP): Importera formulärdata med Java API](form-data-integration-service-java.md#quick-start-soap-mode-importing-form-data-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Exportera formulärdata med Java API](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
+[Snabbstart (SOAP): exportera formulärdata med Java API](form-data-integration-service-java.md#quick-start-soap-mode-exporting-form-data-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
@@ -29,7 +30,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 >
 >Snabbstart vid programmering med AEM formulär baseras på den Forms-server som distribueras på JBoss Application Server och Microsoft Windows. Om du använder ett annat operativsystem, till exempel UNIX, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Importera formulärdata med Java API {#quick-start-soap-mode-importing-form-data-using-the-java-api}
+## Snabbstart (SOAP): Importera formulärdata med Java API {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
 I följande Java-kodexempel importeras data till ett PDF-formulär. Data finns i en XML-fil med namnet *Loan_data.xml* och formuläret PDF sparas som en PDF-fil med namnet *ResultLoanForm.pdf*. (Se [Importera formulärdata](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
 
@@ -131,7 +132,7 @@ I följande Java-kodexempel importeras data till ett PDF-formulär. Data finns i
  
 ```
 
-## Snabbstart (SOAP-läge): Exportera formulärdata med Java API {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
+## Snabbstart (SOAP): exportera formulärdata med Java API {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
 
 I följande Java-kodexempel exporteras data från ett PDF-formulär. Formulärdata sparas som en XML-fil med namnet *Loan_data.xml*. (Se [Exporterar formulärdata](/help/forms/developing/importing-exporting-data.md#exporting-form-data).)
 

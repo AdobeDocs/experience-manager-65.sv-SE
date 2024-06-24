@@ -3,9 +3,9 @@ title: Ytterligare steg för att få e-post med bilagor
 description: Lär dig hur du åtgärdar felet när du inte kan hämta e-post med bilagor för AEM Forms på JEE-plattformar.
 exl-id: 0d0713fb-d95a-4a95-91ef-9cdaea30e343
 solution: Experience Manager, Experience Manager Forms
-feature: Adaptive Forms, Troubleshooting
+feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%

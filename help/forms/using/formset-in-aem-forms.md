@@ -5,11 +5,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: hTML5_forms
 docset: aem65
-feature: HTML5 Forms
+feature: HTML5 Forms,Mobile Forms
 exl-id: 039afdf3-013b-41b2-8821-664d28617f61
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '2804'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Formuläruppsättningar stöds också i AEM Forms-appen, vilket gör att fältar
 
 ## Skapa och hantera formuläruppsättning {#creating-and-managing-form-set}
 
-Du kan koppla flera XDP-filer eller formulärmallar, som skapats med Designer, till en formuläruppsättning. Formuläruppsättningar kan sedan användas för att selektivt återge XDP:er baserat på värden som användarna angett i de ursprungliga formulären och deras profiler.
+Du kan koppla flera XDP-filer eller formulärmallar, som har skapats med Designer, till en formuläruppsättning. Formuläruppsättningar kan sedan användas för att selektivt återge XDP:er baserat på värden som användarna angett i de ursprungliga formulären och deras profiler.
 
 Använd [AEM Forms användargränssnitt](../../forms/using/introduction-managing-forms.md) för att hantera alla formulär, formuläruppsättningar och relaterade resurser.
 
@@ -90,7 +90,7 @@ När en formuläruppsättning har skapats kan du utföra följande åtgärder f�
 * Hämta: Du kan hämta formuläruppsättningen med alla dess beroenden.
 * Starta/hantera granskning: När formuläruppsättningen har skapats kan du konfigurera granskningen genom att klicka på Starta granskning. När granskningen har startats för en formuläruppsättning visas alternativet Hantera granskning för användaren. På granskningsskärmen kan du uppdatera/avsluta granskningen. För de granskningar du har lagt till kan du kontrollera granskningen och lägga till kommentarer om det behövs.
 * Ta bort: Tar bort hela formuläruppsättningen. Formulären i den borttagna formuläruppsättningen finns kvar i databasen.
-* Publicera/avpublicera: Detta publicerar/återpublicerar formuläruppsättningen tillsammans med alla formulär som den innehåller och de relaterade resurserna i dessa formulär.
+* Publish/Unpublish: Detta publicerar/avpublicerar formuläruppsättningen tillsammans med alla formulär som den innehåller och de relaterade resurserna i dessa formulär.
 * Förhandsgranska: Förhandsgranska innehåller två alternativ: Förhandsgranska som HTML (utan data) och anpassad förhandsvisning med exempeldata.
 * Visa/redigera egenskaper: Du kan visa/redigera metadataegenskaperna för en markerad formuläruppsättning.
 

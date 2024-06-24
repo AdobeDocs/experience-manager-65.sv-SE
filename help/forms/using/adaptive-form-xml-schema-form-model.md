@@ -1,12 +1,12 @@
 ---
 title: Hur skapar man adaptiva Forms med XML-schema?
 description: Lär dig hur du använder XML-schema som formulärmodell i ett adaptivt formulär. Du kan använda befintliga XSD-mallar för att skapa anpassningsbara formulär och dra och släppa schemaelement från XSD till ditt anpassningsbara formulär. Gräv djupare med ett exempel på ett XML-schema, lägg till specialegenskaper i fält med XML-schema och begränsa godtagbara värden för en adaptiv formulärkomponent.
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 role: User, Developer
 level: Beginner, Intermediate
 exl-id: 35d5859f-54c4-4d14-9c64-0d9291ef9029
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1121'
 ht-degree: 0%

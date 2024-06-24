@@ -8,7 +8,8 @@ topic-tags: develop
 role: Developer
 exl-id: c5bf9184-a837-4033-9962-7b3052498e75
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,APIs & Integrations,AEM Forms on JEE
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 Java™ API Quick Start (SOAP) finns för tjänsten Distiller®:
 
-[Snabbstart (SOAP-läge): Konvertera en PostScript-fil till ett PDF-dokument med Java](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
+[Snabbstart (SOAP): Konvertera en PostScript-fil till ett PDF-dokument med Java](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
@@ -27,7 +28,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 >
 >Snabbstart i programmering med AEM formulär baseras på Forms Server som distribueras på JBoss® Application Server och operativsystemet Microsoft® Windows. Om du använder ett annat operativsystem, till exempel UNIX®, ska du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Konvertera en PostScript-fil till ett PDF-dokument med Java™ API {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
+## Snabbstart (SOAP): Konvertera en PostScript-fil till ett PDF-dokument med Java™ API {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
 
 I följande kodexempel konverteras en PostScript-fil med namnet *Loan.ps* till en PDF-fil som anropas *Loan.pdf*. (Se [Konvertera PostScript till PDF-dokument](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents).)
 

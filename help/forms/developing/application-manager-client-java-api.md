@@ -8,32 +8,33 @@ topic-tags: develop
 role: Developer
 exl-id: 659eb9b0-93a0-4bae-8836-d4bc9c3a8c77
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+feature: Adaptive Forms,APIs & Integrations
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '429'
 ht-degree: 0%
 
 ---
 
-# JavaAPI-snabbstart för Application Manager-klient (SOAP) {#application-manager-client-javaapi-quick-start-soap}
+# Snabbstart för Application Manager Client JavaAPI (SOAP) {#application-manager-client-javaapi-quick-start-soap}
 
-Följande Java™ API Quick Start (SOAP) är tillgängligt för Application Manager-klienten.
+Följande Java™ API Quick Start(SOAP) är tillgängligt för Application Manager-klienten.
 
-[Snabbstart (SOAP-läge): Skapa programversion med Java](#quick-start-soap-mode-creating-application-version-using-the-java-api)
+[Snabbstart (SOAP): Skapa programversion med Java](#quick-start-soap-mode-creating-application-version-using-the-java-api)
 
-[Snabbstart (SOAP-läge): exportera program med Java](#quick-start-soap-mode-exporting-applications-using-the-java-api)
+[Snabbstart (SOAP): exportera program med Java](#quick-start-soap-mode-exporting-applications-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Importera program med Java](#quick-start-soap-mode-importing-applications-using-the-java-api)
+[Snabbstart (SOAP): Importera program med Java](#quick-start-soap-mode-importing-applications-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hämta ett AEM Forms-program med Java](application-manager-client-java-api.md#quick-start-soap-mode-getting-a-application-using-the-java-api)
+[Snabbstart (SOAP): Hämta ett AEM Forms-program med Java](application-manager-client-java-api.md#quick-start-soap-mode-getting-a-application-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hämta program med Java](application-manager-client-java-api.md#quick-start-soap-mode-getting-the-applications-using-the-java-api)
+[Snabbstart (SOAP): Hämta program med Java](application-manager-client-java-api.md#quick-start-soap-mode-getting-the-applications-using-the-java-api)
 
-[Snabbstart (SOAP-läge): Hämta status för program med Java](application-manager-client-java-api.md#quick-start-soap-mode-getting-status-of-applications-using-java-api)
+[Snabbstart (SOAP): hämta status för program med Java](application-manager-client-java-api.md#quick-start-soap-mode-getting-status-of-applications-using-java-api)
 
-[Snabbstart (SOAP-läge):Förhandsgranska AEM Forms-programarkivet och senare med Java](application-manager-client-java-api.md#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api)
+[Snabbstart (SOAP):Förhandsgranska AEM Forms-programarkivet och senare med Java](application-manager-client-java-api.md#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api)
 
-[Snabbstart (SOAP-läge):ta bort AEM Forms-programarkivet med Java](application-manager-client-java-api.md#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api)
+[Snabbstart (SOAP):ta bort AEM Forms-programarkivet med Java](application-manager-client-java-api.md#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
@@ -41,7 +42,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 >
 >Snabbstart i programmering med AEM Forms baseras på Forms Server som körs på JBoss® och Windows. Om du använder ett annat operativsystem, till exempel UNIX®, kan du ersätta Windows-specifika sökvägar med sökvägar som stöds av det aktuella operativsystemet. På samma sätt måste du ange giltiga anslutningsegenskaper om du använder en annan J2EE-programserver. Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
-## Snabbstart (SOAP-läge): Skapa programversion med Java™ API {#quick-start-soap-mode-creating-application-version-using-the-java-api}
+## Snabbstart (SOAP): Skapa programversion med Java™ API {#quick-start-soap-mode-creating-application-version-using-the-java-api}
 
 I följande Java™-kodexempel skapas ett program med Java™ API.
 
@@ -140,7 +141,7 @@ public class CreateApplicationVersion_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge): Exportera program med Java™ API {#quick-start-soap-mode-exporting-applications-using-the-java-api}
+## Snabbstart (SOAP): Exportera program med Java™ API {#quick-start-soap-mode-exporting-applications-using-the-java-api}
 
 I följande Java™-kodexempel exporteras ett program med Java™ API.
 
@@ -243,7 +244,7 @@ public class ExportLCA_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge): Importera program med Java™ API {#quick-start-soap-mode-importing-applications-using-the-java-api}
+## Snabbstart (SOAP): Importera program med Java™ API {#quick-start-soap-mode-importing-applications-using-the-java-api}
 
 I följande Java™-kodexempel importeras ett program med Java™-API:t.
 
@@ -330,7 +331,7 @@ public class ImportLCA_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge): Hämta ett program med Java™ API {#quick-start-soap-mode-getting-a-application-using-the-java-api}
+## Snabbstart (SOAP): Hämta ett program med Java™ API {#quick-start-soap-mode-getting-a-application-using-the-java-api}
 
 I följande Java™-kodexempel hämtas ett program med Java™-API:t.
 
@@ -437,7 +438,7 @@ public class GetApplication_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge): Hämta program med Java™ API {#quick-start-soap-mode-getting-the-applications-using-the-java-api}
+## Snabbstart (SOAP): Hämta program med Java™ API {#quick-start-soap-mode-getting-the-applications-using-the-java-api}
 
 I följande Java™-kodexempel hämtas programmen med Java™-API:t.
 
@@ -536,7 +537,7 @@ public class GetApplications_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge): Hämta status för program med Java™ API {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
+## Snabbstart (SOAP): Hämta status för program med Java™ API {#quick-start-soap-mode-getting-status-of-applications-using-java-api}
 
 ```java
 /*
@@ -641,7 +642,7 @@ public class GetApplicationStatus_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge):Förhandsgranska LiveCyclet ES2 och senare programarkiv med Java™ API {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
+## Snabbstart (SOAP):Förhandsgranska LiveCyclets ES2-programarkiv och senare med Java™ API {#quick-start-soap-mode-previewing-the-livecycle-es2-and-later-application-archive-using-the-java-api}
 
 Följande Java™-kodexempel används för att förhandsgranska AEM Forms-programarkiv och senare med Java™ API.
 
@@ -720,7 +721,7 @@ public class PreviewLCA_SOAP {
 }
 ```
 
-## Snabbstart (SOAP-läge):ta bort programarkivet med Java™ API {#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api}
+## Snabbstart (SOAP):ta bort programarkivet med Java™ API {#quick-start-soap-mode-deleting-the-application-archive-using-the-java-api}
 
 I följande Java™-kodexempel tas ett programarkiv bort.
 

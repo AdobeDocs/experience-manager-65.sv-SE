@@ -5,7 +5,8 @@ docset: aem65
 exl-id: 030fe9f2-cd41-4290-b8a6-2f9ade6b5789
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+feature: Adaptive Forms
+source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
 workflow-type: tm+mt
 source-wordcount: '1561'
 ht-degree: 0%
@@ -178,7 +179,7 @@ Utför följande steg för att skapa regler baserade på **[!UICONTROL Adobe Exp
    >[!VIDEO](https://video.tv.adobe.com/v/337425)
 
 
-### Publiceringsflöden {#publish-flow}
+### Publish {#publish-flow}
 
 När du har skapat dataelementen och använt dem i regler publicerar du konfigurationen för att samla in formulärdata i [!DNL Adobe Analytics].
 
@@ -194,7 +195,7 @@ Utför följande steg för att publicera konfigurationen:
 
 1. Bekräfta ändringarna och publiceringsflödet visas snart i **[!UICONTROL Published]** -avsnitt.
 
-![Publiceringsflöde](/help/forms/using/assets/publish-flow.png)
+![Publish Flow](/help/forms/using/assets/publish-flow.png)
 
 ## 2. Konfigurera AEM Forms {#configure-aem-forms}
 
@@ -218,7 +219,7 @@ Så här skapar du en konfiguration för Adobe Launch:
 
 1. Välj **[!UICONTROL Save & Close]**.
 
-1. Publicera konfigurationen.
+1. Publish konfigurationen.
 
 ### Aktivera [!DNL Adobe Analytics] för en adaptiv blankett {#enable-analytics-adaptive-form}
 
@@ -228,7 +229,7 @@ Används [!DNL Adobe Launch] i en befintlig adaptiv form:
 1. Markera det adaptiva formuläret och välj **[!UICONTROL Properties]**.
 1. I **[!UICONTROL Basic]** väljer du [konfigurationsbehållare](#create-adobe-launch-configuration) används när konfigurationen för Adobe Launch skapas.
 1. Välj **[!UICONTROL Save & Close]**. Det adaptiva formuläret är aktiverat för [!DNL Adobe Analytics].
-1. Publicera formuläret.
+1. Publish blanketten.
 
 När du har aktiverat [!DNL Adobe Analytics] för ett anpassningsbart formulär kan du [validera](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/implement-solutions/analytics.html?lang=en#validate-the-page-view-beacon) om ett datahändelseflöde finns mellan AEM Forms och [!DNL Adobe Analytics]. Integreringen av AEM Forms med Adobe Analytics är klar. Nu kan du [konfigurera och visa rapporter i Adobe Analytics](#view-reports-adobe-analytics).
 

@@ -4,11 +4,11 @@ description: Med Forms kan du konfigurera en skicka-åtgärd för att definiera 
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: author
 docset: aem65
-feature: Adaptive Forms, Foundation Components
+feature: Adaptive Forms,Foundation Components
 exl-id: 04efb4ad-cff6-4e05-bcd2-98102f052452
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '2556'
 ht-degree: 0%
@@ -269,6 +269,6 @@ Författaren kan konfigurera customJavaScript-bibliotek per anpassat formulär. 
 
 ## Felhantering vid sändning {#error-handling-on-submit-action}
 
-Konfigurera anpassade felsidor som 404.jsp och 500.jsp som en del av riktlinjerna för säkerhet och skärpa i Experience Manager. Dessa hanterare anropas när ett formulär 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på noden Publicera.
+Konfigurera anpassade felsidor som 404.jsp och 500.jsp som en del av riktlinjerna för säkerhet och skärpa i Experience Manager. Dessa hanterare anropas när ett formulär 404- eller 500-fel skickas. Hanterarna anropas också när dessa felkoder aktiveras på Publish-noden.
 
 Mer information finns i [Anpassa sidor som visas av felhanteraren](/help/sites-developing/customizing-errorhandler-pages.md).

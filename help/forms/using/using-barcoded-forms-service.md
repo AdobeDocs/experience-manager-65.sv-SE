@@ -5,11 +5,11 @@ content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
 docset: aem65
-feature: Document Services
+feature: Document Services,Assembler,Barcoded Forms
 exl-id: d4b5cacd-0bac-48b5-a8a6-0f58883136d7
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 0%
@@ -94,7 +94,7 @@ Tjänsten Barcoded Forms returnerar följande XML-dokument när streckkoderna ha
 
 ### Arbetsflöden som använder streckkodade formulär {#workflows-that-use-barcoded-forms}
 
-Formulärförfattare skapar interaktiva streckkodsformulär med Designer. (Se [Designer - hjälp](https://www.adobe.com/go/learn_aemforms_designer_63).) När en användare fyller i ett streckkodsformulär med Adobe Reader eller Acrobat uppdateras streckkoden automatiskt för att koda formulärdata.
+Formulärförfattare skapar interaktiva streckkodsformulär med Designer. (Se [Hjälp om Designer](https://www.adobe.com/go/learn_aemforms_designer_63).) När en användare fyller i ett streckkodsformulär med Adobe Reader eller Acrobat uppdateras streckkoden automatiskt för att koda formulärdata.
 
 Tjänsten Barcoded Forms är användbar vid konvertering av data som finns på papper till elektroniskt format. När ett streckkodsformulär fylls i och skrivs ut kan den utskrivna kopian skannas och användas som indata till tjänsten Barcoded Forms.
 
@@ -127,7 +127,7 @@ Tänk också på följande begränsningar när du använder tjänsten Barcoded F
 * Tjänsten stöder AcroForms fullt ut och statiska formulär som innehåller 2D-streckkoder som sparas med Adobe Reader eller Acrobat. För 1D-streckkoder kan du dock antingen förenkla formuläret eller skicka det som skannat PDF eller TIFF.
 * Dynamiska XFA-formulär stöds inte helt. Om du vill avkoda 1D- och 2D-streckkoder på rätt sätt i ett dynamiskt formulär, kan du antingen förenkla formuläret eller skicka det som skannat PDF eller TIFF.
 
-Tjänsten kan dessutom avkoda alla streckkoder som har en symbolik som stöds om ovanstående begränsningar iakttas. Mer information om hur du skapar interaktiva streckkodade formulär finns i [Designer - hjälp](https://www.adobe.com/go/learn_aemforms_designer_63).
+Tjänsten kan dessutom avkoda alla streckkoder som har en symbolik som stöds om ovanstående begränsningar iakttas. Mer information om hur du skapar interaktiva streckkodade formulär finns i [Hjälp om Designer](https://www.adobe.com/go/learn_aemforms_designer_63).
 
 ## Konfigurera egenskaper för tjänsten   {#configureproperties}
 
