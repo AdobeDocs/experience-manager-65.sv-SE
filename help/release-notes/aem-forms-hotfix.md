@@ -5,9 +5,9 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: f9e98d7de24d516eab163d42f6c1c3155915856e
+source-git-commit: ad71f1c92bba90000f72319536fffd255fb4db6e
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '673'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
      </td>
     <td>
     <ul>
-    <li> När du har uppgraderat till AEM Forms Service Pack 6.5.21.0 kan tjänsten PaperCapture inte utföra OCR-åtgärder (Optical Character Recognition) på PDF. Information om hur du löser problemet finns i <a href="/help/forms/using/papercapture-service-resolution.md"> felsökning</a> artikel.(CQDOC-21680) </li>
+    <li> När du har uppgraderat till AEM Forms Service Pack 6.5.21.0 kan tjänsten PaperCapture inte utföra OCR-åtgärder (Optical Character Recognition) på PDF. Installationsanvisningar finns i <a href="/help/forms/using/papercapture-service-resolution.md"> felsökning</a> artikel.(CQDOC-21680) </li>
     </ul>
     </td>    
   </tr>
@@ -54,7 +54,7 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
      </td>
     <td>
     <ul>
-    <li>Utkastbrev med XML-data fastnar i inläsningsläget under förhandsgranskningen. Information om hur du hämtar och installerar snabbkorrigeringen finns i<a href="#install-hotfix"> Ladda ned och installera snabbkorrigering för problem med utkast</a> -avsnitt.(FORMS-14521)</li>
+    <li>Utkastbrev med XML-data fastnar i inläsningsläget under förhandsgranskningen. Information om hämtning och installation av programfixen finns i<a href="#install-hotfix"> Ladda ned och installera snabbkorrigering för problem med utkast</a> -avsnitt.(FORMS-14521)</li>
     </ul>
     </td>    
   </tr>
