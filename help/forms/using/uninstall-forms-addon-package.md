@@ -6,9 +6,9 @@ feature: Adaptive Forms
 role: User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 975f1f580404ea1f2940aec5981f5668dced4b95
+source-git-commit: 2755e414ea23ebc1472e9c08d832eca93f28311b
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '228'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 1%
 
 I den här artikeln beskrivs de steg som krävs för att avinstallera AEM Forms-tilläggspaketet från en AEM Forms SDK-instans. Följ de här stegen för att se till att Forms-tilläggspaketet tas bort och för att förhindra eventuella problem med AEM.
 
-## Krav
+## Förutsättning
 
-Säkerhetskopiera formulär och data för att undvika dataförluster.
+Se till att säkerhetskopiera för att undvika dataförlust.
 
 ## Avinstallera AEM Forms Add-on Package
 
