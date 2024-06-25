@@ -5,9 +5,9 @@ solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 64e120ee-5f16-4cd3-9ae9-95b165169e47
-source-git-commit: e682381f08e143c1bf14d7dcee4f022e684ee1f2
+source-git-commit: f9e98d7de24d516eab163d42f6c1c3155915856e
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '196'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,12 @@ ht-degree: 0%
 ## Problem
 
 Efter uppgradering till AEM Forms Service Pack 6.5.21.0 har `PaperCapture` kan inte utföra OCR-åtgärder (Optical Character Recognition) på PDF. Tjänsten genererar inte utdata i form av PDF eller en loggfil.
+
+## Gäller för
+
+Denna lösning gäller
+* AEM Forms på alla (JBoss, Weblogic, Websphere) JEE-servrar
+* AEM Forms på OSGi-servrar
 
 ## Lösning
 
