@@ -9,9 +9,9 @@ content-type: reference
 docset: aem65
 exl-id: e8929d7c-9920-4c02-95a9-6f7f7a365203
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: c705667e60ccfbc4612ef3212dbe549e6bea66a9
 workflow-type: tm+mt
-source-wordcount: '3565'
+source-wordcount: '3568'
 ht-degree: 0%
 
 ---
@@ -168,18 +168,22 @@ Du kan definiera en eller flera filterdefinitioner för ett paket. Använd mer �
 
 ![Fliken Filter](assets/edit-filter.png)
 
-När du skapar filter kan du definiera en bana eller använda ett reguljärt uttryck för att ange alla noder som du vill ta med eller utesluta.
+När du skapar regler definierar du ett reguljärt uttryck (kallas även regex, regexp eller rationellt uttryck) för att ange alla noder som du vill ta med eller exkludera.
 
 | Regeltyp | Beskrivning |
 |---|---|
-| include | Om du tar med en katalog inkluderas den katalogen och alla filer och mappar i den katalogen (det vill säga hela underträdet), men **inte** ta med andra filer eller mappar från den angivna rotsökvägen. |
-| exclude | Om du exkluderar en katalog exkluderas den katalogen och alla filer och mappar i den katalogen (det vill säga hela underträdet). |
+| include | Inkludera kommer att inkludera alla filer och mappar i den angivna katalogen som matchar det reguljära uttrycket. Inkludera **inte** ta med andra filer eller mappar från den angivna rotsökvägen. |
+| exclude | Uteslut exkluderar alla filer och mappar som matchar det reguljära uttrycket. |
 
 Paketfilter definieras oftast när du börjar [skapa paketet.](#creating-a-new-package) De kan emellertid också redigeras senare, och därefter bör paketet byggas om för att uppdatera innehållet baserat på de nya filterdefinitionerna.
 
 >[!TIP]
 >
 >Ett paket kan innehålla flera filterdefinitioner så att noder från olika platser enkelt kan kombineras till ett paket.
+
+>[!TIP]
+>
+>Mer bakgrundsinformation finns i [Apache Jackrabbit - Arbetsytefilter](https://jackrabbit.apache.org/filevault/filter.html) dokumentation.
 
 ### Beroenden {#dependencies}
 
