@@ -10,9 +10,9 @@ exl-id: 53d8c654-8017-4528-a44e-e362d8b59f82
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 84979bbb49d47ec47c898a6747f64048b577c365
 workflow-type: tm+mt
-source-wordcount: '5398'
+source-wordcount: '5409'
 ht-degree: 0%
 
 ---
@@ -96,7 +96,7 @@ I följande tabeller visas varje objekt tillsammans med:
   <tr>
    <td>medverkande</td>
    <td>Grupp</td>
-   <td><p>Grundläggande behörigheter som tillåter användaren att skriva innehåll (som i, endast funktionalitet).</p> <p>Tilldelar inga privilegier till /content-trädet. Måste tilldelas för de enskilda grupperna eller användarna.</p> </td>
+   <td><p>Grundläggande behörighet som tillåter användaren att skriva innehåll (som i, endast de behörigheter som krävs för grundfunktionerna).</p> <p>Tilldelar inga behörigheter för åtkomst till själva /content-trädet. Dessa måste tilldelas specifikt för de enskilda grupperna eller användarna.</p> </td>
    <td> </td>
   </tr>
   <tr>
@@ -196,7 +196,7 @@ Där bockmarkeringen är i rutnätet visas även vilka behörigheter användarna
   </tr>
   <tr>
    <td>Replikera</td>
-   <td>Användaren kan replikera innehåll till en annan miljö (till exempel publiceringsmiljön). Behörigheten gäller även för underordnade sidor.</td>
+   <td>Användaren kan replikera innehåll till en annan miljö (till exempel Publish-miljön). Behörigheten gäller även för underordnade sidor.</td>
   </tr>
  </tbody>
 </table>
@@ -242,7 +242,7 @@ AEM WCM använder ACL-listor (Access Control Lists) för att organisera de behö
 
 Behörigheterna tillämpas även på underordnade sidor.
 
-Om en behörighet inte ärvs från den överordnade noden men har minst en lokal post läggs följande symboler till i kryssrutan. En lokal post skapas i CRX 2.2-gränssnittet (Jokertecken-ACL:er kan för närvarande bara skapas i CRX).
+Om en behörighet inte ärvs från den överordnade noden men har minst en lokal post läggs följande symboler till i kryssrutan. En lokal post skapas i CRX 2.2-gränssnittet (jokertecken-ACL:er kan för närvarande bara skapas i CRX.)
 
 För en åtgärd vid en angiven sökväg:
 
@@ -293,7 +293,7 @@ Nedan följer några rekommendationer om hur du hanterar åtkomstkontrollistor:
 
   Adobe rekommenderar att du arbetar med Tillåt i stället för Neka [Bästa praxis](#best-practices).
 
-Innan du ändrar någon av behörigheterna måste du se till att du förstår hur de fungerar och fungerar tillsammans. Se CRX-dokumentationen som visar hur AEM WCM [utvärderar åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated)och exempel på hur du ställer in åtkomstkontrollistor.
+Innan du ändrar någon av behörigheterna måste du se till att du förstår hur de fungerar och fungerar tillsammans. Se CRX dokumentation som illustrerar hur AEM WCM [utvärderar åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md#how-access-rights-are-evaluated)och exempel på hur du ställer in åtkomstkontrollistor.
 
 ### Behörigheter {#permissions}
 
