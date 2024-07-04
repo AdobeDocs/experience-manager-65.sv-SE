@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 8f5b6aee8a48690f1ac2706f25d45e7e9424e219
+source-git-commit: b24a1b225b2d798db26be1533e2e74bf08fdaa5d
 workflow-type: tm+mt
-source-wordcount: '3976'
+source-wordcount: '4047'
 ht-degree: 0%
 
 ---
@@ -152,7 +152,7 @@ Nedan följer en lista över tillgänglighetskorrigeringar i den här versionen:
 ### [!DNL Assets]{#assets-6521}
 
 * Om en resurs publiceras till Brand Portal förblir publiceringsstatusen inkonsekvent. (ASSETS-36807)
-* Resurser tas inte bort när du tar bort dem från en instans med ett API-anrop. (ASSETS-35131)
+* Assets tas inte bort när du tar bort dem från en instans med ett API-anrop. (ASSETS-35131)
 * När du försöker importera metadata kan du `question mark (?)` ersätter infogning av tecken på andra språk än engelska.  (ASSETS-35091)
 * När `dc:title` egenskapen används med datatypsträng, resursinnehållsträdet fungerar inte korrekt efter installationen av Service Pack 6.5.19. (ASSETS-34684)
 * Ett fel visas om det finns något specialtecken i namnet på en resurs. (ASSETS-33248)
@@ -161,7 +161,7 @@ Nedan följer en lista över tillgänglighetskorrigeringar i den här versionen:
 
 * I AEM 6.5.18 visas inte alla aktiveringspunkter som lagts till i en resurs när du redigerar aktiveringspunkter. Alla aktiveringspunkter fungerar dock i en publicerad resurs, men du kan inte redigera dem senare om det behövs. (ASSETS-33609)
 * De senaste EPS-filerna som överförs genererar inte miniatyrer efter ombearbetningen. (ASSETS-32617)
-* I Verktyg > Resurser > Publiceringsinställningar > fliken Begärandeattribut anger du `Width(px)` och `Height(px)` skiljer sig åt på spanska, italienska och portugisiska. De är inte justerade mot varandra för de här platserna. (ASSETS-31896)
+* I Verktyg > Assets > Dynamic Media Publish Setup > Request Attributes tab, the input `Width(px)` och `Height(px)` skiljer sig åt på spanska, italienska och portugisiska. De är inte justerade mot varandra för de här platserna. (ASSETS-31896)
 * Från och med 1 maj 2024 upphörde Adobe Dynamic Media med stödet för följande:
    * SSL (Secure Socket Layer) 2.0
    * SSL 3.0
@@ -202,7 +202,7 @@ Nedan följer en lista över tillgänglighetskorrigeringar i den här versionen:
    * Obligatoriska eller obligatoriska formulärfält är tillgängliga enligt ANDI-standarden. (FORMS-13097)
 
 * När en användare försöker visa ett formulär på sidan som läses in, återges det inte. (FORMS-1394)
-* Datumindatafältkomponenten fungerar inte korrekt på Microsoft Edge i kompatibilitetsläget för Internet Explorer. (FORMS-1370)
+* Datumindatafältkomponenten fungerar inte korrekt på Microsoft Edge i kompatibilitetsläge för Internet Explorer. (FORMS-1370)
 * Det gick inte att skicka ett e-postmeddelande med bifogad fil när korrigeringen för [ytterligare steg för att använda e-post med bilagor](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/troubleshooting/additional-steps-to-use-email-with-attachments) utförs på servern. (FORMS-1427)
 * I AEM Forms Workspace på Service Pack 18 (6.5.18.0) skadas dokumentfilen när en användare kommenterar ett överfört dokument. (FORMS-13735)
 * I AEM Forms Service Pack 18 (6.5.18.0), Service Pack 19 (6.5.19.0) eller Service Pack 20 (6.5.20.0) misslyckas sökningen när en användare försöker söka efter ett anpassat formulär från sidopanelen. (FORMS-14117)
@@ -290,7 +290,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 #### Oak {#foundation-oak-6521}
 
 * Prestandaregressionskorrigering - Undvik intervallfrågor i liknande villkor. (OAK-9481)
-* Den nya Oak-versionen är 1.22.20.
+* Den nya Oak-versionen är 1.2.20.
 
 #### Plattform{#foundation-platform-6521}
 
@@ -442,7 +442,7 @@ Se [Föråldrade och borttagna funktioner](/help/release-notes/deprecated-remove
        `http://localhost:4504/editor.html/libs/wcm/core/content/sites/publishpagewizard.html?item=/content/we-retail/language-masters/en/about-us.html` -->
 
 
-* **Relaterad till eken**
+* **Relaterat till Oak**
 Från Service Pack 13 och senare har följande fellogg börjat visas som påverkar persistence-cachen:
 
   ```shell
@@ -508,7 +508,7 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 * Användare kan byta namn på en mapp i en hierarki i [!DNL Assets] och publicera en kapslad mapp i [!DNL Brand Portal]. Mappens namn uppdateras dock inte i [!DNL Brand Portal] tills rotmappen publiceras på nytt.
 
 * Följande fel och varningsmeddelanden kan visas under installationen av [!DNL Experience Manager] 6.5.x.x:
-   * &quot;När Adobe Target-integreringen är konfigurerad i [!DNL Experience Manager] med Target Standard API (IMS-autentisering) och sedan exportera Experience Fragments till Target så att fel erbjudandetyper skapas. I stället för att skriva&quot;Experience Fragment&quot;/källa&quot;Adobe Experience Manager&quot; skapar Target flera erbjudanden med typen&quot;HTML&quot;/källa&quot;Adobe Target Classic&quot;.
+   * &quot;När Adobe Target-integreringen är konfigurerad i [!DNL Experience Manager] med Target Standard API (IMS-autentisering) och sedan exportera Experience Fragments till Target så skapas felaktiga erbjudandetyper. I stället för att skriva&quot;Experience Fragment&quot;/källa&quot;Adobe Experience Manager&quot; skapar Target flera erbjudanden med typen&quot;HTML&quot;/källa&quot;Adobe Target Classic&quot;.
    * `com.adobe.granite.maintenance.impl.TaskScheduler`: Inga underhållsfönster hittades på `granite/operations/maintenance`.
    * Validering på serversidan av adaptiva formulär misslyckas när sammanställningsfunktioner som SUM, MAX och MIN används (CQ-4274424).
    * `com.adobe.granite.maintenance.impl.TaskScheduler` : Inga underhållsfönster hittades på `granite/operations/maintenance`.
@@ -543,6 +543,10 @@ Du måste lägga till följande egenskaper i indexdefinitionsnoden för att få 
 * Om en användare försöker förhandsgranska ett utkast med sparade XML-data fastnar den i `Loading` för vissa specifika bokstäver. Information om hur du hämtar och installerar snabbkorrigeringen finns i [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) artikel. (FORMS-14521)
 
 * Efter uppgradering till AEM Forms Service Pack 6.5.21.0 har `PaperCapture` kan inte utföra OCR-åtgärder (Optical Character Recognition) på PDF. Tjänsten genererar inte utdata i form av PDF eller en loggfil. Information om hur du hämtar och installerar snabbkorrigeringen finns i [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) artikel. (CQDOC-21680)
+
+* När användare uppdaterar från AEM 6.5 Forms Service Pack 18 (6.5.18.0) eller AEM 6.5 Forms Service Pack 19 (6.5.19.0) till AEM 6.5 Forms Service Pack 20 (6.5.20.0) eller AEM 6.5 Forms Service Pack 21 (6.5.21.0) stöter användare på en JSP-kompilator åtgärdsfel, som förhindrar att de öppnar eller skapar anpassningsbara formulär och som även orsakar fel i andra AEM gränssnitt som sidredigeraren, AEM Forms och AEM. (FORMS-1256)
+
+
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 

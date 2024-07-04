@@ -5,9 +5,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: ae4c7e9d-9af8-4288-a6f9-e3bcbe7d153d
-source-git-commit: 2266f67d834341715b7300ff366f93d960110dac
+source-git-commit: f2f6f7efe67efdfc88863593844cc172a4815622
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1673'
 ht-degree: 0%
 
 ---
@@ -140,12 +140,9 @@ Navigera till rätt katalog och från ett skal och en typ `./aem65_cfp_install.b
 
 +++
 
-+++5. Installera serverdelen (AEM Service Pack 6.5.14.0 eller tidigare) (**Obligatorisk installation**)
++++5. Installera serverletsfragmentet om det inte är installerat (**Obligatoriskt steg**)
 
->[!NOTE]
->
-> * Om du uppgraderar från **AEM Service Pack 6.5.15.0**, installation av **serletfragment** är inte obligatoriskt. För versioner **AEM Service Pack 6.5.14.0** eller tidigare, är **obligatorisk att installera** serletfragmentet.
-
+<!-- >[!NOTE] > > * If you are upgrading from **AEM Service Pack 6.5.15.0**, the installation of the **servlet fragment** is not required. For versions **AEM Service Pack 6.5.14.0** or earlier, it is **mandatory to install** the servlet fragment. -->
 
 Så här hämtar och installerar du serverletsfragmentet:
 
@@ -209,7 +206,7 @@ Paketet installeras automatiskt.
 
 +++1. Säkerhetskopiera din befintliga miljö
 
-1. Säkerhetskopiera [CRX-databas och databasschema](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
+1. Säkerhetskopiera [CRX databas- och databasschema](https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/aem-forms-backup-recovery/backing-aem-forms-data.html).
 
 >[!NOTE]
 >
