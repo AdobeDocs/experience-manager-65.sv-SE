@@ -9,9 +9,9 @@ exl-id: a7281ca0-461f-4762-a631-6bb539596200
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 6fb844ea428c15adab71503dde6138e46eabf0a3
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1564'
 ht-degree: 0%
 
 ---
@@ -89,6 +89,10 @@ Integrationspaketet skapar automatiskt `aemserver` som AEM använder för att an
 
 1. Välj lämplig säkerhetszon och definiera den betrodda IP-masken efter behov.
 
+   >[!CAUTION]
+   >
+   >Säkerhetszonen som ska konfigureras är **Privat företagsnätverk (VPN+LAN)**.
+
 1. Klicka **Spara**.
 
 1. Logga ut från Adobe Campaign klient.
@@ -155,7 +159,7 @@ AEM kan nu kommunicera med Adobe Campaign.
 >
 >Se till att din Adobe Campaign-server är tillgänglig via Internet. AEM har inte åtkomst till privata nätverk.
 
-## Konfigurera replikering till AEM publiceringsinstans {#replication}
+## Konfigurera replikering till AEM Publish-instans {#replication}
 
 Kampanjinnehåll skapas av innehållsförfattare i AEM. Den här instansen är vanligtvis endast tillgänglig internt i din organisation. För att innehåll som bilder och resurser ska vara tillgängliga för mottagarna av kampanjen måste ni publicera det innehållet.
 
