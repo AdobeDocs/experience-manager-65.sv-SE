@@ -5,9 +5,9 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: ad71f1c92bba90000f72319536fffd255fb4db6e
+source-git-commit: fb689e86deaabcc4033ed75f615086b630a9a525
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '903'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,23 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
     <td><strong>Datum</strong></td>
     <td><strong>Länk för hämtning av snabbkorrigeringar (AEM Software Distribution link)</strong></td>
     <td><strong>Åtgärdade problem</strong></td>
+  </tr>
+  <tr>
+    <td>10 juli 2024</td>
+     <td>
+     <ul>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/jboss/win/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-windows-jboss.zip.zip">Programfix för AEM Service Pack 6.5.21.0 i Windows för JBoss JEE-server </a> </li>
+      <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/jboss/linux/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-linux-jboss.tar.gz">Programfix för AEM Service Pack 6.5.21.0 i Linux för JBoss JEE-server </a> </li>
+       <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/websphere/win/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-windows-websphere.zip.zip">Programfix för AEM Service Pack 6.5.21.0 i Windows för Webshpere JEE-server </a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/websphere/linux/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-linux-websphere.tar.gz">Programfix för AEM Service Pack 6.5.21.0 i Linux för Webshpere JEE-server</a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/weblogic/win/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-windows-weblogic.zip.zip">Programfix för AEM Service Pack 6.5.21.0 i Windows för Weblogic JEE-server </a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/aemforms-6-5-0-0089/weblogic/linux/adobe-aem-forms-jee-service-pack-6.5.21.0-hotfix-linux-weblogic.tar.gz">Programfix för AEM Service Pack 6.5.21.0 i Linux för Weblogic JEE-server</a> </li>
+     </ul>
+     </td>
+    <td>
+    <ul><li>När en användare uppdaterar till AEM Forms Service Pack 20 (6.5.20.0) på JEE-servern och genererar PDF med hjälp av utdatatjänster, återges PDF med tillgänglighetsproblem. (LC-3922112)</li><li>Taggad PDF som genererats med utdatatjänsten i AEM Forms JEE visar "Olämplig strukturvarning". (LC-3922038)</li><li>När ett formulär skickas i AEM Forms JEE tas instanser av ett upprepat XML-element bort från data. (LC-3922017)</li><li>När en användare i en Linux-miljö återger ett adaptivt formulär (på JEE) i HTML återges det inte korrekt. (LC-3921957)</li><li>När en användare konverterar en XTG-fil till PostScript-format med hjälp av utdatatjänsten i AEM Forms JEE misslyckas den med följande fel: AEM_OUT_001_003: Oväntat undantag: PAExecute-fel: XFA_RENDER_FAILURE. (LC-3921720)</li><li>När en användare har uppgraderat till AEM Forms Service Pack 18 (6.5.18.0) på JEE-servern återges inte HTML5 eller PDF forms och XMLFM-krascher när användaren skickar ett formulär. (LC-3921718)
+    </ul>
+    </td>    
   </tr>
   <tr>
     <td>21 juni 2024</td>
