@@ -8,7 +8,7 @@ feature: Collaboration,Adobe Asset Link,Desktop App
 exl-id: c7d589a3-1c5f-4ff0-879e-15e1c556f6dc
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: a144f7cc75b1a5cdb45d2aaf90e87013ac68a431
 workflow-type: tm+mt
 source-wordcount: '3173'
 ht-degree: 9%
@@ -19,7 +19,7 @@ ht-degree: 9%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/aem-cc-integration-best-practices.html?lang=en) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/manage/aem-cc-integration-best-practices) |
 | AEM 6.5 | Den här artikeln |
 
 [!DNL Adobe Experience Manager Assets] är en DAM-lösning (Digital Asset Management) som kan integreras med [!DNL Adobe Creative Cloud] för att hjälpa DAM-användare att samarbeta med kreativa team och effektivisera samarbetet när det gäller att skapa innehåll.
@@ -32,7 +32,7 @@ Läs vidare för att ta reda på vilka integreringar som du ska välja mellan st
 >
 >[!DNL Experience Manager] till [!DNL Creative Cloud] Mappdelning är föråldrad och ingår inte längre i den här guiden. Adobe rekommenderar att du använder nyare funktioner som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [Experience Manager datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/troubleshoot.html) för att ge kreativa användare tillgång till resurser som hanteras i [!DNL Experience Manager].
 
-## Samarbete mellan kreatörer, marknadsförare och DAM-användare {#collaboration-needs-of-creatives-marketers-and-dam-users}
+## Collaboration behov för kreatörer, marknadsförare och DAM-användare {#collaboration-needs-of-creatives-marketers-and-dam-users}
 
 | Krav | Använd skiftläge | Involverade ytor |
 |---|---|---|
@@ -71,7 +71,7 @@ Den här artikeln fokuserar främst på de två första aspekterna av samarbetsb
 | Överför - flera filer/hierarkiska mappstrukturer | Nej | Ja | [Överför via webbgränssnitt](manage-assets.md#uploading-assets) eller via egna skript eller verktyg. |
 | Diverse - användare och inloggning | Creative Cloud-användare som är inloggad på Creative Cloud datorprogram känns igen (SSO) | [!DNL Experience Manager] användare och autentiseringsuppgifter | Användare av båda lösningarna räknar med [!DNL Experience Manager] användarkvot. |
 | Diverse - nätverk och åtkomst | Kräver åtkomst från användarens skrivbord till [!DNL Experience Manager] distribution via nätverk | Kräver åtkomst från användarens skrivbord till [!DNL Experience Manager] distribution via nätverk | [!DNL Adobe Asset Link] delar inte nätverksproxymiljö. |
-| Diverse - Migrera ett stort antal resurser | Nej | Nej | [Guide för resursmigrering](assets-migration-guide.md) |
+| Diverse - Migrera ett stort antal resurser | Nej | Nej | [Migreringsguide för Assets](assets-migration-guide.md) |
 
 För att stödja användningsexemplen på resursfördelning bör andra lösningar beaktas:
 
@@ -144,15 +144,15 @@ Det är ofta inte önskvärt att lagra alla resurser och uppdateringar. Om till 
 
 Kreativa team (och organisationer) är vanligtvis inte intresserade av att lagra resurser i varje skede av resursens livscykel. De undviker till exempel att lagra resurser i följande fall:
 
-* Resurser som ännu inte har slutförts eller som är föremål för experimenterande.
-* Resurser som inte klarar granskningsprocessen.
+* Assets som ännu inte är klara eller som är föremål för experimenterande.
+* Assets som inte klarar granskningsprocessen.
 * Jämfört med resursen i fråga har teamet bättre kandidater att representera sitt arbete för externa team.
 
 Vanligtvis lagras följande klassresurser i DAM:
 
-* Tillgångar som har nått en viss löptid och anses vara klara att delas.
-* Resurser som det kreativa teamet har valt i förväg.
-* Specifika resursformat som kan användas eller begäras av marknadsföring, beroende på ett specifikt kontrakt eller avtal (t.ex. JPG-filer som konverterats från RAW-filer, TIFF/bilder från PSD).
+* Assets som nått en viss mognad och anses vara redo att delas.
+* Assets som har valts ut i förväg av det kreativa teamet.
+* Specifika resursformat som kan användas eller begäras av marknadsföring, beroende på ett specifikt kontrakt eller avtal (t.ex. JPG filer som konverterats från RAW-filer, TIFF/bilder från PSD).
 
 #### När resursuppdateringar lagras i DAM {#when-updates-to-assets-are-stored-in-dam}
 
