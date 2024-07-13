@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Ändra gränssnittets färgschema {#changing-the-color-scheme-of-the-interface}
 
-Du kan ändra färgschemat för användargränssnittets delar i AEM Forms arbetsyta så att de passar dina behov. Nedan följer några exempel på representativa färgschemaanpassningar. Förutom de steg som beskrivs i den här artikeln finns mer information i [Allmänna steg för anpassning av AEM Forms arbetsyta](/help/forms/using/generic-steps-html-workspace-customization.md).
+Du kan ändra färgschemat för användargränssnittets delar i AEM Forms arbetsyta så att de passar dina behov. Nedan följer några exempel på representativa färgschemaanpassningar. Förutom de steg som beskrivs i den här artikeln finns mer information i [Allmänna steg för anpassning av arbetsytan i AEM Forms](/help/forms/using/generic-steps-html-workspace-customization.md).
 
 ## Övre navigeringsfältet {#top-navigation-bar}
 
@@ -54,7 +54,7 @@ Uppdatera navigeringsfältet högst upp på arbetsytan i AEM Forms.
 
 ## Kategorikomponent {#category-component}
 
-Kategorikomponenten visar de olika kategorierna för dina uppgifter i den vänstra panelen. Om du vill ändra färgen definierar du bakgrundsfärgen i `.category` CSS-filens element.
+Kategorikomponenten visar de olika kategorierna för dina uppgifter i den vänstra panelen. Om du vill ändra färgen definierar du bakgrundsfärgen i elementet `.category` i CSS-filen.
 
 ## Aktivitetskomponent {#task-component}
 

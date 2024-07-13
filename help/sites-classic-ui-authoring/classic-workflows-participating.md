@@ -24,7 +24,7 @@ Arbetsflödena omfattar vanligtvis steg som kräver att en person utför en akti
 
 Du kan utföra följande åtgärder för att bearbeta ett arbetsobjekt:
 
-* **Complete**
+* **Fullständigt**
 
   Du kan slutföra ett objekt så att arbetsflödet kan fortsätta till nästa steg.
 
@@ -48,37 +48,37 @@ Du kan utföra följande åtgärder för att bearbeta ett arbetsobjekt:
 
 När du tilldelas en arbetsuppgift (till exempel **Godkänn innehåll**) visas olika varningar och/eller meddelanden:
 
-* The **Status** -kolumnen i webbplatskonsolen anger när en sida är i ett arbetsflöde:
+* Kolumnen **Status** i webbplatskonsolen anger när en sida är i ett arbetsflöde:
 
-  ![arbetsflödenstatus-1](assets/workflowstatus-1.png)
+  ![workflowStatus-1](assets/workflowstatus-1.png)
 
 * När du, eller en grupp som du tillhör, tilldelas en arbetsuppgift som en del av ett arbetsflöde, visas arbetsuppgiften i AEM arbetsflödesinkorg.
 
-  ![arbetsflödewinbox](assets/workflowinbox.png)
+  ![arbetsflödeslåda](assets/workflowinbox.png)
 
 ### Slutför ett deltagarsteg {#completing-a-participant-step}
 
 När du har vidtagit den angivna åtgärden kan du slutföra arbetsuppgiften och på så sätt tillåta arbetsflödet att fortsätta. Använd följande procedur för att slutföra arbetsuppgiften.
 
-1. Välj arbetsflödessteget och klicka på **Complete** i det övre navigeringsfältet.
-1. I dialogrutan som visas väljer du **Nästa steg**, d.v.s. steget som ska köras nästa. En nedrullningsbar lista visar alla lämpliga destinationer. A **Kommentar** kan också anges.
+1. Markera arbetsflödessteget och klicka på knappen **Slutför** i det övre navigeringsfältet.
+1. I den dialogruta som visas väljer du **Nästa steg**, det vill säga nästa steg. En nedrullningsbar lista visar alla lämpliga destinationer. Du kan också ange en **kommentar**.
 
    ![arbetsflöde slutfört](assets/workflowcomplete.png)
 
    Hur många steg som visas beror på arbetsflödesmodellens design.
 
-1. Klicka **OK** för att bekräfta åtgärden.
+1. Bekräfta åtgärden genom att klicka på **OK**.
 
 ### Delegera ett deltagarsteg {#delegating-a-participant-step}
 
 Använd följande procedur för att delegera en arbetsuppgift.
 
-1. Klicka på **Delegera** i det övre navigeringsfältet.
-1. I dialogrutan använder du listrutan för att välja **Användare** att delegera arbetsuppgiften till. Du kan också lägga till en **Kommentar**.
+1. Klicka på knappen **Delegera** i det övre navigeringsfältet.
+1. I dialogrutan använder du listrutan för att välja **Användare** att delegera arbetsposten till. Du kan också lägga till en **kommentar**.
 
    ![arbetsflödesdelegat](assets/workflowdelegate.png)
 
-1. Klicka **OK** för att bekräfta åtgärden.
+1. Bekräfta åtgärden genom att klicka på **OK**.
 
 ### Stega bakåt i ett deltagarsteg {#performing-step-back-on-a-participant-step}
 

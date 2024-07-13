@@ -25,7 +25,7 @@ Följ de här stegen för att aktivera AEM att söka efter dokumentsäkerhetssky
 ## Innan du börjar {#before-you-start}
 
 * Installera och konfigurera AEM Forms dokumentsäkerhet.
-* Lägg till paketet sun.util.calendar till tillåtelselista i **Konfiguration av brandvägg för deserialisering.** Konfigurationen visas på `https://'[server]:[port]'/system/console/configMgr`.
+* Lägg till paketet sun.util.calendar till tillåtelselista i **Brandväggskonfigurationen för deserialisering.** Konfigurationen visas på `https://'[server]:[port]'/system/console/configMgr`.
 * Kontrollera att alla AEM är igång. Paketen listas på `https://'[server]:[port]'/system/console/bundles`. Om alla paket inte är aktiva väntar du och kontrollerar paketens status efter några minuter.
 
 ## Skapa en säker anslutning i AEM Forms arbetsflöde (AEM Forms på JEE) {#establish-a-secure-connection-within-aem-forms-workflow-aem-forms-on-jee}
@@ -37,31 +37,31 @@ En säker anslutning möjliggör ett smidigt informationsflöde mellan AEM Forms
 
 ### Konfigurera AEM Forms Client SDK Bundle med AEM Forms på JEE-administratörsbehörighet {#configure-aem-forms-client-sdk-bundle-with-aem-forms-on-jee-admin-credentials}
 
-1. Öppna AEM konfigurationshanteraren och logga in som administratör. Standardwebbadressen är https://&lt;servername>:&lt;port>/lc/system/console/configMgr.
+1. Öppna AEM konfigurationshanteraren och logga in som administratör. Standardwebbadressen är https://&lt;serverName>:&lt;port>/lc/system/console/configMgr.
 1. Sök efter och öppna AEM Forms Client SDK Bundle. Ange värde för följande egenskaper:
 
-   * **Server-URL:** Ange HTTP-URL för AEM Forms på JEE-server. Om du vill aktivera kommunikation via https startar du om AEM Forms på JEE-servern med -Djavax.net.ssl.trustStore=&lt;path of=&quot;&quot; aem=&quot;&quot; forms=&quot;&quot; on=&quot;&quot; jee=&quot;&quot; keystore=&quot;&quot; file=&quot;&quot;> parameter.
+   * **Server-URL:** Ange HTTP-URL för AEM Forms på JEE-server. Om du vill aktivera kommunikation över https startar du om AEM Forms på JEE-servern med parametern -Djavax.net.ssl.trustStore=&lt;sökväg till AEM Forms på JEE-nyckelfil>.
    * **Tjänstnamn**: Lägg till RightsManagementService i listan över angivna tjänster.
    * **Användarnamn:** Ange användarnamn för det AEM Forms på JEE-konto som ska användas för att initiera anrop från AEM Forms på JEE-servern. Det angivna kontot måste ha behörighet att anropa Document Services på AEM Forms på JEE-servern.
-   * **Lösenord**: Ange lösenord för det AEM Forms på JEE-konto som anges i fältet Användarnamn.
+   * **Lösenord**: Ange lösenordet för det AEM Forms på JEE-konto som anges i fältet Användarnamn.
 
-   Klicka **Spara**. AEM är aktiverat för att söka efter dokumentsäkerhetsskyddade PDF- och Microsoft Office-dokument.
+   Klicka på **Spara**. AEM är aktiverat för att söka efter dokumentsäkerhetsskyddade PDF- och Microsoft Office-dokument.
 
 ### Konfigurera AEM Forms Client SDK Bundle med hjälp av ömsesidig autentisering {#configure-aem-forms-client-sdk-bundle-using-mutual-authentication}
 
 1. Aktivera ömsesidig autentisering för AEM Forms på JEE. Mer information finns i [CAC och ömsesidig autentisering](https://helpx.adobe.com/livecycle/kb/cac-mutual-authentication.html).
-1. Öppna AEM konfigurationshanteraren och logga in som administratör. Standardwebbadressen är https://&lt;servername>:&lt;port>/lc/system/console/configMgr.
+1. Öppna AEM konfigurationshanteraren och logga in som administratör. Standardwebbadressen är https://&lt;serverName>:&lt;port>/lc/system/console/configMgr.
 1. Sök efter och öppna AEM Forms Client SDK Bundle. Ange värde för följande egenskaper:
 
-   * **Server-URL:** Ange HTTPS-URL för AEM Forms på JEE-server. Om du vill aktivera kommunikation via https startar du om AEM Forms på JEE-servern med -Djavax.net.ssl.trustStore=&lt;path of=&quot;&quot; aem=&quot;&quot; forms=&quot;&quot; on=&quot;&quot; jee=&quot;&quot; keystore=&quot;&quot; file=&quot;&quot;> parameter.
+   * **Server-URL:** Ange HTTPS-URL för AEM Forms på JEE-server. Om du vill aktivera kommunikation över https startar du om AEM Forms på JEE-servern med parametern -Djavax.net.ssl.trustStore=&lt;sökväg till AEM Forms på JEE-nyckelfil>.
    * **Aktivera tvåvägs SSL**: Aktivera alternativet Aktivera tvåvägs SSL.
-   * **KeyStore-fil-URL**: Ange URL-adressen till nyckelfilen.
-   * **TrustStore-fil-URL**: Ange URL-adressen för förvaltarfilen.
+   * **KeyStore-fil-URL**: Ange URL:en för nyckelbehållarfilen.
+   * **TrustStore-filens URL**: Ange URL:en för förvaltarfilen.
    * **KeyStore-lösenord**: Ange lösenordet för nyckelfilen.
    * **TrustStorePassword**: Ange lösenordet för förvaltarfilen.
    * **Tjänstnamn**: Lägg till RightsManagementService i listan över angivna tjänster.
 
-   Klicka **Spara**. AEM är aktiverat för att söka efter dokumentsäkerhetsskyddade PDF- och Microsoft Office-dokument
+   Klicka på **Spara**. AEM är aktiverat för att söka efter dokumentsäkerhetsskyddade PDF- och Microsoft Office-dokument
 
    >[!NOTE]
    >

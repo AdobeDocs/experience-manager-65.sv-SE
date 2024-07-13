@@ -26,26 +26,26 @@ Exemplet, som behandlas i det här dokumentet, är en referensimplementering av 
 >[!NOTE]
 >
 >* De exempel och konfigurationer som beskrivs i det här dokumentet är enligt MySQL 5.6.24 och du måste ersätta dem på lämpligt sätt för ditt databassystem.
->* Kontrollera att du har installerat den senaste versionen av AEM Forms tilläggspaket. En lista över tillgängliga paket finns i [AEM Forms-versioner](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) artikel.
+>* Kontrollera att du har installerat den senaste versionen av AEM Forms tilläggspaket. En lista över tillgängliga paket finns i artikeln [AEM Forms-utgåvor](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html).
 >* Exempelpaketet fungerar bara med adaptiva Forms-sändningsåtgärder.
 
 ## Konfigurera och konfigurera exemplet {#set-up-and-configure-the-sample}
 
 Utför följande steg på alla författare- och publiceringsinstanser för att installera och konfigurera exemplet:
 
-1. Hämta följande **aem-fp-db-integration-sample-pkg-6.1.2.zip** till filsystemet.
+1. Hämta följande **aem-fp-db-integration-sample-pkg-6.1.2.zip** -paket till filsystemet.
 
    Exempelpaket för databasintegrering
 
 [Hämta fil](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. Gå till AEM på https://[*värd*]:[*port*]/crx/packmgr/.
+1. Gå till AEM på https://[*host*]:[*port*]/crx/packmgr/.
 1. Klicka på **[!UICONTROL Upload Package]**.
 
-1. Välj **aem-fp-db-integration-sample-pkg-6.1.2.zip** paketera och klicka **[!UICONTROL OK]**.
-1. Klicka **[!UICONTROL Install]** till bredvid paketet för att installera paketet.
+1. Bläddra till paketet **aem-fp-db-integration-sample-pkg-6.1.2.zip** och klicka på **[!UICONTROL OK]**.
+1. Klicka på **[!UICONTROL Install]** bredvid paketet för att installera paketet.
 1. Gå till **[!UICONTROL AEM Web Console Configuration]**
-på https://[*värd*]:[*port*]/system/console/configMgr.
+på https://[*host*]:[*port*]/system/console/configMgr.
 1. Klicka för att öppna **[!UICONTROL Forms Portal Draft and Submission Configuration]** i redigeringsläge.
 
 1. Ange värdena för egenskaperna enligt följande tabell:
@@ -61,7 +61,7 @@ på https://[*värd*]:[*port*]/system/console/configMgr.
 
    >[!NOTE]
    >
-   >Tjänsterna löses av deras namn som anges som värde för `aem.formsportal.impl.prop` enligt följande:
+   >Tjänsterna matchas av deras namn som anges som värde för nyckeln `aem.formsportal.impl.prop` enligt följande:
 
    ```java
    @Service(value = {SubmitDataService.class, DraftDataService.class})
@@ -84,9 +84,9 @@ på https://[*värd*]:[*port*]/system/console/configMgr.
    >
    >Om du ändrar tabellnamnen anger du dem i formulärportalskonfigurationen.
 
-1. Låt andra konfigurationer vara och klicka **[!UICONTROL Save]**.
+1. Låt andra konfigurationer vara som de är och klicka på **[!UICONTROL Save]**.
 
-1. Databasanslutningen kan göras via den poolade datakällan för Apache Sling-anslutningen.
+1. Databasanslutningen kan göras via Apache Sling Connection Pooled Data Source.
 1. För Apache Sling-anslutningen söker du efter och klickar för att öppna **[!UICONTROL Apache Sling Connection Pooled DataSource]** i redigeringsläge i webbkonsolkonfigurationen. Ange värdena för egenskaperna enligt följande tabell:
 
 <table>
@@ -97,15 +97,15 @@ på https://[*värd*]:[*port*]/system/console/configMgr.
   </tr>
   <tr>
    <td>Datakällans namn</td>
-   <td><p>Ett datakällnamn för filtrering av drivrutiner från datakällpoolen</p> <p><strong>Obs! </strong><em>I exempelimplementeringen används FormsPortal som datakällnamn.</em></p> </td>
+   <td><p>Ett datakällnamn för filtrering av drivrutiner från datakällpoolen</p> <p><strong>Obs! </strong><em>Exempelimplementeringen använder FormsPortal som datakällnamn.</em></p> </td>
   </tr>
   <tr>
    <td>JDBC-drivrutinsklass</td>
    <td>com.mysql.jdbc.Driver</td>
   </tr>
   <tr>
-   <td>URI för JDBC-anslutning<br /> </td>
-   <td>jdbc:mysql://[<em>värd</em>]:[<em>port</em>]/[<em>schema_name</em>]</td>
+   <td>JDBC-anslutnings-URI<br /> </td>
+   <td>jdbc:mysql://[<em>host</em>]:[<em>port</em>]/[<em>schema_name</em>]</td>
   </tr>
   <tr>
    <td>Användarnamn</td>
@@ -163,7 +163,7 @@ på https://[*värd*]:[*port*]/system/console/configMgr.
 >* JDBC-drivrutinen för MySQL ingår inte i exemplet. Se till att du har etablerat dig för den och ange den information som krävs för att konfigurera JDBC-anslutningspoolen.
 >* Peka författaren och publicera instanser för att använda samma databas. Värdet för URI-fältet för JDBC-anslutningen måste vara samma för alla författare- och publiceringsinstanser.
 
-1. Låt andra konfigurationer vara och klicka **[!UICONTROL Save]**.
+1. Låt andra konfigurationer vara som de är och klicka på **[!UICONTROL Save]**.
 
 1. Om du redan har en tabell i databasschemat går du vidare till nästa steg.
 
@@ -225,7 +225,7 @@ på https://[*värd*]:[*port*]/system/console/configMgr.
    ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-   **SQL-sats för ytterligare metadata**
+   **SQL-sats för ytterligare metadatakan**
 
    ```sql
    CREATE TABLE `additionalmetadatatable` (
@@ -303,15 +303,15 @@ Exempelimplementeringen är nu konfigurerad, som du kan använda för att lista 
 
 Utför följande steg på alla författare- och publiceringsinstanser för att installera filen mysql-connector-java-5.1.39-bin.jar:
 
-1. Navigera till `https://'[server]:[port]'/system/console/depfinder` och söka efter paketet com.mysql.jdbc.
+1. Navigera till `https://'[server]:[port]'/system/console/depfinder` och sök efter paketet com.mysql.jdbc.
 1. I kolumnen Exporterad av kontrollerar du om paketet exporteras av något paket.
 
    Fortsätt om paketet inte exporteras av något paket.
 
-1. Navigera till `https://'[server]:[port]'/system/console/bundles` och klicka **[!UICONTROL Install/Update]**.
-1. Klicka **[!UICONTROL Choose File]** och bläddra till filen mysql-connector-java-5.1.39-bin.jar. Välj även **[!UICONTROL Start Bundle]** och **[!UICONTROL Refresh Packages]** kryssrutor.
+1. Navigera till `https://'[server]:[port]'/system/console/bundles` och klicka på **[!UICONTROL Install/Update]**.
+1. Klicka på **[!UICONTROL Choose File]** och bläddra till filen mysql-connector-java-5.1.39-bin.jar. Markera även kryssrutorna **[!UICONTROL Start Bundle]** och **[!UICONTROL Refresh Packages]**.
 1. Klicka på **[!UICONTROL Install or Update]**. Starta om servern när du är klar.
-1. (*Endast Windows*) Stäng av operativsystemets brandvägg.
+1. (*Endast Windows*) Inaktivera systemets brandvägg för ditt operativsystem.
 
 >[!NOTE]
 >
@@ -319,7 +319,7 @@ Utför följande steg på alla författare- och publiceringsinstanser för att i
 
 ## Exempelkod för formulärportaldata och metadatatjänst {#sample-code-for-forms-portal-data-and-metadata-service}
 
-Följande ZIP innehåller `FormsPortalSampleDataServiceImpl` och `FormsPortalSampleMetadataServiceImpl` (implementeringsklasser) för gränssnitt för data- och metadatatjänster. Dessutom innehåller den alla klasser som krävs för kompilering av ovannämnda implementeringsklasser.
+Följande ZIP-adress innehåller `FormsPortalSampleDataServiceImpl` och `FormsPortalSampleMetadataServiceImpl` (implementeringsklasser) för gränssnitt för data- och metadatatjänster. Dessutom innehåller den alla klasser som krävs för kompilering av ovannämnda implementeringsklasser.
 
 [Hämta fil](assets/sample_package.zip)
 
@@ -327,23 +327,23 @@ Följande ZIP innehåller `FormsPortalSampleDataServiceImpl` och `FormsPortalSam
 
 Databasimplementeringen av Forms Portal använder ytterligare metadatatabell. Tabellen har en sammansatt primärnyckel baserad på kolumnerna Key och id i tabellen. MySQL tillåter primärnycklar upp till 255 tecken. Du kan använda följande valideringsskript på klientsidan för att kontrollera längden på filnamnet som är kopplat till filwidgeten. Valideringen körs när en fil bifogas. Skriptet som ges i följande procedur visar ett meddelande när filnamnet är större än 150 (inklusive filtillägg). Du kan ändra skriptet för att kontrollera om det innehåller ett annat antal tecken.
 
-Utför följande steg för att skapa [ett klientbibliotek](/help/sites-developing/clientlibs.md) och använd skriptet:
+Utför följande steg för att skapa [ett klientbibliotek](/help/sites-developing/clientlibs.md) och använda skriptet:
 
 1. Logga in på CRXDE och navigera till /etc/clientlibs/
-1. Skapa en nod av typen **cq:ClientLibraryFolder** och ange namnet på noden. Till exempel: `validation`.
+1. Skapa en nod av typen **cq:ClientLibraryFolder** och ange namnet på noden. Exempel: `validation`.
 
    Klicka på **[!UICONTROL Save All]**.
 
-1. Högerklicka på noden och klicka på **[!UICONTROL create new file]** och skapa en fil med tillägget .txt. Till exempel: `js.txt`Lägg till följande kod i den nyligen skapade TXT-filen och klicka på **[!UICONTROL Save All]**.
+1. Högerklicka på noden, klicka på **[!UICONTROL create new file]** och skapa en fil med tillägget .txt. `js.txt`Lägg till exempel till följande kod i den nyligen skapade TXT-filen och klicka på **[!UICONTROL Save All]**.
 
    ```javascript
    #base=util
     util.js
    ```
 
-   I ovanstående kod `util` är namnet på mappen och `util.js` filens namn i `util` mapp. The `util` mapp och `util.js` filen skapas i följande steg.
+   I ovanstående kod är `util` namnet på mappen och `util.js` namnet på filen i mappen `util`. Mappen `util` och filen `util.js` skapas i följande steg.
 
-1. Högerklicka på `cq:ClientLibraryFolder` som skapades i steg 2 väljer du Skapa > Skapa mapp. Skapa en mapp med namnet `util`. Klicka på **[!UICONTROL Save All]**. Högerklicka på `util` väljer du Skapa > Skapa fil. Skapa en fil med namnet `util.js`. Klicka på **[!UICONTROL Save All]**.
+1. Högerklicka på noden `cq:ClientLibraryFolder` som skapades i steg 2 och välj Skapa > Skapa mapp. Skapa en mapp med namnet `util`. Klicka på **[!UICONTROL Save All]**. Högerklicka på mappen `util` och välj Skapa > Skapa fil. Skapa en fil med namnet `util.js`. Klicka på **[!UICONTROL Save All]**.
 
 1. Lägg till följande kod i filen util.js och klicka på **[!UICONTROL Save All]**. Koden verifierar längden på filnamnet.
 
@@ -406,18 +406,18 @@ Utför följande steg för att skapa [ett klientbibliotek](/help/sites-developin
 
    * **[!UICONTROL Name:]** kategorier
 
-   * **[!UICONTROL Type:]** Sträng
+   * **[!UICONTROL Type:]**-sträng
 
    * **[!UICONTROL Value:]** fp.validation
 
-   * **[!UICONTROL multi option:]** Aktiverad
+   * **[!UICONTROL multi option:]** har aktiverats
 
-1. Navigera till `/libs/fd/af/runtime/clientlibs/guideRuntime`och lägg till `fp.validation` värdet till egenskapen embed.
+1. Navigera till `/libs/fd/af/runtime/clientlibs/guideRuntime` och lägg till värdet `fp.validation` till egenskapen embed.
 
-1. Navigera till /libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA och lägg till `fp.validation` värde för att bädda in egenskap.
+1. Navigera till /libs/fd/af/runtime/clientlibs/guideRuntimeWithXFA och lägg till värdet `fp.validation` för att bädda in egenskapen.
 
    >[!NOTE]
    >
    >Om du använder anpassade klientbibliotek i stället för klientbiblioteken guideRuntime och guideRuntimeWithXfa använder du kategorinamnet för att bädda in klientbiblioteket som skapas i den här proceduren i dina anpassade bibliotek som läses in vid körning.
 
-1. Klicka **[!UICONTROL Save All.]** När filnamnet är större än 150 tecken (inklusive filtillägg) visas nu ett meddelande.
+1. Klicka på **[!UICONTROL Save All.]**. När filnamnet är större än 150 tecken (inklusive filtillägg) visas ett meddelande.

@@ -30,13 +30,13 @@ Målet med den här självstudiekursen är att lära en utvecklare som är ny at
 
 ![WKND](assets/screen_shot_2018-11-23at152453.png)
 
-[WKND Developer Tutorial finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) och vägleder dig genom att skapa ett AEM projekt med hjälp av den senaste tekniken och de bästa metoderna.
+[WKND Developer Tutorial är tillgänglig här](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) och vägleder dig genom att skapa ett AEM projekt med hjälp av de senaste teknikerna och bästa metoderna.
 
 ## Kärnbegrepp {#core-concepts}
 
 I självstudiekursen används många kraftfulla funktioner i AEM. Webbplatsen kommer att implementeras med:
 
-* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+* [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 * [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 * [Pekgränssnitt](/help/sites-developing/touch-ui-concepts.md)
 * [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
@@ -46,4 +46,4 @@ Gå igenom självstudiekursen innan du går in på de ovanstående begreppen i d
 
 ## Nästa steg {#next-steps}
 
-När du är klar med [självstudiekurs](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html), överväga att granska dokumentet [AEM Core Concepts](/help/sites-developing/the-basics.md) för att få en bättre förståelse för vissa underliggande tekniker och utvecklingsparadigmer i AEM.
+När du har slutfört [självstudiekursen](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html) kan du överväga att granska dokumentet [AEM Core Concepts](/help/sites-developing/the-basics.md) för att få en bättre förståelse för vissa underliggande tekniker och utvecklingsparadigmer för AEM.

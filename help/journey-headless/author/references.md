@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Trney](overview.md) den [Introduktion](introduction.md) har omfattat de grundläggande begrepp och termer som är relevanta för utvecklingen av headless.
+I början av [AEM Headless Content Author Journey](overview.md) innehöll [Introduction](introduction.md) grundläggande begrepp och terminologi som är relevant för redigering utan rubrik.
 
 Du har lärt dig grunderna i Headless CMS Authoring, med en introduktion till redigering med AEMaaCS och i synnerhet framtagning av Content Fragments.
 
@@ -25,7 +25,7 @@ Den här artikeln bygger vidare på dessa så att du förstår hur du använder 
 ## Syfte {#objective}
 
 * **Målgrupp**: Avancerat
-* **Syfte**: Introduktion till användning av referenser för Headless CMS Authoring. Vilka typer av referenser som finns tillgängliga, och vad är syftet med dem:
+* **Mål**: Introduktion till användning av referenser för Headless CMS Authoring. Vilka typer av referenser som finns tillgängliga, och vad är syftet med dem:
 
    * Innehållsreferenser
    * Resurs-/mediereferenser
@@ -46,7 +46,7 @@ Innehållsreferenser gör just det - de låter dig referera till allt annat inne
 
 ## Resurs-/mediereferenser {#assets-media-references}
 
-Resurser (till exempel bilder eller media) kan refereras inom ett textblock med hjälp av **Infoga resurs** alternativ. Då öppnas en webbläsare där du kan välja resursen.
+Assets (till exempel bilder eller media) kan refereras inom ett textblock med alternativet **Infoga resurs**. Då öppnas en webbläsare där du kan välja resursen.
 
 ![Innehållsfragment - infoga resurs](/help/journey-headless/author/assets/headless-journey-author-references-02.png)
 
@@ -78,7 +78,7 @@ Som författare ansvarar du inte för att definiera dessa relationer (det gör i
 
 ### Så här skapar du kapslade fragment {#author-nested-fragment}
 
-Att skapa fragmentreferenser är ganska okomplicerat (men vanligtvis kommer fältet inte att märkas som **Fragmentreferens**). Du kan antingen skriva in referensen direkt eller (troligare) välja mappikonen för att öppna en webbläsare där du kan navigera och välja det fragment du behöver.
+Att skapa fragmentreferenser är ganska okomplicerat (men vanligtvis kommer fältet inte att ha etiketten **Fragmentreferens**). Du kan antingen skriva in referensen direkt eller (troligare) välja mappikonen för att öppna en webbläsare där du kan navigera och välja det fragment du behöver.
 
 ![Innehållsfragment - referenser](/help/journey-headless/author/assets/headless-journey-author-references-03.png)
 
@@ -89,7 +89,7 @@ Definitionen av kontrollerna för innehållsfragmentmodellen:
 
 ### Navigera i kapslade fragment {#navigate-nested-fragment}
 
-Använda **Strukturträd** på fliken i redigeraren för innehållsfragment kan du navigera genom fragmenten som fragmentet refererar till och sedan genom eventuella referenser. Om du markerar en referens öppnas fragmentet för redigering.
+På fliken **Strukturträd** i redigeraren för innehållsfragment kan du navigera bland fragmenten som fragmentet refererar till, och sedan genom eventuella referenser. Om du markerar en referens öppnas fragmentet för redigering.
 
 >[!NOTE]
 >
@@ -105,7 +105,7 @@ Ad hoc-referenser kan läggas till som en enkel länk i ett textblock:
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är nästa steg att [Läs mer om metadata och taggning](metadata-tagging.md). Då introduceras och diskuteras hur du kan definiera metadata och taggar för dina innehållsfragment.
+Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är nästa steg att [Lär dig mer om metadata och taggning](metadata-tagging.md). Då introduceras och diskuteras hur du kan definiera metadata och taggar för dina innehållsfragment.
 
 ## Ytterligare resurser {#additional-resources}
 
@@ -113,7 +113,7 @@ Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är
 
    * [Hantera innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md)
 
-      * [Använd konfigurationen i resursmappen](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
+      * [Använd konfigurationen i din Assets-mapp](/help/assets/content-fragments/content-fragments-configuration-browser.md#apply-the-configuration-to-your-assets-folder)
 
       * [Skapa ett innehållsfragment](/help/assets/content-fragments/content-fragments-managing.md#creating-a-content-fragment)
 
@@ -126,7 +126,7 @@ Nu när du har lärt dig mer om referenser och struktur i innehållsfragment är
       * [Modeller för innehållsfragment - egenskaper](/help/assets/content-fragments/content-fragments-models.md#properties)
 
 * Komma igång-guider
-   * [Skapa en startguide för en resursmapp utan rubrik](/help/sites-developing/headless/getting-started/create-assets-folder.md)
+   * [Skapa en startguide för Assets Folder Headless](/help/sites-developing/headless/getting-started/create-assets-folder.md)
 
 * [AEM Headless Content Architect Journey](/help/journey-headless/architect/overview.md)
 

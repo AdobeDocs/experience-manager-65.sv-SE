@@ -32,7 +32,7 @@ När du startar ditt Adobe Experience Manager (AEM) Forms-program måste du för
    >    * Om du vill visa en lista med server-URL:er klickar du på listpilen i det högra hörnet i textrutan Server-URL.
    >    * Välj en AEM Forms Server-URL att logga in på via appen.
 
-När du loggar in på appen dirigeras du till [**Startsida** screen](../../forms/using/home-screen.md).
+När du loggar in på appen dirigeras du till [**startskärmen**](../../forms/using/home-screen.md).
 
 >[!NOTE]
 >

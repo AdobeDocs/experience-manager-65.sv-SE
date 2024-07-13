@@ -22,6 +22,6 @@ Systeminformationstjänsten tillhandahåller REST API:er för att hämta informa
 
 1. Logga in på administrationskonsolen. Administrationskonsolens standardwebbadress är `https://[hostname]:'port'/adminui.`
 1. Navigera till Tjänster > Program och tjänster > Tjänsthantering.
-1. På sidan Service Management klickar du på **SystemInfo** service.
+1. Klicka på tjänsten **SystemInfo** på sidan Tjänsthantering.
 1. Välj REST i listan på fliken Slutpunkter och klicka på **Lägg till**.
-1. På skärmen Add REST Endpoint klickar du på **Lägg till**.
+1. Klicka på **Lägg till** på skärmen Lägg till REST-slutpunkt.

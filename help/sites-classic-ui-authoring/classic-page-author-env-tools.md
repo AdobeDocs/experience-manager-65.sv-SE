@@ -23,7 +23,7 @@ I redigeringsmiljön i AEM finns olika sätt att ordna och redigera ditt innehå
 
 ## Webbplatsadministration {#site-administration}
 
-The **Webbplatser** konsolen gör att du kan hantera och navigera på webbplatsen. Med hjälp av de två rutorna kan webbplatsens struktur utökas och åtgärder vidtas för det element som krävs:
+Med konsolen **Webbplatser** kan du hantera och navigera på webbplatsen. Med hjälp av de två rutorna kan webbplatsens struktur utökas och åtgärder vidtas för det element som krävs:
 
 ![chlimage_1-108](assets/chlimage_1-108.png)
 
@@ -37,17 +37,17 @@ Det finns en separat sidredigerare med det klassiska användargränssnittet som 
 
 ## Få hjälp {#accessing-help}
 
-Olika **Hjälp** kan nås direkt från AEM:
+Olika **hjälp**-resurser kan nås direkt från AEM:
 
-Förutom att få tillgång till [hjälp från konsolens verktygsfält](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help)kan du även komma åt hjälpen från sidan (med ? ikon) när du redigerar en sida:
+Förutom att du får åtkomst till [hjälpen från konsolens verktygsfält](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help) kan du även få åtkomst till hjälpen från sidosparken (med ? ikon) när du redigerar en sida:
 
-![Sidekick, komprimerad](do-not-localize/sidekick-collapsed-2.png)
+![Sidekick komprimerad](do-not-localize/sidekick-collapsed-2.png)
 
-Eller genom att använda **Hjälp** i redigeringsdialogrutan för specifika komponenter. Då visas sammanhangsberoende hjälp.
+Eller genom att använda knappen **Hjälp** i redigeringsdialogrutan för specifika komponenter. Då visas sammanhangsberoende hjälp.
 
 ## Sidekick {#sidekick}
 
-The **Komponenter** kan du bläddra bland de komponenter som är tillgängliga för att läggas till på den aktuella sidan. Den önskade gruppen kan expanderas och sedan dras en komponent till önskad plats på sidan.
+På fliken **Komponenter** i sidosparken kan du bläddra bland de komponenter som är tillgängliga för att läggas till på den aktuella sidan. Den önskade gruppen kan expanderas och sedan dras en komponent till önskad plats på sidan.
 
 ![chlimage_1-110](assets/chlimage_1-110.png)
 
@@ -65,7 +65,7 @@ Du kan använda innehållssökaren för att hitta en rad olika resurser. Om det 
 
 * [Stycken](#referencing-paragraphs-from-other-pages)
 * [Produkter](#products)
-* Eller till [bläddra på webbplatsen efter databasstruktur](#the-content-finder)
+* Eller [bläddra på webbplatsen efter databasstruktur](#the-content-finder)
 
 Med alla alternativ kan du [söka efter specifika objekt](#the-content-finder).
 
@@ -143,14 +143,14 @@ följande sökmönster hittar den (och alla andra bilder som matchar mönstret):
 
 * `name:*nmv*`
 * `name:AD*`
-teckenmatchningen är *not* skiftlägeskänslig.
+teckenmatchningen är *inte* skiftlägeskänslig.
 
 * `name:ad?nm??is.*`
 Du kan använda valfritt antal jokertecken i en fråga.
 
 >[!NOTE]
 >
->Du kan också använda [SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html) sökning.
+>Du kan också använda [SQL2](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/org/apache/jackrabbit/commons/query/sql2/package-summary.html)-sökning.
 
 ## Visar referenser {#showing-references}
 
@@ -158,11 +158,11 @@ AEM låter dig se vilka sidor som är länkade till den sida du arbetar med just
 
 Så här visar du direkta sidreferenser:
 
-1. I sidosparken väljer du **Sida** -tabbikonen.
+1. I sidosparken väljer du flikikonen **Sida** .
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. Välj **Visa referenser...** AEM öppnar fönstret Referenser och visar vilka sidor som refererar till den markerade sidan, inklusive deras sökvägar.
+1. Välj **Visa referenser..** AEM öppnar fönstret Referenser och visar vilka sidor som refererar till den valda sidan, inklusive deras sökvägar.
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
@@ -173,17 +173,17 @@ I vissa situationer finns det ytterligare åtgärder att vidta från Sidekick, b
 
 * [Blueprint](/help/sites-administering/msm-best-practices.md)
 
-Övriga [Förbindelser mellan sidor kan visas i webbplatskonsolen](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console).
+Andra [relationer mellan sidor visas i webbplatskonsolen](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console).
 
 ## Granskningslogg {#audit-log}
 
-The **Granskningslogg** kan nås via **Information** sidosparkens flik. Här listas de senaste åtgärderna som har utförts på den aktuella sidan, till exempel:
+**Granskningsloggen** finns på fliken **Information** i sidosparken. Här listas de senaste åtgärderna som har utförts på den aktuella sidan, till exempel:
 
 ![chlimage_1-118](assets/chlimage_1-118.png)
 
 ## Sidinformation {#page-information}
 
-Webbplatskonsolen [innehåller information om sidans aktuella status](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console) som publicering, ändring, låst, livecopy och så vidare.
+Webbplatskonsolen [innehåller även information om sidans aktuella status](/help/sites-classic-ui-authoring/author-env-basic-handling.md#page-information-on-the-websites-console), t.ex. publikation, ändring, låst, livecopy och så vidare.
 
 ## Sidlägen {#page-modes}
 
@@ -213,4 +213,4 @@ I det här läget kan du redigera sidans design genom att konfigurera de kompone
 
 ## Kortkommandon {#keyboard-shortcuts}
 
-Olika [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) är tillgängliga.
+Det finns olika [kortkommandon](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).

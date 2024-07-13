@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Skapa en ny GRE-fältkomponent{#creating-a-new-granite-ui-field-component}
 
-Gränssnittet Granite innehåller ett antal komponenter som är utformade för att användas i formulär. Dessa kallas *fält* i GRUND-språket Granite. Standardkomponenterna i Granite-formuläret finns under:
+Gränssnittet för Granite innehåller ett antal komponenter som är utformade för att användas i formulär. Dessa kallas *fält* i användargränssnittsordlistan för Granite. Standardkomponenterna i Granite-formuläret finns under:
 
 `/libs/granite/ui/components/foundation/form/*`
 
@@ -28,7 +28,7 @@ Gränssnittet Granite innehåller ett antal komponenter som är utformade för a
 
 >[!NOTE]
 >
->Mer information om fält finns i [Granite UI-dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
+>Mer information om fält finns i [Bevilja gränssnittsdokumentationen](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
 
 Använd ramverket Granite UI Foundation för att utveckla och/eller utöka Granite-komponenter. Detta har två element:
 
@@ -45,18 +45,18 @@ Använd ramverket Granite UI Foundation för att utveckla och/eller utöka Grani
 
    * en samling klientlibs som innehåller vokabulära tecken (dvs. HTML) för att uppnå generiska interaktionsmönster via ett hypermediastyrt användargränssnitt.
 
-Den generiska användargränssnittskomponenten Granite `field` består av två intressanta filer:
+Den generiska GRA-gränssnittskomponenten `field` består av två filer av intresse:
 
-* `init.jsp`: hanterar den generiska bearbetningen; etiketter, beskrivning och tillhandahåller formulärvärden som du behöver när du återger fältet.
-* `render.jsp`: det är här som den faktiska återgivningen av fältet utförs och måste åsidosättas för ditt anpassade fält; inkluderas av `init.jsp`.
+* `init.jsp`: hanterar den generiska bearbetningen, etiketter, beskrivning och tillhandahåller formulärvärden som du behöver när du återger fältet.
+* `render.jsp`: Det är här som den faktiska återgivningen av fältet utförs och måste åsidosättas för ditt anpassade fält. Inkluderas av `init.jsp`.
 
-Se [Bevilja gränssnittsdokumentation - fält](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html) för mer information.
+Mer information finns i [Bevilja gränssnittsdokumentation - fält](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/field/index.html).
 
 Se till exempel:
 
 * `cqgems/customizingfield/components/colorpicker`
 
-   * tillhandahålls av [Kodexempel](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
+   * från [kodexemplet](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
 
 * `granite/ui/components/foundation/form`
 
@@ -64,13 +64,13 @@ Se till exempel:
 >
 >Eftersom JSP används för den här mekanismen, ges i18n och XSS inte direkt. Det innebär att du måste internationalisera och undvika dina strängar. Följande katalog innehåller de generiska fälten från en standardinstans och du kan använda dessa som referens:
 >
->`/libs/granite/ui/components/foundation/form` katalog
+>`/libs/granite/ui/components/foundation/form`-katalog
 
 ## Skapa serverskriptet för komponenten {#creating-the-server-side-script-for-the-component}
 
-Ditt anpassade fält bör bara åsidosätta `render.jsp` skript, där du anger koden för komponenten. Du kan betrakta JSP-filen (det vill säga återgivningsskriptet) som en wrapper för koden.
+Ditt anpassade fält bör bara åsidosätta skriptet `render.jsp`, där du anger koden för komponenten. Du kan betrakta JSP-filen (det vill säga återgivningsskriptet) som en wrapper för koden.
 
-1. Skapa en komponent som använder `sling:resourceSuperType` egenskap att ärva från:
+1. Skapa en komponent som använder egenskapen `sling:resourceSuperType` för att ärva från:
 
    `/libs/granite/ui/components/foundation/form/field`
 
@@ -80,7 +80,7 @@ Ditt anpassade fält bör bara åsidosätta `render.jsp` skript, där du anger k
 
    I det här skriptet skapar du hypermediemarkeringen (d.v.s. berikad kod som innehåller hypermediatillägget) så att klienten kan interagera med det genererade elementet. Detta bör följa kodningsformatet för serversidan Granite.
 
-   När du anpassar, det enda kontrakt som du *måste* fulfill är att läsa formulärvärdet (initierat i `init.jsp`) från begäran med:
+   Vid anpassning är det enda kontrakt som du *måste* fylla i att läsa formulärvärdet (initierat i `init.jsp`) från begäran med:
 
    ```
    // Delivers the value of the field (read from the content)
@@ -88,7 +88,7 @@ Ditt anpassade fält bör bara åsidosätta `render.jsp` skript, där du anger k
    vm.get("value, String.class");
    ```
 
-   Mer information finns i implementeringen av färdiga GRA-fält, till exempel: `/libs/granite/ui/components/foundation/form/textfield`.
+   Mer information finns i implementeringen av användningsklara GRA-fält, till exempel `/libs/granite/ui/components/foundation/form/textfield`.
 
    >[!NOTE]
    >
@@ -98,10 +98,10 @@ Ditt anpassade fält bör bara åsidosätta `render.jsp` skript, där du anger k
 
 Så här lägger du till specifikt klientbeteende i komponenten:
 
-1. Skapa ett clientlib för kategori `cq.authoring.dialog`.
-1. Skapa ett clientlib för kategori `cq.authoring.dialog` och definiera `JS`/ `CSS` inuti den.
+1. Skapa ett klientlib för kategorin `cq.authoring.dialog`.
+1. Skapa ett klientlib av kategorin `cq.authoring.dialog` och definiera din `JS`/ `CSS` inuti den.
 
-   Definiera `JS`/ `CSS` inuti klientlib.
+   Definiera din `JS`/ `CSS` inuti klientlib.
 
    >[!NOTE]
    >

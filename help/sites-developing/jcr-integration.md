@@ -28,7 +28,7 @@ Det är alltid snabbare att navigera i databasen för att hämta data än att k�
 
 ## Begränsa omfattningen av JCR-observation {#restrict-the-scope-of-jcr-observation}
 
-När du lyssnar efter händelser i databasen är det viktigt att begränsa omfattningen så mycket som möjligt. Det är till exempel mycket bättre att lyssna efter en händelse på `/etc/mycompany` inte lyssna på `/etc`. Lyssna aldrig efter händelser i databasroten. Kontrollera dessutom att återkallningsmetoderna körs så snabbt som möjligt när det inte finns något att göra.
+När du lyssnar efter händelser i databasen är det viktigt att begränsa omfattningen så mycket som möjligt. Det är till exempel mycket bättre att lyssna efter en händelse på `/etc/mycompany` än att lyssna på `/etc`. Lyssna aldrig efter händelser i databasroten. Kontrollera dessutom att återkallningsmetoderna körs så snabbt som möjligt när det inte finns något att göra.
 
 ## Eliminera användningen av JCR-administratörsåtkomst {#eliminate-use-of-jcr-admin-access}
 

@@ -45,9 +45,9 @@ Obligatoriskt:
 
 Ange minst 1 av följande:
 
-* Slutanvändarens kund tillhandahöll OAuth ID (det ID som används i kundens system för direkttillstånd): *dpsc-directEntitlementId*
-* För Windows-appanvändare gäller slutanvändarens App Store-ID: *dpsc-windowsAppStoreId*
-* E-postadressen som slutanvändaren använde för att interagera med DPS-appen: *e-post*
+* Slutanvändarens kund tillhandahöll OAuth ID (ID:t som används i kundens system för direkttillstånd): *dpsc-directEntitlementId*
+* För Windows-appanvändare: slutanvändarens App Store-ID: *dpsc-windowsAppStoreId*
+* E-postadressen som slutanvändaren använde för att interagera med DPS-appen: *email*
 
 ### Vanliga frågor och svar {#frequently-asked-questions-faq}
 
@@ -55,7 +55,7 @@ Ange minst 1 av följande:
 
 Adobe tar bort information om App Store-köp (prenumerationer och så vidare), men inköp finns fortfarande kvar i App Store. Om appen (slutanvändaren) är inloggad i App Store hämtas dessa kvitton igen och skickas till Adobe. Senare betraktas de som nya inköp och återställs av appen, med tillgång igen.
 
-**Tar Adobe bort kundtillhandahållna berättiganden när en begäran från DELETE görs?**
+**Tar Adobe bort kundtillhandahållna berättiganden när en DELETE-förfrågan initieras?**
 
 Adobe tar bort information om kundens ytterligare direktbehörigheter. Om appen (slutanvändaren) loggar in på OAuth-mekanismen som kunden har använt skickas information till Adobe och tjänsterna hämtar de extra berättigandena igen.
 

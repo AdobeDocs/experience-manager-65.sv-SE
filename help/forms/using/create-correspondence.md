@@ -19,24 +19,24 @@ ht-degree: 0%
 
 ## Skapa korrespondens i användargränssnittet Skapa korrespondens {#create-correspondence-in-the-create-correspondence-user-interface}
 
-Efter [brevmall skapad i korrespondenshantering](../../forms/using/create-letter.md)kan slutanvändaren/agenten/anspråksjusteraren öppna brevet i användargränssnittet Skapa korrespondens och skapa en korrespondens genom att ange data, konfigurera innehåll och hantera bilagor. Slutligen kan anspråksjusteraren eller agenten hantera innehållet i förhandsgranskningsläget och skicka brevet.
+När en [brevmall har skapats i Correspondence Management](../../forms/using/create-letter.md) kan slutanvändaren/agenten/anspråksjusteraren öppna brevet i användargränssnittet Skapa korrespondens och skapa en korrespondens genom att ange data, konfigurera innehåll och hantera bilagor. Slutligen kan anspråksjusteraren eller agenten hantera innehållet i förhandsgranskningsläget och skicka brevet.
 
 ### Förhandsgranska korrespondens {#preview-a-correspondence}
 
 Markera den bokstav du vill förhandsgranska genom att följa följande steg:
 
-1. På sidan Bokstäver väljer du **Välj**.
+1. Välj **Välj** på sidan Bokstäver.
 1. Välj lämplig bokstav genom att trycka på den.
 
    ![Markera brev](assets/1_selectletter.png)
 
    Markera brev
 
-1. För en ordlistebaserad bokstav väljer du **Förhandsgranska** > **Förhandsgranska**. Om du vill använda en annan bokstav än en ordlista väljer du **Förhandsgranska**. Du kan också hålla pekaren över en bokstav (utan att markera den) och förhandsgranska den genom att markera ikonen Förhandsgranska brev.
+1. Om du har en dataordlistebaserad bokstav väljer du **Förhandsgranska** > **Förhandsgranska**. Du kan också välja **Förhandsgranska** om du har en bokstav som inte är en dataordlista. Du kan också hålla pekaren över en bokstav (utan att markera den) och förhandsgranska den genom att markera ikonen Förhandsgranska brev.
 
    >[!NOTE]
    >
-   >Om ett datalexikon inte är associerat med bokstaven visas förhandsgranskningen av bokstaven. Om bokstaven är dataordlistebaserad visar Korrespondenshantering alternativen Förhandsvisa och Anpassad på menyn Förhandsvisa och du kan välja ett av de två alternativen. Du kan också koppla testdata till en datamordlista. När [Data Dictionary har associerade testdata](../../forms/using/data-dictionary.md#p-working-with-test-data-p)När du sedan väljer förhandsvisningsalternativet öppnas den normala förhandsvisningen med testdata ifyllda.
+   >Om ett datalexikon inte är associerat med bokstaven visas förhandsgranskningen av bokstaven. Om bokstaven är dataordlistebaserad visar Korrespondenshantering alternativen Förhandsvisa och Anpassad på menyn Förhandsvisa och du kan välja ett av de två alternativen. Du kan också koppla testdata till en datamordlista. När [Data Dictionary har associerade testdata](../../forms/using/data-dictionary.md#p-working-with-test-data-p) öppnas den normala förhandsvisningen med testdata ifyllda när du väljer förhandsvisningsalternativet.
 
 1. Om du vill kunna återge en korrespondens medan du förhandsgranskar den, bör du antingen vara administratör eller en del av någon av följande grupper:
 
@@ -45,29 +45,29 @@ Markera den bokstav du vill förhandsgranska genom att följa följande steg:
 
    Om du inte har de behörigheter som krävs ber du administratören om rätt åtkomst. Mer information om hur du skapar och lägger till användare i grupper finns i [Lägga till användare eller grupper i en grupp](/help/sites-administering/security.md). Om du försöker återge en korrespondens utan att ha rätt behörighet visas felsidan 404.
 
-1. Om du har valt **Förhandsgranska** > **Egen**&#x200B;öppnas en dialogruta. I dialogrutan markerar du en datafil, som motsvarar dataordlistan, som du vill förhandsgranska bokstaven med och väljer sedan **Förhandsgranska**. En datafil skapas baserat på ett datalexikon för en viss bokstav. Mer information om datafilen finns i [Dataordlista](../../forms/using/data-dictionary.md#p-working-with-test-data-p).
+1. Om du har valt **Förhandsgranska** > **Egen** öppnas en dialogruta. I dialogrutan markerar du en datafil, som motsvarar dataordlistan, som du vill förhandsgranska bokstaven med och väljer sedan **Förhandsgranska**. En datafil skapas baserat på ett datalexikon för en viss bokstav. Mer information om datafilen finns i [Dataordlista](../../forms/using/data-dictionary.md#p-working-with-test-data-p).
 
    ![Förhandsgranska brev](assets/8_previewcustomdatafile.png)
 
 1. Bokstaven HTML (förhandsgranskning av mobilformulär) öppnas som standard med fliken Data i fokus.
 
-   Mer information om mobilformulär och vilka funktioner de har stöd för finns i [Skillnaden mellan Mobile Forms och PDF forms](https://helpx.adobe.com/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
+   Mer information om mobilformulär och vilka funktioner de stöder finns i [Funktionsdifferentiering mellan Mobile Forms och PDF forms](https://helpx.adobe.com/livecycle/help/mobile-forms/feature-differentiation-mobile-forms-pdf.html).
 
    Det finns tre flikar: data, innehåll och bilagor. Om det inte finns några dataelement (platshållarvariabler och layoutfält) öppnas bokstaven direkt i med fliken Innehåll. Fliken Bifogade filer är bara tillgänglig när det finns bifogade filer eller när biblioteksåtkomst är aktiverat.
 
    >[!NOTE]
    >
-   >Mer information om hur du växlar mellan återgivningsläget HTML eller PDF i förhandsgranskningen av brevet finns i [Ändra återgivningsläge för bokstav](#changerenditionmode). Mer information om stöd för PDF i Correspondence Management och AEM finns i [Avbrutna insticksprogram för NPAPI-webbläsare och deras inverkan](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html). <!-- and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html). THIS URL IS A 404 AND NO SUITABLE REPLACEMENT TOPIC WAS FOUND. CONSIDER DELETING OR ADDING NEW LINK. COMMENTING OUT SO USERS DON'T CLICK IT. -->
+   >Mer information om hur du växlar mellan återgivningsläget HTML eller PDF i förhandsgranskningen av bokstaven finns i [Ändra återgivningsläget för bokstaven](#changerenditionmode). Mer information om stöd för PDF i Correspondence Management och AEM finns i [Avbryta plugin-program för NPAPI-webbläsare och dess påverkan](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html). <!-- and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html). THIS URL IS A 404 AND NO SUITABLE REPLACEMENT TOPIC WAS FOUND. CONSIDER DELETING OR ADDING NEW LINK. COMMENTING OUT SO USERS DON'T CLICK IT. -->
 
 ### Ange data {#enterdata}
 
 Fyll i de tillgängliga layoutfälten och platshållarna på fliken Data.
 
-1. Ange data- och innehållsvariablerna i fälten efter behov. Fyll i alla obligatoriska fält markerade med en asterisk (&#42;) för att aktivera **Skicka** -knappen.
+1. Ange data- och innehållsvariablerna i fälten efter behov. Fyll i alla obligatoriska fält som är markerade med en asterisk (&#42;) för att aktivera knappen **Skicka** .
 
    Markera ett datafältvärde i förhandsvisningen av HTML för att markera motsvarande datafält på fliken Data.
 
-   ![Ange data i brevet](assets/2_enterdata.png) ![2_1_enterdata](assets/2_1_enterdata.png)
+   ![Ange data i bokstaven](assets/2_enterdata.png) ![2_1_enterdata](assets/2_1_enterdata.png)
 
 ### Hantera innehåll {#managecontent}
 
@@ -75,7 +75,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
 1. Välj **Innehåll**. Korrespondenshanteringen visar fliken Innehåll i brevet.
 
-   ![Fliken Innehåll - markera modul i innehåll](assets/3_content.png)
+   ![Fliken Innehåll - högdagermodulen i innehållet](assets/3_content.png)
 
 1. Redigera innehållsmodulerna efter behov på fliken Innehåll. Om du vill fokusera på den relevanta innehållsmodulen i innehållshierarkin kan du antingen markera den relevanta raden eller det relevanta stycket i förhandsgranskningen av bokstaven eller välja innehållsmodulen direkt i innehållshierarkin.
 
@@ -83,19 +83,19 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    ![4_highlightmoduleincontent](assets/4_highlightmoduleincontent.png)
 
-   Genom att trycka på Markera valda moduler på fliken Innehåll eller Data ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)) längst upp till vänster i förhandsgranskningen av HTML kan du inaktivera eller aktivera funktioner för att gå till innehålls-/datamodulen när relevant text, stycke eller datafält är markerat i förhandsgranskningen av bokstaven.
+   Genom att trycka på Markera markerade moduler ( ![markeratMarkeradDModulesincontentccr](assets/highlightselectedmodulesincontentccr.png)) längst upp till vänster i förhandsgranskningen av HTML-bokstaven på fliken Innehåll eller Data kan du inaktivera eller aktivera funktioner för att gå till innehålls-/datamodulen när den relevanta texten, stycket eller datafältet är markerad i förhandsvisningen av bokstaven.
 
-   Mer information om åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information som finns i användargränssnittet Create Correspondence](#actions-and-info-available-in-the-create-correspondence-content-tab).
+   Mer information om vilka åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information i användargränssnittet Skapa korrespondens](#actions-and-info-available-in-the-create-correspondence-content-tab).
 
 1. Om du vill söka efter innehållsmoduler använder du fältet Sök. Ange det fullständiga eller delvisa namnet eller titeln på innehållsmodulen för att söka efter den i korrespondensen.
-1. Välj ikonen Visa ( ![visa](assets/display.png)) framför en lista, text, villkor eller målområde för att visa eller dölja den i bokstaven.
-1. Om du vill redigera en textbunden eller redigerbar textmodul markerar du den relevanta **Redigera** ikon ( ![edittextmodule](assets/edittextmodule.png)) eller dubbelklicka på den relevanta textmodulen i förhandsgranskningen av bokstaven.
+1. Markera visningsikonen ( ![visa](assets/display.png)) framför en lista, text, villkor eller målområde om du vill visa eller dölja den i bokstaven.
+1. Om du vill redigera en textbunden eller redigerbar textmodul väljer du den relevanta **redigeringsikonen** ( ![redigeringsmodul](assets/edittextmodule.png)) eller dubbelklickar på den relevanta textmodulen i förhandsvisningen av bokstaven.
 
    Systemet visar en textredigerare för att redigera och formatera texten.
 
    Standardstavningskontrollen i webbläsaren kontrollerar stavningen i textredigeraren. Om du vill hantera stavnings- och grammatikkontrollen kan du redigera stavningskontrollinställningarna i webbläsaren eller installera plugin-program/tillägg för webbläsaren för att kontrollera stavning och grammatik.
 
-   Du kan också använda de olika kortkommandona i textredigeraren för att hantera, redigera och formatera text. Mer information om [Textredigerare](/help/forms/using/keyboard-shortcuts.md#correspondence-management) kortkommandon i Kortkommandon för korrespondenshantering.
+   Du kan också använda de olika kortkommandona i textredigeraren för att hantera, redigera och formatera text. Mer information om [kortkommandon för textredigeraren](/help/forms/using/keyboard-shortcuts.md#correspondence-management) finns i Kortkommandon för korrespondenshantering.
 
    ![5_edittextmodule](assets/5_edittextmodule.png)
 
@@ -115,7 +115,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    Du kan dra in text och siffror i brevet med tabbtangenten. Du kan till exempel använda tabbtangenten för att justera flera textkolumner i en lista till ett tabellformat.
 
-   ![tabbar](assets/tabspaces.png)
+   ![tabspaces](assets/tabspaces.png)
 
    Exempel: Använda tabbtangenten för att justera flera textkolumner i ett tabellformat
 
@@ -131,24 +131,24 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
    ![specialtecken](assets/specialcharacters.png)
 
-   Correspondence Management har inbyggt stöd för 210 specialtecken. Administratören kan [lägg till stöd för fler/anpassade specialtecken genom anpassning](../../forms/using/custom-special-characters.md).
+   Correspondence Management har inbyggt stöd för 210 specialtecken. Administratören kan [lägga till stöd för fler/anpassade specialtecken genom anpassning](../../forms/using/custom-special-characters.md).
 
 1. Markera texten och välj Markera färg om du vill framhäva delar av texten i en redigerbar textbunden modul.
 
-   ![letterbakgrundsfärg](assets/letterbackgroundcolor.png)
+   ![letterbackgroundColor](assets/letterbackgroundcolor.png)
 
-   Du kan antingen välja en grundfärg direkt `**[A]**` finns på paletten Grundfärger eller väljer **Välj** efter användning av skjutreglaget `**[B]**` för att välja lämplig ton för färgen.
+   Du kan antingen direkt välja en grundfärg `**[A]**` som finns på paletten Grundfärger eller välja **Markera** efter att du har använt reglaget `**[B]**` för att välja rätt färgton.
 
-   Du kan också gå till fliken Avancerat och välja lämplig nyans, ljushet och mättnad `**[C]**` för att skapa en exakt färg och sedan välja Markera `**[D]**` om du vill använda färgen för att markera texten.
+   Du kan också gå till fliken Avancerat och välja lämplig nyans, ljushet och mättnad `**[C]**` för att skapa den exakta färgen och sedan välja Välj `**[D]**` för att använda färgen för att markera texten.
 
    ![textbakgrundsfärg](assets/textbackgroundcolor.png)
 
-1. Ändra innehåll och format och välj **Spara**. Markera ( ![editnextmoduleccr](assets/editnextmoduleccr.png)) för att gå mellan redigerbara textmoduler, eller markera **Spara och nästa** om du vill spara ändringarna och gå till nästa redigerbara textmodul.
+1. Gör önskade ändringar av innehåll och format och välj **Spara**. Välj ( ![editnextmodulecr](assets/editnextmoduleccr.png)) om du vill gå mellan redigerbara textmoduler, eller välj **Spara och nästa** om du vill spara ändringarna och gå till nästa redigerbara textmodul.
 1. Systemet visar också de ofyllda variablerna för var och en av grenarna. Om det inte finns några ofyllda variabler visas ofyllda variabler som 0. Om det finns en ofylld variabel kan du markera en gren för att expandera den och leta reda på den ofyllda variabeln. Använd verktygsfältet Innehåll för att ta bort innehåll, öka/minska indrag för innehållet och infoga sidbrytningar före/efter innehållet.
 
    Du kan infoga sidbrytningar ovanför och under datamoduler även när de ingår i listor och villkor.
 
-1. Välj Öppna/stäng innehållsvariabel ( ![opencontentvariables](assets/opencontentvariables.png)) för att öppna innehållsvariablerna och fylla i dem på rätt sätt.
+1. Välj Öppna/stäng innehållsvariabel ( ![openContentVariables](assets/opencontentvariables.png)) för att öppna innehållsvariablerna och fylla i dem korrekt.
 1. När du har fyllt i den ofyllda variabeln korrekt anges antalet ofyllda variabler till 0.
 
    I användargränssnittet Skapa korrespondens visas antalet ofyllda variabler på varje nivå i hierarkin för en modul som innehåller minst en variabel. Om en modul innehåller ofyllda variabler visas antalet på variabel-, modul-, målområdes- och brevmallsnivå.
@@ -167,15 +167,15 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
    Modulerna i en brevmall visar det ofyllda variabelantalet enligt beskrivningen nedan:
 
    * **Text** Visar summan av de unika ofyllda platshållarvariablerna och dataordlisteelementen i textmodulen.
-   * **Villkor** Visar summan av de unika ofyllda villkorsvariablerna i villkoret och variablerna i de resulterande modulerna.
+   * **Villkor** Visar summan av de unika, ofyllda villkorsvariablerna i villkoret och variablerna i de resulterande modulerna.
    * **Lista** Visar summan av alla unika ofyllda variabler som finns i modulerna som är tilldelade till listan.
    * **Målområde** Visar summan av alla unika ofyllda variabler som finns i modulerna som tilldelats målområdet.
 
    Observera följande när det gäller variabler med standardvärden:
 
-   * Ett booleskt variabelfält får som standard värdet *false*. Variabeln anses dock vara ofylld. Det innebär att variabelantalet innehåller alla booleska variabelfält med värde *false*.
+   * Ett booleskt variabelfält har standardvärdet *false*. Variabeln anses dock vara ofylld. Det innebär att variabelantalet innehåller alla booleska variabelfält med värdet *false*.
 
-   * Ett numeriskt variabelfält blir som standard *0 (noll)*. Variabeln anses dock vara ofylld. Det innebär att variabelantalet innehåller alla numeriska variabelfält med värde *0 (noll)*.
+   * Ett numeriskt variabelfält har standardvärdet *0 (noll)*. Variabeln anses dock vara ofylld. Det innebär att variabelantalet innehåller alla numeriska variabelfält med värdet *(noll)*.
 
 #### Åtgärder och information som är tillgängliga på fliken Skapa korrespondensinnehåll {#actions-and-info-available-in-the-create-correspondence-content-tab}
 
@@ -207,7 +207,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
 1. Välj **Bifogade filer**. Korrespondenshanteringen visar de tillgängliga bifogade filerna, enligt inställningarna när brevmallen skapas.
 1. Du kan välja att inte skicka en bifogad fil tillsammans med bokstaven genom att trycka på visningsikonen, och du kan markera krysset i den bifogade filen för att ta bort det från bokstaven. För de bifogade filer som anges inaktiveras ikonerna Visa och Ta bort när du skapar en brevmall som Obligatorisk.
-1. Välj biblioteksåtkomst ( ![libraryaccess](assets/libraryaccess.png)) för att komma åt innehållsbiblioteket och infoga DAM-resurser som bilagor.
+1. Välj ikonen Biblioteksåtkomst ( ![biblioteksåtkomst](assets/libraryaccess.png)) för att komma åt innehållsbiblioteket och infoga DAM-resurser som bilagor.
 
    >[!NOTE]
    >
@@ -221,7 +221,7 @@ På fliken Innehåll hanterar du innehåll som dokumentfragment och innehållsva
 
 Du kan göra layout- och innehållsrelaterade ändringar för att se till att brevet ser ut som du tänkt dig och skicka det till olika postprocesser.
 
-1. Markera allt redigerbart innehåll i brevet genom att markera **Markera redigerbara avsnitt**.
+1. Markera **Markera redigerbara avsnitt** om du vill framhäva allt redigerbart innehåll i brevet.
 
    Det redigerbara innehållet i bokstaven markeras med grå bakgrund.
 
@@ -231,11 +231,11 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    Till exempel markeras raden &quot;Att ge oss åtkomst..&quot; i bilden nedan och motsvarande innehållsmodul markeras på fliken Innehåll.
 
-   Genom att trycka på Markera valda moduler i innehållet ( ![highlightselectedmodulesincontentccr](assets/highlightselectedmodulesincontentccr.png)) kan du inaktivera eller aktivera funktioner för att markera innehållsmodulen på fliken Innehåll när användaren knackar på den relevanta texten, stycket eller datafältet i förhandsgranskningen av bokstaven.
+   Genom att trycka på Markera valda moduler i innehåll ( ![highlightselectedModulesincontentccr](assets/highlightselectedmodulesincontentccr.png)) kan du inaktivera eller aktivera funktioner för att markera innehållsmodulen på fliken Innehåll när användaren knackar på relevant text, stycke eller datafält i förhandsgranskningen av bokstaven.
 
-   Mer information om åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information som finns i användargränssnittet Create Correspondence](#actions-and-info-available-in-the-create-correspondence-content-tab).
+   Mer information om vilka åtgärder som är tillgängliga för olika moduler i användargränssnittet Skapa korrespondens finns i [Åtgärder och information i användargränssnittet Skapa korrespondens](#actions-and-info-available-in-the-create-correspondence-content-tab).
 
-1. Om du vill lägga till en sidbrytning till brevet markerar du var du vill infoga en sidbrytning och väljer Sidbrytning före eller Sidbrytning efter ( ![pagebreakbefore efter](assets/pagebreakbeforeafter.png)).
+1. Om du vill lägga till en sidbrytning i brevet markerar du var du vill infoga en sidbrytning före eller efter ( ![sidbrytning före](assets/pagebreakbeforeafter.png)).
 
    En explicit sidbrytningsplatshållare infogas i brevet. Om du vill se hur en explicit sidbrytning påverkar bokstaven läser du i den förenklade PDF-förhandsvisningen.
 
@@ -245,13 +245,13 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    ![Explicit sidbrytning](assets/8_pagebreak.png)
 
-1. Om du vill spara brevet som ett utkast, som du kan fortsätta att arbeta med senare, väljer du Spara som utkast. Om du vill använda det här alternativet måste ditt brev vara [publicerad](../../forms/using/publishing-unpublishing-forms.md#publishanasset). Mer information finns i Utkastinstans under [Spara utkast och skicka brev](#savingdrafts).
+1. Om du vill spara brevet som ett utkast, som du kan fortsätta att arbeta med senare, väljer du Spara som utkast. Om du vill använda det här alternativet måste ditt brev [publiceras](../../forms/using/publishing-unpublishing-forms.md#publishanasset). Mer information finns i Utkastinstans under [Spara utkast och skicka brevinstanser](#savingdrafts).
 
    ![saveasdraft](assets/saveasdraft.png)
 
-   Dialogrutan Utkastbokstavsnamn visas med bokstavskod-ID:t. Du kan också redigera detta ID. Anteckna brev-ID:t och välj sedan **Klar**. Du kan senare använda detta ID för att [läsa in utkastet igen](submit-letter-topostprocess.md#reloaddraft).
+   Dialogrutan Utkastbokstavsnamn visas med bokstavskod-ID:t. Du kan också redigera detta ID. Anteckna brev-ID:t och välj sedan **Klar**. Du kan senare använda detta ID för att [läsa in utkastet ](submit-letter-topostprocess.md#reloaddraft) igen.
 
-1. Om du vill förhandsgranska bokstaven som ett förenklat PDF med exakt layout och sidbrytningar som de ska skickas, väljer du ( ![förhandsgranska](assets/preview.png)) Förhandsgranska.
+1. Om du vill förhandsgranska bokstaven som ett förenklat PDF med exakt layout och sidbrytningar så som den kommer att skickas, väljer du Förhandsgranska ( ![förhandsvisning](assets/preview.png)).
 
    Bokstaven visas som ett förenklat PDF. Det förenklade PDF är den exakta representationen av brevet så som det kommer att skickas med rätt teckensnitt, brytningar och layout för brevet.
 
@@ -259,7 +259,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
    >
    >Om du använder återgivningstypen Mozilla Firefox och HTML måste du använda insticksprogrammet för webbläsaren och inte Acrobat för att förhandsgranska bokstaven som separerad PDF. Om du vill välja insticksprogrammet för webbläsaren går du till Mozilla Firefox-inställningarna och för innehållstypen PDF väljer du Förhandsgranska i Firefox.
 
-1. Om du tycker att den förenklade förhandsvisningen av PDF är tillfredsställande väljer du **Skicka** skicka brevet. Du kan också ändra bokstaven genom att markera **Avsluta förhandsgranskning** om du vill gå tillbaka till förhandsgranskningen av gränssnittet Skapa korrespondens för brevet för att göra ändringar i brevet. Om konfigurationen Hantera bokstavsinstans är aktiverad i publiceringsinstansen när du väljer Skicka, genereras instansen av skicka-brev.
+1. Om du anser att den förenklade förhandsgranskningen av PDF är tillfredsställande väljer du **Skicka** för att skicka brevet. Du kan också ändra bokstaven genom att välja **Avsluta förhandsgranskning** och gå tillbaka till förhandsgranskningen av brevet för att skapa korrespondens för att göra ändringar i brevet. Om konfigurationen Hantera bokstavsinstans är aktiverad på Publish-instansen genereras instansen av skickabrev när du väljer Skicka.
 
    Mer information finns i Utkastinstans under Spara utkast och skicka brevinstanser.
 
@@ -267,7 +267,7 @@ Du kan göra layout- och innehållsrelaterade ändringar för att se till att br
 
    När du har gjort de ändringar du vill kan du antingen skicka brevet från HTML5-förhandsvisningen eller välja Förhandsgranska igen om du vill granska den förenklade PDF.
 
-   Mer information om skillnaderna mellan HTML5-formulär och PDF forms finns i [Skillnaden mellan HTML5-formulär och PDF forms](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
+   Mer information om skillnader mellan HTML5-formulär och PDF forms finns i [Funktionsskillnad mellan HTML5-formulär och PDF forms](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
 
 ## Spara utkast och skicka brev {#savingdrafts}
 
@@ -275,41 +275,41 @@ När ett brev återges i användargränssnittet Skapa korrespondens kan du spara
 
 Det finns två typer av bokstavsinstanser som kan sparas: förekomst av utkast och förekomst av Skicka.
 
-* **Utkastinstans**: Utkastinstans fångar det aktuella läget för den bokstav du förhandsgranskar. Om du vill spara en utkastinstans måste du först kontrollera att bokstaven och alla resurser som den refererar till är i publicerat läge. Mer information om hur du publicerar brev finns i [Publicera en resurs](../../forms/using/publishing-unpublishing-forms.md#publishanasset). Du måste publicera ett brev innan du kan spara det som ett utkast, eftersom du när du publicerar ett brev skapar en version av brevet, dess beroende resurser och data vid den tidpunkten. Den publicerade versionen av ett brev kan inte redigeras av dig eller en annan användare och kan återställas senare utan oväntade avvikelser från den publicerade versionen. Du kan gå tillbaka till den här instansen senare och fortsätta därifrån du gick.
+* **Utkastinstans**: Utkastinstansen fångar det aktuella läget för det brev som du förhandsgranskar. Om du vill spara en utkastinstans måste du först kontrollera att bokstaven och alla resurser som den refererar till är i publicerat läge. Mer information om hur du publicerar brev finns i [Publish an asset](../../forms/using/publishing-unpublishing-forms.md#publishanasset). Du måste skicka ett brev till Publish innan du kan spara det som ett utkast, eftersom du när du publicerar ett brev skapar en version av brevet, dess beroende resurser och data vid den tidpunkten. Den publicerade versionen av ett brev kan inte redigeras av dig eller en annan användare och kan återställas senare utan oväntade avvikelser från den publicerade versionen. Du kan gå tillbaka till den här instansen senare och fortsätta därifrån du gick.
 
-* **Skicka instans**: Submit-instanser fångar statusen för brevet när det skickas. Instansen Submit lagrar PDF-läget för bokstavsinstansen efter att den har efterbearbetats tillsammans med de data som anges av användaren i användargränssnittet Create Correspondence.
+* **Submit Instance**: Submit-instanser fångar statusen för brevet när det skickas. Instansen Submit lagrar PDF-läget för bokstavsinstansen efter att den har efterbearbetats tillsammans med de data som anges av användaren i användargränssnittet Create Correspondence.
 
 Sådana instanser kan bara sparas när brevet visas på en publiceringsinstans. Som standard är sparandet av instanser inaktiverat. Gör så här om du vill att instanser av bokstäver ska kunna sparas:
 
-1. I AEM öppnar du Adobe Experience Manager Web Console Configuration för servern med följande URL: https://&lt;server>:&lt;port>/&lt;contextpath>/system/console/configMgr
-1. Sök **[!UICONTROL Correspondence Management Configurations]** och klicka på den.
-1. Kontrollera **[!UICONTROL Manage Letter Instances on Publish]** konfiguration och klicka sedan på **[!UICONTROL Save]**.
+1. I AEM öppnar du Adobe Experience Manager Web Console Configuration för servern med följande URL: https://&lt;server>:&lt;port>/&lt;kontextsökväg>/system/console/configMgr
+1. Leta reda på **[!UICONTROL Correspondence Management Configurations]** och klicka på den.
+1. Kontrollera konfigurationen av **[!UICONTROL Manage Letter Instances on Publish]** och klicka sedan på **[!UICONTROL Save]**.
 
 ### Aktivera funktionen Spara utkast {#enable-save-draft-feature}
 
 Innan du publicerar brev eller sparar utkast på publiceringsinstansen utför du följande steg på författaren och publiceringsinstansen för att aktivera funktionen Spara som utkast:
 
-The *cq:lastReplicationAction*, *cq:lastreplikerad* och *cq:lastReplicatedBy* egenskaperna överförs inte som standard till publiceringsinstansen. För överföring *cq:lastReplicationAction*, *cq:lastreplikerad* och *cq:lastReplicatedBy* egenskaper för att publicera instansen, inaktivera [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] -komponenten. Så här inaktiverar du komponenten:
+Egenskaperna *cq:lastReplicationAction*, *cq:lastrepated* och *cq:lastReplicatedBy* överförs inte som standard till publiceringsinstansen. Om du vill överföra egenskaperna *cq:lastReplicationAction*, *cq:lastrepReplicated* och *cq:lastReplicatedBy* till en publiceringsinstans inaktiverar du komponenten [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]. Så här inaktiverar du komponenten:
 
 1. Öppna Adobe Experience Manager Web Console Components-konsolen på författarinstansen. Standardwebbadressen är `http://author-server:port/system/console/components`
 
-1. Sök efter **[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]** -komponenten.
+1. Sök efter komponenten **[!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory]**.
 
-1. Klicka ![Inaktivera knapp](/help/forms/using/assets/enablebutton.png) ikonen för att inaktivera [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory] -komponenten.
+1. Klicka på ikonen ![Inaktivera knapp](/help/forms/using/assets/enablebutton.png) för att inaktivera komponenten [!UICONTROL com.day.cq.replication.impl.ReplicationPropertiesFilterFactory].
 
 ![Författarinstans](/help/forms/using/assets/replicationproperties.png)
 
-Om du vill aktivera Spara som utkast-funktionen ersätter du den befintliga URL:en på [!UICONTROL VersionRestoreManager Author URL] med URL:en till din författarinstans. Så här ersätter du URL-adressen:
+Om du vill aktivera funktionen Spara som utkast ersätter du den befintliga URL:en på [!UICONTROL VersionRestoreManager Author URL] med URL:en för författarinstansen. Så här ersätter du URL-adressen:
 
-1. Öppna i publiceringsinstansen [!UICONTROL Aode Manager Web Console Configuration]. Standardwebbadressen är `https://publish-server:port/system/console/configMgr`
+1. Öppna [!UICONTROL Aode Manager Web Console Configuration] på publiceringsinstansen. Standardwebbadressen är `https://publish-server:port/system/console/configMgr`
 
-1. Sök och öppna **[!UICONTROL Correspondence Management - Author instance Version Restore configurations]** -komponenten.
+1. Sök efter och öppna komponenten **[!UICONTROL Correspondence Management - Author instance Version Restore configurations]**.
 
-1. Leta reda på **[!UICONTROL VersionRestoreManager Author URL]** och ange URL:en för författarinstansen.
+1. Leta reda på fältet **[!UICONTROL VersionRestoreManager Author URL]** och ange URL:en för författarinstansen.
 
 1. Klicka på Spara.
 
-![Publiceringsinstans](/help/forms/using/assets/correspondencemanagement.png)
+![Publish Instance](/help/forms/using/assets/correspondencemanagement.png)
 
 När du har aktiverat sparandet av bokstavsinstanser kan du välja var du vill spara bokstavsinstanserna. Det finns två alternativ för att spara bokstavsinstanserna: Spara lokalt eller Spara fjärranslutet.
 
@@ -323,19 +323,19 @@ Det här alternativet finns för personer som har problem med att spara använda
 
 #### Aktivera fjärrsparande {#enable-remote-save}
 
-1. I AEM öppnar du Adobe Experience Manager Web Console Configuration för servern med följande URL: `https://<server>:<port>/<contextpath>/system/console/configMgr`
+1. Öppna Adobe Experience Manager Web Console-konfiguration för servern med följande URL i AEM: `https://<server>:<port>/<contextpath>/system/console/configMgr`
 1. Sök efter **[!UICONTROL Correspondence Management Configurations]** och klicka på den.
-1. Leta reda på **[!UICONTROL Remote Save]** konfiguration, kontrollera och klicka **[!UICONTROL Save]**.
+1. Leta reda på **[!UICONTROL Remote Save]**-konfigurationen, kontrollera den och klicka på **[!UICONTROL Save]**.
 
 #### Ange inställningar för bearbetningsförfattare {#specify-processing-author-settings}
 
-1. I AEM öppnar du Adobe Experience Manager Web Console Configuration för servern med följande URL: `https://<server>:<port>/system/console/configMgr`
+1. Öppna Adobe Experience Manager Web Console-konfiguration för servern med följande URL i AEM: `https://<server>:<port>/system/console/configMgr`
 
    ![Konfiguration av Adobe Experience Manager Web Console](assets/2configmanager.png)
 
 1. På den här sidan letar du upp SDK-konfigurationen för LiveCyclet Client och expanderar den genom att klicka på den.
 
-1. Ange LiveCyclets servernamn, ange inloggningsinformationen och klicka sedan på **Spara**.
+1. Ange LiveCyclets servernamn, ange inloggningsinformationen och klicka sedan på **Spara** i URL:en för bearbetningsservern.
 
    ![Ange LiveCyclets servernamn och inloggningsinformation](assets/3configmanager.png)
 
@@ -345,27 +345,27 @@ Det här alternativet finns för personer som har problem med att spara använda
 
 * Brevbilagorna är tillgängliga efter postprocessen i PDF, som skapas efter att brevet skickats in.
 * När bokstaven återges med hjälp av API:er på serversidan som en interaktiv eller icke-interaktiv PDF, innehåller det återgivna PDF bilagor som bilagor i PDF.
-* När en inläggsprocess som är kopplad till en brevmall läses in som en del av åtgärderna Skicka eller Fullständig korrespondens med användargränssnittet Skapa korrespondens, skickas bilagor som List&lt;com.adobe.idp.document> i parametern AttachmentDocs.
+* När en inläggsprocess som är kopplad till en brevmall läses in som en del av åtgärderna Skicka eller Fullständig korrespondens med användargränssnittet Skapa korrespondens, skickas bilagor som List&lt;com.adobe.idp.Document> i parametern AttachmentDocs.
 * Färdiga leveransmekanismer som e-post och utskrift, levererar också bilagor tillsammans med PDF i den genererade korrespondensen.
 
 ## Återgivningslägen för förhandsgranskning av brev: Förhandsgranskning av mobilformulär och förhandsgranskning av PDF {#rendition-modes-of-letter-preview-mobile-forms-preview-and-pdf-preview}
 
-AEM Forms Correspondence Management visar ett brev som HTML i användargränssnittet Create Correspondence. Korrespondenshanteringen har dock fortfarande stöd för att återgå till förhandsvisningen i PDF i stället för till förhandsvisningen i HTML. Mer information om hur du växlar mellan förhandsvisningsläget HTML och PDF finns i [Ändra återgivningsläge för bokstav](#changerenditionmode).
+AEM Forms Correspondence Management visar ett brev som HTML i användargränssnittet Create Correspondence. Korrespondenshanteringen har dock fortfarande stöd för att återgå till förhandsvisningen i PDF i stället för till förhandsvisningen i HTML. Mer information om hur du växlar mellan förhandsvisningsläget HTML och PDF finns i [Ändra återgivningsläget för bokstaven](#changerenditionmode).
 
 Nedan följer de fördelar och funktioner som finns i HTML och PDF Preview.
 
 **Fördelar med mobilformulär/förhandsgranskning i HTML**
 
-* **Markera ett datafältvärde för att markera motsvarande datafält**: I användargränssnittet Skapa korrespondens kan du markera ett datafältvärde i brevet för att markera motsvarande datafält på fliken Data. Mer information finns i [Ange data](#enterdata).
+* **Markera ett datafältvärde för att markera motsvarande datafält**: I användargränssnittet Skapa korrespondens kan du markera ett datafältvärde i bokstaven för att markera motsvarande datafält på fliken Data. Mer information finns i [Ange data](#enterdata).
 
-* **Stöd för webbläsare**: Webbläsare har stegvis stöd för NPAPI som påverkar förhandsgranskningen av brevet i PDF. Förhandsgranskning av brev i HTML/mobilformulär påverkas inte av detta.
-* **Markera redigerbart innehåll i en bokstav**: I användargränssnittet Skapa korrespondens kan du markera Markera redigerbart innehåll för att markera allt redigerbart innehåll i bokstaven i grått. Mer information finns i [Hantera innehåll](#managecontent).
+* **Webbläsarstöd**: Webbläsare har stegvis stöd för NPAPI, vilket påverkar förhandsgranskningen av PDF. Förhandsgranskning av brev i HTML/mobilformulär påverkas inte av detta.
+* **Markera redigerbart innehåll i en bokstav**: I användargränssnittet Skapa korrespondens kan du markera Markera redigerbart innehåll för att markera allt redigerbart innehåll i brevet i grått. Mer information finns i [Hantera innehåll](#managecontent).
 
 `<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`
-`<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>`  **Fördelar med PDF Preview**
+`<li>` `<li>Benefits of HTML preview  <ul>   <li>Right to left</li>   <li>NPAPI</li>   <li>Highlight Editable Content</li>  </ul> </li>` `<li>Benefits of PDF preview  <ul>   <li>Page Break</li>   <li>Final Preview</li>  </ul> </li>` **Fördelar med PDF preview**
 
-* **Sidbrytning**: I förhandsgranskningen av PDF kan du se exakt hur sidbrytningarna i brevet påverkar utdata.
-* **Slutlig förhandsgranskning**: I förhandsgranskningen av PDF kan du visa den exakta formateringen och utseendet på brevet så som det kommer att se ut i utskriften.
+* **Sidbrytning**: I förhandsgranskningen av PDF kan du exakt visa hur sidbrytningarna i brevet påverkar utdata.
+* **Slutlig förhandsgranskning**: I förhandsvisningen i PDF kan du visa den exakta formateringen och utseendet för brevet så som det kommer att se ut i utskriften.
 
 Mer information om skriptstöd i PDF forms finns i [Skriptstöd](https://help.adobe.com/en_US/livecycle/11.0/ScriptingSupport/index.html).
 
@@ -375,10 +375,10 @@ Mer information om skriptstöd i HTML5-formulär finns i [Skriptstöd för HTML5
 
 Som standard använder gränssnittet Skapa korrespondens HTML eller mobilformulär för att återge förhandsgranskningen av brevet. Förhandsgranskningen av mobilformulär har inga problem med återgivningen i någon webbläsare, eftersom webbläsarens inbyggda plugin-program används och inga ytterligare plugin-program krävs. Du kan ändra förhandsgranskningsläget för brev till PDF. Webbläsarbegränsningar kan dock skapa problem för olika funktioner i den interaktiva PDF-förhandsvisningen av brevet.
 
-Mer information om webbläsarkompatibilitet med förhandsgranskning av brev finns i [Avbrutna insticksprogram för NPAPI-webbläsare och deras inverkan](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html).
+Mer information om webbläsarkompatibilitet med förhandsgranskning av brev finns i [Avbryta plugin-program för NPAPI-webbläsare och dess påverkan](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html).
 
 Om du vill ändra förhandsgranskningsläget för brevet utför du följande steg:
 
-1. Gå till `https://[system]:'port'/system/console/configMgr` och, om det behövs, logga in som administratör.
-1. Gå till **[!UICONTROL Correspondence Management Configurations]** > **[!UICONTROL Rendition Type]** och markera **HTML Rendition** (Standard) eller **PDF Rendition**.
+1. Gå till `https://[system]:'port'/system/console/configMgr` och logga in som administratör om det behövs.
+1. Gå till **[!UICONTROL Correspondence Management Configurations]** > **[!UICONTROL Rendition Type]** och välj **HTML återgivning** (standard) eller **PDF återgivning**.
 1. Klicka på **[!UICONTROL Save]**.

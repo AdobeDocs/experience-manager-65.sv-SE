@@ -24,8 +24,8 @@ Noderna i databasen omfattas av namnkonventioner i [Java Content Repository](/he
 
 Dessa namnkonventioner implementeras på olika nivåer:
 
-* JcrUtil: den AEM implementeringen av [JCR-verktyg](#jcr-utilities).
-* PageManager: [Sidhanteraren](#page-manager) innehåller metoder för åtgärder på sidnivå.
+* JcrUtil: den AEM implementeringen av [JCR-verktygen](#jcr-utilities).
+* PageManager: [Page Manager](#page-manager) innehåller metoder för sidnivååtgärder.
 * Enligt det användargränssnitt som används:
 
    * [Pekaktiverat användargränssnitt som standard](#standard-ui)
@@ -33,7 +33,7 @@ Dessa namnkonventioner implementeras på olika nivåer:
 
 ### JCR-verktyg {#jcr-utilities}
 
-[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html) är den AEM implementeringen av de gemensamma teknikverktygen. Det är särskilt intressant att validera namn om du kontrollerar teckenmappningar och följande valideringar:
+[JcrUtil](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html?com/day/cq/commons/jcr/JcrUtil.html) är den AEM implementeringen av JCR-verktygen. Det är särskilt intressant att validera namn om du kontrollerar teckenmappningar och följande valideringar:
 
 * `isValidName`
 

@@ -32,15 +32,15 @@ Konfigurera PhoneGap CLI (`https://docs.phonegap.com/en/4.0.0/guide_cli_index.md
 
 För iOS: För att utveckla för iPhone och iPad behöver du Apple Xcode IDE.
 
-* Ladda ned kostnadsfritt [här](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%2Fdownload%2F&amp;rv=1).
+* Hämta den kostnadsfritt [här](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%2Fdownload%2F&amp;rv=1).
 * Plattformshandbok för PhoneGap iOS (`https://docs.phonegap.com/en/4.0.0/guide_platforms_ios_index.md.html#iOS%20Platform%20Guide`)
 
 För Android™: För att utveckla för iPhone och iPad behöver du Google Android™ Studio IDE.
 
-* Ladda ned kostnadsfritt [här](https://developer.android.com/studio).
+* Hämta den kostnadsfritt [här](https://developer.android.com/studio).
 * Plattformshandbok för PhoneGap Android™ (`https://docs.phonegap.com/en/4.0.0/guide_platforms_android_index.md.html#Android%20Platform%20Guide`)
 
-## Hämta källan {#download-the-source}
+## Ladda ned Source {#download-the-source}
 
 När du har startat utvecklingsmiljön hämtar du källan från AEM App Build Tile:
 
@@ -48,8 +48,8 @@ När du har startat utvecklingsmiljön hämtar du källan från AEM App Build Ti
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
-* Klicka på Hämta källa.
-* Välj önskad källa från modalen Hämtningskälla.
+* Klicka på Hämta Source.
+* Välj önskad källa i Ladda ned Source modal.
 
 ![chlimage_1-46](assets/chlimage_1-46.png)
 
@@ -68,7 +68,7 @@ PhoneGap CLI kan skapa ett plattformsprojekt, kompilera källan och distribuera 
 
 >[!NOTE]
 >
->Du kan göra allt detta separat, se PhoneGap CLI-dokument (`https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/`).
+>Du kan göra alla dessa steg separat, se PhoneGap CLI-dokument (`https://phonegap.com/blog/2014/11/13/phonegap-cli-3-6-3/`).
 
 1. Kontrollera att du har installerat PhoneGap CLI, se ovan.
 1. I ett konsolfönster (eller terminalfönster) går du till rotkatalogen för den extraherade källan.
@@ -91,13 +91,13 @@ phonegap run ios
 >1. Kör `phonegap create helloWorld`
 >1. Navigera till helloWorld (cd helloWorld)
 >1. Kör `phonegap run android` (eller ersätt Android™ med iOS enligt ovan).
->1. Emulatorn öppnar och kör din nya PhoneGap-app med namnet&quot;Device Ready&quot; om JavaScript Bridge till native fungerar.
+>1. Emulatorn öppnar och kör din nya PhoneGap-app med texten&quot;Device Ready&quot; om JavaScript Bridge till native fungerar.
 >
 >Denna felsökning verifierar att PhoneGap CLI-utvecklingsmiljön körs korrekt.
 
-## Felsöka JavaScript med felsökning i Safari och IOS {#debug-javascripts-with-safari-and-ios-debug}
+## Felsöka JavaScript med Safari och IOS-felsökning {#debug-javascripts-with-safari-and-ios-debug}
 
-Du kan felsöka appens JavaScript med hjälp av utvecklarverktygen i Safari, på samma sätt som med ett webbprogram.
+Du kan felsöka appens JavaScript med utvecklarverktygen i Safari, på samma sätt som med ett webbprogram.
 
 ## Aktivera Safari Developer Tools {#enable-safari-developer-tools}
 
@@ -150,7 +150,7 @@ Du kan ange brytpunkter var som helst i källan. När du interagerar med emulato
 
 * Använd kontrollknapparna för att fortsätta köra, stega över, stega in i och ta bort metoder:
 
-![Fem olika funktionskontrollknappar i vågrät rad.](do-not-localize/chlimage_1-4.png)
+![Fem olika funktionskontrollknappar är justerade i en vågrät rad.](do-not-localize/chlimage_1-4.png)
 
 >[!NOTE]
 >
@@ -158,4 +158,4 @@ Du kan ange brytpunkter var som helst i källan. När du interagerar med emulato
 
 ## Nästa steg {#the-next-steps}
 
-När du har lärt dig mer om hur du utvecklar appar med PhoneGap CLI går du till [Åtkomst till enhetsfunktioner](/help/mobile/phonegap-access-device-features.md).
+När du har lärt dig mer om hur du utvecklar appar med PhoneGap CLI läser du [Åtkomst till enhetsfunktioner](/help/mobile/phonegap-access-device-features.md).

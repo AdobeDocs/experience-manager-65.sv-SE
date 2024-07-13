@@ -20,8 +20,8 @@ ht-degree: 0%
 
 I det här avsnittet skapar du följande:
 
-* The **[mall](#createthepagetemplate)** som används för att skapa innehållssidor på exempelwebbplatsen.
-* The **[komponent och skript](#create-the-template-s-rendering-component)** som används för att återge webbplatsens sidor.
+* Den **[mall](#createthepagetemplate)** som används för att skapa innehållssidor på exempelwebbplatsen.
+* Komponenten **[och skriptet](#create-the-template-s-rendering-component)** som används för att återge webbplatsens sidor.
 
 ## Skapa innehållsmallen {#create-the-content-template}
 
@@ -40,13 +40,13 @@ I den här övningen är alla sidor baserade på en enkel mall.
    * Titel: `An SCF Sandbox Play Template`
    * Beskrivning: `An SCF Sandbox template for play pages`
    * Resurstyp: `an-scf-sandbox/components/playpage`
-   * Rankning: &lt;leave as=&quot;&quot; default=&quot;&quot;>
+   * Rankning: &lt;lämna som standard>
 
    Etiketten används som nodnamn.
 
-   Resurstypen visas på `playpage`&#39;s `jcr:content` nod som egenskap `sling:resourceType`. Den identifierar komponenten (resursen) som återger innehållet när det begärs av en webbläsare.
+   Resurstypen visas på `jcr:content`-noden för `playpage` som egenskapen `sling:resourceType`. Den identifierar komponenten (resursen) som återger innehållet när det begärs av en webbläsare.
 
-   I det här fallet skapas alla sidor med `playpage` -mallen återges av `an-scf-sandbox/components/playpage` -komponenten. Sökvägen till komponenten är relativ, vilket gör att Sling kan söka efter resursen först i `/apps` och, om den inte hittas, i `/libs` mapp.
+   I det här fallet återges alla sidor som skapats med mallen `playpage` av komponenten `an-scf-sandbox/components/playpage`. Sökvägen till komponenten är relativ, vilket gör att Sling kan söka efter resursen först i mappen `/apps` och, om den inte hittas, i mappen `/libs`.
 
    ![create-content-template](assets/create-content-template-1.png)
 
@@ -54,13 +54,13 @@ I den här övningen är alla sidor baserade på en enkel mall.
 
    Klicka på **[!UICONTROL Next]**.
 
-1. &quot;Tillåtna sökvägar&quot; avser sökvägarna till sidor som använder den här mallen, så att mallen visas för **[!UICONTROL New Page]** -dialogrutan.
+1. &quot;Tillåtna sökvägar&quot; avser sökvägarna till sidor som använder den här mallen, så att mallen visas för dialogrutan **[!UICONTROL New Page]**.
 
-   Klicka på plustecknet om du vill lägga till en bana `+` och text `/content(/.&ast;)?` i textrutan som visas. Om du använder kopiera/klistra in ska du se till att det inte finns några inledande eller avslutande blanksteg.
+   Om du vill lägga till en bana klickar du på plusknappen `+` och skriver `/content(/.&ast;)?` i textrutan som visas. Om du använder kopiera/klistra in ska du se till att det inte finns några inledande eller avslutande blanksteg.
 
-   Obs! Värdet för den tillåtna sökvägsegenskapen är en *reguljärt uttryck*. Innehållssidor som har en sökväg som matchar uttrycket kan använda mallen. I det här fallet matchar det reguljära uttrycket sökvägen för **/content** och alla dess undersidor.
+   Obs! Värdet för den tillåtna sökvägsegenskapen är ett *reguljärt uttryck*. Innehållssidor som har en sökväg som matchar uttrycket kan använda mallen. I det här fallet matchar det reguljära uttrycket sökvägen till mappen **/content** och alla dess undersidor.
 
-   När en författare skapar en sida nedan `/content`, `playpage` Mallen &quot;En SCF Sandbox-sidmall&quot; visas i en lista med tillgängliga mallar som ska användas.
+   När en författare skapar en sida under `/content` visas mallen `playpage` med namnet&quot;En SCF-sandlådesidmall&quot; i en lista med tillgängliga mallar som ska användas.
 
    När rotsidan har skapats från mallen kan åtkomsten till mallen begränsas till den här webbplatsen genom att redigera egenskapen så att den inkluderar rotsökvägen i det reguljära uttrycket.
 
@@ -70,40 +70,40 @@ I den här övningen är alla sidor baserade på en enkel mall.
 
 1. Klicka på **[!UICONTROL Next]**.
 
-   Klicka **[!UICONTROL Next]** i **[!UICONTROL Allowed Parents]** -panelen.
+   Klicka på **[!UICONTROL Next]** på panelen **[!UICONTROL Allowed Parents]**.
 
-   Klicka **[!UICONTROL Next]** i **[!UICONTROL Allowed Children]** -panelen.
+   Klicka på **[!UICONTROL Next]** på panelen **[!UICONTROL Allowed Children]**.
 
    Klicka på **[!UICONTROL OK]**.
 
-1. När du har klickat på OK och skapat mallen kan du se de röda trianglarna som visas i hörnen på egenskapsfliken för de nya `playpage` mall. Dessa röda trianglar anger redigeringar som inte har sparats.
+1. När du har klickat på OK och skapat mallen kan du se de röda trianglarna som visas i hörnen på egenskapsflikens värden för den nya `playpage`-mallen. Dessa röda trianglar anger redigeringar som inte har sparats.
 
-   Klicka **[!UICONTROL Save All]** för att spara den nya mallen i databasen.
+   Klicka på **[!UICONTROL Save All]** om du vill spara den nya mallen i databasen.
 
    ![verify-content-template](assets/verify-content-template.png)
 
 ### Skapa mallens återgivningskomponent {#create-the-template-s-rendering-component}
 
-Skapa *komponent* som definierar innehållet och återger sidor som skapats baserat på [playpage-mall](#createthepagetemplate).
+Skapa *komponenten* som definierar innehållet och återger sidor som skapats baserat på [uppspelningssidmallen](#createthepagetemplate).
 
-1. Högerklicka i CRXDE Lite **`/apps/an-scf-sandbox/components`** och klicka **[!UICONTROL Create > Component]**.
-1. Genom att ange nodens namn (Label) till *playpage*, banan till komponenten är
+1. Högerklicka **`/apps/an-scf-sandbox/components`** i CRXDE Lite och klicka på **[!UICONTROL Create > Component]**.
+1. Genom att ställa in nodens namn (Label) på *playpage* är sökvägen till komponenten
 
    `/apps/an-scf-sandbox/components/playpage`
 
-   som motsvarar uppspelningssidmallens resurstyp (eventuellt minus den ursprungliga) **`/apps/`** del av banan).
+   som motsvarar uppspelningssidmallens resurstyp (eventuellt minus den inledande **`/apps/`** delen av sökvägen).
 
-   I **[!UICONTROL Create Component]** skriver du följande egenskapsvärden:
+   Ange följande egenskapsvärden i dialogrutan **[!UICONTROL Create Component]**:
 
    * Etikett: **playpage**
    * Titel: **En SCF-sandlådeuppspelningskomponent**
-   * Beskrivning: **Det här är den komponent som återger innehåll för en SCF-sandlådesida.**
-   * Supertyp: *&lt;leave blank=&quot;&quot;>*
-   * Grupp: *&lt;leave blank=&quot;&quot;>*
+   * Beskrivning: **Det här är komponenten som återger innehåll för en SCF-sandlådesida.**
+   * Supertyp: *&lt;lämna tomt>*
+   * Grupp: *&lt;lämna tomt>*
 
    ![create-template-component](assets/create-template-component.png)
 
-1. Klicka **[!UICONTROL Next]** tills **[!UICONTROL Allowed Children]** visas:
+1. Klicka på **[!UICONTROL Next]** tills panelen **[!UICONTROL Allowed Children]** i dialogrutan visas:
 
    * Klicka på **[!UICONTROL OK]**.
    * Klicka på **[!UICONTROL Save All]**.
@@ -112,6 +112,6 @@ Skapa *komponent* som definierar innehållet och återger sidor som skapats base
 
    >[!CAUTION]
    >
-   >Korrespondensen mellan sökvägen till uppspelningskomponenten och `sling:resourceType` spelningssidmallens egenskap är avgörande för att webbplatsen ska fungera korrekt.
+   >Korrespondensen mellan sökvägen till spelsideskomponenten och egenskapen `sling:resourceType` i spelningssidmallen är avgörande för att webbplatsen ska fungera korrekt.
 
    ![verify-template-component](assets/verify-template-component.png)

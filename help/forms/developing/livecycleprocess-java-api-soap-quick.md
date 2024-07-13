@@ -1,5 +1,5 @@
 ---
-title: LiveCycleProcess Java API(SOAP)Snabbstart
+title: LiveCycleProcess Java API(SOAP)Quick Start
 description: Använd snabbstart för LiveCycleProcess Java API (SOAP) för att söka efter processinstanser, pausa processinstanser, starta uppehållna processinstanser, avsluta processinstanser, rensa processdata och hämta statusen för ett jobb.
 contentOwner: admin
 content-type: reference
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # LiveCycleProcess Java API (SOAP) - snabbstart {#livecycleprocess-java-api-soap-quick-start}
 
-Snabbstart för Java API(SOAP) är tillgängligt för processer. A *processinstans* är en förekomst av en specifik process som startades av en anropsmetod som anrops-API:t eller från arbetsytan.
+Snabbstart för Java API(SOAP) är tillgängligt för processer. En *processinstans* är en förekomst av en specifik process som startades av en anropsmetod som anrops-API:t eller från Workspace.
 
 [Snabbstart (SOAP): Söka efter processinstanser med Java API](livecycleprocess-java-api-soap-quick.md#quick-start-soap-mode-searching-for-process-instances-using-the-java-api)
 
@@ -40,7 +40,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 ## Snabbstart (SOAP): Söka efter processinstanser med Java API {#quick-start-soap-mode-searching-for-process-instances-using-the-java-api}
 
-I följande Java-kodexempel söks det efter processinstanser som är baserade på *Lån - fördefinierat* -processen.
+I följande Java-kodexempel söks det efter processinstanser som är baserade på processen *MortgageLoan - Prebuilt* .
 
 ```java
  /*
@@ -429,7 +429,7 @@ I följande Java-kodexempel avslutas en processinstans med identifierarvärdet 7
 
 ## Snabbstart (SOAP): Rensa processdata med Java API {#quick-start-soap-mode-purging-process-data-using-the-java-api}
 
-Följande Java-kod rensar data från en process med namnet *SecureDocument*. Ett filter används som anger att data ska rensas för de processinstanser där processvariabeln med namnet *inValue* är större än 200.
+Följande Java-kod rensar data från en process med namnet *SecureDocument*. Ett filter används som anger att data ska rensas för de processinstanser där processvariabeln *inValue* är större än 200.
 
 ```java
  /*

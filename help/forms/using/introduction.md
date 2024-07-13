@@ -19,9 +19,9 @@ ht-degree: 0%
 
 HTML5-formulär är en ny funktion i Adobe Experience Manager 6.0 (AEM 6.0) som kan återge XFA-formulärmallar i HTML5-format. Denna funktion gör det möjligt att återge formulär på mobila enheter och webbläsare på datorer där XFA-baserad PDF inte stöds. HTML5-formulär har inte bara stöd för XFA-formulärmallarnas befintliga funktioner, utan även nya funktioner, som klottersignaturer, för mobila enheter.
 
-HTML5-formulär genererar dokument som baseras på HTML 5-standardkonstruktioner. Du kan visa HTML5-formulär i alla moderna webbläsare som stöder HTML5. Inga ytterligare webbläsarplugin-program behöver installeras för webbläsarna. Mer information om vilka webbläsare som stöds finns i [Klientplattformar som stöds](https://adobe.com/go/learn_aemforms_supportedplatforms_63).
+HTML5-formulär genererar dokument som baseras på HTML 5-standardkonstruktioner. Du kan visa HTML5-formulär i alla moderna webbläsare som stöder HTML5. Inga ytterligare webbläsarplugin-program behöver installeras för webbläsarna. Mer information om webbläsare som stöds finns i [Klientplattformar som stöds](https://adobe.com/go/learn_aemforms_supportedplatforms_63).
 
-![HTML5 - förhandsgranskning av formulär](do-not-localize/mobile_form_on_an_ipad_date_14.png)
+![HTML5-formulärförhandsgranskning](do-not-localize/mobile_form_on_an_ipad_date_14.png)
 
 ## Viktiga funktioner i HTML5-formulär {#key-capabilities-of-html-forms-br}
 
@@ -41,7 +41,7 @@ Formulärutvecklare kan använda en XFA-mall för att återge formulär i PDF oc
 
 ## Hantera HTML5-formulär {#manage-html-forms}
 
-AEM har också en enhetlig vy för att lista och hantera alla formulärmallar med hjälp av AEM Forms användargränssnitt. Du kan aktivera, inaktivera, publicera och förhandsgranska formulär. Mer information finns i [Introduktion till hantering av formulär](../../forms/using/introduction-managing-forms.md).
+AEM har också en enhetlig vy för att lista och hantera alla formulärmallar med hjälp av AEM Forms användargränssnitt. Du kan aktivera, inaktivera, publicera och förhandsgranska formulär. Mer information finns i [Introduktion till formulärhantering](../../forms/using/introduction-managing-forms.md).
 
 ### Forms-anpassning {#forms-customization}
 

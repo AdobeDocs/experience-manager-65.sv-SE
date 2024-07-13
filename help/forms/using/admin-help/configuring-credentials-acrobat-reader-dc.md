@@ -22,7 +22,7 @@ Om du vill lägga in användarrättigheter i PDF-dokument konfigurerar du AEM fo
 
 Om du använder en utvärderingsreferens ersätter du den med en produktionsautentiseringsuppgift när du flyttar till produktionsmiljön. Om du vill uppdatera en inloggningsinformation som har gått ut eller utvärdera den tar du först bort den gamla Acrobat Reader DC Extensions-autentiseringen.
 
-Mer information om hur du hämtar en inloggningsinformation finns i [Förbereder installation av AEM (Single Server)](https://helpx.adobe.com/pdf/aem-forms/6-3/prepare-install-single-server.pdf).
+Mer information om hur du hämtar autentiseringsuppgifter finns i [Förbereder för att installera AEM formulär (en server)](https://helpx.adobe.com/pdf/aem-forms/6-3/prepare-install-single-server.pdf).
 
 Trust Store kan innehålla fler än en Acrobat Reader DC Extensions-autentiseringsuppgift. Ange en av dessa autentiseringsuppgifter som standardautentiseringsuppgifter för Reader Extensions. Standardautentiseringsuppgifterna används när en Workbench-användare inte kan avgöra vilka autentiseringsuppgifter som ska användas när processen skapas. Dessa regler gäller för standardautentiseringsuppgifter:
 
@@ -33,7 +33,7 @@ Trust Store kan innehålla fler än en Acrobat Reader DC Extensions-autentiserin
 
 >[!NOTE]
 >
->Du kan också importera och ta bort autentiseringsuppgifter via programmering. (Se [Programmera med AEM](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html).)
+>Du kan också importera och ta bort autentiseringsuppgifter via programmering. (Se [Programmera med AEM formulär](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html).)
 
 ## Importera autentiseringsuppgifter för Acrobat Reader DC Extensions {#import-a-acrobat-reader-dc-extensions-credential}
 

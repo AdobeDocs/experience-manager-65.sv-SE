@@ -49,7 +49,7 @@ I processinstanslistan visar AEM Forms-arbetsytan några egenskaper för den ins
   </tr>
   <tr>
    <td>processInstanceStatus</td>
-   <td>0 = Initierad<br /> 1 = Körs<br /> 2 = Fullständigt<br /> 3 = Slutför<br /> 4 = Avbruten<br /> 5 = Avslutar<br /> 6 = Uppskjuten<br /> 7 = Pausa<br /> 8 = Upphäv upphängning</td>
+   <td>0 = Startades<br /> 1 = Körs<br /> 2 = Fullständigt<br /> 3 = Slutför<br /> 4 = Avbrutet<br /> 5 = Avslutar<br /> 6 = Upphävt<br /> 7 = Pausat <br /> 8 = Upphävande av uppehåll</td>
   </tr>
   <tr>
    <td>processName</td>
@@ -61,19 +61,19 @@ I processinstanslistan visar AEM Forms-arbetsytan några egenskaper för den ins
   </tr>
   <tr>
    <td>processVariables</td>
-   <td>Array med objekt av processvariabler. Varje processvariabelobjekt innehåller <strong>name</strong> (processvariabelns namn), <strong>value</strong> (processvariabelns värde), och<strong> type</strong> (typ av processvariabel).</td>
+   <td>Array med objekt av processvariabler. Varje processvariabelobjekt innehåller <strong>name</strong> (processvariabelns namn), <strong>value</strong> (processvariabelns värde) och <strong> type</strong> (processvariabelns typ).</td>
   </tr>
  </tbody>
 </table>
 
 **Exempel:**
 
-Visa `description` utför följande steg för processinstansens egenskap på processinstanskortet.
+Utför följande steg om du vill visa egenskapen `description` för processinstansen på processinstanskortet.
 
-1. Följ [Allmänna steg för anpassning av AEM Forms arbetsyta](/help/forms/using/generic-steps-html-workspace-customization.md).
+1. Följ de [allmänna stegen för anpassning av arbetsytan i AEM Forms](/help/forms/using/generic-steps-html-workspace-customization.md).
 1. Gör följande:
 
-   1. Kopiera /libs/ws/js/runtime/templates/processinstance.html till/apps/ws/js/runtime/templates/, om den inte finns. Klicka **Spara alla**.
+   1. Kopiera /libs/ws/js/runtime/templates/processinstance.html till/apps/ws/js/runtime/templates/, om den inte finns. Klicka på **Spara alla**.
    1. Lägg till processbeskrivning div med klass = &#39;processDescription&#39; inprocessinstance.html.
 
    ```jsp
@@ -83,7 +83,7 @@ Visa `description` utför följande steg för processinstansens egenskap på pro
 1. Gör följande:
 
    1. Öppna /apps/ws/js/registry.js för redigering.
-   1. Söka och ersätta `text!/lc/libs/ws/js/runtime/templates/processinstance.html`med `text!/lc/`**appar**/ws/js/runtime/templates/processinstance.html.
+   1. Sök och ersätt `text!/lc/libs/ws/js/runtime/templates/processinstance.html` med `text!/lc/`**program**/ws/js/runtime/templates/processinstance.html.
 
 1. Ovanstående ändringar kan kräva en uppdatering av CSS-filen genom att lägga till en post i formatmallen /apps/ws/css/newStyle.css på följande sätt:
 

@@ -98,24 +98,24 @@ När du öppnar och gör anspråk på en uppgift från en grupp eller delad list
 1. Välj en grupp eller delad Att göra-lista i den vänstra rutan. Alla åtgärder visas i den mittersta rutan.
 1. Gör något av följande:
 
-   * Om du vill göra anspråk på en uppgift, utan att öppna den, från en grupp eller delad Att göra-lista, klickar du på  **Anspråk** genom att hålla pekaren över uppgiften. När en uppgift är öppen är anspråksknappen också tillgänglig i åtgärdsfältet nedanför åtgärdsrutan. När du gör anspråk på en uppgift flyttas den från gruppen eller den delade Att göra-listan till din lista.
-   * Om du vill göra anspråk på och öppna en uppgift från en grupp eller delad Att göra-lista klickar du på **Göra anspråk och öppna**.
+   * Om du vill göra anspråk på en uppgift, utan att öppna den, från en grupp eller delad Att göra-lista, klickar du på **Anspråk** genom att hålla pekaren över uppgiften. När en uppgift är öppen är anspråksknappen också tillgänglig i åtgärdsfältet nedanför åtgärdsrutan. När du gör anspråk på en uppgift flyttas den från gruppen eller den delade Att göra-listan till din lista.
+   * Klicka på **Anspråk och öppna** om du vill göra anspråk på och öppna en uppgift från en grupp eller delad Att göra-lista.
 
 ## Arbeta med uppgifter {#working-with-tasks}
 
 När du har öppnat en uppgift beror uppgiften på vilka flikar som visas i huvudrutan och vilka verktyg som är tillgängliga. Flikarna som du kan se beskrivs nedan:
 
-* **Sammanfattning av uppgifter**: När en uppgift öppnas kan du i rutan Sammanfattning av uppgifter visa information om uppgiften, om den finns, med en URL som anges i processen i steget Tilldela uppgift. Om du använder åtgärdssammanfattningsfönstret kan ytterligare och relevant information för en uppgift visas för att öka värdet för slutanvändaren av arbetsytan i AEM Forms. Fliken är inte tillgänglig om URL:en för uppgiftssammanfattning inte finns.
+* **Uppgiftssammanfattning**: När en uppgift öppnas kan du i rutan Sammanfattning av uppgifter visa information om uppgiften, om den finns, med hjälp av en URL som anges i processen i steget Tilldela uppgift. Om du använder åtgärdssammanfattningsfönstret kan ytterligare och relevant information för en uppgift visas för att öka värdet för slutanvändaren av arbetsytan i AEM Forms. Fliken är inte tillgänglig om URL:en för uppgiftssammanfattning inte finns.
 
-* **Information**: Visar information om den aktuella uppgiften och processen som den tillhör.
+* **Information**: Visar information om den aktuella aktiviteten och processen som den tillhör.
 
-* **Formulär**: Visar det formulär som är associerat med uppgiften. Formuläret kan vara av många filtyper, bland annat PDF, HTML, Guide och SWF. Formuläret kan se ut som ett vanligt utskrivbart eller webbaserat formulär eller vägleda dig genom en serie guideliknande paneler för att samla in information.
+* **Formulär**: Visar formuläret som är associerat med uppgiften. Formuläret kan vara av många filtyper, bland annat PDF, HTML, Guide och SWF. Formuläret kan se ut som ett vanligt utskrivbart eller webbaserat formulär eller vägleda dig genom en serie guideliknande paneler för att samla in information.
 
-* **Historik**: Visar en lista över de uppgifter som är en del av processinstansen och det tillhörande formuläret, uppgiftstilldelningar och bilagor för varje uppgift.
+* **Historik**: Visar de uppgifter som är en del av processinstansen och det tillhörande formuläret, uppgiftstilldelningar och bilagor för varje uppgift.
 
-* **Bifogade filer**: Visar befintliga bilagor som är associerade med uppgiften och lägger till bilagor, om det behövs.
+* **Bifogade filer**: Visar befintliga bifogade filer som är associerade med aktiviteten och lägger till bifogade filer, om det behövs.
 
-* **Anteckningar**: Visar befintliga anteckningar som är kopplade till uppgiften och lägger till anteckningar om det behövs.
+* **Anteckningar**: Visar befintliga anteckningar som är associerade med aktiviteten och lägger till anteckningar om det behövs.
 
 När du arbetar med en uppgift beskrivs de verktyg du kan se och de åtgärder du kan vidta nedan.
 
@@ -143,14 +143,14 @@ Du kan vidarebefordra en uppgift tillsammans med anteckningar eller bilagor till
 
 ### Returnera en uppgift {#return-a-task}
 
-1. Klicka på en flik **Retur**. Uppgiften återgår till att göra-listan för den användare som tidigare vidarebefordrade uppgiften till dig, eller som delade eller konsulterade uppgiften med dig.
+1. Klicka på **Retur** på en flik. Uppgiften återgår till att göra-listan för den användare som tidigare vidarebefordrade uppgiften till dig, eller som delade eller konsulterade uppgiften med dig.
 
 ### Ta en uppgift offline {#take-a-task-offline}
 
 Du kan arbeta med en uppgift offline och senare skicka in formuläret från Adobe® Reader® eller Adobe® Acrobat® Professional eller Adobe® Acrobat® Standard. När formuläret skickas startas din e-postklient med rätt e-postadress för servern. Du kan sedan skicka det ifyllda formuläret via e-post till servern.
 
-1. Klicka på en flik **Offline**.
-1. Ange ett filnamn att spara formuläret under och klicka på **Spara**. Formuläret som är kopplat till uppgiften sparas lokalt och uppgiften finns kvar i din Att göra-lista tills formuläret skickas.
+1. Klicka på **Offline** på en flik.
+1. Ange ett filnamn för att spara formuläret under och klicka på **Spara**. Formuläret som är kopplat till uppgiften sparas lokalt och uppgiften finns kvar i din Att göra-lista tills formuläret skickas.
 
 ### Arbeta med bilagor {#work-with-attachments}
 
@@ -158,18 +158,18 @@ Du kan lägga till, uppdatera, ta bort eller spara bifogade filer lokalt.
 
 **Lägg till en bifogad fil**
 
-1. I **Bifogade filer** flik, klicka **Bläddra** för att markera filen som ska bifogas.
-1. Välj **Behörigheter** nivå för bilagan för andra användare som deltar i processen. Om du väljer **Läs** kan andra användare spara filen lokalt. Om du väljer någon av redigeringsbehörigheterna kan andra användare även överföra en ny fil som ersätter den bifogade filen.
+1. Klicka på **Bläddra** på fliken **Bifogade filer** för att markera filen som ska bifogas.
+1. Välj nivån **Behörigheter** för den bifogade filen för andra användare som deltar i processen. Om du väljer **Läs** kan andra användare spara filen lokalt. Om du väljer någon av redigeringsbehörigheterna kan andra användare även överföra en ny fil som ersätter den bifogade filen.
 
    >[!NOTE]
    >
    >Du kan också lägga till kommentarer bredvid dina bifogade filer.
 
-1. Klicka **Överför**. Filen bifogas till formuläret.
+1. Klicka på **Överför**. Filen bifogas till formuläret.
 
 **Visa en bifogad fil**
 
-1. På **Bifogade filer** klickar du på filnamnet på den bifogade filen för att visa den.
+1. Klicka på filnamnet på den bifogade filen på fliken **Bifogade filer** för att visa den.
 
 **Spara en bifogad fil lokalt**
 
@@ -177,19 +177,19 @@ Du kan lägga till, uppdatera, ta bort eller spara bifogade filer lokalt.
 
 **Uppdatera en bifogad fil**
 
-1. Klicka **Redigera** för bilagan. Markera den fil som den befintliga bifogade filen ska ersättas med genom att klicka på **Bläddra**.
+1. Klicka på **Redigera** för den bifogade filen. Markera filen som den befintliga bifogade filen ska ersättas med genom att klicka på **Bläddra**.
 
 **Ta bort en bifogad fil**
 
-1. Klicka **Ta bort** för en bilaga.
+1. Klicka på **Ta bort** för en bifogad fil.
 
 ### Spara arbetet utan att slutföra uppgiften {#save-your-work-without-completing-the-task}
 
-1. På en flik väljer du **Spara**.
+1. Välj **Spara** på en flik.
 
    Dialogrutan Spara som utkast visas. Standardnamnet för utkastet är uppgiftsnamnet från uppgiftsmallen.
 
-   ![saveasutkast, dialogruta](assets/saveasdraftdialog.png)
+   ![saveAsDraftdialog](assets/saveasdraftdialog.png)
 
    >[!NOTE]
    >
@@ -200,11 +200,11 @@ Du kan lägga till, uppdatera, ta bort eller spara bifogade filer lokalt.
 
 1. I dialogrutan Spara som utkast anger du ett unikt namn för uppgiften och väljer **OK**.
 
-   ![saveasDRAftdialog_name](assets/saveasdraftdialog_name.png)
+   ![saveAsDraftdialog_name](assets/saveasdraftdialog_name.png)
 
    Utkastet sparas med det angivna namnet. Uppgiften finns kvar i din Att göra-lista och alla ändringar du har gjort i formuläret sparas i mappen Utkast. I din Att göra-lista kan du dessutom söka efter utkastet med utkastnamnet för att fortsätta arbeta med det.
 
-   ![sökafortfråga](assets/searchfortask.png)
+   ![sökfråga](assets/searchfortask.png)
 
 ## Slutföra uppgifter {#completing-tasks}
 
@@ -218,7 +218,7 @@ Du kan slutföra en uppgift på flera olika sätt:
 
 >[!NOTE]
 >
->Det här alternativet är tillgängligt om `isMustOpenToComplete` fältet är inte markerat i `Assign Task` i Workbench när du utformar en process.
+>Det här alternativet är tillgängligt om fältet `isMustOpenToComplete` inte är markerat i steget `Assign Task` i Workbench när du utformar en process.
 
 * Om du får e-postmeddelanden via e-post
 
@@ -233,15 +233,15 @@ När du har slutfört en uppgift kan en bekräftelsedialogruta visas som bekräf
 1. Gör något av följande:
 
    * Markera uppgiften och klicka på lämplig knapp för nästa steg som krävs i processen längst ned i listan.
-   * Om formuläret inte har några knappar och knappen Slutför finns tillgänglig på arbetsytan i AEM Forms klickar du på **Complete**.
+   * Om formuläret inte har några knappar och knappen Slutför i AEM Forms-arbetsytan är tillgänglig klickar du på **Fullständig**.
    * Om formuläret har knappar och knappen Slutför i AEM Forms inte är tillgänglig klickar du på lämplig knapp i formuläret för nästa steg som ska utföras.
 
    Om formuläret inte har några knappar och knappen Slutför i AEM Forms inte är tillgänglig visas ett meddelande om att formuläret inte kan skickas.
 
 1. Om en bekräftelsedialogruta visas gör du något av följande:
 
-   * Klicka **OK** om du har slutfört uppgiften och är redo att signera den.
-   * Klicka **Avbryt** om du vill återgå till uppgiften och inte är redo att signera den.
+   * Klicka på **OK** om du har slutfört uppgiften och är klar att signera den.
+   * Klicka på **Avbryt** om du vill återgå till uppgiften och inte är redo att signera den.
 
 >[!NOTE]
 >
@@ -264,11 +264,11 @@ Du kan skicka flera uppgifter från din Att göra-lista. Det går endast att ski
 
 1. Välj uppgifter för bulkgodkännande. Flera uppgifter i samma process, med samma uppgiftsnamn, och samma flödesalternativ kan väljas. När du har valt en uppgift för godkännande är det bara de uppgifter som har samma process, med samma uppgiftsnamn och samma flödesalternativ, som är aktiverade. Resten är inaktiverade.
 
-   ![1_bulkgodkännande](assets/1_bulkapproval.png)
+   ![1_bulkapproval](assets/1_bulkapproval.png)
 
 1. Klicka på det tillgängliga alternativet Skicka. De valda uppgifterna skickas.
 
-   ![bulkgodkännande](assets/bulkapproval.png)
+   ![bulkapproval](assets/bulkapproval.png)
 
 ## Delta i uppgifter via e-post {#participating-in-tasks-through-email}
 
@@ -280,7 +280,7 @@ E-postmeddelandena kan innehålla en länk som öppnar uppgiften i AEM Forms arb
 
 >[!NOTE]
 >
->* Information om hur du konfigurerar arbetsytan att använda rätt e-postmallar finns i [Administratörshandbok för AEM Forms JEE](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/).
+>* Information om hur du konfigurerar arbetsytan så att rätt e-postmallar används finns i [AEM Forms JEE Administrator Guide](https://help.adobe.com/en_US/AEMForms/6.1/AdminHelp/).
 >
 >* Om utkast vidarebefordras efter att uppgiften har skickats in på arbetsytan i AEM Forms skickas e-postmeddelanden. Om utkast vidarebefordras från startpunkten för AEM Forms-arbetsytan skickas inga e-postmeddelanden.
 
@@ -296,9 +296,9 @@ När du slutför en uppgift via e-post tas uppgiften bort från din att göra-li
 
 ### Ta emot e-postmeddelanden {#receive-email-notification-messages}
 
-1. Klicka **Inställningar**.
-1. I **Meddela aktivitetshändelser via e-post** lista, välj **Ja**.
-1. Om du vill inkludera formuläret och data med e-postmeddelandet går du till **Bifoga Forms i e-post** lista, välj **Ja**.
+1. Klicka på **Inställningar**.
+1. Välj **Ja** i listan **Meddela aktivitetshändelser via e-post**.
+1. Om du vill inkludera formuläret och data med e-postmeddelandet väljer du **Ja** i listan **Bifoga Forms i e-post** .
 
 ## Delta i uppgifter via mobila enheter {#participating-in-tasks-through-mobile-devices}
 
@@ -306,9 +306,9 @@ Du kan använda AEM Forms arbetsyteapp för att delta i uppgifter från din mobi
 
 ## Om deadlines och påminnelser {#about-deadlines-and-reminders}
 
-A *deadline* bestämmer vilket datum och vilken tid du måste slutföra en uppgift senast. När en deadline har passerats dirigerar servern aktiviteten till nästa steg i processen (som kan vara en annan användares Att göra-lista) och sedan visas deadlineikonen på uppgiften. Deadalikonen visas oavsett vilka regler som är kopplade till processen.
+En *deadline* avgör vilket datum och vilken tid du måste slutföra en uppgift innan. När en deadline har passerats dirigerar servern aktiviteten till nästa steg i processen (som kan vara en annan användares Att göra-lista) och sedan visas deadlineikonen på uppgiften. Deadalikonen visas oavsett vilka regler som är kopplade till processen.
 
-A *påminnelse* meddelar dig om en uppgift som kräver din uppmärksamhet. Påminnelser inträffar vid en förbestämd tidpunkt och sedan med regelbundna intervall tills du slutför den associerade uppgiften. När du får en påminnelse visas påminnelseikonen på uppgiften.
+En *påminnelse* meddelar dig om en åtgärd som kräver din åtgärd. Påminnelser inträffar vid en förbestämd tidpunkt och sedan med regelbundna intervall tills du slutför den associerade uppgiften. När du får en påminnelse visas påminnelseikonen på uppgiften.
 
 Affärsprocessen avgör beteende och tidpunkt för deadlines och påminnelser. Alla processer har inte deadlines och påminnelser. Administratören anger om e-postmeddelanden ska skickas för deadlines och påminnelser. Du kan ange om du vill få e-postmeddelanden.
 
@@ -340,16 +340,16 @@ Tänk på att för att en användare ska kunna se en uppgift i en delad kö mås
 >
 >Om du tänker vara borta från kontoret kan du även ange inställningar för att vidarebefordra uppgifter till andra användare när du är borta, i stället för att dela hela din Att göra-lista.
 
-**Dela kön**
+**Dela din kö**
 
-1. I **Köer** i **Inställningar** klickar du på +-ikonen för Användare som för närvarande delar min kö.
+1. På fliken **Köer** på fliken **Inställningar** klickar du på ikonen + för Användare som för närvarande delar min kö.
 1. Sök efter och välj namnet på användaren.
-1. Klicka **Dela** om du vill dela kön med den valda användaren.
+1. Klicka på knappen **Dela** om du vill dela kön med den valda användaren.
 1. Markera namnet på användaren och klicka på **Dela**.
 
    >[!NOTE]
    >
-   >Du kan ta bort en användare från att dela din Att göra-lista genom att klicka på **X** -ikonen i slutet av den rad där användaren finns.
+   >Du kan ta bort en användare från att dela din Att göra-lista genom att klicka på ikonen **X** i slutet av den rad där användaren visas.
 
 ### Åtkomst till andra köer {#accessing-other-queues}
 
@@ -359,15 +359,15 @@ När du begär åtkomst till en annan användares Att göra-lista får användar
 
 Om du får åtkomst till en annan användares Att göra-lista kan du inte visa några uppgifter som fanns i användarens Att göra-lista innan du beviljades åtkomst. Du kan bara visa de uppgifter som finns i användarens Att göra-lista efter att du har fått tillgång till Att göra-listan.
 
-**Öppna en annan kö**
+**Gå till en annan kö**
 
-1. I **Inställningar** öppnar du **Köer** -fliken.
+1. Öppna fliken **Köer** på fliken **Inställningar**.
 1. Klicka på + för de användarköer som jag har åtkomst till. Sök efter användarens namn i popup-dialogrutan.
 1. Markera namnet på användaren och klicka på **Begäran**.
 
    >[!NOTE]
    >
-   >Du kan ta bort din åtkomst till en annan Att göra-lista genom att välja användarnamnet i listan Användare som jag har åtkomst till och klicka på **X** i slutet av raden där användarens namn ska anges. Du kan inte ta bort din åtkomst till en annan Att göra-lista när en begäran om att få åtkomst till Att göra-listan fortfarande väntar.
+   >Du kan ta bort din åtkomst till en annan Att göra-lista genom att markera användarnamnet i listan Användare som jag har åtkomst till och klicka på **X** i slutet av raden som anger användarens namn. Du kan inte ta bort din åtkomst till en annan Att göra-lista när en begäran om att få åtkomst till Att göra-listan fortfarande väntar.
 
 ## Ange inställningar utanför kontoret {#setting-out-of-office-preferences}
 
@@ -383,18 +383,18 @@ Du kan ange en standardperson som alla dina uppgifter skickas till. Du kan ocks�
 
 ### Ange inställningar för frånvaro {#set-out-of-office-preferences}
 
-1. Klicka **Inställningar** och klicka **Frånvarande**.
+1. Klicka på **Inställningar** och sedan på **Frånvaro**.
 1. Gör något av följande för att ange när du inte är på kontoret:
 
-   * För att ange att du inte är på kontoret nu på obestämd tid, i **Jag är för närvarande** lista, välj **Frånvarande** men lägg inte till ett datumintervall.
-   * Om du vill ange ett startdatum och en starttid som du inte är på kontoret och klickar på + för **Schema för frånvaro**. Använd kalendern och tidslistan för att ange startdatum och starttid. Om du inte anger något slutdatum eller någon sluttid räknas du som ledig från kontoret på obestämd tid från startdatumet och -tiden tills du ändrar dina inställningar.
+   * Om du vill ange att du inte är på kontoret just nu under en obegränsad tidsperiod väljer du **Från kontoret** i listan **Jag är för närvarande**, men lägger inte till något datumintervall.
+   * Om du vill ange ett startdatum och en starttid som du inte är på kontoret och klickar på + för **Frånvaroschema**. Använd kalendern och tidslistan för att ange startdatum och starttid. Om du inte anger något slutdatum eller någon sluttid räknas du som ledig från kontoret på obestämd tid från startdatumet och -tiden tills du ändrar dina inställningar.
 
-1. Om du vill ange hur dina uppgifter ska hanteras som standard väljer du något av dessa alternativ på menyn **Vid frånvaro: Standardanvändare för frånvarouppgifter** lista:
+1. Om du vill ange hur dina uppgifter ska hanteras som standard väljer du något av följande alternativ i listan **När du är utanför kontoret: Standardanvändare för aktiviteter utanför kontoret**:
 
-   * Välj **Tilldela inte** för att behålla uppgifter i din Att göra-lista tills du kommer tillbaka.
-   * Välj **Sök användare** om du vill söka efter en användare som du kan tilldela uppgifter till. När du väljer en användare kan du även visa användarens frånvaroschema.
+   * Välj **Tilldela inte** om du vill behålla uppgifter i din att göra-lista förrän du kommer tillbaka.
+   * Välj **Sök efter användare** om du vill söka efter en användare som du vill tilldela dina uppgifter till. När du väljer en användare kan du även visa användarens frånvaroschema.
 
-1. Om du vill ange undantag till standardinställningen klickar du på + för **Bearbeta undantag**, väljer processen för att skapa ett undantag och väljer sedan en annan användare eller väljer **Tilldela inte** från **är tilldelad till** lista.
+1. Om du vill ange undantag till standardinställningen klickar du på + för **Processundantag**, väljer den process som ett undantag ska skapas för och väljer sedan en annan användare eller väljer **Tilldela inte** i listan **är tilldelad till**.
 
    >[!NOTE]
    >

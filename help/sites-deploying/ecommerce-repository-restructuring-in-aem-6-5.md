@@ -1,5 +1,5 @@
 ---
-title: Omstrukturering av e-handelslager i AEM 6.5
+title: E-Commerce Repository-omstrukturering i AEM 6.5
 description: Lär dig hur du gör nödvändiga ändringar för att migrera till den nya databasstrukturen i AEM 6.5 for E-Commerce.
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 ---
 
-# Omstrukturering av e-handelslager i AEM 6.5{#e-commerce-repository-restructuring-in-aem}
+# E-Commerce Repository-omstrukturering i AEM 6.5{#e-commerce-repository-restructuring-in-aem}
 
-Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/sites-deploying/repository-restructuring.md) på denna sida bör kunder som uppgraderar till AEM 6.5 använda denna sida för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM E-Commerce-lösning. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
+Så som beskrivs på den överordnade sidan [Databasomstrukturering på sidan AEM 6.5](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.5 använda den här sidan för att utvärdera arbetsinsatsen som är kopplad till databasändringar som påverkar AEM E-Commerce-lösning. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
 
 ## Med 6.5-uppgradering {#with-upgrade}
 
@@ -35,7 +35,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td>
-   <td><p>Du kan använda en <a href="/help/sites-deploying/lazy-content-migration.md" target="_blank">Lazy Migration</a> migrera data från E-Commerce.</p> <p>Följande steg utförs:</p>
+   <td><p>Du kan använda en <a href="/help/sites-deploying/lazy-content-migration.md" target="_blank">Azure Migration</a>-aktivitet för att migrera E-Commerce-data.</p> <p>Följande steg utförs:</p>
     <ul>
      <li>justerar referenser till den gamla platsen så att de pekar på den nya platsen</li>
      <li>flyttar innehåll från den gamla platsen till den nya</li>

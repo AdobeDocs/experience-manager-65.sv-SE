@@ -20,26 +20,26 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Möjlighet för en community-medlem att följa [verksamhet](activities.md) och ska följas genom två komponenter: `Follow` och `Following`.
+Möjligheten för en community-medlem att följa [aktiviteter](activities.md) och följas har etablerats genom två komponenter: `Follow` och `Following`.
 
-The `Follow` måste vara associerad med en annan resurs, och den här associationen har redan upprättats för communitymedlemmar och funktioner.
+Komponenten `Follow` måste vara associerad med en annan resurs och den här associationen har redan upprättats för community-medlemmar och funktioner.
 
-The `Following` listar bara de medlemmar som antingen följer den aktuella medlemmen eller som följs av den aktuella medlemmen. Det här sociala diagrammet över relationerna mellan medlemmar ingår i den användarprofil som upprättats för en [communitywebbplats](overview.md#communitiessites).
+Komponenten `Following` visar bara de medlemmar som antingen följer den aktuella medlemmen eller som följs av den aktuella medlemmen. Det här sociala diagrammet över relationerna mellan medlemmar ingår i den användarprofil som har upprättats för en [communitywebbplats](overview.md#communitiessites).
 
 ## Lägga till följande på en sida {#adding-following-to-a-page}
 
-Om du vill lägga till en `Following` till en sida i redigeringsläge, leta reda på komponenten `Communities / Following` och dra den till rätt plats på en sida där det sociala diagrammet ska visas.
+Om du vill lägga till en `Following`-komponent på en sida i redigeringsläge, letar du reda på komponenten `Communities / Following` och drar den på plats på en sida där det sociala diagrammet ska visas.
 
-Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
-När [nödvändiga bibliotek på klientsidan](essentials-socialgraph.md#essentials-for-client-side) ingår så här `Following` visas:
+När de [nödvändiga klientbiblioteken](essentials-socialgraph.md#essentials-for-client-side) inkluderas visas `Following`-komponenten så här:
 
 ![följande](assets/following.png)
 
 ## Konfigurera följande {#configuring-following}
 
-För närvarande är det nödvändigt att ställa in egenskapen för att avgöra om komponenten visar `follows` eller `following` relation.
+För närvarande är det nödvändigt att ställa in egenskapen för att avgöra om komponenten visar relationen `follows` eller relationen `following`.
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på [Grundläggande om sociala diagram](essentials-socialgraph.md) för utvecklare.
+Mer information finns på sidan [Grundläggande om sociala diagram](essentials-socialgraph.md) för utvecklare.

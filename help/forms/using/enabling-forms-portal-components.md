@@ -28,19 +28,19 @@ Komponenterna i formulärportalen är inte tillgängliga för användning. Gör 
 
 1. Utför följande steg för de sidor som använder en statisk mall:
 
-   1. I sidhuvudet väljer du ![canvas-drop-down](assets/canvas-drop-down.png) > **Design** för att öppna sidan i designläge.
-   1. Markera en komponent (med en blå ram) och markera sedan ![fältnivå](assets/field-level.png) för att markera det styckesystem som innehåller den aktuella komponenten.
-   1. Välj ![settings_icon](assets/settings_icon.png) för att öppna dialogrutan Redigera för styckesystemet.
-   1. I listan över **[!UICONTROL Allowed Components]**, aktivera kryssrutor för **[!UICONTROL Document Services]** och **[!UICONTROL Document Services Predicates]** -komponenter. Välj **[!UICONTROL OK]**.
+   1. I sidhuvudet väljer du ![listrutan för arbetsyta](assets/canvas-drop-down.png) > **Design** för att öppna sidan i designläge.
+   1. Markera en komponent (med en blå kant) och välj sedan ![fältnivå](assets/field-level.png) för att välja det styckesystem som innehåller den aktuella komponenten.
+   1. I styckesystemet väljer du ![settings_icon](assets/settings_icon.png) för att öppna dialogrutan Redigera för styckesystemet.
+   1. Aktivera kryssrutor för komponenterna **[!UICONTROL Document Services]** och **[!UICONTROL Document Services Predicates]** i listan med **[!UICONTROL Allowed Components]**. Välj **[!UICONTROL OK]**.
 
 1. Utför följande steg för de sidor som använder en dynamisk mall:
 
    1. I sidhuvudet väljer du ![egenskaper](assets/properties.png) > **Redigera mall** för att öppna sidans mall.
-   1. Välj **Layoutbehållare** och markera ![FeedManagement](/help/forms/using/assets/feedmanagement.png). I **Tillåtna komponenter** -fliken, aktivera **Document Services och Document Services - predikat** och markera ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
+   1. Välj **Layoutbehållare** och välj ![FeedManagement](/help/forms/using/assets/feedmanagement.png). På fliken **Tillåtna komponenter** aktiverar du alternativen **Document Services och Document Services Predicates** och väljer ![aem_6_3_forms_save](assets/aem_6_3_forms_save.png).
 
 >[!NOTE]
 >
->Du kan också aktivera specifika komponenter från dessa kategorier genom att markera komponenterna. Mer information om komponenterna och deras användning finns i [Skapa en formulärportalsida](/help/forms/using/creating-form-portal-page.md) och [Bädda in länkkomponent på en sida](/help/forms/using/embedding-link-component-page.md).
+>Du kan också aktivera specifika komponenter från dessa kategorier genom att markera komponenterna. Mer information om komponenterna och hur de används finns i [Skapa en formulärportalsida](/help/forms/using/creating-form-portal-page.md) och [Bädda in länkkomponent på en sida](/help/forms/using/embedding-link-component-page.md).
 
 Nu är komponentkategorierna Document Services och Document Services Predicates tillgängliga i komponentwebbläsaren. Komponenterna aktiveras för alla sidor som använder samma mall.
 

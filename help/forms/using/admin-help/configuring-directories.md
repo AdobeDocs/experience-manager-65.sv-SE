@@ -42,7 +42,7 @@ Ange de kataloger som autentiseringsprovidern efterfrågar användarinformation 
 
 ### Lägga till en anpassad SPI {#add-a-custom-spi}
 
-Mer information om hur du skapar en anpassad SPI finns i&quot;Utveckla SPI för AEM formulär&quot; i [Programmera med AEM](https://www.adobe.com/go/learn_aemforms_programming_63). Om du vill göra en nyligen distribuerad anpassad SPI tillgänglig för association med domänen startar du om servern.
+Mer information om hur du skapar en anpassad SPI finns i&quot;Utveckla SPI för AEM&quot; i [Programmering med AEM formulär](https://www.adobe.com/go/learn_aemforms_programming_63). Om du vill göra en nyligen distribuerad anpassad SPI tillgänglig för association med domänen startar du om servern.
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 1. Klicka på Ny företagsdomän eller välj en befintlig företagsdomän.
@@ -77,25 +77,25 @@ När du synkroniserar dina domäner efter att ha tagit bort en katalog markeras 
 
 När du lägger till en katalog i en domän anger du följande kataloginställningar.
 
-**Server:** (Obligatoriskt) Katalogserverns fullständiga domännamn (FQDN). För en dator som till exempel heter x i adobe.com är FQDN x.adobe.com. En IP-adress kan användas i stället för FQDN-servernamnet.
+**Server:** (obligatoriskt) Fullständigt kvalificerat domännamn (FQDN) för katalogservern. För en dator som till exempel heter x i adobe.com är FQDN x.adobe.com. En IP-adress kan användas i stället för FQDN-servernamnet.
 
-**Port:** (Obligatoriskt) Den port som katalogservern använder. Vanligtvis 389, eller 636, om SSL-protokollet (Secure Sockets Layer) används för att skicka autentiseringsinformation över nätverket.
+**Port:** (obligatoriskt) Den port som katalogservern använder. Vanligtvis 389, eller 636, om SSL-protokollet (Secure Sockets Layer) används för att skicka autentiseringsinformation över nätverket.
 
-**SSL:** (Obligatoriskt) Anger om katalogservern använder SSL när data skickas över nätverket. Standardvärdet är Nej. Om du anger Ja måste motsvarande LDAP-servercertifikat betraktas som tillförlitligt av JRE (Java™ runtime environment) på programservern.
+**SSL:** (obligatoriskt) Anger om katalogservern använder SSL när data skickas över nätverket. Standardvärdet är Nej. Om du anger Ja måste motsvarande LDAP-servercertifikat betraktas som tillförlitligt av JRE (Java™ runtime environment) på programservern.
 
-**Bindning** (Obligatoriskt) Anger hur du får åtkomst till katalogen.
+**Bindning** (obligatoriskt) Anger hur du ska få åtkomst till katalogen.
 
 **Anonym:** Inget användarnamn eller lösenord krävs. En anonym användare kan hämta endast en begränsad mängd data. Det här alternativet kan vara användbart för inledande testning.
 
 **Användare:** Autentisering krävs. Ange namnet på den användarpost som har åtkomst till katalogen i rutan Namn. Det är bäst att ange det fullständiga unika namnet (DN) för användarkontot, till exempel cn=Jane Doe, ou=användare, dc=can, dc=com. Ange det associerade lösenordet i rutan Lösenord. Dessa inställningar krävs när du väljer Användare som bindningsalternativ.
 
-**Namn:** Namn som kan användas för att ansluta till LDAP-databasen när anonym åtkomst inte har aktiverats. För Active Directory 2003 anger du `[domain name]\[userid]`. För Sun™ One, eDirectory eller IBM Tivoli Directory Server anger du det fullständiga, kvalificerade namnet på användaren, till exempel uid=lcuser,ou=it,o=company.com.
+**Namn:** Namn som kan användas för att ansluta till LDAP-databasen när anonym åtkomst inte har aktiverats. Ange `[domain name]\[userid]` för Active Directory 2003. För Sun™ One, eDirectory eller IBM Tivoli Directory Server anger du det fullständiga, kvalificerade namnet på användaren, till exempel uid=lcuser,ou=it,o=company.com.
 
 **Lösenord:** Lösenord som motsvarar det namn du angav för att ansluta till LDAP-databasen när anonym åtkomst inte är aktiverad.
 
-**Fyll sida med:** När det här alternativet är markerat fylls attribut på användar- och gruppinställningssidorna i med motsvarande LDAP-standardvärden.
+**Fyll sidan med:** Om du väljer det här alternativet fylls attribut på användar- och gruppinställningssidorna med motsvarande LDAP-standardvärden.
 
-**Hämta basens unika namn:** Hämtar bas-DN:n och visar dem i listrutan. Den här inställningen är användbar när du har flera bas-DN och behöver välja ett värde.
+**Hämta bas-DN:n:** Hämtar bas-DN:erna och visar dem i listrutan. Den här inställningen är användbar när du har flera bas-DN och behöver välja ett värde.
 
 **Aktivera hänvisning:** Den här inställningen gäller när din organisation använder flera Active Directory-domäner som är organiserade i en hierarkisk struktur och du har angett kataloginställningar för endast den överordnade domänen. Om du väljer det här alternativet kan användarhantering komma åt användar- och gruppinformation från de underordnade domänerna.
 
@@ -105,15 +105,15 @@ När du lägger till en katalog i en domän anger du följande kataloginställni
 
 ### Användarinställningar {#user-settings}
 
-**Unik identifierare:** (Obligatoriskt) Ett unikt och konstant attribut som används för att identifiera användare. Använd ett icke-DN-attribut som unik identifierare eftersom användarens unika namn kan ändras om användaren flyttar till en annan del av organisationen. Den här inställningen beror på katalogservern. Värdet är objectGUID för Active Directory 2003, nsuniqueID för Sun™ One och guid för eDirectory.
+**Unik identifierare:** (obligatoriskt) Ett unikt och konstantattribut som används för att identifiera användare. Använd ett icke-DN-attribut som unik identifierare eftersom användarens unika namn kan ändras om användaren flyttar till en annan del av organisationen. Den här inställningen beror på katalogservern. Värdet är objectGUID för Active Directory 2003, nsuniqueID för Sun™ One och guid för eDirectory.
 
 >[!NOTE]
 >
 >Se till att du anger ett attribut som garanterat är unikt i din organisation. Om du anger ett felaktigt värde kan det orsaka allvarliga systemproblem.
 
-**Basens unika namn:** Ange som startpunkt för synkronisering av användare och grupper från LDAP-hierarkin. Det är bäst att ange ett bas-DN på den lägsta nivån i hierarkin som omfattar alla användare och grupper som behöver synkroniseras för tjänster.
+**Bas-DN:** Ange som startpunkt för synkronisering av användare och grupper från LDAP-hierarkin. Det är bäst att ange ett bas-DN på den lägsta nivån i hierarkin som omfattar alla användare och grupper som behöver synkroniseras för tjänster.
 
-Om du valde alternativet Aktivera referens i kataloginställningarna anger du basens unika namn till alternativet *dc* en del av DN. För att referensen ska fungera måste sökintervallet innehålla både överordnade och underordnade domäner.
+Om du valde alternativet Aktivera hänvisning i kataloginställningarna anger du basens unika namn till *dc*-delen av DN. För att referensen ska fungera måste sökintervallet innehålla både överordnade och underordnade domäner.
 
 >[!NOTE]
 >
@@ -121,29 +121,29 @@ Om du valde alternativet Aktivera referens i kataloginställningarna anger du ba
 
 Även om Base DN är en obligatorisk inställning i administrationskonsolen kan vissa katalogservrar som IBM Domino Enterprise Server kräva ett tomt BaseDN. Om du vill ange ett tomt Base-DN exporterar du filen config.xml, redigerar inställningen i filen config.xml och importerar den sedan på nytt. (Se [Importera och exportera konfigurationsfilen](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).)
 
-**Sökfilter:** (Obligatoriskt) Det sökfilter som ska användas för att hitta posten som är associerad med användaren. Du kan göra en sökning på en nivå eller en sökning på undernivå. (Se Sökfiltersyntax eller RFC 2254.) Mer information om Microsoft AD-schemat finns i Active Directory-schema.
+**Sökfilter:** (obligatoriskt) Sökfiltret som ska användas för att hitta posten som är associerad med användaren. Du kan göra en sökning på en nivå eller en sökning på undernivå. (Se Sökfiltersyntax eller RFC 2254.) Mer information om Microsoft AD-schemat finns i Active Directory-schema.
 
-**Beskrivning:** Schemaattribut för beskrivningen av användaren
+**Beskrivning:** Schemaattribut för användarbeskrivningen
 
-**Fullständigt namn:** (Obligatoriskt) Schemaattribut för användarens fullständiga namn
+**Fullständigt namn:** (obligatoriskt) Schemaattribut för användarens fullständiga namn
 
-**Inloggnings-ID:** (Obligatoriskt) Schemaattribut för användarens inloggnings-ID
+**Inloggnings-ID:** (obligatoriskt) Schemaattribut för användarens inloggnings-ID
 
-**Efternamn:** (Obligatoriskt) Schemaattribut för användarens efternamn
+**Efternamn:** (obligatoriskt) Schemaattribut för användarens efternamn
 
-**Förnamn:** (Obligatoriskt) Schemaattribut för användarens förnamn
+**Förnamn:** (obligatoriskt) Schemaattribut för användarens förnamn
 
 **Initialer:** Schemaattribut för användarens initialer
 
-**Affärskalender:** Ger dig möjlighet att mappa en affärskalender till en användare baserat på värdet för den här inställningen (affärskalendernyckeln). Affärskalendrar definierar affärsdagar och icke-affärsdagar. AEM kan använda affärskalendrar vid beräkning av framtida datum och tidpunkter för händelser som påminnelser, deadlines och eskalering. Hur du tilldelar användare affärskalendernycklar beror på om du använder en företagsdomän, lokal domän eller hybriddomän. (Se Konfigurera affärskalendrar.)
+**Affärskalender:** Du kan mappa en affärskalender till en användare baserat på värdet för den här inställningen (affärskalendernyckeln). Affärskalendrar definierar affärsdagar och icke-affärsdagar. AEM kan använda affärskalendrar vid beräkning av framtida datum och tidpunkter för händelser som påminnelser, deadlines och eskalering. Hur du tilldelar användare affärskalendernycklar beror på om du använder en företagsdomän, lokal domän eller hybriddomän. (Se Konfigurera affärskalendrar.)
 
-Om du använder en företagsdomän kan du mappa inställningen för Business Calendar till ett fält i LDAP-katalogen. Om till exempel varje användarpost i katalogen innehåller en *land* och du vill tilldela affärskalendrar baserat på det land där användaren befinner sig, anger du *land* fältnamn som värde för inställningen för affärskalender. Du kan sedan mappa affärskalendernycklarna (de värden som definierats för *land* i LDAP-katalogen) till affärskalendrar i formulärarbetsflödet.
+Om du använder en företagsdomän kan du mappa inställningen för Business Calendar till ett fält i LDAP-katalogen. Om till exempel varje användarpost i din katalog innehåller fältet *country* och du vill tilldela affärskalendrar baserat på det land där användaren finns, anger du fältnamnet *country* som värde för inställningen för affärskalender. Du kan sedan mappa affärskalendernycklarna (de värden som definieras för fältet *country* i LDAP-katalogen) till affärskalendrar i formulärarbetsflödet.
 
 Mängden utrymme som används för att visa namnet på affärskalendernyckeln på arbetsflödessidorna för formulär är begränsad. Begränsa namnet på affärskalendernyckeln till färre än 53 tecken så att det inte trunkeras på dessa sidor.
 
-**Ändra tidsstämpel:** Om du vill aktivera deltakatalogsynkronisering anger du det här värdet till att ändra TimeStamp. (Se Aktivera katalogsynkronisering av ändringar.)
+**Ändra tidsstämpel:** Om du vill aktivera delta-katalogsynkronisering anger du det här värdet till att ändra TimeStamp. (Se Aktivera katalogsynkronisering av ändringar.)
 
-**Organisation:** Schemaattribut för namnet på organisationen som användaren tillhör.
+**Organisation:** Schemaattribut för namnet på den organisation som användaren tillhör.
 
 **Primär e-postadress:** Schemaattribut för användarens primära e-postadress.
 
@@ -157,7 +157,7 @@ Mängden utrymme som används för att visa namnet på affärskalendernyckeln p�
 
 **Tidszon:** Schemaattribut som innehåller tidszonen där användaren finns. Värdet är en sträng som Ort/Land.
 
-**Aktivera VLV-kontroll (Virtual List View):** En LDAP-kontroll som gör det möjligt för AEM att hämta data gruppvis från katalogservern. Om du använder Sun One som LDAP-katalog och katalogen innehåller många användare, skapar aktivering av VLV ett index som kan användas av användarhantering vid sökning efter användare. Den här funktionen är användbar när du använder ett vanligt användarkonto som bara kan synkronisera en begränsad mängd data. Du kan också aktivera VLV för grupper. Om du väljer Aktivera VLV-kontroll (Virtual List View) anger du ett namn i rutan Sorteringsfält.
+**Aktivera VLV-kontroll (Virtual List View):** En LDAP-kontroll som gör att AEM kan hämta data i grupper från katalogservern. Om du använder Sun One som LDAP-katalog och katalogen innehåller många användare, skapar aktivering av VLV ett index som kan användas av användarhantering vid sökning efter användare. Den här funktionen är användbar när du använder ett vanligt användarkonto som bara kan synkronisera en begränsad mängd data. Du kan också aktivera VLV för grupper. Om du väljer Aktivera VLV-kontroll (Virtual List View) anger du ett namn i rutan Sorteringsfält.
 
 >[!NOTE]
 >
@@ -167,23 +167,23 @@ Mängden utrymme som används för att visa namnet på affärskalendernyckeln p�
 
 ### Gruppinställningar {#group-settings}
 
-**Unik identifierare:** (Obligatoriskt) Ett unikt och konstant attribut som används för att identifiera grupper. Använd ett icke-DN-attribut som unik identifierare. Den här inställningen beror på katalogservern. Värdet är objectGUID för Active Directory 2003, nsuniqueID för Sun One och guid för eDirectory.
+**Unik identifierare:** (obligatoriskt) Ett unikt och konstantattribut som används för att identifiera grupper. Använd ett icke-DN-attribut som unik identifierare. Den här inställningen beror på katalogservern. Värdet är objectGUID för Active Directory 2003, nsuniqueID för Sun One och guid för eDirectory.
 
 >[!NOTE]
 >
 >Se till att du anger ett attribut som garanterat är unikt i din organisation. Om du anger ett felaktigt värde kan det orsaka allvarliga systemproblem.
 
-**Basens unika namn:** (Obligatoriskt) Katalogens unika namn.
+**Bas-DN:** (obligatoriskt) Ange katalogens unika namn.
 
 Även om Base DN är en obligatorisk inställning i administrationskonsolen, kräver vissa katalogservrar som IBM Domino Enterprise Server ett tomt BaseDN. Om du vill ange ett tomt Base-DN exporterar du filen config.xml, redigerar inställningen i filen config.xml och importerar den sedan på nytt. (Se [Importera och exportera konfigurationsfilen](/help/forms/using/admin-help/importing-exporting-configuration-file.md#importing-and-exporting-the-configuration-file).)
 
-**Sökfilter:** (Obligatoriskt) Det sökfilter som ska användas för att hitta posten som är associerad med gruppen. Du kan göra en sökning på en nivå eller en sökning på undernivå.
+**Sökfilter:** (obligatoriskt) Sökfiltret som ska användas för att hitta posten som är associerad med gruppen. Du kan göra en sökning på en nivå eller en sökning på undernivå.
 
 **Beskrivning:** Schemaattribut för beskrivningen av gruppen
 
-**Fullständigt namn:** (Obligatoriskt) Schemaattribut för hela gruppens namn
+**Fullständigt namn:** (obligatoriskt) Schemaattribut för hela gruppnamnet
 
-**Medlems-DN:** (Obligatoriskt) Schemaattribut för det särskiljande namnet på medlemmar i en grupp
+**Medlems-DN:** (obligatoriskt) Schemaattribut för det särskiljande namnet på medlemmar i en grupp
 
 **Unik medlemsidentifierare:** Unik identifierare för en användare eller grupp som är medlem i den valda gruppen. Värdet beror på katalogservern. Värdet är objectSID för AD2003, nsuniqueID för Sun One och guid för eDirectory.
 
@@ -197,15 +197,15 @@ Om DN anges som en unik identifierare behöver du inte konfigurera Unik identifi
 
 **Sekundär e-postadress:** Schemaattribut för gruppens sekundära e-postadress
 
-**Ändra tidsstämpel:** Om du vill aktivera deltakatalogsynkronisering anger du det här värdet till att ändra TimeStamp. (Se Aktivera katalogsynkronisering av ändringar.)
+**Ändra tidsstämpel:** Om du vill aktivera delta-katalogsynkronisering anger du det här värdet till att ändra TimeStamp. (Se Aktivera katalogsynkronisering av ändringar.)
 
-**Aktivera VLV-kontroll (Virtual List View):** En LDAP-kontroll som gör det möjligt för AEM att hämta data gruppvis från katalogservern. Om du använder Sun One som LDAP-katalog och katalogen innehåller många grupper, skapar aktivering av VLV ett index som användarhantering kan använda när grupper söks. Den här funktionen är användbar när du använder ett vanligt användarkonto som bara kan synkronisera en begränsad mängd data. Du kan även aktivera VLV för användare. Om du väljer Aktivera VLV-kontroll (Virtual List View) anger du ett sorteringsfältnamn.
+**Aktivera VLV-kontroll (Virtual List View):** En LDAP-kontroll som gör att AEM kan hämta data i grupper från katalogservern. Om du använder Sun One som LDAP-katalog och katalogen innehåller många grupper, skapar aktivering av VLV ett index som användarhantering kan använda när grupper söks. Den här funktionen är användbar när du använder ett vanligt användarkonto som bara kan synkronisera en begränsad mängd data. Du kan även aktivera VLV för användare. Om du väljer Aktivera VLV-kontroll (Virtual List View) anger du ett sorteringsfältnamn.
 
 >[!NOTE]
 >
 >Konfigurera Sun One om du vill aktivera VLV. Se [Konfigurera användarhantering för att använda VLV (Virtual List View)](configuring-directories.md#configure-user-management-to-use-virtual-list-view-vlv).
 
-**Namn på sorteringsfält:** Om du valde Aktivera VLV-kontroll (Virtual List View) anger du det attributnamn som används för att sortera indexet. Det här attributnamnet är det som du angav när du skapade ett index för VLV på katalogservern.
+**Sorteringsfältnamn:** Om du valde Aktivera VLV-kontroll (Virtual List View) anger du attributnamnet som används för att sortera indexet. Det här attributnamnet är det som du angav när du skapade ett index för VLV på katalogservern.
 
 >[!NOTE]
 >
@@ -227,13 +227,13 @@ LDAP-protokollet innehåller en mekanism för att fråga stora datauppsättninga
 >
 >I det här avsnittet beskrivs hur du använder VLV-kontrollen för Sun ONE Directory Server. Du kan dock använda den här kontrollen för alla katalogservrar som har stöd för VLV-kontroll.
 
-1. När du konfigurerar katalogen väljer du Aktivera VLV-kontroll (Virtual List View) på både sidan Användarinställningar och på sidan Gruppinställningar. När du markerar kryssrutan måste du även ange ett sorteringsnamn i rutan Sorteringsfält. Standardvärdet är uid. (Se [Lägga till kataloger eller anpassade SPI-filer](configuring-directories.md#adding-directories-or-custom-spis) eller [Redigera en katalog](configuring-directories.md#edit-a-directory).)
+1. När du konfigurerar katalogen väljer du Aktivera VLV-kontroll (Virtual List View) på både sidan Användarinställningar och på sidan Gruppinställningar. När du markerar kryssrutan måste du även ange ett sorteringsnamn i rutan Sorteringsfält. Standardvärdet är uid. (Se [Lägga till kataloger eller anpassade SPI:er](configuring-directories.md#adding-directories-or-custom-spis) eller [Redigera en katalog](configuring-directories.md#edit-a-directory).)
 1. Använd administrationskonsolen Sun ONE eller ett kommandoradsskript för att skapa LDAP VLV-poster för användare och grupper. Om du använder ett kommandoradsskript kan du använda exempelanvändarna och gruppera LDIF-filer. (Se [Konfigurera Sun ONE Directory Server for VLV](configuring-directories.md#configuring-the-sun-one-directory-server-for-vlv).)
 1. Stoppa servern och skapa ett nödvändigt index. (Se [Skapa katalogserverindex för VLV](configuring-directories.md#create-the-directory-server-index-for-vlv).)
 
 ### Konfigurera Sun ONE Directory Server for VLV {#configuring-the-sun-one-directory-server-for-vlv}
 
-För att skapa en VLV krävs ett par poster som innehåller `vlvSearch` och `vlvIndex` objektklasser. vlvSearch-posten innehåller en sökbas och `vlvFilter` -attribut, som anger den objektklass som innehåller de attribut som du vill sortera. The `vlvIndex` objektklassen innehåller `vlvSort` -attribut, som anger ett eller flera attribut att sortera och i vilken ordning de ska sorteras. (Ett minustecken (-) betecknar omvänd alfabetisk ordning). Att använda VLV med AEM formulär kräver separata poster för användare och grupper.
+För att skapa en VLV krävs ett par poster som innehåller objektklasserna `vlvSearch` och `vlvIndex`. vlvSearch-posten innehåller en sökbas och attributet `vlvFilter`, som anger objektklassen som innehåller de attribut du vill sortera. Objektklassen `vlvIndex` innehåller attributet `vlvSort` som anger ett eller flera attribut att sortera och den ordning i vilken de ska sorteras. (Ett minustecken (-) betecknar omvänd alfabetisk ordning). Att använda VLV med AEM formulär kräver separata poster för användare och grupper.
 
 >[!NOTE]
 >
@@ -258,25 +258,25 @@ Här följer ett exempel på LDIF för VLV-post för användare:
  objectclass: vlvIndex
 ```
 
-**Skapa objektposter med hjälp av ett skript**
+**Skapa objektposterna med ett skript**
 
 1. Exempelskriptet har en LDAP-post med namnet `lcuser`. Den här posten är avsedd för VLV-relaterad konfiguration för användarsynkronisering i AEM formulär. Ändra följande egenskaper i enlighet med detta:
 
-   **Postnamn:** Posten i exemplet är `lcuser`. If `lcuser` ändras måste den ändras i alla områden i exempelskriptet.
+   **Postnamn:** Posten i det här exemplet är `lcuser`. Om `lcuser` ändras måste den ändras i alla områden i exempelskriptet.
 
-   **vBase:** Det basnamn som har angetts på sidan Användarinställningar.
+   **vlvBase:** Basens unika namn som har angetts på sidan Användarinställningar.
 
-   **vFilter:** Det sökfilter som anges på sidan Användarinställningar.
+   **vlvFilter:** Sökfiltret som anges på sidan Användarinställningar.
 
-   **vlvSort:** Det sorteringsfält som anges i avsnittet VLV-inställningar på sidan Användarinställningar. En VLV-kontroll kräver att du anger en sorteringskontroll. Det här fältet används som sorteringsparameter för det VLV-index som skapas.
+   **vlvSort:** Sorteringsfältet som anges i avsnittet VLV-inställningar på sidan Användarinställningar. En VLV-kontroll kräver att du anger en sorteringskontroll. Det här fältet används som sorteringsparameter för det VLV-index som skapas.
 
-   **aci:** Åtkomstkontrollen som anges i exempelskriptet ger alla autentiserade användare behörighet att komma åt VLV-index för att läsa, söka och jämföra åtgärder. Administratören kan begränsa åtkomsten till en bindningsanvändare, som är konfigurerad på sidan Katalogserverinställningar som är angiven i användargränssnittet för användarhantering. Om behörigheter inte anges kan användarsökningen inte använda VLV och LDAP-servern genererar ett behörighetsundantag.
+   **aci:** Åtkomstkontrollen som anges i exempelskriptet ger alla autentiserade användare behörighet att komma åt VLV-index för read-, search- och compare-åtgärder. Administratören kan begränsa åtkomsten till en bindningsanvändare, som är konfigurerad på sidan Katalogserverinställningar som är angiven i användargränssnittet för användarhantering. Om behörigheter inte anges kan användarsökningen inte använda VLV och LDAP-servern genererar ett behörighetsundantag.
 
    >[!NOTE]
    >
-   >Som en regel är vlvIndex-postens namn också inställt på `lcuser`, men du kan ge den ett annat namn. Använd samma namn i vlvindex-verktyget. (Se [Skapa katalogserverindex för VLV ](configuring-directories.md#create-the-directory-server-index-for-vlv)*.)*
+   >Som en konvention är vlvIndex-postens namn också inställt på `lcuser`, men du kan ge det ett annat namn. Använd samma namn i vlvindex-verktyget. (Se [Skapa katalogserverindex för VLV ](configuring-directories.md#create-the-directory-server-index-for-vlv)*.)*
 
-1. Använda `ldapmodify` för Sun ONE Server skapar du en liknande post för grupper med hjälp av gruppens basnamn, sökfilter respektive sorteringsfält:
+1. Använd verktyget `ldapmodify` som ingår i Sun ONE Server för att skapa en liknande post för grupper med hjälp av gruppens basnamn, sökfilter respektive sorteringsfält:
 
    `server directory\shared\bin>ldapmodify -v -a -h host -p port -D "admin user" -w "password" -f "LDIF file location"`
 
@@ -306,11 +306,11 @@ När du har konfigurerat kataloginställningarna och skapat LDAP VLV-poster för
     [21/Nov/2007:16:47:29 +051800] - userRoot: Finished indexing.
    ```
 
-   Vlvindex-verktyget finns i katalogserverns instanskatalog. Om Sun ONE Server har två instanser som kör server1 och server2 är vlvindex-verktyget i *Sun ONE server directory*\server1-katalog. Värdet för parametern `-T` är värdet för `cn` attribut för den vlvindex-post som tidigare skapats i LDIF-provet. I det här fallet är det `lcuser`.
+   Vlvindex-verktyget finns i katalogserverns instanskatalog. Om Sun ONE Server har två instanser som kör server1 och server2 finns verktyget vlvindex i katalogen *Sun ONE server*\server1. Värdet för parametern `-T` är värdet för attributet `cn` för den Vlvindex-post som skapades tidigare i LDIF-exempelfilen. I det här fallet är det `lcuser`.
 
 1. Om VLV även är aktiverat för grupper skapar du motsvarande index för grupperna. Kontrollera om indexen har skapats med följande kommando:
 
-   *sol en serverkatalog* `\shared\bin>ldapsearch -h`*värdnamn* `-p`*port no* `-s base -b "" objectclass=*`
+   *sol en serverkatalog* `\shared\bin>ldapsearch -h`*värdnamn* `-p`*port nr* `-s base -b "" objectclass=*`
 
    Utdata som följande exempeldata genereras:
 

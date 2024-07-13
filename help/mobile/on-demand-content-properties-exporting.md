@@ -22,13 +22,13 @@ ht-degree: 0%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Apparna representeras som *cq:Sidor* AEM.
+Appar representeras som *cq:Pages* i AEM.
 
-De delar samma gemensamma egenskaper som finns i *cq:Sida* utöver de andra som visas nedan och som representerar egenskaper som stöder integrering.
+De delar samma gemensamma egenskaper som finns i alla *cq:Page* förutom de andra som visas nedan och som representerar egenskaper som stöder integrering.
 
 ## Appegenskaper {#app-properties}
 
-Följande tabell visar **Programegenskaper och noder**.
+I följande tabell visas **Programegenskaper och noder**.
 
 <table>
  <tbody>
@@ -45,7 +45,7 @@ Följande tabell visar **Programegenskaper och noder**.
   <tr>
    <td>dps-exportTemplate</td>
    <td>String:Path</td>
-   <td><p>Sökväg till programmets exportkonfigurationer. Exportkonfigurationen är en mapp med två underordnade konfigurationsmallar för ContentSync-export.</p> <p><i>dps-article</i>: Konfiguration av ContentSync-export för att exportera artikelinnehåll</p> <p><i>dps-HTMLResources</i>: Konfiguration av ContentSync-export för att exportera delade resurser för program/artikel</p> </td>
+   <td><p>Sökväg till programmets exportkonfigurationer. Exportkonfigurationen är en mapp med två underordnade konfigurationsmallar för ContentSync-export.</p> <p><i>dps-article</i>: Konfiguration av ContentSync-export för att exportera artikelinnehåll</p> <p><i>dps-HTMLResources</i>: Konfiguration för ContentSync-export för att exportera delade resurser för program/artikel</p> </td>
   </tr>
   <tr>
    <td>dps-projectId</td>
@@ -80,7 +80,7 @@ Följande tabell visar **Programegenskaper och noder**.
   <tr>
    <td>sling:resourceType</td>
    <td>String:Path</td>
-   <td><p>Sökväg till en cq:Component som är eller utökar <i>mobilappar/core/components/instance.</i></p> <p>Detta medför att det finns och återges i Apps-katalogen.</p> </td>
+   <td><p>Sökväg till en cq:Component som är eller utökar <i>mobileapps/core/components/instance.</i></p> <p>Detta medför att det finns och återges i Apps-katalogen.</p> </td>
   </tr>
  </tbody>
 </table>

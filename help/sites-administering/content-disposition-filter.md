@@ -24,12 +24,12 @@ När filtret har installerats blockeras åtkomsten till alla resurser. Du kan ti
 
 ## Konfigurera filtret för innehållsdisposition {#configure-content-disposition-filter}
 
-Du kan visa [Apache Sling Content Disposition Filter i GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java).
+Du kan visa [Dispositionsfiltret för Apache Sling-innehåll i GitHub](https://github.com/apache/sling-org-apache-sling-security/blob/master/src/main/java/org/apache/sling/security/impl/ContentDispositionFilterConfiguration.java).
 
 Alternativen för Innehållsdispositionsfilter innehåller följande funktioner:
 
-* **Sökvägar för innehållsdisposition:** En lista med sökvägar där filtret används följt av en lista med MIME-typer som ska uteslutas på den sökvägen. Sökvägen måste vara en absolut sökväg och kan innehålla jokertecken (`*`) i slutet så att alla resurssökvägar matchar det angivna sökvägsprefixet. Till exempel: `/content/*:image/jpeg,image/svg+xml` använder filtret på alla noder i `/content?` utom JPG och SVG.
+* **Sökvägar för innehållsdisposition:** En lista med sökvägar där filtret används följt av en lista med MIME-typer som ska uteslutas på den sökvägen. Sökvägen måste vara en absolut sökväg och kan innehålla ett jokertecken (`*`) i slutet, för att matcha alla resurssökvägar med det angivna sökvägsprefixet. `/content/*:image/jpeg,image/svg+xml` använder till exempel filtret på alla noder i `/content?` förutom bilder i JPG och SVG.
 
-* **Uteslutna resurssökvägar:** En lista över uteslutna resurser. Varje resurssökväg måste anges som en absolut och fullständig sökväg. Prefixmatchning/jokertecken stöds inte.
+* **Uteslutna resurssökvägar:** En lista över exkluderade resurser. Varje resurssökväg måste anges som en absolut och fullständig sökväg. Prefixmatchning/jokertecken stöds inte.
 
-* **Aktivera för alla resurssökvägar:** Den här flaggan styr om det här filtret ska aktiveras för alla sökvägar, förutom för de uteslutna sökvägarna som definieras av Uteslutna resurssökvägar. Om du anger flaggan som true ignoreras innehållets dispositionssökvägar. Oberoende av konfigurationen täcks bara resurssökvägar som innehåller en egenskap med namnet `jcr:data` eller `jcr:content/jcr:data`.
+* **Aktivera för alla resurssökvägar:** Den här flaggan kontrollerar om det här filtret ska aktiveras för alla sökvägar, utom för de uteslutna sökvägarna som definieras av Undantagna resurssökvägar. Om du anger flaggan som true ignoreras innehållets dispositionssökvägar. Oberoende av konfigurationen täcks bara resurssökvägar som innehåller egenskapen `jcr:data` eller `jcr:content/jcr:data`.

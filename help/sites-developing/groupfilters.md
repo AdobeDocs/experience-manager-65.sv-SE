@@ -28,13 +28,13 @@ Skapa ett enhetsgruppsfilter för att definiera en uppsättning krav för enhets
 
 Utforma dina filter så att du kan använda kombinationer av dem för att definiera grupper av funktioner. Vanligtvis finns det överlappande funktioner för olika enhetsgrupper. Därför kan du använda vissa filter med flera enhetsgruppsdefinitioner.
 
-När du har skapat ett filter kan du använda det i [gruppkonfiguration.](/help/sites-developing/mobile.md#creating-a-device-group)
+När du har skapat ett filter kan du använda det i [gruppkonfigurationen.](/help/sites-developing/mobile.md#creating-a-device-group)
 
 ## Klassen Filter Java™ {#the-filter-java-class}
 
-Ett enhetsgruppsfilter är en OSGi-komponent som implementerar [com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) gränssnitt. När implementeringsklassen distribueras tillhandahåller den en filtertjänst som är tillgänglig för enhetsgruppskonfigurationer.
+Ett enhetsgruppsfilter är en OSGi-komponent som implementerar gränssnittet [com.day.cq.wcm.mobile.api.device.DeviceGroupFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html). När implementeringsklassen distribueras tillhandahåller den en filtertjänst som är tillgänglig för enhetsgruppskonfigurationer.
 
-Den lösning som beskrivs i denna artikel använder Apache Felix Maven SCR Plugin för att underlätta utvecklingen av komponenten och tjänsten. Därför används i Java™-klassen `@Component`och `@Service` anteckningar. Klassen har följande struktur:
+Den lösning som beskrivs i denna artikel använder Apache Felix Maven SCR Plugin för att underlätta utvecklingen av komponenten och tjänsten. Därför används anteckningarna `@Component` och `@Service` i Java™-klassen i exemplet. Klassen har följande struktur:
 
 ```java
 package com.adobe.example.myapp;
@@ -70,11 +70,11 @@ Ange kod för följande metoder:
 
 * `getDescription`: Returnerar filterbeskrivningen. Beskrivningen visas i dialogrutan Konfiguration av enhetsgrupp.
 * `getTitle`: Returnerar namnet på filtret. Namnet visas när du väljer filter för enhetsgruppen.
-* `matches`: Avgör om enheten har de funktioner som krävs.
+* `matches`: Avgör om enheten har de nödvändiga funktionerna.
 
 ### Ange filternamn och beskrivning {#providing-the-filter-name-and-description}
 
-The `getTitle` och `getDescription` returnerar filternamnet och beskrivningen. Följande kod visar den enklaste implementeringen:
+Metoderna `getTitle` och `getDescription` returnerar filternamnet och beskrivningen. Följande kod visar den enklaste implementeringen:
 
 ```java
 public String getDescription() {
@@ -90,13 +90,13 @@ Det räcker att hårdkoda namn- och beskrivningstexten för en enspråkig redige
 
 ### Utvärdera mot filtervillkor {#evaluating-against-filter-criteria}
 
-The `matches` funktionReturnerar `true` om enhetens funktioner uppfyller alla filtervillkor. Utvärdera informationen i metodargumenten för att avgöra om enheten tillhör gruppen. Följande värden anges som argument:
+Funktionen `matches` returnerar `true` om enhetsfunktionerna uppfyller alla filtervillkor. Utvärdera informationen i metodargumenten för att avgöra om enheten tillhör gruppen. Följande värden anges som argument:
 
 * Ett DeviceGroup-objekt
 * Namnet på användaragenten
 * Ett Map-objekt som innehåller enhetsfunktionerna. Kartnycklarna är WURFL™-funktionsnamnen och värdena är motsvarande värden från WURFL™-databasen.
 
-The [com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) -gränssnittet innehåller en delmängd av WURFL™-funktionsnamnen i statiska fält. Använd dessa fältkonstanter som nycklar när du hämtar värden från kartan över enhetsfunktioner.
+Gränssnittet [com.day.cq.wcm.mobile.api.devicespecs.DeviceSpecsConstants](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/index.html?com/day/cq/wcm/mobile/api/device/DeviceGroupFilter.html) innehåller en delmängd av WURFL™-funktionsnamnen i statiska fält. Använd dessa fältkonstanter som nycklar när du hämtar värden från kartan över enhetsfunktioner.
 
 Följande kodexempel avgör till exempel om enheten stöder CSS:
 
@@ -105,7 +105,7 @@ boolean cssSupport = true;
 cssSupport = NumberUtils.toInt(capabilities.get(DeviceSpecsConstants.DSPEC_XHTML_SUPPORT_LEVEL)) > 1;
 ```
 
-The `org.apache.commons.lang.math` paketet innehåller `NumberUtils` klassen.
+Paketet `org.apache.commons.lang.math` innehåller klassen `NumberUtils`.
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ The `org.apache.commons.lang.math` paketet innehåller `NumberUtils` klassen.
 
 Den exempel på implementering av DeviceGroupFilter som följer avgör om enhetens fysiska storlek uppfyller minimikraven. Det här filtret är avsett att ge gruppen med pekenheter granularitet. Storleken på knapparna i programgränssnittet bör vara densamma oavsett den fysiska skärmstorleken. Storleken på andra objekt, till exempel text, kan variera. Filtret aktiverar det dynamiska urvalet av en viss CSS som styr storleken på gränssnittselementen.
 
-Det här filtret använder storlekskriterier på `physical_screen_height` och `physical_screen_width` WURFL™-egenskapsnamn.
+Det här filtret tillämpar storlekskriterier på egenskapsnamnen `physical_screen_height` och `physical_screen_width` WURFL™.
 
 ```java
 package com.adobe.example.myapp;
@@ -166,7 +166,7 @@ public class ScreenSizeLarge implements DeviceGroupFilter {
 
 Strängvärdet som returneras av metoden getTitle visas i listrutan för enhetsgruppsegenskaperna.
 
-![filtertillgrupp](assets/filteraddtogroup.png)
+![filteraddToGroup](assets/filteraddtogroup.png)
 
 De strängvärden som returneras av metoderna getTitle och getDescription finns längst ned på sammanfattningssidan för enhetsgruppen.
 
@@ -176,7 +176,7 @@ De strängvärden som returneras av metoderna getTitle och getDescription finns 
 
 Följande POM-kod är användbar om du använder Maven för att skapa program. POM refererar till flera nödvändiga plugin-program och beroenden.
 
-**Plugins:**
+**Plugin-program:**
 
 * Apache Maven Compiler Plugin: Kompilerar Java™-klasser från källkod.
 * Apache Felix Maven Bundle Plugin: Skapar paketet och manifestet
@@ -190,7 +190,7 @@ Följande POM-kod är användbar om du använder Maven för att skapa program. P
 
 Gränssnitten DeviceGroup och DeviceGroupFilter ingår i Day Communique 5 WCM Mobile API bundle. Felix-anteckningarna ingår i paketet Apache Felix Declarative Services. Du kan hämta den här JAR-filen från den offentliga Adobe-databasen.
 
-Vid redigeringen är 5.5.2 den version av WCM Mobile API-paketet som finns i den senaste versionen av AEM. Använd Adobe Web Console ([https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)) för att säkerställa att det här är den paketversion som finns i din miljö.
+Vid redigeringen är 5.5.2 den version av WCM Mobile API-paketet som finns i den senaste versionen av AEM. Använd Adobe Web Console ([https://localhost:4502/system/console/bundles](https://localhost:4502/system/console/bundles)) för att kontrollera att det här är den paketversion som distribueras i din miljö.
 
 **POM:** (Din POM använder ett annat groupId och en annan version.)
 
@@ -257,4 +257,4 @@ Vid redigeringen är 5.5.2 den version av WCM Mobile API-paketet som finns i den
 </project>
 ```
 
-Lägg till profilen som [Hämta innehållspaketet Maven Plugin](/help/sites-developing/vlt-mavenplugin.md) -avsnittet innehåller information om din maven-inställningsfil för att använda den publika Adobe-databasen.
+Lägg till den profil som finns i avsnittet [Hämtning av innehållspaketet från Plugin-programmet ](/help/sites-developing/vlt-mavenplugin.md) för din maven-inställningsfil för användning i den publika Adobe-databasen.

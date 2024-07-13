@@ -38,15 +38,15 @@ Den största fördelen med hash-kodning är att du inte behöver jämföra löse
 
 >[!NOTE]
 >
->Det finns några välkända säkerhetsproblem (s.k. hash-kollisioner) med MD4 eller MD5. På grund av dessa hash-kollisioner och andra SHA-1-attacker (inklusive regnbågstabeller) bestämde jag mig för att koncentrera mig på SHA-256-hash-funktionen i det andra exemplet. Mer information finns i [Kollision](https://en.wikipedia.org/wiki/Hash_collision) och [Regnbågstabell](https://en.wikipedia.org/wiki/Rainbow_table) sidor från Wikipedia.
+>Det finns några välkända säkerhetsproblem (s.k. hash-kollisioner) med MD4 eller MD5. På grund av dessa hash-kollisioner och andra SHA-1-attacker (inklusive regnbågstabeller) bestämde jag mig för att koncentrera mig på SHA-256-hash-funktionen i det andra exemplet. Mer information finns på sidorna [Kollision](https://en.wikipedia.org/wiki/Hash_collision) och [Regnbågstabell](https://en.wikipedia.org/wiki/Rainbow_table) från Wikipedia.
 
 ## Undersöka skriptobjekten {#examining-script-objects}
 
 När du öppnar ett av de två exempelbilderna i AEM Forms på JEE Designer hittar du de fyra skriptobjekten på paletten Hierarki (se figur nedan).
 
-![Variabel](assets/variables.jpg)
+![Variabler](assets/variables.jpg)
 
-Om du vill se JavaScript-implementeringen av hash-funktionerna i dessa skriptobjekt markerar du skriptobjektet och utforskar koden i skriptredigeraren. Du kan se hur följande hash-funktioner har implementerats:
+Om du vill se hur JavaScript implementerar hash-funktionerna i dessa skriptobjekt markerar du skriptobjektet och utforskar koden i skriptredigeraren. Du kan se hur följande hash-funktioner har implementerats:
 
 * soHASHING_MD4.hex_md4()
 * soHASHING_MD4.b64_md4()
@@ -61,7 +61,7 @@ Om du vill se JavaScript-implementeringen av hash-funktionerna i dessa skriptobj
 * soHASHING_SHA256.b64_sha256()
 * soHASHING_SHA256.str_sha256()
 
-Som du kan se i den här listan finns det olika funktioner tillgängliga för de olika utdatatyperna för hashen. Du kan välja mellan `hex_` för hexadecimala siffror, `b64_` för Base64-kodade utdata, eller `str_` för enkel strängkodning.
+Som du kan se i den här listan finns det olika funktioner tillgängliga för de olika utdatatyperna för hashen. Du kan välja mellan `hex_` för hexadecimala siffror, `b64_` för Base64-kodade utdata eller `str_` för enkel strängkodning.
 
 Beroende på vilken hash-funktion du väljer varierar längden på hashen:
 
@@ -79,10 +79,10 @@ Exempelfilerna för den här artikeln är två PDF forms. I det första exemplet
 Prova det första exemplet genom att följa stegen nedan:
 
 1. När du har hämtat och packat upp exempelfilerna öppnar du hashing_forms_sample1.pdf med AEM Forms på JEE Designer. Du kan också använda Adobe Reader eller Adobe Acrobat Professional för att öppna och visa exemplet, men du kan inte se källkoden.
-1. I textfältet [!UICONTROL clear text] skriv ett lösenord eller något annat meddelande som du vill ska hashas.
+1. I textfältet med etiketten [!UICONTROL clear text] skriver du ett lösenord eller något annat meddelande som du vill ska hashas.
 1. Klicka på någon av de fyra knapparna för att generera hash-taggen MD4, MD5, SHA-1 eller SHA-256. Beroende på vilken knapp du tryckte på anropas en av de fyra hash-funktionerna som skapar hexadecimala utdata och strängen eller meddelandet hashas.
 
-Resultatet av hash-åtgärden visas i fältet med etiketten [!UICONTROL hash]. Hash-längden varierar beroende på vilken hash-funktion du väljer.
+Resultatet av hash-åtgärden visas i fältet [!UICONTROL hash]. Hash-längden varierar beroende på vilken hash-funktion du väljer.
 
 Alla samplingar använder hexadecimala siffror som utdatatyp. Du kan använda skriptredigeraren för att ändra exemplen och ändra utdatatypen till Base64 eller simple String.
 
@@ -96,7 +96,7 @@ Prova det andra exemplet genom att följa stegen nedan:
 1. Välj ett av de två lösenordsfälten [!UICONTROL Password MAN] eller [!UICONTROL Password WOMAN] och skriv in lösenorden:
    1. Lösenordet för mannen är `bob`
    1. Lösenordet för kvinnan är `alice`
-1. När du flyttar bort fokus från lösenordsfälten eller trycker på Retur genereras hash-värdet för lösenordet som du har angett automatiskt och jämförs med den lagrade hash-koden för det korrekta lösenordet i bakgrunden. De korrekta, hashas-lösenorden lagras i de osynliga textfälten med etiketten `passwd_man_hashed` och `passwd_woman_hashed`. Om du anger rätt lösenord för mannen får textfälten etiketterade `Man 1` och `Man 2` är tillgängliga så att du kan skriva text i dem. Samma beteende gäller för kvinnans fält.
+1. När du flyttar bort fokus från lösenordsfälten eller trycker på Retur genereras hash-värdet för lösenordet som du har angett automatiskt och jämförs med den lagrade hash-koden för det korrekta lösenordet i bakgrunden. De korrekta, hashas-lösenorden lagras i de osynliga textfälten `passwd_man_hashed` och `passwd_woman_hashed`. Om du anger rätt lösenord för mannen görs textfälten `Man 1` och `Man 2` tillgängliga så att du kan skriva text i dem. Samma beteende gäller för kvinnans fält.
 1. Du kan också klicka på knappen med namnet&quot;delete passwords&quot;, som inaktiverar textfälten och ändrar deras kantlinje.
 
 Koden för att jämföra de två hash-kodade värdena och aktivera textfälten är okomplicerad:
@@ -114,13 +114,13 @@ if (soHASHING_SHA256.hex_sha256(this.rawValue) == passwd_man_hashed.rawValue){
 
 Var behöver du något sådant här? Ta till exempel ett PDF-formulär som innehåller fält som endast ska fyllas i av behöriga personer. Genom att skydda fälten med ett lösenord, som inte kan visas i klartext någonstans i dokumentet som i Sample_2.pdf, kan du se till att dessa fält bara är tillgängliga för användare som känner till lösenordet.
 
-Jag rekommenderar att du fortsätter utforska de två exempelfilerna för PDF.  Du kan generera nya hash-värden med Sample_1.pdf och använda de genererade värdena för att ändra antingen lösenordet eller hash-funktionen som används i Sample_2.pdf.  Resurserna som listas i avsnittet Attribut innehåller även ytterligare information om hash-kodning och de specifika JavaScript-implementeringar som används i den här artikeln.
+Jag rekommenderar att du fortsätter utforska de två exempelfilerna för PDF.  Du kan generera nya hash-värden med Sample_1.pdf och använda de genererade värdena för att ändra antingen lösenordet eller hash-funktionen som används i Sample_2.pdf.  Resurserna som listas i avsnittet Attribut innehåller även ytterligare information om hashning och de specifika JavaScript-implementeringar som används i den här artikeln.
 
 ## Attribut {#attributions}
 
 * [Ronald Rivest](https://en.wikipedia.org/wiki/Ron_Rivest)
 * [NIST](https://csrc.nist.gov/projects/cryptographic-standards-and-guidelines)
 * [Hash-kollision](https://en.wikipedia.org/wiki/Hash_collision)
-* [Regnbågsbord](https://en.wikipedia.org/wiki/Rainbow_table)
-* [Startsida för JavaScript MD5-projekt](https://pajhome.org.uk/crypt/md5/)
-* [jsSHA2 project home page](https://anmar.eu.org/projects/jssha2/)
+* [Regnbågstabell](https://en.wikipedia.org/wiki/Rainbow_table)
+* [JavaScript MD5 - startsida för projekt](https://pajhome.org.uk/crypt/md5/)
+* [jsSHA2-projektstartsida](https://anmar.eu.org/projects/jssha2/)

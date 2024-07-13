@@ -26,13 +26,13 @@ En författare kan stöta på följande funktionella begränsningar när han ell
 
 ### Länkar som inte är aktiva {#links-not-active}
 
-När [redigera en sida](/help/sites-authoring/editing-content.md), är länkar inte aktiva.
+Länkarna är inte aktiva när [en sida ](/help/sites-authoring/editing-content.md) redigeras.
 
-* [Växla till **Förhandsgranska** läge](/help/sites-authoring/editing-content.md#preview-mode) för att navigera med hjälp av länkarna i ditt innehåll.
+* [Växla till **förhandsgranskningsläget**](/help/sites-authoring/editing-content.md#preview-mode) om du vill navigera med hjälp av länkarna i ditt innehåll.
 
 ### Strukturera sidor {#structure-pages}
 
-Sidor kan inte namnges `structure`. Sidor med namn `structure` går inte att redigera i sidredigeraren.
+Sidorna kan inte ha namnet `structure`. Sidor med namnet `structure` kan inte redigeras i sidredigeraren.
 
 ## CSS-begränsningar {#css-limitations}
 
@@ -52,7 +52,7 @@ Absolut positionerade element kan orsaka problem i positionen för deras övert�
 
 Fasta bakgrundsbilder kanske inte visas som fasta vid bläddring eftersom de är inbäddade i en iframe.
 
-* Markera **Visa sidan som publicerad** i sidhuvudsfältets åtgärder visas sidan korrekt.
+* Om du väljer **Visa sidan som publicerad** i sidhuvudsfältet visas sidan korrekt.
 
 ### 100 % höjd {#height}
 

@@ -30,13 +30,13 @@ Med innehållsfragment som använder strukturerat innehåll kan du tillhandahål
 
 >[!NOTE]
 >
->Funktionen som beskrivs här är tillgänglig för alla kärnkomponenter eftersom [version 1.1.0 av kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
+>De funktioner som beskrivs här är tillgängliga för alla kärnkomponenter sedan [version 1.1.0 av kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
 
 ## JSON-exporterare med kärnkomponenter för innehållsfragment {#json-exporter-with-content-fragment-core-components}
 
 Med den AEM JSON-exporteraren kan du leverera innehållet på alla AEM sidor i JSON-datamodellformat. Den här metoden kan sedan användas av dina egna program.
 
-Inom AEM uppnås leveransen med väljaren `model` och `.json` tillägg.
+Inom AEM uppnås leveransen med tillägget väljare `model` och `.json`.
 
 `.model.json`
 
@@ -52,7 +52,7 @@ Inom AEM uppnås leveransen med väljaren `model` och `.json` tillägg.
 
 Du kan också leverera innehållet i ett strukturerat innehållsfragment genom att specifikt rikta in det på det.
 
-Använd hela sökvägen till fragmentet (via `jcr:content`), till exempel med ett suffix som
+Använd hela sökvägen till fragmentet (med hjälp av `jcr:content`), till exempel med ett suffix som det.
 
 `.../jcr:content/root/responsivegrid/contentfragment.model.json`
 
@@ -70,23 +70,23 @@ Sidan kan innehålla antingen ett enda innehållsfragment eller flera komponente
 
   >[!NOTE]
   >
-  >Du kan [anpassa era egna komponenter](/help/sites-developing/json-exporter-components.md) för att få tillgång till och använda dessa data.
+  >Du kan [anpassa dina egna komponenter](/help/sites-developing/json-exporter-components.md) för att komma åt och använda dessa data.
 
   >[!NOTE]
   >
-  >Även om det inte är en standardimplementering [flera väljare stöds,](json-exporter-components.md#multiple-selectors) men `model` måste vara den första.
+  >Även om det inte är en standardimplementering stöds [flera väljare, ](json-exporter-components.md#multiple-selectors) men `model` måste vara den första.
 
 ### Ytterligare information {#further-information}
 
 Se även:
 
-* Resurser för HTTP API
+* ASSETS HTTP API
 
-   * [Resurser för HTTP API](/help/assets/mac-api-assets.md)
+   * [ASSETS HTTP API](/help/assets/mac-api-assets.md)
 
 * Sling Models:
 
-   * [Sling Models - Associera en modellklass med en resurstyp sedan 130](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
+   * [Sling Models - Associerar en modellklass med en resurstyp sedan 130](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
 
 * AEM med JSON:
 
@@ -96,10 +96,10 @@ Se även:
 
 Mer information finns i:
 
-* The [Avsnittet Innehållsfragment i användarhandboken för Assets](/help/assets/content-fragments/content-fragments.md)
+* Avsnittet [Innehållsfragment i användarhandboken för Assets](/help/assets/content-fragments/content-fragments.md)
 
 * [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
 * [Skapa med innehållsfragment](/help/sites-authoring/content-fragments.md)
 * [Aktivera JSON-export för en komponent](/help/sites-developing/json-exporter-components.md)
 
-* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och [Innehållsfragmentkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)
+* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och komponenten [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html)

@@ -21,7 +21,7 @@ ht-degree: 0%
 
 I AEM Forms kan du använda tjänsten SendToPrinter för att skicka ett dokument till skrivaren. Tjänsten SendToPrinter stöder följande åtkomstmekanismer för utskrift:
 
-* **Direktåtkomlig skrivare** `: A printer that is installed on the same computer is called a direct accessible printer, and the computer is named printer host. This type of printer can be a local printer that is connected to the computer directly.`
+* **Direkttillgänglig skrivare** `: A printer that is installed on the same computer is called a direct accessible printer, and the computer is named printer host. This type of printer can be a local printer that is connected to the computer directly.`
 
 * **Indirekt tillgänglig skrivare** `: The printer that is installed on a print server is accessed from other computers. Technologies such as the common UNIX® printing system (CUPS) and the Line Printer Daemon (LPD) protocol are available to connect to a network printer. To access an indirect accessible printer, specify the print server’s IP or host name. Using this mechanism, you can send a document to an LPD URI when the network has an LPD running. The mechanism lets you route the document to any printer that is connected to the network that has an LPD running.`
 
@@ -31,7 +31,7 @@ I AEM Forms kan du använda tjänsten SendToPrinter för att skicka ett dokument
    * &quot;**DirectIP** `: A standard protocol for remote printing and managing print jobs. This protocol can be used locally or remotely. Print queues are not required.`
    * &quot;**LPD** `: A printing protocol named Line Printer Daemon protocol or Line Printer Remote (LPR) protocol. This protocol provides network print server functionality for UNIX-based systems.`
    * **SharedPrinter** `: A printing protocol that enables a computer to use a printer that is configured for that computer.`
-   * **CIF**: Utdatatjänsten stöder CIF.
+   * **CIF**: Utdatatjänsten stöder utskriftsprotokollet Common Internet File System (CIF).
 
 ## Använda tjänsten SendToPrinter {#using-sendtoprinter-service}
 

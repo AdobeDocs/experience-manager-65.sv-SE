@@ -36,7 +36,7 @@ DOM-träd med två alternativknappar
 
 SOM-uttrycket ändras när du ändrar positionen för alternativknapparna i det adaptiva formuläret. I redigeringsläget kan du visa SOM-uttrycket för ett fält eller element i AEM Forms med alternativet Visa SOM-uttryck. Alternativet visas på panelen och när du högerklickar på fältet eller elementet.
 
-![Extrahera SOM-uttryck i en adaptiv form](assets/som-expressions.png)
+![Extraherar SOM-uttryck i en adaptiv form](assets/som-expressions.png)
 
 Extrahera SOM-uttryck i en adaptiv form
 
@@ -46,4 +46,4 @@ I paneler kan du komma åt funktionen från panelens verktygsfält. Funktionen u
 
 Extrahera SOM-uttryck med panelens verktygsfält
 
-Vissa API:er listas i [GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) använder SOM-uttrycket för ett element. Om du till exempel vill ge fokus till ett visst fält i en adaptiv form skickar du motsvarande SOM-uttryck till `getFocus`API in `guideBridge`.
+Vissa API:er i [GuideBridge](https://helpx.adobe.com/aem-forms/6/javascript-api/GuideBridge.html) använder SOM-uttrycket för ett element. Om du till exempel vill ge fokus till ett visst fält i ett adaptivt formulär skickar du motsvarande SOM-uttryck till `getFocus`-API:t i `guideBridge`.

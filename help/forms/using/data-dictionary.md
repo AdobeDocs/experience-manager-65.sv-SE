@@ -34,11 +34,11 @@ Vanligtvis behöver företagsanvändare inte känna till metadata-representation
 1. En författare [skapar dataordlistan](#createdatadictionary) genom att överföra ett schema eller från början.
 1. Skribenten skapar brev och interaktiv kommunikation baserat på dataordlistan och kopplar dataordlisteelement i brev och interaktiv kommunikation när det behövs.
 1. En författare kan hämta XML-exempeldatafil, som baseras på ett dataglexikons schema. Författaren kan ändra XML-exempelfilen, som kan kopplas som testdata med dataordlistan. Samma sak används vid förhandsgranskningen av brevet.
-1. while [förhandsgranska en bokstav](../../forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p), väljer en författare att förhandsgranska bokstaven med data (anpassad förhandsgranskning). Bokstaven öppnas i förväg med de data som författaren har angett. Detta öppnas i gränssnittet för att skapa korrespondens. Agenten som förhandsgranskar det här brevet kan ändra innehållet, data och bilagor i det här brevet och kan skicka det slutliga brevet. Mer information om hur du skapar bokstäver finns i [Skapa korrespondens](../../forms/using/create-letter.md).
+1. När [förhandsgranskar ett brev](../../forms/using/create-letter.md#p-types-of-linkage-available-for-each-of-the-fields-p) väljer en författare att förhandsgranska brevet med data (anpassad förhandsgranskning). Bokstaven öppnas i förväg med de data som författaren har angett. Detta öppnas i gränssnittet för att skapa korrespondens. Agenten som förhandsgranskar det här brevet kan ändra innehållet, data och bilagor i det här brevet och kan skicka det slutliga brevet. Mer information om hur du skapar brev finns i [Skapa korrespondens](../../forms/using/create-letter.md).
 
 ## Förutsättning {#prerequisite}
 
-Installera [Kompatibilitetspaket](compatibility-package.md) för att visa **Dataordlistor** på **Forms** sida.
+Installera [Kompatibilitetspaketet](compatibility-package.md) om du vill visa alternativet **Dataordlistor** på **Forms** -sidan.
 
 ## Skapa en dataordlista {#createdatadictionary}
 
@@ -52,18 +52,18 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
 1. Välj **Skapa dataordlista**.
 1. Lägg till följande på skärmen Egenskaper:
 
-   * **Titel:** (Valfritt) Ange dataordlistans rubrik. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Bokstäver och andra dokumentfragment refereras till med sin titel (när de är tillgängliga), t.ex. i miniatyrbilder och resursegenskaper. Dataordlistor refereras med sina namn och inte till titlar.
-   * **Namn:** Det unika namnet för dataordlistan. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel och de specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
+   * **Titel:** (valfritt) Ange dataordlistans titel. Titeln behöver inte vara unik och kan innehålla specialtecken och tecken som inte är engelska. Bokstäver och andra dokumentfragment refereras till med sin titel (när de är tillgängliga), t.ex. i miniatyrbilder och resursegenskaper. Dataordlistor refereras med sina namn och inte till titlar.
+   * **Namn:** Dataordlistans unika namn. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel och de specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
 
    * **Beskrivning**: (Valfritt) Beskrivning av dataordlistan.
    * **Taggar:** (Valfritt) Om du vill skapa en egen tagg anger du ett värde i textfältet och trycker på Retur. Taggen visas under textfältet med taggar. När du sparar den här texten skapas även de nya taggarna.
    * **Utökade egenskaper**: (Valfritt) Välj **Lägg till fält** om du vill ange metadataattribut för dataordlistan. Ange ett unikt egenskapsnamn i kolumnen Egenskapsnamn. Ange ett värde som ska associeras med egenskapen i kolumnen Värde.
 
-   ![Dataordlistegenskaper som anges på tyska](do-not-localize/1_ddproperties.png)
+   ![Dataordlistegenskaper anges på tyska](do-not-localize/1_ddproperties.png)
 
-1. (Valfritt) Om du vill överföra en XSD-schemadefinition för ditt datalexikon väljer du under strukturpanelen för dataordlista **Överför XML-schema**. Bläddra till XSD-filen, markera den och markera den **Öppna**. En Data Dictionary skapas baserat på det överförda XML-schemat. Du måste ändra visningsnamn och beskrivningar för elementen i dataordlistan. Om du vill göra det markerar du namnen på elementen genom att trycka på dem och redigerar deras beskrivningar, visningsnamn och annan information i fälten i den högra rutan.
+1. (Valfritt) Om du vill överföra en XSD-schemadefinition för ditt datalexikon väljer du **Överför XML-schema** under strukturpanelen för dataordlista. Bläddra till XSD-filen, markera den och välj **Öppna**. En Data Dictionary skapas baserat på det överförda XML-schemat. Du måste ändra visningsnamn och beskrivningar för elementen i dataordlistan. Om du vill göra det markerar du namnen på elementen genom att trycka på dem och redigerar deras beskrivningar, visningsnamn och annan information i fälten i den högra rutan.
 
-   Mer information om beräknade element finns i [Beräknade dataordlisteelement](#computedddelements).
+   Mer information om beräknade element finns i [Element i ordlistan för beräknade data](#computedddelements).
 
    >[!NOTE]
    >
@@ -90,9 +90,9 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
    * En överordnad DDE (sammansatt) kan inte ha två underordnade objekt med samma namn.
    * Uppräkningar innehåller bara primitiva strängtyper.
 
-   Mer information om sammansatta element, samlingselement och primitiva element samt hur du arbetar med dataordlisteelement finns i [Koppla element i dataordlistan till XML-schema](#mappingddetoschema).
+   Mer information om sammansatta element, samlingselement och primitiva element och om hur du arbetar med dataordlisteelement finns i [Mappa element i dataordlistan till XML-schema](#mappingddetoschema).
 
-   Information om valideringar i datamordlistan finns i [Valideringar av Data Dictionary Editor](#ddvalidations).
+   Mer information om valideringar i Data Dictionary finns i [Valideringar av Data Dictionary Editor](#ddvalidations).
 
    ![2_addPropertiesBasic](assets/2_addddpropertiesbasic.png)
 
@@ -100,7 +100,7 @@ Du använder Data Dictionary Editor för att skapa ett datalexikon eller du kan 
 
    ![3_addPropertiesAdvanced](assets/3_addddpropertiesadvanced.png)
 
-1. (Valfritt) Du kan ta bort vilket element som helst genom att trycka på de tre punkterna till höger om ett element och välja **Ta bort**.
+1. (Valfritt) Du kan ta bort ett element genom att trycka på de tre punkterna till höger om ett element och välja **Ta bort**.
 
    ![4_deleteElement](assets/4_deleteelement.png)
 
@@ -150,8 +150,8 @@ När du redigerar eller visar ett datalexikon kan du se vilka element i dataordl
 
 ## Arbeta med testdata {#working-with-test-data}
 
-1. På sidan Dataordlistor väljer du **Välj**.
-1. Välj en dataordlista som du vill hämta testdata för och välj sedan **Hämta XML-exempeldata**.
+1. Välj **Markera** på sidan Dataordlistor.
+1. Välj en dataordlista som du vill hämta testdata för och välj sedan **Hämta exempel-XML-data**.
 1. Välj **OK** i varningsmeddelandet. En XML-fil hämtas.
 1. Öppna XML-filen med Anteckningar eller en annan XML-redigerare. XML-filen har samma struktur som dataordlistan och platshållarsträngarna i elementen. Ersätt platshållarsträngarna med de data som du vill testa en bokstav med.
 
@@ -198,7 +198,8 @@ När du redigerar eller visar ett datalexikon kan du se vilka element i dataordl
 
 1. När du har gjort dataposterna kan du använda den här XML-filen när du förhandsgranskar en bokstav med testdata.
 
-   Du kan lägga till dessa testdata med DD (Välj DD och välj Överför testdata och överför den här xml-filen). När du sedan förhandsgranskar bokstaven normalt (inte anpassat) används dessa XML-data som en bokstav. Du kan också välja Anpassad och sedan överföra XML-koden.
+   Du kan lägga till dessa testdata med DD (Välj DD och välj Överför testdata och överför den här XML-filen)
+När du sedan förhandsgranskar bokstaven normalt (inte anpassat) används alltså dessa XML-data som en bokstav. Du kan också välja Anpassad och sedan överföra XML-koden.
 
 ## Exempel {#samples}
 
@@ -272,10 +273,10 @@ I följande tabell beskrivs de gemensamma attribut som är kopplade till en DDE:
   <tr>
    <td>Namn</td>
    <td>Sträng</td>
-   <td>Obligatoriskt.<br /> DDE:ns namn. Den måste vara unik.</td>
+   <td>Obligatoriskt.DDE:ns <br />-namn. Den måste vara unik.</td>
   </tr>
   <tr>
-   <td>Referens<br /> Namn</td>
+   <td>Namn på referens <br /></td>
    <td>Sträng</td>
    <td>Obligatoriskt. Unikt referensnamn för DDE som tillåter referenser till DDE som är oberoende av ändringar i hierarkin eller strukturen för dataordlistan. Textmoduler mappas med det här namnet</td>
   </tr>
@@ -355,23 +356,23 @@ För export av en XSD krävs en specifik datamappning, vilket beskrivs i följan
    <td>DDI (instansvärdedatatyp)<br /> </p> </td>
   </tr>
   <tr>
-   <td><p>xs:element av typen - sammansatt typ<br /> </p> </td>
-   <td>DDE of type - COMPOSITE<br /> </p> </td>
+   <td><p>xs:element av typen - sammansatt typ <br /> </p> </td>
+   <td>DDE av typen - COMPOSITE<br /> </p> </td>
    <td>java.util.Map<br /> </td>
   </tr>
   <tr>
    <td><p>xs:element där maxOccurs &gt; 1<br /> </p> </td>
-   <td>DDE of type - COLLECTION-<br /> En DDE-nod skapas bredvid COLLECTION DDE som hämtar information från den överordnade COLLECTION-noden. Samma sak skapas för båda samlingarna av enkla/sammansatta datatyper. När du har en SAMLING av den sammansatta typen hämtar Data Dictionary-trädet de ingående fälten i de underordnade för DDE som har skapats för att hämta typinformation.<br /> - DDE (COLLECTION)<br /> - DDE(COMPOSITE for type info)<br /> - DDE(STRING) field1<br /> - DDE(STRING), fält2<br /> <br /> </p> </td>
+   <td>DDE av typen COLLECTION-<br /> En DDE-nod skapas bredvid COLLECTION DDE som hämtar information från den överordnade COLLECTION-noden. Samma sak skapas för båda samlingarna av enkla/sammansatta datatyper. När du har en SAMLING av den sammansatta typen hämtar Data Dictionary-trädet de ingående fälten i de underordnade för DDE som har skapats för att hämta typinformation.<br /> - DDE (COLLECTION)<br /> - DDE(COMPOSITE for type info)<br /> - DDE(STRING) field1<br /> - DDE(STRING) field2<br /> <br /> </p> </td>
    <td>java.util.List<br /> </td>
   </tr>
   <tr>
    <td>Attribut av typen - xs:id <br /> </p> </td>
-   <td>DDE of type - STRING <br /> </td>
+   <td>DDE av typen - STRING <br /> </td>
    <td>java.lang.String<br /> </td>
   </tr>
   <tr>
    <td>xs:attribute /xs:element of type - xs:string</p> </td>
-   <td>DDE of type - STRING<br /> </td>
+   <td>DDE av typen - STRING<br /> </td>
    <td>java.lang.String<br /> </td>
   </tr>
   <tr>
@@ -401,7 +402,7 @@ För export av en XSD krävs en specifik datamappning, vilket beskrivs i följan
   </tr>
   <tr>
    <td>Element av enum-typ och baseType - xs:string</td>
-   <td>DDE of<br /> type - STRING<br /> undertyp - ENUM<br /> valueSet - the allowed values for ENUM<br /> </td>
+   <td>DDE av typen <br /> - STRING<br /> subtyp - ENUM<br /> valueSet - de tillåtna värdena för ENUM<br /> </td>
    <td>java.lang.String</td>
   </tr>
  </tbody>
@@ -411,11 +412,11 @@ För export av en XSD krävs en specifik datamappning, vilket beskrivs i följan
 
 När du har skapat ett datalexikon kan du hämta det som en XML-exempeldatafil och skriva text i den.
 
-1. Välj på sidan Dataordlistor **Välj** och markera sedan ett datalexikon.
-1. Välj **Hämta XML-exempeldata**.
+1. Markera **Markera** på sidan Dataordlistor och markera sedan en dataordlista.
+1. Välj **Hämta exempel-XML-data**.
 1. Välj **OK** i varningsmeddelandet.
 
-   Correspondence Management skapar en XML-fil baserad på den valda dataordlistestrukturen och hämtar den till datorn med namnet &lt;data-dictionary-name>-SampleData. Nu kan du redigera filen i en XML- eller textredigerare och skriva in data medan [skapa ett brev](../../forms/using/create-letter.md).
+   Korrespondenshantering skapar en XML-fil baserat på den valda dataordlistestrukturen och hämtar den till datorn med namnet &lt;data-dictionary-name>-SampleData. Nu kan du redigera den här filen i en XML- eller textredigerare och göra dataposter medan [en bokstav](../../forms/using/create-letter.md) skapas.
 
 ## Internationalisering av metadata {#internationalization-of-meta-data}
 
@@ -423,9 +424,9 @@ När du vill skicka samma bokstav på olika språk till dina kunder kan du lokal
 
 ### Lokalisera dataordlista {#localize-data-dictionary}
 
-1. På sidan Dataordlistor väljer du **Välj** och markera sedan ett datalexikon.
+1. Markera **Markera** på sidan Dataordlistor och markera sedan en dataordlista.
 1. Välj **Hämta lokaliseringsdata**.
-1. Välj **OK** i varningen. Correspondence Management hämtar en zip-fil till datorn med namnet DataDictionary-&lt;ddname>.zip.
+1. Välj **OK** i aviseringen. Correspondence Management hämtar en zip-fil till datorn med namnet DataDictionary-&lt;DDname>.zip.
 1. Zip-filen innehåller en .properties-fil. Den här filen definierar det hämtade dataordlistan. Innehållet i egenskapsfilen liknar följande:
 
    ```ini
@@ -454,7 +455,7 @@ När du vill skicka samma bokstav på olika språk till dina kunder kan du lokal
 
 1. Arkivera .properties-filen (eller filer för flera språk) i en och samma ZIP-fil.
 
-1. Välj på sidan Dataordlistor **Mer** > **Överför lokaliseringsdata** och markera zip-filen med lokaliserade egenskapsfiler.
+1. På sidan Dataordlistor väljer du **Mer** > **Överför lokaliseringsdata** och markerar ZIP-filen med lokaliserade egenskapsfiler.
 1. Om du vill visa lokaliseringsändringarna ändrar du språkområdet i webbläsaren.
 
 ## Valideringar av datamordlista {#ddvalidations}
@@ -524,7 +525,7 @@ I följande exempel visas ett enkelt schema.
 </xs:schema>
 ```
 
-| **Dataordlisteelement** | **Standardbindning för XML** |
+| **Element i dataordlistan** | **Standardbindning för XML** |
 |---|---|
 | age | /age |
 | pris | /price |
@@ -556,7 +557,7 @@ I följande exempel visas schemat för en anteckning.
   </tr>
   <tr>
    <td>anteckning</td>
-   <td>empty(null)<br /> </td>
+   <td>tom(null)<br /> </td>
   </tr>
   <tr>
    <td>till</td>
@@ -644,7 +645,7 @@ Token.xsd som är associerad med det här exemplet är:
 </xs:complexType>
 ```
 
-| **Dataordlisteelement** | **Standardbindning för XML** |
+| **Element i dataordlistan** | **Standardbindning för XML** |
 |---|---|
 | Rot | empty(null) |
 | Tokens | /root/Tokens |

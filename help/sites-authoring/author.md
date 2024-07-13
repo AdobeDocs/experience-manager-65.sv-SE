@@ -19,7 +19,7 @@ ht-degree: 0%
 AEM har två miljöer:
 
 * Författare
-* Publicera
+* Publish
 
 Dessa interagerar så att ni kan göra innehåll tillgängligt på er webbplats så att besökarna kan läsa det.
 
@@ -34,7 +34,7 @@ I redigeringsmiljön är AEM funktionalitet tillgänglig via två gränssnitt. I
 
 ### Författarmiljö {#author-environment}
 
-Författaren arbetar i det som kallas **författarmiljö**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det finns bakom ett företags brandvägg som ger fullständigt skydd och som kräver att författaren loggar in med ett konto som tilldelats rätt åtkomstbehörighet.
+Författaren arbetar i det som kallas **författarmiljön**. Detta ger ett användarvänligt gränssnitt (grafiskt användargränssnitt (GUI eller UI)) för att skapa innehållet. Det finns bakom ett företags brandvägg som ger fullständigt skydd och som kräver att författaren loggar in med ett konto som tilldelats rätt åtkomstbehörighet.
 
 >[!NOTE]
 >
@@ -58,30 +58,30 @@ Det finns även administrativa uppgifter som hjälper dig att hantera ditt inneh
 
 >[!NOTE]
 >
->AEM [administrerad](/help/sites-administering/home.md) (för de flesta uppgifter) från författarmiljön.
+>AEM [administreras](/help/sites-administering/home.md) (för de flesta uppgifter) från författarmiljön.
 
-#### Publiceringsmiljö {#publish-environment}
+#### Publish Environment {#publish-environment}
 
-När AEM är klar publiceras webbplatsens innehåll på **publiceringsmiljö**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
+När AEM är klar publiceras webbplatsens innehåll i **publiceringsmiljön**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
 
 Normalt ligger publiceringsmiljön innanför den demilitariserade zonen, dvs. är tillgänglig via Internet, men inte längre under det interna nätverkets fulla skydd.
 
-När AEM är en [communitywebbplats](/help/communities/overview.md), eller innehåller [Communities-komponenter](/help/communities/author-communities.md), inloggade webbplatsbesökare (medlemmar) kan interagera med communityfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan beviljas tillstånd att utföra aktiviteter som normalt bara är begränsade till författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
+När den AEM webbplatsen är en [communitywebbplats](/help/communities/overview.md), eller innehåller [communitykomponenter](/help/communities/author-communities.md), kan besökare på den inloggade webbplatsen (medlemmar) interagera med communityfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan beviljas tillstånd att utföra aktiviteter som normalt bara är begränsade till författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
 
 >[!NOTE]
 >
 >Tyvärr förekommer ibland en överlappning i den terminologi som används. Detta kan inträffa med:
 >
->* **Publicera/avpublicera**
+>* **Publish/Avpublicera**
 >  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
 >
 >* **Aktivera/inaktivera**
 >  Dessa termer är synonyma med publicera/avpublicera.
 >
->* **Replikering/replikering**
+>* **Replikera/replikera**
 >  Detta är de tekniska termer som används för att ange dataförflyttning (till exempel sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan, det vill säga vid publicering eller omvänd replikering av användarkommentarer.
 >
 
 #### Dispatcher {#dispatcher}
 
-Om du vill optimera prestanda för besökare på webbplatsen kan du **[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)** implementerar belastningsutjämning och cachning.
+**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)** implementerar belastningsutjämning och cachning för att optimera prestanda för besökare på din webbplats.

@@ -27,6 +27,6 @@ Med Forms kan du ange en anpassad XCI-fil som kan användas för återgivning. (
 
 Du kan välja alternativ som avbryter åsidosättningen för alternativen ovan. I så fall använder Forms värdena som anges i den anpassade XCI-filen.
 
-1. I administrationskonsolen klickar du på **Tjänster** > **Forms**.
+1. Klicka på **Tjänster** > **Forms** i administrationskonsolen.
 1. Markera eller avmarkera kryssrutan Använd XCI-standardalternativ för system. När det här alternativet är markerat använder Forms standardvärden för inställningarna för paket, skapare, producent och compressObjectStream. När det här alternativet är avmarkerat används de värden som anges i den anpassade XCI-filen.
-1. Klicka **Spara**.
+1. Klicka på **Spara**.

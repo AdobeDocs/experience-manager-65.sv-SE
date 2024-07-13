@@ -22,7 +22,7 @@ ht-degree: 2%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-The **Hantera program** och sidan Hantera program är ett sätt att visa och redigera programmetadata. Appens metadata krävs för att ett program ska kunna frisläppas till en återförsäljares butik. Detta kan omfatta vanliga metadata, iOS-metadata och skärmbilder. Se [Hantera apppanel](/help/mobile/phonegap-app-details-tile.md) för mer information om gemensamma metadata och iOS-metadata.
+Sidan **Hantera program** och Hantera program erbjuder ett sätt att visa och redigera programmetadata. Appens metadata krävs för att ett program ska kunna frisläppas till en återförsäljares butik. Detta kan omfatta vanliga metadata, iOS-metadata och skärmbilder. Mer information om vanliga metadata och iOS-metadata finns i [Hantera apppanel](/help/mobile/phonegap-app-details-tile.md).
 
 ## Redigera appdata {#editing-the-app-data}
 
@@ -32,7 +32,7 @@ Så här redigerar du appens metadata:
 
    ![chlimage_1-29](assets/chlimage_1-29.png)
 
-1. Om du vill visa eller redigera detaljer klickar du på&quot;..&quot; längst ned till höger i **Hantera program** platta.
+1. Om du vill visa eller redigera information klickar du på ... längst ned till höger i rutan **Hantera app** .
 
 1. Ange eller visa informationen på någon av de fem flikarna som finns, enligt bilden nedan.
 
@@ -42,14 +42,14 @@ Så här redigerar du appens metadata:
 
 Du kan redigera gemensamma metadata och IOS-metadata:
 
-* Välj **Avancerat** från programbeskrivningssidan.
+* Välj fliken **Avancerat** på programbeskrivningssidan.
 * Redigera eller visa vanliga metadata och IOS-metadata. Se siffrorna nedan för mer information.
 
 ![chlimage_1-31](assets/chlimage_1-31.png) ![chlimage_1-32](assets/chlimage_1-32.png)
 
 ## Lägg till och ta bort skärmbilder {#add-and-remove-screenshots}
 
-Du kan inkludera skärmbilder av appar för att lägga in metadata. Vissa leverantörer kräver korrekta skärmbilder när de skickar in appar till sin appbutik. Dessa bilder måste redan finnas i Assets. Se [Resursväljaren](../assets/search-assets.md#assetpicker) för att ladda upp skärmbilder.
+Du kan inkludera skärmbilder av appar för att lägga in metadata. Vissa leverantörer kräver korrekta skärmbilder när de skickar in appar till sin appbutik. Dessa bilder måste redan finnas i Assets. Se [Resursväljaren](../assets/search-assets.md#assetpicker) för att överföra skärmbilderna.
 
 ![chlimage_1-33](assets/chlimage_1-33.png)
 
@@ -57,7 +57,7 @@ Du kan inkludera skärmbilder av appar för att lägga in metadata. Vissa levera
 
 Så här lägger du till en resurs som skärmbild:
 
-1. I redigeringsläge för **Hantera program** klickar du på Lägg till (plusikon).
+1. I redigeringsläge på sidan **Hantera program** klickar du på Lägg till (plusikon).
 1. Markera resursen och klicka på **Välj** för att lägga till resursen.
 
    ![chlimage_1-34](assets/chlimage_1-34.png)

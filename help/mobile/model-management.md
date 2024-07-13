@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Modellhantering innefattar att skapa och hantera modeller för att associera med slutliga dataobjekt. Varje modell innehåller alla egenskaper och fältdefinitioner som behövs för att det ska bli enklare att skapa och återge objekt.
 
-Modellhantering innefattar att skapa **modeller**, **enheter** och **mellanslag**. I följande diagram visas förhållandet mellan AEM och modellerna.
+Modellhantering innebär att **modeller**, **entiteter** och **blanksteg** skapas. I följande diagram visas förhållandet mellan AEM och modellerna.
 
 ![chlimage_1-81](assets/chlimage_1-81.png)
 
@@ -50,7 +50,7 @@ Modeller används för att avgöra hur enheter skapas. De definierar vad som är
 >Det finns en modell utanför en app eftersom mer än en app kan använda den.
 >
 
-Information om hur du skapar och hanterar modeller på kontrollpanelen och i databasen finns i **[Models](/help/mobile/administer-mobile-apps.md)**.
+Mer information om hur du skapar och hanterar modeller på kontrollpanelen och i databasen finns i **[Modeller](/help/mobile/administer-mobile-apps.md)**.
 
 ### Enheter i innehållsmodell {#entities-in-content-model}
 
@@ -58,9 +58,9 @@ En entitet är en instans av en innehållsmodell. En enhet exponeras via innehå
 
 Om det finns befintligt AEM genereras en entitet med en modell och AEM innehållskällan. En sidenhet är till exempel ett kanal- och layoutoberoende objekt som genereras från en AEM och sidmodellen.
 
-Ändringar av det refererade innehållet i en entitet resulterar i en ändring av entiteten. Exempel: om en *cq:sida* uppdateras, så uppdateras även alla enheter som är baserade på den sidan.
+Ändringar av det refererade innehållet i en entitet resulterar i en ändring av entiteten. Om till exempel en *cq:page* uppdateras, uppdateras även entiteter som är baserade på den sidan.
 
-Information om hur du skapar anpassade entiteter från modeller finns i **[Arbeta med entiteter](/help/mobile/spaces-and-entities.md)**.
+Mer information om hur du skapar anpassade entiteter från modeller finns i **[Arbeta med entiteter](/help/mobile/spaces-and-entities.md)**.
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ På AEM sida är ett space ett bekvämt sätt att hantera enheter som är relate
 
 *Till exempel*,
 
-En användare har tre allmänna klassificeringar av enheter. Den ena är enbart avsedd för internt bruk, den andra är godkänd för allmänt bruk och den andra är för vanliga enheter som används av många appar. För att förenkla hanteringen skapar användaren tre blanksteg: *internal*, *public* (med både engelskt och franskt innehåll), och *vanlig* för att förvalta de berörda enheterna enligt nedan:
+En användare har tre allmänna klassificeringar av enheter. Den ena är enbart avsedd för internt bruk, den andra är godkänd för allmänt bruk och den andra är för vanliga enheter som används av många appar. För att göra det enkelt att hantera skapar användaren tre blanksteg: *internal*, *public* (med både engelskt och franskt innehåll) och *common* för hantering av de enheter som anges nedan:
 
 * /content/entities/internal
 * /content/entities/public/en
@@ -84,7 +84,7 @@ En användare har tre allmänna klassificeringar av enheter. Den ena är enbart 
 
 En tjänstslutpunkt anges för utrymmet så att det inbyggda klientbiblioteket kan begära en lista över innehållet i ett utrymme. Denna &quot;lista&quot; returneras som ett JSON-objekt.
 
-Se **[Blanksteg och entiteter](/help/mobile/spaces-and-entities.md)** för att skapa och publicera platser.
+Se **[Blanksteg och entiteter](/help/mobile/spaces-and-entities.md)** för att skapa och publicera blanksteg.
 
 >[!NOTE]
 >
@@ -94,4 +94,4 @@ Se **[Blanksteg och entiteter](/help/mobile/spaces-and-entities.md)** för att s
 
 Med mappar kan användarna ordna enheter efter behov och underlätta finare ACL-kontroll. Blanksteg kan innehålla mappar som hjälper dig att ytterligare ordna innehållet och resurserna i rymden. En användare kan skapa sin egen hierarki under ett space.
 
-Information om hur du skapar och hanterar mappar inom ett space finns i **[Arbeta med mappar i ett space](/help/mobile/spaces-and-entities.md)**.
+Mer information om hur du skapar och hanterar mappar inom ett space finns i **[Arbeta med mappar i ett space](/help/mobile/spaces-and-entities.md)**.

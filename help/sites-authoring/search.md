@@ -23,7 +23,7 @@ I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende 
 
 >[!NOTE]
 >
->Utanför redigeringsmiljön finns det även andra sökfunktioner, till exempel [Frågebyggaren](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
+>Utanför författarmiljön finns det även andra funktioner som kan användas för sökning, till exempel [Query Builder](/help/sites-developing/querybuilder-api.md) och [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md).
 
 ## Grunderna i sökning {#search-basics}
 
@@ -35,11 +35,11 @@ Med sökfältet kan du:
 
 * Sök efter ett specifikt nyckelord, en viss sökväg eller en viss tagg.
 * Filtrera enligt resursspecifika kriterier som ändrade datum, sidstatus, filstorlek osv.
-* Definiera och använda en [sparad sökning](#saved-searches) - baserat på ovanstående kriterier.
+* Definiera och använd en [sparad sökning](#saved-searches) baserat på ovanstående villkor.
 
 >[!NOTE]
 >
->Sökningen kan även anropas med snabbtangenten `/` (snedstreck) när sökfältet visas.
+>Sökningen kan också anropas med snabbtangenten `/` (snedstreck) när sökfältet är synligt.
 
 ## Sök och filtrera {#search-and-filter}
 
@@ -56,11 +56,11 @@ Så här söker och filtrerar du resurser:
 1. Om det behövs kan du ta bort platsfiltret (markera **X** på filtret som du vill ta bort) för att söka i alla konsoler/resurstyper.
 1. Resultaten visas, grupperade efter konsol och relaterad resurstyp.
 
-   Du kan antingen välja en specifik resurs (för ytterligare åtgärd) eller gå ned på detaljnivå genom att välja önskad resurstyp, till exempel **Visa alla platser**:
+   Du kan antingen välja en specifik resurs (för ytterligare åtgärd) eller fördjupa dig genom att välja den resurstyp som krävs, till exempel **Visa alla platser**:
 
    ![screen-shot_2019-03-05at101900](assets/screen-shot_2019-03-05at101900.png)
 
-1. Om du vill gå längre ned väljer du skensymbolen (längst upp till vänster) för att öppna sidopanelen **Filter och alternativ**.
+1. Om du vill gå vidare väljer du skensymbolen (längst upp till vänster) för att öppna sidopanelen **Filter och alternativ**.
 
    ![Filter och alternativ](do-not-localize/screen_shot_2018-03-23at101542.png)
 
@@ -71,7 +71,7 @@ Så här söker och filtrerar du resurser:
    * Sparade sökningar
    * Sökkatalog
    * Taggar
-   * Sökvillkor, till exempel Ändrade datum, Publiceringsstatus, LiveCopy-status.
+   * Sökvillkor, till exempel Ändrade datum, Publish-status, LiveCopy-status.
 
    >[!NOTE]
    >
@@ -79,8 +79,8 @@ Så här söker och filtrerar du resurser:
    >
    >
    >
-   >    * Beroende på vilken resurstyp du har valt, är t.ex. kriterierna Resurser och Communities begripligt specialiserade.
-   >    * Din instans som [Sök i Forms](/help/sites-administering/search-forms.md) kan anpassas (lämpligt för platsen i AEM).
+   >    * Beroende på vilken resurstyp du har valt, t.ex. är Assets- och Communities-kriterierna förståeligt specialiserade.
+   >    * Instansen som [Sök i Forms](/help/sites-administering/search-forms.md) kan anpassas (lämplig för platsen i AEM).
    >
    >
 
@@ -102,11 +102,11 @@ Så här söker och filtrerar du resurser:
 
 Förutom att söka efter en mängd olika aspekter kan du även spara en viss sökkonfiguration för hämtning och användning i ett senare skede:
 
-1. Definiera sökvillkor och välj **Spara**.
+1. Definiera sökvillkoren och välj **Spara**.
 
    ![screen-shot_2019-03-05at102613-1](assets/screen-shot_2019-03-05at102613-1.png)
 
-1. Tilldela ett namn och använd sedan **Spara** bekräfta:
+1. Tilldela ett namn och använd sedan **Spara** för att bekräfta:
 
    ![screen-shot_2019-03-05at102725](assets/screen-shot_2019-03-05at102725.png)
 
@@ -117,7 +117,7 @@ Förutom att söka efter en mängd olika aspekter kan du även spara en viss sö
 1. När du har sparat kan du:
 
    * Använd **x** (mot namnet på den sparade sökningen) för att starta en ny fråga (den sparade sökningen tas inte bort).
-   * **Redigera sparad sökning**, ändra sökvillkoren och sedan **Spara** igen.
+   * **Redigera sparad sökning**, ändra sökvillkoren och **Spara** igen.
 
 Du kan ändra sparade sökningar genom att markera den sparade sökningen och klicka på **Redigera sparad sökning** längst ned på sökpanelen.
 

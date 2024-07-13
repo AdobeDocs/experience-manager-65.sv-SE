@@ -24,7 +24,7 @@ Täck över kommentarsystemet med en anpassad version genom att kopiera det mins
 >
 >Innehållet i mappen /libs redigeras aldrig eftersom ominstallation eller uppgradering kan ta bort eller ersätta mappen /libs medan innehållet i mappen /apps lämnas orört.
 
-Använda [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) i en författarinstans börjar du med att skapa en sökväg i mappen /apps som är identisk med sökvägen till de överlagrade komponenterna i mappen /libs.
+Använd [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md) på en författarinstans och börja med att skapa en sökväg i mappen /apps som är identisk med sökvägen till de överlagrade komponenterna i mappen /libs.
 
 Sökvägen som dupliceras är:
 
@@ -32,29 +32,29 @@ Sökvägen som dupliceras är:
 
 Vissa noder i sökvägen är mappar och andra är komponenter.
 
-1. Bläddra till [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
+1. Gå till [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
 1. Skapa `/apps/social` (om den inte redan finns)
-   * Välj `/apps` nod
+   * Välj `/apps`-nod
    * **[!UICONTROL Create > Folder]**
       * Ange namn: `social`
-1. Välj `social` nod
+1. Välj `social`-nod
    * **[!UICONTROL Create]** > **[!UICONTROL Folder]**
       * Ange namn: `commons`
-1. Välj `commons` nod
+1. Välj `commons`-nod
    * **[!UICONTROL Create > Folder]**
       * Ange namn: `components`
-1. Välj `components` nod
+1. Välj `components`-nod
    * **[!UICONTROL Create > Folder]**.
       * Ange namn: `hbs`
-1. Välj `hbs` nod
+1. Välj `hbs`-nod
    * **[!UICONTROL Create]** > **[!UICONTROL Create Component]**
       * Ange etikett: `comments`
       * Ange titel: `Comments`
       * Ange beskrivning: `List of comments without showing avatars`
       * Supertyp: `social/commons/components/comments`
       * Ange grupp: `Communities`
-      * Klicka **[!UICONTROL Next]** tills **[!UICONTROL OK]**
-1. Välj `comments` nod
+      * Klicka på **[!UICONTROL Next]** till **[!UICONTROL OK]**
+1. Välj `comments`-nod
 
    * **[!UICONTROL Create]** > **[!UICONTROL Create Component]**
 
@@ -63,9 +63,9 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
       * Ange beskrivning: `A comment instance without avatars`
       * Supertyp: `social/commons/components/comments/comment`
       * Ange grupp: `.hidden`
-      * Klicka **[!UICONTROL Next]** tills **[!UICONTROL OK]**
+      * Klicka på **[!UICONTROL Next]** till **[!UICONTROL OK]**
    * Välj **[!UICONTROL Save All]**
-1. Ta bort standardinställningen `comments.jsp`
+1. Ta bort standardvärdet `comments.jsp`
    * Välj nod `/apps/social/commons/components/hbs/comments/comments.jsp`
    * Välj **[!UICONTROL Delete]**
 1. Ta bort standardkommentaren.jsp
@@ -75,12 +75,12 @@ Vissa noder i sökvägen är mappar och andra är komponenter.
 
 >[!NOTE]
 >
->Om du vill bevara arvskedjan väljer du `Super Type` (egenskap `sling:resourceSuperType`) för övertäckningskomponenterna anges med samma värde som `Super Type` av de komponenter som skall täckas, i detta fall
+>För att bevara arvskedjan anges `Super Type` (egenskap `sling:resourceSuperType`) för överläggskomponenterna till samma värde som `Super Type` för de komponenter som ska överlappas, i det här fallet:
 >
 >* `social/commons/components/comments`
 >* `social/commons/components/comments/comment`
 
-Övertäckningen är egen `Type`(egenskap `sling:resourceType`) måste vara en relativ självreferens så att innehåll som inte hittas i /apps sedan söks efter i /libs.
+Övertäckningens egna `Type`(egenskap `sling:resourceType`) måste vara en relativ självreferens så att innehåll som inte hittas i /apps sedan söks efter i /libs.
 * Namn: `sling:resourceType`
 * Typ: `String`
 * Värde: `social/commons/components/hbs/comments`

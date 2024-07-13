@@ -40,7 +40,7 @@ AEM Mobile tillhandahåller en plan för PhoneGap-appen för att skapa mobilappa
 
 Rotsidan för de mobilprogram du skapar i AEM visas i Apps-konsolen.
 
-Rotsidan lagras under egenskapen Målsökväg i programmet som angavs när programmet skapades (standardsökvägen är /content/phonegap/apps). Sidnamnet är egenskapen Name för programmet. Till exempel standardwebbadressen för rotsidan på webbplatsen med namnet `myphonegapapp` är `http://localhost:4502/content/phonegap/apps/myphonegapapp.html`.
+Rotsidan lagras under egenskapen Målsökväg i programmet som angavs när programmet skapades (standardsökvägen är /content/phonegap/apps). Sidnamnet är egenskapen Name för programmet. Standardwebbadressen för rotsidan på webbplatsen `myphonegapapp` är till exempel `http://localhost:4502/content/phonegap/apps/myphonegapapp.html`.
 
 ![chlimage_1-146](assets/chlimage_1-146.png)
 
@@ -48,7 +48,7 @@ Rotsidan lagras under egenskapen Målsökväg i programmet som angavs när progr
 
 De första underordnade sidorna på rotsidan är språkvariationerna för programmet. Namnet på varje sida är det språk som programmet skapas för. Engelska är till exempel namnet på den engelska varianten av programmet.
 
-**Obs!** Standardprogrammet för PhoneGap skapar bara ett engelskt program. Utvecklaren kan ändra planen så att den kan skapa fler språkvarianter.
+**Obs!** Standardversionen av PhoneGap skapar bara ett engelskt program. Utvecklaren kan ändra planen så att den kan skapa fler språkvarianter.
 
 ![chlimage_1-147](assets/chlimage_1-147.png)
 
@@ -67,19 +67,19 @@ Startsidan eller index.html-sidan för en språkvariant av ett program visas nä
 
 Mobilprogram bygger på en plan som definierar en sidstruktur och egenskaper. Du kan konfigurera följande programegenskaper:
 
-* **Titel:** Programtitel.
+* **Titel:** Programnamnet.
 * **Målsökväg:** Platsen i databasen där programmet lagras. Låt standardinställningen vara om du vill skapa en sökväg baserat på programnamnet.
 
-* **Namn:** Standardvärdet är värdet för egenskapen Title med blankstegstecken borttagna. Namnet används i CQ för att referera till programmet, till exempel för databasnoden som representerar programmet.
+* **Namn:** Standardvärdet är värdet på egenskapen Title där blankstegstecken tas bort. Namnet används i CQ för att referera till programmet, till exempel för databasnoden som representerar programmet.
 * **Beskrivning:** En beskrivning av programmet.
-* **Server-URL:** Den URL som innehåller OTA-innehåll (Over-the-Air) uppdateras i programmet. Standardvärdet är publiceringsserverns URL-adress för instansen som används för att skapa ett program (hämtas från externaliseringstjänsten). Observera att detta måste vara en publiceringsserverinstans i stället för en författare, vilket kräver autentisering.
+* **Server-URL:** Den URL som tillhandahåller OTA-innehåll (Over-the-Air) uppdateras i programmet. Standardvärdet är publiceringsserverns URL-adress för instansen som används för att skapa ett program (hämtas från externaliseringstjänsten). Observera att detta måste vara en publiceringsserverinstans i stället för en författare, vilket kräver autentisering.
 
 Du kan också tillhandahålla en bildfil som du kan använda som programminiatyrbild, välja vilken PhoneGap Build-konfiguration som ska användas och välja vilken mobilappsanalyskonfiguration som ska användas. Den här bilden används bara som miniatyrbild för att representera ditt mobilprogram i mobilappskonsolen i Experience Manager.
 
 Det finns ytterligare (och valfria) flikar för att bygga molntjänster och integrera plugin-programmet Adobe Mobile Services SDK i appen.
 
 * Bygg: Klicka på Hantera konfigurationer och konfigurera build.phonegap.com här. I listrutan kan du sedan välja den nya molntjänsten PhoneGap build.
-* Analyser: Klicka på Hantera konfigurationer och konfigurera [Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html) molntjänst. I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.
+* Analys: Klicka på Hantera konfigurationer och konfigurera molntjänsten [Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html). I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.
 
 >[!NOTE]
 >
@@ -90,7 +90,7 @@ I följande procedur används Touch-gränssnittet för att skapa ett mobilprogra
 1. Klicka på Appar på listen.
 1. Klicka på ikonen Skapa.
 
-   ![Ikonen Skapa indikeras av ett plustecken inuti en fyrkant.](do-not-localize/chlimage_1-7.png)
+   ![Ikonen Skapa indikeras av ett plustecken inuti en kvadrat.](do-not-localize/chlimage_1-7.png)
 
 1. (Valfritt) Ange en beskrivning för programmet på fliken Avancerat och ändra serverns URL om det behövs.
 1. (Valfritt) Om du använder PhoneGap Build för att kompilera programmet väljer du den konfiguration som ska användas på fliken Skapa.
@@ -117,26 +117,26 @@ När du har skapat ett mobilprogram kan du ändra egenskaperna.
 
 1. Om du vill ändra egenskapsvärden klickar du på ikonen Redigera.
 
-   ![Ikonen Redigera visas med en penna.](do-not-localize/chlimage_1-9.png)
+   ![Ikonen Redigera indikeras av en penna.](do-not-localize/chlimage_1-9.png)
 
 1. Konfigurera de grundläggande och avancerade egenskaperna och klicka sedan på ikonen Klar.
 
-   ![Klar-ikonen visas med en bockmarkeringssymbol.](do-not-localize/chlimage_1-10.png)
+   ![Klar-ikonen indikeras av en bockmarkeringssymbol.](do-not-localize/chlimage_1-10.png)
 
 #### Konfigurera en språkvariant för programmet {#configure-a-language-variation-of-the-application}
 
 1. Klicka på Appar på listen.
 1. Klicka för att gå in i det mobilprogram du vill redigera i apparna Admin Console. Välj den språkversion av programmet som ska konfigureras och klicka på ikonen Visa programegenskaper.
 
-   ![Ikonen Visa programegenskaper som indikeras av bokstaven I inuti en cirkel.](do-not-localize/chlimage_1-11.png)
+   ![Ikonen Visa programegenskaper som indikeras av bokstaven I i en cirkel.](do-not-localize/chlimage_1-11.png)
 
 1. Om du vill ändra egenskapsvärden klickar du på ikonen Redigera.
 
-   ![Ikonen Redigera visas med en penna.](do-not-localize/chlimage_1-12.png)
+   ![Ikonen Redigera indikeras av en penna.](do-not-localize/chlimage_1-12.png)
 
 1. Konfigurera egenskaperna på flikarna Grundläggande, Avancerat, Version och Analytics och klicka sedan på ikonen Done (Klar).
 
-   ![Klar-ikonen visas med en bockmarkeringssymbol.](do-not-localize/chlimage_1-13.png)
+   ![Klar-ikonen indikeras av en bockmarkeringssymbol.](do-not-localize/chlimage_1-13.png)
 
 ### Skapa innehåll för ett mobilprogram {#authoring-the-content-of-a-mobile-application}
 
@@ -290,7 +290,7 @@ Observera att bilder visas i karusellen för sidor som är kopplade till en bild
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
-**fliken Carousel-egenskaper**
+**Egenskapsfliken Carousel**
 
 Konfigurera karusellens beteende:
 
@@ -333,7 +333,7 @@ Fyll i listan med resultatet av en nyckelordssökning. Sökningen utförs på de
 
 **Avancerad sökning**
 
-Fyll i listan med en [Querybuilder](/help/sites-developing/querybuilder-api.md) fråga.
+Fyll i listan med en [Querybuilder](/help/sites-developing/querybuilder-api.md)-fråga.
 
 ### Bild {#image}
 

@@ -48,9 +48,9 @@ En telekomoperatör skickar månadsräkningar till kunderna via e-post. Fakturan
 ## Förutsättningar {#prerequisites}
 
 * Konfigurera en AEM författarinstans.
-* Installera [AEM Forms-tillägg](/help/forms/using/installing-configuring-aem-forms-osgi.md) on author instance
+* Installera [AEM Forms-tillägget](/help/forms/using/installing-configuring-aem-forms-osgi.md) på författarinstansen
 * Konfigurera MYSQL-databasen
-* Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudiekursen är baserade på MySQL-databasen och använder Oraclets [MySQL JDBC-databasdrivrutin](https://dev.mysql.com/downloads/connector/j/5.1.html).
+* Hämta JDBC-databasdrivrutin (JAR-fil) från databasprovidern. Exemplen i självstudien är baserade på MySQL-databasen och använder Oraclets [MySQL JDBC-databasdrivrutin](https://dev.mysql.com/downloads/connector/j/5.1.html).
 
 ## Steg 1: Planera interaktiv kommunikation {#step-plan-the-interactive-communication}
 
@@ -74,7 +74,7 @@ Så här skapar du en anatomi för den interaktiva kommunikationen med följande
 
 ![03-create-adaptive-form-main-image_small](assets/03-create-adaptive-form-main-image_small.png)
 
-Med en formulärdatamodell kan du koppla en interaktiv kommunikation till olika datakällor. AEM användarprofil, RESTful-webbtjänster, SOAP-baserade webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med en interaktiv kommunikation för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms dataintegrering](/help/forms/using/data-integration.md).
+Med en formulärdatamodell kan du koppla en interaktiv kommunikation till olika datakällor. Till exempel AEM användarprofil, RESTful-webbtjänster, SOAP webbtjänster, OData-tjänster och relationsdatabaser. En formulärdatamodell är ett enhetligt datarepresentationsschema för affärsenheter och tjänster som är tillgängliga i anslutna datakällor. Du kan använda formulärdatamodellen med en interaktiv kommunikation för att hämta data från anslutna datakällor. Mer information om formulärdatamodell finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
 
 **Mål:**
 
@@ -140,7 +140,7 @@ Interaktiv kommunikation kan distribueras via två kanaler: tryck och webb. Du k
 
 [](/help/forms/using/create-interactive-communication0.md)
 
-## Steg 6: Publicera interaktiv kommunikation {#step-publish-your-interactive-communication}
+## Steg 6: Publish din interaktiva kommunikation {#step-publish-your-interactive-communication}
 
 ![12-publish-your-adaptive-form-_small](assets/12-publish-your-adaptive-form-_small.png)
 

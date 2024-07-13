@@ -22,7 +22,7 @@ På den här sidan visas självhjälpsresurser för AEM Classic.
 >CIF Classic är i underhållsläge.
 >
 >* Nya projekt bör använda [AEM CIF](/help/commerce/cif/introduction.md).
->* Befintliga CIF Classic bör [migrera till AEM CIF](/help/commerce/cif/migration.md).
+>* Befintlig CIF Classic ska [migrera till AEM CIF](/help/commerce/cif/migration.md).
 
 ## CIF klassiska artiklar {#key-articles}
 

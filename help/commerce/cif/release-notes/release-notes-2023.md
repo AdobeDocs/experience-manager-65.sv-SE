@@ -39,7 +39,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 | Komponent | Version | Information |
 |:-------|:-------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| CIF | 2023.11.23.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2023.11.23.00.zip) |
+| CIF | 2023.11.23.00 | [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2023.11.23.00.zip) |
 | CIF Venia Reference Site | 2023.11.08 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2023.11.08) |
 
 ### Felkorrigeringar {#bug-fixes-november}
@@ -54,4 +54,4 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 ### Nyheter {#what-is-new-july}
 
-* Produktfilter finns i `ProductList` komponent
+* Produktfilterkopplingar i komponenten `ProductList`

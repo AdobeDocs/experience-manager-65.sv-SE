@@ -20,19 +20,19 @@ ht-degree: 0%
 
 Händelser som körnings- eller startfel registreras i programserverns loggfiler. Om du har problem med att distribuera till programservern kan du använda loggfilerna för att hitta problemet. Du kan öppna loggfilerna med valfri textredigerare.
 
-(JBoss) Följande loggfiler finns i `[appserver root]/server/'server'/log` katalog:
+(JBoss) Följande loggfiler finns i katalogen `[appserver root]/server/'server'/log`:
 
 * boot.log
-* server.log.*[yyyy-mm-dd]*
+* server.log.*[åååå-mm-dd]*
 * server.log
 
-(WebLogic) Domänloggfiler finns i `[appserverdomain]` katalogen och serverloggfilerna finns i `[appserverdomain]/servers/[appserver name]/logs` katalog:
+(WebLogic) Domänloggfilerna finns i katalogen `[appserverdomain]` och serverloggfilerna finns i katalogen `[appserverdomain]/servers/[appserver name]/logs`:
 
 * `access.log`
 * `[appserver name].log`
 * `[appserver name].out.[incremental number]`
 
-(WebSphere) Följande loggfiler finns i `[appserver root]/profiles/default/logs/[appserver name]` katalog:
+(WebSphere) Följande loggfiler finns i katalogen `[appserver root]/profiles/default/logs/[appserver name]`:
 
 * SystemErr.log
 * SystemOut.log

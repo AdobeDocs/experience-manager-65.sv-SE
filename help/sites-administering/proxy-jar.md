@@ -46,16 +46,16 @@ java -jar proxy.jar <host> <remoteport> <localport> [options]
 ### Alternativ {#options}
 
 * **q (tyst läge)** Skriver inte begäranden till konsolfönstret. Använd det här alternativet om du inte vill göra anslutningen långsammare eller om du loggar utdata till en fil (se alternativet -logfile).
-* **b (binärt läge)** Om du letar efter specifika bytekombinationer i trafiken ska du aktivera binärt läge. Utdata innehåller hexadecimala utdata och teckenutdata.
+* **b (binärt läge)** Aktivera binärt läge om du söker efter specifika bytekombinationer i trafiken. Utdata innehåller hexadecimala utdata och teckenutdata.
 * **t (tidsstämpelloggposter)** Lägger till en tidsstämpel i varje loggutdata. Tidsstämpeln är i sekunder, så den kanske inte är lämplig för att kontrollera enstaka begäranden. Använd den för att hitta händelser som inträffar vid en viss tidpunkt om du använder proxyservern under en längre tidsperiod.
-* **loggfil &lt;filename> (skriv till loggfil)** Skriver klient-server-konversationen till en loggfil. Den här parametern fungerar även i tyst läge.
-* **i &lt;numindentions> (lägg till indrag)** Varje aktiv anslutning är indragen för bättre läsbarhet. Standardvärdet är 16 nivåer. (Nytt i proxy.jar version 1.16).
+* **loggfil &lt;filnamn> (skriv till loggfil)** Skriver klient-server-konversationen till en loggfil. Den här parametern fungerar även i tyst läge.
+* **i &lt;numIndentions> (add indention)** Varje aktiv anslutning är indragen för bättre läsbarhet. Standardvärdet är 16 nivåer. (Nytt i proxy.jar version 1.16).
 
 ## Användning av proxyserververktyget {#uses-of-the-proxy-server-tool}
 
 Följande scenarier visar några av de syften som proxyserververktyget kan användas för:
 
-**Kontrollera om det finns cookies och deras värden**
+**Sök efter cookies och deras värden**
 
 I följande exempel på loggpost visas alla cookies och deras värden som klienten skickade på den sjätte anslutningen som öppnats sedan proxystart:
 
@@ -63,7 +63,7 @@ I följande exempel på loggpost visas alla cookies och deras värden som klient
 C-6-#000635 -> [Cookie: cq3session=7e39bc51-ac72-3f48-88a9-ed80dbac0693; Show=ShowMode; JSESSIONID=68d78874-cabf-9444-84a4-538d43f5064d ]
 ```
 
-**Söker efter rubriker och deras värden** I följande exempel på loggpost visas att servern kan skapa en keep-alive-anslutning och att innehållets längdhuvud är korrekt inställt:
+**Söker efter rubriker och deras värden** I följande loggpostexempel visas att servern kan skapa en keep-alive-anslutning och att innehållets längdhuvud har angetts korrekt:
 
 ```xml
 S-7-#000017 -> [Connection: Keep-Alive ]
@@ -71,9 +71,9 @@ S-7-#000017 -> [Connection: Keep-Alive ]
 S-7-#000107 -> [Content-Length: 124 ]
 ```
 
-**Kontrollera om Keep-Alive fungerar**
+**Kontrollerar om Keep-Alive fungerar**
 
-**Håll dig uppdaterad** innebär att en klient återanvänder anslutningen till servern för att överföra flera filer (sidkod, bilder, formatmallar osv.). Utan att hålla kontakten vid liv måste klienten upprätta en ny anslutning för varje begäran.
+**Keep-Alive** innebär att en klient återanvänder anslutningen till servern för att överföra flera filer (sidkod, bilder, formatmallar osv.). Utan att hålla kontakten vid liv måste klienten upprätta en ny anslutning för varje begäran.
 
 Så här kontrollerar du om keep-alive-funktionen fungerar:
 
@@ -91,7 +91,7 @@ Om du förlorar begäranden i en komplex serverinställning, till exempel med en
 1. Starta en annan proxy efter en brandvägg
 1. Använd dessa för att se hur långt förfrågningarna kommer.
 
-**Hängande förfrågningar**
+**Förfrågningar som hänger**
 
 Om du ibland får väntande förfrågningar:
 
@@ -149,7 +149,7 @@ Om AEM körs på localhost:4303 startar du proxyservern enligt följande:
 java -jar proxy.jar localhost 4303 4444 -logfile test.log
 ```
 
-Du kan komma åt servern (`localhost:4303`) utan proxyservern, men om du kommer åt den via `localhost:4444`loggar proxyservern kommunikationen. Öppna en webbläsare och öppna en sida som skapats med mallen ovan. Titta sedan på loggfilen.
+Du kan komma åt servern (`localhost:4303`) utan proxyservern, men om du kommer åt den via `localhost:4444` loggar proxyservern kommunikationen. Öppna en webbläsare och öppna en sida som skapats med mallen ovan. Titta sedan på loggfilen.
 
 >[!NOTE]
 >

@@ -32,7 +32,7 @@ Se följande:
 * [Skapa Adobe Campaign Forms i AEM](/help/sites-authoring/adobe-campaign-forms.md)
 * [Rikta in er på Adobe Campaign](/help/sites-authoring/target-adobe-campaign.md)
 
-Du måste ha [integrerad AEM med Adobe Campaign](/help/sites-administering/campaign.md).
+Du måste tidigare ha [integrerat AEM med Adobe Campaign](/help/sites-administering/campaign.md).
 
 Om du dessutom vill anpassa dina integreringar ska du läsa följande avsnitt:
 

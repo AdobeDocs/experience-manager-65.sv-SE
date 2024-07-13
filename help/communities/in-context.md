@@ -20,7 +20,7 @@ ht-degree: 0%
 
 För AEM Communities kan moderering utföras av administratörer och betrodda communitymedlemmar direkt på den publicerade sidan där communityinnehållet publicerades.
 
-När en [modereringskonsol](moderation.md)innehåller den information som visas för innehållet en länk till den publicerade sidan som ger åtkomst till ytterligare modereringsåtgärder som är tillgängliga vid moderering i sitt sammanhang.
+När du använder en [moderationskonsol](moderation.md) innehåller den information som visas för innehållet en länk till den publicerade sidan som ger åtkomst till ytterligare modereringsåtgärder som är tillgängliga vid moderering i kontext.
 
 ## Modereringsåtgärder {#moderation-actions}
 
@@ -38,11 +38,11 @@ Användargränssnittet som visas för moderatorn i publiceringsinstansen finns i
 
 ## Exempel {#example}
 
-Använda [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) webbplats skapad när [Komma igång med AEM Communities](getting-started.md), kan du skapa en tråd i ett forum där du kan använda olika modereringsaktiviteter i publiceringsmiljön. Se nedan.
+Om du använder webbplatsen [Geometrixx Engage](http://localhost:4503/content/sites/engage/en.html) som skapades när [Komma igång med AEM Communities](getting-started.md) kan du konfigurera en tråd i ett forum där olika modereringsaktiviteter i Publish-miljön kan användas. Se nedan.
 
-Aaron McDonald (`aaron.mcdonald@mailinator.com`) identifierades som en betrodd communitymedlem genom att han lades till i gruppen community-engage-moderators när webbplatsen skapades.
+Aaron McDonald (`aaron.mcdonald@mailinator.com`) identifierades som en betrodd community-medlem genom att han lades till i gruppen community-engage-moderators när webbplatsen skapades.
 
-Rebekah Larsen (`rebekah.larsen@trashymail.com`) kan läggas till som medlem i en community-engage-members-grupp med [Medlemskonsol](members.md).
+Rebekah Larsen (`rebekah.larsen@trashymail.com`) kan läggas till som medlem i en community-engage-members-grupp med [Members console](members.md).
 
 Mer information om användargrupper finns på [Hantera användare och användargrupper](users.md).
 
@@ -51,7 +51,7 @@ Mer information om användargrupper finns på [Hantera användare och användarg
 * Logga in som Rebekah Larsen (rebekah.larsen@trashymail.com)
 
    * Välj forum
-   * Välj nytt inlägg
+   * Välj ny Post
    * Ange ämne
 
      När nektaret ska bytas ut mot födoämnesraden
@@ -60,14 +60,14 @@ Mer information om användargrupper finns på [Hantera användare och användarg
 
      Jag har inte haft särskilt stor framgång när jag lägger upp en matare för hummerfåglar varje år. De verkar komma en dag eller två, då är det klart. Jag ändrar det en gång i veckan är det för långt? Måste jag ändra den tidigare?
 
-   * Välj inlägg
+   * Välj Post
    * Välj Logga ut
 
 * Logga in som Aaron McDonald (aaron.mcdonald@mailinator.com)
 
    * Välj forum
    * Välj Läs mer för ämnet Hummingbird
-   * Ange kommentaren för Posta svar
+   * Skriv kommentaren till Post Reply
 
      Jag byter min en gång i veckan och får dem från maj till oktober.
 
@@ -78,7 +78,7 @@ Mer information om användargrupper finns på [Hantera användare och användarg
 
    * Välj forum
    * Välj Läs mer för ämnet Hummingbird
-   * Ange kommentaren för Posta svar
+   * Skriv kommentaren till Post Reply
 
      Jag säljer nektar och feeds - gå till https://my.viral.url/
 
@@ -95,9 +95,9 @@ En anonym besökare kan endast visa forumet, men inte publicera något innehåll
 
 ### Ny medlem (#4) {#new-member}
 
-Logga in som administratör och lägg till Boyd Larsen (boyd.larsen@dodgit.com) som ny medlem i en community-engage-members-grupp med [Medlemskonsol](members.md)och sedan logga ut.
+Logga in som administratör och lägg till Boyd Larsen (boyd.larsen@dodgit.com) som ny medlem i en community-engage-members-grupp med [Medlemskonsolen](members.md). Logga sedan ut.
 
-Vid publicering loggar du in som Boyd Larsen och öppnar tråden genom att välja `Forum`och sedan `Read more` för den hummingbird-posten.
+Vid publicering loggar du in som Boyd Larsen och öppnar tråden genom att välja `Forum` och sedan `Read more` för den hummingbird-posten.
 
 Obs!
 
@@ -122,7 +122,7 @@ Obs!
 
 ![community-admin-forum](assets/community-admin-forum.png)
 
-Välj menyalternativet Administration så att du kan komma åt [modereringskonsol](moderation.md) från publiceringsmiljön.
+Välj menyalternativet Administration så att du kan komma åt [moderationskonsolen](moderation.md) från Publish-miljön.
 
 Observera att för en administratör är allt modereringsbart innehåll synligt, inte bara innehåll från Geometrixx Engage Community-webbplatsen.
 
@@ -134,7 +134,7 @@ Logga ut.
 
 ### Community Moderator (#2) {#community-moderator}
 
-Logga in som Aaron McDonald (`aaron.mcdonal@mailinator.com`), som är en community-moderator, och få tillgång till tråden genom att välja Forum och sedan Läs mer om den hummerande fågelposten.
+Logga in som Aaron McDonald (`aaron.mcdonal@mailinator.com`), moderator för communityn, och få åtkomst till tråden genom att välja Forum och sedan Läs mer för den hummingbird-posten.
 
 Obs!
 
@@ -145,7 +145,7 @@ Obs!
 
 ![community-forum-moderator](assets/community-forum-moderator.png)
 
-Välj menyalternativet Administration så att du kan komma åt [modereringskonsol](moderation.md) från publiceringsmiljön.
+Välj menyalternativet Administration så att du kan komma åt [moderationskonsolen](moderation.md) från Publish-miljön.
 
 Observera att för en community-moderator är det bara moderatorbart innehåll från Geometrixx Engage community-webbplatsen som visas.
 
@@ -157,7 +157,7 @@ Logga ut.
 
 ### Innehållsförfattare (#1) {#content-author}
 
-Logga in som Rebekah Larsen (`rebekah.larsen@mailinator.com`), som är en community-medlem som startade tråden, och som kommer åt tråden genom att välja Forum och sedan Läs mer för den hummerande fågelposten.
+Logga in som Rebekah Larsen (`rebekah.larsen@mailinator.com`), en communitymedlem som startade tråden, och gå till tråden genom att välja Forum och sedan Läs mer för den hummeringBirkelposten.
 
 Obs!
 

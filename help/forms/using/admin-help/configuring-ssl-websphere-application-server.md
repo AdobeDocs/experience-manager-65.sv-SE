@@ -50,42 +50,42 @@ För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det 
 ### Skapa en Windows-användare för WebSphere {#create-a-windows-user-for-websphere}
 
 1. Logga in i Windows med ett administratörsanvändarkonto.
-1. Välj **Start > Control Panel > Administrative Tools > Computer Management > Local Users and Groups**.
+1. Välj **Start > Kontrollpanelen > Administrationsverktyg > Datorhantering > Lokala användare och grupper**.
 1. Högerklicka på Användare och välj **Ny användare**.
 1. Skriv ett användarnamn och lösenord i rutorna och ange eventuell annan information som du vill ha i de övriga rutorna.
-1. Avmarkera **Användaren måste ändra lösenordet vid nästa inloggning**, klicka **Skapa** och klicka sedan på **Stäng**.
-1. Klicka **Användare**, högerklicka på den användare du skapade och välj **Egenskaper**.
-1. Klicka på **medlem i** och sedan klicka på **Lägg till**.
-1. Skriv i rutan Ange de objektnamn du vill markera `Administrators`klickar du på Kontrollera namn för att se till att gruppnamnet är korrekt.
-1. Klicka **OK** och sedan klicka **OK** igen.
+1. Avmarkera **Användaren måste ändra lösenordet vid nästa inloggning**, klicka på **Skapa** och klicka sedan på **Stäng**.
+1. Klicka på **Användare**, högerklicka på den användare du skapade och välj **Egenskaper**.
+1. Klicka på fliken **Medlem i** och sedan på **Lägg till**.
+1. Skriv `Administrators` i rutan Ange de objektnamn som ska markeras och klicka på Kontrollera namn för att se till att gruppnamnet är korrekt.
+1. Klicka på **OK** och sedan på **OK** igen.
 1. Välj **Start > Kontrollpanelen > Administrationsverktyg > Lokal säkerhetsprincip > Lokala profiler**.
 1. Klicka på Tilldelning av användarrättigheter, högerklicka sedan på Agera som en del av operativsystemet och välj Egenskaper.
-1. Klicka **Lägg till användare eller grupp**.
-1. Skriv namnet på den användare som du skapade i steg 4 i rutan Ange de objektnamn som ska väljas. Klicka sedan på **Kontrollera namn** för att säkerställa att namnet är korrekt, och klicka sedan på **OK**.
-1. Klicka **OK** för att stänga funktionsmakrot som en del av dialogrutan för operativsystemsegenskaper.
+1. Klicka på **Lägg till användare eller grupp**.
+1. Skriv namnet på den användare som du skapade i steg 4 i rutan Ange de objektnamn som ska väljas, klicka på **Kontrollera namn** för att kontrollera att namnet är korrekt och klicka sedan på **OK**.
+1. Klicka på **OK** för att stänga funktionsmakrot som en del av dialogrutan för operativsystemsegenskaper.
 
 ### Konfigurera WebSphere för att använda den nyskapade användaren som administratör {#configure-websphere-to-use-the-newly-created-user-as-administrator}
 
 1. Kontrollera att WebSphere körs.
-1. I administrationskonsolen för WebSphere väljer du **Säkerhet > Global säkerhet**.
-1. Under Administrativ säkerhet väljer du **Administrativa användarroller**.
+1. Välj **Säkerhet > Global säkerhet** i administrationskonsolen för WebSphere.
+1. Välj **Administrativa användarroller** under Administrativ säkerhet.
 1. Klicka på Lägg till och gör följande:
 
-   1. Typ **&amp;ast;** i sökrutan och klicka på Sök.
-   1. Klicka **Administratör** under roller.
+   1. Skriv **&amp;ast;** i sökrutan och klicka på Sök.
+   1. Klicka på **Administratör** under roller.
    1. Lägg till den nyskapade användaren i Mappad till roll och mappa den till Administratör.
 
-1. Klicka **OK** och spara ändringarna.
+1. Klicka på **OK** och spara ändringarna.
 1. Starta om WebSphere-profilen.
 
 ## Aktivera administrativ säkerhet {#enable-administrative-security}
 
-1. I administrationskonsolen för WebSphere väljer du **Säkerhet > Global säkerhet**.
-1. Klicka **Guiden Konfigurera säkerhet**.
-1. Säkerställ **Aktivera programsäkerhet** kryssrutan är aktiverad. Klicka på **Nästa**.
-1. Välj **Federerade databaser** och klicka **Nästa**.
+1. Välj **Säkerhet > Global säkerhet** i administrationskonsolen för WebSphere.
+1. Klicka på **Guiden Säkerhetskonfiguration**.
+1. Kontrollera att kryssrutan **Aktivera programsäkerhet** är aktiverad. Klicka på **Nästa**.
+1. Välj **Federated databaser** och klicka på **Nästa**.
 1. Ange de autentiseringsuppgifter som du vill ange och klicka på **Nästa**.
-1. Klicka **Slutför**.
+1. Klicka på **Slutför**.
 1. Starta om WebSphere-profilen.
 
    WebSphere börjar använda standardnyckelbehållaren och förtrostore.
@@ -95,31 +95,31 @@ För att aktivera SSL behöver WebSphere åtkomst till ett användarkonto i det 
 Du kan skapa förtroendelager och nyckelbehållare med hjälp av nyckelverktyget eller Admin Console. Se till att installationssökvägen för WebSphere inte innehåller parenteser så att nyckelmannen fungerar som den ska.
 
 1. I administrationskonsolen för WebSphere väljer du **Säkerhet > SSL-certifikat och nyckelhantering**.
-1. Klicka **Nyckelbehållare och certifikat** under Relaterade artiklar.
-1. I **Användning av nyckelbehållare** listruta, kontrollera att **SSL-nyckelbehållare** är markerat. Klicka **Nytt**.
+1. Klicka på **Nyckelarkiv och certifikat** under Relaterade objekt.
+1. I listrutan **Nyckelarkiv använder** kontrollerar du att **SSL-nyckelbehållare** är markerat. Klicka på **Ny**.
 1. Ange ett logiskt namn och en beskrivning.
-1. Ange sökvägen där du vill att nyckelbehållaren ska skapas. Om du redan har skapat en nyckelbehållare via ikeyman anger du sökvägen till nyckelbehållaren.
+1. Ange sökvägen där du vill att nyckelbehållaren ska skapas. Om du redan har skapat en nyckelbehållare via ikeyman anger du sökvägen till nyckellagringsfilen.
 1. Ange och bekräfta lösenordet.
 1. Välj typ av nyckelbehållare och klicka på **Använd**.
 1. Spara huvudkonfigurationen.
-1. Klicka **Personligt certifikat**.
+1. Klicka på **Personligt certifikat**.
 1. Om du redan har skapat en nyckelbehållare med nyckelhanteraren visas ditt certifikat. Annars måste du lägga till ett nytt självsignerat certifikat genom att utföra följande steg:
 
    1. Välj **Skapa > självsignerat certifikat**.
-   1. Ange lämpliga värden i certifikatformuläret. Se till att du behåller Alias och eget namn som fullständigt kvalificerat domännamn för datorn.
+   1. Ange lämpliga värden i certifikatformuläret. Se till att du behåller Alias och nätverksnamn som fullständigt kvalificerat domännamn för datorn.
    1. Klicka på **Använd**.
 
 1. Upprepa steg 2 till 10 för att skapa en truststore.
 
 ## Tillämpa anpassad keystore och truststore på servern {#apply-custom-keystore-and-truststore-to-the-server}
 
-1. I WebSphere-administrationskonsolen väljer du **Säkerhet > SSL-certifikat och nyckelhantering**.
+1. I WebSphere administrationskonsol väljer du **Säkerhet > SSL-certifikat och nyckelhantering**.
 1. Klicka på **Hantera konfiguration** av slutpunktssäkerhet. Den lokala topologikartan öppnas.
 1. Under Inkommande väljer du direkt underordnad noder.
 1. Under Relaterade objekt väljer du **SSL-konfigurationer**.
 1. Välj **NodeDeafultSSLSetting**.
 1. I listrutorna för förvaltararkivnamn och nyckelbehållarnamn väljer du det anpassade förvaltararkivet och nyckelbehållaren som du skapade.
-1. Klicka **Använd**.
+1. Klicka på **Använd**.
 1. Spara huvudkonfigurationen.
 1. Starta om WebSphere-profilen.
 
@@ -127,9 +127,9 @@ Du kan skapa förtroendelager och nyckelbehållare med hjälp av nyckelverktyget
 
 ## Aktivera stöd för AEM {#enabling-support-for-aem-forms-natives}
 
-1. I administrationskonsolen för WebSphere väljer du **Säkerhet > Global säkerhet**.
-1. Expandera i avsnittet Autentisering **RMI/IP-säkerhet** och klicka **CSIv2 inkommande kommunikation**.
-1. Se till att **SSL-stöd** väljs i listrutan Transport.
+1. Välj **Säkerhet > Global säkerhet** i administrationskonsolen för WebSphere.
+1. Expandera **RMI/IIOP-säkerhet** i avsnittet Autentisering och klicka på **Inkommande CSIv2-kommunikation**.
+1. Kontrollera att **SSL-supported** är markerat i listrutan Transport.
 1. Starta om WebSphere-profilen.
 
 ## Konfigurera WebSphere för att konvertera URL:er som börjar med https {#configuring-websphere-to-convert-urls-that-begins-with-https}
@@ -143,7 +143,7 @@ Om du vill konvertera en URL som börjar med https lägger du till ett signerarc
 1. Klicka på Hämta från port och utför följande åtgärder:
 
    * Skriv URL-adressen i rutan Värd. Skriv till exempel `www.paypal.com`.
-   * I rutan Port skriver du `443`. Den här porten är standardport för SSL.
+   * Skriv `443` i rutan Port. Den här porten är standardport för SSL.
    * Skriv ett alias i rutan Alias.
 
 1. Klicka på Hämta signerarinformation och kontrollera sedan att informationen har hämtats.
@@ -161,10 +161,10 @@ IBM WebSphere tillåter inte flera anrop till ORB.init() när Global Security ä
 
 Utför följande steg för att ange att porten ska vara dynamisk och för att lösa problemet:
 
-1. I administrationskonsolen för WebSphere väljer du **Servrar** > **Servertyper** > **WebSphere-programserver**.
+1. I administrationskonsolen för WebSphere väljer du **Servrar** > **Servertyper** > **Programserver för WebSphere**.
 1. Välj servern i avsnittet Inställningar.
-1. I **Konfiguration** flik, under **Kommunikation** sektion, expandera **Portar** och klicka **Information**.
-1. Klicka på följande portnamn och ändra **portnummer** till 0 och klicka på **OK**.
+1. Expandera **Portar** under **Kommunikation** på fliken **Konfiguration** och klicka på **Information**.
+1. Klicka på följande portnamn, ändra **portnummer** till 0 och klicka på **OK**.
 
    * `ORB_LISTENER_ADDRESS`
    * `SAS_SSL_SERVERAUTH_LISTENER_ADDRESS`
@@ -173,8 +173,8 @@ Utför följande steg för att ange att porten ska vara dynamisk och för att l�
 
 ## Konfigurera filen sling.properties {#configure-the-sling-properties-file}
 
-1. Öppna `[aem-forms_root]`\crx-repository\launchpad\sling.properties fil för redigering.
-1. Leta reda på `sling.bootdelegation.ibm` egenskap och lägg till `com.ibm.websphere.ssl.*`till värdefältet. Det uppdaterade fältet ser ut så här:
+1. Öppna `[aem-forms_root]`\crx-repository\launchpad\sling.properties för redigering.
+1. Leta reda på egenskapen `sling.bootdelegation.ibm` och lägg till `com.ibm.websphere.ssl.*` i värdefältet. Det uppdaterade fältet ser ut så här:
 
    ```shell
    sling.bootdelegation.ibm=com.ibm.xml.*, com.ibm.websphere.ssl.*

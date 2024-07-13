@@ -34,7 +34,7 @@ Appdefinitioner är ett sätt att identifiera vilka utrymmen och andra konfigura
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. Välj **Appar** från **Mobil** och klicka **Skapa.**
+1. Välj **Appar** från **Mobil** och klicka på **Skapa.**
 
    Välj **App** och ange information för att skapa din nya app.
 

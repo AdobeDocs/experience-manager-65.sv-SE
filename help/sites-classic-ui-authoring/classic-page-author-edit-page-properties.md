@@ -28,7 +28,7 @@ Egenskaperna fördelas på flera flikar:
 
 * **Titel**
 
-  Sidans rubrik visas på olika platser. Till exempel **Webbplatser** tabblista och **Webbplatser** kort-/listvyer.
+  Sidans rubrik visas på olika platser. Till exempel fliklistan **Webbplatser** och vyerna **Webbplatser** kort/lista.
 
   Detta är ett obligatoriskt fält.
 
@@ -48,13 +48,13 @@ Egenskaperna fördelas på flera flikar:
 
   En växlingsknapp som anger om sidan visas eller döljs i sidnavigeringen.
 
-* **Sidrubrik**
+* **Sidtitel**
 
   En rubrik som ska användas på sidan.
 
-* **Navigeringsrubrik**
+* **Navigeringstitel**
 
-  Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom visas **Titel** används.
+  Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom används **Title**.
 
 * **Underrubrik**
 
@@ -80,7 +80,7 @@ Egenskaperna fördelas på flera flikar:
 
   Här kan du ange en fågel-URL för sidan. Det gör att du kan ha en kortare och mer uttrycksfull URL.
 
-  Om Vanity-URL:en till exempel är inställd på w `elcome`till den sida som identifieras av sökvägen / `v1.0/startpage`för webbplatsen h `ttp://example.com,` sedan h `ttp://example.com/welcome`skulle vara den vanligaste URL:en för h `ttp://example.com/content/v1.0/startpage`
+  Om Vanity-URL:en till exempel är inställd på w `elcome` för den sida som identifieras av sökvägen / `v1.0/startpage` för webbplatsen h `ttp://example.com,` , blir h `ttp://example.com/welcome` användar-URL:en för h `ttp://example.com/content/v1.0/startpage`
 
   >[!CAUTION]
   >
@@ -105,7 +105,7 @@ Egenskaperna fördelas på flera flikar:
 
 * **Design**
 
-  Ange [design](/help/sites-developing/designer.md) som ska användas för den här sidan.
+  Ange den [design](/help/sites-developing/designer.md) som ska användas för den här sidan.
 
 * **Alias**
 
@@ -151,21 +151,21 @@ Egenskaperna fördelas på flera flikar:
 
   Definiera egenskaper för [molntjänster](/help/sites-developing/extending-cloud-config.md).
 
-### Personalisering {#personalization}
+### Personalization {#personalization}
 
-* **Personalisering**
+* **Personalization**
 
-  Välj en [Varumärke som anger ett omfång för målanpassning](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
+  Välj ett [varumärke om du vill ange ett omfång för ](/help/sites-classic-ui-authoring/classic-personalization-campaigns.md).
 
 ### Behörigheter {#permissions}
 
 * **Behörigheter** (pekoptimerat användargränssnitt)
 
-  Visa [effektiva behörigheter och lägga till nya behörigheter](/help/sites-administering/user-group-ac-admin.md).
+  Visa [gällande behörigheter och lägg till nya behörigheter](/help/sites-administering/user-group-ac-admin.md).
 
 ### Blueprint {#blueprint}
 
-* **Blueprint**
+* **Utskrift**
 
   Definiera egenskaper för en designsida i [hantering av flera webbplatser](/help/sites-administering/msm.md). Styr under vilka omständigheter ändringar ska spridas till Live Copy.
 
@@ -177,7 +177,7 @@ Egenskaperna fördelas på flera flikar:
 
 ### Webbplatsstruktur {#site-structure}
 
-* Tillhandahålla länkar till sidor som innehåller funktioner för hela webbplatsen, till exempel **Registreringssida**, **Offlinesida**, bland annat.
+* Tillhandahåll länkar till sidor som innehåller funktioner för hela webbplatsen, till exempel **Registreringssida**, **Offlinesida**.
 
 ## Redigera sidegenskaper {#editing-page-properties-2}
 
@@ -187,8 +187,8 @@ Sidegenskaper definierar de olika egenskaperna för sidan, till exempel rubriker
 
 1. Öppna sidan som du vill redigera.
 
-1. Öppna **Sida** välj **Sidegenskaper...**
+1. Öppna fliken **Sida** och välj sedan **Sidegenskaper..** i sidöppningen.
 
    Då öppnas en dialogruta med flera flikar.
 
-1. Gör de ändringar du vill och klicka sedan på **OK** att spara.
+1. Gör de ändringar du vill och klicka sedan på **OK** för att spara.

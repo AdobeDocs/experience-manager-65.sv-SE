@@ -20,7 +20,7 @@ ht-degree: 1%
 
 ## Ökning {#overview}
 
-Tillägget AEM Brackets ger ett smidigt arbetsflöde för att redigera AEM komponenter och klientbibliotek och utnyttjar kraften i [Parenteser](https://brackets.io/) kodredigeraren som ger åtkomst från kodredigeraren till Photoshop-filer och -lager. Den enkla synkronisering som tillägget ger (ingen Maven eller filvalv krävs) ökar utvecklarens effektivitet och hjälper även gränssnittsutvecklare med begränsade AEM att delta i projekt. Det här tillägget har även stöd för [HTML-mallspråk (HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), vilket minskar komplexiteten i JSP och gör komponentutvecklingen enklare och säkrare.
+AEM Brackets Extension ger ett smidigt arbetsflöde för att redigera AEM komponenter och klientbibliotek och utnyttjar kraften i kodredigeraren [Brackets](https://brackets.io/) som ger åtkomst till Photoshop-filer och -lager inifrån kodredigeraren. Den enkla synkronisering som tillägget ger (ingen Maven eller filvalv krävs) ökar utvecklarens effektivitet och hjälper även gränssnittsutvecklare med begränsade AEM att delta i projekt. Det här tillägget har också stöd för [HTML Template Language (HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), vilket gör JSP-komponenten enklare och säkrare.
 
 ![chlimage_1-53](assets/chlimage_1-53a.png)
 
@@ -31,7 +31,7 @@ De viktigaste funktionerna i AEM Brackets Extension är:
 * Automatisk synkronisering av ändrade filer till AEM.
 * Manuell dubbelriktad synkronisering av filer och mappar.
 * Fullständig innehållspaketsynkronisering av projektet.
-* HTML-kodkomplettering för uttryck och `data-sly-*` blockprogramsatser.
+* HTML-kodkomplettering för uttryck och `data-sly-*` blocksatser.
 
 Brackets innehåller dessutom många användbara funktioner för AEM teckensnittsutvecklare:
 
@@ -46,18 +46,18 @@ Brackets innehåller dessutom många användbara funktioner för AEM teckensnitt
 
 AEM Brackets Extension har stöd för Brackets version 1.0 eller senare.
 
-Hämta den senaste Brackets-versionen från [hakparenteser.io](https://brackets.io/).
+Hämta den senaste Brackets-versionen från [brackets.io](https://brackets.io/).
 
 ### Tillägget {#the-extension}
 
 Så här installerar du tillägget:
 
-1. Öppna Brackets. På menyn **Fil**, markera **Extension Manager...**
-1. Retur **AEM** i sökfältet och leta efter **AEM Brackets Extension**.
+1. Öppna Brackets. I menyn **Arkiv** väljer du **Extension Manager..**
+1. Ange **AEM** i sökfältet och sök efter **AEM Brackets Extension**.
 
    ![chlimage_1-54](assets/chlimage_1-54a.png)
 
-1. Klicka **Installera**.
+1. Klicka på **Installera**.
 1. Stäng dialogrutan och Extension Manager när installationen är klar.
 
 ## Komma igång {#getting-started}
@@ -68,21 +68,21 @@ När tillägget har installerats kan du börja utveckla AEM komponenter genom at
 
 Projektet måste innehålla minst
 
-1. a `jcr_root` mapp (till exempel `myproject/jcr_root`)
+1. en `jcr_root`-mapp (till exempel `myproject/jcr_root`)
 
-1. a `filter.xml` fil (till exempel `myproject/META-INF/vault/filter.xml`); för mer information om strukturen på `filter.xml` filen finns i [Filterdefinition för arbetsyta](https://jackrabbit.apache.org/filevault/filter.html).
+1. en `filter.xml`-fil (till exempel `myproject/META-INF/vault/filter.xml`). Mer information om strukturen för filen `filter.xml` finns i [Workspace-filterdefinitionen](https://jackrabbit.apache.org/filevault/filter.html).
 
-In Brackets&#39; **Fil** meny, välja **Öppna mapp...** och välj antingen `jcr_root` eller den överordnade projektmappen.
+Välj **Öppna mapp..** på menyn **Arkiv** i hakparenteser och välj antingen mappen `jcr_root` eller den överordnade projektmappen.
 
 >[!NOTE]
 >
->Om du inte har ett eget projekt med ett innehållspaket kan du testa [HTL TodoMVC-exempel](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc). På GitHub klickar du på **Ladda ned ZIP**, extrahera filerna lokalt och enligt instruktionerna ovan öppnar du `jcr_root` i Brackets. Följ sedan stegen nedan för att konfigurera **Projektinställningar** och slutligen överföra hela paketet till din AEM genom att göra en **Exportera innehållspaket** enligt instruktionerna längre ned i avsnittet Fullständig synkronisering av innehållspaket.
+>Om du inte har ett eget projekt med ett innehållspaket kan du prova [HTL TodoMVC-exemplet](https://github.com/Adobe-Marketing-Cloud/aem-sightly-sample-todomvc). På GitHub klickar du på **Hämta ZIP**, extraherar filerna lokalt och öppnar mappen `jcr_root` i Brackets enligt instruktionerna ovan. Följ sedan stegen nedan för att konfigurera **projektinställningarna** och överför slutligen hela paketet till AEM utvecklingsinstans genom att göra ett **Exportera innehållspaket** enligt anvisningarna längre ned i avsnittet Fullständig synkronisering av innehållspaket.
 >
->Efter dessa steg bör du kunna komma åt `/content/todo.html` URL-adressen till din AEM-utvecklingsinstans och du kan börja göra ändringar i koden i hakparenteser och se hur ändringarna synkroniserades direkt till den AEM servern när du gjort en uppdatering i webbläsaren.
+>Efter de här stegen bör du kunna komma åt URL:en `/content/todo.html` för din AEM-utvecklingsinstans och du kan börja göra ändringar i koden i hakparenteser och se hur ändringarna synkroniserades direkt till AEM-servern när du har gjort en uppdatering i webbläsaren.
 
 ### Projektinställningar {#project-settings}
 
-Om du vill synkronisera ditt innehåll till och från en AEM utvecklingsinstans måste du definiera dina projektinställningar. Detta kan du göra genom att gå till **AEM** meny och välja **Projektinställningar...**
+Om du vill synkronisera ditt innehåll till och från en AEM utvecklingsinstans måste du definiera dina projektinställningar. Detta kan du göra genom att gå till menyn **AEM** och välja **Projektinställningar..**
 
 ![chlimage_1-55](assets/chlimage_1-55a.png)
 
@@ -103,17 +103,17 @@ Detta synkroniserar endast ändringar från hakparenteser till AEM, men inte tv�
 
 ### Manuell dubbelriktad synkronisering {#manual-bidirectional-synchronization}
 
-Öppna snabbmenyn i projektutforskaren genom att högerklicka på en fil eller mapp och på **Exportera till server** eller **Importera från server** finns.
+I projektutforskaren öppnar du snabbmenyn genom att högerklicka på en fil eller mapp och alternativen **Exportera till server** eller **Importera från server** är tillgängliga.
 
 ![chlimage_1-56](assets/chlimage_1-56a.png)
 
 >[!NOTE]
 >
->Om den markerade posten ligger utanför `jcr_root` mapp, **Exportera till server** och **Importera från server** sammanhangsbaserade menyposter är inaktiverade.
+>Om den markerade posten ligger utanför mappen `jcr_root` inaktiveras sammanhangsbaserade menyposter för **Exportera till server** och **Importera från server**.
 
 ### Fullständig synkronisering av innehållspaket {#full-content-package-synchronization}
 
-I **AEM** -menyn, **Exportera innehållspaket** eller **Importera innehållspaket** kan du synkronisera hela projektet med servern.
+På menyn **AEM** kan du synkronisera hela projektet med servern med alternativen **Exportera innehållspaket** eller **Importera innehållspaket**.
 
 ![chlimage_1-57](assets/chlimage_1-57a.png)
 
@@ -134,7 +134,7 @@ Om du klickar på meddelandeikonen öppnas dialogrutan Synkroniseringsstatus med
 >
 >Endast innehåll som markerats som inkluderat av filtreringsreglerna från `filter.xml` synkroniseras, oavsett vilken synkroniseringsmetod som används.
 >
->Dessutom `.vltignore` filer kan användas för att utesluta innehåll från synkronisering till och från databasen.
+>Dessutom stöds `.vltignore`-filer för att utesluta innehåll från synkronisering till och från databasen.
 
 ## Redigera HTML-kod {#editing-htl-code}
 
@@ -142,21 +142,21 @@ AEM Brackets Extension innehåller även vissa funktioner för automatisk komple
 
 ### Automatisk komplettering av attribut {#attribute-auto-completion}
 
-1. I ett HTML-attribut skriver du `sly`. Attributet fylls i automatiskt till `data-sly-`.
+1. I ett HTML-attribut skriver du `sly`. Attributet har fyllts i automatiskt till `data-sly-`.
 1. Markera HTL-attributet i listrutan.
 
 ### Automatisk komplettering av uttryck {#expression-auto-completion}
 
-Inom ett uttryck `${}`, vanliga variabelnamn slutförs automatiskt.
+Inom ett uttryck `${}` slutförs gemensamma variabelnamn automatiskt.
 
 ## Mer information {#more-information}
 
-AEM Brackets Extension är ett öppen källkodsprojekt som hanteras av GitHub av [Adobe Marketing Cloud](https://github.com/Adobe-Marketing-Cloud) under Apache License, version 2.0:
+AEM Brackets Extension är ett öppen källkodsprojekt som hanteras av GitHub av [Adobe Marketing Cloud](https://github.com/Adobe-Marketing-Cloud) -organisationen, under Apache-licensen, version 2.0:
 
 * Koddatabas: [https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension](https://github.com/Adobe-Marketing-Cloud/aem-sightly-brackets-extension)
 * Apache License, version 2.0: [https://www.apache.org/licenses/LICENSE-2.0.html](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-Kodredigeraren Brackets är även ett öppen källkodsprojekt som hanteras av GitHub av [Adobe Systems Incorporated](https://github.com/adobe) organisation:
+Kodredigeraren Brackets är också ett öppen källkodsprojekt som hanteras av GitHub av [Adobe Systems Incorporated](https://github.com/adobe) -organisationen:
 
 * Koddatabas: [https://github.com/adobe/brackets](https://github.com/adobe/brackets)
 

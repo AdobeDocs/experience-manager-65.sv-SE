@@ -17,25 +17,25 @@ ht-degree: 0%
 
 AEM Forms tillhandahåller en uppsättning OSGi-tjänster för att utföra olika åtgärder på dokumentnivå, till exempel tjänster för att skapa, sammanställa, distribuera och arkivera PDF-dokument, lägga till digitala signaturer för att begränsa åtkomst till dokument samt avkoda Barcoded Forms. Dessa tjänster ingår i AEM Forms tilläggspaket. Tillsammans kallas dessa tjänster dokumenttjänster. Listan över tillgängliga dokumenttjänster och deras viktigaste funktioner är följande:
 
-* **Assembler:** Gör att du kan kombinera, ordna om och förstärka PDF- och XDP-dokument och få information om PDF-dokument. Det hjälper även till att konvertera och validera PDF-dokument till standarden PDF/A, omformar PDF forms, XML-formulär och PDF forms till PDF/A-1b, PDF/A-2b och PDFA/A-3b. Mer information finns i [Assembler Service](/help/forms/using/assembler-service.md).
+* **Assembler-tjänst:** Gör att du kan kombinera, ordna om och förstärka PDF- och XDP-dokument och få information om PDF-dokument. Det hjälper även till att konvertera och validera PDF-dokument till standarden PDF/A, omformar PDF forms, XML-formulär och PDF forms till PDF/A-1b, PDF/A-2b och PDFA/A-3b. Mer information finns i [Assembler Service](/help/forms/using/assembler-service.md).
 
-* **ConvertPDF-tjänst:** Du kan konvertera PDF-dokument till PostScript- eller bildfiler (JPEG, JPEG 2000, PNG och TIFF). Mer information finns i [ConvertPDF Service](/help/forms/using/using-convertpdf-service.md).
+* **ConvertPDF-tjänsten:** Gör att du kan konvertera PDF-dokument till PostScript- eller bildfiler (JPEG, JPEG 2000, PNG och TIFF). Mer information finns i [Konvertera PDF-tjänst](/help/forms/using/using-convertpdf-service.md).
 
-* **Barcoded Forms service:** Ger möjlighet att extrahera data från elektroniska bilder av streckkoder. Tjänsten accepterar TIFF och PDF som innehåller en eller flera streckkoder som indata och extraherar streckkodsdata. Mer information finns i [Barcoded Forms Service](/help/forms/using/using-barcoded-forms-service.md).
+* **Barcoded Forms-tjänst:** Gör att du kan extrahera data från elektroniska bilder av streckkoder. Tjänsten accepterar TIFF och PDF som innehåller en eller flera streckkoder som indata och extraherar streckkodsdata. Mer information finns i [Barcoded Forms Service](/help/forms/using/using-barcoded-forms-service.md).
 
-* **DocAssurance-tjänst:** Gör att du kan kryptera och dekryptera dokument, utöka funktionaliteten i Adobe Reader med ytterligare användarrättigheter och lägga till digitala signaturer i dina dokument. Tjänsten Doc Assurance innehåller tre tjänster: signatur, kryptering och läsartillägg. Mer information finns i [DocAssurance-tjänst](/help/forms/using/overview-aem-document-services.md).
+* **DocAssurance-tjänsten:** Gör att du kan kryptera och dekryptera dokument, utöka Adobe Reader funktioner med ytterligare användningsbehörighet och lägga till digitala signaturer i dina dokument. Tjänsten Doc Assurance innehåller tre tjänster: signatur, kryptering och läsartillägg. Mer information finns i [DocAssurance-tjänsten](/help/forms/using/overview-aem-document-services.md).
 
 * **Krypteringstjänst:** Gör att du kan kryptera och dekryptera dokument. När ett dokument är krypterat blir innehållet oläsligt. En behörig användare kan dekryptera dokumentet för att få åtkomst till dess innehåll. Mer information finns i [Krypteringstjänst](/help/forms/using/overview-aem-document-services.md#encryption-service).
 
-* **Forms-tjänst:** Gör att du kan skapa interaktiva klientprogram för datainhämtning som validerar, bearbetar, omformar och levererar formulär som vanligtvis skapas i Forms Designer. Forms-tjänsten återger alla formulärdesigner som du utvecklar för PDF-dokument. Mer information finns i [Forms Service](/help/forms/using/forms-service.md).
+* **Forms-tjänst:** Gör att du kan skapa interaktiva klientprogram för datainhämtning som validerar, bearbetar, omvandlar och levererar formulär som vanligtvis skapas i Forms Designer. Forms-tjänsten återger alla formulärdesigner som du utvecklar för PDF-dokument. Mer information finns i [Forms-tjänsten](/help/forms/using/forms-service.md).
 
-* **Utdatatjänst:** Gör att du kan skapa dokument i olika format, t.ex. PDF, laserskrivarformat och etikettskrivarformat. Laserskrivarformat är PostScript och Printer Control Language (PCL). Mer information finns i [Output Service](/help/forms/using/output-service.md).
+* **Utdatatjänst:** Gör att du kan skapa dokument i olika format, t.ex. PDF, laserskrivarformat och etikettskrivarformat. Laserskrivarformat är PostScript och Printer Control Language (PCL). Mer information finns i [Utdatatjänst](/help/forms/using/output-service.md).
 
-* **Tjänsten PDF Generator:** Tjänsten PDF Generator tillhandahåller API:er för konvertering av inbyggda filformat till PDF. Dessutom konverteras PDF till andra filformat och storleken på PDF-dokument optimeras. Mer information finns i [Tjänsten PDF Generator](aem-document-services-programmatically.md#pdfgeneratorservice).
+* **PDF Generator-tjänst:** Tjänsten PDF Generator tillhandahåller API:er för konvertering av ursprungliga filformat till PDF. Dessutom konverteras PDF till andra filformat och storleken på PDF-dokument optimeras. Mer information finns i [PDF Generator-tjänsten](aem-document-services-programmatically.md#pdfgeneratorservice).
 
-* **Reader Extension Service:** Möjliggör för er organisation att enkelt dela interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader med ytterligare användarrättigheter. Med tjänsten aktiveras funktioner som inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader, t.ex. för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet. Mer information finns i [Tilläggstjänsten Reader](/help/forms/using/overview-aem-document-services.md#reader-extension-service).
+* **Reader-tilläggstjänsten:** Gör det möjligt för din organisation att enkelt dela interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader med ytterligare användningsbehörighet. Med tjänsten aktiveras funktioner som inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader, t.ex. för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet. Mer information finns i [Reader-tilläggstjänsten](/help/forms/using/overview-aem-document-services.md#reader-extension-service).
 
-* **Signaturtjänst:** Gör att du kan arbeta med digitala signaturer och dokument på AEM. Signaturtjänsten används till exempel vanligtvis i följande situationer:
+* **Signaturtjänst:** Gör att du kan arbeta med digitala signaturer och dokument på AEM server. Signaturtjänsten används till exempel vanligtvis i följande situationer:
 
    * AEM certifierar ett formulär innan det skickas till en användare för att öppnas med Acrobat eller Adobe Reader.
    * Den AEM servern validerar en signatur som har lagts till i ett formulär med Acrobat eller Adobe Reader.
@@ -43,13 +43,13 @@ AEM Forms tillhandahåller en uppsättning OSGi-tjänster för att utföra olika
 
   Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter som lagras i förtroendearkivet. Mer information finns i [Signaturtjänst](/help/forms/using/aem-document-services-programmatically.md).
 
-AEM Forms är en kraftfull plattform för större företag och dokumenttjänsterna är bara en av AEM Forms funktioner. En fullständig lista över funktioner finns på [Introduktion till AEM Forms](/help/forms/using/introduction-aem-forms.md).
+AEM Forms är en kraftfull plattform för större företag och dokumenttjänsterna är bara en av AEM Forms funktioner. En fullständig lista över funktioner finns i [Introduktion till AEM Forms](/help/forms/using/introduction-aem-forms.md).
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms tilläggspaket är ett program som distribueras till AEM. I allmänhet behöver du bara en AEM (författare eller publicerad) för att köra AEM Forms Document Services. Följande topologi rekommenderas för att köra AEM Forms Document Services. Mer information om topologier finns i [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms tilläggspaket är ett program som distribueras till AEM. I allmänhet behöver du bara en AEM (författare eller publicerad) för att köra AEM Forms Document Services. Följande topologi rekommenderas för att köra AEM Forms Document Services. Mer information om topologier finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
-![Arkitektur och driftsättningstopologier för AEM Forms](do-not-localize/document-services.png)
+![Arkitektur och distributionstopologier för AEM Forms](do-not-localize/document-services.png)
 
 >[!NOTE]
 >
@@ -59,13 +59,13 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. I allmänhet
 
 Innan du börjar installera och konfigurera AEM Forms Document Services bör du kontrollera att:
 
-* Maskinvaru- och programvaruinfrastruktur finns på plats. En detaljerad lista över maskin- och programvara som stöds finns på [tekniska krav](/help/sites-deploying/technical-requirements.md).
+* Maskinvaru- och programvaruinfrastruktur finns på plats. En detaljerad lista över maskinvara och programvara som stöds finns i [Tekniska krav](/help/sites-deploying/technical-requirements.md).
 
 * Installationssökvägen för AEM-instansen innehåller inte blanksteg.
 * En AEM-instans körs. I AEM är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. I allmänhet behöver du bara en AEM (författare eller publicerad) för att köra AEM Forms Document Services:
 
-   * **Upphovsman**: En AEM som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
-   * **Publicera**: En AEM instans som skickar det publicerade innehållet till allmänheten via internet eller ett internt nätverk.
+   * **Författare**: En AEM som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
+   * **Publish**: En AEM som skickar det publicerade innehållet till allmänheten via Internet eller ett internt nätverk.
 
 * Minneskraven är uppfyllda. AEM Forms tilläggspaket kräver:
 
@@ -163,13 +163,13 @@ Om du använder ett UNIX-baserat operativsystem installerar du följande 32-bita
  </tbody>
 </table>
 
-* **(endast PDF Generator**) Installera 32-bitarsversionen av biblioteken libcurl, libcrypto och libssl och skapa nedanstående symboler. Symbolerna pekar på den senaste versionen av respektive bibliotek:
+* **(endast PDF Generator**) Installera 32-bitarsversionen av bibliotek för libcurl, libcrypto och libssl och skapa nedanstående symboler. Symbolerna pekar på den senaste versionen av respektive bibliotek:
 
    * /usr/lib/libcurl.so
    * /usr/lib/libcrypto.so
    * /usr/lib/libssl.so
 
-* **(endast PDF Generator)** Tjänsten PDF Generator har stöd för WebKit- och WebToPDF-vägar för konvertering av HTML-filer till PDF-dokument. Installera nedanstående 64-bitarsbibliotek om du vill aktivera konvertering för WebToPDF-vägar. I allmänhet är dessa bibliotek redan installerade. Om något bibliotek saknas installerar du det manuellt:
+* **(endast PDF Generator)** PDF Generator-tjänsten stöder WebKit- och WebToPDF-vägar för konvertering av HTML-filer till PDF-dokument. Installera nedanstående 64-bitarsbibliotek om du vill aktivera konvertering för WebToPDF-vägar. I allmänhet är dessa bibliotek redan installerade. Om något bibliotek saknas installerar du det manuellt:
 
    * linux-gate.so.1
    * libz.so.1
@@ -195,13 +195,13 @@ Om du ska använda tjänsten PDF Generator för att konvertera inbyggda filforma
 
 >[!NOTE]
 >
->* Om din AEM Forms-server är offline eller i en säker miljö och Internet inte är tillgängligt för att aktivera Adobe Acrobat, se [Aktivering offline](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en) för instruktioner om hur du aktiverar sådana instanser av Adobe Acrobat.
+>* Om din AEM Forms-server är offline eller i en säker miljö och Internet inte är tillgängligt för att aktivera Adobe Acrobat finns mer information i [Offlineaktivering](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en) om hur du aktiverar sådana instanser av Adobe Acrobat.
 >* Adobe Acrobat, Microsoft® Word, Excel och PowerPoint finns endast för Microsoft® Windows. Om du använder det UNIX-baserade operativsystemet måste du installera OpenOffice för att konvertera RTF-filer och Microsoft® Office-filer som stöds till PDF-dokument.
 >* Stäng alla dialogrutor som visas när du har installerat Adobe Acrobat och tredjepartsprogram för alla användare som har konfigurerats att använda tjänsten PDF Generator.
 >* Starta alla installerade program minst en gång. Stäng alla dialogrutor för alla användare som har konfigurerats att använda tjänsten PDF Generator.
->* [Kontrollera utgångsdatum för dina Adobe Acrobat-serienummer](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html) och ange ett datum för uppdatering av licensen eller [migrera ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) baserat på utgångsdatum.
+>* [Kontrollera förfallodatumet för dina Adobe Acrobat-serienummer](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html) och ange ett datum för att uppdatera licensen eller [migrera ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) baserat på förfallodatumet.
 
-När du har installerat Acrobat öppnar du Microsoft® Word. På **Acrobat** flik, klicka **Skapa PDF** och konvertera en .doc- eller .docx-fil som finns på datorn till ett PDF-dokument. Om konverteringen lyckas är AEM Forms redo att använda Acrobat tillsammans med PDF Generator.
+När du har installerat Acrobat öppnar du Microsoft® Word. På fliken **Acrobat** klickar du på **Skapa PDF** och konverterar en .doc- eller .docx-fil som finns på datorn till ett PDF-dokument. Om konverteringen lyckas är AEM Forms redo att använda Acrobat tillsammans med PDF Generator.
 
 ### Konfigurera miljövariabler {#setup-environment-variables}
 
@@ -252,7 +252,7 @@ Ange miljövariabler för 64-bitars Java Development Kit, tredjepartsprogram och
 
 Utför följande steg för att konfigurera IBM® SSL-socketprovidern:
 
-1. Skapa en kopia av filen java.security. Filens standardplats är `[WebSphere_installation_directory]\Appserver\java_[version]\jre\lib\security`.
+1. Skapa en kopia av filen java.security. Standardplatsen för filen är `[WebSphere_installation_directory]\Appserver\java_[version]\jre\lib\security`.
 1. Öppna den kopierade java.security-filen för redigering.
 1. Ändra standardfabrikerna för SSL-socket så att de använder JSSE2-fabrikerna i stället för standardfabrikerna i IBM® WebSphere®:
 
@@ -287,16 +287,16 @@ Utför följande steg för att konfigurera IBM® SSL-socketprovidern:
 
 1. Öppna ett Microsoft® Office-program. Exempel: Microsoft® Word. Navigera till **[!UICONTROL File]**> **[!UICONTROL Options]**. Dialogrutan Alternativ visas.
 
-1. Klicka **[!UICONTROL Trust Center]** och klicka **[!UICONTROL Trust Center Settings]**.
-1. I **[!UICONTROL Trust Center settings]**, klicka **[!UICONTROL File Block Settings]**.
-1. I **[!UICONTROL File Type]** lista, avmarkera **[!UICONTROL Open]** för den filtyp som PDF Generator ska kunna konvertera till PDF-dokument.
+1. Klicka på **[!UICONTROL Trust Center]** och sedan på **[!UICONTROL Trust Center Settings]**.
+1. Klicka på **[!UICONTROL File Block Settings]** i **[!UICONTROL Trust Center settings]**.
+1. I listan **[!UICONTROL File Type]** avmarkerar du **[!UICONTROL Open]** för den filtyp som tjänsten PDF Generator ska kunna konvertera till PDF-dokument.
 
 ### (Endast Windows) Bevilja privilegiet Ersätt en token på processnivå {#grant-the-replace-a-process-level-token-privilege}
 
-Användarkontot som används för att starta programservern kräver **Ersätta en processnivåtoken** privilegium. Det lokala systemkontot har **Ersätta en processnivåtoken** behörighet som standard. För servrar som körs med en användare i gruppen Lokala administratörer måste privilegiet ges uttryckligen. Utför följande steg för att bevilja privilegiet:
+Användarkontot som används för att starta programservern kräver privilegiet **Ersätt en token på processnivå**. Det lokala systemkontot har behörigheten **Ersätt en token** på processnivå som standard. För servrar som körs med en användare i gruppen Lokala administratörer måste privilegiet ges uttryckligen. Utför följande steg för att bevilja privilegiet:
 
-1. Öppna Group Policy Editor för Microsoft® Windows. Klicka på om du vill öppna grupprincipredigeraren **[!UICONTROL Start]**, typ **gpedit.msc** i rutan Starta sökning och klicka på **[!UICONTROL Group Policy Editor]**.
-1. Navigera till **[!UICONTROL Local Computer Policy]** > **[!UICONTROL Computer Configuration]** > **[!UICONTROL Windows Settings]** > **[!UICONTROL Security Settings]** > **[!UICONTROL Local Policies]** > **[!UICONTROL User Rights Assignment]** och redigera **[!UICONTROL Replace a process level token]** och inkludera gruppen Administratörer.
+1. Öppna Group Policy Editor för Microsoft® Windows. Om du vill öppna grupprincipredigeraren klickar du på **[!UICONTROL Start]**, skriver **gpedit.msc** i rutan Starta sökning och klickar på **[!UICONTROL Group Policy Editor]**.
+1. Navigera till **[!UICONTROL Local Computer Policy]** > **[!UICONTROL Computer Configuration]** > **[!UICONTROL Windows Settings]** > **[!UICONTROL Security Settings]** > **[!UICONTROL Local Policies]** > **[!UICONTROL User Rights Assignment]** och redigera **[!UICONTROL Replace a process level token]**-principen och inkludera gruppen Administratörer.
 1. Lägg till användaren i posten Ersätt en processnivåtoken.
 
 >[!NOTE]
@@ -317,15 +317,15 @@ Du kan göra det möjligt för en icke-administratörsanvändare att använda tj
 
 ### (Endast Windows) Inaktivera Kontroll av användarkonto (UAC) {#disable-user-account-control-uac}
 
-1. Gå till verktyget Systemkonfiguration **[!UICONTROL Start > Run]** och sedan ange **[!UICONTROL MSCONFIG]**.
-1. Klicka på **[!UICONTROL Tools]** och rulla nedåt och markera **[!UICONTROL Change UAC Settings]**. Klicka **[!UICONTROL Launch]** för att köra kommandot i ett nytt fönster.
+1. Gå till **[!UICONTROL Start > Run]** och ange **[!UICONTROL MSCONFIG]** om du vill komma åt systemkonfigurationsverktyget.
+1. Klicka på fliken **[!UICONTROL Tools]**, rulla nedåt och välj **[!UICONTROL Change UAC Settings]**. Klicka på **[!UICONTROL Launch]** om du vill köra kommandot i ett nytt fönster.
 1. Justera skjutreglaget till nivån för Aldrig meddelande. När du är klar stänger du kommandofönstret och stänger fönstret Systemkonfiguration.
 1. Kontrollera att registerinställningen för UAC är inställd på 0 (noll). Verifiera genom att utföra följande steg:
 
-   1. Microsoft® rekommenderar att du säkerhetskopierar registret innan du ändrar det. Detaljerade anvisningar finns i [Säkerhetskopiera och återställa registret i Windows](https://support.microsoft.com/en-us/help/322756).
+   1. Microsoft® rekommenderar att du säkerhetskopierar registret innan du ändrar det. Detaljerade steg finns i [Säkerhetskopiera och återställa registret i Windows](https://support.microsoft.com/en-us/help/322756).
    1. Öppna Registereditorn i Microsoft® Windows. Öppna Registereditorn genom att gå till Start > Kör, skriva regedit och klicka på OK.
    1. Navigera till `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system\`. Kontrollera att värdet för EnableLUA är 0 (noll).
-   1. Ange värdet för **EnableLUA** är inställt på 0 (noll). Om värdet inte är 0 ändrar du värdet till 0. Stäng Registereditorn.
+   1. Kontrollera att värdet för **EnableLUA** är 0 (noll). Om värdet inte är 0 ändrar du värdet till 0. Stäng Registereditorn.
 
 1. Starta om datorn.
 
@@ -374,25 +374,25 @@ Kopiera Unicode-teckensnittet till någon av följande kataloger som passar ditt
 AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet innehåller AEM Forms Document Services och andra AEM Forms-funktioner. Så här installerar du paketet:
 
 1. Öppna [Programvarudistribution](https://experience.adobe.com/downloads). Du behöver en Adobe ID för att logga in på Software Distribution.
-1. Välj **[!UICONTROL Adobe Experience Manager]** finns i rubrikmenyn.
-1. I **[!UICONTROL Filters]** avsnitt:
-   1. Välj **[!UICONTROL Forms]** från **[!UICONTROL Solution]** listruta.
-   2. Välj version och typ för paketet. Du kan också använda **[!UICONTROL Search Downloads]** för att filtrera resultaten.
-1. Välj det paketnamn som gäller för operativsystemet och välj **[!UICONTROL Accept EULA Terms]** och markera **[!UICONTROL Download]**.
-1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Välj **[!UICONTROL Adobe Experience Manager]** som finns på rubrikmenyn.
+1. I avsnittet **[!UICONTROL Filters]**:
+   1. Välj **[!UICONTROL Forms]** i listrutan **[!UICONTROL Solution]**.
+   2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
+1. Välj det paketnamn som gäller för ditt operativsystem, välj **[!UICONTROL Accept EULA Terms]** och välj **[!UICONTROL Download]**.
+1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka på **[!UICONTROL Upload Package]** för att överföra paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-   Du kan även hämta paketet via länken direkt i [AEM Forms-versioner](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) artikel.
+   Du kan även hämta paketet via den direktlänk som visas i artikeln [AEM Forms-utgåvor](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
-1. När paketet har installerats uppmanas du att starta om AEM. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms Server väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED inte visas i `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log-filen och loggen är stabil.
+1. När paketet har installerats uppmanas du att starta om AEM. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms Server väntar du tills ServiceEvent REGISTERED- och ServiceEvent UNREGISTERED-meddelandena inte längre visas i filen `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log och loggen är stabil.
 
-## Konfiguration efter installation {#post-installation-configurations}
+## Post-installationskonfigurationer {#post-installation-configurations}
 
 ### Konfigurera Boot Delegation för RSA/BouncyCastle-bibliotek  {#configure-boot-delegation-for-rsa-bouncycastle-libraries}
 
-1. Stoppa AEM. Navigera till [AEM installationskatalog]\crx-quickstart\conf\. Öppna filen sling.properties för redigering.
+1. Stoppa AEM. Navigera till mappen [AEM installationskatalogen]\crx-quickstart\conf\. Öppna filen sling.properties för redigering.
 
-   Om du `[AEM installation directory]\crx-quickstart\bin\start.bat` om du vill starta en AEM ska du redigera sling.properties som finns på `[AEM_root]\crx-quickstart\`.
+   Om du använder `[AEM installation directory]\crx-quickstart\bin\start.bat` för att starta en AEM ska du redigera sling.properties som finns på `[AEM_root]\crx-quickstart\`.
 
 1. Lägg till följande egenskaper i filen sling.properties:
 
@@ -411,7 +411,7 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 ### Konfigurera teckensnittshanterartjänsten  {#configuring-the-font-manager-service}
 
 1. Logga in på [AEM Configuration Manager](http://localhost:4502/system/console/configMgr) som administratör.
-1. Leta reda på och öppna **[!UICONTROL CQ-DAM-Handler-Gibson Font Managers]** service. Ange sökvägen till katalogerna System Fonts, Adobe Server Fonts och Customer Fonts. Klicka på **[!UICONTROL Save]**.
+1. Leta reda på och öppna tjänsten **[!UICONTROL CQ-DAM-Handler-Gibson Font Managers]**. Ange sökvägen till katalogerna System Fonts, Adobe Server Fonts och Customer Fonts. Klicka på **[!UICONTROL Save]**.
 
    >[!NOTE]
    >
@@ -423,21 +423,21 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 
 Det krävs ett lokalt användarkonto för att köra tjänsten PDF Generator. Anvisningar om hur du skapar en lokal användare finns i [Skapa ett användarkonto i Windows](https://support.microsoft.com/en-us/help/13951/windows-create-user-account) eller skapa ett användarkonto på UNIX-baserade plattformar.
 
-1. Öppna [Konfiguration av AEM Forms PDF Generator](http://localhost:4502/libs/fd/pdfg/config/ui.html) sida.
+1. Öppna sidan [Konfiguration i AEM Forms PDF Generator](http://localhost:4502/libs/fd/pdfg/config/ui.html).
 
-1. I **[!UICONTROL User Accounts]** anger du autentiseringsuppgifter för ett lokalt användarkonto och klickar på **[!UICONTROL Submit]**. Tillåt åtkomst till användaren om du uppmanas att göra det i Microsoft® Windows. När den konfigurerade användaren läggs till visas den under **[!UICONTROL Your user accounts]** i **[!UICONTROL User Accounts]** -fliken.
+1. Ange autentiseringsuppgifter för ett lokalt användarkonto på fliken **[!UICONTROL User Accounts]** och klicka på **[!UICONTROL Submit]**. Tillåt åtkomst till användaren om du uppmanas att göra det i Microsoft® Windows. När den konfigurerade användaren läggs till visas den under avsnittet **[!UICONTROL Your user accounts]** på fliken **[!UICONTROL User Accounts]**.
 
 ### Konfigurera timeout-inställningar {#configure-the-time-out-settings}
 
-1. I [AEM](http://localhost:4502/system/console/configMgr), leta upp och öppna **[!UICONTROL Jacorb ORB Provider]** service.
+1. I [AEM konfigurationshanteraren](http://localhost:4502/system/console/configMgr) letar du reda på och öppnar tjänsten **[!UICONTROL Jacorb ORB Provider]**.
 
-   Lägg till följande i **[!UICONTROL Custom Properties.name]** fält och klicka **[!UICONTROL Save]**. Tidsgränsen för väntande svar (kallas även CORBA-klienttimeout) anges till 600 sekunder.
+   Lägg till följande i fältet **[!UICONTROL Custom Properties.name]** och klicka på **[!UICONTROL Save]**. Tidsgränsen för väntande svar (kallas även CORBA-klienttimeout) anges till 600 sekunder.
 
    `jacorb.connection.client.pending_reply_timeout=600000`
 
 1. Logga in på AEM författarinstans och navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure PDF Generator]**. Standardwebbadressen är <http://localhost:4502/libs/fd/pdfg/config/ui.html>.
 
-   Öppna **[!UICONTROL General Configuration]** och ändra värdet för följande fält för din miljö:
+   Öppna fliken **[!UICONTROL General Configuration]** och ändra värdet för följande fält för din miljö:
 
 <table>
  <tbody>
@@ -468,21 +468,21 @@ Det krävs ett lokalt användarkonto för att köra tjänsten PDF Generator. Anv
 
 I Microsoft® Windows används Adobe Acrobat för att konvertera de filformat som stöds till ett PDF-dokument. Så här konfigurerar du Adobe Acrobat för tjänsten PDF Generator:
 
-1. Öppna Acrobat och välj **[!UICONTROL Edit]**> **[!UICONTROL Preferences]**> **[!UICONTROL Updater]**. I Sök efter uppdateringar avmarkerar **[!UICONTROL Automatically install updates]** och klicka **[!UICONTROL OK]**. Stäng Acrobat.
+1. Öppna Acrobat och välj **[!UICONTROL Edit]**> **[!UICONTROL Preferences]**> **[!UICONTROL Updater]**. I Leta efter uppdateringar avmarkerar du **[!UICONTROL Automatically install updates]** och klickar på **[!UICONTROL OK]**. Stäng Acrobat.
 1. Dubbelklicka på ett PDF-dokument på datorn. När Acrobat startas för första gången visas dialogrutorna för inloggning, välkomstskärm och licensavtal. Stäng de här dialogrutorna för alla användare som har konfigurerats att använda PDF Generator.
 1. Kör batchfilen för verktyget PDF Generator för att konfigurera Acrobat för tjänsten PDF Generator:
 
-   1. Öppna [AEM](http://localhost:4502/crx/packmgr/index.jsp) och ladda ned `adobe-aemfd-pdfg-common-pkg-[version].zip` från Package Manager.
+   1. Öppna [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) och hämta filen `adobe-aemfd-pdfg-common-pkg-[version].zip` från Package Manager.
    1. Zippa upp den hämtade ZIP-filen. Öppna kommandotolken med administratörsbehörighet.
    1. Navigera till `[extracted-zip-file]\jcr_root\etc\packages\day\cq60\fd\adobe-aemds-common-pkg-[version]\jcr_root\etc\packages\day\cq60\fd\`
    1. Zippa upp `adobe-aemfd-pdfg-common-pkg-[version]`.
-   1. Navigera till `[downloaded-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]` katalog. Kör följande kommandofil:
+   1. Navigera till katalogen `[downloaded-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]`. Kör följande kommandofil:
 
       `Acrobat_for_PDFG_Configuration.bat`
 
       Acrobat är konfigurerat att köras med tjänsten PDF Generator.
 
-1. Kör [Systemberedskap (SRT)](#SRT) för att validera installationen av Acrobat.
+1. Kör [Systemberedskapsverktyget ](#SRT) för att validera Acrobat-installationen.
 
 ### (Endast Windows) Konfigurera primär väg för konvertering från HTML till PDF {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
@@ -492,15 +492,15 @@ Den primära standardvägen för konvertering från HTML till PDF är Webkit. S�
 
 1. Navigera AEM författarinstansen till **[!UICONTROL Tools]**> **[!UICONTROL Forms]**> **[!UICONTROL Configure PDF Generator]**.
 
-1. I **[!UICONTROL General Configuration]** väljer du önskad konverteringsväg på fliken **[!UICONTROL Primary Route for HTML to PDF conversions]** nedrullningsbar meny.
+1. Välj önskad konverteringsväg i listrutan **[!UICONTROL Primary Route for HTML to PDF conversions]** på fliken **[!UICONTROL General Configuration]**.
 
 ### Initiera Global Trust Store {#intialize-global-trust-store}
 
 Med pålitlighetslagerhanteringen kan du importera, redigera och ta bort certifikat som du litar på på servern för validering av digitala signaturer och certifikatautentisering. Du kan importera och exportera valfritt antal certifikat. När ett certifikat har importerats kan du redigera pålitlighetsinställningarna och förtroendearkivets typ. Så här initierar du ett förtroendearkiv:
 
 1. Logga in på AEM Forms-instansen som administratör.
-1. Gå till  **[!UICONTROL Tools]** >  **[!UICONTROL Security]** >  **[!UICONTROL Trust Store]**.
-1. Klicka  **[!UICONTROL Create TrustStore]**. Ange lösenord och välj **[!UICONTROL Save]**.
+1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Trust Store]**.
+1. Klicka på **[!UICONTROL Create TrustStore]**. Ange lösenord och välj **[!UICONTROL Save]**.
 
 ### Konfigurera certifikat för Reader-tilläggs- och krypteringstjänsten {#set-up-certificates-for-reader-extension-and-encryption-service}
 
@@ -520,11 +520,11 @@ Innan du konfigurerar certifikaten bör du kontrollera att du har en:
 Utför följande steg för att konfigurera certifikaten:
 
 1. Logga in AEM författarinstansen som administratör. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
-1. Klicka på **[!UICONTROL name]** användarkontots fält. The **[!UICONTROL Edit User Settings]** sidan öppnas. I AEM Author-instansen finns certifikat i en KeyStore. Om du inte har skapat en KeyStore tidigare klickar du på **[!UICONTROL Create KeyStore]** och ange ett nytt lösenord för KeyStore. Om servern redan innehåller en KeyStore hoppar du över det här steget.  Om du använder certifikatet för Adobe Reader Extensions är lösenordet för nyckelfilen alltid detsamma som lösenordet för den privata nyckeln.
-1. På **[!UICONTROL Edit User Settings]** väljer du **[!UICONTROL KeyStore]** -fliken. Expandera **[!UICONTROL Add Private Key from Key Store file]** och ange ett alias. Aliaset används för att utföra Reader-tilläggsåtgärden.
-1. Om du vill överföra certifikatfilen klickar du på **[!UICONTROL Select Key Store File]** och ladda upp en &lt;filename>.pfx-fil.
+1. Klicka på fältet **[!UICONTROL name]** för användarkontot. Sidan **[!UICONTROL Edit User Settings]** öppnas. I AEM Author-instansen finns certifikat i en KeyStore. Om du inte har skapat en KeyStore tidigare klickar du på **[!UICONTROL Create KeyStore]** och anger ett nytt lösenord för KeyStore. Om servern redan innehåller en KeyStore hoppar du över det här steget.  Om du använder certifikatet för Adobe Reader Extensions är lösenordet för nyckelfilen alltid detsamma som lösenordet för den privata nyckeln.
+1. Välj fliken **[!UICONTROL KeyStore]** på sidan **[!UICONTROL Edit User Settings]**. Expandera alternativet **[!UICONTROL Add Private Key from Key Store file]** och ange ett alias. Aliaset används för att utföra Reader-tilläggsåtgärden.
+1. Om du vill överföra certifikatfilen klickar du på **[!UICONTROL Select Key Store File]** och överför en &lt;filnamn>.pfx-fil.
 
-   Lägg till **[!UICONTROL Key Store Password]**, **[!UICONTROL Private Key Password]** och **[!UICONTROL Private Key Alias]** som är kopplad till certifikatet till respektive fält. Klicka på **[!UICONTROL Submit]**.
+   Lägg till **[!UICONTROL Key Store Password]**, **[!UICONTROL Private Key Password]** och **[!UICONTROL Private Key Alias]** som är associerad med certifikatet till respektive fält. Klicka på **[!UICONTROL Submit]**.
 
    >[!NOTE]
    >
@@ -534,7 +534,7 @@ Utför följande steg för att konfigurera certifikaten:
 
 ### Aktivera AES-256 {#enable-aes}
 
-Om du vill använda AES 256-kryptering för PDF-filer hämtar och installerar du Java Cryptography Extension (JCE) Unlimited Strength Jurisdential Policy-filer. Ersätt filerna local_policy.jar och US_export_policy.jar i mappen jre/lib/security. Om du till exempel använder Sun JDK kopierar du de hämtade filerna till `[JAVA_HOME]/jre/lib/security` mapp.
+Om du vill använda AES 256-kryptering för PDF-filer hämtar och installerar du Java Cryptography Extension (JCE) Unlimited Strength Jurisdential Policy-filer. Ersätt filerna local_policy.jar och US_export_policy.jar i mappen jre/lib/security. Om du till exempel använder Sun JDK kopierar du de hämtade filerna till mappen `[JAVA_HOME]/jre/lib/security`.
 
 Assembler-tjänsten är beroende av tjänsten Reader Extensions, tjänsten Signature, Forms och Output. Utför följande steg för att verifiera att de tjänster som krävs är igång:
 
@@ -571,7 +571,7 @@ Assembler-tjänsten är beroende av tjänsten Reader Extensions, tjänsten Signa
 När du har installerat AEM Forms-tillägget och Microsoft® Project på datorn registrerar du ett bidrag för Microsoft® Project på 64-bitarsplatsen. Det underlättar körning av konverteringstester för Project till PDFG. Följande steg beskriver processen för registerposten:
 
 1. Öppna Registereditorn för Microsoft® Windows (regedit), öppna Registereditorn, gå till Start > Kör, skriv regedit och klicka på OK.
-1. Navigera till `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Acrobat PDFMaker\<version>\Office\SupportedApp`och skapa en ny **Binärt värde** register och ändra namn på det till **Projekt**.
+1. Navigera till `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Acrobat PDFMaker\<version>\Office\SupportedApp` och skapa ett nytt **binärt värderegister** och byt namn på det till **Projekt**.
 1. Ändra datavärdet för det skapade binära registret till 01 och klicka på OK.
 1. Stäng registerposten.
 
@@ -596,9 +596,9 @@ När du har installerat AEM Forms-tillägget och Microsoft® Project på datorn 
 
 ## Systemberedskap (SRT) {#SRT}
 
-The [Systemberedskap](#srt-configuration) kontrollerar om datorn är korrekt konfigurerad för att köra PDF Generator-konverteringar. Verktyget genererar en rapport vid den angivna sökvägen. Så här kör du verktyget:
+Verktyget [Systemberedskap](#srt-configuration) kontrollerar om datorn är korrekt konfigurerad för att köra PDF Generator-konverteringar. Verktyget genererar en rapport vid den angivna sökvägen. Så här kör du verktyget:
 
-1. Öppna kommandotolken. Navigera till `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools` mapp.
+1. Öppna kommandotolken. Navigera till mappen `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools`.
 
 1. Kör följande kommando från kommandotolken:
 
@@ -608,7 +608,7 @@ The [Systemberedskap](#srt-configuration) kontrollerar om datorn är korrekt kon
 
    >[!NOTE]
    >
-   >* Om systemberedskapsverktyget rapporterar att filen pdfgen.api inte är tillgänglig i Acrobat plug-ins-mappen kopierar du filen pdfgen.api från `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` till `[Acrobat_root]\Acrobat\plug_ins` katalog.
+   >* Om systemberedskapsverktyget rapporterar att filen pdfgen.api inte är tillgänglig i Acrobat plug-ins-mappen kopierar du filen pdfgen.api från katalogen `[extracted-adobe-aemfd-pdfg-common-pkg]\jcr_root\libs\fd\pdfg\tools\adobe-aemfd-pdfg-utilities-[version]\plugins\x86_win32` till katalogen `[Acrobat_root]\Acrobat\plug_ins`.
 
 1. Navigera till `[Path_of_reports_folder]`. Öppna filen SystemReadinessTool.html. Verifiera rapporten och åtgärda problemen.
 
@@ -650,15 +650,15 @@ Du kan använda filen srt_config.yaml för att konfigurera olika inställningar 
 
 Om du får problem även efter att du har åtgärdat alla problem som rapporterats av SRT-verktyget utför du följande kontroller:
 
-Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#SRT) rapporterar inga fel.
+Kontrollera att [Systemberedskapsverktyget](#SRT) inte rapporterar något fel innan du utför följande kontroller.
 
 +++ Adobe Acrobat
 
-* Endast [version som stöds](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Microsoft® Office (32-bitars) och Adobe Acrobat installeras och dialogrutorna för att öppna avbryts.
+* Kontrollera att endast [version](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Microsoft® Office (32-bitars) och Adobe Acrobat som stöds är installerade och att dialogrutorna för att öppna är avbrutna.
 * Kontrollera att Adobe Acrobat Update Service är inaktiverad.
-* Se till att [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) gruppfilen kördes med administratörsbehörighet.
+* Kontrollera att gruppfilen [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) kördes med administratörsbehörighet.
 * Se till att en PDF Generator-användare läggs till i användargränssnittet för PDF-konfigurationen.
-* Se till att [Ersätta en processnivåtoken](#grant-the-replace-a-process-level-token-privilege) behörigheter läggs till för PDF Generator-användaren.
+* Kontrollera att behörigheten [Ersätt en token på processnivå](#grant-the-replace-a-process-level-token-privilege) har lagts till för PDF Generator-användaren.
 * Kontrollera att Office COM-tillägget för Acrobat PDFMaker är aktiverat för Microsoft Office-program.
 
 +++
@@ -667,9 +667,9 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 **Microsoft® Windows**
 
-* Kontrollera att 32-bitars [version som stöds](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Microsoft Office är installerat och dialogrutorna för att öppna avbryts för alla program.
+* Kontrollera att 32-bitars [version](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Microsoft Office som stöds är installerad och att dialogrutorna för att öppna är avbrutna för alla program.
 * Se till att en PDF Generator-användare läggs till i användargränssnittet för PDF-konfigurationen.
-* Se till att PDF Generator är medlem i administratörsgruppen och att [Ersätta en processnivåtoken](#grant-the-replace-a-process-level-token-privilege) privilegium har angetts för användaren.
+* Kontrollera att PDF Generator-användaren är medlem i en administratörsgrupp och att privilegiet [Ersätt en token](#grant-the-replace-a-process-level-token-privilege) för processnivå har angetts för användaren.
 * Se till att användaren är konfigurerad i användargränssnittet i PDF Generator och utför följande åtgärder:
    1. Logga in på Microsoft® Windows med PDF Generator.
    1. Öppna Microsoft® Office- eller OpenOffice-program och avbryt alla dialogrutor.
@@ -681,10 +681,10 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 **Linux®**
 
-* Installera [version som stöds](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) för OpenOffice. AEM Forms stöder både 32- och 64-bitarsversioner. När du har installerat öppnar du alla OpenOffice-program, avbryter alla dialogrutor och stänger programmen. Öppna programmen igen och se till att ingen dialogruta visas när du öppnar ett OpenOffice-program.
+* Installera den [version](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av OpenOffice som stöds. AEM Forms stöder både 32- och 64-bitarsversioner. När du har installerat öppnar du alla OpenOffice-program, avbryter alla dialogrutor och stänger programmen. Öppna programmen igen och se till att ingen dialogruta visas när du öppnar ett OpenOffice-program.
 
-* Skapa en miljövariabel `OpenOffice_PATH` och ange att den ska peka på OpenOffice-installationen anges i [konsol](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) eller dt-profilen (enhetsträd).
-* Om det uppstår problem när du installerar OpenOffice bör du kontrollera att [32-bitars bibliotek](#extrarequirements) som krävs för OpenOffice-installation finns tillgängligt.
+* Skapa en miljövariabel `OpenOffice_PATH` och ställ in den så att den pekar på OpenOffice-installationen anges i [ console](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) - eller dt-profilen (enhetsträd).
+* Om det uppstår problem när du installerar OpenOffice kontrollerar du att [32-bitars bibliotek](#extrarequirements) som krävs för OpenOffice-installation är tillgängliga.
 
 +++
 
@@ -692,7 +692,7 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 * Se till att teckensnittskataloger läggs till i användargränssnittet för PDF Generator config.
 
-**Linux och Solaris (konverteringsväg för WebToPDF)**
+**Linux och Solaris (WebToPDF-konverteringsflöde)**
 
 * Kontrollera att det finns ett 32-bitars bibliotek (libicudata.so.42) för Webkit-baserad HTMLToPDF-konvertering och att det finns 64-bitars (libicudata.so.42 libs för WebToPDF-baserad HTMLToPDF-konvertering.
 
@@ -704,7 +704,7 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 **Linux® och Solaris™ (WebKit-konverteringsväg)**
 
-* Se till att katalogerna `/usr/lib/X11/fonts` och `/usr/share/fonts` finns. Om katalogerna inte finns skapar du en symbolisk länk från `/usr/share/X11/fonts` till `/usr/lib/X11/fonts` och en annan symbolisk länk från `/usr/share/fonts` till `/usr/share/X11/fonts`.
+* Kontrollera att katalogerna `/usr/lib/X11/fonts` och `/usr/share/fonts` finns. Om katalogerna inte finns skapar du en symbolisk länk från `/usr/share/X11/fonts` till `/usr/lib/X11/fonts` och en annan symbolisk länk från `/usr/share/fonts` till `/usr/share/X11/fonts`.
 
   ```
   ln -s /usr/share/fonts /usr/share/X11/fonts
@@ -714,10 +714,10 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 * Se till att IBM-teckensnitt kopieras under användare/resurs/teckensnitt.
 * Kontrollera att glibc för att åtgärda spöksårbarheter finns på datorn. Använd din standardpakethanterare för att uppdatera till den senaste versionen av glibc. Det innehåller åtgärder för att åtgärda spöksårbarheter.
-* Kontrollera att de senaste versionerna av 32-bitars lib curl-, libcrypto- och libssl-bibliotek är installerade på datorn. Skapa också symboler `/usr/lib/libcurl.so` (eller libcurl.a för AIX®), `/usr/lib/libcrypto.so` (eller libcrypto.a för AIX®) och `/usr/lib/libssl.so` (eller libssl.a för AIX®) som pekar på de senaste versionerna (32 bitar) av respektive bibliotek.
+* Kontrollera att de senaste versionerna av 32-bitars lib curl-, libcrypto- och libssl-bibliotek är installerade på datorn. Skapa också symbolerna `/usr/lib/libcurl.so` (eller libcurl.a för AIX®), `/usr/lib/libcrypto.so` (eller libcrypto.a för AIX®) och `/usr/lib/libssl.so` (eller libssl.a för AIX®) som pekar på de senaste versionerna (32 bitar) av respektive bibliotek.
 
 * Utför följande steg för IBM® SSL Socket Provider:
-   1. Kopiera java.security-filen från `<WAS_Installed_JAVA>\jre\lib\security` till vilken plats som helst på din AEM Forms Server. Standardplatsen är Standardplats = `<WAS_Installed>\Appserver\java_[version]\jre\lib\security`.
+   1. Kopiera java.security-filen från `<WAS_Installed_JAVA>\jre\lib\security` till valfri plats på din AEM Forms-server. Standardplatsen är Standardplats = `<WAS_Installed>\Appserver\java_[version]\jre\lib\security`.
 
    1. Redigera java.security-filen på den kopierade platsen och ändra standardfabrikerna för SSL Socket med JSSE2-fabriker (använd JSSE2-fabriker i stället för WebSphere®).
 
@@ -773,16 +773,16 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 +++Licensen för Adobe Acrobat som är installerad på AEM Forms Server upphör att gälla
 
-* Om du har en befintlig licens av Adobe Acrobat och den har gått ut, [Hämta den senaste versionen av Adobe Application Manager](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html)och migrera ditt serienummer. Före [migrera ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
+* Om du har en befintlig licens för Adobe Acrobat och den har upphört att gälla [Ladda ned den senaste versionen av Adobe Application Manager](https://helpx.adobe.com/in/creative-suite/kb/aam-troubleshoot-download-install.html) och migrera ditt serienummer. Innan [du migrerar ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
 
-   * Använd följande kommandon för att generera prov.xml och serialisera den befintliga installationen med prov.xml i stället för kommandona i [migrera ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) nummerartikel.
+   * Använd följande kommandon för att generera prov.xml och serialisera om den befintliga installationen med prov.xml-filen i stället för kommandona i [migrera serienummerartikeln](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number).
 
          &quot;
          
-         adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;leid>] [—regsuppress=ss] [—eulasuppress] [—locales=limited list of locales in xx_XX format or ALL>] [—provfile=&lt;absolute path=&quot;&quot; to=&quot;&quot; prov.xml=&quot;&quot;>]
-         
-         &quot;
+         adobe_prtk —tool=VolumeSerialize —generate —serial=&lt;serialnum> [—leid=&lt;LEID>] [—regsuppress=ss] [—eulasuppress] [—locales=limited list of locales in xx_XX format or ALL>] [—provfile=&lt;Absolute path to prov.xml>]{2&quot; 
      
+         
+         
    * Volymserialisera paketet (serialisera om den befintliga installationen med prov.xml-filen och den nya serienumret): Kör följande kommando från PRTK-installationsmappen som administratör för att serialisera och aktivera distribuerade paket på klientdatorer:
 
          &quot;
@@ -790,13 +790,13 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
          
          &quot;
      
-* För storskaliga installationer använder du [Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) för att ta bort tidigare versioner av Reader och Acrobat. Anpassa installationsprogrammet och distribuera det till alla datorer i organisationen.
+* Vid storskaliga installationer använder du [Acrobat Customization Wizard](https://www.adobe.com/devnet-docs/acrobatetk/tools/Wizard/index.html) för att ta bort tidigare versioner av Reader och Acrobat. Anpassa installationsprogrammet och distribuera det till alla datorer i organisationen.
 
 +++
 
 +++ AEM Forms Server är offline eller säker och Internet är inte tillgängligt för att aktivera Acrobat.
 
-* Du kan gå online inom 7 dagar efter det att du startat Adobe för att slutföra aktiveringen och registreringen online eller använda en internetaktiverad enhet och produktens serienummer för att slutföra processen. Detaljerade anvisningar finns i [Aktivering offline](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en).
+* Du kan gå online inom 7 dagar efter det att du startat Adobe för att slutföra aktiveringen och registreringen online eller använda en internetaktiverad enhet och produktens serienummer för att slutföra processen. Mer information finns i [Aktivering offline](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en).
 
 +++
 
@@ -804,7 +804,8 @@ Innan du utför följande kontroller bör du kontrollera att [Systemberedskap](#
 
 När en användare försöker konvertera Word- eller Excel-filer till PDF på Microsoft Windows Server, uppstår följande fel:
 
-*Felmeddelande från den primära konverteraren: ALC-PDG-015-003-Systemet kan inte öppna indatafilen. Skicka filen igen eller kontakta systemadministratören.*
+*Felmeddelande från den primära konverteraren:
+ALC-PDG-015-003-Systemet kan inte öppna indatafilen. Skicka filen igen eller kontakta systemadministratören.*
 
 Information om hur du löser problemet finns i [Det går inte att konvertera Word- eller Excel-filen till PDF på Windows Server](/help/forms/using/disable-uac-for-pdfgconfiguration.md).
 
@@ -824,7 +825,7 @@ När du konverterar Microsoft Excel 2019 till PDF på Microsoft Windows Server 2
 
 +++ Det går inte att konvertera XPS-filer till PDF
 
-För att lösa problemet [skapa en funktionsspecifik registernyckel i Windows](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html).
+Du löser problemet genom att [skapa en funktionsspecifik registernyckel i Windows](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html).
 
 +++
 

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Godkännande och godkännande{#acceptance-and-sign-off}
 
-Som nämndes [Godkännandetester](/help/sites-developing/planning.md) är en särskild provningskategori som används för att kontrollera att
+Som vi nämnt är [Godkännandetester](/help/sites-developing/planning.md) en särskild testkategori som används för att verifiera att:
 
 * Projektet uppfyller kundens krav.
 * Kunden godkänner projektet.

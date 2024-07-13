@@ -30,7 +30,7 @@ Detta kan fungera som en bedömning av den utvecklingsinsats som är nödvändig
 
 ## Konfigurera {#how-to-set-up}
 
-Mönsteravkännaren släpps separat som en [ett paket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) för alla AEM från 6.1 till 6.5 AEM 6.5. Den kan installeras med [Pakethanteraren](/help/sites-administering/package-manager.md).
+Mönsteravkännaren släpps separat som ett [ett paket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/compatpack/pd-all-aem65) som fungerar med AEM 6.1-6.5 AEM 6.5. Den kan installeras med [pakethanteraren](/help/sites-administering/package-manager.md).
 
 ## Använda {#how-to-use}
 
@@ -41,14 +41,14 @@ Mönsteravkännaren släpps separat som en [ett paket](https://experience.adobe.
 >* öka detekteringsgraden
 >* undvika flaskhalsar i affärskritiska instanser
 >
->båda samtidigt rekommenderas att programmet körs **i stagningsmiljöer** som är så nära produktionerna som möjligt inom användarapplikationer, innehåll och konfigurationer.
+>båda samtidigt rekommenderas att köra **på mellanlagringsmiljöer** som är så nära produktionsmiljöerna som möjligt inom områden som användarprogram, innehåll och konfigurationer.
 
 Du kan använda flera metoder för att kontrollera mönsteravkännarens utdata:
 
 * **Via Felix Inventory Console:**
 
-1. Gå till AEM webbkonsol genom att gå till *https://serveraddress:serverport/system/console/configMgr*
-1. Välj **Status - mönsteravkännare** enligt bilden nedan:
+1. Gå till AEM webbkonsol via *https://serveraddress:serverport/system/console/configMgr*
+1. Välj **Status - Mönsteravkännare** så som visas i bilden nedan:
 
    ![screenshot-2018-2-5pattern-Dettor](assets/screenshot-2018-2-5pattern-detector.png)
 
@@ -82,7 +82,7 @@ Utdata ser ut så här:
 2018-02-13T14:18:32.071+01:00 [SUSPICION] The pattern=ECU/extraneous.content.usage was found by detector=ContentAccessDetector with id=a07fd94318f12312c165e06d890cbd3c2c8b8dad0c030663db8b4c800dd7c33f message="Cross-boundary overlay of internal marked path /libs/granite/operations/components/commons/commons.jsp/jcr:content referenced at /apps/granite/operations/components/commons/commons.jsp/jcr:content with properties redefined: jcr:lastModifiedBy, jcr:mimeType, jcr:data, jcr:lastModified, jcr:uuid". More info at=https://www.adobe.com/go/aem6_EC
 ```
 
-Förloppet kan filtreras med `grep` kommando:
+Förloppet kan filtreras med kommandot `grep`:
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.txt | tee patterns-report.log | grep PROGRESS
@@ -98,7 +98,7 @@ Detta ger följande utdata:
 
 ## Hantera JSON-gränssnittet {#handling-the-json-interface}
 
-På samma sätt kan JSON bearbetas med [jq, verktyg](https://stedolan.github.io/jq/) så snart den har publicerats.
+På samma sätt kan JSON bearbetas med [jq-verktyget](https://stedolan.github.io/jq/) så snart det har publicerats.
 
 ```shell
 curl -Nsu 'admin:admin' https://localhost:4502/system/console/status-pattern-detector.json | tee patterns-report.json | jq --unbuffered -C 'select(.suspicion == true)'
@@ -216,7 +216,7 @@ För närvarande kan du kontrollera följande med Mönsteravkännare:
 
 * OSGi-paket matchar inte export och import
 * Dela resurstyper och supertyper (med innehållsövertäckningar för sökvägar)
-* definitioner av ekindexvärden (kompatibilitet)
+* definitioner av Oak-index (kompatibilitet)
 * VLT-paket (överanvändning)
 * rep:kompatibilitet med användarnoder (i samband med OAuth-konfiguration)
 

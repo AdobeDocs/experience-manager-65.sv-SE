@@ -1,6 +1,6 @@
 ---
 title: Ställa in dagens meddelande
-description: Med dagens meddelande kan du ange att ett meddelande ska visas på välkomstsidan i gränssnittet för arbetsytan.
+description: Med dagens meddelande kan du ange att ett meddelande ska visas på välkomstsidan i Workspace användargränssnitt.
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_workspace
@@ -18,30 +18,30 @@ ht-degree: 0%
 
 # Ställa in dagens meddelande {#setting-the-message-of-the-day}
 
-Du kan ange att ett meddelande ska visas på välkomstsidan i användargränssnittet för arbetsytan.
+Du kan ange att ett meddelande ska visas på välkomstsidan i Workspace användargränssnitt.
 
 Om det behövs kan du använda HTML-taggarna som stöds av Adobe Flash® Player för att formatera textens utseende:
 
-* &lt;a> Ankarmärke
+* &lt;a> Ankartagg
 * &lt;b> Fet tagg
 * &lt;br> Bryttagg
-* &lt;font> Teckensnittstagg
-* &lt;img> Bild-tagg
-* &lt;i> Kursiv tagg
-* &lt;li> Tagg för listobjekt
-* &lt;p> Stycketagg
-* &lt;span> Spänn tagg
-* &lt;textformat> Tagg för textformat
+* Teckensnittstaggen &lt;font>
+* Bild-taggen &lt;img>
+* Taggen &lt;i> Kursiv
+* &lt;li>-tagg för listobjekt
+* Taggen &lt;p> Stycke
+* &lt;span> Span-tagg
+* Tagg för textformat
 * &lt;u> Understrykningstagg
 
-Mer information om taggarna som stöds finns i definitionen av `htmlText` egenskapen för klassen TextField i [Flex språkreferens](https://flex.apache.org/).
+Mer information om de taggar som stöds finns i definitionen av egenskapen `htmlText` för klassen TextField i [Flex språkreferens](https://flex.apache.org/).
 
 ## Ange dagens meddelande {#set-the-message-of-the-day}
 
-1. I administrationskonsolen klickar du på Tjänster > Arbetsyta > Dagens meddelande.
+1. I administrationskonsolen klickar du på Tjänster > Workspace > Dagens meddelande.
 1. Ange texten som ska visas på välkomstskärmen i rutan Dagens meddelande.
 1. Klicka på Spara.
 
 >[!NOTE]
 >
->Flex Workspace används inte AEM formulärreleasen.
+>Flex Workspace används inte i AEM.

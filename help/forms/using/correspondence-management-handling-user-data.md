@@ -52,11 +52,11 @@ Beroende på den datalagringsbeständighet som har konfigurerats för din AEM-di
 
 I ovanstående AEM:
 
-* `[yyyy]/[mm]/[dd]` är nodstrukturen baserad på det datum då bokstavsinstansen skapades
+* `[yyyy]/[mm]/[dd]` är nodstrukturen baserad på datumet då bokstavsinstansen skapades
 * `[node-id]` är det ID som tilldelats mappen som innehåller bokstaven
-* `[letter-instance-name]` är namnet som anges när du sparar eller skickar ett brev
+* `[letter-instance-name]` är det namn som anges när ett brev sparas eller skickas
 
-Under [letter-instance-name] nod skapas följande nodstruktur och data för varje bokstavsinstans lagras i AEM.
+Under noden [letter-instance-name] skapas följande nodstruktur och data för varje bokstavsinstans lagras i AEM.
 
 | Nod | Beskrivning |
 |---|---|
@@ -71,9 +71,9 @@ Du kan få åtkomst till utkast och skickade korrespondensdata i de konfigurerad
 
 ### Åtkomst till användardata {#access-user-data}
 
-Korrespondenshanteringen innehåller API:er som du kan använda för att hitta och komma åt utkast och skickade brev. Med API:erna kan du söka efter och öppna bokstavsinstanser med hjälp av bokstavsinstans-ID:t eller den användare som sparade eller skickade korrespondensen. Mer information finns i [API:er för åtkomst till bokstavsinstanser](/help/forms/using/cm-apis-to-access-letter-instances.md).
+Korrespondenshanteringen innehåller API:er som du kan använda för att hitta och komma åt utkast och skickade brev. Med API:erna kan du söka efter och öppna bokstavsinstanser med hjälp av bokstavsinstans-ID:t eller den användare som sparade eller skickade korrespondensen. Mer information finns i [API:er för att komma åt bokstavsinstanser](/help/forms/using/cm-apis-to-access-letter-instances.md).
 
-Du kan också navigera till bokstavsinstansen AEM databasen med CRXDE Lite. Se [Användardata och datalager](/help/forms/using/correspondence-management-handling-user-data.md#data) för information om lagrade data och lagringsplats.
+Du kan också navigera till bokstavsinstansen AEM databasen med CRXDE Lite. Se [Användardata och datalager](/help/forms/using/correspondence-management-handling-user-data.md#data) för information om lagrade data och databasplats.
 
 ### Ta bort användardata {#delete-user-data}
 

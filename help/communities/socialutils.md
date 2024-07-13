@@ -20,9 +20,9 @@ ht-degree: 0%
 
 ## Paketet SocialUtils har tagits bort {#socialutils-package-deprecated}
 
-Paketet `com.adobe.cq.social.ugcbase.SocialUtils` har tagits bort i AEM 6.1.
+Paketet `com.adobe.cq.social.ugcbase.SocialUtils` togs bort i AEM 6.1.
 
-I följande tabell visas de metoder som ska användas i stället för `SocialUtils` metoder.
+I följande tabeller visas de metoder som ska användas i stället för `SocialUtils` metoder.
 
 ## Paket för SocialResourceUtilities  {#socialresourceutilities-package}
 

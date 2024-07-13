@@ -35,7 +35,7 @@ Processstegen definieras antingen av en Java™-klass eller av ett ECMAScript.
 
 Nyttolasten är den enhet som en arbetsflödesinstans agerar på. Nyttolasten väljs implicit av den kontext i vilken en arbetsflödesinstans startas.
 
-Om ett arbetsflöde till exempel används på en AEM sida *P* sedan *P* överförs från steg till steg när arbetsflödet utvecklas, där varje steg kan utföras efter *P* på något sätt.
+Om ett arbetsflöde till exempel används på en AEM sida *P*, skickas *P* från steg till steg när arbetsflödet fortskrider, där varje steg kan agera på *P* på något sätt.
 
 I det vanligaste fallet är nyttolasten en JCR-nod i databasen (till exempel en AEM eller resurs). En JCR-nodnyttolast skickas som en sträng som antingen är en JCR-sökväg eller en JCR-identifierare (UUID). Ibland kan nyttolasten vara en JCR-egenskap (skickas som en JCR-sökväg), en URL, ett binärt objekt eller ett generiskt Java™-objekt. Enskilda processsteg som fungerar på nyttolasten förväntar sig vanligtvis en nyttolast av en viss typ, eller fungerar på olika sätt beroende på nyttolasttypen. För varje process som beskrivs nedan beskrivs den förväntade nyttolasttypen, om sådan finns,.
 
@@ -43,7 +43,7 @@ I det vanligaste fallet är nyttolasten en JCR-nod i databasen (till exempel en 
 
 Vissa arbetsflödesprocesser accepterar argument som administratören anger när arbetsflödessteget ställs in.
 
-Argument anges som en enskild sträng i **Processargument** -egenskapen i **Egenskaper** i arbetsflödesredigeraren. För varje process som beskrivs nedan beskrivs argumentsträngens format i en enkel EBNF-grammatik. Följande indikerar till exempel att argumentsträngen består av ett eller flera kommaavgränsade par, där varje par består av ett namn (som är en sträng) och ett värde, avgränsade med ett dubbelkolon:
+Argument anges som en enskild sträng i egenskapen **Processargument** i rutan **Egenskaper** i arbetsflödesredigeraren. För varje process som beskrivs nedan beskrivs argumentsträngens format i en enkel EBNF-grammatik. Följande indikerar till exempel att argumentsträngen består av ett eller flera kommaavgränsade par, där varje par består av ett namn (som är en sträng) och ett värde, avgränsade med ett dubbelkolon:
 
 ```
     args := name '::' value [',' name '::' value]*
@@ -58,7 +58,7 @@ Efter den här tidsgränsen är arbetsflödessteget inte längre i drift. Vissa 
 
 ### Behörigheter {#permissions}
 
-Sessionen som skickades till `WorkflowProcess` backas upp av tjänstanvändaren för arbetsflödets processtjänst, som har följande behörigheter i arkivets rot:
+Sessionen som skickas till `WorkflowProcess` backas upp av tjänstanvändaren för arbetsflödets processtjänst, som har följande behörigheter i arkivets rot:
 
 * `jcr:read`
 * `rep:write`
@@ -66,7 +66,7 @@ Sessionen som skickades till `WorkflowProcess` backas upp av tjänstanvändaren 
 * `jcr:lockManagement`
 * `crx:replicate`
 
-Om behörighetsuppsättningen inte är tillräcklig för `WorkflowProcess` måste den använda en session med nödvändig behörighet.
+Om den behörighetsuppsättningen inte är tillräcklig för din `WorkflowProcess`-implementering måste den använda en session med de behörigheter som krävs.
 
 Det rekommenderade sättet att göra detta är att använda en tjänstanvändare som har skapats med den nödvändiga, men minimala, underuppsättningen behörigheter som krävs.
 
@@ -74,17 +74,17 @@ Det rekommenderade sättet att göra detta är att använda en tjänstanvändare
 >
 >Om du uppgraderar från en version före AEM 6.2 kan du behöva uppdatera implementeringen.
 >
->I tidigare versioner skickades administratörssessionen till `WorkflowProcess` implementeringar och kan sedan ha fullständig åtkomst till databasen utan att behöva definiera specifika åtkomstkontrollistor.
+>I tidigare versioner skickades administratörssessionen till `WorkflowProcess`-implementeringarna och kunde sedan ha fullständig åtkomst till databasen utan att behöva definiera specifika åtkomstkontrollistor.
 >
 >Behörigheterna definieras nu enligt ovan ([Behörigheter](#permissions)). Som den metod som rekommenderas för att uppdatera implementeringen.
 >
 >En kortsiktig lösning finns också tillgänglig för bakåtkompatibilitet när kodändringar inte är möjliga:
 >
->* Använda webbkonsolen ( `/system/console/configMgr` leta upp **Konfigurationstjänst för arbetsflöde för Adobe Granite**
+>* Använda webbkonsolen ( `/system/console/configMgr`) för att hitta konfigurationstjänsten för arbetsflödet **Adobe Granite**
 >
->* aktivera **Läge för äldre arbetsflödesprocess**
+>* aktivera **äldre arbetsflödesprocessläge**
 >
->Detta återgår till det gamla beteendet att ge en administratörssession till `WorkflowProcess` implementering och ge obegränsad åtkomst till hela databasen igen.
+>Detta återgår till det gamla beteendet att tillhandahålla en administratörssession till implementeringen av `WorkflowProcess` och ger obegränsad åtkomst till hela databasen igen.
 
 ## Processer för arbetsflödeskontroll {#workflow-control-processes}
 
@@ -92,30 +92,30 @@ Följande processer utför inga åtgärder på innehåll. De styr själva arbets
 
 ### AbsoluteTimeAutoAdvance (autoförskott för absolut tid) {#absolutetimeautoadvancer-absolute-time-auto-advancer}
 
-The `AbsoluteTimeAutoAdvancer` (Absolut tid för automatiskt avancerat) fungerar likadant som **AutoAdvcer**, förutom att den timeout inträffar vid en viss tidpunkt och ett visst datum, i stället för efter en viss tid.
+Processen `AbsoluteTimeAutoAdvancer` (autoavancerat för absolut tid) fungerar på samma sätt som **AutoAdvanced**, förutom att den inträffar vid en viss tidpunkt och ett visst datum i stället för efter en viss tidslängd.
 
 * **Java™-klass**: `com.adobe.granite.workflow.console.timeout.autoadvance.AbsoluteTimeAutoAdvancer`
 * **Nyttolast**: Ingen.
-* **Argument**: Ingen.
+* **Argument**: Inga.
 * **Timeout**: Processen tar slut när den angivna tiden och datumet nås.
 
 ### AutoAdvantager (automatiskt avancerat) {#autoadvancer-auto-advancer}
 
-The `AutoAdvancer` processen flyttar automatiskt arbetsflödet till nästa steg. Om det finns mer än ett möjligt nästa steg (till exempel om det finns en OR-delning) kommer den här processen att flytta fram arbetsflödet längs *standardflöde*, om en sådan har angetts, annars kommer arbetsflödet inte att avanceras.
+Processen `AutoAdvancer` flyttar automatiskt arbetsflödet till nästa steg. Om det finns mer än ett möjligt nästa steg (till exempel om det finns en OR-delning) kommer den här processen att flytta arbetsflödet längs *standardvägen*, om en sådan har angetts, annars kommer arbetsflödet inte att avanceras.
 
 * **Java™-klass**: `com.adobe.granite.workflow.console.timeout.autoadvance.AutoAdvancer`
 
 * **Nyttolast**: Ingen.
-* **Argument**: Ingen.
-* **Timeout**: Processen tar slut efter angiven tidslängd.
+* **Argument**: Inga.
+* **Timeout**: Processtiden är slut efter angiven tidslängd.
 
 ### ProcessAssembler (Process Assembler) {#processassembler-process-assembler}
 
-The `ProcessAssembler` kör flera underprocesser sekventiellt i ett enda arbetsflödessteg. Använd `ProcessAssembler`skapar du ett enda steg av den här typen i arbetsflödet och anger dess argument för att ange namn och argument för de underprocesser som du vill köra.
+Processen `ProcessAssembler` kör flera underprocesser sekventiellt i ett enda arbetsflödessteg. Om du vill använda `ProcessAssembler` skapar du ett enda steg av den här typen i arbetsflödet och anger dess argument för att ange namn och argument för de underprocesser som du vill köra.
 
 * **Java™-klass**: `com.day.cq.workflow.impl.process.ProcessAssembler`
 
-* **Nyttolast**: En DAM-resurs, AEM eller ingen nyttolast (beror på underprocessernas krav).
+* **Nyttolast**: En DAM-resurs, AEM sida eller ingen nyttolast (beror på kraven för underprocesser).
 * **Argument**:
 
 ```
@@ -129,7 +129,7 @@ The `ProcessAssembler` kör flera underprocesser sekventiellt i ett enda arbetsf
         listitem := /* A string */
 ```
 
-* **Timeout**: Respektad.
+* **Timeout**: Förväntat.
 
 Till exempel:
 
@@ -151,9 +151,9 @@ Följande processer utför enkla uppgifter eller fungerar som exempel.
 
 >[!CAUTION]
 >
->Ändra ingenting i dialogrutan `/libs` bana.
+>Ändra ingenting i sökvägen `/libs`.
 >
->Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
+>Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 
 ### delete {#delete}
 
@@ -162,7 +162,7 @@ Objektet vid den angivna sökvägen tas bort.
 * **ECMAScript-sökväg**: `/libs/workflow/scripts/delete.ecma`
 
 * **Nyttolast**: JCR-sökväg
-* **Argument**: Ingen
+* **Argument**: Inga
 * **Timeout**: Ignorerad
 
 ### noop {#noop}
@@ -172,17 +172,17 @@ Detta är null-processen. Ingen åtgärd utförs, men ett felsökningsmeddelande
 * **ECMAScript-sökväg**: `/libs/workflow/scripts/noop.ecma`
 
 * **Nyttolast**: Ingen
-* **Argument**: Ingen
+* **Argument**: Inga
 * **Timeout**: Ignorerad
 
 ### rule-false {#rule-false}
 
-Detta är en null-process som returnerar `false` på `check()` -metod.
+Detta är en null-process som returnerar `false` för metoden `check()`.
 
 * **ECMAScript-sökväg**: `/libs/workflow/scripts/rule-false.ecma`
 
 * **Nyttolast**: Ingen
-* **Argument**: Ingen
+* **Argument**: Inga
 * **Timeout**: Ignorerad
 
 ### exempel {#sample}
@@ -192,7 +192,7 @@ Detta är ett exempel på ECMAScript-process.
 * **ECMAScript-sökväg**: `/libs/workflow/scripts/sample.ecma`
 
 * **Nyttolast**: Ingen
-* **Argument**: Ingen
+* **Argument**: Inga
 * **Timeout**: Ignorerad
 
 ### LockProcess {#lockprocess}
@@ -203,7 +203,7 @@ Låser arbetsflödets nyttolast.
 
 * **Nyttolast:** JCR_PATH och JCR_UID
 * **Argument:** Ingen
-* **Timeout:** Ignorerad
+* **Timeout:** ignoreras
 
 Stegen har ingen effekt under följande omständigheter:
 
@@ -218,7 +218,7 @@ Låser upp arbetsflödets nyttolast.
 
 * **Nyttolast:** JCR_PATH och JCR_UID
 * **Argument:** Ingen
-* **Timeout:** Ignorerad
+* **Timeout:** ignoreras
 
 Stegen har ingen effekt under följande omständigheter:
 
@@ -235,6 +235,6 @@ Skapar en version av arbetsflödets nyttolast (AEM eller DAM-resurs).
 
 * **Java™-klass**: `com.day.cq.wcm.workflow.process.CreateVersionProcess`
 
-* **Nyttolast**: En JCR-sökväg eller ett UUID som refererar till en sida eller en DAM-resurs
-* **Argument**: Ingen
-* **Timeout**: Respektad
+* **Nyttolast**: En JCR-sökväg eller UUID som refererar till en sida eller en DAM-resurs
+* **Argument**: Inga
+* **Timeout**: Respekt

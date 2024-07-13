@@ -35,13 +35,13 @@ Ett paket innehåller även vaultmetainformation, inklusive filterdefinitioner o
 
 ## Pakethanteraren {#package-manager}
 
-Pakethanteraren hanterar paketen i AEM. Efter att du har [har tilldelats nödvändiga behörigheter](#permissions-needed-for-using-the-package-manager) du kan använda Package Manager för olika åtgärder, bland annat för att konfigurera, bygga, hämta och installera dina paket.
+Pakethanteraren hanterar paketen i AEM. När du har [tilldelat de nödvändiga behörigheterna](#permissions-needed-for-using-the-package-manager) kan du använda Package Manager för olika åtgärder, bland annat för att konfigurera, bygga, hämta och installera dina paket.
 
 ### Nödvändiga behörigheter {#required-permissions}
 
 För att kunna skapa, ändra, överföra och installera paket måste användarna ha rätt behörighet på följande noder:
 
-* Fullständig behörighet exklusive radering `/etc/packages`
+* Fullständiga rättigheter exklusive borttagning på `/etc/packages`
 * Noden som innehåller paketinnehållet
 
 >[!CAUTION]
@@ -54,22 +54,22 @@ För att kunna skapa, ändra, överföra och installera paket måste användarna
 
 Du kommer åt Package Manager på tre sätt:
 
-1. Från AEM huvudmeny > **verktyg** > **Distribution** > **Paket**
+1. Från AEM huvudmeny > **Verktyg** > **Distribution** > **Paket**
 1. Från [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) med hjälp av det övre växlingsfältet
-1. Direkt via åtkomst `http://<host>:<port>/crx/packmgr/`
+1. Direkt genom åtkomst till `http://<host>:<port>/crx/packmgr/`
 
 ### Pakethanterarens användargränssnitt {#ui}
 
 Pakethanteraren är uppdelad i fyra huvudsakliga funktionsområden:
 
 * **Vänster navigeringspanel** - Med den här panelen kan du filtrera och sortera paketlistan.
-* **Paketlista** - Det här är listan med paket i din instans som filtrerats och sorterats efter val i den vänstra navigeringspanelen.
-* **Aktivitetslogg** - Den här panelen minimeras först och utökas för att beskriva aktiviteten i Package Manager, till exempel när ett paket byggs eller installeras. Det finns ytterligare knappar på fliken Aktivitetslogg för att:
+* **Paketlista** - Det här är listan över paket i din instans som filtrerats och sorterats efter val i den vänstra navigeringspanelen.
+* **Aktivitetslogg** - Den här panelen minimeras först och utökas för att beskriva aktiviteten i Package Manager, till exempel när ett paket skapas eller installeras. Det finns ytterligare knappar på fliken Aktivitetslogg för att:
    * **Rensa logg**
    * **Visa/dölj**
 * **Verktygsfält** - Verktygsfältet innehåller uppdateringsknappar för den vänstra navigeringspanelen och paketlistan samt knappar för sökning, skapande och överföring av paket.
 
-![Pakethanterarens användargränssnitt](assets/package-manager-ui.png)
+![Pakethanterarens gränssnitt](assets/package-manager-ui.png)
 
 Om du klickar på ett alternativ i den vänstra navigeringspanelen filtreras paketlistan omedelbart.
 
@@ -85,7 +85,7 @@ Det finns ett antal åtgärder som kan utföras på ett paket via de verktygsfä
 * [Ladda ned](#downloading-packages-to-your-file-system)
 * [Dela](#share)
 
-Ytterligare åtgärder finns under **Mer** -knappen.
+Ytterligare åtgärder är tillgängliga under knappen **Mer**.
 
 * [Ta bort](#deleting-packages)
 * [Täckning](#package-coverage)
@@ -107,7 +107,7 @@ Om paketet har ändrats eller aldrig byggts visas statusen som en länk för att
 
 ## Paketinställningar {#package-settings}
 
-Ett paket är i princip en uppsättning filter och databasdata som baseras på dessa filter. Med hjälp av gränssnittet för pakethanteraren kan du klicka på ett paket och sedan på **Redigera** om du vill visa information om ett paket med följande inställningar.
+Ett paket är i princip en uppsättning filter och databasdata som baseras på dessa filter. Med hjälp av pakethanterarens gränssnitt kan du klicka på ett paket och sedan på knappen **Redigera** för att visa information om ett paket, inklusive följande inställningar.
 
 * [Allmänna inställningar](#general-settings)
 * [Paketfilter](#package-filters)
@@ -119,7 +119,7 @@ Ett paket är i princip en uppsättning filter och databasdata som baseras på d
 
 Du kan redigera olika paketinställningar för att definiera information som paketbeskrivning, beroenden och providerinformation.
 
-The **Paketinställningar** är tillgänglig via **Redigera** knapp när [skapa](#creating-a-new-package) eller [redigera](#viewing-and-editing-package-information) ett paket. Klicka på **Spara**.
+Dialogrutan **Paketinställningar** är tillgänglig via knappen **Redigera** när du [skapar](#creating-a-new-package) eller [redigerar](#viewing-and-editing-package-information) ett paket. Klicka på **Spara** när ändringarna har gjorts.
 
 ![Dialogrutan Redigera paket, allmänna inställningar](assets/general-settings.png)
 
@@ -139,7 +139,7 @@ Nedan följer exempel på konventioner som används för officiella förpackning
 
 Officiell snabbkorrigering
 
-![Numeriskt snabbkorrigeringsminiatyr](assets/official-hotfix.png)
+![Miniatyrbild för officiell snabbkorrigering](assets/official-hotfix.png)
 
 Officiell AEM installation av tillägg
 
@@ -147,20 +147,20 @@ Officiell AEM installation av tillägg
 
 Service Pack
 
-![ikon för AEM](assets/official-service-pack.png)
+![ikon AEM service pack-ikon](assets/official-service-pack.png)
 
 Använd en unik ikon för ditt paket. Återanvänd inte en ikon som används av Adobe.
 
 ### Paketfilter {#package-filters}
 
-Filter identifierar databasnoderna som ska inkluderas i paketet. A **Filterdefinition** anger följande information:
+Filter identifierar databasnoderna som ska inkluderas i paketet. En **filterdefinition** anger följande information:
 
-* The **Rotsökväg** av innehållet som ska inkluderas
+* **Rotsökvägen** för innehållet som ska inkluderas
 * **Regler** som innehåller eller exkluderar specifika noder under rotsökvägen
 
-Lägg till regler med **+** -knappen. Ta bort regler med **-** -knappen.
+Lägg till regler med knappen **+**. Ta bort regler med knappen **-**.
 
-Reglerna tillämpas i den ordning de har, så att de kan placeras efter behov med **Upp** och **Ned** pilknappar.
+Regler tillämpas i den ordning de har, så att de kan placeras efter behov med pilknapparna **Upp** och **Ned** .
 
 Filter kan innehålla noll eller flera regler. När inga regler har definierats innehåller paketet allt innehåll under rotsökvägen.
 
@@ -172,10 +172,10 @@ När du skapar regler definierar du ett reguljärt uttryck (kallas även regex, 
 
 | Regeltyp | Beskrivning |
 |---|---|
-| include | Inkludera kommer att inkludera alla filer och mappar i den angivna katalogen som matchar det reguljära uttrycket. Inkludera **inte** ta med andra filer eller mappar från den angivna rotsökvägen. |
+| include | Inkludera kommer att inkludera alla filer och mappar i den angivna katalogen som matchar det reguljära uttrycket. Inkludera **inkluderar inte** andra filer eller mappar från den angivna rotsökvägen. |
 | exclude | Uteslut exkluderar alla filer och mappar som matchar det reguljära uttrycket. |
 
-Paketfilter definieras oftast när du börjar [skapa paketet.](#creating-a-new-package) De kan emellertid också redigeras senare, och därefter bör paketet byggas om för att uppdatera innehållet baserat på de nya filterdefinitionerna.
+Paketfilter definieras oftast när du först [skapar paketet.](#creating-a-new-package) De kan dock även redigeras senare, och därefter bör paketet byggas om för att uppdatera innehållet baserat på de nya filterdefinitionerna.
 
 >[!TIP]
 >
@@ -183,7 +183,7 @@ Paketfilter definieras oftast när du börjar [skapa paketet.](#creating-a-new-p
 
 >[!TIP]
 >
->Mer bakgrundsinformation finns i [Apache Jackrabbit - Arbetsytefilter](https://jackrabbit.apache.org/filevault/filter.html) dokumentation.
+>Bakgrundsinformation finns i dokumentationen för [Apache Jackrabbit - Workspace Filter](https://jackrabbit.apache.org/filevault/filter.html).
 
 ### Beroenden {#dependencies}
 
@@ -198,15 +198,15 @@ Paketfilter definieras oftast när du börjar [skapa paketet.](#creating-a-new-p
 
 ### Avancerade inställningar {#advanced-settings}
 
-![fliken Avancerade inställningar](assets/advanced-settings.png)
+![Fliken Avancerade inställningar](assets/advanced-settings.png)
 
 | Fält | Beskrivning | Exempel/detaljer |
 |---|---|---|
 | Namn | Namnet på paketets leverantör | `WKND Media Group` |
 | URL | URL för providern | `https://wknd.site` |
 | Länk | Paketspecifik länk till en providersida | `https://wknd.site/package/` |
-| Kräver | Definierar om det finns några begränsningar när paketet installeras | **Administratör** - Paketet får bara installeras med administratörsbehörighet <br>**Starta om** - AEM måste startas om efter att paketet har installerats |
-| AC-hantering | Anger hur åtkomstkontrollsinformationen som definieras i paketet hanteras när paketet importeras | **Ignorera** - Bevara åtkomstkontrollistor i databasen <br>**Skriv över** - Skriv över åtkomstkontrollistor i databasen <br>**Sammanfoga** - Sammanfoga båda uppsättningar åtkomstkontrollistor <br>**MergePreserve** - Lägg samman åtkomstkontrollen i innehållet med den som ingår i paketet genom att lägga till åtkomstkontrollposter för objekt som inte finns i innehållet <br>**Rensa** - Rensa åtkomstkontrollistor |
+| Kräver | Definierar om det finns några begränsningar när paketet installeras | **Admin** - Paketet får bara installeras med administratörsbehörighet <br>**Starta om** - AEM måste startas om efter att paketet har installerats |
+| AC-hantering | Anger hur åtkomstkontrollsinformationen som definieras i paketet hanteras när paketet importeras | **Ignorera** - Bevara ACL:er i databasen <br>**Skriv över** - Skriv över ACL:er i databasen <br>**Merge** - Sammanfoga båda uppsättningarna ACL:er <br>**MergePreserve** - Lägg samman åtkomstkontroll i innehållet med den som följer med paketet genom att lägga till åtkomstkontrollposter för objekt som inte finns i innehållet <br>**Rensa**} - Rensa åtkomstkontrollistor |
 
 ### Paketskärmbilder {#package-screenshots}
 
@@ -222,13 +222,13 @@ Det finns många åtgärder som kan utföras på ett paket.
 
 1. [Åtkomst till pakethanteraren.](#accessing)
 
-1. Klicka **Skapa paket**.
+1. Klicka på **Skapa paket**.
 
    >[!TIP]
    >
    >Om din instans har många paket kan det finnas en mappstruktur på plats. I sådana fall är det enklare att navigera till den önskade målmappen innan du skapar det nya paketet.
 
-1. I **Nytt paket** anger du följande fält:
+1. Ange följande fält i dialogrutan **Nytt paket**:
 
    ![Dialogrutan Nytt paket](assets/new-package-dialog.png)
 
@@ -238,29 +238,29 @@ Det finns många åtgärder som kan utföras på ett paket.
 
    * **Grupp** - Det här är målgruppens (eller mappens) namn. Med grupper kan du ordna dina paket. En mapp skapas för gruppen om den inte redan finns. Om du lämnar gruppnamnet tomt skapas paketet i huvudpaketlistan.
 
-1. Klicka **OK** för att skapa paketet.
+1. Klicka på **OK** för att skapa paketet.
 
 1. AEM listar det nya paketet högst upp i paketlistan.
 
    ![Nytt paket](assets/new-package.png)
 
-1. Klicka **Redigera** för att definiera [paketinnehåll.](#package-contents) Klicka **Spara** när du har redigerat inställningarna.
+1. Klicka på **Redigera** för att definiera innehållet i [paketet.](#package-contents) Klicka på **Spara** när du har redigerat inställningarna.
 
-1. Nu kan du [Bygge](#building-a-package) ditt paket.
+1. Du kan nu [bygga](#building-a-package) ditt paket.
 
 Det är inte obligatoriskt att omedelbart skapa paketet efter att det har skapats. Ett obyggt paket innehåller inget innehåll och består endast av filterdata och andra metadata för paketet.
 
 ### Skapa ett paket {#building-a-package}
 
-Ett paket skapas ofta samtidigt som du [skapa paketet](#creating-a-new-package), men du kan gå tillbaka vid ett senare tillfälle för att antingen skapa eller återskapa paketet. Detta kan vara användbart om innehållet i databasen har ändrats eller om paketfiltren har ändrats.
+Ett paket byggs ofta samtidigt som du [skapar paketet](#creating-a-new-package), men du kan gå tillbaka vid ett senare tillfälle för att antingen skapa eller återskapa paketet. Detta kan vara användbart om innehållet i databasen har ändrats eller om paketfiltren har ändrats.
 
 1. [Åtkomst till pakethanteraren.](#accessing)
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka **Bygge**. En dialogruta där du uppmanas bekräfta att du vill skapa paketet eftersom allt befintligt paketinnehåll skrivs över.
+1. Klicka på **Skapa**. En dialogruta där du uppmanas bekräfta att du vill skapa paketet eftersom allt befintligt paketinnehåll skrivs över.
 
-1. Klicka **OK**. AEM skapar paketet och visar allt innehåll som lagts till i paketet på samma sätt som i aktivitetslistan. När AEM är klar visas en bekräftelse på att paketet har skapats och (när du stänger dialogrutan) information om paketlistan uppdateras.
+1. Klicka på **OK**. AEM skapar paketet och visar allt innehåll som lagts till i paketet på samma sätt som i aktivitetslistan. När AEM är klar visas en bekräftelse på att paketet har skapats och (när du stänger dialogrutan) information om paketlistan uppdateras.
 
 ### Redigera ett paket {#edit-package}
 
@@ -270,11 +270,11 @@ När ett paket har överförts till AEM kan du ändra dess inställningar.
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka **Redigera** och uppdatera **[Paketinställningar](#package-settings)** efter behov.
+1. Klicka på **Redigera** och uppdatera **[paketinställningarna](#package-settings)** efter behov.
 
-1. Klicka **Spara** att spara.
+1. Klicka på **Spara** för att spara.
 
-Du kan behöva [återskapa paketet](#building-a-package) för att uppdatera innehållet baserat på de ändringar du har gjort.
+Du kan behöva [återskapa paketet](#building-a-package) för att uppdatera innehållet baserat på dina ändringar.
 
 ### Rewrapping a Package {#rewrapping-a-package}
 
@@ -284,11 +284,11 @@ När ett paket har byggts kan det paketeras om. När du gör om en paketering ä
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka **Redigera** och uppdatera **[Paketinställningar](#package-settings)** efter behov.
+1. Klicka på **Redigera** och uppdatera **[paketinställningarna](#package-settings)** efter behov.
 
-1. Klicka **Spara** att spara.
+1. Klicka på **Spara** för att spara.
 
-1. Klicka **Mer** > **Radbryt** och en dialogruta med en fråga om bekräftelse.
+1. Klicka på **Mer** > **Radbrytning** så uppmanas du bekräfta åtgärden i en dialogruta.
 
 ### Visa andra paketversioner {#other-versions}
 
@@ -298,7 +298,7 @@ Eftersom alla versioner av ett paket visas i listan som alla andra paket, kan pa
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka **Mer** > **Andra versioner** och en dialogruta öppnas med en lista över andra versioner av samma paket med statusinformation.
+1. Klicka på **Mer** > **Andra versioner** så öppnas en dialogruta med en lista över andra versioner av samma paket med statusinformation.
 
 ### Innehåll och testinstallation för visning av paket {#viewing-package-contents-and-testing-installation}
 
@@ -308,13 +308,13 @@ När du har skapat ett paket kan du visa innehållet.
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Om du vill visa innehållet klickar du **Mer** > **Innehåll** och Package Manager visar hela innehållet i paketet i aktivitetsloggen.
+1. Om du vill visa innehållet klickar du på **Mer** > **Innehåll** och Pakethanteraren visar hela innehållet i paketet i aktivitetsloggen.
 
    ![Paketet innehåller](assets/package-contents.png)
 
-1. Om du vill göra en torr installation klickar du **Mer** > **Testa installationen** och Package Manager rapporterar i aktivitetsloggen resultatet som om installationen utfördes.
+1. Om du vill utföra en torr installation klickar du på **Mer** > **Testa installationen** och Pakethanteraren rapporterar resultaten i aktivitetsloggen som om installationen utfördes.
 
-   ![Testinstallation](assets/test-install.png)
+   ![Testa installationen](assets/test-install.png)
 
 ### Hämtar paket till filsystemet {#downloading-packages-to-your-file-system}
 
@@ -322,13 +322,13 @@ När du har skapat ett paket kan du visa innehållet.
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka på **Ladda ned** eller paketets länkade filnamn i paketinformationsområdet.
+1. Klicka på knappen **Hämta** eller på paketets länkade filnamn i paketinformationsområdet.
 
 1. AEM hämtar paketet till datorn.
 
 ### Dela ett paket {#share}
 
-Paketresursen var en centraliserad offentlig tjänst för distribution av innehållspaket. Paketresursen har ersatts av [Programvarudistribution](#software-distribution) och knappen fungerar inte längre.
+Paketresursen var en centraliserad offentlig tjänst för distribution av innehållspaket. Paketresursen har ersatts av [Programvarudistribution](#software-distribution) och den här knappen fungerar inte längre.
 
 ### Överför paket från filsystemet {#uploading-packages-from-your-file-system}
 
@@ -336,18 +336,18 @@ Paketresursen var en centraliserad offentlig tjänst för distribution av inneh�
 
 1. Välj den gruppmapp som du vill att paketet ska överföras till.
 
-1. Klicka på **Överför paket** -knappen.
+1. Klicka på knappen **Överför paket**.
 
 1. Ange nödvändig information om det överförda paketet.
 
    ![Dialogrutan Paketöverföring](assets/package-upload-dialog.png)
 
-   * **Paket** - Använd **Bläddra..** för att välja det paket som krävs från det lokala filsystemet.
+   * **Paket** - Använd knappen **Bläddra..** för att välja det paket som krävs från det lokala filsystemet.
    * **Tvinga överföring** - Om det redan finns ett paket med det här namnet framtvingar det här alternativet överföringen och skriver över det befintliga paketet.
 
-1. Klicka **OK** och det valda paketet överförs och paketlistan uppdateras därefter.
+1. Klicka på **OK** och det valda paketet överförs och paketlistan uppdateras därefter.
 
-Paketinnehållet finns nu på AEM, men för att göra innehållet tillgängligt för användning måste du [installera paketet](#installing-packages).
+Paketinnehållet finns nu på AEM, men för att göra innehållet tillgängligt måste du [installera paketet](#installing-packages).
 
 ### Verifierar paket {#validating-packages}
 
@@ -363,9 +363,9 @@ Pakethanteraren kan utföra följande valideringar:
 
 ##### Validera OSGi-paketimporter {#osgi-package-imports}
 
-**Vad är markerat?**
+**Vad är markerat**
 
-Den här valideringen undersöker paketet för alla JAR-filer (OSGi-paket) och extraherar deras `manifest.xml` (som innehåller de versionshanteringsberoenden som OSGi-paketet är beroende av) och verifierar den AEM instansens export av dessa beroenden med rätt versioner.
+Den här valideringen undersöker paketet för alla JAR-filer (OSGi-paket), extraherar deras `manifest.xml` (som innehåller de versionshanteringsberoenden som OSGi-paketet är beroende av) och verifierar den AEM instansen exporterar dessa beroenden med rätt versioner.
 
 **Hur det rapporteras**
 
@@ -375,19 +375,19 @@ Alla versionshanteringsberoenden som inte kan uppfyllas av den AEM instansen vis
 
 Om beroenden inte uppfylls startar inte OSGi-paketen med dessa beroenden. Detta resulterar i en trasig programdistribution eftersom allt som förlitar sig på det ostartade OSGi-paketet i sin tur inte fungerar som det ska.
 
-**Felmatchning**
+**Fellösning**
 
 För att åtgärda fel på grund av att OSGi-paket inte är nöjda måste beroendeversionen i paketet med otillfredsställande importer justeras.
 
 ##### Validera övertäckningar {#overlays}
 
-**Vad är markerat?**
+**Vad är markerat**
 
 Valideringen avgör om det paket som installeras innehåller en fil som redan finns i AEM.
 
-Med en befintlig övertäckning vid `/apps/sling/servlet/errorhandler/404.jsp`, ett paket som `/libs/sling/servlet/errorhandler/404.jsp`, så att den befintliga filen ändras på `/libs/sling/servlet/errorhandler/404.jsp`.
+Med en befintlig övertäckning på `/apps/sling/servlet/errorhandler/404.jsp`, till exempel, ett paket som innehåller `/libs/sling/servlet/errorhandler/404.jsp`, så att den ändrar den befintliga filen på `/libs/sling/servlet/errorhandler/404.jsp`.
 
-**Hur det rapporteras**
+**Så här rapporteras det**
 
 Alla sådana övertäckningar beskrivs i aktivitetsloggen för Package Manager.
 
@@ -395,9 +395,9 @@ Alla sådana övertäckningar beskrivs i aktivitetsloggen för Package Manager.
 
 Ett feltillstånd innebär att paketet försöker distribuera en fil som redan är överlagrad, vilket innebär att ändringarna i paketet åsidosätts (och därmed&quot;döljs&quot;) av övertäckningen och inte börjar gälla.
 
-**Felmatchning**
+**Fellösning**
 
-För att lösa det här problemet måste du ha kvar övertäckningsfilen i `/apps` måste granska ändringarna i den överlagrade filen i `/libs` och lägg in de ändringar som behövs i övertäckningen ( `/apps`) och distribuera om den överlagrade filen.
+För att lösa det här problemet måste den som ansvarar för övertäckningsfilen i `/apps` granska ändringarna i den överliggande filen i `/libs` och införliva ändringarna efter behov i övertäckningen ( `/apps`) och distribuera den överliggande filen på nytt.
 
 >[!NOTE]
 >
@@ -405,7 +405,7 @@ För att lösa det här problemet måste du ha kvar övertäckningsfilen i `/app
 
 ##### Validera åtkomstkontrollistor {#acls}
 
-**Vad är markerat?**
+**Vad är markerat**
 
 Valideringen kontrollerar vilka behörigheter som läggs till, hur de hanteras (sammanfoga/ersätt) och om de aktuella behörigheterna påverkas.
 
@@ -417,7 +417,7 @@ Behörigheterna beskrivs i aktivitetsloggen för Package Manager.
 
 Inga explicita fel kan anges. Valideringen anger bara om nya ACL-behörigheter kommer att läggas till eller påverkas av att paketet installeras.
 
-**Felmatchning**
+**Fellösning**
 
 Med hjälp av den information som valideringen ger kan de påverkade noderna granskas i CRXDE och åtkomstkontrollistorna kan justeras i paketet efter behov.
 
@@ -440,9 +440,9 @@ Validering ska alltid ske efter att paketet har överförts, men innan det insta
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Validera paketet genom att klicka **Mer** > **Validera**,
+1. Validera paketet genom att klicka på **Mer** > **Validera**
 
-1. I den modala dialogrutan som visas använder du kryssrutorna för att välja valideringstyp(er) och börja valideringen genom att klicka **Validera**.
+1. I den modala dialogrutan som sedan visas använder du kryssrutorna för att välja valideringstyp(er) och påbörjar valideringen genom att klicka på **Validera**.
 
 1. De valda valideringarna körs sedan och resultaten visas i aktivitetsloggen för Package Manager.
 
@@ -454,13 +454,13 @@ Begäran om POST har följande format.
 https://<host>:<port>/crx/packmgr/service.jsp?cmd=validate&type=osgiPackageImports,overlays,acls
 ```
 
-The `type` kan vara vilken kommaavgränsad, osorterad lista som helst som består av:
+Parametern `type` kan vara en kommaavgränsad, osorterad lista som består av:
 
 * `osgiPackageImports`
 * `overlays`
 * `acls`
 
-Värdet för `type` standardvärdet är `osgiPackageImports` om det inte uttryckligen skickas.
+Värdet för `type` är som standard `osgiPackageImports` om det inte skickas explicit.
 
 När du använder cURL kör du en programsats som liknar följande:
 
@@ -478,7 +478,7 @@ Paket definieras av sina filter. Du kan låta Pakethanteraren tillämpa filter f
 
 1. Öppna paketinformationen från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka **Mer** > **Täckning**.
+1. Klicka på **Mer** > **Disponering**.
 
 1. Täckningsinformationen visas i aktivitetsloggen.
 
@@ -500,45 +500,45 @@ Innan du installerar paketet skapas ett ögonblicksbildspaket som innehåller de
 >  `com.day.cq.workflow.launcher.impl.WorkflowLauncherImpl.`
 >* När installationen är klar återaktiverar du WorkflowLauncher.
 >
->Genom att inaktivera WorkflowLauncher säkerställer du att Assets-importimeringsramverket inte (oavsiktligt) manipulerar resurserna vid installationen.
+>Genom att inaktivera WorkflowLauncher säkerställer du att Assets importramverk inte (oavsiktligt) manipulerar resurserna vid installationen.
 
 1. [Åtkomst till pakethanteraren.](#accessing)
 
 1. Öppna paketinformationen för det paket som du vill installera från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka på **Installera** knappen i artikelinformationen eller **Installera** i paketets status.
+1. Klicka antingen på knappen **Installera** i objektinformationen eller på länken **Installera** i paketstatusen.
 
 1. En dialogruta begär bekräftelse och tillåter att ytterligare alternativ anges.
 
    * **Endast extrahera** - Extrahera endast paketet så att ingen ögonblicksbild skapas och därför inte kan avinstalleras
-   * **Spara tröskelvärde** - Antal tillfälliga noder tills automatiskt sparande aktiveras (öka om du stöter på undantag för samtidig redigering)
+   * **Spara tröskelvärde** - Antal tillfälliga noder tills automatiskt sparande aktiveras (öka om du stöter på undantag för samtidig ändring)
    * **Extrahera delpaket** - Aktivera automatisk extrahering av delpaket
-   * **Hantering av åtkomstkontroll** - Anger hur åtkomstkontrollsinformationen som definieras i paketet hanteras när paketet installeras (alternativen är desamma som [avancerade paketinställningar](#advanced-settings))
-   * **Beroendehantering** - Ange hur beroenden hanteras under installationen
+   * **Åtkomstkontrollhantering** - Anger hur åtkomstkontrollsinformationen som definieras i paketet hanteras när paketet installeras (alternativen är desamma som de [avancerade paketinställningarna](#advanced-settings))
+   * **Beroendehantering** - Ange hur beroenden ska hanteras under installationen
 
-1. Klicka **Installera**.
+1. Klicka på **Installera**.
 
 1. Aktivitetsloggen visar installationsförloppet.
 
-När installationen är klar och slutförd uppdateras paketlistan och ordet **Installerad** visas i paketstatusen.
+När installationen är klar och slutförd uppdateras paketlistan och ordet **Installed** visas i paketstatusen.
 
 ### Paket installeras om {#reinstalling-packages}
 
-När du installerar om paket utförs samma steg på ett redan installerat paket som bearbetas när [installerar paketet.](#installing-packages)
+När du installerar om paket utförs samma steg på ett redan installerat paket som bearbetas när [paketet installeras.](#installing-packages)
 
 ### Filsystembaserad överföring och installation {#file-system-based-upload-and-installation}
 
 Du kan helt och hållet avstå från Package Manager när du installerar paket. AEM kan identifiera paket som har placerats på en viss plats i värddatorns lokala filsystem och överföra och installera dem automatiskt.
 
-1. Under AEM installationsmapp finns en `crx-quicksart` och `license.properties` -fil. Skapa en mapp med namnet `install` under `crx-quickstart` vilket resulterar i banan `<aem-home>/crx-quickstart/install`.
+1. Under AEM installationsmapp finns det en `crx-quicksart`-mapp tillsammans med jar- och `license.properties`-filen. Skapa en mapp med namnet `install` under `crx-quickstart` som resulterar i sökvägen `<aem-home>/crx-quickstart/install`.
 
 1. Lägg till dina paket i den här mappen. De laddas automatiskt upp och installeras på din instans.
 
 1. När överföringen och installationen är klar kan du se paketen i Package Manager som om du hade använt gränssnittet i Package Manager för att installera dem.
 
-Om instansen körs börjar överföringen och installationen omedelbart när du lägger till den i paketet på `install` mapp
+Om instansen körs börjar överföringen och installationen omedelbart när du lägger till den i paketet i mappen `install`
 
-Om instansen inte körs placeras paket i `install` -mappen installeras vid start i alfabetisk ordning.
+Om instansen inte körs installeras paket som placeras i mappen `install` vid start i alfabetisk ordning.
 
 ### Avinstallerar paket {#uninstalling-packages}
 
@@ -548,7 +548,7 @@ När du avinstallerar paketet återställs innehållet i databasen till ögonbli
 
 1. Öppna paketinformationen för det paket som du vill avinstallera från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka **Mer** > **Avinstallera**, för att ta bort innehållet i det här paketet från databasen.
+1. Klicka på **Mer** > **Avinstallera** om du vill ta bort innehållet i det här paketet från databasen.
 
 1. En dialogruta begär bekräftelse och visar alla ändringar som görs.
 
@@ -562,7 +562,7 @@ Om du tar bort ett paket tas endast dess information bort från Pakethanteraren.
 
 1. Öppna paketinformationen för det paket som du vill ta bort från paketlistan genom att klicka på paketnamnet.
 
-1. Pakethanteraren ber om en bekräftelse på att du vill ta bort paketet. Klicka **OK** för att bekräfta borttagningen.
+1. Pakethanteraren ber om en bekräftelse på att du vill ta bort paketet. Bekräfta borttagningen genom att klicka på **OK**.
 
 1. Paketinformationen tas bort och information rapporteras i aktivitetsloggen.
 
@@ -574,7 +574,7 @@ Replikera innehållet i ett paket för att installera det på publiceringsinstan
 
 1. Öppna paketinformationen för det paket som du vill replikera från paketlistan genom att klicka på paketnamnet.
 
-1. Klicka **Mer** > **Replikera**.
+1. Klicka på **Mer** > **Replikera**.
 
 1. Paketet replikeras och information rapporteras i aktivitetsloggen.
 
@@ -582,9 +582,9 @@ Replikera innehållet i ett paket för att installera det på publiceringsinstan
 
 AEM paket kan användas för att skapa och dela innehåll i olika AEM miljöer.
 
-[Programvarudistribution](https://downloads.experiencecloud.adobe.com) är en centraliserad tjänst som förenklar sökning och hämtning av AEM.
+[Programvarudistribution](https://downloads.experiencecloud.adobe.com) är en centraliserad tjänst som är utformad för att förenkla sökning och hämtning av AEM.
 
-Mer information finns i [Dokumentation om programvarudistribution.](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
+Mer information finns i [dokumentationen för programdistribution.](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html)
 
 >[!NOTE]
 >

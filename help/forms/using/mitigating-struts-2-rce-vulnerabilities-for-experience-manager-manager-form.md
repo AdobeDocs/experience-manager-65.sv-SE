@@ -32,17 +32,17 @@ I följande tabell visas upplösning för alla påverkade versioner:
 
 | Frigör | Aktuell version | Användaråtgärd |
 |---|---|---|
-| Experience Manager 6.5 Forms i JEE | 6.5.19.0 | [Installera det senaste Service Pack-meddelandet](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en) |
-| Experience Manager 6.5 Forms i JEE | 6.5.13.0 - 6.5.18.0 | Använd någon av följande metoder: <ul><li>  <a href="https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en"> Installera det senaste Service Pack-meddelandet </a> </li> <li> <a href ="#use-manual-mitigation-steps"> Använd manuella begränsningssteg </a> |
-| Experience Manager 6.5 Forms i JEE | 6.5-6.5.12.0 | [Installera det senaste Service Pack-meddelandet](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en)  </br> </br> **OBS!** AEM Forms har för närvarande stöd för versionerna 6.5.13.0 till 6.5.19.0. Om du använder en äldre version rekommenderar vi att du uppgraderar till 6.5.13.0 eller senare. Anvisningar om hur du installerar AEM 6.5.13.0 eller senare finns i versionsinformationen. |
+| Experience Manager 6.5 Forms i JEE | 6.5.19.0 | [Installera den senaste Service Pack-versionen](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en) |
+| Experience Manager 6.5 Forms i JEE | 6.5.13.0 - 6.5.18.0 | Använd någon av följande metoder: <ul><li>  <a href="https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en"> Installera den senaste Service Pack-versionen </a> </li> <li> <a href ="#use-manual-mitigation-steps"> Använd manuell begränsning </a> |
+| Experience Manager 6.5 Forms i JEE | 6.5-6.5.12.0 | [Installera den senaste Service Pack-versionen](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en) </br> </br> **OBS!** AEM Forms stöder för närvarande versionerna 6.5.13.0 till 6.5.19.0. Om du använder en äldre version rekommenderar vi att du uppgraderar till 6.5.13.0 eller senare. Anvisningar om hur du installerar AEM 6.5.13.0 eller senare finns i versionsinformationen. |
 
 ### Använd manuella begränsningssteg {#use-manual-mitigation-steps}
 
 Du kan använda de manuella begränsningsstegen för att lösa problemet på AEM 6.5 Form Server som kör Service Pack 13 till AEM 6.5 Form Server som kör Service Pack 18 (6.5.13.0 - 6.5.18.0):
 
-1. Ladda ned [struts-core 2.5.33 jar](https://repo1.maven.org/maven2/org/apache/struts/struts2-core/2.5.33/struts2-core-2.5.33.jar) till en lokal mapp. Exempel: C:\Users\labuser\Desktop\struts2-core-2.5.33.jar.
-1. Hämta AEM Forms on JEE Manual Patching Tool från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/patch_utility/archive-patcher-1.0.0.zip).
-1. Zippa upp det manuella arkivet med korrigeringsverktyg. Extrahera till `/Users/labuser/Desktop/archive-patcher-1.0.0 folder`. Följande filer extraheras:
+1. Hämta [strängkärnan 2.5.33 jar](https://repo1.maven.org/maven2/org/apache/struts/struts2-core/2.5.33/struts2-core-2.5.33.jar) till en lokal mapp. Exempel: C:\Users\labuser\Desktop\struts2-core-2.5.33.jar.
+1. Ladda ned AEM Forms on JEE Manual Patching Tool från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/fd/patch_utility/archive-patcher-1.0.0.zip).
+1. Zippa upp det manuella arkivet med korrigeringsverktyg. Extrahera till exempel till `/Users/labuser/Desktop/archive-patcher-1.0.0 folder`. Följande filer extraheras:
    * archive-patcher-1.0.0.jar
    * patch-archive.bat
    * patch-archive.sh
@@ -67,7 +67,7 @@ Du kan använda de manuella begränsningsstegen för att lösa problemet på AEM
    >
    >Verktyget kräver Internetanslutning eftersom beroenden hämtas vid körning. Kontrollera därför att du är ansluten till Internet innan du kör verktyget.
 
-1. Kör följande kommandon i den angivna ordningen för rekursiv ersättning på plats. Innan du kör kommandot måste du ersätta sökvägen i kommandot med sökvägen till din AEM Forms-server och `struts2-core-2.5.33.jar` -fil.
+1. Kör följande kommandon i den angivna ordningen för rekursiv ersättning på plats. Innan du kör kommandot måste du ersätta sökvägen i kommandot med sökvägen till AEM Forms-servern och filen `struts2-core-2.5.33.jar`.
 
 
 
@@ -99,7 +99,7 @@ Du kan använda de manuella begränsningsstegen för att lösa problemet på AEM
    >
    >Verktyget kräver Internetanslutning eftersom beroenden hämtas vid körning. Kontrollera därför att du är ansluten till Internet innan du kör verktyget.
 
-1. Kör följande kommandon i den angivna ordningen för rekursiv ersättning på plats. Innan du kör kommandot måste du ersätta sökvägen i kommandot med sökvägen till din AEM Forms-server och `struts2-core-2.5.33.jar` -fil.
+1. Kör följande kommandon i den angivna ordningen för rekursiv ersättning på plats. Innan du kör kommandot måste du ersätta sökvägen i kommandot med sökvägen till AEM Forms-servern och filen `struts2-core-2.5.33.jar`.
 
 
 

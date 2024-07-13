@@ -52,7 +52,7 @@ Utvecklarna ansvarar för att utveckla och anpassa det föreslagna projektet (oa
 * förverkliga designen
 * utveckla de tjänster och skript som krävs för att implementera de funktioner som krävs
 
-Konfigurationen av [utveckling](/help/sites-developing/best-practices.md) miljön kan vara beroende av olika faktorer, men består av:
+Konfigurationen av [utvecklingsmiljön](/help/sites-developing/best-practices.md) kan vara beroende av olika faktorer, även om den består av:
 
 * Ett integrerat utvecklingssystem med versionskontroll som ger en integrerad kodbas. Detta används för att sammanfoga och konsolidera kod från de enskilda utvecklingsmiljöer som används av varje utvecklare.
 * En personlig miljö för varje utvecklare, vilken vanligtvis finns på hens lokala dator. Med lämpliga intervall synkroniseras koden med versionskontrollsystemet
@@ -61,7 +61,7 @@ Beroende på hur omfattande ditt system är kan utvecklingsmiljön ha både för
 
 ### Kvalitetssäkring {#quality-assurance}
 
-Den här miljön används av kvalitetssäkringsgruppen för att [test](/help/sites-developing/test-plan.md) ditt nya system, både design och funktion. Den bör ha både författar- och publiceringsmiljöer med lämpligt innehåll och tillhandahålla alla tjänster som behövs för att möjliggöra en komplett serie tester.
+Den här miljön används av kvalitetssäkringsteamet för att [testa](/help/sites-developing/test-plan.md) ditt nya system på ett heltäckande sätt, både design och funktion. Den bör ha både författar- och publiceringsmiljöer med lämpligt innehåll och tillhandahålla alla tjänster som behövs för att möjliggöra en komplett serie tester.
 
 ### Mellanlagring {#staging}
 
@@ -71,7 +71,7 @@ Mellanlagringsmiljön bör vara en spegling av produktionsmiljön - konfiguratio
 * Den kan användas för sluttester (design, funktionalitet och gränssnitt) innan den distribueras till produktionsmiljöerna.
 * Även om det inte alltid är möjligt att ha samma mellanlagringsmiljö som produktionsmiljön bör den vara så lik som möjligt för att möjliggöra prestanda- och lasttestning.
 
-### Produktion - Skapa och publicera {#production-author-and-publish}
+### Production - Author and Publish {#production-author-and-publish}
 
 Produktionsmiljön består av de miljöer som behövs för att [författa och publicera](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) implementeringen.
 
@@ -95,7 +95,7 @@ Innehåll som aktiverats paketeras och placeras i författarmiljöns replikering
 
 Om du vill återreplikera data som genererats i en publiceringsmiljö till författarmiljön avsöker en replikeringslyssnare i redigeringsmiljön publiceringsmiljön och hämtar sådant innehåll från publiceringsmiljöns utkorg för omvänd replikering.
 
-#### Publicera {#publish}
+#### Publish {#publish}
 
 En publiceringsmiljö finns i DMZ (Demilitarized Zone). Detta är den miljö där besökare får tillgång till ditt innehåll (till exempel via en webbplats eller i form av en mobilapp) och interagerar med det, oavsett om det är offentligt eller i intranätet. En publiceringsmiljö:
 
@@ -139,6 +139,6 @@ Produktionsinnehållet bör flyttas från produktionsmiljön till mellanlagrings
 Innehåll kan överföras:
 
 * Mellan olika miljöer – genom exporter och importer av paket.
-* Mellan olika instanser - genom direktreplikering ([AEM](/help/sites-deploying/replication.md)), innehållet (med en HTTP- eller HTTPS-anslutning).
+* Mellan olika instanser - genom direkt replikering ([AEM replikering](/help/sites-deploying/replication.md)), innehållet (med HTTP- eller HTTPS-anslutning).
 
 ![chlimage_1-1](assets/chlimage_1-1.png)

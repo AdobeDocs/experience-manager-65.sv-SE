@@ -33,16 +33,16 @@ En diskussion om lagringsalternativ och driftsättningstopologier finns på:
 
 I redigeringsmiljön kommer du till lagringskonsolen.
 
-* Välj **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**
+* Välj **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]** från global navigering
 
 Så här väljer du ett annat lagringsalternativ än standard-JCR:
 
 * Välj ett alternativ
 * Konfigurera korrekt
 
-   * Mer information finns [välja MSRP](msrp.md#select-msrp)
-   * Mer information finns [välja DSRP](dsrp.md#select-dsrp)
-   * Mer information finns [markera ASRP](asrp.md#select-asrp)
+   * Se information för [att välja MSRP](msrp.md#select-msrp)
+   * Se information om [val av DSRP](dsrp.md#select-dsrp)
+   * Se information för [att välja ASRP](asrp.md#select-asrp)
 
 * Välj **[!UICONTROL Submit]**.
 
@@ -50,10 +50,10 @@ Så här väljer du ett annat lagringsalternativ än standard-JCR:
 
 Om du inte gör något är standarddatabasen AEM JCR.
 
-JCR är *not* en gemensam butik som delas av redigerings- och publiceringsmiljöerna. Community-innehåll visas bara i författar- eller publiceringsmiljön som det skapades i.
+JCR är *inte* en gemensam lagringsplats som delas av författarmiljöerna och Publish-miljöerna. Community-innehåll visas bara från den författarmiljö eller Publish-miljö där det skapades.
 
-Besök [JCR Store](jsrp.md) om du vill ha mer information.
+Mer information finns på [JCR Store](jsrp.md).
 
 >[!NOTE]
 >
->Nodens frånvaro `srpc` under `/etc/socialconfig` anger standardvärdet [JCR-butik](jsrp.md).
+>Frånvaro av noden `srpc` under `/etc/socialconfig` indikerar [JCR-standardarkivet](jsrp.md).

@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Adobe Experience Manager (AEM) kan enkelt återges med [Standardservrar för Sling](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) för rendering [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) och andra format.
+Adobe Experience Manager (AEM)-innehåll kan enkelt återges med [Sling Default Servlets](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) för att återge [JSON](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html#default-json-rendering) och andra format.
 
 Dessa färdiga återgivningar tar vanligtvis plats i databasen och returnerar innehållet som det är.
 
@@ -35,7 +35,7 @@ I följande diagram visas återgivningen av innehållstjänster.
 
 ## Begär JSON {#requesting-json}
 
-Använd **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;no&quot; />.[&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.][&lt;export-config span=&quot;&quot; id=&quot;0&quot; translate=&quot;no&quot; />.json** för att begära JSON.]
+Använd **&lt;RESOURCE.caas[.&lt;EXPORT-CONFIG][.&lt;EXPORT-CONFIG].json** om du vill begära JSON.
 
 <table>
  <tbody>
@@ -45,11 +45,11 @@ Använd **&lt;resource.caas span=&quot;&quot; id=&quot;1&quot; translate=&quot;n
   </tr>
   <tr>
    <td>EXPORT-CONFIG</td>
-   <td><p><strong>VALFRITT</strong><br /> </p> <p>en exportkonfiguration hittades under /apps/mobileapps/caas/exportConfigs/EXPORT-CONFIG<br /> <br /> Om det utelämnas används standardexportkonfigurationen </p> </td>
+   <td><p><strong>VALFRITT</strong><br /> </p> <p>en exportkonfiguration hittades under /apps/mobileapps/caas/exportConfigs/EXPORT-CONFIG<br /> <br /> Om den utelämnas används standardexportkonfigurationen </p> </td>
   </tr>
   <tr>
    <td>DJUP-INT</td>
-   <td><strong>VALFRITT</strong><br /> <br /> djuprekursion för återgivning av underordnade objekt som används vid Sling-återgivning</td>
+   <td><strong>VALFRITT</strong><br /> <br /> djuprekursion för återgivning av underordnade som används vid Sling-återgivning</td>
   </tr>
  </tbody>
 </table>
@@ -108,7 +108,7 @@ I följande tabell visas egenskaperna för Export Configs:
    <td>Sträng[]</td>
    <td>innehåller allt</td>
    <td>Egenskapsnamn</td>
-   <td><p>if excludePropertyPrefixes set<br /> Detta omfattar angivna egenskaper trots att prefixet matchas,</p> <p>else (exclude properties ignore) inkluderar endast dessa egenskaper</p> </td>
+   <td><p>Om excludePropertyPrefixes anges <br /> innehåller detta angivna egenskaper trots att prefixet har matchats,</p> <p>else (exclude properties ignore) inkluderar endast dessa egenskaper</p> </td>
   </tr>
   <tr>
    <td>includeChildren</td>
@@ -128,7 +128,7 @@ I följande tabell visas egenskaperna för Export Configs:
    <td>renameProperties</td>
    <td>Sträng[]<br /> <br /> </td>
    <td>ändra namn på ingenting</td>
-   <td>&lt;actual_property_name&gt;,&lt;replacement_property_name&gt;</td>
+   <td>&lt;actual_property_name&gt;,&lt;replace_property_name&gt;</td>
    <td>ändra namn på egenskaper med ersättningar</td>
   </tr>
  </tbody>
@@ -158,7 +158,7 @@ I följande tabell visas egenskaperna:
    <td>Sträng[] </td>
    <td>-</td>
    <td>sling:resourceType</td>
-   <td>Returnera inte standardexporten av CaaS json för följande sling-resurstyper.<br /> Returnera en kundjson-export genom att återge resursen som<br /> &lt;resource&gt;.&lt;selector_to_inc&gt;.json </td>
+   <td>Returnera inte standardexporten av CaaS json för följande sling-resurstyper.<br /> Returnera en kundjson-export genom att återge resursen som:<br /> &lt;RESOURCE&gt;.&lt;SELECTOR_TO_INC&gt;.json </td>
   </tr>
  </tbody>
 </table>
@@ -174,7 +174,7 @@ Content Services innehåller två exportkonfigurationer:
 
 Standardexportkonfigurationen för Content Services används om en konfiguration anges i den begärda URI:n.
 
-&lt;resource>.caas[.&lt;depth-int>].json
+&lt;RESOURCE>.caas[.&lt;DEPTH-INT>].json
 
 <table>
  <tbody>
@@ -192,7 +192,7 @@ Standardexportkonfigurationen för Content Services används om en konfiguration
   </tr>
   <tr>
    <td>includeProperties</td>
-   <td>jcr:text,text<br /> jcr:title,title<br /> jcr:beskrivning,beskrivning<br /> jcr:lastModified,lastModified<br /> cq:tags,taggar<br /> cq:lastModified,lastModified</td>
+   <td>jcr:text,text<br /> jcr:title,title<br /> jcr:description,description<br /> jcr:lastModified,lastModified<br /> cq:tags,tags<br /> cq:lastModified,lastModified</td>
   </tr>
   <tr>
    <td>includeComponents</td>
@@ -212,7 +212,7 @@ Standardexportkonfigurationen för Content Services används om en konfiguration
   </tr>
   <tr>
    <td>Sling JSON Overrides</td>
-   <td>grund/komponenter/bild<br /> wcm/foundation/components/image<br /> mobileapps/caas/components/data/contentReference<br /> mobileapps/caas/components/data/assetlist</td>
+   <td>foundation/components/image<br /> wcm/foundation/components/image<br /> mobileapps/caas/components/data/contentReference<br /> mobileapps/caas/components/data/assetlist</td>
   </tr>
  </tbody>
 </table>
@@ -221,7 +221,7 @@ Standardexportkonfigurationen för Content Services används om en konfiguration
 
 Den här konfigurationen utökar standardinställningen så att underordnade grupperingar inkluderas under en underordnad nod.
 
-&lt;site_page>.caas.page[.&lt;depth-int>].json
+&lt;SITE_PAGE>.caas.page[.&lt;DEPTH-INT>].json
 
 ### Ytterligare resurser {#additional-resources}
 

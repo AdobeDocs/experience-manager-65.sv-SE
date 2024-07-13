@@ -22,9 +22,9 @@ En variabel i en arbetsflödesmodell är ett sätt att lagra ett värde baserat 
 
 I AEM arbetsflödesmodeller kan du:
 
-* [Skapa en variabel](/help/sites-developing/using-variables-in-aem-workflows.md#create-a-variable) av en datatyp som baseras på den informationstyp som du vill lagra i den.
-* [Ange ett värde för variabeln](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable) med hjälp av arbetsflödessteget Ange variabel.
-* [Använda variabeln](/help/sites-developing/using-variables-in-aem-workflows.md#use-a-variable) i eller Dela och Gå till AEM arbetsflödessteg så att du kan definiera ett uttryck för att fatta beslut om routning. Du kan också använda variabler i alla steg i AEM Forms Workflow.
+* [Skapa en variabel](/help/sites-developing/using-variables-in-aem-workflows.md#create-a-variable) för en datatyp baserat på den informationstyp som du vill lagra i den.
+* [Ange ett värde för variabeln ](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable) med hjälp av arbetsflödessteget Ange variabel.
+* [Använd variabeln ](/help/sites-developing/using-variables-in-aem-workflows.md#use-a-variable) i arbetsflödesstegen ELLER Dela och Gå till AEM så att du kan definiera ett uttryck för att fatta beslut om routning. Du kan också använda variabler i alla steg i AEM Forms Workflow.
 
 I följande video visas hur du kan skapa, ange och använda variabler i AEM arbetsflödesmodeller:
 
@@ -32,7 +32,7 @@ I följande video visas hur du kan skapa, ange och använda variabler i AEM arbe
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/usevariables_example.mp4)
 
-Variabler är ett tillägg till [MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) gränssnitt. Du kan använda [MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) i ECMAScript för att komma åt metadata som sparats med variabler.
+Variabler är ett tillägg till gränssnittet [MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html). Du kan använda [MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) i ECMAScript för att komma åt metadata som sparats med variabler.
 
 ## Skapa en variabel {#create-a-variable}
 
@@ -45,25 +45,25 @@ Du skapar variabler med hjälp av avsnittet Variabler som är tillgängliga i ar
 >
 >Arbetsflöden har endast stöd för ISO8601-format för datatypsvariabler.
 
-Ytterligare komplexa datatyper som är tillgängliga i AEM Forms-arbetsflöden finns på [Variabler i AEM Forms arbetsflöden](/help/forms/using/variable-in-aem-workflows.md). Använd datatypen ArrayList för att skapa variabelsamlingar. Du kan skapa en ArrayList-variabel för alla primitiva och komplexa datatyper. Skapa till exempel en ArrayList-variabel och välj String som undertyp för att lagra flera strängvärden med variabeln.
+Ytterligare komplexa datatyper som är tillgängliga i AEM Forms-arbetsflöden finns i [Variabler i AEM Forms-arbetsflöden](/help/forms/using/variable-in-aem-workflows.md). Använd datatypen ArrayList för att skapa variabelsamlingar. Du kan skapa en ArrayList-variabel för alla primitiva och komplexa datatyper. Skapa till exempel en ArrayList-variabel och välj String som undertyp för att lagra flera strängvärden med variabeln.
 
 Om du vill skapa en variabel
 
 1. I en AEM går du till Verktyg > Arbetsflöde > Modeller.
-1. Välj **[!UICONTROL Create]** och ange arbetsflödesmodellens titel och valfria namn. Markera modellen och välj **[!UICONTROL Edit]**.
-1. Välj variabelikonen som är tillgänglig i sidokanten av arbetsflödesmodellen och välj **[!UICONTROL Add Variable]**.
+1. Välj **[!UICONTROL Create]** och ange titeln och ett valfritt namn för arbetsflödesmodellen. Markera modellen och välj **[!UICONTROL Edit]**.
+1. Välj variabelikonen som är tillgänglig i sidosparken för arbetsflödesmodellen och välj **[!UICONTROL Add Variable]**.
 
    ![Lägg till variabel](assets/variables_add_variable_new.png)
 
 1. I dialogrutan Lägg till variabel anger du namnet och väljer variabeltyp.
-1. Välj datatyp på menyn **[!UICONTROL Type]** och ange följande värden:
+1. Välj datatypen i listrutan **[!UICONTROL Type]** och ange följande värden:
 
    * Primitiv datatyp - Ange ett valfritt standardvärde för variabeln.
    * JSON eller XML - Ange en JSON- eller XML-schemasökväg (tillval). Systemet validerar schemasökvägen när egenskaper som är tillgängliga i schemat mappas och lagras till en annan variabel.
    * Formulärdatamodell - Ange en formulärdatamodell.
    * ArrayList - Ange en undertyp för samlingen.
 
-1. Ange en valfri beskrivning av variabeln och välj ![Ikonen Spara markeras med en bock inuti en ruta.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att spara ändringarna. Variabeln visas i listan som är tillgänglig i den vänstra rutan.
+1. Ange en valfri beskrivning av variabeln och välj ikonen ![Spara som markeras med en bock i en ruta.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) om du vill spara ändringarna. Variabeln visas i listan som är tillgänglig i den vänstra rutan.
 
 Tänk på följande när du skapar variabler:
 
@@ -79,11 +79,11 @@ Du kan använda steget Ange variabel för att ange värdet för en variabel och 
 
 Beroende på variabelns datatyp kan du använda följande alternativ för att ange värdet för en variabel:
 
-* **Literal:** Använd alternativet när du vet exakt vilket värde du ska ange.
+* **Literal:** Använd alternativet när du vet exakt vilket värde som ska anges.
 * **Uttryck:** Använd alternativet när värdet som ska användas beräknas baserat på ett uttryck. Uttrycket skapas i angiven uttrycksredigerare.
 * **JSON-punktnotation:** Använd alternativet för att hämta ett värde från en JSON- eller FDM-typvariabel.
 * **XPATH:** Använd alternativet för att hämta ett värde från en XML-typvariabel.
-* **I förhållande till nyttolast:** Använd alternativet när värdet som ska sparas till variabeln är tillgängligt på en sökväg som är relativ till nyttolasten.
+* **Relativt till nyttolast:** Använd alternativet när värdet som ska sparas i variabeln är tillgängligt på en sökväg som är relativ till nyttolasten.
 * **Absolut sökväg:** Använd alternativet när värdet som ska sparas i variabeln är tillgängligt på en absolut sökväg.
 
 Du kan också uppdatera specifika element i en JSON- eller XML-typvariabel med JSON DOT Notation eller XPATH.
@@ -93,16 +93,16 @@ Du kan också uppdatera specifika element i en JSON- eller XML-typvariabel med J
 Så här lägger du till mappning mellan variabler:
 
 1. På arbetsflödets redigeringssida väljer du ikonen Steg som är tillgänglig i arbetsflödesmodellens sidospark.
-1. Dra och släpp **Ange variabel** gå till arbetsflödets redigerare, markera steget och välj ![Konfigurationsikonen indikeras av en skiftnyckel.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) (Konfigurera).
+1. Dra och släpp steget **Ange variabel** till arbetsflödesredigeraren, markera steget och välj ikonen ![Konfigurera som anges av en skiftnyckel.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) (Konfigurera).
 1. I dialogrutan Ange variabel väljer du **[!UICONTROL Mapping]** > **[!UICONTROL Add Mapping]**.
-1. I **Kartvariabel** markerar du variabeln där data ska lagras, väljer mappningsläge och anger ett värde som ska lagras i variabeln. Mappningslägena varierar beroende på variabeltypen.
-1. Mappa fler variabler så att du kan skapa ett meningsfullt uttryck. Välj ![Ikonen Spara markeras med en bock inuti en ruta.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att spara ändringarna.
+1. I avsnittet **Mappningsvariabel** markerar du variabeln som data ska lagras i, väljer mappningsläget och anger ett värde som ska lagras i variabeln. Mappningslägena varierar beroende på variabeltypen.
+1. Mappa fler variabler så att du kan skapa ett meningsfullt uttryck. Välj ikonen ![Spara som markeras med en bock inuti en ruta.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) om du vill spara ändringarna.
 
 ### Exempel 1: Fråga en XML-variabel för att ange ett värde för en strängvariabel {#example-query-an-xml-variable-to-set-value-for-a-string-variable}
 
-Välj en variabel av XML-typ som du vill lagra en XML-fil i. Fråga XML-variabeln för att ange värdet för en strängvariabel för egenskapen som är tillgänglig i XML-filen. Använd **Ange XPATH för XML-variabeln** fält för att definiera egenskapen som ska lagras i strängvariabeln.
+Välj en variabel av XML-typ som du vill lagra en XML-fil i. Fråga XML-variabeln för att ange värdet för en strängvariabel för egenskapen som är tillgänglig i XML-filen. Använd **Ange XPATH för fältet XML-variabel** för att definiera den egenskap som ska lagras i strängvariabeln.
 
-I det här exemplet väljer du en **formdata** XML-variabel som lagrar **cc-app.xml** -fil. Fråga **formdata** så att du kan ange värdet för **e-postadress** strängvariabel som lagrar värdet för **emailAddress** egenskapen finns i **cc-app.xml** -fil.
+I det här exemplet väljer du en **formdata** XML-variabel som ska lagra filen **cc-app.xml**. Fråga variabeln **formdata** så att du kan ange värdet för strängvariabeln **emailaddress** för att lagra värdet för egenskapen **emailAddress** som finns i filen **cc-app.xml** .
 
 >[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4 "Ange värdet för en variabel")
 
@@ -110,7 +110,7 @@ I det här exemplet väljer du en **formdata** XML-variabel som lagrar **cc-app.
 
 Använd ett uttryck för att beräkna summan av variablerna och lagra resultatet i en variabel.
 
-I det här exemplet använder du uttrycksredigeraren för att definiera ett uttryck för att beräkna summan av **tillgångskostnad** och **saldobelopp** variabler och lagra resultatet i **totalvärde** variabel.
+I det här exemplet använder du uttrycksredigeraren för att definiera ett uttryck för att beräkna summan av variablerna **assetsCost** och **balanceamount** och lagra resultatet i variabeln **totalValue** .
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
@@ -138,7 +138,7 @@ Det baseras på redigering av adaptiva formulärregler med följande ändringar.
 * Stöder inte inställning av ett objekts egenskap.
 * Stöder inte anrop till en webbtjänst.
 
-Mer information finns i [regelredigerare för anpassningsbara formulär](/help/forms/using/rule-editor.md).
+Mer information finns i [Regelredigeraren för anpassade formulär](/help/forms/using/rule-editor.md).
 
 ## Använda en variabel {#use-a-variable}
 
@@ -157,9 +157,9 @@ Med ELLER-delning skapas en delning i arbetsflödet, varefter endast en gren är
 
 Du kan definiera routningsuttryck för en gren med en regeldefinition, ett ECMA-skript eller ett externt skript.
 
-Du kan använda variabler för att definiera routningsuttrycket med hjälp av uttrycksredigeraren. Mer information om hur du använder routningsuttryck för steget ELLER Dela finns i [ELLER Dela upp steg](/help/sites-developing/workflows-step-ref.md#or-split).
+Du kan använda variabler för att definiera routningsuttrycket med hjälp av uttrycksredigeraren. Mer information om hur du använder routningsuttryck för steget ELLER Dela finns i [ELLER Dela steg](/help/sites-developing/workflows-step-ref.md#or-split).
 
-I det här exemplet ska du använda [exempel 2](/help/sites-developing/using-variables-in-aem-workflows.md#example2) för att ange värdet för **totalvärde** variabel. Gren 1 är aktiv om värdet för **totalvärde** är större än 50000. På samma sätt kan du definiera en regel som gör grenen 2 aktiv om värdet för **totalvärde** är mindre än 50000.
+I det här exemplet använder du [example 2](/help/sites-developing/using-variables-in-aem-workflows.md#example2) för att ange värdet för variabeln **totalvalue** innan du definierar routningsuttrycket. Gren 1 är aktiv om värdet för variabeln **totalvalue** är större än 50000. På samma sätt kan du definiera en regel som gör grenen 2 aktiv om värdet för variabeln **totalvalue** är mindre än 50000.
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
@@ -167,11 +167,11 @@ I det här exemplet ska du använda [exempel 2](/help/sites-developing/using-var
 
 Välj på liknande sätt en extern skriptsökväg eller ange ECMA-skriptet för routningsuttryck för att utvärdera den aktiva grenen. Välj **[!UICONTROL Rename Branch]** om du vill ange ett alternativt namn för grenen.
 
-Fler exempel finns i [Skapa en arbetsflödesmodell](/help/forms/using/aem-forms-workflow.md#create-a-workflow-model).
+Mer exempel finns i [Skapa en arbetsflödesmodell](/help/forms/using/aem-forms-workflow.md#create-a-workflow-model).
 
 #### Gå till steg {#go-to-step}
 
-The **Gå till steg** I kan du ange nästa steg som ska köras i arbetsflödesmodellen, beroende på resultatet av ett routningsuttryck.
+Med **Gå till steg** kan du ange nästa steg som ska köras i arbetsflödesmodellen, beroende på resultatet av ett routningsuttryck.
 
 Ungefär som i steget ELLER Dela kan du definiera routningsuttryck för Gå till med hjälp av en regeldefinition, ett ECMA-skript eller ett externt skript.
 
@@ -179,9 +179,9 @@ Du kan använda variabler för att definiera routningsuttrycket med hjälp av ut
 
 ![Gå till regel](assets/variables_goto_rule1_new.png)
 
-I det här exemplet anger steget Gå till att visa kreditkortsansökan som nästa steg om värdet för **actiontaken** variabeln är lika med **Behöver mer information**.
+I det här exemplet anger Gå till-steget Granska kreditkortsansökan som nästa steg om värdet för variabeln **actiontaken** är lika med **Behöver mer information**.
 
-Fler exempel på hur du använder regeldefinition i steget Gå till finns i [Simulera en for-slinga](/help/sites-developing/workflows-step-ref.md#simulateforloop).
+Mer exempel på hur du använder regeldefinitionen i steget Gå till finns i [Simulera en For-slinga](/help/sites-developing/workflows-step-ref.md#simulateforloop).
 
 #### Centrala arbetsflödessteg för Forms {#forms-workflow-centric-workflow-steps}
 
@@ -189,7 +189,7 @@ Alla AEM Forms Workflow-steg har stöd för variabler. Mer information finns i [
 
 ### Arbetsflödessteg utan stöd för variabler {#workflow-steps-without-support-for-variables}
 
-Du kan använda [MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) gränssnitt för att komma åt variabler i arbetsflödessteg som inte stöder variabler.
+Du kan använda gränssnittet [MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) för att komma åt variabler i arbetsflödessteg som inte stöder variabler.
 
 #### Hämta variabelvärdet {#retrieve-the-variable-value}
 
@@ -201,7 +201,7 @@ Om du vill hämta värden för befintliga variabler baserat på datatypen använ
 | XML | Packages.org.w3c.dom.Document xmlObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.org.w3c.dom.Document.class); |
 | JSON | Packages.com.google.gson.JsonObject jsonObject = workItem.getWorkflowData().getMetaDataMap().get(variableName, Packages.com.google.gson.JsonObject.class); |
 
-Mer information om API:er för ytterligare komplexa variabeldatatyper som är tillgängliga i AEM Forms-arbetsflöden finns i [Variabler i AEM Forms arbetsflöden](/help/forms/using/variable-in-aem-workflows.md).
+Mer information om API:er för ytterligare komplexa variabeldatatyper som är tillgängliga i AEM Forms-arbetsflöden finns i [Variabler i AEM Forms-arbetsflöden](/help/forms/using/variable-in-aem-workflows.md).
 
 **Exempel**
 
@@ -225,15 +225,15 @@ workItem.getWorkflowData().getMetaDataMap().put(variableName, value)
 workItem.getWorkflowData().getMetaDataMap().put(salary, 50000)
 ```
 
-Uppdaterar värdet för **lön** variabel till 50000.
+Uppdaterar värdet för variabeln **lön** till 50000.
 
 ### Ange variabler för att starta arbetsflöden {#apiinvokeworkflow}
 
 Du kan använda ett API för att ange variabler och skicka dem för att anropa arbetsflödesinstanser.
 
-[workflowSession.startWorkflow](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) I används model, wfData och metaData som argument. Använd MetaDataMap för att ange värdet för variabeln.
+[workflowSession.startWorkflow](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/WorkflowSession.html#startWorkflow-com.adobe.granite.workflow.model.WorkflowModel-com.adobe.granite.workflow.exec.WorkflowData-java.util.Map-) använder modell, wfData och metaData som argument. Använd MetaDataMap för att ange värdet för variabeln.
 
-I denna API **variableName** variabeln är inställd på **value** med metaData.put(variableName, value);
+I detta API är variabeln **variableName** inställd på **value** med metaData.put(variableName, value);
 
 ```java
 import com.adobe.granite.workflow.model.WorkflowModel;
@@ -251,8 +251,8 @@ workflowSession.startWorkflow(model, wfData, metaData);
 ## Redigera en variabel {#edit-a-variable}
 
 1. På sidan Redigera arbetsflöde väljer du ikonen Variabler som är tillgänglig i arbetsflödesmodellens sidokikon. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
-1. Välj ![Redigeringsikonen indikeras av en pennsymbol.](https://helpx.adobe.com/content/dam/help/images/en/edit.png) (Redigera) bredvid variabelnamnet som du vill redigera.
-1. Redigera variabelinformationen och markera ![Ikonen Spara markeras med en bock.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att spara ändringarna. Du kan inte redigera **[!UICONTROL Name]** och **[!UICONTROL Type]** fält för en variabel.
+1. Välj ikonen ![Redigera som indikeras av en pennsymbol.Ikonen ](https://helpx.adobe.com/content/dam/help/images/en/edit.png) (Redigera) bredvid variabelnamnet som du vill redigera.
+1. Redigera variabelinformationen och välj ikonen ![Spara som markeras med en bock.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) om du vill spara ändringarna. Du kan inte redigera fälten **[!UICONTROL Name]** och **[!UICONTROL Type]** för en variabel.
 
 ## Ta bort en variabel {#delete-a-variable}
 
@@ -262,4 +262,4 @@ Ta bort en variabel
 
 1. På sidan Redigera arbetsflöde väljer du ikonen Variabler som är tillgänglig i arbetsflödesmodellens sidokikon. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
 1. Välj ikonen Ta bort bredvid variabelnamnet som du vill ta bort.
-1. Välj ![Klar-ikon indikeras av en bockmarkeringssymbol.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att bekräfta och ta bort variabeln.
+1. Välj ikonen ![Klar, vilket indikeras av en bockmarkeringssymbol.](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) för att bekräfta och ta bort variabeln.

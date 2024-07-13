@@ -16,14 +16,14 @@ ht-degree: 29%
 
 # AEM Modernization Tools {#modernization-tools}
 
-[Verktyg för AEM](https://opensource.adobe.com/aem-modernize-tools/) möjliggöra enkel konvertering av
+Med [AEM moderniseringsverktyg](https://opensource.adobe.com/aem-modernize-tools/) kan du enkelt konvertera:
 
 * [Statiska mallar](page-templates-static.md) till [redigerbara mallar](page-templates-editable.md)
-* [Designkonfigurationer](page-templates-static.md) till [policyer](page-templates-editable.md)
-* [Foundation Components](/help/sites-authoring/default-components-foundation.md) till [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [Klassiskt användargränssnitt](website.md) till [Pekaktiverat användargränssnitt](touch-ui-concepts.md)
+* [Designkonfigurationer](page-templates-static.md) till [profiler](page-templates-editable.md)
+* [Foundation Components](/help/sites-authoring/default-components-foundation.md) to [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [Klassiskt gränssnitt](website.md) till [Touchaktiverat gränssnitt](touch-ui-concepts.md)
 
-Mer information om användningen av dessa verktyg finns i [se deras dokumentation](https://opensource.adobe.com/aem-modernize-tools/).
+Mer information om hur dessa verktyg används finns i [dokumentationen för dem](https://opensource.adobe.com/aem-modernize-tools/).
 
 >[!NOTE]
 >

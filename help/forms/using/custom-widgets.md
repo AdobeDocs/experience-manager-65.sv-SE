@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Skapa anpassade utseenden i HTML5-formulär{#create-custom-appearances-in-html-forms}
 
-Du kan koppla anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar med hjälp av utseenderamverket. XFA-motorn använder olika widgetar, se [Appearance Framework for adaptive and HTML5 forms](/help/forms/using/introduction-widgets.md) för detaljerad information.
+Du kan koppla anpassade widgetar till en Mobile Forms. Du kan utöka befintliga jQuery-widgetar eller utveckla egna widgetar med hjälp av utseenderamverket. XFA-motorn använder olika widgetar. Mer information finns i [Utseenderamverket för adaptiva formulär och HTML5-formulär](/help/forms/using/introduction-widgets.md).
 
 ![Ett exempel på standardwidget och anpassad widget](assets/custom-widgets.jpg)
 
@@ -43,11 +43,11 @@ HTML5-formulär innehåller en implementering av widgetramverket som kan utökas
   </tr>
   <tr>
    <td>återge</td>
-   <td>Återgivningsfunktionen returnerar jQuery-objektet för widgetens standardelement HTML. Standardelementet för HTML ska vara av fokuserbar typ. Till exempel: &lt;a&gt;, &lt;input&gt;och &lt;li&gt;. Det returnerade elementet används som $userControl. Om $userControl anger begränsningen ovan fungerar funktionerna i klassen AbstractWidget som förväntat, i annat fall kräver vissa av de vanliga API:erna (focus, click) ändringar. </td>
+   <td>Återgivningsfunktionen returnerar jQuery-objektet för widgetens standardelement HTML. Standardelementet för HTML ska vara av fokuserbar typ. Till exempel &lt;a&gt;, &lt;input&gt; och &lt;li&gt;. Det returnerade elementet används som $userControl. Om $userControl anger begränsningen ovan fungerar funktionerna i klassen AbstractWidget som förväntat, i annat fall kräver vissa av de vanliga API:erna (focus, click) ändringar. </td>
   </tr>
   <tr>
    <td>getEventMap</td>
-   <td>Returnerar en karta som konverterar HTML-händelser till XFA-händelser. <br /> {<br /> oskärpa: XFA_EXIT_EVENT,<br /> }<br /> I det här exemplet visas att oskärpan är en HTML-händelse och att XFA_EXIT_EVENT motsvarar en XFA-händelse. </td>
+   <td>Returnerar en karta som konverterar HTML-händelser till XFA-händelser. <br /> <br /> oskärpa: XFA_EXIT_EVENT,<br /> }<br /> Det här exemplet visar att oskärpan är en HTML-händelse och att XFA_EXIT_EVENT motsvarar en XFA-händelse. </td>
   </tr>
   <tr>
    <td>getOptionsMap</td>
@@ -68,7 +68,7 @@ HTML5-formulär innehåller en implementering av widgetramverket som kan utökas
  </tbody>
 </table>
 
-Om du vill skapa en egen widget inkluderar du referenser till JavaScript-filen som innehåller åsidosatta funktioner och nyligen tillagda funktioner i den profil som skapas ovan. Till exempel *sliderNumericFieldWidget* är en widget för numeriska fält. Om du vill använda widgeten i din profil i rubrikavsnittet inkluderar du följande rad:
+Om du vill skapa en egen widget inkluderar du referenser till JavaScript-filen som innehåller åsidosatta funktioner och nyligen tillagda funktioner i den profil som skapas ovan. *sliderNumericFieldWidget* är till exempel en widget för numeriska fält. Om du vill använda widgeten i din profil i rubrikavsnittet inkluderar du följande rad:
 
 ```javascript
 window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
@@ -76,7 +76,7 @@ window.formBridge.registerConfig("widgetConfig" , widgetConfigObject);
 
 ### Registrera anpassad widget med XFA Scripting Engine  {#register-custom-widget-with-xfa-scripting-engine-nbsp}
 
-När den anpassade widgetkoden är klar registrerar du widgeten med skriptmotorn med hjälp av `registerConfig`API för [Form Bridge](/help/forms/using/form-bridge-apis.md). WidgetConfigObject används som indata.
+När den anpassade widgetkoden är klar registrerar du widgeten med skriptmotorn genom att använda `registerConfig`API för [Form Bridge](/help/forms/using/form-bridge-apis.md). WidgetConfigObject används som indata.
 
 ```javascript
 window.formBridge.registerConfig("widgetConfig",

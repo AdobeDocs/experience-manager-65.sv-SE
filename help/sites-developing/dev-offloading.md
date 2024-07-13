@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Funktionen Apache Sling Discovery tillhandahåller ett Java-API som gör att du kan skapa JobManager-jobb och JobConsumer-tjänster som använder dem.
 
-Mer information om hur du skapar avlastningstopologier och konfigurerar ämnesförbrukning finns i [Avlastar jobb](/help/sites-deploying/offloading.md).
+Mer information om hur du skapar avlastning av topologier och konfigurerar ämnesförbrukning finns i [Avlastning av jobb](/help/sites-deploying/offloading.md).
 
 ## Hantera jobbnyttolaster {#handling-job-payloads}
 
@@ -29,7 +29,7 @@ Avlastningsramverket definierar två jobbegenskaper som du använder för att id
 * `offloading.job.input.payload`: En kommaavgränsad lista med innehållssökvägar. Innehållet replikeras till den instans som kör jobbet.
 * `offloading.job.output.payload`: En kommaavgränsad lista med innehållssökvägar. När jobbkörningen är klar replikeras jobbnyttolasten till de här sökvägarna i instansen som skapade jobbet.
 
-Använd `OffloadingJobProperties` enum för att referera till egenskapsnamnen:
+Använd uppräkningen `OffloadingJobProperties` för att referera till egenskapsnamnen:
 
 * `OffloadingJobProperties.INPUT_PAYLOAD.propertyName()`
 * `OffloadingJobProperties.OUTPUT_PAYLOAD.propetyName()`
@@ -42,7 +42,7 @@ Skapa en klient som anropar metoden JobManager.addJob för att skapa ett jobb so
 
 * Ämne: Jobbämnet.
 * Namn: (valfritt)
-* Egenskapskarta: A `Map<String, Object>` objekt som innehåller ett obegränsat antal egenskaper, t.ex. indatanyttolastsökvägar och utdatanyttolastsökvägar. Det här Map-objektet är tillgängligt för det JobConsumer-objekt som kör jobbet.
+* Egenskapskarta: Ett `Map<String, Object>`-objekt som innehåller valfritt antal egenskaper, till exempel indatanyttolastsökvägar och utdatanyttolastsökvägar. Det här Map-objektet är tillgängligt för det JobConsumer-objekt som kör jobbet.
 
 I följande exempeltjänst skapas ett jobb för ett givet ämne och en angiven nyttolastsökväg.
 
@@ -92,7 +92,7 @@ public class JobGeneratorImpl implements JobGenerator  {
 }
 ```
 
-Loggen innehåller följande meddelande när JobGeneratorImpl.createJob anropas för `com/adobe/example/offloading` ämne och `/content/geometrixx/de/services` nyttolast:
+Loggen innehåller följande meddelande när JobGeneratorImpl.createJob anropas för `com/adobe/example/offloading`-avsnittet och `/content/geometrixx/de/services`-nyttolasten:
 
 ```shell
 10.06.2013 15:43:33.868 *INFO* [JobHandler: /etc/workflow/instances/2013-06-10/model_1554418768647484:/content/geometrixx/en/company] com.adobe.example.offloading.JobGeneratorImpl Received request to make job for topic com/adobe/example/offloading and payload /content/geometrixx/de/services
@@ -100,9 +100,9 @@ Loggen innehåller följande meddelande när JobGeneratorImpl.createJob anropas 
 
 ## Utveckla en jobbkonsument {#developing-a-job-consumer}
 
-Utveckla en OSGi-tjänst som implementerar `org.apache.sling.event.jobs.consumer.JobConsumer` gränssnitt. Identifiera med ämnet som ska användas med `JobConsumer.PROPERTY_TOPICS` -egenskap.
+Om du vill förbruka jobb utvecklar du en OSGi-tjänst som implementerar gränssnittet `org.apache.sling.event.jobs.consumer.JobConsumer`. Identifiera med ämnet som ska användas med egenskapen `JobConsumer.PROPERTY_TOPICS`.
 
-Följande exempel på JobConsumer-implementering registreras med `com/adobe/example/offloading` ämne. Konsumenten ställer helt enkelt in egenskapen Förbrukad för noden med nyttolastinnehåll på true.
+Följande exempel på JobConsumer-implementering registreras med ämnet `com/adobe/example/offloading`. Konsumenten ställer helt enkelt in egenskapen Förbrukad för noden med nyttolastinnehåll på true.
 
 ```java
 package com.adobe.example.offloading;

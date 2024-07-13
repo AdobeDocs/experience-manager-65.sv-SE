@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # Migrering till Touch UI{#migration-to-the-touch-ui}
 
-Från och med version 6.0 har Adobe Experience Manager (AEM) infört ett nytt användargränssnitt som kallas *pekaktiverat användargränssnitt* (kallas även *pekgränssnitt*). Den är anpassad efter Adobe Experience Cloud och Adobe användargränssnittets allmänna riktlinjer. Det här har blivit standardgränssnittet i AEM med det äldre, skrivbordsorienterade gränssnittet som kallas *klassiskt användargränssnitt*.
+Från och med version 6.0 introducerade Adobe Experience Manager (AEM) ett nytt användargränssnitt som kallas *användargränssnittet med pekskärm* (kallas även *användargränssnittet*). Den är anpassad efter Adobe Experience Cloud och Adobe användargränssnittets allmänna riktlinjer. Det här har blivit standardgränssnittet i AEM med det äldre skrivbordsorienterade gränssnittet som kallas *det klassiska gränssnittet*.
 
 Om du har använt AEM med klassiskt användargränssnitt ska du vidta åtgärder för att migrera instansen. Den här sidan är avsedd att fungera som en språngbräda genom länkar till enskilda resurser.
 
 >[!NOTE]
 >
->Ett sådant migreringsprojekt kan få stor effekt på din instans. Se [Hantera projekt - bästa praxis](/help/managing/best-practices.md) för rekommenderade riktlinjer.
+>Ett sådant migreringsprojekt kan få stor effekt på din instans. Se [Hantera projekt - Bästa metoder](/help/managing/best-practices.md) för rekommenderade riktlinjer.
 
 ## Grunderna {#the-basics}
 
@@ -38,7 +38,7 @@ Tänk på följande stora skillnader mellan det klassiska gränssnittet och pekg
    <td>Pekaktiverat användargränssnitt</td>
   </tr>
   <tr>
-   <td>Beskrivs i JCR-databasen som en nodstruktur. Varje nod som representerar ett element i användargränssnittet kallas för <em>ExtJS-widget</em> och återges på klientsidan av <code>ExtJS</code>.</td>
+   <td>Beskrivs i JCR-databasen som en nodstruktur. Alla noder som representerar ett element i användargränssnittet kallas <em>ExtJS-widget</em> och återges på klientsidan av <code>ExtJS</code>.</td>
    <td>Beskrivs också i JCR-databasen som en nodstruktur. I det här fallet refererar dock alla noder till en Sling-resurstyp (Sling-komponent) som ansvarar för återgivningen. Gränssnittet renderas alltså (i stort) på serversidan.</td>
   </tr>
   <tr>
@@ -49,7 +49,7 @@ Tänk på följande stora skillnader mellan det klassiska gränssnittet och pekg
    <td><code>sling:resourceType</code>
     <ul>
      <li>används</li>
-     <li>till exempel<br /> <code>cq/gui/components/authoring/dialog</code><br /> </li>
+     <li>till exempel <br /> <code>cq/gui/components/authoring/dialog</code><br /> </li>
     </ul> </td>
   </tr>
   <tr>
@@ -65,11 +65,11 @@ Tänk på följande stora skillnader mellan det klassiska gränssnittet och pekg
     </ul> </td>
   </tr>
   <tr>
-   <td><p>JavaScript-plats:</p>
+   <td><p>JavaScript:</p>
     <ul>
      <li>Imperativa delar bäddas in direkt med avlyssnare eller hanteras i klientlibs.</li>
     </ul> </td>
-   <td><p>JavaScript-plats:</p>
+   <td><p>JavaScript:</p>
     <ul>
      <li>Imperativa delar kan inte bäddas in i dialogdefinition; ansvarsfördelning.</li>
     </ul> </td>
@@ -81,7 +81,7 @@ Tänk på följande stora skillnader mellan det klassiska gränssnittet och pekg
     </ul> </td>
    <td><p>Händelsehantering:</p>
     <ul>
-     <li>JavaScript observerar dialogrutehändelser.</li>
+     <li>JavaScript observerar dialoghändelser.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -93,13 +93,13 @@ Tänk på följande stora skillnader mellan det klassiska gränssnittet och pekg
    <td>Återgivning utförd av servern:
     <ul>
      <li>Klienten begär sidor tillsammans med det relaterade användargränssnittet.</li>
-     <li>Servern skickar (push) gränssnittet som HTML-dokument och använder Coral UI-komponenter.<br /> </li>
+     <li>Servern skickar (push) användargränssnittet som HTML-dokument och använder Coral UI-komponenter.<br /> </li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-Med andra ord innebär migrering av ett avsnitt i användargränssnittet från det klassiska användargränssnittet till det pekande användargränssnittet att du porterar ett *ExtJS-widget* till *Sling-komponent*. För att underlätta detta baseras pekgränssnittet på GRE-ramverket (Granite UI Framework), som redan innehåller vissa Sling-komponenter för användargränssnittet (kallas GRE UI-komponenter).
+Med andra ord innebär migrering av ett avsnitt i användargränssnittet från det klassiska gränssnittet till pekgränssnittet att en *ExtJS-widget* porteras till en *Sling-komponent*. För att underlätta detta baseras pekgränssnittet på GRE-ramverket (Granite UI Framework), som redan innehåller vissa Sling-komponenter för användargränssnittet (kallas GRE UI-komponenter).
 
 Kontrollera status och relaterade rekommendationer innan du börjar:
 
@@ -115,15 +115,15 @@ Grundläggande information om hur du utvecklar användargränssnittet för peksk
 
 Dialogrutor är en viktig faktor när du migrerar komponenter:
 
-* [Utveckla AEM](/help/sites-developing/developing-components.md) (med det pekaktiverade användargränssnittet)
+* [Utveckla AEM](/help/sites-developing/developing-components.md) (med det beröringsaktiverade användargränssnittet)
 * [Migrera från en klassisk komponent](/help/sites-developing/developing-components.md#migrating-from-a-classic-component)
-* [Verktyg för AEM](/help/sites-developing/modernization-tools.md) - för att hjälpa dig att konvertera dialogrutorna för dina klassiska användargränssnittskomponenter till touchgränssnitt
+* [AEM Moderniseringsverktyg](/help/sites-developing/modernization-tools.md) - hjälper dig att konvertera dialogrutorna för dina klassiska användargränssnittskomponenter till användargränssnitt
 
    * Det finns ett kompatibilitetslager med pekfunktion för att öppna en klassisk användargränssnittsdialogruta i en&quot;Touch UI wrapper&quot;, men det har begränsad funktionalitet och rekommenderas inte på lång sikt.
 
-* [Anpassa dialogrutefält i Touch UI](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
+* [Anpassa dialogrutefält i Touch-gränssnittet](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/aem-customizing-dialog-fields-in-touch-ui.html)
 * [Skapa en ny GRE-fältkomponent](/help/sites-developing/granite-ui-component.md)
-* [Anpassa sidredigering](/help/sites-developing/customizing-page-authoring-touch.md) (med det pekaktiverade användargränssnittet)
+* [Anpassa sidredigering](/help/sites-developing/customizing-page-authoring-touch.md) (med det beröringsaktiverade användargränssnittet)
 
 ## Migrera konsoler {#migrating-consoles}
 
@@ -137,11 +137,11 @@ Du kan också anpassa konsolerna:
 
 * [Mallar](/help/sites-developing/templates.md) - [Redigerbara mallar](/help/sites-developing/page-templates-editable.md)
 * [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
+* [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 
 >[!NOTE]
 >
->Se även [Utveckla - bästa praxis](/help/sites-developing/best-practices.md).
+>Se även [Utveckla - Bästa metoder](/help/sites-developing/best-practices.md).
 
 ## Ytterligare resurser {#further-resources}
 
@@ -151,7 +151,7 @@ Fullständig information om hur du utvecklar AEM finns i samlingen av resurser u
 * [Bevilja gränssnittsdokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
 * [AEM 6.5 Sites Tutorials and Videos](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html)
 * [Getting Started Developing AEM Sites - WKND Tutorial](/help/sites-developing/getting-started.md)
-* [AEM Gems](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html)
+* [AEM stödraster](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/overview.html)
 * [AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/)
 
 >[!CAUTION]

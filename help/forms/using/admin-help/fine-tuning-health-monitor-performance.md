@@ -74,7 +74,7 @@ När du samlar in systemstatistik som fyller i hälsoövervakaren påverkas pres
 1. Skriv användarnamnet och lösenordet som du skapade för WebLogic Server-domänen och klicka på Logga under Change Center och klicka på Lock &amp; Edit.
 1. Klicka på Miljö > Servrar under Domänstruktur och klicka på namnet på den hanterade servern i den högra panelen.
 1. På nästa skärm klickar du på fliken Konfiguration > fliken Serverstart.
-1. I rutan Argument lägger du till de argument du vill ha i slutet av det aktuella innehållet. Lägg till - `Dadobe.healthmonitor.enabled=false` inaktiverar hälsoövervakning.
+1. I rutan Argument lägger du till de argument du vill ha i slutet av det aktuella innehållet. Om du till exempel lägger till - `Dadobe.healthmonitor.enabled=false` inaktiveras hälsoövervakaren.
 1. Klicka på Spara och sedan på Aktivera ändringar.
 1. Starta om WebLogic-hanterad server.
 

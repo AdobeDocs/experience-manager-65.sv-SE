@@ -18,26 +18,26 @@ Lär dig hur du aktiverar vissa Content Fragment-funktioner i Configuration Brow
 
 ## Aktivera funktionen för innehållsfragment för instansen {#enable-content-fragment-functionality-instance}
 
-Innan du använder innehållsfragment använder du **Konfigurationsläsaren** för att aktivera följande:
+Använd **Konfigurationsläsaren** för att aktivera följande innan du använder innehållsfragment:
 
 * **Modeller för innehållsfragment** - obligatoriskt
-* **GraphQL Beständiga frågor** - valfritt
+* **GraphQL - beständiga frågor** - valfritt
 
 >[!CAUTION]
 >
->Om du inte aktiverar **Modeller för innehållsfragment**:
+>Om du inte aktiverar **modeller för innehållsfragment**:
 >
->* den **Skapa** kan inte användas för att skapa modeller.
->* du inte kan [välj platskonfigurationen för att skapa den relaterade slutpunkten](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint).
+>* alternativet **Skapa** är inte tillgängligt för att skapa modeller.
+>* Du kan inte [välja platskonfigurationen för att skapa den relaterade slutpunkten](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint).
 
 Om du vill aktivera funktionen för innehållsfragment måste du göra följande:
 
 * Aktivera användning av innehållsfragmentsfunktioner via konfigurationsläsaren
-* Använda konfigurationen i resursmappen
+* Använd konfigurationen i din Assets-mapp
 
 ### Aktivera funktionen för innehållsfragment i konfigurationsläsaren {#enable-content-fragment-functionality-in-configuration-browser}
 
-Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fragment-model), du **måste** först aktivera dem via **Konfigurationsläsaren**:
+Om du vill [använda vissa funktioner för innehållsfragment](#creating-a-content-fragment-model) måste **du** först aktivera dem via **konfigurationsläsaren**:
 
 >[!NOTE]
 >
@@ -47,21 +47,21 @@ Till [använda vissa funktioner för innehållsfragment](#creating-a-content-fra
 
 1. Använd **Skapa** för att öppna dialogrutan där du:
 
-   1. Ange en **Titel**.
+   1. Ange en **titel**.
    1. Om du vill aktivera deras användning väljer du
       * **Modeller för innehållsfragment**
-      * **GraphQL Beständiga frågor**
+      * **GraphQL - beständiga frågor**
 
       ![Definiera konfiguration](assets/cfm-conf-01.png)
 
-1. Välj **Skapa** för att spara definitionen.
+1. Välj **Skapa** om du vill spara definitionen.
 
 <!-- 1. Select the location appropriate to your website. -->
 
-### Använd konfigurationen i resursmappen {#apply-the-configuration-to-your-assets-folder}
+### Använd konfigurationen i din Assets-mapp {#apply-the-configuration-to-your-assets-folder}
 
-När konfigurationen **global** är aktiverat för innehållets fragmentfunktion och gäller sedan för alla resursmappar.
+När konfigurationen **global** är aktiverad för innehållsfragmentfunktioner gäller detta alla Assets-mappar.
 
-Om du vill använda andra konfigurationer (d.v.s. exkludera globala) med en jämförbar resursmapp måste du definiera anslutningen. Detta gör du genom att välja lämplig **konfiguration** på fliken **Cloud Services** i **Mappegenskaper** för rätt mapp.
+Om du vill använda andra konfigurationer (d.v.s. inte globala) med en jämförbar Assets-mapp måste du definiera anslutningen. Detta gör du genom att välja lämplig **konfiguration** på fliken **Cloud Services** i **Mappegenskaper** för rätt mapp.
 
 ![Använd konfiguration](assets/cfm-conf-02.png)

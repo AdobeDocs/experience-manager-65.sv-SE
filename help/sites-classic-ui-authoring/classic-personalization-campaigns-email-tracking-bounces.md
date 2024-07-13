@@ -22,7 +22,7 @@ ht-degree: 0%
 >
 >Adobe planerar inte att ytterligare förbättra spårningen av öppnade/studsade e-postmeddelanden som skickas av AEM SMTP-tjänst.
 >
->Rekommendationen är att [använda Adobe Campaign och dess AEM](/help/sites-administering/campaign.md).
+>Rekommendationen är att [använda Adobe Campaign och dess AEM integrering](/help/sites-administering/campaign.md).
 
 När du skickar ett nyhetsbrev till många användare finns det vanligtvis några ogiltiga e-postadresser i listan. Skickar nyhetsbrev till adresserna som studsar tillbaka. AEM kan hantera dessa studsar och kan sluta skicka nyhetsbrev till dessa adresser när den konfigurerade studsräknaren har överskridits. Som standard är studsfrekvensen 3, men den kan konfigureras.
 
@@ -34,9 +34,9 @@ Med flödesimporteraren kan du importera innehåll från externa källor till di
 
 Så här konfigurerar du feed-importeraren för spårning av studsade e-postmeddelanden:
 
-1. I **verktyg** väljer du Feed Importer.
+1. Välj Feed-importeraren i **Verktyg**.
 
-1. Klicka **Lägg till** för att skapa en konfiguration.
+1. Klicka på **Lägg till** för att skapa en konfiguration.
 
    ![chlimage_1](assets/chlimage_1a.png)
 
@@ -44,9 +44,9 @@ Så här konfigurerar du feed-importeraren för spårning av studsade e-postmedd
 
    Alla konfigurationer behöver information om följande i avsöknings-URL:
 
-   `username`: Det användarnamn som används för anslutning
+   `username`: Användarnamnet som används för anslutning
 
-   `password`: Det lösenord som används för anslutning
+   `password`: Lösenordet som används för anslutning
 
    Beroende på vilket protokoll du använder kan du dessutom konfigurera vissa inställningar.
 
@@ -64,9 +64,9 @@ Så här konfigurerar du feed-importeraren för spårning av studsade e-postmedd
 
    Gör att du kan ange flaggor att söka efter.
 
-   `imap.flag.SEEN`:Ange false för nytt/osynligt meddelande, true för redan lästa meddelanden
+   `imap.flag.SEEN`:Ange false för nytt/ej visat meddelande, true för redan lästa meddelanden
 
-   Se [https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html](https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html) för den fullständiga listan över flaggor.
+   Se [https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html](https://javaee.github.io/javamail/docs/api/index.html?javax/mail/Flags.Flag.html) för en fullständig lista över flaggor.
 
    **IMAP-exempel:**
 
@@ -83,7 +83,7 @@ När du har konfigurerat feed-importeraren konfigurerar du Från-adressen och st
 
 Så här konfigurerar du nyhetsbrevstjänsten:
 
-1. I OSGi-konsolen, på `<host>:<port>/system/console/configMgr`, navigera till **MCM Newsletter**.
+1. Gå till **MCM Newsletter** på OSGi-konsolen på `<host>:<port>/system/console/configMgr`.
 
 1. Konfigurera tjänsten och spara ändringarna när du är klar.
 

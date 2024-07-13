@@ -43,7 +43,7 @@ Den här konsolen visar de märken som är tillgängliga för tillfället och fr
 
 ## Skapa märke {#create-badge}
 
-Ett märke skapas genom att en lämplig liten bild (72 dpi med en höjd på mellan 26 och 32 pixlar) överförs och ett namn anges. Badge-bilden sparas i databasen på `/libs/settings/community/badging/images` och replikeras automatiskt till publiceringsmiljön.
+Ett märke skapas genom att en lämplig liten bild (72 dpi med en höjd på mellan 26 och 32 pixlar) överförs och ett namn anges. Badge-bilden lagras i databasen på `/libs/settings/community/badging/images` och replikeras automatiskt till publiceringsmiljön.
 
 Om publiceringsmiljön är en grupp utgivare måste du konfigurera [användarsynkronisering](/help/communities/sync.md).
 
@@ -55,11 +55,11 @@ Om publiceringsmiljön är en grupp utgivare måste du konfigurera [användarsyn
 
 * **Namn**
 
-  (*Obligatoriskt*) Namnet på märket. Det är standardinställningen `Display Name` och databasnodens namn. Om `Name` är inte ett giltigt databasnodnamn, det har ändrats.
+  (*Obligatoriskt*) Namnet på märket. Det är standardvärdet `Display Name` och databasnodens namn. Om `Name` inte är ett giltigt databasnodnamn ändras det.
 
 * **Visningsnamn**
 
-  (*Valfritt*) Namnet som ska visas för märket i användargränssnittet. Standard är den oförändrade text som anges för `Name`.
+  (*Valfritt*) Namnet som ska visas för märket i användargränssnittet. Standard är den oförändrade text som har angetts för `Name`.
 
 * **Beskrivning**
 
@@ -67,6 +67,6 @@ Om publiceringsmiljön är en grupp utgivare måste du konfigurera [användarsyn
 
 ## Ytterligare information {#additional-information}
 
-Mer information om hur du ställer in regler för poäng och badging finns i [Betygsättning och emblem](/help/communities/implementing-scoring.md).
+Mer information om hur du konfigurerar regler för poäng och badging finns i [Betygsättning och emblem](/help/communities/implementing-scoring.md).
 
 Information om hur du hanterar emblem för medlemmar finns i [Medlemskonsolen](/help/communities/members.md).

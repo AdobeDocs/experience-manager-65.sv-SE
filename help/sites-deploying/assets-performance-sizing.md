@@ -1,5 +1,5 @@
 ---
-title: Prestandahandbok för resurser
+title: Assets Performance Guide
 description: Lär dig hur du avgör den optimala maskinvarustorleken för en ny konfiguration av Digital Asset Management (DAM) och hur du felsöker prestandaproblem
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ---
 
-# Prestandahandbok för resurser{#assets-performance-guide}
+# Assets Performance Guide{#assets-performance-guide}
 
 DAM (Digital Asset Management) används ofta i fall där prestanda är viktiga. Den vanliga DAM-installationen innehåller dock flera maskinvaru- och programvarukomponenter som kan påverka prestandan. Det här dokumentet innehåller följande:
 
@@ -31,7 +31,7 @@ Dåliga prestanda inom digital resurshantering kan påverka användarupplevelsen
 
 Interaktiva prestanda mäts i svarstid för sidor. Detta är den tid det tar från att ta emot HTTP-begäran till att stänga HTTP-svaret, som kan avgöras av loggfilerna för begäran. Vanliga målprestanda är en sidsvarstid på mindre än två sekunder.
 
-**2. Resursbearbetning** Ett problem med resurshanteringen är när användare överför resurser och det tar några minuter tills resurserna konverteras och hämtas till Adobe Experience Manager (AEM) DAM.
+**2. Resursbearbetning** Ett problem med tillgångsbearbetning är när användare överför resurser och det tar några minuter tills resurser konverteras och hämtas till Adobe Experience Manager (AEM) DAM.
 
 Prestanda för tillgångsbearbetning mäts i genomsnittlig slutförandetid för arbetsflödet. Det här är den tid det tar från det att arbetsflödet för resursuppdatering anropas till det slutförs, vilket kan avgöras av användargränssnittet för arbetsflödesrapporter. Normala målprestanda beror på storleken och typen av resurser som bearbetas och antalet renderingar. Exempel på målprestanda kan vara följande:
 
@@ -39,11 +39,11 @@ Prestanda för tillgångsbearbetning mäts i genomsnittlig slutförandetid för 
 * under en minut för bilder som är mindre än 100 MB med standardrenderingar
 * under fem minuter för HD-videoklipp som är kortare än en minut
 
-**3. Hämtningshastighet** Ett genomströmningsproblem uppstår när hämtning från AEM DAM tar lång tid och miniatyrbilder visas inte direkt när du bläddrar i DAM-administratören eller DAM Finder.
+**3. Hämtningshastighet** Ett genomströmningsproblem uppstår när det tar lång tid att hämta från AEM DAM och miniatyrerna visas inte omedelbart när du bläddrar i DAM-administratören eller DAM Finder.
 
 Dataöverföringsprestanda mäts i hämtningshastigheten i kilobit per sekund. Det normala målet är 300 kbit/s för 100 samtidiga nedladdningar.
 
-**4. Faktorer som påverkar bearbetningen av tillgångar**
+**4. Faktorer som påverkar bearbetningsprestanda för resurser**
 
 För att kunna beräkna vilken maskinvara du behöver för att bearbeta resurser bör följande aspekter beaktas:
 
@@ -57,11 +57,11 @@ Heap har identifierats som den viktigaste begränsningsfaktorn. När resursen ö
 
 DAM-processerna är väl lämpade att utföras parallellt för stora mängder. När du överför resurser i en batch och processorer med flera kärnor går det snabbare att överföra den absoluta tiden per resurs.
 
-**5. Uppskattar maskinvarukrav för att utföra tillgångsbearbetning**
+**5. Uppskattar maskinvarukrav för bearbetning av resurser**
 
 Omfattande bearbetning av digitala resurser kräver optimerade maskinvaruresurser, de viktigaste faktorerna är bildstorlek och högsta genomströmning för bearbetade bilder.
 
-Allokera minst 16 GB stackutrymme och konfigurera [!UICONTROL DAM Update Asset] arbetsflöde för att använda [Camera Raw paket](/help/assets/camera-raw.md) för konsumtion av råbilder.
+Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet [!UICONTROL DAM Update Asset] så att det använder det [Camera Raw paketet](/help/assets/camera-raw.md) för konsumtion av råbilder.
 
 ## Förstå systemet {#understanding-the-system}
 
@@ -75,13 +75,13 @@ I följande förklaring beskrivs de möjliga prestandafallsområdena med vissa l
 
 **AEM DAM Finder** Interaktiva prestandaproblem som ofta förekommer i sökningar orsakas av hög processoranvändning på grund av många samtidiga användare eller andra CPU-krävande processer i samma instans. Genom att gå från virtuella datorer till dedikerade datorer och se till att inga andra tjänster körs på datorn kan du förbättra prestandan. Om hög processorbelastning orsakas av resursbearbetning och många samtidiga användare rekommenderar dag att du lägger till ytterligare klusternoder.
 
-**AEM DAM-arbetsflöde** Långvariga arbetsflödesprocesser vid tillgångsintag orsakar prestandaproblem vid bearbetning av resurser. Beroende på vilken typ av resurser som bearbetas kan detta visa på överanvändning av processorn. Dag rekommenderar att du minskar antalet andra processer som körs i systemet och ökar antalet tillgängliga processorer genom att lägga till klusternoder.
+**AEM DAM-arbetsflöde** Långvariga arbetsflödesprocesser under tillgångsintag orsakar prestandaproblem vid bearbetning av resurser. Beroende på vilken typ av resurser som bearbetas kan detta visa på överanvändning av processorn. Dag rekommenderar att du minskar antalet andra processer som körs i systemet och ökar antalet tillgängliga processorer genom att lägga till klusternoder.
 
 **NAS-anslutning** Dålig nätverksanslutning till NAS orsakar interaktiva prestandaproblem eftersom åtkomst av nya noder under resurshanteringen blir långsammare på grund av nätverksfördröjning. Dessutom påverkar långsam nätverksgenomströmning negativt genomströmning, men även bearbetningsprestanda eftersom inläsning och sparande av återgivningar blir långsammare.
 
 Orsaker till dålig fördröjning och genomströmning i en NAS är nätverkstopologi eller överutnyttjande av NAS av andra tjänster.
 
-**Nätverksansluten lagring** Överanvända nätverksanslutna lagringssystem kan orsaka en rad problem:
+**Nätverksansluten lagring** Överanvända nätverksanslutna lagringssystem kan orsaka en mängd problem:
 
 * Det har ofta uppstått problem med diskutrymmet som kan förebyggas genom korrekt storleksändring av ett DAM-projekt.
 * Hög diskfördröjning kan spridas till långsamma åtkomsttider för CRX och kan leda till interaktiva prestandaproblem.
@@ -95,7 +95,7 @@ För varje digitalt resurshanteringsprojekt måste du se till att det finns ett 
 1. Genomströmnings- och latenstester med JMeter - Att köras på en klientdator säkerställer att det inte finns några topologirelaterade problem.
 1. Standardiserade materialbearbetningstester - Infoga några exempelresurser och mät tiden. Detta bör omfatta integration med externa arbetsflöden.
 1. Övervaka processoranvändning, disk- och minnesanvändning för varje klusternod.
-1. Diagnostik för läs-/skrivprestanda för CRX för att identifiera problem som inte är relaterade till bearbetning.
+1. CRX läs- och skrivprestandadiagnostik för att identifiera problem som inte är relaterade till bearbetning.
 1. Övervaka nätverksfördröjning och -genomströmning från DAM-kluster till din NAS.
 1. Testa, läs och skriv prestanda och diskfördröjning direkt på NAS, om det är möjligt.
 

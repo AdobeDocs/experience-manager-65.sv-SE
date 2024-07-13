@@ -21,7 +21,7 @@ ht-degree: 0%
 XFA-formulärmallar eller XDP-mallar är mallar för:
 
 * [Bokstäver](/help/forms/using/create-letter.md)
-* [Utskriftskanal](/help/forms/using/web-channel-print-channel.md#printchannel) av [Interaktiv kommunikation](/help/forms/using/interactive-communications-overview.md)
+* [Skriv ut kanal](/help/forms/using/web-channel-print-channel.md#printchannel) av [Interaktiv kommunikation](/help/forms/using/interactive-communications-overview.md)
 
 * Layoutfragment
 
@@ -54,43 +54,43 @@ När du har analyserat layouten som krävs för att skapa interaktiv kommunikati
 
 >[!NOTE]
 >
->Lägg till innehåll i Print-kanalen i den interaktiva kommunikationen i stället för att lägga till innehåll i delformulärskomponenten i XDP-mallen. Lägg till innehåll i målområdena i utskriftskanalen med [dokumentfragment, diagram, bilder](create-interactive-communication.md#step2)och layoutfragment.
+>Lägg till innehåll i Print-kanalen i den interaktiva kommunikationen i stället för att lägga till innehåll i delformulärskomponenten i XDP-mallen. Lägg till innehåll i målområdena i utskriftskanalen med [dokumentfragment, diagram, bilder](create-interactive-communication.md#step2) och layoutfragment.
 
 Utför följande steg för att använda delformulär i en XDP-mall:
 
-1. Öppna Forms Designer och välj **Fil** > **Nytt** > **Använd ett tomt formulär**, markera **Nästa** och sedan markera **Slutför** om du vill öppna formuläret för att skapa en mall.
+1. Öppna Forms Designer, välj **Arkiv** > **Nytt** > **Använd ett tomt formulär**, välj **Nästa** och sedan **Slutför** för att öppna formuläret för att skapa en mall.
 
-   Se till att **Objektbibliotek** och **Objekt** alternativen är markerade på menyn **Fönster** -menyn.
+   Kontrollera att alternativen **Objektbibliotek** och **Objekt** är markerade på menyn **Fönster** .
 
-1. Dra och släpp **Delformulär** -komponenten från **Objektbibliotek** till formuläret.
+1. Dra och släpp **delformuläret** från **objektbiblioteket** till formuläret.
 
-   ![Komponentdesigner](assets/subform_component_designer_new.png)
+   ![Komponent Designer](assets/subform_component_designer_new.png)
 
-1. Markera delformuläret för att visa alternativen för delformuläret i **Objekt** i den högra rutan.
-1. Välj **Delformulär** och markera **Flödat** från **Innehåll** listruta. Dra delformulärets vänstra slutpunkt för att justera längden.
+1. Markera delformuläret för att visa alternativen för delformuläret i fönstret **Objekt** i den högra rutan.
+1. Välj fliken **Delformulär** och välj **Flödat** i listrutan **Innehåll**. Dra delformulärets vänstra slutpunkt för att justera längden.
 
    ![Flödat delformulär](assets/object_subform_flowed_new.png)
 
-1. I **Bindning** tab:
+1. På fliken **Bindning**:
 
-   1. Ange ett namn för delformuläret i dialogrutan **Namn** fält.
-   1. Välj **Ingen databindning** från **Databindning** listruta.
+   1. Ange ett namn för delformuläret i fältet **Namn**.
+   1. Välj **Ingen databindning** i listrutan **Databindning**.
 
 1. Markera på samma sätt rotdelformuläret i den vänstra rutan.
 
    ![Rotdelformulär](assets/root_subform_designer_new.png)
 
-1. Välj **Delformulär** och markera **Flödat** från **Innehåll** listruta. I **Bindningar** tab:
+1. Välj fliken **Delformulär** och välj **Flödat** i listrutan **Innehåll**. På fliken **Bindningar**:
 
-   1. Ange ett namn för delformuläret i dialogrutan **Namn** fält.
-   1. Välj **Ingen databindning** från **Databindning** listruta.
+   1. Ange ett namn för delformuläret i fältet **Namn**.
+   1. Välj **Ingen databindning** i listrutan **Databindning**.
 
-   Upprepa steg 2-5 för att lägga till fler delformulär i XDP-mallen. Lägg till [text, dokumentfragment, bilder och diagram](create-interactive-communication.md#step2) till målområdena endast när du skapar interaktiv kommunikation.
+   Upprepa steg 2-5 för att lägga till fler delformulär i XDP-mallen. Lägg bara till [text, dokumentfragment, bilder och diagram](create-interactive-communication.md#step2) i målområdena när du redigerar interaktiv kommunikation.
 
-1. Välj **Fil** > **Spara som** så här sparar du filen i det lokala filsystemet:
+1. Välj **Arkiv** > **Spara som** om du vill spara filen i det lokala filsystemet:
 
    1. Navigera till platsen där du vill spara filen och ange ett namn för XDP-mallen.
-   1. Välj **.xdp** från **Spara som typ** listruta.
+   1. Välj **.xdp** i listrutan **Spara som typ**.
 
    1. Välj **Spara**.
 
@@ -100,48 +100,48 @@ Använd bildfältet eller delformulärskomponenten i XDP-mallen och lägg till e
 
 >[!NOTE]
 >
->Lägg till en bild i utskriftskanalen i den interaktiva kommunikationen i stället för att lägga till en bild i bildfältet eller delformulärskomponenten i XDP-mallen. Mer information finns i [Lägga till innehåll i interaktiv kommunikation](../../forms/using/create-interactive-communication.md#step2).
+>Lägg till en bild i utskriftskanalen i den interaktiva kommunikationen i stället för att lägga till en bild i bildfältet eller delformulärskomponenten i XDP-mallen. Mer information finns i [Lägga till innehåll i den interaktiva kommunikationen](../../forms/using/create-interactive-communication.md#step2).
 
 Utför följande steg för att använda komponenten Bildfält i en XDP-mall:
 
-1. Dra och släpp **Bildfält** -komponenten från **Objektbibliotek** till formuläret.
-1. Markera delformuläret för att visa alternativen för delformuläret i **Objekt** i den högra rutan.
-1. I **Bindning** tab:
+1. Dra och släpp **bildfältskomponenten** från **objektbiblioteket** till formuläret.
+1. Markera delformuläret för att visa alternativen för delformuläret i fönstret **Objekt** i den högra rutan.
+1. På fliken **Bindning**:
 
-   1. Ange ett namn för bildfältet i dialogrutan **Namn** fält.
-   1. Välj **Ingen databindning** från **Databindning** listruta.
+   1. Ange ett namn för bildfältet i fältet **Namn**.
+   1. Välj **Ingen databindning** i listrutan **Databindning**.
 
 ### Skapa XDP-mall för layoutfragment {#xdplayoutfragments}
 
-Använd tabellkomponenten i Forms Designer för att skapa layoutfragment och använd dem sedan för att skapa tabeller när du skapar tryckkanalen i interaktiv kommunikation. Om du använder layoutfragment för att skapa tabeller ser du till att tabellinnehållet behåller strukturen när webbkanalen genereras automatiskt med hjälp av utskriftskanalen.
+Använd tabellkomponenten i Forms Designer för att skapa layoutfragment och använd dem sedan för att skapa tabeller när du redigerar Print channel of Interactive Communication. Om du använder layoutfragment för att skapa tabeller ser du till att tabellinnehållet behåller strukturen när webbkanalen genereras automatiskt med hjälp av utskriftskanalen.
 
 >[!NOTE]
 >
->Ange text i tabellcellerna eller [skapa bindning med formulärdatamodellsobjekt](create-interactive-communication.md#step2) bara när du skapar interaktiv kommunikation.
+>Ange text i tabellcellerna eller [skapa bindning med formulärdatamodellsobjekten](create-interactive-communication.md#step2) medan du redigerar den interaktiva kommunikationen.
 
-Utför följande steg för att använda tabellkomponenten i XDP-mallen med Forms Designer:
+Utför följande steg för att använda komponenten Table i XDP-mallen med Forms Designer:
 
-1. Dra och släpp **Tabell** -komponenten från **Objektbibliotek** till formuläret.
-1. I **Infoga tabell** dialog:
+1. Dra och släpp komponenten **Tabell** från **objektbiblioteket** till formuläret.
+1. I dialogrutan **Infoga tabell**:
 
    1. Ange antalet rader och kolumner för tabellen.
-   1. Välj **Inkludera rubrikrad i tabell** om du vill ta med en rad för tabellrubriken.
+   1. Markera kryssrutan **Inkludera rubrikrad i tabell** om du vill inkludera en rad i tabellrubriken.
    1. Välj **OK**.
 
-1. Välj **+** i den vänstra rutan bredvid tabellens namn högerklickar du på cellnamnen i rubriken och andra rader och väljer **Byt namn på objekt** om du vill byta namn på tabellcellerna.
-1. Klicka på tabellrubrikens textfält i dialogrutan **Designvy** och döp om dem.
-1. Dra och släpp **Textfält** -komponenten från **Objektbibliotek** till varje tabellcell i **Designvy**. Utför det här steget om du vill kunna binda tabellceller till formulärdatamodellsobjekten när du redigerar interaktiv kommunikation.
+1. Markera **+** i den vänstra rutan bredvid tabellens namn, högerklicka på cellnamnen i rubriken och andra rader och välj **Byt namn på objekt** för att byta namn på tabellcellerna.
+1. Klicka på tabellrubrikens textfält i **designvyn** och byt namn på dem.
+1. Dra och släpp **textfältskomponenten** från **objektbiblioteket** till varje tabellcell i **designvyn**. Utför det här steget om du vill kunna binda tabellceller till formulärdatamodellsobjekten när du redigerar interaktiv kommunikation.
 
    ![Textfält i en tabell](assets/text_fields_table_new.png)
 
 1. Markera namnet på raden i den vänstra rutan och välj **Objekt** > **Bindning** > **Upprepa rad för varje dataobjekt**. Utför det här steget för att se till att om en bindning skapas mellan tabellcellerna på den här raden med formulärdatamodellsobjekt av samlingstyp, upprepas tabellraden automatiskt för varje dataobjekt som finns i databasen.
 
-   Ange text i tabellcellerna eller [skapa bindning med formulärdatamodellsobjekt](create-interactive-communication.md#step2) bara när du skapar interaktiv kommunikation.
+   Ange text i tabellcellerna eller [skapa bindning med formulärdatamodellsobjekten](create-interactive-communication.md#step2) medan du redigerar den interaktiva kommunikationen.
 
-1. Välj **Fil** > **Spara som** så här sparar du filen i det lokala filsystemet:
+1. Välj **Arkiv** > **Spara som** om du vill spara filen i det lokala filsystemet:
 
    1. Navigera till platsen där du vill spara filen och ange namnet på XDP-mallen.
-   1. Välj **.xdp** från **Spara som typ** listruta.
+   1. Välj **.xdp** i listrutan **Spara som typ**.
 
    1. Välj **Spara**.
 
@@ -149,9 +149,9 @@ Utför följande steg för att använda tabellkomponenten i XDP-mallen med Forms
 
 När du har skapat en XDP-mall med Forms Designer måste du överföra den till AEM Forms-servern så att mallen kan användas när du skapar den interaktiva kommunikationen.
 
-1. Välj **Forms** > **Forms och dokument**.
+1. Välj **Forms** > **Forms &amp; Documents**.
 1. Välj **Skapa** > **Filöverföring**.
-1. Navigera till XDP-mallens plats i det lokala filsystemet och välj **Öppna** om du vill importera XDP-mallen till AEM Forms-servern.
+1. Navigera till platsen för XDP-mallen på det lokala filsystemet och välj **Öppna** för att importera XDP-mallen till AEM Forms-servern.
 
 ## Använda schema {#using-schema}
 
@@ -166,9 +166,9 @@ Som standard anses alla fält vara relaterade till olika andra datakällor. Om l
 
 Ett relaterbart fält måste:
 
-* vara en XFA &lt;field> eller &lt;exclgroup>
+* vara en XFA &lt;fält> eller &lt;exkl. grupp>
 * har en XFA-bindningsreferens
-* om det är en &lt;exclgroup>måste den ha minst ett underordnat alternativknappsfält, annars kan dess värdetyp inte bestämmas
+* om det är ett &lt;exklGroup> måste det ha minst ett underordnat alternativknappsfält, annars går det inte att avgöra värdetypen
 
 Ett relaterbart fält måste:
 
@@ -178,7 +178,7 @@ Ett relaterbart fält får inte
 
 * Inkludera ett &quot;_int&quot;-suffix i namnet
 * har bindningen angiven som &quot;none&quot;
-* vara underordnad en &lt;exclgroup> element
+* vara underordnad ett &lt;exklGroup>-element
 
 Så länge ett relaterbart fält uppfyller villkoren ovan kan det finnas på vilken plats som helst och på vilket kapslingsdjup som helst i layouten. Du kan använda relaterade fält på mallsidor.
 
@@ -231,4 +231,4 @@ När element som organisationens logotyp och adress visas på alla sidor i ett b
 
 Använd layoutens serveråtergivningsformat till dynamiskt XML-formulär, annars kan inga bokstäver/interaktiv kommunikation som baseras på den här layouten återges korrekt. Som standard är serveråtergivningsformatet i Forms Designer inställt på dynamiskt XML-formulär. För att vara säker på att du använder rätt format:
 
-* I Designer klickar du på **Fil** > **Formuläregenskaper** > **Standardvärden** och se till att inställningen för återgivning/format i PDF är inställd på dynamiskt XML-formulär.
+* I Designer klickar du på **Arkiv** > **Formuläregenskaper** > **Standardvärden** och kontrollerar att inställningen för återgivning/format i PDF är inställd på dynamiskt XML-formulär.

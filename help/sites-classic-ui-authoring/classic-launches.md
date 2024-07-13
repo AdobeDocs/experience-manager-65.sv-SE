@@ -24,9 +24,9 @@ En startsida skapas så att du kan göra ändringar redo för framtida publiceri
 
 >[!NOTE]
 >
->Teorin bakom lanseringar beskrivs i detalj under [Startar](/help/sites-authoring/launches.md) i standarddokumentationen.
+>Teorin bakom starter beskrivs i detalj under [Startar](/help/sites-authoring/launches.md) i standardredigeringsdokumentationen.
 >
->Information som är specifik för användning av starter i det klassiska användargränssnittet finns i följande dokumentation tillsammans med [Skapa startprogram](/help/sites-classic-ui-authoring/classic-launches-creating.md), [Redigeringsövningar](/help/sites-classic-ui-authoring/classic-launches-editing.md)och [Befordra lanseringar](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
+>Information som är specifik för användning av starter i det klassiska användargränssnittet finns i följande dokumentation tillsammans med [Skapa starter](/help/sites-classic-ui-authoring/classic-launches-creating.md), [Redigeringsstarter](/help/sites-classic-ui-authoring/classic-launches-editing.md) och [Befordra starter](/help/sites-classic-ui-authoring/classic-launches-promoting.md).
 
 >[!CAUTION]
 >

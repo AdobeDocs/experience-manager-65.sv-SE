@@ -41,21 +41,21 @@ Följande egenskaper och noder kan tillämpas på komponenterna för att styra b
 
 * **`cq:noDecoration {boolean}`:** Den här egenskapen kan läggas till i en komponent och ett true-värde AEM inte generera några wrapper-element över komponenten.
 
-* **`cq:htmlTag`node :** Den här noden kan läggas till under en komponent och kan ha följande egenskaper:
+* **`cq:htmlTag`-nod:** Den här noden kan läggas till under en komponent och kan ha följande egenskaper:
 
-   * **`cq:tagName {String}`:** Detta kan användas för att ange en anpassad HTML-tagg som ska användas för att kapsla in komponenterna i stället för DIV-standardelementet.
-   * **`class {String}`:** Detta kan användas för att ange CSS-klassnamn som ska läggas till i wrapper.
+   * **`cq:tagName {String}`:** Det här kan användas för att ange en anpassad HTML-tagg som ska användas för att kapsla komponenterna i stället för DIV-standardelementet.
+   * **`class {String}`:** Det här kan användas för att ange CSS-klassnamn som ska läggas till i omslutningen.
    * Andra egenskapsnamn läggs till som HTML-attribut med samma String-värde som anges.
 
 ## Skriptkontroller {#script-controls}
 
-Omslutningens beteende skiljer sig dock åt beroende på om [HTL](/help/sites-developing/decoration-tag.md#htl) eller [JSP](/help/sites-developing/decoration-tag.md#jsp) används för att inkludera elementet.
+Omslutningsbeteendet skiljer sig dock åt beroende på om [HTL](/help/sites-developing/decoration-tag.md#htl) eller [JSP](/help/sites-developing/decoration-tag.md#jsp) används för att inkludera elementet.
 
 ### HTL {#htl}
 
 I allmänhet kan omslutningsbeteendet i HTML sammanfattas på följande sätt:
 
-* Ingen wrapper-DIV renderas som standard (när du gör `data-sly-resource="foo"`).
+* Ingen wrapper-DIV återges som standard (när du bara gör `data-sly-resource="foo"`).
 * Alla wcm-lägen (inaktiverade, förhandsgranska, redigera både på författare och publicerade) återges identiskt.
 
 Omslagets beteende kan också styras helt.
@@ -65,7 +65,7 @@ Omslagets beteende kan också styras helt.
 
 Det går att helt styra beteendet för wrapper-taggarna från HTML-skript och tillhörande logik.
 
-Mer information om hur du utvecklar i HTML finns i [HTL-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html).
+Mer information om hur du utvecklar i HTML finns i [HTL-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html).
 
 #### Beslutsträd {#decision-tree}
 
@@ -99,7 +99,7 @@ Alla exempel som följer förutsätter följande innehållsstruktur och komponen
 
 #### Användningsfall 1: Inkludera en komponent för återanvändning av kod {#use-case-include-a-component-for-code-reuse}
 
-Det vanligaste användningsfallet är när en komponent innehåller en annan komponent av kodskäl. I så fall är den inkluderade komponenten inte nödvändig för att kunna redigeras med ett eget verktygsfält och en egen dialogruta. Därför behövs ingen wrapper, och komponentens `cq:htmlTag` ignoreras. Detta kan betraktas som standardbeteendet.
+Det vanligaste användningsfallet är när en komponent innehåller en annan komponent av kodskäl. I så fall vill den inkluderade komponenten inte kunna redigeras med ett eget verktygsfält och en egen dialogruta. Därför behövs ingen wrapper och komponentens `cq:htmlTag` ignoreras. Detta kan betraktas som standardbeteendet.
 
 `one.html: <sly data-sly-resource="child"></sly>`
 
@@ -113,9 +113,9 @@ Ett exempel är en komponent som innehåller en huvudbildkomponent för att visa
 
 #### Användningsfall 2: Inkludera en redigerbar komponent {#use-case-include-an-editable-component}
 
-Ett annat vanligt användningsfall är när behållarkomponenter innehåller redigerbara underordnade komponenter, som en layoutbehållare. I det här fallet behöver varje inkluderat underordnat objekt en wrapper för att redigeraren ska fungera (såvida de inte uttryckligen inaktiveras med `cq:noDecoration` egenskap).
+Ett annat vanligt användningsfall är när behållarkomponenter innehåller redigerbara underordnade komponenter, som en layoutbehållare. I det här fallet behöver varje inkluderat underordnat objekt en wrapper för att redigeraren ska fungera (om de inte uttryckligen inaktiveras med egenskapen `cq:noDecoration`).
 
-Eftersom den inkluderade komponenten i det här fallet är en fristående komponent, behöver den ett wrapper-element för att redigeraren ska kunna arbeta och för att definiera dess layout och format som ska användas. För att aktivera det här beteendet finns `decoration=true` alternativ.
+Eftersom den inkluderade komponenten i det här fallet är en fristående komponent, behöver den ett wrapper-element för att redigeraren ska kunna arbeta och för att definiera dess layout och format som ska användas. Det finns ett alternativ för `decoration=true` som kan utlösa det här beteendet.
 
 `one.html: <sly data-sly-resource="${'child' @ decoration=true}"></sly>`
 
@@ -130,25 +130,25 @@ Resultat av utdata på `/content/test.html`:
 Det kan finnas ett obegränsat antal komplexa fall, som enkelt kan uppnås genom möjligheten att HTML uttryckligen anger:
 
 * **`decorationTagName='ELEMENT_NAME'`** För att definiera elementnamnet för wrapper.
-* **`cssClassName='CLASS_NAME'`** För att definiera CSS-klassnamn som ska anges för den.
+* **`cssClassName='CLASS_NAME'`** Om du vill definiera CSS-klassnamnen som ska anges på den.
 
 `one.html: <sly data-sly-resource="${'child' @ decorationTagName='aside', cssClassName='child'}"></sly>`
 
 `two.html: Hello World!`
 
-Resultat `/content/test.html`:
+Resultat: `/content/test.html`:
 
 **`<aside class="child">Hello World!</aside>`**
 
 ## JSP {#jsp}
 
-När en komponent inkluderas med `cq:includ`e eller `sling:include`är standardbeteendet i AEM att använda en DIV för att kapsla in elementet. Denna radbrytning kan dock anpassas på två sätt:
+När du inkluderar en komponent som använder `cq:includ`e eller `sling:include` är standardbeteendet i AEM att använda en DIV för att kapsla in elementet. Denna radbrytning kan dock anpassas på två sätt:
 
 * Säg uttryckligen åt AEM att inte kapsla in komponenten med `cq:noDecoration`.
 * Använd en anpassad HTML-tagg för att kapsla in komponenten med `cq:htmlTag`/ `cq:tagName` eller `decorationTagName`.
 
 ### Beslutsträd {#decision-tree-1}
 
-Följande beslutsträd visar hur `cq:noDecoration`, `cq:htmlTag`, `cq:tagName`och `decorationTagName` påverkar wrapperns beteende.
+Följande beslutsträd visar hur `cq:noDecoration`, `cq:htmlTag`, `cq:tagName` och `decorationTagName` påverkar wrapperfunktionen.
 
 ![chlimage_1-3](assets/chlimage_1-3a.jpeg)

@@ -44,7 +44,7 @@ Konfigurationsfilen innehåller PDF Generator-konverteringsinformation, inklusiv
 
 1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Konfigurationsfiler > Importera konfiguration.
 1. Välj Importera en befintlig konfigurationsfil.
-1. Om du vill ange filens plats i rutan Konfigurationsfil klickar du på Bläddra för att hitta och markera filen. Klicka sedan på **Importera**.
+1. Om du vill ange filens plats i rutan Konfigurationsfil klickar du på Bläddra för att hitta och markera filen och klickar sedan på **Importera**.
 
 ## Konvertera alla lager i AutoCAD-filer {#convert-all-layers-within-autocad-files}
 
@@ -52,7 +52,7 @@ Som standard konverterar PDF Generator bara standardlagret med AutoCAD-filer til
 
 1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Konfigurationsfiler > Exportera konfiguration.
 1. Välj Hämta hela konfigurationen och klicka på Hämta.
-1. Öppna den hämtade filen i en textredigerare och öppna den under `AutoCAD` -taggen i `PDFMaker` tagg, lägga till text `convertAllPages="true"`.
+1. Öppna den hämtade filen i en textredigerare och lägg till texten `convertAllPages="true"` under taggen `AutoCAD` i taggen `PDFMaker` .
 1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Konfigurationsfiler > Importera konfiguration.
 1. Välj Importera en befintlig konfigurationsfil, ange den uppdaterade filen och klicka på Importera.
 

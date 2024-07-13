@@ -32,21 +32,21 @@ Stöd för OSGi Configuration Plugin har lagts till för att dekryptera egenskap
 
 De här stegen visar hur du krypterar SMTP-lösenordet för e-posttjänsten. Du kan slutföra de här stegen för en OSGI-egenskap som du vill kryptera.
 
-1. Gå till AEM webbkonsol på *https://&lt;serveraddress>:&lt;serverport>/system/console/configMgr*
-1. I det övre vänstra hörnet går du till **Main - Crypto Support**
+1. Gå till AEM webbkonsol på *https://&lt;serveradress>:&lt;serverport>/system/console/configMgr*
+1. Gå till **Main - Crypto Support** i det övre vänstra hörnet
 
    ![chlimage_1-325](assets/chlimage_1-325.png)
 
-1. The **Stöd för Adobe Experience Manager Web Console-kryptering** visas.
+1. Sidan **Adobe Experience Manager Web Console Crypto Support** visas.
 
    ![screen_shot_2018-08-01at113417am](assets/screen_shot_2018-08-01at113417am.png)
 
-1. I **Oformaterad text** anger du texten i de känsliga data som du vill skydda.
+1. I fältet **Oformaterad text** anger du texten i känsliga data som du vill skydda.
 1. Välj **Protect**. Den skyddade texten visas som krypterad text.
 
    ![screen_shot_2018-08-01at113844am](assets/screen_shot_2018-08-01at113844am.png)
 
-1. Kopiera den skyddade texten från steg 5 och klistra in den i OSGI-formulärvärdet. I det här exemplet krypteras **SMTP-lösenord** läggs till i *Dagens CQ-tjänst för e-post*.
+1. Kopiera den skyddade texten från steg 5 och klistra in den i OSGI-formulärvärdet. I det här exemplet läggs det krypterade **SMTP-lösenordet** till i *Day CQ Mail Service*.
 
    ![screen_shot_2016-12-18at105809pm](assets/screen_shot_2016-12-18at105809pm.png)
 

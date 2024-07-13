@@ -33,13 +33,13 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 ## Assets {#assets}
 
-De effektivaste strategierna kring Assets, inklusive Dynamic Media och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
+De effektivaste strategierna för Assets, inklusive Dynamic Media och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
 
 <table>
  <tbody>
   <tr>
    <td>Filformat</td>
-   <td><a href="/help/assets/assets-file-format-best-practices.md">Metodtips för filformat för resurser</a></td>
+   <td><a href="/help/assets/assets-file-format-best-practices.md">Assets-filformat God praxis</a></td>
    <td>Beskriver de effektivaste strategierna för filstöd i AEM Assets.</td>
   </tr>
   <tr>
@@ -53,7 +53,7 @@ De effektivaste strategierna kring Assets, inklusive Dynamic Media och Dynamic M
    <td><p>Beskriver hur du kan förbättra skärpan i en bild och det bästa sättet att optimera bildkvaliteten om du använder Dynamic Media eller integrerar med Dynamic Media Classic. </p> </td>
   </tr>
   <tr>
-   <td>Flerspråkiga resurser</td>
+   <td>Flerspråkig Assets</td>
    <td><a href="/help/assets/best-practices-for-translating-assets-efficiently.md">Bästa praxis för översättning</a></td>
    <td>Beskriver de bästa sätten att effektivt översätta AEM resurser.</td>
   </tr>
@@ -64,10 +64,10 @@ De effektivaste strategierna kring Assets, inklusive Dynamic Media och Dynamic M
 
 Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
-Redigering: [Designmiljö och verktyg](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) - Innehåller en översikt över hur du skapar sidor.
+Redigering: [Redigeringsmiljö och verktyg](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md) - Ger en översikt över hur du skapar sidor.
 
 ## Forms {#forms}
 
-Adaptiva former: [Bästa tillvägagångssätt för arbete med anpassningsbara formulär](/help/forms/using/adaptive-forms-best-practices.md) - Beskriver de bästa sätten att skapa, redigera och anpassa anpassade formulär.
+Anpassade formulär: [Bästa tillvägagångssätt för att arbeta med adaptiva formulär](/help/forms/using/adaptive-forms-best-practices.md) - Beskriver de bästa sätten att konfigurera, redigera och anpassa adaptiva formulär.
 
-HTML5-formulär: [Bästa praxis för utformning av HTML5-formulär](/help/forms/using/best-practices-for-html5-forms.md) - Beskriver de bästa sätten att arbeta med layout och design av HTML5-formulär.
+HTML5-formulär: [Bästa tillvägagångssätt för att utforma HTML5-formulär](/help/forms/using/best-practices-for-html5-forms.md) - Beskriver de bästa sätten att arbeta med layout och design för HTML 5-formulär.

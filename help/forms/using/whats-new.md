@@ -37,21 +37,21 @@ Lodräta flikar, villkor och kryssrutor läggs till för att öka formulärens s
 
 * **[Villkorskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en villkorskomponent. Det gör det möjligt för formulärförfattare att infoga ett specifikt avsnitt i formuläret där användarna presenteras med de villkor eller juridiska avtal som är kopplade till användningen av en tjänst, produkt eller plattform. Den här komponenten är utformad för att informera användare om de regler, bestämmelser och skyldigheter som de godkänner genom att skicka in formuläret.
 
-  ![Vertikala flikar, villkor och kryssrutekomponenter](/help/forms/using/assets/forms-components.png)
+  ![Lodräta flikar, villkor och kryssrutekomponenter](/help/forms/using/assets/forms-components.png)
 
-* **[Lodräta flikar, komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu ordna formulärinnehåll i en lodrät lista med flikar, vilket ger en strukturerad och navigeringsbar layout. Om du använder vertikala flikar i ett formulär kan det förbättra användarupplevelsen genom att förenkla navigeringen och förbättra organisationen av formulärinnehållet, särskilt i situationer där ett formulär innehåller flera avsnitt eller komplex information.
+* **[Komponent för lodräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu ordna formulärinnehåll i en lodrät lista med flikar, vilket ger en strukturerad och navigeringsbar layout. Om du använder vertikala flikar i ett formulär kan det förbättra användarupplevelsen genom att förenkla navigeringen och förbättra organisationen av formulärinnehållet, särskilt i situationer där ett formulär innehåller flera avsnitt eller komplex information.
 
 #### 64-bitarsversionen av AEM Forms Designer
 
-The [64-bitarsversionen av AEM Forms Designer](/help/forms/using/installing-configuring-designer.md) ger bättre prestanda, skalbarhet och minneshantering för att underlätta formulärframtagningen. Med 64-bitarsarkitekturen kan du enkelt hantera ännu större och mer komplexa projekt, vilket ger smidiga designarbetsflöden och optimerad effektivitet. Utöka dina formulärdesignmöjligheter och ta till vara framtiden för AEM Forms Designer med den här banbrytande releasen.
+[64-bitarsversionen av AEM Forms Designer](/help/forms/using/installing-configuring-designer.md) ger bättre prestanda, skalbarhet och minneshantering för att underlätta formulärframtagningen. Med 64-bitarsarkitekturen kan du enkelt hantera ännu större och mer komplexa projekt, vilket ger smidiga designarbetsflöden och optimerad effektivitet. Förbättra dina formulärdesignmöjligheter och ta till vara framtiden för AEM Forms Designer med denna banbrytande release.
 
 #### Ansluta en adaptiv Forms med Microsoft® SharePoint List
 
-AEM Forms är en körklar integrering med [skicka blankettdata direkt till SharePoint List](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)), så att du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft® SharePoint List som en datakälla för en formulärdatamodell och använda Skicka med formulärdatamodellen för att ansluta ett anpassat formulär med SharePoint List.
+AEM Forms har en körklar integrering för att [skicka formulärdata direkt till SharePoint List](/help/forms/using/configuring-submit-actions.md#submit-to-microsoft&reg;-sharepoint-list)) så att du kan använda funktionerna i SharePoint Lists. Du kan konfigurera Microsoft® SharePoint List som en datakälla för en formulärdatamodell och använda Skicka med formulärdatamodellen för att ansluta ett anpassat formulär med SharePoint List.
 
 #### Stöd för att konfigurera Document of Record-egenskaper för adaptiva formulärfragment
 
-Nu kan du enkelt [anpassa dina adaptiva formulärfragment och fälten i Adaptiv formulärredigerare](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
+Du kan nu enkelt [anpassa dina anpassade formulärfragment och dess fält i den adaptiva formulärredigeraren](/help/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.md).
 
 #### Innehåller 64-bitarsversionen av XMLFM
 

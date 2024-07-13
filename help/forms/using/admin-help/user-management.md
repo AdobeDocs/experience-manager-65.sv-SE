@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Med användarhantering kan du aktivera enkel inloggning (SSO) mellan AEM formulärmoduler och Netegrity SiteMinder-skyddade program med SAML (Security Assertion Markup Language). När enkel inloggning är implementerad är AEM inloggningssidor inte obligatoriska och visas inte om användaren redan är autentiserad via företagsportalen.
 
-Mer information om hur du förbättrar prestanda för databas- och katalogsynkronisering för DB2 finns i [IBM DB2-databas: Kör kommandon för regelbundet underhåll](/help/forms/using/admin-help/ibm-db2-database-running-commands.md#ibm-db2-database-running-commands-for-regular-maintenance).
+Mer information om hur du förbättrar prestanda för databas- och katalogsynkronisering för DB2 finns i [IBM DB2-databasen: Kör kommandon för regelbundet underhåll](/help/forms/using/admin-help/ibm-db2-database-running-commands.md#ibm-db2-database-running-commands-for-regular-maintenance).
 
 ## Konfigurera användarhantering för en SSL-aktiverad LDAP-server {#configuring-user-management-for-an-ssl-enabled-ldap-server}
 
@@ -50,7 +50,7 @@ När du har installerat och konfigurerat din AEM formulärmiljö med Document Se
 
 ## Begränsningar för administratörsanvändare {#administrator-user-restrictions}
 
-Användare med vissa typer av administratörsbehörighet kan av säkerhetsskäl inte komma åt arbetsytans slutanvändarsidor. Eftersom dessa webbsidor kan finnas utanför en brandvägg kan det utgöra en säkerhetsrisk att tillåta åtgärder på administrationsnivå. Endast användare som har behörigheten Workspace Administrator eller Workspace User har åtkomst till slutanvändarens webbsidor.
+Användare med vissa typer av administratörsbehörighet kan av säkerhetsskäl inte komma åt Workspace slutanvändares webbsidor. Eftersom dessa webbsidor kan finnas utanför en brandvägg kan det utgöra en säkerhetsrisk att tillåta åtgärder på administrationsnivå. Endast användare som har behörighet som Workspace-administratör eller Workspace-användare har åtkomst till slutanvändarens webbsidor.
 
 >[!NOTE]
 >

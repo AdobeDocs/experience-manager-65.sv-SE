@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Med Adobe Target som är integrerat med AEM kan ni skapa upplevelser som är anpassade för en viss målgrupp. Med Adobe Target kan du skapa A/B-tester, mäta användarnas svar och generera anpassat webbinnehåll för målanvändare. Du kan integrera Adobe Target med AEM Forms för att anpassa bildkomponenterna i adaptiva formulär och interaktiv kommunikation.
 
-Konfigurera Adobe Target i AEM för användning med adaptiva formulär och interaktiv kommunikation, se [Skapa en målkonfiguration i AEM](/help/sites-administering/target.md) och [Lägg till ett ramverk](/help/sites-administering/target.md).
+Konfigurera Adobe Target i AEM för att använda det med adaptiva formulär och interaktiv kommunikation, se [Skapa en målkonfiguration i AEM](/help/sites-administering/target.md) och [Lägg till ett ramverk](/help/sites-administering/target.md).
 
 >[!NOTE]
 >
@@ -29,24 +29,24 @@ Konfigurera Adobe Target i AEM för användning med adaptiva formulär och inter
 
 ## Skapa en målaktivitet {#creating-a-target-activity}
 
-1. Välj **Adobe Experience Manager > Personalisering > Verksamheter**.
+1. Välj **Adobe Experience Manager > Personalization > Aktiviteter**.
 
    `https://<hostname>:<port>/libs/cq/personalization/touch-ui/content/v2/activities.html`
 
-1. Välj på sidan Aktiviteter **Skapa > Skapa varumärke**.
+1. Välj **Skapa > Skapa varumärke** på aktivitetssidan.
 1. Du uppmanas att välja en mall och ange egenskaper.
 
-   Välj en mall och välj **Nästa.** Ange namnet på varumärket i egenskapssektionen och välj **Skapa.**
+   Välj en mall och välj **Nästa.** Ange namnet på ditt varumärke i egenskapssektionen och välj **Skapa.**
 Ditt varumärke finns nu med på aktivitetssidan.
 
 1. Välj ditt varumärke på sidan Verksamheter.
-1. I ert varumärkes huvudområde väljer du **Skapa** > **Skapa aktivitet**.
+1. Välj **Skapa** > **Skapa aktivitet** i huvudområdet för ditt varumärke.
 
    När du skapar en aktivitet anger du dess information, mål och inställningar.
 
-   Avsnittet Detaljer innehåller namn, målmotor och mål. När du väljer Adobe Target som målmotor aktiveras konfigurationsalternativet för målmolnet. Välj målmolnkonfigurationen, välj aktivitetstyp, ange målet för aktiviteten och välj **Nästa**. Interaktiv kommunikation har bara stöd för aktivitetstypen Experience Targeting.
+   Avsnittet Detaljer innehåller namn, målmotor och mål. När du väljer Adobe Target som målmotor aktiveras konfigurationsalternativet för målmolnet. Välj din målmolnkonfiguration, välj Aktivitetstyp, ange målet för aktiviteten och välj **Nästa**. Interaktiv kommunikation har bara stöd för aktivitetstypen Experience Targeting.
 
-   I målavsnittet kan du lägga till en målgruppsupplevelse och namnge den. Klicka **Lägg till upplevelse** för att aktivera **Välj publik** och **Namnge upplevelsen** alternativ. Välj **Välj publik** för att se en lista över målgrupper och deras källa. Välj en målgrupp i listan Målgruppsnamn. Välj **Lägg till upplevelse** för att namnge upplevelsen och välja **Nästa**.
+   I målavsnittet kan du lägga till en målgruppsupplevelse och namnge den. Klicka på **Lägg till upplevelse** för att aktivera alternativen **Välj publik** och **Namnge upplevelse**. Välj **Välj publik** om du vill visa en lista över målgrupper och deras källa. Välj en målgrupp i listan Målgruppsnamn. Välj **Lägg till upplevelse** för att namnge upplevelsen och välj **Nästa**.
 
    I avsnittet Mål och inställningar kan du schemalägga och prioritera din aktivitet. Ange startdatum, slutdatum och prioritet för aktiviteten, målmått, ytterligare mått och välj **Spara**.
 
@@ -58,7 +58,7 @@ Ditt varumärke finns nu med på aktivitetssidan.
 
 1. Aktivera målet genom att redigera .jsp-filen så att den innehåller klientbibliotek som din adaptiva formulärmall använder.
 
-   I den färdiga implementeringen klickar du på **verktyg** >  **CRXDE Lite**.
+   I den färdiga implementeringen klickar du till exempel på **Verktyg** > **CRXDE Lite**.
 
    I adressfältet i CRXDE Lite skriver du /libs/fd/af/components/page/base/head.jsp för att redigera filen head.jsp.
 
@@ -72,12 +72,12 @@ Ditt varumärke finns nu med på aktivitetssidan.
 
 1. Om du vill aktivera målramverket för adaptiva formulär navigerar du till formuläret eller den interaktiva kommunikationen och öppnar det i redigeringsläge.
 
-   Om du vill öppna ett formulär eller en interaktiv kommunikation i redigeringsläge väljer du **Välj** och sedan **Öppna**.
+   Om du vill öppna ett formulär eller en interaktiv kommunikation i redigeringsläge väljer du **Markera** och sedan **Öppna**.
 
-   Du kan också visa fyra knappar när du flyttar pekaren över formuläret eller en interaktiv kommunikationsikon utan att markera den. Du kan välja **Redigera** som visas för att öppna formuläret i redigeringsläge.
+   Du kan också visa fyra knappar när du flyttar pekaren över formuläret eller en interaktiv kommunikationsikon utan att markera den. Du kan markera knappen **Redigera** som visas för att öppna formuläret i redigeringsläge.
 
-1. Välj **Sidinformation** ![temaalternativ](assets/theme-options.png) > **Öppna egenskaper**.
-1. Välj en konfiguration för fliken Allmänt **Adobe Target** fält. Välj **Spara och stäng**.
+1. Välj **Sidinformation** ![temaalternativ](assets/theme-options.png) > **Öppna egenskaper** i verktygsfältet för sidan.
+1. Välj en konfiguration för fältet **Adobe Target** på fliken Allmänt. Välj **Spara och stäng**.
 
 ## Använda skapad aktivitet på en adaptiv formulärbild eller en interaktiv kommunikationsbild {#applying-created-activity-to-an-adaptive-form-image-or-an-interactive-communication-image}
 
@@ -89,12 +89,12 @@ Ditt varumärke finns nu med på aktivitetssidan.
    >
    >AEM Forms har bara stöd för bildkomponenter. Kontrollera att panelen som är värd för bildkomponenten inte innehåller någon annan komponent och att antalet kolumner för panelen är 1.
 
-1. Växla från **Redigera** till **Målinriktning** läge. Alternativet för att växla mellan lägen ligger nära det övre högra hörnet.
-1. Välj en **VARUMÄRKE**, markera **VERKSAMHET** och markera **Börja målinrikta**. The **Målgrupper** -menyn visas till höger om redigeraren.
+1. Växla från **Redigera** till **Målläge**. Alternativet för att växla mellan lägen ligger nära det övre högra hörnet.
+1. Välj ett **VARUMÄRKE**, markera **AKTIVITET** och välj **Starta målgruppsanpassning**. Menyn **Publiker** visas till höger om redigeraren.
 
-   ![riktad meny](assets/targeting-menu.png)
+   ![targeting-menu](assets/targeting-menu.png)
 
-1. Välj en målgrupp i **Målgrupper** och välj den bild som du vill använda som mål. En meny visas. Välj **Mål**. Markera bilden och markera **Konfigurera**. I egenskapsfönstret väljer du den bild som ska visas för den valda publiken. Upprepa steget för alla målgrupper. Upplevelsens målinriktning aktiveras för bilden i den interaktiva kommunikationen eller adaptiva formen.
+1. Välj en målgrupp på menyn **Publiker** och välj den bild som du vill ha som målbild. En meny visas. Välj **Mål** på menyn. Markera bilden och välj **Konfigurera**. I egenskapsfönstret väljer du den bild som ska visas för den valda publiken. Upprepa steget för alla målgrupper. Upplevelsens målinriktning aktiveras för bilden i den interaktiva kommunikationen eller adaptiva formen.
 
 ## Kontrollera om den skapade aktiviteten synkroniseras med målservern {#check-if-the-created-activity-syncs-with-the-target-server}
 
@@ -107,7 +107,7 @@ Kontrollera att aktivitetens status är Synkroniserad.
 Så här validerar du Target-beteende:
 
 * Använd målinriktning med `wcmmode preview` i redigeringsläget
-* Använd målinriktning med `wcmmode preview` och `wcmmode disabled` i publiceringsläge
+* Använd målinriktning med `wcmmode preview` och `wcmmode disabled` i publiceringsläget
 
 ## Övervaka målinriktning för bildkomponenten {#monitor-targeting-for-the-image-component}
 

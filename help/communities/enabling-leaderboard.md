@@ -21,32 +21,32 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-The `Leaderboard` kan du få en uppfattning om hur medlemmar interagerar inom communityn genom att rangordna medlemmar enligt poäng (grundläggande poängsättning) eller deras sakkunskap (avancerad poängsättning).
+Komponenten `Leaderboard` hjälper dig att förstå hur medlemmar interagerar inom communityn genom att rangordna medlemmar enligt poäng (grundläggande poängsättning) eller deras expertis (avancerad poängsättning).
 
-Innan du tar med komponenten för rankningslistan på en sida måste du konfigurera [Communities Scoring and Badges](/help/communities/implementing-scoring.md).
+Innan du inkluderar huvudpanelskomponenten på en sida måste du konfigurera [Webbgruppsbedömning och badges](/help/communities/implementing-scoring.md).
 
 I det här avsnittet av dokumentationen beskrivs:
 
-* Lägga till `Leaderboard` till en [communitywebbplats](/help/communities/overview.md#community-sites).
-* Konfigurationsinställningar för `Leaderboard` -komponenten.
+* Lägger till komponenten `Leaderboard` till en [community-webbplats](/help/communities/overview.md#community-sites).
+* Konfigurationsinställningar för komponenten `Leaderboard`.
 
 ### Lägga till en huvudpanel på en sida {#adding-a-leaderboard-to-a-page}
 
-Lägga till en `Leaderboard` till en sida i redigeringsläge, leta reda på komponenten
+Om du vill lägga till en `Leaderboard`-komponent på en sida i redigeringsläge letar du reda på komponenten
 
 * `Communities / Leaderboard`
 
 Och dra den till rätt plats på en sida.
 
-Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
 När komponenten placeras på en sida i en community-webbplats är det så här den visas:
 
-![huvudbok](assets/leaderboard.png)
+![rankningslista](assets/leaderboard.png)
 
 ### Konfigurerar huvudpanel {#configuring-leaderboard}
 
-Markera den monterade `Leaderboard` så att du kan komma åt och välja `Configure` -ikonen som öppnar redigeringsdialogrutan.
+Markera den monterade `Leaderboard`-komponenten så att du kan komma åt och markera ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
@@ -54,12 +54,12 @@ Markera den monterade `Leaderboard` så att du kan komma åt och välja `Configu
 
 #### Fliken Inställningar {#settings-tab}
 
-Under **[!UICONTROL Settings]** anger du vilken information om medlemmen som visas:
+Under fliken **[!UICONTROL Settings]** anger du vilken information om medlemmen som visas:
 
 * **Visningsnamn**
 
   Ett beskrivande namn som ska visas för styrelsen, som återspeglar reglerna som valts för att visa märken och poäng.
-Standard är `Leaderboard` om inget anges.
+Standardvärdet är `Leaderboard` om inget anges.
 
 * **Badge**
 
@@ -78,7 +78,7 @@ Standard är avmarkerat.
 
 #### Fliken Regler {#rules-tab}
 
-Under **Regler** -fliken, communitywebbplatsen och dess regler för poäng och badning
+Under fliken **Regler**, communitywebbplatsen och dess regler för poäng och märkning
 
 * **Regelplats**
 
@@ -88,7 +88,7 @@ Under **Regler** -fliken, communitywebbplatsen och dess regler för poäng och b
 
   (Obligatoriskt) Specifik regel som genererar de bakgrundsmusik som ska visas.
 
-* **Märkningsregel**
+* **Badging-regel**
 
   (Obligatoriskt) Specifik regel som genererar märket som ska visas.
 
@@ -115,10 +115,10 @@ Konfiguration av huvudpanelskomponent:
 
    * Regelplats = `/content/sites/<site name>/jcr:content`
    * Poängregel = `/libs/settings/community/scoring/rules/forums-scoring`
-   * Badningsregel = `/libs/settings/community/badging/rules//reference-badging`
+   * Badging-regel = `/libs/settings/community/badging/rules//reference-badging`
    * Visningsgräns = `10`
 
-![deltagare-rankningslista](assets/participants-leaderboard.png)
+![deltagare-leaderboard](assets/participants-leaderboard.png)
 
 ### Exempel: Expert Leaderboard {#example-experts-leaderboard}
 
@@ -138,13 +138,13 @@ Konfiguration av huvudpanelskomponent:
 
    * Regelplats = `/content/sites/<site name>/jcr:content`
    * Poängregel = `/libs/settings/community/scoring/rules/adv-forums-scoring`
-   * Badningsregel = `/libs/settings/community/badging/rules/adv-forums-badging`
+   * Badging-regel = `/libs/settings/community/badging/rules/adv-forums-badging`
    * Visningsgräns = `10`
 
-![expertråd](assets/experts-leaderboard.png)
+![expertpanel](assets/experts-leaderboard.png)
 
 ### Ytterligare information {#additional-information}
 
-Mer information finns på [Grundläggande om Ledningsbord](/help/communities/leaderboard.md) för utvecklare.
+Mer information finns på sidan [Ledarpanel Essentials](/help/communities/leaderboard.md) för utvecklare.
 
-Instruktioner för hur du skapar regler finns i [Communities Scoring and Badges](/help/communities/implementing-scoring.md) sida för administratörer.
+Instruktioner för hur du skapar regler finns på sidan [Värderingar och märken för ](/help/communities/implementing-scoring.md) för administratörer.

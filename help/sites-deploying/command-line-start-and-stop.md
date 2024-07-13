@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Starta Adobe Experience Manager från kommandoraden {#starting-adobe-experience-manager-from-the-command-line}
 
-The `start` skript är tillgängligt under *den &lt;cq-installation>/bin* katalog. Det finns både UNIX®- och Windows-versioner. Skriptet startar instansen som är installerad i *&lt;cq-installation>* katalog.
+Skriptet `start` är tillgängligt i katalogen *&lt;cq-installation>/bin*. Det finns både UNIX®- och Windows-versioner. Skriptet startar instansen som är installerad i katalogen *&lt;cq-installation>*.
 
 Dessa två versioner har stöd för en lista med miljövariabler som kan användas för att starta och justera Adobe Experience Manager-instansen (AEM).
 
@@ -32,19 +32,19 @@ Dessa två versioner har stöd för en lista med miljövariabler som kan använd
   </tr>
   <tr>
    <td>CQ_PORT</td>
-   <td>TCP-port som används för stopp- och statusskript<br /> </td>
+   <td>TCP-port som används för stopp- och statusskript <br /> </td>
   </tr>
   <tr>
    <td>CQ_HOST</td>
-   <td>Värdnamn<br /> </td>
+   <td>Värdnamn <br /> </td>
   </tr>
   <tr>
    <td>CQ_INTERFACE</td>
-   <td>Gränssnitt som den här servern ska lyssna på<br /> </td>
+   <td>Gränssnitt som servern ska lyssna på <br /> </td>
   </tr>
   <tr>
    <td>CQ_RUNMODE</td>
-   <td>Körningslägen avgränsade med kommatecken<br /> </td>
+   <td>Körningslägen avgränsade med kommatecken <br /> </td>
   </tr>
   <tr>
    <td>CQ_JARFILE</td>
@@ -56,18 +56,18 @@ Dessa två versioner har stöd för en lista med miljövariabler som kan använd
   </tr>
   <tr>
    <td>CQ_JAAS_CONFIG</td>
-   <td>Sökväg till JAAS-konfigurationen<br /> </td>
+   <td>Sökväg till JAAS-konfigurationen <br /> </td>
   </tr>
   <tr>
    <td>CQ_JVM_OPTS</td>
-   <td>JVM-standardalternativ<br /> </td>
+   <td>Standardalternativ för JVM <br /> </td>
   </tr>
  </tbody>
 </table>
 
 >[!CAUTION]
 >
->Vissa körningslägen, bland annat författare och publicering, måste anges innan AEM startas första gången och kan inte ändras efteråt. Innan du konfigurerar en AEM som används i produktionen, se [dokumentation om körningslägen](/help/sites-deploying/configure-runmodes.md) för mer information.
+>Vissa körningslägen, bland annat författare och publicering, måste anges innan AEM startas första gången och kan inte ändras efteråt. Innan du konfigurerar en AEM som används i produktionen bör du läsa [dokumentationen för körningslägen](/help/sites-deploying/configure-runmodes.md) för mer information.
 
 ### Exempel på Windows-plattformen start.bat-skript {#windows-platform-start-bat-script-example}
 
@@ -83,7 +83,7 @@ CQ_PORT=1234 ./start
 
 >[!NOTE]
 >
->Startskriptet startar AEM QuickStart som installeras under *den &lt;cq-installation>/app* mapp.
+>Startskriptet startar AEM QuickStart som installerats under mappen *&lt;cq-installation>/app*.
 
 ## Stoppar Adobe Experience Manager {#stopping-adobe-experience-manager}
 
@@ -91,16 +91,16 @@ Om du vill stoppa AEM gör du något av följande:
 
 * Beroende på vilken plattform du använder:
 
-   * Om du AEM från ett skript eller kommandoraden trycker du på **Ctrl+C** för att stänga av servern.
+   * Om du började AEM från antingen ett skript eller kommandoraden trycker du på **Ctrl+C** för att stänga servern.
    * Om du har använt startskriptet på UNIX® måste du använda stoppskriptet för att stoppa AEM.
 
-* Om du AEM genom att dubbelklicka på burkfilen klickar du på **På** knappen i startfönstret (knappen ändras sedan till **Av**) för att stänga av servern.
+* Om du började AEM genom att dubbelklicka på burkfilen klickar du på knappen **På** i startfönstret (knappen ändras sedan till **Av**) för att stänga servern.
 
   ![chlimage_1-63](assets/chlimage_1-63.png)
 
 ## Stoppa Adobe Experience Manager från kommandoraden {#stopping-adobe-experience-manager-from-the-command-line}
 
-The `stop` skript är tillgängligt under *den &lt;cq-installation>/bin* katalog. Det finns både UNIX®- och Windows-versioner. Skriptet stoppar den instans som körs som är installerad i *&lt;cq-installation>* katalog.
+Skriptet `stop` är tillgängligt i katalogen *&lt;cq-installation>/bin*. Det finns både UNIX®- och Windows-versioner. Skriptet stoppar den instans som körs och som är installerad i katalogen *&lt;cq-installation>*.
 
 ### Exempel på stoppskript för UNIX®-plattformen {#unix-platform-stop-script-example}
 
@@ -116,7 +116,7 @@ The `stop` skript är tillgängligt under *den &lt;cq-installation>/bin* katalog
 
 Om du bara vill förkonfigurera databasen (utan att flytta den) behöver du bara:
 
-* Extract `repository.xml` till önskad plats
+* Extrahera `repository.xml` till önskad plats
 
 * uppdatera `repository.xml` efter behov
 

@@ -26,13 +26,13 @@ ht-degree: 6%
    + [Inledande konfiguration](setup.md)
    + [Skapa en ny communitywebbplats](create-site.md)
    + [Upplev den publicerade webbplatsen](published-site.md)
-   + [Skapar kapslade grupper](nested-groups.md)
+   + [Redigerar kapslade grupper](nested-groups.md)
 + Distribuerar {#deploy}
    + [Distribuera webbgrupper](deploy-communities.md)
    + [Uppgradera till AEM 6.5 Communities](upgrade.md)
    + [Rekommenderade topologier för communities](topologies.md)
-   + [Konfigurera Dispatcher för Communities](dispatcher.md)
-+ Administratör {#administer}
+   + [Konfigurera Dispatcher för webbgrupper](dispatcher.md)
++ Administrerar {#administer}
    + [Tjänsten för hantering av användare och användargenererat innehåll i AEM Communities](user-ugc-management-service.md)
    + [Communities-konsoler](consoles.md)
    + [Analyskonfiguration för communityfunktioner](analytics.md)
@@ -85,7 +85,7 @@ ht-degree: 6%
    + [Grundläggande om communityn](sites-for-developers.md)
    + [Grundläggande om aktivitetsström](essentials-activities.md)
    + [Blog Essentials](blog-developer-basics.md)
-   + [Grundläggande kalender](calendar-basics-for-developers.md)
+   + [Grundläggande om kalendern](calendar-basics-for-developers.md)
    + [Clientlibs for Communities Components](clientlibs.md)
    + [Grundläggande kommentarer](essentials-comments.md)
    + [OSGi Events for Communities-komponenter](events.md)

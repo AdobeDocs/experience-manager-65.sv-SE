@@ -27,7 +27,7 @@ Du kan använda sidan Tjänsthantering för att konfigurera inställningar för 
 
    >[!NOTE]
    >
-   >Alla tjänster som listas på sidan Tjänsthantering har inte fliken Konfiguration. För processer som du har skapat visas bara fliken Konfiguration om du har lagt till en konfigurationsparameter till processen i Workbench. (Se&quot;Konfigurationsparametrar&quot; i [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63) .)
+   >Alla tjänster som listas på sidan Tjänsthantering har inte fliken Konfiguration. För processer som du har skapat visas bara fliken Konfiguration om du har lagt till en konfigurationsparameter till processen i Workbench. (Se&quot;Konfigurationsparametrar&quot; i [Workbench-hjälpen](https://www.adobe.com/go/learn_aemforms_workbench_63) .)
 
 
 1. Klicka på fliken Säkerhet och ange säkerhetsinställningarna för tjänsten. Se [Ändra säkerhetsinställningar för en tjänst](configure-service-settings.md#modifying-security-settings-for-a-service).
@@ -38,15 +38,15 @@ Du kan använda sidan Tjänsthantering för att konfigurera inställningar för 
 
 ## Granska inställningar för arbetsflödestjänst {#audit-workflow-service-settings}
 
-Workbench ger möjlighet att spela in processinstanser när de körs under körning och sedan spela upp dem för att observera processens beteende. (Se [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63).) För att spara utrymme i filsystemet i Forms Server kan du begränsa mängden lagrade processinspelningsdata. Du kan konfigurera följande egenskaper för tjänsten Granskningsarbetsflöde ( `AuditWorkflowService`):
+Workbench ger möjlighet att spela in processinstanser när de körs under körning och sedan spela upp dem för att observera processens beteende. (Se [Workbench-hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63).) För att spara utrymme i filsystemet i Forms Server kan du begränsa mängden lagrade processinspelningsdata. Du kan konfigurera följande egenskaper för tjänsten Granskningsarbetsflöde ( `AuditWorkflowService`):
 
-**maxNumberOfRecordingInstances:** Maximalt antal inspelningar som lagras. När det högsta antalet lagras tas den äldsta inspelningen bort från filsystemet när en ny inspelning skapas. Den här egenskapen är användbar om du tenderar att skapa många inspelningar och vill ta bort gamla inspelningar automatiskt. Standardvärdet är 50.
+**maxNumberOfRecordingInstances:** Det maximala antalet inspelningar som lagras. När det högsta antalet lagras tas den äldsta inspelningen bort från filsystemet när en ny inspelning skapas. Den här egenskapen är användbar om du tenderar att skapa många inspelningar och vill ta bort gamla inspelningar automatiskt. Standardvärdet är 50.
 
-**MaxNumberOfRecordingPoster:** Maximalt antal dataposter som kan lagras för varje inspelning. Dataposter är information om åtgärder som utförs i processen. Flera poster lagras för varje körning av en åtgärd, till exempel om åtgärden har startats, om åtgärden har slutförts och om den väg som leder till åtgärden är slutförd. Den här egenskapen är användbar när processer kan innehålla många körningar av åtgärder, till exempel när en oändlig slinga påträffas. Standardvärdet är 50.
+**MaxNumberOfRecordingPoster:** Det maximala antalet dataposter som kan lagras för varje inspelning. Dataposter är information om åtgärder som utförs i processen. Flera poster lagras för varje körning av en åtgärd, till exempel om åtgärden har startats, om åtgärden har slutförts och om den väg som leder till åtgärden är slutförd. Den här egenskapen är användbar när processer kan innehålla många körningar av åtgärder, till exempel när en oändlig slinga påträffas. Standardvärdet är 50.
 
 ## streckkodsinställningar för formulärtjänst {#barcoded-forms-service-settings}
 
-Tjänsten för streckkodade formulär `(BarcodedFormsService)` extraherar streckkodsdata från skannade bilder. Tjänsten accepterar en streckkodsform (TIFF eller PDF) som indata och extraherar maskinvaruåtergivningen av data som är kodade med streckkoden.
+Streckkodad formulärtjänst `(BarcodedFormsService)` extraherar streckkodsdata från skannade bilder. Tjänsten accepterar en streckkodsform (TIFF eller PDF) som indata och extraherar maskinvaruåtergivningen av data som är kodade med streckkoden.
 
 Följande inställningar är tillgängliga för den streckkodade formulärtjänsten.
 
@@ -56,19 +56,19 @@ Följande inställningar är tillgängliga för den streckkodade formulärtjäns
 
 **Uppläsning:** När du väljer det här alternativet skannas streckkodsbilder lodrätt nedifrån och upp.
 
-**Uppläsning:** När du väljer det här alternativet skannas streckkodsbilder lodrätt uppifrån och ned.
+**Nedläsning:** När du väljer det här alternativet skannas streckkodsbilder lodrätt uppifrån och ned.
 
 >[!NOTE]
 >
 >Som standard är alla alternativ markerade. Avmarkera bara ett alternativ om du är säker på att inga streckkoder visas på det sättet i formulären.
 
-**Sökväg till basfil:** Den filsökväg som är relativ till vilka parametrarna för gruppindata och utdata för åtgärderna Kör XML-filjobb och Kör Flat File-jobb tolkas. I klustrade konfigurationer måste sökvägen till basfilen vara en delad filsystemplats som alla klusternoder har läs-/skrivåtkomst till.
+**Bas filsökväg:** Den filsökväg som är relativ till vilka parametrarna för batchindata och utdatafiler för åtgärderna Kör XML-filjobb och Kör platta filjobb tolkas. I klustrade konfigurationer måste sökvägen till basfilen vara en delad filsystemplats som alla klusternoder har läs-/skrivåtkomst till.
 
-**Namn på datakälla:** Namnet på den datakälla som används för att underhålla status- och historikinformation om batchbearbetningsjobb. Den angivna datakällan måste ha stöd för globala (XA) transaktioner.
+**Data-Source-namn:** Namnet på datakällan som används för att underhålla status- och historikinformation om batchbearbetningsjobb. Den angivna datakällan måste ha stöd för globala (XA) transaktioner.
 
-## Inställningar för tjänsten Central Migration Bridge (inaktuellt) {#central-migration-bridge-service-settings}
+## Inställningar för Bridge-tjänsten för central migrering (inaktuell) {#central-migration-bridge-service-settings}
 
-Tjänsten Central Migration Bridge ( `CentralMigrationBridge`) anropar en delmängd av funktionaliteten i Adobe Central Pro Output Server (Central) som innehåller kommandona JFMERGE, JFTRANS och XMLIMPORT. Med tjänsten för central migreringsbrygga kan du återanvända följande centrala resurser i AEM formulär:
+Bridge-tjänsten för central migrering ( `CentralMigrationBridge`) anropar en delmängd av Adobe Central Pro Output Server (Central)-funktionen, som innehåller kommandona JFMERGE, JFTRANS och XMLIMPORT. Med Bridge-tjänståtgärder för central migrering kan du återanvända följande centrala resurser i AEM formulär:
 
 * malldesign (&amp;ast;.ifd)
 * utdatamallar (&amp;ast;.mdf)
@@ -76,19 +76,19 @@ Tjänsten Central Migration Bridge ( `CentralMigrationBridge`) anropar en delmä
 * inledningsfiler (&amp;ast;.pre-filer)
 * datadefinitionsfiler (&amp;ast;.tdf)
 
-Följande inställning är tillgänglig för tjänsten Central Migration Bridge.
+Följande inställning är tillgänglig för Bridge-tjänsten för central migrering.
 
 **Katalog för central installation:** Katalogen där Adobe Central 5.7 är installerat.
 
 ## Content Repository Connector for EMC Documentum-tjänstinställningar {#content-repository-connector-for-emc-documentum-service-settings}
 
-Content Repository Connector for EMC Documentum-tjänsten ( `EMCDocumentumContentRepositoryConnector`) kan du skapa processer som interagerar med innehåll som lagras i en Documentum-databas.
+Med Content Repository Connector for EMC Documentum-tjänsten ( `EMCDocumentumContentRepositoryConnector`) kan du skapa processer som interagerar med innehåll som lagras i en Documentum-databas.
 
 Följande inställning är tillgänglig för tjänsten Content Repository Connector for EMC Documentum.
 
-**Standardsökväg för resurslänksobjekt:** Standarddelen av sökvägen i Documentum-databasen för lagring av objektet Resurslänk. Den faktiska sökvägen består av standardsökvägen och platsen för formulärmallen i AEM formulärdatabas.
+**Standardsökväg för resurslänksobjekt:** Standarddelen av sökvägen i Documentum-databasen för lagring av resurslänksobjektet. Den faktiska sökvägen består av standardsökvägen och platsen för formulärmallen i AEM formulärdatabas.
 
-Om standardsökvägen till exempel är inställd på `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects`och formulärmallen lagras i en mapp `/Docbase/forms/`, lagras objektet Resurslänk på följande plats:
+Om standardsökvägen till exempel är `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects` och formulärmallen lagras i en mapp `/Docbase/forms/`, lagras resurslänksobjektet på följande plats:
 
 `/LiveCycleES/ConnectorforEMCDocumentum/AssetLinkObjects/Docbase/forms/`
 
@@ -100,9 +100,9 @@ Med Content Repository Connector för IBM FileNet kan du skapa processer som int
 
 Följande inställning är tillgänglig för tjänsten Content Repository Connector för IBM FileNet.
 
-**Standardsökväg för resurslänksobjekt:** Standarddelen av sökvägen i IBM FileNet-databasen för lagring av objektet Asset Link. Den faktiska sökvägen består av standardsökvägen och platsen för formulärmallen i AEM formulärdatabas.
+**Standardsökväg för resurslänksobjekt:** Standarddelen av sökvägen i IBM FileNet-databasen för lagring av resurslänksobjektet. Den faktiska sökvägen består av standardsökvägen och platsen för formulärmallen i AEM formulärdatabas.
 
-Om standardsökvägen till exempel är inställd på `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects`och formulärmallen lagras i en mapp `/Docbase/forms/`, lagras objektet Resurslänk på följande plats:
+Om standardsökvägen till exempel är `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects` och formulärmallen lagras i en mapp `/Docbase/forms/`, lagras resurslänksobjektet på följande plats:
 
 `/LiveCycleES/ConnectorforIBMFileNet/AssetLinkObjects/Docbase/forms/`
 
@@ -110,7 +110,7 @@ Standardvärdet för inställningen är `/LiveCycleES/ConnectorforIBMFileNet/Ass
 
 ## Konvertera tjänstinställningar för PDF {#convert-pdf-service-settings}
 
-Tjänsten Convert PDF ( `ConvertPdfService`) konverterar PDF-dokument till PostScript och till flera bildformat (JPEG, JPEG 2000, PNG och TIFF). Att konvertera ett PDF-dokument till PostScript är användbart för oövervakad serverbaserad utskrift på en PostScript-skrivare. Det är praktiskt att konvertera ett PDF-dokument till en flersidig TIFF-fil när du arkiverar dokument i content management-system som saknar stöd för PDF-dokument.
+Tjänsten Convert PDF ( `ConvertPdfService`) konverterar PDF-dokument till PostScript och till flera bildformat (JPEG, JPEG 2000, PNG och TIFF). Att konvertera ett PDF-dokument till PostScript är användbart för oövervakad serverbaserad utskrift på alla PostScript-skrivare. Det är praktiskt att konvertera ett PDF-dokument till en flersidig TIFF-fil när du arkiverar dokument i content management-system som saknar stöd för PDF-dokument.
 
 Följande inställningar är tillgängliga för tjänsten Convert PDF.
 
@@ -120,19 +120,19 @@ Följande inställningar är tillgängliga för tjänsten Convert PDF.
 
 **Kräver nytt:** Skapar alltid en ny transaktionskontext. Om det finns en aktiv transaktionskontext pausas den.
 
-**Timeout för transaktion (i sek):** Antalet sekunder som den underliggande transaktionsprovidern ska vänta innan en transaktion som omsluter den här åtgärden återställs. Det här värdet ignoreras om en befintlig transaktionskontext sprids. Standardvärdet är 180.
+**Överföringstid (i sek):** Antalet sekunder som den underliggande transaktionsprovidern ska vänta innan en transaktion som omsluter den här åtgärden återställs. Det här värdet ignoreras om en befintlig transaktionskontext sprids. Standardvärdet är 180.
 
-**Tröskelupplösning för utjämning (i dpi):** Den bildupplösning under vilken utjämning (eller kantutjämning) tillämpas på text, teckningar och bilder, om du har valt alternativet Använd utjämning på för dessa element.
+**Tröskelupplösning för utjämning (i dpi):** Den bildupplösning under vilken utjämning (eller kantutjämning) tillämpas på text, teckningar och bilder, om du har valt alternativen &quot;Tillämpa utjämning på&quot; för dessa element.
 
 **Använd utjämning på text:** Styr kantutjämning av text. Avmarkera den här kryssrutan om du vill inaktivera utjämning av text och göra texten skarpare och lättare att läsa med en skärmförstorare.
 
 **Använd utjämning på LineArt:** Använder utjämning för att ta bort plötsliga vinklar i linjer.
 
-**Använd utjämning på bilder:** Använder utjämning för att minimera abrupta ändringar i bilder.
+**Använd utjämning på bilder:** Använder utjämning för att minimera abrupta bildändringar.
 
 ## Distiller tjänstinställningar {#distiller-service-settings}
 
-Distiller-tjänsten ( `DistillerService`) konverterar PostScript-, Encapsulated PostScript- (EPS) och PRN-filer till PDF över ett nätverk.
+Distiller-tjänsten ( `DistillerService`) konverterar PostScript-, Encapsulated PostScript- (EPS) och PRN-filer till PDF-filer via ett nätverk.
 
 Följande inställningar är tillgängliga för tjänsten Distiller.
 
@@ -150,7 +150,7 @@ Följande inställningar är tillgängliga för tjänsten Distiller.
 
 Nya inställningar kan skapas via användargränssnittet i PDF Generator.
 
-**Skyddsinställningar:** Förkonfigurerade säkerhetsinställningar som används för genererade PDF-dokument. Standardvärdet är Ingen säkerhet. Skapa skyddsinställningar med PDF Generator och ange sedan inställningen här.
+**Säkerhetsinställningar:** Förkonfigurerade säkerhetsinställningar som används för genererade PDF-dokument. Standardvärdet är Ingen säkerhet. Skapa skyddsinställningar med PDF Generator och ange sedan inställningen här.
 
 **Poolstorlek:** Poolens ursprungliga storlek. När Distiller-tjänsten distribueras används det här numret för att avgöra hur många instanser av tjänstimplementering som skapas och tilldelas den kostnadsfria poolen som väntar på anrop. Tjänstbehållaren kan sedan svara direkt på anropsbegäranden utan att först initiera en tjänstinstans.
 
@@ -158,19 +158,19 @@ Nya inställningar kan skapas via användargränssnittet i PDF Generator.
 
 >[!NOTE]
 >
->Adobe® LiveCycle® Content Services ES (Borttagen) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe product lifecycle document](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
+>Adobe® LiveCycle® Content Services ES (Borttagen) är ett innehållshanteringssystem som installeras med LiveCycle. Det gör det möjligt för användarna att utforma, hantera, övervaka och optimera humancentrerade processer. Supporten för innehållstjänster (borttaget) upphör 2014-12-31. Se [Adobe produktlivscykeldokument](https://www.adobe.com/support/products/enterprise/eol/eol_matrix.html).
 
-Dokumenthanteringstjänsten ( `DocumentManagementService`) gör det möjligt för processer att använda innehållshanteringsfunktionen som tillhandahålls av Content Services (Borttagen). Dokumenthanteringsåtgärder innehåller grundläggande uppgifter som krävs för att underhålla utrymme och innehåll i innehållshanteringssystemet. Exempel på sådana uppgifter är kopiera, ta bort, flytta, hämta och lagra innehåll, skapa blanksteg och associationer samt hämta och ange innehållsattribut.
+Tjänsten Document Management ( `DocumentManagementService`) gör det möjligt för processer att använda innehållshanteringsfunktionen som tillhandahålls av Content Services (Borttagen). Dokumenthanteringsåtgärder innehåller grundläggande uppgifter som krävs för att underhålla utrymme och innehåll i innehållshanteringssystemet. Exempel på sådana uppgifter är kopiera, ta bort, flytta, hämta och lagra innehåll, skapa blanksteg och associationer samt hämta och ange innehållsattribut.
 
 Följande inställningar är tillgängliga för dokumenthanteringstjänsten.
 
 **Butiksschema:** Schemat för den butik där innehållet finns. Standardvärdet är arbetsyta.
 
-**HTTP-port:** Den port som används för åtkomst till innehållstjänster (borttagen). Standardvärdet är 8080.
+**HTTP-port:** Porten som används för åtkomst till innehållstjänster (borttagen). Standardvärdet är 8080.
 
 ## Inställningar för e-posttjänst {#email-service-settings}
 
-E-post används ofta för att distribuera innehåll eller tillhandahålla statusinformation som en del av en automatiserad process. E-posttjänsten ( `EmailService`) används för att processer ska kunna ta emot e-postmeddelanden från en POP3- eller IMAP-server och skicka e-postmeddelanden till en SMTP-server.
+E-post används ofta för att distribuera innehåll eller tillhandahålla statusinformation som en del av en automatiserad process. Med e-posttjänsten ( `EmailService`) kan processer ta emot e-postmeddelanden från en POP3- eller IMAP-server och skicka e-postmeddelanden till en SMTP-server.
 
 En process använder till exempel e-posttjänsten för att skicka ett e-postmeddelande med en bifogad PDF-formulärfil. E-posttjänsten ansluter till en SMTP-server för att skicka e-postmeddelandet med den bifogade filen. Formuläret PDF är utformat så att mottagaren kan klicka på Skicka när formuläret har fyllts i. Åtgärden gör att formuläret returneras som en bifogad fil till den angivna e-postservern. E-posttjänsten hämtar det returnerade e-postmeddelandet och lagrar det ifyllda formuläret i en processdataformulärvariabel.
 
@@ -178,7 +178,7 @@ Följande inställningar är tillgängliga för e-posttjänsten.
 
 **SMTP-värd:** IP-adressen eller URL:en för SMTP-servern som ska användas för att skicka e-post.
 
-**SMTP-portnummer:** Den port som används för att ansluta till SMTP-servern.
+**SMTP-portnummer:** Porten som används för att ansluta till SMTP-servern.
 
 **SMTP-autentisering:** Välj om användarautentisering krävs för att ansluta till SMTP-servern.
 
@@ -186,23 +186,23 @@ Följande inställningar är tillgängliga för e-posttjänsten.
 
 **SMTP-lösenord:** Lösenordet som är associerat med SMTP-användarkontot.
 
-**SMTP-transportsäkerhet:** Det säkerhetsprotokoll som ska användas för att ansluta till SMTP-servern:
+**SMTP-transportsäkerhet:** Säkerhetsprotokollet som ska användas för att ansluta till SMTP-servern:
 
 * Välj Ingen om inget protokoll används (data skickas i klartext)
 * Välj SSL om Secure Sockets Layer-protokollet används.
 * Välj TLS om transportlagersäkerhet används.
 
-**POP3/IMAP-värd:** IP-adressen eller URL:en för POP3- eller IMAP-servern som ska användas för att skicka e-post.
+**POP3/IMAP-värd:** IP-adressen eller URL-adressen för POP3- eller IMAP-servern som ska användas för att skicka e-post.
 
 **POP3/IMAP-användarnamn:** Användarnamnet för det användarkonto som ska användas för att logga in på POP3- eller IMAP-servern.
 
 **POP3/IMAP-lösenord:** Lösenordet som är associerat med POP3- eller IMAP-användarkontot.
 
-**POP3/IMAP-portnummer:** Den port som används för att ansluta till POP3- eller IMAP-servern.
+**POP3/IMAP-portnummer:** Porten som används för att ansluta till POP3- eller IMAP-servern.
 
 **POP3/IMAP:** Det protokoll som ska användas för att skicka och ta emot e-post.
 
-**Ta emot transportsäkerhet:** Det säkerhetsprotokoll som ska användas för att ansluta till SMTP-servern:
+**Ta emot transportsäkerhet:** Säkerhetsprotokollet som ska användas för att ansluta till SMTP-servern:
 
 * Välj Ingen om inget protokoll används (data skickas i klartext).
 * Välj SSL om Secure Sockets Layer-protokollet används.
@@ -210,11 +210,11 @@ Följande inställningar är tillgängliga för e-posttjänsten.
 
 ## Inställningar för krypteringstjänst {#encryption-service-settings}
 
-Krypteringstjänsten ( `EncryptionService`) kan du kryptera och dekryptera dokument. När ett dokument är krypterat blir innehållet oläsligt. En behörig användare kan dekryptera dokumentet för att få åtkomst till innehållet. Om ett PDF-dokument är krypterat med ett lösenord måste användaren ange det öppna lösenordet innan dokumentet kan visas i Adobe Reader eller Adobe Acrobat. Om ett PDF-dokument är krypterat med ett certifikat måste användaren dekryptera PDF-dokumentet med den offentliga nyckel som motsvarar det certifikat (privat nyckel) som användes för att kryptera PDF-dokumentet.
+Med krypteringstjänsten ( `EncryptionService`) kan du kryptera och dekryptera dokument. När ett dokument är krypterat blir innehållet oläsligt. En behörig användare kan dekryptera dokumentet för att få åtkomst till innehållet. Om ett PDF-dokument är krypterat med ett lösenord måste användaren ange det öppna lösenordet innan dokumentet kan visas i Adobe Reader eller Adobe Acrobat. Om ett PDF-dokument är krypterat med ett certifikat måste användaren dekryptera PDF-dokumentet med den offentliga nyckel som motsvarar det certifikat (privat nyckel) som användes för att kryptera PDF-dokumentet.
 
 Följande inställningar är tillgängliga för krypteringstjänsten.
 
-**LDAP-standardserver att ansluta till:** Värdnamn för den LDAP-server som används för att hämta certifikat för dokumentkryptering.
+**LDAP-standardserver som ska anslutas till:** Värdnamn för LDAP-servern som används för att hämta certifikat för dokumentkryptering.
 
 **LDAP-standardport att ansluta till:** LDAP-serverns portnummer.
 
@@ -230,7 +230,7 @@ Följande inställningar är tillgängliga för krypteringstjänsten.
 
 ## FTP-tjänstinställningar {#ftp-service-settings}
 
-FTP-tjänsten ( `FTP`) kan processerna interagera med en FTP-server. FTP-tjänståtgärder kan hämta filer från FTP-servern, skicka filer på FTP-servern och ta bort filer från FTP-servern. Till exempel kan dokument som genereras från en process lagras på en FTP-server för distribution. Eller så kan ett externt system generera filer baserat på tidigare steg i en process. I ett efterföljande steg i processen kan filerna överföras till en fjärrplats.
+FTP-tjänsten ( `FTP`) gör att processer kan interagera med en FTP-server. FTP-tjänståtgärder kan hämta filer från FTP-servern, skicka filer på FTP-servern och ta bort filer från FTP-servern. Till exempel kan dokument som genereras från en process lagras på en FTP-server för distribution. Eller så kan ett externt system generera filer baserat på tidigare steg i en process. I ett efterföljande steg i processen kan filerna överföras till en fjärrplats.
 
 Följande inställningar är tillgängliga för FTP-tjänsten.
 
@@ -238,7 +238,7 @@ Följande inställningar är tillgängliga för FTP-tjänsten.
 
 **Standardport:** Den port som används för att ansluta till FTP-servern. Standardvärdet är 21.
 
-**Standardanvändarnamn:** Namnet på det användarkonto som du kan använda för att komma åt FTP-servern. Användarkontot måste ha tillräcklig behörighet för att utföra de FTP-åtgärder som krävs för den här tjänsten.
+**Standardanvändarnamn:** Namnet på användarkontot som du kan använda för att komma åt FTP-servern. Användarkontot måste ha tillräcklig behörighet för att utföra de FTP-åtgärder som krävs för den här tjänsten.
 
 **Standardlösenord:** Lösenordet som ska användas med det angivna användarnamnet för autentisering med FTP-servern.
 
@@ -250,33 +250,34 @@ Följande inställningar är tillgängliga för tjänsten Generate PDF.
 
 **Adobe PDF-inställningar:** Namnet på de förkonfigurerade Adobe PDF-inställningarna som ska tillämpas på ett konverteringsjobb, om dessa inställningar inte anges som en del av API-anropsparametrarna. Adobe PDF-inställningarna konfigureras i administrationskonsolen genom att klicka på Tjänster > PDF Generator> Adobe PDF-inställningar. De här inställningarna gäller endast för PDFMaker-baserade konverteringar.
 
-**Skyddsinställningar:** Namnet på de förkonfigurerade säkerhetsinställningarna som ska tillämpas på ett konverteringsjobb, om dessa inställningar inte anges som en del av API-anropsparametrarna. Säkerhetsinställningarna konfigureras i administrationskonsolen genom att klicka på Tjänster > PDF Generator> Säkerhetsinställningar.
+**Säkerhetsinställningar:** Namnet på de förkonfigurerade säkerhetsinställningarna som ska tillämpas på ett konverteringsjobb, om dessa inställningar inte anges som en del av API-anropsparametrarna. Säkerhetsinställningarna konfigureras i administrationskonsolen genom att klicka på Tjänster > PDF Generator> Säkerhetsinställningar.
 
 **Filtypsinställningar:** Namnet på den förkonfigurerade filtypsinställningen som ska användas för ett konverteringsjobb, om dessa inställningar inte anges som en del av API-anropsparametrarna. Filtypsinställningarna konfigureras i administrationskonsolen genom att klicka på Tjänster > PDF Generator> Filtypsinställningar.
 
-**Använd WebCapture (endast Windows):** När den här inställningen är true använder Generate PDF-tjänsten Acrobat för alla konverteringar från HTML till PDF. Detta kan förbättra kvaliteten på PDF-filer som skapas från HTML, men prestandan kan vara något lägre. Standardvärdet är false.
+**Använd WebCapture (endast Windows):** När den här inställningen är true använder tjänsten Generate PDF Acrobat för alla konverteringar från HTML till PDF. Detta kan förbättra kvaliteten på PDF-filer som skapas från HTML, men prestandan kan vara något lägre. Standardvärdet är false.
 
-**Primär konverterare för konvertering från HTML till PDF:** Tjänsten Generate PDF erbjuder flera vägar för att konvertera HTML-filer till PDF-dokument: Webkit, WebCapture (endast Windows) och WebToPDF. Med den här inställningen kan användaren välja den primära konverteraren för att konvertera HTML till PDF. Som standard är WebToPDF markerad.
+**Primär konverterare för konverteringar från HTML till PDF:** Tjänsten Generate PDF tillhandahåller flera vägar för konvertering av HTML-filer till PDF-dokument: Webkit, WebCapture (endast Windows) och WebToPDF. Med den här inställningen kan användaren välja den primära konverteraren för att konvertera HTML till PDF. Som standard är WebToPDF markerad.
 
-**Reservkonverterare för konvertering från HTML till PDF:** Ange konverteraren för HTML till PDF om den primära konverteraren misslyckas. Som standard är WebCapture (endast Windows) markerad.
+**Reservkonverterare för konverteringar från HTML till PDF:** Ange konverteraren för konverteringar från HTML till PDF om den primära konverteraren misslyckas. Som standard är WebCapture (endast Windows) markerad.
 
-**Använd Acrobat Image Conversion (endast Windows):** När den här inställningen är true använder Generate PDF-tjänsten Acrobat för alla Image to PDF-konverteringar. Den här inställningen är bara användbar om standardkonverteringsfunktionen för ren Java inte kan konvertera en stor del av indatabilderna korrekt. Standardvärdet är false.
+**Använd Acrobat Image Conversion (endast Windows):** När den här inställningen är true använder tjänsten Generate PDF Acrobat för alla Image-to-PDF-konverteringar. Den här inställningen är bara användbar om standardkonverteringsfunktionen för ren Java inte kan konvertera en stor del av indatabilderna korrekt. Standardvärdet är false.
 
-**Aktivera Acrobat-baserade AutoCAD-konverteringar (endast Windows):** När den här inställningen är true använder tjänsten Generate PDF Acrobat för alla DWG-konverteringar till PDF. Den här inställningen är bara användbar om AutoCAD inte är installerat på servern eller om AutoCAD-konverteringsfunktionen inte kan konvertera filer.
+**Aktivera Acrobat-baserade AutoCAD-konverteringar (endast Windows):** När den här inställningen är true använder tjänsten Generate PDF Acrobat för alla DWG till PDF-konverteringar. Den här inställningen är bara användbar om AutoCAD inte är installerat på servern eller om AutoCAD-konverteringsfunktionen inte kan konvertera filer.
 
-**Reguljära uttryck för att hitta förbjudna specialtecken i användarnamnet (endast Windows):** Anger tecken som stör åtgärderna Export PDF och Optimize PDF när tecknen visas i en användares namn.
+**Reguljära uttryck för att hitta förbjudna specialuttryck
+Tecken i användarnamn (endast Windows):** Anger tecken som stör Export PDF- och Optimize PDF-åtgärder när tecknen visas i en användares namn.
 
 **Poolstorlek för ImageToPDF:** Poolstorleken för standardkonverteraren (ren Java) Image-to-PDF i tjänsten Generate PDF. Den här inställningen styr de maximala samtidiga Image-to-PDF-konverteringar som tjänsten Generate PDF kan utföra. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem.
 
-**Poolstorlek HTML till PDF:** Poolstorleken för konverteraren HTML till PDF i tjänsten Generate PDF. Den här inställningen styr de maximala samtidiga HTML-till-PDF-konverteringar som tjänsten Generate PDF kan utföra. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem.
+**Poolstorlek HTML till PDF:** Poolstorleken för HTML till PDF i konverteraren i tjänsten Generate PDF. Den här inställningen styr de maximala samtidiga HTML-till-PDF-konverteringar som tjänsten Generate PDF kan utföra. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem.
 
 **OCR-poolstorlek:** Poolstorleken för den PaperCaptureService som PDF Generator använder för OCR. Standardvärdet för den här inställningen (rekommenderas för enprocessorsystem) är 3, som du kan öka på flerprocessorsystem. Den här inställningen är endast giltig i Windows-system.
 
-**ImageToPDF max pages in memory for TIFF conversions:** Med den här inställningen bestäms det maximala antalet sidor från en TIFF-bild som kan finnas kvar i minnet innan de rensas till disk under konverteringen till PDF. Standardvärdet för den här inställningen är 500, vilket kan ökas om ytterligare minne tilldelas ImageToPDF-konverteringsprocessen.
+**ImageToPDF max pages in memory for TIFF conversions:** Den här inställningen avgör det maximala antalet sidor från en TIFF-bild som kan finnas kvar i minnet innan den töms till disk under konvertering till PDF. Standardvärdet för den här inställningen är 500, vilket kan ökas om ytterligare minne tilldelas ImageToPDF-konverteringsprocessen.
 
-**Reservteckensnittsfamilj för konverteringar från HTML till PDF:** Namnet på teckensnittsfamiljen som ska användas i PDF-dokument när teckensnittet som användes i det ursprungliga HTML inte är tillgängligt för AEM Forms Server. Ange en teckensnittsfamilj om du förväntar dig att konvertera HTML-sidor som använder otillgängliga teckensnitt. På sidor som skapats på regionala språk kan t.ex. otillgängliga teckensnitt användas.
+**Reservteckensnittsfamilj för HTML till PDF:** Namnet på teckensnittsfamiljen som ska användas i PDF-dokument när teckensnittet som användes i den ursprungliga HTML inte är tillgängligt för AEM Forms Server. Ange en teckensnittsfamilj om du förväntar dig att konvertera HTML-sidor som använder otillgängliga teckensnitt. På sidor som skapats på regionala språk kan t.ex. otillgängliga teckensnitt användas.
 
-**Återförsökslogik för interna konverteringar** Regerar generering av PDF om det första konverteringsförsöket har misslyckats:
+**Återförsökslogik för systemspecifika konverteringar** Regerar genereringsförsök i PDF om det första konverteringsförsöket har misslyckats:
 
 * **Inget nytt försök**
 
@@ -294,7 +295,7 @@ Följande inställningar är tillgängliga för tjänsten Generate PDF.
 
 När du skapar en stödlinje bäddas vissa resurser, till exempel en definition av stödlinjen, in i stödlinjen. Resurser kan också finnas som referenser till programresurser som lagras lokalt eller på AEM Forms Server. Handboken innehåller inga data, och värdena för sändningsplatsen och indata passar inte för alla externa miljöer.
 
-I de flesta fall räcker standardåtergivningstjänsten för stödlinjer för att förbereda en guide för användning i arbetsytor eller andra externa miljöer. (I vyn Tjänster i Workbench är standardtjänsten Guides (system)/Processes/Render Guide - 1.0.) Tjänsten Guide Utilities ( `GuidesUtility`) kan du skapa en anpassad process för att återge en stödlinje, om det behövs.
+I de flesta fall räcker standardåtergivningstjänsterna för stödlinjer för att förbereda en guide för användning i Workspace eller andra externa miljöer. (I vyn Tjänster i Workbench är standardtjänsten Guides (system)/Processes/Render Guide - 1.0.) Med tjänsten Guide Utilities ( `GuidesUtility`) kan du skapa en anpassad process för återgivning av en guide, om det behövs.
 
 Med guideverktygen kan du lägga till följande guideåtergivningsåtgärder i en process:
 
@@ -311,11 +312,11 @@ Standardvärdena för tjänsten Guide Utilities har stöd för de flesta fall. O
 
 **publicPaths:** Det här alternativet har tagits bort. Använd inte det här alternativet för AEM formulär.
 
-**pathInfoExpiryInSeconds:** Det intervall efter vilket en begäran om sökvägsinformation från en klient upphör att gälla. Standardvärdet är 1.
+**pathInfoExpiryInSeconds:** Intervallet efter vilket en begäran om sökvägsinformation från en klient upphör att gälla. Standardvärdet är 1.
 
-**marginExpiryInSeconds:** Det intervall efter vilket en begäran om säkerhet från en kund upphör att gälla. Standardvärdet är 315576000.
+**ateralExpiryInSeconds:** Intervallet efter vilket en begäran om säkerhet från en klient upphör att gälla. Standardvärdet är 315576000.
 
-**mismatchExpiryInSeconds:** Det intervall efter vilket en begäran om säkerhet från en kund upphör att gälla när eTag (enhetstagg) inte matchar. (En e-tagg är en HTTP-svarshuvud.) Standardvärdet är 1.
+**mismatchExpiryInSeconds:** Intervallet efter vilket en begäran om säkerhet från en klient upphör att gälla när eTag (enhetstagg) inte matchar. (En e-tagg är en HTTP-svarshuvud.) Standardvärdet är 1.
 
 **guideContext:** The context root of the Guides web application. Matchar det värde som angetts med webbprogrammet för stödlinjer. Standardvärdet är /Guides/.
 
@@ -323,13 +324,13 @@ Standardvärdena för tjänsten Guide Utilities har stöd för de flesta fall. O
 
 **idBytes:** Antalet slumpmässiga byte som ska användas för en nyckelidentifierare. Standardvärdet är 6.
 
-**macAlgorithm:** Den MAC-algoritm (Message Authentication Code) som ska användas för att bekräfta URL-adresser. Den här metoden skickas till metoden getInstance i klassen Mac. Standardvärdet är HmacSHA1.
+**macAlgorithm:** Den MAC-algoritm (meddelandelegitimeringskod) som ska användas för att verifiera ingående URL-adresser. Den här metoden skickas till metoden getInstance i klassen Mac. Standardvärdet är HmacSHA1.
 
 **macRefreshIntervalInMinutes:** Den tid en nyckel är aktiv. När en nyckel har varit aktiv för det här intervallet genereras en ny nyckel. Den nya tangenten blir aktiv. Den tidigare aktiva nyckeln behålls för 10 % av uppdateringsintervallet. Detta beteende gör att URL:er som genereras med den gamla nyckeln kan fortsätta att fungera i hela nyckelbytet. Standardvärdet är 144000.
 
-**macOverlapIntervalInMinutes:** Den tid som den föregående nyckeln förblir giltig efter att en ny har genererats. Standardvärdet är 1 440 minuter (1 dag).
+**macOverlapIntervalInMinutes:** Den tid som föregående nyckel ska förbli giltig efter att en ny har genererats. Standardvärdet är 1 440 minuter (1 dag).
 
-**macKeySeed:** Ett dirigeringsvärde för generering av säker URL. När det här alternativet är valt uppdateras aldrig nyckeln. Om du anger samma startvärde på olika servrar genereras säkra URL:er som är kompatibla. Detta kan vara användbart om flera formulärservrar används bakom en belastningsutjämnare. Ange en slumpmässig sekvens med tecken och siffror som startvärde.
+**macKeySeed:** Ett dirigeringsvärde för generering av den säkra URL:en. När det här alternativet är valt uppdateras aldrig nyckeln. Om du anger samma startvärde på olika servrar genereras säkra URL:er som är kompatibla. Detta kan vara användbart om flera formulärservrar används bakom en belastningsutjämnare. Ange en slumpmässig sekvens med tecken och siffror som startvärde.
 
 ### Använda stödlinjer i ett serverkluster {#using-guides-in-a-server-cluster}
 
@@ -345,21 +346,21 @@ Starta om klustret eftersom macSeedValue är skrivskyddat när systemet startas.
 
 ## JDBC-tjänstinställningar {#jdbc-service-settings}
 
-JDBC-tjänsten ( `JdbcService`) kan processerna interagera med databaser.
+JDBC-tjänsten ( `JdbcService`) gör det möjligt för processer att interagera med databaser.
 
 Följande inställning är tillgänglig för JDBC-tjänsten.
 
-**Datakällans namn:** Ett strängvärde som representerar JNDI-namnet på datakällan som ska användas för att ansluta till databasservern. Datakällan måste definieras på den programserver som är värd för Forms Server. Standardvärdet är JNDI-namnet på datakällan för AEM formulärdatabas.
+**datakällans namn:** Ett strängvärde som representerar JNDI-namnet på datakällan som ska användas för att ansluta till databasservern. Datakällan måste definieras på den programserver som är värd för Forms Server. Standardvärdet är JNDI-namnet på datakällan för AEM formulärdatabas.
 
 ## JMS-tjänstinställningar {#jms-service-settings}
 
-JMS-tjänsten ( `JMS`) möjliggör interaktion med Java Messaging System-leverantörer (JMS) som implementerar både peka-till-punkt-meddelanden och publicerar/prenumererar-meddelanden.
+JMS-tjänsten ( `JMS`) aktiverar interaktion med Java Messaging System-providers (JMS) som implementerar både peka-till-punkt-meddelanden och publicera/prenumerera-meddelanden.
 
 Konfigurera JMS-tjänsten med standardegenskaper så att tjänståtgärderna kan ansluta till och interagera med en JMS-provider och en associerad JNDI-tjänst. Värdena för tjänsteegenskaperna ställs in på standardvärden baserat på JBoss Application Server. Ändra dessa värden om du använder en annan programserver som värd AEM formulär.
 
 Följande inställningar är tillgängliga för JMS-tjänsten.
 
-**Provider-URL:** URL för JNDI-tjänstprovidern. Standardvärdet baseras på JBoss-programservern. Följande URL är standardvärden för de programservrar som AEM formulär stöder:
+**Provider-URL:** URL:en för JNDI-tjänstprovidern. Standardvärdet baseras på JBoss-programservern. Följande URL är standardvärden för de programservrar som AEM formulär stöder:
 
 **JBoss:** `<server name>:1099`
 
@@ -367,45 +368,45 @@ Följande inställningar är tillgängliga för JMS-tjänsten.
 
 **WebSphere:** `<server name>:2809`
 
-**JNDI-användarnamn:** Användarnamnet för det konto som ska användas för autentisering med JNDI-tjänstprovidern som används för att söka efter kö- och ämnesnamn. Standardvärdet är gäst.
+**JNDI-användarnamn:** Användarnamnet för kontot som ska användas för autentisering med JNDI-tjänstprovidern som används för att söka efter namn på köer och ämnen. Standardvärdet är gäst.
 
-**JNDI-lösenord:** Lösenordet som är associerat med det användarnamn som har angetts för JNDI-användarnamn. Standardvärdet är gäst.
+**JNDI-lösenord:** Lösenordet som är associerat med användarnamnet som har angetts för JNDI-användarnamn. Standardvärdet är gäst.
 
-**Startkontextfabrik:** Den Java-klass som ska användas som inledande kontextfabrik. JMS-tjänsten använder den här klassen för att skapa en inledande kontext, som är utgångspunkten för att matcha namn på ämnen och köer. Standardvärdet är den inledande kontextfabriken för JMS-tjänsten på JBoss. Följande klasser är de inledande kontextfabrikerna för de programservrar som AEM formulär stöder:
+**Initial Context Factory:** Den Java-klass som ska användas som inledande kontextfabrik. JMS-tjänsten använder den här klassen för att skapa en inledande kontext, som är utgångspunkten för att matcha namn på ämnen och köer. Standardvärdet är den inledande kontextfabriken för JMS-tjänsten på JBoss. Följande klasser är de inledande kontextfabrikerna för de programservrar som AEM formulär stöder:
 
 **JBoss:** org.jnp.interfaces.NamingContextFactory
 
 **WebLogic:** weblogic.jndi.WLInitialContextFactory
 
-**WebSphere:** com.ibm.websphere.naming.WsnInitialContextFactory
+**WebSphere:**.com.ibm.websphere.naming.WsnInitialContextFactory
 
 **Användarnamn för anslutning:** Lösenordet som är associerat med användarnamnet som har angetts för anslutningsanvändarnamnet. Standardvärdet är gäst.
 
-**Lösenord för anslutning:** Lösenordet som är associerat med användarnamnet som har angetts för anslutningsanvändarnamnet. Standardvärdet är gäst.
+**Anslutningslösenord:** Lösenordet som är associerat med användarnamnet som har angetts för anslutningsanvändarnamnet. Standardvärdet är gäst.
 
-**Andra egenskaper:** Egenskapsnamn och värdepar som du kan skicka till JNDI-tjänstleverantören. Dessa egenskaper beror på implementeringen och konfigurationen av providern som du använder.
+**Andra egenskaper:** Egenskapsnamn och värdepar som du kan skicka till JNDI-tjänstprovidern. Dessa egenskaper beror på implementeringen och konfigurationen av providern som du använder.
 
-Egenskapsnamnet och värdeparen avgränsas med semikolon **;**. I följande text visas det värde som skulle ha angetts för två egenskaper med namnen name1 och name2, med värdena value1 och value2:
+Egenskapsnamnet och värdepar avgränsas med semikolon **;**. I följande text visas det värde som skulle ha angetts för två egenskaper med namnen name1 och name2, med värdena value1 och value2:
 
 `name1=value1;name2=value2`
 
 ## LDAP-tjänstinställningar {#ldap-service-settings}
 
-LDAP-tjänsten ( `LDAPService`) innehåller åtgärder för att fråga i LDAP-kataloger. LDAP-kataloger används vanligtvis för att lagra information om personer, grupper och tjänster i en organisation.
+LDAP-tjänsten ( `LDAPService`) innehåller åtgärder för att fråga efter LDAP-kataloger. LDAP-kataloger används vanligtvis för att lagra information om personer, grupper och tjänster i en organisation.
 
 Följande inställningar är tillgängliga för LDAP-tjänsten.
 
-**Startkontextfabrik:** Den Java-klass som ska användas som kontextfabrik. Den här klassen används för att skapa en anslutning till LDAP-servern. Standardvärdet är com.sun.jndi.ldap.LdapCtxFactory, vilket är lämpligt för de flesta LDAP-servrar.
+**Initial Context Factory:** Den Java-klass som ska användas som kontextfabrik. Den här klassen används för att skapa en anslutning till LDAP-servern. Standardvärdet är com.sun.jndi.ldap.LdapCtxFactory, vilket är lämpligt för de flesta LDAP-servrar.
 
 **Provider-URL:** Den URL som ska användas för att ansluta till LDAP-tjänsten. Värdets format är `ldap://server name:port`
 
-*servernamn* är namnet på den dator där LDAP-servern finns
+*servernamn* är namnet på den dator som är värd för LDAP-servern
 
 *port* är den kommunikationsport som LDAP-tjänsten använder. Standardvärdet är 389, som är standardporten som används för LDAP-anslutningar.
 
 **Användarnamn:** Användarnamnet för det användarkonto som ska användas för att logga in på LDAP-servern. Användarkontot måste ha behörighet att ansluta till servern och läsa informationen i LDAP-katalogen.
 
-Beroende på LDAP-servern kan användarnamnet vara ett enkelt användarnamn som `myname` eller ett unikt namn, till exempel `cn=myname,cn=users,dc=myorg`.
+Beroende på LDAP-servern kan användarnamnet vara ett enkelt användarnamn, till exempel `myname` eller ett unikt namn, till exempel `cn=myname,cn=users,dc=myorg`.
 
 **Lösenord:** Lösenordet som motsvarar användarnamnet som anges för inställningen Användarnamn.
 
@@ -415,7 +416,7 @@ Beroende på LDAP-servern kan användarnamnet vara ett enkelt användarnamn som 
 
 ## Inställningar för konfigurationstjänsten för Microsoft SharePoint {#microsoft-sharepoint-configuration-service-settings}
 
-Konfigurationstjänsten för Microsoft SharePoint `(MSSharePointConfigService)`I kan du ange autentiseringsuppgifter för den användare av AEM formulär som har personifieringsbehörigheter. Mer information om personifieringsbehörigheter finns i [Konfigurera anslutningsprogrammet för Microsoft SharePoint](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html).
+Med konfigurationstjänsten `(MSSharePointConfigService)`för Microsoft SharePoint kan du ange autentiseringsuppgifter för den användare av AEM formulär som har personifieringsbehörigheter. Mer information om personifieringsbehörigheter finns i [Konfigurera anslutningsprogrammet för Microsoft SharePoint](https://help.adobe.com/en_US/AEMForms/6.1/SharePointConfig/index.html).
 
 Följande inställningar är tillgängliga för konfigurationstjänsten för Microsoft SharePoint:
 
@@ -424,17 +425,17 @@ Följande inställningar är tillgängliga för konfigurationstjänsten för Mic
 
 **Aktivera SSL (HTTPS):**
 
-**Live-tid:** Hur länge (i sekunder) som den här provisioneringsprofilen är giltig och cachelagras på klienten. Standardvärdet är 86400 (24 timmar). När ett klientprogram synkroniseras med servern och den angivna tiden har gått, begär klientprogrammet en ny provisioneringsprofil från servern.
+**TTL:** Tiden, i sekunder, som den här provisioneringsprofilen är giltig och cachelagrad på klienten. Standardvärdet är 86400 (24 timmar). När ett klientprogram synkroniseras med servern och den angivna tiden har gått, begär klientprogrammet en ny provisioneringsprofil från servern.
 
 **Kryptering:** Anger om data som lagras på den mobila enheten ska krypteras.
 
-**Forms-program:** Aktiverar funktionen Forms i mobilklientprogrammen. När det här alternativet är markerat kan användare öppna formulär och initiera processer från sina mobila enheter.
+**Forms-program:** Aktiverar Forms-funktionen i mobilklientprogrammen. När det här alternativet är markerat kan användare öppna formulär och initiera processer från sina mobila enheter.
 
-**Aktivitetsprogram:** Aktiverar funktionen Uppgifter i mobilklientprogrammen. När det här alternativet är markerat kan användare komma åt sina uppgiftslistor och slutföra uppgifter från sina mobila enheter.
+**Aktivitetsprogram:** Aktiverar aktivitetsfunktionen i mobilklientprogrammen. När det här alternativet är markerat kan användare komma åt sina uppgiftslistor och slutföra uppgifter från sina mobila enheter.
 
-**Innehållstjänstprogram:** Aktiverar Content Services-funktionen i mobilklientprogrammet. Den här funktionen är endast tillgänglig för iOS. När det här alternativet är markerat kan iPhone- och iPad-användare komma åt filer som lagras i organisationens WebDAV-server.
+**Content Services-program:** Aktiverar Content Services-funktionen i mobilklientprogrammet. Den här funktionen är endast tillgänglig för iOS. När det här alternativet är markerat kan iPhone- och iPad-användare komma åt filer som lagras i organisationens WebDAV-server.
 
-**Offlinesupport:** Gör det möjligt för användare att fortsätta använda mobilklientprogrammen även när de inte har någon anslutning till servern (t.ex. när de är utanför cellområdet eller i flygplansläge). Användarna måste även aktivera offlinesupport på sina mobila enheter. Den här funktionen är tillgänglig för Android- och iOS-enheter. Som standard är den här funktionen inaktiverad.
+**Offlinesupport:** Gör det möjligt för användare att fortsätta använda mobilklientprogrammen även när de inte har någon anslutning till servern (t.ex. när de är utanför cellområdet eller i flygplansläge). Användarna måste även aktivera offlinesupport på sina mobila enheter. Den här funktionen är tillgänglig för enheter med Android och iOS. Som standard är den här funktionen inaktiverad.
 
 >[!NOTE]
 >
@@ -442,23 +443,23 @@ Följande inställningar är tillgängliga för konfigurationstjänsten för Mic
 
 **Android:** Tillåter Android-enheter att ansluta till servern.
 
-**Apple iOS:** Tillåter iPhone och iPad att ansluta till servern.
+**Apple iOS:** Tillåter iPhone- och iPad-enheter att ansluta till servern.
 
-**AIR:** Tillåter att enheter som kör program baserade på Adobe AIR® ansluter till servern.
+**AIR:** Tillåter att enheter som kör program som är baserade på Adobe AIR® ansluter till servern.
 
 **BlackBerry:** Tillåter BlackBerry-enheter att ansluta till servern.
 
-**Android Microsoft Exchange ActiveSync krävs:** Anger om principhanteraren (EA) för Microsoft Exchange ActiveSync måste installeras och vara aktiv på Android-enheter. När det här alternativet är markerat måste EA tillämpas på Android-enheten. När det här alternativet inte är markerat utförs ingen kontroll, även om andra krav fortfarande gäller.
+**Android Microsoft Exchange ActiveSync krävs:** Anger om Microsoft Exchange ActiveSync-principhanteraren (EA) måste installeras och vara aktiv på Android-enheter. När det här alternativet är markerat måste EA verkställas på Android-enheten. När det här alternativet inte är markerat utförs ingen kontroll, även om andra krav fortfarande gäller.
 
-**Minsta PIN-kod för Android:** Android-enheter måste ha en global inställning som tvingar PIN-koden eller lösenordet att vara minst så lång. Det räcker inte att bara ha en PIN-kod med den angivna längden. PIN-kodens längd måste framtvingas av systemet så att användare inte kan ta bort eller korta ned PIN-koden senare. Standardvärdet är 4.
+**Minsta PIN-kodslängd för Android:** Android-enheter måste ha en global inställning som tvingar PIN-koden eller lösenordet att vara minst den här längden. Det räcker inte att bara ha en PIN-kod med den angivna längden. PIN-kodens längd måste framtvingas av systemet så att användare inte kan ta bort eller korta ned PIN-koden senare. Standardvärdet är 4.
 
-**Maximalt lösenord för Android-användare återställs innan rensning:** Android-enheter har en global inställning som rensar systemet efter ett angivet antal ogiltiga lösenordsförsök. Den här globala inställningen är aktiverad och lika med eller lägre än det värde som anges här. Standardvärdet är 5.
+**Android Maximum Password Retries Before Wipe:** Android-enheter har en global inställning som rensar systemet efter ett angivet antal ogiltiga lösenordsförsök. Den här globala inställningen är aktiverad och lika med eller lägre än det värde som anges här. Standardvärdet är 5.
 
-**Android-rensning vid borttagning:** Anger vad som händer när en principöverträdelse inträffar på en Android-enhet. När det här alternativet är markerat tas kontot bort. När det här alternativet inte är markerat tas lösenordet för det lagrade kontot och cachelagrade data bort. Inga fler synkroniseringsförsök görs förrän användaren åtgärdar principöverträdelsen.
+**Android-rensning vid borttagning:** Anger vad som ska hända när en principöverträdelse inträffar på en Android-enhet. När det här alternativet är markerat tas kontot bort. När det här alternativet inte är markerat tas lösenordet för det lagrade kontot och cachelagrade data bort. Inga fler synkroniseringsförsök görs förrän användaren åtgärdar principöverträdelsen.
 
 ## Inställningar för utdatatjänst {#output-service-settings}
 
-Utdatatjänsten `(OutputService)`Med kan du sammanfoga XML-formulärdata med en formulärdesign som har skapats i AEM Designer för att skapa en dokumentutdataström i något av följande format:
+Med utdatatjänsten `(OutputService)` kan du sammanfoga XML-formulärdata med en formulärdesign som skapats i AEM Designer för att skapa en dokumentutdataström i något av följande format:
 
 * Ett utdataflöde för PDF eller PDF/A-dokument.
 * En Adobe PostScript-utdataström.
@@ -471,45 +472,45 @@ Följande inställningar är tillgängliga för utdatatjänsten.
 
 **Transaktionstyp:** Anger hur en transaktionskontext ska spridas till en åtgärd:
 
-**Obligatoriskt:** har stöd för en transaktionskontext om en sådan redan finns. I annat fall skapas en ny transaktionskontext. Det här är standardvärdet.
+**Obligatoriskt:** stöder en transaktionskontext om det redan finns en. I annat fall skapas en ny transaktionskontext. Det här är standardvärdet.
 
 **Kräver nytt:** Skapar alltid en ny transaktionskontext. Om det finns en aktiv transaktionskontext pausas den.
 
-**Timeout för transaktion (i sek):** Antalet sekunder som den underliggande transaktionsprovidern väntar innan en transaktion som omsluter åtgärden återställs. Det här värdet ignoreras om en befintlig transaktionskontext sprids.
+**Överföringstid (i sek):** Antalet sekunder som den underliggande transaktionsprovidern väntar innan en transaktion som omsluter den här åtgärden återställs. Det här värdet ignoreras om en befintlig transaktionskontext sprids.
 
 När du bearbetar stora datafiler eller arbetar på en server med många operativsystem kan det vara nödvändigt att öka tidsgränsen för Output-tjänsten. Om du vill ändra timeout-värdet kontrollerar du att maskinvaruservrarna har tillräckligt med minne och att minnet är tillgängligt för Java Application Server-heap. Standardvärdet är `180`.
 
 ## Inställningar för PDFG Config-tjänsten {#pdfg-config-service-settings}
 
-Följande inställningar är tillgängliga för tjänsten PDFG Config ( `PDFGConfigService`).
+Följande inställningar är tillgängliga för PDFG Config-tjänsten ( `PDFGConfigService`).
 
-**Katalog för alternativ för användarjobb:** Sökvägen till filsystemmappen där tjänsten c skriver de jobbalternativsfiler som är tillgängliga för Acrobat Pro Extended. Standardvärdet är [user.home]/Application Data/Adobe/Adobe PDF/Settings.
+**Katalog för användarjobbalternativ:** Sökvägen till filsystemsmappen där c-tjänsten skriver de jobbalternativsfiler som är tillgängliga för Acrobat Pro Extended. Standardvärdet är [user.home]/Application Data/Adobe/Adobe PDF/Settings.
 
-**PS-startkatalog:** Sökvägen till filsystemmappen där startfilerna som krävs av Adobe Acrobat Distiller sparas. Standardvärdet är [user.home]/Application Data/Adobe/Adobe PDF/Distiller/Startup.
+**PS-startkatalog:** Sökvägen till filsystemmappen där startfilerna som krävs för Adobe Acrobat Distiller sparas. Standardvärdet är [user.home]/Application Data/Adobe/Adobe PDF/Distiller/Startup.
 
 **PS-startfil:** Namnet på startfilen som krävs av Adobe Acrobat Distiller. Standardvärdet är example.ps.
 
-**Timeout för serverkonvertering:** Den maximala tidsgränsen för jobbkonvertering (i sekunder) för tjänsten Generate PDF och tjänsten Distiller. Den här inställningen begränsar den maximala konverteringstimeout som kan anges i filen config.xml och på administrationskonsolsidorna för PDF Generator. Standardvärdet är 270.
+**Tidsgräns för serverkonvertering:** Den maximala tidsgränsen för jobbkonvertering (i sekunder) för tjänsten Generate PDF och Distiller. Den här inställningen begränsar den maximala konverteringstimeout som kan anges i filen config.xml och på administrationskonsolsidorna för PDF Generator. Standardvärdet är 270.
 
-**Serverns globala timeout:** Vid konvertering av PDF tar Forms Server hänsyn till tidsgränsen. Konfigurera timeout-värdet för att lösa problemet.
+**Serverns globala tidsgräns:** Vid PDF-konvertering tar en Forms-server hänsyn till tidsgränsen. Konfigurera timeout-värdet för att lösa problemet.
 
-**Prefix för jobbalternativ:** Ett prefix som används av tjänsten Generate PDF för att lägga till en kort sträng i jobbalternativsfilerna som skapas temporärt för Acrobat Distiller. Standardvärdet är pdfg.
+**Prefix för jobbalternativ:** Ett prefix som används av tjänsten Generate PDF för att lägga till en kort sträng i jobbalternativfilerna som skapas temporärt för användning av Acrobat Distiller. Standardvärdet är pdfg.
 
-**Icke-Unicode-appar:** En kommaavgränsad lista med programnamn som är kända för att inte vara Unicode-kompatibla. Listan är förifylld med namnen på flera program, som har stöd för i PDF Generator. Om du väljer att lägga till stöd för PDF-konverteringar via andra program från tredje part som inte kan använda Unicode måste du lägga till dem i den här listan. Standardvärdet är AutoCAD, Excel, PowerPoint, Project, Publisher, Visio, Word, WordPerfect.
+**Program som inte är Unicode:** En kommaavgränsad lista över programnamn som är kända för att vara Unicode-inkompatibla. Listan är förifylld med namnen på flera program, som har stöd för i PDF Generator. Om du väljer att lägga till stöd för PDF-konverteringar via andra program från tredje part som inte kan använda Unicode måste du lägga till dem i den här listan. Standardvärdet är AutoCAD, Excel, PowerPoint, Project, Publisher, Visio, Word, WordPerfect.
 
-**Antal servertrådpooler:** Styr storleken på den trådpool som tjänsten Generate PDF använder internt för att hantera konverteringsbegäranden från HTML till PDF som innefattar spikning (konvertering av länkade sidor som är tillgängliga från huvudsidan). Standardvärdet är 20.
+**Antal servertrådpooler:** Styr storleken på den trådpool som tjänsten Generate PDF använder internt för att hantera konverteringsbegäranden mellan HTML och PDF som innefattar spikning (konvertering av länkade sidor som är tillgängliga från huvudsidan). Standardvärdet är 20.
 
 **Sekunder för PDFG-rensningsgenomsökning:** Mer information finns i avsnittet Sekunder för jobbförfallodatum.
 
-**Utgångsdatum i sekunder för jobb:** Tjänsten Generate PDF tar bort indatafiler så snart de konverteras. Utdatafilerna sparas tillfälligt under en tid som bestäms av inställningarna Sekunder för PDFG-rensning och Sekunder för jobbförfallodatum.
+**Förfallodatum i sekunder för jobb:** Tjänsten Generate PDF tar bort indatafiler så snart de konverteras. Utdatafilerna sparas tillfälligt under en tid som bestäms av inställningarna Sekunder för PDFG-rensning och Sekunder för jobbförfallodatum.
 
 Inställningen Sekunder för förfallodatum för jobb anger hur gammal en fil eller tom mapp måste vara innan den kan tas bort. Inställningen Sekunder för PDFG-rensningsgenomsökning anger hur ofta en rensningstråd söker igenom de tillfälliga mapparna efter filer som kan tas bort.
 
 Om t.ex. Förfallotid i sekunder för jobb är inställt på 100 och PDFG-rensningsgenomsökningssekunder är inställt på 200, körs rensningstråden var 200:e sekund och tar bort filer som är 100 sekunder eller äldre.
 
-Standardvärdet för sekundära PDFG-rensningsgenomsökningar är `43200` (12 timmar). Standardvärdet för Förfallotid i sekunder för jobb är `86400` (24 timmar).
+Standardvärdet för sekundära PDFG-rensningsgenomsökningar är `43200` (12 timmar). Standardvärdet för Förfallotid för jobb är `86400` (24 timmar).
 
-**Standardspråk:** Används för att åsidosätta standardspråkområdet (land + språk) på servern där tjänsten Generate PDF är distribuerad. Om den här parametern inte är angiven bestäms standardspråket av det operativsystem som tjänsten distribueras till. Den här parametern styr vilket språk felmeddelandena returneras till API:erna.
+**Standardspråk:** Används för att åsidosätta standardspråket (land + språk) på servern där tjänsten Generate PDF har distribuerats. Om den här parametern inte är angiven bestäms standardspråket av det operativsystem som tjänsten distribueras till. Den här parametern styr vilket språk felmeddelandena returneras till API:erna.
 
 ## inställningar för datatjänsttjänst för formulärarbetsflöde {#forms-workflow-data-services-service-settings}
 
@@ -521,13 +522,13 @@ Följande tjänster utökar Data Services och visar sammansättningar som Worksp
 
 ## Fjärrtjänstinställningar {#remoting-service-settings}
 
-De flesta tjänster är konfigurerade så att du kan komma åt dem via (Borttagning för AEM formulär) AEM formulär. Mer information om (borttagning av AEM formulär) AEM formulär finns i [Programmera med AEM](https://adobe.com/go/learn_aemforms_programming_63).
+De flesta tjänster är konfigurerade så att du kan komma åt dem via (Borttagning för AEM formulär) AEM formulär. Mer information om (Borttagning av AEM formulär) AEM formulär finns i [Programmering med AEM formulär](https://adobe.com/go/learn_aemforms_programming_63).
 
 Följande inställningar är tillgängliga för tjänsten Remoting.
 
-**Autentiseringsmetod för Flex-klient:** Bestämmer vilken typ av svar som servern skickar tillbaka till klienten när den anropade tjänsten är säkerhetsaktiverad, den anropade åtgärden inte stöder anonyma anrop och klienten skickar antingen inga eller ogiltiga autentiseringsuppgifter. Välj Anpassad eller Grundläggande. Standardvärdet är Grundläggande.
+**Flex klientautentiseringsmetod:** Bestämmer vilken typ av svar som servern skickar tillbaka till klienten när den anropade tjänsten är säkerhetsaktiverad, den anropade åtgärden inte stöder anonyma anrop och klienten skickar antingen inga eller ogiltiga autentiseringsuppgifter. Välj Anpassad eller Grundläggande. Standardvärdet är Grundläggande.
 
-**Tillåt serialisering av icke-serialiserbara klasser:** De flesta AEM formulärslutpunkter tillåter bara att serialiserbara klasser används för anrop. I äldre versioner tillät slutpunkten Remoting icke-serialiserbara klasser att användas för anrop från Flex-baserade klienter. För att förhindra en säkerhetslucka som beskrivs i APS11-15 har detta ändrats. Markera den här kryssrutan om du vill fortsätta använda icke-serialiserbara klasser med slutpunkten för Flex Remoting.
+**Tillåt serialisering av icke-serialiserbara klasser:** De flesta AEM formulärslutpunkter tillåter endast serialiserbara klasser att användas för anrop. I äldre versioner tillät slutpunkten Remoting icke-serialiserbara klasser att användas för anrop från Flex-baserade klienter. För att förhindra en säkerhetslucka som beskrivs i APS11-15 har detta ändrats. Markera den här kryssrutan om du vill fortsätta använda icke-serialiserbara klasser med slutpunkten för Flex Remoting.
 
 ## Inställningar för databastjänst {#repository-service-settings}
 
@@ -539,47 +540,51 @@ Databasprovidertjänsten är en tjänstdelegat som fungerar som gränssnitt till
 
 Följande inställning är tillgänglig för databastjänsten.
 
-**Providertjänst:** Namnet på den tjänst som används som lagringsprovider. Standardvärdet är RepositoryProviderService.
+**Providertjänst:** Namnet på tjänsten som används som lagringsprovider. Standardvärdet är RepositoryProviderService.
 
 ## Inställningar för signaturtjänst {#signature-service-settings}
 
-Signaturtjänsten ( `SignatureService`) kan man skydda de Adobe PDF-dokument man distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att dokumenten inte ändras. Om du ändrar ett dokument bryts signaturen. Eftersom säkerhetsfunktionerna tillämpas på själva dokumentet förblir dokumentet säkert och kontrollerat under hela sin livscykel, utanför brandväggen, när det laddas ned offline och när det skickas tillbaka till organisationen.
+Signaturtjänsten ( `SignatureService`) gör det möjligt för din organisation att skydda säkerheten och sekretessen för Adobe PDF-dokument som den distribuerar och tar emot. Den här tjänsten använder digitala signaturer och certifiering för att säkerställa att dokumenten inte ändras. Om du ändrar ett dokument bryts signaturen. Eftersom säkerhetsfunktionerna tillämpas på själva dokumentet förblir dokumentet säkert och kontrollerat under hela sin livscykel, utanför brandväggen, när det laddas ned offline och när det skickas tillbaka till organisationen.
 
 Följande inställningar är tillgängliga för signaturtjänsten.
 
-**Namn på fjärr-HSM SPI-tjänsten:** Det här alternativet används när HSM är installerat på en fjärrdator. Ange det här alternativet när AEM har installerats i ett 64-bitars Windows och du använder HSM-enheter för signering.
+**Namnet på fjärr-HSM SPI-tjänsten:** Det här alternativet används när HSM är installerat på en fjärrdator. Ange det här alternativet när AEM har installerats i ett 64-bitars Windows och du använder HSM-enheter för signering.
 
-**URL för fjärr-HSM-webbtjänsten:** Ange det här alternativet när AEM har installerats på 64-bitars Windows och du använder HSM-enheter för signering.
+**URL för fjärr-HSM-webbtjänsten:** Ange det här alternativet när AEM har installerats i 64-bitars Windows och du använder HSM-enheter för signering.
 
 **Certifiering för att inkludera formulärinläsningsändringar:** När det här alternativet är markerat certifieras XFA-formulärstatusen utöver XFA-mallen. Observera att aktivering av det här alternativet kan ha en negativ inverkan på prestandan. Standardvärdet är true.
 
-**Kör JavaScript-skript för dokument:** Anger om dokument-JavaScript-skript ska köras under signeringsåtgärder. Standardvärdet är false.
+**Kör JavaScript-skript för dokument:** Anger om JavaScript-skript för dokument ska köras under signeringsåtgärder. Standardvärdet är false.
 
 **Bearbeta dokument med Acrobat 9-kompatibilitet:** Anger om Acrobat 9-kompatibilitet ska aktiveras. Om du till exempel markerar det här alternativet aktiveras Synlig certifiering i Dynamisk PDF. Standardvärdet är false.
 
-**Bädda in spärrinformation vid undertecknande:** Anger om spärrinformation bäddas in när PDF-dokumentet signeras. Standardvärdet är false.
+**Bädda in spärrinformation vid signering:** Anger om spärrinformation bäddas in när PDF-dokumentet signeras. Standardvärdet är false.
 
-**Bädda in återkallningsinformation vid certifiering:** Anger om spärrinformationen bäddas in när PDF-dokumentet certifieras. Standardvärdet är false.
+**Bädda in återkallningsinformation vid certifiering:** Anger om återkallningsinformationen bäddas in när PDF-dokumentet certifieras. Standardvärdet är false.
 
-**Tvinga inbäddning av återkallningsinformation för alla certifikat under undertecknande/certifiering:** Anger om en signerings- eller certifieringsåtgärd misslyckas om giltig återkallningsinformation för alla certifikat inte bäddas in. Observera att om ett certifikat inte innehåller någon CRL- eller OCSP-information, anses det vara giltigt, även om ingen återkallningsinformation hämtas. Standardvärdet är false.
+**Tvinga inbäddning av spärrinformation för alla certifikat
+Under signering/certifiering:** Anger om en signerings- eller certifieringsåtgärd misslyckas om giltig återkallningsinformation för alla certifikat inte bäddas in. Observera att om ett certifikat inte innehåller någon CRL- eller OCSP-information, anses det vara giltigt, även om ingen återkallningsinformation hämtas. Standardvärdet är false.
 
-**Återkallningskontrollordning:** Anger ordningen för spärrkontroll när det är möjligt att kontrollera detta med hjälp av både CRL- och OCSP-mekanismer (Online Certificate Status Protocol). Standardvärdet är OCSPFfirst.
+**Återkallningskontrollordning:** Anger ordningen för spärrkontroll när det är möjligt att kontrollera detta med hjälp av både certifikatåterkallningslistan (CRL) och OCSP-mekanismer (Online Certificate Status Protocol). Standardvärdet är OCSPFfirst.
 
-**Maximal storlek för information om återkallningsarkivering:** Den största tillåtna storleken för arkiveringsinformation för återkallning i kilobyte. AEM försöker lagra så mycket spärrinformation som möjligt utan att överskrida gränsen. Standardvärdet är 10 kB.
+**Maximal storlek på information om återkallningsarkivering:** Den maximala storleken på information om återkallningsarkivering i kilobyte. AEM försöker lagra så mycket spärrinformation som möjligt utan att överskrida gränsen. Standardvärdet är 10 kB.
 
-**Supportsignaturer som skapats i PreRelease-versioner av Adobe-produkter:** När det här alternativet är markerat valideras signaturen som skapats med en förhandsversion av Adobe-produkter korrekt. Standardvärdet är false.
+**Stödsignaturer har skapats från PreRelease-versioner av
+Adobe-produkter:** När det här alternativet är markerat valideras signaturer som skapats med en förhandsversion av Adobe-produkter korrekt. Standardvärdet är false.
 
 **Alternativ för verifieringstid:** Anger tidpunkten för verifiering av en signerares certifikat. Standardvärdet är Säker tid för annan aktuell tid.
 
-**Använd återkallningsinformation som arkiverats i signaturen under validering:** Anger om den spärrinformation som arkiveras med signaturen används för spärrkontroll. Standardvärdet är true.
+**Använd återkallningsinformation som arkiverats i signaturen under
+Validering:** Anger om den spärrinformation som arkiveras med signaturen används för spärrkontroll. Standardvärdet är true.
 
-**Använd valideringsinformation som lagras i dokumentet för validering av signaturer:** När det här alternativet är markerat används den valideringsinformation (inklusive information om återkallning och tidsstämplar) som är inbäddad i dokumentet för att validera signaturer. Standardvärdet är true.
+**Använd verifieringsinformation som finns lagrad i dokumentet för
+Validering av signaturer:** När det här alternativet är markerat används den valideringsinformation (inklusive information om återkallning och tidsstämpling) som är inbäddad i dokumentet för att validera signaturer. Standardvärdet är true.
 
-**Högsta antal tillåtna kapslade verifieringssessioner:** Högsta tillåtna antal kapslade verifieringssessioner. AEM använder det här värdet för att förhindra en oändlig slinga när OCSP- eller CRL-signerarcertifikaten verifieras när OCSP- eller CRL-certifikatet inte är korrekt konfigurerat. Standardvärdet är 10.
+**Högsta tillåtna antal kapslade verifieringssessioner:** Det högsta tillåtna antalet kapslade verifieringssessioner. AEM använder det här värdet för att förhindra en oändlig slinga när OCSP- eller CRL-signerarcertifikaten verifieras när OCSP- eller CRL-certifikatet inte är korrekt konfigurerat. Standardvärdet är 10.
 
-**Maximal låsskevning för verifiering:** Den maximala tiden, i minuter, som signeringstiden kan vara efter valideringstiden. Om klockskevningen är större än det här värdet är signaturen inte giltig. Standardvärdet är 65 minuter.
+**Maximal klockförvrängning för verifiering:** Den maximala tiden, i minuter, som signeringstiden kan vara efter valideringstiden. Om klockskevningen är större än det här värdet är signaturen inte giltig. Standardvärdet är 65 minuter.
 
-**Certifikatets livstidscache:** Livslängden för ett certifikat som hämtats online eller på annat sätt i cachen. Standardvärdet är 1 dag.
+**Cacheminne för certifikatets livstid:** Livslängden för ett certifikat som har hämtats online eller på annat sätt i cacheminnet. Standardvärdet är 1 dag.
 
 ### Transportalternativ {#transport-options}
 
@@ -587,91 +592,91 @@ Följande inställningar är tillgängliga för signaturtjänsten.
 
 **Proxyport:** Proxyporten. Ange ett giltigt portnummer mellan 0 och 65535. Standardvärdet är 80.
 
-**Proxyinloggningsanvändarnamn:** Användarnamnet för proxyinloggning. Används bara om ett giltigt värde har angetts för proxyvärden och proxyport. Inget standardvärde.
+**Användarnamn för proxyinloggning:** Användarnamn för proxyinloggning. Används bara om ett giltigt värde har angetts för proxyvärden och proxyport. Inget standardvärde.
 
-**Lösenord för proxyinloggning:** Proxyinloggningslösenordet. Används bara om ett giltigt värde anges för proxyvärden, proxyporten och användarnamnet för proxyinloggning. Inget standardvärde.
+**Lösenord för proxyinloggning:** Lösenordet för proxyinloggning. Används bara om ett giltigt värde anges för proxyvärden, proxyporten och användarnamnet för proxyinloggning. Inget standardvärde.
 
 **Maximal hämtningsgräns:** Den maximala mängden data, i MB, som kan tas emot per anslutning. Det minsta värdet är 1 MB och det högsta värdet är 1 024 MB. Standardvärdet är 16 MB.
 
-**Anslutningstid ut:** Den längsta väntetiden, i sekunder, för att upprätta en ny anslutning. Det minsta värdet är 1 och det högsta värdet är 300. Standardvärdet är 5.
+**Anslutningens timeout:** Den längsta väntetiden, i sekunder, för att upprätta en ny anslutning. Det minsta värdet är 1 och det högsta värdet är 300. Standardvärdet är 5.
 
-**Sockettimeout:** Maximal väntetid, i sekunder, innan en sockettimeout (i väntan på dataöverföring) inträffar. Det minsta värdet är 1 och det högsta värdet är 3 600. Standardvärdet är 30.
+**Sockettimeout:** Den längsta väntetiden, i sekunder, innan en sockettimeout (i väntan på dataöverföring) inträffar. Det minsta värdet är 1 och det högsta värdet är 3 600. Standardvärdet är 30.
 
 ### Alternativ för validering av sökväg {#path-validation-options}
 
-**Kräv explicit princip:** Anger om sökvägen måste vara giltig för minst en av de certifikatprofiler som är kopplade till signerarcertifikatets rotcertifikatsutfärdare. Standardvärdet är false.
+**Kräv explicit princip:** Anger om sökvägen måste vara giltig för minst en av certifikatprofilerna som är associerad med signerarcertifikatets förtroendeankare. Standardvärdet är false.
 
-**Hindra alla profiler:** Anger om objektidentifieraren för princip (OID) ska behandlas om den ingår i ett certifikat. Standardvärdet är false.
+**Hindra EN princip:** Anger om objektidentifieraren för princip (OID) ska behandlas om den ingår i ett certifikat. Standardvärdet är false.
 
 **Hindra principmappning:** Anger om principmappning tillåts i certifieringssökvägen. Standardvärdet är false.
 
-**Markera alla banor:** Anger om alla sökvägar ska valideras eller om valideringen ska avbrytas efter att den första giltiga sökvägen har hittats. Välj true eller false. Standardvärdet är false.
+**Kontrollera alla sökvägar:** Anger om alla sökvägar ska valideras eller om valideringen ska avbrytas efter att den första giltiga sökvägen har hittats. Välj true eller false. Standardvärdet är false.
 
 **LDAP-server:** LDAP-servern som används för att söka efter certifikat för sökvägsvalidering. Inget standardvärde.
 
 **Följ URI:er i AIA-certifikat:** Anger om URI:er (Uniform Resource Identifiers) i AIA-certifikat behandlas vid sökvägsidentifiering. Standardvärdet är false.
 
-**Tillägg för grundläggande begränsningar krävs i certifikatutfärdarcertifikat:** Anger om certifikatutfärdarens grundläggande begränsningscertifikattillägg måste finnas för certifikatutfärdarcertifikat. Vissa tidiga tyska certifierade rotcertifikat (7 och tidigare) är inte kompatibla med RFC 3280 och innehåller inte det grundläggande begränsningstillägget. Om det är känt att en användares EE-certifikat kan härledas till en sådan tysk rot avmarkerar du den här kryssrutan. Standardvärdet är true.
+**Tillägg för grundläggande begränsningar krävs i certifikatutfärdarcertifikat:** Anger om certifikatutfärdarens certifikattillägg för grundläggande begränsningar måste finnas för certifikatutfärdarcertifikat. Vissa tidiga tyska certifierade rotcertifikat (7 och tidigare) är inte kompatibla med RFC 3280 och innehåller inte det grundläggande begränsningstillägget. Om det är känt att en användares EE-certifikat kan härledas till en sådan tysk rot avmarkerar du den här kryssrutan. Standardvärdet är true.
 
-**Kräv giltig certifikatsignatur när kedjan byggs:** Anger om kedjebyggaren kräver giltiga signaturer på certifikat som används för att skapa kedjor. När den här kryssrutan är markerad kommer kedjebyggaren inte att skapa kedjor med ogiltiga RSA-signaturer på certifikat. Överväg kedja CA > ICA > EE där certifikatutfärdarens signatur på ett ICA inte är giltig. Om den här inställningen är true stoppas kedjebyggnaden vid ICA och CA inkluderas inte i kedjan. Om den här inställningen är false skapas den fullständiga 3-certifikatskedjan. Den här inställningen påverkar inte DSA-signaturer. Standardvärdet är false.
+**Kräv giltig certifikatsignatur under kedjeskapande:** Anger om kedjebyggaren kräver giltiga signaturer för certifikat som används för att skapa kedjor. När den här kryssrutan är markerad kommer kedjebyggaren inte att skapa kedjor med ogiltiga RSA-signaturer på certifikat. Överväg kedja CA > ICA > EE där certifikatutfärdarens signatur på ett ICA inte är giltig. Om den här inställningen är true stoppas kedjebyggnaden vid ICA och CA inkluderas inte i kedjan. Om den här inställningen är false skapas den fullständiga 3-certifikatskedjan. Den här inställningen påverkar inte DSA-signaturer. Standardvärdet är false.
 
 ### Alternativ för tidsstämpelleverantör {#timestamp-provider-options}
 
-**URL för TSP-server:** URL:en för standardtidsstämpelprovidern. Används endast om ett giltigt värde anges. Inget standardvärde.
+**TSP-serverns URL:** URL:en för standardtidsstämpelprovidern. Används endast om ett giltigt värde anges. Inget standardvärde.
 
-**TSP-serveranvändarnamn:** Användarnamnet om det behövs av tidsstämpelprovidern. Används bara om ett giltigt värde har angetts för URL:en. Inget standardvärde.
+**TSP-serverns användarnamn:** Användarnamnet, om nödvändigt, av tidsstämpelprovidern. Används bara om ett giltigt värde har angetts för URL:en. Inget standardvärde.
 
-**TSP-serverlösenord:** Lösenordet för ovanstående användarnamn om det behövs av tidsstämpelprovidern. Används bara om ett giltigt värde har angetts för URL:en och användarnamnet. Inget standardvärde.
+**TSP-serverlösenord:** Lösenordet för det ovanstående användarnamnet om det behövs av tidsstämpelprovidern. Används bara om ett giltigt värde har angetts för URL:en och användarnamnet. Inget standardvärde.
 
 **Begär hash-algoritm:** Anger den hash-algoritm som ska användas när begäran för tidsstämpelprovidern skapas. Standardvärdet är SHA1.
 
-**Format för spärrkontroll:** Anger det format för spärrkontroll som används för att avgöra pålitlighetsstatus för tidsstämpelproviderns certifikat från den spärrstatus som observerats. Standardvärdet är BestEffort.
+**Format för spärrkontroll:** Anger det spärrkontrollsformat som används för att fastställa pålitlighetsstatus för tidsstämpelproviderns certifikat från den spärrstatus som observerats. Standardvärdet är BestEffort.
 
-**Send Nonce:** Anger om ett nonce skickas med begäran från tidsstämpelprovidern. Ett omedelbart kan vara en tidsstämpel, en besöksräknare på en webbsida eller en speciell markör som är avsedd att begränsa eller förhindra otillåten kopiering eller reproduktion av en fil. Standardvärdet är true.
+**Skicka en gång:** Anger om ett namn skickas med tidsstämpelproviderbegäran. Ett omedelbart kan vara en tidsstämpel, en besöksräknare på en webbsida eller en speciell markör som är avsedd att begränsa eller förhindra otillåten kopiering eller reproduktion av en fil. Standardvärdet är true.
 
-**Använd utgångna tidsstämplar vid validering:** När det här alternativet är markerat kan utgångna tidsstämplar användas för att hämta valideringstider för signaturer. Standardvärdet är true.
+**Använd utgångna tidsstämplar under validering:** När det här alternativet är markerat kan utgångna tidsstämplar användas för att hämta valideringstider för signaturer. Standardvärdet är true.
 
 **TSP-svarsstorlek:** Beräknad storlek i byte för TSP-svaret. Det här värdet bör representera den maximala storleken för tidsstämpelsvaret som den konfigurerade tidsstämpelprovidern kan returnera. Ändra inte detta om du inte är helt säker. Det minsta värdet är 60 B och det högsta värdet är 10240 B. Standardvärdet är 4096B.
 
-**Ignorera tidsstämpelservertillägg**: Välj **Ignorera tidsstämpelservertillägg** om du inte vill att AEM Forms-servern ska kunna kontakta den angivna tidsstämpelservern. Om du väljer det här alternativet undviker du processfel som inträffar på grund av timeout i anslutningen mellan AEM Forms och tidsstämpelservrar.
+**Ignorera tidsstämpelservertillägg**: Markera alternativet **Ignorera tidsstämpelservertillägg** om du inte vill att AEM Forms-servern ska kontakta den angivna tidsstämpelservern. Om du väljer det här alternativet undviker du processfel som inträffar på grund av timeout i anslutningen mellan AEM Forms och tidsstämpelservrar.
 
 ### Alternativ för listan över spärrade certifikat {#certificate-revocation-list-options}
 
-**Konsultera lokal URI först:** Anger om platsen för listan över återkallade certifikat som anges i lokal URI eller CRL-sökning ska ges företräde framför någon plats som anges i ett certifikat för spärrkontroll. Standardvärdet är false.
+**Konsult-URI först:** Anger om den CRL-plats som anges i lokal URI eller CRL-sökning ska ges företräde framför någon plats som anges i ett certifikat för spärrkontroll. Standardvärdet är false.
 
 **Lokal URI för CRL-sökning:** URL för den lokala CRL-providern. Det här värdet används bara om inställningen Konsult lokal URI första är true. Inget standardvärde.
 
-**Format för spärrkontroll:** Anger det format för spärrkontroll som används för att fastställa pålitlighetsstatusen för CRL-providerns certifikat från den status som observerats för spärrkontroll. Standardvärdet är BestEffort.
+**Format för spärrkontroll:** Anger det format för spärrkontroll som används för att fastställa pålitlighetsstatus för CRL-providerns certifikat från den status som observerats för spärrkontroll. Standardvärdet är BestEffort.
 
-**LDAP-server för CRL-sökning:** LDAP-servern använde för att hämta listor över återkallade certifikat (som www.ldap.com). Alla DN-baserade frågor om listor över återkallade certifikat dirigeras till den här servern. Inget standardvärde.
+**LDAP-server för CRL-sökning:** LDAP-servern använde för att hämta CRL:er (som www.ldap.com). Alla DN-baserade frågor om listor över återkallade certifikat dirigeras till den här servern. Inget standardvärde.
 
-**Anslut:** Anger om du ska ansluta till Internet för att hämta en lista över återkallade certifikat. Om värdet är false genomsöks bara cachelagrade listor över återkallade certifikat (på den lokala hårddisken eller sådana som är inbäddade med signatur). Standardvärdet är true.
+**Anslut:** Anger om du ska ansluta för att hämta en lista över återkallade certifikat. Om värdet är false genomsöks bara cachelagrade listor över återkallade certifikat (på den lokala hårddisken eller sådana som är inbäddade med signatur). Standardvärdet är true.
 
 **Ignorera giltighetsdatum:** Anger om svarets thisUpdate- och nextUpdate-tider ska ignoreras, vilket förhindrar att dessa tider har en negativ effekt på svarets giltighet. Standardvärdet är false.
 
-**Kräv AKI-tillägg i CRL:** Anger om tillägget för utfärdarens nyckelidentifierare måste inkluderas i en lista över återkallade certifikat. Standardvärdet är false.
+**Kräv AKI-tillägg i CRL:** Anger om tillägget för identifierare av utfärdarnyckel måste inkluderas i en CRL. Standardvärdet är false.
 
 ### Alternativ för statusprotokoll för onlinecertifikat {#online-certificate-status-protocol-options}
 
-**URL för OCSP-server:** URL för OCSP-standardservern. Om OCSP-servern som anges via den här URL:en används beror på inställningen för alternativet URL till rådgivning. Inget standardvärde.
+**URL för OCSP-server:** för OCSP-standardservern. Om OCSP-servern som anges via den här URL:en används beror på inställningen för alternativet URL till rådgivning. Inget standardvärde.
 
-**Alternativ för URL till konsult:** Styr listan och ordningen för de OCSP-servrar som används för statuskontrollen. Standardvärdet är UseAIAInCert.
+**URL till konsult-alternativ:** Styr listan och ordningen för de OCSP-servrar som används för att utföra statuskontrollen. Standardvärdet är UseAIAInCert.
 
-**Format för spärrkontroll:** Anger den typ av spärrkontroll som används vid verifiering av OCSP-serverns certifikat. Standardvärdet är CheckIfAvailable.
+**Format för spärrkontroll:** Anger den stil för spärrkontroll som används vid verifiering av OCSP-serverns certifikat. Standardvärdet är CheckIfAvailable.
 
-**Send Nonce:** Anger om ett nonce skickas med OCSP-begäran. Ett omedelbart kan vara en tidsstämpel, en besöksräknare på en webbsida eller en speciell markör som är avsedd att begränsa eller förhindra otillåten kopiering eller reproduktion av en fil. Standardvärdet är true.
+**Skicka en gång:** Anger om ett namn skickas med OCSP-begäran. Ett omedelbart kan vara en tidsstämpel, en besöksräknare på en webbsida eller en speciell markör som är avsedd att begränsa eller förhindra otillåten kopiering eller reproduktion av en fil. Standardvärdet är true.
 
 **Maximal tid för skevning av klocka:** Maximal tillåten skevning, i minuter, mellan svarstid och lokal tid. Det minsta värdet är 0 och det högsta värdet är 2147483647m. Standardvärdet är 5 m.
 
-**Svarets varaktighet för färdighet:** Maximal tid, i minuter, för vilken ett förkonstruerat OCSP-svar anses vara giltigt. Det minsta värdet är 1 m och det högsta tillåtna värdet är 2147483647. Standardvärdet är 525600 (ett år).
+**Tid för svarsfärdighet:** Maximal tid, i minuter, för vilken ett förkonstruerat OCSP-svar anses vara giltigt. Det minsta värdet är 1 m och det högsta tillåtna värdet är 2147483647. Standardvärdet är 525600 (ett år).
 
-**Underteckna OCSP-begäran:** Anger om OCSP-begäran ska signeras. Standardvärdet är false.
+**Signera OCSP-begäran:** Anger om OCSP-begäran ska signeras. Standardvärdet är false.
 
-**Autentiseringsalias för begärande signerare:** Anger det autentiseringsalias som ska användas för att signera OCSP-begäran om signering är aktiverat. Används bara om signering av OCSP-begäran är aktiverat. Inget standardvärde.
+**Begär autentiseringsuppgifter för signerare alias:** Anger det autentiseringsalias som ska användas för att signera OCSP-begäran om signering är aktiverat. Används bara om signering av OCSP-begäran är aktiverat. Inget standardvärde.
 
-**Anslut:** Anger om du ska ansluta till Internet för att utföra spärrkontroll. Standardvärdet är true.
+**Anslut:** Anger om du ska ansluta för att göra en spärrkontroll. Standardvärdet är true.
 
-**Ignorera svarstiderna thisUpdate och nextUpdate:** Anger om svarets thisUpdate- och nextUpdate-tider ska ignoreras, vilket förhindrar att dessa tider har en negativ effekt på svarets giltighet. Standardvärdet är false.
+**Ignorera svarets thisUpdate- och nextUpdate-tider:** Anger om svarets thisUpdate- och nextUpdate-tider ska ignoreras, vilket förhindrar att dessa tider får en negativ effekt på svarets giltighet. Standardvärdet är false.
 
 **Tillåt OCSPNoCheck-tillägg:** Anger om OCSPNoCheck-tillägget tillåts i svarssigneringscertifikatet. Standardvärdet är true.
 
@@ -687,21 +692,21 @@ Följande inställningar är tillgängliga för signaturtjänsten.
 
 ## Inställningar för tjänsten Bevakade mappar {#watched-folder-service-settings}
 
-Tjänsten Bevakade mappar ( `WatchedFolder`) konfigurerar attribut som är gemensamma för alla bevakade mappslutpunkter. Det innehåller också standardvärden för bevakade mappslutpunkter. (Se [Konfigurera bevakade mappslutpunkter](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints).) Den anropas inte av externa klientprogram eller används i processer som skapats i Workbench.
+Tjänsten Bevakad mapp ( `WatchedFolder`) konfigurerar attribut som är gemensamma för alla bevakade mappslutpunkter. Det innehåller också standardvärden för bevakade mappslutpunkter. (Se [Konfigurera bevakade mappslutpunkter](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints).) Den anropas inte av externa klientprogram eller används i processer som skapats i Workbench.
 
 Följande inställningar är tillgängliga för tjänsten Bevakade mappar.
 
-**Cron-uttryck:** Kronuttrycket som används av kvarts för att schemalägga avsökningen av indatakatalogen.
+**Kronuttryck:** Kronuttrycket som används av kvarts för att schemalägga avsökningen av indatakatalogen.
 
 **Antal upprepningar:** Antalet gånger som indatakatalogen avsöks. Standardantalet för upprepning som ska användas om det här värdet inte anges i slutpunktskonfigurationen. Värdet -1 anger att katalogen genomsöks oändligt. Standardvärdet är -1.
 
-**Upprepa intervall:** Standardvärdet för antal sekunder mellan varje omröstning. Det här värdet används som upprepningsintervall såvida inte ett annat värde anges i konfigurationen för bevakad mappslutpunkt. Standardvärdet är 5. Mer information finns i beskrivningen av inställningen Gruppstorlek.
+**Intervall för upprepning:** Standardvärdet för antal sekunder mellan varje omröstning. Det här värdet används som upprepningsintervall såvida inte ett annat värde anges i konfigurationen för bevakad mappslutpunkt. Standardvärdet är 5. Mer information finns i beskrivningen av inställningen Gruppstorlek.
 
 **Asynkron:** Identifierar anropstypen som asynkron eller synkron. Övergående och synkrona processer kan bara anropas synkront. Standardvärdet är asynkront.
 
-**Vänta:** Standardvärdet för tid, i sekunder, efter vilken filerna hämtas från indatamapparna. Om filen eller mappen är äldre än den tid som anges i väntetiden hämtas den för bearbetning. Standardvärdet är 0.
+**Väntetid:** Standardvärdet för tid, i sekunder, efter vilket filerna hämtas från indatamapparna. Om filen eller mappen är äldre än den tid som anges i väntetiden hämtas den för bearbetning. Standardvärdet är 0.
 
-**Batchstorlek:** Standardvärdet för antalet filer eller mappar som bearbetas per sökning. Standardvärdet är 2.
+**Batchstorlek:** Standardvärdet för antalet filer eller mappar som bearbetas per skanning. Standardvärdet är 2.
 
 Inställningarna Intervall för upprepning och Gruppstorlek avgör hur många filer i Bevakade mappar som tas upp vid varje sökning. Bevakad mapp använder en Quartz-trådpool för att skanna indatamappen. Trådpoolen delas med andra tjänster. Om skanningsintervallet är litet genomsöks indatamappen ofta av trådarna. Om filer ofta placeras i den bevakade mappen bör du hålla sökintervallet litet. Om filerna tas bort sällan bör du använda ett större inläsningsintervall så att de andra tjänsterna kan använda trådarna.
 
@@ -709,13 +714,13 @@ Om det finns en stor mängd filer som tas bort gör du gruppstorleken stor. Om t
 
 När filer släpps i den bevakade mappen visas filerna i indata, vilket kan försämra prestanda om skanningen sker varje sekund. Om du ökar skanningsintervallet kan prestandan förbättras. Om volymen för de filer som tas bort är liten justerar du batchstorleken och upprepningsintervallet därefter. Om till exempel 10 filer tas bort varje sekund, kan du försöka med att ange intervallet för upprepning till 1 sekund och gruppstorleken till 10.
 
-I en klusterkonfiguration skalas inte gruppstorleken för en bevakad mappslutpunkt till flera klusternoder. Om batchstorleken till exempel är inställd på `2` för ett kluster med två noder och alternativet Begränsning är valt bearbetar noderna tillsammans filer i grupper om två i stället för att varje nod bearbetar två filer i taget.
+I en klusterkonfiguration skalas inte gruppstorleken för en bevakad mappslutpunkt till flera klusternoder. Om batchstorleken till exempel är `2` för ett kluster med två noder och alternativet Begränsning är markerat bearbetar noderna alla filer gruppvis i stället för i varje nod som bearbetar två filer samtidigt.
 
 **Skriv över duplicerade filnamn:** En boolesk sträng som anger om den bevakade mappen skriver över duplicerade resultatfilnamn och om bevarade dokument med samma namn ska skrivas över.
 
-**Bevara mapp:** Standardvärdet för mappen preserve. Den här mappen används för att kopiera källfilerna till om bearbetningen av indata lyckas. Värdet kan vara en tom, relativ eller absolut sökväg med ett filmönster enligt beskrivningen för inställningen Resultatmapp.
+**Bevara mapp:** Standardvärdet för den reserverade mappen. Den här mappen används för att kopiera källfilerna till om bearbetningen av indata lyckas. Värdet kan vara en tom, relativ eller absolut sökväg med ett filmönster enligt beskrivningen för inställningen Resultatmapp.
 
-**Felmapp:** Namnet på den mapp där felfilerna kopieras. Värdet kan vara en tom, relativ eller absolut sökväg med ett filmönster enligt beskrivningen för inställningen Resultatmapp.
+**Felmapp:** Namnet på mappen där felfilerna kopieras. Värdet kan vara en tom, relativ eller absolut sökväg med ett filmönster enligt beskrivningen för inställningen Resultatmapp.
 
 **Resultatmapp:** Standardnamnet för resultatmappen. Den här mappen används för att kopiera resultatfilerna till. Värdet kan vara en tom, relativ eller absolut sökväg med följande filmönster.
 
@@ -734,25 +739,25 @@ I en klusterkonfiguration skalas inte gruppstorleken för en bevakad mappslutpun
 * %R = slumptal (från 0 till 9)
 * %P = process- eller jobb-ID
 
-Om det till exempel är 2009-08-17 och du anger `C:/Test/WF0/failure/%Y/%M/%D/%H/`, blir resultatmappen `C:/Test/WF0/failure/2009/07/17/20`.
+Om det till exempel är 2009-08-17 och du anger `C:/Test/WF0/failure/%Y/%M/%D/%H/` blir resultatmappen `C:/Test/WF0/failure/2009/07/17/20`.
 
 Om sökvägen inte är absolut men relativ skapas mappen i den bevakade mappen. Mer information om filmönster finns i [Om filmönster](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#about-file-patterns).
 
 >[!NOTE]
 >
->Ju mindre resultatmapparna är, desto bättre prestanda blir Bevakade mappar. Om den beräknade belastningen för den bevakade mappen till exempel är 1 000 filer varje timme kan du prova ett mönster som `result/%Y%M%D%H` så att en ny undermapp skapas varje timme. Om inläsningen är mindre (till exempel 1 000 filer per dag) kan du använda ett mönster som `result/%Y%M%D`.
+>Ju mindre resultatmapparna är, desto bättre prestanda blir Bevakade mappar. Om den beräknade inläsningen för den bevakade mappen till exempel är 1 000 filer varje timme kan du prova ett mönster som `result/%Y%M%D%H` så att en ny undermapp skapas varje timme. Om inläsningen är mindre (till exempel 1 000 filer per dag) kan du använda ett mönster som `result/%Y%M%D`.
 
-**Scenmapp:** Standardnamnet för scenmappen i den bevakade mappen.
+**Scenmapp:** Standardnamnet på scenmappen i den bevakade mappen.
 
-**Indatamapp:** Standardnamnet för indatamappen i den bevakade mappen.
+**Indatamapp:** Standardnamnet på indatamappen i den bevakade mappen.
 
-**Bevara vid fel:** Om true bevaras originalfilerna i felmappen vid fel.
+**Bevara vid fel:** Om värdet är true bevaras originalfilerna i felmappen vid fel.
 
 **Begränsning:** När det här alternativet är markerat begränsas antalet bevakade mappjobb som AEM formulärprocesser vid en given tidpunkt. Värdet för Gruppstorlek avgör det maximala antalet jobb (se Om begränsning).
 
 ## Inställningar för webbtjänst {#web-service-service-settings}
 
-Webbtjänsten ( `WebService`) används för att processer ska kunna starta webbtjänståtgärder.
+Webbtjänsten ( `WebService`) aktiverar processer för att anropa webbtjänståtgärder.
 
 Med webbtjänsten kan processer starta webbtjänståtgärder. En organisation kan till exempel vilja integrera en process för att lagra och hämta information som kontakt- och kontoinformation genom att anropa en tjänsteleverantörs exponerade webbtjänster. Webbtjänsten anropar en angiven webbtjänst och skickar värden för var och en av dess parametrar. Returvärdena från åtgärden sparas sedan i en angiven variabel i en process.
 
@@ -764,18 +769,18 @@ Följande inställningar är tillgängliga för webbtjänsten.
 
 **Lösenord för nyckelbehållare:** Lösenordet för nyckelfilen.
 
-**Typ av nyckelarkiv:** Typ av nyckelbehållare. Ange inget värde för att använda standardnyckelbehållartypen som är konfigurerad för den JVM som kör Forms Server. Annars anger du något av följande värden:
+**Nyckellagringstyp:** Nyckellagringstypen. Ange inget värde för att använda standardnyckelbehållartypen som är konfigurerad för den JVM som kör Forms Server. Annars anger du något av följande värden:
 
 * jks
 * pkcs12
 * cms
 * jceks
 
-**Trust Store:** Den fullständiga sökvägen till förtroendearkivfilen som innehåller den offentliga nyckeln för webbtjänstservern.
+**Förtroendearkiv:** Den fullständiga sökvägen till förtroendearkivfilen som innehåller den offentliga nyckeln för webbtjänstservern.
 
-**Lösenord för betrodd lagringsplats:** Lösenordet för förvaltarfilen.
+**Lösenord för förtroendearkivet:** Lösenordet för förtroendearkivfilen.
 
-**Typ av förtroendearkiv:** Typ av förvaltararkiv. Ange inget värde för att använda standardnyckelbehållartypen som är konfigurerad för den JVM som kör Forms Server. Annars anger du något av följande värden:
+**Pålitlig lagringstyp:** Typ av förtroendearkiv. Ange inget värde för att använda standardnyckelbehållartypen som är konfigurerad för den JVM som kör Forms Server. Annars anger du något av följande värden:
 
 * jks
 * pkcs12
@@ -784,11 +789,11 @@ Följande inställningar är tillgängliga för webbtjänsten.
 
 ## Inställningar för XSLT-omvandlingstjänsten {#xslt-transformation-service-settings}
 
-Tjänsten XSLT Transformation ( `XSLTService`) används för att processer ska kunna använda XSLT (Extensible Stylesheet Language Transformations) i XML-dokument.
+Tjänsten XSLT-omvandling ( `XSLTService`) aktiverar processer för att tillämpa XSLT (Extensible Stylesheet Language Transformations) på XML-dokument.
 
 Följande inställning är tillgänglig för tjänsten XSLT-omvandling.
 
-**Fabriksnamn:** Det fullständiga, kvalificerade namnet på Java-klassen som ska användas för att utföra XSLT-omvandlingar. Om inget värde anges används standardfabriken som är konfigurerad i Java Virtual Machine som kör Forms Server.
+**Fabriksnamn:** Det fullständiga kvalificerade namnet på Java-klassen som ska användas för att utföra XSLT-omvandlingar. Om inget värde anges används standardfabriken som är konfigurerad i Java Virtual Machine som kör Forms Server.
 
 ## Ändra säkerhetsinställningar för en tjänst {#modifying-security-settings-for-a-service}
 
@@ -812,7 +817,7 @@ Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppf
 
    Om du vill ange den körtidsidentitet som används av en tjänst för att köra åtgärder väljer du Ange Kör som, väljer ett alternativ i den associerade listan och klickar sedan på Spara. Välj bland följande alternativ:
 
-   **Anropare:** Använder samma identitet som användaren som anropade tjänsten.
+   **Anroparen:** Använder samma identitet som användaren som anropade tjänsten.
 
    **System:** Använder systemanvändaren för att köra tjänsten med fullständig behörighet.
 
@@ -828,16 +833,16 @@ Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppf
 1. På skärmen Välj huvudnamn visas de användare och grupper som är konfigurerade i Användarhantering. Om användaren eller gruppen som du vill använda inte visas använder du sökfunktionen för att hitta den. Klicka på ett användar- eller gruppnamn.
 1. På skärmen Lägg till behörigheter väljer du de behörigheter som ska tilldelas till användaren eller gruppen för den här tjänsten:
 
-   * **INVOKE_PERM:** Så här anropar du alla åtgärder på tjänsten
-   * **ÄNDRA_KONFIG_PERM:** Så här ändrar du konfigurationen för en tjänst
+   * **INVOKE_PERM:** Så här anropar du alla åtgärder i tjänsten
+   * **ÄNDRA_CONFIG_PERM:** Så här ändrar du konfigurationen för en tjänst
    * **SUPERVISOR_PERM:** Så här visar du processinstansdata för en tjänst som skapats från en process
    * **START_STOP_PERM:** Starta och stoppa en tjänst
    * **ADD_REMOVE_ENDPOINTS_PERM:** Lägga till, ta bort och ändra slutpunkter för en tjänst
    * **CREATE_VERSION_PERM:** Skapa en version av tjänsten
    * **DELETE_VERSION_PERM:** Ta bort en version av tjänsten
-   * **MODIFY_VERSION_PERM:** Ändra en version av tjänsten
+   * **ÄNDRA_VERSION_PERM:** Så här ändrar du en version av tjänsten
    * **READ_PERM:** Så här visar du tjänsten
-   * **PROCESS_OWNER_PERM:** För användning i en framtida version av AEM formulär. Använd inte denna behörighet.
+   * **PROCESS_OWNER_PERM:** För användning i framtida versioner av AEM formulär. Använd inte denna behörighet.
    * **SERVICE_MANAGER_PERM:** För användning i en framtida version av AEM formulär. Använd inte denna behörighet.
    * **SERVICE_AGENT_PERM:** För användning i en framtida version av AEM formulär. Använd inte denna behörighet.
 
@@ -846,7 +851,7 @@ Standardsäkerhetsprofiler installeras, som sedan kan konfigureras för att uppf
 ### Ta bort säkerhetsobjektet från en säkerhetsprofil {#remove-the-principal-from-a-security-profile}
 
 1. Välj den tjänst som ska konfigureras på sidan Tjänsthantering.
-1. Klicka på **Säkerhet** väljer du den säkerhetsprofil som ska tas bort och klickar på **Ta bort**.
+1. Klicka på fliken **Dokumentskydd**, markera säkerhetsprofilen som ska tas bort och klicka på **Ta bort**.
 
 ## Konfigurera poolning för en tjänst {#configuring-pooling-for-a-service}
 

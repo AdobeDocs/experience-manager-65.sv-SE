@@ -21,7 +21,7 @@ ht-degree: 0%
 * Skapa en konfiguration för Translation Integration Framework.
 * Associera molnkonfigurationerna med sidorna.
 
-En översikt över funktionerna för innehållsöversättning i AEM finns på [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md).
+En översikt över funktionerna för översättning av innehåll i AEM finns i [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md).
 
 ## Ansluta till en översättningstjänstleverantör {#connecting-to-a-translation-service-provider}
 
@@ -29,7 +29,7 @@ Skapa en molnkonfiguration som ansluter AEM till översättningstjänstleverant�
 Följande översättningsleverantörer tillhandahåller en implementering av det nya API:t för översättningsprojekten. Länkar för mer information om integrationen:
 
 * [Translations.com](https://exchange.adobe.com/experiencecloud.details.90104.globallink-connect-plus-for-aem.html)
-* [Lera Tablet Technologies](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
+* [Lera surfplattetekniker](https://exchange.adobe.com/experiencecloud.details.90064.clay-tablet-translation-for-experience-manager.html)
 * [Lionbridge](https://exchange.adobe.com/experiencecloud.details.100064.lionbridge-connector-for-experience-manager-63.html)
 * [Memsource](https://exchange.adobe.com/experiencecloud.details.103166.memsource-connector-for-adobe-experience-manager.html)
 * [Molnord](https://exchange.adobe.com/experiencecloud.details.90019.html)
@@ -68,9 +68,9 @@ När du har skapat en ramverkskonfiguration associerar du molnkonfigurationen me
 
 Om olika delar av webbplatsen har olika översättningskrav skapar du flera ramverkskonfigurationer utifrån detta. En flerspråkig webbplats innehåller t.ex. engelska, spanska och japanska språkkopior. Webbplatsägaren använder två olika översättningstjänstleverantörer för spanska och japanska översättningar. Därför är två konfigurationer av ramverket konfigurerade. Varje konfiguration använder en annan översättningstjänstleverantör.
 
-När du har konfigurerat ett ramverk för översättningsintegrering kan du [associera den med sidorna](/help/sites-administering/tc-prep.md) som använder den.
+När du har konfigurerat ett ramverk för översättningsintegrering kan du [associera det med sidorna](/help/sites-administering/tc-prep.md) som använder det.
 
-**Obs!** En översikt över funktionerna för innehållsöversättning i AEM finns på [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md).
+**Obs!** En översikt över funktionerna för innehållsöversättning i AEM finns i [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md).
 
 En enda konfiguration av ramverket styr hur sidinnehåll, communityinnehåll och resurser ska översättas.
 ![chlimage_1-386](assets/translation-config-65.jpg)
@@ -111,12 +111,12 @@ Webbplatsegenskaperna styr hur översättning av sidinnehåll utförs.
    <td>Välj att översätta taggar som är kopplade till sidan.</td>
   </tr>
   <tr>
-   <td>Översätt sidresurser</td>
-   <td><p>Välj hur resurser som har lagts till i komponenter från filsystemet eller refererats från Assets ska översättas:</p>
+   <td>Översätt sida Assets</td>
+   <td><p>Välj hur du vill översätta resurser som har lagts till i komponenter från filsystemet eller som refereras från Assets:</p>
     <ul>
      <li>Översätt inte: Sidresurser översätts inte.</li>
-     <li>Använda arbetsflöde för översättning av platser: Resurser hanteras enligt konfigurationsegenskaperna på fliken Platser.</li>
-     <li>Använda arbetsflöde för översättning av resurser: Resurser hanteras enligt egenskapskonfigurationen på fliken Resurser.</li>
+     <li>Använda arbetsflöde för översättning av platser: Assets hanteras enligt konfigurationsegenskaperna på fliken Platser.</li>
+     <li>Använda Assets arbetsflöde för översättning: Assets hanteras enligt egenskapskonfigurationen på fliken Assets.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -128,17 +128,17 @@ Webbplatsegenskaperna styr hur översättning av sidinnehåll utförs.
 
 ### Egenskaper för webbkonfiguration {#communities-configuration-properties}
 
-Communities-egenskaper styr hur översättning av användargenererat innehåll utförs. Översättningen av användargenererat innehåll använder alltid maskinöversättning. Mer information finns i [Översätter användargenererat innehåll](/help/communities/translate-ugc.md).
+Communities-egenskaper styr hur översättning av användargenererat innehåll utförs. Översättningen av användargenererat innehåll använder alltid maskinöversättning. Mer information finns i [Översätta användargenererat innehåll](/help/communities/translate-ugc.md).
 
 | Egenskap | Beskrivning |
 |---|---|
 | Översättningsprovider | Välj översättningsprovidern som ska utföra översättningen. Providern som molnkonfigurationer skapas för visas i listan. |
 | Innehållskategori | En kategori som beskriver innehållet som du översätter. Kategorin kan påverka valet av terminologi och fraser när innehåll översätts. |
-| Välj ett språk som ska användas som globalt resurslager | (Valfritt) Genom att välja en språkinställning för lagring av UGC, visas inlägg från alla språkkopior i en global konversation. Välj språkområde för [basspråk](/help/communities/sites-console.md#translation) för webbplatsen. Om du väljer Ingen gemensam lagringsplats inaktiveras global översättning. Som standard är global översättning inaktiverat. |
+| Välj ett språk som ska användas som globalt resurslager | (Valfritt) Genom att välja en språkinställning för lagring av UGC, visas inlägg från alla språkkopior i en global konversation. Välj språkinställning för [basspråket](/help/communities/sites-console.md#translation) för webbplatsen som standard. Om du väljer Ingen gemensam lagringsplats inaktiveras global översättning. Som standard är global översättning inaktiverat. |
 
-### Egenskaper för resurskonfiguration {#assets-configuration-properties}
+### Egenskaper för Assets-konfiguration {#assets-configuration-properties}
 
-Resursegenskaperna styr hur resurser konfigureras. Mer information om översättning av resurser finns i [Skapa språkkopior för resurser](/help/assets/translation-projects.md).
+Assets-egenskaper styr hur resurser konfigureras. Mer information om översättning av resurser finns i [Skapa språkkopior för Assets](/help/assets/translation-projects.md).
 
 <table>
  <tbody>
@@ -152,7 +152,7 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
     <ul>
      <li>Maskinöversättning: Översättningsprovidern utför översättningen omedelbart med maskinöversättning.</li>
      <li>Översättning av människor: Innehållet skickas automatiskt till översättningsleverantören för manuell översättning. </li>
-     <li>Översätt inte: Resurser skickas inte för översättning.</li>
+     <li>Översätt inte: Assets skickas inte för översättning.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -164,7 +164,7 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
    <td>(Endast maskinöversättning) En kategori som beskriver innehållet som du översätter. Kategorin kan påverka valet av terminologi och fraser när innehåll översätts.</td>
   </tr>
   <tr>
-   <td>Översätt resurser</td>
+   <td>Översätt Assets</td>
    <td>Välj om du vill inkludera resurser i översättningsprojektet. </td>
   </tr>
   <tr>
@@ -189,7 +189,7 @@ Resursegenskaperna styr hur resurser konfigureras. Mer information om översätt
    * Om det redan finns konfigurationer klickar du på Visa konfigurationer och sedan på länken + som visas bredvid Tillgängliga konfigurationer.
 
 1. Ange ett namn för konfigurationen och klicka sedan på Skapa.
-1. Konfigurera egenskaperna på fliken Platser, Communities och Assets och klicka sedan på OK.
+1. Konfigurera egenskaperna på fliken Webbplatser, Communities och Assets och klicka sedan på OK.
 
 ## Konfigurera sidor för översättning {#configuring-pages-for-translation}
 
@@ -204,7 +204,7 @@ När du associerar en sida med en molnkonfiguration ärver de underordnade sidor
 
 Vid behov kan du åsidosätta associationen på en underordnad sida. Innehållet på en webbplats handlar till exempel mest om kläder. En av sidorna beskriver dock företaget. Webbplatsens rotsida är associerad med ett Translation Integration Framework som anger maskinöversättning med kategorin Clothing. Den gren som beskriver företaget använder ett ramverk som utför maskinöversättning med kategorin Allmänt.
 
-Dessutom, för alla communities [SCF-komponenter](/help/communities/scf.md) på sidorna kommer det användargenererade innehållet (UGC) att innehålla möjligheten för användare att översätta innehåll. Mer information finns i [Översättning av användargenererat innehåll](/help/communities/translate-ugc.md).
+Dessutom, för alla communities [SCF-komponenter](/help/communities/scf.md) på sidorna, kommer det användargenererade innehållet (UGC) att innehålla möjligheten för användare att översätta innehåll. Mer information finns i [Översättning av användargenererat innehåll](/help/communities/translate-ugc.md).
 
 ### Koppla en sida till en översättningsleverantör {#associating-a-page-with-a-translation-provider}
 

@@ -28,10 +28,10 @@ Bildkonverteringsbiblioteket har stöd för CMYK och fullt stöd för alfa, utom
 
 Förutom stöd för ett stort antal filformat och profiler har Imaging Transcoding Library betydande fördelar jämfört med andra tredjepartslösningar när det gäller prestanda, skalbarhet och kvalitet. Här är några av fördelarna med att använda Imaging Transcoding Library:
 
-* **Skalförändra med ökad filstorlek eller upplösning**: Skalning uppnås huvudsakligen genom den patenterade möjligheten i Imaging Transcoding Library att ändra storlek samtidigt som filer avkodas. Detta gör att minnesanvändningen vid körning alltid är optimal och inte är en kvadratisk funktion som ökar filstorleken eller upplösningsmegapixlar. Konverteringsbiblioteket för bildbehandling kan bearbeta större och högupplösta filer (som innehåller högre megapixlar). Tredjepartsverktyg som ImageMagick kan inte hantera stora filer och krascher när sådana filer bearbetas.
-* **Komprimerings- och storleksändringsalgoritmer för Photoshop**: Överensstämmelse med branschstandard när det gäller kvalitet på nedsampling (jämn, skarp och automatisk bikubisk) och komprimeringskvalitet. Imaging Transcoding Library utvärderar dessutom kvalitetsfaktorn för indatabilden och använder intelligent optimala tabeller och kvalitetsinställningar för utdatabilden. Detta ger filer av optimal storlek utan att den visuella kvaliteten äventyras.
-* **Hög genomströmning:** Svarstiden är kortare och genomströmningen är genomgående högre än ImageMagick. Därför bör Imaging Transcoding Library minska väntetiden för användare och kostnaden för värdtjänster.
-* **Skala bättre med samtidig inläsning:** Omkodningsbiblioteket för bilder fungerar optimalt under samtidiga inläsningsförhållanden. Den ger hög genomströmning med optimala processorprestanda, minnesanvändning och låg svarstid, vilket minskar kostnaderna för värdtjänster.
+* **Skalförändrar med ökad filstorlek eller upplösning**: Skalförändringen uppnås huvudsakligen genom den patenterade möjligheten hos Imaging Transcoding Library att ändra storlek samtidigt som filer avkodas. Detta gör att minnesanvändningen vid körning alltid är optimal och inte är en kvadratisk funktion som ökar filstorleken eller upplösningsmegapixlar. Konverteringsbiblioteket för bildbehandling kan bearbeta större och högupplösta filer (som innehåller högre megapixlar). Tredjepartsverktyg som ImageMagick kan inte hantera stora filer och krascher när sådana filer bearbetas.
+* **Komprimerings- och storleksändringsalgoritmer för Photoshop**: Kompatibilitet med branschstandard vad gäller kvalitet för nedsampling (jämn, skarp och automatisk bikubisk) och komprimeringskvalitet. Imaging Transcoding Library utvärderar dessutom kvalitetsfaktorn för indatabilden och använder intelligent optimala tabeller och kvalitetsinställningar för utdatabilden. Detta ger filer av optimal storlek utan att den visuella kvaliteten äventyras.
+* **Hög genomströmning:** Svarstiden är lägre och genomströmningen är konsekvent högre än ImageMagick. Därför bör Imaging Transcoding Library minska väntetiden för användare och kostnaden för värdtjänster.
+* **Skalförändra bättre med samtidig inläsning:** Konverteringsbiblioteket för bildåtergivning fungerar optimalt under samtidiga inläsningsförhållanden. Den ger hög genomströmning med optimala processorprestanda, minnesanvändning och låg svarstid, vilket minskar kostnaderna för värdtjänster.
 
 ## Plattformar som stöds {#supported-platforms}
 
@@ -55,12 +55,12 @@ Kommandoradsargumenten för Imaging Transcoding Library kan innehålla följande
  -resize
 ```
 
-Du kan konfigurera följande alternativ för `-resize` parameter:
+Du kan konfigurera följande alternativ för parametern `-resize`:
 
 * `X`: Fungerar ungefär som [!DNL Experience Manager]. Till exempel -resize 319.
-* `WxH`: Proportionerna behålls inte, till exempel `-resize 319x319`.
-* `Wx`: Fastställer bredden och beräknar höjden med bibehållna proportioner. Till exempel: `-resize 319x`.
-* `xH`: Korrigerar höjden och beräknar bredden med bibehållna proportioner. Till exempel: `-resize x319`.
+* `WxH`: Proportionerna bevaras inte, till exempel `-resize 319x319`.
+* `Wx`: Korrigerar bredden och beräknar höjden med bibehållna proportioner. Exempel: `-resize 319x`.
+* `xH`: Korrigerar höjden och beräknar bredden med bibehållna proportioner. Exempel: `-resize x319`.
 
 ```shell
  -AllowUpsampling (Resizes smaller images)
@@ -76,13 +76,13 @@ Om du vill konfigurera ITL-bearbetning skapar du en konfigurationsfil och uppdat
 
 Om du vill konfigurera biblioteket skapar du en CONF-fil som anger biblioteken med följande steg. Du behöver administratörs- eller rotbehörigheter.
 
-1. Ladda ned [Paket för avkodningsbibliotek från programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) och installera det med pakethanteraren. Paketet är kompatibelt med [!DNL Experience Manager] 6.5.
+1. Hämta paketet [Imaging Transcoding Library från Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-imaging-transcoding-library-pkg) och installera det med Package Manager. Paketet är kompatibelt med [!DNL Experience Manager] 6.5.
 
-1. Att känna till ett paket-ID för `com.day.cq.dam.cq-dam-switchengine`loggar du in på webbkonsolen och klickar på **[!UICONTROL OSGi]** > **[!UICONTROL Bundles]**. Du kan även öppna paketkonsolen genom att gå till `https://[aem_server:[port]/system/console/bundles/` URL. Sök `com.day.cq.dam.cq-dam-switchengine` och dess ID.
+1. Om du vill veta ett paket-ID för `com.day.cq.dam.cq-dam-switchengine` loggar du in på webbkonsolen och klickar på **[!UICONTROL OSGi]** > **[!UICONTROL Bundles]**. Du kan även öppna paketkonsolen genom att gå till URL:en för `https://[aem_server:[port]/system/console/bundles/`. Leta reda på paketet `com.day.cq.dam.cq-dam-switchengine` och dess ID.
 
-1. Kontrollera att alla nödvändiga bibliotek har extraherats genom att kontrollera mappen med kommandot `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`, där mappnamnet skapas med paket-ID:t. Kommandot är till exempel `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle588/data/binaries/` om paket-ID är `588`.
+1. Kontrollera att alla nödvändiga bibliotek extraheras genom att kontrollera mappen med kommandot `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/`, där mappnamnet skapas med paket-ID:t. Till exempel är kommandot `ls -la /aem65/author/crx-quickstart/launchpad/felix/bundle588/data/binaries/` om paket-ID är `588`.
 
-1. Skapa `SWitchEngineLibs.conf` fil som ska länkas till biblioteket.
+1. Skapa filen `SWitchEngineLibs.conf` för att länka till biblioteket.
 
    ```shell
    cd `/etc/ld.so.conf.d`
@@ -90,56 +90,56 @@ Om du vill konfigurera biblioteket skapar du en CONF-fil som anger biblioteken m
    vi SWitchEngineLibs.conf
    ```
 
-1. Lägg till `/aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/` sökväg till conf-filen med `cat SWitchEngineLibs.conf` -kommando.
+1. Lägg till sökvägen `/aem65/author/crx-quickstart/launchpad/felix/bundle<id>/data/binaries/` till conf-filen med kommandot `cat SWitchEngineLibs.conf`.
 
-1. Kör `ldconfig` för att skapa nödvändiga länkar och cacheminne.
+1. Kör kommandot `ldconfig` om du vill skapa nödvändiga länkar och cacheminne.
 
-1. I kontot som används för att starta [!DNL Experience Manager], redigera `.bash_profile` -fil. Lägg till `LD_LIBRARY_PATH` genom att lägga till följande:
+1. Redigera `.bash_profile`-filen i det konto som används för att starta [!DNL Experience Manager]. Lägg till `LD_LIBRARY_PATH` genom att lägga till följande.
 
    ```shell
    LD_LIBRARY_PATH=.
    export LD_LIBRARY_PATH
    ```
 
-1. För att säkerställa att värdet för banan är inställt på `.`, använda `echo $LD_LIBRARY_PATH` -kommando. Utdata ska bara `.`. Om värdet inte är inställt på `.`startar du om sessionen.
+1. Använd kommandot `echo $LD_LIBRARY_PATH` om du vill vara säker på att värdet för sökvägen är `.`. Utdata ska bara vara `.`. Om värdet inte är `.` startar du om sessionen.
 
-### Konfigurera [!UICONTROL DAM Update Asset] arbetsflöde {#configure-dam-asset-update-workflow}
+### Konfigurera arbetsflödet för [!UICONTROL DAM Update Asset] {#configure-dam-asset-update-workflow}
 
-Uppdatera [!UICONTROL DAM Update Asset] arbetsflöde för att använda biblioteket för bearbetning av bilder.
+Uppdatera arbetsflödet [!UICONTROL DAM Update Asset] så att biblioteket används för bearbetning av bilder.
 
-1. I [!DNL Experience Manager] användargränssnitt, välja **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. I användargränssnittet för [!DNL Experience Manager] väljer du **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
 
-1. Från **[!UICONTROL Workflow Models]** sida, öppna **[!UICONTROL DAM Update Asset]** arbetsflödesmodell i redigeringsläge.
+1. Öppna arbetsflödesmodellen **[!UICONTROL DAM Update Asset]** på sidan **[!UICONTROL Workflow Models]** i redigeringsläge.
 
-1. Öppna **[!UICONTROL Process Thumbnails]** steg i arbetsflödesprocessen. I **[!UICONTROL Thumbnails]** lägger du till de MIME-typer som du vill hoppa över standardprocessen för generering av miniatyrbilder för i **[!UICONTROL Skip Mime Types]** lista.
-Om du till exempel vill skapa miniatyrbilder för en TIFF-bild med hjälp av Imaging Transcoding Library, anger du `image/tiff` i **[!UICONTROL Skip Mime Types]** fält.
+1. Öppna arbetsflödessteget **[!UICONTROL Process Thumbnails]**. På fliken **[!UICONTROL Thumbnails]** lägger du till de MIME-typer som du vill hoppa över standardprocessen för generering av miniatyrbilder för i listan **[!UICONTROL Skip Mime Types]**.
+Om du till exempel vill skapa miniatyrer för en TIFF-bild med hjälp av Imaging Transcoding Library anger du `image/tiff` i fältet **[!UICONTROL Skip Mime Types]**.
 
-1. I **[!UICONTROL Web Enabled Image]** lägger du till de MIME-typer för vilka du vill hoppa över standardprocessen för generering av webbåtergivning i **[!UICONTROL Skip List]**. Om du till exempel hoppade över MIME-typen `image/tiff` i steget ovan lägger du till `image/tiff` till överhoppningslistan.
+1. Lägg till de MIME-typer som du vill hoppa över standardprocessen för generering av webbåtergivning för på fliken **[!UICONTROL Web Enabled Image]** i **[!UICONTROL Skip List]**. Om du till exempel hoppade över MIME-typen `image/tiff` i ovanstående steg lägger du till `image/tiff` i hopplistan.
 
-1. Öppna **[!UICONTROL EPS thumbnails (powered by ImageMagick)]** går du till **[!UICONTROL Arguments]** -fliken. I **[!UICONTROL Mime Types]** lägger du till de MIME-typer som du vill att Imaging Transcoding Library ska bearbeta. Om du t.ex. hoppade över MIME-typen `image/tiff` i steget ovan lägger du till `image/jpeg` till **[!UICONTROL Mime Types]** lista.
+1. Öppna steget **[!UICONTROL EPS thumbnails (powered by ImageMagick)]** och gå till fliken **[!UICONTROL Arguments]**. Lägg till de MIME-typer som du vill att Imaging Transcoding Library ska bearbeta i listan **[!UICONTROL Mime Types]**. Om du till exempel hoppade över MIME-typen `image/tiff` i ovanstående steg lägger du till `image/jpeg` i listan **[!UICONTROL Mime Types]**.
 
 1. Ta bort eventuella standardkommandon.
 
-1. Växla sidopanel och lägg till i listan med steg **[!UICONTROL SWitchEngine Handler]**.
+1. Växla sidopanel och lägg till **[!UICONTROL SWitchEngine Handler]** från listan med steg.
 
-1. Lägg till kommandon i [!UICONTROL SwitchEngine Handler] baserat på era egna krav. Finjustera parametrarna för de kommandon som du anger så att de uppfyller dina krav. Om du till exempel vill bevara färgprofilen för JPEG-bilden lägger du till följande kommandon i **[!UICONTROL Commands]** lista:
+1. Lägg till kommandon i [!UICONTROL SwitchEngine Handler] baserat på dina anpassade krav. Finjustera parametrarna för de kommandon som du anger så att de uppfyller dina krav. Om du till exempel vill bevara färgprofilen för JPEG-bilden lägger du till följande kommandon i listan **[!UICONTROL Commands]**:
 
    * `SWitchEngine -input ${file} -destMime PNG -resize 48 -output ${directory}cq5dam.thumbnail.48.48.png`
    * `SWitchEngine -input ${file} -destMime PNG -resize 140x100 -output ${directory}cq5dam.thumbnail.140.100.png`
    * `SWitchEngine -input ${file} -destMime PNG -resize 319 -output ${directory}cq5dam.thumbnail.319.319.png`
    * `SWitchEngine -input ${file} -destMime JPEG -resize 1280 -preserveCMYK -output ${directory}cq5dam.web.1280.1280.jpeg`
 
-   ![klibbig](assets/chlimage_1-199.png)
+   ![kalkering](assets/chlimage_1-199.png)
 
 1. (Valfritt) Generera miniatyrbilder från en mellanrendering med ett enda kommando. Den mellanliggande återgivningen fungerar som källa för att generera statiska återgivningar och webbåtergivningar. Den här metoden är snabbare än den tidigare metoden. Du kan emellertid inte använda anpassade parametrar för miniatyrbilder med den här metoden.
 
-   ![klibbig](assets/chlimage_1-200.png)
+   ![kalkering](assets/chlimage_1-200.png)
 
-1. Om du vill generera webbåtergivningar konfigurerar du parametrarna i **[!UICONTROL Web-Enabled Image]** -fliken.
+1. Konfigurera parametrar på fliken **[!UICONTROL Web-Enabled Image]** om du vill generera webbåtergivningar.
 
-1. Synkronisera den uppdaterade [!UICONTROL DAM Update Asset] arbetsflödesmodell. Spara arbetsflödet.
+1. Synkronisera den uppdaterade arbetsflödesmodellen för [!UICONTROL DAM Update Asset]. Spara arbetsflödet.
 
-Du kontrollerar konfigurationen genom att överföra en TIFF-avbildning och övervaka filen error.log. Du kommer att märka `INFO` meddelanden med omnämnanden av `SwitchEngineHandlingProcess execute: executing command line`. Loggarna anger de återgivningar som genereras. När arbetsflödet är klart kan du visa de nya återgivningarna i [!DNL Experience Manager].
+Du kontrollerar konfigurationen genom att överföra en TIFF-avbildning och övervaka filen error.log. Du kommer att märka `INFO` meddelanden med omnämnanden av `SwitchEngineHandlingProcess execute: executing command line`. Loggarna anger de återgivningar som genereras. När arbetsflödet har slutförts kan du visa de nya återgivningarna i [!DNL Experience Manager].
 
 >[!MORELIKETHIS]
 >

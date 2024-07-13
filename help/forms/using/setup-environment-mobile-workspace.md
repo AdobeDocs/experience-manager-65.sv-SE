@@ -40,7 +40,7 @@ Du behöver följande maskinvara, programvara och licenser för att skapa och di
 
 * Android™ Development Toolkit (ADT bundle) som kan hämtas från [https://developer.android.com/studio](https://developer.android.com/studio)
 * Om miljön är konfigurerad på ett Mac-system bör ADT installeras i mappen Program.
-* Om ADT är installerat på någon annan plats i Mac, eller om miljön är konfigurerad för ett Windows-system, måste ADT SDK-sökvägen uppdateras i `local.properties` -fil. Den här filen är tillgänglig i `src\android` i den extraherade källarkivet `mobileworkspace-src.zip`. I den här filen pekar du på `sdk.dir` variabel till ADT SDK-plats på skrivbordet.
+* Om ADT har installerats på någon annan plats i Mac, eller om miljön har konfigurerats på ett Windows-system, måste ADT SDK-sökvägen uppdateras i filen `local.properties`. Den här filen är tillgänglig i mappen `src\android` i det extraherade källarkivet `mobileworkspace-src.zip`. I den här filen pekar du variabeln `sdk.dir` till ADT SDK-platsen på skrivbordet.
 
 >[!NOTE]
 >

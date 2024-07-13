@@ -46,11 +46,11 @@ Flera procedurer kräver att du startar eller stoppar instansen av WebLogic Serv
 
 >[!NOTE]
 >
->Om du kör WebLogic Server på Red Hat® Enterprise Linux Advanced Server 4.0 anger du `LD_ASSUME_KERNEL` miljövariabel till 2.4.19 genom att använda `export LD_ASSUME_KERNEL=2.4.19` -kommando. Kör sedan WebLogic Server från samma gränssnitt där du anger den här systemvariabeln.
+>Om du kör WebLogic Server på Red Hat® Enterprise Linux Advanced Server 4.0 anger du miljövariabeln `LD_ASSUME_KERNEL` till 2.4.19 med hjälp av kommandot `export LD_ASSUME_KERNEL=2.4.19`. Kör sedan WebLogic Server från samma gränssnitt där du anger den här systemvariabeln.
 
 ## Starta WebLogic-server {#start-weblogic-server}
 
-1. Från en kommandotolk går du till *[appserver root]*/user_projects/domains/*[appserverdomain]*.
+1. Gå till *[appserver root]*/user_projects/domains/*[appserverdomain]* från en kommandotolk.
 1. Ange följande kommando:
 
    * (Windows) `startWebLogic.cmd`
@@ -71,18 +71,18 @@ Administrationskonsolen för WebLogic Server är inte längre tillgänglig och k
 
 ## Starta administrationskonsolen för WebLogic {#start-weblogic-administration-console}
 
-1. Om WebLogic Admin Server inte redan körs går du från en kommandotolk till *[appserver root]\user_projects\domains\[domainname]* och ange följande kommando:
+1. Om WebLogic Admin Server inte redan körs går du från en kommandotolk till katalogen *[appserver root]\user_projects\domains\[domainname]* och anger följande kommando:
 
    * (Windows) `startWebLogic.cmd`
    * (Linux, UNIX) ./ `startWebLogic.sh`
 
-1. Öppna administrationskonsolen för WebLogic-servern genom att skriva `https://[host name]:[port]/console` på URL-raden i en webbläsare, där *[port]* är den osäkra lyssningsporten. Portvärdet är som standard 7001.
+1. Gå till administrationskonsolen för WebLogic Server genom att skriva `https://[host name]:[port]/console` på URL-raden i en webbläsare, där *[port]* är den osäkra avlyssningsporten. Portvärdet är som standard 7001.
 1. På inloggningsskärmen skriver du ditt användarnamn och lösenord och klickar på Logga in.
 
 ## Starta nodhanteraren {#start-node-manager}
 
 1. Kontrollera att WebLogic-servern körs.
-1. Från en ny kommandotolk går du till *[appserver root]*/server/bin.
+1. Gå till *[appserver root]*/server/bin från en ny kommandotolk.
 1. Ange följande kommando:
 
    * (Windows) `startNodeManager.cmd`
@@ -107,7 +107,7 @@ När du har stängt av WebLogic Server kan du stänga den kommandotolk som du ka
 
 ## Stoppa en WebLogic-hanterad server {#stop-a-weblogic-managed-server}
 
-1. Starta administrationskonsolen för WebLogic-servern genom att skriva `https://`*[värdnamn]:[port ]*`/console` på URL-raden i en webbläsare.
+1. Starta administrationskonsolen för WebLogic-servern genom att skriva `https://`*[värdnamnet]:[port ]*`/console` i URL-raden för en webbläsare.
 1. Klicka på Miljö > Servrar under Domänstruktur.
 1. Klicka på fliken Kontroll i den högra rutan.
 1. Markera den hanterade server som du vill stoppa.

@@ -1,6 +1,6 @@
 ---
 title: Video i Sites Classic Authoring
-description: Med resurser får du centraliserad hantering av videoresurser där du kan överföra videor direkt till Assets för automatisk kodning till Dynamic Media Classic och få tillgång till Dy-videor direkt från Assets för sidredigering.
+description: Assets har en centraliserad hantering av videor där du kan ladda upp videor direkt till Assets för automatisk kodning till Dynamic Media Classic och få tillgång till Dy-videor direkt från Assets för redigering på webben.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
 topic-tags: authoring
@@ -18,23 +18,23 @@ ht-degree: 0%
 
 # Video{#video}
 
-Med resurser får du centraliserad hantering av videoresurser där du kan överföra videor direkt till Assets för automatisk kodning till Dynamic Media Classic och få tillgång till Dynamic Media Classic videor direkt från Assets för sidredigering.
+Assets har en centraliserad hantering av videor där du kan överföra videor direkt till Assets för automatisk kodning till Dynamic Media Classic och få tillgång till Dynamic Media Classic-videor direkt från Assets för framtagning av webbsidor.
 
 Tack vare Dynamic Media Classic videointegration kan optimerad video även användas på alla skärmar (automatisk enhets- och bandbreddsidentifiering).
 
 * Dynamic Media Classic videokomponent utför automatiskt enhets- och bandbreddsidentifiering för att spela upp video i rätt format och med rätt kvalitet på datorer, surfplattor och mobiler.
-* Resurser - Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning på flera skärmar, inklusive datorer, iOS, Android™, BlackBerry® och Windows mobila enheter. Se [Dynamic Media Classic dokumentation om adaptiva videouppsättningar för mer information](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html#video).
+* Assets - Du kan inkludera adaptiva videouppsättningar i stället för bara enskilda videoresurser. En adaptiv videouppsättning är en behållare för alla videoåtergivningar som krävs för att spela upp video sömlöst på flera skärmar. En adaptiv videouppsättning grupperar versioner av samma video som är kodade med olika bithastigheter och format som 400 kbit/s, 800 kbit/s och 1 000 kbit/s. Du använder en adaptiv videouppsättning, tillsammans med S7-videokomponenten, för adaptiv videoströmning på flera skärmar, inklusive stationära datorer, iOS, Android™, BlackBerry® och Windows mobila enheter. Mer information finns i [Dynamic Media Classic-dokumentationen om adaptiva videouppsättningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html#video).
 
 ## Om FFMPEG och Dynamic Media Classic {#about-ffmpeg-and-scene}
 
-Standardprocessen för videokodning bygger på den FFMPEG-baserade integrationen med videoprofiler. Därför är det en färdig lösning [!UICONTROL DAM Update Asset] arbetsflödet innehåller följande två ffmpeg-baserade arbetsflödessteg:
+Standardprocessen för videokodning bygger på den FFMPEG-baserade integrationen med videoprofiler. Därför innehåller det körklara arbetsflödet [!UICONTROL DAM Update Asset] följande två snabbarbetsflödessteg:
 
 * FFMPEG-miniatyrbilder
 * FFMPEG-kodning
 
-Om du aktiverar och konfigurerar Dynamic Media Classic-integreringen tas inte dessa två arbetsflödessteg bort automatiskt från körklart [!UICONTROL DAM Update Asset] arbetsflöde för förtäring. Om du redan använder FFMPEG-baserad videokodning i Adobe Experience Manager är det troligt att du har FFMPEG installerat i dina redigeringsmiljöer. I det här fallet kodas en ny videofil som har importerats med Experience Manager Assets två gånger: en gång från FFMPEG-kodaren och en gång från Dynamic Media Classic-integreringen.
+Om du aktiverar och konfigurerar Dynamic Media Classic-integreringen tas inte dessa två arbetsflödessteg bort automatiskt från det körklara arbetsflödet för [!UICONTROL DAM Update Asset]. Om du redan använder FFMPEG-baserad videokodning i Adobe Experience Manager är det troligt att du har FFMPEG installerat i dina redigeringsmiljöer. I det här fallet kodas en ny videofil som har importerats med Experience Manager Assets två gånger: en gång från FFMPEG-kodaren och en gång från Dynamic Media Classic-integreringen.
 
-Om du har konfigurerat och installerat den FFMPEG-baserade videokodningen i Experience Manager rekommenderar Adobe att du tar bort de två FFMPEG-arbetsflödena från [!UICONTROL DAM Update Asset] arbetsflöden.
+Om du har konfigurerat och installerat den FFMPEG-baserade videokodningen i Experience Manager rekommenderar Adobe att du tar bort de två FFMPEG-arbetsflödena från dina [!UICONTROL DAM Update Asset]-arbetsflöden.
 
 ### Format som stöds {#supported-formats}
 
@@ -54,28 +54,28 @@ Om svaret är ja på någon av eller båda dessa frågor överför du videon dir
 
 #### Om du överför videon direkt till Adobe Assets {#if-you-are-uploading-your-video-directly-to-adobe-assets}
 
-Om du behöver ett arbetsflöde eller en versionshantering för dina resurser bör du överföra dem till Adobe Assets först. Här följer det rekommenderade arbetsflödet:
+Om du behöver ett arbetsflöde eller en versionshantering för dina resurser bör du först överföra dem till Adobe Assets. Här följer det rekommenderade arbetsflödet:
 
 1. Ladda upp videomaterialet till Adobe Assets och koda och publicera automatiskt till Dynamic Media Classic.
-1. I Experience Manager får du tillgång till videomaterial i WCM i **[!UICONTROL Movies]** -fliken i Content Finder.
+1. I Experience Manager får du åtkomst till videomaterial i WCM på fliken **[!UICONTROL Movies]** i Content Finder.
 1. Skapa med Dynamic Media Classic video- eller grundvideokomponent.
 
 #### Om du överför din video till Dynamic Media Classic {#if-you-are-uploading-your-video-to-scene}
 
 Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurser bör du överföra dina resurser till Dynamic Media Classic. Här följer det rekommenderade arbetsflödet:
 
-1. I Dynamic Media Classic-datorprogrammet [konfigurera en schemalagd FTP-överföring och -kodning till Dynamic Media Classic (automatisk systeminstallation)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options).
-1. I Experience Manager får du tillgång till videomaterial i WCM i **[!UICONTROL Dynamic Media Classic]** -fliken i Content Finder.
+1. I Dynamic Media Classic-skrivbordsappen konfigurerar [en schemalagd FTP-överföring och -kodning till Dynamic Media Classic (automatisk systeminstallation)](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options).
+1. I Experience Manager får du åtkomst till videomaterial i WCM på fliken **[!UICONTROL Dynamic Media Classic]** i Content Finder.
 1. Skapa med Dynamic Media Classic videokomponent.
 
 ### Konfigurera integrering med Dynamic Media Classic Video {#configuring-integration-with-scene-video}
 
-1. I **[!UICONTROL Cloud Services]** navigera till **[!UICONTROL Dynamic Media Classic]** konfigurera och välja **[!UICONTROL Edit]**.
-1. Välj **[!UICONTROL Video]** -fliken.
+1. I **[!UICONTROL Cloud Services]** går du till din **[!UICONTROL Dynamic Media Classic]**-konfiguration och väljer **[!UICONTROL Edit]**.
+1. Välj fliken **[!UICONTROL Video]**.
 
    >[!NOTE]
    >
-   >The **[!UICONTROL Video]** visas inte om sidan inte har någon molnkonfiguration. Se [Aktivera Dynamic Media Classic för WCM](#enablingscene7forwcm).
+   >Fliken **[!UICONTROL Video]** visas inte om sidan inte har någon molnkonfiguration. Se [Aktivera Dynamic Media Classic för WCM](#enablingscene7forwcm).
 
 1. Välj den adaptiva videokodningsprofilen, en färdig videokodningsprofil eller en anpassad videokodningsprofil.
 
@@ -83,7 +83,7 @@ Om du inte behöver ett arbetsflöde eller en versionshantering för dina resurs
    >
    >Mer information om vad videoförinställningarna betyder finns i [Videoförinställningar för kodning av videofiler](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files).
    >
-   >Adobe rekommenderar att du antingen väljer båda adaptiva videouppsättningar när du konfigurerar de universella förinställningarna eller väljer **[!UICONTROL Adaptive Video Encoding]** alternativ.
+   >Adobe rekommenderar att du antingen väljer båda adaptiva videouppsättningar när du konfigurerar de universella förinställningarna eller väljer alternativet **[!UICONTROL Adaptive Video Encoding]**.
 
 1. De valda kodningsprofilerna tillämpas automatiskt på alla videoklipp som överförs till CQ DAM-målmappen som du konfigurerar för den här Dynamic Media Classic-molnkonfigurationen. Du kan konfigurera flera Dynamic Media Classic molnkonfigurationer med olika målmappar för att tillämpa olika kodningsprofiler efter behov.
 
@@ -98,13 +98,13 @@ Uppdatera visnings- och kodningsförinställningarna för video i Experience Man
 Så här överför du din primära källvideo till Dynamic Media Classic från Adobe DAM:
 
 1. Navigera till målmappen för CQ DAM där du har konfigurerat molnkonfigurationen med Dynamic Media Classic-kodningsprofiler.
-1. Välj **[!UICONTROL Upload]** för att överföra primärt källvideoklipp. Videoöverföring och -kodning är klar efter [!UICONTROL DAM Update Asset] arbetsflödet är klart och **[!UICONTROL Publish to Dynamic Media Classic]** har en bock.
+1. Välj **[!UICONTROL Upload]** om du vill överföra primärt källvideoklipp. Överföringen och kodningen av videon har slutförts när arbetsflödet [!UICONTROL DAM Update Asset] har slutförts och **[!UICONTROL Publish to Dynamic Media Classic]** har en bock.
 
    >[!NOTE]
    >
    >Det kan ta en stund innan videominiatyrbilderna genereras.
 
-   När du drar den primära källvideon för DAM till videokomponenten får den åtkomst *alla* Dynamic Media Classic-kodade proxyrenderingar för leverans.
+   När du drar den primära DAM-källvideon till videokomponenten får den åtkomst till *alla* Dynamic Media Classic-kodade proxyåtergivningar för leverans.
 
 ### Foundation Video-komponent jämfört med Dynamic Media Classic Video-komponent {#foundation-video-component-versus-scene-video-component}
 
@@ -123,7 +123,7 @@ I följande matris förklaras när du bör använda vilken komponent:
 
 ## Videokomponent för Experience Manager {#aem-video-component}
 
-Även om du bör använda komponenten Dynamic Media Classic Video för att visa Dynamic Media Classic-videofilmer beskrivs hur du använder Dynamic Media Classic-videofilmer med [!UICONTROL Foundation Video Component] i Experience Manager för fullständighetens skull.
+Även om du bör använda videokomponenten för Dynamic Media Classic för att visa Dynamic Media Classic-videofilmer beskrivs det här avsnittet hur du använder Dynamic Media Classic-videofilmer med [!UICONTROL Foundation Video Component] i Experience Manager för att få en fullständig beskrivning.
 
 ### Experience Manager Video and Dynamic Media Classic Video comparison {#aem-video-and-scene-video-comparison}
 
@@ -147,9 +147,9 @@ De olika videokodningarna skapas enligt de kodningsförinställningar för Dynam
 >
 >Nya videoprofiler och ändringar av dem måste aktiveras för publicering.
 
-1. I Experience Manager, gå till **[!UICONTROL Tools]** väljer **[!UICONTROL Configuration Console]**.
-1. Gå till Konfiguration **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]** i navigeringsträdet.
-1. Skapa en Dynamic Media Classic Video-profil. I **[!UICONTROL New]** meny, välja **[!UICONTROL Create Page]**.
+1. Gå till **[!UICONTROL Tools]** i Experience Manager och välj sedan **[!UICONTROL Configuration Console]**.
+1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Video Profiles]** i navigeringsträdet i konfigurationskonsolen.
+1. Skapa en Dynamic Media Classic Video-profil. Välj **[!UICONTROL Create Page]** på menyn **[!UICONTROL New]**.
 1. Markera Dynamic Media Classic videoprofilmall. Ge den nya videoprofilsidan ett namn och välj **[!UICONTROL Create]**.
 
    ![chlimage_1-133](assets/chlimage_1-133.png)
@@ -178,8 +178,8 @@ Grundvideokomponenten måste känna till vilka videoprofiler som ska användas f
 >
 >Ändringar som görs i designen kräver att designen aktiveras för publicering.
 
-1. Öppna den grundläggande videokomponentens designdialog och ändra till **[!UICONTROL Profiles]** -fliken. Ta sedan bort färdiga profiler och lägg till de nya videoprofilerna för Dynamic Media Classic. Ordningen på profillistan i designdialogrutan definierar också ordningen på videokällelementet vid återgivning.
-1. För webbläsare som inte stöder HTML5 kan du konfigurera ett flash-fall med videokomponenten. Öppna dialogrutan för design av videokomponenter och ändra till **[!UICONTROL Flash]** -fliken. Konfigurera Flash Player-inställningarna och tilldela en reservprofil för Flash Player.
+1. Öppna den grundläggande videokomponentens designdialogruta och ändra till fliken **[!UICONTROL Profiles]**. Ta sedan bort färdiga profiler och lägg till de nya videoprofilerna för Dynamic Media Classic. Ordningen på profillistan i designdialogrutan definierar också ordningen på videokällelementet vid återgivning.
+1. För webbläsare som inte stöder HTML5 kan du konfigurera ett flash-fall med videokomponenten. Öppna dialogrutan för design av videokomponenter och ändra till fliken **[!UICONTROL Flash]**. Konfigurera Flash Player-inställningarna och tilldela en reservprofil för Flash Player.
 
 #### Checklista {#checklist}
 

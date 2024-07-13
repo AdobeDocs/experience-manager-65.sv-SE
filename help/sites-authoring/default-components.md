@@ -14,9 +14,9 @@ ht-degree: 0%
 
 # Komponenter{#components}
 
-Adobe Experience Manager (AEM) innehåller olika färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när [redigera en sida](/help/sites-authoring/editing-content.md) och grupperas efter huvudfunktionsområde (kallas komponentgrupp) för att underlätta filtreringen.
+Adobe Experience Manager (AEM) innehåller olika färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när [en sida redigeras](/help/sites-authoring/editing-content.md) och grupperas efter huvudfunktionsområdet (kallas komponentgrupp) för att underlätta filtreringen.
 
-Komponenterna är tillgängliga när [redigera en sida](/help/sites-authoring/editing-content.md). För att underlätta filtreringen grupperas komponenterna efter huvudfunktionsområdet (det vill säga komponentgruppen).
+Komponenterna är tillgängliga när du [redigerar en sida](/help/sites-authoring/editing-content.md). För att underlätta filtreringen grupperas komponenterna efter huvudfunktionsområdet (det vill säga komponentgruppen).
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ Komponenterna är tillgängliga när [redigera en sida](/help/sites-authoring/ed
 
 ## Allmän användning {#general-usage}
 
-Komponenterna finns på **Komponenter** fliken på sidpanelen i sidredigeraren när [redigera en sida](/help/sites-authoring/editing-content.md).
+Komponenterna är tillgängliga på fliken **Komponenter** på sidpanelen i sidredigeraren när du [redigerar en sida](/help/sites-authoring/editing-content.md).
 
 Du kan markera en komponent och dra den till önskad plats på sidan. Du kan sedan redigera den med:
 
@@ -38,29 +38,29 @@ Du kan markera en komponent och dra den till önskad plats på sidan. Du kan sed
 Mer information om hur du lägger till komponenter på en sida finns i [Redigera sidinnehåll](/help/sites-authoring/editing-content.md).
 Komponenterna sorteras efter olika kategorier som kallas komponentgrupper. Exempel på sådana komponentgrupper är:
 
-* **Vi.butik**: Innehåller kärnkomponenterna som är proxyvarierade för användning med [Referensimplementering för Vi.butik](/help/sites-developing/we-retail.md).
+* **We.Retail**: Inkluderar de kärnkomponenter som proxyiserats för användning med referensimplementeringen [We.Retail](/help/sites-developing/we-retail.md).
 
-* **Commerce**: Innehåller handelskomponenter som varukorgar och produktrutnät
+* **We.Retail Commerce**: Innehåller handelskomponenter som t.ex. kundvagnar och produktrutnät
 
 * **Allmänt**: Innehåller layoutbehållaren och Experience Fragment
 
 ## Översikt över alla komponenter {#overview-of-all-components}
 
-The [Komponentkonsol](/help/sites-authoring/default-components-console.md) ger en översikt över komponentgrupper och komponenter som tillhandahålls av din AEM. Du kan visa viktig information om de enskilda komponenterna och deras användning.
+[Komponentkonsolen](/help/sites-authoring/default-components-console.md) ger en översikt över komponentgrupperna och komponenterna som tillhandahålls av din AEM. Du kan visa viktig information om de enskilda komponenterna och deras användning.
 
 ## Komponenter - större områden {#components-major-areas}
 
 På följande sidor finns länkar till ytterligare viktig information om komponenter:
 
-* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) - Med Core Components får du flexibla och funktionsrika redigeringsfunktioner som ger viktiga innehållstyper för att skapa sidor.
+* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) - Core-komponenterna erbjuder flexibla och funktionsrika redigeringsfunktioner, som tillhandahåller viktiga innehållstyper för att skapa sidor.
 
-* [Communities](/help/communities/author-communities.md) - Komponenterna innehåller interaktiva funktioner för en webbplats, till exempel forum och kommentarer. Många av dessa komponenter ingår när en [Community-webbplats](/help/communities/overview.md) skapas.
+* [Communities](/help/communities/author-communities.md) - Komponenterna innehåller interaktiva funktioner för en webbplats, till exempel forum och kommentarer. Många av dessa komponenter inkluderas när en [community](/help/communities/overview.md) skapas.
 
-* [eCommerce](/help/commerce/cif-classic/administering/ecommerce.md) - eCommerce-funktionaliteten i AEM innehåller också en rad komponenter. Faktisk användning kan bero på vilken e-handelsmotor som används.
+* [eCommerce](/help/commerce/cif-classic/administering/ecommerce.md) - e-handelsfunktionen i AEM innehåller också en rad komponenter. Faktisk användning kan bero på vilken e-handelsmotor som används.
 
 ### Konfigurera komponenter {#configuring-components}
 
 Förutom de komponenter som författare kan komma åt i en standardinstallation finns det även andra komponenter.
 
 * Om sidan är baserad på den rekommenderade, moderna, redigerbara mallen kan du [redigera mallen](/help/sites-authoring/templates.md) aktivera/inaktivera dessa och redigera parametrar för specifika komponenter.
-* Om sidan är baserad på en statisk mall kan du använda [designläge](/help/sites-authoring/default-components-designmode.md#enable-disable-components) för att aktivera/inaktivera dessa och redigera parametrar för specifika komponenter.
+* Om sidan är baserad på en statisk mall kan du använda [designläget](/help/sites-authoring/default-components-designmode.md#enable-disable-components) för att aktivera/inaktivera dessa och redigera parametrar för specifika komponenter.

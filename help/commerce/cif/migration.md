@@ -18,11 +18,11 @@ Den här guiden hjälper dig att identifiera de områden du behöver uppdatera f
 
 ## CIF
 
-CIF är tillgängligt för AEM 6.5 via [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Den är kompatibel och innehåller samma funktioner som CIF för Experience Manager as a Cloud Service.
+CIF är tillgängligt för AEM 6.5 via [Programdistributionsportalen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). Den är kompatibel och innehåller samma funktioner som CIF för Experience Manager as a Cloud Service.
 
-Se [Komma igång med AEM innehåll och Commerce](getting-started.md).
+Se [Komma igång med AEM och Commerce](getting-started.md).
 
-För att stödja projekt som distribuerar CIF tillhandahåller Adobe [AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components).
+För att ge stöd åt projekt som distribuerar CIF tillhandahåller Adobe [AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components).
 
 ## Produktkatalog
 
@@ -30,7 +30,7 @@ Import av produktkatalogdata stöds inte av CIF. Med hjälp av CIF tilläggsobje
 
 >[!TIP]
 >
->Om det inte finns några API:er i realtid bör en extern produktcache med API:er användas för integreringen. Exempel [Magento öppen källkod](https://business.adobe.com/products/magento/open-source.html).
+>Om det inte finns några API:er i realtid bör en extern produktcache med API:er användas för integreringen. Exempel: [Magento öppen källkod](https://business.adobe.com/products/magento/open-source.html).
 
 ## Produktkatalogupplevelser med AEM rendering
 

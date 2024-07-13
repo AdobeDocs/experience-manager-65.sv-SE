@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Formateringskonstruktioner för adaptiva formulär{#styling-constructs-for-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 ## Förutsättningar {#prerequisites}
 
@@ -25,7 +25,7 @@ Kunskap om CSS och LESS Framework.
 
 ## Vad kan anpassas {#what-can-be-customized}
 
-I artikeln listas allmänt tillgängliga CSS-klasser för adaptiva formulär. Du kan använda dessa klasser för att formatera olika komponenter i ett anpassat formulär. Formateringen av redigeringskomponenter, t.ex. dialogrutor och statusfält som visar varningar, ligger utanför artikelns omfång. Använd dessa formateringskonstruktioner för att skapa format (med CSS eller Less) endast när du inte kan formatera komponenter med [temaredigerare](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html).
+I artikeln listas allmänt tillgängliga CSS-klasser för adaptiva formulär. Du kan använda dessa klasser för att formatera olika komponenter i ett anpassat formulär. Formateringen av redigeringskomponenter, t.ex. dialogrutor och statusfält som visar varningar, ligger utanför artikelns omfång. Använd dessa formateringskonstruktioner om du bara vill skapa format (med CSS eller Less) när du inte kan formatera komponenter med [temaredigeraren](https://helpx.adobe.com/experience-manager/6-3/forms/using/themes.html).
 
 ## Anpassa format i anpassningsbara formulär {#customizing-styles-in-adaptive-forms}
 
@@ -140,7 +140,7 @@ Fälten innehåller etiketter, widgetar, hjälpbeskrivning (både lång och kort
 
 ## Etikettformat {#label-styling}
 
-Elementet HTML **label** som används för fältet innehåller klasserna **vänster** eller **top** beroende på om etiketten är högst upp eller till vänster.
+HTML-elementet **label** som används för fältet innehåller klasserna **left** eller **top** beroende på om etiketten finns högst upp eller till vänster.
 
 <table>
  <tbody>
@@ -180,11 +180,11 @@ Elementet HTML **label** som används för fältet innehåller klasserna **väns
  </tbody>
 </table>
 
-CSS-reglerna för etiketten tillämpas med **guideFieldLabel** etikett. Om du är författare åsidosätter du den här regeln för att göra dina anpassade ändringar synliga.
+CSS-reglerna för etiketten tillämpas med etiketten **guideFieldLabel** . Om du är författare åsidosätter du den här regeln för att göra dina anpassade ändringar synliga.
 
 ## Widgets-format {#widgets-styling}
 
-Beroende på typ innehåller widgetar även klasser. Vanligtvis innehåller widgetarna `guideFieldWidget` klassen. De widgetar som levereras med HTML använder normalt elementindata och markering för standardelementet HTML. Formateringen görs därefter. Du kan inte formatera en anpassad widget genom att ändra variablerna.
+Beroende på typ innehåller widgetar även klasser. Vanligtvis innehåller widgetar klassen `guideFieldWidget`. De widgetar som levereras med HTML använder normalt elementindata och markering för standardelementet HTML. Formateringen görs därefter. Du kan inte formatera en anpassad widget genom att ändra variablerna.
 
 <table>
  <tbody>
@@ -290,7 +290,7 @@ Formateringen för fokuserade, obligatoriska och inaktiverade fält är begräns
 
 ## Hjälpbeskrivning {#help-description}
 
-En författare kan ange hjälpinnehåll i fälten med hjälp av komponenterna för kort och lång beskrivning. Båda komponenterna har en gemensam klass `.guideHelpDescription` och en annan klass `.long`/ `.short`, beroende på typen av beskrivning. Hjälpinnehållet omsluts av ett styckeelement för att åsidosätta formateringen av beskrivningen. Hjälpbeskrivningen (både lång och kort) ändras med variabler som börjar med widgetshelp, vilket anges i följande tabell:
+En författare kan ange hjälpinnehåll i fälten med hjälp av komponenterna för kort och lång beskrivning. Båda komponenterna har en gemensam klass, `.guideHelpDescription`, och en annan klass, `.long`/ `.short`, beroende på typen av beskrivning. Hjälpinnehållet omsluts av ett styckeelement för att åsidosätta formateringen av beskrivningen. Hjälpbeskrivningen (både lång och kort) ändras med variabler som börjar med widgetshelp, vilket anges i följande tabell:
 
 <table>
  <tbody>
@@ -331,7 +331,7 @@ En författare kan ange hjälpinnehåll i fälten med hjälp av komponenterna f�
 
 ## Villkor {#terms-and-conditions}
 
-Villkor (TnC) `` ``) kan du ange villkor. Du kan anpassa widgeten med hjälp av de variabler som beskrivs i följande tabell.
+Med widgeten Villkor (TnC `` ``) kan du ange villkor. Du kan anpassa widgeten med hjälp av de variabler som beskrivs i följande tabell.
 
 <table>
  <tbody>
@@ -354,7 +354,7 @@ Villkor (TnC) `` ``) kan du ange villkor. Du kan anpassa widgeten med hjälp av 
 
 Knappar är också widgetar. Men deras format skiljer sig något från widgetarna. I anpassningsbara former utgör något av följande en knapp:
 
-* input[type = text]
+* indata[type = text]
 * knapp
 * element med klass .button
 
@@ -641,7 +641,7 @@ Här följer HTML-koden för tabbnavigeringselementet (liknar bootstrap-flikarna
 
 `</div>`
 
-Du kan ändra navigatorns format med CSS-regler som markerar elementen med **underordnad** väljare. Så här lägger du till ett textdekorationsformat till ankartaggen:
+Du kan ändra navigatorns format med CSS-regler som markerar elementen med **underordnade** väljare. Så här lägger du till ett textdekorationsformat till ankartaggen:
 
 Fliknavigator överst:
 
@@ -721,7 +721,7 @@ Klassen guideNavIcon innehåller en standardikon för tabbnavigering (både vän
 
 >[!NOTE]
 >
->Du kan ändra ikonen för en viss navigator genom att ange en CSS-klass på panelen vid redigering, formulärexempel &lt;class_name>. Du lägger till en **&lt;class_name>nav** för navigeringsikonen.
+>Du kan ändra ikonen för en viss navigator genom att ange en CSS-klass på panelen vid redigeringen, till exempel &lt;CLASS_NAME>. Du lägger till **&lt;CLASS_NAME>_nav** som ikon för navigatorn.
 
 <table>
  <tbody>
@@ -917,7 +917,7 @@ En panel innehåller ett valfritt verktygsfält och dess innehåll.
   </tr>
   <tr>
    <td><p><code>panel-font-color</code></p> </td>
-   <td><p>Teckenfärg för paneltexten<br /> </p> </td>
+   <td><p>Teckenfärg för paneltexten <br /> </p> </td>
   </tr>
   <tr>
    <td><p><code>panel-padding</code></p> </td>
@@ -942,7 +942,7 @@ En panel innehåller ett valfritt verktygsfält och dess innehåll.
  </tbody>
 </table>
 
-Panelnoden är uppdelad i navigatorer och innehåll. Där `` `` är ingen separat formatkomponent för innehållet. Variablerna som beskrivs tillämpas på navigatorn och innehållet.
+Panelnoden är uppdelad i navigatorer och innehåll. Det finns ingen separat formatkomponent för innehållet i `` ``. Variablerna som beskrivs tillämpas på navigatorn och innehållet.
 
 Den översta panelen (RootPanel) har inte den här klassen.
 
@@ -1076,7 +1076,7 @@ Variablerna i följande tabell påverkar den fasta verktygsfältslayouten för m
 
 ## Temaspecifik variabel {#theme-specific-variable}
 
-The **Enkel registrering** tema på /etc/clientlibs/fd/af/guithema/simpleRegistrering och kategorin `guide.theme.simpleEnrollment` innehåller också några variabler. Om du vill skapa ett tema som förbättrar enkel registrering kan du använda följande&quot;extra variabler&quot;:
+Temat **Enkel registrering** på /etc/clientlibs/fd/af/guithema/simpleEnrollment och kategorin `guide.theme.simpleEnrollment` innehåller också några variabler. Om du vill skapa ett tema som förbättrar enkel registrering kan du använda följande&quot;extra variabler&quot;:
 
 <table>
  <tbody>

@@ -21,7 +21,7 @@ ht-degree: 0%
 Eftersom Adobe Experience Manager (AEM) baseras på Sling och använder en JCR-databas är de nodtyper som erbjuds av båda dessa tillgängliga för användning:
 
 * [JCR-nodtyper](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/3_Repository_Model.html#3.1.7-Node-Types)
-* [Sling Node Types](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
+* [Dela nodtyper](https://cwiki.apache.org/confluence/display/SLING/Sling+Node+Types)
 
 Förutom de här nodtyperna finns AEM ett antal anpassade nodtyper.
 
@@ -78,7 +78,7 @@ Definierar nodtypen för en kommentarnod.
 
 **Beskrivning**
 
-Definierar nodtypen för en `commentattachment` nod
+Definierar nodtypen för en `commentattachment`-nod
 
 **Definition**
 
@@ -161,16 +161,16 @@ Definierar en blandningstyp som markerar noder som pseudosidor. Med andra ord in
 Definierar standardnoden för sidinnehåll, med de minimala egenskaper som används av WCM.
 
 * `@prop jcr:title` - Rubrik för sidan.
-* `@prop jcr:description` - Beskrivning av sidan.
+* `@prop jcr:description` - Beskrivning av den här sidan.
 * `@prop cq:template` - Sökväg till mallen som användes för att skapa sidan.
 * `@prop cq:allowedTemplates` - Lista med reguljära uttryck som används för att bestämma sökvägarna till den tillåtna mallen.
-* `@prop pageTitle` - Rubriken visas i `<title>` -tagg.
-* `@prop navTitle` - Titel som används vid navigering.
-* `@prop hideInNav` - Anger om sidan ska vara dold i navigeringen.
-* `@prop onTime` - Tid när den här sidan blir giltig.
+* `@prop pageTitle` - Rubrik visas i taggen `<title>`.
+* `@prop navTitle` - Titel som används i navigering.
+* `@prop hideInNav` - Anger om sidan ska döljas i navigeringen.
+* `@prop onTime` - Tid när sidan blir giltig.
 * `@prop offTime` - Tid när den här sidan blir ogiltig.
 * `@prop cq:lastModified` - Datum då sidan (eller dess stycken) senast ändrades.
-* `@prop cq:lastModifiedBy` - Senaste användaren som ändrar sidan (eller dess stycken).
+* `@prop cq:lastModifiedBy` - Senaste användare som ska ändra sidan (eller dess stycken).
 * `@prop jcr:language` - Språket för sidinnehåll.
 
 >[!NOTE]
@@ -229,24 +229,24 @@ Definierar en CQ-mall.
 
 Definierar en CQ-komponent.
 
-* `@prop jcr:title` - Komponentens titel.
+* `@prop jcr:title` - Komponentens namn.
 * `@prop jcr:description` - Beskrivning av komponenten.
-* `@node dialog` - Primär dialogruta.
-* `@prop dialogPath` - Sökväg till primär dialogruta (alternativ till dialogruta).
-* `@node design_dialog` - Design.
-* `@prop cq:cellName` - Namn på designcellen.
-* `@prop cq:isContainer` - Anger om det är en behållarkomponent. Tvingar cellnamnen för de underordnade komponenterna att användas i stället för sökvägsnamn. Till exempel `parsys` är en behållarkomponent. Om det här värdet inte definieras görs kontrollen baserat på förekomsten av en `cq:childEditConfig`.
-* `@prop cq:noDecoration` - Om true, ingen dekoration `div` -taggar ritas när komponenten tas med.
+* `@node dialog` - primär dialogruta.
+* `@prop dialogPath` - sökväg till primär dialogruta (alternativ till dialogruta).
+* `@node design_dialog` - Designdialog.
+* `@prop cq:cellName` - Designcellens namn.
+* `@prop cq:isContainer` - Anger om det är en behållarkomponent. Tvingar cellnamnen för de underordnade komponenterna att användas i stället för sökvägsnamn. `parsys` är till exempel en behållarkomponent. Om det här värdet inte har definierats görs kontrollen utifrån om det finns en `cq:childEditConfig`.
+* `@prop cq:noDecoration` - Om värdet är true ritas inga `div`-dekorationstaggar när den här komponenten inkluderas.
 * `@node cq:editConfig` - Den konfiguration som definierar parametrarna för redigeringsfältet.
-* `@node cq:childEditConfig` - Den redigeringskonfiguration som ärvs av underordnade komponenter.
-* `@node cq:htmlTag` - Definierar ytterligare taggattribut som läggs till i &quot;omgivande&quot; `div` -taggen när komponenten inkluderas.
+* `@node cq:childEditConfig` - Redigeringskonfigurationen som ärvs av underordnade komponenter.
+* `@node cq:htmlTag` - Definierar ytterligare taggattribut som läggs till i den omgivande `div` -taggen när komponenten inkluderas.
 * `@node icon.png`- En fil som innehåller en karakteristisk ikon.
 * `@node thumbnail.png` - En fil som innehåller en karakteristisk miniatyrbild.
-* `@prop allowedParents` - Mönster för reguljära uttryck som avgör vilka komponentsökvägar som tillåts som överordnade komponenter.
+* `@prop allowedParents` - Mönster för reguljära uttryck som avgör vilka sökvägar för komponenter som tillåts som överordnade komponenter.
 * `@prop allowedChildren` - Mönster för reguljära uttryck som avgör vilka sökvägar för komponenter som tillåts som underordnade komponenter.
 * `@node virtual` - Innehåller undernoder som återspeglar virtuella komponenter som används för att dra och släppa komponenter.
-* `@prop componentGroup` - Namnet på komponentgruppen som används för att dra och släppa komponenten.
-* `@node cq:infoProviders` - Innehåller undernoder, som alla har en egenskap `className` som refererar till `PageInfoProvider`.
+* `@prop componentGroup` - Komponentgruppens namn, som används för att dra och släppa komponenten.
+* `@node cq:infoProviders` - Innehåller undernoder, som var och en har egenskapen `className` som refererar till en `PageInfoProvider`.
 
 **Definition**
 
@@ -291,14 +291,14 @@ Definierar konfigurationen för&quot;redigeringsfältet&quot;.
    * `floating` - för en normal, flytande dialogruta
    * `inline` - infogad redigering
    * `auto` - automatisk identifiering (beroende på tillgängligt utrymme)
-* `@node cq:inplaceEditing` - Infoga redigeringskonfiguration för den här komponenten.
+* `@node cq:inplaceEditing` - Redigeringskonfiguration för den här komponenten infogas.
 * `@prop cq:layout`- Redigeringsfältets layout:
    * `editbar` - redigeringsfält
    * `rollover` - rulla över bildruta
    * `auto` - automatisk identifiering
-* `@node cq:formParameters`- Ytterligare parametrar att lägga till i dialogformuläret.
+* `@node cq:formParameters` - Ytterligare parametrar att lägga till i dialogformuläret.
 * `@prop cq:actions`- Lista över åtgärder (redigeringsfältsknappar eller menyalternativ).
-* `@node cq:actionConfigs` - Widgetkonfigurationer för redigeringsfält eller menyalternativ.
+* `@node cq:actionConfigs` - Widget-konfigurationer för redigeringsfält eller menyalternativ.
 * `@prop cq:emptyText` - Text som ska visas om det inte finns något visuellt innehåll.
 * `@node cq:dropTargets` - Samling med `{@link cq:DropTargetConfig}` noder.
 
@@ -321,7 +321,7 @@ Konfigurerar ett släppmål för en komponent. Namnet på den här noden använd
 
 * `@prop accept` - Lista över MIME-typer som accepteras av det här släppmålet, till exempel `["image/*"]`
 * `@prop groups` - Lista med dra och släpp-grupper som accepterar en källa.
-* `@prop propertyName` - Namnet på den egenskap som används för att lagra referensen.
+* `@prop propertyName` - Namnet på egenskapen som används för att lagra referensen.
 
 **Definition**
 
@@ -338,14 +338,14 @@ Konfigurerar ett släppmål för en komponent. Namnet på den här noden använd
 Definierar en virtuell CQ-komponent. Används för närvarande endast för den nya guiden Dra och släpp för komponenten.
 
 * `@prop jcr:title` - Den här komponentens namn.
-* `@prop jcr:description` - Beskrivning av komponenten.
+* `@prop jcr:description` - Beskrivning av den här komponenten.
 * `@node cq:editConfig` - Redigera konfiguration som definierar parametrarna för redigeringsfältet.
 * `@node cq:childEditConfig`- Redigera konfiguration som ärvs av underordnade komponenter.
 * `@node icon.png` - En fil som innehåller en karakteristisk ikon.
 * `@node thumbnail.png` - En fil som innehåller en karakteristisk miniatyrbild.
 * `@prop allowedParents` - Mönster för reguljära uttryck för att bestämma sökvägar för komponenter som tillåts som överordnade komponenter.
 * `@prop allowedChildren` - Mönster för reguljära uttryck för att bestämma sökvägar för komponenter som tillåts som underordnade komponenter.
-* `@prop componentGroup` - Namnet på komponentgruppen där komponenten dras och släpps.
+* `@prop componentGroup` - Namnet på komponentgruppen för dra och släpp-komponenten.
 
 **Definition**
 
@@ -451,8 +451,8 @@ Nodtypen `cq:attributes` är för ContentBus-versionstaggarna. Den här noden ha
 
 * `@prop created (long) mandatory copy` - Tidsstämpel för när versionsinformationen skapades, vanligtvis tiden för incheckning av den tidigare versionen eller tiden då sidan skapades.
 * `@prop csd (string) mandatory copy` - csd-standardattribut, kopia av egenskapen cq:csd för sidnoden
-* `@prop timestamp (long) mandatory copy` - Tidsstämpel för den senaste versionsändringen, vanligtvis incheckningstid.
-* `@prop * (string) copy` - Ytterligare attribut, versionshanterade med den överordnade noden.
+* `@prop timestamp (long) mandatory copy` - Tidsstämpel för senaste versionsändring, vanligtvis incheckningstid.
+* `@prop * (string) copy` - Ytterligare attribut, versionsindelade med den överordnade noden.
 
 **Definition**
 
@@ -466,7 +466,7 @@ Nodtypen `cq:attributes` är för ContentBus-versionstaggarna. Den här noden ha
 
 **Beskrivning**
 
-Nodtypen `cq:contentPage` innehåller egenskaps- och undernoddefinitioner för ContentBus-innehållssidor. Endast när den här blandningstypen läggs till i en nod av typen `cq:page`blir en nod en innehållssida för ContentBus.
+Nodtypen `cq:contentPage` innehåller egenskaps- och undernoddefinitioner för ContentBus-innehållssidor. Endast när den här blandningstypen läggs till i en nod av typen `cq:page` blir en nod en ContentBus-innehållssida.
 
 Objekten i en `cq:Cq4ContentPage` är:
 
@@ -488,10 +488,10 @@ Objekten i en `cq:Cq4ContentPage` är:
 
 Avsökningskonfiguration.
 
-* `@prop source (String) mandatory` - Datakällans URI. Obligatoriskt och får inte vara tomt.
+* `@prop source (String) mandatory` - URI för datakälla. Obligatoriskt och får inte vara tomt.
 * `@prop target (String)` - Målplatsen där data som hämtats från datakällan lagras. Valfritt och standard är cq:PollConfig-noden.
 * `@prop interval (Long)` - Intervallet i sekunder som nya eller uppdaterade data från datakällan ska avsökas. Valfritt och standardvärdet är 30 minuter (1 800 sekunder).
-* [Skapa anpassade dataportortjänster för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/polling.html)
+* [Skapar anpassade dataimporteringstjänster för Adobe Experience Manager](https://helpx.adobe.com/experience-manager/using/polling.html)
 
 **Definition**
 
@@ -583,7 +583,7 @@ Definierar en LiveSync-blandning. Om en nod ingår i en LiveRelationship med en 
 
 Definierar en LiveSyncCanceled-blandning. Avbryt LiveSync-beteendet för en live-kopia (kontrollerad)-nod som kan vara inblandad i en LiveRelationship på grund av någon av dess överordnade noder.
 
-* `@prop cq:isCancelledForChildren` - Definierar om en LiveSync avbryts, även för underordnade.
+* `@prop cq:isCancelledForChildren` - Definierar om en LiveSync är avbruten, även för underordnade.
 
 **Definition**
 
@@ -651,12 +651,12 @@ Definierar nodtypen för en konsolnod.
 
 Definierar blandning av information om replikeringsstatus.
 
-* `@prop cq:lastPublished`- Det datum då sidan senast publicerades (används inte längre).
-* `@prop cq:lastPublishedBy`- Den användare som publicerade sidan senast (används inte längre).
+* `@prop cq:lastPublished` - Det datum då sidan senast publicerades (används inte längre).
+* `@prop cq:lastPublishedBy`- Användaren som publicerade sidan senast (används inte längre).
 * `@prop cq:lastReplicated` - Det datum då sidan senast replikerades.
-* `@prop cq:lastReplicatedBy` - Användaren som replikerade sidan sist.
+* `@prop cq:lastReplicatedBy` - Användaren som replikerade sidan senast.
 * `@prop cq:lastReplicationAction` - Replikeringsåtgärden: aktivera eller inaktivera.
-* `@prop cq:lastReplicationStatus` - Replikeringsstatus (används inte längre).
+* `@prop cq:lastReplicationStatus` - Replikeringsstatusen (används inte längre).
 
 **Definition**
 
@@ -817,7 +817,7 @@ Alla användare/offentliga webbplatser kan tagga innehållet (Web2.0-format), so
 
 **Beskrivning**
 
-Lägger till en `cq:userContent` undernod som kan ändras av användare. Varje användare har en egen `cq:userContent/<userid>` subnode, som vanligtvis har mixin `cq:UserTaggable`.
+Lägger till en `cq:userContent`-undernod som kan ändras av användare. Varje användare har sin egen `cq:userContent/<userid>`-undernod, som vanligtvis har mixin `cq:UserTaggable`.
 
 **Definition**
 
@@ -825,7 +825,7 @@ Lägger till en `cq:userContent` undernod som kan ändras av användare. Varje a
    * `mixin`
    * `+ cq:userContent (nt:unstructured)`
 
-Utökad variant, som definierar `cq:userContent` träd
+Utökad variant, definierar mer explicit trädet `cq:userContent`
 
 * `[cq:AllowsUserContent]`
    * `mixin`

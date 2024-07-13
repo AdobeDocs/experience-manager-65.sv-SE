@@ -21,20 +21,20 @@ ht-degree: 0%
 
 ## Ändra skriptet {#modify-the-script}
 
-The `comment.hbs` -skript som skapar det övergripande HTML för varje kommentar.
+Skriptet `comment.hbs` ansvarar för att skapa det övergripande HTML för varje kommentar.
 
 Så här visar du inte avataren bredvid varje publicerad kommentar:
 
-1. Kopiera `comment.hbs`från `libs`till `apps`
+1. Kopiera `comment.hbs` från `libs` till `apps`
 
    1. Välj `/libs/social/commons/components/hbs/comments/comment/comment.hbs`
    1. Välj **[!UICONTROL Copy]**
    1. Välj `/apps/social/commons/components/hbs/comments/comment`
    1. Välj **[!UICONTROL Paste]**
 
-1. Öppna överlägg `comment.hbs`
+1. Öppna det dolda `comment.hbs`
 
-   * Dubbelklicka på nod `comment.hbs` in `/apps/social/commons/components/hbs/comments/comment folder`
+   * Dubbelklicka på noden `comment.hbs` i `/apps/social/commons/components/hbs/comments/comment folder`
 
 1. Hitta följande rader och ta bort eller kommentera dem:
 
@@ -43,7 +43,7 @@ Så här visar du inte avataren bredvid varje publicerad kommentar:
         <img class="scf-comment-avatar {{#if topLevel}}withTopLevel{{/if}}" src="{{author.avatarUrl}}"></img>
 ```
 
-Radera linjerna eller omge dem med `<!--` och `-->` så att du kan kommentera ut dem. Dessutom läggs tecknen &#39;xxx&#39; till som en visuell indikator på var avataren skulle ha varit.
+Ta bort raderna eller omge dem med `<!--` och `-->` så att du kommenterar dem. Dessutom läggs tecknen &#39;xxx&#39; till som en visuell indikator på var avataren skulle ha varit.
 
 ```xml
    xxx
@@ -58,11 +58,11 @@ Radera linjerna eller omge dem med `<!--` och `-->` så att du kan kommentera ut
 
 >[!NOTE]
 >
->En robustare form av replikering skulle vara att skapa ett paket i Package Manager och [activate](/help/sites-administering/package-manager.md#replicating-packages) den. Ett paket kan exporteras och arkiveras.
+>En robustare form av replikering skulle vara att skapa ett paket i Package Manager och [aktivera](/help/sites-administering/package-manager.md#replicating-packages) det. Ett paket kan exporteras och arkiveras.
 
-Välj **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** och klicka **[!UICONTROL Activate Tree]**.
+I den globala navigeringen väljer du **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Replication]** och klickar på **[!UICONTROL Activate Tree]**.
 
-Ange som startsökväg `/apps/social/commons` och markera **[!UICONTROL Activate]**.
+Ange `/apps/social/commons` som startsökväg och välj **[!UICONTROL Activate]**.
 
 ![verify-content-template](assets/verify-content-template.png)
 
@@ -70,6 +70,6 @@ Ange som startsökväg `/apps/social/commons` och markera **[!UICONTROL Activate
 
 Om du loggar in på publiceringsinstansen som administratör, till exempel https://localhost:4503/crx/de som administratör/administratör, kan du kontrollera att de överliggande komponenterna finns där.
 
-Om du loggar ut och sedan loggar in som `aaron.mcdonald@mailinator.com/password` och uppdatera sidan, observera att en avatar inte visas med den publicerade kommentaren. Istället visas en enkel &#39;xxx&#39;.
+Om du loggar ut och sedan loggar in som `aaron.mcdonald@mailinator.com/password` och uppdaterar sidan, observerar du att en avatar inte visas med den publicerade kommentaren. Istället visas en enkel &#39;xxx&#39;.
 
 ![create-template-component](assets/create-template-component.png)

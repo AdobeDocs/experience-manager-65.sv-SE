@@ -20,10 +20,10 @@ ht-degree: 0%
 
 Du kan ange den teckenuppsättning som används för att koda utdataströmmen.
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Services > output]**.
+1. Klicka på **[!UICONTROL Services > output]** i administrationskonsolen.
 1. Välj en teckenuppsättning i listan Teckenuppsättning under Internationalisering. Den här inställningen är beroende av `TransformationFormat` och `PrintFormat` som anges via API:t. Om du vill ange en annan teckenuppsättning än de som visas väljer du Anpassad och anger ett kodningsvärde i rutan som visas.
 
-   If `TransformationFormat` är PDF och PDF/A eller `PrintFormat` är PCL, PostScript, Zebra-etikett, IPL, DPL, TPCL, GenericColorPCL eller GenericPSLevel3. Endast specifika teckenuppsättningar stöds.
+   Om `TransformationFormat` är PDF och PDF/A eller `PrintFormat` är PCL, PostScript, Zebra-etikett, IPL, DPL, TPCL, GenericColorPCL eller GenericPSLevel3 stöds endast specifika teckenuppsättningar.
 
    Teckenuppsättningen måste vara ett giltigt kanoniskt namn. Standardvärdet är ISO-8859-1.
 

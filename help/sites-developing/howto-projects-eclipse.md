@@ -22,7 +22,7 @@ I den här guiden beskrivs hur du använder Eclipse för att utveckla AEM projek
 
 >[!NOTE]
 >
->Adobe har nu [AEM Development Tools for Eclipse](/help/sites-developing/aem-eclipse.md) som hjälper dig att utveckla AEM lösningar med Eclipse.
+>Adobe tillhandahåller nu [AEM utvecklingsverktyg för Eclipse](/help/sites-developing/aem-eclipse.md) som hjälper dig att utveckla AEM lösningar med Eclipse.
 
 ## Ökning {#overview}
 
@@ -41,29 +41,29 @@ Var och en av dem förklaras mer ingående i resten av denna handledning.
 
 ## Installera Eclipse {#install-eclipse}
 
-Ladda ned&quot;Eclipse IDE for Java EE Developers&quot; från [Eclipse - nedladdningssida](https://www.eclipse.org/downloads/).
+Hämta Eclipse IDE för Java EE-utvecklare från [Eclipse-nedladdningssidan](https://www.eclipse.org/downloads/).
 
-Installera Eclipse efter [Installationsanvisningar](https://wiki.eclipse.org/Eclipse/Installation).
+Installera Eclipse enligt [installationsanvisningarna](https://wiki.eclipse.org/Eclipse/Installation).
 
 ## Konfigurera ditt AEM baserat på Maven {#set-up-your-aem-project-based-on-maven}
 
-Konfigurera sedan projektet med Maven enligt beskrivningen i [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+Konfigurera sedan projektet med Maven enligt beskrivningen i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
 ## Förbered JSP-stöd för Eclipse {#prepare-jsp-support-for-eclipse}
 
 Eclipse kan även ge stöd vid arbete med JSP, till exempel
 
 * automatisk komplettering av taggbibliotek
-* Eclipse-medvetenhet om objekt som definieras av &lt;cq:defineobjects /> och &lt;sling:defineobjects />
+* Eclipse-medvetenhet om objekt som definieras av &lt;cq:defineObjects /> och &lt;sling:defineObjects />
 
 Så fungerar det:
 
-1. Följ instruktionerna på [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) in [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
-1. Lägg till följande i &lt;build /> i innehållsmodulens POM.
+1. Följ instruktionerna på [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+1. Lägg till följande i avsnittet &lt;build /> i innehållsmodulens POM.
 
    Eclipse&#39;s Maven support plugin, m2e, ger inte stöd för maven-jspc-plugin, och den här konfigurationen anger för m2e att ignorera plugin-programmet och den relaterade uppgiften att rensa upp de tillfälliga kompileringsresultaten.
 
-   Detta är inte något problem: vilket beskrivs i [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps)används maven-jspc-plugin i den här konfigurationen bara för att validera att JSP:er kompileras som en del av byggprocessen. Eclipse rapporterar redan om JSP-problem och förlitar sig inte på denna Maven-plugin för att kunna göra det.
+   Detta är inget problem: som beskrivs i [Så här fungerar JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) används plugin-programmet maven-jspc-plugin i den här konfigurationen bara för att validera att JSP:er kompileras som en del av byggprocessen. Eclipse rapporterar redan om JSP-problem och förlitar sig inte på denna Maven-plugin för att kunna göra det.
 
    **myproject/content/pom.xml**
 
@@ -132,4 +132,4 @@ Så fungerar det:
 
    >[!NOTE]
    >
-   >Om du inkluderar `/libs/foundation/global.jsp` eller andra JSP:er i `/libs`måste du kopiera det till ditt projekt så att Eclipse kan lösa problemet. Samtidigt måste ni se till att den inte paketeras i ert innehållspaket av Maven. Hur du uppnår detta beskrivs i [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+   >Om du inkluderar `/libs/foundation/global.jsp` eller andra JSP:er i `/libs` måste du kopiera den till ditt projekt så att Eclipse kan lösa inkluderingen. Samtidigt måste ni se till att den inte paketeras i ert innehållspaket av Maven. Hur du uppnår detta beskrivs i [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).

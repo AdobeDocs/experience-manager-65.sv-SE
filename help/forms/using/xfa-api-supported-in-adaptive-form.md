@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 Adaptiva formulär har stöd för olika XFA-händelser, egenskaper, skript och valideringar som definieras i en XDP-fil, inklusive:
 
@@ -141,7 +141,7 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till egenskapen short description i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>bildtext<em> (alla fälttyper)</em></p> </td>
+   <td><p>bildtext <em> (alla fälttyper)</em></p> </td>
    <td><p>Mappad till egenskapen Title i anpassad form.</p> </td>
   </tr>
   <tr>
@@ -153,27 +153,27 @@ Följande tabell visar hur olika XFA-skript som definieras i XDP-filerna fungera
    <td><p>Mappad till värdeegenskap i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>objekt<em> (Listruta, kryssruta)</em></p> </td>
+   <td><p>objekt<em> (listruta, kryssruta)</em></p> </td>
    <td><p>Mappad till alternativegenskap i adaptiv form. Du kan åsidosätta den med hjälp av uttrycket Alternativ.</p> </td>
   </tr>
   <tr>
-   <td><p>maxChar<em> (Textfält)</em></p> </td>
+   <td><p>maxChar<em> (textfält)</em></p> </td>
    <td><p>Mappas till egenskapen Maximum för tillåtna tecken i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>flera<em> (Textfält)</em></p> </td>
+   <td><p>multiline<em> (textfält)</em></p> </td>
    <td><p>Mappad till egenskapen Tillåt flera rader i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>fracDigit<em> (Numeriskt fält, decimalfält)</em></p> </td>
+   <td><p>fracDigit<em> (numeriskt fält, decimalfält)</em></p> </td>
    <td><p>Mappas till egenskapen Frac digits i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>leadDigit<em> (Numeriskt fält, decimalfält)</em></p> </td>
+   <td><p>leadDigit<em> (numeriskt fält, decimalfält)</em></p> </td>
    <td><p>Mappas till egenskapen Leadsiffror i adaptiv form.</p> </td>
   </tr>
   <tr>
-   <td><p>multiSelect<em> (Listruta)</em></p> </td>
+   <td><p>multiSelect<em> (listruta)</em></p> </td>
    <td><p>Mappad till Tillåter flera markeringsegenskaper i adaptiv form.</p> </td>
   </tr>
  </tbody>

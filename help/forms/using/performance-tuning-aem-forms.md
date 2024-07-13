@@ -22,32 +22,32 @@ I den här artikeln beskrivs strategier och bästa metoder som du kan implemente
 
 ## Cacheinställningar {#cache-settings}
 
-Du kan konfigurera och styra cachningsstrategin för AEM Forms med **Mobile Forms Configurations** i AEM Web Configuration Console på:
+Du kan konfigurera och styra cachelagringsstrategin för AEM Forms med komponenten **Mobile Forms Configurations** i AEM webbkonfigurationskonsol på:
 
-* (AEM Forms on OSGi) `https://'[server]:[port]'/system/console/configMgr`
-* (AEM Forms on JEE) `https://'[server]:[port]'/lc/system/console/configMgr`
+* (AEM Forms på OSGi) `https://'[server]:[port]'/system/console/configMgr`
+* (AEM Forms på JEE) `https://'[server]:[port]'/lc/system/console/configMgr`
 
 De tillgängliga alternativen för cachelagring är följande:
 
-* **Ingen**: Tvingar dig att inte cachelagra någon artefakt. Detta saktar i praktiken ned prestanda och kräver hög minnestillgänglighet på grund av att cache saknas.
-* **Konservativ**: Dicates to cache only that middle artifacts that are generated before rendering the form, such as a template containing inline fragments and images.
-* **Aggressiv**: Framtvingar cache-lagring av nästan allt som kan cachas, inklusive återgivet HTML-innehåll förutom alla artefakter från den konservativa cachenivån. Det ger bästa prestanda men kräver också mer minne för att lagra cachelagrade artefakter. Aggressiv cachningsstrategi innebär att du får konstant tidsprestanda när du återger ett formulär när det återgivna innehållet cachas.
+* **Ingen**: Tvingar ingen artefakt att cachelagras. Detta saktar i praktiken ned prestanda och kräver hög minnestillgänglighet på grund av att cache saknas.
+* **Konservativ**: Endast de mellanliggande artefakter som genereras innan formuläret renderas, till exempel en mall som innehåller textbundna fragment och bilder, cachelagras.
+* **Aggressiv**: Tvingar dig att cachelagra nästan allt som kan cachas, inklusive återgivet HTML-innehåll förutom alla artefakter från den konservativa cachenivån. Det ger bästa prestanda men kräver också mer minne för att lagra cachelagrade artefakter. Aggressiv cachningsstrategi innebär att du får konstant tidsprestanda när du återger ett formulär när det återgivna innehållet cachas.
 
 Standardinställningarna för cacheminnet för AEM Forms kanske inte är tillräckligt bra för att uppnå optimala prestanda. Därför rekommenderar vi att du använder följande inställningar:
 
 * **Cachestrategi**: Aggressiv
 * **Cachestorlek** (i antal formulär):
-* **Maximal objektstorlek**: Som obligatoriskt
+* **Maximal objektstorlek**: efter behov
 
 ![Mobile Forms Configurations](assets/snap.png)
 
 >[!NOTE]
 >
->Om du använder AEM Dispatcher för att cachelagra adaptiva formulär cache-lagras även anpassningsbara formulär som innehåller formulär med förfyllda data. Om sådana formulär hanteras från AEM Dispatcher-cachen kan det leda till att förfyllda eller inaktuella data skickas till användarna. Använd AEM Dispatcher för att cachelagra adaptiva formulär som inte använder förfyllda data. Dessutom gör inte en Dispatcher-cache cachelagrade cachelagrade fragment automatiskt ogiltiga. Använd den alltså inte för att cachelagra formulärfragment. Använd för sådana formulär och fragment [Cacheminne för adaptiva formulär](../../forms/using/configure-adaptive-forms-cache.md).
+>Om du använder AEM Dispatcher för att cachelagra adaptiva formulär cache-lagras även adaptiva formulär som innehåller formulär med förfyllda data. Om sådana formulär hanteras från AEM Dispatcher-cache kan det leda till att förfyllda eller inaktuella data skickas till användarna. Använd därför AEM Dispatcher för att cachelagra adaptiva formulär som inte använder förifyllda data. Dessutom gör inte en Dispatcher-cache cachelagrade cachelagrade fragment automatiskt ogiltiga. Använd den alltså inte för att cachelagra formulärfragment. Använd [cache för anpassade formulär](../../forms/using/configure-adaptive-forms-cache.md) för sådana formulär och fragment.
 
 ## JVM-parametrar {#jvm-parameters}
 
-För optimala prestanda bör du använda följande JVM `init` argument för att konfigurera `Java heap` och `PermGen`.
+För optimala prestanda bör du använda följande JVM `init`-argument för att konfigurera `Java heap` och `PermGen`.
 
 ```shell
 set CQ_JVM_OPTS=%CQ_JVM_OPTS% -Xms8192m
@@ -78,9 +78,9 @@ I följande steg visas de ändringar som krävs för att aktivera komprimering m
 * Solaris™ 64-bitars: ladda ned Apache-webbservern från Solaris™ webbplats i Sunfreeware.
 * Linux®: Apache-webbservern är förinstallerad på ett Linux®-system.
 
-Apache kan kommunicera med CRX med HTTP-protokollet. Konfigurationerna är avsedda för optimering med HTTP.
+Apache kan kommunicera med CRX via HTTP-protokollet. Konfigurationerna är avsedda för optimering med HTTP.
 
-1. Avkommentera följande modulkonfigurationer i `APACHE_HOME/conf/httpd.conf` -fil.
+1. Avkommentera följande modulkonfigurationer i filen `APACHE_HOME/conf/httpd.conf`.
 
    ```shell
    LoadModule proxy_balancer_module modules/mod_proxy.so
@@ -90,17 +90,17 @@ Apache kan kommunicera med CRX med HTTP-protokollet. Konfigurationerna är avsed
 
    >[!NOTE]
    >
-   >För Linux® är standardvärdet `APACHE_HOME` är `/etc/httpd/`.
+   >För Linux® är standardvärdet `APACHE_HOME` `/etc/httpd/`.
 
 1. Konfigurera proxyn på port 4502 för crx.
-Lägg till följande konfiguration i `APACHE_HOME/conf/httpd.conf` konfigurationsfil.
+Lägg till följande konfiguration i konfigurationsfilen `APACHE_HOME/conf/httpd.conf`.
 
    ```shell
    ProxyPass / https://<server>:4502/
    ProxyPassReverse / https://<server>:4502/
    ```
 
-1. Aktivera komprimering. Lägg till följande konfiguration i `APACHE_HOME/conf/httpd.conf` konfigurationsfil.
+1. Aktivera komprimering. Lägg till följande konfiguration i konfigurationsfilen `APACHE_HOME/conf/httpd.conf`.
 
    **För HTML5-formulär**
 
@@ -119,7 +119,7 @@ Lägg till följande konfiguration i `APACHE_HOME/conf/httpd.conf` konfiguration
    </Location>
    ```
 
-   **För anpassningsbara formulär**
+   **För adaptiva formulär**
 
    ```xml
    <Location /content/forms/af>
@@ -136,7 +136,7 @@ Lägg till följande konfiguration i `APACHE_HOME/conf/httpd.conf` konfiguration
    </Location>
    ```
 
-   Om du vill få åtkomst till crx-servern använder du `https://'server':80`, där `server` är namnet på den server som Apache-servern körs på.
+   Använd `https://'server':80`, där `server` är namnet på den server där Apache-servern körs, för att få åtkomst till crx-servern.
 
 ## Använda ett antivirus på en server som kör AEM Forms {#using-an-antivirus-on-server-running-aem-forms}
 
@@ -162,14 +162,14 @@ För att förbättra prestandan kan du instruera antivirusprogrammet att uteslut
    * (WebLogic) [appserverdomain]/&#39;server&#39;/adobe/LiveCycleServer/DocumentStorage
    * (WebSphere®) [appserver root]/installedApps/adobe/&#39;server&#39;/DocumentStorage
 
-* **(Endast AEM Forms på JEE)** AEM Forms Server loggar och temporär katalog. Standardplatsen är:
+* **(Endast AEM Forms på JEE)** AEM Forms Server loggar och tillfällig katalog. Standardplatsen är:
 
-   * Serverloggar - [AEM Forms installationskatalog]\Adobe\AEM forms\[app-server]\server\all\logs
-   * Temp-katalog - [AEM Forms installationskatalog]\temp
+   * Serverloggar - [AEM Forms installationskatalog]\Adobe\AEM formulär\[app-server]\server\all\logs
+   * Temporär katalog - [AEM Forms installationskatalog]\temp
 
 >[!NOTE]
 >
->* Om du använder en annan plats för GDS och en tillfällig katalog öppnar du AdminUI på `https://'[server]:[port]'/adminui`, navigera till **Hem > Inställningar > Systeminställningar > Huvudkonfigurationer** för att bekräfta platsen som används.
+>* Om du använder en annan plats för GDS och en tillfällig katalog öppnar du AdminUI på `https://'[server]:[port]'/adminui`, går till **Hem > Inställningar > Core System Settings > Core Configurations** för att bekräfta platsen som används.
 >
 * Om AEM Forms Server fungerar långsamt även efter att de föreslagna katalogerna har utelämnats ska du även utelämna den körbara Java™-filen (java.exe).
 >

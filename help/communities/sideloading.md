@@ -32,7 +32,7 @@ Stegen för att lägga till SCF-komponenter dynamiskt är:
 
 1. [Lägg till komponenten i DOM](#dynamically-add-component-to-dom)
 
-1. [Läs in komponenten separat](#sideload-by-invoking-scf) med någon av två metoder:
+1. [Läs in komponenten](#sideload-by-invoking-scf) separat med en av två metoder:
 
 * [Dynamisk inkludering](#dynamic-inclusion)
    * Boostrap alla dynamiskt tillagda komponenter
@@ -88,4 +88,4 @@ I stället för att starta alla SCF-komponenter som finns i DOM kan du ange en s
 
 `SCF.addComponent(document.getElementById(*someId*));`
 
-Plats `someId` är värdet för `data-component-id` -attribut.
+Där `someId` är värdet för attributet `data-component-id`.

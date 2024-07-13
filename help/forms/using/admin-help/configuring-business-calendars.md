@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Konfigurera affärskalendrar {#configuring-business-calendars}
 
-*Affärskalendrar* definiera arbetsdagar och icke-arbetsdagar (t.ex. lagstadgade helgdagar, helger och stängningsdagar) för din organisation. När du använder affärskalendrar hoppar AEM formulär över icke-arbetsdagar när vissa datumberäkningar utförs. I Workbench kan du ange om du vill använda affärskalendrar för användarrelaterade händelser som påminnelser om uppgifter, deadlines och eskaleringar eller för åtgärder som inte är kopplade till användare, som Timer Events och Wait Service.
+*Affärskalendrar* definierar affärsdagar och icke-affärsdagar (t.ex. lagstadgade helger, helger och företagsstängningsdagar) för din organisation. När du använder affärskalendrar hoppar AEM formulär över icke-arbetsdagar när vissa datumberäkningar utförs. I Workbench kan du ange om du vill använda affärskalendrar för användarrelaterade händelser som påminnelser om uppgifter, deadlines och eskaleringar eller för åtgärder som inte är kopplade till användare, som Timer Events och Wait Service.
 
 En påminnelse om en aktivitet är till exempel konfigurerad att inträffa tre arbetsdagar efter att uppgiften har tilldelats en användare. Uppgiften tilldelas på torsdag. De följande tre dagarna är dock inte arbetsdagar eftersom fredagen är en nationell helgdag och de följande två dagarna är helgdagar. Påminnelsen skickas därför på onsdagen nästa vecka.
 
@@ -28,7 +28,7 @@ En påminnelse om en aktivitet är till exempel konfigurerad att inträffa tre a
 
 ## Använda standardaffärskalendern {#using-the-default-business-calendar}
 
-AEM innehåller en standardarbetskalender (namngiven *Inbyggd kalender*) som anger lördagar och söndagar som lediga dagar. Om alla användare i organisationen har samma icke-arbetsdagar kan du uppdatera standardarbetskalendern så att den passar din organisation. Om du bara använder standardarbetskalendern behöver du inte aktivera affärskalendrar i Användarhantering eller tillhandahålla några mappningar. När inga andra affärskalendrar definieras används standardaffärskalendern i AEM formulär.
+AEM innehåller en standardaffärskalender (med namnet *Inbyggd kalender*) som anger lördagar och söndagar som lediga dagar. Om alla användare i organisationen har samma icke-arbetsdagar kan du uppdatera standardarbetskalendern så att den passar din organisation. Om du bara använder standardarbetskalendern behöver du inte aktivera affärskalendrar i Användarhantering eller tillhandahålla några mappningar. När inga andra affärskalendrar definieras används standardaffärskalendern i AEM formulär.
 
 ## Konfigurera flera affärskalendrar {#setting-up-multiple-business-calendars}
 
@@ -42,7 +42,7 @@ Om några användare i organisationen har olika icke-arbetsdagar kan du definier
 
    Om en användare är medlem i två olika grupper, och dessa grupper mappas till två olika affärskalendrar, använder AEM den första kalendern som hittas i sökresultaten. I det här fallet bör du överväga att använda affärskalendernycklar för att associera användare med affärskalendrar.
 
-   **Affärskalenycklar:** Du kan tilldela en affärskalender till en användare baserat på en affärskalendernyckel, som är en inställning som anges i Användarhantering. Du kan sedan mappa affärskalendernyckeln till en affärskalender i formulärarbetsflödet.
+   **Affärskalenummernycklar:** Du kan tilldela en användare en affärskalender baserat på en affärskalendernyckel, vilket är en inställning som anges i Användarhantering. Du kan sedan mappa affärskalendernyckeln till en affärskalender i formulärarbetsflödet.
 
    Hur du tilldelar användare affärskalendernycklar beror på om du använder en företagsdomän, lokal domän eller hybriddomän. Mer information om hur du konfigurerar domäner finns i [Lägga till domäner](/help/forms/using/admin-help/adding-domains.md#adding-domains).
 
@@ -52,7 +52,7 @@ Om några användare i organisationen har olika icke-arbetsdagar kan du definier
 
 1. I formulärarbetsflödet definierar du en kalender för varje uppsättning användare som delar samma icke-arbetsdagar. (Se [Skapa eller uppdatera en affärskalender](configuring-business-calendars.md#create-or-update-a-business-calendar).)
 1. I formulärarbetsflödet kan du mappa affärskalendernycklarna eller gruppmedlemskapen för varje kalender. (Se [Mappa användare och grupper till en affärskalender](configuring-business-calendars.md#mapping-users-and-groups-to-a-business-calendar).)
-1. I Workbench väljer processutvecklaren om han eller hon ska använda affärskalendrar för påminnelser, deadlines och eskalering. (Se [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63).)
+1. I Workbench väljer processutvecklaren om han eller hon ska använda affärskalendrar för påminnelser, deadlines och eskalering. (Se [Workbench-hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63).)
 
    Om processutvecklaren väljer att använda affärskalendrar väljer AEM dynamiskt lämplig affärskalender baserat på inställningen för användarhantering och de företagskalendermappningar som definierats i administrationskonsolen. Om det inte finns några mappningar kommer standardkalendern att användas.
 
@@ -80,7 +80,7 @@ Om din organisation innehåller olika uppsättningar användare som har olika ic
 
 1. Dubbelklicka i kalendern till vänster på andra icke-vardagar, till exempel helger. Du kan inte välja tidigare dagar. De icke-arbetsdagar som du väljer visas i en lista till höger med datumet två gånger på en rad. Välj datumet till vänster för att ange namn eller beskrivning för icke-affärsdagen.
 
-   Om du vill ta bort en affärsdag från listan klickar du på ![bus_cal_trash](assets/bus_cal_trash.png) bredvid dagen.
+   Om du vill ta bort en icke-arbetsdag från listan klickar du på ![bus_cal_trash](assets/bus_cal_trash.png) bredvid dagen.
 
 1. [Valfritt] Om den här kalendern ska vara standardkalender väljer du Standardkalender. Standardkalendern används när ingen annan kalendermappning finns för användarassocierade händelser eller när ingen affärskalender har angetts för Timer-händelsen eller Wait-tjänsten. Du kan inte ta bort standardkalendern.
 1. När du är klar med att definiera icke-arbetsdagar väljer du Aktiverad kalender och klickar sedan på Spara.

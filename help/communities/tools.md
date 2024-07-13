@@ -33,6 +33,6 @@ Logga in din författarinstans om du vill öppna webbgruppsverktygskonsolen:
 
 * [Lagringskonfiguration](srp-config.md) - Konsol för konfiguration och val av [standard-SRP](working-with-srp.md).
 
-* [Komponentguide](components-guide.md) - Öppnar en interaktiv plats som gör det möjligt att experimentera med hur SCF-komponenterna fungerar och hur de kan konfigureras eller anpassas.
+* [Komponenthandbok](components-guide.md) - Öppnar en interaktiv plats som gör att du kan experimentera med hur SCF-komponenterna fungerar och hur de kan konfigureras eller anpassas.
 
-* [Badges](badges.md) - Konsol varifrån anpassade märken kan läggas till för användning i [regler för poängsättning och märkning](implementing-scoring.md)
+* [Badges](badges.md) - Konsol från vilken anpassade emblem kan läggas till för användning i [regler för poäng och emblem](implementing-scoring.md)

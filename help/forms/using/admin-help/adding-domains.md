@@ -22,30 +22,30 @@ ht-degree: 0%
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 1. Klicka på Ny företagsdomän.
-1. Skriv en unik identifierare för domänen i rutan ID och skriv ett beskrivande namn för domänen i rutan Namn. (Se [Viktigt att tänka på för domännamn och ID](adding-domains.md#important-considerations-for-domain-names-and-ids).)
+1. Skriv en unik identifierare för domänen i rutan ID och skriv ett beskrivande namn för domänen i rutan Namn. (Se [Viktigt att tänka på när det gäller domännamn och ID](adding-domains.md#important-considerations-for-domain-names-and-ids).)
 1. Ange om kontolåsning ska aktiveras. (Se [Konfigurera inställningar för låsning av konto](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings).) Som standard är Aktivera låsning av konto markerat.
 1. Klicka på Lägg till autentisering och välj en leverantör i listan Autentiseringsprovider, beroende på vilken autentiseringsmetod din organisation använder. Möjliga värden är LDAP, Kerberos, SAML eller en anpassad autentiseringsprovider.
 
    Om du väljer LDAP kan du använda den LDAP-server som anges i katalogkonfigurationen, eller så kan du välja en annan LDAP-server att använda för autentisering. Om du väljer en annan server måste användarna finnas på båda LDAP-servrarna.
 
 1. Ange eventuell ytterligare information som krävs på sidan. (Se [Autentiseringsinställningar](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
-1. Lägg till en katalog eller ett anpassat SPI (Service Provider Interface). (Se [Lägga till kataloger eller anpassade SPI-filer](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
+1. Lägg till en katalog eller ett anpassat SPI (Service Provider Interface). (Se [Lägga till kataloger eller anpassade SPI:er](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
 1. Klicka på Slutför och sedan på OK.
 
-När du har skapat en företagsdomän synkroniserar du katalogen manuellt eller skapar en utlösare som ska utföra en synkronisering innan användarhantering kan använda den. Du kan sedan ställa in ett katalogsynkroniseringsschema och utföra manuell synkronisering efter behov. (Se [Synkroniserar kataloger](/help/forms/using/admin-help/synchronizing-directories.md#synchronizing-directories).)
+När du har skapat en företagsdomän synkroniserar du katalogen manuellt eller skapar en utlösare som ska utföra en synkronisering innan användarhantering kan använda den. Du kan sedan ställa in ett katalogsynkroniseringsschema och utföra manuell synkronisering efter behov. (Se [Synkronisera kataloger](/help/forms/using/admin-help/synchronizing-directories.md#synchronizing-directories).)
 
 ## Lägg till en lokal domän {#add-a-local-domain}
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 1. Klicka på Ny lokal domän.
-1. I rutan ID anger du en unik identifierare för domänen och skriver ett beskrivande namn för domänen i rutan Namn. (Se [Viktigt att tänka på för domännamn och ID](adding-domains.md#important-considerations-for-domain-names-and-ids).)
+1. I rutan ID anger du en unik identifierare för domänen och skriver ett beskrivande namn för domänen i rutan Namn. (Se [Viktigt att tänka på när det gäller domännamn och ID](adding-domains.md#important-considerations-for-domain-names-and-ids).)
 1. Ange om kontolåsning ska aktiveras och klicka sedan på OK. (Se [Konfigurera inställningar för låsning av konto](/help/forms/using/admin-help/configure-account-locking-settings.md#configure-account-locking-settings).) Som standard är Aktivera låsning av konto markerat.
 
 ## Lägg till en hybriddomän {#add-a-hybrid-domain}
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 1. Klicka på Ny hybrid-domän.
-1. I rutan ID anger du en unik identifierare för domänen och skriver ett beskrivande namn för domänen i rutan Namn. (Se [Viktigt att tänka på för domännamn och ID](adding-domains.md#important-considerations-for-domain-names-and-ids).)
+1. I rutan ID anger du en unik identifierare för domänen och skriver ett beskrivande namn för domänen i rutan Namn. (Se [Viktigt att tänka på när det gäller domännamn och ID](adding-domains.md#important-considerations-for-domain-names-and-ids).)
 1. Klicka på Lägg till autentisering och välj en leverantör i listan Autentiseringsprovider, beroende på vilken autentiseringsmetod din organisation använder. Möjliga värden är LDAP, Kerberos, SAML eller en anpassad autentiseringsprovider.
 1. Ange eventuell ytterligare information som krävs på sidan. (Se [Autentiseringsinställningar](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
 1. Klicka på OK och sedan på OK igen.
@@ -56,7 +56,7 @@ Tänk på följande när du väljer ett domännamn och ett ID:
 
 ### Allmänna överväganden {#general-considerations}
 
-* När du använder en annan databasleverantör än DB2 kan domän-ID:t innehålla upp till 50 byte. Om du använder ASCII-tecken med en byte är gränsen 50 tecken. Om domänidentifieraren innehåller flerbytetecken reduceras den här gränsen. Om du till exempel skapar en domän vars identifierare innehåller 3-byte-tecken är gränsen 16 tecken. Du kan inte heller skapa domäner som innehåller 4-byte-tecken. Om du skapar ett domän-ID som överskrider den här gränsen kommer AEM att vara i ett instabilt tillstånd. Information om hur du återställer från det här instabila läget finns i &quot; [Ta bort en domän som innehåller utökade tecken eller flerbytetecken](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)&quot; på den här sidan.
+* När du använder en annan databasleverantör än DB2 kan domän-ID:t innehålla upp till 50 byte. Om du använder ASCII-tecken med en byte är gränsen 50 tecken. Om domänidentifieraren innehåller flerbytetecken reduceras den här gränsen. Om du till exempel skapar en domän vars identifierare innehåller 3-byte-tecken är gränsen 16 tecken. Du kan inte heller skapa domäner som innehåller 4-byte-tecken. Om du skapar ett domän-ID som överskrider den här gränsen kommer AEM att vara i ett instabilt tillstånd. Information om hur du återställer det här instabila läget finns i [Ta bort en domän som innehåller tecken med utökade eller flera byte ](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters) på den här sidan.
 * Antalet företagsdomäner och lokala domäner som kan skapas i AEM formulär beror på längden på varje domän-ID. När du lägger till en företagsdomän eller hybriddomän uppdaterar Hanteraren configInstance-strängen i AuthProviders-noden i konfigurationsfilen för AEM formulär (config.xml). Strängen configInstance innehåller en kolonavgränsad lista med absoluta sökvägar för alla domäner som är associerade med auktoriseringsprovidern. Strängen får innehålla högst 8 192 tecken. När den gränsen nås kan du inte skapa fler domäner.
 
 ### Att tänka på när du använder DB2 {#considerations-when-using-db2}
@@ -71,9 +71,9 @@ När du använder DB2 för AEM formulärdatabas beror den maximala tillåtna lä
 
 När du använder MySQL som AEM formulärdatabas gäller följande begränsningar:
 
-* Använd endast ASCII-tecken (single-byte) för domän-ID och domännamn. Om du använder utökade ASCII-tecken är AEM i ett instabilt tillstånd och kan utlösa ett undantag om du försöker ta bort domänen. Information om hur du återställer från det här instabila läget finns i &quot; [Ta bort en domän som innehåller utökade tecken eller flerbytetecken](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters)&quot; på denna sida.
-* Du kan inte skapa två domäner som har samma namn men som skiljer sig åt. Du kan till exempel försöka skapa en domän med namnet *Adobe* när en domän namnges *adobe* finns redan vilket resulterar i ett fel.
-* Användarhantering kan inte skilja mellan två domännamn som bara skiljer sig åt när utökade tecken används. Om du till exempel skapar en domän med namnet *abcde* och en domän med namnet *âbcdé*, anses de vara desamma.
+* Använd endast ASCII-tecken (single-byte) för domän-ID och domännamn. Om du använder utökade ASCII-tecken är AEM i ett instabilt tillstånd och kan utlösa ett undantag om du försöker ta bort domänen. Information om hur du återställer det här instabila läget finns i avsnittet [Ta bort en domän som innehåller tecken som består av flera byte eller flera byte ](adding-domains.md#remove-a-domain-that-contains-extended-or-multi-byte-characters) på den här sidan.
+* Du kan inte skapa två domäner som har samma namn men som skiljer sig åt. Om du till exempel försöker skapa en domän med namnet *Adobe* när det redan finns en domän med namnet *adobe* uppstår ett fel.
+* Användarhantering kan inte skilja mellan två domännamn som bara skiljer sig åt när utökade tecken används. Om du till exempel skapar en domän med namnet *abcde* och en domän med namnet *âbcdè* betraktas de som samma.
 
 ### Ta bort en domän som innehåller utökade tecken eller flerbytetecken {#remove-a-domain-that-contains-extended-or-multi-byte-characters}
 

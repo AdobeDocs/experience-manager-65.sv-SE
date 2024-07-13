@@ -29,14 +29,14 @@ I följande tabell anges funktionsstödet för HTML5-formulär och PDF forms:
    <th>PDF</th>
   </tr>
   <tr>
-   <td>Streckkoder<br /> </td>
+   <td>Streckkoder <br /> </td>
    <td>Inte tillgängligt på användargränssnittsnivå. </td>
    <td>Stöds</td>
   </tr>
   <tr>
    <td>Signaturfält<br /> </td>
-   <td><strong>Digitala signaturer</strong> stöds inte, men en ny <strong>Klottersignatur</strong> fält läggs till för papper som signaturer. Man kan klottra sin signatur i formuläret med <strong>Klottersignatur</strong> fält. Signaturen sparas i formuläret som en bild. Du kan spara geopositioneringsinformation i <strong>Klottersignatur</strong> fält.</td>
-   <td>Signaturfält är tillgängligt för <strong>Digitala signaturer</strong>.</td>
+   <td><strong>Digitala signaturer</strong> stöds inte, men ett nytt <strong>Klottsignaturfält</strong> läggs till för papper som signaturer. Man kan klottra sin signatur i formuläret med fältet <strong>Klottsignatur</strong>. Signaturen sparas i formuläret som en bild. Du kan spara geolokaliseringsinformation i fältet <strong>Klottsignatur</strong>.</td>
+   <td>Signaturfält är tillgängligt för <strong>digitala signaturer</strong>.</td>
   </tr>
   <tr>
    <td>Datasammanfogning</td>
@@ -45,22 +45,22 @@ I följande tabell anges funktionsstödet för HTML5-formulär och PDF forms:
   </tr>
   <tr>
    <td>Bilder</td>
-   <td>Data-URI-schemat används för att visa bilder. Alla moderna versioner av webbläsare stöder det här schemat, men det finns skillnader i det intervall med bildformat som varje webbläsare stöder.<br /> </td>
+   <td>Data-URI-schemat används för att visa bilder. Alla moderna versioner av webbläsare har stöd för det här schemat, men det finns skillnader i det intervall med bildformat som varje webbläsare har stöd för.<br /> </td>
    <td>Formaten .gif, .png, .jpeg, .bmp och .tiff stöds.</td>
   </tr>
   <tr>
-   <td>Sidnumrering<br /> </td>
-   <td><p>Ett HTML5-formulär är uppdelat i paneler och rutor för att ge det ett utseende som liknar PDF forms. Sidans storlek beräknas dynamiskt. Om allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, döljs den tomma sidan. Ett tomt utrymme (tomt utrymme) visas inte mellan sidorna ovanför och under den tomma sidan.</p> <p>Om datasammanfogning eller skript lägger till innehåll på en sida utökas sidans längd så att det nya innehållet får plats. Inga nya sidor läggs till i formuläret så att det nya innehållet får plats. </p> <p><strong>Obs!</strong> När allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, förblir den tomma sidan (tomt utrymme) synlig mellan den första och andra sidan, men inte mellan andra sidor.</p> </td>
+   <td>Sidnumrering <br /> </td>
+   <td><p>Ett HTML5-formulär är uppdelat i paneler och rutor för att ge det ett utseende som liknar PDF forms. Sidans storlek beräknas dynamiskt. Om allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, döljs den tomma sidan. Ett tomt utrymme (tomt utrymme) visas inte mellan sidorna ovanför och under den tomma sidan.</p> <p>Om datasammanfogning eller skript lägger till innehåll på en sida utökas sidans längd så att det nya innehållet får plats. Inga nya sidor läggs till i formuläret så att det nya innehållet får plats. </p> <p><strong>Obs!</strong> När allt innehåll på en sida i ett HTML5-formulär tas bort eller markeras som dolt, förblir den tomma sidan (tomt utrymme) synlig mellan den första och den andra sidan, men inte mellan andra sidor.</p> </td>
    <td>Sidnumrering i PDF beror på det sammanslagna datainnehållet eller på att användarinnehållet och antalet sidor ökar/minskar baserat på det.</td>
   </tr>
   <tr>
    <td>Sidhuvuden/sidfötter </td>
-   <td>Stöds. <br /> <br /> Eftersom mobilformulären HTML5 inte stöder sidbrytningar visas sidhuvuden och sidfötter endast en gång. Du kan dock konfigurera dem i layouten så att de visas på flera ställen i förhandsgranskningen av mobilformulär.<br /> </td>
+   <td>Stöds. <br /> <br /> Eftersom mobilformulär i HTML5 inte stöder sidbrytningar visas sidhuvuden och sidfötter endast en gång. Du kan dock konfigurera dem i layouten så att de visas på flera ställen i förhandsgranskningen av mobilformulär.<br /> </td>
    <td>Stöds.</td>
   </tr>
   <tr>
    <td>Anpassade widgetar</td>
-   <td>Man kan anpassa widgetar för att förbättra användarupplevelsen på mobila enheter.<br /> </td>
+   <td>Du kan anpassa widgetar för att förbättra användarupplevelsen på mobila enheter.<br /> </td>
    <td>Alla widgetar är låsta och ingen anpassad widget kan kopplas.<br /> </td>
   </tr>
   <tr>

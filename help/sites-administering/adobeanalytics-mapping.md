@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # Mappa komponentdata med Adobe Analytics-egenskaper{#mapping-component-data-with-adobe-analytics-properties}
 
-Lägg till komponenter i ramverket som samlar in data som ska skickas till Adobe Analytics. Komponenter som är utformade för att samla analysdata lagrar data i lämplig **CQ-variabel**. När du lägger till en sådan komponent i ett ramverk visas en lista med CQ-variabler så att du kan använda var och en av dem **Analysvariabel**.
+Lägg till komponenter i ramverket som samlar in data som ska skickas till Adobe Analytics. Komponenter som är utformade för att samla in analysdata lagrar data i lämplig **CQ-variabel**. När du lägger till en sådan komponent i ett ramverk visas en lista med CQ-variabler så att du kan använda alla till rätt **analysvariabel**.
 
 ![aa-11](assets/aa-11.png)
 
-När **AEM** är öppen. Analysvariablerna visas i innehållssökaren.
+När **AEM-vyn** är öppen visas analysvariablerna i innehållssökaren.
 
 ![aa-12](assets/aa-12.png)
 
@@ -38,13 +38,13 @@ Mappade data skickas till Adobe Analytics när sidan läses in och följande vil
 
 Använd följande procedur för att mappa CQ-komponentvariabler med Adobe Analytics rapportegenskaper.
 
-1. I **AEM** drar du en spårningskomponent från sidosparken till ramverket. Dra till exempel **Sida** -komponenten från **Allmänt** kategori.
+1. I **AEM-vyn** drar du en spårningskomponent från sidosparken till ramverket. Dra till exempel komponenten **Sida** från kategorin **Allmänt** .
 
    ![aa-13](assets/aa-13.png)
 
-   Det finns flera standardkomponentgrupper: **Allmänt**, **Handel**, **Communities** och **Övriga**. Din AEM kan vara konfigurerad att visa olika grupper och komponenter.
+   Det finns flera standardkomponentgrupper: **Allmänt**, **Commerce**, **Communities** och **Annat**. Din AEM kan vara konfigurerad att visa olika grupper och komponenter.
 
-1. Om du vill mappa Adobe Analytics-variabler med variabler som är definierade i komponenten drar du i en **Analysvariabel** från innehållssökaren till ett fält i spårningskomponenten. Dra till exempel `Page Name (pageName)` till `pagedata.title`.
+1. Om du vill mappa Adobe Analytics-variabler med variabler som är definierade i komponenten drar du en **analysvariabel** från innehållssökaren till ett fält i spårningskomponenten. Dra till exempel `Page Name (pageName)` till `pagedata.title`.
 
    ![aa-14](assets/aa-14.png)
 
@@ -65,7 +65,7 @@ Använd följande procedur för att mappa CQ-komponentvariabler med Adobe Analyt
    >* `eVars` och `props` mappas till CQ-variabler som börjar med antingen `pagedata.X` eller `eventdata.X`
    >* Händelser bör mappas till variabler som börjar med `eventdata.events.X`
 
-1. Om du vill göra ramverket tillgängligt på publiceringsinstansen av webbplatsen öppnar du **Sida** sidosparkflik och klicka **Aktivera Framework.**
+1. Om du vill göra ramverket tillgängligt på publiceringsinstansen på din webbplats öppnar du fliken **Sida** i sidosparken och klickar på **Aktivera ramverk.**
 
 ## Mappa produktrelaterade variabler {#mapping-product-related-variables}
 
@@ -77,8 +77,8 @@ AEM använder en konvention för att namnge produktrelaterade variabler och hän
 | `product.sku` | `product.sku` (konverteringsvariabel) | Produktens sku. |
 | `product.quantity` | `product.quantity` (konverteringsvariabel) | Antalet produkter som köpts. |
 | `product.price` | `product.price` (konverteringsvariabel) | Produktpriset. |
-| `product.events.<eventName>` | Vilka lyckade händelser som ska kopplas till produkten i din rapport. | `product.events` är prefixet för namngivna händelser *eventName.* |
-| `product.evars.<eVarName>` | Konverteringsvariabler ( `eVar`) för att associera med produkten. | `product.evars` är prefixet för eVar-variabler med namnet *eVarName.* |
+| `product.events.<eventName>` | Vilka lyckade händelser som ska kopplas till produkten i din rapport. | `product.events` är prefixet för händelser med namnet *eventName.* |
+| `product.evars.<eVarName>` | Konverteringsvariablerna ( `eVar`) som ska associeras med produkten. | `product.evars` är prefixet för eVar-variabler med namnet *eVarName.* |
 
 Flera AEM Commerce-komponenter använder dessa variabelnamn.
 
@@ -90,7 +90,7 @@ Flera AEM Commerce-komponenter använder dessa variabelnamn.
 
 1. Logga in på Adobe Analytics webbplats med samma inloggningsuppgifter som AEM.
 1. Se till att det RSID som du valde är det som användes i föregående steg.
-1. I **Rapporter** (till vänster på sidan) väljer **Anpassad konvertering** sedan **Anpassad konvertering 1-10** och markera variabeln som motsvarar `eVar7`
+1. I **Rapporter** (till vänster på sidan) väljer du **Anpassad konvertering**, sedan **Anpassad konvertering 1-10** och väljer variabeln som motsvarar `eVar7`
 
 1. Beroende på vilken version av Adobe Analytics du använder måste du vänta i genomsnitt 45 minuter tills rapporten uppdateras med det sökord som används, till exempel eggplant i exemplet
 
@@ -103,18 +103,18 @@ När du först öppnar ett Adobe Analytics-ramverk innehåller innehållssökare
 * Händelser
 
 När ett RSID är markerat läggs alla variabler som tillhör det RSID till i listan.\
-The `cf#` behövs för att mappa Analytics-variabler till CQ-variablerna som finns i de olika spårningskomponenterna. Se Konfigurera ett ramverk för grundläggande spårning.
+`cf#` behövs för att mappa Analytics-variabler till CQ-variablerna som finns i de olika spårningskomponenterna. Se Konfigurera ett ramverk för grundläggande spårning.
 
 Beroende på vilken vy som har valts för ramverket fylls innehållssökaren i av antingen Analytics-variabler (i AEM) eller CQ-variabler (i analysvyn).
 
 Listan kan ändras på följande sätt:
 
-1. När **AEM** kan listan filtreras beroende på vilken variabeltyp som väljs med hjälp av de tre filterknapparna:
+1. I vyn **AEM** kan listan filtreras beroende på vilken variabeltyp som väljs med hjälp av de tre filterknapparna:
 
-   * If *ingen knapp* om du väljer det här alternativet visas hela listan.
-   * Om **Trafik** om knappen är markerad visas endast de variabler som hör till trafikavsnittet.
-   * Om **Konvertering** om du väljer det här alternativet visas endast de variabler som hör till avsnittet Konvertering.
-   * Om **Händelser** om du väljer det här alternativet visas endast de variabler som hör till händelseavsnittet.
+   * Om *ingen knapp* är markerad visas den fullständiga listan i listan.
+   * Om knappen **Trafik** är markerad visas bara de variabler som tillhör avsnittet Trafik i listan.
+   * Om knappen **Konvertera** är markerad visas endast de variabler som tillhör avsnittet Konvertering i listan.
+   * Om knappen **Händelser** är markerad visas endast de variabler som tillhör avsnittet Händelser i listan.
 
    >[!NOTE]
    >
@@ -127,7 +127,7 @@ Listan kan ändras på följande sätt:
 
 1. I Adobe Analytics-vyn visar Content Finder alla CQ-variabler som tillhör spårningskomponenterna som dras i CQ-vyn.
 
-   * I fallet med **Ladda ned komponent** är *endast en dragd* i CQ-vyn (som har två mappningsbara variabler *eventdata.downloadLink* och *eventdata.events.startDownload*) kommer Content Finder att se ut så här när du växlar till Adobe Analytics-vyn:
+   * Om till exempel komponenten **Download** bara är den *enda dragna* i CQ-vyn (som har två mappningsbara variabler *eventdata.downloadLink* och *eventdata.events.startDownload*) ser Content Finder ut så här när du växlar till Adobe Analytics-vyn:
 
    ![aa-22](assets/aa-22.png)
 
@@ -147,13 +147,13 @@ Vid en given tidpunkt kan man växla mellan två sätt att visa Adobe Analytics-
 
 ![aa-23](assets/aa-23.png)
 
-Om du tar bilden ovan som exempel visas **AEM** har följande egenskaper:
+Om du tar bilden ovan som exempel har vyn **AEM** följande egenskaper:
 
 1. Det här är standardvyn när ramverket öppnas.
 1. Vänster sida: innehållssökaren (cf#) fylls i med Adobe Analytics-variabler baserat på de RSID(n) som valts.
-1. Flikrubriker (**AEM** och **Analysvy**): använd dessa för att växla mellan de två vyerna.
+1. Flikrubriker (**AEM vy** och **analysvy**): använd dessa för att växla mellan de två vyerna.
 
-1. **AEM**:
+1. **AEM vy**:
 
    1. Om ramverket har komponenter som ärvs från dess överordnade, visas de här tillsammans med variablerna som mappas till komponenterna.
 
@@ -161,7 +161,7 @@ Om du tar bilden ovan som exempel visas **AEM** har följande egenskaper:
       1. Om du vill låsa upp en ärvd komponent dubbelklickar du på hänglåset bredvid komponentens namn
       1. Om du vill återställa arvet tar du bort den olåsta komponenten. Därefter återfår den sin låsta status.
 
-   1. **Dra komponenterna hit för att inkludera dem i analysramverket**: Komponenter kan dras från Sidekick och släppas här.
+   1. **Dra komponenter hit för att inkludera dem i analysramverket**: Komponenter kan dras från Sidekick och släppas här.
    1. Du kan hitta alla komponenter som för närvarande ingår i analysramverket:
 
       1. Om du vill lägga till en komponent drar du den från sidosparkens komponentflik
@@ -172,35 +172,35 @@ Om du tar bilden ovan som exempel visas **AEM** har följande egenskaper:
 
 ![aa-24](assets/aa-24.png)
 
-1. Du kommer åt den här vyn genom att växla till **Analysvy** -fliken i ramverket.
+1. Du kommer åt den här vyn genom att växla till fliken **Analysvy** i ramverket.
 1. Vänster sida: Content Finder (cf#) ifyllt av CQ-variabler baserat på de komponenter som dras till ramverket i CQ-vyn.
-1. Flikrubriker (**AEM** och **Analysvy**): använd dessa för att växla mellan de två vyerna.
+1. Flikrubriker (**AEM vy** och **analysvy**): använd dessa för att växla mellan de två vyerna.
 
 1. De tre tabellerna (Traffic, Conversion, Event) innehåller alla tillgängliga Adobe Analytics-variabler. som tillhör de markerade RSID:erna. Mappningarna som visas här ska vara desamma som i AEM:
 
    * **Trafik**:
 
-      * Trafikvariabel ( `prop1`) mappas till en CQ-variabel ( `eventdata.downloadLink`)
+      * Trafikvariabeln ( `prop1`) har mappats till en CQ-variabel ( `eventdata.downloadLink`)
 
       * När komponenten har en Padlock bredvid sig innebär det att den ärvs från ett överordnat ramverk och därför inte kan redigeras
 
    * **Konvertering**:
 
-      * Konverteringsvariabel ( `eVar1`) mappas till en CQ-variabel ( `pagedata.title`)
+      * Konverteringsvariabel ( `eVar1`) mappad till en CQ-variabel ( `pagedata.title`)
 
-      * Konverteringsvariabel ( `eVar3`) mappas till ett JavaScript-uttryck som lagts till internt genom att dubbelklicka på CQ-variabelfältet och ange koden manuellt
+      * Konverteringsvariabeln ( `eVar3`) mappas till ett JavaScript-uttryck som lagts till internt genom att dubbelklicka på CQ-variabelfältet och ange koden manuellt
 
    * **Händelse**:
 
-      * Händelsevariabel ( `event1`) mappas till en CQ-händelse ( `eventdata.events.pageView`)
+      * Händelsevariabel ( `event1`) mappad till en CQ-händelse ( `eventdata.events.pageView`)
 
 >[!NOTE]
 >
 >CQ-variabelkolumnen för en tabell kan även fyllas i genom att dubbelklicka på fältet och lägga till text. Dessa fält accepterar JavaScript som indata.
 >
->Till exempel bredvid `prop3` du kan lägga till:
+>Bredvid `prop3` kan du till exempel lägga till:
 >     `'`* `Adobe:'+pagedata.title+':'+pagedata.sitesection`\
->skicka *title* av en sida sammanfogad med *platshållare* använda *:* (kolon) och prefix med *Adobe* as `prop3`
+>om du vill skicka *title* för en sida som är sammanfogad med dess *platskarta* med *:* (kolon) och prefixerad med *Adobe* som `prop3`
 >
 
 >[!CAUTION]

@@ -27,7 +27,7 @@ Med sidskillnaden kan användaren jämföra den aktuella sidan med startsidor, t
 
 ## Operationsinformation {#operation-details}
 
-När du jämför versioner av en sida återskapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Detta krävs för att innehållet ska kunna återges [för jämförelse sida vid sida](/help/sites-developing/pagediff.md#operation-details).
+När du jämför versioner av en sida återskapas den tidigare versionen som användaren vill jämföra av AEM i bakgrunden för att underlätta skillnaderna. Detta krävs för att kunna återge innehållet [för jämförelse sida vid sida](/help/sites-developing/pagediff.md#operation-details).
 
 Denna rekreationsåtgärd görs internt av AEM och är transparent för användaren och kräver ingen åtgärd. En administratör som till exempel visar databasen i CRXDE Lite kan se dessa återskapade versioner i innehållsstrukturen.
 
@@ -39,7 +39,7 @@ En rensningsåtgärd körs automatiskt för att rensa upp det tillfälliga inneh
 
 ## Behörigheter {#permissions}
 
-I det klassiska användargränssnittet behövde man tidigare tänka på hur man skulle underlätta AEM (t.ex. använda `cq:text` tagg lib, eller anpassad integrering av `DiffService` OSGi-tjänst in i komponenter). Det här behövs inte längre för den nya diff-funktionen, eftersom skillnaden inträffar på klientsidan via DOM-jämförelse.
+I det klassiska användargränssnittet var det tidigare nödvändigt att ta hänsyn till utvecklingen för att underlätta AEM (som att använda `cq:text`-tagglib eller att integrera `DiffService` OSGi-tjänsten i komponenter). Det här behövs inte längre för den nya diff-funktionen, eftersom skillnaden inträffar på klientsidan via DOM-jämförelse.
 
 Det finns dock vissa begränsningar som måste beaktas av utvecklaren.
 
@@ -56,7 +56,7 @@ Det finns dock vissa begränsningar som måste beaktas av utvecklaren.
 
    * Komponenter som använder AJAX för att inkludera innehåll
    * Enkelsidiga program
-   * JavaScript-baserade komponenter som ändrar DOM när användaren interagerar.
+   * JavaScript-baserade komponenter som ändrar DOM efter användarinteraktion.
 
 >[!NOTE]
 >

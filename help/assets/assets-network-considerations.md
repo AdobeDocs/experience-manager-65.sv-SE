@@ -1,6 +1,6 @@
 ---
 title: Nätverksaspekter och -krav
-description: Diskutera nätverksaspekter när du utformar en [!DNL Adobe Experience Manager Assets] distribution.
+description: Diskuterar nätverksaspekter när du utformar en  [!DNL Adobe Experience Manager Assets] distribution.
 contentOwner: AG
 role: Architect, Admin
 feature: Developer Tools
@@ -13,18 +13,18 @@ ht-degree: 0%
 
 ---
 
-# [!DNL Assets] nätverksaspekter {#assets-network-considerations}
+# [!DNL Assets] nätverkshänsyn {#assets-network-considerations}
 
-Att förstå ditt nätverk är lika viktigt som att förstå [!DNL Adobe Experience Manager Assets]. Nätverket kan påverka uppladdning, nedladdning och användarupplevelser. Genom att diagram över din nätverkstopologi kan du identifiera kodpunkter och underoptimerade områden i nätverket som du måste åtgärda för att förbättra nätverkets prestanda och användarupplevelsen.
+Det är lika viktigt att förstå ditt nätverk som att förstå [!DNL Adobe Experience Manager Assets]. Nätverket kan påverka uppladdning, nedladdning och användarupplevelser. Genom att diagram över din nätverkstopologi kan du identifiera kodpunkter och underoptimerade områden i nätverket som du måste åtgärda för att förbättra nätverkets prestanda och användarupplevelsen.
 
 Se till att du inkluderar följande i nätverksdiagrammet:
 
 * Anslutning från klientenheten (till exempel dator, mobil och surfplatta) till nätverket.
 * Företagsnätets topologi.
-* Länka upp till Internet från företagets nätverk och [!DNL Experience Manager] miljö.
-* Topologi av [!DNL Experience Manager] miljö.
-* Definiera samtidiga konsumenter av [!DNL Experience Manager] nätverksgränssnitt.
-* Definierade arbetsflöden för [!DNL Experience Manager] distribution.
+* Länka till Internet från företagsnätverket och miljön [!DNL Experience Manager].
+* Topologi för miljön [!DNL Experience Manager].
+* Definiera samtidiga konsumenter av nätverksgränssnittet [!DNL Experience Manager].
+* Definierade arbetsflöden för distributionen [!DNL Experience Manager].
 
 ## Anslutning från klientenheten till företagsnätverket {#connectivity-from-the-client-device-to-the-corporate-network}
 
@@ -32,7 +32,7 @@ Börja med att diagram över anslutningen mellan de enskilda klientenheterna och
 
 ![chlimage_1-353](assets/chlimage_1-353.png)
 
-Klientenheter ansluter till företagsnätverket på olika sätt, t.ex. via WiFi, Ethernet till en delad switch samt via VPN. Det är viktigt att identifiera och förstå kontrollpunkter i det här nätverket för att [!DNL Assets] planera och modifiera nätverket.
+Klientenheter ansluter till företagsnätverket på olika sätt, t.ex. via WiFi, Ethernet till en delad switch samt via VPN. Det är viktigt att identifiera och förstå kontrollpunkter i det här nätverket för att [!DNL Assets] ska kunna planera och ändra nätverket.
 
 Överst till vänster i diagrammet visas tre enheter som delar en WiFi-åtkomstpunkt på 48 Mbit/s. Om alla enheter överförs samtidigt delas WiFi-nätverkets bandbredd mellan enheterna. Jämfört med systemet som helhet kan en användare stöta på en annan krymppunkt för de tre klienterna över den här delade kanalen.
 
@@ -48,15 +48,15 @@ Den dator som visas till höger har en begränsad uppström till företagsnätve
 
 Diagrammet visar högre hastigheter för överordnad länk inom företagsnätverket än vad som vanligtvis används. Dessa rör är delade resurser. Om den delade växeln förväntas hantera 50 klienter kan det vara en krymppunkt. I det inledande diagrammet delar bara två datorer den aktuella anslutningen.
 
-## Länka upp till Internet från företagets nätverk och [!DNL Experience Manager] miljö {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
+## Länka till Internet från företagsnätverket och miljön [!DNL Experience Manager] {#uplink-to-the-internet-from-the-corporate-network-and-aem-environment}
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
 Det är viktigt att ta hänsyn till okända faktorer på Internet och VPC-anslutningen eftersom bandbredden över Internet kan försämras på grund av belastningstopp eller storskaliga leverantörsavbrott. I allmänhet är internetanslutningen tillförlitlig. Ibland kan det dock medföra att kontrollpunkter läggs till.
 
-På uppkopplingen från ett företagsnätverk till Internet kan det finnas andra tjänster som använder bandbredden. Det är viktigt att förstå hur stor del av bandbredden som kan dedikeras eller prioriteras för Assets. Om t.ex. en 1 Gbit/s-länk redan har 80 % utnyttjandegrad kan du bara tilldela maximalt 20 % av bandbredden för [!DNL Experience Manager Assets].
+På uppkopplingen från ett företagsnätverk till Internet kan det finnas andra tjänster som använder bandbredden. Det är viktigt att du förstår hur stor del av bandbredden som kan dedikeras eller prioriteras för Assets. Om till exempel en 1 Gbit/s-länk redan har 80 % utnyttjandegrad kan du bara allokera högst 20 % av bandbredden för [!DNL Experience Manager Assets].
 
-Företagets brandväggar och proxies kan också forma bandbredden på många olika sätt. Den här typen av enhet kan prioritera bandbredden med hjälp av tjänstekvalitet, bandbreddsbegränsningar per användare eller bithastighetsbegränsningar per värd. Det är viktiga kontrollpunkter att granska eftersom de kan ha betydande effekter [!DNL Assets] användarupplevelse.
+Företagets brandväggar och proxies kan också forma bandbredden på många olika sätt. Den här typen av enhet kan prioritera bandbredden med hjälp av tjänstekvalitet, bandbreddsbegränsningar per användare eller bithastighetsbegränsningar per värd. Det här är viktiga kontrollpunkter att undersöka eftersom de kan påverka användarupplevelsen för [!DNL Assets] i betydande grad.
 
 I det här exemplet har företaget en upplänk på 10 Gbit/s. Den borde vara tillräckligt stor för flera kunder. Dessutom har brandväggen en värdhastighetsgräns på 10 Mbit/s. Denna begränsning kan potentiellt begränsa trafiken till en enda värd till 10 Mbit/s, även om uppkopplingen till Internet är på 10 Gbit/s.
 
@@ -64,21 +64,21 @@ Det här är den minsta klientorienterade kodpunkten. Du kan dock utvärdera om 
 
 I exempeldiagrammen kan du dra slutsatsen att sex enheter delar en konceptuell kanal på 10 Mbit/s. Beroende på storleken på de resurser som används kan detta vara otillräckligt för att uppfylla användarnas förväntningar.
 
-## Topologi av [!DNL Experience Manager] miljö {#topology-of-the-aem-environment}
+## Topologi för miljön [!DNL Experience Manager] {#topology-of-the-aem-environment}
 
 ![chlimage_1-356](assets/chlimage_1-356.png)
 
-Utforma topologin för [!DNL Experience Manager] miljö kräver detaljerade kunskaper om systemkonfigurationen och hur nätverket är anslutet i användarmiljön.
+För att designa topologin för miljön [!DNL Experience Manager] krävs detaljerade kunskaper om systemkonfigurationen och hur nätverket är anslutet i användarmiljön.
 
 Exempelscenariot innehåller en publiceringsgrupp med fem servrar, en binär S3-butik och Dynamic Media-konfigurerad.
 
-Avsändaren delar sin 100 Mbit/s-anslutning med två enheter, utsidan av världen och [!DNL Experience Manager] distribution. För samtidiga överförings- och nedladdningsåtgärder bör du dividera numret med två. Den anslutna externa lagringsplatsen använder en separat anslutning.
+Dispatcharen delar sin 100 Mbit/s-anslutning med två entiteter, utsidan och distributionen [!DNL Experience Manager]. För samtidiga överförings- och nedladdningsåtgärder bör du dividera numret med två. Den anslutna externa lagringsplatsen använder en separat anslutning.
 
-The [!DNL Experience Manager] distributionen delar sin 1 Gbit/s-anslutning med flera tjänster. Från ett nätverkstopologiperspektiv motsvarar det att dela en kanal med olika tjänster.
+Distributionen [!DNL Experience Manager] delar sin 1 Gbit/s-anslutning med flera tjänster. Från ett nätverkstopologiperspektiv motsvarar det att dela en kanal med olika tjänster.
 
-Granska nätverket från klientenheten till [!DNL Experience Manager] driftsättning, verkar den minsta chokpunkten vara begränsningen för företagets brandvägg på 10 Mbit. Du kan använda dessa värden i storleksräknaren i dialogrutan [Handbok för resursstorlek](assets-sizing-guide.md) för att fastställa användarupplevelsen.
+Om du granskar nätverket från klientenheten till distributionen av [!DNL Experience Manager] verkar den minsta kodpunkten vara begränsningen av företagsbrandväggen på 10 Mbit. Du kan använda de här värdena i storlekskalkylatorn i [Assets storleksguide](assets-sizing-guide.md) för att avgöra användarupplevelsen.
 
-## Definierade arbetsflöden för [!DNL Experience Manager] distribution {#defined-workflows-of-the-aem-deployment}
+## Definierade arbetsflöden för distributionen [!DNL Experience Manager] {#defined-workflows-of-the-aem-deployment}
 
 När du tar hänsyn till nätverksprestanda kan det vara viktigt att tänka på arbetsflödena och publiceringen som kommer att ske i systemet. Dessutom använder S3 eller annan nätverksansluten lagring som du använder och I/O-begäranden nätverksbandbredd. Det innebär att även i ett helt optimerat nätverk kan prestanda begränsas av disk-I/O.
 

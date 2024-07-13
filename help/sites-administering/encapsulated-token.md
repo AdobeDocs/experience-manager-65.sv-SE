@@ -58,7 +58,7 @@ Du kan se hur detta fungerar i en geografiskt distribuerad distribution med Mong
 >
 >* Anteckningssessioner är aktiverade, eller
 >
->* Användare skapas redan i AEM när synkroniseringen startar. Detta innebär att inkapslade token inte stöds i situationer där hanterarna **skapa** -användare under synkroniseringsprocessen.
+>* Användare skapas redan i AEM när synkroniseringen startar. Detta innebär att inkapslade token inte stöds i situationer där hanterarna **create** -användare under synkroniseringsprocessen.
 
 Det finns några saker du behöver tänka på när du konfigurerar den inkapslade token:
 
@@ -70,11 +70,11 @@ Det finns några saker du behöver tänka på när du konfigurerar den inkapslad
 Om du vill replikera nyckeln mellan instanser måste du:
 
 1. få åtkomst till AEM, vanligtvis en författarinstans, som innehåller det nyckelmaterial som ska kopieras,
-1. Leta reda på `com.adobe.granite.crypto.file` i det lokala filsystemet. Under den här sökvägen:
+1. Leta reda på paketet `com.adobe.granite.crypto.file` i det lokala filsystemet. Under den här sökvägen:
 
    * `<author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25`
 
-   The `bundle.info` filen i varje mapp identifierar paketnamnet.
+   `bundle.info`-filen i varje mapp identifierar paketnamnet.
 
 1. Navigera till datamappen. Till exempel:
 
@@ -86,7 +86,7 @@ Om du vill replikera nyckeln mellan instanser måste du:
    * `<publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle25/data`
 
 1. Klistra in de två filer som du kopierade tidigare.
-1. [Uppdatera krypteringspaketet](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) om målinstansen redan körs.
+1. [Uppdatera Crypto Bundle](/help/communities/deploy-communities.md#refresh-the-granite-crypto-bundle) om målinstansen redan körs.
 
 1. Upprepa stegen ovan för alla förekomster som du vill replikera nyckeln till.
 
@@ -94,6 +94,6 @@ Om du vill replikera nyckeln mellan instanser måste du:
 
 När HMAC-nyckeln har replikerats kan du aktivera den inkapslade token via webbkonsolen:
 
-1. Peka webbläsaren till `https://serveraddress:port/system/console/configMgr`
-1. Leta efter en post som anropas **Autentiseringshanterare för Adobe Granite-token** och klicka på den.
-1. I följande fönster: **Aktivera stöd för inkapslad token** och tryck **Spara**.
+1. Peka webbläsaren på `https://serveraddress:port/system/console/configMgr`
+1. Leta efter en post med namnet **Adobe Granite Token Authentication Handler** och klicka på den.
+1. I följande fönster markerar du rutan **Aktivera inkapslat tokenstöd** och trycker på **Spara**.

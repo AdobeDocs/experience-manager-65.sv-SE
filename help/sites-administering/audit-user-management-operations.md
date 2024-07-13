@@ -29,14 +29,14 @@ Förbättringen möjliggör granskning av CRUD-åtgärder (Skapa, Läs, Uppdater
 * En användare läggs till i en grupp
 * Behörighetsändringar för en befintlig användare eller grupp
 
-Som standard skrivs posterna till `error.log` -fil. För att underlätta övervakningen rekommenderar vi att de dirigeras om till en separat loggfil. Mer information om hur du gör detta finns i stycket nedan.
+Som standard skrivs posterna i filen `error.log`. För att underlätta övervakningen rekommenderar vi att de dirigeras om till en separat loggfil. Mer information om hur du gör detta finns i stycket nedan.
 
 ## Omdirigera utdata till en separat loggfil {#redirecting-the-output-to-a-separate-log-file}
 
-Om du vill dirigera om loggningsutdata till en separat loggfil skapar du en **Loggningsloggare för Apache Sling** konfiguration. Låt oss använda `useraudit.log` som namnet på den separata filen i exemplet nedan.
+Om du vill dirigera om loggningsutdata till en separat loggfil skapar du en **Apache Sling Logging Logger** -konfiguration. Vi använder `useraudit.log` som namn på den separata filen i exemplet nedan.
 
 1. Gå till webbkonsolen genom att gå till *https://serveraddress:serverport/system/console/configMgr*
-1. Sök efter **Konfiguration av loggningsloggare för Apache Sling**. Tryck sedan på + till höger om posten för att skapa en fabrikskonfiguration.
+1. Sök efter **Loggningskonfiguration för Apache Sling**. Tryck sedan på + till höger om posten för att skapa en fabrikskonfiguration.
 1. Skapa följande konfiguration:
 
    * **Loggnivå:** Information
@@ -44,7 +44,7 @@ Om du vill dirigera om loggningsutdata till en separat loggfil skapar du en **Lo
    * **Meddelandemönster:** standardnivå
    * **Logger:** com.adobe.granite.security.user.internal.audit, com.adobe.granite.security.user.internal.servlets.AuthorizableServlet
 
-   Om du vill ange båda loggarna **Logger** måste du ange namnet på det första fältet, sedan skapa ett annat fält genom att trycka på plusknappen (+) och ange namnet på den andra loggen.
+   Om du vill ange båda loggarna i fältet **Logger** måste du ange namnet på den första, sedan skapa ett annat fält genom att trycka på plusknappen (+) och ange namnet på den andra loggen.
 
 ## Exempelutdata {#example-output}
 

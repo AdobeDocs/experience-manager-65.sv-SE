@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->En lista över innehåll- och konfigurationsändringar som inte omfattas av kompatibilitetspaketet finns på [Omstrukturering av lager i AEM](/help/sites-deploying/repository-restructuring.md).
+>En lista över innehåll- och konfigurationsändringar som inte omfattas av kompatibilitetspaketet finns i [Databasomstrukturering i AEM](/help/sites-deploying/repository-restructuring.md).
 
 I Adobe Experience Manager (AEM) 6.5 har alla funktioner utvecklats med bakåtkompatibilitet i åtanke.
 
@@ -37,13 +37,13 @@ Med Kompatibilitetspaketet kan du köra AEM i kompatibilitetsläge och skjuta up
 >
 >Kompatibilitetspaketet är bara en tillfällig lösning för att skjuta upp utvecklingen som krävs för att vara AEM 6.5-kompatibel. Adobe rekommenderar det endast som ett sista alternativ om du inte kan åtgärda kompatibilitetsproblem via utveckling omedelbart efter uppgraderingen. Dessutom rekommenderar Adobe att du växlar till inbyggt läge och avinstallerar kompatibilitetspaketet när du har valt att fortsätta med 6.5-baserad anpassad utveckling och att du har tillgång till alla 6.5-funktioner.
 
-![sase](assets/sase.png)
+![ase](assets/sase.png)
 
-Kompatibilitetspaketet har två lägen: **Routning aktiverad** och **Routning inaktiverad**.
+Kompatibilitetspaketet har två lägen: **Routing Enabled** och **Routing Disabled**.
 
 Detta gör att AEM 6.5 kan köras i tre lägen:
 
-**Ursprungligt läge:**
+**Inbyggt läge:**
 
 Det inbyggda läget är till för kunder som vill använda alla nya funktioner i AEM 6.5 och är redo att göra en del av utvecklingen för att få anpassningarna att fungera med alla nya funktioner.
 
@@ -57,11 +57,11 @@ Kompatibilitetsläget är avsett för kunder som har anpassat gränssnitt som in
 
 Äldre läge är för kunder som har anpassade gränssnitt som baseras på äldre eller inaktuell kod från AEM som har flyttats ut i kompatibilitetspaketet.
 
-![sapte](assets/sapte.png)
+![form](assets/sapte.png)
 
 ## Konfigurera {#how-to-set-up}
 
-The **AEM 6.4 Kompatibilitetspaket för 6.5** kan installeras som ett paket med pakethanteraren. Du kan ladda ned [AEM 6.4 Compatibility Pack for 6.5 from the Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=compat*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=20&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fcompatpack%2Faem-compat-cq65-to-cq64) webbplats.
+Kompatibilitetspaketet **AEM 6.4 för 6.5** kan installeras som ett paket med pakethanteraren. Du kan hämta [AEM 6.4-kompatibilitetspaketet för 6.5 från platsen för programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=compat*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=20&amp;package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fcompatpack%2Faem-compat-cq65-to-cq64).
 
 När Kompatibilitetspaketet har installerats kan routningen aktiveras eller inaktiveras med en växel i OSGI-konfigurationen enligt nedan:
 

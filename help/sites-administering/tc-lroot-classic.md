@@ -37,20 +37,20 @@ I följande procedur används det klassiska användargränssnittet för att skap
 
    I dialogrutan Språkkopia visas en matris med tillgängliga språkversioner och webbsidor. Ett x i en språkkolumn betyder att sidan är tillgänglig på det språket.
 
-   ![språkDialogrutan](assets/languagecopydialog.png)
+   ![languageDialog](assets/languagecopydialog.png)
 
 1. Om du vill kopiera en befintlig sida eller ett befintligt sidträd till en språkversion, markerar du cellen för sidan i språkkolumnen. Klicka på pilen och välj den typ av kopia som ska skapas.
 
    I följande exempel kopieras sidan för utrustning/solglasögon/irian till den franska språkversionen.
 
-   ![språkopydilogdropdown](assets/languagecopydilogdropdown.png)
+   ![languagePodDilogListruta](assets/languagecopydilogdropdown.png)
 
    | Typ av språkkopia | Beskrivning |
    |---|---|
    | auto | Använder beteendet från överordnade sidor |
    | ignorera | Skapar inte en kopia av den här sidan och dess underordnade sidor |
    | `<language>+` (t.ex. franska+) | Kopierar sidan och alla underordnade sidor från det språket |
-   | `<language>` (t.ex. franska) | Kopierar endast sidan från det språket |
+   | `<language>` (till exempel franska) | Kopierar endast sidan från det språket |
 
 1. Stäng dialogrutan genom att klicka på OK.
 1. Klicka på Ja i nästa dialogruta för att bekräfta kopian.

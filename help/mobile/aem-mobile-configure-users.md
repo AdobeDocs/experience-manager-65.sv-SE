@@ -34,7 +34,7 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
 1. Skapa en användargrupp med namnet&quot;app-authors&quot;:
 
-   Navigera till User Admin Console: [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
+   Navigera till Admin Console: [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
    I användargruppkonsolen väljer du plusknappen (+) för att skapa en grupp.
 
@@ -44,11 +44,11 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
-1. Nu när du har skapat användargruppen app-authors kan du lägga till enskilda teammedlemmar i den nya gruppen via [Användare Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. Nu när du har skapat användargruppen app-authors kan du lägga till enskilda teammedlemmar i den nya gruppen via [Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
-1. Med följande kan du lägga till i gruppen AEM innehållsförfattare:
+1. Med följande kan du lägga till i AEM innehållsförfattargrupp:
 
    (Läs) den
 
@@ -59,7 +59,7 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
 ### AEM Mobile Application Administrators Group (app-admins group) {#aem-mobile-application-administrators-group-app-admins-group}
 
-Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörigheter som finns i appförfattare **OCH** Dessutom ansvarar de också för
+Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörigheter som finns i appförfattarna **AND** och dessutom ansvarar de för:
 
 * Förproduktion, publicering och rensning av programuppdateringar för ContentSync OTA
 
@@ -83,7 +83,7 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
    >
    >arbetsflödesanvändare krävs för att fjärrbygga med PhoneGap Build-tjänsten
 
-1. Navigera till [Behörighetskonsol](http://localhost:4502/useradmin) och lägga till behörigheter för att administrera molntjänster
+1. Navigera till [Behörighetskonsolen](http://localhost:4502/useradmin) och lägg till behörigheter för att administrera molntjänster
 
    * (Läs, Ändra, Skapa, Ta bort, Replikera) på /etc/cloudServices/mobiltjänster
 

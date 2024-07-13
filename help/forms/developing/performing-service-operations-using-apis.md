@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Utföra serviceåtgärder med API:er {#performing-service-operations-using-apis}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 Innan du börjar utveckla klientprogram med AEM Forms API:er rekommenderar Adobe att du först läser Invoke AEM Forms, som beskriver olika sätt att anropa tjänster på. (Se [Tjänstbehållare](/help/forms/developing/service-container.md#service-container).)
 

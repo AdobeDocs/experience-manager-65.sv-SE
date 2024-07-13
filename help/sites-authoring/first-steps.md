@@ -20,14 +20,14 @@ ht-degree: 6%
 
 # Steg 1 för författare{#first-steps-for-authors}
 
-I det här avsnittet får du en översikt över de huvuduppgifter som du kommer att använda när [börja skapa innehåll](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) med Adobe Experience Manager (AEM).
+I det här avsnittet finns en översikt över de huvudåtgärder som du kommer att använda när [börjar redigera innehåll](/help/sites-authoring/author.md#concept-of-authoring-and-publishing) med Adobe Experience Manager (AEM).
 
 Den omfattar följande:
 
 * [Komma igång](#getting-started)\
   Information om den grundläggande händelsesekvensen som du behöver för att skapa och publicera din första sida.
 
-* [Ytterligare åtgärder](#further-actions)\
+* [Fler åtgärder](#further-actions)\
   Fortsätt med de många andra åtgärderna som du kan använda när du redigerar.
 
 ## Komma igång {#getting-started}
@@ -48,20 +48,20 @@ För många åtgärder, till exempel redigering, måste du [öppna en sida](/hel
 
 ### Redigera en sida {#editing-a-page}
 
-Om instansen redan har befintliga sidor eller om du själv har skapat en ny sida kan du [redigera en sida](/help/sites-authoring/editing-content.md) av:
+Oavsett om din instans redan har befintliga sidor eller du själv har skapat en ny sida kan du [redigera en sida](/help/sites-authoring/editing-content.md) genom att:
 
 * [Infoga en komponent (stycke)](/help/sites-authoring/editing-content.md#inserting-a-component)
-* [Redigera/konfigurera/kopiera/klipp/ta bort/klistra in](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) en komponent
+* [Redigera/Konfigurera/Kopiera/Klipp ut/Ta bort/Klistra in](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) en komponent
 * [Redigera (innehåll)](/help/sites-authoring/editing-content.md#edit-content)
 * [Redigera (innehåll) - helskärmsläge](/help/sites-authoring/editing-content.md#edit-content-full-screen-mode)
 
 * [Ångra och göra om sidredigeringar](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits)
-* [Använda förhandsgranskningsläge](/help/sites-authoring/editing-content.md#preview-mode) (för att se hur det kommer att se ut när det publiceras)
+* [Använder förhandsgranskningsläge](/help/sites-authoring/editing-content.md#preview-mode) (för att se hur det kommer att se ut när det publiceras)
 * [Låsa en sida](/help/sites-authoring/editing-content.md#locking-a-page)
 
 ### Publicera en sida {#publishing-a-page}
 
-När du är klar med redigeringen av sidan vill du [publicera (eller aktivera) sidan](/help/sites-authoring/publishing-pages.md#main-pars-title-10) så att den blir tillgänglig för besökare på er webbplats.
+När du är klar med redigeringen av sidan vill du [publicera (eller aktivera) sidan](/help/sites-authoring/publishing-pages.md#main-pars-title-10) så att den är tillgänglig för besökare på webbplatsen.
 
 ## Ytterligare åtgärder {#further-actions}
 
@@ -69,15 +69,15 @@ Efter de grundläggande stegen finns det många andra åtgärder som du kan anv�
 
 ### Kopiera en sida {#copying-a-page}
 
-Det är ibland enklare att [kopiera en sida](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page) och återanvänd innehållet i stället för att skapa allt från början igen.
+Det är ibland enklare att [kopiera en sida](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page) och återanvända innehållet i stället för att skapa allt från början igen.
 
 ### Flytta eller byta namn på en sida {#moving-or-renaming-a-page}
 
-[Flytta och byta namn på sidor](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page) i stort sett samma sak.
+[Att flytta och byta namn på sidor](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page) har i princip gjorts med samma åtgärd.
 
 ### Avpublicera en sida {#unpublishing-a-page}
 
-Om du vill göra tidigare publicerat (eller aktiverat) innehåll otillgängligt på din offentliga webbplats [avpublicera (eller inaktivera) sidan](/help/sites-authoring/publishing-pages.md#main-pars-title-5).
+Om du vill göra tidigare publicerat (eller aktiverat) innehåll otillgängligt på den offentliga webbplatsen [avpublicerar (eller inaktiverar) du sidan](/help/sites-authoring/publishing-pages.md#main-pars-title-5).
 
 ### Ta bort en sida {#deleting-a-page}
 
@@ -85,11 +85,11 @@ Om en sida inte längre behövs kanske du vill [ta bort sidan](/help/sites-autho
 
 ### Ange sidegenskaper {#setting-the-page-properties}
 
-Varje [sidan har egenskaper](/help/sites-authoring/editing-page-properties.md) som du kan definiera för att avgöra olika aspekter av åtgärden. Dessa kan uppdateras med båda användargränssnitten.
+Varje [sida har egenskaper](/help/sites-authoring/editing-page-properties.md) som du kan definiera för att avgöra olika aspekter av åtgärden. Dessa kan uppdateras med båda användargränssnitten.
 
 ### Skapa en sidversion {#creating-a-version-of-a-page}
 
-Du kan [skapa en version](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version) på en sida och sedan [återgå till en version](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version) vid behov.
+Du kan [skapa en version](/help/sites-authoring/working-with-page-versions.md#creating-a-new-version) av en sida och sedan [återgå till en version](/help/sites-authoring/working-with-page-versions.md#reverting-to-a-page-version) om det behövs.
 
 ## Mer information {#more-information}
 

@@ -37,14 +37,14 @@ De affärsprocesser som din organisation har etablerat kan representeras som arb
 >
 >Mer information finns i:
 >
->* Använda och delta i arbetsflöden: [Arbeta med arbetsflöden](/help/sites-authoring/workflows.md).
+>* Tillämpar och deltar i arbetsflöden: [Arbeta med arbetsflöden](/help/sites-authoring/workflows.md).
 >* Skapa arbetsflödesmodeller och utöka arbetsflödesfunktioner: [Utveckla och utöka arbetsflöden](/help/sites-developing/workflows.md).
->* Förbättra prestanda för arbetsflöden som använder betydande serverresurser: [Samtidig bearbetning av arbetsflöden](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing).
+>* Förbättrar prestanda för arbetsflöden som använder betydande serverresurser: [Samtidig arbetsflödesbearbetning](/help/sites-deploying/configuring-performance.md#concurrent-workflow-processing).
 >
 
 ## Arbetsflödesmodeller och instanser {#workflow-models-and-instances}
 
-[Arbetsflödesmodeller](/help/sites-developing/workflows.md#model) AEM representeras och implementeras affärsprocesser:
+[Arbetsflödesmodeller](/help/sites-developing/workflows.md#model) i AEM representerar och implementerar affärsprocesser:
 
 * Vanligtvis arbetar de med sidor eller resurser för att uppnå ett visst resultat.
 * Dessa sidor och/eller resurser kallas arbetsflödets nyttolast.
@@ -55,7 +55,7 @@ När en arbetsflödesmodell startas (körs) skapas en arbetsflödesinstans. En a
 
 >[!CAUTION]
 >
->Stegen som utförs är de som definieras av arbetsflödesmodellen *när instansen genereras*. Se [Utveckla arbetsflöden](/help/sites-developing/workflows.md#model) för mer information.
+>Stegen som utförs är de som definieras av arbetsflödesmodellen *vid den tidpunkt instansen genereras*. Mer information finns i [Utveckla arbetsflöden](/help/sites-developing/workflows.md#model).
 
 Arbetsflödesinstanser går igenom följande livscykel:
 
@@ -92,21 +92,21 @@ Ett arbetsflöde kan ha någon av följande statusar:
 * **KÖRS**: Arbetsflödesinstansen körs.
 * **SLUTFÖRD**: Arbetsflödesinstansen har avslutats.
 
-* **UPPHÄVD**: Märker upp arbetsflödet som pausat. Se dock varningsmeddelandet nedan om ett känt problem med det här läget.
-* **ABORTERAD**: Arbetsflödesinstansen har avslutats.
-* **STAL**: Progression för arbetsflödesinstansen kräver att ett bakgrundsjobb körs, men jobbet kan inte hittas i systemet. Detta kan inträffa när ett fel inträffar när arbetsflödet körs.
+* **UPPHÖRT**: Markerar arbetsflödet som pausat. Se dock varningsmeddelandet nedan om ett känt problem med det här läget.
+* **AVBRUTEN**: Arbetsflödesinstansen har avslutats.
+* **STALE**: Progression för arbetsflödesinstansen kräver att ett bakgrundsjobb körs, men jobbet kan inte hittas i systemet. Detta kan inträffa när ett fel inträffar när arbetsflödet körs.
 
 >[!NOTE]
 >
->När körningen av ett processteg resulterar i fel visas steget i administratörens inkorg och arbetsflödets status är **KÖRS**.
+>När körningen av ett processsteg resulterar i fel visas steget i administratörens inkorg och arbetsflödets status är **RUNNING**.
 
 Beroende på status kan du utföra åtgärder för att köra arbetsflödesinstanser när du måste ingripa i den normala förloppet för en arbetsflödesinstans:
 
-* **Gör uppehåll**: När du gör uppehåll ändras arbetsflödets status till Pausat. Se Varning nedan:
+* **Gör uppehåll**: Om du gör uppehåll ändras arbetsflödets status till Pausat. Se Varning nedan:
 
 >[!CAUTION]
 >
 >Det finns ett känt fel när ett arbetsflödesläge markeras som Pausa. I det här läget är det möjligt att agera på pausade arbetsflödesobjekt i en Inkorg.
 
-* **Återuppta**: Startar om ett pausat arbetsflöde på samma plats där det pausades, med samma konfiguration.
-* **Avsluta**: Avslutar arbetsflödets körning och ändrar tillståndet till **ABORTERAD**. En avbruten arbetsflödesinstans kan inte startas om.
+* **Återuppta**: Startar om ett pausat arbetsflöde på samma plats i körningen där det pausades, med samma konfiguration.
+* **Avsluta**: Avslutar arbetsflödets körning och ändrar tillståndet till **ABORTED**. En avbruten arbetsflödesinstans kan inte startas om.

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Webbkonsol{#web-console}
 
-Webbkonsolen i Adobe Experience Manager (AEM) är baserad på [Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix är en community-satsning för att implementera OSGi R4 Service Platform, som innehåller OSGi-ramverket och standardtjänster.
+Webbkonsolen i Adobe Experience Manager (AEM) baseras på [Apache Felix Web Management Console](https://felix.apache.org/documentation/subprojects/apache-felix-web-console.html). Apache Felix är en community-satsning för att implementera OSGi R4 Service Platform, som innehåller OSGi-ramverket och standardtjänster.
 
 >[!NOTE]
 >
@@ -28,25 +28,25 @@ Webbkonsolen i Adobe Experience Manager (AEM) är baserad på [Apache Felix Web 
 
 Webbkonsolen erbjuder ett urval flikar för underhåll av OSGi-paketen, bland annat:
 
-* [Konfiguration](#configuration): används för att konfigurera OSGi-paketen och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar
+* [Konfiguration](#configuration): används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar
 * [Paket](#bundles): används för att installera paket
 * [Komponenter](#components): används för att kontrollera status för komponenter som krävs för AEM
 
 Alla ändringar som görs tillämpas omedelbart på det system som körs. Ingen omstart krävs.
 
-Konsolen kan nås från `../system/console`; till exempel:
+Konsolen kan nås från `../system/console`, till exempel:
 
 `http://localhost:4502/system/console/components`
 
 ## Konfiguration {#configuration}
 
-The **Konfiguration** -fliken används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
+Fliken **Konfiguration** används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
 
 >[!NOTE]
 >
->Se [OSGi-konfiguration med webbkonsolen](/help/sites-deploying/configuring-osgi.md) för mer information.
+>Mer information finns i [OSGi-konfiguration med webbkonsolen](/help/sites-deploying/configuring-osgi.md).
 
-The **Konfiguration** -fliken kan nås av antingen:
+Fliken **Konfiguration** kan nås av antingen:
 
 * Listrutan:
 
@@ -93,7 +93,7 @@ Du kan sedan uppdatera parametrarna efter behov och:
 
   Ta bort den aktuella konfigurationen. Om det är standard återställs parametrarna till standardinställningarna. Om den skapas från en fabrikskonfiguration tas den specifika instansen bort.
 
-* **Lås upp**
+* **Lås upp bindning**
 
   Lås upp den aktuella konfigurationen från paketet.
 
@@ -103,7 +103,7 @@ Du kan sedan uppdatera parametrarna efter behov och:
 
 ## Paket {#bundles}
 
-The **Paket** är den mekanism som används för att installera OSGi-paket som krävs för AEM. Du kommer åt fliken på något av följande sätt:
+Fliken **Paket** är en mekanism för att installera de OSGi-paket som krävs för AEM. Du kommer åt fliken på något av följande sätt:
 
 * Listrutan:
 
@@ -121,7 +121,7 @@ På den här fliken kan du:
 
 * **Installera eller uppdatera**
 
-  Du kan **Bläddra** för att hitta filen som innehåller ditt paket och ange om det ska **Starta** omedelbart och **Startnivå**.
+  Du kan **Bläddra** för att hitta filen som innehåller ditt paket och ange om det ska **Börja** omedelbart och vid vilken **Startnivå**.
 
 * **Läs in igen**
 
@@ -133,7 +133,7 @@ På den här fliken kan du:
 
   Efter en uppdatering kan till exempel både den gamla och den nya versionen fortfarande köras på grund av tidigare referenser. Det här alternativet kontrollerar och flyttar alla referenser till den nya versionen, så att den gamla versionen kan stoppas.
 
-* **Starta**
+* **Start**
 
   Startar ett paket enligt den angivna startnivån.
 
@@ -151,15 +151,15 @@ På den här fliken kan du:
 
 >[!NOTE]
 >
->Efter **Uppdatera** rekommenderar Adobe att du utför en **Uppdatera paket**.
+>Efter **Update** rekommenderar Adobe att du utför en **Update Packages**.
 
 ## Komponenter {#components}
 
-The **Komponenter** På -fliken kan du aktivera och/eller inaktivera de olika komponenterna. Den kan nås av antingen:
+På fliken **Komponenter** kan du aktivera och/eller inaktivera de olika komponenterna. Den kan nås av antingen:
 
 * Listrutan:
 
-  **Main >**
+  **Huvudsida >**
 
 * URL-adressen, till exempel:
 

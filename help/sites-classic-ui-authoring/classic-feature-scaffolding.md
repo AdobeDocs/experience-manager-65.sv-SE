@@ -29,15 +29,15 @@ Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält so
 
 ## Så fungerar Scaffolding {#how-scaffolding-works}
 
-Scaffäler lagras i **verktyg** konsol för webbplatsadministratören.
+Skafflar lagras i **verktygskonsolen** för webbplatsadministratören.
 
-* Öppna **verktyg** konsol och klicka **Standardsidans placering**.
-* Klicka på **Geometrixx**.
-* Under **Geometrixx** hittar du en *avskalad sida* anropad **Nyheter**. Dubbelklicka för att öppna den här sidan.
+* Öppna konsolen **Verktyg** och klicka på **Standardsidkodning**.
+* Klicka på **Geometrixx** under det här.
+* Under **Geometrixx** hittar du en *schafold-sida* med namnet **News**. Dubbelklicka för att öppna den här sidan.
 
-![howscafels_work](assets/howscaffolds_work.png)
+![howscaffels_work](assets/howscaffolds_work.png)
 
-Ställningen består av ett formulär med ett fält för varje innehållspunkt som utgör den sida som ska skapas och fyra viktiga parametrar som är tillgängliga via **Sidegenskaper** på sidan med ställningar.
+Stapeln består av ett formulär med ett fält för varje innehållspunkt som utgör sidan som ska skapas och fyra viktiga parametrar som du kommer åt via **sidegenskaperna** på struktursidan.
 
 ![pageprops](assets/pageprops.png)
 
@@ -45,10 +45,10 @@ Skolningssidans egenskaper är:
 
 * **Titeltext**: Det här är namnet på själva byggnadssidan. I det här exemplet kallas det&quot;News&quot;.
 * **Beskrivning**: Detta visas under rubriken på byggnadssidan.
-* **Målmall**: Det här är den mall som det här skalet använder när en sida skapas. I det här exemplet är det en *Geometrixx innehållssida* mall.
+* **Målmall**: Det här är mallen som används för den här strukturen när en sida skapas. I det här exemplet är det en *Geometrixx Content Page*-mall.
 * **Målsökväg**: Det här är sökvägen till den överordnade sidan under vilken den här strukturen skapar sidor. I det här exemplet är sökvägen */content/geometrixx/en/news*.
 
-Skaffets brödtext är formen. När en användare vill skapa en sida med hjälp av skalet fyller han i formuläret och klickar *Skapa*, längst ned. I **Nyheter** exemplet ovan innehåller följande fält:
+Skaffets brödtext är formen. När en användare vill skapa en sida med skalet fyller han i formuläret och klickar på *Skapa* längst ned. I exemplet **News** ovan har formuläret följande fält:
 
 * **Titel**: Det här är namnet på sidan som ska skapas. Det här fältet finns alltid på alla ställningar.
 * **Text**: Det här fältet motsvarar en textkomponent på den resulterande sidan.
@@ -61,25 +61,25 @@ Skaffets brödtext är formen. När en användare vill skapa en sida med hjälp 
 
 ### Skapa ett ställningar {#creating-a-scaffold}
 
-Om du vill skapa en schablon går du till **verktyg** konsol, sedan **Standardsidans placering** och skapa en sida. Det finns en malltyp för en sida, *Ställningsmall.*
+Om du vill skapa ett schackrum går du till konsolen **Verktyg**, **Standardsidans schackring** och skapar en sida. En malltyp för en sida är tillgänglig, *mallen för scenkodning.*
 
-Gå till **Sidegenskaper** på den nya sidan och ange *Titeltext*, *Beskrivning*, *Målmall* och *Målsökväg*, enligt beskrivningen ovan.
+Gå till den nya sidans **Sidegenskaper** och ange *titeltexten*, *beskrivningen*, *målmallen* och *målsökvägen* enligt beskrivningen ovan.
 
-Därefter måste du definiera strukturen för sidan som det här skalet ska skapa. För att göra detta, gå till **[designläge](/help/sites-authoring/page-authoring.md#sidekick)** på scensidan. En länk visas där du kan redigera skalet i **dialogruteredigerare**.
+Därefter måste du definiera strukturen för sidan som det här skalet ska skapa. Det gör du genom att gå till **[designläge](/help/sites-authoring/page-authoring.md#sidekick)** på struktursidan. En länk visas där du kan redigera skalet i **dialogruteredigeraren**.
 
 ![cq5_dialog_editor](assets/cq5_dialog_editor.png)
 
 I dialogruteredigeraren anger du de egenskaper som ska skapas varje gång en ny sida skapas med det här skalet.
 
-Dialogrutedefinitionen för ett ställningar fungerar på liknande sätt som för en komponent (se [Komponenter](/help/sites-developing/components.md)). Det finns dock några viktiga skillnader:
+Dialogrutedefinitionen för ett ställningar fungerar på ungefär samma sätt som för en komponent (se [Komponenter](/help/sites-developing/components.md)). Det finns dock några viktiga skillnader:
 
-* Komponentdialogrutans definitioner återges som vanliga dialogrutor (som i t.ex. den mittersta rutan i dialogruteredigeraren) medan definitioner i dialogrutan för att ställa in skala, trots att de visas som vanliga dialogrutor i dialogruteredigeraren, återges som ett ställningar på den skalbara sidan (som visas i **Nyheter** ställningar ovan).
+* Komponentdialogrutans definitioner återges som vanliga dialogrutor (som i till exempel den mittersta rutan i dialogruteredigeraren) medan definitioner i dialogrutan, som visas som vanliga dialogrutor i dialogruteredigeraren, återges som ett ställningar på den skalbara sidan (som visas i skalan **News** ovan).
 * Komponentdialogrutor innehåller endast fält för de värden som behövs för att definiera innehållet i en enskild specifik komponent. En strukturdialogruta måste innehålla fält för varje egenskap i varje stycke på sidan som ska skapas.
-* Om det finns komponentdialogrutor är komponenten som används för att återge det angivna innehållet implicit och därför är `sling:resourceType` styckets egenskap fylls i automatiskt när stycket skapas. I ett schackmönster måste all information som definierar både innehållet och den tilldelade komponenten för ett visst stycke anges i själva dialogrutan. I schackold-dialogrutor måste den här informationen anges med *Dold* fält för att skicka den här informationen när sidor skapas.
+* Om det finns komponentdialogrutor är den komponent som används för att återge det angivna innehållet implicit och därför fylls egenskapen `sling:resourceType` i automatiskt när stycket skapas. I ett schackmönster måste all information som definierar både innehållet och den tilldelade komponenten för ett visst stycke anges i själva dialogrutan. I dimensionella dialogrutor måste den här informationen anges med hjälp av fälten *Dold* för att den här informationen ska kunna skickas när sidan skapas.
 
-En titt på exemplet **Nyheter** i dialogrutan kan du förklara hur det fungerar. Gå till designläge på scensidan och klicka på länken för dialogruteredigeraren.
+Om du tittar på scenariodialogrutan **News** i dialogruteredigeraren kan du förklara hur det här fungerar. Gå till designläge på scensidan och klicka på länken för dialogruteredigeraren.
 
-Klicka nu på dialogrutan **Dialog > Tab Panel > Text > Text**, så här:
+Klicka nu på dialogrutefältet **Dialog > Tabb-panel > Text > Text** så här:
 
 ![textedit](assets/textedit.png)
 
@@ -95,12 +95,12 @@ Det här är namnet på den egenskap som innehållet i det här fältet ska skri
 
 Detta definierar platsen för innehållslagringen för texten som ska infogas i det här fältet. Men vi måste också specificera ytterligare två egenskaper för detta innehåll:
 
-* Att strängen som lagras här måste tolkas som *RTF* och
+* Det faktum att strängen som lagras här måste tolkas som *RTF*, och
 * vilken komponent som ska användas för att återge innehållet till den resulterande sidan.
 
 I en normal komponentdialogruta behöver du inte ange den här informationen eftersom den är implicit eftersom dialogrutan redan är bunden till en viss komponent.
 
-Om du vill ange dessa två informationsdelar använder du dolda fält. Klicka på det första dolda fältet **Dialog > Tab Panel > Text > Hidden**, så här:
+Om du vill ange dessa två informationsdelar använder du dolda fält. Klicka på det första dolda fältet **Dialog > Tabb-panel > Text > Dold** så här:
 
 ![dold](assets/hidden.png)
 
@@ -114,11 +114,11 @@ Egenskapen name för det här dolda fältet är
 
 Det här är en boolesk egenskap som används för att tolka textsträngen som lagras på `./jcr:content/par/text/text`.
 
-Eftersom vi vet att texten ska tolkas som en RTF-text kan vi specificera `value` egenskap för det här fältet som `true`.
+Eftersom vi vet att texten ska tolkas som RTF-text kan vi ange egenskapen `value` för det här fältet som `true`.
 
 >[!CAUTION]
 >
->I dialogruteredigeraren kan användaren ändra värdena för *befintlig* egenskaper i dialogdefinitionen. Användaren måste använda för att lägga till en ny egenskap [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md). När ett nytt dolt fält läggs till i en dialogrutedefinition med dialogruteredigeraren har det inte något *value* -egenskap (det vill säga en egenskap med namnet&quot;value&quot;). Om det dolda fältet i fråga kräver att en standardvärdeegenskap ställs in, måste den här egenskapen läggas till manuellt med något av CRX-verktygen. Värdet kan inte läggas till med själva dialogruteredigeraren. Men när egenskapen finns kan dess värde redigeras med dialogruteredigeraren.
+>I dialogruteredigeraren kan användaren ändra värdena för *befintliga*-egenskaper i dialogdefinitionen. Användaren måste använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md) för att lägga till en ny egenskap. När ett nytt dolt fält läggs till i en dialogrutedefinition med dialogruteredigeraren har det till exempel inte någon *value* -egenskap (det vill säga en egenskap med namnet &quot;value&quot;). Om det dolda fältet kräver att en standardvärdeegenskap ställs in, måste den här egenskapen läggas till manuellt med något av CRX-verktygen. Värdet kan inte läggas till med själva dialogruteredigeraren. Men när egenskapen finns kan dess värde redigeras med dialogruteredigeraren.
 
 Det andra dolda fältet visas om du klickar på det så här:
 
@@ -136,13 +136,13 @@ Och det fasta värdet som anges för den här egenskapen är
 
 `foundation/components/textimage`
 
-Detta anger att komponenten som ska användas för att återge textinnehållet i det här stycket är *Textbild* -komponenten. Använda med `isRichText` booleskt, som anges i det andra dolda fältet, kan komponenten återge den faktiska textsträngen som lagras på `./jcr:content/par/text/text` på önskat sätt.
+Detta anger att komponenten som ska användas för att återge textinnehållet i det här stycket är komponenten *Textbild*. Med hjälp av det booleska `isRichText`-värde som anges i det andra dolda fältet kan komponenten återge den faktiska textsträngen som lagras på `./jcr:content/par/text/text` på det sätt som du vill.
 
 ### Skällning med MSM-arv {#scaffolding-with-msm-inheritance}
 
 I det klassiska användargränssnittet är ställningar helt integrerade med MSM-arv (om tillämpligt).
 
-När du öppnar en sida i **Ställning** läge (med ikonen längst ned i sidosparken) alla komponenter som är föremål för arv indikeras av:
+När du öppnar en sida i läget **Scaffolding** (med ikonen längst ned i sidosparken) visas alla komponenter som är föremål för arv av:
 
 * en låssymbol (för de flesta komponenter, till exempel Text och Titel)
 * en mask med texten **Klicka för att avbryta arv** (för bildkomponenter)
@@ -166,4 +166,4 @@ När du har låst upp kan du återställa arvet genom att klicka på den olåsta
 
 >[!NOTE]
 >
->Om arvet avbryts på sidnivå (från fliken Livecopy i Sidegenskaper) kan alla komponenter redigeras i **Ställning** (de visas i olåst läge).
+>Om arvet avbryts på sidnivå (från fliken Livecopy i Sidegenskaper) kan alla komponenter redigeras i läget **Skällning** (de visas i ett olåst läge).

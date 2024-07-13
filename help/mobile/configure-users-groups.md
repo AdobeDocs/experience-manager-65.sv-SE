@@ -39,7 +39,7 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
 1. Skapa en användargrupp med namnet&quot;app-authors&quot;:
 
-   Navigera till User Admin Console: [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
+   Navigera till Admin Console: [http://localhost:4502/libs/granite/security/content/groupadmin.html](http://localhost:4502/libs/granite/security/content/groupadmin.html)
 
    I användargruppkonsolen väljer du plusknappen (+) för att skapa en grupp.
 
@@ -51,13 +51,13 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
    Lägg till appförfattare i gruppen Författare
 
-1. Nu när du har skapat användargruppen app-authors kan du lägga till enskilda teammedlemmar i den nya gruppen via [Användare Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
+1. Nu när du har skapat användargruppen app-authors kan du lägga till enskilda teammedlemmar i den nya gruppen via [Admin Console](http://localhost:4502/libs/granite/security/content/useradmin.md).
 
    ![chlimage_1-19](assets/chlimage_1-19.png)
 
    Redigera användargrupper
 
-1. Navigera till [Behörighetskonsol](http://localhost:4502/useradmin) och lägga till behörigheter för att administrera molntjänster
+1. Navigera till [Behörighetskonsolen](http://localhost:4502/useradmin) och lägg till behörigheter för att administrera molntjänster
 
    * (Läs) på /etc/cloudServices
 
@@ -67,7 +67,7 @@ Medlemmar i gruppen app-author ansvarar för att skapa AEM innehåll för mobila
 
 ### AEM Mobile Application Administrators Group (app-admins group) {#aem-mobile-application-administrators-group-app-admins-group}
 
-Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörigheter som finns i appförfattare **OCH** Dessutom ansvarar de också för
+Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörigheter som finns i appförfattarna **AND** och dessutom ansvarar de för:
 
 * Konfigurera molntjänster för PhoneGap Build och Adobe Mobile Services i AEM
 * Mellanlagring, publicering och rensning av uppdateringar av innehållssynkronisering, OTA
@@ -88,7 +88,7 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 
    ![chlimage_1-20](assets/chlimage_1-20.png)
 
-1. Navigera till [Behörighetskonsol](http://localhost:4502/useradmin) och lägga till behörigheter för att administrera molntjänster
+1. Navigera till [Behörighetskonsolen](http://localhost:4502/useradmin) och lägg till behörigheter för att administrera molntjänster
 
    * (Läs, Ändra, Skapa, Ta bort, Replikera) på /etc/cloudServices/mobiltjänster
    * (Läs, Ändra, Skapa, Ta bort, Replikera) på /etc/cloudservices/phonegap-build
@@ -114,14 +114,14 @@ Medlemmar i gruppen app-admins kan skapa programinnehåll med samma behörighete
 
 Instrumentpaneler kan visa olika åtgärder baserat på de behörigheter som användaren har. Nedan beskrivs vilka åtgärder som är tillgängliga för varje platta.
 
-Förutom dessa behörigheter kan en åtgärd också visas/döljas baserat på hur det aktuella programmet är konfigurerat. Det finns till exempel ingen punkt som visar åtgärden &#39;Remote Build&#39; om en PhoneGap-molnkonfiguration inte har tilldelats programmet. De här listas nedan under &#39;**Konfigurationsvillkor**-avsnitt.
+Förutom dessa behörigheter kan en åtgärd också visas/döljas baserat på hur det aktuella programmet är konfigurerat. Det finns till exempel ingen punkt som visar åtgärden &#39;Remote Build&#39; om en PhoneGap-molnkonfiguration inte har tilldelats programmet. Dessa listas nedan under **Konfigurationsvillkor**.
 
 ### Hantera apppanel {#manage-app-tile}
 
 Panelen har för närvarande inga åtgärder som kräver behörigheter, men informationssidan för programmet har följande åtgärder:
 
 * *Redigera* för app-author och app-admin (UI Trigger - jcr:write - on /content/phonegap/{suffix})
-* *Ladda ned* för app-author och app-admin (UI Trigger - på /content/phonegap/{suffix})
+* *Hämta* för appförfattare och app-admin (UI-utlösare - på /content/phonegap/{suffix})
 
 Bilden nedan visar hämtnings- och redigeringsalternativen för ett program:
 

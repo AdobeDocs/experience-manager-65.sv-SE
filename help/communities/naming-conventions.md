@@ -1,6 +1,6 @@
 ---
-title: Namnkonventioner i Java&trade; paketnamn
-description: Lär dig mer om namnkonventioner och hur du använder bindestreck i Java&trade;-paketnamnet.
+title: Namnkonventioner i Java&trade; package name
+description: Lär dig mer om namnkonventioner och hur du använder bindestreck i Java&trade; package name.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -24,8 +24,8 @@ När du skapar en plats för en Java™-klass måste paketnamnet matcha databasm
 
 När du använder bindestreck i namn på databasobjekt bör du AEM att använda bindestreck, men bindestreck är inte tillåtna i Java™-paketnamn.
 
-Den underliggande CRX-plattformen måste kunna skilja mellan ett faktiskt understreck `_ `och ett bindestreck `-`. I JCR måste därför bindestrecket ersättas med Unicode-värdet (u002d) och escape-konverteras med ett understreck `_`.
+Den underliggande CRX-plattformen måste kunna skilja mellan det faktiska understrecket `_ ` och bindestrecket `-`. I JCR måste därför bindestrecket ersättas med Unicode-värdet (u002d) och escape-konverteras med understrecket `_`.
 
-Om databassökvägen till exempel är **/apps/my-example/component/info/Info.java**, ska paketnamnet vara `java package apps.my_002dexample.component.info;`
+Om databassökvägen till exempel är **/apps/my-example/component/info/Info.java** ska paketnamnet vara `java package apps.my_002dexample.component.info;`
 
 Observera att ett understreck måste undantas på liknande sätt, så att `_` blir `_005f`.

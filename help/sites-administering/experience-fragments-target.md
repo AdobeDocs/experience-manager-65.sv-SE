@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Exportera Experience Fragments till Adobe Target{#exporting-experience-fragments-to-adobe-target}
 
-Du kan exportera [Upplevelsefragment](/help/sites-authoring/experience-fragments.md)som har skapats i Adobe Experience Manager (AEM) till Adobe Target (Target). De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala.
+Du kan exportera [Experience Fragments](/help/sites-authoring/experience-fragments.md), som har skapats i Adobe Experience Manager (AEM), till Adobe Target (Target). De kan sedan användas som erbjudanden i Target-aktiviteter för att testa och personalisera upplevelser i stor skala.
 
 Det finns tre formatalternativ för att exportera ett Experience Fragment till Adobe Target:
 
@@ -27,7 +27,7 @@ Det finns tre formatalternativ för att exportera ett Experience Fragment till A
 * JSON: Stöd för leverans av headless-innehåll
 * HTML &amp; JSON
 
-AEM Experience Fragments kan exporteras till standardarbetsytan i Adobe Target eller till användardefinierade arbetsytor för Adobe Target. Detta görs med Adobe Developer Console, som AEM [integrerat med Adobe Target med IMS](/help/sites-administering/setting-up-ims-integrations-for-aem.md).
+AEM Experience Fragments kan exporteras till standardarbetsytan i Adobe Target eller till användardefinierade arbetsytor för Adobe Target. Detta görs med Adobe Developer Console, som AEM måste [integreras med Adobe Target med IMS](/help/sites-administering/setting-up-ims-integrations-for-aem.md).
 
 >[!NOTE]
 >
@@ -47,7 +47,7 @@ AEM Experience Fragments kan exporteras till standardarbetsytan i Adobe Target e
 >
 >Mer information finns även i:
 >
->* [Utveckling av Adobe Target](https://developers.adobetarget.com/)
+>* [Adobe Target-utveckling](https://developers.adobetarget.com/)
 >* [Kärnkomponenter - Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html)
 >
 
@@ -63,23 +63,23 @@ Du måste utföra olika åtgärder:
    >
    >Tidigare konfigurationer gjordes med [JWT-autentiseringsuppgifter som nu är borttagna i Adobe Developer Console](/help/sites-administering/jwt-credentials-deprecation-in-adobe-developer-console.md).
 
-1. Upplevelsefragment exporteras från AEM författarinstans, så du måste [Konfigurera AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer) på författarinstansen för att se till att alla referenser i Experience Fragment är externaliserade för webbleverans.
+1. Experience Fragments exporteras från AEM författarinstans, så du måste [konfigurera AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer) för författarinstansen för att se till att alla referenser i Experience Fragment är externaliserade för webbleverans.
 
    >[!NOTE]
    >
-   >För ländrörning som inte omfattas av standardinställningen används [Experience Fragment Link Rewriter-provider](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html) är tillgängligt. Med detta kan ni utveckla anpassade regler för er instans.
+   >[Experience Fragment Link Rewriter-providern](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html) är tillgänglig för läntreskrivning som inte omfattas av standardinställningen. Med detta kan ni utveckla anpassade regler för er instans.
 
 ## Lägg till molnkonfigurationen {#add-the-cloud-configuration}
 
-Innan du exporterar ett fragment måste du lägga till **Molnkonfiguration** for **Adobe Target** till fragmentet eller mappen. Detta gör även att du kan:
+Innan du exporterar ett fragment måste du lägga till **molnkonfigurationen** för **Adobe Target** i fragmentet eller mappen. Detta gör även att du kan:
 
 * ange de formatalternativ som ska användas för exporten
 * välj en målarbetsyta som mål
 * välj en Externalizer-domän för att skriva om referenser i Experience Fragment (valfritt)
 
-De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp och/eller det fragment som krävs. Specifikationen ärvs efter behov.
+De obligatoriska alternativen kan väljas i **Sidegenskaper** för den obligatoriska mappen och/eller fragmentet. Specifikationen ärvs vid behov.
 
-1. Navigera till **Upplevelsefragment** konsol.
+1. Navigera till konsolen **Experience Fragments**.
 
 1. Öppna **Sidegenskaper** för rätt mapp eller fragment.
 
@@ -90,9 +90,9 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp och/el
    >
    >Om du lägger till molnkonfigurationen i själva Experience Fragment ärvs konfigurationen av alla variationer.
 
-1. Välj **Cloud Service** -fliken.
+1. Markera fliken **Cloud Service**.
 
-1. Under **Konfiguration av Cloud Service**, markera **Adobe Target** i listrutan.
+1. Under **Konfiguration av Cloud Service** väljer du **Adobe Target** i listrutan.
 
    >[!NOTE]
    >
@@ -102,7 +102,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp och/el
    >
    >[Kärnkomponenter - Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html)
 
-   Under **Adobe Target** välj:
+   Under **Adobe Target** väljer du:
 
    * lämplig konfiguration
    * det obligatoriska formatalternativet
@@ -113,7 +113,7 @@ De obligatoriska alternativen kan väljas i **Sidegenskaper** av den mapp och/el
    >
    >Externalizer-domänen är valfri.
    >
-   >En AEM Externalizer konfigureras när du vill att det exporterade innehållet ska peka på en viss *publicera* domän. Mer information finns i [Konfigurera AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer).
+   >En AEM Externalizer konfigureras när du vill att det exporterade innehållet ska peka på en specifik *publiceringsdomän*. Mer information finns i [Konfigurera AEM Link Externalizer](/help/sites-administering/target-requirements.md#configuring-the-aem-link-externalizer).
    >
    >Observera också att Externalizer-domäner bara är relevanta för innehållet i Experience Fragment som skickas till Target, och inte för metadata som Visa erbjudandeinnehåll.
 
@@ -140,41 +140,41 @@ Så här exporterar du ett Experience Fragment från AEM till Target (efter att 
    >
    >Det måste vara en webbvariant för Experience Fragment.
 
-1. Klicka **Exportera till Adobe Target**.
+1. Klicka på **Exportera till Adobe Target**.
 
    >[!NOTE]
    >
    >Om Experience Fragment redan har exporterats väljer du **Uppdatera i Adobe Target**.
 
-1. Klicka **Exportera utan publicering** eller **Publicera** efter behov.
+1. Klicka på **Exportera utan publicering** eller **Publish** efter behov.
 
    >[!NOTE]
    >
-   >Markera **Publicera** publicerar Experience Fragment direkt och skickar det till Target.
+   >Om du väljer **Publish** publiceras Experience Fragment direkt och skickas till Target.
 
-1. Klicka **OK** i bekräftelsedialogrutan.
+1. Klicka på **OK** i bekräftelsedialogrutan.
 
    Din Experience Fragment bör nu vara i Target.
 
    >[!NOTE]
    >
-   >[Olika detaljer](/help/sites-authoring/experience-fragments.md#details-of-your-experience-fragment) av exporten visas i **Listvy** av konsolen och **Egenskaper**.
+   >[Olika detaljer](/help/sites-authoring/experience-fragments.md#details-of-your-experience-fragment) i exporten visas i **listvyn** i konsolen och i **Egenskaper**.
 
    >[!NOTE]
    >
-   >När du visar ett Experience Fragment i Adobe Target *senast ändrad* datum som visas är det datum då fragmentet senast ändrades i AEM, inte det datum då fragmentet senast exporterades till Adobe Target.
+   >När du visar ett Experience Fragment i Adobe Target är det *senast ändrade*-datum som visas det datum då fragmentet senast ändrades i AEM, inte det datum då fragmentet senast exporterades till Adobe Target.
 
 >[!NOTE]
 >
->Du kan också exportera från sidredigeraren med jämförbara kommandon i [Sidinformation](/help/sites-authoring/author-environment-tools.md#page-information) -menyn.
+>Du kan också exportera från sidredigeraren med jämförbara kommandon på menyn [Sidinformation](/help/sites-authoring/author-environment-tools.md#page-information) .
 
 ## Använda dina upplevelsefragment i Adobe Target {#using-your-experience-fragments-in-adobe-target}
 
-När du har utfört ovanstående uppgifter visas Experience Fragment på offertsidan i Adobe Target. Titta på [specifik Target-dokumentation](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html) om du vill veta mer om vad du kan uppnå där.
+När du har utfört ovanstående uppgifter visas Experience Fragment på offertsidan i Adobe Target. Titta på den [specifika Target-dokumentationen](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html) för att lära dig mer om vad du kan uppnå där.
 
 >[!NOTE]
 >
->När du visar ett Experience Fragment i Adobe Target *senast ändrad* datum som visas är det datum då fragmentet senast ändrades i AEM, inte det datum då fragmentet senast exporterades till Adobe Target.
+>När du visar ett Experience Fragment i Adobe Target är det *senast ändrade*-datum som visas det datum då fragmentet senast ändrades i AEM, inte det datum då fragmentet senast exporterades till Adobe Target.
 
 ## Ta bort ett Experience Fragment som redan har exporterats till Adobe Target {#deleting-an-experience-fragment-already-exported-to-adobe-target}
 
@@ -199,7 +199,7 @@ För att undvika sådana situationer:
 
 Experience Fragments innehåller fullständiga html-taggar och alla nödvändiga klientbibliotek (CSS/JS) för att återge fragmentet exakt som det skapades av Experience Fragment Content Author. Det här är underdesign.
 
-När du använder ett Experience Fragment-erbjudande med Adobe Target på en sida som levereras av AEM innehåller målsidan redan alla nödvändiga klientbibliotek. Dessutom behövs inte heller den överflödiga html-koden i Experience Fragment-erbjudandet (se [Överväganden](#considerations)).
+När du använder ett Experience Fragment-erbjudande med Adobe Target på en sida som levereras av AEM innehåller målsidan redan alla nödvändiga klientbibliotek. Dessutom behövs inte heller den överflödiga HTML-koden i Experience Fragment-erbjudandet (se [Considerations](#considerations)).
 
 Här följer ett pseudoexempel på html i ett Experience Fragment-erbjudande:
 
@@ -217,27 +217,27 @@ Här följer ett pseudoexempel på html i ett Experience Fragment-erbjudande:
 </html>
 ```
 
-När AEM exporterar ett Experience Fragment till Adobe Target sker detta på en hög nivå med hjälp av flera ytterligare Sling Selectors. URL:en för det exporterade Experience Fragment kan till exempel se ut så här (observera `nocloudconfigs.atoffer`):
+När AEM exporterar ett Experience Fragment till Adobe Target sker detta på en hög nivå med hjälp av flera ytterligare Sling Selectors. URL:en för det exporterade Experience Fragment kan till exempel se ut så här (meddelande `nocloudconfigs.atoffer`):
 
 * http://www.your-aem-instance.com/content/experience-fragments/my-offers/my-xf-offer.nocloudconfigs.atoffer.html
 
-The `nocloudconfigs` -väljaren definieras med hjälp av HTML och kan överlappas genom att kopiera den från:
+`nocloudconfigs`-väljaren definieras med hjälp av HTML och kan överlappas genom att den kopieras från:
 
 * /libs/cq/experience-fragments/components/xfpage/nocloudconfigs.html
 
-The `atoffer` väljaren används efter bearbetning med [Sling Rewriter](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html). Båda kan användas för att ta bort klientbiblioteken.
+`atoffer`-väljaren används för efterbearbetning med [Sling Rewriter](/help/sites-developing/experience-fragments.md#the-experience-fragment-link-rewriter-provider-html). Båda kan användas för att ta bort klientbiblioteken.
 
 ### Exempel {#example}
 
-För det syftet här ska vi illustrera hur man gör detta med `nocloudconfigs`.
+I detta syfte ska vi illustrera hur du gör detta med `nocloudconfigs`.
 
 >[!NOTE]
 >
->Se [Redigerbara mallar](/help/sites-developing/templates.md#editable-templates) för mer information.
+>Mer information finns i [Redigerbara mallar](/help/sites-developing/templates.md#editable-templates).
 
 #### Övertäckningar {#overlays}
 
-I just det här exemplet [övertäckningar](/help/sites-developing/overlays.md) som inkluderas tar bort klientbiblioteken *och* den ovidkommande html. Du förutsätts redan ha skapat malltypen Experience Fragment. De nödvändiga filer som behöver kopieras från `/libs/cq/experience-fragments/components/xfpage/` inkludera:
+I det här exemplet tar de [övertäckningar](/help/sites-developing/overlays.md) som ingår bort klientbiblioteken *och* den överflödiga HTML-koden. Du förutsätts redan ha skapat malltypen Experience Fragment. Nödvändiga filer som behöver kopieras från `/libs/cq/experience-fragments/components/xfpage/` är:
 
 * `nocloudconfigs.html`
 * `head.nocloudconfigs.html`
@@ -265,7 +265,7 @@ Innehållet i dessa filer är följande:
 
 >[!NOTE]
 >
->Används `data-sly-unwrap` om du vill ta bort body-taggen måste du `nocloudconfigs.html`.
+>Om du vill använda `data-sly-unwrap` för att ta bort body-taggen behöver du `nocloudconfigs.html`.
 
 ### Överväganden {#considerations}
 

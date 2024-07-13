@@ -37,7 +37,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 ## Oak {#oak}
 
-[Oak](/help/sites-deploying/platform.md) är ett skalbart och prestandabaserat hierarkiskt innehållslager som utgör grunden för AEM.
+[Oak](/help/sites-deploying/platform.md) är en skalbar och högpresterande hierarkisk innehållsdatabas som är grunden för AEM.
 
 <table>
  <tbody>
@@ -47,7 +47,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
    <td>Innehåller en rapport om den tekniska flexibiliteten, höga prestanda och funktioner för återställning efter ljudkatastrof</td>
   </tr>
   <tr>
-   <td>Rekommenderade ekdriftsättningar</td>
+   <td>Rekommenderade Oak-driftsättningar</td>
    <td><a href="/help/sites-deploying/recommended-deploys.md">Rekommenderade driftsättningar</a></td>
    <td>Beskriver distributionsscenarier</td>
   </tr>
@@ -63,7 +63,7 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
   </tr>
   <tr>
    <td>Sök i Oak</td>
-   <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">Metodtips för frågor och indexering</a><br /> </td>
+   <td><a href="/help/sites-deploying/best-practices-for-queries-and-indexing.md">Bästa tillvägagångssätt för frågor och indexering</a><br /> </td>
    <td>Beskriver de bästa sätten att indexera innehåll.</td>
   </tr>
  </tbody>
@@ -75,7 +75,7 @@ AEM Communities förenklar framtagning och hantering av lokala communityn. Bäst
 
 [Community Content Store](/help/communities/working-with-srp.md) - Diskuterar den nya funktionen för delad lagring för användargenererat innehåll (UGC) och överväganden för val av underliggande [topologi](/help/communities/topologies.md).
 
-[Rekommenderade distributioner för communities](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) - Beskriver de rekommenderade distributionerna för Communities. |
+[Rekommenderade distributioner för communities](/help/sites-deploying/recommended-deploys.md#considerations-for-aem-communities) - Beskriver de rekommenderade distributionerna för communities. |
 
 ## UI {#ui}
 
@@ -94,12 +94,12 @@ De bästa metoderna för prestandaanvändning listas här:
   <tr>
    <td>Bästa metoder för kvalitetssäkring</td>
    <td><a href="/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance">Bästa metoder för kvalitetssäkring</a></td>
-   <td>En standardiserad översikt över problemen med att definiera ett testkoncept specifikt för prestandatester på dina <em>publicera</em> miljö. Detta är främst av intresse för kvalitetstekniker, projektledare och systemadministratörer.</td>
+   <td>En standardiserad översikt över problemen med att definiera ett testkoncept specifikt för prestandatester i din <em>publish</em> -miljö. Detta är främst av intresse för kvalitetstekniker, projektledare och systemadministratörer.</td>
   </tr>
   <tr>
    <td>Använda Dispatcher med ett CDN</td>
    <td><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn">Använda Dispatcher med ett CDN</a></td>
-   <td>Ett leveransnätverk (CDN), som Akamai Edge Delivery eller Amazon Cloud Front, levererar innehåll från en plats nära slutanvändaren.</td>
+   <td>Ett nätverk för innehållsleverans (CDN), som Akamai Edge Delivery eller Amazon Cloud Front, levererar innehåll från en plats nära slutanvändaren.</td>
   </tr>
   <tr>
    <td>Prestandaoptimering</td>

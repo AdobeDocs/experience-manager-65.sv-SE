@@ -26,7 +26,7 @@ Analysfunktionen i AEM Forms ingår i AEM Forms tilläggspaket. Mer information 
 
 Utöver tilläggspaketet behöver du ett Adobe Analytics-konto. Information om lösningen finns i [Adobe Analytics](https://www.adobe.com/solutions/digital-analytics.html).
 
-När du har AEM Forms-tilläggspaketet och ett Adobe Analytics-konto kan du integrera Adobe Analytics-kontot med AEM Forms och aktivera spårning av formulär och dokument enligt beskrivningen i [Konfigurera analyser och rapporter](../../forms/using/configure-analytics-forms-documents.md).
+När du har AEM Forms-tilläggspaketet och ett Adobe Analytics-konto integrerar du Adobe Analytics-kontot med AEM Forms och aktiverar spårning i dina formulär eller dokument enligt beskrivningen i [Konfigurera analyser och rapporter](../../forms/using/configure-analytics-forms-documents.md).
 
 ### Hur användarinteraktionsinformation registreras {#how-user-interaction-information-is-recorded}
 
@@ -50,20 +50,20 @@ När en användare interagerar med formuläret registreras interaktionerna och s
 
 Följ de här stegen för att visa analysrapporter:
 
-1. Logga in på AEM `https://[hostname]:'port'`
-1. Klicka **Forms > Forms &amp; Documents**.
+1. Logga in på AEM på `https://[hostname]:'port'`
+1. Klicka på **Forms > Forms &amp; Documents**.
 1. Välj det formulär som du vill visa analysrapporterna för.
 1. Välj **Mer > Analysrapporter**.
 
 ![analytikerrapport](assets/analyticsreport.png)
 
-**S.** Analysrapport, kommando
+**A.** Kommandot Analysrapport
 
 AEM Forms visar analysrapporter för formuläret och för varje panel i formuläret, enligt nedan.
 
-![Sammanfattningsrapport för ett anpassat formulär](assets/analyticsdashboard_callout.png)
+![Sammanfattningsrapport för ett adaptivt formulär](assets/analyticsdashboard_callout.png)
 
-**S.** Konverteringar **B.** Sammanfattning på formulärnivå **C.** Sammanfattning på panelnivå **D.** Webbläsare för besökare - filter **E.** Operativsystem för besökare - filter **F.** Besökarnas språk - filter
+**A.** Konverterar **B.** Sammanfattning på formulärnivå **C.** Sammanfattning på panelnivå **D.** Webbläsare för besökare - filtrera **E.** Operativsystem för besökare - filtrera **F.** Språk för besökare - filtrera
 
 Som standard visas analysrapporten för de senaste sju dagarna. Du kan visa rapporter för de senaste 15 dagarna, den senaste månaden och så vidare, eller ange ett datumintervall.
 
@@ -77,11 +77,11 @@ Som standard visas analysrapporten för de senaste sju dagarna. Du kan visa rapp
 
 Med konverteringsdiagrammet på formulärnivå får du insikt i hur formuläret fungerar med följande nyckeltal:
 
-* **Återgivningar**: Antal gånger ett formulär öppnas
-* **Besökare**: Antal besökare i formuläret
-* **Inlämningar**: Antal gånger som formuläret skickas in
+* **Återgivningar**: Antalet gånger som ett formulär öppnas
+* **Besökare**: Antalet besökare i formuläret
+* **Skicka in**: Antal gånger som formuläret skickas
 
-![konvertering](assets/conversion-graph.png)
+![konverteringsdiagram](assets/conversion-graph.png)
 
 ### Analysrapport för adaptiva formulär och HTML5-formulär {#analytics-report-for-adaptive-and-html-forms}
 
@@ -90,9 +90,9 @@ I avsnittet Sammanfattning på formulärnivå får du information om hur formul�
 * **Genomsnittlig fyllningstid**: Genomsnittlig tid för att fylla i formuläret. När användarna lägger tid på formuläret men inte skickar in det, inkluderas den tiden inte i den här beräkningen.
 * **Återgivningar**: Antal gånger som formuläret har återgetts eller öppnats
 * **Utkast**: Antal gånger som formuläret har sparats som utkast
-* **Inlämningar**: Antal gånger som formuläret har skickats in
+* **Skicka in**: Antal gånger som formuläret har skickats in
 * **Avbryt**: Antal gånger som användarna började fylla i formuläret och sedan lämnade det utan att fylla i formuläret
-* **Unika besökare**: Antal gånger som formuläret återges av unika besökare. Mer information om unika besökare finns på [Unika besökare, besök och kundbeteende](https://helpx.adobe.com/analytics/kb/unique-visitors-visitor-behavior.html).
+* **Unika besökare**: Antal gånger som formuläret återges av unika besökare. Mer information om unika besökare finns i [Unika besökare, besök och kundbeteende](https://helpx.adobe.com/analytics/kb/unique-visitors-visitor-behavior.html).
 
 ![Utökad sammanfattningsanalysrapport på formulärnivå](assets/analytics-report.png)
 
@@ -100,8 +100,8 @@ I avsnittet Sammanfattning på formulärnivå får du information om hur formul�
 
 I avsnittet Sammanfattning på panelnivå finns följande information om varje panel i formuläret:
 
-* **Genomsnittlig fyllningstid**: Genomsnittlig tid för panelen, oavsett om formuläret skickas eller inte
-* **Fel påträffades**: Genomsnittligt antal fel som användarna har påträffat i fälten på en panel. Fel som påträffas uppstår genom att det totala antalet fel i ett fält divideras med antalet återgivningar av formuläret.
+* **Genomsnittlig fyllningstid**: Genomsnittlig tid på panelen, oavsett om formuläret har skickats eller inte
+* **Fel som påträffades**: Genomsnittligt antal fel som användarna påträffade i fälten på en panel. Fel som påträffas uppstår genom att det totala antalet fel i ett fält divideras med antalet återgivningar av formuläret.
 * **Hjälp använd**: Genomsnittligt antal gånger som användare har använt sammanhangsberoende hjälp för fälten i panelen. Hjälpen Åtkomst fås genom att det totala antalet gånger som hjälpen är tillgänglig för ett fält divideras med antalet återgivningar av formuläret.
 
 #### Detaljerad panelrapport {#detailed-panel-report}
@@ -114,9 +114,9 @@ Den detaljerade rapporten visar värden för alla fält i panelen.
 
 Panelrapporten har tre flikar:
 
-* **Tidsrapport**(Standard): Visar hur många sekunder som har ägnats åt att fylla i fälten i panelen
-* **Felrapport**: Visar antalet fel som användare råkade ut för när de fyllde i fälten
-* **Hjälprapport**: Antal gånger som hjälp för ett visst fält användes
+* **Tidsrapport** (standard): Visar hur många sekunder som har ägnats åt att fylla i fälten i panelen
+* **Felrapport**: Visar antalet fel som användare påträffade när de fyllde fälten
+* **Hjälprapport**: Antal gånger som hjälp om ett visst fält användes
 
 Du kan navigera mellan panelerna om det finns flera tillgängliga paneler.
 
@@ -124,9 +124,9 @@ Du kan navigera mellan panelerna om det finns flera tillgängliga paneler.
 
 I tabellerna Webbläsardistribution, Operativsystemsdistribution och Språkdistribution visas återgivningar, besökare och inskickade filer i olika webbläsare, operativsystem och språk för formuläranvändare. De här tabellerna har som standard högst fem poster. Du kan klicka på Visa fler om du vill visa fler poster och klicka på Visa färre om du vill gå tillbaka till de vanliga fem posterna eller färre.
 
-Om du vill filtrera analysdata ytterligare kan du klicka på en post i någon av tabellerna. Om du till exempel klickar på Google Chrome i tabellen Webbläsardistribution återges rapporten igen med data som är relevanta för webbläsaren Google Chrome enligt följande:
+Om du vill filtrera analysdata ytterligare kan du klicka på en post i någon av tabellerna. Om du till exempel klickar på Google Chrome i tabellen Webbläsardistribution återges rapporten igen med data som är relevanta för Google Chrome webbläsare enligt följande:
 
-![Filter som tillämpas på analysrapporten - Google Chrome ](assets/filter-1.png)
+![Filter som används på analysrapport - Google Chrome ](assets/filter-1.png)
 
 Om du visar panelrapporten när du har använt ett filter visas även panelrapportdata enligt det använda filtret.
 

@@ -62,7 +62,7 @@ Om du har problem med tjänster kan du inaktivera de associerade slutpunkterna f
 
    >[!NOTE]
    >
-   >Ta inte med ett &lt;-tecken i namnet eller beskrivningen eftersom det kortar av namnet eller beskrivningen som visas i Arbetsyta.
+   >Ta inte med ett &lt;-tecken i namnet eller beskrivningen eftersom det kortar av namnet eller beskrivningen som visas i Workspace.
 
 1. Klicka på Uppdatera om du vill spara ändringarna.
 

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Konfigurera LDAP med AEM 6 {#configuring-ldap-with-aem}
 
-LDAP ( **L** ightweight **D** katalog **A**&#x200B;åtkomst **P** Protokoll) används för åtkomst till centraliserade katalogtjänster. Det minskar den arbetsinsats som krävs för att hantera användarkonton eftersom de kan nås av flera program. En sådan LDAP-server är Active Directory. LDAP används ofta för att uppnå enkel inloggning, vilket gör att en användare kan få åtkomst till flera program efter inloggning en gång.
+LDAP (protokollet **L** ightweight **D** Directory **A** Access **P**) används för åtkomst till centraliserade katalogtjänster. Det minskar den arbetsinsats som krävs för att hantera användarkonton eftersom de kan nås av flera program. En sådan LDAP-server är Active Directory. LDAP används ofta för att uppnå enkel inloggning, vilket gör att en användare kan få åtkomst till flera program efter inloggning en gång.
 
 Användarkonton kan synkroniseras mellan LDAP-servern och databasen med LDAP-kontoinformation som sparas i databasen. Den här funktionen gör att konton kan tilldelas till databasgrupper för att tilldela de behörigheter och behörigheter som krävs.
 
@@ -41,15 +41,15 @@ Om du vill att LDAP ska fungera med AEM måste du skapa tre OSGi-konfigurationer
 
 >[!NOTE]
 >
->Titta [Oak&#39;s External Login Module - Authenticating with LDAP and Beyond](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html) för att göra externa inloggningsmoduler djupdykare.
+>Titta på [Oak modul för extern inloggning - autentiserar med LDAP och bortom](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-oak-external-login-module-authenticating-with-ldap-and-beyond.html) för att kunna identifiera externa inloggningsmoduler.
 >
->Ett exempel på hur du konfigurerar Experience Manager med Apache DS finns i [Konfigurerar Adobe Experience Manager 6.5 för att använda Apache Directory Service.](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)
+>Ett exempel på hur du konfigurerar Experience Manager med Apache DS finns i [Konfigurera Adobe Experience Manager 6.5 så att den använder Apache Directory Service.](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/configuring-adobe-experience-manager-6-to-use-apache-directory/m-p/183805)
 
 ## Konfigurera LDAP-identitetsleverantören {#configuring-the-ldap-identity-provider}
 
 LDAP-identitetsprovidern används för att definiera hur användare hämtas från LDAP-servern.
 
-Den finns i hanteringskonsolen under **Apache Jackrabbit Oak LDAP Identity Provider** namn.
+Den finns i hanteringskonsolen under **Apache Jackrabbit Oak LDAP Identity Provider** -namnet.
 
 Följande konfigurationsalternativ är tillgängliga för LDAP-identitetsleverantören:
 
@@ -60,7 +60,7 @@ Följande konfigurationsalternativ är tillgängliga för LDAP-identitetsleveran
    <td>Namnet på den här LDAP-providerkonfigurationen.</td>
   </tr>
   <tr>
-   <td><strong>Värdnamn för LDAP-server</strong><br /> </td>
+   <td><strong>LDAP-servervärdnamn</strong><br /> </td>
    <td>Värdnamn för LDAP-servern</td>
   </tr>
   <tr>
@@ -113,7 +113,7 @@ Följande konfigurationsalternativ är tillgängliga för LDAP-identitetsleveran
   </tr>
   <tr>
    <td><strong>Extra filter för användare</strong></td>
-   <td>Extra LDAP-filter som används vid sökning efter användare. Det sista filtret formateras så här: (&amp;()&lt;idattr&gt;=&lt;userid&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)' (user.extraFilter)</td>
+   <td>Extra LDAP-filter som används vid sökning efter användare. Det sista filtret formateras som: (&amp;(&lt;idAttr&gt;=&lt;userId&gt;)(objectclass=&lt;objectClass&gt;)&lt;extraFilter&gt;) (user.extraFilter)</td>
   </tr>
   <tr>
    <td><strong>Användarens DN-sökvägar</strong></td>
@@ -133,7 +133,7 @@ Följande konfigurationsalternativ är tillgängliga för LDAP-identitetsleveran
   </tr>
   <tr>
    <td><strong>Gruppera extra filter</strong></td>
-   <td>Extra LDAP-filter som används vid sökning efter grupper. Det sista filtret är formaterat så här: (&amp;()&lt;nameattr&gt;=&lt;groupname&gt;)(objectclass=&lt;objectclass&gt;)&lt;extrafilter&gt;)'</td>
+   <td>Extra LDAP-filter som används vid sökning efter grupper. Det sista filtret är formaterat enligt följande: (&amp;(&lt;nameAttr&gt;=&lt;groupName&gt;)(objectclass=&lt;objectClass&gt;)&lt;extraFilter&gt;)</td>
   </tr>
   <tr>
    <td><strong>Gruppera DN-sökvägar</strong></td>
@@ -150,7 +150,7 @@ Följande konfigurationsalternativ är tillgängliga för LDAP-identitetsleveran
 
 Synkroniseringshanteraren definierar hur identitetsleverantörens användare och grupper synkroniseras med databasen.
 
-Den finns under **Standardsynkhanterare för Apache Jackrabbit** i hanteringskonsolen.
+Den finns under **Apache Jackrabbit Oak-standardhanterare för synkronisering** i hanteringskonsolen.
 
 Följande konfigurationsalternativ är tillgängliga för Synkroniseringshanteraren:
 
@@ -178,7 +178,7 @@ Följande konfigurationsalternativ är tillgängliga för Synkroniseringshantera
   </tr>
   <tr>
    <td><strong>Förfallotid för användarmedlemskap</strong></td>
-   <td>Tid efter vilken medlemskapet upphör.<br /> </td>
+   <td>Tid efter vilket medlemskapet upphör.<br /> </td>
   </tr>
   <tr>
    <td><strong>Inkapslingsdjup för användarmedlemskap</strong></td>
@@ -209,7 +209,7 @@ Den externa inloggningsmodulen finns under **Apache Jackrabbit Oak External Logi
 
 >[!NOTE]
 >
->Apache Jackrabbit Oak External Login Module implementerar Java™ Authentication and Authorization Servi (JAAS)-specifikationerna. Se [officiell Oracle Java™ Security Reference Guide](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html) för mer information.
+>Apache Jackrabbit Oak External Login Module implementerar Java™ Authentication and Authorization Server (JAAS)-specifikationerna. Mer information finns i [Java™ Security Reference Guide](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jaas/JAASRefGuide.html) för Oraclet.
 
 Dess uppdrag är att definiera vilken identitetsleverantör och synkroniseringshanterare som ska användas, vilket effektivt binder de två modulerna.
 
@@ -218,8 +218,8 @@ Följande konfigurationsalternativ är tillgängliga:
 | **JAAS-rankning** | Ange rankningen (d.v.s. sorteringsordningen) för den här inloggningsmodulposten. Posterna sorteras i fallande ordning (dvs. högre rangordnade konfigurationer kommer först). |
 |---|---|
 | **JAAS-kontrollflagga** | Egenskap som anger om en LoginModule är OBLIGATORISK, REQUISITE, TILLRÄCKLIG eller VALFRI. Mer information om innebörden av dessa flaggor finns i dokumentationen om JAAS-konfigurationen. |
-| **JAAS Realm** | Sfärnamnet (eller programnamnet) som LoginModule är registrerad mot. Om inget sfärnamn anges registreras LoginModule med en standardsfärk som konfigurerats i Felix JAAS-konfigurationen. |
-| **Namn på identitetsleverantör** | Identitetsleverantörens namn. |
+| **JAAS-sfär** | Sfärnamnet (eller programnamnet) som LoginModule är registrerad mot. Om inget sfärnamn anges registreras LoginModule med en standardsfärk som konfigurerats i Felix JAAS-konfigurationen. |
+| **Identitetsleverantörens namn** | Identitetsleverantörens namn. |
 | **Namn på synkroniseringshanterare** | Synkroniseringshanterarens namn. |
 
 >[!NOTE]
@@ -230,7 +230,7 @@ Följande konfigurationsalternativ är tillgängliga:
 
 AEM 6 kan konfigureras för autentisering med LDAP över SSL genom att följa nedanstående procedur:
 
-1. Kontrollera **Använd SSL** eller **Använd TLS** kryssrutor när du konfigurerar [LDAP-identitetsleverantör](#configuring-the-ldap-identity-provider).
+1. Markera kryssrutorna **Använd SSL** eller **Använd TLS** när du konfigurerar [LDAP-identitetsprovidern](#configuring-the-ldap-identity-provider).
 1. Konfigurera Synkroniseringshanteraren och modulen för extern inloggning enligt inställningarna.
 1. Installera SSL-certifikaten i din virtuella Java™-dator om det behövs. Installationen kan göras med hjälp av nyckelverktyget:
 
@@ -244,7 +244,7 @@ Självsignerade certifikat kan användas när AEM konfigureras för autentiserin
 
 1. Kontrollera att du har ett SSL-bibliotek installerat och att det fungerar. I den här proceduren används OpenSSL som exempel.
 
-1. Skapa en anpassad OpenSSL-konfigurationsfil (cnf). Du kan göra den här konfigurationen genom att kopiera standardkonfigurationsfilen **openssl.cnf **och anpassa den. På UNIX®-system är den `/usr/lib/ssl/openssl.cnf`
+1. Skapa en anpassad OpenSSL-konfigurationsfil (cnf). Du kan göra den här konfigurationen genom att kopiera standardkonfigurationsfilen **openssl.cnf **och anpassa den. På UNIX®-system är den på `/usr/lib/ssl/openssl.cnf`
 
 1. Fortsätt till att skapa certifikatutfärdarens rotnyckel genom att köra följande kommando i en terminal:
 
@@ -280,12 +280,12 @@ Om du vill aktivera felsökningsloggning måste du göra följande:
 
 * Loggnivå: Felsökning
 * Loggfil logs/ldap.log
-* Meddelandemönster: {0,datum,`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast;{4}&amp;ast; {2} {3} {5}
+* Meddelandemönster: {0,date,`dd.MM.yyyy` `HH:mm:ss.SSS` &amp;ast;{4}&amp;ast; {2} {3} {5}
 * Logger: org.apache.jackrabbit.oak.security.authentication.ldap
 
 * Loggnivå: Felsökning
 * Loggfil: logs/external.log
-* Meddelandemönster: {0,datum,`dd.MM.yyyy` `HH:mm:ss.SSS`} &amp;ast;{4}&amp;ast; {2} {3} {5}
+* Meddelandemönster: {0,date,`dd.MM.yyyy` `HH:mm:ss.SSS` &amp;ast;{4}&amp;ast; {2} {3} {5}
 * Logger: org.apache.jackrabbit.oak.spi.security.authentication.external
 
 ## Ett ord om gruppanknytning {#a-word-on-group-affiliation}
@@ -296,9 +296,9 @@ Vanligtvis läggs dessa grupper till av en lokal AEM eller av någon annan ident
 
 Om en användare tas bort från en grupp på LDAP-servern återspeglas ändringen på AEM sida vid synkroniseringen. Alla andra grupptillhörigheter för användaren som inte lades till av LDAP finns dock kvar.
 
-AEM identifierar och hanterar rensning av användare från externa grupper med hjälp av `rep:externalId` -egenskap. Den här egenskapen läggs till automatiskt för alla användare eller grupper som synkroniseras med Synchronization Handler och den innehåller information om den ursprungliga identitetsleverantören.
+AEM identifierar och hanterar rensning av användare från externa grupper med egenskapen `rep:externalId`. Den här egenskapen läggs till automatiskt för alla användare eller grupper som synkroniseras med Synchronization Handler och den innehåller information om den ursprungliga identitetsleverantören.
 
-Se Apache Oak-dokumentation på [Användar- och gruppsynkronisering](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html).
+Se Apache Oak-dokumentation om [användar- och gruppsynkronisering](https://jackrabbit.apache.org/oak/docs/security/authentication/usersync.html).
 
 ## Kända fel {#known-issues}
 

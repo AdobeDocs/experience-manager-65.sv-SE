@@ -27,9 +27,9 @@ Med meddelandefunktionen kan du göra följande:
 
 **A** - skicka ett meddelande till en eller flera community-medlemmar
 
-**B** - skicka direktmeddelanden i [bulk to community member groups](/help/communities/messaging.md#group-messaging)
+**B** - skicka direktmeddelanden i [bulk till medlemsgrupper](/help/communities/messaging.md#group-messaging)
 
-**C** - skicka ett meddelande med bilagor
+**C** - skicka ett meddelande med bifogade filer
 
 **D** - vidarebefordra ett meddelande
 
@@ -39,18 +39,18 @@ Med meddelandefunktionen kan du göra följande:
 
 **G** - återställ ett borttaget meddelande
 
-![meddelandesektion](assets/messaging-section.png)
+![messaging-section](assets/messaging-section.png)
 
 ![restore-message](assets/restore-message.png)
 
 Information om hur du aktiverar och ändrar meddelandefunktionen finns i:
 
 * [Konfigurera meddelanden](/help/communities/messaging.md) för administratörer
-* [Viktiga meddelanden](/help/communities/essentials-messaging.md) för utvecklare
+* [Meddelandeverktyg](/help/communities/essentials-messaging.md) för utvecklare
 
 >[!NOTE]
 >
->Det går inte att lägga till `Compose Message, Message, or Message List` komponenter (finns i `Communities`till en sida i redigeringsläge.
+>Det går inte att lägga till `Compose Message, Message, or Message List` komponenter (hittades i `Communities`-komponentgruppen) på en sida i redigeringsläge för författare.
 
 ## Konfigurera meddelandekomponenter {#configure-messaging-components}
 
@@ -58,15 +58,15 @@ När meddelanden har aktiverats för en community-webbplats konfigureras den uta
 
 ### Konfigurera meddelandelista (meddelanderuta) {#configure-message-list-message-box}
 
-Så här ändrar du konfigurationen för listan med meddelanden för **Inkorg**, **Skickade objekt** och **Papperskorgen** sidor med meddelandefunktionen, öppna webbplatsen i [redigeringsläge](/help/communities/sites-console.md#authoring-site-content).
+Om du vill ändra konfigurationen för listan med meddelanden för sidorna **Inkorg**, **Skickat** och **Papperskorg** i meddelandefunktionen öppnar du webbplatsen i [redigeringsläget för författare](/help/communities/sites-console.md#authoring-site-content) .
 
-1. I `Preview` läge, välj **Meddelanden** för att öppna meddelandesidan. Välj sedan antingen **Inkorg**, **Skickade objekt** eller **Papperskorgen** för att konfigurera komponenten för den meddelandelistan.
+1. I `Preview`-läget väljer du länken **Meddelanden** för att öppna huvudmeddelandesidan. Välj sedan antingen **Inkorg**, **Skickat** eller **Papperskorgen** för att konfigurera komponenten för den meddelandelistan.
 
-1. I `Edit` markerar du komponenten på sidan.
-1. Om du vill öppna konfigurationsdialogrutan avbryter du arv genom att välja `link` -ikon.
+1. Markera komponenten på sidan i `Edit`-läge.
+1. Om du vill komma åt konfigurationsdialogrutan avbryter du arv genom att välja ikonen `link`.
 När arvet har avbrutits går det att välja konfigurationsikonen för att öppna konfigurationsdialogrutan.
 
-1. När konfigurationen är klar måste du återställa arvet genom att välja `broken link` -ikon.
+1. När konfigurationen är klar måste du återställa arvet genom att välja ikonen `broken link`.
 
 ![configure-message-list](assets/configure-message-list.png)
 
@@ -76,11 +76,11 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Tjänstväljare**
 
-  (*Obligatoriskt*) Ange värdet för egenskapen **`serviceSelector.name`** från [Tjänsten AEM Communities Messaging Operations](/help/communities/messaging.md#messaging-operations-service).
+  (*Obligatoriskt*) Ange värdet för egenskapen **`serviceSelector.name`** från [AEM Communities Messaging Operations Service](/help/communities/messaging.md#messaging-operations-service).
 
-* **Skapa sida**
+* **Disponera sida**
 
-  (*Obligatoriskt*) Den sida som ska öppnas när en medlem klickar på **`Reply`** -knappen. Målsidan ska innehålla **Disponera meddelande** formulär.
+  (*Obligatorisk*) Den sida som ska öppnas när en medlem klickar på knappen **`Reply`**. Målsidan ska innehålla formuläret **Disponera meddelande**.
 
 * **Svara/visa som resurs**
 
@@ -90,13 +90,13 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
   Det profilformulär som ska användas för att visa avsändarprofilen.
 
-* **Pappersmapp**
+* **Papperskorgen**
 
   Om den här meddelandelistekomponenten är markerad visas endast meddelanden som har flaggats som borttagna (papperskorg).
 
 * **Mappsökvägar**
 
-  (*Obligatoriskt*) Referera till de värden som angetts för **inbox.path.name** och **sentitems.path.name** i [Tjänsten AEM Communities Messaging Operations](/help/communities/messaging.md#messaging-operations-service). Vid konfigurering för en `Inbox`, lägger till en post med värdet för **inbox.path.name**. Vid konfigurering för en `Outbox`, lägger till en post med värdet för **sentitems.path.name**. Vid konfigurering för `Trash`lägger du till två poster med båda värdena.
+  (*Obligatoriskt*) Refererar till de värden som angetts för **inbox.path.name** och **sentitems.path.name** i [AEM Communities Messaging Operations Service](/help/communities/messaging.md#messaging-operations-service). När du konfigurerar för en `Inbox` lägger du till en post med värdet **inbox.path.name**. När du konfigurerar för en `Outbox` lägger du till en post med värdet för **sentitems.path.name**. När du konfigurerar för `Trash` lägger du till två poster med båda värdena.
 
 #### Fliken Visa {#display-tab}
 
@@ -104,19 +104,19 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Markera läsknapp**
 
-  Om det här alternativet är markerat visas en `Read`så att ett meddelande kan markeras som läst.
+  Om det här alternativet är markerat visas en `Read`-knapp som tillåter att ett meddelande markeras som läst.
 
 * **Markera som oläst-knapp**
 
-  Om det här alternativet är markerat visas en `Mark Unread` så att ett meddelande kan markeras som läst.
+  Om det här alternativet är markerat visas en `Mark Unread`-knapp som tillåter att ett meddelande markeras som läst.
 
 * **Ta bort-knapp**
 
-  Om det här alternativet är markerat visas en `Delete` så att ett meddelande kan markeras som läst. Duplicerar borttagningsfunktionen om **`Message Options`** är även markerad.
+  Om det här alternativet är markerat visas en `Delete`-knapp som tillåter att ett meddelande markeras som läst. Duplicerar borttagningsfunktionen om **`Message Options`** också är markerad.
 
 * **Meddelandealternativ**
 
-  Om det här alternativet är markerat visas **`Reply`**, **`Reply All`**, **`Forward`** och **`Delete`** -knappar som gör att ett meddelande kan skickas igen eller tas bort. Duplicerar borttagningsfunktionen om **`Delete Button`** är även markerad.
+  Om det här alternativet är markerat visas knapparna **`Reply`**, **`Reply All`**, **`Forward`** och **`Delete`** så att ett meddelande kan skickas igen eller tas bort. Duplicerar borttagningsfunktionen om **`Delete Button`** också är markerad.
 
 * **Meddelanden per sida**
 
@@ -128,19 +128,19 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Visa användare**
 
-  Välj antingen **`Sender`** eller **`Recipients`** så att du kan avgöra om avsändaren eller mottagarna ska visas.
+  Välj antingen **`Sender`** eller **`Recipients`** så att du kan bestämma om du vill visa avsändaren eller mottagarna.
 
 ### Konfigurera dispositionsmeddelande {#configure-compose-message}
 
-Om du vill ändra konfigurationen för den sammansatta meddelandesidan öppnar du webbplatsen i [redigeringsläge](/help/communities/sites-console.md#authoring-site-content).
+Om du vill ändra konfigurationen för den sammansatta meddelandesidan öppnar du webbplatsen i [redigeringsläget för författare](/help/communities/sites-console.md#authoring-site-content).
 
-* I `Preview` läge, välj **Meddelanden** för att öppna meddelandesidan. Välj sedan knappen Nytt meddelande så att du kan öppna `Compose Message` sida.
+* I `Preview`-läget väljer du länken **Meddelanden** för att öppna huvudmeddelandesidan. Välj sedan knappen Nytt meddelande så att du kan öppna sidan `Compose Message`.
 
-* I `Edit` markerar du huvudkomponenten på sidan som innehåller meddelandetexten.
-* Om du vill öppna konfigurationsdialogrutan avbryter du arv genom att välja `link` -ikon.
+* I läget `Edit` väljer du huvudkomponenten på sidan som innehåller meddelandetexten.
+* Om du vill komma åt konfigurationsdialogrutan avbryter du arv genom att välja ikonen `link`.
 När arvet har avbrutits går det att välja konfigurationsikonen för att öppna konfigurationsdialogrutan.
 
-* När konfigurationen är klar måste du återställa arvet genom att välja `broken link` -ikon.
+* När konfigurationen är klar måste du återställa arvet genom att välja ikonen `broken link`.
 
 ![config-compose-message](assets/config-compose-message.png)
 
@@ -148,13 +148,13 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 ![basic-tab-compose](assets/basic-tab-compose.png)
 
-* **Omdirigeringsadress**
+* **Omdirigerings-URL**
 
-  Ange URL-adressen till sidan som visas när meddelandet har skickats. Till exempel: `../messaging.html`.
+  Ange URL-adressen till sidan som visas när meddelandet har skickats. Exempel: `../messaging.html`.
 
 * **Avbryt URL**
 
-  Ange URL-adressen till sidan som visas om avsändaren avbryter meddelandet. Till exempel: `../messaging.html`.
+  Ange URL-adressen till sidan som visas om avsändaren avbryter meddelandet. Exempel: `../messaging.html`.
 
 * **Maximal längd för meddelandets ämne**
 
@@ -166,7 +166,7 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Tjänstväljare**
 
-  (*Obligatoriskt*) Ange värdet för egenskapen **`serviceSelector.name`** från [Tjänsten AEM Communities Messaging Operations](/help/communities/messaging.md#messaging-operations-service).
+  (*Obligatoriskt*) Ange värdet för egenskapen **`serviceSelector.name`** från [AEM Communities Messaging Operations Service](/help/communities/messaging.md#messaging-operations-service).
 
 #### Fliken Visa {#display-tab-1}
 
@@ -174,27 +174,27 @@ När arvet har avbrutits går det att välja konfigurationsikonen för att öppn
 
 * **Visa ämnesfält**
 
-  Om du markerar det här alternativet visas `Subject` och gör det möjligt att lägga till ett ämne i meddelandet. Standard är inte markerat.
+  Om det här alternativet är markerat visar du fältet `Subject` och aktiverar att du lägger till ett ämne i meddelandet. Standard är inte markerat.
 
 * **Ämnesetikett**
 
-  Ange den text som du vill ska visas bredvid `Subject` fält. Standard är `Subject`.
+  Ange den text som du vill ska visas bredvid fältet `Subject`. Standardvärdet är `Subject`.
 
 * **Visa fält för bifogad fil**
 
-  Om du markerar det här alternativet visas `Attachment` och gör det möjligt att lägga till bifogade filer i meddelandet. Standard är inte markerat.
+  Om du markerar det här alternativet visas fältet `Attachment` och det går att lägga till bifogade filer i meddelandet. Standard är inte markerat.
 
 * **Bifoga filetikett**
 
-  Ange den text som du vill ska visas bredvid `Attachment` fält. Standard är **`Attach File`**.
+  Ange den text som du vill ska visas bredvid fältet `Attachment`. Standardvärdet är **`Attach File`**.
 
 * **Visa innehållsfält**
 
-  Om du markerar det här alternativet visas `Content` och aktivera tillägg av meddelandetext. Standard är inte markerat.
+  Om det här alternativet är markerat visar du fältet `Content` och aktiverar att du lägger till en meddelandetext. Standard är inte markerat.
 
 * **Innehållsetikett**
 
-  Ange den text som du vill ska visas bredvid `Content` fält. Standard är **`Body`**.
+  Ange den text som du vill ska visas bredvid fältet `Content`. Standardvärdet är **`Body`**.
 
 * **Med RTF-redigerare**
 

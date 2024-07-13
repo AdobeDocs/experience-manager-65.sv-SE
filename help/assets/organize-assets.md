@@ -30,38 +30,38 @@ Alla digitala resurser, metadata och innehåll i Microsoft® Office- och PDF-dok
 Det mest grundläggande sättet att ordna resurser är att spara dessa i mappar. Det motsvarar att ordna filer i mappar i det lokala filsystemet. Mer information om hur du skapar och hanterar mappar finns i [Hantera resurser](manage-assets.md). Hur du namnger filer och mappar, hur du ordnar undermappar och hur du hanterar filerna i dessa mappar kan påverka hur dessa resurser bearbetas. Genom att använda enhetliga och lämpliga namngivningsstrategier för filer och mappar tillsammans med god metadatapraxis kan ni få ut det mesta av era digitala resurslager.
 
 * Vanligtvis växer databasen med digitala resurser. Därför är det viktigt att formalisera metadataanvändning, mappstruktur och filnamngivning tidigt när du skapar innehåll.
-* Använd endast mappar för att få en enhetlig lagringsstruktur för dina digitala resurser. Denna konsekvens hjälper er att arbeta och hantera ert material bättre. Resurser som placerats i följande typer av mappar kan till exempel hjälpa dig att använda rätt [profiler som ska användas för bearbetning av tillgångar](processing-profiles.md):
+* Använd endast mappar för att få en enhetlig lagringsstruktur för dina digitala resurser. Denna konsekvens hjälper er att arbeta och hantera ert material bättre. Resurser som placerats i följande typer av mappar kan till exempel hjälpa dig att använda rätt [profiler för resursbearbetning](processing-profiles.md):
 
    * **Utvecklingsmappar**: innehåller digitala resurser som du för närvarande arbetar med.
-   * **Klientmappar**: innehåller digitala resurser baserade på klienter eller projektnamn.
-   * **Primära mappar**: innehåller digitala källresurser.
+   * **Klientmappar**: innehåller digitala resurser som är baserade på klienter eller projektnamn.
+   * **Primära mappar**: innehåller ursprungliga digitala källresurser.
    * **Återgivningsmappar**: innehåller återgivningar och kopior av det ursprungliga digitala källmaterialet.
-   * **Filstorleksmappar**: innehåller digitala resurser baserade på små, medelstora eller stora filstorlekar.
+   * **Filstorleksmappar**: innehåller digitala resurser baserat på liten, medelstor eller stor filstorlek.
    * **Mellanlagringsmappar**: innehåller digitala resurser som är klara att publiceras live på din webbplats.
-   * **MIME-typmappar**: innehåller digitala resurser som är specifika för MIME-typer, t.ex. bilder, dokument och multimedia.
-   * **Arkivera mappar**: innehåller pensionerade digitala resurser.
-   * **Datumbaserade mappar**: innehåller digitala resurser baserat på skapandedatum eller senaste ändringsdatum.
+   * **MIME-typmappar**: innehåller digitala resurser som är specifika för MIME-typer som bilder, dokument och multimedia.
+   * **Arkivmappar**: innehåller kasserade digitala resurser.
+   * **Datumbaserade mappar**: innehåller digitala resurser baserat på ett skapandedatum eller ett senast ändrat datum.
 
 * Skapa en katalog med mappar som troligtvis inte ändras så att anpassningar och automatisering fortsätter att fungera. De tilldelade bearbetningsprofilerna fortsätter till exempel att fungera.
-* Om en resurs redan har publicerats använder du [!DNL Experience Manager] om du vill flytta resursen till en annan mapp och publicera på nytt från den nya platsen är den ursprungliga publicerade resursplatsen fortfarande tillgänglig, tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är dock *vilse* till [!DNL Experience Manager] och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
+* Om en resurs redan har publicerats använder du [!DNL Experience Manager] för att flytta resursen till en annan mapp och publicera om från den nya platsen, är den ursprungliga publicerade resursplatsen fortfarande tillgänglig tillsammans med den nyligen publicerade resursen. Den ursprungliga publicerade resursen är *förlorad* till [!DNL Experience Manager] och kan inte avpubliceras. Därför bör du först avpublicera en resurs och sedan flytta den till en annan mapp.
 
 ## Ordna resurser med hjälp av taggar {#use-tags-to-organize-assets}
 
 Med taggar, som metadata, kan du enkelt söka efter resurser, skapa samlingar med hjälp av sökresultaten, öka rankningen för vissa resurser och använda artificiella intelligensalgoritmer i Adobe Sensei för tillgångsidentifiering.
 
-[!DNL Adobe Experience Manager Assets] använder en självlärande algoritm för att skapa mycket beskrivande taggar som gör att du kan hitta rätt resurs med bara några klick. Smart taggning använder Adobe Sensei, Adobe artificiella intelligens och maskininlärningsmiljö, som kan utbildas för att känna igen och använda både standard- och företagsspecifika taggar på bilder. Smarta taggar kan även identifiera innehåll, enskilda ord eller fraser och automatiskt använda beskrivande taggar på resurser
+[!DNL Adobe Experience Manager Assets] använder en självlärande algoritm för att skapa väldigt beskrivande taggar som gör att du kan hitta rätt resurs med bara några klick. Smart taggning använder Adobe Sensei, Adobe artificiella intelligens och maskininlärningsmiljö, som kan utbildas för att känna igen och använda både standard- och företagsspecifika taggar på bilder. Smarta taggar kan även identifiera innehåll, enskilda ord eller fraser och automatiskt använda beskrivande taggar på resurser
 
 Mer information finns i följande artiklar:
 
 * [Om taggar i Experience Manager](/help/sites-authoring/tags.md)
 * [Redigera metadata för resurser](metadata.md)
-* [Förbättrade smarta taggar i resurser](enhanced-smart-tags.md)
+* [Förbättrade smarta taggar i Assets](enhanced-smart-tags.md)
 
 ## Ordna som samlingar {#organize-as-collections}
 
-Med resurssamlingar i [!DNL Experience Manager Assets]kan du effektivisera möjligheten att skapa, redigera och dela resurser mellan användare. Skapa flera typer av samlingar baserat på hur du använder dem, inklusive samlingar som innehåller en statisk referenslista över resurser, mappar och samlingar samt samlingar som hämtar resurser baserat på sökvillkor. Du kan också skapa samlingar med resurser från olika platser och dela dem med flera användare med olika åtkomstnivåer, behörighet att visa och redigera.
+Med resurssamlingar i [!DNL Experience Manager Assets] kan du effektivisera möjligheten att skapa, redigera och dela resurser mellan användare. Skapa flera typer av samlingar baserat på hur du använder dem, inklusive samlingar som innehåller en statisk referenslista över resurser, mappar och samlingar samt samlingar som hämtar resurser baserat på sökvillkor. Du kan också skapa samlingar med resurser från olika platser och dela dem med flera användare med olika åtkomstnivåer, behörighet att visa och redigera.
 
-Mer information finns i [hantera samlingar](manage-collections.md).
+Mer information finns i [Hantera samlingar](manage-collections.md).
 
 <!-- TBD items: add screenshots where applicable
 Any hints/recommendations of when to use what method of organizing? Some examples of how organizing helps towards a better taxonomy and improved content velocity.

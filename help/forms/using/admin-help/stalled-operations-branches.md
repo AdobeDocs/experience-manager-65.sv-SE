@@ -29,15 +29,15 @@ För varje objekt som inte är installerade visas följande information i listan
 
 **Åtgärdsnamn eller grennamn:** Namnet på åtgärden eller grenen.
 
-**Status:** STALLERAD för fasta objekt.
+**Status:** STALLERAS alltid för installerade objekt.
 
 **Fel:** En kort beskrivning av problemet.
 
 **Process-ID:** Det positiva heltal som formulärarbetsflödet tilldelar när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar en process). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
 
-**Processnamn - version:** Namnet på processen som tilldelats i Workbench.
+**Processnamn - Version:** Namnet på processen som tilldelats i Workbench.
 
-**Stängt den:** Datum och tid då åtgärden eller grenen stoppades.
+**Stängt datum:** Datum och tid då åtgärden eller grenen stoppades.
 
 Du kan göra följande på sidan Installerade åtgärder eller Stängda grenar:
 
@@ -78,7 +78,7 @@ Fel uppstår när åtgärden Tilldela uppgift i AEM användartjänst är konfigu
 
 När den här situationen inträffar ändras inte processens och aktivitetens tillstånd vid den konfigurerade eskaleringstiden, och eskaleringen sker inte, men processen avbryts inte. Följande meddelande visas i serverloggen:
 
-&quot;Huvudkontot som har angetts för eskalering är inte giltigt för taskID: *tal*, angiven kö: *tal*.&quot;
+&quot;Det huvudobjekt som angetts för eskalering är inte giltigt för taskID: *number*, angiven kö: *number*.&quot;
 
 Om eskaleringsanvändaren tas bort innan aktiviteten genereras (innan Tilldela uppgift-åtgärden körs) avbryts processen eller InvalidPrincipal-undantagshändelsen.
 

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 I Correspondence Management innehåller en brevmall typiska formulärfält, layoutfunktioner som sidhuvud och sidfot samt tomma målområden för innehållsplacering.
 
-Correspondence Management tillhandahåller brevmallar i [AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). Du kan anpassa mallarna i Designer efter företagets grafiska profil och behov. Paketet innehåller följande mallar:
+Correspondence Management tillhandahåller brevmallar i [AEM Forms-tilläggspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). Du kan anpassa mallarna i Designer efter företagets grafiska profil och behov. Paketet innehåller följande mallar:
 
 * Klassisk
 * Klassisk enkel
@@ -72,7 +72,7 @@ PDF-förhandsgranskning av ett brev som skapats med mallen Balanserat vänster
 
 Mallen Balanced Right har företagslogotypen till vänster och ger utrymme för att ange mottagarnas adress på själva brevet. Mallen för balanserat höger innehåller även en sidfot som flödar om när brevet har flera sidor.
 
-![balanserad höger](assets/balancedright.png)
+![utjämnad höger](assets/balancedright.png)
 
 PDF förhandsgranskning av ett brev som skapats med mallen för balanserat höger
 

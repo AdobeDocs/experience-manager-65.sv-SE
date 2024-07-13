@@ -27,15 +27,15 @@ Med funktionen för sidskillnader kan du enkelt jämföra två sidor sida vid si
 
 >[!TIP]
 >
->Se [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details) för mer teknisk information om den här funktionen.
+>Mer teknisk information om den här funktionen finns i [Developing and Page Diff](/help/sites-developing/pagediff.md#operation-details).
 
 ## Använd {#use}
 
 Diff:en sida vid sida kan jämföra:
 
 * [Versioner](/help/sites-authoring/working-with-page-versions.md#comparing-a-version-with-current-page) - Tidigare version av en sida med det aktuella läget
-* [Live-kopior](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page) - Live Copy med utkast
-* [Startar](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) - Starta med källan
+* [Live-kopior](/help/sites-administering/msm-livecopy.md#comparing-a-live-copy-page-with-a-blueprint-page) - Live-kopia med utkast
+* [Startar](/help/sites-authoring/launches-editing.md#comparing-a-launch-page-to-its-source-page) - Starta med Source
 * [Språkkopior](/help/sites-administering/tc-manage.md#comparing-language-copies) - En sida före och efter (re-)översättning
 
 Läs respektive avsnitt om hur du påbörjar skillnaderna i dessa sammanhang.
@@ -51,7 +51,7 @@ Om du till exempel jämför versioner visas den aktuella versionen till vänster
 
 Källan för båda sidorna visas tydligt i sidhuvudsfältet högst upp i webbläsarfönstret.
 
-![Källa visas i rubriken](assets/chlimage_1-109.png)
+![Source visas i sidhuvudet](assets/chlimage_1-109.png)
 
 Skillnaden identifierar ändringar på komponentnivå och HTML-nivå. Objekt som har ändrats markeras med olika färger.
 
@@ -77,7 +77,7 @@ Om du vill fokusera på ett visst innehåll kan du klicka på helskärmsikonen f
 
 Den markerade sidan fyller hela fönstret, men fältet förblir överst så att du kan växla mellan de två sidorna.
 
-![Med fältet längst upp kan du växla mellan sidor](assets/chlimage_1-110.png)
+![Med fältet överst kan du växla mellan sidor](assets/chlimage_1-110.png)
 
 Du kan också stänga helskärmsläget genom att klicka på ikonen för att avsluta helskärmsläget.
 
@@ -93,7 +93,7 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 * För versioner återskapar inte diff åtkomstkontrollprincipen och Live copy-relationen.
 * Om en sida flyttas kan du inte längre göra några skillnader med versioner som gjorts före flyttningen.
 
-   * Om du får problem med en skillnad ska du kontrollera [Tidslinje](/help/sites-authoring/basic-handling.md#timeline) för att se om sidan har flyttats.
+   * Om du får problem med en skillnad kontrollerar du [tidslinjen](/help/sites-authoring/basic-handling.md#timeline) för sidan för att se om sidan har flyttats.
 
 >[!NOTE]
 >
@@ -101,4 +101,4 @@ I vissa situationer kan det hända att sidskillnader inte identifierar någon sk
 
 >[!NOTE]
 >
->Mer information om hur sidskillnader fungerar och vilka begränsningar som kan påverka sidskillnader finns i [dokumentation för utvecklare](/help/sites-developing/pagediff.md) av den här funktionen.
+>Mer information om funktionen för sidskillnader och begränsningar som kan påverka sidskillnader finns i [utvecklardokumentationen](/help/sites-developing/pagediff.md) för den här funktionen.

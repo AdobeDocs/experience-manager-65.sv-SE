@@ -27,11 +27,11 @@ Ett Dynamic Media-företagskonto som alias ser till att alla färdiga Dynamic Me
 
 Tänk på följande när du konfigurerar ett Dynamic Media-företagskonto:
 
-* Alla befintliga Dynamic Media-URL:er eller visningsprogramkod på din *live* digitala egenskaper måste uppdateras manuellt för att återspegla det nya aliasnamnet. Alla URL-adresser och visningsprogram som bäddar in kod med ditt ursprungliga Dynamic Media-företagsnamn fortsätter dock att fungera för befintliga eller nya resurser.
+* Alla befintliga Dynamic Media-URL:er eller visningsprograminbäddningskod för dina *live*-digitala egenskaper måste uppdateras manuellt för att det nya aliasnamnet ska återspeglas. Alla URL-adresser och visningsprogram som bäddar in kod med ditt ursprungliga Dynamic Media-företagsnamn fortsätter dock att fungera för befintliga eller nya resurser.
 * Dynamic Media aliaskonto är begränsat till Experience Manager Assets redigeringsläge och leverans. Företagets aliasnamn fungerar inte med Experience Manager Sites. WCM-komponenter (Web Content Management) har inte uppdaterats för den här ändringen. Dessa komponenter fortsätter att fungera med Dynamic Media ursprungliga företagsnamn för hämtning av Dynamic Media-resurser.
-* Du kan bara konfigurera ett företagalias-konto på **[!UICONTROL Edit Dynamic Media Configuration]** sida. Du kan dock skapa så många alias-konton som ett supportärende och manuellt spegla det nödvändiga aliasnamnet i Dynamic Media URL:er eller visningsprogrammets inbäddningskod.
-* En färdig lösning [Cacheinvalidering](/help/assets/invalidate-cdn-cache-dynamic-media.md) kan Dynamic Media göra URL:er ogiltiga med konton för både företags- och företagsalias konfigurerade på Dynamic Media konfigurationssida i Cloud Service.
-* När du konfigurerar ett företagalias-konto på **[!UICONTROL Edit Dynamic Media Configuration]** sida, för att cacheminnet ska kunna ogiltigförklaras måste du göra URL:er ogiltiga för *båda* den **[!UICONTROL Company]** konto och **[!UICONTROL Company Alias]** samtidigt.
+* Du kan bara konfigurera ett företagalias-konto på sidan **[!UICONTROL Edit Dynamic Media Configuration]**. Du kan dock skapa så många alias-konton som ett supportärende och manuellt spegla det nödvändiga aliasnamnet i Dynamic Media URL:er eller visningsprogrammets inbäddningskod.
+* Funktionen [Cacheinvalidering](/help/assets/invalidate-cdn-cache-dynamic-media.md) i Dynamic Media som är klar att användas gör URL-adresserna ogiltiga med konton för både företags- och företagsalias konfigurerade på Dynamic Media konfigurationssida i Cloud Service.
+* När du konfigurerar ett företagalias-konto på sidan **[!UICONTROL Edit Dynamic Media Configuration]** måste du göra URL:er för *både* **[!UICONTROL Company]**-kontot och **[!UICONTROL Company Alias]** ogiltiga samtidigt för att cacheminnet ska lyckas.
 
 Se även [Skapa en Dynamic Media-konfiguration i Cloud Service](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services)
 
@@ -39,19 +39,19 @@ Se även [Skapa en Dynamic Media-konfiguration i Cloud Service](/help/assets/con
 
 Du börjar konfigurera ett Dynamic Media-företagskonto genom att först skicka ett supportärende. Det här steget är obligatoriskt.
 
-1. [Använd Admin Console för att skapa ett supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
+1. [Skapa ett supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html) med Admin Console.
 1. Ange följande information i ditt supportärende:
 
-   * Det Dynamic Media-företagets alias som du vill använda. Namnet måste innehålla *endast* bokstäver (blandat skiftläge tillåts), siffror, bindestreck och understreck.
+   * Det Dynamic Media-företagets alias som du vill använda. Namnet får bara innehålla ** bokstäver (blandat skiftläge tillåts), siffror, bindestreck och understreck.
    * Din region.
-   * Om [linjaler](/help/assets/using-rulesets-to-transform-urls.md) används tidigare för att leverera Dynamic Media-innehåll via ett alternativt företagskontonamn för Dynamic Media.
+   * Anger om [regeluppsättningar](/help/assets/using-rulesets-to-transform-urls.md) används tidigare för att hantera Dynamic Media-innehåll med ett alternativt företagskontonamn för Dynamic Media.
 
-1. När Dynamic Media alias-kontot har skapats av Support väljer du den as a Cloud Service logotypen för Experience Manager i Experience Manager as a Cloud Service Author för att komma åt den globala navigeringskonsolen.
+1. När Dynamic Media alias-kontot har skapats av Support väljer du as a Cloud Service logotypen för Experience Manager i Experience Manager as a Cloud Service Author för att komma åt den globala navigeringskonsolen.
 1. Till vänster om konsolen väljer du verktygsikonen och går till **[!UICONTROL Cloud Services > Dynamic Media Configuration]**.
-1. På sidan Dynamic Media Configuration Browser väljer du **[!UICONTROL global]** (markera inte mappikonen till vänster om **[!UICONTROL global]**). Välj sedan **[!UICONTROL Edit]**.
+1. På sidan Dynamic Media Configuration Browser väljer du **[!UICONTROL global]** i den vänstra rutan (markera inte mappikonen till vänster om **[!UICONTROL global]**). Välj sedan **[!UICONTROL Edit]**.
 
    ![Textfältet Dynamic Media Company Alias](/help/assets/assets-dm/dm-company-alias.png)
 
-1. På **[!UICONTROL Edit Dynamic Media Configuration]** sida, på **[!UICONTROL Company Alias]** i textfältet skriver du det Dynamic Media-alias-kontonamn som du angav i ditt supportärende tidigare.
-1. I sidans övre högra hörn väljer du **[!UICONTROL Save]**.
+1. På sidan **[!UICONTROL Edit Dynamic Media Configuration]** skriver du Dynamic Media alias-kontonamnet som du angav i ditt supportärende tidigare i textfältet **[!UICONTROL Company Alias]**.
+1. Välj **[!UICONTROL Save]** i det övre högra hörnet på sidan.
 Dynamic Media alias-konto för företag har nu sparats och aktiverats. Alla URL:er och visningsprogrammets inbäddningskod för befintliga och nya resurser återspeglar nu det nya företagets aliasnamn.

@@ -17,4 +17,4 @@ ht-degree: 0%
 
 1. Varför visas inte streckkoder och signaturfält i HTML 5-formuläret?
 
-   Svar: Streckkoder och signaturfält är inte relevanta i HTML eller mobilscenarier. Dessa fält visas som icke-interaktiva områden. AEM Forms Designer har dock ett nytt signaturskriptfält som kan användas i stället för signaturfält. Du kan också lägga till en [anpassad widget](../../forms/using/custom-widgets.md) för streckkoder och integrera dem.
+   Svar: Streckkoder och signaturfält är inte relevanta i HTML eller mobilscenarier. Dessa fält visas som icke-interaktiva områden. AEM Forms Designer har dock ett nytt signaturskriptfält som kan användas i stället för signaturfält. Du kan också lägga till en [anpassad widget](../../forms/using/custom-widgets.md) för streckkoder och integrera den.

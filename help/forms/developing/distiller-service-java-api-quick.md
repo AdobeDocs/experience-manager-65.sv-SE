@@ -1,5 +1,5 @@
 ---
-title: Distiller Service Java&trade; API QuickStart(SOAP)
+title: Distiller Service Java&handel; API QuickStart(SOAP)
 description: Läs om hur Distiller omvandlar PostScript-, EPS- och PRN-filer till PDF, som ofta används för stora volymer av dokument för tryck-till-elektronisk konvertering.
 contentOwner: admin
 content-type: reference
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Java™ API Quick Start (SOAP) finns för tjänsten Distiller®:
 
-[Snabbstart (SOAP): Konvertera en PostScript-fil till ett PDF-dokument med Java](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
+[Snabbstart (SOAP): konvertera en PostScript-fil till ett PDF-dokument med Java](distiller-service-java-api-quick.md#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api)
 
 AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och anslutningsläget bör anges till SOAP.
 
@@ -30,7 +30,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 ## Snabbstart (SOAP): Konvertera en PostScript-fil till ett PDF-dokument med Java™ API {#quick-start-soap-mode-converting-a-postscript-file-to-a-pdf-document-using-the-java-api}
 
-I följande kodexempel konverteras en PostScript-fil med namnet *Loan.ps* till en PDF-fil som anropas *Loan.pdf*. (Se [Konvertera PostScript till PDF-dokument](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents).)
+I följande kodexempel konverteras en PostScript-fil med namnet *Loan.ps* till en PDF-fil med namnet *Loan.pdf*. (Se [Konverterar PostScript till PDF-dokument](/help/forms/developing/converting-postscript-pdf-documents.md#converting-postscript-to-pdf-documents).)
 
 ```java
  /*

@@ -26,37 +26,37 @@ Europeiska unionens allmänna dataskyddsförordning om integritetsskydd får ver
 
 AEM Sites är redo att hjälpa kunderna med deras GDPR-efterlevnadsskyldigheter. På den här sidan får kunderna hjälp med hur de hanterar GDPR-förfrågningar i AEM Sites. Den beskriver platsen för privata data som lagras och hur du tar bort dem manuellt eller med kod.
 
-Mer information finns i [GDPR-sidan på Adobe Privacy Center](https://www.adobe.com/privacy/general-data-protection-regulation.html).
+Mer information finns på sidan [GDPR på Adobe Privacy Center](https://www.adobe.com/privacy/general-data-protection-regulation.html).
 
 >[!NOTE]
 >
->Se [AEM GDPR-beredskap](/help/managing/data-protection-and-privacy.md) för mer information.
+>Mer information finns i [AEM GDPR-beredskap](/help/managing/data-protection-and-privacy.md).
 
 ## Författarserver {#author-server}
 
-Användarkonton och UGC-innehåll på författarservern beskrivs i [Plattforms-GDPR-dokumentation](/help/managing/data-protection-and-privacy.md).
+Användarkonton och UGC-innehåll på författarservern beskrivs i [plattformens GDPR-dokumentation](/help/managing/data-protection-and-privacy.md).
 
 ## Publish Server {#publish-server}
 
-Användarkonton som används för att autentisera besökare på webbplatsen, och UGC-innehåll på publiceringsservern omfattas av [Plattforms-GDPR-dokumentation](/help/managing/data-protection-and-privacy.md).
+Användarkonton som används för att autentisera besökare på webbplatsen och UGC-innehåll på publiceringsservern beskrivs i [plattformens GDPR-dokumentation](/help/managing/data-protection-and-privacy.md).
 
 Som standard lagrar inte AEM Sites-komponenter formulärdata som anges av besökare på publiceringsservern. Vi rekommenderar att du vidarebefordrar data till ett tredjepartssystem eller Adobe Campaign för vidare bearbetning.
 
 ## Opt-In/Opt-Out {#opt-in-opt-out}
 
-AEM har [anmälningstjänst för cookie](/help/sites-developing/cookie-optout.md) som kan användas för att hantera anmälan/avanmälan för användare.
+AEM har en [tjänst för cookie-avanmälan](/help/sites-developing/cookie-optout.md) som kan användas för att hantera avanmälan/avanmälan för användare.
 
 ## Förbättrade insikter från Analytics {#enhanced-insights-by-analytics}
 
 AEM Sites innehåller en valfri integrering med Enhanced Insights by Analytics som använder funktioner i Adobe Analytics On-Demand Service.
 
-Mer information om hur man hanterar förfrågningar från registrerade GDPR gällande Adobe Analytics finns på [Adobe Analytics och GDPR](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html).
+Mer information om hur du hanterar förfrågningar om registrerade GDPR-data relaterade till Adobe Analytics finns i [Adobe Analytics och GDPR](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html).
 
-## Förbättrad personalisering med Target {#enhanced-personalization-by-target}
+## Förbättrade Personalization efter Target {#enhanced-personalization-by-target}
 
-AEM Sites innehåller en valfri integrering med Förbättrad personalisering via Target som använder funktioner i Adobe Target On-Demand Service.
+AEM Sites innehåller en valfri integrering med Enhanced Personalization by Target som använder funktioner i Adobe Target On-Demand Service.
 
-Mer information om hur man hanterar förfrågningar från registrerade GDPR gällande Adobe Target finns på [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://developer.adobe.com/target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation/?lang=en).
+Mer information om hur du hanterar förfrågningar från registrerade GDPR-data relaterade till Adobe Target finns i [Adobe Target - Sekretess och allmänna dataskyddsförordningen](https://developer.adobe.com/target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation/?lang=en).
 
 ## ContextHub {#contexthub}
 
@@ -108,7 +108,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
 
 * Använd webbläsarens konsol, till exempel:
 
-   * Krom:
+   * Chrome:
 
       * Öppna Utvecklarverktyg > Program > Lagring:
 
@@ -127,7 +127,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
    * Safari:
 
       * Öppna Inställningar > Avancerat > Visa menyn Framkalla i menyraden
-      * Öppna Utveckla > Visa JavaScript-konsol
+      * Öppna Framkalla > Visa JavaScript Console
 
          * Konsol > Lagring > Lokal lagring > (webbplats) > ContextHubPersistence
          * Konsol > Lagring > Sessionslagring > (webbplats) > ContextHubPersistence
@@ -158,7 +158,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
 
 * Använd webbläsarens konsol:
 
-   * Chrome - open Developer Tools > Application > Storage:
+   * Chrome - öppna Developer Tools > Application > Storage:
 
       * Lokal lagring > (webbplats) > ContextHubPersistence
       * Sessionslagring > (webbplats) > ContextHubPersistence

@@ -22,8 +22,8 @@ Kampanjhantering ger digitala marknadsförare möjlighet att leverera personalis
 
 Om du administrerar kampanjer (inklusive landningssidor) kan du behöva göra följande:
 
-* **Definiera segment** - ni måste definiera segment och strategier för ert målinriktade innehåll.
-* **Förbered HTML för landningssidor** - Med landningssidor kan skribenter importera design och innehåll direkt till en AEM sida snabbt och enkelt. Du måste förbereda HTML så att materialet kan importeras på rätt sätt. Landningssidor är användbara när du skapar marknadsföringslandningssidor som bara är aktiva under en begränsad tid och behöver skapas snabbt.
+* **Definiera segment** - Du måste definiera segment och strategier för målinnehållet.
+* **Förbered HTML för landningssidor** - Med landningssidor kan författare importera design och innehåll direkt till en AEM sida snabbt och enkelt. Du måste förbereda HTML så att materialet kan importeras på rätt sätt. Landningssidor är användbara när du skapar marknadsföringslandningssidor som bara är aktiva under en begränsad tid och behöver skapas snabbt.
 * **Integrera med SiteCatalyst** - Du kan integrera landningssidor med SiteCatalyst.
 
 Se följande sidor:

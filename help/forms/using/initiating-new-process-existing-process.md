@@ -26,10 +26,10 @@ Så här startar du en ny process från befintliga processdata:-
 
    * Klicka på den processinstans vars data du vill använda i spårningen. Klicka på den aktivitetsrad som motsvarar startpunkten i vyn Processhistorik i den högra rutan.
    * I Spärra/knip väljer du en sökmall som visar en lista med processinstanser. Markera instansen vars data du vill använda.
-   * I **[!UICONTROL To-Do]** väljer du uppgiften. Klicka på **[!UICONTROL History]** och välj den åtgärd som initierade processinstansen.
+   * Markera uppgiften på fliken **[!UICONTROL To-Do]**. Klicka på fliken **[!UICONTROL History]** och välj den åtgärd som initierade processinstansen.
 
-   ![Välj uppgift](assets/start3_new.png) ![Välj uppgift](assets/start1_new.png)
+   ![Välj aktiviteten](assets/start3_new.png) ![Välj aktiviteten](assets/start1_new.png)
 
-1. Klicka på **[!UICONTROL Start]**. Ett adaptivt formulär för den nya processinstansen visas med förfyllda data.
+1. Klicka på **[!UICONTROL Start]** i åtgärdsverktygsfältet. Ett adaptivt formulär för den nya processinstansen visas med förfyllda data.
 
-1. Uppdatera data efter behov och klicka på antingen **[!UICONTROL Complete]** eller en lämplig knapp i formuläret.
+1. Uppdatera data efter behov och klicka antingen på **[!UICONTROL Complete]** eller en lämplig knapp i formuläret.

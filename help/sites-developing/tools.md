@@ -24,9 +24,9 @@ ht-degree: 0%
 AEM tillhandahåller:
 
 * [ett ramverk för testning av komponentens användargränssnitt](/help/sites-developing/hobbes.md).
-* [en mekanism för testning och felsökning av komponenter](/help/sites-developing/developer-mode.md).
+* [en mekanism för att testa och felsöka komponenter](/help/sites-developing/developer-mode.md).
 
-Här följer två testverktyg för öppen källkod:
+Följande två testverktyg är öppna för Source:
 
 **Selen**
 
@@ -52,7 +52,7 @@ Ett felsökningssystem som kan konfigureras efter dina egna behov.
 
 **Kalkylblad**
 
-Även om kalkylblad inte är specifikt ett felsökningsverktyg är de ofta *mis* används för detta eftersom de är lätta att förstå och de flesta användare har erfarenhet av sin funktionalitet.
+Även om kalkylblad inte är specifikt ett felsökningsverktyg, används ofta *mis* för detta ändamål eftersom de är lätta att förstå och de flesta användare har erfarenhet av sin funktionalitet.
 
 Om de här kalkylbladen används för spårning:
 

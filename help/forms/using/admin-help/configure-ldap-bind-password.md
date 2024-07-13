@@ -22,7 +22,7 @@ För att undvika säkerhetsrisker har fältet för bind-lösenord i den exporter
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler.
 1. Om du vill exportera den aktuella konfigurationsinställningen till en fil klickar du på Exportera och sparar konfigurationsfilen på en annan plats.
-1. Leta reda på `Domains` > *[Ditt domännamn]* > `DirectoryConfigs` > `LDAPGroupConfig` nod. Här är ett exempel:
+1. Leta reda på noden `Domains` > *[Ditt domännamn]* > `DirectoryConfigs` > `LDAPGroupConfig` i filen. Här är ett exempel:
 
    ```xml
     <node name="LDAPGroupConfig">
@@ -37,7 +37,7 @@ För att undvika säkerhetsrisker har fältet för bind-lösenord i den exporter
 
    Ange ett värde för `bindpassword` och spara ändringarna.
 
-1. Leta reda på `Domains` > *[Ditt domännamn]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig` nod. Här är ett exempel:
+1. Leta reda på noden `Domains` > *[Ditt domännamn]* > `DirectoryConfigs` > `LDAPGroupConfig` > `LDAPUserConfig` i filen. Här är ett exempel:
 
    ```xml
     <node name="LDAPUserConfig">

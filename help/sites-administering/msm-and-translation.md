@@ -28,7 +28,7 @@ Följande administrationsverktyg finns för att hantera webbplatser och sidor:
 
    * [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md)
 
-* Dessa två funktioner kan kombineras för att passa för webbplatser som båda [Flerspråkig och flerspråkig](#multinational-and-multilingual-sites).
+* Dessa två funktioner kan kombineras för att passa för webbplatser som är både [Flerspråkiga och flerspråkiga](#multinational-and-multilingual-sites).
 
 ## Flerspråkiga och flerspråkiga webbplatser {#multinational-and-multilingual-sites}
 
@@ -36,7 +36,7 @@ Ni kan effektivt skapa innehåll för multinationella och flerspråkiga webbplat
 
 * [Översätt](/help/sites-administering/translation.md) huvudwebbplatsen till olika språk.
 
-* Använd [Multi Site Manager](/help/sites-administering/msm.md) till:
+* Använd [Multi Site Manager](/help/sites-administering/msm.md) för att:
 
    * Återanvänd innehåll från huvudwebbplatsen och översättningarna för att skapa webbplatser för andra länder och kulturer.
    * Se till att begränsa användningen av Multi Site Manager till innehåll på ett språk, till exempel engelsk master > engelska språkgrenar på landsplatser, fransk master > franska språkgrenar på landsplatser.
@@ -44,14 +44,14 @@ Ni kan effektivt skapa innehåll för multinationella och flerspråkiga webbplat
 
 I följande diagram visas hur huvudbegreppen överlappar (men inte alla nivåer/element som berörs):
 
-![Diagram som visar huvudbegreppen MSM och översättning](assets/chlimage_1-71a.png)
+![Diagram som visar huvudbegrepp för MSM och översättning](assets/chlimage_1-71a.png)
 
 >[!NOTE]
 >
 >I detta fall, och på liknande sätt, hanterar inte MSM de olika språkversionerna som sådana.
 >
->* [MSM](/help/sites-administering/msm.md) hanterar distributionen av översatt innehåll från en plan (till exempel en global master) till live-kopiorna (till exempel de lokala webbplatserna) inom ett språks gränser.
->* The [översättning](/help/sites-administering/translation.md) integreringsfunktionerna i AEM, tillsammans med översättningshanteringstjänster från tredje part, hanterar språken och översätter innehåll till dessa olika språk.
+>* [MSM](/help/sites-administering/msm.md) hanterar distributionen av översatt innehåll från en plan (till exempel en global master) till live-kopiorna (till exempel de lokala platserna) inom ett språks gränser.
+>* Integreringsfunktionerna i [translation](/help/sites-administering/translation.md) i AEM, tillsammans med översättningshanteringstjänster från tredje part, hanterar språken och översätter innehåll till dessa olika språk.
 >
 >För mer avancerade användningsområden kan MSM användas även av flerspråkiga mallsidor.
 
@@ -59,9 +59,9 @@ I följande diagram visas hur huvudbegreppen överlappar (men inte alla nivåer/
 >
 >För alla användningsfall rekommenderas följande metodtips:
 >
->* [Bästa praxis för MSM](/help/sites-administering/msm-best-practices.md); särskilt:
+>* [Bästa praxis för MSM](/help/sites-administering/msm-best-practices.md), särskilt:
 >
->   * [Skapa webbplats](/help/sites-administering/msm-best-practices.md#create-site)
+>   * [Skapa plats](/help/sites-administering/msm-best-practices.md#create-site)
 >   * [MSM och flerspråkiga webbplatser](/help/sites-administering/msm-best-practices.md#msm-and-multilingual-websites)
 >
->* [Best Practices for Translation](/help/sites-administering/tc-bp.md)
+>* [Bästa metoder för översättning](/help/sites-administering/tc-bp.md)

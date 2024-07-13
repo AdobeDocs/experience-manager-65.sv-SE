@@ -24,15 +24,15 @@ AEM ger dig möjlighet att konfigurera:
 * begär dataloggning; en särskild loggningskonfiguration för begärandeinformation
 * specifika inställningar för de enskilda tjänsterna, till exempel en enskild loggfil och ett format för loggmeddelandena
 
-De här är alla [OSGi-konfigurationer](/help/sites-deploying/configuring-osgi.md).
+Det här är alla [OSGi-konfigurationer](/help/sites-deploying/configuring-osgi.md).
 
 >[!NOTE]
 >
->Inloggning AEM baseras på Sling-principer. Se [Sling Logging](https://sling.apache.org/site/logging.html) för ytterligare information.
+>Inloggning AEM baseras på Sling-principer. Mer information finns i [Sling Logging](https://sling.apache.org/site/logging.html).
 
 ## Global loggning {#global-logging}
 
-[Konfiguration av Apache Sling-loggning](/help/sites-deploying/osgi-configuration-settings.md) används för att konfigurera rotloggaren. Detta definierar de globala inställningarna för inloggning AEM:
+[Loggningskonfiguration för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md) används för att konfigurera rotloggaren. Detta definierar de globala inställningarna för inloggning AEM:
 
 * loggningsnivån
 * platsen för den centrala loggfilen
@@ -42,7 +42,7 @@ De här är alla [OSGi-konfigurationer](/help/sites-deploying/configuring-osgi.m
 
 >[!NOTE]
 >
->Detta [Kunskapsbasartikel](https://helpx.adobe.com/experience-manager/kb/HowToRotateRequestAndAccessLog.html) I beskrivs hur du roterar filen request.log och access.log.
+>I den här [kunskapsbasartikeln](https://helpx.adobe.com/experience-manager/kb/HowToRotateRequestAndAccessLog.html) beskrivs hur du roterar filen request.log och access.log.
 
 ## Loggare och skribenter för enskilda tjänster {#loggers-and-writers-for-individual-services}
 
@@ -59,13 +59,13 @@ På så sätt kan du kanalisera loggmeddelanden för en enskild tjänst till en 
 
 AEM använder följande för att skriva loggmeddelanden till filen:
 
-1. An **OSGi-tjänst** (logger) skriver ett loggmeddelande.
-1. A **Loggningsloggare** tar det här meddelandet och formaterar det enligt din specifikation.
-1. A **Loggningsförfattare** skriver alla dessa meddelanden till den fysiska filen som du har definierat.
+1. En **OSGi-tjänst** (logger) skriver ett loggmeddelande.
+1. En **loggningsloggare** tar emot det här meddelandet och formaterar det enligt din specifikation.
+1. Ett **loggningsskrivprogram** skriver alla dessa meddelanden till den fysiska filen som du har definierat.
 
 Dessa element är länkade med följande parametrar för de relevanta elementen:
 
-* **Logger (loggningsloggare)**
+* **Logger (loggningslogg)**
 
   Definiera de tjänster som genererar meddelandena.
 
@@ -75,7 +75,7 @@ Dessa element är länkade med följande parametrar för de relevanta elementen:
 
   Detta används för att länka en loggningslogg till en loggningsförfattare. Värdet måste vara identiskt med samma parameter i loggningsskrivarens konfiguration för att anslutningen ska kunna upprättas.
 
-* **Loggfil (loggningsskrivare)**
+* **Loggfil (loggningsförfattare)**
 
   Definiera den fysiska fil som loggmeddelandena ska skrivas till.
 
@@ -85,7 +85,7 @@ Dessa element är länkade med följande parametrar för de relevanta elementen:
 
 Vissa loggare och skrivprogram ingår i en AEM standardinstallation.
 
-Det första är ett specialfall eftersom det styr både `request.log` och `access.log` filer:
+Det första är ett specialfall eftersom det styr både `request.log`- och `access.log`-filerna:
 
 * Loggaren:
 
@@ -93,7 +93,7 @@ Det första är ett specialfall eftersom det styr både `request.log` och `acces
 
      (org.apache.sling.engine.impl.log.RequestLoggerService)
 
-   * Skriv meddelanden om att begära innehåll till `request.log`.
+   * Skriv meddelanden om begärandeinnehåll till `request.log`.
 
 * Länkar till:
 
@@ -113,7 +113,7 @@ De andra paren följer standardkonfigurationen:
 
      (org.apache.sling.Commons.log.LogManager.factory.config)
 
-   * Skrivningar `Information` meddelanden till `logs/error.log`.
+   * Skriver `Information` meddelanden till `logs/error.log`.
 
 * Länkar till skrivprogrammet:
 
@@ -123,9 +123,10 @@ De andra paren följer standardkonfigurationen:
 
 * Loggaren:
 
-   * Konfiguration av loggningslogg för Apache Sling (org.apache.sling.Commons.log.LogManager.factory.config.649d51b7-6425-45c9-81e6-2697a03d6be7)
+   * Konfiguration av loggningsloggare för Apache Sling
+(org.apache.sling.Commons.log.LogManager.factory.config.649d51b7-6425-45c9-81e6-2697a03d6be7)
 
-   * Skrivningar `Warning` meddelanden till `../logs/error.log` för tjänsten `org.apache.pdfbox`.
+   * Skriver `Warning` meddelanden till `../logs/error.log` för tjänsten `org.apache.pdfbox`.
 
 * Länkar inte till ett specifikt skrivprogram, så skapar och använder ett implicit skrivprogram med standardkonfiguration (daglig loggrotation).
 
@@ -139,7 +140,7 @@ Du kan definiera ett eget par för loggare/skrivare:
    1. Ange loggaren.
    1. Konfigurera de andra parametrarna efter behov.
 
-1. Skapa en instans av fabrikskonfigurationen [Konfiguration av skrivprogram för Apache Sling Logging](/help/sites-deploying/osgi-configuration-settings.md).
+1. Skapa en instans av fabrikskonfigurationen [Konfiguration för Apache Sling Logging Writer ](/help/sites-deploying/osgi-configuration-settings.md).
 
    1. Ange loggfilen - den måste matcha den som har angetts för loggaren.
    1. Konfigurera de andra parametrarna efter behov.

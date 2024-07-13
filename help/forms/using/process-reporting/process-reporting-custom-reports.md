@@ -24,14 +24,14 @@ Du kan använda REST-gränssnittet i QueryBuilder eller skapa en OSGi-tjänst me
 
 Utför följande mallprocedur innan du lägger till en anpassad rapport:
 
-1. Data som används i anpassade rapporter måste vara tillgängliga i processrapportering. För att säkerställa att data är tillgängliga schemalägger du ett cron-jobb eller användning **[Synkronisera](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** i gränssnittet för processrapportering.
+1. Data som används i anpassade rapporter måste vara tillgängliga i processrapportering. Om du vill vara säker på att data är tillgängliga schemalägger du ett cron-jobb eller använder alternativet **[Synkronisera](https://helpx.adobe.com/livecycle/help/process-reporting/install-start-process-reporting.html#Process%20Reporting%20Home%20screen)** i gränssnittet för processrapportering.
 1. URL-begäran (som kapslar in den önskade frågan) måste returnera ett lämpligt frågeresultatobjekt. Om du vill skapa en fråga kan du använda REST-gränssnittet i [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en) för att skapa en OSGi-tjänst med hjälp av QueryBuilder API. Du kan skapa dynamiska eller statiska frågor.
 
 1. Skapa ett anpassat användargränssnitt för att visa resultaten. Du kan skapa ett fristående användargränssnitt eller integrera resultatet med befintliga processrapporteringsgränssnitt.
 
 ## Använda REST-gränssnittet i QueryBuilder {#using-the-rest-interface-of-the-querybuilder}
 
-CRX QueryBuilder REST-gränssnittet exponerar funktionerna i Asset Share Query Builder via ett Java API och ett REST API. Lär dig använda [CRX QueryBuilder REST-gränssnitt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en)innan du utför följande steg:
+CRX QueryBuilder REST-gränssnittet exponerar funktionerna i Asset Share Query Builder via ett Java API och ett REST API. Lär dig hur du använder [CRX QueryBuilder REST-gränssnittet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en) innan du utför följande steg:
 
 1. Bläddra till URL:en `https://'[server]:[port]'/lc/bin/querybuilder.json`
 1. Skapa en fråga baserat på lagringsnodens struktur och nodegenskaper i Process Reporting.
@@ -48,7 +48,7 @@ CRX QueryBuilder REST-gränssnittet exponerar funktionerna i Asset Share Query B
 
 ## Skapa en tjänst med hjälp av Query Builder API  {#creating-a-service-using-query-builder-api-nbsp}
 
-Förutsättningen för att skapa en tjänst med hjälp av Query Builder API är [skapa och distribuera CQ OSGI-paket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en) och [med Query Builder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en).
+Förutsättningen för att skapa en tjänst med hjälp av Query Builder API är [att skapa och distribuera CQ OSGI-paketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en) och [med hjälp av Query Builder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=en).
 
 1. Skapa en OSGi-tjänst med lämpliga anteckningar. Så här kommer du åt QueryBuilder:
 
@@ -64,7 +64,7 @@ Förutsättningen för att skapa en tjänst med hjälp av Query Builder API är 
     predicateGroup.setAllRequired(true);
    ```
 
-1. Lägg till predikat i den nyligen skapade prediateGroup. Några praktiska predikatkonstruktioner är [JcrBoolPropertyPredicateEvaluator i 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en), [JcrPropertyPredicateEvaluator i 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en), [RangePropertyPredicateEvaluator i 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en), [DateRangePredicateEvaluator i 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en)och [TypePredicateEvaluator i 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en).
+1. Lägg till predikat i den nyligen skapade prediateGroup. Ett par användbara predikatkonstruktioner är [JcrBoolPropertyPredicateEvaluator i 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en), [JcrPropertyPredicateEvaluator i 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en), [RangePropertyPredicateEvaluator i 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en), [DateRangePredicateEvaluator i 5.5.5 3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en) och [TypePredicateEvaluator i 5.3](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en).
 
    För statiska rapporter kan predikaten kodas, medan predikaten hämtas från begäran för dynamiska rapporter.
 
@@ -135,13 +135,13 @@ Förutsättningen för att skapa en tjänst med hjälp av Query Builder API är 
                        out.write(row.toString().getBytes());
    ```
 
-1. Använd `org.apache.felix maven-bundle-plugin` för att skapa ett OSGi-paket för servleten.
+1. Använd `org.apache.felix maven-bundle-plugin` för att skapa ett OSGi-paket för serverleten.
 
 1. Distribuera paketet på CRX-servern.
 
 ### Exempel på tjänst {#service-example}
 
-I följande tjänstexempel räknas instanser av en process som finns i **KÖRS** och **SLUTFÖRD** vid slutet av varje månad, kvartal och år.
+I följande tjänstexempel räknas instanser av en process som är i läget **RUNNING** och **COMPLETE** vid slutet av varje månad, kvartal och år.
 
 ```java
 package custom.reporting.service;
@@ -339,7 +339,7 @@ public class PeriodicProcessVolume {
 }
 ```
 
-Exemplet `pom.xml`filen som ska skapas ovanför tjänsten är:
+Exempelfilen `pom.xml` som ska skapas ovanför tjänsten är:
 
 ```xml
 <project xmlns="https://maven.apache.org/POM/4.0.0" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
@@ -423,10 +423,10 @@ Exemplet `pom.xml`filen som ska skapas ovanför tjänsten är:
 
 ## Skapa ett separat användargränssnitt  {#creating-a-separate-ui-nbsp}
 
-Förutsättningarna för att skapa ett separat användargränssnitt för att visa resultat är [Grundläggande om att sälja in 5.6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en), [Skapa en CRX-nod](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en) och tillhandahålla lämpliga [behörighet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en).
+Förutsättningarna för att skapa ett separat användargränssnitt för att visa resultat är [Grundläggande om segmentering i 5.6.1](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en), [Skapa en CRX-nod](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en) och ger rätt [åtkomstbehörighet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=en).
 
-1. Skapa en CRX-nod på `/apps` nod och tilldela lämpliga behörigheter. (PERM_PROCESS_REPORTING_USER)
-1. Definiera renderaren på `/content` nod.
+1. Skapa en CRX-nod på noden `/apps` och tilldela lämpliga åtkomstbehörigheter. (PERM_PROCESS_REPORTING_USER)
+1. Definiera renderaren på noden `/content`.
 1. Lägg till JSP- eller HTML-filer i noden som skapades i steg 1. Du kan också lägga till CSS-filer.
 
    ![En exempelnod med JSP- och CSS-filer](assets/nodewith_jsp_css_new.png)
@@ -631,16 +631,16 @@ response.setCharacterEncoding("utf-8");
 
 ## Integrera rapportgränssnitt i befintligt processrapporteringsgränssnitt  {#integrating-report-ui-in-existing-process-reporting-ui-nbsp}
 
-Förutsättningarna för att skapa ett separat användargränssnitt för att visa resultat är [Grundläggande om försäljning](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [Skapa en CRX-nod](/help/sites-developing/developing-with-crxde-lite.md#creating-a-node) och tillhandahålla lämpliga [behörighet](/help/sites-developing/developing-with-crxde-lite.md#access-control).
+Förutsättningarna för att skapa ett separat användargränssnitt för att visa resultat är [Sling Basics](https://wem.help.adobe.com/enterprise/en_US/10-0/wem/developing/the_basics.html), [Skapa en CRX-nod](/help/sites-developing/developing-with-crxde-lite.md#creating-a-node) och ger rätt [åtkomstbehörighet](/help/sites-developing/developing-with-crxde-lite.md#access-control).
 
 1. Skapa ett separat användargränssnitt.
-1. Skapa ett underordnat objekt `nt:unstructured` noden vid `/content/process-reporting-runtime/custom-reports` nod för varje anslutningsbar rapport.
+1. Skapa en underordnad `nt:unstructured`-nod på noden `/content/process-reporting-runtime/custom-reports` för varje anslutningsbar rapport.
 
-   * **id**- Anger rapportens unika ID-nummer.
-   * **name**- Anger rapportens namn. Namnet visas i användargränssnittet.
+   * **id** - Anger rapportens unika ID-nummer.
+   * **namn**- Anger rapportens namn. Namnet visas i användargränssnittet.
    * **link**- Anger relativ länk till renderaren för det separata användargränssnittet. Länken skapas i steg 1.
-   * **description**- Anger rapportens beskrivning på en rad. Du kan lämna beskrivningsfältet tomt.
-   * **icon**- Anger bilden som ska representera rapporten i pictorial. Du kan lämna ikonfältet tomt.
+   * **description**- Anger rapportens enradsbeskrivning. Du kan lämna beskrivningsfältet tomt.
+   * **ikon**- Anger bilden som ska representera rapporten i pictorially. Du kan lämna ikonfältet tomt.
 
    ![Egenskaper för nod ](assets/node_properties_new.png)
 
@@ -648,7 +648,7 @@ Förutsättningarna för att skapa ett separat användargränssnitt för att vis
 
 1. Rapportens användargränssnitt är integrerat med processrapportens användargränssnitt. När du har integrerat användargränssnittet ser det uppdaterade användargränssnittet ut ungefär som i följande bilder:
 
-   ![Användargränssnitt för nytillagda anpassade rapporter](assets/sampleui_screenshot_new.png)
+   ![Användargränssnitt för nya anpassade rapporter](assets/sampleui_screenshot_new.png)
 
    Användargränssnitt för nytillagda anpassade rapporter
 
@@ -658,6 +658,6 @@ Förutsättningarna för att skapa ett separat användargränssnitt för att vis
 
 ## Exempelpaket {#sample-package}
 
-Importera `sample-report-pkg-1.zip` paket för att integrera anpassade rapporter och användargränssnitt som diskuteras i artikeln med processhanteringsgränssnittet.
+Importera paketet `sample-report-pkg-1.zip` om du vill integrera anpassade rapporter och användargränssnitt som beskrivs i artikeln med processhanteringsgränssnittet.
 
 [Hämta fil](assets/sample-report-pkg-1.zip)

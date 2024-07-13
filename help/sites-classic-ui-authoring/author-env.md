@@ -20,13 +20,13 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Följande dokumentation fokuserar på det klassiska användargränssnittet. Mer information om redigering i det moderna, pekaktiverade användargränssnittet finns i [standarddokumentation](/help/assets/assets.md).
+>Följande dokumentation fokuserar på det klassiska användargränssnittet. Mer information om redigering i det moderna, pekaktiverade användargränssnittet finns i [standarddokumentationen för redigering](/help/assets/assets.md).
 
 I författarmiljön kan du utföra åtgärder som rör:
 
-* [Redigering](/help/sites-authoring/author.md) (inklusive [sidredigering](/help/sites-authoring/qg-page-authoring.md) och [hantera resurser](/help/assets/assets.md))
+* [Redigering](/help/sites-authoring/author.md) (inklusive [sidredigering](/help/sites-authoring/qg-page-authoring.md) och [hantering av resurser](/help/assets/assets.md))
 
-* [Administratör](/help/sites-administering/administer-best-practices.md) uppgifter du behöver när du genererar och underhåller innehåll på webbplatsen
+* [Administrera](/help/sites-administering/administer-best-practices.md) aktiviteter som du behöver när du genererar och underhåller innehåll på webbplatsen
 
 Det finns två grafiska användargränssnitt som är tillgängliga via alla moderna webbläsare:
 
@@ -36,7 +36,7 @@ Det finns två grafiska användargränssnitt som är tillgängliga via alla mode
    * Den är främst grön.
    * Den har utformats för användning på stationära enheter.
    * Den underhålls inte längre.
-   * Följande dokumentation fokuserar på det här klassiska användargränssnittet. Mer information om redigering i det moderna, pekbaserade användargränssnittet finns i [standarddokumentation](/help/sites-authoring/author.md).
+   * Följande dokumentation fokuserar på det här klassiska användargränssnittet. Mer information om redigering i det moderna, pekbaserade användargränssnittet finns i [standarddokumentationen för redigering](/help/sites-authoring/author.md).
 
    ![chlimage_1-149](assets/chlimage_1-149.png)
 
@@ -44,8 +44,8 @@ Det finns två grafiska användargränssnitt som är tillgängliga via alla mode
 
    * Det här är det moderna AEM.
    * Den är främst grå, med ett rent, platt gränssnitt.
-   * Den är utformad för användning både på pekskärmar och på stationära enheter (optimerad för pekskärmar). Utseendet och känslan är densamma på alla enheter [visa och välja resurser](/help/sites-authoring/basic-handling.md) skiljer sig något (tryck mot klick).
-   * Se [standarddokumentation](/help/sites-authoring/author.md) om du vill ha mer information om hur du skapar med det pekbaserade användargränssnittet. Följande dokumentation fokuserar på det klassiska användargränssnittet.
+   * Den är utformad för användning både på pekskärmar och på stationära enheter (optimerad för pekskärmar). Utseendet och känslan är densamma på alla enheter, men [när du visar och väljer dina resurser](/help/sites-authoring/basic-handling.md) skiljer sig åt något (tryck mot klick).
+   * Se [standarddokumentationen för redigering](/help/sites-authoring/author.md) om du vill ha mer information om hur du skapar med det pekbaserade användargränssnittet. Följande dokumentation fokuserar på det klassiska användargränssnittet.
 
    * Skrivbord:
 

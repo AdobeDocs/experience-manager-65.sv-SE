@@ -25,16 +25,16 @@ AEM Forms arbetsyta stöder formatuppsättningar. Med formuläruppsättningar ka
 
 ## Koppla en formuläruppsättning till startpunkten i en AEM Forms-arbetsyteapp {#attaching-a-formset-to-startpoint-in-an-aem-forms-workspace-app-br}
 
-1. Skapa affärsprocessarbetsflödet i Workbench. Mer information finns i [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63).
-1. Välj bland processegenskaperna för startpunkten **Använd en CRX-resurs** i presentationer och data.
+1. Skapa affärsprocessarbetsflödet i Workbench. Mer information finns i [Workbench-hjälpen](https://www.adobe.com/go/learn_aemforms_workbench_63).
+1. Välj **Använd en CRX-resurs** i Presentation &amp; Data i processegenskaperna för startpunkten.
 
    ![1-3](assets/1-3.png)
 
-1. Klicka ![bläddra](assets/browse.png) (Bläddra) bredvid resurssökvägen för CRX. Dialogrutan Välj formulärresurs visas.
+1. Klicka på ![Bläddra](assets/browse.png) (Bläddra) bredvid CRX resurssökväg. Dialogrutan Välj formulärresurs visas.
 
    ![2-1](assets/2-1.png)
 
-1. Klicka på **Formset** väljer du den relevanta formuppsättningen i listan och klickar sedan på **OK**.
+1. Klicka på fliken **Formuppsättning**, markera den relevanta formuppsättningen i listan och klicka sedan på **OK**.
 
 1. Distribuera programmet efter uppdatering av andra relevanta processegenskaper.
 

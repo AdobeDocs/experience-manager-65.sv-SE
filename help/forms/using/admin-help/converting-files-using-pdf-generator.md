@@ -37,7 +37,7 @@ Du kan använda webbsidorna i PDF Generator för att konvertera filer.
 
    * Om du överför en inställningsfil anger du sökvägen och namnet i rutan eller klickar på Bläddra för att hitta och markera filen.
 
-1. (Valfritt) Under XMP Metadatafil skriver du sökvägen och namnet på den XMP filen, eller klickar på Bläddra för att hitta och markera filen. En XMP kan användas för att inkludera standardmetadatainformation. (Se [XMP filer](converting-files-using-pdf-generator.md#about-xmp-files).)
+1. (Valfritt) Under XMP Metadatafil skriver du sökvägen och namnet på den XMP filen, eller klickar på Bläddra för att hitta och markera filen. En XMP kan användas för att inkludera standardmetadatainformation. (Se [Om XMP filer](converting-files-using-pdf-generator.md#about-xmp-files).)
 1. Klicka på Skapa. När filen skapas visas en länk till den. Om ett fel inträffar under konverteringen visas en varning. Om du skapar en PostScript-fil innehåller varningen även en länk till loggfilen.
 1. Klicka på länken för filen PDF. Filen öppnas i Acrobat.
 
@@ -97,13 +97,13 @@ Om ZIP-filen innehåller mer än en HTML-fil på den lägsta nivån i mapphierar
 
    * Om du vill använda en befintlig inställningsfil väljer du Överför inställningsfil och klickar på Bläddra för att gå till filplatsen.
 
-1. Om du vill överföra en XMP klickar du på Bläddra och går till filplatsen. En XMP kan användas för att inkludera standardmetadatainformation. (Se [XMP filer](converting-files-using-pdf-generator.md#about-xmp-files).)
+1. Om du vill överföra en XMP klickar du på Bläddra och går till filplatsen. En XMP kan användas för att inkludera standardmetadatainformation. (Se [Om XMP filer](converting-files-using-pdf-generator.md#about-xmp-files).)
 1. Klicka på Skapa. När filen skapas visas en länk till filen PDF.
 1. Klicka på länken om du vill visa PDF-dokumentet i Acrobat.
 
 ## Exportera en PDF-fil till ett annat filformat (endast Windows) {#export-a-pdf-file-to-another-file-format-windows-only}
 
-Du kan exportera PDF-filer till olika filformat enligt beskrivningen i kapitlet om tjänsten Generera PDF i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_63).
+Du kan exportera PDF-filer till olika filformat, vilket beskrivs i kapitlet om tjänsten Generate PDF i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_63) .
 
 1. I administrationskonsolen klickar du på Tjänster > PDF Generator > Export PDF.
 1. Klicka på Bläddra för att leta reda på PDF-filen som ska exporteras.
@@ -112,7 +112,7 @@ Du kan exportera PDF-filer till olika filformat enligt beskrivningen i kapitlet 
 
    Konverteringstiden som visas när filen konverteras kan vara större än det värde som du anger här. Konverteringstiden är den tid som har ägnats åt att vänta på tråden eller processen, den tid det tar att konvertera filen och den tid det tar för reservkonverteraren (om tillämpligt). tid. Värdet Ange en timeout är bara den tid det tar att konvertera filen.
 
-1. (Valfritt) I dialogrutan **Ange anpassad preflight-profil** , klicka på Bläddra och välj en [anpassad preflight-profil](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html). Preflight-profiler används bara vid konvertering av dokument till PDF-format (PDF/A).
+1. (Valfritt) Klicka på Bläddra i alternativet **Ange anpassad preflight-profil** och välj en [anpassad preflight-profil](https://helpx.adobe.com/acrobat/using/preflight-profiles-acrobat-pro.html). Preflight-profiler används bara vid konvertering av dokument till PDF-format (PDF/A).
 1. Klicka på Exportera. När konverteringen är klar visas en länk till den exporterade filen.
 1. Klicka på länken för att visa den konverterade filen.
 

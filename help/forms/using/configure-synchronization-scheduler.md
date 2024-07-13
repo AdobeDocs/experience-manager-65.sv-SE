@@ -24,38 +24,38 @@ Som standard körs synkroniseringsschemaläggaren efter var tredje minut för at
 
 Utför följande steg för att ändra intervallet för synkroniseringsplaneraren:
 
-1. Logga in AEM Configuration Manager. URL:en för Configuration Manager är `https://'[server]:[port]'/lc/system/console/configMgr`
+1. Logga in AEM Configuration Manager. URL för Configuration Manager är `https://'[server]:[port]'/lc/system/console/configMgr`
 
-1. Leta reda på och öppna **FormsManagerConfiguration** paket.
+1. Leta upp och öppna paketet **FormsManagerConfiguration**.
 
-1. Ange ett nytt värde för **Frekvens för synkroniseringsschemaläggare** alternativ.
+1. Ange ett nytt värde för alternativet **Schemaläggarens frekvens för synkronisering**.
 
    Frekvensenheten är minuter. Om du till exempel vill konfigurera schemaläggaren att köras efter var 60:e minut anger du 60.
 
 ## Synkronisera resurser {#synchronizing-assets}
 
-Du kan använda **Synkronisera resurser från databas** om du vill synkronisera resurserna manuellt. Så här synkroniserar du resurserna manuellt:
+Du kan använda alternativet **Synkronisera Assets från databas** om du vill synkronisera resurserna manuellt. Så här synkroniserar du resurserna manuellt:
 
 1. Logga in på AEM Forms. Standardwebbadressen är `https://'[server]:[port]'/lc/aem/forms/`.
 
    ![AEM Forms användargränssnitt](assets/aem_forms_ui.png)
 
-   **Bild:** *AEM Forms användargränssnitt*
+   **Figur:** *AEM Forms användargränssnitt*
 
-1. Klicka på ![aem6forms_sync](assets/aem6forms_sync.png) i verktygsfältet. Om du inte har några resurser på den senast konfigurerade sökvägen visas dialogrutan enligt nedan. Klicka **Starta** för att initiera synkroniseringen.
+1. Klicka på ikonen ![aem6forms_sync](assets/aem6forms_sync.png) i verktygsfältet. Om du inte har några resurser på den senast konfigurerade sökvägen visas dialogrutan enligt nedan. Klicka på **Start** för att starta synkroniseringen.
 
-   ![Synkroniseringsdialogruta](assets/migrate-and-syncronize.png)
+   ![Dialogrutan Synkronisering](assets/migrate-and-syncronize.png)
 
-   **Bild:** *Synkroniseringsdialogruta*
+   **Figur:** *Dialogrutan Synkronisering*
 
 ## Felsökning av synkroniseringsfel {#troubleshooting-synchronization-error}
 
 Du kan skapa nya program i arbetsflödesdesignern (LiveCyclet Workbench).
 
-Om det nyligen skapade programmet och en mapp på /content/dam/formsanddocuments har samma namn visas ett felmeddelande &quot;*Det finns redan en resurs med samma namn som det här programmet på rotnivå.*&quot; är loggad.
+Om det nyligen skapade programmet och en mapp på /content/dam/formSanddocuments har samma namn, finns det redan ett fel på rotnivån: *En resurs med samma namn som det här programmet.* är loggad.
 
 Lös konflikten genom att byta namn på programmet och manuellt synkronisera resurserna.
 
 ![Konflikter i dialogrutan för resurssynkronisering](assets/sync-conflict.png)
 
-**Bild:** *Konflikter i dialogrutan för resurssynkronisering*
+**Figur:** *Konflikter i dialogrutan för resurssynkronisering*

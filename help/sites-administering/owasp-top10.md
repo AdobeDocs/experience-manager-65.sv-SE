@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # OWASP Top 10{#owasp-top}
 
-The [Öppna säkerhetsprojekt för webbprogram](https://owasp.org/) (OWASP) har en lista över vad de anser vara [De 10 viktigaste säkerhetsriskerna för webbapplikationer](https://owasp.org/www-project-top-ten/).
+[Open Web Application Security Project](https://owasp.org/) (OWASP) innehåller en lista över vad de anser vara de [10 viktigaste säkerhetsriskerna för webbprogram](https://owasp.org/www-project-top-ten/).
 
-Dessa är listade nedan tillsammans med en förklaring av hur CRX hanterar dem.
+Dessa listas nedan tillsammans med en förklaring av hur CRX hanterar dem.
 
 ## 1. Injektion {#injection}
 
@@ -30,13 +30,13 @@ Dessa är listade nedan tillsammans med en förklaring av hur CRX hanterar dem.
 
 ## 2. XSS (Cross-Site Scripting) {#cross-site-scripting-xss}
 
-Den allmänna begränsningsmetoden är att koda alla utdata av användargenererat innehåll med hjälp av ett XSS-skyddsbibliotek på serversidan baserat på [OWASP Encoder](https://owasp.org/www-project-java-encoder/) och [AntiSamy](https://wiki.owasp.org/index.php/Category:OWASP_AntiSamy_Project).
+Det allmänna begränsningsarbetet är att koda alla utdata för användargenererat innehåll med hjälp av ett XSS-skyddsbibliotek på serversidan som baseras på [OWASP Encoder](https://owasp.org/www-project-java-encoder/) och [AntiSamy](https://wiki.owasp.org/index.php/Category:OWASP_AntiSamy_Project).
 
 XSS är en topprioritering både under testning och utveckling, och eventuella problem som hittas löses (normalt) omedelbart.
 
 ## 3. Bruten autentisering och sessionshantering {#broken-authentication-and-session-management}
 
-AEM använder ljud och beprövad verifieringsteknik, beroende på [Apache Jackrabbit](https://jackrabbit.apache.org/jcr/index.html) och [Apache Sling](https://sling.apache.org/). Webbläsar-/HTTP-sessioner används inte i AEM.
+AEM använder ljudtekniker och beprövade autentiseringstekniker som är beroende av [Apache Jackrabbit](https://jackrabbit.apache.org/jcr/index.html) och [Apache Sling](https://sling.apache.org/). Webbläsar-/HTTP-sessioner används inte i AEM.
 
 ## 4. Osäkra direkta objektreferenser {#insecure-direct-object-references}
 
@@ -46,13 +46,13 @@ All åtkomst till dataobjekt förmedlas av databasen och begränsas därför av 
 
 CSRF (Cross-Site Request Forgery) reduceras genom att en kryptografisk token automatiskt matas in i alla formulär och AJAX och denna token verifieras på servern för varje POST.
 
-Dessutom levereras AEM med ett hänvisningsfiltret, som kan konfigureras till *endast* tillåt POST från specifika värdar (definieras i en lista).
+Dessutom levereras AEM med ett hänvisningsrubrikbaserat filter, som kan konfigureras till *endast*, som tillåter förfrågningar från POSTER från specifika värdar (definieras i en lista).
 
 ## 6. Felkonfiguration av säkerhet {#security-misconfiguration}
 
-Det är omöjligt att garantera att all programvara alltid är korrekt konfigurerad. Adobe strävar dock efter att tillhandahålla så mycket vägledning som möjligt och göra konfigurationen så enkel som möjligt. Dessutom AEM fartyg med [integrerade säkerhetshälsokontroller](/help/sites-administering/operations-dashboard.md) som hjälper dig att snabbt övervaka säkerhetskonfigurationen.
+Det är omöjligt att garantera att all programvara alltid är korrekt konfigurerad. Adobe strävar dock efter att tillhandahålla så mycket vägledning som möjligt och göra konfigurationen så enkel som möjligt. Dessutom levereras AEM med [integrerade säkerhetshälsokontroller](/help/sites-administering/operations-dashboard.md) som hjälper dig att övervaka säkerhetskonfigurationen snabbt.
 
-Granska [Säkerhetschecklista](/help/sites-administering/security-checklist.md) om du vill ha mer information med stegvisa anvisningar om hur du härdar.
+Gå igenom [checklistan för säkerhet](/help/sites-administering/security-checklist.md) om du vill ha mer information som ger dig stegvisa anvisningar om hur du kan förbättra säkerheten.
 
 ## 7. Osäker kryptografisk lagring {#insecure-cryptographic-storage}
 
@@ -62,7 +62,7 @@ Känsliga data, som autentiseringsuppgifter från tredje part, lagras i kryptera
 
 ## 8. Det gick inte att begränsa URL-åtkomst {#failure-to-restrict-url-access}
 
-I databasen kan du ange [finstilt korniga privilegier (enligt JCR)](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html) för en viss användare eller grupp på en viss sökväg, via åtkomstkontrollposter. Åtkomstbegränsningar används av databasen.
+I databasen kan du ange [finstilt korniga behörigheter (enligt JCR)](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/2.0/16_Access_Control_Management.html) för en given användare eller grupp på en given sökväg, via åtkomstkontrollposter. Åtkomstbegränsningar används av databasen.
 
 ## 9. Otillräckligt skydd av transportskikt {#insufficient-transport-layer-protection}
 

@@ -24,9 +24,9 @@ För de AEM CIF kärnkomponenterna konfigureras cachelagring på komponentbasis,
 
 När cachen har konfigurerats för en viss komponent börjar den lagra GraphQL-frågor och svar enligt varje cachekonfigurationspost. Storleken på cacheminnet och cachelagringstiden för varje post ska definieras på projektbasis, t.ex. beroende på hur ofta katalogdata kan ändras, hur viktigt det är att en komponent alltid visar de senaste tillgängliga data, och så vidare. Observera att det inte finns någon cacheogiltigförklaring, så var försiktig när du anger varaktigheten för cachen.
 
-När cachelagring konfigureras för komponenter måste cachenamnet vara namnet på **proxy** komponenter som du definierar i ditt projekt.
+När du konfigurerar cachelagring för komponenter måste cachenamnet vara namnet på de **proxy**-komponenter som du definierar i ditt projekt.
 
-Innan klienten skickar en GraphQL-begäran kontrollerar den om **exakt** samma GraphQL-begäran har redan cache-lagrats och returnerar eventuellt det cachelagrade svaret. För att matcha måste GraphQL-begäran matcha exakt, dvs. frågan, åtgärdsnamnet (om det finns något), variablerna (om sådana finns) MÅSTE alla vara lika med den cachelagrade begäran och alla anpassade HTTP-rubriker som kan anges MÅSTE också vara desamma. Adobe Commerce `Store` sidhuvudet MÅSTE matcha.
+Innan klienten skickar en GraphQL-begäran kontrollerar den om **exakt** samma GraphQL-begäran redan har cache-lagrats och returnerar eventuellt det cachelagrade svaret. För att matcha måste GraphQL-begäran matcha exakt, dvs. frågan, åtgärdsnamnet (om det finns något), variablerna (om sådana finns) MÅSTE alla vara lika med den cachelagrade begäran och alla anpassade HTTP-rubriker som kan anges MÅSTE också vara desamma. Adobe Commerce `Store`-huvudet MÅSTE till exempel matcha.
 
 ### Exempel
 
@@ -44,26 +44,26 @@ Ett annat exempel där cachningsfunktionen GraphQl bör användas är navigering
 venia/components/structure/navigation:true:10:600
 ```
 
-När du överväger [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia) används. Observera användningen av komponentens proxynamn `venia/components/structure/navigation`och **not** namnet på CIF navigeringskomponent (`core/cif/components/structure/navigation/v1/navigation`).
+När du överväger att använda referensarkivet [Venia](https://github.com/adobe/aem-cif-guides-venia). Observera att komponentproxynamnet `venia/components/structure/navigation` används och **inte** namnet på CIF navigeringskomponent (`core/cif/components/structure/navigation/v1/navigation`).
 
-Cachelagring för andra komponenter bör definieras på projektbasis, vanligtvis i samordning med cachning som konfigurerats på Dispatcher-nivå. Kom ihåg att det inte finns någon aktiv ogiltigförklaring av dessa cacheminnen, så cachelagringstiden bör vara noggrann. Det finns inga värden för&quot;en storlek passar alla&quot; som matchar alla möjliga projekt och användningsfall. Se till att du definierar en cachelagringsstrategi på projektnivå som bäst motsvarar projektets krav.
+Cachelagring för andra komponenter bör definieras på projektbasis, vanligen i samordning med cachning som konfigurerats på Dispatcher-nivå. Kom ihåg att det inte finns någon aktiv ogiltigförklaring av dessa cacheminnen, så cachelagringstiden bör vara noggrann. Det finns inga värden för&quot;en storlek passar alla&quot; som matchar alla möjliga projekt och användningsfall. Se till att du definierar en cachelagringsstrategi på projektnivå som bäst motsvarar projektets krav.
 
 ## Dispatcher Caching {#dispatcher}
 
-Cachelagra AEM sidor eller fragment i [AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är den bästa metoden för alla AEM projekt. Oftast bygger det på invalideringstekniker som säkerställer att allt innehåll som ändras i AEM uppdateras korrekt i Dispatcher. Detta är en viktig egenskap i AEM Dispatcher-cachningsstrategi.
+Cachelagring av AEM sidor eller fragment i [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är en god vana för alla AEM projekt. Oftast bygger det på invalideringstekniker som säkerställer att allt innehåll som ändras i AEM uppdateras korrekt i Dispatcher. Detta är en viktig egenskap i den AEM Dispatcher cachningsstrategin.
 
 Förutom rent AEM hanterat innehåll CIF en sida kan den vanligtvis visa e-handelsdata som hämtas dynamiskt från Adobe Commerce via GraphQL. Även om sidstrukturen i sig kanske aldrig ändras kan e-handelsinnehållet ändras, till exempel om vissa produktdata (till exempel namn eller pris) ändras i Adobe Commerce.
 
-För att säkerställa att CIF sidor kan cachelagras under en begränsad tid i AEM Dispatcher rekommenderar vi att du använder [Invalidering av tidsbaserad cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl) (kallas även TTL-baserad cachelagring) när CIF cachelagrar sidor i AEM Dispatcher. Den här funktionen kan konfigureras i AEM med den extra [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) paket.
+För att säkerställa att CIF sidor kan cachelagras under en begränsad tid i AEM Dispatcher rekommenderar vi att du använder [tidsbaserad cacheinvalidering](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl) (kallas även TTL-baserad cachelagring) när du cachelagrar CIF sidor i AEM Dispatcher. Den här funktionen kan konfigureras i AEM med det extra [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) -paketet.
 
-Med TTL-baserad cachning definierar en utvecklare vanligtvis en eller flera cachningstider för valda AEM. Detta garanterar att CIF sidor bara cachelagras i AEM Dispatcher upp till den konfigurerade längden och att innehållet uppdateras ofta.
+Med TTL-baserad cachning definierar en utvecklare vanligtvis en eller flera cachningstider för valda AEM. Detta garanterar att CIF sidor bara cachelagras i AEM Dispatcher upp till den konfigurerade längden och att innehållet uppdateras regelbundet.
 
 >[!NOTE]
 >
->Data på serversidan kan cachas av AEM Dispatcher, men vissa CIF komponenter, som `product`, `productlist`och `searchresults` -komponenter hämtar vanligtvis alltid produktpriser på nytt i en webbläsarbegäran på klienten när sidan läses in. Detta säkerställer att viktigt dynamiskt innehåll alltid hämtas vid sidinläsning.
+>Data på serversidan kan cachas av AEM Dispatcher, men vissa CIF komponenter som `product`, `productlist` och `searchresults` hämtar vanligtvis alltid produktpriser på nytt i en webbläsarbegäran på klientsidan när sidan läses in. Detta säkerställer att viktigt dynamiskt innehåll alltid hämtas vid sidinläsning.
 
 ## Ytterligare resurser
 
 - [Referensarkiv för Venedig](https://github.com/adobe/aem-cif-guides-venia)
-- [Konfiguration av GraphQL-cachning](https://github.com/adobe/commerce-cif-graphql-client#caching)
-- [AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
+- [GraphQL cachelagringskonfiguration](https://github.com/adobe/commerce-cif-graphql-client#caching)
+- [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)

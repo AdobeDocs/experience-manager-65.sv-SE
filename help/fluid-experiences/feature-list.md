@@ -17,14 +17,14 @@ ht-degree: 1%
 
 Adobe Experience Manager Fluid Experiences bygger på de kraftfulla funktionerna i AEM Sites, AEM Dynamic Media och AEM Assets och ger en robust lösning för leverans av headless-material.
 
-AEM Fluid Experiences skiljer sig från klassiska AEM genom att endast använda headless delivery use case. Framtagning och distribution av rubrikinnehåll och AEM starkt stöd för hybridanvändning finns med [kompletta lösningar från AEM Sites, Assets och Dynamic Media.](https://experienceleague.adobe.com/docs/experience-manager-65/user-guide/home.html)
+AEM Fluid Experiences skiljer sig från klassiska AEM genom att endast använda headless delivery use case. Framtagning och leverans av rubrikstyrt innehåll och AEM starkt stöd för hybridanvändning finns med [AEM Sites-, Assets- och Dynamic Media-lösningarna.](https://experienceleague.adobe.com/docs/experience-manager-65/user-guide/home.html)
 
 I följande tabeller definieras funktionerna i AEM flytande upplevelser och länken till relevant supportdokumentation.
 
 * [Databas](#repository-features)
 * [Åtkomst, API:er och leverans](#access-api-and-delivery-features)
 * [Administratörer och integreringar](#admin-and-integration-features)
-* [Analyser och personalisering](#analytics-and-personalization)
+* [Analyser och Personalization](#analytics-and-personalization)
 
 >[!NOTE]
 >
@@ -34,7 +34,7 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 
 |  |
 |---|
-| [Innehållsarkiv](/help/assets/manage-assets.md) |
+| [Innehållsdatabas](/help/assets/manage-assets.md) |
 | [Resurstyper](/help/assets/assets-formats.md) |
 | [Bildåtergivningar](/help/assets/image-presets.md) |
 | [Metadata och tagghantering](/help/assets/metadata.md) |
@@ -49,10 +49,10 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 
 |  |
 |---|
-| [HTTP-API](/help/assets/mac-api-assets.md) |
+| [HTTP API](/help/assets/mac-api-assets.md) |
 | [Strukturerade innehållsmodeller](/help/assets/content-fragments/content-fragments.md) |
 | [Innehållstjänster](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html) |
-| [Upplevelsefragment](/help/sites-authoring/experience-fragments.md) |
+| [Upplev fragment](/help/sites-authoring/experience-fragments.md) |
 | HTTP API för strukturerat innehåll (läs) |
 | HTTP API för strukturerat innehåll (CRUD) |
 | [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) |
@@ -65,7 +65,7 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 | [Användarhantering](/help/sites-administering/user-group-ac-admin.md) |
 | [Hantering av flerspråkiga resurser](/help/assets/multilingual-assets.md) |
 | [Internationalisering](/help/sites-developing/i18n.md) |
-| [Översättning av innehåll](/help/sites-administering/translation.md) |
+| [Innehållsöversättning](/help/sites-administering/translation.md) |
 | [Övervakning](/help/sites-deploying/monitoring-and-maintaining.md) |
 | [Säkerhetskopiera](/help/sites-administering/backup-and-restore.md) |
 | [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) |
@@ -74,17 +74,17 @@ I följande tabeller definieras funktionerna i AEM flytande upplevelser och län
 | [Arbetsflöden](/help/sites-administering/workflows-starting.md) |
 | Anslutning (molntjänster) |
 
-## Analyser och personalisering {#analytics-and-personalization}
+## Analyser och Personalization {#analytics-and-personalization}
 
 |  |
 |---|
-| [Tillgångsrapportering](/help/assets/asset-reports.md) |
+| [Resursrapportering](/help/assets/asset-reports.md) |
 | Förbättrade insikter från Adobe Analytics |
 | Förbättrade insikter från Adobe Target |
 
 ## Läs mer {#learn-more}
 
-* [Flytande upplevelser för användning i headless](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html)
-* [AEM: Vad, varför och hur?](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html)
-* [Vanliga frågor om tredjepartsåtkomst](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html)
+* [Fluid Experiences for headless use cases](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-headless-usecases.html)
+* [AEM Content Service: What, Why, and How?](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html)
+* [Vanliga frågor om åtkomst från tredje part](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/chapter-7.html)
 * [Använda Sling API:er](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models)

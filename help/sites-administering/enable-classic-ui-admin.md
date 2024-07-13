@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Som standard är möjligheten att växla till det klassiska användargränssnittet via Admin Consoles inaktiverad. Därför visas inte längre de popup-ikoner som visades när användaren placerade musen över vissa konsolikoner, vilket ger åtkomst till det klassiska gränssnittet.
 
-Alla konsoler som har en klassisk användargränssnittsversion i `/libs/cq/core/content/nav` kan återaktiveras individuellt så att **Klassiskt användargränssnitt** igen visas konsolikonen igen när användaren för musen över den.
+Alla konsoler som har en klassisk användargränssnittsversion i `/libs/cq/core/content/nav` kan återaktiveras individuellt så att alternativet **Klassiskt användargränssnitt** visas igen över konsolikonen när användaren för musen över den.
 
 I det här exemplet återaktiverar du det klassiska gränssnittet för webbplatskonsolen.
 
@@ -38,18 +38,18 @@ I det här exemplet återaktiverar du det klassiska gränssnittet för webbplats
 
    `/libs/cq/core/content/nav/sites`
 
-1. Skapa en övertäckning med **Överläggsnod** option; till exempel:
+1. Skapa en övertäckning med alternativet **Överläggsnod**, till exempel:
 
-   * **Bana**: `/apps/cq/core/content/nav/sites`
-   * **Överläggsplats**: `/apps/`
-   * **Matcha nodtyper**: active (markera kryssrutan)
+   * **Sökväg**: `/apps/cq/core/content/nav/sites`
+   * **Plats för övertäckning**: `/apps/`
+   * **Matcha nodtyper**: aktiv (markera kryssrutan)
 
 1. Lägg till följande boolesk egenskap till den överlagrade noden:
 
    `enableDesktopOnly = {Boolean}true`
 
-1. The **Klassiskt användargränssnitt** Alternativet är åter tillgängligt som ett poseralternativ i Admin Console.
+1. Alternativet **Klassiskt användargränssnitt** är igen tillgängligt som ett poseralternativ i Admin Console.
 
-   ![klassiskt alternativ för UI-posering](assets/syui-01-2019-02-27-15-16-55.png)
+   ![Alternativ för klassisk UI-pekare](assets/syui-01-2019-02-27-15-16-55.png)
 
 Upprepa dessa steg för varje konsol som du vill återaktivera åtkomst till den klassiska användargränssnittsversionen för.

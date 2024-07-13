@@ -34,7 +34,7 @@ Banderoller representerar vanligtvis grafiska kampanjlänkar.
 >
 >* [Designöverväganden](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
 >
->* [Skapa banderoller](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
+>* [Skapar banderoller](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
 >
 
 ## Skapa en banderoll {#creating-a-banner}
@@ -43,10 +43,10 @@ Det allmänna arbetsflödet för att skapa en artikel är följande:
 
 1. Välj **Mobil** från sidospåret.
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Klicka på nedpilen i det övre högra hörnet av **Hantera banderoller** platta.
+1. Klicka på nedpilen i det övre högra hörnet av rutan **Hantera banderoller** .
 1. Gå igenom varje steg i guiden för att fortsätta skapa din nya banderoll.
-1. När du är klar klickar du **Skapa**.
-1. Din nya banderoll visas i **Hantera banderoller** platta.
+1. Klicka på **Skapa** när du är klar.
+1. Din nya banderoll visas i rutan **Hantera banderoller**.
 
 ![chlimage_1-6](assets/chlimage_1-6.gif)
 
@@ -61,9 +61,9 @@ Befintligt mobilt on demand-innehåll kan hämtas (importeras) från Mobile On-D
 Arbetsflödet för att importera en ny artikel
 
 1. Välj mobilapp i katalogen i Mobile On-Demand-appen.
-1. Klicka på nedpilen i det övre högra hörnet av **Hantera banderoller** och välj Importera banderoller.
-1. Klicka **Importera banderoll** i dialogrutan och sedan Stäng.
-1. Dina artiklar om mobil on demand visas nu i **Hantera banderoller** platta.
+1. Klicka på nedpilen i det övre högra hörnet av rutan **Hantera banderoller** och välj Importera banderoller.
+1. Klicka på **Importera banderoll** i dialogrutan och sedan på Stäng.
+1. Dina artiklar för mobil on demand visas nu i panelen **Hantera banners**.
 
 >[!CAUTION]
 >
@@ -71,7 +71,7 @@ Arbetsflödet för att importera en ny artikel
 
 ## Redigera en banderoll {#editing-a-banner}
 
-Använd den inbyggda AEM dra och släpp-redigeraren för att lägga till eller ändra en artikel. Komponenter som text och bilder kan läggas till/tas bort. Bilder från DAM-resurser kan infogas.
+Använd den inbyggda AEM dra och släpp-redigeraren för att lägga till eller ändra en artikel. Komponenter som text och bilder kan läggas till/tas bort. Bilder från DAM Assets kan infogas.
 
 >[!CAUTION]
 >
@@ -91,11 +91,11 @@ Banderoller har flera egenskaper som titlar, beskrivningar och bilder. Den här 
 Det allmänna arbetsflödet för att visa/redigera en artikel:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Välj en banderoll på menyn **Hantera banderoller** platta.
+1. Välj en banderoll i rutan **Hantera banners**.
 
 1. Välj **Egenskaper** i åtgärdsfältet.
 1. Visa alla tillgängliga metadata för artikeln.
-1. Redigera metadata vid behov och klicka på **Spara** när det är klart.
+1. Redigera metadata vid behov och klicka på **Spara** när du är klar.
 1. Du kan också ladda upp ändringarna direkt till Mobile On-Demand.
 
 ## Överföra en banderoll {#uploading-a-banner}
@@ -104,8 +104,8 @@ Det allmänna arbetsflödet för att visa/redigera en artikel:
 
 Det allmänna arbetsflödet för att överföra en banderoll:
 
-1. Från **Mobil** väljer du mobilappen på begäran i katalogen.
-1. I **Hantera banderoller** väljer du en banderoll för överföring till Mobile On-Demand.
+1. Från **Mobile** väljer du appen Mobile On-Demand i katalogen.
+1. I rutan **Hantera banners** väljer du en banderoll för överföring till Mobile On-Demand.
 1. Lägg till fler banners om det behövs från listvyn.
 1. Välj **Överför** i åtgärdsfältet och klicka sedan på Överför i dialogrutan.
 1. Din banderoll har nu överförts till Mobile On-Demand.
@@ -119,11 +119,11 @@ Den här åtgärden tar bort den markerade banderollen från Mobile On-Demand oc
 Det allmänna arbetsflödet för att ta bort en banner:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Markera den banderoll som ska tas bort i **Hantera banderoller** platta.
+1. Markera den banderoll som ska tas bort i rutan **Hantera banderoller**.
 1. Se till att det är markerat i listan (markera andra att ta bort efter behov).
-1. Klicka **Ta bort** i åtgärdsfältet.
+1. Klicka på **Ta bort** i åtgärdsfältet.
 1. Kontrollera om du vill ta bort från AEM och Mobile On-Demand.
-1. Klicka **Ta bort**.
+1. Klicka på **Ta bort**.
 1. Din banderoll har nu tagits bort från listan.
 
 ### Nästa steg {#the-next-steps}

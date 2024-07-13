@@ -29,7 +29,7 @@ För en enkel demonstration, en visuell funktion, tas den avatar som visas för 
 
 ## Ändra HBS-skript {#modify-the-hbs-scripts}
 
-Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
+Använder [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
 * Öppna [/apps/custom/components/comments/comment/**comment.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comment/comment.hbs)
 
@@ -41,7 +41,7 @@ Använda [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
         -->
      ```
 
-* Öppna [/apps/custom/components/comments/**kommentarer.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
+* Öppna [/apps/custom/components/comments/**comments.hbs**](https://localhost:4502/crx/de/index.jsp#/apps/custom/components/comments/comments.hbs)
 
    * Kommentera taggen som innehåller avataren för nästa kommentarspost (~ line 44):
 
@@ -65,11 +65,11 @@ Ett sätt är att
    * Välj **[!UICONTROL Activate Tree]**.
    * Ange `Start Path` till `/apps/custom`.
    * Avmarkera **[!UICONTROL Only Modified]**.
-   * Välj **[!UICONTROL Activate]** -knappen.
+   * Välj knappen **[!UICONTROL Activate]**.
 
 ### Visa ändrad kommentar på publicerad exempelsida {#view-modified-comment-on-published-sample-page}
 
-[Fortsätta upplevelsen](/help/communities/extend-sample-page.md#publish-sample-page) i publiceringsinstansen, som fortfarande är inloggad som samma användare, är det nu möjligt att uppdatera sidan i publiceringsmiljön för att visa ändringen för att ta bort avataren:
+[Det går nu att uppdatera sidan i publiceringsmiljön och visa ändringen för att ta bort avataren:](/help/communities/extend-sample-page.md#publish-sample-page)
 
 ![view-modified-content](assets/view-modified-content.png)
 

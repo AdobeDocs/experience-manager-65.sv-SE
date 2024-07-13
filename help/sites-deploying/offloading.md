@@ -22,7 +22,7 @@ ht-degree: 0%
 
 När du avlastar distribueras bearbetningsuppgifter mellan Experience Manager-instanser i en topologi. Med avlastning kan du använda särskilda Experience Manager-instanser för att utföra vissa typer av bearbetning. Specialiserad bearbetning gör att du kan maximera användningen av tillgängliga serverresurser.
 
-Avlastningen baseras på [Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html) och Sling JobManager-funktioner. Om du vill använda avlastning lägger du till Experience Manager-kluster i en topologi och identifierar de jobbämnen som klusterprocessen gör. Kluster består av en eller flera instanser av Experience Manager, så att en enda instans betraktas som ett kluster.
+Avlastningen baseras på funktionerna [Apache Sling Discovery](https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html) och Sling JobManager. Om du vill använda avlastning lägger du till Experience Manager-kluster i en topologi och identifierar de jobbämnen som klusterprocessen gör. Kluster består av en eller flera instanser av Experience Manager, så att en enda instans betraktas som ett kluster.
 
 Mer information om hur du lägger till instanser i en topologi finns i [Administrera topologier](/help/sites-deploying/offloading.md#administering-topologies).
 
@@ -38,7 +38,7 @@ När JobManager skapar ett jobb väljer avlastningsramverket ett Experience Mana
 * Klustret måste innehålla en eller flera instanser som kör en JobConsumer som är registrerad för jobbämnet.
 * Ämnet måste aktiveras för minst en instans i klustret.
 
-Se [Konfigurera ämnesförbrukning](/help/sites-deploying/offloading.md#configuring-topic-consumption) om du vill ha information om hur du finjusterar jobbdistributionen.
+Mer information om finjustering av jobbdistribution finns i [Konfigurera ämnesförbrukning](/help/sites-deploying/offloading.md#configuring-topic-consumption).
 
 ![chlimage_1-109](assets/chlimage_1-109.png)
 
@@ -155,7 +155,7 @@ Använd webbkonsolen eller en sling:OsgiConfig-nod för att konfigurera följand
    <td>Databasbeskrivningsnamn</td>
    <td>leaderValectionRepositoryDescriptor</td>
    <td> </td>
-   <td>&lt;no value&gt;</td>
+   <td>&lt;inget värde&gt;</td>
   </tr>
  </tbody>
 </table>
@@ -199,7 +199,7 @@ Jobb fördelas mellan instanser där det associerade ämnet är aktiverat med hj
    * Inaktiverad: Den här instansen förbrukar inte jobb i det här avsnittet.
    * Exklusiv: Den här instansen förbrukar endast jobb i det här avsnittet.
 
-   **Obs!** När du väljer Exklusiv för ett ämne ställs alla andra ämnen automatiskt in på Inaktiverad.
+   **Obs!** När du väljer Exklusiv för ett ämne anges alla andra ämnen automatiskt till Inaktiverad.
 
 ### Installerade jobbkonsumenter {#installed-job-consumers}
 
@@ -218,15 +218,15 @@ Flera JobConsumer-implementeringar installeras med Experience Manager. Ämnen so
 
 Tjänsten Apache Sling Job Consumer Manager innehåller egenskaperna tillåtelselista och blockeringslista. Konfigurera dessa egenskaper för att aktivera eller inaktivera bearbetning av specifika ämnen i en Experience Manager-instans.
 
-**Obs!** Om instansen tillhör en topologi kan du även använda Avlastningsläsaren på vilken dator som helst i topologin för att aktivera eller inaktivera ämnen.
+**Obs!** Om instansen tillhör en topologi kan du även använda Avlastningsläsaren på valfri dator i topologin för att aktivera eller inaktivera ämnen.
 
 Den logik som skapar listan med aktiverade ämnen tillåter först alla ämnen som finns i tillåtelselista och tar sedan bort ämnen som finns på blockeringslista. Som standard är alla ämnen aktiverade (tillåtelselista är `*`) och inga ämnen är inaktiverade (blockeringslista har inget värde).
 
-Använd webbkonsol eller en `sling:OsgiConfig` -nod för att konfigurera följande egenskaper. För `sling:OsgiConfig` noder, PID för tjänsten Job Consumer Manager är org.apache.sling.event.impl.job.JobConsumerManager.
+Använd webbkonsolen eller en `sling:OsgiConfig`-nod för att konfigurera följande egenskaper. För `sling:OsgiConfig` noder är PID för tjänsten Job Consumer Manager org.apache.sling.event.impl.job.JobConsumerManager.
 
 | Egenskapsnamn i webbkonsolen | OSGi ID | Beskrivning |
 |---|---|---|
-| Tillåtelselista | job.consumermanager.whitelist | En lista med ämnen som den lokala JobManager-tjänsten bearbetar. Standardvärdet för &amp;ast; skickar alla ämnen till den registrerade TopicConsumer-tjänsten. |
+| Tillåtelselista | job.consumermanager.whitelist | En lista med ämnen som den lokala JobManager-tjänsten bearbetar. Standardvärdet för &amp;ast; gör att alla ämnen skickas till den registrerade TopicConsumer-tjänsten. |
 | Blockeringslista | job.consumermanager.blacklist | En lista med ämnen som den lokala JobManager-tjänsten inte bearbetar. |
 
 ## Skapar replikeringsagenter för avlastning {#creating-replication-agents-for-offloading}
@@ -255,9 +255,9 @@ Replikeringsschemat liknar det som används mellan författare och publiceringsi
 
 ### Namnge replikeringsagenter för avlastning {#naming-the-replication-agents-for-offloading}
 
-Använd ett specifikt format för ***Namn*** egenskapen för replikeringsagenterna så att avlastningsramverket automatiskt använder rätt agent för specifika arbetarinstanser.
+Använd ett specifikt format för egenskapen ***Name*** för replikeringsagenterna så att avlastningsramverket automatiskt använder rätt agent för specifika arbetarinstanser.
 
-**Namnge den utgående agenten på författarinstansen:**
+**Namnger den utgående agenten på författarinstansen:**
 
 `offloading_<slingid>`, där `<slingid>` är Sling-ID för arbetarinstansen.
 
@@ -269,13 +269,13 @@ Exempel: `offloading_f5c8494a-4220-49b8-b079-360a72f71559`
 
 Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
-**Namnge utkorgen på arbetarinstansen:**
+**Namnger utkorgen på arbetarinstansen:**
 
 `offloading_outbox`
 
 ### Skapar den utgående agenten {#creating-the-outgoing-agent}
 
-1. Skapa en **Replikeringsagent** på författaren. (Se [dokumentation för replikeringsagenter](/help/sites-deploying/replication.md)). Ange alla **Titel**. The **Namn** måste följa namnkonventionen.
+1. Skapa en **replikeringsagent** på författaren. (Se [dokumentationen för replikeringsagenter](/help/sites-deploying/replication.md)). Ange en **titel**. **Namnet** måste följa namnkonventionen.
 1. Skapa agenten med följande egenskaper:
 
    | Egenskap | Värde |
@@ -289,7 +289,7 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 ### Skapar den omvända agenten {#creating-the-reverse-agent}
 
-1. Skapa en **Agenten för omvänd replikering** på författaren. (Se [dokumentation för replikeringsagenter](/help/sites-deploying/replication.md).) Ange alla **Titel**. The **Namn** måste följa namnkonventionen.
+1. Skapa en **agent för omvänd replikering** på författaren. (Se [dokumentationen för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. **Namnet** måste följa namnkonventionen.
 1. Skapa agenten med följande egenskaper:
 
    | Egenskap | Värde |
@@ -302,7 +302,7 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 ### Skapa en utkorgsagent {#creating-the-outbox-agent}
 
-1. Skapa en **Replikeringsagent** på arbetarinstansen. (Se [dokumentation för replikeringsagenter](/help/sites-deploying/replication.md).) Ange alla **Titel**. The **Namn** måste vara `offloading_outbox`.
+1. Skapa en **replikeringsagent** på arbetsinstansen. (Se [dokumentationen för replikeringsagenter](/help/sites-deploying/replication.md).) Ange en **titel**. **Namn** måste vara `offloading_outbox`.
 1. Skapa agenten med följande egenskaper.
 
    | Egenskap | Värde |
@@ -315,7 +315,7 @@ Exempel: `offloading_reverse_f5c8494a-4220-49b8-b079-360a72f71559`
 
 Hämta Sling ID för en Experience Manager-instans med någon av följande metoder:
 
-* Öppna webbkonsolen och i Sling-inställningarna hittar du värdet för egenskapen Sling ID ([http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings)). Den här metoden är användbar om instansen ännu inte ingår i topologin.
+* Öppna webbkonsolen och i inställningarna för Sling hittar du värdet för egenskapen Sling ID ([http://localhost:4502/system/console/status-slingsettings](http://localhost:4502/system/console/status-slingsettings)). Den här metoden är användbar om instansen ännu inte ingår i topologin.
 * Använd Topology-webbläsaren om instansen redan är en del av topologin.
 
 <!--

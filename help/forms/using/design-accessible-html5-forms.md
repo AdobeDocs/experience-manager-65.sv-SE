@@ -20,7 +20,7 @@ ht-degree: 0%
 
 HTML5-formulär använder hjälpmedelsstandarden ARIA HTML5 för att generera hjälpmedelsförberedda HTML-formulär. De här formulären har stöd för tabbnavigering (utom Mozilla FireFox) och är certifierade som kompatibla med vanliga skärmläsare. Om du vill generera ett HTML5-formulär med bra hjälpmedelsfunktioner utformar du XFA-formulärmallen baserat på vissa grundläggande riktlinjer för design. Riktlinjerna för designen omfattar konfiguration av rätt tabbordning och tillhandahållande av innehållet i Tala text för varje formulärkontroll. AEM Forms Designer stöder inställningen av dessa formulärkontrollsattribut för att skapa ett PDF och HTML5-formulär som är tillgängligt.
 
-*Obs!Fliknavigering omfattar inte skyddade fält, t.ex. beräkningsfält som visar summan av värden. För att skärmläsaren ska kunna läsa värdet för ett skyddat fält placerar du ett tomt skrivskyddat fält ovanpå eller bredvid det skyddade fältet. Tilldela det skyddade fältets värde till det nya skrivskyddade fältet. Skärmläsaren eller fliknavigeringen kan välja det här skrivskyddade fältet och tala ut det som värdet för det skyddade fältet.*
+*Obs! Fliknavigeringen omfattar inte skyddade fält, t.ex. beräkningsfält som visar summan av värden. För att skärmläsaren ska kunna läsa värdet för ett skyddat fält placerar du ett tomt skrivskyddat fält ovanpå eller bredvid det skyddade fältet. Tilldela det skyddade fältets värde till det nya skrivskyddade fältet. Skärmläsaren eller fliknavigeringen kan välja det här skrivskyddade fältet och tala ut det som värdet för det skyddade fältet.*
 
 AEM Forms Designer innehåller flera alternativ för att tala text som kan skickas till skärmläsare. För varje objekt i ett formulär kan användaren ange en av flera inställningar för skärmläsartexten:
 
@@ -31,4 +31,4 @@ AEM Forms Designer innehåller flera alternativ för att tala text som kan skick
 
 ![hjälpmedel](assets/accessibility.png)
 
-Om det finns flera alternativ som funktionsbeskrivning, Reader-text och bildtext på en formulärkontroll använder Reader på skärmen endast en av dessa egenskaper. Standardordningen är Reader, funktionsbeskrivning, bildtext och namn för anpassad skärm. Du kan åsidosätta standardordningen med hjälp av Skärm Reader **Prioritet** på paletten Tillgänglighet.
+Om det finns flera alternativ som funktionsbeskrivning, Reader-text och bildtext på en formulärkontroll använder Reader på skärmen endast en av dessa egenskaper. Standardordningen är Reader, funktionsbeskrivning, bildtext och namn för anpassad skärm. Du kan åsidosätta standardordningen med alternativet **Företräde** på Reader på paletten Tillgänglighet.

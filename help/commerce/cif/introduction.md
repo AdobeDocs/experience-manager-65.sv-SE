@@ -14,7 +14,7 @@ ht-degree: 2%
 ---
 
 
-# Innehåll och handel {#content-commerce}
+# Innehåll och Commerce {#content-commerce}
 
 Med Adobe Experience Manager innehåll och e-handel kan varumärken skalas och utvecklas snabbare för att särskilja handelsupplevelser och fånga upp ökade webbutgifter. AEM Content och Commerce kombinerar de engagerande, flerkanaliga och personaliserade upplevelserna i Experience Manager med ett obegränsat antal e-handelslösningar för att ge alla delar av kundresan olika upplevelser, minska time to value och öka konverteringsgraden.
 
@@ -62,13 +62,13 @@ Kraftfulla CIF i AEM gör det möjligt för innehållsskapare att snabbt skapa k
 
 ### Tid till värde (TTV)
 
-Snabbare projektutveckling med [AEM kärnkomponenter](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)och integreringsmönster för PWA (Headless Content och Commerce).
+Snabbar upp projektutvecklingen med [AEM Core Components](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och integreringsmönster för PWA (Headless Content and Commerce).
 
 CIF har tagits fram för kontinuerlig innovation med ett kontinuerligt uppdaterat tillägg som ger kunden tillgång till nya och förbättrade funktioner.
 
 ### Integreringar
 
-Koppla samman ditt ekosystem (till exempel en e-handelslösning) med Experience Cloud med  [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html), en serverfri PaaS som bygger på mikrotjänster, och [CIF](https://github.com/adobe/commerce-cif-graphql-integration-reference).
+Koppla ditt ekosystem (till exempel en e-handelslösning) till Experience Cloud med [Adobe I/O Runtime](https://www.adobe.io/apis/experienceplatform/runtime.html), en icke-serverbaserad PaaS utan mikrotjänst och [CIF referensimplementering](https://github.com/adobe/commerce-cif-graphql-integration-reference).
 
 ## Beprövade mönster och bästa praxis
 

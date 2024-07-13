@@ -23,11 +23,11 @@ När en kund genererar ett stort antal PDF via tjänster som implementerats via 
 <!-- Attached is a simplified template (BollatoRiservatiLandscape_table_simple.xdp) that simulates the problem.
 Using the Designer, if we associate the template "BollatoRiservatiLandscape_table_semplice.xdp" with the XML file "BollatoRiservati.xml" during the generation of the pdf, the process comes to occupy 1.6 Gb of RAM. On the server side, with the complete template, the pdf generation process breaks down, occupying 2 GB of RAM.-->
 
-Detta beror på att det maximala antalet sidor i en utskriftsbegäran är begränsat till ungefär 1 000 sidor i Windows. När en utskrift genereras måste mallen och data läsas in i minnet och den resulterande layouten byggs upp i minnet. Det innebär att det finns gränser för storleken på den slutliga utdatafilen. Processen som genererar utskriften är en 32-bitars åtgärd, vilket innebär att den är begränsad till 2 GB RAM i Windows <!--and 4 GB on UNIX-->.
+Detta beror på att det maximala antalet sidor i en utskriftsbegäran är begränsat till ungefär 1 000 sidor i Windows. När en utskrift genereras måste mallen och data läsas in i minnet och den resulterande layouten byggs upp i minnet. Det innebär att det finns gränser för storleken på den slutliga utdatafilen. Processen som genererar utskriften är en 32-bitarsåtgärd, vilket innebär att den är begränsad till 2 GB RAM i Windows <!--and 4 GB on UNIX-->.
 
 ## Gäller för {#applies-to}
 
-Lösningen gäller AEM Forms <!--JEE Server and AEM Forms on OSGi Server--> för x86_win32 XMLFM.
+Lösningen gäller för AEM Forms <!--JEE Server and AEM Forms on OSGi Server--> för x86_win32 XMLFM.
 
 ## Lösning {#solution}
 
@@ -37,11 +37,11 @@ Den största faktorn som påverkar minnesanvändningen är mängden data i ett f
 
 **Hög**
 
-1. **Val av delformulär** - En urvalsuppsättning med delformulär är en variant av delformulärsuppsättningsobjektet som gör att du kan anpassa visningen av specifika delformulär inifrån uppsättningen med hjälp av villkorssatser.
-1. **Använd statisk text i stället för bildtexter** - Nästan alla fält innehåller en bildtext i, och du bör använda den istället för att ha ytterligare en statisk text som bildtext.
-1. Använd **RTF (Rich Text Format)** där det är möjligt.
+1. **Alternativa delformulär** - En urvalsuppsättning med delformulär är en variant av delformuläruppsättningsobjektet som gör att du kan anpassa visningen av specifika delformulär inifrån uppsättningen med hjälp av villkorssatser.
+1. **Använd statisk text i stället för bildtexter** - Nästan alla fält innehåller en bildtext inuti, och du bör använda den istället för att ha ytterligare statisk text som bildtext.
+1. Använd **RTF** när det är möjligt.
 
-**Genomsnittlig**
+**Medel**
 
 Ytterligare faktorer som du bör tänka på när du utformar formulärmallen för att förbättra minnesanvändningen:
 

@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Forms Portal | Hantera användardata {#forms-portal-handling-user-data}
 
-[!DNL AEM Forms] Portal innehåller komponenter som du kan använda för att lista adaptiva formulär, HTML5-formulär och andra Forms-resurser på [!DNL AEM Sites] sida. Dessutom kan du konfigurera den så att den visar utkast och skickade adaptiva formulär och HTML5-formulär för en inloggad användare. Mer information om Forms Portal finns i [Introduktion till att publicera formulär på en portal](/help/forms/using/introduction-publishing-forms.md).
+[!DNL AEM Forms]-portalen innehåller komponenter som du kan använda för att lista adaptiva formulär, HTML5-formulär och andra Forms-resurser på sidan [!DNL AEM Sites]. Dessutom kan du konfigurera den så att den visar utkast och skickade adaptiva formulär och HTML5-formulär för en inloggad användare. Mer information om Forms Portal finns i [Introduktion till att publicera formulär på en portal](/help/forms/using/introduction-publishing-forms.md).
 
 När en inloggad användare sparar ett anpassat formulär som ett utkast eller skickar det, visas de på flikarna Utkast och Inskickat på Forms Portal. Data för ifyllda eller inskickade formulär lagras i datalagret som är konfigurerat för AEM. Utkast och inskickade data från anonyma användare visas inte på Forms Portal-sidan, men data lagras i det konfigurerade datalagret. Se [Konfigurera lagringstjänster för utkast och överföringar](/help/forms/using/configuring-draft-submission-storage.md).
 
@@ -25,8 +25,8 @@ När en inloggad användare sparar ett anpassat formulär som ett utkast eller s
 
 Forms Portal lagrar data för utkast och skickade formulär i följande scenarier:
 
-* Skicka-åtgärden som konfigurerats i det adaptiva formuläret är **Forms Portal Submit Action**.
-* För andra skicka-åtgärder än **Forms Portal Submit Action**, **[!UICONTROL Store data in Forms Portal]** är aktiverat i **[!UICONTROL Submission]** egenskaper för den adaptiva formulärbehållaren.
+* Den sändningsåtgärd som har konfigurerats i det adaptiva formuläret är **Forms Portal Submit Action**.
+* För andra skicka-åtgärder än **Forms Portal Submit Action** aktiveras alternativet **[!UICONTROL Store data in Forms Portal]** i **[!UICONTROL Submission]** -egenskaperna för den adaptiva formulärbehållaren.
 
 För varje utkast och skickat formulär för inloggade och anonyma användare lagras följande data i Forms Portal:
 
@@ -56,7 +56,7 @@ Beroende på den konfigurerade datalagringens beständighet lagras utkast och sk
   <tr>
    <td><p>Databas</p> </td>
    <td><p>AEM databas för Author-instans och databastabeller</p> </td>
-   <td>Databastabeller <code>data</code>, <code>metadata</code>och <code>additionalmetadata</code></td>
+   <td>Databastabeller <code>data</code>, <code>metadata</code> och <code>additionalmetadata</code></td>
   </tr>
  </tbody>
 </table>
@@ -67,19 +67,19 @@ Du kan komma åt formulärdata för inloggade och anonyma användare i konfigure
 
 ### AEM instanser {#aem-instances}
 
-Alla utkast och skickade formulärdata för AEM (författare, publicering eller fjärranvändare) för inloggade och anonyma användare lagras i `/content/forms/fp/` nod för tillämplig AEM. Varje gång en inloggad eller anonym användare sparar ett utkast eller skickar ett formulär är `draft ID` eller `submission ID`, a `user data ID`och en slumpmässig `ID` för varje bifogad fil (om tillämpligt) genereras. Det är kopplat till respektive utkast eller inlämning.
+Alla utkast och skickade formulärdata i AEM instanser (författare, publicering eller fjärr) för inloggade och anonyma användare lagras i noden `/content/forms/fp/` i den tillämpliga AEM. Varje gång en inloggad eller anonym användare sparar ett utkast eller skickar ett formulär genereras ett `draft ID`- eller `submission ID`-, `user data ID`- och ett slumpmässigt `ID`-värde för varje bifogad fil (om tillämpligt). Det är kopplat till respektive utkast eller inlämning.
 
 #### Åtkomst till användardata {#access-user-data}
 
-När en inloggad användare sparar ett utkast eller skickar ett formulär skapas en underordnad nod med användar-ID:t. Till exempel utkast och data skickas för Sarah Rose vars användar-ID är `srose` lagras i `/content/forms/fp/srose/` nod i AEM. I användar-ID-noden ordnas data i en hierarkisk struktur.
+När en inloggad användare sparar ett utkast eller skickar ett formulär skapas en underordnad nod med användar-ID:t. Utkast och inskickade data för Sarah Rose vars användar-ID är `srose` lagras till exempel i noden `/content/forms/fp/srose/` i AEM. I användar-ID-noden ordnas data i en hierarkisk struktur.
 
-I följande tabell förklaras hur data för alla utkast har `srose` lagras i AEM.
+I följande tabell förklaras hur data för alla utkast av `srose` lagras i AEM.
 
 >[!NOTE]
 >
->En exakt struktur som `drafts` replikeras för skickade formulär för `srose` under `/content/forms/fp/srose/submit/` nod.
+>En exakt struktur som `drafts` replikeras för skickade formulär för `srose` under noden `/content/forms/fp/srose/submit/`.
 >
->Alla utkast och inskickat material av `anonymous` -användare lagras under `/content/forms/fp/anonymous/` som organiserar utkast och inskickade data för alla anonyma användare under `draft` och `submit` noder.
+>Alla utkast och inskickat material från `anonymous`-användare lagras under noden `/content/forms/fp/anonymous/`, som organiserar utkast och inskickat material för alla anonyma användare under noderna `draft` och `submit`.
 
 | Nod | Beskrivning |
 |---|---|
@@ -93,9 +93,9 @@ I följande tabell förklaras hur data för alla utkast har `srose` lagras i AEM
 
 #### Ta bort användardata {#delete-user-data}
 
-Om du vill ta bort användardata från utkast och inskickade data för en inloggad användare från AEM system helt måste du ta bort `user ID` nod för en viss användare från författarnoden. Ta bort data manuellt från alla tillämpliga AEM.
+Om du vill ta bort användardata från utkast och överföringar för en inloggad användare från AEM system helt måste du ta bort noden `user ID` för en viss användare från författarnoden. Ta bort data manuellt från alla tillämpliga AEM.
 
-Utkast och inlämningsdata för alla anonyma användare lagras i den gemensamma `drafts` och `submit` noder under `/content/forms/fp/anonymous`. Det finns ingen metod för att hitta data för en viss anonym användare om inte viss identifierbar information är känd. I det här fallet kan du söka efter information som identifierar den anonyma användaren i AEM och manuellt ta bort noden som innehåller den från alla tillämpliga AEM för att ta bort data från AEM. Om du vill ta bort data för alla anonyma användare kan du ta bort `anonymous` nod för att ta bort utkast och skicka data för alla anonyma användare.
+Utkast och överföringsdata för alla anonyma användare lagras i de gemensamma `drafts`- och `submit`-noderna under `/content/forms/fp/anonymous`. Det finns ingen metod för att hitta data för en viss anonym användare om inte viss identifierbar information är känd. I det här fallet kan du söka efter information som identifierar den anonyma användaren i AEM och manuellt ta bort noden som innehåller den från alla tillämpliga AEM för att ta bort data från AEM. Om du vill ta bort data för alla anonyma användare kan du ta bort noden `anonymous` för att ta bort utkast och skicka data för alla anonyma användare.
 
 ### Databas {#database}
 
@@ -107,7 +107,7 @@ När AEM har konfigurerats för att lagra data i en databas lagras Forms Portal-
 
 #### Åtkomst till användardata {#access-user-data-1}
 
-Kör följande databaskommando om du vill komma åt utkast och skicka data för en inloggad och anonym användare i databastabellerna. Ersätt `logged-in user` med det användar-ID vars data du vill komma åt eller med `anonymous` för anonyma användare.
+Kör följande databaskommando om du vill komma åt utkast och skicka data för en inloggad och anonym användare i databastabellerna. Ersätt `logged-in user` med det användar-ID vars data du vill komma åt eller med `anonymous` för anonyma användare i frågan.
 
 ```sql
 select * from metadata, data, additionalmetadatatable where metadata.owner = 'logged-in user' and metadata.id = additionalmetadatatable.id and metadata.userdataID = data.id
@@ -115,7 +115,7 @@ select * from metadata, data, additionalmetadatatable where metadata.owner = 'lo
 
 #### Ta bort användardata {#delete-user-data-1}
 
-Om du vill ta bort utkast och skicka data för en inloggad användare från databastabellerna kör du följande databaskommando. Ersätt `logged-in user` med det användar-ID vars data du vill ta bort eller med `anonymous` för anonyma användare. Om du vill ta bort data för en viss anonym användare från databasen måste du hitta dem med identifierbar information och ta bort dem från databastabeller som innehåller informationen.
+Om du vill ta bort utkast och skicka data för en inloggad användare från databastabellerna kör du följande databaskommando. Ersätt `logged-in user` med det användar-ID vars data du vill ta bort eller med `anonymous` för anonyma användare i frågan. Om du vill ta bort data för en viss anonym användare från databasen måste du hitta dem med identifierbar information och ta bort dem från databastabeller som innehåller informationen.
 
 ```sql
 DELETE FROM metadata, data, additionalmetadatatable USING metadata INNER JOIN data ON metadata.userdataID = data.id INNER JOIN additionalmetadatatable ON metadata.id = additionalmetadatatable.id WHERE metadata.owner = 'logged-in user'

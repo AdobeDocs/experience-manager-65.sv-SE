@@ -137,7 +137,7 @@ I följande kodexempel hämtas, granskas och sparas XMP metadata. (Se [Exportera
 
 ## Snabbstart (SOAP): Importera XMP metadata med Java API {#quick-start-soap-mode-importing-xmp-metadata-using-the-java-api}
 
-I följande kodexempel importeras XMP metadata och den nya PDF-filen sparas på disken. PDF-dokumentet är baserat på en PDF-fil med namnet Loan.pdf. XML-dokumentet som innehåller de metadata som ska importeras till PDF-dokumentet baseras på en XML-fil med namnet *LoanMetaData.xml*. Mer information om XML-filen finns i [Importera metadata till PDF-dokument](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
+I följande kodexempel importeras XMP metadata och den nya PDF-filen sparas på disken. PDF-dokumentet är baserat på en PDF-fil med namnet Loan.pdf. XML-dokumentet som innehåller de metadata som ska importeras till PDF-dokumentet är baserat på en XML-fil med namnet *LoanMetaData.xml*. Mer information om XML-filen finns i [Importera metadata till PDF-dokument](/help/forms/developing/xmp-utilities.md#importing-metadata-into-pdf-documents).
 
 ```java
  /*

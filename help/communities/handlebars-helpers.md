@@ -16,21 +16,21 @@ ht-degree: 1%
 
 # Hjälpmedel för SCF-handtag {#scf-handlebars-helpers}
 
-| **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
+| **[⇐ Feature Essentials](essentials.md)** | **[Anpassning på serversidan¥](server-customize.md)** |
 |---|---|
-|   | **[Anpassning på klientsidan](client-customize.md)** |
+|   | **[Anpassning på klientsidan¥](client-customize.md)** |
 
 Handlister Hjälpprogram är metoder som kan anropas från Handlebars-skript för att underlätta arbetet med SCF-komponenter.
 
 Implementeringen innehåller en definition på klientsidan och en definition på serversidan. Det är också möjligt för utvecklare att skapa anpassade hjälpprogram.
 
-De anpassade SCF-hjälprarna som levereras med AEM Communities definieras i [klientbibliotek](../../help/sites-developing/clientlibs.md):
+De anpassade SCF-hjälpen som levereras med AEM Communities definieras i [klientbiblioteket](../../help/sites-developing/clientlibs.md):
 
 * `/etc/clientlibs/social/commons/scf/helpers.js`
 
 >[!NOTE]
 >
->Installera [senaste webbgruppsfunktionspaket](deploy-communities.md#latestfeaturepack).
+>Installera det [senaste funktionsmakropaketet för communityn](deploy-communities.md#latestfeaturepack).
 
 ## Förkortning {#abbreviate}
 
@@ -44,7 +44,7 @@ Om safeString är true är den returnerade strängen SafeString.
 
 ### Parametrar {#parameters}
 
-* **kontext**: String
+* **context**: String
 
   (Valfritt) Standard är den tomma strängen
 
@@ -92,7 +92,7 @@ Ett hjälpmedel för att lägga till två intervall under en div, ett för den f
 
 ### Parametrar {#parameters-1}
 
-* **kontext**: String
+* **context**: String
 
   (Valfritt) Standard är den tomma strängen.
 
@@ -132,13 +132,13 @@ En hjälp som returnerar en formaterad datumsträng.
 
 ### Parametrar {#parameters-2}
 
-* **kontext**: Number
+* **context**: Number
 
   (Valfritt) en millisekundförskjutning från 1 januari 1970 (epok). Standard är aktuellt datum.
 
-* **format**: String
+* **format**: Sträng
 
-  (Valfritt) Datumformatet som ska användas. Standardvärdet är &quot;`YYYY-MM-DDTHH:mm:ss.sssZ`och resultatet visas som &quot;`2015-03-18T18:17:13-07:00`&quot;
+  (Valfritt) Datumformatet som ska användas. Standardvärdet är `YYYY-MM-DDTHH:mm:ss.sssZ` och resultatet visas som `2015-03-18T18:17:13-07:00`
 
 ### Exempel {#examples-1}
 
@@ -164,7 +164,7 @@ En hjälpfunktion som returnerar innehåll beroende på ett likhetsvillkor.
 
   Det vänstra värdet som ska jämföras.
 
-* **rvalue**: String
+* **värde**: Sträng
 
   Högervärdet som ska jämföras.
 
@@ -184,13 +184,13 @@ En blockhjälp som testar det aktuella värdet för [WCM-läge](https://develope
 
 ### Parametrar {#parameters-4}
 
-* **kontext**: String
+* **context**: String
 
   (Valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
 
-* **läge**: String
+* **mode**: Sträng
 
-  (Valfritt) En kommaavgränsad lista med [WCM-lägen](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) för att testa om det finns.
+  (Valfritt) En kommaavgränsad lista med [WCM-lägen](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) som ska testas om de anges.
 
 ### Exempel {#example-2}
 
@@ -206,19 +206,19 @@ En blockhjälp som testar det aktuella värdet för [WCM-läge](https://develope
 
 Den här hjälpen åsidosätter Handlebars help &#39;i18n&#39;.
 
-Se även [Internationalisering av strängar i JavaScript-kod](../../help/sites-developing/i18n-dev.md#internationalizing-strings-in-javascript-code).
+Se även [Internationalisering av strängar i JavaScript Code](../../help/sites-developing/i18n-dev.md#internationalizing-strings-in-javascript-code).
 
 ### Parametrar {#parameters-5}
 
-* **kontext**: String
+* **context**: String
 
   (Valfritt) Den sträng som ska översättas. Obligatoriskt om inget standardvärde har angetts.
 
-* **standard**: String
+* **standard**: Sträng
 
   (Valfritt) Standardsträngen som ska översättas. Obligatoriskt om ingen kontext har angetts.
 
-* **kommentar**: String
+* **kommentar**: Sträng
 
   (Valfritt) Ett översättningstips
 
@@ -237,15 +237,15 @@ Med den här metoden kan resursen anpassas programmatiskt enklare än vad som ä
 
 Det finns bara ett urval av webbgruppskomponenter att ta med. <!-- OBSOLETE/OLD  NEED TO UPDATE FOR 6.5  For AEM 6.1, those that are includable are [comments](essentials-comments.md), [rating](rating-basics.md), [reviews](reviews-basics.md), and [voting](essentials-voting.md). -->
 
-Den här hjälpen, som bara är lämplig på serversidan, har funktioner som liknar [cq:include](../../help/sites-developing/taglib.md) för JSP-skript.
+Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner som liknar [cq:include](../../help/sites-developing/taglib.md) för JSP-skript.
 
 ### Parametrar {#parameters-6}
 
-* **kontext**: Sträng eller objekt
+* **context**: Sträng eller objekt
 
   (Valfritt, såvida du inte anger en relativ sökväg)
 
-  Använd `this` för att skicka det aktuella sammanhanget.
+  Använd `this` för att skicka den aktuella kontexten.
 
   Använd `this.id` för att hämta resursen på `id` för återgivning av begärd resourceType.
 
@@ -253,11 +253,11 @@ Den här hjälpen, som bara är lämplig på serversidan, har funktioner som lik
 
   (Valfritt) Resurstypen är som standard resurstyp från kontext.
 
-* **mall**: String
+* **template**: String
 
   Sökväg till komponentskript.
 
-* **bana**: String
+* **sökväg**: Sträng
 
   (Obligatoriskt) Sökvägen till resursen. Om sökvägen är relativ måste en kontext anges, annars returneras den tomma strängen.
 
@@ -271,29 +271,29 @@ Den här hjälpen, som bara är lämplig på serversidan, har funktioner som lik
 {{include this.id path="comments" resourceType="social/commons/components/hbs/comments"}}
 ```
 
-Innehåller en ny kommentarkomponent på `this.id` + /comments.
+Innehåller en ny kommentarskomponent på `this.id` + /comments.
 
 ## IncludeClientLib {#includeclientlib}
 
 En handledare som innehåller ett AEM HTML-klientbibliotek, som kan vara ett js, en css eller ett temabibliotek. Om flera inkluderingar av olika typer, till exempel js och css, ska den här taggen användas flera gånger i Handlebars-skriptet.
 
-Den här hjälpen, som bara är lämplig på serversidan, har funktioner som liknar [ui:includeClientLib](../../help/sites-developing/taglib.md) för JSP-skript.
+Den här hjälpen, som bara är lämplig på serversidan, innehåller funktioner som liknar [ui:includeClientLib](../../help/sites-developing/taglib.md) för JSP-skript.
 
 ### Parametrar {#parameters-7}
 
-* **kategorier**: String
+* **categories**: String
 
   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Inkludera alla JavaScript- och CSS-bibliotek för de angivna kategorierna. Temanamnet extraheras från begäran.
 
-* **tema**: String
+* **tema**: Sträng
 
   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Inkludera alla temarelaterade bibliotek (både CSS och JS) för de angivna kategorierna. Temanamnet extraheras från begäran.
 
-* **js**: String
+* **js**: Sträng
 
   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Inkluderar alla JavaScript-bibliotek för de angivna kategorierna.
 
-* **css**: String
+* **css**: Sträng
 
   (Valfritt) En lista med kommaavgränsade klientbibliotekskategorier. Inkluderar alla CSS-bibliotek för de angivna kategorierna.
 
@@ -348,7 +348,7 @@ Till exempel:
 
 ### Parametrar {#parameters-8}
 
-* **kontext**: Number
+* **context**: Number
 
   Tidigare kunde man jämföra med&quot;now&quot;. Tiden uttrycks som en millisekundförskjutning från 1 januari 1970 (epok).
 
@@ -380,7 +380,7 @@ OBS! Den här hjälpen är inte en validerare och ska inte användas för att sk
 
 ### Parametrar {#parameters-9}
 
-* **kontext**: object
+* **kontext**: objekt
 
   HTML som ska kodas.
 
@@ -398,7 +398,7 @@ OBS! Den här hjälpen är inte en validerare och ska inte användas för att sk
 
 ### Parametrar {#parameters-10}
 
-* **kontext**: Object
+* **kontext**: Objekt
 
   HTML som ska kodas.
 
@@ -410,13 +410,13 @@ OBS! Den här hjälpen är inte en validerare och ska inte användas för att sk
 
 ## Xss-jsString {#xss-jsstring}
 
-En hjälp som kodar en källsträng för skrivning till JavaScript-stränginnehåll för att skydda mot XSS.
+En hjälpare som kodar en källsträng för skrivning till JavaScript-stränginnehåll för att skydda mot XSS.
 
 OBS! Den här hjälpen är inte en validerare och ska inte användas för att skriva till godtycklig JavaScript.
 
 ### Parametrar {#parameters-11}
 
-* **kontext**: Object
+* **kontext**: Objekt
 
   HTML som ska kodas.
 
@@ -434,7 +434,7 @@ OBS! Den här hjälpen kan returnera en tom sträng.
 
 ### Parametrar {#parameters-12}
 
-* **kontext**: Object
+* **kontext**: Objekt
 
   Den URL som ska saneras.
 
@@ -446,15 +446,15 @@ OBS! Den här hjälpen kan returnera en tom sträng.
 
 ## Handlebars.js Basic Overview {#handlebars-js-basic-overview}
 
-* Ett Handlebars-anrop är en enkel identifierare ( *name* av hjälpfunktionen), följt av noll eller flera blankstegsavgränsade parametrar.
+* Ett hjälpanrop till en handledare är en enkel identifierare (hjälpens *namn*) följt av noll eller flera mellanrumsavgränsade parametrar.
 * Parametrar kan vara ett enkelt String-, number-, boolean- eller JSON-objekt och en valfri sekvens av nyckelvärdepar (hash-argument) som de sista parametrarna.
 * Nycklarna i hash-argumenten måste vara enkla identifierare.
 * Värdena i hash-argument är Handlebars-uttryck: enkla identifierare, sökvägar eller strängar.
-* Det aktuella sammanhanget `this`, är alltid tillgängligt för Handlebars hjälpprogram.
+* Den aktuella kontexten `this` är alltid tillgänglig för Handlebars-hjälpredor.
 * Kontexten kan vara ett String-, number-, boolean- eller JSON-dataobjekt.
-* Det går att skicka ett objekt som är inkapslat i den aktuella kontexten som kontext, till exempel `this.url` eller `this.id` (se följande exempel på enkla och blockerade hjälpmedel).
+* Det går att skicka ett objekt som är kapslat i den aktuella kontexten som kontext, till exempel `this.url` eller `this.id` (se följande exempel på enkla och blockerade hjälpprogram).
 
-* Blockhjälpredor är funktioner som kan anropas var som helst i mallen. De kan anropa ett mallblock noll eller flera gånger med olika kontext varje gång. De innehåller ett sammanhang mellan `{{#*name*}}` och `{{/*name*}}`.
+* Blockhjälpredor är funktioner som kan anropas var som helst i mallen. De kan anropa ett mallblock noll eller flera gånger med olika kontext varje gång. De innehåller en kontext mellan `{{#*name*}}` och `{{/*name*}}`.
 
 * Handtag ger en slutgiltig parameter till hjälpredor som heter &quot;options&quot;. Alternativobjektet innehåller
 
@@ -488,7 +488,7 @@ template(context);
 Återger:
 
 &lt;ul>
-&lt;li>&lt;a href=&quot;/posts/hello-world&quot;>Posta!&lt;/a>&lt;/li>
+&lt;li>&lt;a href=&quot;/post/hello-world&quot;>Post!&lt;/a>&lt;/li>
 &lt;/ul>
 
 ### Ett exempel på en blockhjälp från Handlebars.js-dokumentationen: {#an-example-of-a-block-helper-from-handlebars-js-documentation}
@@ -523,7 +523,7 @@ Anpassade hjälpprogram måste implementeras på serversidan och klientsidan, s�
 
 ### Anpassade hjälpmedel på serversidan {#server-side-custom-helpers}
 
-Implementera och registrera en anpassad SCF-hjälp på serversidan genom att implementera Java™-gränssnittet [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html), gör det till en [OSGi Service](../../help/sites-developing/the-basics.md#osgi) och installera det som en del av ett OSGi-paket.
+Om du vill implementera och registrera en anpassad SCF-hjälp på serversidan implementerar du bara Java™-gränssnittet [TemplateHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/handlebars/api/TemplateHelper.html), gör det till en [OSGi-tjänst](../../help/sites-developing/the-basics.md#osgi) och installerar det som en del av ett OSGi-paket.
 
 Till exempel:
 
@@ -571,7 +571,7 @@ public class FooTextHelper implements TemplateHelper<String>{
 
 ### Anpassade hjälpmedel på klientsidan {#client-side-custom-helpers}
 
-Hjälpprogram på klientsidan är Handlebars-skript som registreras genom att anropa `Handlebars.registerHelper()`.
+Hjälpprogrammen på klientsidan är Handlebars-skript som har registrerats genom att anropa `Handlebars.registerHelper()`.
 Till exempel:
 
 ### custom-helpers.js {#custom-helpers-js}
@@ -592,12 +592,12 @@ function(Handlebars, SCF, $CQ) {
 De anpassade hjälpfilerna på klientsidan måste läggas till i ett anpassat klientbibliotek.
 Klientlib måste:
 
-* Inkludera ett beroende på `cq.social.scf`.
+* Ta med ett beroende av `cq.social.scf`.
 * Läs in när Hanterarfält har lästs in.
-* be [ingår](clientlibs.md).
+* Bli [inkluderad](clientlibs.md).
 
-Obs! SCF-hjälprarna definieras i `/etc/clientlibs/social/commons/scf/helpers.js`.
+Obs! Hjälpprogrammen för SCF definieras i `/etc/clientlibs/social/commons/scf/helpers.js`.
 
-| **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
+| **[⇐ Feature Essentials](essentials.md)** | **[Anpassning på serversidan¥](server-customize.md)** |
 |---|---|
-|   | **[Anpassning på klientsidan](client-customize.md)** |
+|   | **[Anpassning på klientsidan¥](client-customize.md)** |

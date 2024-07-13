@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Komponenter{#components}
 
-Adobe Experience Manager (AEM) innehåller en mängd färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när [redigera en sida](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) och grupperas efter huvudfunktionsområde (dvs. komponentgrupp) för att underlätta filtreringen.
+Adobe Experience Manager (AEM) innehåller en mängd färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när [en sida redigeras](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) och grupperas efter huvudfunktionsområdet (det vill säga komponentgruppen) för att underlätta filtreringen.
 
 >[!CAUTION]
 >
@@ -37,8 +37,8 @@ På följande sidor finns snabba länkar till några av de viktigaste områdena 
 
 * [eCommerce](/help/commerce/cif-classic/administering/ecommerce.md)
 
-  eCommerce-funktionaliteten i AEM innehåller också en rad komponenter som finns i **Handel** grupp. Faktisk användning kan bero på vilken e-handelsmotor som används.
+  eCommerce-funktionen i AEM innehåller också en rad komponenter som finns i **Commerce** -gruppen. Faktisk användning kan bero på vilken e-handelsmotor som används.
 
 ## Använda designläge för att konfigurera komponenter {#using-design-mode-to-configure-components}
 
-Förutom de komponenter som författare kan komma åt via sidbrytaren i en standardinstallation finns det även andra komponenter. Du kan använda [Designläge](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#enable-disable-components) för att aktivera/inaktivera dessa och redigera parametrar för specifika komponenter.
+Förutom de komponenter som författare kan komma åt via sidbrytaren i en standardinstallation finns det även andra komponenter. Du kan använda [designläget](/help/sites-classic-ui-authoring/classic-page-author-design-mode.md#enable-disable-components) för att aktivera/inaktivera dessa och redigera parametrar för specifika komponenter.

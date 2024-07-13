@@ -27,7 +27,7 @@ Så här lokaliserar du användargränssnittet för AEM Forms-arbetsytan till de
 * Lokalisera dolda kategorier, köer och processer.
 * Lokalisera datumväljare
 
-Innan du utför ovanstående steg måste du följa de steg som anges på [Allmänna steg för anpassning av AEM Forms arbetsyta](../../forms/using/generic-steps-html-workspace-customization.md).
+Innan du utför stegen ovan måste du följa stegen som beskrivs i [Allmänna steg för anpassning av AEM Forms-arbetsytan](../../forms/using/generic-steps-html-workspace-customization.md).
 
 >[!NOTE]
 >
@@ -35,12 +35,12 @@ Innan du utför ovanstående steg måste du följa de steg som anges på [Allmä
 
 ## Lokalisera text {#localizing-text}
 
-Utför följande steg för att lägga till stöd för ett språk *Nytt* och webbläsarens språkkod *nw*.
+Utför följande steg så att du kan lägga till stöd för språket *New* och webbläsarens språkkod *nw*.
 
 1. Logga in på CRXDE Lite.
 Standardwebbadressen för CRXDE Lite är `https://'[server]:[port]'/lc/crx/de/index.jsp`.
 1. Navigera till platsen `apps/ws/locales` och skapa en mapp `nw.`
-1. Kopiera filen `translation.json`från platsen `/apps/ws/locales/en-US` till plats `/apps/ws/locales/nw` .
+1. Kopiera filen `translation.json` från platsen `/apps/ws/locales/en-US` till platsen `/apps/ws/locales/nw`.
 1. Navigera till `/apps/ws/locales/nw` och öppna `translation.json` för redigering. Gör språkområdesspecifika ändringar i filen translation.json.
 
    Följande exempel innehåller filen translation.json för engelska och franska i arbetsytan AEM Forms.
@@ -49,9 +49,9 @@ Standardwebbadressen för CRXDE Lite är `https://'[server]:[port]'/lc/crx/de/in
 
 ## Lokalisera komprimerade kategorier, köer och processer {#localizing-collapsed-categories-queues-and-processes}
 
-På arbetsytan i AEM Forms används bilder för att visa rubriker för kategorier, köer och processer. Du behöver ett utvecklingspaket för att lokalisera dessa rubriker. Mer information om hur du skapar ett utvecklingspaket finns i [Skapar AEM Forms-arbetsytekod.](introduction-customizing-html-workspace.md#building-html-workspace-code)
+På arbetsytan i AEM Forms används bilder för att visa rubriker för kategorier, köer och processer. Du behöver ett utvecklingspaket för att lokalisera dessa rubriker. Mer information om hur du skapar ett utvecklingspaket finns i [Skapa AEM Forms-arbetsytekod.](introduction-customizing-html-workspace.md#building-html-workspace-code)
 
-I följande steg antas de nya lokaliserade bildfilerna vara *Kategorier_nw.png*, *Queue_nw.png* och *Processes_nw.png*. Bildernas rekommenderade bredd bör vara 19 pixlar.
+I följande steg antas de nya lokaliserade bildfilerna vara *Categories_nw.png*, *Queue_nw.png* och *Processes_nw.png*. Bildernas rekommenderade bredd bör vara 19 pixlar.
 
 >[!NOTE]
 >
@@ -61,8 +61,8 @@ I följande steg antas de nya lokaliserade bildfilerna vara *Kategorier_nw.png*,
 
 Så här översätter du bilderna:
 
-1. Placera bildfilerna i en WebDAV-klient */apps/ws/images* mapp.
-1. Navigera till */apps/ws/css*. Öppna *newStyle.css* för att redigera och lägga till följande poster:
+1. Placera bildfilerna i mappen */apps/ws/images* med en WebDAV-klient.
+1. Navigera till */apps/ws/css*. Öppna *newStyle.css* för redigering och lägg till följande poster:
 
    ```css
    #categoryListBar .content.nw {
@@ -78,9 +78,9 @@ Så här översätter du bilderna:
    }
    ```
 
-1. Utför alla semantiska ändringar som anges i [Anpassa arbetsytan](../../forms/using/introduction-customizing-html-workspace.md) artikel.
-1. Navigera till *js/runtime/utility* och öppna *usersession.js* fil för redigering.
-1. Leta reda på koden som visas i det ursprungliga kodblocket och lägg till villkoret *lang!== &#39;nw&#39;* till programsatsen if:
+1. Utför alla semantiska ändringar som anges i artikeln [Workspace Customization](../../forms/using/introduction-customizing-html-workspace.md).
+1. Navigera till mappen *js/runtime/utility* och öppna filen *usersession.js* för redigering.
+1. Leta reda på koden som visas i det ursprungliga kodblocket och lägg till villkoret *lang !==&#39;nw&#39;* to the if statement:
 
    ```javascript
    // Orignal code
@@ -108,18 +108,18 @@ Så här översätter du bilderna:
 
 ## Lokaliserar datumväljaren {#localizing-date-picker}
 
-Du behöver ett utvecklingspaket för att lokalisera *datepicker* API. Mer information om hur du skapar ett utvecklingspaket finns i [Skapar AEM Forms arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code).
+Du behöver ett utvecklingspaket för att lokalisera API:t *datepicker*. Mer information om hur du skapar ett utvecklingspaket finns i [Skapa AEM Forms-arbetsytekod](introduction-customizing-html-workspace.md#building-html-workspace-code).
 
-1. Hämta och extrahera [jQuery UI-paket](https://jqueryui.com/download/all/), navigera till *&lt;extracted jquery=&quot;&quot; ui=&quot;&quot; package=&quot;&quot;>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n.
+1. Hämta och extrahera [jQuery-gränssnittspaketet](https://jqueryui.com/download/all/), navigera till *&lt;gränssnittspaket för extraherad jquery>*\jquery-ui-1.10.2.zip\jquery-ui-1.10.2\ui\i18n.
 1. Kopiera filen jquery.ui.datepicker-nw.js för språkkod nu till apps/ws/js/libs/jqueryui och gör språkspecifika ändringar i filen.
-1. Navigera till `apps/ws/js` och öppna `jquery.ui.datepicker-nw.js` fil för redigering.
-1. Skapa ett alias för `jquery.ui.datepicker-nw.js.` Koden som skapar ett alias för `jquery.ui.datepicker-nw.js` filen är:
+1. Navigera till `apps/ws/js` och öppna filen `jquery.ui.datepicker-nw.js` för redigering.
+1. Skapa ett alias för `jquery.ui.datepicker-nw.js.` I filen main.js. Koden som skapar ett alias för filen `jquery.ui.datepicker-nw.js` är:
 
    ```javascript
    jqueryuidatepickernw : pathprefix + 'libs/jqueryui/jquery.ui.datepicker-nw'
    ```
 
-1. Använd alias `jqueryuidatepickernw` som innehåller `jquery.ui.datepicker-nw.js` i alla filer där datumväljaren används. Datepicker används i följande filer:
+1. Använd aliaset `jqueryuidatepickernw` om du vill inkludera filen `jquery.ui.datepicker-nw.js` i alla filer som använder datumväljaren. Datepicker används i följande filer:
 
    * `js/runtime/views/outofoffice.js`
    * `js/runtime/views/searchtemplatedetails.js`

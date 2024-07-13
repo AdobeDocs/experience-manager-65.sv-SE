@@ -24,19 +24,19 @@ Formulären hämtas till din app och är tillgängliga offline. Du driver t.ex. 
 Så här synkroniserar du formuläret i AEM Forms-appen:
 
 1. Markera ett formulär i författarinstansen och klicka på **Visa egenskaper**.
-1. På egenskapssidan klickar du på **Avancerat.**
-1. Aktivera alternativet under Avancerat: **Synkronisera med AEM Forms App** och markera **Spara**.
+1. Klicka på **Avancerat.** på egenskapssidan.
+1. Aktivera alternativet **Synkronisera med AEM Forms App** under Avancerat och välj **Spara**.
 
 Om du vill synkronisera flera formulär i författarinstansen markerar du flera formulär i formulärhanteraren och väljer **Synkronisera med AEM Forms App**. När formuläret publiceras kan AEM Forms-appen ansluta till publiceringsservern och hämta formulären.
 
-Om ditt AFA-program (AEM Form Application) inte kan synkroniseras utför du följande steg för att åtgärda synkroniseringsproblemet:
+Om ditt AFA-program (AEM Form Application) från Android inte kan synkroniseras utför du följande steg för att åtgärda synkroniseringsproblemet:
 
 1. Gå till **https://[server]:[port]/system/console/configMgr**.
-1. Sök efter **[!UICONTROL Adobe Granite Token Authentication Handler]** och klicka **[!UICONTROL Edit]**.
-1. Välj **[!UICONTROL None]** i listrutan för **[!UICONTROL SameSite attribute for the login-token cookie]** -attribut.
+1. Sök efter **[!UICONTROL Adobe Granite Token Authentication Handler]** och klicka på **[!UICONTROL Edit]**.
+1. Välj alternativet **[!UICONTROL None]** i listrutan för attributet **[!UICONTROL SameSite attribute for the login-token cookie]**.
 1. Klicka på **[!UICONTROL Save]**.
 
-![Synkronisera bild med AFA Android-app](/help/forms/using/assets/afaandroid.png)
+![Synkronisera bild med AFA Android-appen](/help/forms/using/assets/afaandroid.png)
 
 >[!NOTE]
 >

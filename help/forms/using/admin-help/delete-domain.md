@@ -22,5 +22,5 @@ Använd sidan Domänhantering för att markera en befintlig domän som föråldr
 
 Om du skapar en domän med samma namn som en borttagen domän återställs den borttagna domänen tillsammans med informationen som den innehåller. DefaultDom-domänen kan inte tas bort.
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Settings > User Management > Domain Management]**.
-1. Markera kryssrutan för den domän som ska tas bort, klicka på **[!UICONTROL Delete]** och klicka sedan på **[!UICONTROL OK]**.
+1. Klicka på **[!UICONTROL Settings > User Management > Domain Management]** i administrationskonsolen.
+1. Markera kryssrutan för den domän som ska tas bort, klicka på **[!UICONTROL Delete]** och sedan på **[!UICONTROL OK]**.

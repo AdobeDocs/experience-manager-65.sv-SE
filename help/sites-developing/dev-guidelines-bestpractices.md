@@ -51,11 +51,11 @@ Följande allmänna regler för utvecklare passar bäst i de vanligaste projekte
 
 När du skapar egna komponenter eller anpassar en befintlig komponent är det oftast enklast (och säkraste) att återanvända befintliga definitioner. Samma principer gäller även andra element i AEM, till exempel felhanteraren.
 
-Detta kan du göra genom att kopiera och ersätta den befintliga definitionen. Med andra ord, kopiera definitionen från `/libs` till `/apps/<your-project>`. Den här nya definitionen, i `/apps`, kan uppdateras efter dina behov.
+Detta kan du göra genom att kopiera och ersätta den befintliga definitionen. Det innebär att definitionen kopieras från `/libs` till `/apps/<your-project>`. Den nya definitionen i `/apps` kan uppdateras enligt dina krav.
 
 >[!NOTE]
 >
->Se [Använda övertäckningar](/help/sites-developing/overlays.md) för mer information.
+>Mer information finns i [Använda övertäckningar](/help/sites-developing/overlays.md).
 
 Till exempel:
 
@@ -81,9 +81,9 @@ Till exempel:
 
 >[!CAUTION]
 >
->**Gör inte** ändra något i `/libs` bana.
+>**Ändra inte** något i sökvägen `/libs`.
 >
->Orsaken är att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
+>Orsaken är att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 >
 >För konfiguration och andra ändringar:
 >
@@ -109,14 +109,14 @@ Använd navigeringsåtkomst till innehållsträdet i stället för att utföra e
 
 >[!NOTE]
 >
->Om du använder [Frågebyggaren](/help/sites-developing/querybuilder-api.md)använder du JCR-frågor när Query Builder genererar JCR-frågor under huven.
+>Om du använder [Query Builder](/help/sites-developing/querybuilder-api.md) använder du JCR-frågor eftersom Query Builder genererar JCR-frågor under huven.
 >
 
 ## Säkerhetsaspekter {#security-considerations}
 
 >[!NOTE]
 >
->Det är även värt att hänvisa till [checklista för säkerhet](/help/sites-administering/security-checklist.md).
+>Det är också värt att referera till [checklistan för säkerhet](/help/sites-administering/security-checklist.md).
 
 ### JCR-sessioner (databas) {#jcr-repository-sessions}
 
@@ -132,7 +132,7 @@ Med XSS (Cross-site scripting) kan angripare lägga in kod på webbsidor som vis
 
 AEM tillämpar principen om att filtrera allt innehåll som användaren tillhandahåller vid utskrift. Förhindrande av XSS har högsta prioritet under både utveckling och testning.
 
-En brandvägg för webbprogram, som [mod_security för Apache](https://modsecurity.org), kan ge tillförlitlig och central kontroll över distributionsmiljöns säkerhet och skydda mot tidigare oidentifierade serveröverskridande skriptattacker (cross-site scripting).
+En brandvägg för ett webbprogram, till exempel [mod_security för Apache](https://modsecurity.org), kan dessutom ge tillförlitlig, central kontroll över distributionsmiljöns säkerhet och skydda mot tidigare oidentifierade serveröverskridande skriptattacker (cross-site scripting).
 
 >[!CAUTION]
 >
@@ -159,10 +159,10 @@ Detta gäller information som är konfidentiell för systemet (som konfiguration
 
 Felsidor kan anpassas för AEM. Detta är tillrådligt så att instansen inte visar slingspår på interna serverfel.
 
-Se [Anpassa felsidor som visas av felhanteraren](/help/sites-developing/customizing-errorhandler-pages.md) för fullständig information.
+Mer information finns i [Anpassa felsidor som visas av felhanteraren](/help/sites-developing/customizing-errorhandler-pages.md).
 
 ### Öppna filer i Java™-processen {#open-files-in-the-java-process}
 
-Eftersom AEM kan få åtkomst till många filer bör du ange antalet [öppna filer för en Java™-process](/help/sites-deploying/configuring.md#open-files-in-the-java-process) vara explicit konfigurerad för AEM.
+Eftersom AEM har åtkomst till många filer rekommenderar vi att antalet [öppna filer för en Java™-process](/help/sites-deploying/configuring.md#open-files-in-the-java-process) konfigureras explicit för AEM.
 
 För att minimera problemet bör utvecklingsverktyget se till att alla öppna filer stängs korrekt när det är möjligt (meningsfullt).

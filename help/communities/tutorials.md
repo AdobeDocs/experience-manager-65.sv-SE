@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Självstudiekurser {#tutorials}
 
-Detta är exempel på hur du kan lära dig mer och arbeta med Adobe Experience Manager (AEM) 6.1 Communities [ramverk för sociala komponenter (SCF)](scf.md).
+Det här är exempel som du kan använda för att lära dig och arbeta med Adobe Experience Manager (AEM) 6.1 Communities [ramverk för sociala komponenter (SCF)](scf.md).
 
 ## Anpassning på klientsidan {#client-side-customization}
 
@@ -34,13 +34,13 @@ Se även:
 
 ## Anpassning på serversidan {#server-side-customization}
 
-Se även [SCF-anpassning på serversidan](server-customize.md).
+Se även [anpassning på serversidan](server-customize.md).
 
-Exempelkod finns i [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) databas:
+Exempelkod finns i [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) -databasen:
 
 * [Anpassa SCF-komponentexempel](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-customize)
 
-* [Exempel på SCF-komponent för övertäckning](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-overlay)
+* [Överlägg SCF-komponentexempel](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-overlay)
 
 * [Utöka SCF-komponentexempel](https://github.com/Adobe-Marketing-Cloud/aem-scf-sample-components-extension)
 
@@ -60,11 +60,11 @@ Exempelkod finns i [Adobe Experience Cloud GitHub](https://github.com/Adobe-Mark
 
 ## Demonstrationsanvändare {#demo-users}
 
-Paketet med exempel på Geometrixx innehåller demoanvändare. Det är ofta en skillnad i upplevelse mellan att vara besökare (inte inloggad) eller medlem (inloggad). Så länge exempelpaketen är installerade kan du använda dessa användare för att simulera ett inloggat läge när du utforskar med Geometrixx [Community Components Guide](components-guide.md).
+Paketet med exempel på Geometrixx innehåller demoanvändare. Det är ofta en skillnad i upplevelse mellan att vara besökare (inte inloggad) eller medlem (inloggad). Så länge exempelpaketen är installerade kan du använda dessa användare för att simulera ett inloggat läge när du undersöker med [Community Components Guide](components-guide.md).
 
 Om du vill visa en fullständig lista över demoanvändare går du till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Security > Users]**. Eller använd det klassiska användargränssnittet [säkerhetskonsol](http://localhost:4502/useradmin) för att hantera användare och grupper.
 
-Om en [communitywebbplatsen har skapats](getting-started.md)kan du tilldela demoanvändare till [användargrupper](users.md).
+Om en [community-webbplats har skapats](getting-started.md) kan du tilldela demoanvändare till dess [community-användargrupper](users.md).
 
 ***användar-ID* / *lösenord***:
 

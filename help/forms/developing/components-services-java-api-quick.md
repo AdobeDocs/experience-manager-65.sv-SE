@@ -1,6 +1,6 @@
 ---
-title: Java&handel med komponenter och tjänster; APIQuick Start (SOAP)
-description: Lär dig hur du programmässigt hanterar AEM Forms-komponenter och -tjänster med Java&trade; API Quick Start (SOAP).
+title: Java&amp för komponenter och tjänster;handel; APIQuick Start (SOAP)
+description: Lär dig att programmässigt hantera AEM Forms-komponenter och -tjänster med Java&handel; API Quick Start (SOAP).
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.4/FORMS

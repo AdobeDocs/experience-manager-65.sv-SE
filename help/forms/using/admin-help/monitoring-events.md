@@ -22,9 +22,9 @@ När granskningsfunktionen är aktiverad kan du med dokumentsäkerhet övervaka 
 
 **Användare:** Kan visa granskade händelser för sina policyskyddade dokument och för alla skyddade dokument som de tar emot och använder.
 
-**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av policyer från sina uppsättningar.
+**Principuppsättningskoordinatorer:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av principer från sina principuppsättningar.
 
-**Administratörer:** Kan visa granskade händelser som är relaterade till alla policyskyddade dokument och användare. Administratörer kan även spåra andra typer av händelser, bland annat användare, dokument, principer och systemhändelser.
+**Administratörer:** Kan visa granskade händelser som är relaterade till alla principskyddade dokument och användare. Administratörer kan även spåra andra typer av händelser, bland annat användare, dokument, principer och systemhändelser.
 
 >[!NOTE]
 >
@@ -58,23 +58,25 @@ Du kan söka efter händelser på sidan Händelser genom att använda en kombina
 
 **Användare:** Kan visa granskade händelser för sina policyskyddade dokument och för alla skyddade dokument som de tar emot och använder. Dessa sökalternativ är tillgängliga:
 
-**Händelser som rör mig:** Användare kan hitta händelser för alla principskyddade dokument som de har skapat eller tagit emot. Om en användare till exempel öppnar, visar eller skriver ut ett dokument som en annan person har skyddat, ser användaren bara dessa händelser för det dokumentet.
+**Händelser relaterade till
+Till mig:** Användare kan hitta händelser för alla principskyddade dokument som de har skapat eller tagit emot. Om en användare till exempel öppnar, visar eller skriver ut ett dokument som en annan person har skyddat, ser användaren bara dessa händelser för det dokumentet.
 
-**Händelser som rör mina dokument:** Användarna kan hitta alla händelser som är relaterade till deras egna policyskyddade dokument. Användarna ser händelser som genereras av alla som hanterar deras dokument.
+**Händelser som rör mina dokument:** Användare kan hitta alla händelser som är relaterade till deras egna policyskyddade dokument. Användarna ser händelser som genereras av alla som hanterar deras dokument.
 
-**Koordinatorer för principuppsättning:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av policyer från sina uppsättningar. Dessa alternativ är tillgängliga:
+**Principuppsättningskoordinatorer:** Kan visa granskade händelser, inklusive dokument- och principhändelser, för dokument som skyddas av principer från sina principuppsättningar. Dessa alternativ är tillgängliga:
 
-**Dokumenthändelser där jag är koordinator för principuppsättning:** Koordinatorer för principuppsättningar som har behörighet att visa händelser kan hitta händelser som är relaterade till dokument som skyddas av profiler från deras principuppsättningar.
+**dokumenthändelser där
+Jag är koordinator för principuppsättningen:** Koordinatorer för principuppsättningar som har behörighet att visa händelser kan hitta händelser som är relaterade till dokument som skyddas av principer i deras principuppsättningar.
 
-**Policyhändelser där jag är koordinator för principuppsättning:** Koordinatorer för principuppsättningar som har behörighet att visa händelser kan hitta händelser som är relaterade till principer från sina principuppsättningar.
+**Principhändelser där jag är koordinator för principuppsättning:** Koordinatorer för principuppsättningar som har behörighet att visa händelser kan hitta händelser som är relaterade till principer från sina principuppsättningar.
 
-**Administratörer:** Kan visa granskade händelser som är relaterade till alla policyskyddade dokument och användare. Administratörer kan även spåra andra typer. Administratörer kan dessutom dela upp händelsesökningar ytterligare efter typ av användare:
+**Administratörer:** Kan visa granskade händelser som är relaterade till alla principskyddade dokument och användare. Administratörer kan även spåra andra typer. Administratörer kan dessutom dela upp händelsesökningar ytterligare efter typ av användare:
 
 **Kända användare:** Användare finns i källkatalogerna eller är registrerade som externa användare.
 
 **Anonyma användare:** Okända användare som har åtkomst till ett dokument som är skyddat med en profil som tillåter anonym åtkomst.
 
-**Systemanvändare:** Serverinitierade händelser, t.ex. en katalogsynkronisering.
+**Systemanvändare:** Serverinitierade händelser, till exempel katalogsynkronisering.
 
 1. Klicka på Händelser på dokumentsäkerhetssidan.
 1. Markera de sökvillkor som du vill använda i söklistan. Beroende på vad du har valt i söklistan visas en andra lista med ytterligare sökvillkor. Skriv sökvillkoren i textrutan, om tillämpligt.

@@ -28,7 +28,7 @@ Det här innehållet beskriver hur bevakade mappar påverkas av olika scenarier 
 * Fel
 * Bevara
 
-En användare eller ett klientprogram släpper först filen eller mappen i indatamappen. Tjänståtgärden flyttar sedan filen till scenmappen för bearbetning. När tjänsten har utfört den angivna åtgärden sparas den ändrade filen i utdatamappen. Källfiler som bearbetats har flyttats till mappen preserve och filer som inte kunde bearbetas har flyttats till felmappen. När `Preserve On Failure` om attributet för den bevakade mappen är aktiverat, flyttas misslyckade bearbetade källfiler till mappen preserve. (Se [Konfigurera bevakade mappslutpunkter](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints).)
+En användare eller ett klientprogram släpper först filen eller mappen i indatamappen. Tjänståtgärden flyttar sedan filen till scenmappen för bearbetning. När tjänsten har utfört den angivna åtgärden sparas den ändrade filen i utdatamappen. Källfiler som bearbetats har flyttats till mappen preserve och filer som inte kunde bearbetas har flyttats till felmappen. När attributet `Preserve On Failure` för den bevakade mappen är aktiverat flyttas misslyckade bearbetade källfiler till mappen för bevarande. (Se [Konfigurera bevakade mappslutpunkter](/help/forms/using/admin-help/configuring-watched-folder-endpoints.md#configuring-watched-folder-endpoints).)
 
 Du kan säkerhetskopiera bevakade mappar i filsystemet.
 
@@ -38,7 +38,7 @@ Du kan säkerhetskopiera bevakade mappar i filsystemet.
 
 ## Hur bevakade mappar fungerar {#how-watched-folders-work}
 
-Det här innehållet beskriver den bevakade mappfilsbearbetningen. Det är viktigt att förstå denna process innan man utarbetar en återhämtningsplan. I det här exemplet `Preserve On Failure` för den bevakade mappen är aktiverat. Filerna bearbetas i den ordning som de kommer fram.
+Det här innehållet beskriver den bevakade mappfilsbearbetningen. Det är viktigt att förstå denna process innan man utarbetar en återhämtningsplan. I det här exemplet är attributet `Preserve On Failure` för den bevakade mappen aktiverat. Filerna bearbetas i den ordning som de kommer fram.
 
 I följande tabell beskrivs filhanteringen för fem exempelfiler (fil1, fil2, fil3, fil4, fil5) under hela processen. I tabellen representerar x-axeln tid, till exempel Tid 1 eller T1, och y-axeln representerar mappar i den bevakade mapphierarkin, till exempel Indata.
 
@@ -111,17 +111,17 @@ I följande tabell beskrivs filhanteringen för fem exempelfiler (fil1, fil2, fi
 
 I följande text beskrivs filhanteringen för varje gång:
 
-**T1:** De fyra exempelfilerna placeras i indatamapp.
+**T1:** De fyra exempelfilerna placeras i indatamappen.
 
 **T2:** Tjänståtgärden flyttar fil1 till scenmappen för manipulering.
 
 **T3:** Tjänståtgärden flyttar fil2 till scenmappen för manipulering. Resultatet av fil1 placeras i utdatamappen och fil1 flyttas till mappen preserve.
 
-**T4:** Tjänståtgärden placerar filen3 i scenmappen för manipulering. Resultatet av fil2 placeras i utdatamappen och fil2 placeras i den reserverade mappen.
+**T4:** Tjänståtgärden placerar fil3 i scenmappen för manipulering. Resultatet av fil2 placeras i utdatamappen och fil2 placeras i den reserverade mappen.
 
 **T5:** Tjänståtgärden placerar fil4 i scenmappen för manipulering. Hanteringen av filen3 misslyckas och den placeras i felmappen av tjänståtgärden.
 
-**T6:** Tjänståtgärden placerar fil5 i indatamappen. Resultatet av filen 4 placeras i utdatamappen och filen 4 placeras i mappen preserve.
+**T6:** Tjänsten placerar fil5 i indatamappen. Resultatet av filen 4 placeras i utdatamappen och filen 4 placeras i mappen preserve.
 
 **T7:** Tjänståtgärden placerar fil5 i scenmappen för manipulering.
 
@@ -137,15 +137,15 @@ Om t.ex. en säkerhetskopia tas vid T1-tidpunkten och servern misslyckas vid T7,
 
 Om en senare säkerhetskopiering har gjorts kan du återställa filerna. När du återställer filerna bör du tänka på vilken mapp i mapphierarkin den aktuella filen finns i:
 
-**Scen:** Filerna i den här mappen bearbetas igen när den bevakade mappen har återställts.
+**Scen:** Filer i den här mappen bearbetas igen när den bevakade mappen har återställts.
 
-**Indata:** Filerna i den här mappen bearbetas igen när den bevakade mappen har återställts.
+**Indata:** Filer i den här mappen bearbetas igen när den bevakade mappen har återställts.
 
-**Resultat:** Filerna i den här mappen bearbetas inte.
+**Resultat:** Filer i den här mappen bearbetas inte.
 
-**Utdata:** Filerna i den här mappen bearbetas inte.
+**Utdata:** Filer i den här mappen bearbetas inte.
 
-**Bevara:** Filerna i den här mappen bearbetas inte.
+**Bevara:** Filer i den här mappen bearbetas inte.
 
 ## Strategier för att minimera dataförluster {#strategies-to-minimize-data-loss}
 
@@ -154,16 +154,16 @@ Följande strategier kan minimera dataförlust för utdata och indatamappar när
 * Säkerhetskopiera utdata och felmappar ofta, t.ex. en timme, för att undvika förlust av resultat och felfiler.
 * Säkerhetskopiera indatafilerna i en annan mapp än den bevakade mappen. Detta garanterar att filen är tillgänglig efter återställning om du inte kan hitta filerna i utdata- eller felmappen. Kontrollera att filnamnsschemat är konsekvent.
 
-  Om du till exempel sparar utdata med `%F.`*extension*, får utdatafilen samma namn som indatafilen. Detta hjälper dig att avgöra vilka indatafiler som ska ändras och vilka som ska skickas igen. Om du bara ser filen file1_out i resultatmappen och inte filen2_out, file3_out och file4_out, måste du skicka filen 2, file3 och file4 igen.
+  Om du till exempel sparar utdata med `%F.`*filnamnstillägget* får utdatafilen samma namn som indatafilen. Detta hjälper dig att avgöra vilka indatafiler som ska ändras och vilka som ska skickas igen. Om du bara ser filen file1_out i resultatmappen och inte filen2_out, file3_out och file4_out, måste du skicka filen 2, file3 och file4 igen.
 
 * Om den bevakade säkerhetskopian av mappen som är tillgänglig är äldre än den tid det tar att bearbeta jobbet, bör du låta systemet skapa en bevakad mapp och automatiskt placera filerna i indatamappen.
 * Om den senaste tillgängliga säkerhetskopian inte är tillräckligt aktuell är säkerhetskopieringstiden kortare än den tid det tar att bearbeta filerna och den bevakade mappen återställs, har filen manipulerats i någon av följande steg:
 
    * **Steg 1:** I indatamappen
-   * **Steg 2:** Kopierad till scenmappen, men processen har inte anropats än
-   * **Steg 3:** Kopieras till scenmappen och processen anropas
-   * **Steg 4:** Hantering pågår
-   * **Steg 5:** Returnerade resultat
+   * **Steg 2:** har kopierats till scenmappen men processen har inte anropats än
+   * **Steg 3:** har kopierats till scenmappen och processen anropas
+   * **Steg 4:** Redigering pågår
+   * **Steg 5:** Resultat returnerades
 
   Om filerna finns på scen 1 ändras de. Om filerna finns i scen 2 eller 3 placerar du dem i indatamappen så att ändringarna utförs igen.
 

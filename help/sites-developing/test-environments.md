@@ -20,22 +20,22 @@ ht-degree: 0%
 
 För att definiera vilka konfigurationer som ska testas bör du tänka på följande:
 
-**Utveckling** - För enhetstester och vissa integreringstester.
+**Utveckling** - För enhets- och vissa integreringstester.
 
-**Testning** - För de flesta av testerna.
+**Testar** - För de flesta testerna.
 
 **Live** - För slutliga prestanda- och stresstester. Även för godkännandetester med kunden.
 
 Bestäm vilka instanser du behöver och var (vanligtvis minst en av varje för alla testnivåer):
 
-**Upphovsman** - Den här instansen tillåter författare att mata in och publicera innehåll.
+**Författare** - Den här instansen tillåter författare att ange och publicera innehåll.
 
-**Publicera** - Den här instansen visar webbplatsen i dess publicerade form så att besökarna kan komma åt den.
+**Publish** - Den här instansen presenterar webbplatsen i dess publicerade form så att besökare kan komma åt den.
 
 Testad med Dispatcher.
 
 Slutligen måste den faktiska maskinvaran beaktas - alla prestandatester bör göras på ett system så nära som möjligt i konfigurationen till den slutliga livemiljön. Därför rekommenderar vi även att du delar upp projektstarten i en
 
-**Soft Launch** - Minskad tillgänglighet, vilket ger tid för prestandatester, justering och optimering under realistiska förhållanden i produktionsmiljön.
+**Mjuk start** - Minskad tillgänglighet, vilket ger tid för prestandatester, justering och optimering under realistiska förhållanden i produktionsmiljön.
 
-**Hård start** - Full tillgänglighet.
+**Hård start** - fullständig tillgänglighet.

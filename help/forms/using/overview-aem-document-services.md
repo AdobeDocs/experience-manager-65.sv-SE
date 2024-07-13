@@ -46,10 +46,10 @@ När du använder utdatatjänsten för att sammanfoga XML-data med en formulärd
 Följande fyra utdatatjänster kan användas:
 
 * **generatePDFOuput**: Sammanfogar en formulärdesign med data för att generera ett PDF-dokument
-* **generatePrintedOutput**: Sammanfogar en formulärdesign med formulärdata för att generera ett dokument som ska skickas till antingen en laserskrivare eller en nätverksskrivare
+* **generatePrintedOutput**: Sammanfogar en formulärdesign med formulärdata för att generera ett dokument som ska skickas till antingen en laserskrivare eller en nätverksskrivare för etiketter
 
-* **generatePDFOutputBatch**: Sammanfogar flera mallar med flera dataposter i ett enda anrop för att generera en batch med PDF-filer. Det finns också ett alternativ för att generera ett enda PDF genom att kombinera alla PDF
-* **generatePrintedOutputBatch**: Sammanfogar flera mallar med flera dataposter i ett enda anrop för att generera en batch med utskriftsdokument (PS,PCL,ZPL,DPL,IPL,TPCL). Det finns också ett alternativ för att generera ett enda utskriftsdokument.
+* **generatePDFOutputBatch**: Sammanfogar flera mallar med flera dataposter i ett enda anrop för att generera en grupp med PDF-filer. Det finns också ett alternativ för att generera ett enda PDF genom att kombinera alla PDF
+* **generatePrintedOutputBatch**: Sammanfogar flera mallar med flera dataposter i ett enda anrop för att generera en grupp av utskriftsdokument (PS,PCL,ZPL,DPL,IPL,TPCL). Det finns också ett alternativ för att generera ett enda utskriftsdokument.
 
 ## Assembler Service {#assembler-service}
 
@@ -133,7 +133,7 @@ När PDF-dokument har rätt användarbehörighet kan mottagarna göra följande 
 
 Dessa specialfunktioner aktiveras automatiskt när ett PDF-dokument med aktiverade rättigheter öppnas i Adobe Reader. När användaren har arbetat klart med ett rättighetsaktiverat dokument inaktiveras dessa funktioner på nytt i Adobe Reader. De är inaktiverade tills användaren får ett annat rättighetsaktiverat PDF-dokument.
 
-Tjänsten DocAssurance är inte tillgänglig för användning. Information om hur du konfigurerar tjänsten DocAssurance finns i [Installera och konfigurera konfiguration av dokumenttjänster](../../forms/using/install-configure-document-services.md).
+Tjänsten DocAssurance är inte tillgänglig för användning. Mer information om hur du konfigurerar tjänsten DocAssurance finns i [Installera och konfigurera Document Services](../../forms/using/install-configure-document-services.md).
 
 ## Skicka till skrivartjänst {#send-to-printer-service}
 

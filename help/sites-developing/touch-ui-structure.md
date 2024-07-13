@@ -79,7 +79,7 @@ När du skapar sidor är de strukturella områdena följande.
 
 ### Innehållsram {#content-frame}
 
-Sidinnehållet återges i innehållsramen. Innehållsramen är oberoende av redigeraren för att säkerställa att det inte finns några konflikter på grund av CSS eller JavaScript.
+Sidinnehållet återges i innehållsramen. Innehållsramen är oberoende av redigeraren för att säkerställa att det inte uppstår några konflikter på grund av CSS eller JavaScript.
 
 Innehållsramen finns till höger i fönstret, under verktygsfältet.
 
@@ -89,7 +89,7 @@ Innehållsramen finns till höger i fönstret, under verktygsfältet.
 
 Redigeringsramen har redigeringsfunktionerna.
 
-Redigeringsramen är en behållare (abstrakt) för alla *redigeringselement*. Den ligger ovanpå innehållsramen och innehåller:
+Redigeringsramen är en behållare (abstrakt) för alla *sidelementen*. Den ligger ovanpå innehållsramen och innehåller:
 
 * det övre verktygsfältet
 * sidopanelen
@@ -108,7 +108,7 @@ Sidpanelen är dold som standard. När du väljer det här alternativet visas de
 
 ### Side Panel - Assets {#side-panel-assets}
 
-På fliken Resurser kan du välja bland flera resurser. Du kan också filtrera efter en viss term eller välja en grupp.
+På fliken Assets kan du välja bland flera olika resurser. Du kan också filtrera efter en viss term eller välja en grupp.
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
@@ -126,7 +126,7 @@ På fliken Komponenter kan du välja bland komponenterna. Du kan också filtrera
 
 ### Övertäckningar {#overlays}
 
-Dessa överlägg innehållsramen och används av [lager](#layer) för att utnyttja mekanismerna i hur du kan interagera (transparent) med komponenterna och deras innehåll.
+Dessa täcker över innehållsramen och används av [lagren](#layer) för att realisera mekanismerna för hur du kan interagera (genomskinligt) med komponenterna och deras innehåll.
 
 Övertäckningarna finns i redigerarramen (med alla andra sidredigeringselement), även om de faktiskt täcker över rätt komponenter i innehållsramen.
 
@@ -165,6 +165,6 @@ Beroende på vilket utrymme som är tillgängligt placeras komponentens verktygs
 
 ## Ytterligare information {#further-information}
 
-Mer information om begreppen kring det beröringskänsliga användargränssnittet finns i [Koncepten i det AEM användargränssnittet med pekskärm](/help/sites-developing/touch-ui-concepts.md).
+Mer information om begreppen kring det beröringsaktiverade användargränssnittet finns i [Concepts of the AEM Touch-Enabled UI](/help/sites-developing/touch-ui-concepts.md).
 
-Mer teknisk information finns på [JS-dokumentationsuppsättning](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för pekaktiverad sidredigerare.
+Mer teknisk information finns i [JS-dokumentationen ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för den beröringsaktiverade sidredigeraren.

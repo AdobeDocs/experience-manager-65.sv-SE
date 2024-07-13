@@ -14,45 +14,45 @@ ht-degree: 2%
 
 # Skapa hjälpmedelsanpassat innehåll (WCAG 2.1-överensstämmelse) {#creating-accessible-content-wcag-conformance}
 
-The [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG/), upprättad av [en arbetsgrupp inom World Wide Web Consortium](https://www.w3.org/groups/#Accessibility_Guidelines_Working_Group), består av en uppsättning teknikoberoende riktlinjer och framgångskriterier som gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder.
+[Riktlinjerna för tillgängligt webbinnehåll (WCAG) 2.1](https://www.w3.org/TR/WCAG/), som har utarbetats av [en arbetsgrupp inom World Wide Web Consortium](https://www.w3.org/groups/#Accessibility_Guidelines_Working_Group), består av en uppsättning teknikoberoende riktlinjer och framgångskriterier som gör webbinnehåll tillgängligt för och användbart för personer med funktionshinder.
 
 Som en introduktion tillhandahåller konsortiet en serie sektioner och styrkande dokument:
 
 * [Nya funktioner i WCAG 2.1](https://www.w3.org/TR/WCAG/#new-features-in-wcag-2-1)
-* [Hur WCAG 2.1 fungerar](https://www.w3.org/WAI/WCAG21/quickref/)
-* [Om WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/)
+* [Så här uppfyller du WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/)
+* [Förstå WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/)
 * [Tekniker för WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/)
-* [WCAG-dokument](https://www.w3.org/WAI/standards-guidelines/wcag/docs/)
+* [WCAG-dokumenten](https://www.w3.org/WAI/standards-guidelines/wcag/docs/)
 
 Se även:
-* The [Snabbguide till WCAG 2.1](/help/managing/qg-wcag.md).
-* The [Rapporter om överensstämmelse för tillgänglighet för Adobe-lösningar](https://www.adobe.com/accessibility/compliance.html).
+* Snabbguiden [till WCAG 2.1](/help/managing/qg-wcag.md).
+* [Rapporter om tillgänglighetskonformning för Adobe-lösningar](https://www.adobe.com/accessibility/compliance.html).
 * [Konfigurera RTF-redigeraren för att skapa tillgängligt innehåll](/help/sites-administering/rte-accessible-content.md)
 
 Riktlinjerna är indelade i tre överensstämmelsenivåer: Nivå A (lägsta), Nivå AA och Nivå AAA (högsta). Nivåerna definieras kortfattat enligt följande:
 
 * **Nivå A:** Webbplatsen har en grundläggande, lägsta tillgänglighetsnivå. För att den här nivån ska uppnås måste alla kriterier på nivå A uppfyllas.
-* **Nivå AA:** Detta är en idealisk nivå av hjälpmedel att eftersträva, där din webbplats når en grundläggande nivå av tillgänglighet, så att den är tillgänglig för de flesta människor i de flesta situationer som använder de flesta tekniker. För att den här nivån ska uppnås måste alla kriterier nivå A och nivå AA uppfyllas.
+* **Nivå AA:** Detta är en idealisk nivå av hjälpmedel att eftersträva, där din webbplats når en grundläggande nivå av hjälpmedel, så att den är tillgänglig för de flesta personer i de flesta situationer som använder de flesta tekniker. För att den här nivån ska uppnås måste alla kriterier nivå A och nivå AA uppfyllas.
 * **Nivå AAA:** Webbplatsen har hög tillgänglighet. För att uppnå den här nivån uppfylls alla kriterier för lyckade resultat på nivå A, nivå AA och nivå AAA.
 
 När du skapar din webbplats bör du bestämma den övergripande nivån som du vill att din plats ska anpassas efter.
 
-I följande avsnitt presenteras [lager i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance) med tillhörande kriterier för framgång på nivå A och nivå AA [anpassningsnivåer](https://www.w3.org/TR/WCAG/#conformance-to-wcag-2-1).
+I följande avsnitt visas [lager i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance) med relaterade kriterier för lyckade resultat för överensstämmelsenivåerna Nivå A och Nivå AA [](https://www.w3.org/TR/WCAG/#conformance-to-wcag-2-1).
 
 >[!NOTE]
 >
 >I det här dokumentet används följande:
 >
->* The [korta namn för WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance).
->* The [numrering som används i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#numbering-in-wcag-2-1) för att underlätta korsreferenser med WCAG:s webbplats.
+>* [korta namn för WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#wcag-2-layers-of-guidance).
+>* Den [numrering som används i WCAG 2.1-riktlinjerna](https://www.w3.org/TR/WCAG/#numbering-in-wcag-2-1) för att underlätta korsreferering med WCAG-webbplatsen.
 
 ## Princip 1: Förutsägbar {#principle-perceivable}
 
-[Princip 1: Perfekt - Information och komponenter i användargränssnittet måste kunna presenteras för användarna på ett sätt som de kan uppfatta.](https://www.w3.org/TR/WCAG/#perceivable)
+[Princip 1: Perfekt - Information och användargränssnittskomponenter måste vara presenterbara för användarna på ett sätt som de kan uppfatta.](https://www.w3.org/TR/WCAG/#perceivable)
 
 ### Textalternativ (1.1) {#text-alternatives}
 
-[Riktlinje 1.1 Textalternativ: Tillhandahåll textalternativ för allt innehåll som inte är text så att det kan ändras till andra former som människor behöver, t.ex. stor trycksak, blindskrift, tal, symboler eller enklare språk.](https://www.w3.org/TR/WCAG/#text-alternatives)
+[Riktlinje 1.1 Textalternativ: Ange textalternativ för allt icke-textinnehåll så att det kan ändras till andra formulär som användare behöver, till exempel stor utskrift, blindskrift, tal, symboler eller enklare språk.](https://www.w3.org/TR/WCAG/#text-alternatives)
 
 ### Innehåll som inte är text (1.1.1) {#non-text-content}
 
@@ -68,15 +68,15 @@ En annan fördel är att textalternativ gör det möjligt att indexera icke-text
 
 #### Så här möts innehåll som inte är text (1.1.1) {#how-to-meet-non-text-content}
 
-För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Detta kan du göra i **Alternativ text** fält. Se t.ex. kärnkomponenten **[Bild](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)**.
+För statisk grafik är det grundläggande kravet att tillhandahålla ett motsvarande textalternativ för grafiken. Detta kan du göra i fältet **Alternativ text**. Se t.ex. kärnkomponenten **[Bild](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html)**.
 
 >[!NOTE]
 >
->Vissa färdiga kärnkomponenter, som **[Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html)** tillhandahåller inte **Alternativ text** fält för att lägga till alternativa textbeskrivningar till enskilda bilder, men det finns **Etikett** fält (**[Tillgänglighet](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html#accessibility-tab)** för hela komponenten.
+>Vissa av de körklara kärnkomponenterna, som **[Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html)**, innehåller inte något **Alternativtext**-fält för att lägga till alternativa textbeskrivningar till enskilda bilder, även om det finns fältet **Etikett** (**[Hjälpmedel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html#accessibility-tab)** ) för hela komponenten.
 >
->När du implementerar versioner av dessa för din AEM måste ditt utvecklingsteam konfigurera sådana komponenter så att de stöder `alt` så att författare kan lägga till det i innehållet (se [Stöd för ytterligare element och attribut i HTML](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+>När du implementerar versioner av dessa för din AEM måste utvecklingsteamet konfigurera sådana komponenter så att de stöder attributet `alt` så att författare kan lägga till det i innehållet (se [Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
-AEM kräver **Alternativ text** fält som ska fyllas i som standard. Om bilden bara är dekorativ och alternativ text inte behövs, kan **Bilden är dekorativ** kan markeras.
+AEM kräver att fältet **Alternativ text** fylls i som standard. Om bilden är enbart dekorativ och alternativ text inte behövs kan alternativet **Bilden är dekorativ** kontrolleras.
 
 #### Skapa bra textalternativ {#creating-good-text-alternatives}
 
@@ -97,11 +97,11 @@ The [W3C draft: HTML5 Techniques for providing useful text alternatives](https:/
 
 Specifika typer av icke-textinnehåll som kräver textalternativ kan vara:
 
-* Illustrativa foton: Det här är bilder av människor, objekt eller platser. Det är viktigt att tänka på fotots roll på sidan och att beskriva bildinnehållet, eftersom hjälpmedelstekniken meddelar elementtypen (till exempel `graphic` eller `image`), vilket kan göra användningen tydligare `screenshot` eller `illustration` i de alternativa textbeskrivningarna, men detta beror på sammanhanget. Enhetlighet är en viktig faktor, ett beslut bör fattas för ett helt redigeringsteam och det ska tillämpas i hela användarupplevelsen.
+* Illustrativa foton: Det här är bilder av människor, objekt eller platser. Det är viktigt att tänka på fotots roll på sidan och att beskriva bildinnehållet, eftersom hjälpmedelstekniken meddelar elementtypen (till exempel `graphic` eller `image`). Det kan göra det tydligare att använda `screenshot` eller `illustration` i de alternativa textbeskrivningarna, men det beror på sammanhanget. Enhetlighet är en viktig faktor, ett beslut bör fattas för ett helt redigeringsteam och det ska tillämpas i hela användarupplevelsen.
 * Ikoner: Det här är små bilder (grafik) som förmedlar specifik information. De måste användas konsekvent på en sida och en webbplats. Alla förekomster av ikonen på en sida eller på en webbplats bör ha samma korta och koncisa textalternativ, såvida inte detta leder till onödig duplicering av intilliggande text.
-* Diagram och diagram: Dessa representerar vanligtvis numeriska data. Ett alternativ för att tillhandahålla ett textalternativ kan vara att ta med en kort sammanfattning av huvudtrenderna som visas i diagrammet eller grafiken. Om det behövs kan du även ge en mer detaljerad beskrivning i texten med hjälp av **Beskrivning** fältet i **Avancerat** fliken för bildegenskaper. Du kan även tillhandahålla källdata i tabellformat någon annanstans på sidan eller webbplatsen.
-* Kartor, diagram, flödesscheman: För grafik som innehåller rumsliga data (till exempel för att ge stöd för att beskriva relationer mellan objekt eller en process) måste du se till att huvudmeddelandet finns i textformat och att den här textinformationen är placerad nära varje associerad datapunkt. För kartor är det troligtvis opraktiskt att ange en fullständig textmotsvarighet, men om kartan tillhandahålls som ett sätt att hjälpa människor att hitta till en viss plats, kan kartbildens alternativa text kortfattat ange *Karta över X* anger du sedan en beskrivning av den platsen i text någon annanstans på sidan eller genom **Beskrivning** fältet i **Avancerat** -fliken i **Bild** -komponenten.
-* CAPTCHA: EN CAPTCHA är en *Helt automatiserat offentligt kurstest för att skilja datorer och människor åt*. Det är en säkerhetskontroll som används på webbsidor för att skilja människor från skadliga program, men som kan orsaka tillgänglighetshinder. Det är bilder som kräver att användarna beskriver vad de ser för att klara ett säkerhetstest. Det går inte att ange ett textalternativ för bilden, så du måste istället överväga alternativa icke-grafiska lösningar. W3C ger några förslag, till exempel:
+* Diagram och diagram: Dessa representerar vanligtvis numeriska data. Ett alternativ för att tillhandahålla ett textalternativ kan vara att ta med en kort sammanfattning av huvudtrenderna som visas i diagrammet eller grafiken. Om det behövs kan du även ge en mer detaljerad beskrivning i texten med hjälp av fältet **Beskrivning** på fliken **Avancerade** bildegenskaper. Du kan även tillhandahålla källdata i tabellformat någon annanstans på sidan eller webbplatsen.
+* Kartor, diagram, flödesscheman: För grafik som innehåller rumsliga data (till exempel för att ge stöd för att beskriva relationer mellan objekt eller en process) måste du se till att huvudmeddelandet finns i textformat och att den här textinformationen är placerad nära varje associerad datapunkt. För kartor är det troligtvis opraktiskt att ange en fullständig textmotsvarighet, men om kartan tillhandahålls som ett sätt att hjälpa människor att hitta rätt till en viss plats, kan den alternativa texten i mappningsbilden kortfattat visa *Karta över X* och sedan ge anvisningar till den platsen i text någon annanstans på sidan eller genom fältet **Beskrivning** på fliken **Avancerat** i komponenten **Bild** .
+* CAPTCHA: En CAPTCHA är ett *Helt automatiserat offentligt kurstest för att skilja datorer och människor åt*. Det är en säkerhetskontroll som används på webbsidor för att skilja människor från skadliga program, men som kan orsaka tillgänglighetshinder. Det är bilder som kräver att användarna beskriver vad de ser för att klara ett säkerhetstest. Det går inte att ange ett textalternativ för bilden, så du måste istället överväga alternativa icke-grafiska lösningar. W3C ger några förslag, till exempel:
    * Logikpussel
    * Användning av ljudutdata i stället för bilder
    * Begränsade användningskonton och skräppostfilter.
@@ -109,7 +109,7 @@ Specifika typer av icke-textinnehåll som kräver textalternativ kan vara:
 
 >[!NOTE]
 >
->Det bör finnas en lämplig kontrastnivå mellan bakgrunden och förgrundstexten; detta diskuteras mer ingående [Kontrast (minimal) (1.4.3)](#contrast-minimum).
+>Det bör finnas en lämplig kontrastnivå mellan bakgrunden och förgrundstexten. Detta beskrivs mer ingående i [Kontrast (minimal) (1.4.3)](#contrast-minimum).
 
 #### Mer information - Innehåll som inte är text (1.1.1) {#more-information-non-text-content}
 
@@ -123,9 +123,9 @@ Specifika typer av icke-textinnehåll som kräver textalternativ kan vara:
 
 ### Tidsbaserade media (1.2) {#time-based-media}
 
-[Riktlinje 1.2 Tidsbaserade medier: Tillhandahåll alternativ för tidsbaserade medier.](https://www.w3.org/TR/WCAG/#time-based-media)
+[Riktlinje 1.2 Tidsbaserat media: Ange alternativ för tidsbaserade media.](https://www.w3.org/TR/WCAG/#time-based-media)
 
-Detta handlar om webbinnehåll som *tidsbaserad*. Detta omfattar innehåll som användaren kan spela upp (t.ex. video, ljud och animerat innehåll) och som kan spelas in i förväg eller i en liveström.
+Detta gäller webbinnehåll som är *tidsbaserat*. Detta omfattar innehåll som användaren kan spela upp (t.ex. video, ljud och animerat innehåll) och som kan spelas in i förväg eller i en liveström.
 
 ### Endast ljud och endast video (inspelat i förväg) (1.2.1) {#audio-only-and-video-only-prerecorded}
 
@@ -159,7 +159,7 @@ Om du anger den här informationen i ett annat format, till exempel text (eller 
 >
 >Om ljud- eller videoinnehållet tillhandahålls som ett alternativ till innehåll som finns i ett annat format på samma webbsida kanske inget extra alternativ krävs.
 >
->Riktlinjerna [Om WCAG 1.2.1](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html), lämna ytterligare information.
+>Riktlinjerna [Om WCAG 1.2.1](https://www.w3.org/WAI/WCAG21/Understanding/audio-only-and-video-only-prerecorded.html) finns mer information.
 
 Att infoga multimedia i dina AEM webbsidor påminner om att infoga en bild. Men eftersom multimediainnehållet är mycket mer än en stillbild finns det olika inställningar och alternativ för att styra hur multimediainnehållet spelas upp.
 
@@ -191,7 +191,7 @@ Bildtexter kan antingen vara:
 
 Använd undertexter där det är möjligt, eftersom det ger användarna möjlighet att välja om de vill visa undertexter eller inte.
 
-För undertexter skapar och tillhandahåller du en synkroniserad bildtextfil i lämpligt format (till exempel [SMIL](https://www.w3.org/AudioVideo/)) tillsammans med videofilen (detaljer om hur du gör detta ligger utanför den här handbokens räckvidd, men vi har tagit fram länkar till vissa självstudiekurser under [Mer information - bildtexter (inspelade i förväg) (1.2.2)](#more-information-captions-prerecorded)). Se till att du anger en anteckning, eller aktivera bildtextfunktionen i videospelaren, så att användarna vet att bildtexter är tillgängliga för videon.
+För undertexter skapar och tillhandahåller du en synkroniserad bildtextfil i ett lämpligt format (till exempel [SMIL](https://www.w3.org/AudioVideo/)) tillsammans med videofilen (information om hur du gör detta ligger utanför den här handbokens räckvidd, men vi har tillhandahållit länkar till vissa självstudiekurser under [Mer information - Bildtexter (inspelade i förväg) (1.2.2)](#more-information-captions-prerecorded)). Se till att du anger en anteckning, eller aktivera bildtextfunktionen i videospelaren, så att användarna vet att bildtexter är tillgängliga för videon.
 
 Om du måste använda öppna bildtexter bäddar du in texten i videospåret. Detta kan du göra med videoredigeringsprogram som tillåter att titlar läggs över i videon.
 
@@ -222,7 +222,7 @@ Det finns två strategier som kan användas för att uppfylla detta kriterium. B
 1. Inkludera ytterligare ljudbeskrivning för videoinnehållet. Detta kan uppnås på ett av tre sätt:
    * Under pauser i den befintliga dialogen, lämna information om förändringar i scenen som inte presenteras som en del av det befintliga ljudspåret.
    * Skapa ett nytt, extra och valfritt ljudspår som innehåller det ursprungliga ljudspåret, men även extra ljudinformation om ändringar i scenen.
-      * Användare kan växla mellan det befintliga ljudspåret (som *inte* innehåller en ljudbeskrivning) och det nya ljudspåret (som *gör* innehåller en ljudbeskrivning).
+      * Användare kan växla mellan det befintliga ljudspåret (som *inte* innehåller en ljudbeskrivning) och det nya ljudspåret (som *inte* innehåller en ljudbeskrivning).
       * Detta förhindrar avbrott för användare som inte behöver den ytterligare beskrivningen.
    * Skapa en andra version av videoinnehållet som tillåter utökade ljudbeskrivningar. Detta minskar de svårigheter som är förknippade med att tillhandahålla detaljerade ljudbeskrivningar i mellanrummen mellan de befintliga dialogrutorna genom att tillfälligt pausa ljudet och videon vid lämpliga tidpunkter. Därför kan en mycket längre ljudbeskrivning ges innan åtgärden startar om. Precis som i föregående exempel är detta det bästa som finns som ett extra ljudspår för att förhindra avbrott för användare som inte behöver den extra beskrivningen.
 1. Ange en textavskrift som är en lämplig textmotsvarighet till ljud- och visuella element i videon eller animeringen. Detta bör i tillämpliga fall omfatta en indikation om vem som talar, en beskrivning av inställningen, eventuella händelser eller information som presenteras visuellt samt röstuttryck. Beroende på hur lång den är kan du placera utskriften på samma sida som videon eller animeringen, eller på en separat sida. Om du väljer det senare alternativet anger du en länk till utskriften bredvid videon eller animeringen.
@@ -246,11 +246,11 @@ Exakta detaljer om hur du skapar ljudbeskrivad video ligger utanför den här ha
 
 #### Syfte - Textning (live) (1.2.4) {#purpose-captions-live}
 
-Detta kriterium är identiskt med [Bildtexter (inspelade i förväg)](#captions-prerecorded) på så sätt att tillgänglighetshinder som upplevs av människor som är döva eller hörselskadade tas bort, förutom att detta kriterium gäller live-presentationer som webbsändningar.
+Detta kriterium är identiskt med [Bildtexter (inspelade i förväg)](#captions-prerecorded) eftersom det åtgärdar tillgänglighetshinder som upplevs av personer som är döva eller hörselskadade, förutom att detta kriterium gäller live-presentationer som webbsändningar.
 
 #### Så här fungerar det - bildtexter (Live) (1.2.4) {#how-to-meet-captions-live}
 
-Följ anvisningarna i [Bildtexter (inspelade i förväg)](#captions-prerecorded) ovan. På grund av mediernas aktiva natur måste dock bildtexter skapas så snabbt som möjligt och som svar på vad som händer. Därför bör du överväga att använda bildtexter i realtid eller tal-till-text-verktyg.
+Följ anvisningarna för [Bildtexter (inspelade i förväg)](#captions-prerecorded) ovan. På grund av mediernas aktiva natur måste dock bildtexter skapas så snabbt som möjligt och som svar på vad som händer. Därför bör du överväga att använda bildtexter i realtid eller tal-till-text-verktyg.
 
 Detaljerade instruktioner ligger utanför det här dokumentets räckvidd, men med följande resurser får du användbar information:
 
@@ -271,11 +271,11 @@ Detaljerade instruktioner ligger utanför det här dokumentets räckvidd, men me
 
 #### Syfte - ljudbeskrivning (inspelad i förväg) (1.2.5) {#purpose-audio-description-prerecorded}
 
-Detta kriterium är identiskt med [Ljudbeskrivning eller mediealternativ (inspelat i förväg)](#audio-description-or-media-alternative-prerecorded), förutom att författare måste ange en mycket mer detaljerad ljudbeskrivning för att följa nivå AA.
+Detta kriterium är identiskt med [Ljudbeskrivning eller Mediealternativ (inspelat i förväg)](#audio-description-or-media-alternative-prerecorded), förutom att författare måste ange en mycket mer detaljerad ljudbeskrivning för att uppfylla nivå AA.
 
 #### Så här uppfyller du kraven - ljudbeskrivning (inspelad i förväg) (1.2.5) {#how-to-meet-audio-description-prerecorded}
 
-Följ anvisningarna i [Ljudbeskrivning eller mediealternativ (inspelat i förväg)](#audio-description-or-media-alternative-prerecorded).
+Följ anvisningarna för [Ljudbeskrivning eller mediealternativ (inspelat i förväg)](#audio-description-or-media-alternative-prerecorded).
 
 #### Mer information - ljudbeskrivning (inspelad i förväg) (1.2.5) {#more-information-audio-description-prerecorded}
 
@@ -300,63 +300,63 @@ Denna riktlinje omfattar de krav som är nödvändiga för att stödja personer 
 
 #### Syfte - Information och relationer (1.3.1) {#purpose-info-and-relationships}
 
-Många hjälpmedelstekniker som används av personer med funktionshinder använder strukturinformation för att effektivt kunna visa eller *förstå* innehåll. Den här strukturinformationen kan ha formen av sidrubriker, tabellrader, kolumnrubriker och listtyper. En skärmläsare kan till exempel tillåta användaren att navigera på en sida från rubrik till rubrik. Men när sidinnehåll bara verkar ha en struktur genom visuell formatering, snarare än underliggande HTML, finns det ingen strukturinformation tillgänglig för hjälpmedelstekniker, vilket begränsar deras möjligheter att hantera enklare surfning.
+Många hjälpmedelstekniker som används av personer med funktionshinder använder strukturinformation för att effektivt visa eller *förstå* -innehåll. Den här strukturinformationen kan ha formen av sidrubriker, tabellrader, kolumnrubriker och listtyper. En skärmläsare kan till exempel tillåta användaren att navigera på en sida från rubrik till rubrik. Men när sidinnehåll bara verkar ha en struktur genom visuell formatering, snarare än underliggande HTML, finns det ingen strukturinformation tillgänglig för hjälpmedelstekniker, vilket begränsar deras möjligheter att hantera enklare surfning.
 
 Detta kriterium gäller för att säkerställa att sådan strukturinformation tillhandahålls via HTML, eller andra kodningstekniker, så att webbläsare och hjälpmedelstekniker kan komma åt informationen och dra nytta av den.
 
 #### Hur man möter - Information och relationer (1.3.1) {#how-to-meet-info-and-relationships}
 
-AEM gör det enkelt att skapa semantiskt meningsfullt webbinnehåll med lämpliga HTML-element. Öppna sidinnehållet i textredigeraren (en textkomponent) och använd **Paraformat** meny (styckesymbol) för att ange lämpligt strukturelement (till exempel stycke och rubrik).
+AEM gör det enkelt att skapa semantiskt meningsfullt webbinnehåll med lämpliga HTML-element. Öppna sidinnehållet i textredigeraren (en textkomponent) och använd menyn **Paraformat** (styckesymbol) för att ange lämpligt strukturelement (till exempel stycke och rubrik).
 
 Du kan se till att dina webbsidor får rätt struktur genom att använda följande element där det är tillämpligt:
 
-* **Rubriker:** Så länge du har tillgänglighetsfunktionerna i textredigeraren aktiverade kan AEM erbjuda tre rubriknivåer. Du kan använda dessa för att identifiera avsnitt och underavsnitt för innehåll. Rubrik 1 är den högsta rubriknivån, rubrik 3 den lägsta. Systemadministratören kan konfigurera systemet så att fler rubriknivåer tillåts.
+* **Rubriker:** Så länge du har tillgänglighetsfunktionerna i textredigeraren aktiverade AEM tre sidrubriknivåer. Du kan använda dessa för att identifiera avsnitt och underavsnitt för innehåll. Rubrik 1 är den högsta rubriknivån, rubrik 3 den lägsta. Systemadministratören kan konfigurera systemet så att fler rubriknivåer tillåts.
 
 * **Listor**: Du kan använda HTML för att ange tre olika typer av listor:
-   * Elementet `<ul>` används för *oordnade* punktlistor. Enskilda listobjekt identifieras med `<li>` -element. I RTE använder du **Punktlista** -ikon.
-   * The `<ol>` element används för *numrerad* listor. Enskilda listobjekt identifieras med `<li>` -element. I RTE använder du **Numrerad lista** -ikon.
+   * Elementet `<ul>` används för *oordnade* punktlistor. Enskilda listobjekt identifieras med elementet `<li>`. Använd ikonen **Punktlista** i textredigeraren.
+   * Elementet `<ol>` används för *numrerade* listor. Enskilda listobjekt identifieras med elementet `<li>`. Använd ikonen **Numrerad lista** i textredigeraren.
 
   Om du vill ändra befintligt innehåll till en viss listtyp markerar du lämplig text och väljer lämplig listtyp. Precis som i det tidigare exemplet som visar hur stycketext skrivs in, läggs de rätta listelementen automatiskt till i HTML.
 
   I helskärmsläge visas ikonerna **Punktlista** och **Numrerad lista**. Om du inte arbetar i helskärmsläge finns de två alternativen bakom den enda **Listor**-ikonen.
 
 * **Tabeller**: Datatabeller måste identifieras med tabellelement i HTML:
-   * en `<table>` element
-   * a `<tr>` element för varje rad i tabellen
-   * a `<th>` element för varje rad och kolumnrubrik
-   * a `<td>` element för varje datacell
+   * ett `<table>`-element
+   * ett `<tr>`-element för varje rad i tabellen
+   * ett `<th>`-element för varje rad och kolumnrubrik
+   * ett `<td>`-element för varje datacell
 
   Tillgängliga tabeller använder dessutom följande element och attribut:
 
-   * The `<caption>` -elementet används för att ange en synlig bildtext för tabellen. Bildtexter visas som standard centrerade ovanför tabellen, men kan placeras korrekt med CSS. Bildtexten är programmatiskt kopplad till tabellen och är därför en användbar metod för att ge en introduktion till innehållet.
-   * The `<summary>` -elementet hjälper icke-synkade användare att enklare förstå den information som presenteras i en tabell genom att ge en sammanfattning av vad en synkad användare kan se. Det här är användbart när komplexa eller okonventionella tabellayouter används (det här attributet visas inte i webbläsaren, det läses bara ut för hjälpfunktioner).
-   * The `scope` attributet för `<th>` -element används för att ange om en cell representerar en rubrik för en viss rad eller för en viss kolumn. Ett liknande sätt är att använda attributen header och id i komplexa tabeller, där dataceller kan kopplas till en eller flera rubriker.
+   * Elementet `<caption>` används för att tillhandahålla en synlig bildtext för tabellen. Bildtexter visas som standard centrerade ovanför tabellen, men kan placeras korrekt med CSS. Bildtexten är programmatiskt kopplad till tabellen och är därför en användbar metod för att ge en introduktion till innehållet.
+   * Elementet `<summary>` hjälper icke-synkade användare att enklare förstå informationen som presenteras i en tabell genom att ge en sammanfattning av vad en synkad användare kan se. Det här är användbart när komplexa eller okonventionella tabellayouter används (det här attributet visas inte i webbläsaren, det läses bara ut för hjälpfunktioner).
+   * `scope`-attributet för elementet `<th>` används för att ange om en cell representerar en rubrik för en viss rad eller för en viss kolumn. Ett liknande sätt är att använda attributen header och id i komplexa tabeller, där dataceller kan kopplas till en eller flera rubriker.
 
   >[!NOTE]
   >
-  >Som standard är dessa element och attribut inte direkt tillgängliga, men det är möjligt för systemadministratören att lägga till stöd för dessa värden i **Tabellegenskaper** (se [Stöd för ytterligare element och attribut i HTML](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes).
+  >Som standard är dessa element och attribut inte direkt tillgängliga, men det är möjligt för systemadministratören att lägga till stöd för dessa värden i dialogrutan **Tabellegenskaper** (se [Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
-  Öppna **Tabell** där du kan välja **Tabellegenskaper** tab:
+  Så här öppnar du dialogrutan **Tabell** där du kan välja fliken **Tabellegenskaper**:
 
-   * Definiera en lämplig **Bildtext**.
+   * Definiera en lämplig **bildtext**.
    * Ta helst bort alla standardvärden för **Bredd**, **Höjd**, **Kant**, **Cellfyllnad** och **Cellmellanrum** eftersom dessa egenskaper kan anges i en global formatmall.
 
-  Du kan sedan använda **Cellegenskaper** för att välja om cellen är en data- eller rubrikcell:
+  Du kan sedan använda **cellegenskaperna** för att välja om cellen är en data- eller rubrikcell:
 
-* **Betoning**: Använd `<strong>` eller `<em>` element som anger betoning. Använd inte rubriker för att markera text i stycken.
+* **Betoning**: Använd elementet `<strong>` eller `<em>` för att ange betoning. Använd inte rubriker för att markera text i stycken.
    * Markera den text som du vill framhäva;
-   * Klicka på **B** ikon (för `<strong>`) eller **I** ikon (för `<em>`) visas i **Egenskaper** (se till att HTML är markerat).
+   * Klicka på ikonen **B** (för `<strong>`) eller **I** (för `<em>`) som visas på panelen **Egenskaper** (kontrollera att HTML är markerat).
 
      >[!NOTE]
      >
      >RTE i en AEM standardinstallation är konfigurerad att använda:
      >
-     >* `<b>` for `<strong>`
-     >* `<i>` for `<em>`
+     >* `<b>` för `<strong>`
+     >* `<i>` för `<em>`
      >
-     >De är i själva verket desamma, men `<strong>` och `<em>` är att föredra eftersom de är semantiskt korrekta i html. Utvecklingsteamet kan konfigurera RTE att använda `<strong>` och `<em>` (i stället för `<b>` och `<i>`) när du utvecklar din projektinstans.
+     >De är i själva verket samma, men `<strong>` och `<em>` är att föredra eftersom de semantiskt korrekt HTML. Utvecklingsteamet kan konfigurera RTE så att `<strong>` och `<em>` (i stället för `<b>` och `<i>`) används när projektinstansen utvecklas.
 
-* **Komplexa datatabeller**: Om det finns komplexa tabeller med två eller flera rubriknivåer kan det hända att de grundläggande tabellegenskaperna inte räcker till för att ge all nödvändig strukturinformation. För den här typen av komplexa tabeller måste direkta relationer skapas mellan rubrikerna och deras relaterade celler med hjälp av **header** och **id** attribut.
+* **Komplexa datatabeller**: Ibland, där det finns komplexa tabeller med två eller flera rubriknivåer, kanske de grundläggande tabellegenskaperna inte räcker till för att ge all nödvändig strukturinformation. För den här typen av komplexa tabeller måste direkta relationer skapas mellan rubrikerna och deras relaterade celler med attributen **header** och **id**.
 
   >[!NOTE]
   >
@@ -400,7 +400,7 @@ Du kan se till att dina webbsidor får rätt struktur genom att använda följan
 #### Mer information - Info och relationer (1.3.1) {#more-information-info-and-relationships}
 
 * [Förstå villkor 1.3.1](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
-* [Så här uppfyller du kriterierna för lyckade resultat 1.3.1](https://www.w3.org/WAI/WCAG21/quickref/#info-and-relationships)
+* [Så här uppfyller du kriterierna 1.3.1](https://www.w3.org/WAI/WCAG21/quickref/#info-and-relationships)
 
 ### Betydelsefull sekvens (1.3.2)  {#meaningful-sequence}
 
@@ -414,7 +414,7 @@ Syftet med detta villkor är att en användaragent ska kunna tillhandahålla en 
 
 #### Så här möts du - meningsfull sekvens (1.3.2) {#how-to-meet-meaningful-sequence}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna 1.3.2](https://www.w3.org/WAI/WCAG21/quickref/#meaningful-sequence).
+Följ riktlinjerna under [Så här uppfyller du kriterierna 1.3.2](https://www.w3.org/WAI/WCAG21/quickref/#meaningful-sequence).
 
 #### Mer information - meningsfull sekvens (1.3.2) {#more-information-meaningful-sequence}
 
@@ -435,27 +435,27 @@ På samma sätt innebär information som kräver att man skiljer mellan olika lj
 
 >[!NOTE]
 >
->Information om krav för alternativ till färg finns i [Användning av färg](#use-of-color).
+>Mer information om krav för alternativ till färg finns i [Användning av färg](#use-of-color).
 
 #### Hur man uppfyller kraven - sensoriska egenskaper (1.3.3) {#how-to-meet-sensory-characteristics}
 
 Se till att all information som bygger på visuella egenskaper för sidinnehåll också presenteras i ett alternativt format.
 
-* Förlita dig inte på visuell position för att ge information. Om du till exempel vill hänvisa användare till en meny till höger på sidan för att få tillgång till mer information, ska du inte hänvisa till *menyn till höger*; i stället ger du menyn ett namn (t.ex. som rubrik) och refererar till det namnet i texten.
+* Förlita dig inte på visuell position för att ge information. Om du till exempel vill referera användare till en meny till höger på sidan för att få tillgång till mer information, ska du inte referera till *menyn till höger*. I stället ska du namnge menyn (t.ex. som en rubrik) och hänvisa till det namnet i texten.
 * Förlita dig inte på att textformatering (till exempel fet eller kursiv text) är det enda sättet att förmedla information.
 
 >[!NOTE]
 >
->Beskrivande termer får användas om de anses ha betydelse i en icke-visuell kontext. Använd till exempel *ovan* och *nedan* skulle i allmänhet vara godtagbara, eftersom de antyder innehåll före och efter en viss innehållspost. Detta skulle fortfarande vara rimligt när innehållet talas högt.
+>Beskrivande termer får användas om de anses ha betydelse i en icke-visuell kontext. Om du till exempel använder *ovan* och *nedan* skulle det i allmänhet vara acceptabelt, eftersom de antyder innehåll före och efter ett visst innehållsobjekt. Detta skulle fortfarande vara rimligt när innehållet talas högt.
 
 #### Mer information - Sensoriska egenskaper (1.3.3) {#more-information-sensory-characteristics}
 
 * [Förstå villkor 1.3.3](https://www.w3.org/WAI/WCAG21/Understanding/sensory-characteristics.html)
-* [Så här uppfyller du kriterierna för lyckade resultat 1.3.3](https://www.w3.org/WAI/WCAG21/quickref/#sensory-characteristics)
+* [Så här uppfyller du kriterierna 1.3.3](https://www.w3.org/WAI/WCAG21/quickref/#sensory-characteristics)
 
 ### Skiljbar (1.4) {#distinguishable}
 
-[Riktlinje 1.4 Skiljaktig: Gör det enklare för användarna att se och höra innehåll, inklusive att separera förgrunden från bakgrunden.](https://www.w3.org/TR/WCAG/#distinguishable)
+[Riktlinje 1.4 Skiljbar: Gör det enklare för användare att se och höra innehåll, inklusive att separera förgrunden från bakgrunden.](https://www.w3.org/TR/WCAG/#distinguishable)
 
 ### Användning av färg (1.4.1)  {#use-of-color}
 
@@ -475,7 +475,7 @@ En person med synsbrist i rött-grönt kommer till exempel inte att kunna skilja
 
 Färgen kan inte heller uppfattas av personer som använder webbläsare som bara innehåller text, enheter för monokrom visning eller som visar en svartvit utskrift av sidan.
 
-Ytterligare en tanke är *markerad* för ett gränssnittselement (t.ex. tabbar, växlingsknappar), som måste förmedlas på något annat sätt än bara med färg och bortom bara en visuell presentation. För sådana element är den extra användningen av mönster, former och programmatisk information användbar när du skapar en helomfattande användarupplevelse som inte är beroende av en viss innebörd.
+Ett annat övervägande är det *valda*-läget för ett gränssnittselement (t.ex. tabbar, växlingsknappar), som måste förmedlas på något annat sätt än bara med färg och utanför bara en visuell presentation. För sådana element är den extra användningen av mönster, former och programmatisk information användbar när du skapar en helomfattande användarupplevelse som inte är beroende av en viss innebörd.
 
 #### Hur man klarar - Färganvändning (1.4.1) {#how-to-meet-use-of-color}
 
@@ -483,11 +483,11 @@ Kontrollera att det finns information om färgen, oavsett var den används för 
 
 Kontrollera till exempel att information som anges av färg också finns explicit i texten.
 
-Om färg används som en referenspunkt för att ge information bör du ange en extra visuell referenspunkt, som att ändra formatet (till exempel fet, kursiv) eller teckensnitt. Detta hjälper personer med nedsatt syn eller som har nedsatt färgseende att identifiera informationen. Den kan dock inte användas helt eftersom den inte hjälper personer som inte kan se sidan alls. Därför är det (ibland) användbart att tillhandahålla dold text eller att använda programmatiska lösningar som [ARIA-paket (Accessible Rich Internet Applications) med webbstandarder](https://www.w3.org/WAI/standards-guidelines/aria/), för att förmedla denna information till icke-synkade användare.
+Om färg används som en referenspunkt för att ge information bör du ange en extra visuell referenspunkt, som att ändra formatet (till exempel fet, kursiv) eller teckensnitt. Detta hjälper personer med nedsatt syn eller som har nedsatt färgseende att identifiera informationen. Den kan dock inte användas helt eftersom den inte hjälper personer som inte kan se sidan alls. Därför är det (ibland) användbart att tillhandahålla dold text eller att använda programmatiska lösningar, som t.ex. [ARIA (Accessible Rich Internet Applications) ](https://www.w3.org/WAI/standards-guidelines/aria/), för att förmedla informationen till icke-synkade användare.
 
 #### Mer information - Färganvändning (1.4.1) {#more-information-use-of-color}
 
-* [Om villkor för att lyckas 1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
+* [Förstå villkor 1.4.1](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
 * [Så här uppfyller du kriterierna 1.4.1](https://www.w3.org/WAI/WCAG21/quickref/#use-of-color)
 
 ### Ljudkontroll (1.4.2)  {#audio-control}
@@ -508,7 +508,7 @@ Därför är det viktigt att användaren kan stänga av bakgrundsljudet.
 
 #### Hur man klarar - ljudkontroll (1.4.2) {#how-to-meet-audio-control}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna 1.4.2](https://www.w3.org/WAI/WCAG21/quickref/#audio-control).
+Följ riktlinjerna under [Så här uppfyller du kriterierna 1.4.2](https://www.w3.org/WAI/WCAG21/quickref/#audio-control).
 
 #### Mer information - Ljudkontroll (1.4.2) {#more-information-audio-control}
 
@@ -521,12 +521,12 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna 1.4.2](https://www.w3.or
 * Nivå AA
 * Kontrast (minimal): Den visuella presentationen av text och bilder av text har ett kontrastförhållande på minst 4,5:1, utom följande:
    * Stor text: Storskalig text och bilder av storskalig text har ett kontrastförhållande på minst 3:1.
-   * Incident: Text eller bilder av text som är en del av en inaktiv användargränssnittskomponent, [ren dekoration](https://www.w3.org/TR/WCAG/#dfn-pure-decoration), som inte är synlig för någon eller är en del av en bild som innehåller annat visuellt innehåll, har inget kontrastkrav.
+   * Incident: Text eller bilder av text som är en del av en inaktiv användargränssnittskomponent, [ren dekoration](https://www.w3.org/TR/WCAG/#dfn-pure-decoration), inte synliga för någon, eller som är en del av en bild som innehåller annat visuellt innehåll, har inget kontrastkrav.
    * Logotyper: Text som ingår i en logotyp eller ett varumärkesnamn har inget minimikrav på kontrast.
 
   >[!NOTE]
   >
-  >Se [Förstå icke-textkontrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) för mer information, för att säkerställa att innehållsförfattare förstår ytterligare krav runt icke-textelement (inklusive ikoner, gränssnittselement med flera).
+  >Mer information finns i [Förstå icke-textkontrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) för att se till att innehållsförfattare förstår ytterligare krav runt icke-textelement (inklusive ikoner, gränssnittselement med flera).
 
 #### Syfte - Kontrast (minimum) (1.4.3) {#purpose-contrast-minimum}
 
@@ -558,10 +558,10 @@ Se till att texten kontrasterar tillräckligt med bakgrunden. Kontrastförhålla
 >Följande sajter kan vara till hjälp vid konvertering till andra enheter:
 >
 >* [Px to Em Calculator - Omni](https://www.omnicalculator.com/conversion/px-to-em)
->* Se&quot;Konvertering av teckenstorlek: pixel-point-em-rem-percent&quot; vid `https://websemantics.uk/tools/font-size-conversion-pixel-point-em-rem-percent/`
->* Se PMtoEM.com: Konvertering från PX till EM på `http://pxtoem.com/`
+>* Se &quot;Konvertering av teckenstorlek: pixel-point-em-rem-percent&quot; vid `https://websemantics.uk/tools/font-size-conversion-pixel-point-em-rem-percent/`
+>* Se PMtoEM.com: PX to EM conversion made simple at `http://pxtoem.com/`
 
-Använd ett färgkontrastverktyg, till exempel [Pacific Group Color Contrast Analyzer](https://www.paciellogroup.com/resources/contrast-analyser.html) eller [WebAIM-färgkontrastkontroll](https://webaim.org/resources/contrastchecker/). Med dessa verktyg kan du kontrollera färgpar och rapportera om eventuella kontrastproblem.
+Om du vill kontrollera kontrastförhållanden använder du ett färgkontrastverktyg, till exempel [Pacific Group Color Contrast Analyzer](https://www.paciellogroup.com/resources/contrast-analyser.html) eller [WebAIM-färgkontrastkontrollen](https://webaim.org/resources/contrastchecker/). Med dessa verktyg kan du kontrollera färgpar och rapportera om eventuella kontrastproblem.
 
 Om du inte är lika orolig för hur sidan ska se ut kan du välja att inte ange färg för bakgrunds- och förgrundstext. Ingen kontrastkontroll krävs eftersom användarens webbläsare bestämmer färgerna för texten och bakgrunden.
 
@@ -569,8 +569,8 @@ Om det inte går att följa de rekommenderade kontrastnivåerna skapar du en lä
 
 #### Mer information - Kontrast (minimum) (1.4.3) {#more-information-contrast-minimum}
 
-* [Förstå villkor för framgång 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
-* [Så här uppfyller du kriterierna för framgång 1.4.3](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum)
+* [Förstå villkor 1.4.3](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+* [Så här uppfyller du kriterierna 1.4.3](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum)
 
 ### Ändra storlek på text (1.4.4)  {#resize-text}
 
@@ -580,15 +580,15 @@ Om det inte går att följa de rekommenderade kontrastnivåerna skapar du en lä
 
 #### Syfte - Ändra textstorlek (1.4.4) {#purpose-resize-text}
 
-Syftet med detta villkor är att säkerställa att visuellt återgiven text, inklusive textbaserade kontroller (texttecken som har visats så att de kan ses [Jämför texttecken som fortfarande har ett dataformat som t.ex. ASCII]) kan skalas utan problem så att den kan läsas direkt av personer med lindriga visuella funktionshinder, utan att hjälpfunktioner som skärmförstorare behöver användas. Det kan vara bra för användaren att skalförändra allt innehåll på webbsidan, men texten är viktigast.
+Syftet med detta villkor är att säkerställa att visuellt återgiven text, inklusive textbaserade kontroller (texttecken som har visats så att de kan ses som [kontra texttecken som fortfarande är i dataformat som t.ex. ASCII]), kan skalas så att de kan läsas direkt av personer med lindriga visuella funktionshinder, utan att hjälpteknik som skärmförstorare behöver användas. Det kan vara bra för användaren att skalförändra allt innehåll på webbsidan, men texten är viktigast.
 
 #### Så här uppfyller du kraven - ändra storlek på text (1.4.4) {#how-to-meet-resize-text}
 
-Förutom att följa riktlinjerna i [Så här uppfyller du kriterierna 1.4.4](https://www.w3.org/WAI/WCAG21/quickref/#resize-text) Du kan uppmuntra skribenter att använda flytande, flexibla bredder och höjder i sina sidlayouter och teckenstorlekar (till exempel responsiv webbdesign) för att ge läsarna möjlighet att ändra storlek på text.
+Förutom att följa riktlinjerna under [Uppfyll kriterier för framgång 1.4.4](https://www.w3.org/WAI/WCAG21/quickref/#resize-text) kan du uppmuntra skribenter att använda flytande, flexibel bredd och höjd i sin siddesign och sina teckenstorlekar (till exempel responsiv webbdesign) för att ge läsarna möjlighet att ändra storlek på texten.
 
 #### Mer information - Ändra textstorlek (1.4.4) {#more-information-resize-text}
 
-* [Förstå villkor för framgång 1.4.4](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html)
+* [Förstå villkor 1.4.4](https://www.w3.org/WAI/WCAG21/Understanding/resize-text.html)
 * [Så här uppfyller du kriterierna 1.4.4](https://www.w3.org/WAI/WCAG21/quickref/#resize-text)
 
 ### Bilder av text (1.4.5) {#images-of-text}
@@ -609,7 +609,7 @@ Bilder av text används ofta när ett visst textformat är att föredra, t.ex. e
 
 #### Så här möts - bilder av text (1.4.5) {#how-to-meet-images-of-text}
 
-Om bilder av text måste användas, använder du CSS för att ersätta bilder av text med motsvarande text i HTML så att texten blir tillgänglig på ett anpassningsbart sätt. Ett exempel finns i [C30: Använda CSS för att ersätta text med bilder av text och tillhandahålla gränssnittskontroller för att växla](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C30).
+Om bilder av text måste användas, använder du CSS för att ersätta bilder av text med motsvarande text i HTML så att texten blir tillgänglig på ett anpassningsbart sätt. Se till exempel [C30: Använda CSS för att ersätta text med bilder av text och tillhandahålla gränssnittskontroller för att växla](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C30).
 
 #### Mer information - Textbilder (1.4.5) {#more-information-images-of-text}
 
@@ -618,11 +618,11 @@ Om bilder av text måste användas, använder du CSS för att ersätta bilder av
 
 ## Princip 2: Användbar {#principle-operable}
 
-[Princip 2: Användbar - Användargränssnittets komponenter och navigering måste vara användbara.](https://www.w3.org/TR/WCAG/#operable)
+[Princip 2: Operable - Användargränssnittskomponenter och navigering måste vara operabla.](https://www.w3.org/TR/WCAG/#operable)
 
 ### Tangentbord tillgängligt (2.1) {#keyboard-accessible}
 
-[Riktlinje 2.1 Tangentbord tillgängligt: Gör alla funktioner tillgängliga från ett tangentbord.](https://www.w3.org/TR/WCAG/#keyboard-accessible)
+[Riktlinje 2.1-tangentbord tillgänglig: Gör alla funktioner tillgängliga från ett tangentbord.](https://www.w3.org/TR/WCAG/#keyboard-accessible)
 
 Det handlar om att se till att användarna har tillgång till alla funktioner via ett tangentbord.
 
@@ -638,12 +638,12 @@ Syftet med detta villkor är att se till att innehåll, när det är möjligt, k
 
 #### Så här möts du - tangentbord (2.1.1) {#how-to-meet-keyboard}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.1.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas 2.1.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard).
 
 #### Mer information - Tangentbord (2.1.1) {#more-information-keyboard}
 
-* [Om villkor för att lyckas 2.1.1](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
-* [Så här uppfyller du kriterierna för framgång 2.1.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard)
+* [Förstå villkor för slutförande 2.1.1](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
+* [Så här uppfyller du kriterierna för lyckade försök 2.1.1](https://www.w3.org/WAI/WCAG21/quickref/#keyboard)
 
 ### Ingen tangentbordssvällning (2.1.2)  {#no-keyboard-trap}
 
@@ -653,22 +653,22 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.1.1](ht
 
 #### Syfte - Ingen tangentbordssvällning (2.1.2) {#purpose-no-keyboard-trap}
 
-Syftet med detta villkor är att se till att innehållet inte *svällning* tangentbordsfokus i underavsnitt av innehållet på en webbsida. Detta är ett vanligt problem när flera format kombineras på en sida och återges med plugin-program eller inbäddade program.
+Syftet med det här villkoret är att se till att innehållet inte *fångar upp* tangentbordsfokus inom underavsnitt av innehållet på en webbsida. Detta är ett vanligt problem när flera format kombineras på en sida och återges med plugin-program eller inbäddade program.
 
 Det kan finnas tillfällen då webbsidans funktioner begränsar fokus till ett underavsnitt av innehållet (till exempel en modal dialogruta). I sådana fall bör du ange en metod som gör att en användare kan lämna det underavsnittet av innehållet (ESC-tangenten stänger den modala dialogrutan eller en stängningsknapp stänger den modala dialogrutan).
 
 #### Så här möts - ingen tangentbordssvällning (2.1.2) {#how-to-meet-no-keyboard-trap}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.1.2](https://www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas 2.1.2](https://www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap).
 
 #### Mer information - Ingen tangentbordssvällning (2.1.2) {#more-information-no-keyboard-trap}
 
-* [Om villkor för att lyckas 2.1.2](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
-* [Så här uppfyller du kriterierna för framgång 2.1.2](https://www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap)
+* [Förstå villkor för slutförande 2.1.2](https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap.html)
+* [Så här uppfyller du kriterierna för lyckade försök 2.1.2](https://www.w3.org/WAI/WCAG21/quickref/#no-keyboard-trap)
 
 ### Tillräcklig tid (2.2) {#enough-time}
 
-[Riktlinje 2.2 Tillräcklig tid: Ge användarna tillräckligt med tid för att läsa och använda innehållet.](https://www.w3.org/TR/WCAG/#enough-time)
+[Riktlinje 2.2 Tillräcklig tid: Ge användarna tillräckligt med tid för att läsa och använda innehåll.](https://www.w3.org/TR/WCAG/#enough-time)
 
 Det handlar om att se till att användarna har tillräckligt med tid för att läsa och vidta åtgärder.
 
@@ -684,12 +684,12 @@ Syftet med detta kriterium är att se till att användare med funktionshinder f�
 
 #### Så här möts - Tidsjustering (2.2.1) {#how-to-meet-timing-adjustable}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.2.1](https://www.w3.org/WAI/WCAG21/quickref/#timing-adjustable).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas 2.2.1](https://www.w3.org/WAI/WCAG21/quickref/#timing-adjustable).
 
 #### Mer information - Tidsjustering (2.2.1) {#more-information-timing-adjustable}
 
-* [Om villkor för att lyckas 2.2.1](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
-* [Så här uppfyller du kriterierna för framgång 2.2.1](https://www.w3.org/WAI/WCAG21/quickref/#timing-adjustable)
+* [Förstå villkor för slutförande 2.2.1](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
+* [Så här uppfyller du kriterierna för lyckade resultat {2.2.1](https://www.w3.org/WAI/WCAG21/quickref/#timing-adjustable)
 
 ### Pausa, Stoppa, Dölj (2.2.2)  {#pause-stop-hide}
 
@@ -699,15 +699,17 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.2.1](ht
    * Flytta, blinka, rulla: För rörlig, blinkande eller rullningsinformation som
       * a) startar automatiskt,
       * b) varar mer än fem sekunder, och
-      * C) presenteras parallellt med annat innehåll, det finns en mekanism för användaren att pausa, stoppa eller dölja det såvida inte rörelsen, blinkningen eller rullningen är en del av en verksamhet där det är nödvändigt,
+      * C) presenteras parallellt med annat innehåll,
+Det finns en mekanism för användaren att pausa, stoppa eller dölja den, såvida inte rörelsen, blinkningen eller rullningen är en del av en verksamhet där det är nödvändigt.
    * Automatisk uppdatering: För all information som uppdateras automatiskt
       * a) startar automatiskt, och
-      * b) presenteras parallellt med annat innehåll och det finns en mekanism för användaren att pausa, stoppa eller dölja den eller att styra uppdateringens frekvens, såvida inte den automatiska uppdateringen är en del av en aktivitet där det är nödvändigt.
+      * b) presenteras parallellt med annat innehåll
+det finns en funktion som användaren kan använda för att pausa, stoppa eller dölja uppdateringen eller för att styra uppdateringens frekvens, såvida inte den automatiska uppdateringen är en del av en aktivitet där den är nödvändig.
 
 Poängen är:
 
 1. Krav som rör flimmer eller blinkande innehåll finns i Designa inte innehåll på ett sätt som är känt för att orsaka kramper (2.3).
-1. Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens möjlighet att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Överensstämmelsekrav 5: Störningar](https://www.w3.org/TR/WCAG20/#cc5).
+1. Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens möjlighet att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Krav på överensstämmelse 5: Störning](https://www.w3.org/TR/WCAG20/#cc5).
 1. Innehåll som uppdateras regelbundet av programvara eller som direktuppspelas till användaragenten behöver inte bevara eller presentera information som genereras eller tas emot mellan inledandet av paus och återupptagandet, eftersom detta kanske inte är tekniskt möjligt, och i många situationer kan det vara vilseledande.
 1. En animering som är en del av en förinläsningsfas eller liknande situation kan anses vara nödvändig om interaktion inte kan ske under den fasen för alla användare och om inte förloppet visar sig kan det förvirra användarna eller få dem att tro att innehållet frystes eller förstörs.
 
@@ -727,8 +729,8 @@ Beroende på innehållets natur kan du använda ett eller flera av följande fö
 
 #### Mer information - Pausa, Stoppa, Dölj (2.2.2) {#more-information-pause-stop-hide}
 
-* [Förstå villkor för framgång 2.2.2](https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html)
-* [Hur man uppfyller kriterierna för framgång 2.2.2](https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide)
+* [Förstå villkor 2.2.2](https://www.w3.org/WAI/WCAG21/Understanding/pause-stop-hide.html)
+* [Så här uppfyller du kriterium 2.2.2](https://www.w3.org/WAI/WCAG21/quickref/#pause-stop-hide)
 
 ### Kramper och fysiska reaktioner (2.3) {#seizures-and-physcial-reactions}
 
@@ -742,7 +744,7 @@ Beroende på innehållets natur kan du använda ett eller flera av följande fö
 
 >[!NOTE]
 >
->Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens förmåga att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Överensstämmelsekrav 5: Störningar](https://www.w3.org/TR/WCAG/#cc5).
+>Eftersom innehåll som inte uppfyller detta kriterium kan påverka användarens förmåga att använda hela sidan, måste allt innehåll på webbsidan (vare sig det används för att uppfylla andra kriterier för framgång eller inte) uppfylla detta kriterium. Se [Krav på överensstämmelse 5: Störning](https://www.w3.org/TR/WCAG/#cc5).
 
 #### Syfte - Tre Flashar eller under tröskelvärde (2.3.1) {#purpose-three-flashes-or-below-threshold}
 
@@ -753,12 +755,12 @@ I vissa fall kan blinkande innehåll orsaka fotokänsliga anfall. Detta kriteriu
 Se till att följande tekniker används:
 
 * Se till att komponenterna inte blinkar mer än tre gånger under en 1-sekundersperiod.
-* Om ovanstående villkor inte kan uppfyllas visas blinkande innehåll i en *litet säkert område* i pixlar på skärmen. Detta område beräknas med hjälp av en komplex formel, som täcks av [G176: Hålla blinkningsområdet tillräckligt litet](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/G176), så den här tekniken bör bara följas om blinkande innehåll är *nödvändigt.
+* Om ovanstående villkor inte kan uppfyllas visas blinkande innehåll i pixlar i ett *litet säkert område* på skärmen. Det här området beräknas med en komplex formel, som beskrivs i [G176: Behåll blinkningsområdet tillräckligt litet](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/G176), så den här tekniken bör endast följas om blinkande innehåll är *nödvändigt.
 
 #### Mer information - tre Flashar eller under tröskelvärde (2.3.1) {#more-information-three-flashes-or-below-threshold}
 
-* [Förstå villkor för framgång 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html)
-* [Hur man uppfyller kriterierna för framgång 2.3.1](https://www.w3.org/WAI/WCAG21/quickref/#three-flashes-or-below-threshold)
+* [Förstå villkor för slutförande 2.3.1](https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold.html)
+* [Så här uppfyller du villkor för att lyckas {2.3.1](https://www.w3.org/WAI/WCAG21/quickref/#three-flashes-or-below-threshold)
 
 ### Navigeringsbar (2.4) {#navigable}
 
@@ -778,12 +780,12 @@ Syftet med detta villkor är att personer som navigerar sekventiellt genom inneh
 
 #### Så här möts du - kringgå block (2.4.1) {#how-to-meet-bypass-blocks}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks).
 
 #### Mer information - Kringgå block (2.4.1) {#more-information-bypass-blocks}
 
-* [Om villkor för att lyckas 2.4.1](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
-* [Så här uppfyller du kriterierna för framgång 2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks)
+* [Förstå villkor för slutförande 2.4.1](https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks.html)
+* [Så här uppfyller du kriterierna för lyckade försök 2.4.1](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks)
 
 ### Sida med rubriker (2.4.2)  {#page-titled}
 
@@ -803,8 +805,8 @@ Du kan också redigera sidans titel när du redigerar en sida, tillgänglig via 
 
 #### Mer information - sida titel (2.4.2) {#more-information-page-titled}
 
-* [Förstå villkor för framgång 2.4.2](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
-* [Hur man uppfyller kriterierna för framgång 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
+* [Förstå villkor 2.4.2](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
+* [Så här uppfyller du kriterium 2.4.2](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
 
 ### Fokusordning (2.4.3)  {#focus-order}
 
@@ -818,12 +820,12 @@ Syftet med detta villkor är att se till att användare som navigerar sekventiel
 
 #### Så här möts du - fokusordning (2.4.3) {#how-to-meet-focus-order}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.4.3](https://www.w3.org/WAI/WCAG21/quickref/#focus-order).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4.3](https://www.w3.org/WAI/WCAG21/quickref/#focus-order).
 
 #### Mer information - Fokusordning (2.4.3) {#more-information-focus-order}
 
-* [Förstå villkor för framgång 2.4.3](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)
-* [Så här uppfyller du kriterierna för framgång 2.4.3](https://www.w3.org/WAI/WCAG21/quickref/#focus-order)
+* [Förstå villkor för slutförande 2.4.3](https://www.w3.org/WAI/WCAG21/Understanding/focus-order.html)
+* [Så här uppfyller du kriterierna för lyckade försök 2.4.3](https://www.w3.org/WAI/WCAG21/quickref/#focus-order)
 
 ### Länksyfte (i sitt sammanhang) (2.4.4)  {#link-purpose-in-context}
 
@@ -846,7 +848,7 @@ Se framför allt till att länkens syfte tydligt beskrivs i länktexten.
    * Text: Kvällsklasser för hösten 2010 - detaljer.
    * Orsak: Genom att justera texten och placeringen av länkelementet något kan länktexten förbättras:
 
-Länkarna ska vara enhetliga på olika sidor, särskilt för navigeringsfält. Om till exempel en länk till en viss sida heter **Publikationer** på en sida använder du den texten på andra sidor för att säkerställa konsekvens.
+Länkarna ska vara enhetliga på olika sidor, särskilt för navigeringsfält. Om till exempel en länk till en viss sida heter **Publikationer** på en sida kan du använda den texten på andra sidor för att säkerställa konsekvens.
 
 Vid skrivtillfället finns det vissa problem som omger användningen av rubrikattribut för att säkerställa att liknande länkar som visas på en sida ger unik information om destinationen (t.ex.&quot;läs mer&quot; avser ofta ett intervall av olika destinationer):
 
@@ -856,7 +858,7 @@ Vid skrivtillfället finns det vissa problem som omger användningen av rubrikat
 
 Titelattributet kan användas för att ge en länk extra kontext, men tänk på dess begränsningar och använd det inte som ett alternativ till lämplig länktext.
 
-Där länken består av en bild kontrollerar du att den alternativa texten för bilden beskriver länkens mål. Om t.ex. en bild av en bokhylla är inställd som en länk till en persons publikationer bör den alternativa texten vara **John Smiths publikationer** och inte **Bokhylla**.
+Där länken består av en bild kontrollerar du att den alternativa texten för bilden beskriver länkens mål. Om till exempel en bild av en bokhylla är inställd som en länk till en persons publikationer, ska den alternativa texten läsa **John Smiths publikationer** och inte **Bookshelf**.
 
 Om länkankarpunkten innehåller text som beskriver länkens syfte förutom bildelementet (och därmed texten visas bredvid bilden) använder du ett tomt alt-attribut för bilden:
 
@@ -869,24 +871,24 @@ John Smith's publications
 
 >[!NOTE]
 >
->Ovanstående kodutdrag är en illustration, du bör använda **Bild** -komponenten.
+>Ovanstående kodutdrag är en illustration. Du bör använda komponenten **Bild**.
 
-Även om det är tillrådligt att ge länktext som identifierar länkens syfte utan att behöva ytterligare kontext, är det inte alltid möjligt. Kontextfria länkar kan användas i följande fall, där HTML finns som exempel i [Hur man uppfyller kriterierna för framgång 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context).
+Även om det är tillrådligt att ge länktext som identifierar länkens syfte utan att behöva ytterligare kontext, är det inte alltid möjligt. Kontextfria länkar kan användas i följande fall. Exempel på sådana finns i [Så här uppfyller du kriterium 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context).
 
 * Länktexten är en del av en lista med närbesläktade länkar och när listobjektet som länken omges av innehåller tillräckligt med kontext.
-* Syftet med en länk kan tydligt framgå av *föregående* (inte följande) stycketext.
+* Syftet med en länk kan tydligt identifieras från stycketexten *före* (inte följande).
 * Länken ingår i en datatabell och syftet kan därför tydligt identifieras från tillhörande rubriker.
 * En lista med länkar finns i en uppsättning rubriker och själva rubriken ger rätt sammanhang.
 * En lista med länkar finns i en kapslad länk och det överordnade listobjektet ovanför den kapslade länken ger rätt kontext.
 
 Ibland kan det vara lämpligt att tillhandahålla en alternativ version av webbsidan som visar exakt samma innehåll men där länktexten inte är så detaljerad, om det finns flera länkar på en sida (där var och en innehåller länkens riktning i komplex men nödvändig detalj).
 
-Du kan också använda skript så att bara en liten del av texten finns i själva länken. När du aktiverar en lämplig kontroll som är placerad överst på sidan, är länktexten *expanderad* ytterligare detaljer. Ett liknande sätt är att använda CSS för *hide* den fullständiga länken från synkade användare, men ändå skicka den i sin helhet till skärmläsaranvändare. Detta faller utanför det här dokumentets räckvidd, men mer information om hur du kan uppnå detta finns i [Mer information - Länksyfte (i sammanhang) (2.4.4)](#more-information-link-purpose-in-context) -avsnitt.
+Du kan också använda skript så att bara en liten del av texten finns i själva länken. När du aktiverar en lämplig kontroll som är placerad överst på sidan, *utökas* till mer information. Ett liknande sätt är att använda CSS för att *dölja* den fullständiga länken för identifierade användare, men ändå visa den i sin helhet för skärmläsaranvändare. Detta ligger utanför det här dokumentets omfång, men mer information om hur detta kan uppnås finns i avsnittet [Mer information - länksyfte (i kontext) (2.4.4)](#more-information-link-purpose-in-context).
 
 #### Mer information - Länksyfte (i sammanhang) (2.4.4) {#more-information-link-purpose-in-context}
 
-* [Förstå villkor för framgång 2.4.4](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
-* [Hur man uppfyller kriterierna för framgång 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context)
+* [Förstå villkor för slutförande 2.4.4](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
+* [Så här uppfyller du kriterium 2.4.4](https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context)
 
 <!--
 * [C7: Using CSS to hide a portion of the link text](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/C7)
@@ -906,12 +908,12 @@ Syftet med detta kriterium är att göra det möjligt för användare att hitta 
 
 #### Så här möts du - flera sätt (2.4.5) {#how-to-meet-multiple-ways}
 
-Följ riktlinjerna i [Hur man uppfyller kriterierna för framgång 2.4.5](https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4.5](https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways).
 
 #### Mer information - Flera sätt (2.4.5) {#more-information-multiple-ways}
 
-* [Förstå villkor för framgång 2.4.5](https://www.w3.org/WAI/WCAG21/Understanding/multiple-ways.html)
-* [Hur man uppfyller kriterierna för framgång 2.4.5](https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways)
+* [Förstå villkor för slutförande 2.4.5](https://www.w3.org/WAI/WCAG21/Understanding/multiple-ways.html)
+* [Så här uppfyller du kriterierna för att lyckas {2.4.5](https://www.w3.org/WAI/WCAG21/quickref/#multiple-ways)
 
 ### Rubriker och etiketter (2.4.6)  {#headings-and-labels}
 
@@ -925,12 +927,12 @@ Syftet med detta kriterium är att hjälpa användarna att förstå vilken infor
 
 #### Hur man uppfyller kraven - rubriker och etiketter (2.4.6) {#how-to-meet-headings-and-labels}
 
-Följ riktlinjerna i [Hur man uppfyller kriterierna för framgång 2.4.6](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4.6](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels).
 
 #### Mer information - Rubriker och etiketter (2.4.6) {#more-information-headings-and-labels}
 
-* [Förstå villkor för framgång 2.4.6](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html)
-* [Hur man uppfyller kriterierna för framgång 2.4.6](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels)
+* [Förstå villkor för slutförande 2.4.6](https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html)
+* [Så här uppfyller du kriterierna för lyckade försök 2.4.6](https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels)
 
 ### Synligt fokus (2.4.7)  {#focus-visible}
 
@@ -948,12 +950,12 @@ Om resultatvillkoret är&quot;driftssätt&quot;, ska detta beaktas för plattfor
 
 #### Hur man möter - Synligt fokus (2.4.7) {#how-to-meet-focus-visible}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 2.4.7](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {2.4.7](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible).
 
 #### Mer information - Synligt fokus (2.4.7) {#more-information-focus-visible}
 
-* [Förstå villkor för framgång 2.4.7](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)
-* [Så här uppfyller du kriterierna för framgång 2.4.7](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible)
+* [Förstå villkor för slutförande 2.4.7](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible.html)
+* [Så här uppfyller du kriterierna för lyckade försök 2.4.7](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible)
 
 ## Princip 3: Förstå {#principle-understandable}
 
@@ -975,9 +977,9 @@ Syftet med detta kriterium är att säkerställa att text och annat språkligt i
 
 #### Hur man uppfyller kraven - sidans språk (3.1.1) {#how-to-meet-language-of-page}
 
-För att uppfylla det här kriteriet kan standardspråket på en webbsida identifieras med `lang` -attribut i `<html>` -element överst på sidan. Till exempel:
+För att uppfylla det här kriteriet kan standardspråket på en webbsida identifieras med attributet `lang` i elementet `<html>` överst på sidan. Till exempel:
 
-* Om en sida skrivs på engelska är `<html>` -elementet ska vara:
+* Om en sida är skriven på engelska ska `<html>`-elementet ha följande namn:
   `<html lang = "en">`
 
 * En sida som skall återges på spanska bör anta följande standard:
@@ -991,9 +993,9 @@ I AEM anges sidans standardspråk när du skapar sidan, men det kan också ändr
 
 #### Mer information - Sidans språk (3.1.1) {#more-information-language-of-page}
 
-* [Om villkor för att lyckas 3.1.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
-* [Hur man uppfyller kriterierna för framgång 3.1.1](https://www.w3.org/WAI/WCAG21/quickref/#language-of-page)
-* Koderna baseras på ISO 639-1. En mer omfattande lista över koder för varje språk finns på [W3 Schools site](https://www.w3schools.com/tags/ref_language_codes.asp).
+* [Förstå villkor 3.1.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
+* [Så här uppfyller du villkor 3.1.1](https://www.w3.org/WAI/WCAG21/quickref/#language-of-page)
+* Koderna baseras på ISO 639-1. En mer omfattande lista med koder för varje språk finns på [W3 Schools-webbplatsen](https://www.w3schools.com/tags/ref_language_codes.asp).
 
 ### Delarnas språk (3.1.2)  {#language-of-parts}
 
@@ -1003,7 +1005,7 @@ I AEM anges sidans standardspråk när du skapar sidan, men det kan också ändr
 
 #### Syfte - Språk för delar (3.1.2) {#purpose-language-of-parts}
 
-Syftet med detta kriterium är att det ska vara lika med kriteriet om framgång [Sidans språk](#language-of-page), förutom att det gäller webbsidor som innehåller innehåll på flera språk på en sida (t.ex. på grund av citat eller ovanliga låneord).
+Syftet med det här kriteriet är att det fungerar på samma sätt som kriteriet [Sidans språk](#language-of-page), förutom att det gäller webbsidor som innehåller innehåll på flera språk på en sida (t.ex. på grund av offerter eller ovanliga låneord).
 
 Sidor som använder det här framgångsvillkoret tillåter:
 
@@ -1013,7 +1015,7 @@ Sidor som använder det här framgångsvillkoret tillåter:
 
 #### Hur man uppfyller kraven - Språk för delar (3.1.2) {#how-to-meet-language-of-parts}
 
-The `lang` kan användas för att identifiera ändringar i innehållsspråket. En offert på tyska (ISO 639-1-kod &quot;de&quot;) kan till exempel visas på följande sätt:
+Attributet `lang` kan användas för att identifiera ändringar i innehållsspråket. En offert på tyska (ISO 639-1-kod &quot;de&quot;) kan till exempel visas på följande sätt:
 
 ```xml
 <blockquote cite = "John F. Kennedy" lang = "de">
@@ -1025,7 +1027,7 @@ The `lang` kan användas för att identifiera ändringar i innehållsspråket. E
 >
 >Blockcitattecken stöds inte i en körklar instans. En anpassad komponent kan utvecklas som stöd för funktionen.
 
-På samma sätt kan webbläsaren återge ett ovanligt låneord eller en ovanlig fras korrekt om `span` -elementet används enligt följande:
+På samma sätt kan webbläsaren återge ett ovanligt låneord eller en ovanlig fras korrekt om elementet `span` används enligt följande:
 
 ```xml
 <p>The only French phrase I know is <span lang = "fr">je ne sais quoi</code>.</p>
@@ -1033,18 +1035,18 @@ På samma sätt kan webbläsaren återge ett ovanligt låneord eller en ovanlig 
 
 >[!NOTE]
 >
->Det är inte nödvändigt att följa detta kriterium när namn eller städer på olika språk inkluderas. Eller när du använder ord eller fraser som har blivit vanliga på standardspråket, som *schadenfreude* på engelska.
+>Det är inte nödvändigt att följa detta kriterium när namn eller städer på olika språk inkluderas. Eller när du använder ord eller fraser som har blivit vanliga i standardspråket, som *schadenfreude* på engelska.
 
-Om du vill lägga till intervallelementet med ett lämpligt språk kan du redigera HTML-koden manuellt i källredigeringsläget för textredigeraren så att den läses upp som ovan. Alternativt `lang` attribut kan inkluderas i textredigeraren av en systemadministratör (se [Stöd för ytterligare element och attribut i HTML](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+Om du vill lägga till intervallelementet med ett lämpligt språk kan du redigera HTML-koden manuellt i källredigeringsläget för textredigeraren så att den läses upp som ovan. Alternativt kan attributet `lang` inkluderas i textredigeringsfilen av en systemadministratör (se [Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 #### Mer information - Språk för delar (3.1.2) {#more-information-language-of-parts}
 
-* [Förstå villkor för framgång 3.1.2](https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html)
-* [Hur man uppfyller kriterierna för framgång 3.1.2](https://www.w3.org/WAI/WCAG21/quickref/#language-of-parts)
+* [Förstå villkor 3.1.2](https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts.html)
+* [Så här uppfyller du villkor 3.1.2](https://www.w3.org/WAI/WCAG21/quickref/#language-of-parts)
 
 ### Förutsägbar (3.2) {#predictable}
 
-[Riktlinje 3.2 Förutsägbar: Gör webbsidor synliga och fungerar på förutsägbara sätt.](https://www.w3.org/TR/WCAG/#predictable)
+[Riktlinje 3.2 Förutsägbar: Gör så att webbsidor visas och fungerar på förutsägbara sätt.](https://www.w3.org/TR/WCAG/#predictable)
 
 Det handlar om att säkerställa att webbsidorna ser likadana ut och fungerar som de ska.
 
@@ -1066,12 +1068,12 @@ Fokus kan flyttas till en kontroll antingen via tangentbordet (t.ex. genom att t
 
 #### Så här möts du - i fokus (3.2.1) {#how-to-meet-on-focus}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 3.2.1](https://www.w3.org/WAI/WCAG21/quickref/#on-focus).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för lyckat resultat 3.2.1](https://www.w3.org/WAI/WCAG21/quickref/#on-focus).
 
 #### Mer information - I fokus (3.2.1) {#more-information-on-focus}
 
-* [Om villkor för att lyckas 3.2.1](https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html)
-* [Så här uppfyller du kriterierna för framgång 3.2.1](https://www.w3.org/WAI/WCAG21/quickref/#on-focus)
+* [Förstå villkor 3.2.1](https://www.w3.org/WAI/WCAG21/Understanding/on-focus.html)
+* [Så här uppfyller du villkoren 3.2.1](https://www.w3.org/WAI/WCAG21/quickref/#on-focus)
 
 ### Indata (3.2.2)  {#on-input}
 
@@ -1085,12 +1087,12 @@ Syftet med det här kriteriet är att säkerställa att det går att ange data e
 
 #### Så här möts - Vid inmatning (3.2.2) {#how-to-meet-on-input}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 3.2.2](https://www.w3.org/WAI/WCAG21/quickref/#on-input).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för lyckat resultat 3.2.2](https://www.w3.org/WAI/WCAG21/quickref/#on-input).
 
 #### Mer information - Vid inmatning (3.2.2) {#more-information-on-input}
 
-* [Om villkor för att lyckas 3.2.2](https://www.w3.org/WAI/WCAG21/Understanding/on-input.html)
-* [Så här uppfyller du kriterierna för framgång 3.2.2](https://www.w3.org/WAI/WCAG21/quickref/#on-input)
+* [Förstå villkor 3.2.2](https://www.w3.org/WAI/WCAG21/Understanding/on-input.html)
+* [Så här uppfyller du villkoren 3.2.2](https://www.w3.org/WAI/WCAG21/quickref/#on-input)
 
 ### Enhetlig navigering (3.2.3)  {#consistent-navigation}
 
@@ -1108,12 +1110,12 @@ Användare kan initiera en ändring av ordningen med hjälp av adaptiva använda
 
 #### Hur man möter - Enhetlig navigering (3.2.3) {#how-to-meet-consistent-navigation}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 3.2.3](https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för lyckat resultat {3.2.3](https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation).
 
 #### Mer information - Enhetlig navigering (3.2.3) {#more-information-consistent-navigation}
 
-* [Förstå villkor för framgång 3.2.3](https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html)
-* [Så här uppfyller du kriterierna för framgång 3.2.3](https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation)
+* [Förstå villkor för slutförande 3.2.3](https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation.html)
+* [Så här uppfyller du villkoren 3.2.3](https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation)
 
 ### Konsekvent identifiering (3.2.4)  {#consistent-identification}
 
@@ -1133,16 +1135,16 @@ Om det finns två komponenter på en webbsida som båda har samma funktioner som
 
 #### Hur man uppfyller kraven - konsekvent identifiering (3.2.4) {#how-to-meet-consistent-identification}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 3.2.4](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas ](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification).
 
 #### Mer information - Konsekvent identifiering (3.2.4) {#more-information-consistent-identification}
 
-* [Förstå villkor för framgång 3.2.4](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification.html)
-* [Så här uppfyller du kriterierna för framgång 3.2.4](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification)
+* [Förstå villkor för slutförande 3.2.4](https://www.w3.org/WAI/WCAG21/Understanding/consistent-identification.html)
+* [Så här uppfyller du villkoren 3.2.4](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification)
 
 ### Ingångsstöd (3.3) {#input-assistance}
 
-[Riktlinje 3.3 Inmatningsassistans: Hjälp användarna att undvika och rätta till misstag.](https://www.w3.org/TR/WCAG/#input-assistance)
+[Riktlinje 3.3 Hjälp med inmatning: Hjälp användarna att undvika och rätta till misstag.](https://www.w3.org/TR/WCAG/#input-assistance)
 
 ### Felidentifiering (3.3.1)  {#error-identification}
 
@@ -1152,7 +1154,7 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 3.2.4](ht
 
 #### Syfte - Felidentifiering (3.3.1) {#purpose-error-identification}
 
-Syftet med detta villkor är att se till att användarna är medvetna om att ett fel har inträffat och kan avgöra vad som är fel. Felmeddelandet ska vara så specifikt som möjligt. Om det inte går att skicka in ett formulär, räcker det inte att återvisa formuläret och ange felfälten för att vissa användare ska inse att ett fel har inträffat. Användare av skärmläsare vet till exempel inte om ett fel uppstod förrän de stöter på en av indikatorerna. De kan hoppa över hela formuläret innan felindikatorn påträffas, eftersom de tror att sidan helt enkelt inte fungerar. Enligt definitionen i WCAG, [indatafel](https://www.w3.org/TR/WCAG/#dfn-input-error) är information som användaren lämnar och som inte godkänns. Detta inkluderar följande:
+Syftet med detta villkor är att se till att användarna är medvetna om att ett fel har inträffat och kan avgöra vad som är fel. Felmeddelandet ska vara så specifikt som möjligt. Om det inte går att skicka in ett formulär, räcker det inte att återvisa formuläret och ange felfälten för att vissa användare ska inse att ett fel har inträffat. Användare av skärmläsare vet till exempel inte om ett fel uppstod förrän de stöter på en av indikatorerna. De kan hoppa över hela formuläret innan felindikatorn påträffas, eftersom de tror att sidan helt enkelt inte fungerar. Enligt definitionen i WCAG är ett [indatafel](https://www.w3.org/TR/WCAG/#dfn-input-error) information som användaren anger och som inte accepteras. Detta inkluderar följande:
 
 Information som krävs av webbsidan men utelämnas av användaren, eller information som tillhandahålls av användaren men som ligger utanför det obligatoriska dataformatet eller tillåtna värden.
 Till exempel:
@@ -1166,12 +1168,12 @@ Till exempel:
 
 #### Så här möts du - Felidentifiering (3.3.1) {#how-to-meet-error-identification}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 3.3.1](https://www.w3.org/WAI/WCAG21/quickref/#error-identification).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas 3.3.1](https://www.w3.org/WAI/WCAG21/quickref/#error-identification).
 
 #### Mer information - Felidentifiering (3.3.1) {#more-information-error-identification}
 
-* [Om villkor för att lyckas 3.3.1](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
-* [Så här uppfyller du kriterierna för framgång 3.3.1](https://www.w3.org/WAI/WCAG21/quickref/#error-identification)
+* [Förstå villkor för slutförande 3.3.1](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
+* [Så här uppfyller du villkoren 3.3.1](https://www.w3.org/WAI/WCAG21/quickref/#error-identification)
 
 ### Etiketter eller instruktioner (3.3.2) {#labels-or-instructions}
 
@@ -1185,39 +1187,41 @@ Att ge instruktioner som hjälper människor att fylla i formulär är en grundl
 
 ##### Forms
 
-I AEM WKND-demoprojekt läggs en standardetikett till när du lägger till en formulärkomponent, till exempel en **Textfält**, till sidan. Den här standardtiteln beror på komponenttypen. Du kan lägga till en egen titel i **Titel och text** -fliken i redigeringsdialogrutan för det fältet. Det är viktigt att se till att etiketter hjälper användarna att förstå informationen som är kopplad till varje formulärkomponent.
+I AEM WKND-demoprojekt läggs en standardetikett till när du lägger till en formulärkomponent, till exempel ett **textfält**, på sidan. Den här standardtiteln beror på komponenttypen. Du kan lägga till din egen titel på fliken **Titel och Text** i redigeringsdialogrutan för det fältet. Det är viktigt att se till att etiketter hjälper användarna att förstå informationen som är kopplad till varje formulärkomponent.
 
-Detta **Titel** fältet måste användas för fältelement eftersom det innehåller en etikett som är tillgänglig för hjälpfunktioner. Det räcker inte att bara skriva en etikett bredvid fältet.
+Det här fältet **Rubrik** måste användas för fältelement eftersom det innehåller en etikett som är tillgänglig för hjälpmedelsteknik. Det räcker inte att bara skriva en etikett bredvid fältet.
 
-För vissa formulärkomponenter går det även att dölja etiketter visuellt med **Dölj titel** kryssrutan. Etiketter som döljs på det här sättet är fortfarande tillgängliga för hjälpfunktioner, men de visas inte på skärmen. Detta kan vara en bra metod i vissa situationer, men det är bäst att ta med en visuell etikett där det är möjligt, eftersom vissa användare kanske tittar på ett litet avsnitt på skärmen (ett fält i taget) och behöver etiketterna för att kunna identifiera fältet på rätt sätt.
+För vissa formulärkomponenter går det även att dölja etiketter visuellt med kryssrutan **Dölj rubrik** . Etiketter som döljs på det här sättet är fortfarande tillgängliga för hjälpfunktioner, men de visas inte på skärmen. Detta kan vara en bra metod i vissa situationer, men det är bäst att ta med en visuell etikett där det är möjligt, eftersom vissa användare kanske tittar på ett litet avsnitt på skärmen (ett fält i taget) och behöver etiketterna för att kunna identifiera fältet på rätt sätt.
 
 ###### Bildknappar {#image-buttons}
 
-Där bildknappar används (till exempel **Bildknapp** komponenten i WKND-projektet), **Titel** fältet i **Titel och text** i redigeringsdialogrutan innehåller faktiskt bildens alt-text, i stället för etiketten. I exemplet nedan har bilden med texten `Submit` Alt-texten `Submit`, som lagts till med fältet **Titel** i redigeringsdialogrutan.
+Där bildknappar används (till exempel komponenten **Bildknapp** i WKND-projektet), innehåller fältet **Titel** på fliken **Titel och text** i redigeringsdialogrutan den alternativa texten för bilden, i stället för etiketten. I exemplet nedan har bilden med texten `Submit` Alt-texten `Submit`, som lagts till med fältet **Titel** i redigeringsdialogrutan.
 
 ###### Grupper med formulärfält {#groups-of-form-fields}
 
-I WKND-projektet, där det finns en grupp med relaterade kontroller, till exempel **Alternativgrupp**, kan en titel behövas för gruppen och enskilda kontroller. När du lägger till en uppsättning med alternativknappar i AEM visas den här grupptiteln i fältet **Titel**, medan enskilda titlar anges när alternativknapparna (**Objekt**) skapas.
+I WKND-projektet, där det finns en grupp med relaterade kontroller, till exempel **Alternativgrupp**, kan en rubrik behövas för gruppen och enskilda kontroller. När du lägger till en uppsättning med alternativknappar i AEM visas den här grupptiteln i fältet **Titel**, medan enskilda titlar anges när alternativknapparna (**Objekt**) skapas.
 
-Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste omsluta titeln i `fieldset` och `legend` -taggar för att skapa den här associationen och detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i **Fältegenskaper** dialogruta (se [Stöd för ytterligare element och attribut i HTML](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
+Det finns dock ingen programmatisk koppling mellan grupptiteln och alternativknapparna själva. Mallredigerare måste kapsla in titeln i de `fieldset` - och `legend` -taggar som krävs för att skapa den här kopplingen, och detta kan bara göras genom att redigera sidans källkod. En systemadministratör kan också lägga till stöd för dessa element så att de visas i dialogrutan **Fältegenskaper** (se [Lägga till stöd för ytterligare HTML-element och attribut](/help/sites-administering/rte-accessible-content.md#add-support-for-more-html-elements-and-attributes)).
 
 ###### Ytterligare överväganden för Forms {#additional-considerations-for-forms}
 
-Om data ska matas in i ett visst format bör du göra detta tydligt i etikettexten. Om till exempel ett datum måste anges i `DD-MM-YYYY` i, ange det här som en del av etiketten. Det innebär att när skärmläsaranvändare stöter på fältet visas etiketten automatiskt tillsammans med ytterligare information om formatet.
+Om data ska matas in i ett visst format bör du göra detta tydligt i etikettexten. Om till exempel ett datum måste anges i formatet `DD-MM-YYYY` anger du det här som en del av etiketten. Det innebär att när skärmläsaranvändare stöter på fältet visas etiketten automatiskt tillsammans med ytterligare information om formatet.
 
 Om indata för ett formulärfält är obligatoriska klargör du detta genom att använda ordet ”required” som en del av etiketten. AEM lägger till en asterisk när ett fält är obligatoriskt, men det är bra att inkludera ordet `required` i själva etiketten (i fältet **Titel** i redigeringsdialogrutan).
 
 Placeringen av etiketter är också viktig eftersom den hjälper dem att hitta rätt fält. Detta är särskilt viktigt när användaren har ett komplext formulär. Följ konventionen nedan:
 
-* Kryssrutor eller alternativknappar: Etiketterna placeras direkt till höger om fältet.
-* Alla andra formulärkomponenter (till exempel textrutor, kombinationsrutor): Etiketterna placeras antingen direkt ovanför eller omedelbart till vänster om fältet.
+* Kryssrutor eller alternativknappar:
+Etiketterna placeras direkt till höger om fältet.
+* Alla andra formulärkomponenter (till exempel textrutor, kombinationsrutor):
+Etiketterna placeras antingen direkt ovanför eller direkt till vänster om fältet.
 
-I enkla formulär med begränsad funktionalitet kan du märka en `Submit` kan fungera som etikett för intilliggande fält (till exempel `Search`). Detta är användbart när det kan vara svårt att hitta plats för etikettexten.
+I enkla formulär med begränsad funktionalitet kan etikettering av en `Submit`-knapp fungera som etikett för det intilliggande fältet (till exempel `Search`). Detta är användbart när det kan vara svårt att hitta plats för etikettexten.
 
 #### Mer information - etiketter eller instruktioner (3.3.2) {#more-information-labels-or-instructions}
 
-* [Förstå villkor för framgång 3.3.2](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
-* [Hur man uppfyller kriterium 3.3.2](https://www.w3.org/WAI/WCAG21/quickref/#labels-or-instructions)
+* [Förstå villkor 3.3.2](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
+* [Så här uppfyller du villkor 3.3.2](https://www.w3.org/WAI/WCAG21/quickref/#labels-or-instructions)
 
 ### Felförslag (3.3.3)  {#error-suggestion}
 
@@ -1227,7 +1231,7 @@ I enkla formulär med begränsad funktionalitet kan du märka en `Submit` kan fu
 
 #### Syfte - Felförslag (3.3.3) {#purpose-error-suggestion}
 
-Syftet med detta villkor är att se till att användarna får lämpliga förslag på hur ett indatafel kan korrigeras om det är möjligt. WCAG-definitionen för [indatafel](https://www.w3.org/TR/WCAG/#dfn-input-error) säger att det är&quot;information som användaren tillhandahåller som inte accepteras&quot; av systemet. Några exempel på information som inte accepteras är information som är obligatorisk men utelämnad av användaren och information som tillhandahålls av användaren men som ligger utanför det obligatoriska dataformatet eller tillåtna värden.
+Syftet med detta villkor är att se till att användarna får lämpliga förslag på hur ett indatafel kan korrigeras om det är möjligt. WCAG-definitionen för [indatafel](https://www.w3.org/TR/WCAG/#dfn-input-error) anger att det är &quot;information som användaren anger som inte accepteras&quot; av systemet. Några exempel på information som inte accepteras är information som är obligatorisk men utelämnad av användaren och information som tillhandahålls av användaren men som ligger utanför det obligatoriska dataformatet eller tillåtna värden.
 
 Success Criterion 3.3.1 innehåller meddelanden om fel. Personer med kognitiva begränsningar kan dock finna det svårt att förstå hur felen ska korrigeras. Personer med visuella funktionshinder kanske inte kan komma på exakt hur felet ska korrigeras. Om det inte går att skicka in formuläret kan användaren överge det eftersom han/hon kanske inte vet hur felet ska åtgärdas trots att han/hon vet att det har inträffat.
 
@@ -1235,12 +1239,12 @@ Innehållsförfattaren kan ge en beskrivning av felet eller så kan användarage
 
 #### Så här möts du - Felförslag (3.3.3) {#how-to-meet-error-suggestion}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 3.3.3](https://www.w3.org/WAI/WCAG21/quickref/#error-suggestion).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas 3.3.3](https://www.w3.org/WAI/WCAG21/quickref/#error-suggestion).
 
 #### Mer information - Felförslag (3.3.3) {#more-information-error-suggestion}
 
-* [Förstå villkor för framgång 3.3.3](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html)
-* [Så här uppfyller du kriterierna för framgång 3.3.3](https://www.w3.org/WAI/WCAG21/quickref/#error-suggestion)
+* [Förstå villkor för slutförande 3.3.3](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion.html)
+* [Så här uppfyller du villkoren 3.3.3](https://www.w3.org/WAI/WCAG21/quickref/#error-suggestion)
 
 ### Förebygga fel (juridisk, finansiell, data) (3.3.4)  {#error-prevention-legal-financial-data}
 
@@ -1248,9 +1252,12 @@ Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 3.3.3](ht
 * Nivå AA
 * Felförebyggande (juridisk, ekonomisk, datarelaterad): För webbsidor som gör att juridiska åtaganden eller ekonomiska transaktioner för användaren inträffar, som ändrar eller tar bort användarstyrda data i datalagringssystem eller som skickar in testsvar från användaren är minst ett av följande sant:
 
-   * Reverserbara inskickat material är reversibla.
-   * Kontrollerade data som anges av användaren kontrolleras för indatafel och användaren ges möjlighet att korrigera dem.
-   * Bekräftat En mekanism är tillgänglig för granskning, bekräftelse och korrigering av information innan inlämningen är klar.
+   * Reversible
+Inlämningarna kan återställas.
+   * Markerad
+Data som anges av användaren kontrolleras för indatafel och användaren ges möjlighet att korrigera dem.
+   * Bekräftat
+Det finns en mekanism för att granska, bekräfta och korrigera information innan inlämningen är klar.
 
 #### Syfte - Förebyggande av fel (rättsliga, finansiella, uppgifter) (3.3.4) {#purpose-error-prevention-legal-financial-data}
 
@@ -1262,16 +1269,16 @@ Användarstyrda data är användaranpassade data som användaren kan ändra och/
 
 #### Hur man ska uppfylla kraven - Förebyggande av fel (rättsliga, finansiella, uppgifter) (3.3.4) {#how-to-meet-error-prevention-legal-financial-data}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 3.3.4](https://www.w3.org/WAI/WCAG21/quickref/#error-prevention-legal-financial-data).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas {3.3.4](https://www.w3.org/WAI/WCAG21/quickref/#error-prevention-legal-financial-data).
 
 #### Mer information - Felförebyggande (Juridik, Finans, Data) (3.3.4) {#more-information-error-prevention-legal-financial-data}
 
-* [Förstå villkor för framgång 3.3.4](https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data.html)
-* [Så här uppfyller du kriterierna för framgång 3.3.4](https://www.w3.org/WAI/WCAG21/quickref/#error-prevention-legal-financial-data)
+* [Förstå villkor för slutförande 3.3.4](https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data.html)
+* [Så här uppfyller du kriterierna 3.3.4](https://www.w3.org/WAI/WCAG21/quickref/#error-prevention-legal-financial-data)
 
 ## Princip 4: Robust {#principle-robust}
 
-[Princip 4: Robust - Innehållet måste vara tillräckligt robust för att kunna tolkas av ett stort antal användaragenter, inklusive hjälpmedelstekniker.](https://www.w3.org/TR/WCAG/#robust)
+[Princip 4: Robust - Innehållet måste vara tillräckligt robust så att det kan tolkas av ett stort antal användaragenter, inklusive hjälpmedelstekniker.](https://www.w3.org/TR/WCAG/#robust)
 
 ### Kompatibel (4.1) {#compatible}
 
@@ -1293,12 +1300,12 @@ Eftersom reparationstekniken varierar mellan olika användaragenter kan man inte
 
 #### Hur man möter - parsing (4.1.1) {#how-to-meet-parsing}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/#parsing).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/#parsing).
 
 #### Mer information - Analys (4.1.1) {#more-information-parsing}
 
-* [Om villkor för att lyckas 4.1.1](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html)
-* [Så här uppfyller du kriterierna för framgång 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/#parsing)
+* [Förstå villkor 4.1.1](https://www.w3.org/WAI/WCAG21/Understanding/parsing.html)
+* [Så här uppfyller du kriterierna för lyckade försök 4.1.1](https://www.w3.org/WAI/WCAG21/quickref/#parsing)
 
 ### Namn, roll, värde (4.1.2)  {#name-role-value}
 
@@ -1318,9 +1325,9 @@ Ett viktigt läge för en användargränssnittskontroll är om den har fokus ell
 
 #### Så här möts du - namn, roll, värde (4.1.2) {#how-to-meet-ame-role-value}
 
-Följ riktlinjerna i [Så här uppfyller du kriterierna för framgång 4.1.2](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value).
+Följ riktlinjerna under [Så här uppfyller du kriterierna för att lyckas 4.1.2](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value).
 
 #### Mer information - namn, roll, värde (4.1.2 {#more-information-ame-role-value}
 
-* [Om villkor för att lyckas 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
-* [Så här uppfyller du kriterierna för framgång 4.1.2](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value)
+* [Förstå villkor 4.1.2](https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html)
+* [Så här uppfyller du kriterierna 4.1.2](https://www.w3.org/WAI/WCAG21/quickref/#name-role-value)

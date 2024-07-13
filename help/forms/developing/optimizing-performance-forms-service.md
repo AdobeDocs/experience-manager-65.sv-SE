@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Optimera prestandan för Forms-tjänsten {#optimizing-the-performance-of-theforms-service}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 ## Optimera prestandan för Forms-tjänsten {#optimizing-the-performance-of-the-forms-service}
 
@@ -45,25 +45,25 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett Forms Client API-objekt**
 
-Innan du programmässigt kan utföra en API-åtgärd för Forms-tjänstklienten måste du skapa en Forms-tjänstklient. Om du använder Java API skapar du en `FormsServiceClient` -objekt. Om du använder Forms webbtjänst-API skapar du en `FormsService` -objekt.
+Innan du programmässigt kan utföra en API-åtgärd för Forms-tjänstklienten måste du skapa en Forms-tjänstklient. Om du använder Java API skapar du ett `FormsServiceClient`-objekt. Om du använder Forms webbtjänst-API:t skapar du ett `FormsService`-objekt.
 
-**Ange alternativ för prestanda vid körning**
+**Ange alternativ för körning**
 
 Du kan ställa in följande alternativ för prestandakörning för att förbättra prestandan för Forms-tjänsten:
 
 * **Cache-lagring av formulär**: Du kan cachelagra ett formulär som återges som PDF i servercachen. Varje formulär cachelagras när det har skapats för första gången. Om det cachelagrade formuläret vid en efterföljande återgivning är nyare än formulärdesignens tidsstämpel hämtas formuläret från cachen. Genom att cache-lagra formulär förbättrar du prestanda för Forms-tjänsten eftersom den inte behöver hämta formulärdesignen från en databas.
 * Det kan ta längre tid att återge formulärstödlinjer (inaktuella) än andra omformningstyper. Vi rekommenderar att du cache-lagrar formulärguider (borttagna) för att förbättra prestandan.
-* **Fristående alternativ**: Om du inte behöver Forms-tjänsten för att utföra beräkningar på serversidan kan du ange alternativet Fristående till `true`, vilket resulterar i att formulär återges utan lägesinformation. Lägesinformation är nödvändig om du vill återge ett interaktivt formulär till en slutanvändare som sedan anger information i formuläret och skickar tillbaka formuläret till Forms. Forms-tjänsten utför sedan en beräkningsåtgärd och återger formuläret till användaren med de resultat som visas i formuläret. Om ett formulär utan statusinformation skickas tillbaka till Forms-tjänsten är endast XML-data tillgängliga och serversidesberäkningar utförs inte.
-* **Linjäriserad PDF**: En linjäriserad PDF-fil ordnas för att möjliggöra effektiv inkrementell åtkomst i en nätverksmiljö. PDF-filen är giltig PDF i alla avseenden och kompatibel med alla befintliga visningsprogram och andra PDF-program. Det vill säga att en linjär PDF kan visas medan den fortfarande hämtas.
+* **Fristående alternativ**: Om du inte behöver Forms-tjänsten för att utföra beräkningar på serversidan, kan du ställa in det fristående alternativet på `true`, vilket resulterar i att formulär återges utan lägesinformation. Lägesinformation är nödvändig om du vill återge ett interaktivt formulär till en slutanvändare som sedan anger information i formuläret och skickar tillbaka formuläret till Forms. Forms-tjänsten utför sedan en beräkningsåtgärd och återger formuläret till användaren med de resultat som visas i formuläret. Om ett formulär utan statusinformation skickas tillbaka till Forms-tjänsten är endast XML-data tillgängliga och serversidesberäkningar utförs inte.
+* **Linjäriserad PDF**: En linjäriserad PDF-fil är organiserad för att möjliggöra effektiv inkrementell åtkomst i en nätverksmiljö. PDF-filen är giltig PDF i alla avseenden och kompatibel med alla befintliga visningsprogram och andra PDF-program. Det vill säga att en linjär PDF kan visas medan den fortfarande hämtas.
 * Det här alternativet förbättrar inte prestanda när ett PDF-formulär återges på klienten.
-* **GuideRSL, alternativ**: Aktiverar generering av formulärguiden (borttagen) med hjälp av delade bibliotek vid körning. Det innebär att den första begäran hämtar en mindre SWF-fil, plus större delade bibliotek som lagras i webbläsarens cache. Mer information finns i RSL i Flex-dokumentationen.
-* Du kan även förbättra prestanda för Forms-tjänsten genom att återge ett formulär på klienten. (Se [Återger Forms på klienten](/help/forms/developing/rendering-forms-client.md).)
+* **Alternativet GuideRSL**: Aktiverar generering av formulärguiden (föråldrad) med delade bibliotek vid körning. Det innebär att den första begäran hämtar en mindre SWF-fil, plus större delade bibliotek som lagras i webbläsarens cache. Mer information finns i RSL i Flex-dokumentationen.
+* Du kan även förbättra prestanda för Forms-tjänsten genom att återge ett formulär på klienten. (Se [Återge Forms på klienten](/help/forms/developing/rendering-forms-client.md).)
 
 **Återge formuläret**
 
 Om du vill återge formuläret efter att du har angett prestandaalternativ använder du samma programlogik som att återge ett formulär utan prestandaalternativ.
 
-**Skriv formulärdataströmmen till klientens webbläsare**
+**Skriv formulärdataströmmen till klientwebbläsaren**
 
 När Forms-tjänsten återger ett formulär returneras en formulärdataström som du måste skriva till klientens webbläsare. När formuläret skrivs till webbläsaren visas det för användaren.
 
@@ -91,34 +91,34 @@ Rendera ett formulär med optimerade prestanda med hjälp av Forms API (Java):
 
 1. Skapa ett Forms Client API-objekt
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `FormsServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `FormsServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Ange alternativ för prestanda vid körning
 
-   * Skapa en `PDFFormRenderSpec` genom att använda dess konstruktor.
-   * Ange alternativet för formulärcache genom att anropa `PDFFormRenderSpec` objektets `setCacheEnabled` metod och att skicka `true`.
-   * Ange alternativet linjär genom att anropa `PDFFormRenderSpec` objektets `setLinearizedPDF` metod och att skicka `true.`
+   * Skapa ett `PDFFormRenderSpec`-objekt med hjälp av dess konstruktor.
+   * Ange alternativet för formulärcache genom att anropa `PDFFormRenderSpec`-objektets `setCacheEnabled`-metod och skicka `true`.
+   * Ange alternativet för linjär genom att anropa `PDFFormRenderSpec`-objektets `setLinearizedPDF`-metod och skicka `true.`
 
 1. Återge formuläret
 
-   Anropa `FormsServiceClient` objektets `renderPDFForm` och skicka följande värden:
+   Anropa `FormsServiceClient`-objektets `renderPDFForm`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget.
-   * A `com.adobe.idp.Document` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du en tom `com.adobe.idp.Document` -objekt.
-   * A `PDFFormRenderSpec` objekt som lagrar körningsalternativ för att förbättra prestandan.
-   * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
-   * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * Ett `com.adobe.idp.Document`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du ett tomt `com.adobe.idp.Document`-objekt.
+   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ för att förbättra prestandan.
+   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten.
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
 
-   The `renderPDFForm` returnerar en `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `renderPDFForm` returnerar ett `FormsResult`-objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa en `javax.servlet.ServletOutputStream` som används för att skicka en formulärdataström till klientens webbläsare.
-   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt&quot;s `getOutputContent` -metod.
-   * Skapa en `java.io.InputStream` genom att anropa `com.adobe.idp.Document` objektets `getInputStream` -metod.
-   * Skapa en bytearray och fylla den med formulärdataströmmen genom att anropa `InputStream` objektets `read`och skicka bytearrayen som ett argument.
-   * Anropa `javax.servlet.ServletOutputStream` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skicka en formulärdataström till klientens webbläsare.
+   * Skapa ett `com.adobe.idp.Document`-objekt genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+   * Skapa ett `java.io.InputStream`-objekt genom att anropa `com.adobe.idp.Document`-objektets `getInputStream`-metod.
+   * Skapa en bytearray och fyll i den med formulärdataströmmen genom att anropa `InputStream`-objektets `read`-metod och skicka bytearrayen som ett argument.
+   * Anropa `javax.servlet.ServletOutputStream`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 
@@ -139,38 +139,38 @@ Rendera ett formulär med optimerade prestanda med Forms API (webbtjänst):
 
 1. Skapa ett Forms Client API-objekt
 
-   Skapa en `FormsService` och ange autentiseringsvärden.
+   Skapa ett `FormsService`-objekt och ange autentiseringsvärden.
 
 1. Ange alternativ för prestanda vid körning
 
-   * Skapa en `PDFFormRenderSpec` genom att använda dess konstruktor.
-   * Ange alternativet för formulärcache genom att anropa `PDFFormRenderSpec` objektets `setCacheEnabled` och skickar true.
-   * Ange det fristående alternativet genom att anropa `PDFFormRenderSpec` objektets `setStandAlone` och skickar true.
-   * Ange alternativet linjär genom att anropa `PDFFormRenderSpec` objektets `setLinearizedPDF` och skickar true.
+   * Skapa ett `PDFFormRenderSpec`-objekt med hjälp av dess konstruktor.
+   * Ange alternativet för formulärcache genom att anropa `PDFFormRenderSpec`-objektets `setCacheEnabled`-metod och skicka true.
+   * Ange det fristående alternativet genom att anropa `PDFFormRenderSpec`-objektets `setStandAlone`-metod och skicka true.
+   * Ange alternativet för linjär genom att anropa `PDFFormRenderSpec`-objektets `setLinearizedPDF`-metod och skicka true.
 
 1. Återge formuläret
 
-   Anropa `FormsService` objektets `renderPDFForm` och skicka följande värden:
+   Anropa `FormsService`-objektets `renderPDFForm`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget.
-   * A `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`.
-   * A `PDFFormRenderSpecc` objekt som lagrar körningsalternativ.
-   * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
-   * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
-   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Det här används för att lagra det återgivna PDF-formuläret.
-   * En tom `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret).
-   * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde).
-   * En tom `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+   * Ett `BLOB`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`.
+   * Ett `PDFFormRenderSpecc`-objekt som lagrar körningsalternativ.
+   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten.
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * Ett tomt `com.adobe.idp.services.holders.BLOBHolder`-objekt som fylls i av metoden. Det här används för att lagra det återgivna PDF-formuläret.
+   * Ett tomt `javax.xml.rpc.holders.LongHolder`-objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret).
+   * Ett tomt `javax.xml.rpc.holders.StringHolder`-objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde).
+   * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder`-objekt som innehåller resultatet av den här åtgärden.
 
-   The `renderPDFForm` metoden fyller i `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `renderPDFForm` fyller i objektet `com.adobe.idp.services.holders.FormsResultHolder` som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa en `FormResult` genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder` objektets `value` datamedlem.
-   * Skapa en `javax.servlet.ServletOutputStream` som används för att skicka en formulärdataström till klientens webbläsare.
-   * Skapa en `BLOB` objekt som innehåller formulärdata genom att anropa `FormsResult` objektets `getOutputContent` -metod.
-   * Skapa en bytearray och fylla i den genom att anropa `BLOB` objektets `getBinaryData` -metod. Den här aktiviteten tilldelar innehållet i `FormsResult` till bytearrayen.
-   * Anropa `javax.servlet.http.HttpServletResponse` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
+   * Skapa ett `FormResult`-objekt genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder`-objektets `value`-datamedlem.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skicka en formulärdataström till klientens webbläsare.
+   * Skapa ett `BLOB`-objekt som innehåller formulärdata genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+   * Skapa en bytearray och fyll i den genom att anropa `BLOB`-objektets `getBinaryData`-metod. Den här aktiviteten tilldelar innehållet i objektet `FormsResult` till bytearrayen.
+   * Anropa `javax.servlet.http.HttpServletResponse`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 

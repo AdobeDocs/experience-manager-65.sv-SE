@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Anpassad fristående installation{#custom-standalone-install}
 
-I det här avsnittet beskrivs de alternativ som är tillgängliga när du installerar en fristående AEM. Du kan även läsa [Lagringselement](/help/sites-deploying/storage-elements-in-aem-6.md) om du vill ha mer information om hur du väljer lagringstyp för serverdelen efter att du nyligen har installerat AEM 6.
+I det här avsnittet beskrivs de alternativ som är tillgängliga när du installerar en fristående AEM. Du kan även läsa [Lagringselement](/help/sites-deploying/storage-elements-in-aem-6.md) om du vill ha mer information om hur du väljer lagringstyp för serverdelen efter att du har installerat AEM 6.
 
 ## Ändra portnumret genom att byta namn på filen {#changing-the-port-number-by-renaming-the-file}
 
@@ -28,7 +28,7 @@ Det finns olika regler som ska följas när man byter namn på filen quickstart 
 
 * När du byter namn på filen måste den börja med `cq;` som i `cq5-publish-p4503.jar`.
 
-* Vi rekommenderar att du *alltid* ange portnumret med -p; som i cq5-publish-p4503.jar eller cq5-author-p6754.jar.
+* Vi rekommenderar att du *alltid* anger portnumret med -p, som i cq5-publish-p4503.jar eller cq5-author-p6754.jar.
 
 >[!NOTE]
 >
@@ -42,19 +42,19 @@ Det finns olika regler som ska följas när man byter namn på filen quickstart 
 
 >[!NOTE]
 >
->Du kan också ändra portnumret med `-port` i kommandot start.
+>Du kan också ändra portnumret med alternativet `-port` i startkommandot.
 
 ### Java 11 - överväganden {#java-considerations}
 
 Om du kör Oracle Java 11 (eller vanligtvis versioner av Java nyare än 8) måste ytterligare växlar läggas till på kommandoraden när du startar AEM.
 
-* Följande - `-add-opens` behöver läggas till för att förhindra att relaterade reflektioner får åtkomst till VARNINGSmeddelanden i `stdout.log`
+* Följande - `-add-opens` växlar måste läggas till för att förhindra relaterade reflektionsåtkomstvarningsmeddelanden i `stdout.log`
 
 ```shell
 --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning
 ```
 
-* Dessutom måste du använda `-XX:+UseParallelGC` för att minska eventuella prestandaproblem.
+* Dessutom måste du använda växeln `-XX:+UseParallelGC` för att minska eventuella prestandaproblem.
 
 Nedan visas ett exempel på hur de ytterligare JVM-parametrarna ska se ut när AEM startas i Java 11:
 
@@ -62,19 +62,19 @@ Nedan visas ett exempel på hur de ytterligare JVM-parametrarna ska se ut när A
 -XX:+UseParallelGC --add-opens=java.desktop/com.sun.imageio.plugins.jpeg=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED --add-opens=java.naming/javax.naming.spi=ALL-UNNAMED --add-opens=java.xml/com.sun.org.apache.xerces.internal.dom=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED -Dnashorn.args=--no-deprecation-warning
 ```
 
-Om du kör en instans som är uppgraderad från AEM 6.3 ska du kontrollera att följande egenskap är inställd på **true** under `sling.properties`:
+Om du kör en instans som har uppgraderats från AEM 6.3 ska du kontrollera att följande egenskap är inställd på **true** under `sling.properties`:
 
 * `felix.bootdelegation.implicit`
 
 ## Körningslägen {#run-modes}
 
-**Körningslägen** kan du trimma AEM för ett specifikt ändamål, till exempel författare eller publicera, testa, utveckling, intranät och så vidare. Med de här lägena kan du styra användningen av exempelinnehåll. Det här exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer och så vidare. Detta kan vara särskilt användbart för produktionsklara installationer när du vill hålla installationen smidig och utan exempelinnehåll. Mer information finns i:
+Med **körningslägena** kan du trimma AEM för ett specifikt ändamål, till exempel författare eller publicera, testa, utveckling, intranät och så vidare. Med de här lägena kan du styra användningen av exempelinnehåll. Det här exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer och så vidare. Detta kan vara särskilt användbart för produktionsklara installationer när du vill hålla installationen smidig och utan exempelinnehåll. Mer information finns i:
 
 * [Körningslägen](/help/sites-deploying/configure-runmodes.md)
 
 ## Lägga till en filinstallationsprovider {#adding-a-file-install-provider}
 
-Som standard är mappen `crx-quickstart/install` bevakas för filer.
+Som standard bevakas mappen `crx-quickstart/install` för filer.
 Den här mappen finns inte, men kan skapas under körning.
 
 Om ett paket, en konfiguration eller ett innehållspaket placeras i den här katalogen hämtas det automatiskt och installeras. Om den tas bort avinstalleras den.
@@ -84,19 +84,19 @@ Detta är särskilt intressant för flera användningsområden:
 
 * Under utvecklingen kan det vara enklare att lägga in något i filsystemet.
 * Om något går fel går det inte att nå webbkonsolen och databasen. Med detta kan du lägga in ytterligare paket i den här katalogen och de bör installeras.
-* The `crx-quickstart/install` kan skapas innan snabbstart startas och ytterligare paket kan placeras där.
+* Mappen `crx-quickstart/install` kan skapas innan snabbstart startas och ytterligare paket kan placeras där.
 
 >[!NOTE]
 >
->Se även [Så här installerar du CRX-paket automatiskt när servern startas](https://helpx.adobe.com/experience-manager/kb/HowToInstallPackagesUsingRepositoryInstall.html) till exempel.
+>Se även [Så här installerar du CRX-paket automatiskt när servern startar](https://helpx.adobe.com/experience-manager/kb/HowToInstallPackagesUsingRepositoryInstall.html) för exempel.
 
 ## Installera och starta Adobe Experience Manager som en Windows-tjänst {#installing-and-starting-adobe-experience-manager-as-a-windows-service}
 
 >[!NOTE]
 >
->Var noga med att utföra följande procedur när du är inloggad som administratör eller starta/kör dessa steg med hjälp av **Kör som administratör** val av snabbmeny.
+>Var noga med att utföra följande procedur när du är inloggad som administratör eller starta/kör dessa steg med snabbmenyvalet **Kör som administratör**.
 >
->Loggas in som en användare med administratörsbehörighet **otillräcklig**. Om du inte är inloggad som administratör när du slutför dessa steg får du **Åtkomst nekad** fel.
+>Inloggningen som användare med administratörsbehörighet är **otillräcklig**. Om du inte är inloggad som administratör när du slutför de här stegen får du felmeddelanden om **åtkomst nekad**.
 
 Så här installerar och startar du AEM som en Windows-tjänst:
 
@@ -108,7 +108,7 @@ Så här installerar och startar du AEM som en Windows-tjänst:
 
    Det här kommandot anropar rätt skript som startar Windows-tjänstdaemon i 64-bitars Java i stället för 32-bitars Java.
 
-1. Om du vill förhindra processen från att förfalska mer än en process ökar du JVM-parametern för PermGen. Leta reda på `set jvm_options` och ange värdet enligt följande:
+1. Om du vill förhindra processen från att förfalska mer än en process ökar du JVM-parametern för PermGen. Leta reda på kommandot `set jvm_options` och ange värdet enligt följande:
 
    `set jvm_options=-Xmx1792m`
 
@@ -116,7 +116,7 @@ Så här installerar och startar du AEM som en Windows-tjänst:
 
    `instsrv.bat cq5`
 
-   Kontrollera att tjänsten har skapats genom att öppna Tjänster på kontrollpanelen Administrationsverktyg eller skriva `start services.msc` i kommandotolken. Cq5-tjänsten visas i listan.
+   Om du vill verifiera att tjänsten har skapats öppnar du Tjänster på kontrollpanelen Administrationsverktyg eller skriver `start services.msc` i kommandotolken. Cq5-tjänsten visas i listan.
 
 1. Starta tjänsten genom att göra något av följande:
 
@@ -140,11 +140,11 @@ Så här installerar och startar du AEM som en Windows-tjänst:
 >
 >När du installerar AEM som tjänst måste du ange den absoluta sökvägen för loggkatalogen i `com.adobe.xmp.worker.files.ncomm.XMPFilesNComm` från Configuration Manager.
 
-Om du vill avinstallera tjänsten klickar du på **Stoppa** i **Tjänster** navigera till mappen och skriv `instsrv.bat -uninstall cq5`. Tjänsten tas bort från listan i **Tjänster** kontrollpanelen eller från listan på kommandoraden när du skriver `net start`.
+Om du vill avinstallera tjänsten klickar du antingen på **Stoppa** på kontrollpanelen **Tjänster** eller på kommandoraden, navigerar till mappen och skriver `instsrv.bat -uninstall cq5`. Tjänsten tas bort från listan på kontrollpanelen **Tjänster** eller från listan på kommandoraden när du skriver `net start`.
 
 ## Definiera om platsen för den tillfälliga arbetskatalogen {#redefining-the-location-of-the-temporary-work-directory}
 
-Standardplatsen för den tillfälliga mappen på Java-datorn är `/tmp`. AEM använder den här mappen också när paket skapas.
+Standardplatsen för den temporära mappen för Java-datorn är `/tmp`. AEM använder den här mappen också när paket skapas.
 
 Om du vill ändra platsen för den tillfälliga mappen (till exempel om du behöver en katalog med mer ledigt utrymme) definierar du en * `<new-tmp-path>`* genom att lägga till JVM-parametern:
 
@@ -274,7 +274,7 @@ Log files
 
 ## Installera AEM i Amazon EC2-miljön {#installing-aem-in-the-amazon-ec-environment}
 
-När du installerar AEM på en Amazon Elastic Compute Cloud-instans (EC2) installeras Author-instansen korrekt om du installerar både författaren och publicerar på EC2-instansen enligt proceduren [Installerar instanser av AEM Manager](#installinginstancesofaemmanager); publiceringsinstansen blir dock författare.
+Om du installerar AEM på en Amazon Elastic Compute Cloud-instans (EC2) och du installerar både författaren och publiceringen på EC2-instansen installeras författarinstansen korrekt enligt proceduren [Installera instanser av AEM Manager](#installinginstancesofaemmanager). Publish-instansen blir dock författare.
 
 Innan du installerar Publish-instansen i EC2-miljön gör du följande:
 
@@ -286,7 +286,7 @@ Innan du installerar Publish-instansen i EC2-miljön gör du följande:
 
    >[!NOTE]
    >
-   >Om du ändrar läge **efter** när du startar instansen första gången kan du inte ändra körningsläget.
+   >Om du ändrar läget **efter att** startat instansen första gången kan du inte ändra körningsläget.
 
 1. Starta instansen genom att köra:
 
@@ -298,7 +298,7 @@ Innan du installerar Publish-instansen i EC2-miljön gör du följande:
    >
    >Kontrollera att du först kör instansen när du har packat upp den genom att köra kommandot ovan. Annars genereras inte fyllningen quickstart.properties. Utan den här filen kommer eventuella framtida AEM inte att kunna uppgraderas.
 
-1. I **bin** mapp, öppna **start** och kontrollera följande avsnitt:
+1. Öppna skriptet **start** i mappen **bin** och kontrollera följande avsnitt:
 
    ```xml
    # runmode(s)
@@ -307,7 +307,7 @@ Innan du installerar Publish-instansen i EC2-miljön gör du följande:
    fi
    ```
 
-1. Ändra runmode till **publicera** och spara filen.
+1. Ändra körningsläget till **publicera** och spara filen.
 
    ```xml
    # runmode(s)
@@ -316,7 +316,7 @@ Innan du installerar Publish-instansen i EC2-miljön gör du följande:
    fi
    ```
 
-1. Stoppa instansen och starta om den genom att köra **start** skript.
+1. Stoppa instansen och starta om den genom att köra skriptet **start**.
 
 ## Verifierar installationen {#verifying-the-installation}
 
@@ -332,19 +332,19 @@ Webbkonsolen.
 
 Även om det finns många möjligheter att konfigurera AEM WCM bör vissa åtgärder vidtas eller åtminstone granskas omedelbart efter installationen:
 
-* Läs [Säkerhetschecklista](/help/sites-administering/security-checklist.md) för uppgifter som krävs för att säkerställa att systemet förblir säkert.
-* Granska listan över standardanvändare och -grupper som installeras med AEM WCM. Kontrollera om du vill vidta åtgärder för andra konton - se [Säkerhet och användaradministration](/help/sites-administering/security.md) för mer information.
+* Gå till [checklistan för säkerhet](/help/sites-administering/security-checklist.md) för uppgifter som krävs för att säkerställa att systemet förblir säkert.
+* Granska listan över standardanvändare och -grupper som installeras med AEM WCM. Kontrollera om du vill vidta åtgärder för andra konton. Mer information finns i [Säkerhet och användaradministration](/help/sites-administering/security.md).
 
 ## Åtkomst till CRXDE Lite och webbkonsolen {#accessing-crxde-lite-and-the-web-console}
 
 När AEM WCM har startats kan du även få åtkomst till:
 
-* [CRXDE Lite](#accessing-crxde-lite) - används för att få åtkomst till och hantera databasen
+* [CRXDE Lite](#accessing-crxde-lite) - används för att komma åt och hantera databasen
 * [Webbkonsol](#accessing-the-web-console) - används för att hantera eller konfigurera OSGi-paket (kallas även OSGi-konsolen)
 
 ### Åtkomst till CRXDE Lite {#accessing-crxde-lite}
 
-Om du vill öppna CRXDE Lite kan du välja **CRXDE Lite** från välkomstskärmen eller använd webbläsaren för att navigera till
+Om du vill öppna CRXDE Lite kan du välja **CRXDE Lite** på välkomstskärmen eller använda webbläsaren för att navigera till
 
 ```
  https://<<i>host</i>>:<<i>port</i>>/crx/de/index.jsp
@@ -357,7 +357,7 @@ Till exempel:
 
 #### Åtkomst till webbkonsolen {#accessing-the-web-console}
 
-Om du vill komma åt Adobe CQ webbkonsol kan du välja **OSGi Console** från välkomstskärmen eller använd webbläsaren för att navigera till
+Om du vill komma åt Adobe CQ webbkonsol kan du välja **OSGi Console** från välkomstskärmen eller använda webbläsaren för att navigera till
 
 ```
  https://<host>:<port>/system/console
@@ -370,7 +370,7 @@ eller för sidan Bundles
 
 ![chlimage_1-14](assets/chlimage_1-14.png)
 
-Se [OSGi-konfiguration med webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console) för mer information.
+Mer information finns i [OSGi-konfiguration med webbkonsolen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-with-the-web-console).
 
 ## Felsökning {#troubleshooting}
 
@@ -386,6 +386,6 @@ Om beständig lagring är inbäddad i installationskatalogen, till exempel i sta
 
 >[!NOTE]
 >
->Adobe rekommenderar att du säkerhetskopierar databasen innan du tar bort AEM. Om du tar bort hela &lt;cq-installation-directory>tar du bort databasen. Behåll databasdata innan du tar bort, flytta eller kopiera &lt;cq-installation-directory>/crx-quickstart/databasmapp någon annanstans innan de andra mapparna tas bort.
+>Adobe rekommenderar att du säkerhetskopierar databasen innan du tar bort AEM. Om du tar bort hela &lt;cq-installation-directory> tar du bort databasen. Om du vill behålla databasdata innan du tar bort, flyttar eller kopierar du mappen &lt;cq-installation-directory>/crx-quickstart/database någon annanstans innan du tar bort de andra mapparna.
 
 Om din installation av AEM använder extern lagring, till exempel en databasserver, tas inte data bort automatiskt när du tar bort mappen, men lagringskonfigurationen tas bort, vilket gör det svårt att återställa JCR-innehållet.

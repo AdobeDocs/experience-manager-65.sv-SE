@@ -21,7 +21,7 @@ ht-degree: 0%
 Använd sidan Inbjudna och lokala användare för att hantera inbjudna och lokala användare. Den här sidan visas bara om följande krav uppfylls:
 
 * Du är en administratör som har tilldelats rollen Hantera inbjudna och lokala användare och användarrollen för administrationskonsolen. (Se [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).)
-* Inbjuden användarregistrering är aktiverat. (Se [Konfigurerar inbjuden användarregistrering](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
+* Inbjuden användarregistrering är aktiverat. (Se [Konfigurera registrering av inbjudna användare](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
 
 Sidan Inbjudna och lokala användare innehåller två flikar som du kan använda för att söka efter, visa, redigera, låsa, låsa upp och ta bort inbjude och lokala användarkonton.
 
@@ -38,7 +38,7 @@ Du kan lägga till ett eller flera inbjudna användarkonton i dokumentskyddet sa
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Inbjudna och lokala användare och sedan på Bjud in ny användare.
 1. Skriv e-postadresserna till de användare som du vill bjuda in. Ange flera adresser på en rad, avgränsade med kommatecken.
 
-   Meddelandet som du skapade när du aktiverade registrering för inbjudna användare skickas till användarna. (Se [Konfigurerar inbjuden användarregistrering](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
+   Meddelandet som du skapade när du aktiverade registrering för inbjudna användare skickas till användarna. (Se [Konfigurera registrering av inbjudna användare](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
 
 1. Klicka på OK.
 
@@ -63,7 +63,7 @@ När du lägger till en inbjuden användare skickar dokumentsäkerheten automati
 
 Du kan återställa lösenord för aktiverade inbjudna användare som har registrerat sig med dokumentsäkerhet men har glömt sitt lösenord. När du återställer ett lösenord skapas ett e-postmeddelande som innehåller ett nytt, tillfälligt lösenord för användaren.
 
-När du aktiverade den inbjudna användarregistreringsprocessen skapade du ett e-postmeddelande som kommer att skickas till användarna som ber dem att återställa sina lösenord. (Se [Konfigurerar inbjuden användarregistrering](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
+När du aktiverade den inbjudna användarregistreringsprocessen skapade du ett e-postmeddelande som kommer att skickas till användarna som ber dem att återställa sina lösenord. (Se [Konfigurera registrering av inbjudna användare](/help/forms/using/admin-help/configuring-client-server-options.md#configuring-invited-user-registration).)
 
 1. I administrationskonsolen klickar du på Tjänster > Dokumentsäkerhet > Inbjudna och lokala användare och sedan på fliken Lokala användare.
 1. Välj lämplig användare i användarlistan.

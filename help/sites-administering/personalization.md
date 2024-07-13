@@ -1,5 +1,5 @@
 ---
-title: Personalisering
+title: Personalization
 description: Lär dig mer om personalisering i Adobe Experience Manager för att ge användaren en skräddarsydd miljö med dynamiskt innehåll.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 ---
 
-# Personalisering {#personalization}
+# Personalization {#personalization}
 
-## Vad är personalisering? {#what-is-personalization}
+## Vad är Personalization? {#what-is-personalization}
 
 Det finns en allt större mängd innehåll idag, oavsett om det gäller webbplatser på internet, extranät eller intranät.
 
-Personalisering handlar om att förse användaren med en skräddarsydd miljö med dynamiskt innehåll som väljs ut utifrån deras specifika behov, oavsett om det handlar om fördefinierade profiler, användarval eller interaktivt användarbeteende.
+Personalization fokuserar på att förse användaren med en skräddarsydd miljö med dynamiskt innehåll som väljs ut utifrån deras specifika behov, oavsett om det baseras på fördefinierade profiler, användarval eller interaktivt användarbeteende.
 
 Personaliseringen består av tre huvuddelar:
 
@@ -43,7 +43,7 @@ Innehållet måste med andra ord på något sätt vara beroende av användaren. 
 
 * Definiera hur personalisering faktiskt sker - vilket innehåll användaren kan se och när.
 
-Personalisering kan antingen vara:
+Personalization kan vara antingen:
 
 #### Explicit {#explicit}
 
@@ -55,9 +55,9 @@ Personalisering kan antingen vara:
 * Enkel filtrering: val görs utifrån fördefinierade profiler på användar- och/eller gruppnivå.
 * Kollaborativ-/rekommendationsfiltrering: användarbeteendet registreras enligt fördefinierade regler. Dessa regler bygger på beteenden som observeras med likasinnade individer. Den insamlade informationen används för att anpassa den information som visas för användaren, särskilt i form av rekommendationer.
 
-## Hur och när kan personalisering användas? {#how-and-when-can-personalization-be-used}
+## Hur och när kan Personalization användas? {#how-and-when-can-personalization-be-used}
 
-Personalisering kan användas i många fall, till exempel:
+Personalization kan användas i många fall, till exempel:
 
 ### Intranätsidor {#intranet-pages}
 
@@ -79,12 +79,12 @@ Personalisering kan användas i många fall, till exempel:
 
 * Många av de stora sökmotorwebbplatserna har mycket kraftfulla analysverktyg som registrerar användarbeteende, söktermer de använder och de webbplatser de faktiskt besöker. Det används sedan för att anpassa innehållet - särskilt när det gäller att visa annonser.
 
-### Styrka personalisering och punkter att tänka på {#strengths-of-personalization-and-points-to-consider}
+### Styrkan hos Personalization och punkter att tänka på {#strengths-of-personalization-and-points-to-consider}
 
 Följande är skäl till att personalisering bör användas:
 
 * En användare kan uppleva en bekväm och fokuserad webbplats.
-* Personalisering kan användas för att automatiskt sprida åtkomst till den senaste versionen av innehåll.
+* Personalization kan användas för att automatiskt sprida åtkomst till den senaste versionen av innehåll.
 * Funktioner för socialt samarbete är tillgängliga så att användarna kan kommunicera med varandra, eftersom de kan identifieras av sina profiler.
 * En användare kan få det innehåll de behöver för att utföra en viss uppgift. I ett företags intranät kan detta vara ett värdefullt verktyg för att sprida information.
 * Användarna kan få det innehåll de behöver/vill ha, vilket minskar tiden de behöver utföra sökåtgärder.
@@ -99,7 +99,7 @@ Tänk på följande när du använder personalisering:
 
 #### Behörighet {#authorization}
 
-* Personalisering kräver en inloggningsfunktion eftersom webbplatsen måste kunna identifiera användaren.
+* Personalization kräver en inloggningsfunktion eftersom webbplatsen måste kunna identifiera användaren.
 
 #### Cachning {#caching}
 
@@ -108,32 +108,32 @@ Tänk på följande när du använder personalisering:
 
 >[!TIP]
 >
->Personaliseringens effekt på prestanda och relaterade cachelagringsämnen diskuteras vidare i dokumentet [Prestandaoptimering.](/help/sites-deploying/configuring-performance.md)
+>Personalization effekt på prestanda och relaterade cachelagringsämnen beskrivs närmare i dokumentet [Prestandaoptimering.](/help/sites-deploying/configuring-performance.md)
 
 #### Regelernas exakthet {#accuracy}
 
-* Personalisering som uppnås genom att spåra användarens beteende, eller genom att ställa in regler som baseras på användarens profil, måste vara korrekt och logiskt.
+* Personalization som realiseras genom att spåra användarens beteende, eller genom att ställa in regler baserat på användarens profil, måste vara korrekt och logiskt.
 * Det finns inget mer frustrerande för användaren än att ha innehåll som tvingats på eller nekats till dem på grund av den felaktiga logiken i en regel.
 * Därför måste regler vara väl genomtänkta - med användarens krav i förgrunden. Detta kan ta stora ansträngningar, och ska inte underskattas. Att definiera affärsreglerna uppväger ofta den tekniska ansträngningen vid personalisering.
 
 #### När ska användas {#when-to-use}
 
-* Precis som många andra funktioner på webben bör personalisering användas med försiktighet. Kommer användandet verkligen att gynna användaren? ska alltid vara det första övervägandet - eller om det önskade målet kan uppnås med mindre ansträngning med en annan metod. Personalisering kan innebära en risk att användaren konfigurerar en funktion (för att se hur den fungerar) och bara en gång - eftersom den inte ger några verkliga fördelar.
-* Personalisering är bara meningsfullt när innehållet är dynamiskt - beroende på användaren på något sätt. Om alla användare ser samma innehåll är personaliseringen överflödig.
+* Precis som många andra funktioner på webben bör personalisering användas med försiktighet. Kommer användandet verkligen att gynna användaren? ska alltid vara det första övervägandet - eller om det önskade målet kan uppnås med mindre ansträngning med en annan metod. Personalization kan riskera att bli en funktion som användarna konfigurerar en gång (för att se hur det fungerar) och bara en gång - eftersom det inte ger dem några verkliga fördelar.
+* Personalization är bara meningsfullt när innehållet är dynamiskt - beroende på användaren på något sätt. Om alla användare ser samma innehåll är personaliseringen överflödig.
 
 #### Sekretess {#confidentiality}
 
 * Många användare är oroade över dataskydd och -säkerhet. Särskilt när det gäller data som hämtats när de spåras när de surfar på webben.
 
-## Personalisering och åtkomst {#personalization-and-access}
+## Personalization och Access {#personalization-and-access}
 
-Personalisering bör beaktas separat från åtkomstkontroll, men de har en inbördes relation.
+Personalization ska behandlas separat från åtkomstkontrollen, men de har en inbördes relation.
 
-Personalisering i sig skapar inte någon form av åtkomstkontroll. Det är helt enkelt ett sätt att styra vad användaren ser. Det hindrar inte användaren från att få åtkomst till annat innehåll, och precis som med allt innehåll måste användaren ha rätt åtkomstkontroll tilldelad.
+Personalization skapar inte någon form av åtkomstkontroll. Det är helt enkelt ett sätt att styra vad användaren ser. Det hindrar inte användaren från att få åtkomst till annat innehåll, och precis som med allt innehåll måste användaren ha rätt åtkomstkontroll tilldelad.
 
 Åtkomstkontroll kan dock användas för att skapa en form av personalisering. Om du tillåter eller nekar en användare åtkomst till innehåll påverkar detta oundvikligen valet av innehåll som han/hon har tillgängligt, vilket innebär att hans/hennes webbupplevelse anpassas.
 
-## Komponenter tillgängliga för personalisering {#components-available-for-personalization}
+## Komponenter tillgängliga för Personalization {#components-available-for-personalization}
 
 Det finns olika komponenter för AEM. Vissa tillåter användare att logga in och redigera sina profiler, andra (som Mina gadgets) tillåter användarna att konfigurera en viss sida:
 
@@ -168,11 +168,11 @@ Det finns olika komponenter för AEM. Vissa tillåter användare att logga in oc
 | Tag Cloud | Ett taggmoln som visar ett grafiskt presenterat urval av taggar på webbplatsen |
 | Teaser | Ett innehåll (vanligtvis en bild) som visas på en huvudsida för att&quot;lura&quot; användarna att komma åt det underliggande innehållet. |
 
-## Personalisering och communityinnehåll {#personalization-and-community-content}
+## Personalization och communityinnehåll {#personalization-and-community-content}
 
-Community-funktioner som bloggar, forum och kalendrar resulterar i att användargenererat innehåll skapas, vilket ofta kallas användargenererat innehåll (UGC). När UGC anges i en publiceringsmiljö som består av flera AEM (en [publicera servergrupp](/help/communities/topologies.md)) har ett stort problem varit hur UGC ska synkroniseras i alla instanser.
+Community-funktioner som bloggar, forum och kalendrar resulterar i att användargenererat innehåll skapas, vilket ofta kallas användargenererat innehåll (UGC). När UGC anges i en publiceringsmiljö som består av flera AEM instanser (en [publiceringsgrupp](/help/communities/topologies.md)) har ett stort problem varit hur UGC ska synkroniseras i alla instanser.
 
-Med [AEM Communities 6.1](/help/communities/overview.md) kan problemet lösas med en [gemensam butik för UGC](/help/communities/working-with-srp.md). När det gäller personalisering innehåller Communities [Social inloggning](/help/communities/social-login.md) - möjligheten att ge besökarna möjlighet att logga in med Facebook och Twitter.
+Med tillägget [AEM Communities 6.1](/help/communities/overview.md) löses problemet genom att en [gemensam butik för UGC](/help/communities/working-with-srp.md) används. När det gäller personalisering innehåller Communities [social inloggning](/help/communities/social-login.md) - möjlighet att tillhandahålla alternativet för webbplatsbesökare att logga in med Facebook och Twitter.
 
 Utan Communities-tillägg kan olika metoder för att undersöka frågan om enhetlighet i användargenererat innehåll vara:
 

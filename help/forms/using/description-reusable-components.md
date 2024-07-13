@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Beskrivning av återanvändbara komponenter {#description-of-reusable-components}
 
-AEM Forms arbetsyta består av [återanvändbar](/help/forms/using/integrating-html-ws-components-web.md) komponenter som är organiserade i ett specifikt [mappstruktur](/help/forms/using/folder-structure.md) i CRX™. Varje komponent har modell-, vy- och mallfil på den plats som anges i mappstrukturen, JavaScript™-beroenden på andra komponentfiler, händelser som avlyssnas av komponenten och JavaScript-objekt som utlöser dessa händelser på arbetsytan i AEM Forms. En fullständig lista över återanvändbara komponenter med komponentens filnamn och beroenden anges här.
+AEM Forms arbetsyta består av [återanvändbara](/help/forms/using/integrating-html-ws-components-web.md) komponenter som är ordnade i en viss [mappstruktur](/help/forms/using/folder-structure.md) i CRX™. Varje komponent har modell-, vy- och mallfil på den plats som anges i mappstrukturen, JavaScript™-beroenden på andra komponentfiler, händelser som avlyssnas av komponenten och JavaScript-objekt som utlöser dessa händelser på AEM Forms arbetsyta. En fullständig lista över återanvändbara komponenter med komponentens filnamn och beroenden anges här.
 
 ## AktivitetLista {#tasklist}
 
@@ -110,7 +110,7 @@ AEM Forms arbetsyta består av [återanvändbar](/help/forms/using/integrating-h
 
 >[!NOTE]
 >
->Arbetsytan anropar funktionen fetchTasks i TaskList-modellen för att skapa aktivitetsmodeller för den här komponenten.
+>Workspace anropar funktionen fetchTasks i TaskList-modellen för att skapa aktivitetsmodeller för den här komponenten.
 
 ## FilterList {#filterlist}
 

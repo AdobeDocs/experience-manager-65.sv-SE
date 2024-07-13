@@ -22,24 +22,24 @@ Flera procedurer kräver att du stoppar eller startar instansen av WebSphere dä
 
 ## Visa status för WebSphere Application Server {#view-the-status-of-websphere-application-server}
 
-1. Gå till `[appserver root]/bin` katalog.
-1. Ange följande kommando och ersätt *server_name* med namnet på WebSphere Application Server:
+1. Gå till katalogen `[appserver root]/bin` från en kommandotolk.
+1. Ange följande kommando och ersätt *server_name* med namnet på WebSphere-programservern:
 
    * (Windows) `serverStatus.bat`*server_name*
    * (Linux, UNIX) ./ `serverStatus.sh`*server_name*
 
 ## Starta WebSphere Application Server {#start-websphere-application-server}
 
-1. Gå till `[appserver root]/bin` katalog.
-1. Ange följande kommando och ersätt *server_name* med namnet på WebSphere Application Server:
+1. Gå till katalogen `[appserver root]/bin` från en kommandotolk.
+1. Ange följande kommando och ersätt *server_name* med namnet på WebSphere-programservern:
 
    * (Windows) `startServer.bat`*server_name*
    * (Linux, UNIX) ./ `startServer.sh`*server_name*
 
 ## Stoppa WebSphere-programserver {#stop-websphere-application-server}
 
-1. Gå till `[appserver root]/bin` katalog.
-1. Ange följande kommando och ersätt *server_name* med namnet på WebSphere Application Server:
+1. Gå till katalogen `[appserver root]/bin` från en kommandotolk.
+1. Ange följande kommando och ersätt *server_name* med namnet på WebSphere-programservern:
 
    * (Windows) `stopServer.bat`*server_name*
    * (Linux, UNIX) ./ `stopServer.sh`*server_name*

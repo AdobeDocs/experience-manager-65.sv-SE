@@ -1,6 +1,6 @@
 ---
-title: Konfigurerar koppling för IBM&reg; Content Manager
-description: Konfigurera anslutningsprogrammet för IBM&reg; Content Manager för att möjliggöra kommunikation mellan AEM och IBM&reg; Content Manager.
+title: Konfigurera koppling för IBM&reg; Content Manager
+description: Konfigurera anslutningsprogrammet för IBM&reg; Content Manager för att aktivera kommunikation mellan AEM och IBM&reg; Content Manager.
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/connecting_to_a_content_management_system
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Konfigurera Connector för IBM® Content Manager{#configuring-connector-for-ibm-content-manager}
 
-Koppling för IBM® Content Manager möjliggör kommunikation mellan AEM och IBM® Content Manager. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_63).
+Koppling för IBM® Content Manager möjliggör kommunikation mellan AEM och IBM® Content Manager. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Konfigurera IBM® Content Manager-anslutningen {#configure-the-ibm-content-manager-connection}
 

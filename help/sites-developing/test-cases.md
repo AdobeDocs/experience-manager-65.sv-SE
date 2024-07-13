@@ -52,16 +52,18 @@ Automatisering av testfall är dock en betydande investering, så vissa aspekter
 
 När AEM testas är det av särskilt intresse med vissa detaljer:
 
-**Skapa och publicera miljöer**
+**Författare och Publish-miljöer**
 
-Även om det ingår i [Miljö](/help/sites-developing/the-basics.md#environments)är det värt att betona en avgörande faktor AEM testning.
+Även om det är täckt av [miljöer](/help/sites-developing/the-basics.md#environments) är det värt att markera en avgörande faktor AEM testning.
 
 AEM som två program:
 
-* den *Upphovsman* miljö Den här instansen tillåter författare att ange och publicera innehåll.
+* miljön *Författare*
+Den här instansen tillåter författare att ange och publicera innehåll.
 Detta har en liten(er), förutsägbar uppsättning användare, för vilka specifika funktioner och prestanda är avgörande.
 
-* den *Publicera* miljö Den här instansen visar webbplatsen i dess publicerade form så att besökarna kan komma åt den.
+* *Publish*-miljön
+I den här instansen visas webbplatsen i dess publicerade form så att besökarna kan komma åt den.
 Detta har vanligtvis en större uppsättning användare, där trafikvolymen inte alltid är helt förutsägbar. Prestanda är fortfarande avgörande - vid svar på förfrågningar. Överväg även cachning och lastbalansering.
 
 Även om de är samma programvara:
@@ -74,7 +76,7 @@ Detta har vanligtvis en större uppsättning användare, där trafikvolymen inte
 
 Med andra ord måste de testas separat och med olika testfall.
 
-**Personalisering**
+**Personalization**
 
 Vid testning av personalisering ska varje enskilt användningsfall upprepas med hjälp av flera användarkonton för att bevisa beteendet.
 
@@ -82,7 +84,7 @@ Kontrollera även att cachning fungerar korrekt.
 
 **Dispatcher**
 
-I de flesta projekt installeras Dispatcher för cachelagring och belastningsutjämning.
+De flesta projekt installerar Dispatcher för cachelagring och lastbalansering.
 
 Testningen är svår (cachelagring sker på olika nivåer och på olika platser) och måste göras i svarta lådor. Viktiga aspekter att testa:
 

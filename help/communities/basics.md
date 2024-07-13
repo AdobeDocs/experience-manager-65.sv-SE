@@ -22,7 +22,7 @@ ht-degree: 0%
 
 I redigeringsavsnittet i dokumentationen beskrivs hur du lägger till communityfunktioner AEM webbplatser i redigeringsläge för författare och beskriver komponentkonfigurationer.
 
-Komponenter kan utforskas med hjälp av en AEM och den interaktiva [Community Components Guide](components-guide.md).
+Komponenter kan utforskas med hjälp av en AEM och den interaktiva [Community Components-guiden](components-guide.md).
 
 ## Åtkomst till webbgruppskomponenter {#accessing-communities-components}
 
@@ -32,19 +32,19 @@ Tillgängliga webbgruppskomponenter visas [här](author-communities.md#available
 
 >[!NOTE]
 >
->Allmän redigeringsinformation finns i [snabbguide till framtagning av sidor](../../help/sites-authoring/qg-page-authoring.md).
+>Allmän redigeringsinformation finns i [snabbguiden för redigering av sidor](../../help/sites-authoring/qg-page-authoring.md).
 >
 >Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
 
 ### Gå in i designläge {#entering-design-mode}
 
-Om en **Communities** -komponenten finns inte i komponentwebbläsaren (sidespark). Du måste ange `Design Mode` om du vill lägga till andra webbgruppskomponenter. [Nödvändiga bibliotek på klientsidan](#required-clientlibs) (klientlibs) kan också behöva läggas till.
+Om en **Communities**-komponent inte hittas i komponentwebbläsaren (sidespark) måste du ange `Design Mode` för att lägga till andra Communities-komponenter. [Nödvändiga klientbibliotek](#required-clientlibs) (klientbibliotek) kan också behöva läggas till.
 
 Mer information finns i [Konfigurera komponenter i designläge](../../help/sites-authoring/default-components-designmode.md).
 
 Nedan följer bilder på hur du väljer ett fåtal webbgruppskomponenter och visar dem i komponentwebbläsaren:
 
-![komponentdesign](assets/component-design.png)
+![komponent-design](assets/component-design.png)
 
 De valda komponenterna är nu tillgängliga i komponentwebbläsaren:
 
@@ -52,7 +52,7 @@ De valda komponenterna är nu tillgängliga i komponentwebbläsaren:
 
 ## Nödvändiga klienter {#required-clientlibs}
 
-[Bibliotek på klientsidan](../../help/sites-developing/clientlibs.md) (clientlibs) krävs för att en komponent ska fungera korrekt (JavaScript) och formatera (CSS).
+[Klientbibliotek](../../help/sites-developing/clientlibs.md) (klientbibliotek) krävs för att en komponent ska fungera korrekt (JavaScript) och formatera (CSS).
 
 När du lägger till en webbgruppskomponent på en sida och resultatet är ett fel eller ett oväntat utseende, är det första du bör försöka att lägga till nödvändiga klientlibs för webbkomponenterna. Mer information finns i [Clientlibs for Communities Components](clientlibs.md).
 
@@ -68,11 +68,11 @@ När du lägger till en webbgruppskomponent på en sida och resultatet är ett f
 
 Många webbgruppsfunktioner kan konfigureras så att medlemmar kan tagga innehåll som anges (publiceras) i publiceringsmiljön.
 
-Om taggning tillåts kan communityplatsens konfiguration ställas in så att den begränsar de namnutrymmen som visas för medlemmar i publiceringsmiljön. Se [Konsol för communityplatser](sites-console.md#tagging).
+Om taggning tillåts kan communityplatsens konfiguration ställas in så att den begränsar de namnutrymmen som visas för medlemmar i publiceringsmiljön. Se konsolen [Community Sites](sites-console.md#tagging).
 
 Funktioner som tillåter taggning: [blogg](blog-feature.md), [kalender](calendar.md), [filbibliotek](file-library.md), [forum](forum.md)
 
-Funktioner som använder taggar: [sök](search.md), [social tag cloud](tagcloud.md)
+Funktioner som använder taggar: [sök](search.md), [socialt taggmoln](tagcloud.md)
 
 För redigeringsinformation:
 
@@ -80,8 +80,8 @@ För redigeringsinformation:
 
 För administrativ information:
 
-* Skapa taggnamnutrymmen (taxonomi): [Administrera taggar](../../help/sites-administering/tags.md)
-* Konfiguration av communityplats: se [TAGGNING](sites-console.md#tagging)
+* Skapar taggnamnutrymmen (taxonomi): [Administrera taggar](../../help/sites-administering/tags.md)
+* Konfiguration av communityplats: se [TAGGING](sites-console.md#tagging)
 * [Tagga användargenererat innehåll](../../help/sites-authoring/tags.md)
 
 För utvecklarinformation:

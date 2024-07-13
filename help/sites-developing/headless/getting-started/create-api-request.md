@@ -1,6 +1,6 @@
 ---
 title: Komma åt och leverera innehållsfragment Headless Quick Start Guide
-description: Lär dig använda AEM Assets REST API för att hantera innehållsfragment och GraphQL API för headless-leverans av Content Fragment-innehåll.
+description: Lär dig hur du använder AEM Assets REST API för att hantera innehållsfragment och GraphQL API för headless-leverans av Content Fragment-innehåll.
 exl-id: 4664b3a4-4873-4f42-b59d-aadbfaa6072f
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
@@ -18,11 +18,11 @@ Lär dig hur du använder AEM Assets REST API för att hantera innehållsfragmen
 
 ## Vad är GraphQL och Assets REST API:er? {#what-are-the-apis}
 
-[Nu när du har skapat några innehållsfragment,](create-content-fragment.md) kan du använda AEM-API:er för att leverera dem utan problem.
+[Nu när du har skapat några innehållsfragment ](create-content-fragment.md) kan du använda AEM API:er för att leverera dem utan problem.
 
-* [GRAPHQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) Med kan du skapa förfrågningar om åtkomst och leverans av innehållsfragment.
-   * Om du vill använda det här [slutpunkter måste definieras och aktiveras i AEM](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint)och, om det behövs, [GraphiQL-gränssnittet är installerat](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface).
-* [Resursens REST API](/help/assets/assets-api-content-fragments.md) I kan du skapa och ändra innehållsfragment (och andra resurser).
+* [Med GraphQL-API:t](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md) kan du skapa begäranden om åtkomst till och leverans av innehållsfragment.
+   * Om du vill använda detta måste [slutpunkter definieras och aktiveras i AEM](/help/sites-developing/headless/graphql-api/graphql-endpoint.md#enabling-graphql-endpoint), och om det behövs måste [GraphiQL-gränssnittet vara installerat](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#installing-graphiql-interface).
+* [Med Assets REST API](/help/assets/assets-api-content-fragments.md) kan du skapa och ändra innehållsfragment (och andra resurser).
 
 Resten av guiden fokuserar på GraphQL åtkomst och leverans av innehållsfragment.
 
@@ -30,16 +30,16 @@ Resten av guiden fokuserar på GraphQL åtkomst och leverans av innehållsfragme
 
 Informationsarkitekterna måste utforma frågor så att deras kanalslutpunkter kan leverera innehåll. Ta endast hänsyn till dessa frågor en gång per slutpunkt, per modell. Skapa bara en startguide för den här guiden.
 
-1. Logga in AEM och få åtkomst till [GraphiQL-gränssnitt](/help/sites-developing/headless/graphql-api/graphiql-ide.md):
+1. Logga in AEM och öppna [GraphiQL-gränssnittet](/help/sites-developing/headless/graphql-api/graphiql-ide.md):
    * Till exempel: `http://<host>:<port>/aem/graphiql.html`.
 
 1. GraphiQL är en frågeredigerare i webbläsaren för GraphQL. Du kan använda den för att skapa frågor för att hämta innehållsfragment och leverera dem helhjärtat som JSON.
    * På den vänstra panelen kan du skapa din fråga.
    * Resultatet visas på den högra panelen.
    * Frågeredigeraren har funktioner för kodkomplettering och snabbtangenter för att enkelt köra frågan.
-     ![GraphiQL editor](assets/graphiql.png)
+     ![GraphiQL-redigerare](assets/graphiql.png)
 
-1. Anta att modellen du skapade anropades `person` med fält `firstName`, `lastName`och `position`kan du skapa en enkel fråga som hämtar innehållet i innehållsfragmentet.
+1. Om du utgår ifrån att den modell du skapade anropades med fälten `firstName`, `lastName` och `position` kan du skapa en enkel fråga för att hämta innehållet i innehållsfragmentet.`person`
 
    ```text
    query 
@@ -60,13 +60,13 @@ Informationsarkitekterna måste utforma frågor så att deras kanalslutpunkter k
    ![GraphiQL query](assets/graphiql-query.png)
 -->
 
-1. Klicka på **Kör fråga** (högerpil) eller använd `Ctrl-Enter` snabbtangenten och resultatet visas som JSON i den högra panelen.
+1. Klicka på ikonen **Kör fråga** (högerpil) eller använd snabbtangenten `Ctrl-Enter` så visas resultatet som JSON i den högra panelen.
    ![GraphiQL-resultat](assets/graphiql-results.png)
 
 1. Klicka:
-   * **Dokument** längst upp till höger på sidan om du vill visa sammanhangsberoende dokumentation som hjälper dig att skapa frågor som anpassar sig till dina egna modeller.
+   * **Dokument** längst upp till höger på sidan om du vill visa sammanhangsberoende dokumentation som hjälper dig att skapa frågor som anpassar sig efter dina egna modeller.
    * **Historik** i det övre verktygsfältet om du vill visa tidigare frågor.
-   * **Spara som** och **Spara** för att spara dina frågor, därefter kan du visa och hämta dem från **Beständiga frågor** panel och **Publicera**.
+   * **Spara som** och **Spara** om du vill spara dina frågor. Därefter kan du visa och hämta dem från panelen **Beständiga frågor** och **Publish**.
      ![GraphiQL-dokumentation](assets/graphiql-documentation.png)
 
 GraphQL möjliggör strukturerade frågor som inte bara kan rikta sig till specifika datauppsättningar eller enskilda dataobjekt, utan även kan leverera specifika element i objekten, kapslade resultat, har stöd för frågevariabler och mycket annat.
@@ -77,9 +77,9 @@ GraphQL kan undvika iterativa API-begäranden och överleverans. I stället kan 
 
 Så ja! Ni har nu en grundläggande förståelse för innehållshantering utan problem i AEM. Det finns många fler resurser där du kan fördjupa dig för att få en heltäckande bild av de funktioner som finns.
 
-* **[Konfigurationsläsaren](create-configuration.md)** - Mer information om AEM Configuration Browser
+* **[Konfigurationsläsaren](create-configuration.md)** - Mer information om AEM konfigurationsläsare
 * **[Innehållsfragment](/help/assets/content-fragments/content-fragments.md)** - Mer information om hur du skapar och hanterar innehållsfragment
-* **[GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)** för mer information om hur du använder GraphiQL IDE
+* **[GraphiQL IDE](/help/sites-developing/headless/graphql-api/graphiql-ide.md)** om du vill ha mer information om hur du använder GraphiQL IDE
 * **[Beständiga frågor](/help/sites-developing/headless/graphql-api/persisted-queries.md)** för mer information om beständiga frågor
 * **[Stöd för innehållsfragment i AEM Assets HTTP API](/help/assets/assets-api-content-fragments.md)** - Mer information om hur du får åtkomst till AEM direkt via HTTP API, via CRUD-åtgärder (Create, Read, Update, Delete)
-* **[GRAPHQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)** - Mer information om hur du levererar innehållsfragment utan problem
+* **[GraphQL API](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)** - Mer information om hur du skickar innehållsfragment utan problem

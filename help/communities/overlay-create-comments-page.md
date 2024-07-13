@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Skapa kommentarsida {#create-comments-page}
 
-**[Komponenten ⇐ överläggskommentarer](overlay-comments.md) [Skapa noder¥](overlay-create-nodes.md)**
+**[⇐ överläggskommentarkomponent](overlay-comments.md) [Skapa noder¥](overlay-create-nodes.md)**
 
 ## Kommentarsida {#comments-page}
 
-The [Community Components Guide](components-guide.md) gör att du enkelt kan få en överlagring av kommentarkomponenten.
+Med hjälp av guiden [Community Components](components-guide.md) kan du enkelt ta del av kommentarkomponenten.
 
 Visa sidan på författarinstansen:
 
@@ -30,4 +30,4 @@ Visa sidan på författarinstansen:
 
 ![kommentarer](assets/comments.png)
 
-**[Komponenten ⇐ överläggskommentarer](overlay-comments.md) [Skapa noder¥](overlay-create-nodes.md)**
+**[⇐ överläggskommentarkomponent](overlay-comments.md) [Skapa noder¥](overlay-create-nodes.md)**

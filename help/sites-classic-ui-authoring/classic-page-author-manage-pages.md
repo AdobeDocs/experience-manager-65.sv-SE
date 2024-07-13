@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Skapa och ordna sidor{#creating-and-organizing-pages}
 
-I det här avsnittet beskrivs hur du skapar och hanterar sidor med Adobe Experience Manager (AEM) så att du sedan kan [skapa innehåll](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) på de sidorna.
+I det här avsnittet beskrivs hur du skapar och hanterar sidor med Adobe Experience Manager (AEM) så att du sedan kan [skapa innehåll](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md) på dessa sidor.
 
 >[!NOTE]
 >
->Ditt konto behöver [lämpliga åtkomsträttigheter](/help/sites-administering/security.md) och [behörigheter](/help/sites-administering/security.md#permissions) om du vill utföra åtgärder på sidor, till exempel skapa, kopiera, flytta, redigera, ta bort.
+>Ditt konto behöver [lämpliga åtkomsträttigheter](/help/sites-administering/security.md) och [behörigheter](/help/sites-administering/security.md#permissions) för att kunna utföra åtgärder på sidor, till exempel skapa, kopiera, flytta, redigera, ta bort.
 >
 >Om du råkar ut för problem rekommenderar vi att du kontaktar systemadministratören.
 
@@ -33,21 +33,21 @@ Som författare måste du ordna din webbplats inom AEM. Detta innebär att du sk
 * kan du enkelt hitta dem i redigeringsmiljön
 * besökare på er webbplats kan enkelt bläddra bland dem i publiceringsmiljön
 
-Du kan också använda [mappar](#creating-a-new-folder) för att ordna innehållet.
+Du kan också använda [mappar](#creating-a-new-folder) för att ordna ditt innehåll.
 
 Strukturen på en webbplats kan ses som en *trädstruktur* som innehåller dina innehållssidor. Namnen på dessa innehållssidor används för att skapa URL-adresserna, medan titeln visas när sidinnehållet visas.
 
-I följande exempel visas ett utdrag från webbplatsen Geometrixx där t.ex. `Triangle` sidan öppnas:
+Här nedan visas ett utdrag från webbplatsen för Geometrixx. Där kan du till exempel komma åt sidan `Triangle`:
 
 * Författarmiljö
 
   `http://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-* Publiceringsmiljö
+* Publish
 
   `http://localhost:4503/content/geometrixx/en/products/triangle.html`
 
-  Beroende på instansens konfiguration kan du använda `/content` kan vara valfritt i publiceringsmiljön.
+  Beroende på konfigurationen för din instans kan det vara valfritt att använda `/content` i publiceringsmiljön.
 
 ```xml
   /content
@@ -69,7 +69,7 @@ I följande exempel visas ett utdrag från webbplatsen Geometrixx där t.ex. `Tr
     /...
 ```
 
-Den här strukturen kan visas från webbplatskonsolen som du kan använda för att [navigera i trädstrukturen](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15).
+Den här strukturen kan visas från webbplatskonsolen, som du kan använda för att [navigera i trädstrukturen](/help/sites-classic-ui-authoring/author-env-basic-handling.md#main-pars-text-15).
 
 ![chlimage_1-151](assets/chlimage_1-151.png)
 
@@ -87,7 +87,7 @@ När du skapar en sida finns det två nyckelfält:
    * Detta används för att generera URI.
    * Användarindata för det här fältet är valfria. Om inget anges hämtas namnet från titeln.
 
-När du skapar en sida AEM [validerar sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
+När du skapar en sida validerar AEM [sidnamnet enligt konventionerna ](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört.
 
 Implementeringen och listan över tillåtna tecken skiljer sig något beroende på användargränssnittet (det är mer omfattande för det beröringsaktiverade användargränssnittet), men det minsta tillåtna är:
 
@@ -95,33 +95,33 @@ Implementeringen och listan över tillåtna tecken skiljer sig något beroende p
 * A till Z
 * 0 till 9
 * _ (understreck)
-* `-` (minus/bindestreck)
+* `-` (bindestreck/minustecken)
 
-Använd bara dessa tecken om du vill vara säker på att de accepteras/används (om du behöver fullständig information om alla tillåtna tecken finns mer information i [namnkonventioner](/help/sites-developing/naming-conventions.md)).
+Använd bara dessa tecken om du vill vara säker på att de accepteras/används (om du behöver fullständig information om alla tecken som tillåts, se [namnkonventionen](/help/sites-developing/naming-conventions.md)).
 
 #### Titel {#title}
 
-Om du bara anger en sida **Titel** när du skapar en sida, hämtar AEM sidan **Namn** från denna sträng och [validera namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR. I båda användargränssnitten är **Titel** fält som innehåller ogiltiga tecken accepteras, men det härledda namnet får de ogiltiga tecknen understött. Till exempel:
+Om du bara anger sidan **Rubrik** när du skapar en sida, hämtar AEM sidan **Namn** från den här strängen och [validerar namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört. I båda gränssnitten accepteras ett **Title**-fält som innehåller ogiltiga tecken, men det härledda namnet har de ogiltiga tecknen. Till exempel:
 
 | Titel | Härlett namn |
 |---|---|
 | Schön | schoen.html |
-| SC%&amp;ast;ç+ | sc---c-.html |
+| SC%&amp;&amp;ast;ç+ | sc---c-.html |
 
 #### Namn {#name}
 
-Om du anger en sida **Namn** när du skapar en sida, AEM [validerar namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som ålagts av AEM och JCR.
+Om du anger en sida **Namn** när du skapar en sida, validerar AEM [namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR tillämpar.
 
-I det klassiska användargränssnittet **kan inte ange ogiltiga tecken** i **Namn** fält.
+I det klassiska användargränssnittet kan du **inte ange ogiltiga tecken** i fältet **Namn**.
 
 >[!NOTE]
->I det pekaktiverade användargränssnittet **kan inte skicka ogiltiga tecken** i **Namn** fält. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+>I det beröringsaktiverade användargränssnittet kan du **inte skicka ogiltiga tecken** i fältet **Namn**. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
 
 >[!NOTE]
 >
 >Du bör undvika att använda en kod med två bokstäver enligt ISO-639-1, om det inte är en språkrot.
 >
->Se [Förbereder innehåll för översättning](/help/sites-administering/tc-prep.md) för mer information.
+>Mer information finns i [Förbereder innehåll för översättning](/help/sites-administering/tc-prep.md).
 
 ### Mallar {#templates}
 
@@ -150,7 +150,7 @@ Komponenterna är de element som AEM tillhandahåller så att du kan lägga till
 * Video
 * många fler
 
-När du har skapat och öppnat en sida kan du [lägga till innehåll med komponenterna](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph), finns på [sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick).
+När du har skapat och öppnat en sida kan du [lägga till innehåll med hjälp av komponenterna](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#insertinganewparagraph), som är tillgängliga från [sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekick).
 
 ## Hantera sidor {#managing-pages}
 
@@ -158,23 +158,23 @@ När du har skapat och öppnat en sida kan du [lägga till innehåll med kompone
 
 Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida innan du kan börja skapa innehåll:
 
-1. Från **Webbplatser** väljer du den nivå där du vill skapa en sida.
+1. I konsolen **Webbplatser** väljer du på vilken nivå du vill skapa en sida.
 
-   I följande exempel skapar du en sida under nivån **Produkter** - visas i den vänstra rutan; den högra rutan visar sidor som redan finns på nivån under **Produkter**.
+   I följande exempel skapar du en sida under nivån **Produkter**, som visas i den vänstra rutan. I den högra rutan visas sidor som redan finns på nivån under **Produkter**.
 
    ![screen_shot_2012-02-15at114413am](assets/screen_shot_2012-02-15at114413am.png)
 
-1. I **Nytt...** (klicka på pilen bredvid **Nytt...**), välja **Ny sida...**. The **Skapa sida** öppnas.
+1. Välj **Ny sida..** på menyn **Ny...** (klicka på pilen bredvid **Ny...**). Fönstret **Skapa sida** öppnas.
 
-   Klicka **Nytt...** fungerar också som en genväg till **Ny sida...** alternativ.
+   Om du klickar på **Ny..** fungerar det också som en genväg till alternativet **Ny sida..**.
 
-1. The **Skapa sida** kan du
+1. I dialogrutan **Skapa sida** kan du:
 
-   * Ange en **Titel**; detta visas för användaren.
-   * Ange en **Namn**; den används för att generera URI:n. Om inget anges hämtas namnet från titeln.
+   * Ange en **titel**. Den visas för användaren.
+   * Ange ett **namn**. Detta används för att generera URI:n. Om inget anges hämtas namnet från titeln.
 
-      * Om du anger en sida **Namn** när du skapar en sida, AEM [validerar namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) av AEM och JCR.
-      * I det klassiska användargränssnittet **kan inte ange ogiltiga tecken** i **Namn** fält.
+      * Om du anger sidan **Namn** när du skapar en sida, validerar AEM [namnet enligt konventionerna ](/help/sites-developing/naming-conventions.md) som AEM och JCR har angett.
+      * I det klassiska användargränssnittet kan du **inte ange ogiltiga tecken** i fältet **Namn**.
 
    * Klicka på den mall som du vill använda för att skapa den nya sidan.
 
@@ -184,29 +184,29 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    >
    >Se [Konventioner för sidnamngivning](#page-naming-conventions).
 
-   Minimiinformationen som krävs för att skapa en sida är **Titel** och den mall som krävs.
+   Den information som krävs för att skapa en sida är **Rubrik** och den mall som krävs.
 
    ![screen_shot_2012-02-15at114845am](assets/screen_shot_2012-02-15at114845am.png)
 
    >[!NOTE]
    >
-   >Om du vill använda Unicode-tecken i URL-adresserna anger du aliaset ( `sling:alias`), egenskap ([sidegenskaper](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)).
+   >Om du vill använda Unicode-tecken i URL-adresserna anger du aliasegenskapen ( `sling:alias`) ([sidegenskaper](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md)).
 
-1. Klicka **Skapa** för att skapa sidan. Du går tillbaka till **Webbplatser** konsol där du kan se en post för den nya sidan.
+1. Klicka på **Skapa** för att skapa sidan. Du kommer tillbaka till konsolen **Webbplatser** där du kan se ett inlägg för den nya sidan.
 
    Konsolen ger information om sidan (till exempel när den senast redigerades och av vem) som uppdateras efter behov.
 
    >[!NOTE]
    >
-   >Du kan också skapa en sida när du redigerar en befintlig sida. Använda **Skapa underordnad sida** från **Sida** -fliken i sidsparken skapar en sida direkt under den sida som redigeras.
+   >Du kan också skapa en sida när du redigerar en befintlig sida. Om du använder **Skapa underordnad sida** från fliken **Sida** i sidosparken skapas en sida direkt under sidan som redigeras.
 
 ### Öppna en sida för redigering {#opening-a-page-for-editing}
 
-Du kan öppna sidan som ska [redigerad](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties) med någon av flera metoder:
+Du kan öppna sidan som ska [redigeras](/help/sites-classic-ui-authoring/classic-page-author-edit-content.md#editing-a-component-content-and-properties) på något av följande sätt:
 
-* Från **Webbplatser** konsol kan du **dubbelklicka** sidinmatningen för att öppna den för redigering.
+* Från konsolen **Webbplatser** kan du **dubbelklicka** på sidposten för att öppna den för redigering.
 
-* Från **Webbplatser** konsol kan du **högerklicka** (snabbmeny) markerar sidobjektet och väljer **Öppna** på menyn.
+* Från konsolen **Webbplatser** kan du **högerklicka** (snabbmenyn) på sidobjektet och sedan välja **Öppna** på menyn.
 
 * När du har öppnat en sida kan du navigera till andra sidor på webbplatsen (för att redigera dem) genom att klicka på hyperlänkar.
 
@@ -217,13 +217,13 @@ Vid kopiering kan du antingen kopiera:
 * en sida
 * en sida med alla undersidor
 
-1. Från **Webbplatser** markerar du sidan som du vill kopiera.
+1. I konsolen **Webbplatser** väljer du den sida du vill kopiera.
 
    >[!NOTE]
    >
    >I det här skedet är det irrelevant om du vill kopiera en enstaka sida eller de underliggande undersidorna.
 
-1. Klicka **Kopiera**.
+1. Klicka på **Kopiera**.
 
 1. Navigera till den nya platsen och klicka på:
 
@@ -238,13 +238,13 @@ Vid kopiering kan du antingen kopiera:
 
    >[!NOTE]
    >
-   >Du kan också använda **Kopiera sida** från **Sida** sidosparkens flik. Då öppnas en dialogruta där du kan ange mål och så vidare.
+   >Du kan också använda **Kopiera sida** från fliken **Sida** i sidosparken. Då öppnas en dialogruta där du kan ange mål och så vidare.
 
 ### Flytta eller byta namn på sida {#moving-or-renaming-page}
 
 >[!NOTE]
 >
->Om du byter namn på en sida gäller även [Konventioner för sidnamngivning](#page-naming-conventions) när du anger det nya sidnamnet.
+>Om du byter namn på en sida gäller även [Sidnamngivningskonventioner](#page-naming-conventions) när du anger det nya sidnamnet.
 
 Du flyttar eller byter namn på en sida på samma sätt. Med samma åtgärd kan man
 
@@ -258,11 +258,11 @@ Så här flyttar eller byter du namn på en sida:
 
 1. Det finns olika metoder för att utlösa en flytt:
 
-   * Från **Webbplatser** konsol, klicka för att markera sidan och välj sedan **Flytta...**
-   * Från **Webbplatser** konsolen kan du också markera sidobjektet och sedan **högerklicka** och markera **Flytta...**
-   * När du redigerar en sida kan du markera **Flytta sida** från **Sida** sidosparkens flik.
+   * I konsolen **Webbplatser** klickar du för att markera sidan och väljer sedan **Flytta..**.
+   * I konsolen **Webbplatser** kan du även välja sidobjektet, sedan **högerklicka** och välja **Flytta..**.
+   * När du redigerar en sida kan du välja **Flytta sida** på fliken **Sida** i sidosparken.
 
-1. The **Flytta** öppnas. Här kan du antingen ange en ny plats, ett nytt namn för sidan eller båda.
+1. Fönstret **Flytta** öppnas. Här kan du antingen ange en ny plats, ett nytt namn för sidan eller båda.
 
    ![screen_shot_2012-02-15at121336pm](assets/screen_shot_2012-02-15at121336pm.png)
 
@@ -296,9 +296,9 @@ Så här flyttar eller byter du namn på en sida:
 
    >[!NOTE]
    >
-   >Om sidan redan är aktiverad inaktiveras den automatiskt när du flyttar den. Som standard återaktiveras den när flytten är klar, men detta kan ändras genom att avmarkera **Publicera igen** fält för sidan i **Flytta** -fönstret.
+   >Om sidan redan är aktiverad inaktiveras den automatiskt när du flyttar den. Som standard återaktiveras den när flytten är klar, men detta kan ändras genom att du avmarkerar fältet **Publicera igen** för sidan i fönstret **Flytta**.
 
-1. Klicka **Flytta**. Bekräftelse krävs. Klicka **OK** för att bekräfta.
+1. Klicka på **Flytta**. Bekräftelse krävs. Bekräfta genom att klicka på **OK**.
 
    >[!NOTE]
    >
@@ -308,15 +308,15 @@ Så här flyttar eller byter du namn på en sida:
 
 1. Du kan ta bort en sida från olika platser:
 
-   * I **Webbplatser** konsol, klicka för att markera sidan, högerklicka och välj **Ta bort** från den resulterande menyn.
-   * I **Webbplatser** konsol, klicka för att markera sidan och välj sedan **Ta bort** i verktygsfältmenyn.
-   * Använd **Sida** flik att välja **Ta bort sida** - den öppna sidan tas bort.
+   * I konsolen **Webbplatser** klickar du för att markera sidan, högerklickar och väljer **Ta bort** på menyn som visas.
+   * I konsolen **Webbplatser** klickar du för att markera sidan och väljer sedan **Ta bort** på verktygsmenyn.
+   * Använd fliken **Sida** för att välja **Ta bort sida** i sidosparken. Då tas sidan som är öppen bort.
 
 1. När du har valt att ta bort en sida måste du bekräfta begäran eftersom åtgärden inte kan ångras.
 
    >[!NOTE]
    >
-   >Om sidan har publicerats efter borttagningen kan du återställa den senaste versionen (eller en viss version), men detta har kanske inte exakt samma innehåll som den senaste versionen om ytterligare ändringar har gjorts. Se [Återställa sidor](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoringpages) för mer information.
+   >Om sidan har publicerats efter borttagningen kan du återställa den senaste versionen (eller en viss version), men detta har kanske inte exakt samma innehåll som den senaste versionen om ytterligare ändringar har gjorts. Mer information finns i [Återställa sidor](/help/sites-classic-ui-authoring/classic-page-author-work-with-versions.md#restoringpages).
 
 >[!NOTE]
 >
@@ -330,11 +330,11 @@ Du kan [låsa/låsa upp en sida](/help/sites-classic-ui-authoring/classic-page-a
 
 >[!NOTE]
 >
->Mappar kan även användas i [Konventioner för sidnamngivning](#page-naming-conventions) när du anger det nya mappnamnet.
+>Mappar omfattas också av [Sidnamngivningskonventioner](#page-naming-conventions) när du anger det nya mappnamnet.
 
-1. Öppna **Webbplatser** och navigera till önskad plats.
-1. I **Nytt...** (klicka på pilen bredvid **Nytt...**), välja **Ny mapp...**.
-1. The **Skapa mapp** öppnas. Här anger du **Namn** och **Titel**:
+1. Öppna konsolen **Webbplatser** och navigera till önskad plats.
+1. Välj **Ny mapp..** på menyn **Ny...** (klicka på pilen bredvid **Ny..**).
+1. Dialogrutan **Skapa mapp** öppnas. Här kan du ange **Namn** och **Titel**:
 
    ![chlimage_1-152](assets/chlimage_1-152.png)
 

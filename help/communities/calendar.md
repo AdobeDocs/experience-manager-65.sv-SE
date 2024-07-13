@@ -26,25 +26,25 @@ Kalenderfunktionen har stöd för att tillhandahålla information om communityev
 Detta avsnitt i dokumentationen beskriver
 
 * Lägga till kalenderfunktionen på en AEM webbplats
-* Konfiguration för `Calendar` komponenter
+* Konfigurationsinställningar för `Calendar`-komponenter
 
 ## Lägga till en kalender på en sida {#adding-a-calendar-to-a-page}
 
-Lägga till en `Calendar` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp
+Om du vill lägga till en `Calendar`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att hitta
 
 * `Communities / Calendar`
 
 Och dra den till rätt plats på en sida, till exempel i förhållande till funktionen som användarna kan granska.
 
-Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När [nödvändiga bibliotek på klientsidan](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side) ingår så här `Calendar` visas.
+När de [nödvändiga klientbiblioteken](/help/communities/calendar-basics-for-developers.md#essentials-for-client-side) inkluderas visas `Calendar`-komponenten på det här sättet.
 
 ![kalenderkomponent](assets/calendar-component.png)
 
 ### Konfigurerar kalender {#configuring-calendar}
 
-Markera den monterade `Calendar` så att du kan komma åt och välja `Configure` -ikonen som öppnar redigeringsdialogrutan.
+Markera den monterade `Calendar`-komponenten så att du kan komma åt och markera ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
@@ -52,13 +52,13 @@ Markera den monterade `Calendar` så att du kan komma åt och välja `Configure`
 
 #### Fliken Inställningar {#settings-tab}
 
-Under **Inställningar** anger du om du vill tillåta att taggar används på kalenderposter.
+Under fliken **Inställningar** anger du om du vill tillåta att taggar tillämpas på kalenderposter.
 
 * **Händelser per sida**
 
   Definierar antalet händelser som visas per sida. Standardvärdet är 10.
 
-* **Kontrollerad**
+* **Modererad**
 
   Om det här alternativet är markerat måste publicering av kalenderhändelser och kommentarer godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
@@ -72,7 +72,7 @@ Under **Inställningar** anger du om du vill tillåta att taggar används på ka
 
 * **Tillåt taggning**
 
-  Om det här alternativet är markerat, tillåt medlemmar att lägga till taggetiketter till de händelser de publicerar (se **Taggfält** -fliken). Standard är markerat.
+  Om det här alternativet är markerat tillåter du medlemmar att lägga till taggetiketter till de händelser som de skickar (se fliken **Taggfält**). Standard är markerat.
 
 * **Tillåt filöverföringar**
 
@@ -84,11 +84,11 @@ Under **Inställningar** anger du om du vill tillåta att taggar används på ka
 
 * **Maximal filstorlek**
 
-  Endast relevant om `Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+  Endast relevant om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
 * **Tillåtna filtyper**
 
-  Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+  Endast relevant om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **Maximal filstorlek för bifogad bild**
 
@@ -96,7 +96,7 @@ Under **Inställningar** anger du om du vill tillåta att taggar används på ka
 
 * **Tillåtna omslagsbildtyper**
 
-  En kommaavgränsad lista över bildfilstillägg med punktavgränsaren. Standard är `.jpg,.jpeg,.png,.gif,.bmp`.
+  En kommaavgränsad lista över bildfilstillägg med punktavgränsaren. Standardvärdet är `.jpg,.jpeg,.png,.gif,.bmp`.
 
 * **Tillåt kopplade svar**
 
@@ -118,11 +118,11 @@ Under **Inställningar** anger du om du vill tillåta att taggar används på ka
 
   Definierar antalet dagar som läggs till i det aktuella datumet för att beräkna Till-värdet för sidfiltret för kalenderhändelselistan. Standardvärdet är 30.
 
-* **Tillåt innehåll**
+* **Tillåt aktuellt innehåll**
 
-  Idén kan identifieras som om den är markerad [presenterat innehåll](/help/communities/featured.md). Standard är avmarkerat.
+  Om det här alternativet är markerat går det att identifiera idén som [aktuellt innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
-Under **Användarmoderering** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
+Under fliken **Användarmoderering** anger du hur publicerade ämnen och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
@@ -156,11 +156,11 @@ Under **Användarmoderering** anger du hur publicerade ämnen och svar (använda
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under **Taggfält** -fliken, de taggar som kan användas, om de tillåts under **Inställningar** är begränsade enligt de namnutrymmen som har valts.
+Under fliken **Taggfält** är de taggar som kan användas, om de tillåts under fliken **Inställningar** , begränsade enligt de valda namnutrymmena.
 
 * **Tillåtna namnutrymmen**
 
-  Relevant om `Allow Tagging` kontrolleras under **Inställningar** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller&quot;Standardtaggar&quot; (standardnamnutrymmet) och&quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+  Relevant om `Allow Tagging` är markerat under fliken **Inställningar**. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller&quot;Standardtaggar&quot; (standardnamnutrymmet) och&quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
@@ -168,11 +168,11 @@ Under **Taggfält** -fliken, de taggar som kan användas, om de tillåts under *
 
 >[!NOTE]
 >
->Besök [Administrera taggar](/help/sites-administering/tags.md) där du kan lära dig hur du lägger till ett taggnamnutrymme (taxonomi).
+>Gå till [Administrera taggar](/help/sites-administering/tags.md) där du kan lära dig hur du lägger till ett taggnamnområde (taxonomi).
 
 #### Fliken Översättning {#translation-tab}
 
-Under **Översättning** om översättning är aktiverat för communitywebbplatsen kan översättning ställas in så att hela tråden (händelse och kommentarer) översätts i stället för specifika inlägg.
+Om översättning är aktiverat för communitywebbplatsen på fliken **Översättning** kan översättning ställas in så att hela tråden (händelse och kommentarer) översätts i stället för specifika inlägg.
 
 * **Översätt alla**
 
@@ -188,18 +188,18 @@ Andra funktioner beror på om besökaren är en moderator, administratör, commu
 
 ### Styrelsemedlemmar och administratörer {#moderators-and-administrators}
 
-När den inloggade användaren har moderator- eller administratörsbehörighet kan de utföra [modereringsuppgifter](/help/communities/moderate-ugc.md) (som tillåts av komponentens konfiguration) för alla kalenderhändelser och kommentarer som publiceras till en händelse.
+När den inloggade användaren har moderator- eller administratörsbehörighet kan de utföra [modereringsåtgärder](/help/communities/moderate-ugc.md) (som tillåts enligt konfigurationen av komponenten) för alla kalenderhändelser och kommentarer som publiceras till en händelse.
 
-![moderators-view](assets/moderators-view.png)
+![moderatorvy](assets/moderators-view.png)
 
 #### Medlemmar {#members}
 
-När den inloggade användaren är en community-medlem eller [behörig medlem](/help/communities/users.md#privileged-members-group) (beroende på konfiguration) kan de välja `New Event` för att skapa och publicera en ny kalenderhändelse.
+När den inloggade användaren är en community-medlem eller [behörig medlem](/help/communities/users.md#privileged-members-group) (beroende på konfiguration) kan användaren välja `New Event` för att skapa och publicera en ny kalenderhändelse.
 
 De får särskilt
 
 * Skapa en kalenderhändelse
-* Publicera en kommentar i en kalenderhändelse
+* Post en kommentar till en kalenderhändelse
 * Redigera en egen kalenderhändelse eller kommentar
 * Ta bort en egen kalenderhändelse eller kommentar
 * Flagga andras kalenderhändelser eller kommentarer
@@ -212,14 +212,14 @@ De får särskilt
 
 Webbplatsbesökare som inte är inloggade kan bara läsa publicerade kalenderhändelser, översätta dem om de stöds, men kan inte lägga till en händelse eller kommentar eller flagga andras händelser eller kommentarer.
 
-![anonym användarvy](assets/anonymous-user-view1.png)
+![anonym-användarvy](assets/anonymous-user-view1.png)
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på [Grundläggande kalender](/help/communities/calendar-basics-for-developers.md) för utvecklare.
+Mer information finns på sidan [Calendar Essentials](/help/communities/calendar-basics-for-developers.md) för utvecklare.
 
-moderering av kalenderhändelser och kommentarer finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
+moderering av kalenderhändelser och kommentarer finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md) (modererar användargenererat innehåll).
 
 Information om hur du taggar kalenderhändelser och kommentarer finns i [Tagga användargenererat innehåll](/help/communities/tag-ugc.md).
 
-För översättning av kalenderhändelser och kommentarer, se [Översätter användargenererat innehåll](/help/communities/translate-ugc.md).
+Mer information om översättning av kalenderhändelser och kommentarer finns i [Översätta användargenererat innehåll](/help/communities/translate-ugc.md).

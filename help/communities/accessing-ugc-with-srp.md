@@ -1,6 +1,6 @@
 ---
 title: Åtkomst till UGC med SRP
-description: När en plats är konfigurerad att använda ASRP eller MSRP lagras inte den faktiska UGC:n i AEM nodstore (JCR)
+description: När en plats är konfigurerad att använda ASRP eller MSRP lagras inte den faktiska UGC:n i AEM nodarkiv (JCR)
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: developing
@@ -21,17 +21,17 @@ ht-degree: 0%
 
 ## Om SRP {#about-srp}
 
-Alla AEM Communities-komponenter och -funktioner bygger på [ramverk för sociala komponenter (SCF)](/help/communities/scf.md), som anropar SocialResourceProvider-API:t för att komma åt allt användargenererat innehåll (UGC).
+Alla AEM Communities-komponenter och -funktioner bygger på [ramverket för sociala komponenter (SCF)](/help/communities/scf.md), som anropar SocialResourceProvider-API:t för att komma åt allt användargenererat innehåll (UGC).
 
-Innan en community-webbplats skapas [lagringsresursleverantör (SRP)](/help/communities/working-with-srp.md) måste konfigureras för att välja en implementering som är konsekvent med den underliggande [topologi](/help/communities/topologies.md). SRP-implementeringarna baseras på tre lagringsalternativ:
+Innan en community-plats skapas måste [lagringsresursprovidern ](/help/communities/working-with-srp.md) konfigureras för att välja en implementering som är konsekvent med den underliggande [topologin](/help/communities/topologies.md). SRP-implementeringarna baseras på tre lagringsalternativ:
 
-1. [ASRP](/help/communities/asrp.md) - Adobe on demand-lagring
+1. [ASRP](/help/communities/asrp.md) - lagring på begäran Adobe
 1. [MSRP](/help/communities/msrp.md) - MongoDB
 1. [JSRP](/help/communities/jsrp.md) - JCR
 
 ## Om UGC-lagring {#about-ugc-storage}
 
-Det som är viktigt att veta om lagring av UGC är att när en plats har konfigurerats att använda ASRP eller MSRP lagras inte själva UGC i AEM [nodarkiv](/help/sites-deploying/data-store-config.md) (JCR)
+Det som är viktigt att veta om lagring av UGC är att när en plats har konfigurerats att använda ASRP eller MSRP lagras inte den faktiska UGC:n i AEM [nodarkivet](/help/sites-deploying/data-store-config.md) (JCR).
 
 Även om det kan finnas noder i JCR som skuggar UGC för att ge användbara metadata, ska dessa noder inte blandas ihop med själva UGC.
 
@@ -66,14 +66,14 @@ Metoder som ska undvikas:
 
 ### Använd söksamlingar {#use-search-collections}
 
-Olika SRP kan ha olika inbyggda frågespråk. Använd metoder från [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) paket för att köra rätt frågespråk.
+Olika SRP kan ha olika inbyggda frågespråk. Använd metoder från paketet [com.adobe.cq.social.ugc.api](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) för att köra rätt frågespråk.
 
-Mer information finns i [Sök i Grundläggande](/help/communities/search-implementation.md).
+Mer information finns i [Söka i Grundläggande](/help/communities/search-implementation.md).
 
 ## Resurser {#resources}
 
-* [Community-innehåll](/help/communities/working-with-srp.md) - diskuterar de tillgängliga SRP-valen för en gemensam lagringsplats för användargenererat innehåll
-* [Översikt över lagringsresursprovider](/help/communities/srp.md) - introduktion och databasanvändning - översikt
-* [SRP och UGC Essentials](/help/communities/srp-and-ugc.md) - SRP-verktygsmetoder och -exempel
-* [Sök i Grundläggande](/help/communities/search-implementation.md) - viktig information för sökning i användargenererat innehåll
+* [Community Content Storage](/help/communities/working-with-srp.md) - diskuterar tillgängliga SRP-alternativ för en gemensam UGC-butik
+* [Lagringsresursprovideröversikt](/help/communities/srp.md) - översikt över introduktion och databasanvändning
+* [SRP och UGC Essentials](/help/communities/srp-and-ugc.md) - SRP-verktygsmetoder och exempel
+* [Söka efter viktiga](/help/communities/search-implementation.md) - viktig information för sökning i UGC
 * [Omfaktorisering för SocialUtils](/help/communities/socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder

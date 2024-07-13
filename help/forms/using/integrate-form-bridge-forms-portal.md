@@ -1,5 +1,5 @@
 ---
-title: Integrera Form Bridge med en anpassad portal för HTML5-formulär
+title: Integrera Form Bridge med en anpassad portal för HTML5-blanketter
 description: Du kan använda API:t för FormBridge för att hämta eller ange värden för formulärfält från HTML-sidan och skicka formuläret.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ---
 
-# Integrera Form Bridge med en anpassad portal för HTML5-formulär{#integrating-form-bridge-with-custom-portal-for-html-forms}
+# Integrera Form Bridge med en anpassad portal för HTML5-blanketter{#integrating-form-bridge-with-custom-portal-for-html-forms}
 
-FormBridge är ett HTML5-API för formulärbryggan som gör att du kan interagera med ett formulär. Information om API-referens för FormBridge finns i [API-referens för FormBridge](/help/forms/using/form-bridge-apis.md).
+FormBridge är ett HTML5-API för formulärbryggan som gör att du kan interagera med ett formulär. Mer information om API-referens för FormBridge finns i [API-referens för FormBridge](/help/forms/using/form-bridge-apis.md).
 
 Du kan använda API:t för FormBridge för att hämta eller ange värden för formulärfält från HTML-sidan och skicka formuläret. Du kan till exempel använda API för att skapa en guideliknande upplevelse.
 
@@ -74,28 +74,28 @@ Ett befintligt HTML-program kan använda API:t för FormBridge för att interage
 
    >[!NOTE]
    >
-   >The **rad 9**, innehåller ytterligare JSP-referens för CSS-format och JavaScript-filer för att utforma sidan.
+   >**Rad 9** innehåller ytterligare JSP-referens för CSS-format och JavaScript-filer för att utforma sidan.
    >
    >
-   >The &lt;div id=&quot;rightdiv&quot;> tagg på **rad 18** innehåller HTML-fragmentet i XFA-formuläret.
+   >Taggen &lt;div id=&quot;rightdiv&quot;> på **rad 18** innehåller HTML-fragmentet för XFA-formuläret.
    >
    >
-   Sidan är formaterad i två behållare: **vänster** och **höger**. Den högra behållaren har formuläret. Den vänstra behållaren har två inmatningsfält och en del av den externa HTML-sidan.
+   Sidan är formaterad i två behållare: **left** och **right**. Den högra behållaren har formuläret. Den vänstra behållaren har två inmatningsfält och en del av den externa HTML-sidan.
    >
    >
    Följande skärmbild visar hur formuläret visas i en webbläsare.
 
    ![portal](assets/portal.jpg)
 
-   Den vänstra sidan är en del av **HTML page**. Den högra sidan som innehåller fälten är **xfa-form**.
+   Vänster sida är en del av **HTML-sidan**. Den högra sidan som innehåller fälten är **xfa-formuläret**.
 
 1. **Åtkomst till formulärfält från sidan**
 
    Följande är ett exempelskript som du kan lägga till för att ange värden i ett formulärfält.
 
-   Om du till exempel vill ange **EmployeeName** med värdena i fälten **Förnamn** och **Efternamn**, anropa **window.formBridge.setFieldValue** funktion.
+   Om du till exempel vill ställa in **EmployeeName** med värdena i fälten **First Name** och **Last Name** anropar du funktionen **window.formBridge.setFieldValue** .
 
-   På samma sätt kan du läsa värdet genom att anropa **window.formBridge.getFieldValue** API.
+   På samma sätt kan du läsa värdet genom att anropa API:t **window.formBridge.getFieldValue** .
 
    ```javascript
    $(function() {

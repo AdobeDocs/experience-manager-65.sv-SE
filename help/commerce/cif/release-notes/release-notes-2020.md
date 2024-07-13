@@ -48,7 +48,7 @@ ht-degree: 6%
 
 * En ny kategoriCarousel-komponent lades till för att göra det möjligt för företagsanvändare att dra och släppa den här komponenten på AEM innehållssidor för att berika innehållssidor med handelsdata.
 
-* CIF kärnkomponenter har utökats för att utrusta Adobe Client Data Layer genom att skicka e-handelsdata. Adobe Client Data Layer är en standardiserad metod för att samla in data och kommunicera data till digitala analyser och rapportservrar. Mer information finns i [Adobe-klientdatalager](https://github.com/adobe/adobe-client-data-layer/wiki).
+* CIF kärnkomponenter har utökats för att utrusta Adobe Client Data Layer genom att skicka e-handelsdata. Adobe Client Data Layer är en standardiserad metod för att samla in data och kommunicera data till digitala analyser och rapportservrar. Mer information finns i [Adobe-klientdatalagret](https://github.com/adobe/adobe-client-data-layer/wiki).
 
 * Sidorna Produktinformation och Produktlista utökas för att automatiskt fylla i SEO-metadata (som titel, metabeskrivning, meta-nyckelord) som konfigurerats inifrån Adobe Commerce administratörsgränssnitt
 
@@ -116,7 +116,7 @@ ht-degree: 6%
 
 * CIF Venia Reference Site extraherades från CIF Archetype och är nu en fristående GitHub-databas.
 
-* CIF Archetype har sammanfogats med AEM Project Archetype. Använd för nya projekt [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) som startpunkt.
+* CIF Archetype har sammanfogats med AEM Project Archetype. Använd [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) som startpunkt för nya projekt.
 
 * Adressbokshantering har lagts till för att tillåta inloggade användare att hantera sina adresser.
 
@@ -172,7 +172,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 * Stöd för fasetterad sökning har lagts till i sidan Sök och produktlista så att kunderna kan filtrera sökresultat baserat på produktaspekter.
 
-* Ny OSGi-tjänst har lagts till för att anpassa PDP/PLP-URL:er för SEO-syften. Mer information finns i [dokumentation](https://github.com/adobe/aem-core-cif-components).
+* Ny OSGi-tjänst har lagts till för att anpassa PDP/PLP-URL:er för SEO-syften. Mer information finns i [dokumentationen](https://github.com/adobe/aem-core-cif-components).
 
 * Produktbindning skapas automatiskt när en molnkonfiguration skapas.
 
@@ -192,7 +192,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 ### Nyheter {#what-is-new-april}
 
-* Konfigurationsinställningarna för CIF Connector är enhetliga och förenklade. Mer info: utcheckning [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) eller [Ny AEM CIF projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
+* Konfigurationsinställningarna för CIF Connector är enhetliga och förenklade. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) eller [Ny AEM CIF projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
 
 ### Vad har förbättrats {#what-is-improved-april}
 

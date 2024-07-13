@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Grundläggande om sociala diagram  {#social-graph-essentials}
 
-Möjligheten för en community-medlem att följa [verksamhet](essentials-activities.md) och ska följas genom två komponenter:
+Möjligheten för en community-medlem att följa [aktiviteter](essentials-activities.md) och följas har skapats genom två komponenter:
 
-The `following` måste vara associerad med en annan resurs, och den här associationen har redan upprättats för befintliga communitymedlemmar och funktioner i en [communitywebbplats](overview.md#communitiessites).
+Komponenten `following` måste vara associerad med en annan resurs, och den här associationen har redan upprättats för befintliga communitymedlemmar och funktioner på en [communitywebbplats](overview.md#communitiessites).
 
-The `following` -komponenten visar de medlemmar som antingen följer den aktuella medlemmen eller som följs av den aktuella medlemmen. Det här sociala diagrammet över relationerna mellan medlemmar ingår i användarprofilen som har skapats för en community-webbplats.
+Komponenten `following` visar de medlemmar som antingen följer den aktuella medlemmen eller som följs av den aktuella medlemmen. Det här sociala diagrammet över relationerna mellan medlemmar ingår i användarprofilen som har skapats för en community-webbplats.
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -35,11 +35,11 @@ The `following` -komponenten visar de medlemmar som antingen följer den aktuell
    <td>socialt/socialt diagram/komponenter/hbs/relationer</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>oklanderlig</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>inkluderbar</strong></a></td>
    <td>Nej</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
    <td>cq.social.hbs.socialgraph</td>
   </tr>
   <tr>
@@ -55,17 +55,17 @@ The `following` -komponenten visar de medlemmar som antingen följer den aktuell
    <td>Se <a href="socialgraph.md">Använda socialt diagram</a></td>
   </tr>
   <tr>
-   <td><strong> valfri<br /> property</strong></td>
+   <td><strong> valfri <br />-egenskap</strong></td>
    <td>
     <ul>
      <li>Namn: <strong><code>outgoing</code></strong></li>
      <li>Typ: Boolean</li>
      <li>Värde:<br />
       <ul>
-       <li><i>True </i>- <code>following</code> -komponenten visar de medlemmar som den inloggade medlemmen <code>follows</code></li>
-       <li><i>Falskt </i>- <code>following</code> -komponenten visar de medlemmar som <code>follow </code>den inloggade medlemmen</li>
+       <li><i>Sant </i>- Komponenten <code>following</code> visar de medlemmar som den inloggade medlemmen tillhör <code>follows</code></li>
+       <li><i>Falskt </i>- Komponenten <code>following</code> listar de medlemmar som <code>follow </code> den inloggade medlemmen</li>
       </ul> </li>
-    </ul> <p>Standardvärdet är <i>true</i> om egenskapen saknas. Det går inte att ange den här egenskapen i redigeringsdialogrutan i redigeringsläget. Egenskapen måste läggas till i en instans av <code>following</code> nod genom att använda <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
+    </ul> <p>Standardvärdet är <i>true</i> om egenskapen saknas. Det går inte att ange den här egenskapen i redigeringsdialogrutan i redigeringsläget. Egenskapen måste läggas till i en instans av noden <code>following</code> med <a href="../../help/sites-developing/developing-with-crxde-lite.md">CRXDE|Lite</a>.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -74,7 +74,7 @@ The `following` -komponenten visar de medlemmar som antingen följer den aktuell
 
 | **resourceType** | `social/socialgraph/components/hbs/following` |
 |---|---|
-| [**oklanderlig**](scf.md#add-or-include-a-communities-component) | Nej |
+| [**inkluderbar**](scf.md#add-or-include-a-communities-component) | Nej |
 | **mallar** | `/libs/social/socialgraph/components/hbs/following/following.hbs` |
 | **css** | `/libs/social/socialgraph/components/hbs/following/clientlibs/following.css` |
 
@@ -84,6 +84,6 @@ The `following` -komponenten visar de medlemmar som antingen följer den aktuell
 
 * [API för social grafik](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/graph/client/api/package-frame.html)
 
-* [Slutpunkter för socialt diagram](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/graph/client/endpoint/package-frame.html)
+* [Slutpunkter för sociala diagram](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/graph/client/endpoint/package-frame.html)
 
 * [Anpassningar på serversidan](server-customize.md)

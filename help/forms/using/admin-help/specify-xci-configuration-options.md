@@ -29,6 +29,6 @@ Som standard åsidosätter Output några av alternativen som anges i XCI-filen, 
 
 Du kan välja alternativ som avbryter åsidosättningen för de alternativ som anges ovan. I så fall används de värden som anges i den anpassade XCI-filen för utdata.
 
-1. I administrationskonsolen klickar du på **Tjänster** > output.
+1. Klicka på **Tjänster** > Utdata i administrationskonsolen.
 1. Markera eller avmarkera kryssrutan Använd XCI-standardalternativ för system. När det här alternativet är markerat använder Output standardvärdena för inställningarna för paket, skapare, producent och compressObjectStream. När det här alternativet är avmarkerat används de värden som anges i den anpassade XCI-filen.
-1. Klicka **Spara**.
+1. Klicka på **Spara**.

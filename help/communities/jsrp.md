@@ -1,6 +1,6 @@
 ---
 title: JSRP - JCR-lagringsresursprovider
-description: JSRP passar bäst för demonstrations- eller utvecklingsmiljöer för en Publish-instans och en Author-instans
+description: JSRP passar bäst för demonstrations- och utvecklingsmiljöer med en Publish-instans och en Author-instans
 contentOwner: Janice Kendall
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: administering
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 När AEM Communities använder JSRP som lagringsalternativ (standard) lagras community-innehåll i JCR, och användargenererat innehåll (UGC) är endast tillgängligt från författaren eller den publiceringsinstans som det publicerades i.
 
-Eftersom distributionen är enkel lämpar sig JSRP bäst för demonstrations- eller utvecklingsmiljöer med en Publish-instans och en Author-instans.
+På grund av enkelheten i driftsättningen är JSRP bäst lämpat för demonstrations- eller utvecklingsmiljöer i en Publish-instans och en Author-instans.
 
 Se även [Egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of-srp-options) och [Rekommenderade topologier](topologies.md).
 
@@ -32,7 +32,7 @@ Se även [Egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of
 
 Som standard är JSRP lagringsalternativet för UGC.
 
-The [Konsol för lagringskonfiguration](srp-config.md) gör det möjligt att välja standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
+Konsolen [Lagringskonfiguration](srp-config.md) tillåter val av standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
 
 För att nå konsolen Lagringskonfiguration i redigeringsmiljön
 
@@ -57,7 +57,7 @@ JSRP är standardkonfigurationen, och du kan se till att den identiska konfigura
 
 ## Hantera användardata {#managing-user-data}
 
-För information om *användare*, *användarprofiler* och *användargrupper*, som ofta används i publiceringsmiljön, går till:
+Mer information om *användare*, *användarprofiler* och *användargrupper* som ofta anges i publiceringsmiljön finns på:
 
 * [Användarsynkronisering](sync.md)
 * [Hantera användare och användargrupper](users.md)
@@ -68,21 +68,21 @@ För information om *användare*, *användarprofiler* och *användargrupper*, so
 
 Kontrollera att JSRP har konfigurerats som standardprovider genom att kontrollera konfigurationen av lagringsalternativet. Som standard är lagringsresursprovidern JSRP.
 
-Gå till konsolen Lagringskonfiguration eller kontrollera den AEM databasen på alla Author and Publish AEM-instanser:
+På alla Author- och Publish AEM-instanser går du till konsolen Lagringskonfiguration eller kontrollerar AEM:
 
 * I JCR, om [/conf/global/settings/community](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community)
 
-   * Den innehåller inte en [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc) -nod betyder det att lagringsprovidern är JSRP.
-   * Om srpc-noden finns och innehåller nod [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration)ska standardkonfigurationens egenskaper definiera JSRP som standardprovider.
+   * Den innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc)-nod, vilket betyder att lagringsprovidern är JSRP.
+   * Om srpc-noden finns och innehåller noden [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/conf/global/settings/community/srpc/defaultconfiguration), ska standardkonfigurationens egenskaper definiera JSRP som standardprovider.
 
 ### UGC är inte synlig på författarinstans {#ugc-not-visible-on-author-instance}
 
-Det här är inte något fel. En egenskap hos JSRP är att communityinnehåll som anges i publiceringsmiljön endast är synligt i publiceringsmiljön.
+Det här är inte något fel. En egenskap hos JSRP är att communityinnehåll som anges i publiceringsmiljön bara syns i Publish-miljön.
 
-### UGC är inte synlig vid publiceringsinstans {#ugc-not-visible-on-publish-instance}
+### UGC är inte synlig på Publish-instans {#ugc-not-visible-on-publish-instance}
 
-Om en enda publiceringsinstans eller ett publiceringskluster är distribuerat följer du instruktionerna för [UGC är inte synlig i JCR](#ugc-not-visible-in-jcr).
+Om en enskild Publish-instans eller ett publiceringskluster har distribuerats följer du instruktionerna för [UGC är inte synlig i JCR](#ugc-not-visible-in-jcr).
 
-Om en publiceringsgrupp distribueras är egenskapen för JSRP att communityinnehåll bara är synligt på den publiceringsinstans som det publicerades i.
+Om en publiceringsgrupp distribueras är egenskapen för JSRP att communityinnehåll bara visas på den Publish-instans som det publicerades på.
 
-För att UGC ska vara synligt från en publiceringsinstans krävs ett publiceringskluster.
+För att UGC ska vara synligt från alla Publish-instanser krävs ett publiceringskluster.

@@ -140,7 +140,7 @@ Den nödvändiga ökningen av JVM:s största stackstorlek beräknas med följand
 
 Den största stackstorleken för JVM måste ökas med 50 MB för totalt 562 MB.
 
-**Överväg heap-fragmentering**
+**Överväg stackfragmentering**
 
 Om du ställer in storleken på textbundna dokument till stora värden ökar risken för ett OutOfMemoryError-fel på system som lätt kan heap-fragmentering. Om du vill lagra ett dokument textbundet måste JVM-heap-minnet ha tillräckligt sammanhängande utrymme. Vissa operativsystem, JVM:er och skräpinsamlingsalgoritmer är benägna att heap-fragmentering. Fragmentering minskar mängden sammanhängande stackutrymme och kan leda till ett OutOfMemoryError även om det finns tillräckligt med totalt ledigt utrymme.
 
@@ -154,16 +154,16 @@ I det här avsnittet beskrivs inställningar som är specifika för en WebSphere
 
 ### Öka det maximala minne som tilldelas JVM {#increasing-the-maximum-memory-allocated-to-the-jvm}
 
-Om du kör Configuration Manager eller försöker generera Enterprise JavaBeans (EJB) distribuerar du kod med kommandoradsverktyget *ejbdeploy* och ett OutOfMemory-fel inträffar ökar mängden minne som allokerats till JVM.
+Om du kör Configuration Manager eller försöker generera Enterprise JavaBeans (EJB)-distributionskod med kommandoradsverktyget *ejbdeploy* och ett OutOfMemory-fel inträffar, ökar du mängden minne som allokerats till JVM.
 
-1. Redigera ejbdeploy-skriptet i *[appserver root]*/deploytool/itp/ katalog:
+1. Redigera ejbdeploy-skriptet i katalogen *[appserver root]*/deploytool/itp/:
 
    * (Windows) `ejbdeploy.bat`
    * (Linux och UNIX) `ejbdeploy.sh`
 
-1. Hitta `-Xmx256M` och ändra det till ett högre värde, till exempel `-Xmx1024M`.
+1. Hitta parametern `-Xmx256M` och ändra den till ett högre värde, till exempel `-Xmx1024M`.
 1. Spara filen.
-1. Kör `ejbdeploy` eller omdistribuera med Configuration Manager.
+1. Kör kommandot `ejbdeploy` eller omdistribuera med Configuration Manager.
 
 ## Förbättra prestanda för Windows Server 2003 med LDAP {#improving-windows-server-2003-performance-with-ldap}
 
@@ -173,20 +173,20 @@ Om du använder anslutningspoolning på sökanslutningen kan antalet portar som 
 
 ### Konfigurera Windows Server för anslutningspoolning {#configure-your-windows-server-for-connection-pooling}
 
-1. Klicka på Start > Kör för att starta Registereditorn och skriv i rutan Öppna `regedit` och klicka på OK.
+1. Klicka på Start > Kör för att starta Registereditorn och skriv `regedit` i rutan Öppna. Klicka sedan på OK.
 1. Gå till registernyckeln `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters`
 1. Leta reda på TcpTimedWaitDelay-värdenamnet i den högra rutan i Registereditorn. Om namnet inte visas väljer du Redigera > Nytt > DWORD-värde på menyraden för att lägga till namnet.
-1. Skriv i rutan Namn `TcpTimedWaitDelay`
+1. Skriv `TcpTimedWaitDelay` i rutan Namn
 
    >[!NOTE]
    >
-   >Om du inte ser någon blinkande markör och `New Value #` i rutan högerklickar du i den högra panelen, väljer Byt namn och skriver i rutan Namn `TcpTimedWaitDelay`*.*
+   >Om du inte ser någon blinkande markör och `New Value #` inuti rutan högerklickar du i den högra panelen, väljer Byt namn och skriver `TcpTimedWaitDelay`*i rutan Namn.*
 
 1. Upprepa steg 4 för värdenamnen MaxUserPort, MaxHashTableSize och MaxFreeTcbs.
-1. Dubbelklicka i den högra rutan för att ange TcpTimedWaitDelay-värdet. Under Bas väljer du Decimal och skriver i rutan Värde `30`.
-1. Dubbelklicka i den högra rutan för att ange värdet för MaxUserPort. Under Bas väljer du Decimal och skriver i rutan Värde `65534`.
-1. Dubbelklicka inuti den högra rutan för att ange värdet för MaxHashTableSize. Under Bas väljer du Decimal och skriver i rutan Värde `65536`.
-1. Dubbelklicka inuti den högra rutan för att ange värdet för MaxFreeTcbs. Under Bas väljer du Decimal och skriver i rutan Värde `16000`.
+1. Dubbelklicka i den högra rutan för att ange TcpTimedWaitDelay-värdet. Välj Decimal under Basvärde och skriv `30` i rutan Värde.
+1. Dubbelklicka i den högra rutan för att ange värdet för MaxUserPort. Välj Decimal under Basvärde och skriv `65534` i rutan Värde.
+1. Dubbelklicka inuti den högra rutan för att ange värdet för MaxHashTableSize. Välj Decimal under Basvärde och skriv `65536` i rutan Värde.
+1. Dubbelklicka inuti den högra rutan för att ange värdet för MaxFreeTcbs. Välj Decimal under Basvärde och skriv `16000` i rutan Värde.
 
 >[!NOTE]
 >

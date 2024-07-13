@@ -27,10 +27,10 @@ Adobe Experience Platform Launch rekommenderas för att implementera Analytics, 
 
 ## Självstudiekurs {#tutorial}
 
-Om du vill veta mer om hur du integrerar dina SPA med Adobe Experience Platform Launch kan du läsa [den här kunskapsbasartikeln och självstudiekursen](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html), som vägleder dig genom Launch-installationen och implementerar Experience Cloud som byggts med Angular eller React.
+Mer information om hur du integrerar SPA med Adobe Experience Platform Launch finns i [den här kunskapsbasartikeln och självstudiekursen](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html), som vägleder dig genom Launch-konfigurationen och implementerar Experience Cloud som byggts med Angular eller React.
 
 >[!NOTE]
 >
 >Den refererade KB:en skapades för att aktivera Adobe Experience Platform Launch-integrering med SPA som inte använder Adobe Experience Manager SPA Editor. Dessa metoder bör också göra det möjligt för Adobe Experience Platform Launch-integreringen att samexistera med SPA som är byggda för att använda SPA Editor.
 >
->Användningen av Redux tillsammans med JavaScript-SPA har inte utforskats fullständigt. Stöd för Redux planeras i en framtida version av SPA.
+>Användning av Redux tillsammans med JavaScript SPA Libraries har inte utforskats fullständigt. Stöd för Redux planeras i en framtida version av SPA.

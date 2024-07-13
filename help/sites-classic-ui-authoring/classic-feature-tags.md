@@ -20,8 +20,8 @@ ht-degree: 0%
 
 Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbplats. Taggar kan ses som nyckelord eller etiketter som kan bifogas till en sida, en resurs eller annat innehåll för att göra det möjligt att söka efter innehållet och relaterat innehåll.
 
-* Se [Administrera taggar](/help/sites-administering/tags.md) om du vill ha information om hur du skapar och hanterar taggar och till vilka innehållstaggar har tillämpats.
-* Se [Tagga för utvecklare](/help/sites-developing/tags.md) om du vill ha information om taggningsramverket och inkludera och utöka taggar i anpassade program.
+* Mer information om hur du skapar och hanterar taggar och till vilka innehållstaggar har tillämpats finns i [Administrera taggar](/help/sites-administering/tags.md) .
+* Mer information om taggningsramverket och hur du inkluderar och utökar taggar i anpassade program finns i [Tagga för utvecklare](/help/sites-developing/tags.md).
 
 ## Tio skäl att använda märkord {#ten-reasons-to-use-tagging}
 
@@ -40,9 +40,9 @@ När du utformar innehållsstrukturen för en plats och metadatarammet för resu
 
 ## Tillämpar taggar {#applying-tags}
 
-I redigeringsmiljön kan författare lägga till taggar genom att gå till sidegenskaperna och ange en eller flera taggar i **Taggar/nyckelord** fält.
+I redigeringsmiljön kan författare lägga till taggar genom att gå till sidegenskaperna och ange en eller flera taggar i fältet **Taggar/nyckelord**.
 
-Tillämpa [fördefinierade taggar](/help/sites-administering/tags.md), i **Sidegenskaper** fönstret använder `Tags/Keywords` nedrullningsbar meny där du kan välja taggar i listan över taggar som är tillåtna för sidan. Tthe **Standardtaggar** är standardnamnutrymmet, vilket betyder att det inte finns något `namespace-string:` som är förfixerade till taxonomin.
+Om du vill använda [fördefinierade taggar](/help/sites-administering/tags.md) använder du `Tags/Keywords`-fältets listruta i fönstret **Sidegenskaper** och väljer en tagg som är tillåten för sidan. Fliken **Standardtaggar** är standardnamnutrymmet, vilket innebär att det inte finns något prefix `namespace-string:` för taxonomin.
 
 ![chlimage_1-2](assets/chlimage_1-2a.png)
 
@@ -68,7 +68,7 @@ Precis som med sidor kan du göra följande med taggar och namnutrymmen:
 
 Taggmoln visar ett moln med taggar, antingen för den aktuella sidan, för hela webbplatsen eller för de mest använda. Tagga moln är ett sätt att markera problem som är (har varit) av intresse för användaren. Storleken på texten som används för att visa taggen varierar beroende på hur den används.
 
-The [Tag Cloud](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#tag-cloud) används för att lägga till ett taggmoln på en sida.
+Komponenten [Taggmoln](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#tag-cloud) (allmän komponentgrupp) används för att lägga till ett taggmoln på en sida.
 
 ## Söka på taggar {#searching-on-tags}
 
@@ -76,6 +76,6 @@ Du kan söka efter taggar både i författarmiljön och i publiceringsmiljön.
 
 ### Använda sökkomponenten {#using-search-component}
 
-Lägga till en [Sökkomponent](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search) till en sida har en sökfunktion som innehåller taggar och kan användas både i författarmiljön och publiceringsmiljön.
+Om du lägger till en [sökkomponent](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md#search) på en sida får du en sökfunktion som innehåller taggar och kan användas i både författarmiljön och publiceringsmiljön.
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)

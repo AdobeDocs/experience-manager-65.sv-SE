@@ -41,4 +41,4 @@ För att få ut det mesta av det här dokumentet måste du ha en god förståels
 
 >[!MORELIKETHIS]
 >
->* [Skicka inloggningsuppgifter med WS-Security-huvuden](assets/passing-credentials-using-ws-security-headers.pdf)
+>* [Skicka autentiseringsuppgifter med WS-Security-huvuden](assets/passing-credentials-using-ws-security-headers.pdf)

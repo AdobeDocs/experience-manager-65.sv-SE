@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Importera och exportera data {#importing-and-exporting-data}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 ## Om tjänsten för integrering av formulärdata {#about-the-form-data-integration-service}
 
@@ -35,7 +35,7 @@ Formulärdata kan finnas i något av följande format beroende på vilken typ av
 Du kan utföra dessa uppgifter med hjälp av tjänsten för integrering av formulärdata:
 
 * Importera data till PDF forms. Mer information finns i [Importera formulärdata](importing-exporting-data.md#importing-form-data).
-* Exportera data från PDF forms. Mer information finns i [Exporterar formulärdata](importing-exporting-data.md#exporting-form-data).
+* Exportera data från PDF forms. Mer information finns i [Exportera formulärdata](importing-exporting-data.md#exporting-form-data).
 
 >[!NOTE]
 >
@@ -109,7 +109,7 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 * adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms distribueras på JBoss)
 
-Mer information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Mer information om platsen för dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en tjänstklient för integrering av formulärdata**
 
@@ -119,7 +119,7 @@ Innan du programmässigt kan importera data till ett klient-API i PDF måste du 
 
 Om du vill importera data till ett PDF-formulär måste du referera till antingen ett XML-formulär som har skapats i Designer eller ett Acrobat-formulär som har skapats i Acrobat.
 
-**Referera en XML-datakälla**
+**Referera till en XML-datakälla**
 
 Om du vill importera formulärdata måste du referera till en giltig datakälla. Om du vill importera data till ett XFA XML-formulär som skapats i Designer måste du använda en XDP XML-datakälla. Om du refererar till ett Acrobat-formulär måste du använda en XFDF-datakälla. För varje fält som du vill importera data till måste du ange ett värde. Om ett element i XML-datakällan inte motsvarar ett fält i formuläret, ignoreras elementet.
 
@@ -127,7 +127,7 @@ Om du vill importera formulärdata måste du referera till en giltig datakälla.
 
 När du har angett en referens för ett PDF-formulär och en giltig XML-datakälla kan du importera data till PDF-formuläret.
 
-**Spara PDF som en PDF-fil**
+**Spara PDF-formuläret som en PDF-fil**
 
 När du har importerat data till ett formulär kan du spara formuläret som en PDF-fil. När formuläret har sparats som en PDF-fil kan användaren öppna det i Adobe Reader eller Acrobat och se formuläret med importerade data.
 
@@ -155,32 +155,32 @@ Importera formulärdata med hjälp av API:t för integrering av formulärdata (J
 
 1. Skapa en tjänstklient för integrering av formulärdata.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `FormDataIntegrationClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `FormDataIntegrationClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera till ett PDF-formulär.
 
-   * Skapa en `java.io.FileInputStream` genom att använda dess konstruktor. Skicka ett strängvärde som anger platsen för PDF-formuläret.
-   * Skapa en `com.adobe.idp.Document` objekt som lagrar PDF-formuläret med `com.adobe.idp.Document` konstruktor. Skicka `java.io.FileInputStream` objekt som innehåller PDF-formen till konstruktorn.
+   * Skapa ett `java.io.FileInputStream`-objekt med hjälp av dess konstruktor. Skicka ett strängvärde som anger platsen för PDF-formuläret.
+   * Skapa ett `com.adobe.idp.Document`-objekt som lagrar PDF-formuläret med konstruktorn `com.adobe.idp.Document`. Skicka `java.io.FileInputStream`-objektet som innehåller PDF-formuläret till konstruktorn.
 
 1. Referera till en XML-datakälla.
 
-   * Skapa en `java.io.FileInputStream` genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen som innehåller data som ska importeras till formuläret.
-   * Skapa en `com.adobe.idp.Document` objekt som lagrar formulärdata med `com.adobe.idp.Document` konstruktor. Skicka `java.io.FileInputStream` objekt som innehåller formulärdata till konstruktorn.
+   * Skapa ett `java.io.FileInputStream`-objekt med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen som innehåller data som ska importeras till formuläret.
+   * Skapa ett `com.adobe.idp.Document`-objekt som lagrar formulärdata med konstruktorn `com.adobe.idp.Document`. Skicka objektet `java.io.FileInputStream` som innehåller formulärdata till konstruktorn.
 
 1. Importera data till PDF-formuläret.
 
-   Importera data till PDF genom att anropa `FormDataIntegrationClient` objektets `importData` och skicka följande värden:
+   Importera data till PDF genom att anropa `FormDataIntegrationClient`-objektets `importData`-metod och skicka följande värden:
 
-   * The `com.adobe.idp.Document` objekt som lagrar PDF-formuläret.
-   * The `com.adobe.idp.Document` objekt som lagrar formulärdata.
+   * Objektet `com.adobe.idp.Document` som lagrar formuläret PDF.
+   * Objektet `com.adobe.idp.Document` som lagrar formulärdata.
 
-   The `importData` returnerar en `com.adobe.idp.Document` objekt som lagrar ett PDF-formulär som innehåller data i XML-datakällan.
+   Metoden `importData` returnerar ett `com.adobe.idp.Document`-objekt som lagrar ett PDF-formulär som innehåller data i XML-datakällan.
 
 1. Spara PDF-formuläret som en PDF-fil.
 
-   * Skapa en `java.io.File` och se till att filtillägget är .PDF.
-   * Anropa `Document` objektets `copyToFile` metod för att kopiera innehållet i `Document` till filen (se till att du använder `Document` objekt som returneras av `importData` metod).
+   * Skapa ett `java.io.File`-objekt och kontrollera att filtillägget är .PDF.
+   * Anropa `Document`-objektets `copyToFile`-metod för att kopiera innehållet i `Document`-objektet till filen (se till att du använder det `Document`-objekt som returnerades av metoden `importData`).
 
 **Se även**
 
@@ -202,52 +202,52 @@ Importera formulärdata med hjälp av API:t för integrering av formulärdata (w
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa en tjänstklient för integrering av formulärdata.
 
-   * Skapa en `FormDataIntegrationClient` genom att använda dess standardkonstruktor.
-   * Skapa en `FormDataIntegrationClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `FormDataIntegrationClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `FormDataIntegrationClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `FormDataIntegrationClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Ange `?blob=mtom` om du vill använda MTOM.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `FormDataIntegrationClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `FormDataIntegrationClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `FormDataIntegrationClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `FormDataIntegrationClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Referera till ett PDF-formulär.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. Detta `BLOB` -objektet används för att lagra PDF-formuläret.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som anger var PDF-formuläret finns och i vilket läge filen ska öppnas.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` -metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Det här `BLOB`-objektet används för att lagra PDF-formuläret.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som anger var PDF-formuläret finns och i vilket läge filen ska öppnas.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Referera till en XML-datakälla.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. Detta `BLOB` -objektet används för att lagra data som importeras till formuläret.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som anger platsen för XML-filen som innehåller data som ska importeras och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` -metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Det här `BLOB`-objektet används för att lagra data som importeras till formuläret.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som anger platsen för XML-filen som innehåller data som ska importeras och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Importera data till PDF-formuläret.
 
-   Importera data till PDF genom att anropa `FormDataIntegrationClient` objektets `importData` och skicka följande värden:
+   Importera data till formuläret PDF genom att anropa `FormDataIntegrationClient`-objektets `importData`-metod och skicka följande värden:
 
-   * The `BLOB` objekt som lagrar PDF-formuläret.
-   * The `BLOB` objekt som lagrar formulärdata.
+   * Objektet `BLOB` som lagrar formuläret PDF.
+   * Objektet `BLOB` som lagrar formulärdata.
 
-   The `importData` returnerar en `BLOB` objekt som lagrar ett PDF-formulär som innehåller data i XML-datakällan.
+   Metoden `importData` returnerar ett `BLOB`-objekt som lagrar ett PDF-formulär som innehåller data i XML-datakällan.
 
 1. Spara PDF-formuläret som en PDF-fil.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för filen PDF.
-   * Skapa en bytearray som lagrar datainnehållet i `BLOB` objekt som returneras av `importData` -metod. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` fält.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-filen.
+   * Skapa en bytearray som lagrar datainnehållet för objektet `BLOB` som returnerades av metoden `importData`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-fält.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -287,13 +287,13 @@ Följande JAR-filer måste läggas till i projektets klassökväg:
 
 **Skapa en tjänstklient för integrering av formulärdata**
 
-Innan du kan importera data programmatiskt till ett PDF formClient-API måste du skapa en dataintegreringstjänstklient. När du skapar en tjänstklient definierar du de anslutningsinställningar som krävs för att anropa en tjänst. För information, [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+Innan du kan importera data programmatiskt till ett PDF formClient-API måste du skapa en dataintegreringstjänstklient. När du skapar en tjänstklient definierar du de anslutningsinställningar som krävs för att anropa en tjänst. [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties) om du vill ha information.
 
 **Referera till ett PDF-formulär**
 
 Om du vill exportera data från ett PDF-formulär måste du referera till PDF-formulär som har skapats i Designer eller Acrobat och som innehåller formulärdata. Om du försöker exportera data från ett tomt PDF-formulär får du ett tomt XML-schema.
 
-**Exportera data från PDF**
+**Exportera data från PDF-formuläret**
 
 När du har refererat till ett PDF-formulär som innehåller formulärdata kan du exportera data från formuläret. Data exporteras i ett XML-schema som är baserat på formuläret.
 
@@ -325,22 +325,22 @@ Exportera formulärdata med hjälp av API:t för integrering av formulärdata (J
 
 1. Skapa en tjänstklient för integrering av formulärdata.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `FormDataIntegrationClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `FormDataIntegrationClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera till ett PDF-formulär.
 
-   * Skapa en `java.io.FileInputStream` genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för det PDF-formulär som innehåller data som ska exporteras.
-   * Skapa en `com.adobe.idp.Document` objekt som lagrar PDF-formuläret med `com.adobe.idp.Document` konstruktor. Skicka `java.io.FileInputStream` objekt som innehåller PDF-formen till konstruktorn.
+   * Skapa ett `java.io.FileInputStream`-objekt med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för det PDF-formulär som innehåller data som ska exporteras.
+   * Skapa ett `com.adobe.idp.Document`-objekt som lagrar PDF-formuläret med konstruktorn `com.adobe.idp.Document`. Skicka `java.io.FileInputStream`-objektet som innehåller PDF-formuläret till konstruktorn.
 
 1. Exportera data från PDF.
 
-   Exportera formulärdata genom att anropa `FormDataIntegrationClient` objektets `exportData` och skicka `com.adobe.idp.Document` objekt som lagrar PDF-formuläret. Den här metoden returnerar en `com.adobe.idp.Document` objekt som lagrar formulärdata som ett XML-schema.
+   Exportera formulärdata genom att anropa `FormDataIntegrationClient`-objektets `exportData`-metod och skicka det `com.adobe.idp.Document`-objekt som lagrar PDF-formuläret. Den här metoden returnerar ett `com.adobe.idp.Document`-objekt som lagrar formulärdata som ett XML-schema.
 
 1. Spara PDF-formuläret som en PDF-fil.
 
-   * Skapa en `java.io.File` och se till att filtillägget är XML.
-   * Anropa `Document` objektets `copyToFile` metod för att kopiera innehållet i `Document` till filen (se till att du använder `Document` objekt som returneras av `exportData` metod).
+   * Skapa ett `java.io.File`-objekt och kontrollera att filtillägget är XML.
+   * Anropa `Document`-objektets `copyToFile`-metod för att kopiera innehållet i `Document`-objektet till filen (se till att du använder det `Document`-objekt som returnerades av metoden `exportData`).
 
 **Se även**
 
@@ -360,39 +360,39 @@ Exportera formulärdata med hjälp av API:t för integrering av formulärdata (w
 
    Skapa ett Microsoft .NET-projekt som använder MTOM. Kontrollera att du använder följande WSDL-definition: `http://localhost:8080/soap/services/FormDataIntegration?WSDL&lc_version=9.0.1`.
 
-   * Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   * Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa en tjänstklient för integrering av formulärdata.
 
-   * Skapa en `FormDataIntegrationClient` genom att använda dess standardkonstruktor.
-   * Skapa en `FormDataIntegrationClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `FormDataIntegrationClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `FormDataIntegrationClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `FormDataIntegrationClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/FormDataIntegration?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Ange `?blob=mtom` om du vill använda MTOM.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `FormDataIntegrationClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `FormDataIntegrationClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `FormDataIntegrationClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `FormDataIntegrationClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Referera till ett PDF-formulär.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. Detta `BLOB` -objektet används för att lagra det PDF som data exporteras från.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som anger var PDF-formuläret finns och i vilket läge filen ska öppnas.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Det här `BLOB`-objektet används för att lagra det PDF som data exporteras från.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som anger var PDF-formuläret finns och i vilket läge filen ska öppnas.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Exportera data från PDF.
 
-   Importera data till PDF genom att anropa `FormDataIntegrationClient` objektets `exportData` och skicka `BLOB` objekt som lagrar PDF-formuläret. Den här metoden returnerar en `BLOB` objekt som lagrar formulärdata som ett XML-schema.
+   Importera data till PDF genom att anropa `FormDataIntegrationClient`-objektets `exportData`-metod och skicka det `BLOB`-objekt som lagrar PDF-formuläret. Den här metoden returnerar ett `BLOB`-objekt som lagrar formulärdata som ett XML-schema.
 
 1. Spara PDF-formuläret som en PDF-fil.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar platsen för XML-filen.
-   * Skapa en bytearray som lagrar datainnehållet i `BLOB` objekt som returneras av `exportData` -metod. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` fält.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till en XML-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar platsen för XML-filen.
+   * Skapa en bytearray som lagrar datainnehållet för objektet `BLOB` som returnerades av metoden `exportData`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-fält.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en XML-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 

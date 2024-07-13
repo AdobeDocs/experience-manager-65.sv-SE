@@ -1,5 +1,5 @@
 ---
-title: Streckkodad Forms Service Java&trade; API Quick Start(SOAP)
+title: Streckkodad Forms Service Java&handel; API Quick Start(SOAP)
 description: Läs om hur Barcoded Forms Service Java&trade; API Quick Start (SOAP) i AEM Forms möjliggör smidig bearbetning av streckkoder.
 contentOwner: admin
 content-type: reference
@@ -30,7 +30,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 ## Snabbstart (SOAP läge): Avkoda streckkodade formulärdata med Java™ API {#quick-start-soap-mode-decoding-barcoded-form-data-using-the-java-api}
 
-Följande Java™-kod avkodar formulärdata som finns i ett PDF-formulär som sparas som Loan.pdf. De avkodade data sparas som en XML-fil med namnet extractData.xml. I det här kodexemplet konverteras en `org.w3c.dom.Document` objekt till `com.adobe.idp.Document` -objekt. (Se [Avkoda streckkodade formulärdata](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data).)
+Följande Java™-kod avkodar formulärdata som finns i ett PDF-formulär som sparas som Loan.pdf. De avkodade data sparas som en XML-fil med namnet extractData.xml. I det här kodexemplet konverteras ett `org.w3c.dom.Document`-objekt till ett `com.adobe.idp.Document`-objekt. (Se [Avkoda streckkodade formulärdata](/help/forms/developing/barcoded-forms.md#decoding-barcoded-form-data).)
 
 ```java
  /*
@@ -219,4 +219,4 @@ Följande Java™-kod avkodar formulärdata som finns i ett PDF-formulär som sp
 
 >[!NOTE]
 >
->När du använder både `org.w3c.dom.Document` objekt och `com.adobe.idp.Document` -objekt i samma programlogik är det bra rutin att kvalificera båda objekten fullt ut.
+>När du använder både ett `org.w3c.dom.Document`-objekt och ett `com.adobe.idp.Document`-objekt i samma programlogik, är det bra rutin att kvalificera båda objekten fullständigt.

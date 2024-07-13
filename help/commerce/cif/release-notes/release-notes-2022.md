@@ -28,7 +28,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 | Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF | 2022.09.20.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.09.20.00.zip) |
+| CIF | 2022.09.20.00 | [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.09.20.00.zip) |
 | CIF kärnkomponenter | 2.11.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.11.0) |
 | CIF Venia Reference Site | 2022.09.02 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.09.02) |
 
@@ -43,7 +43,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 | Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF | 2022.08.02.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.08.02.00.zip) |
+| CIF | 2022.08.02.00 | [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.08.02.00.zip) |
 
 ### Nyheter {#what-is-new-july}
 
@@ -54,7 +54,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 | Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF | 2022.07.05.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
+| CIF | 2022.07.05.00 | [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.07.05.00.zip) |
 | CIF kärnkomponenter | 2.10.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.10.0) |
 | CIF Venia Reference Site | 2022.07.04 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.07.04) |
 
@@ -74,7 +74,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 | Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF | 2022.05.31.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.05.31.00.zip) |
+| CIF | 2022.05.31.00 | [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.05.31.00.zip) |
 | CIF kärnkomponenter | 2.9.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.9.0) |
 | CIF Venia Reference Site | 2022.05.30 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.05.30) |
 
@@ -82,7 +82,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 * Ny egenskapssida för produktcockpit för bättre och enklare översikt
 
-![översikt över egenskaper för produktcockpit](/help/assets/CIF/product_cockpit_properties_overview.png)
+![egenskapsöversikt för produktcockpit](/help/assets/CIF/product_cockpit_properties_overview.png)
 
 * Förbättrad kompatibilitet och tillförlitlighet för tredjepartsanslutningar i I/O-miljön
 
@@ -98,7 +98,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 | Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF | 2022.04.28.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.04.28.00.zip) |
+| CIF | 2022.04.28.00 | [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.04.28.00.zip) |
 | CIF kärnkomponenter | 2.8.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.8.0) |
 | CIF Venia Reference Site | 2022.04.28 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.04.28) |
 
@@ -116,13 +116,13 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 | Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF | 2022.02.24.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.02.24.00.zip) |
+| CIF | 2022.02.24.00 | [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.02.24.00.zip) |
 | CIF kärnkomponenter | 2.6.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.6.0) |
 | CIF Venia Reference Site | 2022.02.24 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.02.24) |
 
 ### Nyheter {#what-is-new-march}
 
-* Betaversion: AEM Search Core Component har stöd för Commerce LiveSearch
+* Beta: AEM Search Core Component har stöd för Commerce LiveSearch CIF
 * Förbättrad SEO för scenarier med flera butiker: URL-format för PDP/PLP kan nu konfigureras på en butiksnivå via CIF Cloud Config-egenskaper
 * Produktväljaren har stöd för mellanlagrade produkter via det nya filteralternativet i användargränssnittet. Gör det möjligt för innehållsutvecklare att förbereda innehållshantering för kommande produktlanseringar
 * Förenklad CIF och felhantering genom att använda CIF Cloud Config-namn i stället för config proxy-URL
@@ -132,7 +132,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 | Komponent | Version | Information |
 |:-------|:-----:|---------------------:|
-| CIF | 2022.01.20.00 | [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.01.20.00.zip) |
+| CIF | 2022.01.20.00 | [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Faem-commerce-addon-65-2022.01.20.00.zip) |
 | CIF kärnkomponenter | 2.5.0 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.5.0) |
 | CIF Venia Reference Site | 2022.01.27 | [GitHub](https://github.com/adobe/aem-cif-guides-venia/releases/tag/venia-2022.01.27) |
 

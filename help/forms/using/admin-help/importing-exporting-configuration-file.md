@@ -31,7 +31,7 @@ För att undvika säkerhetsrisker inkluderas inte det binda lösenordsvärdet f�
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler.
 1. Klicka på Exportera. Om du använder Microsoft Internet Explorer uppmanas du att ange var filen ska sparas. Om du använder Firefox sparas filen på skrivbordet.
 
-**Importera konfigurationsinformation**
+**Importera konfigurationsinformationen**
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler.
 1. Klicka på Bläddra för att hitta konfigurationsfilen, klicka på Importera och sedan på OK.

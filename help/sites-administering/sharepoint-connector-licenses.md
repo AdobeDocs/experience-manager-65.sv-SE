@@ -40,7 +40,7 @@ I följande tabell visas tredjepartsbibliotek som används i SharePoint Connecto
 | comons-httpclient | [Apache](#apache) |
 | comons-io | [Apache](#apache) |
 | Commons-lang | [Apache](#apache) |
-| samtidig | [Samtidig](#concurrent) (Offentlig domän) |
+| samtidig | [Samtidig](#concurrent) (offentlig domän) |
 | geronimo-activation_1.1_spec | [Apache](#apache) |
 | geronimo-stax-api_1.0_spec | [Apache](#apache) |
 | httpcore | [Apache](#apache) |
@@ -59,12 +59,12 @@ I följande tabell visas tredjepartsbibliotek som används i SharePoint Connecto
 | wstx-asl | [Apache](#apache) |
 | xalan | [Apache](#apache) |
 | xbean | [Apache](#apache) |
-| xml-apis | [Apache](#apache) (innehåller delar som täcks av Public Domain och W3C Software licenses) |
+| xml-apis | [Apache](#apache) (innehåller delar som täcks av licenserna för allmän domän och W3C-programvara) |
 | XmlSchema | [Apache](#apache) |
 
-## Översikt över CRX Third Party Libraries {#overview-of-crx-rd-party-libraries}
+## Översikt över CRX tredjepartsbibliotek {#overview-of-crx-rd-party-libraries}
 
-I följande tabell visas tredjepartsbibliotek som används i CRX, tillsammans med de licenser, copyrightmeddelanden eller ansvarsfriskrivningar som de omfattas av:
+I följande tabell visas tredjepartsbibliotek som används i CRX, tillsammans med de licenser, copyrightmeddelanden och ansvarsfriskrivningar som de omfattas av:
 
 <table>
  <colgroup>

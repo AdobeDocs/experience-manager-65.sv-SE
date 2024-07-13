@@ -15,15 +15,15 @@ ht-degree: 0%
 
 # Stöd för samma webbplats-cookie för AEM 6.5 {#same-site-cookie-support-for-aem-65}
 
-Sedan version 80 har Chrome och senare Safari introducerat en ny modell för cookie-säkerhet. Det här läget är utformat för att införa säkerhetskontroller för tillgänglighet av cookies för tredjepartswebbplatser via en inställning som kallas `SameSite`. Mer detaljerad information finns i [artikel](https://web.dev/samesite-cookies-explained/).
+Sedan version 80 har Chrome och senare Safari infört en ny modell för cookie-säkerhet. Det här läget är utformat för att införa säkerhetskontroller för tillgänglighet av cookies till tredjepartswebbplatser, via en inställning som kallas `SameSite`. Mer detaljerad information finns i den här [artikeln](https://web.dev/samesite-cookies-explained/).
 
-Standardvärdet för inställningen (`SameSite=Lax`) kan leda till att autentisering mellan AEM instanser eller tjänster inte fungerar. Detta beror på att domänerna eller URL-strukturerna för dessa tjänster kanske inte omfattas av begränsningarna i den här cookie-principen.
+Standardvärdet för den här inställningen (`SameSite=Lax`) kan göra att autentisering mellan AEM instanser eller tjänster inte fungerar. Detta beror på att domänerna eller URL-strukturerna för dessa tjänster kanske inte omfattas av begränsningarna i den här cookie-principen.
 
-För att komma runt detta måste du ange `SameSite` cookie-attribut till `None` för inloggningstoken.
+Du måste ange cookie-attributet `SameSite` till `None` för inloggningstoken för att undvika detta.
 
 >[!CAUTION]
 >
->The `SameSite=None` inställningen används bara om protokollet är säkert (HTTPS).
+>Inställningen `SameSite=None` används bara om protokollet är säkert (HTTPS).
 >
 >Om protokollet inte är säkert (HTTP) ignoreras inställningen och det här WARN-meddelandet visas på servern:
 >
@@ -32,8 +32,8 @@ För att komma runt detta måste du ange `SameSite` cookie-attribut till `None` 
 Du kan lägga till inställningen genom att följa stegen nedan:
 
 1. Gå till webbkonsolen på `http://serveraddress:serverport/system/console/configMgr`
-1. Sök efter och klicka på **Autentiseringshanterare för Adobe Granite-token**
-1. Ange **Attributet SameSite för cookie-filen för inloggningstoken** till `None`, vilket visas i bilden nedan
-   ![samma webbplats](assets/samesite1.png)
+1. Sök efter och klicka på autentiseringshanteraren **Adobe Granite**
+1. Ange attributet **SameSite för cookien** för inloggningstoken till `None`, vilket visas i bilden nedan
+   ![samesite](assets/samesite1.png)
 1. Klicka på Spara
-1. När den här inställningen har uppdaterats och användarna har loggat ut och loggat in igen, `login-token` cookies har `None` och kommer att inkluderas i förfrågningar mellan webbplatser.
+1. När den här inställningen har uppdaterats och användarna har loggats ut och loggat in igen, kommer `login-token`-cookies att ha attributet `None` inställt och kommer att inkluderas i förfrågningar mellan webbplatser.

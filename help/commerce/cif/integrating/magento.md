@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Integrering med AEM och Adobe Commerce (Magento) med Commerce integration framework {#aem-commerce-framework}
 
-Experience Manager och Adobe Commerce är helintegrerade med Commerce integrationa frameworken (CIF). CIF gör att AEM kan komma åt och kommunicera direkt med handelsinstansen med Adobe Commerce [GraphQL API:er](https://devdocs.magento.com/guides/v2.4/graphql/).
+Experience Manager och Adobe Commerce är helintegrerade med Commerce integrationa frameworken (CIF). CIF gör att AEM kan komma åt och kommunicera direkt med e-handelsinstansen med Adobe Commerce [GraphQL API:er](https://devdocs.magento.com/guides/v2.4/graphql/).
 
 >[!NOTE]
 >
@@ -25,23 +25,23 @@ Experience Manager och Adobe Commerce är helintegrerade med Commerce integratio
 
 Den övergripande arkitekturen är följande:
 
-![Översikt över CIF](../assets/AEM_Magento_Architecture.png)
+![CIF Översikt över arkitekturen](../assets/AEM_Magento_Architecture.png)
 
 Inom CIF finns stöd för kommunikationsmönster på serversidan och klientsidan.
-API-anrop på serversidan implementeras med det inbyggda, generiska [GraphQL-klient](https://github.com/adobe/commerce-cif-graphql-client) i kombination med en [uppsättning genererade datamodeller](https://github.com/adobe/commerce-cif-magento-graphql) för e-handelsschemat i GraphQL. Dessutom kan valfri GraphQL-fråga eller mutation i GQL-format användas.
+API-anrop på serversidan implementeras med hjälp av den generiska [GraphQL-klienten](https://github.com/adobe/commerce-cif-graphql-client) i kombination med en [uppsättning genererade datamodeller](https://github.com/adobe/commerce-cif-magento-graphql) för Commerce GraphQL-schemat. Dessutom kan valfri GraphQL-fråga eller mutation i GQL-format användas.
 
-För komponenterna på klientsidan, som byggs med [Reagera](https://reactjs.org/), [Apollo Client](https://www.apollographql.com/docs/react/) används.
+För klientkomponenterna, som byggs med [React](https://reactjs.org/), används [Apollo-klienten](https://www.apollographql.com/docs/react/).
 
 ## AEM CIF Core Component Architecture {#cif-core-components}
 
 ![AEM CIF Core Component Architecture](../assets/cif-component-architecture.jpg)
 
-[AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) följer mycket liknande designmönster och bästa praxis som [AEM WCM-kärnkomponenter](https://github.com/adobe/aem-core-wcm-components).
+[AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) följer mycket liknande designmönster och metodtips som [AEM WCM-kärnkomponenter](https://github.com/adobe/aem-core-wcm-components).
 
 Affärslogik och serverdelskommunikation med Adobe Commerce för de AEM kärnkomponenterna implementeras i Sling Models. Om det är nödvändigt att anpassa den här logiken för att uppfylla projektspecifika krav kan delegeringsmönstret för segmenteringsmodeller användas.
 
 >[!TIP]
 >
->The [Anpassa AEM CIF kärnkomponenter](../customizing/customize-cif-components.md) sidan innehåller ett detaljerat exempel och bästa praxis för anpassning CIF kärnkomponenter.
+>Sidan [Anpassa AEM ](../customizing/customize-cif-components.md) CIF kärnkomponenter innehåller ett detaljerat exempel och bästa praxis för hur du anpassar CIF kärnkomponenter.
 
 I projekt kan AEM kärnkomponenter och anpassade projektkomponenter enkelt hämta den konfigurerade klienten för en Adobe Commerce-butik som är kopplad till en AEM sida via Sling Context-Aware-konfiguration.

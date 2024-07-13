@@ -52,7 +52,7 @@ Följande API hittar bokstavsinstanserna baserat på frågeobjektet (både Skick
   </tr>
   <tr>
    <td>fråga</td>
-   <td>Frågeparametern används för att hitta/filtrera instansen av Letter. Här har frågan bara stöd för objektets attribut/egenskaper på den översta nivån. Frågan består av programsatser och"attributeName" som används i Statement-objektet ska vara namnet på egenskapen i Letter-instansobjektet.<br /> </td>
+   <td>Frågeparametern används för att hitta/filtrera instansen av Letter. Här har frågan bara stöd för objektets attribut/egenskaper på den översta nivån. Frågan består av satser och "attributeName" som används i Statement-objektet ska vara namnet på egenskapen i Letter-instansobjektet.<br /> </td>
   </tr>
  </tbody>
 </table>

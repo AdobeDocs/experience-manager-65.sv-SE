@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # Skapa DDX-dokument dynamiskt {#dynamically-creating-ddx-documents}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
-Du kan dynamiskt skapa ett DX-dokument som kan användas för att utföra en Assembler-åtgärd. När du dynamiskt skapar ett DX-dokument kan du använda värden i DDX-dokumentet som hämtas under körning. Om du vill skapa ett DDX-dokument dynamiskt använder du klasser som tillhör det programmeringsspråk som du använder. Om du till exempel utvecklar ditt klientprogram med Java använder du klasser som tillhör `org.w3c.dom.*`paket. Om du använder Microsoft .NET ska du också använda klasser som tillhör `System.Xml` namnutrymme.
+Du kan dynamiskt skapa ett DX-dokument som kan användas för att utföra en Assembler-åtgärd. När du dynamiskt skapar ett DX-dokument kan du använda värden i DDX-dokumentet som hämtas under körning. Om du vill skapa ett DDX-dokument dynamiskt använder du klasser som tillhör det programmeringsspråk som du använder. Om du till exempel utvecklar ditt klientprogram med Java ska du använda klasser som tillhör paketet `org.w3c.dom.*`. Om du använder Microsoft .NET ska du också använda klasser som tillhör namnutrymmet `System.Xml`.
 
-Innan du kan skicka DDX-dokumentet till Assembler-tjänsten måste du konvertera XML-filen från en `org.w3c.dom.Document` instans till en `com.adobe.idp.Document` -instans. Om du använder webbtjänster konverterar du XML från den datatyp som används för att skapa XML (till exempel `XmlDocument`) till `BLOB` -instans.
+Innan du kan skicka DDX-dokumentet till Assembler-tjänsten måste du konvertera XML-filen från en `org.w3c.dom.Document`-instans till en `com.adobe.idp.Document`-instans. Om du använder webbtjänster konverterar du XML från den datatyp som används för att skapa XML (till exempel `XmlDocument`) till en `BLOB`-instans.
 
 Anta att följande DDX-dokument skapas dynamiskt för den här diskussionen.
 
@@ -44,7 +44,7 @@ Det här DDX-dokumentet demonterar ett PDF-dokument. Vi rekommenderar att du är
 
 >[!NOTE]
 >
->Mer information om ett DX-dokument finns i [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).
+>Mer information om ett DDX-dokument finns i [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).
 
 ## Sammanfattning av steg {#summary-of-steps}
 
@@ -76,25 +76,25 @@ Skapa en Assembler-tjänstklient innan du programmässigt utför en Assembler-å
 
 **Skapa DDX-dokumentet**
 
-Skapa ett DX-dokument med det programmeringsspråk som du använder. Om du vill skapa ett DDX-dokument som demonterar ett PDF-dokument måste du se till att det innehåller `PDFsFromBookmarks` -element. Konvertera den datatyp som används för att skapa DDX-dokumentet till en `com.adobe.idp.Document` -instans om du använder Java API. Om du använder webbtjänster konverterar du datatypen till `BLOB` -instans.
+Skapa ett DX-dokument med det programmeringsspråk som du använder. Om du vill skapa ett DDX-dokument som demonterar ett PDF-dokument måste du se till att det innehåller elementet `PDFsFromBookmarks`. Konvertera den datatyp som används för att skapa DDX-dokumentet till en `com.adobe.idp.Document`-instans om du använder Java API. Om du använder webbtjänster konverterar du datatypen till en `BLOB`-instans.
 
 **Konvertera DDX-dokumentet**
 
-Ett DX-dokument som skapas med `org.w3c.dom` måste konverteras till `com.adobe.idp.Document` -objekt. Om du vill utföra den här åtgärden när du använder Java API ska du använda Java XML-omformningsklasser. Om du använder webbtjänster konverterar du DDX-dokumentet till en `BLOB` -objekt.
+Ett DDX-dokument som skapas med `org.w3c.dom`-klasser måste konverteras till ett `com.adobe.idp.Document`-objekt. Om du vill utföra den här åtgärden när du använder Java API ska du använda Java XML-omformningsklasser. Om du använder webbtjänster konverterar du DDX-dokumentet till ett `BLOB`-objekt.
 
-**Referera ett PDF-dokument som ska demonteras**
+**Referera till ett PDF-dokument som ska demonteras**
 
 Om du vill dela upp ett PDF-dokument refererar du till en PDF-fil som representerar det PDF-dokument som ska demonteras. När det skickas till Assembler-tjänsten returneras ett separat PDF-dokument för varje nivå 1-bokmärke i dokumentet.
 
 **Ange körningsalternativ**
 
-Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Om du vill ange körningsalternativ använder du en `AssemblerOptionSpec` -objekt.
+Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Om du vill ange körningsalternativ använder du ett `AssemblerOptionSpec`-objekt.
 
-**Dela upp PDF-dokumentet**
+**Disassemblera PDF-dokumentet**
 
-Dela upp PDF-dokumentet genom att anropa `invokeDDX` operation. Skicka DDX-dokumentet som skapades dynamiskt. Assembler-tjänsten returnerar uppdelade PDF-dokument i ett samlingsobjekt.
+Disassemblera PDF-dokumentet genom att anropa åtgärden `invokeDDX`. Skicka DDX-dokumentet som skapades dynamiskt. Assembler-tjänsten returnerar uppdelade PDF-dokument i ett samlingsobjekt.
 
-**Spara de upplösta PDF-dokumenten**
+**Spara de omonterade PDF-dokumenten**
 
 Alla uppdelade PDF-dokument returneras inom ett samlingsobjekt. Iterera genom samlingsobjektet och spara varje PDF-dokument som en PDF-fil.
 
@@ -120,69 +120,69 @@ Skapa ett DDX-dokument dynamiskt och demontera ett PDF-dokument med hjälp av As
 
 1. Skapa en PDF Assembler-klient.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `AssemblerServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `AssemblerServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Skapa DDX-dokumentet.
 
-   * Skapa ett Java `DocumentBuilderFactory` genom att anropa `DocumentBuilderFactory` class&#39; `newInstance` -metod.
-   * Skapa ett Java `DocumentBuilder` genom att anropa `DocumentBuilderFactory` objektets `newDocumentBuilder` -metod.
-   * Ring `DocumentBuilder` objektets `newDocument` metod för att instansiera en `org.w3c.dom.Document` -objekt.
-   * Skapa DX-dokumentets rotelement genom att anropa `org.w3c.dom.Document` objektets `createElement` -metod. Den här metoden skapar en `Element` som representerar rotelementet. Skicka ett strängvärde som representerar elementets namn till `createElement` -metod. Skicka returvärdet till `Element`. Ange sedan ett värde för det underordnade elementet genom att anropa dess `setAttribute` -metod. Slutligen lägger du till elementet i rubrikelementet genom att anropa rubrikelementets `appendChild` och skicka det underordnade elementobjektet som ett argument. Följande kodrader visar den här programlogiken:
+   * Skapa ett Java `DocumentBuilderFactory`-objekt genom att anropa metoden `DocumentBuilderFactory` class&#39; `newInstance` .
+   * Skapa ett Java `DocumentBuilder`-objekt genom att anropa `DocumentBuilderFactory`-objektets `newDocumentBuilder`-metod.
+   * Anropa `DocumentBuilder`-objektets `newDocument`-metod för att instansiera ett `org.w3c.dom.Document`-objekt.
+   * Skapa DX-dokumentets rotelement genom att anropa `org.w3c.dom.Document`-objektets `createElement`-metod. Den här metoden skapar ett `Element`-objekt som representerar rotelementet. Skicka ett strängvärde som representerar elementets namn till metoden `createElement`. Skicka returvärdet till `Element`. Ange sedan ett värde för det underordnade elementet genom att anropa dess `setAttribute`-metod. Lägg slutligen till elementet i rubrikelementet genom att anropa rubrikelementets `appendChild`-metod och skicka det underordnade elementobjektet som ett argument. Följande kodrader visar den här programlogiken:
      ` Element root = (Element)document.createElement("DDX");  root.setAttribute("xmlns","https://ns.adobe.com/DDX/1.0/");  document.appendChild(root);`
 
-   * Skapa `PDFsFromBookmarks` genom att anropa `Document` objektets `createElement` -metod. Skicka ett strängvärde som representerar elementets namn till `createElement` -metod. Skicka returvärdet till `Element`. Ange ett värde för `PDFsFromBookmarks` element genom att anropa dess `setAttribute` -metod. Lägg till `PDFsFromBookmarks` -element till `DDX` genom att anropa DDX-elementets `appendChild` -metod. Skicka `PDFsFromBookmarks` elementobjekt som argument. Följande kodrader visar den här programlogiken:
+   * Skapa elementet `PDFsFromBookmarks` genom att anropa metoden `createElement` för objektet `Document`. Skicka ett strängvärde som representerar elementets namn till metoden `createElement`. Skicka returvärdet till `Element`. Ange ett värde för elementet `PDFsFromBookmarks` genom att anropa dess `setAttribute`-metod. Lägg till elementet `PDFsFromBookmarks` i elementet `DDX` genom att anropa DDX-elementets `appendChild`-metod. Skicka elementobjektet `PDFsFromBookmarks` som ett argument. Följande kodrader visar den här programlogiken:
 
      ` Element PDFsFromBookmarks = (Element)document.createElement("PDFsFromBookmarks");  PDFsFromBookmarks.setAttribute("prefix","stmt");  root.appendChild(PDFsFromBookmarks);`
 
-   * Skapa en `PDF` genom att anropa `Document` objektets `createElement` -metod. Skicka ett strängvärde som representerar elementets namn. Skicka returvärdet till `Element`. Ange ett värde för `PDF` element genom att anropa dess `setAttribute` -metod. Lägg till `PDF` -element till `PDFsFromBookmarks` genom att anropa `PDFsFromBookmarks` element `appendChild` -metod. Skicka `PDF` elementobjekt som argument. Följande kodrader visar den här programlogiken:
+   * Skapa ett `PDF`-element genom att anropa `Document`-objektets `createElement`-metod. Skicka ett strängvärde som representerar elementets namn. Skicka returvärdet till `Element`. Ange ett värde för elementet `PDF` genom att anropa dess `setAttribute`-metod. Lägg till elementet `PDF` i elementet `PDFsFromBookmarks` genom att anropa `PDFsFromBookmarks`-elementets `appendChild`-metod. Skicka elementobjektet `PDF` som ett argument. Följande kodrader visar den här programlogiken:
 
      ` Element PDF = (Element)document.createElement("PDF");  PDF.setAttribute("source","AssemblerResultPDF.pdf");  PDFsFromBookmarks.appendChild(PDF);`
 
 1. Konvertera DDX-dokumentet.
 
-   * Skapa en `javax.xml.transform.Transformer` genom att anropa `javax.xml.transform.Transformer` objektets statiska `newInstance` -metod.
-   * Skapa en `Transformer` genom att anropa `TransformerFactory` objektets `newTransformer` -metod.
-   * Skapa en `ByteArrayOutputStream` genom att använda dess konstruktor.
-   * Skapa en `javax.xml.transform.dom.DOMSource` genom att använda dess konstruktor. Skicka `org.w3c.dom.Document` -objekt som representerar DDX-dokumentet.
-   * Skapa en `javax.xml.transform.dom.DOMSource` genom att använda konstruktorn och skicka `ByteArrayOutputStream` -objekt.
-   * Fyll i Java `ByteArrayOutputStream` genom att anropa `javax.xml.transform.Transformer` objektets `transform` -metod. Skicka `javax.xml.transform.dom.DOMSource` och `javax.xml.transform.stream.StreamResult` objekt.
-   * Skapa en bytearray och tilldela storleken på `ByteArrayOutputStream` till bytearrayen.
-   * Fylla i bytearrayen genom att anropa `ByteArrayOutputStream` objektets `toByteArray` -metod.
-   * Skapa en `com.adobe.idp.Document` genom att använda dess konstruktor och skicka bytearrayen.
+   * Skapa ett `javax.xml.transform.Transformer`-objekt genom att anropa `javax.xml.transform.Transformer`-objektets statiska `newInstance`-metod.
+   * Skapa ett `Transformer`-objekt genom att anropa `TransformerFactory`-objektets `newTransformer`-metod.
+   * Skapa ett `ByteArrayOutputStream`-objekt med hjälp av dess konstruktor.
+   * Skapa ett `javax.xml.transform.dom.DOMSource`-objekt med hjälp av dess konstruktor. Skicka objektet `org.w3c.dom.Document` som representerar DDX-dokumentet.
+   * Skapa ett `javax.xml.transform.dom.DOMSource`-objekt med hjälp av dess konstruktor och skicka `ByteArrayOutputStream`-objektet.
+   * Fyll i Java `ByteArrayOutputStream`-objektet genom att anropa `javax.xml.transform.Transformer`-objektets `transform`-metod. Skicka objekten `javax.xml.transform.dom.DOMSource` och `javax.xml.transform.stream.StreamResult`.
+   * Skapa en bytearray och tilldela storleken på `ByteArrayOutputStream`-objektet till bytearrayen.
+   * Fyll i bytearrayen genom att anropa `ByteArrayOutputStream`-objektets `toByteArray`-metod.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka bytearrayen.
 
 1. Referera ett PDF-dokument som ska demonteras.
 
-   * Skapa en `java.util.Map` objekt som används för att lagra indatadokument i PDF genom att använda en `HashMap` konstruktor.
-   * Skapa en `java.io.FileInputStream` genom att använda sin konstruktor och skicka platsen för det PDF-dokument som ska demonteras.
-   * Skapa en `com.adobe.idp.Document` -objekt. Skicka `java.io.FileInputStream` objekt som innehåller det PDF-dokument som ska demonteras.
-   * Lägg till en post i `java.util.Map` genom att anropa dess `put` och skicka följande argument:
+   * Skapa ett `java.util.Map`-objekt som används för att lagra PDF-indatadokument med hjälp av en `HashMap`-konstruktor.
+   * Skapa ett `java.io.FileInputStream`-objekt med hjälp av konstruktorn och skicka platsen för det PDF-dokument som ska demonteras.
+   * Skapa ett `com.adobe.idp.Document`-objekt. Skicka det `java.io.FileInputStream`-objekt som innehåller det PDF-dokument som ska demonteras.
+   * Lägg till en post i objektet `java.util.Map` genom att anropa dess `put`-metod och skicka följande argument:
 
       * Ett strängvärde som representerar nyckelnamnet. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet. (I DDX-dokumentet som skapas dynamiskt är värdet `AssemblerResultPDF.pdf`.)
-      * A `com.adobe.idp.Document` objekt som innehåller det PDF-dokument som ska demonteras.
+      * Ett `com.adobe.idp.Document`-objekt som innehåller det PDF-dokument som ska demonteras.
 
 1. Ange körningsalternativ.
 
-   * Skapa en `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
-   * Ange körningsalternativ som uppfyller dina affärsbehov genom att anropa en metod som tillhör `AssemblerOptionSpec` -objekt. Om du till exempel vill instruera tjänsten Assembler att fortsätta bearbeta ett jobb när ett fel inträffar, ska du anropa `AssemblerOptionSpec` objektets `setFailOnError` metod och skicka `false`.
+   * Skapa ett `AssemblerOptionSpec`-objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
+   * Ange körningsalternativ som uppfyller dina affärskrav genom att anropa en metod som tillhör objektet `AssemblerOptionSpec`. Om du till exempel vill instruera Assembler-tjänsten att fortsätta bearbeta ett jobb när ett fel inträffar, anropar du `AssemblerOptionSpec`-objektets `setFailOnError`-metod och skickar `false`.
 
 1. Dela upp PDF-dokumentet.
 
-   Anropa `AssemblerServiceClient` objektets `invokeDDX` och skicka följande värden:
+   Anropa `AssemblerServiceClient`-objektets `invokeDDX`-metod och skicka följande värden:
 
-   * A `com.adobe.idp.Document` objekt som representerar det dynamiskt skapade DDX-dokumentet
-   * A `java.util.Map` objekt som innehåller det PDF-dokument som ska demonteras
-   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativen, inklusive standardteckensnitt och jobbloggsnivå
+   * Ett `com.adobe.idp.Document`-objekt som representerar det dynamiskt skapade DDX-dokumentet
+   * Ett `java.util.Map`-objekt som innehåller det PDF-dokument som ska demonteras
+   * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec`-objekt som anger körningsalternativen, inklusive standardteckensnittet och jobbloggsnivån
 
-   The `invokeDDX` returnerar en `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller de uppdelade PDF-dokumenten och eventuella undantag som inträffat.
+   Metoden `invokeDDX` returnerar ett `com.adobe.livecycle.assembler.client.AssemblerResult`-objekt som innehåller de omonterade PDF-dokumenten och eventuella undantag som har inträffat.
 
 1. Spara de upplösta PDF-dokumenten.
 
    Gör så här för att få fram de uppdelade PDF-dokumenten:
 
-   * Anropa `AssemblerResult` objektets `getDocuments` -metod. Den här metoden returnerar en `java.util.Map` -objekt.
-   * Iterera genom `java.util.Map` tills du hittar resultatet `com.adobe.idp.Document` -objekt.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet.
+   * Anropa metoden `getDocuments` för objektet `AssemblerResult`. Den här metoden returnerar ett `java.util.Map`-objekt.
+   * Upprepa genom objektet `java.util.Map` tills du hittar det resulterande `com.adobe.idp.Document`-objektet.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att extrahera PDF-dokumentet.
 
 **Se även**
 
@@ -202,76 +202,76 @@ Skapa ett DDX-dokument dynamiskt och demontera ett PDF-dokument med Assembler Se
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa en PDF Assembler-klient.
 
-   * Skapa en `AssemblerServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `AssemblerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `AssemblerServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `AssemblerServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `AssemblerServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Skapa DDX-dokumentet.
 
-   * Skapa en `System.Xml.XmlElement` genom att använda dess konstruktor.
-   * Skapa DX-dokumentets rotelement genom att anropa `XmlElement` objektets `CreateElement` -metod. Den här metoden skapar en `Element` som representerar rotelementet. Skicka ett strängvärde som representerar elementets namn till `CreateElement` -metod. Ange ett värde för DDX-elementet genom att anropa dess `SetAttribute` -metod. Lägg slutligen till elementet i DDX-dokumentet genom att anropa `XmlElement` objektets `AppendChild` -metod. Skicka DDX-objektet som ett argument. Följande kodrader visar den här programlogiken:
+   * Skapa ett `System.Xml.XmlElement`-objekt med hjälp av dess konstruktor.
+   * Skapa DX-dokumentets rotelement genom att anropa `XmlElement`-objektets `CreateElement`-metod. Den här metoden skapar ett `Element`-objekt som representerar rotelementet. Skicka ett strängvärde som representerar elementets namn till metoden `CreateElement`. Ange ett värde för DDX-elementet genom att anropa dess `SetAttribute`-metod. Lägg slutligen till elementet i DDX-dokumentet genom att anropa `XmlElement`-objektets `AppendChild`-metod. Skicka DDX-objektet som ett argument. Följande kodrader visar den här programlogiken:
 
      ` System.Xml.XmlElement root = ddx.CreateElement("DDX");  root.SetAttribute("xmlns", "https://ns.adobe.com/DDX/1.0/");  ddx.AppendChild(root);`
 
-   * Skapa DDX-dokumentets `PDFsFromBookmarks` genom att anropa `XmlElement` objektets `CreateElement` -metod. Skicka ett strängvärde som representerar elementets namn till `CreateElement` -metod. Ange sedan ett värde för elementet genom att anropa dess `SetAttribute` -metod. Lägg till `PDFsFromBookmarks` element till rotelementet genom att anropa `DDX` element `AppendChild` -metod. Skicka `PDFsFromBookmarks` elementobjekt som argument. Följande kodrader visar den här programlogiken:
+   * Skapa DDX-dokumentets `PDFsFromBookmarks`-element genom att anropa `XmlElement`-objektets `CreateElement`-metod. Skicka ett strängvärde som representerar elementets namn till metoden `CreateElement`. Ange sedan ett värde för elementet genom att anropa dess `SetAttribute`-metod. Lägg till elementet `PDFsFromBookmarks` i rotelementet genom att anropa metoden `AppendChild` för elementet `DDX`. Skicka elementobjektet `PDFsFromBookmarks` som ett argument. Följande kodrader visar den här programlogiken:
 
      ` XmlElement PDFsFromBookmarks = ddx.CreateElement("PDFsFromBookmarks");  PDFsFromBookmarks.SetAttribute("prefix", "stmt");  root.AppendChild(PDFsFromBookmarks);`
 
-   * Skapa DDX-dokumentets `PDF` genom att anropa `XmlElement` objektets `CreateElement` -metod. Skicka ett strängvärde som representerar elementets namn till `CreateElement` -metod. Ange sedan ett värde för det underordnade elementet genom att anropa dess `SetAttribute` -metod. Lägg till `PDF` -element till `PDFsFromBookmarks` genom att anropa `PDFsFromBookmarks` element `AppendChild` -metod. Skicka `PDF` elementobjekt som argument. Följande kodrader visar den här programlogiken:
+   * Skapa DDX-dokumentets `PDF`-element genom att anropa `XmlElement`-objektets `CreateElement`-metod. Skicka ett strängvärde som representerar elementets namn till metoden `CreateElement`. Ange sedan ett värde för det underordnade elementet genom att anropa dess `SetAttribute`-metod. Lägg till elementet `PDF` i elementet `PDFsFromBookmarks` genom att anropa `PDFsFromBookmarks`-elementets `AppendChild`-metod. Skicka elementobjektet `PDF` som ett argument. Följande kodrader visar den här programlogiken:
 
      ` XmlElement PDF = ddx.CreateElement("PDF");  PDF.SetAttribute("source", "AssemblerResultPDF.pdf");  PDFsFromBookmarks.AppendChild(PDF);`
 
 1. Konvertera DDX-dokumentet.
 
-   * Skapa en `System.IO.MemoryStream` genom att använda dess konstruktor.
-   * Fyll i `MemoryStream` -objektet med DDX-dokumentet genom att använda `XmlElement` -objekt som representerar DDX-dokumentet. Anropa `XmlElement` objektets `Save` och skicka `MemoryStream` -objekt.
-   * Skapa en bytearray och fylla den med data i `MemoryStream` -objekt. I följande kod visas den här programlogiken:
+   * Skapa ett `System.IO.MemoryStream`-objekt med hjälp av dess konstruktor.
+   * Fyll i objektet `MemoryStream` med DDX-dokumentet med hjälp av objektet `XmlElement` som representerar DDX-dokumentet. Anropa `XmlElement`-objektets `Save`-metod och skicka `MemoryStream`-objektet.
+   * Skapa en bytearray och fylla den med data i objektet `MemoryStream`. I följande kod visas den här programlogiken:
 
      ` int bufLen = Convert.ToInt32(stream.Length);  byte[] byteArray = new byte[bufLen];  stream.Position = 0;  int count = stream.Read(byteArray, 0, bufLen);`
 
-   * Skapa en `BLOB` -objekt. Tilldela bytearrayen till `BLOB` objektets `MTOM` fält.
+   * Skapa ett `BLOB`-objekt. Tilldela bytearrayen till `BLOB`-objektets `MTOM`-fält.
 
 1. Referera ett PDF-dokument som ska demonteras.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra indatadokumentet i PDF. Detta `BLOB` objektet skickas till `invokeOneDocument` som ett argument.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för indata-PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` egenskapen för bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra indatadokumentet i PDF. Det här `BLOB`-objektet skickas till `invokeOneDocument` som ett argument.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för indata-PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i objektet `BLOB` genom att tilldela dess `MTOM`-egenskap innehållet i bytearrayen.
 
 1. Ange körningsalternativ.
 
-   * Skapa en `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
-   * Ange körningsalternativ som uppfyller dina affärskrav genom att tilldela ett värde till en datamedlem som tillhör `AssemblerOptionSpec` -objekt. Om du till exempel vill instruera Assembler-tjänsten att fortsätta bearbeta ett jobb när ett fel inträffar tilldelar du `false` till `AssemblerOptionSpec` objektets `failOnError` datamedlem.
+   * Skapa ett `AssemblerOptionSpec`-objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
+   * Ange körningsalternativ för att uppfylla dina affärskrav genom att tilldela ett värde till en datamedlem som tillhör objektet `AssemblerOptionSpec`. Om du till exempel vill instruera Assembler-tjänsten att fortsätta bearbeta ett jobb när ett fel inträffar tilldelar du `false` till `AssemblerOptionSpec`-objektets `failOnError`-datamedlem.
 
 1. Dela upp PDF-dokumentet.
 
-   Anropa `AssemblerServiceClient` objektets `invokeDDX` och skicka följande värden:
+   Anropa `AssemblerServiceClient`-objektets `invokeDDX`-metod och skicka följande värden:
 
-   * A `BLOB` objekt som representerar det dynamiskt skapade DDX-dokumentet
-   * The `mapItem` array som innehåller indata-PDF-dokumentet
-   * An `AssemblerOptionSpec` objekt som anger körningsalternativ
+   * Ett `BLOB`-objekt som representerar det dynamiskt skapade DDX-dokumentet
+   * Arrayen `mapItem` som innehåller PDF-indatadokumentet
+   * Ett `AssemblerOptionSpec`-objekt som anger körningsalternativ
 
-   The `invokeDDX` returnerar en `AssemblerResult` som innehåller resultatet av jobbet och eventuella undantag som inträffade.
+   Metoden `invokeDDX` returnerar ett `AssemblerResult`-objekt som innehåller resultatet av jobbet och eventuella undantag som inträffade.
 
 1. Spara de upplösta PDF-dokumenten.
 
    Gör så här för att hämta de nya PDF-dokumenten:
 
-   * Öppna `AssemblerResult` objektets `documents` fält, vilket är ett `Map` objekt som innehåller de uppdelade PDF-dokumenten.
-   * Iterera genom `Map` -objekt för att hämta varje resulterande dokument. Sedan, byta ut den arraymedlemmens `value` till `BLOB`.
-   * Extrahera de binära data som representerar PDF-dokumentet genom att öppna dess `BLOB` objektets `MTOM` -egenskap. Detta returnerar en array med byte som du kan skriva ut till en PDF-fil.
+   * Åtkomst till `AssemblerResult`-objektets `documents`-fält, som är ett `Map`-objekt som innehåller de omonterade PDF-dokumenten.
+   * Iterera genom objektet `Map` för att få fram varje resulterande dokument. Sedan konverterar du den arraymedlemmens `value` till en `BLOB`.
+   * Extrahera de binära data som representerar PDF-dokumentet genom att komma åt objektets `MTOM`-egenskap för `BLOB`. Detta returnerar en array med byte som du kan skriva ut till en PDF-fil.
 
 **Se även**
 

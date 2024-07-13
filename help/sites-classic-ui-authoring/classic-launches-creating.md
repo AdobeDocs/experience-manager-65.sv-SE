@@ -21,9 +21,9 @@ ht-degree: 14%
 
 Skapa en startsida för att möjliggöra uppdatering av en ny version av befintliga webbsidor för framtida aktivering. När du skapar en Launch anger du en titel och källsidan:
 
-* Titeln visas i **Sidekick**, där författarna kan arbeta med dem.
+* Titeln visas i **Sidekick**, där författare kan komma åt dem för att arbeta med dem.
 * Källsidans underordnade sidor inkluderas som standard i starten. Du kan bara använda källsidan om du vill.
-* Som standard [Live Copy](/help/sites-administering/msm.md) uppdaterar startsidorna automatiskt när källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar.
+* Som standard uppdaterar [Live Copy](/help/sites-administering/msm.md) startsidorna automatiskt när källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar.
 
 Du kan också ange **startdatum** (och starttid) för att definiera när startsidorna ska befordras och aktiveras. **Startdatumet** fungerar dock endast i kombination med flaggan **Produktionsklar** (se [Redigera en startkonfiguration](/help/sites-classic-ui-authoring/classic-launches-editing.md#editing-a-launch-configuration)). För att åtgärderna ska köras automatiskt måste båda anges.
 
@@ -31,26 +31,26 @@ Du kan också ange **startdatum** (och starttid) för att definiera när startsi
 
 Följande procedur skapar en start.
 
-1. Öppna administrationssidan för webbplatsen ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin)).
-1. Klicka **Nytt...** sedan **Ny start...**.
-1. I **Skapa start** anger du värden för följande egenskaper:
+1. Öppna sidan Webbplatsadministration ([http://localhost:4502/siteadmin](http://localhost:4502/siteadmin)).
+1. Klicka på **Ny..** och sedan på **Ny start..**.
+1. I dialogrutan **Skapa start** anger du värden för följande egenskaper:
 
-   * **Starta titel**: Namnet på Launch. Namnet ska vara meningsfullt för författare.
-   * **Källsida**: Sökvägen till sidan som starten ska skapas för. Som standard inkluderas alla underordnade sidor.
+   * **Starttitel**: Namnet på starten. Namnet ska vara meningsfullt för författare.
+   * **Source Page**: Sökvägen till den sida som starten ska skapas för. Som standard inkluderas alla underordnade sidor.
    * **Uteslut undersidor**: Välj det här alternativet om du bara vill skapa startsidan för källsidan och inte för de underordnade sidorna. Som standard är det här alternativet inte markerat.
-   * **Synkronisera**: Välj det här alternativet om du automatiskt vill uppdatera innehållet på startsidor när källsidorna ändras. Detta uppnås genom att man gör lanseringen till [live copy](/help/sites-administering/msm.md).
-   * **Startdatum**: Det datum och den tidpunkt då startkopian ska aktiveras (beroende på **Produktionsklar** flagga, se [Startar - ordningen för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events)).
+   * **Synkronisera inte**: Välj det här alternativet om du vill att innehållet på startsidorna ska uppdateras automatiskt när källsidorna ändras. Detta uppnås genom att starta en [live-kopia](/help/sites-administering/msm.md).
+   * **Startdatum**: Det datum och den tidpunkt då startkopian ska aktiveras (beroende på flaggan **Produktionsklar**; se [Startar - ordning för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events)).
 
    ![chlimage_1-99](assets/chlimage_1-99a.png)
 
-1. Klicka **Skapa**.
+1. Klicka på **Skapa**.
 
 ## Ta bort en start {#deleting-a-launch}
 
 Du kan även ta bort en programstart.
 
-1. I [startar konsolen](/help/sites-classic-ui-authoring/classic-launches.md)väljer du önskad start.
-1. Klicka **Ta bort** - bekräftelse krävs:
+1. Välj önskad start i [startkonsolen](/help/sites-classic-ui-authoring/classic-launches.md).
+1. Klicka på **Ta bort** - bekräftelse krävs:
 
    ![chlimage_1-100](assets/chlimage_1-100a.png)
 

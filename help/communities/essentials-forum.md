@@ -26,15 +26,15 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
  <tbody>
   <tr>
    <td> <strong>resourceTypes</strong></td>
-   <td>social/forum/komponenter/hbs/forum<br /> social/forum/komponenter/hbs/topic<br /> social/forum/components/hbs/post</td>
+   <td>social/forum/components/hbs/forum<br /> social/forum/components/hbs/topic<br /> social/forum/components/hbs/post</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>inkluderbar</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>include</strong></a></td>
    <td>Nej</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td>
-   <td>cq.ckeditor<br /> cq.social.hbs.röstning<br /> cq.social.hbs.forum</td>
+   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td>cq.ckeditor<br /> cq.social.hbs.voice<br /> cq.social.hbs.forum</td>
   </tr>
   <tr>
    <td> <strong>mallar</strong></td>
@@ -46,7 +46,7 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td>
-   <td>Se <a href="forum.md">Forumfunktion</a></td>
+   <td>Se <a href="forum.md">forumfunktion</a></td>
   </tr>
  </tbody>
 </table>
@@ -57,26 +57,26 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
 
 * [Forum-API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/forum/client/api/package-summary.html)
 
-* [Slutpunkter för forum](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/forum/client/endpoints/package-summary.html)
+* [Forumslutpunkter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/forum/client/endpoints/package-summary.html)
 
 * [Anpassningar på serversidan](server-customize.md)
 
 ### Forum {#forum-function}
 
-En community-webbplatsstruktur som innehåller [Forumfunktion](functions.md#forum-function), innehåller en konfigurerad `forum` och inställningar som påverkar moderering, taggning och översättning.
+En community-webbplatsstruktur som innehåller [forumfunktionen](functions.md#forum-function), innehåller en konfigurerad `forum`-komponent och inställningar som påverkar moderering, taggning och översättning.
 
 ### Åtkomst till foruminlägg (UGC) {#accessing-forum-posts-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.
 Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med Adobe Experience Manager 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
+Från och med Adobe Experience Manager 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
-**Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
+**Platsen och formatet för användargenererat innehåll i databasen kan ändras utan varning**.
 
 Se:
 
-* [Översikt över lagringsresursprovider](srp.md) - Översikt över introduktion och databasanvändning.
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel.
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - Riktlinjer för kodning.
+* [Lagringsresursprovideröversikt](srp.md) - Översikt över introduktion och databasanvändning.
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
 * [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.

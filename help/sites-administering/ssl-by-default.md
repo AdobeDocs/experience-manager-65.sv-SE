@@ -25,17 +25,17 @@ I ett försök att kontinuerligt förbättra AEM säkerhet har Adobe introducera
 
 Du kan börja konfigurera SSL/TLS som standard genom att klicka på det relevanta inkorgsmeddelandet från AEM startskärm. Om du vill nå Inkorgen trycker du på klockikonen i skärmens övre högra hörn. Klicka sedan på **Visa alla**. Då visas en lista med alla aviseringar som har beställts i en listvy.
 
-I listan väljer du och öppnar **Konfigurera HTTPS** varning:
+Markera och öppna aviseringen **Konfigurera HTTPS** i listan:
 
 ![chlimage_1-103](assets/chlimage_1-103.png)
 
 >[!NOTE]
 >
->Om **Konfigurera HTTPS** ingen varning finns i Inkorgen. Du kan navigera direkt till HTTPS-guiden genom att gå till *<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*
+>Om aviseringen **Konfigurera HTTPS** inte finns i Inkorgen kan du navigera direkt till HTTPS-guiden genom att gå till *<http://serveraddress:serverport/libs/granite/security/content/sslConfig.html?item=configuration%2fconfiguressl&_charset_=utf-8>*
 
-En tjänstanvändare ringde **ssl-service** har skapats för funktionen. När du har öppnat aviseringen vägleds du genom följande konfigurationsguide:
+En tjänstanvändare med namnet **ssl-service** har skapats för den här funktionen. När du har öppnat aviseringen vägleds du genom följande konfigurationsguide:
 
-1. Konfigurera först arkivautentiseringsuppgifterna. Detta är autentiseringsuppgifterna för **ssl-service** systemanvändarens nyckelarkiv som kommer att innehålla den privata nyckeln och förtroendearkivet för HTTPS-avlyssnaren.
+1. Konfigurera först arkivautentiseringsuppgifterna. Detta är autentiseringsuppgifterna för systemanvändarens nyckelarkiv **ssl-service** som innehåller den privata nyckeln och förtroendearkivet för HTTPS-avlyssnaren.
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
@@ -45,7 +45,7 @@ En tjänstanvändare ringde **ssl-service** har skapats för funktionen. När du
 
    >[!NOTE]
    >
-   >Mer information om hur du skapar en privat nyckel och ett certifikat som ska användas med guiden finns i [detta förfarande](/help/sites-administering/ssl-by-default.md#generating-a-private-key-certificate-pair-to-use-with-the-wizard) nedan.
+   >Mer information om hur du skapar en privat nyckel och ett certifikat som ska användas med guiden finns i [den här proceduren](/help/sites-administering/ssl-by-default.md#generating-a-private-key-certificate-pair-to-use-with-the-wizard) nedan.
 
 1. Slutligen anger du HTTPS-värdnamnet och TCP-porten för HTTPS-avlyssnaren.
 
@@ -96,7 +96,7 @@ Servern kommer, precis som vilken server som helst för POST av sling, att svara
 
 Nedan finns exempel på både ett lyckat svar och ett fel.
 
-**EXEMPEL** (status = 200):
+**EXEMPEL PÅ SLUTFÖRT** (status = 200):
 
 ```xml
 <!DOCTYPE html>
@@ -153,8 +153,8 @@ it for any subsequent updating of the private key or certificate.</dd>
 
 Du kan också automatisera SSL-/TLS-konfigurationen genom att överföra ett paket som redan innehåller följande obligatoriska objekt:
 
-* SSL-service-användarens nyckelbehållare. Det här finns under */home/users/system/security/ssl-service/keystore* i databasen.
-* The `GraniteSslConnectorFactory` konfiguration
+* SSL-service-användarens nyckelbehållare. Detta finns under */home/users/system/security/ssl-service/keystore* i databasen.
+* Konfigurationen `GraniteSslConnectorFactory`
 
 ### Skapa en privat nyckel/ett certifikatpar som ska användas med guiden {#generating-a-private-key-certificate-pair-to-use-with-the-wizard}
 
@@ -189,40 +189,40 @@ Här nedan hittar du ett exempel på hur du skapar ett självsignerat certifikat
    openssl pkcs8 -topk8 -inform PEM -outform DER -in localhostprivate.key -out localhostprivate.der -nocrypt
    ```
 
-1. Till sist skickar du **localhostprivate.der** som den privata nyckeln och **localhost.crt** som SSL/TLS-certifikat i steg 2 i den grafiska SSL/TLS-guiden som beskrivs i början av den här sidan.
+1. Ladda slutligen upp **localhostprivate.der** som privat nyckel och **localhost.crt** som SSL/TLS-certifikat i steg 2 i den grafiska SSL-/TLS-guiden som beskrivs i början av den här sidan.
 
 ### Uppdatera SSL-/TLS-konfigurationen via cURL {#updating-the-ssl-tls-configuration-via-curl}
 
 >[!NOTE]
 >
->Se [Använda cURL med AEM](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html) om du vill ha en centraliserad lista med användbara cURL-kommandon i AEM.
+>En centraliserad lista över användbara cURL-kommandon i AEM finns i [Använda cURL med AEM](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/curl.html).
 
 Du kan också automatisera SSL-/TLS-konfigurationen med verktyget cURL. Du kan göra detta genom att skicka konfigurationsparametrarna till den här URL:en:
 
-*https://&lt;serveraddress>:&lt;serverport>/libs/granite/security/post/sslSetup.html*
+*https://&lt;serveradress>:&lt;serverport>/libs/granite/security/post/sslSetup.html*
 
 Nedan visas parametrarna som du kan använda för att ändra de olika inställningarna i konfigurationsguiden:
 
-* `-F "keystorePassword=password"` - Nyckellagringslösenordet.
+* `-F "keystorePassword=password"` - lösenordet för nyckelbehållaren;
 
-* `-F "keystorePasswordConfirm=password"` - bekräfta lösenordet för nyckelbehållaren,
+* `-F "keystorePasswordConfirm=password"` - bekräfta lösenordet för nyckelbehållaren;
 
-* `-F "truststorePassword=password"` - lösenordet för förvaltararkivet,
+* `-F "truststorePassword=password"` - lösenordet för förvaltararkivet;
 
-* `-F "truststorePasswordConfirm=password"` - bekräfta lösenordet för förtroendearkivet,
+* `-F "truststorePasswordConfirm=password"` - bekräfta lösenordet för förtroendearkivet;
 
-* `-F "privatekeyFile=@localhostprivate.der"` - ange den privata nyckeln,
+* `-F "privatekeyFile=@localhostprivate.der"` - ange den privata nyckeln;
 
-* `-F "certificateFile=@localhost.crt"` - ange certifikatet,
+* `-F "certificateFile=@localhost.crt"` - ange certifikatet;
 
-* `-F "httpsHostname=host.example.com"`- Ange värdnamnet.
+* `-F "httpsHostname=host.example.com"`- ange värdnamnet;
 * `-F "httpsPort=8443"` - den port som HTTPS-avlyssnaren ska arbeta med.
 
 >[!NOTE]
 >
->Det snabbaste sättet att köra cURL för att automatisera SSL-/TLS-konfigurationen är från den mapp där DER- och CRT-filerna finns. Du kan också ange den fullständiga sökvägen i `privatekeyFile` och certificateFile-argument.
+>Det snabbaste sättet att köra cURL för att automatisera SSL-/TLS-konfigurationen är från den mapp där DER- och CRT-filerna finns. Du kan också ange den fullständiga sökvägen i argumenten `privatekeyFile` och certificateFile.
 >
->Du måste också vara autentiserad för att kunna utföra uppdateringen, så se till att du lägger till cURL-kommandot med `-u user:passeword` parameter.
+>Du måste också autentiseras för att kunna utföra uppdateringen, så se till att du lägger till cURL-kommandot med parametern `-u user:passeword`.
 >
 >Ett korrekt cURL-postkommando ska se ut så här:
 
@@ -236,14 +236,14 @@ Du kan skicka en certifikatkedja till servern genom att upprepa parametern certi
 
 `-F "certificateFile=@root.crt" -F "certificateFile=@localhost.crt"..`
 
-När du har kört kommandot kontrollerar du att alla certifikat har gjort det till nyckelbehållaren. Kontrollera **Nyckelbehållare** poster från:
+När du har kört kommandot kontrollerar du att alla certifikat har gjort det till nyckelbehållaren. Kontrollera **Keystore**-posterna från:
 [http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service](http://localhost:4502/libs/granite/security/content/v2/usereditor.html/home/users/system/security/ssl-service)
 
 ### Aktivera en TLS 1.3-anslutning {#enabling-tls-connection}
 
 1. Gå till webbkonsolen
-1. Navigera sedan till **OSGi** - **Konfiguration** - **Adobe Granite SSL Connector Factory**
-1. Gå till **Inkluderade chiffersviter** och lägg till följande poster. Du kan bekräfta varje tillägg genom att trycka på &quot;**+**&quot; till vänster om fältet, efter att ha lagt till var och en i:
+1. Gå sedan till **OSGi** - **Konfiguration** - **Adobe Granite SSL Connector Factory**
+1. Gå till fältet **Inkluderade chiffersviter** och lägg till följande poster. Du kan bekräfta varje tillägg genom att trycka på knappen **+** till vänster om fältet, efter att du lagt till varje tillägg i:
 
    * `TLS_AES_256_GCM_SHA384`
    * `TLS_AES_128_GCM_SHA256`

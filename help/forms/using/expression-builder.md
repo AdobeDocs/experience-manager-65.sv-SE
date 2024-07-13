@@ -38,9 +38,9 @@ Här är några vanliga JSP EL-exempel som du kan använda i din Correspondence 
 * Så här sammanfogar du två strängar: ${str1} ${str2}
 * Jämför två tal: ${age &lt; 18}
 
-Mer information finns i [JSP EL-specifikation](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf). Uttryckshanteraren på klientsidan stöder inte vissa variabler och funktioner i JSP EL-specifikationen, närmare bestämt:
+Mer information finns i [JSP EL-specifikationen](https://download.oracle.com/otn-pub/jcp/jsp-2.1-fr-spec-oth-JSpec/jsp-2_1-fr-spec-el.pdf). Uttryckshanteraren på klientsidan stöder inte vissa variabler och funktioner i JSP EL-specifikationen, närmare bestämt:
 
-* Samlingsindex och kartnycklar (med [] notation) stöds inte i variabelnamn för uttryck som utvärderas på klientsidan.
+* Samlingsindex och mappningsnycklar (med notationen []) stöds inte i variabelnamn för uttryck som utvärderas på klientsidan.
 * Följande är parametertyper eller returtyper för funktioner som används i uttryck:
 
    * java.lang.String
@@ -78,7 +78,7 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
 1. Definiera ett gränssnitt för OSGi-tjänsten som innehåller metoder som exporteras för användning av Expression Manager.
 1. Deklarera metoder i gränssnittet A och kommentera dem med @ServiceMethod-anteckningen (com.adobe.exm.expeval.ServiceMethod). Uttryckshanteraren ignorerar alla metoder som inte kommenteras. ServiceMethod-anteckningen har följande valfria attribut som också kan anges:
 
-   1. **Aktiverad**: Avgör om den här metoden är aktiverad. Uttryckshanteraren ignorerar inaktiverade metoder.
+   1. **Aktiverad**: Anger om den här metoden är aktiverad. Uttryckshanteraren ignorerar inaktiverade metoder.
    1. **familyId**: Anger metodens familj (grupp). Om den är tom antar Expression Manager att metoden tillhör standardfamiljen. Det finns inget register över familjer (utom standardvalet) som funktioner väljs från. Med Expression Manager skapas registret dynamiskt genom en union av alla familj-ID:n som anges av alla funktioner som exporteras av de olika paketen. Se till att det ID som de anger här är läsbart eftersom det även visas i uttrycksredigeringsgränssnittet.
    1. **displayName**: Ett läsbart namn för funktionen. Det här namnet används för visning i redigeringsgränssnittet. Om det är tomt skapar Expression Manager ett standardnamn med funktionens prefix och local-name.
    1. **Beskrivning**: En detaljerad beskrivning av funktionen. Den här beskrivningen används för visning i redigeringsgränssnittet. Om den är tom konstruerar Expression Manager en standardbeskrivning med funktionens prefix och local-name.
@@ -126,7 +126,7 @@ Du kan skapa ett anpassat paket för att exportera dina egna fjärrfunktioner f�
   @org.apache.felix.scr.annotations.Property(name = "exm.service", boolValue = true)})
 ```
 
-Posten exm.service=true instruerar Expression Manager att tjänsten innehåller fjärrfunktioner som är lämpliga att använda i uttryck. The &lt;service_id> värdet måste vara en giltig Java-identifierare (alfanumerisk,$, _ utan andra specialtecken). Det här värdet, som har nyckelordet REMOTE_ som prefix, utgör prefixet som används i uttryck. Ett gränssnitt med en kommenterad metod bar() och tjänst-ID:t foo i tjänsteegenskaperna kan till exempel refereras inuti uttryck med REMOTE_foo:bar().
+Posten exm.service=true instruerar Expression Manager att tjänsten innehåller fjärrfunktioner som är lämpliga att använda i uttryck. Värdet för &lt;service_id> måste vara en giltig Java-identifierare (alfanumerisk,$, _ utan andra specialtecken). Det här värdet, som har nyckelordet REMOTE_ som prefix, utgör prefixet som används i uttryck. Ett gränssnitt med en kommenterad metod bar() och tjänst-ID:t foo i tjänsteegenskaperna kan till exempel refereras inuti uttryck med REMOTE_foo:bar().
 
 ```java
 package mergeandfuse.com;
@@ -154,7 +154,7 @@ public class RemoteFuntionImpl implements RemoteFunction {
 
 Nedan finns exempelarkiv att använda:
 
-* **GoodFunctions.jar.zip** är jar-filen med ett paket som innehåller en fjärrfunktionsdefinition. Ladda ned filen GoodFunctions.jar.zip och zippa upp den för att få filen jar.
+* **GoodFunctions.jar.zip** är en jar-fil med ett paket som innehåller en fjärrfunktionsdefinition. Ladda ned filen GoodFunctions.jar.zip och zippa upp den för att få filen jar.
 * **GoodFunctions.zip** är det paket med källkod som används för att definiera en anpassad fjärrfunktion och skapa ett paket för den.
 
 GoodFunctions.jar.zip

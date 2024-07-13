@@ -23,29 +23,29 @@ Kampanjerna använder ofta teasers som en mekanism för att locka ett visst segm
 
 >[!NOTE]
 >
->Teaser-komponenten är nu borttagen i AEM 6.2. Använd i stället [Målkomponent](/help/sites-authoring/content-targeting-touch.md).
+>Teaser-komponenten är nu borttagen i AEM 6.2. Använd i stället [målkomponenten](/help/sites-authoring/content-targeting-touch.md).
 
-* **Varumärkessidor** lagras i Campaigns-avsnittet på webbplatsen. Ett varumärke innehåller de enskilda kampanjerna.
-* **Kampanjsidor** lagras i Campaigns-avsnittet på webbplatsen. Varje kampanj har en egen sida, där de mer detaljerade definitionerna finns. Behållaren, eller översikten, innehåller också viss information och statistik om de enskilda sidorna för teaser.
+* **Varumärkessidor** lagras i kampanjavsnittet på webbplatsen. Ett varumärke innehåller de enskilda kampanjerna.
+* **Kampanjsidor** lagras i avsnittet Kampanjer på webbplatsen. Varje kampanj har en egen sida, där de mer detaljerade definitionerna finns. Behållaren, eller översikten, innehåller också viss information och statistik om de enskilda sidorna för teaser.
 
 Teaser inom AEM består av flera delar:
 
-* **Teaser pages** lagras under rätt kampanjsida och innehåller definitioner för de steg som är tillgängliga för varje enskild kampanj. De här definitionerna används när de teaserskiktade styckena visas, inklusive innehållsvariationer, det segment som ska användas för att markera en variant och förstärkningsfaktor.
-* The **Teaser component** är tillgängligt direkt och gör att du kan skapa en instans av ditt specifika steg på en innehållssida. Du kan dra laserkomponenten från sidosparken och sedan ange din laserdefinition för att skapa ett eget teaser-stycke. **Obs!** Teaser-komponenten är nu borttagen i AEM 6.2. Använd i stället [Målkomponent](/help/sites-authoring/content-targeting-touch.md).
-* **Teaser paragraphs** är faktiska instanser av ditt suddgummi på en innehållssida. Dessa locka fram ett segment av besökare till innehåll som fokuserar på deras intressen.
+* **Teaser-sidor** lagras under rätt kampanjsida och innehåller definitioner för de Teaser-stycken som är tillgängliga för varje specifik kampanj. De här definitionerna används när de teaserskiktade styckena visas, inklusive innehållsvariationer, det segment som ska användas för att markera en variant och förstärkningsfaktor.
+* **Teaser-komponenten** är tillgänglig direkt och gör att du kan skapa en instans av ditt specifika teaser-stycke på en innehållssida. Du kan dra laserkomponenten från sidosparken och sedan ange din laserdefinition för att skapa ett eget teaser-stycke. **Obs!** Teaser-komponenten är nu borttagen i AEM 6.2. Använd i stället komponenten [ Target ](/help/sites-authoring/content-targeting-touch.md) .
+* **Teaser paragraphs** är faktiska instanser av teaser på en innehållssida. Dessa locka fram ett segment av besökare till innehåll som fokuserar på deras intressen.
 * Sidor där kampanjinnehållet är inriktat på ett specifikt besökarsegment. Vanligtvis leder de smalare styckena besökaren till sådana sidor.
 
 ## Strategier {#strategies}
 
-När du lägger till ett steg på en sida måste du definiera **Strategi**.
+När du lägger till ett steg på en sida måste du definiera **strategin**.
 
-Detta gäller om flera scener är tillgängliga för markering när deras tilldelade segment kan matchas. The **Strategi** anger sedan ett extra villkor som används för att välja den teaser som visas:
+Detta gäller om flera scener är tillgängliga för markering när deras tilldelade segment kan matchas. **Strategin** anger sedan ett extra villkor som används för att välja det teaser som visas:
 
-* **ClickStream-bakgrundsmusik**, baseras på de taggar och relaterade taggar som finns i besökarens klientkontext (visa hur ofta en besökare har klickat på sidor som innehåller respektive tagg). Träffarna för de taggar som definieras på scensidan jämförs.
-* **Slumpmässig**, för&quot;slumpmässig&quot; markering; använder den slumpmässiga faktorn som genereras för en sida, som kan ses med [klientkontext](/help/sites-administering/client-context.md).
+* **Klickströmsbakgrundsmusik** baseras på de taggar och relaterade taggträffar som finns i besökarens klientkontext (visa hur ofta en besökare har klickat på sidor som innehåller respektive tagg). Träffarna för de taggar som definieras på scensidan jämförs.
+* **Slumpmässig**, för slumpmässig markering. Den slumpmässiga faktorn som genereras för en sida används. Detta kan ses med [klientkontexten](/help/sites-administering/client-context.md).
 * **Första** i listan över lösta segment. Ordningen är densamma som för teasers på kampanjbehållarsidan.
 
-The [Förstärkningsfaktor](/help/sites-administering/campaign-segmentation.md#boost-factor) i segmentet påverkar också markeringen. Detta är en viktningsfaktor som läggs till i en segmentdefinition för att öka eller minska den relativa sannolikheten för att den väljs.
+Segmentets [Förstärkningsfaktor](/help/sites-administering/campaign-segmentation.md#boost-factor) påverkar även markeringen. Detta är en viktningsfaktor som läggs till i en segmentdefinition för att öka eller minska den relativa sannolikheten för att den väljs.
 
 Processen och de inbördes förhållandena mellan de olika urvalskriterierna illustreras bäst med ett exempel (en metod som också kan användas för att säkerställa att dina lärare når rätt målgrupp).
 
@@ -104,17 +104,17 @@ Och vi använder följande definitioner av teaser:
    <td>C1 </td>
    <td>T6</td>
    <td>S6</td>
-   <td>Företag<br /> </td>
+   <td>Företag <br /> </td>
   </tr>
  </tbody>
 </table>
 
 Om vi sedan tillämpar detta på en besökare där:
 
-* **S1**, **S2, och **S6** har lösts
+* **S1**, **S2 och **S6** har matchats
 
-* taggen **marknadsföring** har tre träffar
-* taggen **företag** har sex träffar
+* taggen **marketing** har tre träffar
+* taggen **business** har sex träffar
 
 Vi kan se resultatet:
 
@@ -192,7 +192,7 @@ som beräknas innan lämplig strategi tillämpas:
  </tbody>
 </table>
 
-Dessa värden används för att bestämma vilka scener som besökaren ska se, beroende på **Strategi** som tillämpas på teaser-stycket:
+De här värdena används för att avgöra vilka steg besökaren ska se, beroende på vilken **strategi** som tillämpas på det underordnade stycket:
 
 <table>
  <tbody>
@@ -204,7 +204,7 @@ Dessa värden används för att bestämma vilka scener som besökaren ska se, be
   <tr>
    <td>Första</td>
    <td>T5</td>
-   <td>Endast T5 och T6 anses vara deras segment som alla löser <i>och</i> de har den högsta förstärkningsfaktorn. Den returnerade listan är i ordningen T5, T6, så T5 markeras och visas.</td>
+   <td>Endast T5 och T6 betraktas som deras segment, som alla löser <i> och</i> som har den högsta förstärkningsfaktorn. Den returnerade listan är i ordningen T5, T6, så T5 markeras och visas.</td>
   </tr>
   <tr>
    <td>Slumpmässig</td>
@@ -235,10 +235,10 @@ När ni har skapat ert varumärke och er kampanj kan ni skapa och skapa en läro
 
 >[!NOTE]
 >
->Teaser-komponenten är nu borttagen i AEM 6.2. Använd i stället [Målkomponent](/help/sites-authoring/content-targeting-touch.md).
+>Teaser-komponenten är nu borttagen i AEM 6.2. Använd i stället [målkomponenten](/help/sites-authoring/content-targeting-touch.md).
 
 1. Navigera till innehållssidan där du vill placera det steg som ska leda till kampanjsidan.
-1. Lägg till en **Teaser** -komponenten (tillgänglig i **Personalisering** sidbrytare) i önskad position. När kampanjen skapas visas att kampanjsökvägen inte har konfigurerats ännu:
+1. Lägg till en **Teaser**-komponent (tillgänglig i sektionen **Personalization** i sidosparken) i önskad position. När kampanjen skapas visas att kampanjsökvägen inte har konfigurerats ännu:
 
    ![chlimage_1](assets/chlimage_1.png)
 
@@ -252,7 +252,7 @@ Metod som används för markering när flera segment har matchats.
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
-1. Klicka **OK** att spara. Beroende på vilka segment du har angett för teaser och profilen för den användare du är inloggad som, visas rätt innehåll:
+1. Klicka på **OK** för att spara. Beroende på vilka segment du har angett för teaser och profilen för den användare du är inloggad som, visas rätt innehåll:
 
    ![chlimage_1-2](assets/chlimage_1-2.png)
 
@@ -264,7 +264,7 @@ Metod som används för markering när flera segment har matchats.
 
 Förutom kampanjvyn i MCM ger kampanjsidan även information om de lärare som är kopplade till den:
 
-1. Från **Webbplatser** öppnar du kampanjsidan, till exempel:
+1. Öppna kampanjsidan från konsolen **Webbplatser**, till exempel:
 
    `https://localhost:4502/content/campaigns/geometrixx-outdoors/storefront/summer.html`
 

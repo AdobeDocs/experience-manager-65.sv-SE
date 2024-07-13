@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Webbplatsmallar {#site-templates}
 
-Konsolen Platsmallar liknar konsolen [Gruppmallar](tools-groups.md) konsolen, som fokuserar på funktioner av intresse för gemenskapsgrupper.
+Konsolen Webbplatsmallar liknar konsolen [Gruppmallar](tools-groups.md) som är inriktad på funktioner som är av intresse för communitygrupper.
 
 >[!NOTE]
 >
->Konsolerna för att skapa [communitysajter](sites-console.md), [mallar för communitywebbplatser](sites.md), [community-gruppmallar](tools-groups.md)och [communityfunktioner](functions.md) används endast i författarmiljön.
+>Konsolerna för att skapa [communitywebbplatser](sites-console.md), [mallar för communitywebbplatser](sites.md), [mallar för communitygrupper](tools-groups.md) och [communityfunktioner](functions.md) är endast avsedda att användas i författarmiljön.
 
 ## Konsol för webbplatsmallar {#site-templates-console}
 
@@ -30,13 +30,13 @@ I redigeringsmiljön kan du nå webbcommunityplatskonsolen:
 
 * Från global navigering: **[!UICONTROL Tools > Communities > Site Templates]**
 
-Den här konsolen visar mallarna från vilka en [communitywebbplats](sites-console.md) kan skapas och tillåter att nya webbplatsmallar skapas.
+Den här konsolen visar mallarna som en [communityplats](sites-console.md) kan skapas från och tillåter att nya webbplatsmallar skapas.
 
 ![site-template](assets/site-template.png)
 
 ## Skapa platsmall {#create-site-template}
 
-Om du vill börja skapa en platsmall väljer du `Create`.
+Om du vill börja skapa en webbplatsmall väljer du `Create`.
 
 Då öppnas panelen Platsredigeraren som innehåller tre underpaneler:
 
@@ -60,17 +60,17 @@ På panelen Grundläggande information konfigureras ett namn, en beskrivning och
 
 ### Miniatyrbild {#thumbnail}
 
-![webbplatsminiatyrbild](assets/site-thumbnail.png)
+![platsens miniatyrbild](assets/site-thumbnail.png)
 
 (Valfritt) Välj ikonen Överför bild om du vill visa en miniatyrbild tillsammans med namnet och beskrivningen för användare som skapar communitywebbplatser.
 
 ### Struktur {#structure}
 
-![platsstruktur](assets/site-structure.png)
+![site-structure](assets/site-structure.png)
 
 Om du vill lägga till communityfunktioner drar du från höger sida till vänster i den ordning som länkarna på webbplatsmenyn ska visas. Format används på mallen när webbplatsen skapas.
 
-Om du till exempel vill ha en hemsida drar du funktionen Sida från biblioteket och släpper under mallbyggaren. Detta resulterar i att dialogrutan för sidkonfiguration öppnas. Se [function console](functions.md) för information om konfigurationsdialogrutorna.
+Om du till exempel vill ha en hemsida drar du funktionen Sida från biblioteket och släpper under mallbyggaren. Detta resulterar i att dialogrutan för sidkonfiguration öppnas. Mer information om konfigurationsdialogrutorna finns i [funktionskonsolen](functions.md).
 
 Fortsätt att dra och släppa andra communityfunktioner som du vill ha för en community-webbplats som baseras på den här mallen.
 
@@ -78,11 +78,11 @@ Sidfunktionen ger en tom sida. Med funktionen Grupper kan du skapa en gruppwebbp
 
 >[!CAUTION]
 >
->Funktionen Grupper måste *inte vara den första eller enda* i platsstrukturen.
+>Funktionen Grupper får *inte vara den första eller enda*-funktionen i platsstrukturen.
 >
->Alla andra funktioner, till exempel [sidfunktion](functions.md#page-function), måste inkluderas och listas först.
+>Alla andra funktioner, till exempel [sidfunktionen](functions.md#page-function), måste inkluderas och listas först.
 
-![webbplatsredigerare](assets/site-editor.png)
+![webbplatsredigeraren](assets/site-editor.png)
 
 ### Gruppmallar för gruppfunktion {#group-templates-for-groups-function}
 
@@ -90,9 +90,9 @@ När du inkluderar en gruppfunktion i platsmallen, kräver konfigurationen att d
 
 >[!CAUTION]
 >
->Funktionen Grupper måste *inte vara den första eller enda* i platsstrukturen.
+>Funktionen Grupper får *inte vara den första eller enda*-funktionen i platsstrukturen.
 
-![platsfunktioner](assets/site-functions.png)
+![webbplatsfunktioner](assets/site-functions.png)
 
 Genom att välja två eller flera mallar för communitygrupper får gruppadministratören välja när en grupp faktiskt skapas i communityn.
 
@@ -100,6 +100,6 @@ Genom att välja två eller flera mallar för communitygrupper får gruppadminis
 
 ## Redigera webbplatsmall {#edit-site-template}
 
-När du visar webbplatsmallar i huvudmappen [Konsol för webbplatsmallar](#site-templates-console)kan du välja en befintlig platsmall för redigering.
+När du visar webbplatsmallar i huvudkonsolen [Platsmallar](#site-templates-console) går det att välja en befintlig platsmall för redigering.
 
-Den här processen ger samma paneler som [skapa en webbplatsmall](#create-site-template).
+Den här processen innehåller samma paneler som [skapar en platsmall](#create-site-template).

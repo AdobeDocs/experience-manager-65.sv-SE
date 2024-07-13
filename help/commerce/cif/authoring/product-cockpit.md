@@ -26,9 +26,9 @@ Mellanlagrade produktdata inkluderar eventuell mutation i framtiden, t.ex. nya k
 
 ## Konfiguration {#configuration}
 
-Produktkataloger måste konfigureras i AEM. Se [konfigurera butik och kataloger](/help/commerce/cif/getting-started.md#catalog) för mer information.
+Produktkataloger måste konfigureras i AEM. Mer information finns i [konfigurera butik och kataloger](/help/commerce/cif/getting-started.md#catalog).
 
-Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Se [Komma igång](/help/commerce/cif/getting-started.md) för mer information.
+Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Mer information finns i [Komma igång](/help/commerce/cif/getting-started.md).
 
 >[!NOTE]
 >
@@ -36,9 +36,9 @@ Aktivering av mellanlagrade katalogfunktioner kräver autentisering. Se [Komma i
 
 ## Öppnar produktdockan {#opening-product-cockpit}
 
-Det enklaste sättet att komma åt produktdockan är via menyn Commerce AEM huvudmenyn. Du kan också använda Omnissearch (sök efter Commerce) eller öppna `https://<yourAEMInstance>/commerce.html`.
+Det enklaste sättet att komma åt produktdockan är via menyn Commerce AEM huvudmenyn. Det går också att använda Omnissearch (sök efter Commerce) eller öppna `https://<yourAEMInstance>/commerce.html`.
 
-![AEM](/help/commerce/cif/assets/aem-menu.png)
+![AEM-menyn](/help/commerce/cif/assets/aem-menu.png)
 
 ## Bläddra i produktkataloger {#browsing-product-catalogs}
 
@@ -74,7 +74,7 @@ Som standard visas data i produktkatalogen i produktcockpiten. Om du använder&q
 
 Om du klickar på egenskapsikonen för en produkt eller kategori öppnas egenskapsvyn för det markerade objektet. Öppna egenskaper för en produktvariant är lika med öppna de huvudsakliga produktegenskaperna.
 
-### Flikar {#tabs}
+### Commerce Tabs {#tabs}
 
 På flikarna Allmänt och Variant visas fördefinierade handelsegenskaper som kommer från e-handelsservern. Denna information (inkl. varianter) är skrivskyddade data i AEM eftersom arkivsystemet är e-handelsserverdelen. Variantfliken visas bara för produkter med varianter och visar en lista med alla varianter.
 

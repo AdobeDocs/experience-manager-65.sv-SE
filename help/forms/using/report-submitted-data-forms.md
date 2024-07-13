@@ -21,7 +21,7 @@ AEM Forms tillhandahåller API:er som du kan använda för att fråga efter form
 
 >[!NOTE]
 >
->Användare som anropar API:erna måste läggas till i gruppen för granskare enligt beskrivningen i [Koppla granskare som skickar in svar till ett formulär](/help/forms/using/adding-reviewers-form.md).
+>Användare som ska anropa API:erna måste läggas till i granskningsgruppen enligt beskrivningen i [Associera granskare som skickar in till ett formulär](/help/forms/using/adding-reviewers-form.md).
 
 ## GET /content/forms/portal/submission.review.json?func=getFormsForSubmissionReview {#get-content-forms-portal-submission-review-json-func-getformsforsubmissionreview-br}
 
@@ -89,15 +89,15 @@ Ange följande parametrar i begärande-URL:
   </tr>
   <tr>
    <td><code>sort</code> <br /> (valfritt)</td>
-   <td>Anger sorteringsordningen för resultat. Standardvärdet är <strong>desc</strong>, vilket sorterar resultatet i fallande ordning. Du kan ange <code>asc</code> om du vill sortera resultatet i stigande ordning.</td>
+   <td>Anger sorteringsordningen för resultat. Standardvärdet är <strong>desc</strong>, vilket sorterar resultatet i fallande ordning. Du kan ange <code>asc</code> om du vill sortera resultaten i stigande ordning.</td>
   </tr>
   <tr>
    <td><code>cutPoints</code> <br /> (valfritt)</td>
-   <td>Anger en kommaavgränsad lista med formuläregenskaper som ska inkluderas i resultaten. Standardegenskaperna är:<br /> <code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
+   <td>Anger en kommaavgränsad lista med formuläregenskaper som ska inkluderas i resultaten. Standardegenskaperna är: <br /> <code>formName</code>, <code>formPath</code>, <code>submitID</code>, <code>formType</code>, <code>jcr:lastModified</code>, <code>owner</code></td>
   </tr>
   <tr>
    <td><code>search</code> <br /> (valfritt)</td>
-   <td>Söker efter det angivna värdet i formuläregenskaper och returnerar formulär med matchande värden. Standardvärdet är <strong>""</strong>.</td>
+   <td>Söker efter det angivna värdet i formuläregenskaper och returnerar formulär med matchande värden. Standardvärdet är <strong> </strong>.</td>
   </tr>
  </tbody>
 </table>

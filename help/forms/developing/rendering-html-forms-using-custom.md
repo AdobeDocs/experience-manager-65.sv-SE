@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Återge HTML Forms med anpassade CSS-filer {#rendering-html-forms-using-custom-css-files}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 Forms-tjänsten återger HTML-formulär som svar på en HTTP-begäran från en webbläsare. När du återger ett HTML-formulär kan Forms-tjänsten referera till en anpassad CSS-fil. Du kan skapa en anpassad CSS-fil som uppfyller dina affärskrav och referera till den CSS-filen när du använder tjänsten Forms för att återge formulär i HTML.
 
@@ -28,8 +28,8 @@ Forms-tjänsten tolkar den anpassade CSS-filen tyst. Det innebär att Forms-tjä
 I följande lista anges format som stöds i en anpassad CSS-fil:
 
 * **Väljarliknande par på klassnivå**: Om det finns i en anpassad CSS-fil används väljare som används som klassformat i HTML-formuläret. Oanvända klassformat ignoreras.
-* **Väljarstilar för identifierarnivå**: Alla identifierarformat används om de används i formuläret HTML.
-* **Elementnivåväljarliknande par**: Alla elementformat används om de används i formuläret HTML.
+* **Väljarstilpar på identifierarnivå**: Alla identifierarstilar används om de används i HTML-formuläret.
+* **Elementnivåväljarstilpar**: Alla elementstilar används om de används i HTML-formuläret.
 * **Formatprioritet**: Formatprioritet (som important) stöds och kan användas i en anpassad CSS-fil.
 * **Medietyp**: Ett eller flera väljarliknande par kan kapslas in i @media-format för att definiera medietypen. Forms-tjänsten kontrollerar inte om den angivna medietypen stöds. Den medietyp som anges i den anpassade CSS-filen sammanfogas i HTML-formuläret.
 
@@ -37,7 +37,7 @@ Du kan hämta en CSS-exempelfil med FormsIVS-programmet. Ladda upp formuläret, 
 
 >[!NOTE]
 >
->Innan du återger ett HTML-formulär som använder en anpassad CSS-fil är det viktigt att du har en god förståelse för hur du återger HTML-formulär. (Se [Återger Forms som HTML](/help/forms/developing/rendering-forms-html.md).)
+>Innan du återger ett HTML-formulär som använder en anpassad CSS-fil är det viktigt att du har en god förståelse för hur du återger HTML-formulär. (Se [Återge Forms som HTML](/help/forms/developing/rendering-forms-html.md).)
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Om du vill återge ett HTML-formulär anger du en formulärdesign som har skapat
 
 Återgivning av ett HTML-formulär kräver också värden, t.ex. URI-värden som behövs för att återge andra formulärtyper.
 
-**Skriv formulärdataströmmen till klientens webbläsare**
+**Skriv formulärdataströmmen till klientwebbläsaren**
 
 När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdataflöde som du måste skriva till klientens webbläsare för att göra HTML-formuläret synligt för användaren.
 
@@ -101,37 +101,37 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 1. Skapa ett Forms Java API-objekt
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `FormsServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `FormsServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera till CSS-filen
 
-   * Skapa en `HTMLRenderSpec` genom att använda dess konstruktor.
-   * Om du vill återge formuläret HTML som använder en anpassad CSS-fil anropar du `HTMLRenderSpec` objektets `setCustomCSSURI` och skicka ett strängvärde som anger CSS-filens plats och namn.
+   * Skapa ett `HTMLRenderSpec`-objekt med hjälp av dess konstruktor.
+   * Om du vill återge det HTML-formulär som använder en anpassad CSS-fil anropar du `HTMLRenderSpec`-objektets `setCustomCSSURI`-metod och skickar ett strängvärde som anger CSS-filens plats och namn.
 
 1. Återge ett HTML-formulär
 
-   Anropa `FormsServiceClient` objektets `(Deprecated) (Deprecated) renderHTMLForm` och skicka följande värden:
+   Anropa `FormsServiceClient`-objektets `(Deprecated) (Deprecated) renderHTMLForm`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * A `TransformTo` uppräkningsvärde som anger inställningstypen HTML. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamiskt HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
-   * A `com.adobe.idp.Document` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du en tom `com.adobe.idp.Document` -objekt.
-   * The `HTMLRenderSpec` objekt som lagrar körningsalternativ för HTML.
-   * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, som `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
-   * A `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär.
-   * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter som du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * Ett `TransformTo`-uppräkningsvärde som anger inställningstypen HTML. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamiskt HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
+   * Ett `com.adobe.idp.Document`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du ett tomt `com.adobe.idp.Document`-objekt.
+   * Objektet `HTMLRenderSpec` som lagrar körningsalternativ för HTML.
+   * Ett strängvärde som anger rubrikvärdet `HTTP_USER_AGENT`, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+   * Ett `URLSpec`-objekt som lagrar URI-värden som krävs för att återge ett HTML-formulär.
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter, och du kan ange `null` om du inte vill bifoga filer till formuläret.
 
-   The `(Deprecated) renderHTMLForm` returnerar en `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `(Deprecated) renderHTMLForm` returnerar ett `FormsResult`-objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt `getOutputContent` -metod.
-   * Hämta innehållstypen för `com.adobe.idp.Document` genom att anropa dess `getContentType` -metod.
-   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `com.adobe.idp.Document` -objekt.
-   * Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.h\ttp.HttpServletResponse` objektets `getOutputStream` -metod.
-   * Skapa en `java.io.InputStream` genom att anropa `com.adobe.idp.Document` objektets `getInputStream` -metod.
-   * Skapa en bytearray och fylla den med formulärdataströmmen genom att anropa `InputStream` objektets `read` och skicka bytearrayen som ett argument.
-   * Anropa `javax.servlet.ServletOutputStream` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
+   * Skapa ett `com.adobe.idp.Document`-objekt genom att anropa metoden `getOutputContent` för `FormsResult`-objektet.
+   * Hämta innehållstypen för objektet `com.adobe.idp.Document` genom att anropa dess `getContentType`-metod.
+   * Ange innehållstypen för objektet `javax.servlet.http.HttpServletResponse` genom att anropa dess `setContentType`-metod och skicka innehållstypen för objektet `com.adobe.idp.Document`.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientwebbläsaren genom att anropa `javax.servlet.h\ttp.HttpServletResponse`-objektets `getOutputStream`-metod.
+   * Skapa ett `java.io.InputStream`-objekt genom att anropa `com.adobe.idp.Document`-objektets `getInputStream`-metod.
+   * Skapa en bytearray och fyll i den med formulärdataströmmen genom att anropa `InputStream`-objektets `read`-metod och skicka bytearrayen som ett argument.
+   * Anropa `javax.servlet.ServletOutputStream`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 
@@ -154,42 +154,42 @@ När Forms-tjänsten återger ett HTML-formulär returneras ett formulärdatafl�
 
 1. Skapa ett Forms Java API-objekt
 
-   Skapa en `FormsService` och ange autentiseringsvärden.
+   Skapa ett `FormsService`-objekt och ange autentiseringsvärden.
 
 1. Referera till CSS-filen
 
-   * Skapa en `HTMLRenderSpec` genom att använda dess konstruktor.
-   * Om du vill återge formuläret HTML som använder en anpassad CSS-fil anropar du `HTMLRenderSpec` objektets `setCustomCSSURI` och skicka ett strängvärde som anger CSS-filens plats och namn.
+   * Skapa ett `HTMLRenderSpec`-objekt med hjälp av dess konstruktor.
+   * Om du vill återge det HTML-formulär som använder en anpassad CSS-fil anropar du `HTMLRenderSpec`-objektets `setCustomCSSURI`-metod och skickar ett strängvärde som anger CSS-filens plats och namn.
 
 1. Återge ett HTML-formulär
 
-   Anropa `FormsService` objektets `(Deprecated) renderHTMLForm` och skicka följande värden:
+   Anropa `FormsService`-objektets `(Deprecated) renderHTMLForm`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * A `TransformTo` uppräkningsvärde som anger inställningstypen HTML. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamiskt HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
-   * A `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
-   * The `HTMLRenderSpec` objekt som lagrar körningsalternativ för HTML.
-   * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, som `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Du kan skicka en tom sträng om du inte vill ange det här värdet.
-   * A `URLSpec` objekt som lagrar de URI-värden som krävs för att återge ett HTML-formulär.
-   * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter som du kan ange `null` om du inte vill bifoga filer till formuläret.
-   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` -metod. Det här parametervärdet lagrar det återgivna formuläret.
-   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` -metod. Den här parametern lagrar XML-utdata.
-   * En tom `javax.xml.rpc.holders.LongHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` -metod. Det här argumentet lagrar antalet sidor i formuläret.
-   * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` -metod. Det här argumentet lagrar språkets värde.
-   * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av `(Deprecated) renderHTMLForm` -metod. Det här argumentet lagrar återgivningsvärdet som används för HTML.
-   * En tom `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+   * Ett `TransformTo`-uppräkningsvärde som anger inställningstypen HTML. Om du till exempel vill återge ett HTML-formulär som är kompatibelt med dynamiskt HTML för Internet Explorer 5.0 eller senare anger du `TransformTo.MSDHTML`.
+   * Ett `BLOB`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
+   * Objektet `HTMLRenderSpec` som lagrar körningsalternativ för HTML.
+   * Ett strängvärde som anger rubrikvärdet `HTTP_USER_AGENT`, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Du kan skicka en tom sträng om du inte vill ange det här värdet.
+   * Ett `URLSpec`-objekt som lagrar URI-värden som krävs för att återge ett HTML-formulär.
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter, och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * Ett tomt `com.adobe.idp.services.holders.BLOBHolder`-objekt som fylls i av metoden `(Deprecated) renderHTMLForm`. Det här parametervärdet lagrar det återgivna formuläret.
+   * Ett tomt `com.adobe.idp.services.holders.BLOBHolder`-objekt som fylls i av metoden `(Deprecated) renderHTMLForm`. Den här parametern lagrar XML-utdata.
+   * Ett tomt `javax.xml.rpc.holders.LongHolder`-objekt som fylls i av metoden `(Deprecated) renderHTMLForm`. Det här argumentet lagrar antalet sidor i formuläret.
+   * Ett tomt `javax.xml.rpc.holders.StringHolder`-objekt som fylls i av metoden `(Deprecated) renderHTMLForm`. Det här argumentet lagrar språkets värde.
+   * Ett tomt `javax.xml.rpc.holders.StringHolder`-objekt som fylls i av metoden `(Deprecated) renderHTMLForm`. Det här argumentet lagrar återgivningsvärdet som används för HTML.
+   * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder`-objekt som innehåller resultatet av den här åtgärden.
 
-   The `(Deprecated) renderHTMLForm` metoden fyller i `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `(Deprecated) renderHTMLForm` fyller i objektet `com.adobe.idp.services.holders.FormsResultHolder` som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa en `FormResult` genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder` objektets `value` datamedlem.
-   * Skapa en `BLOB` objekt som innehåller formulärdata genom att anropa `FormsResult` objektets `getOutputContent` -metod.
-   * Hämta innehållstypen för `BLOB` genom att anropa dess `getContentType` -metod.
-   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `BLOB` -objekt.
-   * Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` -metod.
-   * Skapa en bytearray och fylla i den genom att anropa `BLOB` objektets `getBinaryData` -metod. Den här aktiviteten tilldelar innehållet i `FormsResult` till bytearrayen.
-   * Anropa `javax.servlet.http.HttpServletResponse` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
+   * Skapa ett `FormResult`-objekt genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder`-objektets `value`-datamedlem.
+   * Skapa ett `BLOB`-objekt som innehåller formulärdata genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+   * Hämta innehållstypen för objektet `BLOB` genom att anropa dess `getContentType`-metod.
+   * Ange innehållstypen för objektet `javax.servlet.http.HttpServletResponse` genom att anropa dess `setContentType`-metod och skicka innehållstypen för objektet `BLOB`.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientwebbläsaren genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
+   * Skapa en bytearray och fyll i den genom att anropa `BLOB`-objektets `getBinaryData`-metod. Den här aktiviteten tilldelar innehållet i objektet `FormsResult` till bytearrayen.
+   * Anropa `javax.servlet.http.HttpServletResponse`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 

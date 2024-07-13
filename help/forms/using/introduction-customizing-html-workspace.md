@@ -37,7 +37,7 @@ AEM Forms arbetsyta har stöd för en mängd anpassningar för att uppdatera anv
 
 Du kan ändra utseende, layout och andra presentationssemantik för AEM Forms-arbetsytan. Ändra arbetsyta genom att anpassa CSS-, HTML-mallar och JavaScript™-filer. Alla standardfiler finns i standardinstallationen.
 
-De vanligaste stegen beskrivs i [Allmänna steg för anpassning av AEM Forms arbetsyta](../../forms/using/generic-steps-html-workspace-customization.md). Specifika exempel på sådana anpassningar, inklusive detaljerade steg, finns i de relaterade artiklarna i slutet av den här artikeln.
+De vanligaste stegen beskrivs i [Allmänna steg för anpassning av AEM Forms-arbetsytan](../../forms/using/generic-steps-html-workspace-customization.md). Specifika exempel på sådana anpassningar, inklusive detaljerade steg, finns i de relaterade artiklarna i slutet av den här artikeln.
 
 #### Förstå formatmallen {#understanding-the-style-sheet}
 
@@ -128,20 +128,20 @@ De översta stegen för CSS-anpassning är:
 * Lägg till formatobjekt i denna CSS. Mer information finns i Förstå CSS-format.
 * Uppdatera referenser i `html.jsp`.
 
-Exakt hur du gör dessa anpassningar finns på [Allmänna steg för anpassning av AEM Forms arbetsyta](../../forms/using/generic-steps-html-workspace-customization.md). CSS-filen som levereras med arbetsytan i AEM Forms finns på /libs/ws/css/. För CSS-relaterade anpassningar använder du [Leveranspaket](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p). Specifika exempel på CSS-relaterade anpassningar finns i de relaterade hjälpavsnitten i slutet av den här artikeln.
+Exakt hur du gör dessa anpassningar finns i [Allmänna steg för anpassning av AEM Forms-arbetsytan](../../forms/using/generic-steps-html-workspace-customization.md). CSS-filen som levereras med arbetsytan i AEM Forms finns på /libs/ws/css/. Använd [Leveranspaket](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p) för CSS-relaterade anpassningar. Specifika exempel på CSS-relaterade anpassningar finns i de relaterade hjälpavsnitten i slutet av den här artikeln.
 
 #### Bild {#image}
 
-Du kan anpassa AEM Forms-arbetsytan för att lägga till olika användare eller lägga till din organisations logotyp. Använd [Leveranspaket](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p).
+Du kan anpassa AEM Forms-arbetsytan för att lägga till olika användare eller lägga till din organisations logotyp. Använd [Leveranspaket](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p) för dessa anpassningar.
 
 De översta stegen för anpassning av bilderna är:
 
 * Installera och konfigurera WebDAV.
 * Lägg till nya bilder.
 * Lägg till nya format som motsvarar de nya bilderna.
-* Länka till den nya CSS-filen i `html.jsp` -fil.
+* Länka till den nya CSS-filen i filen `html.jsp`.
 
-Om du vill komma igång med att anpassa bilderna på arbetsytan i AEM Forms följer du [Allmänna steg för anpassning av AEM Forms arbetsyta](../../forms/using/generic-steps-html-workspace-customization.md). Specifika exempel på bildrelaterade anpassningar finns i de relaterade hjälpavsnitten i slutet av artikeln.
+Följ de [allmänna stegen för anpassning av arbetsytan i AEM Forms](../../forms/using/generic-steps-html-workspace-customization.md) för att komma igång med att anpassa bilderna i AEM Forms. Specifika exempel på bildrelaterade anpassningar finns i de relaterade hjälpavsnitten i slutet av artikeln.
 
 #### HTML-mall {#html-template}
 
@@ -157,13 +157,13 @@ Specifika exempel på sådana anpassningar finns i hjälpavsnitten i slutet av a
 
 ### Semantiska ändringar {#semantic-changes}
 
-Ändra JavaScript-källkoden om du vill ändra funktionaliteten för arbetsytan i AEM Forms. Ändringarna i kärnfunktionen markeras som Semantiska ändringar. Du kan ändra modeller, vyer och mallar som ingår i källkoden för AEM Forms-arbetsytan.
+Ändra JavaScript källkod om du vill ändra funktionaliteten för arbetsytan i AEM Forms. Ändringarna i kärnfunktionen markeras som Semantiska ändringar. Du kan ändra modeller, vyer och mallar som ingår i källkoden för AEM Forms-arbetsytan.
 
 De översta stegen för att göra semantiska ändringar för att ändra funktionaliteten i AEM Forms-arbetsytan är:
 
 * Skapa kopior av standardfilerna i en mapp som skapas av användaren.
 * Lägg till nya modeller och vyer i den användardefinierade mappen.
-* Gör relevanta uppdateringar, som att uppdatera sökvägar för nytillagda modeller och vyer i JavaScript-standardfilerna.
+* Gör relevanta uppdateringar som att uppdatera sökvägar för nya modeller och vyer i JavaScript standardfiler.
 * Minimera paketet för att optimera prestandan.
 
 Mer konceptuell information om komponenterna som är en del av källkoden finns i [Beskrivning av återanvändbara komponenter](/help/forms/using/description-reusable-components.md). Använd Dev Package för dessa anpassningar.
@@ -178,11 +178,11 @@ Mer konceptuell information finns i [Beskrivning av återanvändbara komponenter
 
 ### SDK-paket {#sdk-package}
 
-Paketet innehåller källkoden för AEM Forms-arbetsytan. Paketet finns på `[LC root]\sdk\html-workspace\adobe-lc-workspace-src.zip`.
+Paketet innehåller källkoden för AEM Forms-arbetsytan. Paketet är tillgängligt på `[LC root]\sdk\html-workspace\adobe-lc-workspace-src.zip`.
 
 Det är främst avsett för anpassningar, eftersom det ger möjlighet att generera:
 
-* CRX-paket för Ship-, Debug- och Dev-profiler (som nämns nedan i [CRX-paket](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)).
+* CRX-paket för Ship-, Debug- och Dev-profiler (anges nedan i [CRX-paket](../../forms/using/introduction-customizing-html-workspace.md#p-crx-package-p)).
 * Minimerad version av anpassad kod (för semantiska ändringar).
 
 #### WS-innehåll {#ws-content}
@@ -231,16 +231,16 @@ Det är främst avsett för anpassningar, eftersom det ger möjlighet att genere
       * html.jsp
       * GET.jsp
 
-### CRX-paket {#crx-package}
+### CRX Package {#crx-package}
 
-CRX-paketet kan distribueras i CRX™-databasen. Den finns på `[LC root]\crx-repository\install\adobe-lc-workspace-pkg.zip`.
+CRX-paketet kan användas i CRX™-databasen. Den är tillgänglig på `[LC root]\crx-repository\install\adobe-lc-workspace-pkg.zip`.
 
 Paketet kan byggas med de tre profiler som beskrivs nedan.
 
 | **Profil** | **Beskrivning** | **Användning** |
 |---|---|---|
-| Leveransprofil | Den här profilen skapar ett CRX-paket med minsta möjliga storlek med hjälp av miniatyrbilder. Det här paketet är mest effektivt. Alla JavaScript™-filer kombineras och minieras till en enda JS-fil. | Använd den här profilen när inga ytterligare semantiska ändringar krävs i JS-filer. |
-| Felsökningsprofil | Den här profilen skapar ett måttligt effektivt CRX-paket. Paketets storlek är något större än det paket som skapats med Ship-profilen. Det här paketet innehåller de flesta JavaScript-filer som kombineras till en enda JS-fil. | Använd den här profilen för felsökning. |
+| Leveransprofil | Den här profilen skapar ett CRX-paket med minsta möjliga storlek med hjälp av miniatyrbilder. Det här paketet är mest effektivt. Alla JavaScript™-filer kombineras och mineras i en enda JS-fil. | Använd den här profilen när inga ytterligare semantiska ändringar krävs i JS-filer. |
+| Felsökningsprofil | Den här profilen skapar ett måttligt effektivt CRX-paket. Paketets storlek är något större än det paket som skapats med Ship-profilen. Det här paketet innehåller de flesta JavaScript-filer kombinerade till en enda JS-fil. | Använd den här profilen för felsökning. |
 | Dev-profil | Den här profilen skapar ett CRX-paket med största möjliga storlek. Alla JavaScript-filer är tillgängliga separat, som de är i SDK-paketet. | Använd den här profilen när du inkluderar semantiska ändringar. |
 
 #### Leveransprofil {#ship-profile}

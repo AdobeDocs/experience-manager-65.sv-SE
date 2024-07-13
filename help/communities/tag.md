@@ -22,13 +22,13 @@ När AEM Communities-komponenter har konfigurerats med taggning aktiverat, kan c
 
 Den underliggande infrastrukturen för taggar som används i publiceringsmiljön är densamma som för taggar som används på innehåll i redigeringsmiljön, till exempel sidor och resurser:
 
-* Se [Administrera taggar](../../help/sites-administering/tags.md) och [Tagga användargenererat innehåll](tag-ugc.md) (UGC) om du vill ha information om hur du skapar och hanterar taggar.
+* Mer information om hur du skapar och hanterar taggar finns i [Administrera taggar](../../help/sites-administering/tags.md) och [Tagga användargenererat innehåll](tag-ugc.md) (UGC).
 
-* Se [Tagga för utvecklare](../../help/sites-developing/tags.md) om du vill ha information om [taggningsramverk](../../help/sites-developing/framework.md) och inkludera och utöka taggar i [anpassade program](../../help/sites-developing/building.md).
+* Mer information om [taggningsramverket](../../help/sites-developing/framework.md) och om hur du inkluderar och utökar taggar i [anpassade program](../../help/sites-developing/building.md) finns i [Tagga för utvecklare](../../help/sites-developing/tags.md).
 
-* Se [Använda molnet för sociala taggar](tagcloud.md) för information till författare om hur du lägger till en `social tag cloud` -komponent på en sida för att markera de taggar som används i UGC i publiceringsmiljön.
+* Se [Använda molnet för sociala taggar](tagcloud.md) för information om hur författare lägger till en `social tag cloud`-komponent på en sida för att markera de taggar som används i användargenererat innehåll i publiceringsmiljön.
 
-Taggning av UGC kan vara aktiverat när en [communitywebbplats](sites-console.md#tagging) eller någon av följande funktioner:
+Taggning av UGC kan vara aktiverad när du konfigurerar en [community-webbplats](sites-console.md#tagging) eller någon av följande funktioner:
 
 * [Blogg](blog-feature.md)
 * [Kalender](calendar.md)
@@ -47,11 +47,11 @@ Taggning av UGC kan vara aktiverat när en [communitywebbplats](sites-console.md
    <td>social/komma/components/hbs/tagcloud</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>oklanderlig</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>inkluderbar</strong></a></td>
    <td>Nej</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
    <td>cq.social.hbs.tagcloud</td>
   </tr>
   <tr>
@@ -73,14 +73,14 @@ Taggning av UGC kan vara aktiverat när en [communitywebbplats](sites-console.md
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
-* [API för socialt taggmoln](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
+* [Cloud-API:t för sociala taggar](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagcloud/api/package-summary.html)
 
-* [Social Tag Manager](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
+* [Hanteraren för sociala taggar](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/tagging/package-summary.html)
 
 * [Anpassningar på serversidan](server-customize.md)
 
 ## Taggsökning {#tag-searching}
 
-Från [funktionspaket 1](deploy-communities.md#latestfeaturepack) (FP1) utförs taggsökning med [taggtitlar](../../help/sites-developing/framework.md#tag-characteristics).
+Från och med [funktionspaket 1](deploy-communities.md#latestfeaturepack) (FP1) utförs taggsökning med [taggtitlar](../../help/sites-developing/framework.md#tag-characteristics).
 
 Före FP1 utfördes sökningen med [tagg-ID](../../help/sites-developing/framework.md#tagid).

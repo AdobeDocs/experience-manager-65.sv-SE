@@ -24,7 +24,7 @@ David&#39;s Model skrevs av David Nuescheler för flera år sedan, men idéerna 
 
 * Data kommer först, strukturen senare. Kanske.
 * Kör innehållshierarkin, låt den inte ske.
-* Arbetsytor är för `clone()`, `merge()`och `update()`.
+* Arbetsytor är för `clone()`, `merge()` och `update()`.
 * Se upp för samma namn som syskon.
 * Referenser anses vara skadliga.
 * Filer är filer.

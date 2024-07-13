@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # Hantera inställningsnoderna programmatiskt {#programmatically-managing-the-preferencesnodes}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 I det här avsnittet beskrivs hur du kan använda Preferences Manager Service API (Java) för att programmässigt hantera Preferences Nodes.
 
-Du kan ändra konfigurationsinställningarna manuellt från administratörsgränssnittet. Om du vill ändra alternativen går du till `Home>Settings>User Management> Configuration>Manual Configuration`. Importera `config.xml` när du har gjort ändringarna kommer du att märka att alla ändringar förutom ändringar som gjorts på noden `/Adobe/Adobe Experience Manager Forms/Config/UM persist` är vilse. Förhandsgranskningen av Import och export av användarhantering stöder inte ändring av konfigurationsinställningar för andra komponenter. Nu kan dessa ändringar göras med `PreferencesManagerServiceClient` API.
+Du kan ändra konfigurationsinställningarna manuellt från administratörsgränssnittet. Navigera till `Home>Settings>User Management> Configuration>Manual Configuration` om du vill ändra alternativen. Importera `config.xml` när du har gjort ändringarna kommer du att märka att alla ändringar förutom de som har gjorts på noden `/Adobe/Adobe Experience Manager Forms/Config/UM persist` går förlorade. Förhandsgranskningen av Import och export av användarhantering stöder inte ändring av konfigurationsinställningar för andra komponenter. Dessa ändringar kan nu göras med `PreferencesManagerServiceClient` API:er.
 
-**Sammanfattning av steg** Så här hanterar du noderna i Inställningar programmatiskt:
+**Sammanfattning av steg** Utför följande steg om du vill hantera noderna i Inställningar programmatiskt:
 
 1. Inkludera projektfiler.
 1. Skapa en PreferencesManagerService-klient
@@ -38,6 +38,6 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 Innan du programmässigt kan utföra en PreferencesManagerService-åtgärd måste du skapa en PreferencesManagerService-klient. Med Java-API:t uppnås detta genom att ett PreferencesManagerServiceClient-objekt skapas.
 
-**Anropa lämpliga roll- eller behörighetsåtgärder**
+**Anropa lämplig roll eller lämpliga behörighetsåtgärder**
 
 När du har skapat tjänstklienten kan du sedan anropa Preferences Manager-åtgärderna. Med tjänstklienten kan du läsa och ange behörigheter.

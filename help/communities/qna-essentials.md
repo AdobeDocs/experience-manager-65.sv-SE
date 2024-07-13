@@ -33,8 +33,8 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
    <td>Nej</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md">klientlibs</a></td>
-   <td>cq.ckeditor<br /> cq.social.hbs.röstning<br /> cq.social.hbs.qna</td>
+   <td> <a href="clientlibs.md">clientlibs</a></td>
+   <td>cq.ckeditor<br /> cq.social.hbs.voice<br /> cq.social.hbs.qna</td>
   </tr>
   <tr>
    <td> mallar</td>
@@ -63,20 +63,20 @@ Den här sidan innehåller viktig information om hur du arbetar med forumfunktio
 
 ### QnA-funktion {#qna-function}
 
-En community-webbplatsstruktur som innehåller [QnA-funktion](functions.md#qna-function) har konfigurerats `QnA` och inställningar som påverkar moderering och taggning. QnA-funktionen stöder identifiering av en [privilegierad medlemsanvändargrupp](users.md#privileged-members-group).
+En community-platsstruktur som innehåller [QnA-funktionen](functions.md#qna-function) har en konfigurerad `QnA`-komponent och inställningar som påverkar moderering och taggning. QnA-funktionen stöder identifiering av en [privilegierad medlemsanvändargrupp](users.md#privileged-members-group).
 
 ### Åtkomst till QnA-foruminlägg (UGC) {#accessing-qna-forum-posts-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.
 Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
-**Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
+**Platsen och formatet för användargenererat innehåll i databasen kan ändras utan varning**.
 
 Se:
 
-* [Översikt över lagringsresursprovider](srp.md) - introduktion och översikt över databasanvändningen.
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel.
+* [Lagringsresursprovideröversikt](srp.md) - introduktion och översikt över databasanvändningen.
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
 * [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utfasade verktygsmetoder till aktuella SRP-verktygsmetoder.

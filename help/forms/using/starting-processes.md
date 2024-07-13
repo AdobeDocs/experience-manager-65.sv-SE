@@ -22,7 +22,7 @@ AEM Forms arbetsyta organiserar processerna enligt de kategorier som administrat
 
 När du påbörjar en process kan du behöva fylla i ett formulär för att starta en affärsprocess som styrs av AEM Forms arbetsflöde. Om ett formulär använder Förbered dataprocess kan viss information fyllas i i förväg i ett tomt formulär när en ny process initieras.
 
-Du vill till exempel köpa en ny datorskärm och därför starta en process som kallas *Inköpsorder*. När du startar processen öppnas ett formulär där du uppmanas att ange information om objektet som ska beställas. Ditt namn, personalnummer och chefens namn kan redan vara ifyllda i förväg i formuläret. När du skickar begäran initieras en affärsprocess. Servern dirigerar automatiskt begäran till din hanterare baserat på processdefinitionen. Uppgiften börjar visas i din chefs Att göra-lista. När din chef har godkänt begäran vidarebefordrar formulärarbetsflödet begäran till inköpsavdelningen och skickar ett e-postmeddelande till dig.
+Du vill till exempel köpa en ny datorskärm och därför starta en process som heter *Inköpsorder*. När du startar processen öppnas ett formulär där du uppmanas att ange information om objektet som ska beställas. Ditt namn, personalnummer och chefens namn kan redan vara ifyllda i förväg i formuläret. När du skickar begäran initieras en affärsprocess. Servern dirigerar automatiskt begäran till din hanterare baserat på processdefinitionen. Uppgiften börjar visas i din chefs Att göra-lista. När din chef har godkänt begäran vidarebefordrar formulärarbetsflödet begäran till inköpsavdelningen och skickar ett e-postmeddelande till dig.
 
 ## Välja processer att starta {#selecting-processes-to-start}
 
@@ -46,9 +46,9 @@ När du väljer en process visas fliken Formulär och fliken Detaljer. Om proces
 
 1. Välj en process genom att klicka på en uppgift. Formuläret som är kopplat till processen öppnas på fliken Formulär.
 
-   Alla formulär i en process har en unik URL. Du kan använda den unika URL-adressen för att starta arbetsytan i HTML direkt med den specifika processen och formuläret. URL-adressen har formatet https://&lt;server>:&lt;port>/lc/libs/ws/index.html#/startprocess/&lt;applicationname>%2F&lt;processname>. The &lt;applicationname>%2F&lt;processname> strängen är alltid URL-kodad. Ett exempel-URL är http://localhost:8080/lc/libs/ws/index.html#/startprocess/MyApplication%2FNewProcess. Strängen ApplicationName%2FPProcessName i exemplet är URL-kodad.
+   Alla formulär i en process har en unik URL. Du kan använda den unika URL-adressen för att starta HTML Workspace direkt med den specifika processen och formuläret. URL-adressen har formatet https://&lt;server>:&lt;port>/lc/libs/ws/index.html#/startprocess/&lt;ApplicationName>%2F&lt;ProcessName>. Strängen &lt;ApplicationName>%2F&lt;ProcessName> är alltid URL-kodad. Ett exempel-URL är http://localhost:8080/lc/libs/ws/index.html#/startprocess/MyApplication%2FNewProcess. Strängen ApplicationName%2FPProcessName i exemplet är URL-kodad.
 
-1. Fyll i formuläret enligt instruktionerna som medföljer det. Klicka vid behov på **Maximera** för att öka formulärets synliga område.
+1. Fyll i formuläret enligt instruktionerna som medföljer det. Om det behövs klickar du på **Maximera** för att öka formulärets synliga område.
 1. Om fliken Bifogade filer är tillgänglig lägger du till bifogade filer efter behov.
 1. Om fliken Anteckningar är tillgänglig kan du göra nödvändiga anteckningar.
 1. Gör något av följande:
@@ -58,7 +58,7 @@ När du väljer en process visas fliken Formulär och fliken Detaljer. Om proces
 
    Processhanteringen startar processen och skickar formuläret till Att göra-listorna med lämpliga personer som behöver slutföra nästa uppgift i processen.
 
-   Om du måste stänga ett formulär innan du skickar in det och utan att förlora data som du har angett, sparar du ett utkast och slutför det senare om processen tillåter det. Om formuläret och processen tillåter det kan du även klicka **Offline** och skicka det senare från Adobe® Reader® eller Adobe® Acrobat® Professional eller Acrobat Standard.
+   Om du måste stänga ett formulär innan du skickar in det och utan att förlora data som du har angett, sparar du ett utkast och slutför det senare om processen tillåter det. Om formuläret och processen tillåter det kan du även klicka på **Offline** och skicka det senare från Adobe® Reader® eller Adobe® Acrobat® Professional eller Acrobat Standard.
 
    >[!NOTE]
    >
@@ -78,10 +78,10 @@ Du kan lägga till flera anteckningar, redigera de skrivna anteckningarna och ta
 * Läs/ta bort
 * Ingen åtkomst
 
-1. Öppna en uppgift och klicka på **Anteckningar** om processen tillåter det.
-1. Ange en rubrik för anteckningen i dialogrutan **Titel** och skriver texten i anteckningen i **Anteckning** box.
-1. Välj **Behörigheter** nivå för anteckningen för andra användare som deltar i processen.
-1. Klicka **OK**. En textfil som innehåller din anteckning bifogas till formuläret. Du kan uppdatera en anteckning genom att klicka på den och direkt ändra texten. Du kan ta bort en anteckning genom att klicka på **Ta bort** knapp ![Bild av en papperskorgen](assets/icondelete.png) bredvid anteckningen.
+1. Öppna en uppgift och klicka på fliken **Anteckningar** om processen tillåter det.
+1. Skriv en rubrik för anteckningen i rutan **Titel** och skriv anteckningstexten i rutan **Anteckning**.
+1. Välj nivån **Behörigheter** för anteckningen för andra användare som deltar i processen.
+1. Klicka på **OK**. En textfil som innehåller din anteckning bifogas till formuläret. Du kan uppdatera en anteckning genom att klicka på den och direkt ändra texten. Du kan ta bort en anteckning genom att klicka på knappen **Ta bort** ![Bild på en papperskorgen](assets/icondelete.png) bredvid anteckningen.
 
 ### Lägg till en bifogad fil {#add-an-attachment}
 
@@ -93,10 +93,10 @@ Du kan också lägga till dina kommentarer om den bifogade filen. Du kan ange n�
 * Läs/ta bort
 * Ingen åtkomst
 
-1. Klicka på **Bifogade filer** och markera **Bilaga**.
-1. Klicka **Bläddra** för att markera filen som ska bifogas.
-1. Välj **Behörigheter** nivå för bilagan för andra användare som deltar i processen. Om du väljer **Läs** kan andra användare spara filen lokalt. Om du väljer någon av redigeringsbehörigheterna kan andra användare även överföra en ny fil som ersätter den bifogade filen.
-1. Klicka **OK**. Filen bifogas till formuläret. Du kan ta bort en fil genom att klicka på **Ta bort** knapp ![Bild av en papperskorgen](assets/icondelete.png) bredvid bilagan.
+1. Klicka på fliken **Bifogade filer** och välj **Bifogad fil**.
+1. Klicka på **Bläddra** för att välja filen som ska bifogas.
+1. Välj nivån **Behörigheter** för den bifogade filen för andra användare som deltar i processen. Om du väljer **Läs** kan andra användare spara filen lokalt. Om du väljer någon av redigeringsbehörigheterna kan andra användare även överföra en ny fil som ersätter den bifogade filen.
+1. Klicka på **OK**. Filen bifogas till formuläret. Du kan ta bort en fil genom att klicka på knappen **Ta bort** ![Bild på ett papperskorgen](assets/icondelete.png) bredvid den bifogade filen.
 
 ## Spara utkastkopior av formulär {#saving-draft-copies-of-forms}
 
@@ -112,11 +112,11 @@ Du kan också konfigurera arbetsytan så att den information som användaren ang
 
 ### Spara ett utkast {#save-a-draft-copy}
 
-1. Klicka **Spara** i det nedre vänstra hörnet på en flik. Formuläret läggs till i kategorin Utkast på din att göra-sida. Alla ändringar som du har gjort i formuläret sparas.
+1. Klicka på **Spara** i det nedre vänstra hörnet på en flik. Formuläret läggs till i kategorin Utkast på din att göra-sida. Alla ändringar som du har gjort i formuläret sparas.
 
 ### Öppna ett utkast igen {#reopen-a-draft-copy}
 
-1. På sidan Att göra väljer du **Utkast** och klicka på utkastskopian av formuläret.
+1. På sidan Att göra markerar du kön **Utkast** och klickar på utkastet av formuläret.
 
    Om formuläret innehåller en serie paneler kan du behöva gå till den panel där du avslutade din senaste session.
 
@@ -126,6 +126,6 @@ Du kan lägga till alla processer i kategorin Favoriter. Genom att ange favorite
 
 >[!NOTE]
 >
->Om du vanligtvis startar processer när du använder arbetsytan i AEM Forms kan du ange inställningen Startplats som automatiskt visar kategorin Favoriter när du startar arbetsytan i AEM Forms. Mer information finns i Hantera inställningar i [Komma igång med arbetsytan i AEM Forms](/help/forms/using/getting-started-livecycle-html-workspace.md).
+>Om du vanligtvis startar processer när du använder arbetsytan i AEM Forms kan du ange inställningen Startplats som automatiskt visar kategorin Favoriter när du startar arbetsytan i AEM Forms. Mer information finns i Hantera inställningar i [Komma igång med AEM Forms-arbetsytan](/help/forms/using/getting-started-livecycle-html-workspace.md).
 
 Markera en process som favorit genom att markera den i sin kategori och klicka på den ofyllda stjärnan. Stjärnan blir guld. Om du vill avmarkera en process som en favorit klickar du på den gyllene stjärnan igen.

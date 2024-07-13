@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # Sammanställa PDF-dokument {#assembling-pdf-documents}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
-**Om Assembler Service**
+**Om Assembler-tjänsten**
 
 Med Assembler-tjänsten kan du samla ihop flera PDF-dokument till ett PDF-dokument eller dela upp ett PDF-dokument till flera PDF-dokument. Med Assembler-tjänsten kan du hantera dokument på olika sätt, till exempel genom att ändra sidstorlek och rotera innehåll. Det kan infoga ytterligare innehåll, t.ex. sidhuvuden, sidfötter och en innehållsförteckning, och det kan bevara, importera eller exportera befintligt innehåll, t.ex. anteckningar, bifogade filer och bokmärken.
 

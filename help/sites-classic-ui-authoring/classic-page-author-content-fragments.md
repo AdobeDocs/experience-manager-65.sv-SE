@@ -25,6 +25,6 @@ Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalsp
 
 >[!CAUTION]
 >
->Den fullständiga funktionen för hantering av innehållsfragment är inte tillgänglig i det klassiska användargränssnittet. Se [Sidredigering med innehållsfragment](/help/sites-authoring/content-fragments.md) i standarddokumentationen.
+>Den fullständiga funktionen för hantering av innehållsfragment är inte tillgänglig i det klassiska användargränssnittet. Se [Sidredigering med innehållsfragment](/help/sites-authoring/content-fragments.md) i standardredigeringsdokumentationen.
 >
 >Komponenten Content Fragment kan visas i den klassiska användargränssnittets sidospark, men ytterligare funktioner är inte tillgängliga.

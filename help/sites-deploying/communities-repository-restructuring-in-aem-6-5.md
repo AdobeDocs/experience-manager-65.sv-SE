@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Repositionsomstrukturering för AEM Communities i 6.5 {#repository-restructuring-for-aem-communities-in}
 
-Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/sites-deploying/repository-restructuring.md) på denna sida bör kunder som uppgraderar till AEM 6.5 använda denna sida för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Communities-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
+Så som beskrivs på den överordnade sidan [Databasomstrukturering på sidan AEM 6.4](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.5 använda den här sidan för att utvärdera arbetsinsatsen som är kopplad till databasändringar som påverkar AEM Communities-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
 
 **Med 6.5-uppgradering**
 
@@ -52,7 +52,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td>
-   <td><p>Manuell migrering krävs om du vill gå till en ny sökväg under<code>/apps/settings</code>". Du kan använda konfigurationshanteraren för Granite för att utföra migreringen.</p> <p>Du kan utföra migreringen genom att ange egenskapen <code>mergeList</code> till <code>true</code> på "<code>/libs/settings/community/subscriptions</code>" nod och lägga till en <code>nt:unstructured</code> underordnad nod.</p> </td>
+   <td><p>Manuell migrering krävs om du vill gå till en ny sökväg under <code>/apps/settings</code>. Du kan använda konfigurationshanteraren för Granite för att utföra migreringen.</p> <p>Du kan utföra migreringen genom att ange egenskapen <code>mergeList</code> till <code>true</code> på noden <code>/libs/settings/community/subscriptions</code> och lägga till en underordnad <code>nt:unstructured</code>-nod.</p> </td>
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
@@ -75,7 +75,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td>
-   <td><p>Manuell migrering krävs om du vill gå till en ny sökväg under<code>/apps/settings</code>". Du kan använda konfigurationshanteraren för Granite för att utföra migreringen.</p> <p>Du kan utföra migreringen genom att ange egenskapen <code>mergeList</code> till <code>true</code> på "<code>/libs/settings/community/subscriptions</code>" nod och lägga till en <code>nt:unstructured</code> underordnad nod.</p> </td>
+   <td><p>Manuell migrering krävs om du vill gå till en ny sökväg under <code>/apps/settings</code>. Du kan använda konfigurationshanteraren för Granite för att utföra migreringen.</p> <p>Du kan utföra migreringen genom att ange egenskapen <code>mergeList</code> till <code>true</code> på noden <code>/libs/settings/community/subscriptions</code> och lägga till en underordnad <code>nt:unstructured</code>-nod.</p> </td>
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
@@ -98,7 +98,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td>
-   <td>Det finns en aktivitet för Azure-migrering som rensar webbgruppskonfigurationerna.<br /> <p>Uppgiften flyttar bevakningsord från <code>/etc/watchwords</code> till <code>/conf/global/settings/community/watchwords</code>.</p> <p>Om anpassade bevakningsord lagras i SCM bör de distribueras till <code>/apps/settings/...</code> och du måste se till att det inte finns något överlägg <code>/conf/global/settings/...</code> konfiguration som har företräde.</p> <p>Migreringsaktiviteten tar bort <code>/etc</code> platser.</p> </td>
+   <td>Det finns en aktivitet för Azure-migrering som rensar webbgruppskonfigurationerna.<br /> <p>Uppgiften flyttar bevakningsord från <code>/etc/watchwords</code> till <code>/conf/global/settings/community/watchwords</code>.</p> <p>Om anpassade bevakningsord lagras i SCM bör de distribueras till <code>/apps/settings/...</code> och du måste se till att det inte finns någon överliggande <code>/conf/global/settings/...</code>-konfiguration som har företräde.</p> <p>Migreringsaktiviteten tar bort <code>/etc</code> platser.</p> </td>
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
@@ -125,13 +125,13 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
    <td><strong>Omstruktureringsvägledning</strong></td>
    <td><p>Manuell migrering krävs.</p> <p>Om instansen har anpassat reglerna för märkning/poängsättning finns det inget automatiskt sätt att placera alla regler under en bucket. Kundernas inmatningar behöver den konf-bucket (global eller platsspecifik) som du vill använda för din webbplats.</p> <p>Det finns inget tillgängligt gränssnitt för att konfigurera märkning och poängsättning för en plats.</p> <p>Så här anpassar du dig till den nya databasstrukturen:</p>
     <ol>
-     <li>Skapa en platskontextbucket med <strong>Konfigurationsläsaren</strong> under <strong>verktyg</strong></li>
+     <li>Skapa en platskontextbucket med <strong>Configuration Browser</strong> under <strong>Tools</strong></li>
      <li>Gå till platsroten</li>
-     <li>Ange <code>cq:confproperty</code> till den bucket-sökväg där du vill lagra alla dina inställningar. Samma sak kan anges via webbplatsen <strong>Guiden Redigera - Ange molnkonfigurationsindata</strong>.</li>
-     <li>Flytta relevanta regler för märkning och poängsättning från <code>/etc/community/*</code> till platskontextgruppen som skapades i föregående steg.</li>
+     <li>Ange <code>cq:confproperty</code> till den bucketsökväg där du vill lagra alla dina inställningar. Samma sak kan anges via webbplatsen <strong>Redigera guide - Ange molnkonfigurationsindata</strong>.</li>
+     <li>Flytta relevanta regler för märkning och poängsättning från <code>/etc/community/*</code> till webbplatskontextgruppen som skapades i föregående steg.</li>
      <li>Justera egenskaperna för badging-regler och bedömningsregler i platsroten för att få relativa referenser till nya regelplatser.
       <ol>
-       <li>Om egenskapen för till exempel <code>cq:conf = /conf/we-retail</code>sedan <code>badgingRules [] = community/badging/rules</code> om regler nu flyttas till den här nya bucket.</li>
+       <li>Om till exempel egenskapen för <code>cq:conf = /conf/we-retail</code> flyttas <code>badgingRules [] = community/badging/rules</code> om regler nu till den nya bucket.</li>
       </ol> </li>
      <li>På samma sätt kan du justera referenserna för poängregler i en nod med en badging-regel så att de har en relativ sökväg.</li>
     </ol> <p> </p> <p>Rensa slutligen genom att ta bort resursen <code>/etc/community/badging</code></p> </td>
@@ -185,10 +185,10 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
     <ol>
      <li>Migrera befintliga konfigurationer på den föregående platsen till den nya platsen.
       <ol>
-       <li>Återskapa nya Facebook Social Login Configurations manuellt via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Service &gt; Facebook konfiguration för social inloggning</strong>.<br /> eller <br /> </li>
-       <li>Kopiera alla nya Facebook Cloud-konfigurationer från föregående plats till rätt nya plats, under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
+       <li>Återskapa nya Facebook Social Login Configurations manuellt via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Service &gt; Facebook Social Login Configuration</strong>.<br /> eller <br /> </li>
+       <li>Kopiera alla nya Facebook Cloud-konfigurationer från föregående plats till lämplig ny plats, under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
       </ol> </li>
-     <li>Uppdatera valfri AEM Communities-platsrot för att referera till den nya konfigurationen för Facebook Social Login genom att ställa in <code>[cq:Page]/jcr:content@cq:conf</code> till den absoluta sökvägen i Ny plats.</li>
+     <li>Uppdatera valfri AEM Communities-platsrot så att den refererar till den nya konfigurationen för Facebook Social Login genom att ange egenskapen <code>[cq:Page]/jcr:content@cq:conf</code> till den absoluta sökvägen i den nya platsen.</li>
      <li>Avassociera den gamla Facebook Connect-Cloud Servicen från alla AEM Communities webbplatsrötter som har uppdaterats för att referera till den nya platsen.</li>
     </ol> </td>
   </tr>
@@ -241,10 +241,10 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
     <ol>
      <li>Migrera befintliga konfigurationer på den föregående platsen till den nya platsen.
       <ol>
-       <li>Återskapa nya Pinterest Social Login Configurations manuellt via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Service &gt; Pinterest konfiguration för social inloggning</strong>.<br /> eller</li>
-       <li>Kopiera alla nya Pinterest Cloud-konfigurationer från föregående plats till rätt nya plats under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
+       <li>Återskapa nya Pinterest Social Login Configurations manuellt via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Service &gt; Pinterest Social Login Configuration</strong>.<br /> eller</li>
+       <li>Kopiera alla nya Pinterest Cloud-konfigurationer från föregående plats till lämplig ny plats under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
       </ol> </li>
-     <li>Uppdatera valfri AEM Communities-platsrot för att referera till den nya konfigurationen för Pinterest Social Login med inställningarna i <code>[cq:Page]/jcr:content@cq:conf</code> till den absoluta sökvägen i Ny plats.</li>
+     <li>Uppdatera valfri AEM Communities-platsrot så att den refererar till den nya konfigurationen för Pinterest Social Login genom att ställa in egenskapen <code>[cq:Page]/jcr:content@cq:conf</code> på den absoluta sökvägen i den nya platsen.</li>
      <li>Avassociera den gamla Pinterest Connect-Cloud Servicen från alla AEM Communities webbplatsrötter som har uppdaterats för att referera till den nya platsen.</li>
     </ol> </td>
   </tr>
@@ -269,15 +269,15 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td>
-   <td><p>Om du vill anpassa till den nya databasstrukturen kan poängsättningsreglerna sparas i <code>/apps/settings/</code> eller /<code>conf/.../settings</code></p>
+   <td><p>Om du vill anpassa till den nya databasstrukturen kan poängsättningsreglerna lagras i <code>/apps/settings/</code> eller /<code>conf/.../settings</code></p>
     <ol>
-     <li>För <code>/apps/settings</code>fungerar detta som globala regler eller standardregler som hanteras i SCM.</li>
-    </ol> <p>Skapa sammanhangsberoende konfigurationer i <code>/conf/</code> med CRXDELite:</p>
+     <li>För <code>/apps/settings</code> fungerar detta som globala regler eller standardregler som hanteras i SCM.</li>
+    </ol> <p>Skapa kontextmedvetna konfigurationer i <code>/conf/</code> med CRXDELite:</p>
     <ol>
-     <li>Skapa konfigurationerna i önskat <code>/conf/.../settings</code> plats<br /> </li>
-     <li>Webbplatsen Communities måste ha <code>cq:conf </code>egenskapsuppsättning.
+     <li>Skapa konfigurationerna på önskad <code>/conf/.../settings</code>-plats<br /> </li>
+     <li>Egenskapen <code>cq:conf </code> måste ha angetts för webbgruppsplatsen.
       <ol>
-       <li>Om nej <code>cq:conf</code> är inställt, skulle poängreglerna läsas direkt från den angivna sökvägen för egenskapen '<code>scoringRules</code>' på platsens rotnod, till exempel: <code>/content/we-retail/us/en/community/jcr:content</code></li>
+       <li>Om <code>cq:conf</code> inte anges läses bedömningsreglerna direkt från den angivna sökvägen för egenskapen <code>scoringRules</code> i platsens rotnod, till exempel: <code>/content/we-retail/us/en/community/jcr:content</code></li>
       </ol> </li>
     </ol> <p>Rensa: Ta bort resursen <code>/etc/community/scoring</code></p> </td>
   </tr>
@@ -307,10 +307,10 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.4](/help/si
     <ol>
      <li>Migrera befintliga konfigurationer på den föregående platsen till den nya platsen.
       <ol>
-       <li>Återskapa konfigurationer för social inloggning för nya Twitter manuellt via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Service &gt; Twitter konfiguration för social inloggning</strong>.<br /> eller <br /> </li>
-       <li>Kopiera alla nya Twitter Cloud-konfigurationer från tidigare plats till lämplig ny plats, under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
+       <li>Återskapa nya Twitter för konfiguration för social inloggning manuellt via redigeringsgränssnittet för AEM på <strong>Verktyg &gt; Cloud Service &gt; Twitter konfiguration för social inloggning</strong>.<br /> eller <br /> </li>
+       <li>Kopiera alla nya Twitter Cloud-konfigurationer från föregående plats till lämplig ny plats, under <code>/conf/global or /conf/&lt;tenant&gt;</code>.</li>
       </ol> </li>
-     <li>Uppdatera valfri AEM Communities-platsrot så att den refererar till den nya Twitternas konfiguration för social inloggning genom att ställa in <code>[cq:Page]/jcr:content@cq:conf</code> till den absoluta sökvägen i Ny plats.</li>
+     <li>Uppdatera en AEM Communities-platsrot så att den refererar till den nya Twitternas konfiguration för social inloggning genom att ange egenskapen <code>[cq:Page]/jcr:content@cq:conf</code> till den absoluta sökvägen i den nya platsen.</li>
      <li>Koppla inte bort den gamla Twitter Connect-Cloud Servicen från några av AEM Communities webbplatsrötter som har uppdaterats för att referera till den nya platsen.</li>
     </ol> </td>
   </tr>

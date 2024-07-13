@@ -20,14 +20,14 @@ ht-degree: 0%
 
 ## Ökning {#overview}
 
-Från och med Communities [FP1](deploy-communities.md#latestfeaturepack)kan communitymedlemmar interagera med communityn via e-post med en funktion som kallas prenumerationer.
+Från och med Communities [FP1](deploy-communities.md#latestfeaturepack) kan communitymedlemmar interagera med communityn via e-post med en funktion som kallas prenumerationer.
 
-Prenumerationer liknar [meddelanden](notifications.md) som medlemmar kan prenumerera när de följer bloggartiklar, forumämnen eller QnA-frågor.
+Prenumerationer liknar [meddelanden](notifications.md) eftersom medlemmar kan prenumerera när de följer bloggartiklar, forumämnen eller frågor om Frågor och svar.
 
 Det som skiljer prenumerationer från meddelanden är:
 
 * Medlemmar får inte prenumerera när de följer efter andra medlemmar.
-* Den enda åtgärd som medlemmar kan utföra är att välja `Email Subscriptions` när du följer.
+* Den enda åtgärd som medlemmar kan utföra är att välja `Email Subscriptions` när de följer.
 * När e-postsvar har konfigurerats kan medlemmar effektivt publicera innehåll genom att helt enkelt svara på det mottagna e-postmeddelandet.
 
 ### Krav {#requirements}
@@ -36,21 +36,21 @@ Det som skiljer prenumerationer från meddelanden är:
 
 E-post måste konfigureras för att prenumerationerna ska fungera och för att medlemmarna ska kunna svara via e-post.
 
-Instruktioner om hur du konfigurerar e-post finns i [Konfigurerar e-post](email.md).
+Instruktioner om hur du konfigurerar e-post finns i [Konfigurera e-post](email.md).
 
 **Aktivera prenumerationer och följ**
 
-Komponenter måste konfigureras för att aktivera prenumerationer *och* följer. Funktioner som tillåter prenumerationer är [blogg](blog-feature.md), [forum](forum.md) och [QnA](working-with-qna.md).
+Komponenter måste konfigureras för att aktivera prenumerationer *och* efter. Funktioner som tillåter prenumerationer är [blogg](blog-feature.md), [forum](forum.md) och [QnA](working-with-qna.md).
 
 ## Prenumerationer från följande {#subscriptions-from-following}
 
 ![prenumerationsföljande](assets/subscription-following.png)
 
-The **Följ** Med knappen kan du följa upp tävlingsbidrag som aktiviteter, prenumerationer och/eller meddelanden. Varje gång **Följ** är markerad går det att aktivera eller inaktivera en markering.
+Med knappen **Följ** kan du följa upp aktiviteter, prenumerationer och/eller meddelanden. Varje gång knappen **Följ** är markerad går det att aktivera eller inaktivera en markering.
 
-Om någon av följande metoder är markerad ändras texten till **Följande**. Det går att välja `Unfollow All` för att växla mellan olika metoder.
+Om någon av följande metoder är markerad ändras texten för knappen till **Efter**. Det går att välja `Unfollow All` för att inaktivera alla metoder.
 
-The **Följ** knappen kommer att innehålla `Email Subscriptions` bara när ett forum, QnA eller blogg har konfigurerats för att aktivera e-postprenumerationer. Den här knappen visas:
+Knappen **Följ** kommer endast att innehålla alternativet `Email Subscriptions` när ett forum, QnA eller blogg har konfigurerats för att aktivera e-postprenumerationer. Den här knappen visas:
 
 * På huvudfunktionssidan för det aktiverade forumet, QnA eller bloggen Kommer att skicka ett e-postmeddelande för all aktivitet under den funktionen.
 
@@ -58,11 +58,11 @@ The **Följ** knappen kommer att innehålla `Email Subscriptions` bara när ett 
 
 ## Svara via e-post {#reply-by-email}
 
-När e-post [konfigurerad för att svara via e-post](email.md#configure-polling-importer), får den prenumererande medlemmen ett e-postmeddelande med det publicerade innehållet och en länk till onlineinnehållet.
+När e-postmeddelandet är [konfigurerat för att svara via e-post](email.md#configure-polling-importer) får den medlem som prenumererade ett e-postmeddelande med det publicerade innehållet och en länk till onlineinnehållet.
 
 Om de svarar på e-postmeddelandet visas det innehåll de anger i svaret som innehåll online.
 
-![e-postsvar](assets/email-reply.png)
+![email-reply](assets/email-reply.png)
 
 Hur lång tid det tar för ett svar att bokföras styrs av [avsökningimporterarens uppdateringsintervall](email.md#configure-polling-importer).
 

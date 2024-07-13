@@ -42,15 +42,15 @@ Quickview stöds av följande visningsprogram i Dynamic Media:
     </tr>
     <tr>
     <td>Interaktiva bilder</td>
-    <td><a href="/help/assets/interactive-images.md#adding-hotspots-to-an-image-banner" target="_blank">Lägga till aktiveringspunkter i en bildbanderoll</a>.</td>
+    <td><a href="/help/assets/interactive-images.md#adding-hotspots-to-an-image-banner" target="_blank">Lägger till aktiveringspunkter i en bildbanderoll</a>.</td>
     </tr>
     <tr>
     <td>Interaktiva videoklipp</td>
-    <td><a href="/help/assets/interactive-videos.md#adding-interactivity-to-your-video" target="_blank">Lägga till interaktivitet i videon</a>.</td>
+    <td><a href="/help/assets/interactive-videos.md#adding-interactivity-to-your-video" target="_blank">Lägger till interaktivitet i videon</a>.</td>
     </tr>
     <tr>
     <td>Carousel Banners</td>
-    <td><a href="/help/assets/carousel-banners.md#adding-hotspots-or-image-maps-to-an-image-banner" target="_blank">Lägga till aktiveringspunkter eller bildscheman i en banderoll</a>.<br /> </td>
+    <td><a href="/help/assets/carousel-banners.md#adding-hotspots-or-image-maps-to-an-image-banner" target="_blank">Lägger till aktiveringspunkter eller bildscheman i en banderoll</a>.<br /> </td>
     </tr>
     </tbody>
    </table>
@@ -69,18 +69,18 @@ Quickview stöds av följande visningsprogram i Dynamic Media:
     </tr>
     <tr>
     <td>Interaktiv video<br /> </td>
-    <td><a href="/help/assets/interactive-videos.md#integrating-an-interactive-video-with-your-website" target="_blank">Integrera en interaktiv video med webbplatsen</a>.<br /> </td>
+    <td><a href="/help/assets/interactive-videos.md#integrating-an-interactive-video-with-your-website" target="_blank">Integrera en interaktiv video med din webbplats</a>.<br /> </td>
     </tr>
     <tr>
     <td>Carousel banner</td>
-    <td><a href="/help/assets/carousel-banners.md#adding-a-carousel-banner-to-your-website-page" target="_blank">Lägga till en karusellbanderoll på webbsidan</a>.<br /> </td>
+    <td><a href="/help/assets/carousel-banners.md#adding-a-carousel-banner-to-your-website-page" target="_blank">Lägger till en Carousel-banderoll på webbplatssidan</a>.<br /> </td>
     </tr>
     </tbody>
    </table>
 
 1. Visningsprogrammet du använder måste kunna använda snabbvyn.
 
-   Visningsprogrammet använder en hanterare som kallas `QuickViewActive`.
+   Visningsprogrammet använder en hanterare med namnet `QuickViewActive`.
 
    **Exempel**
 Anta att du använder följande exempelkod för inbäddning på webbsidan för en interaktiv bild:
@@ -91,7 +91,7 @@ Anta att du använder följande exempelkod för inbäddning på webbsidan för e
 
    `*viewerInstance*.setHandlers({ *handler 1*, *handler 2*}, ...`
 
-   **Följande kod används i exemplet med den inbäddade koden ovan:**
+   **Med exempelkoden för inbäddning ovan finns följande kod:**
 
    ```xml
    s7interactiveimageviewer.setHandlers({
@@ -104,14 +104,14 @@ Anta att du använder följande exempelkod för inbäddning på webbsidan för e
    })
    ```
 
-   Läs mer om `setHandlers()` metod på följande sätt:
+   Mer information om metoden `setHandlers()` finns här:
 
    * Interaktivt bildvisningsprogram: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-sethandlers.html)
-   * Interaktivt visningsprogram för video: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
+   * Interaktiv videovisare: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-sethandlers.html)
 
-1. Konfigurera `quickViewActivate` hanterare.
+1. Konfigurera hanteraren `quickViewActivate`.
 
-   The `quickViewActivate` -hanteraren styr snabbvyn i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden innehåller mappning för SKU-variabeluppsättningen i snabbvyn och ett exempel `loadQuickView` funktionsanrop.
+   Hanteraren `quickViewActivate` styr snabbvyn i visningsprogrammet. Hanteraren innehåller variabellistan och funktionsanrop som kan användas med snabbvyn. Inbäddningskoden tillhandahåller mappning för SKU-variabeluppsättningen i snabbvyn och ett exempel på `loadQuickView`-funktionsanrop.
 
    **Variabelmappning**
 Mappa variabler för användning på webbsidan till SKU-värdet och generiska variabler som finns i snabbvyn:
@@ -134,12 +134,12 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
 
    `loadQuickView(sku)`
 
-   Samplingsfunktionsanropet förutsätter funktionen `loadQuickView()` finns och är tillgänglig.
+   Samplingsfunktionsanropet förutsätter att funktionen `loadQuickView()` finns och är tillgänglig.
 
-   Läs mer om `quickViewActivate` metod på följande sätt:
+   Mer information om metoden `quickViewActivate` finns här:
 
    * Interaktivt bildvisningsprogram: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/c-html5-aem-interactive-image-event-callbacks.html)
-   * Interaktivt visningsprogram för video: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
+   * Interaktiv videovisare: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-event-callbacks.html)
    * Stöd för interaktiva data i Interactive Video Viewer: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/c-html5-aem-int-video-int-data-support.html)
 
 1. Gör följande:
@@ -147,9 +147,9 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    * Avkommentera avsnittet setHandlers i den inbäddade koden.
    * Mappa eventuella ytterligare variabler som finns i snabbvyn.
 
-      * Uppdatera `loadQuickView(sku,*var1*,*var2*)` anropa om du lägger till ytterligare variabler.
+      * Uppdatera `loadQuickView(sku,*var1*,*var2*)`-anropet om du lägger till ytterligare variabler.
 
-   * Skapa en enkel `loadQuickView` () på sidan, utanför visningsprogrammet.
+   * Skapa en enkel `loadQuickView` ()-funktion på sidan, utanför visningsprogrammet.
 
      Följande skriver till exempel värdet på SKU till webbläsarkonsolen:
 
@@ -163,7 +163,7 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
 
      När variablerna från snabbvyn är mappade och funktionsanropet är på plats, skriver webbläsarkonsolen variabelvärdet till webbläsarkonsolen med den angivna exempelfunktionen.
 
-1. Du kan nu använda en funktion för att anropa ett enkelt popup-fönster i snabbvyn. I följande exempel används en `DIV` för en popup.
+1. Du kan nu använda en funktion för att anropa ett enkelt popup-fönster i snabbvyn. I följande exempel används `DIV` som popup-fönster.
 1. Formatera popup-fönstret `DIV` på följande sätt. Lägg till egna format efter behov.
 
    ```xml
@@ -176,7 +176,7 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    </style>
    ```
 
-1. Placera popup-fönstret `DIV` på HTML-sidan.
+1. Placera popup-fönstret `DIV` i brödtexten på HTML-sidan.
 
    Ett av elementen anges med ett ID som uppdateras med SKU-värdet när användaren anropar en snabbvy. Exemplet innehåller också en enkel knapp som döljer popup-fönstret igen när det är synligt.
 
@@ -201,22 +201,22 @@ Hanteraren kräver också ett funktionsanrop för att snabbvyn ska fungera. Funk
    ```
 
 1. Ladda upp en testsida för HTML till webbservern och öppna den. Visningsprogrammet visar popup-fönstret `DIV` när en användare anropar en snabbvy.
-1. **Visa det anpassade popup-fönstret i helskärmsläge**
+1. **Så här visar du det anpassade popup-fönstret i helskärmsläge**
 
    Vissa visningsprogram, till exempel Interactive Video Viewer, stöder visning i helskärmsläge. Om du däremot använder popup-fönstret enligt beskrivningen i föregående steg visas det bakom visningsprogrammet i helskärmsläge.
 
    Om du vill att popup-fönstret ska visas i både standardläge och helskärmsläge, kopplar du popup-fönstret till visningsbehållaren. Använd en andra hanterarmetod, `initComplete`.
 
-   The `initComplete` hanteraren anropas efter att visningsprogrammet har initierats.
+   Hanteraren `initComplete` anropas efter att visningsprogrammet har initierats.
 
    ```xml
    "initComplete":function() { code block }
    ```
 
-   Läs mer om `init()` metod på följande sätt:
+   Mer information om metoden `init()` finns här:
 
    * Interaktivt bildvisningsprogram: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-images/jsapi-interactive-image/r-html5-aem-int-image-viewer-javascriptapiref-init.html)
-   * Interaktivt visningsprogram för video: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
+   * Interaktiv videovisare: [https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-for-aem-assets-only/interactive-video/jsapi-interactive-video/r-html5-aem-int-video-javascriptapiref-init.html)
 
 1. Om du vill bifoga det popup-fönster som beskrivs i föregående steg till visningsprogrammet använder du följande kod:
 

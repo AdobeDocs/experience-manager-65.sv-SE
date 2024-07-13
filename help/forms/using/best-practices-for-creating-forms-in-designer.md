@@ -68,7 +68,7 @@ Relaterade kontrollpunkter
 
 ## Konfigurera formuläregenskaper för att generera hjälpmedelsinformation {#configure-form-properties}
 
-För att ett formulär ska vara tillgängligt måste det [synlig](https://www.w3.org/TR/WCAG20/#perceivable) av hjälpmedelsteknik. De flesta skärmläsare tar till exempel inte hänsyn till formulärets visuella layout, utan till den underliggande strukturen.
+För att ett formulär ska vara tillgängligt måste det vara [perceptiellt](https://www.w3.org/TR/WCAG20/#perceivable) av hjälpmedelsteknik. De flesta skärmläsare tar till exempel inte hänsyn till formulärets visuella layout, utan till den underliggande strukturen.
 
 Om du vill implementera den underliggande strukturen med LiveCycle Designer måste du skapa ett PDF-formulär med hjälpmedelsinformation (kallas ibland taggar) som ingår så att skärmläsaren eller annan hjälpmedelsteknik kan läsa formulärets text och komponenter. I ett formulär med tillgänglighetsinformation innehåller varje element information om sin egen struktur, plus information om hur den är relaterad till eller beroende av andra element. Det är bara i PDF-filer med hjälpmedelsinformation som kan användas som skärmläsare som kan identifiera och beskriva innehållet i ett dokument korrekt.
 
@@ -133,7 +133,7 @@ Tänk på följande när du anger alternativ text:
 * Skapa inte textbeskrivningar för statiska bilder som bara används för dekoration.
 * Använd inte skannade data som bakgrundsinformation. Det här kan hända när en designer skannar ett utskriftsformulär och använder Adobe LiveCycle Designer för att lägga till nya fält i formuläret. Skärmläsare kan inte identifiera inlästa data i det här läget.
 
-När du lägger in rent dekorativt grafiskt innehåll i formulären måste du se till att skärmläsarna inte meddelar om bilden. För de flesta skärmläsare kan du uppnå detta genom att ange egenskapen Reader text på skärmen till Ingen på paletten Tillgänglighet. Om du inte gör det kan vissa skärmläsare meddela att det finns en bild, utan att ange vad bilden representerar. För dynamiska bilder, t.ex. bildfältsobjekt, måste du se till att textalternativen uppdateras korrekt när bilden ändras. Skapa inte textbeskrivningar för bildfältsobjekt som bara används för dekoration. Du kan använda skriptspråket FormCalc för att tilldela textbeskrivningar till ett bildfältsobjekt dynamiskt. FormCalc är standardskriptspråket i Adobe LiveCycle Designer. Ta till exempel ett formulär med bildfältet ImageField1 och tillhörande text i bildtextnoden för körningsdata. Du kan använda skript för att skicka texten i en lämplig händelse (till exempel `form:ready`) enligt följande:
+När du lägger in rent dekorativt grafiskt innehåll i formulären måste du se till att skärmläsarna inte meddelar om bilden. För de flesta skärmläsare kan du uppnå detta genom att ange egenskapen Reader text på skärmen till Ingen på paletten Tillgänglighet. Om du inte gör det kan vissa skärmläsare meddela att det finns en bild, utan att ange vad bilden representerar. För dynamiska bilder, t.ex. bildfältsobjekt, måste du se till att textalternativen uppdateras korrekt när bilden ändras. Skapa inte textbeskrivningar för bildfältsobjekt som bara används för dekoration. Du kan använda skriptspråket FormCalc för att tilldela textbeskrivningar till ett bildfältsobjekt dynamiskt. FormCalc är standardskriptspråket i Adobe LiveCycle Designer. Ta till exempel ett formulär med bildfältet ImageField1 och tillhörande text i bildtextnoden för körningsdata. Du kan använda skript för att skicka den här texten i en lämplig händelse (till exempel `form:ready`) enligt följande:
 
 `ImageField1.assist.toolTip = $record.imagetext.value`
 
@@ -170,11 +170,11 @@ När formuläret sparas som PDF söker LiveCycle Designer igenom formuläret eft
 
 Följande alternativ är tillgängliga:
 
-* **Egen text** som du anger i fältet Reader text på hjälpmedelspaletten. Med det här alternativet kan du ange vilken text som helst som du vill att hjälpmedelstekniken, t.ex. skärmläsare, ska använda. I de flesta fall är det bäst att använda bildtextsinställningen - att skapa Reader-text för anpassad skärm bör endast vara ett alternativ när det inte går att använda bildtext eller en funktionsbeskrivning.
+* **Egen text** som du anger i textfältet Reader på hjälpmedelspaletten. Med det här alternativet kan du ange vilken text som helst som du vill att hjälpmedelstekniken, t.ex. skärmläsare, ska använda. I de flesta fall är det bäst att använda bildtextsinställningen - att skapa Reader-text för anpassad skärm bör endast vara ett alternativ när det inte går att använda bildtext eller en funktionsbeskrivning.
 * **Verktygstips** som du anger i fältet Verktygstips på paletten Tillgänglighet. För de flesta objekt visas verktygstips vid körning när användaren håller pekaren över objektet. Verktygstips visas bara för vissa skrivskyddade objekt, till exempel ett streckkodsobjekt för ett pappersformulär, när en skärmläsare används.
 * **Bildtext**, vilket gör att LiveCyclet Designer använder formulärfältets associerade (visuella) etikett som skärmläsartext.
 * **Namn** som du anger i fältet Namn på fliken Bindning. Observera att namnet inte får innehålla blanksteg.
-* **Ingen**, vilket gör att objektet inte har något namn. Detta rekommenderas aldrig för formulärkontroller.
+* **Inget**, vilket gör att objektet inte har något namn. Detta rekommenderas aldrig för formulärkontroller.
 
 Tänk på följande när du använder paletten Tillgänglighet för formulärkontrollsetiketter:
 
@@ -189,15 +189,16 @@ Tänk på följande när du använder paletten Tillgänglighet för formulärkon
 
 Bild 4 visar ett exempel på ett textfält med en visuell bildtext som kan vara oklar för vissa skärmläsaranvändare. I det här exemplet är Reader-text för anpassad skärm inställd på&quot;Antal sidor&quot; och Reader prioritet för skärm är inställd på Anpassad text. Därför kommer den faktiska (visuella) bildtexten (&quot;# av sidor&quot;) inte att användas av skärmläsaren. Ett verktygstips kan också ha angetts.
 
-![Ange Reader-text för anpassad skärm när den synliga etiketten inte räcker till](/help/forms/using/assets/image-4.png)
+![Ange Reader-text för anpassad skärm när den synliga etiketten inte är tillräcklig](/help/forms/using/assets/image-4.png)
 
-Bild 4: **Ange Reader-text för anpassad skärm när den synliga etiketten inte räcker till**
+Bild 4: **Ange Reader-text för anpassad skärm när den synliga etiketten är otillräcklig**
 
 ### Ange etiketter för alternativknappar
 
 När en användare med synnedsättning tabbar in i en alternativknapp måste skärmläsaren läsa två saker:
 * En indikation på syftet med gruppen med alternativknappar
-* En meningsfull etikett för varje alternativknapp Gör alternativknappar tillgängliga med knappbeskrivningar:
+* En meningsfull etikett för varje alternativknapp
+Så här gör du alternativknappar tillgängliga med knappbeskrivningar:
    1. Markera exkluderingsgruppen på paletten Hierarki.
    1. Klicka på paletten Tillgänglighet och skriv den text som ska läsas upp för Reader i rutan Anpassad skärmtext. Om du t.ex. har en exkluderingsgrupp som anger alternativ för betalning med olika kreditkort skriver du Välj en betalningsmetod.
    1. Om bildtexterna för varje alternativknapp innehåller text som är meningsfull när den talas av en skärmläsare, markerar du fliken Bindning på paletten Objekt och avmarkerar kryssrutan Ange objektvärde.
@@ -364,9 +365,9 @@ Du kan ändra ett objekts position genom att göra något av följande:
 
 Du kan ändra ett objekts koordinater mer exakt med paletten Layout (visas i bild 10). På den här paletten kan du ange X- och Y-koordinater samt objektets bredd och höjd.
 
-![Använda koordinater för att exakt placera ett objekt med paletten Layout](/help/forms/using/assets/image-10.png)
+![Använda koordinater för att exakt positionera ett objekt med layoutpaletten](/help/forms/using/assets/image-10.png)
 
-Bild 10: **Använda koordinater för att exakt placera ett objekt med paletten Layout**
+Bild 10: **Använda koordinater för att exakt positionera ett objekt med layoutpaletten**
 
 >[!NOTE]
 > När bildtexten och kontrollen inte sammanfogas, är positionen för bildtexten för en formulärkontroll oberoende av den ordning i vilken skärmläsare läser objektet och dess element. Mer information om bildtexter finns i avsnitt 2.5 Ange korrekta etiketter för formulärkontroller i den här handboken.
@@ -393,7 +394,7 @@ Med paletten Tabbordning (se figur 12) kan du inspektera och ändra den ordning 
 
 ![Paletten Tabbordning](/help/forms/using/assets/image-12.png)
 
-Figur 12: **Paletten Tabbordning**
+Bild 12: **Paletten Tabbordning**
 
 På paletten Tabbordning finns en alternativ vy över formulärets tabbordning. Den visar alla objekt i formuläret som numrerade listor, där varje nummer representerar objektets position i tabbflödet.
 Öppna paletten Tabbordning genom att välja Fönster > Tabbordning.
@@ -469,7 +470,7 @@ I bild 13 visas till exempel ett formulärfält som har en röd bildtext (som an
 
 ![Använda enbart färg för att förmedla information](/help/forms/using/assets/image-13.png)
 
-Figur 13: **Använda enbart färg för att förmedla information**
+Bild 13: **Använder enbart färg för att förmedla information**
 
 För att lösa det här problemet anger du även formulärets obligatoriska status i formulärkontrollens alternativa text (som beskrivs i avsnitt 2.5 Ange korrekta etiketter för formulärkontroller). Du kan till exempel ställa in uppläsningstexten på&quot;Postnummer (obligatoriskt)&quot;. För användare som har svårt att se färg i vissa kombinationer rekommenderar vi att du ställer in textfältstypen till Anges av användaren - krävs på paletten Objekt, förutom alternativ text som anger att fältet är obligatoriskt. Du kan också använda andra indikationer än färg, till exempel visuell text, textformat och kantlinjeformat. För skärmläsaranvändare måste du dock ändå förmedla den information som krävs via hjälpmedelspaletten.
 
@@ -484,7 +485,7 @@ Många användare med synnedsättning förlitar sig på hög kontrast mellan tex
 
 ![Ett formulär med otillräcklig färgkontrast](/help/forms/using/assets/image-14.png)
 
-Figur 14: **Ett formulär med otillräcklig färgkontrast**
+Bild 14: **Ett formulär med otillräcklig färgkontrast**
 
 Vi rekommenderar starkt att du använder standardteckensnitt och bakgrundsfärger: svart på vit bakgrund. Om du måste ändra dessa standardfärger måste du välja en lämplig kombination av färger med hög kontrast. Använd antingen en mörk förgrundsfärg på en ljus bakgrundsfärg eller vice versa. Du kan vara säker på att du använder ett verktyg (till exempel WAT-C Color Contrast Analyzer) för att kontrollera att kontrasten är tillräcklig.
 
@@ -504,7 +505,7 @@ Recommendations för färganvändning:
    * i) Färgkodning får inte användas som det enda sättet att förmedla information, ange en åtgärd, föreslå ett svar eller särskilja ett visuellt element.
 * WCAG 1.0
    * 2.1 Kontrollera att all information som förmedlas med färg också är tillgänglig utan färg, till exempel från sammanhang eller markering.
-   * 2.2 Se till att kombinationer av förgrunds- och bakgrundsfärger ger tillräcklig kontrast när de visas av någon som har färgbrist eller när de visas på en svart och vit skärm. [Prioritet 2 för bilder, prioritet 3 för text] (P2).
+   * 2.2 Se till att kombinationer av förgrunds- och bakgrundsfärger ger tillräcklig kontrast när de visas av någon som har färgbrist eller när de visas på en svart och vit skärm. [Prioritet 2 för bilder, Prioritet 3 för text ] (P2).
 * WCAG 2.0
    * 1.4.1 Användning av Färg: Färg används inte som det enda visuella sättet att förmedla information, indikera en åtgärd, fråga ett svar eller särskilja ett visuellt element. (nivå A)
    * 1.4.3 Kontrast (minimal): Den visuella presentationen av text och bilder av text har ett kontrastförhållande på minst 4,5:1, utom följande: (Nivå AA)
@@ -516,11 +517,16 @@ Recommendations för färganvändning:
 Tabeller är ett effektivt sätt att ordna och presentera innehåll i hjälpmedelsförberedda formulär. När en tabells rader och kolumner används på rätt sätt blir strukturen förutsägbar och konsekvent för formulärinnehållet. När en skärmläsaranvändare till exempel navigerar till en innehållsradcell anger skärmläsaren cellens placering och läser sedan cellinnehållet. Skärmläsaren anger cellens placering med en kombination av rad- och kolumnrubriker eller rad- och kolumnnummer. Eftersom skärmläsare anger information som orienterar användaren till platsen för innehållet i tabellen, påverkar layouten direkt tabellens hjälpmedel.
 
 Du kan ange följande roller för tabellelement när du skapar tabeller. Med de här rollerna kan skärmläsare navigera i tabellstrukturen med särskilda kortkommandon och förmedla relationen mellan tabellceller och motsvarande rubrikceller till användaren.
-* Tabell Tilldelar rollen för en tabell till det markerade delformuläret. När användaren navigerar till det här delformuläret identifierar de flesta skärmläsare det som en tabell och anger antalet rader och kolumner.
-* Rubrikrad Tilldelar en rubrikrad till det markerade delformuläret eller tabellraden. När innehållet i en innehållsradcell skrivs identifierar de flesta skärmläsare först innehållet i motsvarande cell i rubrikraden.
-* Innehållsrad Tilldelar rollen för en innehållsrad till det markerade delformuläret eller tabellraden. Om en cell innehåller ett delformulär läser skärmläsare vanligtvis upp innehållet i motsvarande cell i rubrikraden, följt av fälten i delformuläret.
-* Sidfotsrad Tilldelar en sidfotsrad till det markerade delformuläret eller tabellraden.
-* (Ingen) Anger en rad som förmedlar information om tabellen eller dess innehåll. Raden anses inte vara en del av tabellen, men skärmläsaren läser upp innehållet.
+* Tabell
+Tilldelar rollen för en tabell till det markerade delformuläret. När användaren navigerar till det här delformuläret identifierar de flesta skärmläsare det som en tabell och anger antalet rader och kolumner.
+* Rubrikrad
+Ger det markerade delformuläret eller tabellraden rollen av en rubrikrad. När innehållet i en innehållsradcell skrivs identifierar de flesta skärmläsare först innehållet i motsvarande cell i rubrikraden.
+* Brödtextrad
+Ger det markerade delformuläret eller tabellraden rollen av en innehållsrad. Om en cell innehåller ett delformulär läser skärmläsare vanligtvis upp innehållet i motsvarande cell i rubrikraden, följt av fälten i delformuläret.
+* Sidfotsrad
+Ger det markerade delformuläret eller tabellraden rollen som sidfotsrad.
+* (Ingen)
+Anger en rad som förmedlar information om tabellen eller dess innehåll. Raden anses inte vara en del av tabellen, men skärmläsaren läser upp innehållet.
 
 När tabeller används på rätt sätt är de ett effektivt sätt att ordna och presentera tabellinformation. Undvik alltför komplicerade tabeller, t.ex. tabeller med kapslade tabeller och avsnitt.
 
@@ -550,7 +556,8 @@ När du använder delformulärsobjekt i stället för tabellobjekt för att skap
 De funktioner som stöds av skärmläsaren avgör vilken information som läses in för en komplex tabell. Ta till exempel en tabell som innehåller en rubrikrad och ett avsnitt med en rubrikrad. När användaren navigerar till en innehållsradcell i tabellavsnittet, läser skärmläsare vanligtvis följande innehåll i ordning:
 * Innehåll från lämplig cell i tabellens rubrikrad
 * Innehåll från lämplig cell i avsnittets rubrikrad
-* Innehåll från den markerade cellen En del skärmläsare kanske inte läser innehåll från båda rubrikraderna.
+* Innehåll från den markerade cellen
+Vissa skärmläsare kanske inte läser innehåll från båda sidhuvudsraderna.
 
 Skapa meningsfulla synliga namn eller titlar för tabellerna. Du kan skapa ett tabellnamn som statisk text i Adobe LiveCycle Designer och placera det framför tabellen. Du kan gruppera en tabell och dess namn i ett delformulär. Delformulär är särskilt användbara när du vill kombinera kopplade objekt i en layout.
 
@@ -589,7 +596,7 @@ Smarta fält kan vara ett effektivt sätt att göra vissa formulär enklare att 
 Du kan använda paletten Tillgänglighet för att tilldela roller till objekt baserat på vad objektet används för. Dessa roller kan användas för att skapa rubriker på olika nivåer.
 
 ![Ange en rubrikroll på paletten Tillgänglighet](/help/forms/using/assets/image-15.png)
-Figur 15: **Ange en rubrikroll på paletten Tillgänglighet**
+Bild 15: **Ange en rubrikroll på paletten Tillgänglighet**
 
 Så här skapar du en rubrik i formuläret:
 
@@ -668,7 +675,7 @@ Tänk på följande allmänna riktlinjer när du utformar hjälpmedelsskript:
    * 6.2 Se till att motsvarigheten för dynamiskt innehåll uppdateras när det dynamiska innehållet ändras.
    * 6.3 Kontrollera att sidorna kan användas när skript, miniprogram eller andra programmatiska objekt är avstängda eller inte stöds. Om detta inte är möjligt kan du ange motsvarande information på en alternativ tillgänglig sida.
    * 6.5 Kontrollera att dynamiskt innehåll är tillgängligt eller tillhandahåller en alternativ presentation eller sida (P2).
-   * 8.1 Göra programmatiska element som skript och miniprogram direkt tillgängliga eller kompatibla med hjälpmedelstekniker [Prioritet 1 om funktionen är viktig och inte presenteras någon annanstans], annars (P2).
+   * 8.1 Gör programmatiska element som skript och miniprogram direkt tillgängliga eller kompatibla med hjälpmedelstekniker [Prioritet 1 om funktionaliteten är viktig och inte presenteras någon annanstans], annars (P2).
    * 9.3 För skript anger du logiska händelsehanterare i stället för enhetsberoende händelsehanterare (P2).
    * 10.1 Innan användaragenter tillåter användare att stänga av fönster som skapats i förväg, får inte popup-fönster eller andra fönster visas och det aktuella fönstret ändras inte utan att användaren informeras.
 * WCAG 2.0
@@ -679,7 +686,7 @@ Tänk på följande allmänna riktlinjer när du utformar hjälpmedelsskript:
 ## Se till att allt ljud- och videoinnehåll är tillgängligt{#ensure-audio-video-accessible}
 
 Om formulären innehåller ljud- eller videoinnehåll, inklusive ljud- och videoklipp, måste du se till att innehållet är tillgängligt. Se särskilt till att videoklipp som är inbyggda i formulär innehåller bildtexter (ibland kallade undertexter) för döva och hörselskadade användare samt videobeskrivningar för blinda användare. För ljudfiler som inte är synkroniserade med videoinnehåll räcker det med en enkel utskrift.
-Information om mediefiler som är baserade på Flash finns i [link](/help/forms/using/best-practices-for-creating-forms-in-designer.md) om du vill ha information om bildtexter.
+Information om hur du anger bildtexter finns på [link](/help/forms/using/best-practices-for-creating-forms-in-designer.md) om du vill ha information om hur du tillhandahåller bildtexter.
 
 **Relaterade kontrollpunkter**:
 * Section 508 §1194.22
@@ -721,9 +728,9 @@ Så här anger du egenskapen Local för det översta delformuläret eller ett ob
 1. Visa paletten Objekt genom att välja Fönster > Objekt
 1. Välj fliken Fält på paletten Objekt och välj sedan det språk som ska användas för objektet i listan Språk (se figur 18). När du tillämpar olika språkinställningar på enskilda objekt bör du tänka på att de objekt som finns i tabeller och delformulär automatiskt får samma språkinställning som tabell- och delformulärsobjektet.
 
-![Ändra ett objekts språkområde](/help/forms/using/assets/image-18.png)
+![Ändra språkinställningen för ett objekt](/help/forms/using/assets/image-18.png)
 
-Figur 18: **Ändra ett objekts språkområde**
+Figur 18: **Ändra språkområde för ett objekt**
 
 **Relaterade kontrollpunkter**:
 * WCAG 1.0

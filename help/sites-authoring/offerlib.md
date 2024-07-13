@@ -30,32 +30,32 @@ Erbjudandekonsolen organiserar erbjudanden efter varumärke. Varje varumärke in
 
 Skapa ett varumärke som era erbjudanden är kopplade till. Öppna ett varumärke i Offers-konsolen för att komma åt dess erbjudandebibliotek där du kan skapa mappar och erbjudanden.
 
-När du skapar ett varumärke med hjälp av Erbjudandekonsolen visas det också i [Aktivitetskonsol](/help/sites-authoring/activitylib.md) där ni kan lägga till och administrera aktiviteter för varumärket.
+När du skapar ett varumärke med hjälp av konsolen Erbjudanden visas det också i [aktivitetskonsolen](/help/sites-authoring/activitylib.md) där du kan lägga till och administrera aktiviteter för varumärket.
 
-1. I navigeringskonsolen klickar du på **Personalisering** > **Erbjudanden**.
+1. Klicka på **Personalization** > **Erbjudanden** i navigeringskonsolen.
 
    ![screen-shot_2019-03-05at124139-1](assets/screen-shot_2019-03-05at124139-1.png)
 
-1. Klicka **Skapa** och sedan **Skapa** **Varumärke**.
-1. Välj varumärkesmallen och klicka på **Nästa**.
+1. Klicka på **Skapa** och sedan på **Skapa** **varumärke**.
+1. Markera varumärkesmallen och klicka på **Nästa**.
 1. Skriv en rubrik för varumärket som du vill att det ska visas i konsolerna för erbjudanden och aktiviteter. Du kan också ange eller markera en eller flera taggar som ska kopplas till varumärket.
-1. Klicka **Skapa**.
+1. Klicka på **Skapa**.
 
 ## Lägg till en mapp i ett offertbibliotek {#add-a-folder-to-an-offer-library}
 
 Lägg till en mapp i erbjudandebiblioteket för ett varumärke för att ordna och lagra erbjudanden. Du kan skapa en mapp under varumärket eller under andra mappar.
 
 1. Öppna den plats där du vill skapa mappen i konsolen Erbjudanden. Öppna till exempel varumärket för att skapa en mapp på den översta nivån eller öppna en annan mapp i biblioteket.
-1. Klicka **Skapa** > **Skapa mapp eller erbjudande**.
+1. Klicka på **Skapa** > **Skapa mapp eller erbjudande**.
 
    ![screen-shot_2019-03-05at124557](assets/screen-shot_2019-03-05at124557.png)
 
-1. Välj **Mapp** och klicka **Nästa**.
+1. Välj **Mapp** och klicka på **Nästa**.
 1. Skriv en rubrik för mappen som du vill att den ska visas i erbjudandebiblioteket och skriv eller välj taggar.
 
    ![chlimage_1-172](assets/chlimage_1-172.png)
 
-1. Klicka **Skapa**.
+1. Klicka på **Skapa**.
 
 ## Lägg till ett erbjudande i ett erbjudandebibliotek {#add-an-offer-to-an-offer-library}
 
@@ -64,12 +64,12 @@ Lägg till ett erbjudande i ett varumärkes erbjudandebibliotek så att det kan 
 När du har skapat erbjudandet kan du öppna det och redigera innehållet.
 
 1. I konsolen Erbjudanden öppnar du den plats där du vill skapa erbjudandet. Öppna till exempel varumärket för att skapa ett erbjudande på högsta nivå eller öppna en mapp i biblioteket.
-1. Klicka **Skapa** > **Skapa mapp eller erbjudande**.
+1. Klicka på **Skapa** > **Skapa mapp eller erbjudande**.
 
    ![screen-shot_2019-03-05at124557-1](assets/screen-shot_2019-03-05at124557-1.png)
 
-1. Välj **Erbjudandesida** mall och klicka sedan på **Nästa**.
-1. Skriv en titel för erbjudandet och välj eller ange en eller flera taggar som ska kopplas till erbjudandet. Klicka sedan på **Skapa**.
+1. Välj mallen **Erbjudandesida** och klicka sedan på **Nästa**.
+1. Ange en titel för erbjudandet och välj eller skriv en eller flera taggar som du vill associera med erbjudandet. Klicka sedan på **Skapa**.
 1. Öppna erbjudandet för redigering i bekräftelsedialogrutan genom att klicka på **Öppna sida**.
 
 ## Redigera ett erbjudande {#editing-an-offer}
@@ -89,13 +89,13 @@ Du kan ta bort ett erbjudande när du visar antingen mappinnehåll i ett erbjuda
 
 1. Klicka på ikonen bredvid erbjudandet i konsolen Erbjudanden och klicka på **Ta bort**.
 
-   Välj erbjudandet och klicka på **Ta bort**.
+   Markera erbjudandet och klicka på **Ta bort**.
 
-1. Klicka på **Ta bort** för att bekräfta borttagningen.
+1. Klicka på **Ta bort** i dialogrutan som visas för att bekräfta borttagningen.
 1. Om erbjudandet används i en eller flera upplevelser visas en dialogruta som anger att det hänvisas till erbjudandet:
 
    * Om du vill ta bort erbjudandet och ta bort det från upplevelserna klickar du på **Tvinga borttagning**.
-   * Om du vill behålla erbjudandet klickar du **Avbryt**.
+   * Om du vill behålla erbjudandet klickar du på **Avbryt**.
 
 ## Söker efter erbjudanden {#searching-for-offers}
 

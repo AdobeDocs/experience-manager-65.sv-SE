@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Lägga till information från användardata i metadata för att skicka formulär{#adding-information-from-user-data-to-form-submission-metadata}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 Du kan använda värden som anges i ett element i formuläret för att beräkna metadatafält för ett utkast eller en formulärsändning. Med metadata kan du filtrera innehåll baserat på användardata. En användare skriver till exempel John Doe i namnfältet i ditt formulär. Du kan använda den här informationen för att beräkna metadata som kan kategorisera överföringen under den initiala JD:n.
 
@@ -34,12 +34,12 @@ Gör så här för att lägga till ett element i metadata:
 
 1. Öppna det anpassningsbara formuläret i redigeringsläge.\
    Om du vill öppna formuläret i redigeringsläge markerar du formuläret i formulärhanteraren och väljer **Öppna**.
-1. Markera en komponent i redigeringsläget och välj ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och sedan markera ![cmppr](assets/cmppr.png).
-1. Klicka på **Metadata**.
-1. Klicka på i avsnittet Metadata **Lägg till**.
+1. Markera en komponent i redigeringsläget, välj ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och välj sedan ![cmpr](assets/cmppr.png).
+1. Klicka på **Metadata** i sidofältet.
+1. Klicka på **Lägg till** i avsnittet Metadata.
 1. Använd fältet Värde på fliken Metadata för att lägga till skript. De skript du lägger till samlar in data från element i formuläret och beräknar värden som matas in i metadata.
 
-   Till exempel: **true** loggas i metadata om den angivna åldern är större än 21, och **false** loggas om den är mindre än 21. Du anger följande skript på fliken Metadata:
+   **true** loggas till exempel i metadata om den angivna åldern är större än 21 och **false** loggas om den är mindre än 21. Du anger följande skript på fliken Metadata:
 
    `(agebox.value >= 21) ? true : false`
 
@@ -47,7 +47,7 @@ Gör så här för att lägga till ett element i metadata:
 
    Skript som anges på fliken Metadata
 
-1. Klicka **OK**.
+1. Klicka på **OK**.
 
 När en användare har angett data i elementet som har markerats som ett metadatafält loggas den beräknade informationen i metadata. Du kan se metadata i databasen som du konfigurerade för att lagra metadata.
 
@@ -61,9 +61,9 @@ Om du lägger till ett kryssruteelement i metadata lagras markerade värden som 
 
 ![Lagra flera värden från en kryssruta](assets/checkbox-metadata.png)
 
-Du väljer en adaptiv formulärbehållare och i formuläregenskaperna lägger du till en metadatanyckel `cb1` som lagrar `checkbox1.value`och publicera formuläret. När kunden fyller i formuläret väljer kunden passnummer och personnummer i kryssrutefältet. Värdena 1 och 2 lagras som 1 och 2 i fältet cb1 i metadata för överföringen.
+Du väljer en adaptiv formulärbehållare och i formuläregenskaperna lägger du till en metadatanyckel `cb1` som lagrar `checkbox1.value` och publicerar formuläret. När kunden fyller i formuläret väljer kunden passnummer och personnummer i kryssrutefältet. Värdena 1 och 2 lagras som 1 och 2 i fältet cb1 i metadata för överföringen.
 
-![Metadatapost för flera värden som är markerade i ett kryssrutefält](assets/metadata-entry.png)
+![Metadatapost för flera värden som har markerats i ett kryssrutefält](assets/metadata-entry.png)
 
 >[!NOTE]
 >

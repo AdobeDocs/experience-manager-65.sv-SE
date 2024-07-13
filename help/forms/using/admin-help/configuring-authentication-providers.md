@@ -25,7 +25,7 @@ Om du aktiverar enkel inloggning med SPNEGO lägger du till en Kerberos-autentis
 ## Lägg till en autentiseringsprovider {#add-an-authentication-provider}
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
-1. Klicka på en befintlig domän i listan. Om du lägger till autentisering för en ny domän, se [Lägg till en företagsdomän](/help/forms/using/admin-help/adding-domains.md#add-an-enterprise-domain) eller [Lägg till en hybriddomän](/help/forms/using/admin-help/adding-domains.md#add-a-hybrid-domain).
+1. Klicka på en befintlig domän i listan. Om du lägger till autentisering för en ny domän läser du [Lägg till en företagsdomän](/help/forms/using/admin-help/adding-domains.md#add-an-enterprise-domain) eller [Lägg till en hybriddomän](/help/forms/using/admin-help/adding-domains.md#add-a-hybrid-domain).
 1. Klicka på Lägg till autentisering och välj en leverantör i listan Autentiseringsprovider, beroende på vilken autentiseringsmetod din organisation använder.
 1. Ange eventuell ytterligare information som krävs på sidan. (Se [Autentiseringsinställningar](configuring-authentication-providers.md#authentication-settings).)
 1. (Valfritt) Klicka på Testa för att testa konfigurationen.
@@ -57,39 +57,39 @@ Om du vill använda den LDAP-server som anges i katalogkonfigurationen väljer d
 
 Om du vill använda en annan LDAP-server för autentisering, markerar du LDAP som autentiseringsprovider och markerar kryssrutan Anpassad LDAP-autentisering. Följande konfigurationsinställningar visas.
 
-**Server:** (Obligatoriskt) Katalogserverns fullständiga domännamn (FQDN). För en dator som till exempel heter x i example.com är FQDN x.example.com. En IP-adress kan användas i stället för FQDN-servernamnet.
+**Server:** (obligatoriskt) Fullständigt kvalificerat domännamn (FQDN) för katalogservern. För en dator som till exempel heter x i example.com är FQDN x.example.com. En IP-adress kan användas i stället för FQDN-servernamnet.
 
-**Port:** (Obligatoriskt) Den port som katalogservern använder. Vanligtvis 389, eller 636, om SSL-protokollet (Secure Sockets Layer) används för att skicka autentiseringsinformation över nätverket.
+**Port:** (obligatoriskt) Den port som katalogservern använder. Vanligtvis 389, eller 636, om SSL-protokollet (Secure Sockets Layer) används för att skicka autentiseringsinformation över nätverket.
 
-**SSL:** (Obligatoriskt) Anger om katalogservern använder SSL när data skickas över nätverket. Standardvärdet är Nej. Om du anger Ja måste motsvarande LDAP-servercertifikat betraktas som tillförlitligt av JRE (Java™ runtime environment) på programservern.
+**SSL:** (obligatoriskt) Anger om katalogservern använder SSL när data skickas över nätverket. Standardvärdet är Nej. Om du anger Ja måste motsvarande LDAP-servercertifikat betraktas som tillförlitligt av JRE (Java™ runtime environment) på programservern.
 
-**Bindning** (Obligatoriskt) Anger hur du får åtkomst till katalogen.
+**Bindning** (obligatoriskt) Anger hur du ska få åtkomst till katalogen.
 
 **Anonym:** Inget användarnamn eller lösenord krävs.
 
 **Användare:** Autentisering krävs. Ange namnet på den användarpost som har åtkomst till katalogen i rutan Namn. Det är bäst att ange det fullständiga unika namnet (DN) för användarkontot, till exempel cn=Jane Doe, ou=användare, dc=can, dc=com. Ange det associerade lösenordet i rutan Lösenord. Dessa inställningar krävs när du väljer Användare som bindningsalternativ.
 
-**Hämta basens unika namn:** (Inte obligatoriskt) Hämtar bas-DN:n och visar dem i listrutan. Den här inställningen är användbar när du har flera bas-DN och behöver välja ett värde.
+**Hämta bas-DN:** (inte obligatoriskt) Hämtar bas-DN:n och visar dem i listrutan. Den här inställningen är användbar när du har flera bas-DN och behöver välja ett värde.
 
-**Basens unika namn:** (Obligatoriskt) Används som startpunkt för synkronisering av användare och grupper från LDAP-hierarkin. Det är bäst att ange ett bas-DN på den lägsta nivån i hierarkin som omfattar alla användare och grupper som behöver synkroniseras för tjänster. Inkludera inte användarens unika namn i den här inställningen. Om du vill synkronisera en viss användare använder du inställningen Sökfilter.
+**Bas-DN:** (obligatoriskt) Används som startpunkt för synkronisering av användare och grupper från LDAP-hierarkin. Det är bäst att ange ett bas-DN på den lägsta nivån i hierarkin som omfattar alla användare och grupper som behöver synkroniseras för tjänster. Inkludera inte användarens unika namn i den här inställningen. Om du vill synkronisera en viss användare använder du inställningen Sökfilter.
 
-**Fyll sida med:** (Inte obligatoriskt) När du väljer det här alternativet fylls attribut på användar- och gruppinställningssidorna i med motsvarande LDAP-standardvärden.
+**Fyll sidan med:** (Inte obligatoriskt) Om du väljer det här alternativet fylls attribut på användar- och gruppinställningssidorna med motsvarande LDAP-standardvärden.
 
-**Sökfilter:** (Obligatoriskt) Det sökfilter som ska användas för att hitta posten som är associerad med användaren. Se Syntax för sökfilter.
+**Sökfilter:** (obligatoriskt) Sökfiltret som ska användas för att hitta posten som är associerad med användaren. Se Syntax för sökfilter.
 
 ### Kerberos-inställningar {#kerberos-settings}
 
 Om du konfigurerar autentisering för en företagsdomän eller hybriddomän och väljer Kerberos-autentisering är följande inställningar tillgängliga.
 
-**DNS IP:** DNS IP-adressen för servern där AEM körs. I Windows kan du fastställa den här IP-adressen genom att köra ipconfig /all på kommandoraden.
+**DNS-IP:** DNS-IP-adressen för servern där AEM körs. I Windows kan du fastställa den här IP-adressen genom att köra ipconfig /all på kommandoraden.
 
 **KDC-värd:** Fullständigt kvalificerat värdnamn eller IP-adress för den Active Directory-server som används för autentisering.
 
-**Tjänstanvändare:** Om du använder Active Directory 2003 är det här värdet mappningen som skapas för tjänstens huvudnamn i formuläret `HTTP/<server name>`. Om du använder Active Directory 2008 är det här värdet användar-ID:t för tjänstens huvudnamn. Anta till exempel att tjänstens huvudnamn heter um spnego, att användar-ID är spnegodemo och att mappningen är HTTP/example.yourcompany.com. Med Active Directory 2003 anger du tjänstanvändaren till HTTP/example.yourcompany.com. Med Active Directory 2008 anger du tjänstanvändaren till spnegodemo. (Se Aktivera enkel inloggning med SPNEGO.)
+**Tjänstanvändare:** Om du använder Active Directory 2003 är det här värdet mappningen som skapas för tjänstens huvudnamn i formatet `HTTP/<server name>`. Om du använder Active Directory 2008 är det här värdet användar-ID:t för tjänstens huvudnamn. Anta till exempel att tjänstens huvudnamn heter um spnego, att användar-ID är spnegodemo och att mappningen är HTTP/example.yourcompany.com. Med Active Directory 2003 anger du tjänstanvändaren till HTTP/example.yourcompany.com. Med Active Directory 2008 anger du tjänstanvändaren till spnegodemo. (Se Aktivera enkel inloggning med SPNEGO.)
 
 **Tjänstsfär:** Domännamn för Active Directory
 
-**Lösenord:** Tjänstanvändarens lösenord
+**Lösenord för tjänst:** Lösenord för tjänstanvändare
 
 **Aktivera SPNEGO:** Aktiverar användning av SPNEGO för enkel inloggning (SSO). (Se Aktivera enkel inloggning med SPNEGO.)
 
@@ -97,13 +97,14 @@ Om du konfigurerar autentisering för en företagsdomän eller hybriddomän och 
 
 Om du konfigurerar autentisering för en företagsdomän eller hybriddomän och väljer SAML-autentisering är följande inställningar tillgängliga. Mer information om ytterligare SAML-inställningar finns i [Konfigurera inställningar för SAML-tjänstleverantör](/help/forms/using/admin-help/configure-saml-service-provider-settings.md#configure-saml-service-provider-settings).
 
-**Välj en SAML-identitetsleverantörens metadatafil som ska importeras:** Klicka på Bläddra för att välja en metadatafil för SAML-identitetsleverantören som genererats från din IDP och klicka sedan på Importera. Information från IDP visas.
+**Välj metadata för SAML-identitetsleverantör
+fil som ska importeras:** Klicka på Bläddra för att välja en SAML-metadatafil för identitetsleverantör som genererats från din IDP och klicka sedan på Importera. Information från IDP visas.
 
-**Titel:** Alias för den URL som anges av EntityID. Titeln visas också på inloggningssidan för Enterprise-användare och lokala användare.
+**Titel:** Alias för URL:en som anges av EntityID. Titeln visas också på inloggningssidan för Enterprise-användare och lokala användare.
 
 **Identitetsprovidern stöder grundläggande klientautentisering:** Grundläggande klientautentisering används när IDP använder en SAML-artefaktmatchningsprofil. I den här profilen ansluter Hantering av användare tillbaka till en webbtjänst som körs på IDP för att hämta SAML-försäkran. IDP kan kräva autentisering. Om IDP kräver autentisering markerar du det här alternativet och anger ett användarnamn och lösenord i rutorna.
 
-**Egna egenskaper:** Du kan ange ytterligare egenskaper. De ytterligare egenskaperna är namn=värde-par avgränsade med nya rader.
+**Anpassade egenskaper:** Du kan ange ytterligare egenskaper. De ytterligare egenskaperna är namn=värde-par avgränsade med nya rader.
 
 Följande anpassade egenskaper krävs om artefaktbindning används.
 
@@ -145,7 +146,7 @@ Autentiseringen misslyckas om en användare autentiseras utan att etablera just-
 
 ### Aktivera just-in-time-etablering för en domän {#enable-just-in-time-provisioning-for-a-domain}
 
-1. Skriv en tjänstbehållare som implementerar gränssnitten IdentityCreator och AssignmentProvider. (Se [Programmera med AEM](https://www.adobe.com/go/learn_aemforms_programming_63).)
+1. Skriv en tjänstbehållare som implementerar gränssnitten IdentityCreator och AssignmentProvider. (Se [Programmera med AEM formulär](https://www.adobe.com/go/learn_aemforms_programming_63).)
 1. Distribuera tjänstbehållaren till Forms Server.
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 
@@ -154,7 +155,7 @@ Autentiseringen misslyckas om en användare autentiseras utan att etablera just-
 1. Om du vill skapa en domän klickar du på Ny företagsdomän eller Ny hybrid-domän. Om du vill redigera en befintlig domän klickar du på domänens namn.
 1. Markera Aktivera etablering i realtid.
 
-   ***anteckning **: Om kryssrutan Enable Just In Time Provisioning (Aktivera endast tidsprovisionering) saknas klickar du på Home (Hem) > Settings (Inställningar) > User Management (Användarhantering) > Configuration (Konfiguration) > Advanced System Attributes (Avancerade systemattribut) och sedan på Läs in igen.*
+   ***Obs!**Om kryssrutan Aktivera tidsprovisionering för just in-tid saknas klickar du på Hem > Inställningar > Användarhantering > Konfiguration > Avancerade systemattribut och sedan på Läs in igen.*
 
-1. Lägg till autentiseringsproviders. När du lägger till autentiseringsproviders väljer du en registrerad identitetsskapare och tilldelningsprovider på skärmen Ny autentisering. (Se [Konfigurerar autentiseringsproviders](configuring-authentication-providers.md#configuring-authentication-providers).)
+1. Lägg till autentiseringsproviders. När du lägger till autentiseringsproviders väljer du en registrerad identitetsskapare och tilldelningsprovider på skärmen Ny autentisering. (Se [Konfigurera autentiseringsproviders](configuring-authentication-providers.md#configuring-authentication-providers).)
 1. Spara domänen.

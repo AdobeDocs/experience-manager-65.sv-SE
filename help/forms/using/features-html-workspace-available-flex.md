@@ -28,15 +28,15 @@ När du öppnar en uppgift, innan formuläret öppnas, kan du i en ruta visa inf
 
 ## Stöd för hanterarvyn {#support-for-manager-view}
 
-Med den här funktionen kan chefer komma åt eller agera på uppgifter i sina rapporter. Chefer kan även i organisationshierarkin fördjupa sig i uppgifter i sina indirekta rapporter. Se [Hantera uppgifter i en organisationshierarki med hjälp av hanterarvyn](/help/forms/using/tasks-organizational-hierarchy-using-manager.md) för mer information.
+Med den här funktionen kan chefer komma åt eller agera på uppgifter i sina rapporter. Chefer kan även i organisationshierarkin fördjupa sig i uppgifter i sina indirekta rapporter. Mer information finns i [Hantera uppgifter i en organisationshierarki med hjälp av hanterarvyn](/help/forms/using/tasks-organizational-hierarchy-using-manager.md).
 
 ## Stöd för användaravatarer {#support-for-user-avatars}
 
-Bilder, eller avatarer, för inloggade användare kan nu visas i det övre högra hörnet av arbetsytan i AEM Forms. I hanterarvyn kan användaravatarerna visas för att visa chefernas bilder och deras rapporter. Se [Visa användarens avatar](/help/forms/using/displaying-user-avatar.md) för mer information.
+Bilder, eller avatarer, för inloggade användare kan nu visas i det övre högra hörnet av arbetsytan i AEM Forms. I hanterarvyn kan användaravatarerna visas för att visa chefernas bilder och deras rapporter. Mer information finns i [Visa användarens avatar](/help/forms/using/displaying-user-avatar.md).
 
 ## Stöd för integrering av tredjepartsprogram {#support-for-integrating-third-party-applications}
 
-Funktionen för integrering med tredjepartsprogram kan användas för att helt överföra dina arbetsflöden till AEM Forms arbetsyta. Du kan till exempel återge brevmallar för hantering av korrespondenshantering som uppgifter i AEM Forms-arbetsytefönstret. Därför kan du slutföra uppgiften utan att behöva lämna arbetsytan i AEM Forms. Se [Integrera korrespondenshantering i AEM Forms arbetsyta](/help/forms/using/integrating-correspondence-management-html-workspace.md) för detaljerade anvisningar.
+Funktionen för integrering med tredjepartsprogram kan användas för att helt överföra dina arbetsflöden till AEM Forms arbetsyta. Du kan till exempel återge brevmallar för hantering av korrespondenshantering som uppgifter i AEM Forms-arbetsytefönstret. Därför kan du slutföra uppgiften utan att behöva lämna arbetsytan i AEM Forms. Mer information finns i [Integrera korrespondenshantering i AEM Forms-arbetsytan](/help/forms/using/integrating-correspondence-management-html-workspace.md).
 
 ## Stöd för anpassad aktivitetsåtergivning baserat på slutanvändarens enhet {#support-for-custom-task-rendering-based-on-end-user-s-device}
 

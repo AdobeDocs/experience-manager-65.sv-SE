@@ -34,13 +34,13 @@ Anta att följande DDX-dokument används för den här diskussionen.
  </DDX>
 ```
 
-I det här DDX-dokumentet `DocumentInformation` -elementet instruerar Assembler-tjänsten att returnera information om indatadokumentet i PDF. I `DocumentInformation` -element, `PDFAValidation` -elementet instruerar Assembler-tjänsten att ange om det inmatade PDF-dokumentet är PDF/A-kompatibelt.
+I det här DDX-dokumentet instruerar elementet `DocumentInformation` Assembler-tjänsten att returnera information om indatadokumentet för PDF. I elementet `DocumentInformation` instruerar elementet `PDFAValidation` Assembler-tjänsten att ange om indatadokumentet är PDF/A-kompatibelt eller inte.
 
-Assembler-tjänsten returnerar information som anger om det inmatade PDF-dokumentet är PDF/A-kompatibelt i ett XML-dokument som innehåller en `PDFAConformance` -element. Om det inmatade PDF-dokumentet är PDF/A-kompatibelt är värdet för `PDFAConformance` element `isCompliant` attributet är `true`. Om PDF-dokumentet inte är PDF/A-kompatibelt är värdet för `PDFAConformance` element `isCompliant` attributet är `false`.
+Assembler-tjänsten returnerar information som anger om indatadokumentet PDF är PDF/A-kompatibelt i ett XML-dokument som innehåller ett `PDFAConformance`-element. Om indatadokumentet är PDF/A-kompatibelt är värdet för `PDFAConformance`-elementets `isCompliant`-attribut `true`. Om PDF-dokumentet inte är PDF/A-kompatibelt är värdet för `PDFAConformance`-elementets `isCompliant`-attribut `false`.
 
 >[!NOTE]
 >
->Eftersom DDX-dokumentet som anges i det här avsnittet innehåller en `DocumentInformation` -element returnerar Assembler-tjänsten XML-data i stället för ett PDF-dokument. Det innebär att Assembler-tjänsten inte sammanställer eller demonterar ett PDF-dokument, utan returnerar information om indatadokumentet i PDF i ett XML-dokument.
+>Eftersom DDX-dokumentet som anges i det här avsnittet innehåller ett `DocumentInformation`-element returnerar Assembler-tjänsten XML-data i stället för ett PDF-dokument. Det innebär att Assembler-tjänsten inte sammanställer eller demonterar ett PDF-dokument, utan returnerar information om indatadokumentet i PDF i ett XML-dokument.
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ Assembler-tjänsten returnerar information som anger om det inmatade PDF-dokumen
 
 >[!NOTE]
 >
->Mer information om ett DX-dokument finns i [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).
+>Mer information om ett DDX-dokument finns i [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).
 
 ## Sammanfattning av steg {#summary-of-steps}
 
@@ -74,7 +74,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
-Om AEM Forms körs på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Om AEM Forms körs på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på. Mer information om platsen för alla AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en PDF Assembler-klient**
 
@@ -82,19 +82,19 @@ Innan du programmässigt kan utföra en Assembler-åtgärd måste du skapa en As
 
 **Referera till ett befintligt DDX-dokument**
 
-Det måste finnas referenser till ett DDX-dokument för att en Assembler-tjänståtgärd ska kunna utföras. För att avgöra om ett inmatningsdokument är PDF/A-kompatibelt ser du till att DDX-dokumentet innehåller `PDFAValidation` element i en `DocumentInformation` -element. The `PDFAValidation` -elementet instruerar Assembler-tjänsten att returnera ett XML-dokument som anger om det inmatade PDF-dokumentet är PDF/A-kompatibelt.
+Det måste finnas referenser till ett DDX-dokument för att en Assembler-tjänståtgärd ska kunna utföras. Om du vill avgöra om ett indatadokument är PDF/A-kompatibelt kontrollerar du att DDX-dokumentet innehåller elementet `PDFAValidation` i ett `DocumentInformation` -element. Elementet `PDFAValidation` instruerar Assembler-tjänsten att returnera ett XML-dokument som anger om det inmatade PDF-dokumentet är PDF/A-kompatibelt.
 
-**Referera till ett PDF-dokument som används för att fastställa kompatibiliteten mellan PDF och A**
+**Referera till ett PDF-dokument som används för att fastställa kompatibiliteten PDF/A**
 
 Ett PDF-dokument måste refereras och skickas till Assembler-tjänsten för att avgöra om PDF-dokumentet är PDF/A-kompatibelt.
 
 **Ange körningsalternativ**
 
-Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om alternativ för körning som du kan ange finns i `AssemblerOptionSpec` klassreferens i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+Du kan ställa in körningsalternativ som styr beteendet för Assembler-tjänsten när den utför ett jobb. Du kan till exempel ange ett alternativ som instruerar Assembler-tjänsten att fortsätta bearbeta ett jobb om ett fel uppstår. Mer information om de körningsalternativ du kan ange finns i klassreferensen `AssemblerOptionSpec` i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
 **Hämta information om PDF-dokumentet**
 
-När du har skapat Assembler-tjänstklienten, refererat till DDX-dokumentet, refererat till ett interaktivt PDF-dokument och angett körningsalternativ, kan du anropa `invokeDDX` operation. Eftersom DDX-dokumentet innehåller `DocumentInformation` -element returnerar Assembler-tjänsten XML-data i stället för ett PDF-dokument.
+När du har skapat Assembler-tjänstklienten, refererat till DDX-dokumentet, refererat till ett interaktivt PDF-dokument och angett körningsalternativ, kan du anropa åtgärden `invokeDDX`. Eftersom DDX-dokumentet innehåller elementet `DocumentInformation` returnerar Assembler-tjänsten XML-data i stället för ett PDF-dokument.
 
 **Spara det returnerade XML-dokumentet**
 
@@ -128,50 +128,50 @@ Kontrollera om ett PDF-dokument är PDF/A-kompatibelt med hjälp av Assembler Se
 
 1. Skapa en PDF Assembler-klient.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `AssemblerServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `AssemblerServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa en `java.io.FileInputStream` -objekt som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen. Kontrollera att DDX-dokumentet innehåller `PDFAValidation` element som finns i en `DocumentInformation` -element.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar DDX-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen. Om du vill avgöra om PDF-dokumentet är PDF/A-kompatibelt kontrollerar du att DDX-dokumentet innehåller elementet `PDFAValidation` som finns i ett `DocumentInformation`-element.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Referera till ett PDF-dokument som används för att fastställa kompatibiliteten mellan PDF och A.
 
-   * Skapa en `java.io.FileInputStream` genom att använda dess konstruktor och skicka platsen för ett PDF-dokument som används för att fastställa kompatibiliteten PDF/A.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt som innehåller dokumentet PDF.
-   * Skapa en `java.util.Map` objekt som används för att lagra indata-PDF-dokumentet med hjälp av ett `HashMap` konstruktor.
-   * Lägg till en post i `java.util.Map` genom att anropa dess `put` och skicka följande argument:
+   * Skapa ett `java.io.FileInputStream`-objekt med hjälp av dess konstruktor och skicka platsen för ett PDF-dokument som används för att fastställa kompatibiliteten PDF/A.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka det `java.io.FileInputStream`-objekt som innehåller PDF-dokumentet.
+   * Skapa ett `java.util.Map`-objekt som används för att lagra indatadokumentet i PDF med hjälp av en `HashMap`-konstruktor.
+   * Lägg till en post i objektet `java.util.Map` genom att anropa dess `put`-metod och skicka följande argument:
 
       * Ett strängvärde som representerar nyckelnamnet. Detta värde måste matcha värdet för källelementet som anges i DDX-dokumentet. Värdet för källelementet i DDX-dokumentet som introducerades i det här avsnittet är till exempel Loan.pdf.
-      * A `com.adobe.idp.Document` som innehåller indatadokumentet PDF.
+      * Ett `com.adobe.idp.Document`-objekt som innehåller indatadokumentet i PDF.
 
 1. Ange körningsalternativ.
 
-   * Skapa en `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
-   * Ange körningsalternativ som uppfyller dina affärsbehov genom att anropa en metod som tillhör `AssemblerOptionSpec` -objekt. Om du till exempel vill instruera tjänsten Assembler att fortsätta bearbeta ett jobb när ett fel inträffar, ska du anropa `AssemblerOptionSpec` objektets `setFailOnError` metod och skicka `false`.
+   * Skapa ett `AssemblerOptionSpec`-objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
+   * Ange körningsalternativ som uppfyller dina affärskrav genom att anropa en metod som tillhör objektet `AssemblerOptionSpec`. Om du till exempel vill instruera Assembler-tjänsten att fortsätta bearbeta ett jobb när ett fel inträffar, anropar du `AssemblerOptionSpec`-objektets `setFailOnError`-metod och skickar `false`.
 
 1. Hämta information om PDF-dokumentet.
 
-   Anropa `AssemblerServiceClient` objektets `invokeDDX` och skicka följande obligatoriska värden:
+   Anropa `AssemblerServiceClient`-objektets `invokeDDX`-metod och skicka följande obligatoriska värden:
 
-   * A `com.adobe.idp.Document` objekt som representerar det DDX-dokument som ska användas
-   * A `java.util.Map` objekt som innehåller indatafilen PDF som används för att fastställa kompatibiliteten PDF/A
-   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` objekt som anger körningsalternativ
+   * Ett `com.adobe.idp.Document`-objekt som representerar det DX-dokument som ska användas
+   * Ett `java.util.Map`-objekt som innehåller indatafilen PDF som används för att fastställa kompatibiliteten PDF/A
+   * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec`-objekt som anger körningsalternativen
 
-   The `invokeDDX` returnerar en `com.adobe.livecycle.assembler.client.AssemblerResult` -objekt som innehåller XML-data som anger om PDF-indatadokumentet är PDF/A-kompatibelt.
+   Metoden `invokeDDX` returnerar ett `com.adobe.livecycle.assembler.client.AssemblerResult`-objekt som innehåller XML-data som anger om indatadokumentet för PDF är PDF/A-kompatibelt.
 
 1. Spara det returnerade XML-dokumentet.
 
    Gör så här för att hämta XML-data som anger om indata-PDF-dokumentet är ett PDF/A-dokument:
 
-   * Anropa `AssemblerResult` objektets `getDocuments` -metod. Detta returnerar en `java.util.Map` -objekt.
-   * Iterera genom `java.util.Map` tills du hittar resultatet `com.adobe.idp.Document` -objekt.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera XML-dokumentet. Se till att du sparar XML-data som en XML-fil.
+   * Anropa metoden `getDocuments` för objektet `AssemblerResult`. Detta returnerar ett `java.util.Map`-objekt.
+   * Upprepa genom objektet `java.util.Map` tills du hittar det resulterande `com.adobe.idp.Document`-objektet.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att extrahera XML-dokumentet. Se till att du sparar XML-data som en XML-fil.
 
 **Se även**
 
-[Snabbstart (SOAP läge): Kontrollera om ett dokument är PDF/A-kompatibelt med Java API](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api) (SOAP)
+[Snabbstart (SOAP läge): Avgör om ett dokument är PDF/A-kompatibelt med Java API ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-determining-whether-a-document-is-pdf-a-compliant-using-the-java-api) (SOAP)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
@@ -187,64 +187,64 @@ Kontrollera om ett PDF-dokument är PDF/A-kompatibelt med Assembler Service API 
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa en PDF Assembler-klient.
 
-   * Skapa en `AssemblerServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `AssemblerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `AssemblerServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `AssemblerServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `AssemblerServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra DDX-dokumentet.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för DDX-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra DDX-dokumentet.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för DDX-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Referera till ett PDF-dokument som används för att fastställa kompatibiliteten mellan PDF och A.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra indatadokumentet i PDF.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för indata-PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` med bytearrayens innehåll.
-   * Skapa en `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Det här samlingsobjektet används för att lagra dokumentet PDF.
-   * Skapa en `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt.
-   * Tilldela ett strängvärde som representerar nyckelnamnet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` fält. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet.
-   * Tilldela `BLOB` det objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält.
-   * Lägg till `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt till `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Anropa `MyMapOf_xsd_string_To_xsd_anyType` object&#39; `Add` och skicka `MyMapOf_xsd_string_To_xsd_anyType` -objekt.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra indatadokumentet i PDF.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för indata-PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll objektet `BLOB` genom att tilldela dess `MTOM`-egenskap med innehållet i bytearrayen.
+   * Skapa ett `MyMapOf_xsd_string_To_xsd_anyType`-objekt. Det här samlingsobjektet används för att lagra dokumentet PDF.
+   * Skapa ett `MyMapOf_xsd_string_To_xsd_anyType_Item`-objekt.
+   * Tilldela ett strängvärde som representerar nyckelnamnet till `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektets `key`-fält. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet.
+   * Tilldela det `BLOB`-objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektets `value`-fält.
+   * Lägg till objektet `MyMapOf_xsd_string_To_xsd_anyType_Item` i objektet `MyMapOf_xsd_string_To_xsd_anyType`. Anropa `MyMapOf_xsd_string_To_xsd_anyType`-objektets `Add`-metod och skicka `MyMapOf_xsd_string_To_xsd_anyType`-objektet.
 
 1. Ange körningsalternativ.
 
-   * Skapa en `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
-   * Ange körningsalternativ som uppfyller dina affärskrav genom att tilldela ett värde till en datamedlem som tillhör `AssemblerOptionSpec` -objekt. Om du till exempel vill instruera Assembler-tjänsten att fortsätta bearbeta ett jobb när ett fel inträffar tilldelar du `false` till `AssemblerOptionSpec` objektets `failOnError` datamedlem.
+   * Skapa ett `AssemblerOptionSpec`-objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
+   * Ange körningsalternativ för att uppfylla dina affärskrav genom att tilldela ett värde till en datamedlem som tillhör objektet `AssemblerOptionSpec`. Om du till exempel vill instruera Assembler-tjänsten att fortsätta bearbeta ett jobb när ett fel inträffar tilldelar du `false` till `AssemblerOptionSpec`-objektets `failOnError`-datamedlem.
 
 1. Hämta information om PDF-dokumentet.
 
-   Anropa `AssemblerServiceService` objektets `invoke` och skicka följande värden:
+   Anropa `AssemblerServiceService`-objektets `invoke`-metod och skicka följande värden:
 
-   * A `BLOB` -objekt som representerar DDX-dokumentet.
-   * The `MyMapOf_xsd_string_To_xsd_anyType` som innehåller indatadokumentet PDF. Dess nycklar måste matcha PDF källfilernas namn och dess värden måste vara `BLOB` objekt som motsvarar indatafilen för PDF.
-   * An `AssemblerOptionSpec` objekt som anger körningsalternativ.
+   * Ett `BLOB`-objekt som representerar DDX-dokumentet.
+   * Objektet `MyMapOf_xsd_string_To_xsd_anyType` som innehåller indatadokumentet PDF. Dess nycklar måste matcha namnen på källfilerna i PDF och dess värden måste vara det `BLOB`-objekt som motsvarar indatafilen i PDF.
+   * Ett `AssemblerOptionSpec`-objekt som anger körningsalternativ.
 
-   The `invoke` returnerar en `AssemblerResult` -objekt som innehåller XML-data som anger om PDF-indatadokumentet är ett PDF/A-dokument.
+   Metoden `invoke` returnerar ett `AssemblerResult`-objekt som innehåller XML-data som anger om PDF-indatadokumentet är ett PDF/A-dokument.
 
 1. Spara det returnerade XML-dokumentet.
 
    Gör så här för att hämta XML-data som anger om indata-PDF-dokumentet är ett PDF/A-dokument:
 
-   * Öppna `AssemblerResult` objektets `documents` fält, vilket är ett `Map` -objekt som innehåller XML-data som anger om PDF-indatadokumentet är ett PDF/A-dokument.
-   * Iterera genom `Map` -objekt för att hämta varje resulterande dokument. Sedan konverterar du den arraymedlemmens värde till en `BLOB`.
-   * Extrahera de binära data som representerar XML-data genom att använda dess `BLOB` objektets `MTOM` fält. I det här fältet lagras en array med byte som du kan skriva till som en XML-fil.
+   * Åtkomst till `AssemblerResult`-objektets `documents`-fält, som är ett `Map`-objekt som innehåller XML-data som anger om indata-PDF-dokumentet är ett PDF/A-dokument.
+   * Iterera genom objektet `Map` för att få fram varje resulterande dokument. Sedan konverterar du matrismedlemmens värde till `BLOB`.
+   * Extrahera de binära data som representerar XML-data genom att komma åt objektets `MTOM`-fält `BLOB`. I det här fältet lagras en array med byte som du kan skriva till som en XML-fil.
 
 **Se även**
 

@@ -32,7 +32,7 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
   <tr>
    <td><p>SystemInfo.properties</p></td>
    <td><p>https://'[server]:[port]'/rest/services/SystemInfo.properties'</p></td>
-   <td><p>Detta API är en wrapper för <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a> Java API. Den hämtar konfigurationen för den aktuella arbetsmiljön. </p></td>
+   <td><p>Detta API är en wrapper för Java-API:t <a href="https://docs.oracle.com/javase/6/docs/api/java/lang/System.html#getProperties()">system.getProperties</a>. Den hämtar konfigurationen för den aktuella arbetsmiljön. </p></td>
   </tr>
   <tr>
    <td><p>SystemInfo.envVar</p></td>
@@ -105,7 +105,7 @@ Systeminformationstjänsten tillhandahåller en uppsättning REST API:er för at
   <tr>
    <td><p>SystemInfo.info</p></td>
    <td><p>https://'[server]:[port]'/rest/services/ SystemInfo.info</p></td>
-   <td><p>Detta API är en wrapper för alla API:er för systeminformationstjänsten. Internt körs alla API:er för systeminformation och information hämtas i zip-format. </p><p><i><strong>anteckning</strong>: SystemInfo.info innehåller inte antal och stackspårning av aktiva trådar. </i></p></td>
+   <td><p>Detta API är en wrapper för alla API:er för systeminformationstjänsten. Internt körs alla API:er för systeminformation och information hämtas i zip-format. </p><p><i><strong>Obs!</strong> SystemInfo.info innehåller inte antal och stackspårning för aktiva trådar. </i></p></td>
   </tr>
  </tbody>
 </table>

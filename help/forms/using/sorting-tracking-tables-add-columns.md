@@ -114,7 +114,7 @@ De återstående attributen i aktivitetsmodellen som är tillgängliga för visn
  </tbody>
 </table>
 
-För följande anpassningar i uppgiftstabellen måste du göra semantiska ändringar i källkoden. Se [Introduktion till anpassning av arbetsytan i AEM Forms](/help/forms/using/introduction-customizing-html-workspace.md) om hur du kan göra semantiska ändringar med arbetsytans SDK och skapa ett minierat paket från den ändrade källan.
+För följande anpassningar i uppgiftstabellen måste du göra semantiska ändringar i källkoden. Se [Introduktion till anpassning av AEM Forms-arbetsyta](/help/forms/using/introduction-customizing-html-workspace.md) för hur du kan göra semantiska ändringar med hjälp av arbetsytans SDK och skapa ett minipaket från den ändrade källan.
 
 ## Ändra tabellkolumner och deras ordning {#changing-table-columns-and-their-order}
 
@@ -156,7 +156,7 @@ För följande anpassningar i uppgiftstabellen måste du göra semantiska ändri
 
 Så här sorterar du uppgiftslisttabellen när du klickar på kolumnrubriken:
 
-1. Registrera en klickningshanterare för `.fixedTaskTableHeader th` i filen `js/runtime/views/processinstancehistory.js`.
+1. Registrera en klickhanterare för `.fixedTaskTableHeader th` i filen `js/runtime/views/processinstancehistory.js`.
 
    ```javascript
    events: {
@@ -166,7 +166,7 @@ Så här sorterar du uppgiftslisttabellen när du klickar på kolumnrubriken:
    }
    ```
 
-   Anropa `onTaskTableHeaderClick` funktion för `js/runtime/util/history.js`.
+   Anropa funktionen `onTaskTableHeaderClick` för `js/runtime/util/history.js` i hanteraren.
 
    ```javascript
    onTaskTableHeaderClick: function (event) {
@@ -174,7 +174,7 @@ Så här sorterar du uppgiftslisttabellen när du klickar på kolumnrubriken:
    }
    ```
 
-1. Visa `TaskTableHeaderClick` metod i `js/runtime/util/history.js`.
+1. Visa metoden `TaskTableHeaderClick` i `js/runtime/util/history.js`.
 
    Metoden hittar uppgiftsattributet från click-händelsen, sorterar aktivitetslistan för det attributet och återger uppgiftstabellen med den sorterade aktivitetslistan.
 

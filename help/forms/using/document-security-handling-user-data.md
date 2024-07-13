@@ -62,7 +62,7 @@ Följande tabell visar hur dokumentsäkerhet organiserar data i databastabeller.
   </tr>
   <tr>
    <td><code>EdcPolicyXmlEntity</code></td>
-   <td>Lagrar XML-filer för aktiva profiler. XML för en policy<sup> </sup>innehåller referenser till säkerhetsobjekt-ID för användare som är kopplade till profilen. Princip-XML lagras som ett Blob-objekt.</td>
+   <td>Lagrar XML-filer för aktiva profiler. En princip-XML <sup> </sup> innehåller referenser till huvud-ID för användare som är associerade med principen. Princip-XML lagras som ett Blob-objekt.</td>
   </tr>
   <tr>
    <td><code>EdcPolicyArchiveEntity</code></td>
@@ -83,9 +83,9 @@ Följande tabell visar hur dokumentsäkerhet organiserar data i databastabeller.
 
 Du kan komma åt och exportera dokumentsäkerhetsdata för användare i databaserna och vid behov ta bort dem permanent.
 
-Om du vill exportera eller ta bort användardata från en databas måste du ansluta till databasen med en databasklient och ta reda på det huvud-ID som baseras på viss personligt identifierbar information om användaren. Om du till exempel vill hämta användarens huvud-ID med ett inloggnings-ID kör du följande `select` i databasen.
+Om du vill exportera eller ta bort användardata från en databas måste du ansluta till databasen med en databasklient och ta reda på det huvud-ID som baseras på viss personligt identifierbar information om användaren. Om du till exempel vill hämta användarens huvud-ID med ett inloggnings-ID kör du följande `select`-kommando i databasen.
 
-I `select` kommando, ersätta `<user_login_id>` med användar-ID:t för den användare vars huvud-ID du vill hämta från `EdcPrincipalUserEntity` databastabell.
+Ersätt `<user_login_id>` med inloggnings-ID:t för den användare vars huvud-ID du vill hämta från databastabellen `EdcPrincipalUserEntity` i kommandot `select`.
 
 ```sql
 select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_id>
@@ -95,7 +95,7 @@ När du känner till ditt huvuds-ID kan du exportera eller ta bort användardata
 
 ### Exportera användardata {#export-user-data}
 
-Kör följande databaskommandon så att du kan exportera användardata för ett huvuds-ID från databastabeller. I `select` kommando, ersätt `<principal_id>` med användarens huvud-ID vars data du vill exportera.
+Kör följande databaskommandon så att du kan exportera användardata för ett huvuds-ID från databastabeller. Ersätt `<principal_id>` i kommandot `select` med det huvud-ID för användaren vars data du vill exportera.
 
 >[!NOTE]
 >
@@ -125,7 +125,7 @@ Select * from edcinviteduserentity where principalId = '<principal_id>';
 
 >[!NOTE]
 >
->Exportera data från `EdcAuditEntity` tabellen, använd [EventManager.exportEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API som tar [EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) som en parameter för att exportera granskningsdata baserat på `principalId`, `policyId`, eller `licenseId`.
+>Om du vill exportera data från tabellen `EdcAuditEntity` använder du API:t [ EventManager.exportEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) som använder [ EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) som parameter för att exportera granskningsdata baserat på `principalId`, `policyId` eller `licenseId`.
 
 Om du vill få fram fullständiga data om en användare i systemet måste du få åtkomst till och exportera data från databasen för användarhantering. Mer information finns i [Forms användarhantering: Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
 
@@ -134,7 +134,7 @@ Om du vill få fram fullständiga data om en användare i systemet måste du få
 Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt-ID från databastabeller.
 
 1. Stäng av AEM Forms Server.
-1. Kör följande databaskommandon så att du kan ta bort data för det primära ID:t från databastabeller för dokumentsäkerhet. I `Delete` kommando, ersätt `<principal_id>` med användarens huvud-ID vars data du vill ta bort.
+1. Kör följande databaskommandon så att du kan ta bort data för det primära ID:t från databastabeller för dokumentsäkerhet. Ersätt `<principal_id>` i kommandot `Delete` med det huvud-ID för användaren vars data du vill ta bort.
 
    ```sql
    Delete from EdcPrincipalKeyEntity where principalid = '<principal_id>';
@@ -150,17 +150,17 @@ Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt
 
    >[!NOTE]
    >
-   >Ta bort data från `EdcAuditEntity` tabellen, använd [EventManager.deleteEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) API som tar [EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) som en parameter för att radera granskningsdata baserat på `principalId`, `policyId`, eller `licenseId`.
+   >Om du vill ta bort data från tabellen `EdcAuditEntity` använder du API:t [ EventManager.deleteEvents](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/index.html?com/adobe/livecycle/rightsmanagement/client/EventManager.html) som tar [ EventSearchFilter](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/infomodel/EventSearchFilter.html) som parameter för att ta bort granskningsdata som baseras på `principalId`, `policyId` eller `licenseId`.
 
-1. Aktiva och arkiverade XML-principfiler lagras i `EdcPolicyXmlEntity` och `EdcPolicyArchiveEntity` databastabeller. Så här tar du bort data för en användare från de här tabellerna:
+1. Aktiva och arkiverade princip-XML-filer lagras i databastabellerna `EdcPolicyXmlEntity` respektive `EdcPolicyArchiveEntity`. Så här tar du bort data för en användare från de här tabellerna:
 
-   1. Öppna XML-blobben för varje rad i `EdcPolicyXMLEntity` eller `EdcPolicyArchiveEntity` och extrahera XML-filen. XML-filen liknar den som visas nedan.
+   1. Öppna XML-blobben för varje rad i tabellen `EdcPolicyXMLEntity` eller `EdcPolicyArchiveEntity` och extrahera XML-filen. XML-filen liknar den som visas nedan.
    1. Redigera XML-filen så att du kan ta bort blobben för huvuds-ID:t.
    1. Upprepa steg 1 och 2 för den andra filen.
 
    >[!NOTE]
    >
-   >Ta bort hela blobben i `Principal` -taggen för ett huvud-ID eller princip-XML kan vara skadad eller oanvändbar.
+   >Ta bort hela blobben i taggen `Principal` för ett princip-ID eller så kan princip-XML vara skadat eller oanvändbart.
 
    ```xml
    <ns2:Principal PrincipalNameType="USER">
@@ -189,15 +189,15 @@ Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt
    <ns2:Permission PermissionName="ns3:com.adobe.aps.pdf.printLow" Access="ALLOW"/>
    ```
 
-   Förutom att radera data direkt från `EdcPolicyXmlEntity` tabellen, det finns två sätt att uppnå detta:
+   Förutom att ta bort data direkt från tabellen `EdcPolicyXmlEntity` finns det ytterligare två sätt att uppnå detta:
 
-   **Använda administrationskonsolen**
+   **Använder administrationskonsol**
 
    1. Som administratör loggar du in på administrationskonsolen för Forms JEE på https://[*server*]:[*port*]/adminui.
    1. Navigera till **[!UICONTROL Services > Document Security > Policy Sets]**.
    1. Öppna en principuppsättning och ta bort användaren från profilen.
 
-   **Använda webbsidan Dokumentsäkerhet**
+   **Använder webbsidan för dokumentsäkerhet**
 
    Dokumentsäkerhetsanvändare som har behörighet att skapa personliga profiler kan ta bort användardata från sina profiler. Så här gör du:
 
@@ -207,7 +207,7 @@ Gör följande för att ta bort dokumentsäkerhetsdata för ett säkerhetsobjekt
 
    >[!NOTE]
    >
-   >Administratörer kan söka efter, komma åt och ta bort användardata från andra användares personliga profiler i **[!UICONTROL Services > Document Security > My Policies]** med administrationskonsolen.
+   >Administratörer kan söka efter, komma åt och ta bort användardata från andra användares personliga profiler i **[!UICONTROL Services > Document Security > My Policies]** med hjälp av administrationskonsolen.
 
-1. Ta bort data för huvuds-ID från användarhanteringsdatabasen. Detaljerade anvisningar finns i [Forms användarhantering | Hantera användardata](/help/forms/using/user-management-handling-user-data.md).
+1. Ta bort data för huvuds-ID från användarhanteringsdatabasen. Mer information finns i [Forms användarhantering | Hantera användardata ](/help/forms/using/user-management-handling-user-data.md).
 1. Starta AEM Forms Server.

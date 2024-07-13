@@ -22,11 +22,11 @@ Den här sidan innehåller stegvisa förbättringar och förbättringar av AEM �
 
 Alternativ för att förbättra produktiviteten när du arbetar med översättningsprojekt har lagts till, t.ex. automatiskt för att befordra och ta bort starter för översättningar och schemalägga återkommande körningar av ett översättningsprojekt.
 
-1. Klicka på ellipsen längst ned i översättningsprojektet **Översättningssammanfattning** platta.
+1. Klicka på ellipsen längst ned i rutan **Översättningssammanfattning** i översättningsprojektet.
 
-   ![screen_shot_2018-04-19at22622](assets/screen_shot_2018-04-19at222622.jpg)
+   ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
-1. Växla till **Avancerat** -fliken. Längst ned kan du välja **Befordra översättningsstarter automatiskt**.
+1. Växla till fliken **Avancerat**. Längst ned kan du välja **Befordra översättningsstarter automatiskt**.
 
    ![screen_shot_2018-04-19at223430](assets/screen_shot_2018-04-19at223430.jpg)
 
@@ -42,15 +42,15 @@ Alternativ för att förbättra produktiviteten när du arbetar med översättni
 
 Det går att konfigurera flera målspråk i ett översättningsprojekt, vilket minskar det totala antalet översättningsprojekt som skapas.
 
-1. Klicka på punkterna längst ned i översättningsprojektet **Översättningssammanfattning** platta.
+1. Klicka på punkterna längst ned i rutan **Översättningssammanfattning** i översättningsprojektet.
 
-   ![screen_shot_2018-04-19at22622](assets/screen_shot_2018-04-19at222622.jpg)
+   ![screen_shot_2018-04-19at222622](assets/screen_shot_2018-04-19at222622.jpg)
 
-1. Växla till **Avancerat** -fliken. Du kan lägga till flera språk under **Målspråk**.
+1. Växla till fliken **Avancerat**. Du kan lägga till flera språk under **Målspråk**.
 
    ![screen_shot_2018-04-22at212601](assets/screen_shot_2018-04-22at212601.jpg)
 
-1. Om du initierar översättning via referenslinjen i Sites, lägger du till språk och väljer **Skapa översättningsprojekt på flera språk**.
+1. Om du initierar översättning via referenslinjen i Sites, lägger du till språk och väljer **Skapa flerspråkigt översättningsprojekt**.
 
    ![screen_shot_2018-04-22at212941](assets/screen_shot_2018-04-22at212941.jpg)
 
@@ -98,7 +98,7 @@ Språkrötter kan nu grupperas under noder, till exempel efter region, samtidigt
 >* `/content/we-retail/language-masters/en`
 >* `/content/we-retail/language-masters/americas/central-america/es`
 >
->Detta `es` kommer inte att identifieras eftersom det finns två nivåer (americas/central-america) utanför `en` nod.
+>Den här `es`-språkkopian kommer inte att identifieras eftersom den är 2 nivåer (amerika/central-amerika) från noden `en`.
 
 >[!NOTE]
 >
@@ -108,18 +108,18 @@ Språkrötter kan nu grupperas under noder, till exempel efter region, samtidigt
 
 En egenskap kan nu markeras i platslistevyn som visar om en sida har översatts, är i översättning eller ännu inte har översatts. Så här visar du den:
 
-1. Växla till **Listvy.**
+1. Gå till **listvyn i Sites.**
 
    ![screen_shot_2018-04-23at130646](assets/screen_shot_2018-04-23at130646.jpg)
 
-1. Klicka **Visa inställningar**.
+1. Klicka på **Visa inställningar**.
 
    ![screen_shot_2018-04-23at130844](assets/screen_shot_2018-04-23at130844.jpg)
 
-1. Kontrollera **Översatt** kryssruta under **Översättning** och klicka **Uppdatera**.
+1. Markera kryssrutan **Översatt** under **Översättning** och klicka på **Uppdatera**.
 
    ![screen_shot_2018-04-23at130955](assets/screen_shot_2018-04-23at130955.jpg)
 
-Nu kan du se en **Översatt** kolumn som visar sidornas översättningsstatus.
+Du kan nu se en **översatt**-kolumn som visar sidornas översättningsstatus.
 
 ![screen_shot_2018-04-23at133821](assets/screen_shot_2018-04-23at133821.jpg)

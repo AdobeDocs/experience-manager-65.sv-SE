@@ -21,37 +21,37 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-The `Community Activity List` kan du lägga till trendinformation om inlägg och vyer från medlemmar och inlägg och vyer av innehåll.
+Med komponenten `Community Activity List` kan du lägga till trendinformation om inlägg och vyer från medlemmar och inlägg och vyer av innehåll.
 
 Dokumentet beskriver:
 
-* Lägga till `Community Activity List` till en [communitywebbplats](/help/communities/overview.md#community-sites).
+* Lägger till komponenten `Community Activity List` till en [community-webbplats](/help/communities/overview.md#community-sites).
 
-* Konfigurationsinställningar för `Community Activity List` -komponenten.
+* Konfigurationsinställningar för komponenten `Community Activity List`.
 
 ### Krav {#requirement}
 
-Data för `Community Activity List` är endast tillgängligt när Adobe Analytics har licens och konfigurerats för communitywebbplatsen.
+Data för `Community Activity List` är bara tillgängliga när Adobe Analytics är licensierat och konfigurerat för communitywebbplatsen.
 
 Se [Analyskonfiguration för communityfunktioner](/help/communities/analytics.md).
 
 ### Lägga till en lista med communityaktiviteter på en sida {#adding-a-community-activity-list-to-a-page}
 
-Lägga till en `Community Activity List` till en sida i redigeringsläge, leta reda på komponenten `Communities / Community Activity List` och dra den till rätt plats på en sida.
+Om du vill lägga till en `Community Activity List`-komponent på en sida i redigeringsläge letar du reda på komponenten `Communities / Community Activity List` och drar den till rätt plats på en sida.
 
-Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
 När komponenten placeras på en sida i en community-webbplats är det så här den visas:
 
-![communityaktivitet](assets/community-activity.png)
+![community-activity](assets/community-activity.png)
 
 ### Konfigurerar lista över communityaktiviteter  {#configuring-community-activity-list}
 
-Markera den monterade `Community Activity List` väljer du `Configure` så att du kan öppna redigeringsdialogrutan.
+Markera den monterade `Community Activity List`-komponenten och välj sedan `Configure` -ikonen så att du kan öppna redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
-Under **Kommentar** anger du om och hur kommentarer för överförda filer ska visas:
+Under fliken **Kommentarer** anger du om och hur kommentarer för överförda filer ska visas:
 
 ![egenskaper](assets/activity-list-properties.png)
 
@@ -64,24 +64,24 @@ Under **Kommentar** anger du om och hur kommentarer för överförda filer ska v
    * `Members`
    * `Content`
 
-  Standard är `Members`.
+  Standardvärdet är `Members`.
 
 * **Visa titel**
 
-  En beskrivande rubrik som ska visas ovanför data, till exempel `Trending Content`.
+  En beskrivande titel som ska visas ovanför data, till exempel `Trending Content`.
 Standard är ingen titel.
 
-* **Visa antal**
+* **Visningsantal**
 
   Antalet objekt som ska listas.
 Standardvärdet är 10.
 
-* **Typ av aktivitet**
+* **Aktivitetstyp**
 
   Välj något av följande:
 
    * `Views`(sidbesök)
-   * `Posts`(skapa UGC)
+   * `Posts`(skapar UGC)
    * `Follows`
    * `Likes`
 
@@ -98,26 +98,26 @@ Standardvärdet är 10.
    * `This year (since Jan 1)`
    * `Total`
 
-  Standard är `Total`.
+  Standardvärdet är `Total`.
 
-* **Kontextbana**
+* **Kontextsökväg**
 
   På så sätt kan du omsluta aktiviteten till en delmängd av platsen, t.ex. en viss blogg.
 Standard är hela communitywebbplatsen.
 
-* **Medlemsräkningsaggregering**
+* **Sammansättning av medlemsantal**
 
-  När du avmarkerar det här alternativet (inaktiverat) räknas endast inlägg på den översta nivån. Om kontexten till exempel är rotsidan (standardvärdet), kan du `Activity Type` av `Posts` visar aldrig någon aktivitet eftersom det inte går att publicera innehåll på rotsidan. När du markerar det här alternativet inkluderas antalet på alla underordnade sidor.
+  När du avmarkerar det här alternativet (inaktiverat) räknas endast inlägg på den översta nivån. Om kontexten till exempel är rotsidan (standardvärdet), visar `Activity Type` av `Posts` aldrig någon aktivitet eftersom det inte går att publicera innehåll på rotsidan. När du markerar det här alternativet inkluderas antalet på alla underordnade sidor.
 Standard är markerat.
 
 ### Exempelsida med fyra komponenter {#example-page-with-components}
 
-**De vanligaste besökarna** config: Typ = Medlemmar, aktivitetstyp = Vyer
+**De vanligaste besökarna** config: Type = Medlemmar, aktivitetstyp = Vyer
 
-**De viktigaste bidragsgivarna** config: Typ = Medlemmar, aktivitetstyp = Bokföring
+**Top Contributors** config: Type = Members, Activity type = Posts
 
-**Övre innehåll** config: Type = Content, Activity type = Views,
+**Konfiguration för översta innehåll**: Typ = Innehåll, Typ = Vyer,
 
-**Trendinnehåll** config: Type = Content, Activity type = Posts
+**Trending Content** config: Type = Content, Activity type = Posts
 
 ![komponenter](assets/activity-list-components.png)

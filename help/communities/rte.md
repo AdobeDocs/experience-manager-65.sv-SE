@@ -22,15 +22,15 @@ ht-degree: 0%
 
 Med en textredigerare kan du skriva text med markeringar.
 
-För webbgruppskomponenter, men liknande [textredigerare i redigeringsmiljön](../../help/sites-authoring/rich-text-editor.md)påverkar det text som anges i publiceringsmiljön.
+För webbgruppskomponenter, som liknar [RTF-redigeraren i författarmiljön](../../help/sites-authoring/rich-text-editor.md), påverkar det text som anges i publiceringsmiljön.
 
-![textredigerare](assets/rich-text-editor.png)
+![RTF-redigerare](assets/rich-text-editor.png)
 
 ## Aktivera RTF-redigeraren {#enabling-rich-text-editor}
 
-Communities-komponenter som tillåter användargenererat innehåll (UGC) kan aktiveras för att tillåta RTE. Om komponenten har lagts till på en sida eller inkluderats i en [function](functions.md), RTE kanske är aktiverat som standard.
+Communities-komponenter som tillåter användargenererat innehåll (UGC) kan aktiveras för att tillåta RTE. Om komponenten har lagts till på en sida eller inkluderats i en [funktion](functions.md) kan RTE vara aktiverat som standard.
 
-Om den inte är aktiverad skriver du [redigeringsläge](sites-console.md#authoring-site-content), markerar komponenten för redigering och markerar `Rich Text Editor` kryssrutan.
+Om den inte är aktiverad anger du bara [redigeringsläget för författare](sites-console.md#authoring-site-content), markerar komponenten för redigering och markerar kryssrutan `Rich Text Editor` .
 
 RTE är tillgängligt för följande Communities-komponenter:
 
@@ -59,7 +59,7 @@ På grund av säkerhetsproblem inkluderas inte hyperlänksalternativen i den upp
 
 Så här lägger du till hyperlänksalternativen i verktygsfältet:
 
-* Lägg till ett verktygsfält med namnet &quot; `links`&quot;
+* Lägg till ett verktygsfält med namnet `links`
    * `{ name: 'links', items: [ 'Link','Unlink','Anchor' ] }`
 * Välj **[!UICONTROL Save All]**
 

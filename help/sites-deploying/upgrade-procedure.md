@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Uppgraderingen kräver driftstopp för Author-nivån eftersom de flesta uppgraderingar av Adobe Experience Manager (AEM) utförs på plats. Genom att följa dessa rutiner kan du minimera eller eliminera driftstopp i publiceringsskiktet.
+>Uppgraderingen kräver driftstopp för Author-nivån eftersom de flesta uppgraderingar av Adobe Experience Manager (AEM) utförs på plats. Genom att följa dessa standarder kan du minimera eller eliminera driftstopp i Publish-skiktet.
 
 När du uppgraderar dina AEM-miljöer måste du ta hänsyn till skillnaderna i strategi mellan att uppgradera författarmiljöer eller publiceringsmiljöer för att minimera driftstoppen för både författare och slutanvändare. På den här sidan beskrivs hur du uppgraderar en AEM topologi som för närvarande körs på en version av AEM 6.x. Eftersom processen skiljer mellan redigerings- och publiceringsnivåer och Mongo- och tarMK-baserade distributioner har varje nivå och mikrokärna listats i ett separat avsnitt. När du utför distributionen rekommenderar Adobe att du först uppgraderar din författarmiljö, avgör om du lyckas och sedan fortsätter till publiceringsmiljöerna.
 
@@ -50,14 +50,14 @@ Den topologi som antas för det här avsnittet består av en författarserver so
 
 1. Inaktivera replikeringsagenter på författaren.
 
-1. Kör [underhållsarbete före uppgradering](/help/sites-deploying/pre-upgrade-maintenance-tasks.md).
+1. Kör underhållsaktiviteterna [före uppgradering](/help/sites-deploying/pre-upgrade-maintenance-tasks.md).
 
 ### Uppgraderingskörning {#upgrade-execution}
 
 ![execute_upgrade](assets/execute_upgrade.jpg)
 
-1. Kör [uppgradering på plats](/help/sites-deploying/in-place-upgrade.md).
-1. Uppdatera modulen Dispatcher *vid behov*.
+1. Kör uppgraderingen [på plats](/help/sites-deploying/in-place-upgrade.md).
+1. Uppdatera Dispatcher-modulen *vid behov*.
 
 1. QA validerar uppgraderingen.
 
@@ -85,9 +85,9 @@ Den topologi som antas för det här avsnittet består av en författarserver so
 
 ### Startopologi {#starting-topology-1}
 
-Den topologi som antas för det här avsnittet består av ett MongoMK Author-kluster med minst två AEM Author-instanser, som stöds av minst två MongoMK-databaser. Alla författarinstanser delar ett datalager. De här stegen bör gälla för både S3- och File-datalager. Replikering sker från författarservrarna till TjärMK-publiceringsservergruppen.
+Den topologi som antas för det här avsnittet består av ett MongoMK Author-kluster med minst två AEM Author-instanser, som stöds av minst två MongoMK-databaser. Alla författarinstanser delar ett datalager. De här stegen bör gälla för både S3- och File-datalager. Replikering sker från författarservrarna till Publish-servergruppen tarMK.
 
-![mongo-topologi](assets/mongo-topology.jpg)
+![mongo-topology](assets/mongo-topology.jpg)
 
 ### Förberedelse av uppgradering {#upgrade-preparation-1}
 
@@ -97,18 +97,18 @@ Den topologi som antas för det här avsnittet består av ett MongoMK Author-klu
 1. Klona datalagret för säkerhetskopiering.
 1. Stoppa alla utom en AEM författarinstans, din primära författare.
 1. Ta bort alla MongoDB-noder utom en från replikuppsättningen, den primära Mongo-instansen.
-1. Uppdatera `DocumentNodeStoreService.cfg` på den primära författaren för att återspegla replikuppsättningen för en enskild medlem.
+1. Uppdatera filen `DocumentNodeStoreService.cfg` på den primära författaren så att den återspeglar replikuppsättningen för en enskild medlem.
 1. Starta om den primära författaren för att säkerställa att den startar om ordentligt.
 1. Inaktivera replikeringsagenter på den primära författaren.
-1. Kör [underhållsarbete före uppgradering](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) på den primära författarinstansen.
+1. Kör [underhållsaktiviteter som är före uppgradering](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) på den primära författarinstansen.
 1. Uppgradera vid behov MongoDB på den primära Mongo-instansen till version 3.2 med WiredTiger.
 
 ### Uppgraderingskörning {#Upgrade-execution-1}
 
 ![mongo-execution](assets/mongo-execution.jpg)
 
-1. Köra en [uppgradering på plats](/help/sites-deploying/in-place-upgrade.md) på den primära författaren.
-1. Uppdatera Dispatcher eller webbmodulen *vid behov*.
+1. Kör en [på plats-uppgradering](/help/sites-deploying/in-place-upgrade.md) på den primära författaren.
+1. Uppdatera Dispatcher- eller webbmodulen *vid behov*.
 1. QA validerar uppgraderingen.
 
 ### Om slutförd {#if-successful-1}
@@ -119,7 +119,7 @@ Den topologi som antas för det här avsnittet består av ett MongoMK Author-klu
 
 1. Återskapa de MongoDB-noder som tagits bort från klustret.
 
-1. Uppdatera `DocumentNodeStoreService.cfg` som återspeglar hela replikuppsättningen.
+1. Uppdatera `DocumentNodeStoreService.cfg`-filerna så att de återspeglar hela replikuppsättningen.
 
 1. Starta om Author-instanserna, en åt gången.
 
@@ -137,33 +137,33 @@ Den topologi som antas för det här avsnittet består av ett MongoMK Author-klu
 
 1. Starta de sekundära Mongo-instanserna med en av dem som den nya primära instansen.
 
-1. Konfigurera `DocumentNodeStoreService.cfg` filer på de sekundära författarinstanserna så att de pekar på replikuppsättningen med ännu inte uppgraderade Mongo-instanser.
+1. Konfigurera `DocumentNodeStoreService.cfg`-filerna på de sekundära författarinstanserna så att de pekar på replikuppsättningen med ännu inte uppgraderade Mongo-instanser.
 
 1. Starta de sekundära författarinstanserna.
 
 1. Rensa de uppgraderade författarinstanserna, Mongo-noden och datalagret.
 
-## TjärMK-publiceringsgrupp {#tarmk-publish-farm}
+## TaMK Publish Farm {#tarmk-publish-farm}
 
-### TjärMK-publiceringsgrupp {#tarmk-publish-farm-1}
+### TaMK Publish Farm {#tarmk-publish-farm-1}
 
-Den topologi som antas för det här avsnittet består av två TjärMK-publiceringsinstanser, framtagna av Dispatchers, som i sin tur står framför en belastningsutjämnare. Replikering sker från författarservern till TjärMK-publiceringsservergruppen.
+Den topologi som antas för det här avsnittet består av två TjärMK-publiceringsinstanser, framtagna av Dispatchers, som i sin tur står framför en belastningsutjämnare. Replikering sker från Författarservern till Publish-servergruppen tarMK.
 
-![tarmk-pub-farv5](assets/tarmk-pub-farmv5.png)
+![target-pub-farv5](assets/tarmk-pub-farmv5.png)
 
 ### Uppgraderingskörning {#upgrade-execution-2}
 
 ![upgrade-publish2](assets/upgrade-publish2.png)
 
 1. Stoppa trafiken till Publish 2-instansen vid belastningsutjämnaren.
-1. Kör [underhåll före uppgradering](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) vid publicering 2.
-1. Köra en [uppgradering på plats](/help/sites-deploying/in-place-upgrade.md) vid publicering 2.
-1. Uppdatera Dispatcher eller webbmodulen *vid behov*.
-1. Töm Dispatcher-cachen.
-1. QA validerar Publish 2 via Dispatcher, bakom brandväggen.
-1. Stäng publicering 2.
+1. Kör [föruppgraderingsunderhåll](/help/sites-deploying/pre-upgrade-maintenance-tasks.md) på Publish 2.
+1. Kör en [på plats-uppgradering](/help/sites-deploying/in-place-upgrade.md) på Publish 2.
+1. Uppdatera Dispatcher- eller webbmodulen *vid behov*.
+1. Töm cacheminnet för Dispatcher.
+1. QA validerar Publish 2 genom Dispatcher, bakom brandväggen.
+1. Stäng av Publish 2.
 1. Kopiera Publish 2-instansen.
-1. Starta Publicera 2.
+1. Starta Publish 2.
 
 ### Om slutförd {#if-successful-2}
 
@@ -173,10 +173,10 @@ Den topologi som antas för det här avsnittet består av två TjärMK-publiceri
 1. Stoppa trafiken till Publish 1.
 1. Stoppa Publish 1-instansen.
 1. Ersätt Publish 1-instansen med en kopia av Publish 2.
-1. Uppdatera Dispatcher eller webbmodulen *vid behov*.
-1. Töm Dispatcher-cachen för Publish 1.
-1. Starta Publicera 1.
-1. QA validerar Publish 1 via Dispatcher, bakom brandväggen.
+1. Uppdatera Dispatcher- eller webbmodulen *vid behov*.
+1. Töm Dispatcher cache för Publish 1.
+1. Starta Publish 1.
+1. QA validerar Publish 1 genom Dispatcher, bakom brandväggen.
 
 ### Om misslyckades (återställning) {#if-unsuccessful-rollback-1}
 
@@ -184,9 +184,9 @@ Den topologi som antas för det här avsnittet består av två TjärMK-publiceri
 
 1. Skapa en kopia av Publish 1.
 1. Ersätt Publish 2-instansen med en kopia av Publish 1.
-1. Töm Dispatcher-cachen för Publish 2.
-1. Starta Publicera 2.
-1. QA validerar Publish 2 via Dispatcher, bakom brandväggen.
+1. Töm Dispatcher cache för Publish 2.
+1. Starta Publish 2.
+1. QA validerar Publish 2 genom Dispatcher, bakom brandväggen.
 1. Aktivera trafik till Publish 2.
 
 ## Slutliga uppgraderingssteg {#final-upgrade-steps}
@@ -195,6 +195,6 @@ Den topologi som antas för det här avsnittet består av två TjärMK-publiceri
 1. QA utför slutlig validering från en offentlig URL.
 1. Aktivera replikeringsagenter från redigeringsmiljön.
 1. Återuppta redigering av innehåll.
-1. Utför [kontroller efter uppgradering](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md).
+1. Utför [efteruppgraderingskontroller](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md).
 
 ![final](assets/final.jpg)

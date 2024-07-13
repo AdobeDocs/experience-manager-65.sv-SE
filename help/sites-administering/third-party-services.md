@@ -55,14 +55,14 @@ For information about integrating your AEM site and ExactTarget, see [Integratin
 
 Med ExactTarget e-postmarknadsföringslösningar kan organisationer av alla storlekar utforma och leverera målinriktade, verksamhetskritiska och helintegrerade e-postkampanjer.
 
-Mer information om hur du integrerar AEM och ExactTarget finns i [Konfigurerar ExactTarget](/help/sites-administering/exacttarget.md).
+Mer information om hur du integrerar AEM och ExactTarget finns i [Konfigurera ExactTarget](/help/sites-administering/exacttarget.md).
 
 ## Integrera med Facebook och Twitter {#integrating-with-facebook-and-twitter}
 
-Facebook och Twitter är populära sociala nätverkstjänster. AEM integrering med Facebook och Twitter gör det möjligt för företag att tillhandahålla ett inloggningsalternativ för Facebook eller Twitter för ägda digitala resurser och sedan anpassa användarupplevelsen baserat på profilinformation. Marknadsförarna kan också kombinera profilinformation med data från andra källor, som ett kundrelationssystem eller en webbplatsprofil, för att skapa en enhetlig bild av kunden.
+Facebook och Twitter är populära sociala nätverkstjänster. AEM integrering med Facebook och Twitter gör det möjligt för företag att tillhandahålla ett inloggningsalternativ för Facebook eller Twitter på ägda digitala resurser och sedan anpassa användarupplevelsen baserat på profilinformation. Marknadsförarna kan också kombinera profilinformation med data från andra källor, som ett kundrelationssystem eller en webbplatsprofil, för att skapa en enhetlig bild av kunden.
 
-Se [Social inloggning](/help/communities/social-login.md) för mer information.
+Mer information finns i [Social Login](/help/communities/social-login.md).
 
 ## Integrering med andra leverantörer {#integrating-with-other-providers}
 
-AEM kan du ansluta till andra externa leverantörer med en [Kodavsnitt för allmän analys.](/help/sites-administering/external-providers.md)
+AEM gör att du kan ansluta till andra externa leverantörer med ett [Generic Analytics-kodfragment.](/help/sites-administering/external-providers.md)

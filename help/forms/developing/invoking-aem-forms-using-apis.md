@@ -1,6 +1,6 @@
 ---
 title: Hur anropar jag AEM Forms med API:er?
-description: Lär dig hur du anropar AEM Forms-tjänster med en Java&trade; API, webbtjänster, Remoting och REST.
+description: Lär dig hur du anropar AEM Forms-tjänster med en Java&handel; API, webbtjänster, Remoting och REST.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Anropa AEM Forms med API:er {#invoking-aem-forms-using-apis}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 Adobe Experience Manager Forms är en J2EE-baserad företagsprogramvara som består av tjänster som fungerar i en delad infrastruktur. Serviceåtgärder brukar förbruka eller producera dokument. Med AEM Forms kan man kombinera Forms Workflow med elektroniska blanketter, dokumentsäkerhet och dokumentgenerering i en integrerad och sammanhängande uppsättning tjänster. Dessa tjänster kan nås inifrån och utanför brandväggen.
 

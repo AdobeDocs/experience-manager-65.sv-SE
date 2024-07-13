@@ -63,10 +63,10 @@ Associera sidor med en BrightEdge-konfiguration för att skicka siddata till Bri
 Aktivera en BrightEdge-konfiguration för att replikera den på publiceringsinstansen och aktivera publicerade sidor för interaktion med BrightEdge-tjänsten.
 
 1. Klicka på Webbplatser på listen och bläddra sedan till och markera sidan som du har associerat med BrightEdge-konfigurationen.
-1. Klicka på ikonen Publicera och sedan på Publicera.
+1. Klicka på ikonen Publish och sedan på Publish.
 
    ![chlimage_1-7](assets/chlimage_1-7a.png)
 
-1. Kontrollera att din BrightEdge-konfiguration är markerad i listan över konfigurationer som visas och klicka sedan på Publicera.
+1. Kontrollera att din BrightEdge-konfiguration är markerad i listan över konfigurationer som visas och klicka sedan på Publish.
 
    ![chlimage_1-8](assets/chlimage_1-8a.png)

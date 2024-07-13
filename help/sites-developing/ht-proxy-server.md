@@ -47,7 +47,7 @@ Det här är värdadressen för den CRX-instans som du vill ansluta till. Om ins
 
 `<remoteport>`
 
-Det här är värdporten för mål-CRX-instansen. Standardinställningen för en nyinstallerad AEM är **`4502`** och standardinställningen för en ny AEM författarinstans är `4502`.
+Detta är värdporten för CRX-målinstansen. Standardvärdet för en nyligen installerad AEM är **`4502`** och standardvärdet för en nyligen installerad AEM författarinstans är `4502`.
 
 `<localport>`
 
@@ -59,7 +59,7 @@ Det här är den port på den lokala datorn som du vill ansluta för att komma �
 
 Skriver inte utdata till konsolfönstret. Använd det här alternativet om du inte vill göra anslutningen långsammare eller om du loggar utdata till en fil (se alternativet -logfile).
 
-`-b`(binärt läge)
+`-b` (binärt läge)
 
 Om du letar efter specifika bytekombinationer i trafiken ska du aktivera binärt läge. Utdata kommer då att innehålla hexadecimala utdata och teckenutdata.
 
@@ -73,7 +73,7 @@ Skriver klient-server-konversationen till en loggfil. Den här parametern funger
 
 **`-i <numIndentions>`**(lägg till indrag)
 
-Varje aktiv anslutning är indragen för bättre läsbarhet. Standardvärdet är 16 nivåer. Den här funktionen introducerades med `proxy.jar version 1.16`.
+Varje aktiv anslutning är indragen för bättre läsbarhet. Standardvärdet är 16 nivåer. Den här funktionen infördes med `proxy.jar version 1.16`.
 
 ### Loggformat {#log-format}
 
@@ -97,7 +97,7 @@ C-6-Finished: 758 bytes (1.0 kb/s)
 S-6-Finished: 665 bytes (1.0 kb/s)
 ```
 
-Detta visar antalet byte som skickas mellan klienten ( `C`) och servern ( `S`) på den sjätte förbindelsen och vid den genomsnittliga hastigheten.
+Detta visar antalet byte som passerat mellan klienten ( `C`) och servern ( `S`) på den sjätte anslutningen och med medelhastigheten.
 
 **Ett exempel på loggutdata**
 
@@ -127,7 +127,7 @@ Innehållet i `test.html` är:
 </html>
 ```
 
-Anta att AEM körs `localhost:4502`startas proxyn så här:
+Om AEM körs på `localhost:4502` startas proxyn så här:
 
 `java -jar proxy.jar localhost 4502 4444 -logfile test.log`
 
@@ -146,7 +146,7 @@ using logfile: <some-dir>/crx-quickstart/opt/helpers/test.log
 
 `http://localhost:4444/content/test.html`
 
-Och du ser att webbläsaren gör en `GET` begäran om sidan:
+Du ser att webbläsaren gör en `GET`-begäran för sidan:
 
 ```shell
 C-0-#000000 -> [GET /content/test.html HTTP/1.1 ]
@@ -163,7 +163,7 @@ C-0-#000684 -> [59-7913-4285-8857-832c087bafd5_c484727d3b3665ad%3acrx.default; y
 C-0-#000824 -> [ ]
 ```
 
-Den AEM instansen svarar med filens innehåll `test.html`:
+Den AEM instansen svarar med innehållet i filen `test.html`:
 
 ```shell
 S-0-#000000 -> [HTTP/1.1 200 OK ]
@@ -189,7 +189,7 @@ S-0-#000319 -> [</html>]
 
 Följande scenarier visar några av de syften som proxyservern kan användas för:
 
-**Kontrollera om det finns cookies och deras värden**
+**Sök efter cookies och deras värden**
 
 I följande exempel på loggpost visas alla cookies och deras värden som klienten skickade på den sjätte anslutningen som öppnats sedan proxyn startades:
 
@@ -205,7 +205,7 @@ S-7-#000017 -> [Connection: Keep-Alive ]
  S-7-#000107 -> [Content-Length: 124 ]
 ```
 
-**Kontrollera om Keep-Alive fungerar**
+**Kontrollerar om Keep-Alive fungerar**
 
 Keep-alive är en funktion i HTTP som gör att en klient kan återanvända TCP-anslutningen till servern för att göra flera begäranden (för sidkod, bilder, formatmallar och så vidare). Utan att hålla kontakten vid liv måste klienten upprätta en ny anslutning för varje begäran.
 
@@ -224,7 +224,7 @@ Om du förlorar begäranden i en komplex serverinställning, till exempel med en
 * Starta en annan proxy efter en brandvägg
 * Använd dessa för att se hur långt förfrågningarna kommer.
 
-**Hängande förfrågningar**
+**Förfrågningar som hänger**
 
 Om du ibland får väntande förfrågningar:
 

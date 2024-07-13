@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # Hantera skickade Forms {#handling-submitted-forms}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 Webbaserade tillämpningar där användaren kan fylla i interaktiva formulär kräver att informationen skickas tillbaka till servern. Med tjänsten Forms kan du hämta data som användaren har angett i ett interaktivt formulär. När du har hämtat data kan du bearbeta dem för att uppfylla dina affärskrav. Du kan till exempel lagra data i en databas, skicka data till ett annat program, skicka data till en annan tjänst, sammanfoga data i en formulärdesign, visa data i en webbläsare och så vidare.
 
-Formulärdata skickas till Forms-tjänsten som antingen XML- eller PDF-data, vilket är ett alternativ som ställs in i Designer. Ett formulär som skickas som XML kan användas för att extrahera enskilda fältdatavärden. Det innebär att du kan extrahera värdet för varje formulärfält som användaren har angett i formuläret. Ett formulär som skickas som PDF data är binära data, inte XML-data. Du kan spara formuläret som en PDF-fil eller skicka det till en annan avdelning. Om du vill extrahera data från ett formulär som har skickats som XML och sedan använda formulärdata för att skapa ett PDF-dokument, anropar du en annan AEM Forms-åtgärd. (Se [Skapa PDF-dokument med inskickade XML-data](/help/forms/developing/creating-pdf-documents-submitted-xml.md))
+Formulärdata skickas till Forms-tjänsten som antingen XML- eller PDF-data, vilket är ett alternativ som ställs in i Designer. Ett formulär som skickas som XML kan användas för att extrahera enskilda fältdatavärden. Det innebär att du kan extrahera värdet för varje formulärfält som användaren har angett i formuläret. Ett formulär som skickas som PDF data är binära data, inte XML-data. Du kan spara formuläret som en PDF-fil eller skicka det till en annan avdelning. Om du vill extrahera data från ett formulär som har skickats som XML och sedan använda formulärdata för att skapa ett PDF-dokument, anropar du en annan AEM Forms-åtgärd. (Se [Skapa PDF-dokument med skickade XML-data](/help/forms/developing/creating-pdf-documents-submitted-xml.md))
 
 I följande diagram visas data som skickas till en Java-server med namnet `HandleData` från ett interaktivt formulär som visas i en webbläsare.
 
@@ -45,11 +45,11 @@ I följande tabell förklaras stegen i diagrammet.
   </tr>
   <tr>
    <td><p>2</p></td>
-   <td><p>Data skickas till <code>HandleData</code> Java Servlet som XML-data.</p></td>
+   <td><p>Data skickas till Java-servern <code>HandleData</code> som XML-data.</p></td>
   </tr>
   <tr>
    <td><p>3</p></td>
-   <td><p>The <code>HandleData</code> Java Servlet innehåller programlogik för att hämta data.</p></td>
+   <td><p>Java-servern <code>HandleData</code> innehåller programlogik för att hämta data.</p></td>
   </tr>
  </tbody>
 </table>
@@ -64,7 +64,8 @@ I följande bild visas motsvarande XML-data som hämtas med hjälp av Forms klie
 
 ![hs_hs_loandata](assets/hs_hs_loandata.png)
 
-Fälten i låneformuläret. Dessa värden kan hämtas med Java XML-klasser.
+Fälten i låneformuläret. Dessa värden kan hämtas
+med Java XML-klasser.
 
 >[!NOTE]
 >
@@ -74,7 +75,7 @@ Fälten i låneformuläret. Dessa värden kan hämtas med Java XML-klasser.
 
 Överväg ett webbprogram som anropar Forms-tjänsten. När Forms-tjänsten återger ett interaktivt PDF-formulär till en webbläsare fyller användaren i formuläret och skickar tillbaka det som PDF data. När Forms-tjänsten tar emot data från PDF kan den skicka data från PDF till en annan tjänst eller spara dem som en PDF-fil. I följande diagram visas programmets logikflöde.
 
-![hs_hs_saving_forms](assets/hs_hs_savingforms.png)
+![hs_hs_savingforms](assets/hs_hs_savingforms.png)
 
 I följande tabell beskrivs stegen i det här diagrammet.
 
@@ -129,19 +130,19 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett Forms Client API-objekt**
 
-Innan du programmässigt kan utföra en API-åtgärd för Forms-tjänstklienten måste du skapa en Forms-tjänstklient. Om du använder Java API skapar du en `FormsServiceClient` -objekt. Om du använder Forms webbtjänst-API skapar du en `FormsService` -objekt.
+Innan du programmässigt kan utföra en API-åtgärd för Forms-tjänstklienten måste du skapa en Forms-tjänstklient. Om du använder Java API skapar du ett `FormsServiceClient`-objekt. Om du använder Forms webbtjänst-API:t skapar du ett `FormsService`-objekt.
 
 **Hämta formulärdata**
 
-Om du vill hämta skickade formulärdata anropar du `FormsServiceClient` objektets `processFormSubmission` -metod. När du anropar den här metoden måste du ange innehållstypen för det skickade formuläret. När data skickas från en webbläsare till Forms-tjänsten kan de skickas som antingen XML- eller PDF-data. Om du vill hämta data som anges i formulärfält kan dessa data skickas som XML-data.
+Om du vill hämta skickade formulärdata anropar du `FormsServiceClient`-objektets `processFormSubmission`-metod. När du anropar den här metoden måste du ange innehållstypen för det skickade formuläret. När data skickas från en webbläsare till Forms-tjänsten kan de skickas som antingen XML- eller PDF-data. Om du vill hämta data som anges i formulärfält kan dessa data skickas som XML-data.
 
 Du kan även hämta formulärfält från ett formulär som har skickats som PDF-data genom att ange följande körningsalternativ:
 
-* Skicka följande värde till `processFormSubmission` som innehållstypparametern: `CONTENT_TYPE=application/pdf`.
-* Ange `RenderOptionsSpec` objektets `PDFToXDP` värde till `true`
-* Ange `RenderOptionsSpec` objektets `ExportDataFormat` värde till `XMLData`
+* Skicka följande värde till metoden `processFormSubmission` som innehållstypparameter: `CONTENT_TYPE=application/pdf`.
+* Ange `RenderOptionsSpec`-objektets `PDFToXDP`-värde som `true`
+* Ange `RenderOptionsSpec`-objektets `ExportDataFormat`-värde som `XMLData`
 
-Du anger innehållstypen för det skickade formuläret när du anropar `processFormSubmission` -metod. I följande lista anges tillämpliga värden för innehållstyp:
+Du anger innehållstypen för det skickade formuläret när du anropar metoden `processFormSubmission`. I följande lista anges tillämpliga värden för innehållstyp:
 
 * **text/xml**: Representerar innehållstypen som ska användas när ett PDF-formulär skickar formulärdata som XML.
 * **application/x-www-form-urlencoded**: Representerar innehållstypen som ska användas när ett HTML-formulär skickar data som XML.
@@ -155,15 +156,15 @@ Du hämtar formulärdata som har skickats till Forms-tjänsten och fastställer 
 
 Forms-tjänsten returnerar följande värden för att ange om databearbetningen är klar:
 
-* **0 (Skicka):** Skickade data är klara att bearbetas.
+* **0 (Skicka):** Skickade data kan nu bearbetas.
 * **1 (Beräkna):** Forms-tjänsten utförde en beräkningsåtgärd för data och resultaten måste återges för användaren.
-* **2 (Validera):** Forms-tjänsten validerade formulärdata och resultaten måste återges för användaren.
+* **2 (Validera):** Forms-tjänsten validerade formulärdata och resultaten måste återges till användaren.
 * **3 (Nästa):** Den aktuella sidan har ändrats med resultat som måste skrivas till klientprogrammet.
-* **4 (föregående**): Den aktuella sidan har ändrats med resultat som måste skrivas till klientprogrammet.
+* **4 (Föregående**): Den aktuella sidan har ändrats med resultat som måste skrivas till klientprogrammet.
 
 >[!NOTE]
 >
->Beräkningar och valideringar måste återges för användaren. (Se [Beräknar formulärdata](/help/forms/developing/calculating-form-data.md#calculating-form-data).
+>Beräkningar och valideringar måste återges för användaren. (Se [Beräkna formulärdata](/help/forms/developing/calculating-form-data.md#calculating-form-data).
 
 **Kontrollera om formuläröverföringen innehåller bifogade filer**
 
@@ -177,7 +178,7 @@ När du har fastställt om ett formulär innehåller bifogade filer kan du bearb
 
 **Bearbeta skickade data**
 
-Beroende på innehållstypen för inskickade data kan du extrahera enskilda formulärfältsvärden från inskickade XML-data eller spara inskickade PDF-data som en PDF-fil (eller skicka dem till en annan tjänst). Om du vill extrahera enskilda formulärfält konverterar du inskickade XML-data till en XML-datakälla och hämtar sedan XML-datakällsvärden med hjälp av `org.w3c.dom` -klasser.
+Beroende på innehållstypen för inskickade data kan du extrahera enskilda formulärfältsvärden från inskickade XML-data eller spara inskickade PDF-data som en PDF-fil (eller skicka dem till en annan tjänst). Om du vill extrahera enskilda formulärfält konverterar du skickade XML-data till en XML-datakälla och hämtar sedan XML-datakällsvärden med hjälp av `org.w3c.dom`-klasser.
 
 **Se även**
 
@@ -201,33 +202,33 @@ Hantera inskickade formulär med Forms API (Java):
 
 1. Skapa ett Forms Client API-objekt
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `FormsServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `FormsServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta formulärdata
 
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och anropa `javax.servlet.http.HttpServletResponse` objektets `getInputStream` -metoden inifrån konstruktorn.
-   * Skapa en `RenderOptionsSpec` genom att använda dess konstruktor. Ange språkvärdet genom att anropa `RenderOptionsSpec` objektets `setLocale` och skickar ett strängvärde som anger språkvärdet.
+   * Om du vill hämta formulärdata som har publicerats på en Java-server skapar du ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och anropar `javax.servlet.http.HttpServletResponse`-objektets `getInputStream`-metod inifrån konstruktorn.
+   * Skapa ett `RenderOptionsSpec`-objekt med hjälp av dess konstruktor. Ange språkvärdet genom att anropa `RenderOptionsSpec`-objektets `setLocale`-metod och skicka ett strängvärde som anger språkvärdet.
 
    >[!NOTE]
    >
-   >Du kan instruera Forms att skapa XDP- eller XML-data från inskickat PDF-innehåll genom att anropa `RenderOptionsSpec` objektets `setPDF2XDP` metod och att skicka `true` och även ringa `setXMLData` och skicka `true`. Du kan sedan anropa `FormsResult` objektets `getOutputXML` metod för att hämta XML-data som motsvarar XDP/XML-data. (Med `FormsResult` objektet returneras av `processFormSubmission` som förklaras i nästa delsteg.)
+   >Du kan instruera Forms-tjänsten att skapa XDP- eller XML-data från inskickat PDF-innehåll genom att anropa `RenderOptionsSpec`-objektets `setPDF2XDP` -metod och skicka `true` samt anropa `setXMLData` och skicka `true`. Du kan sedan anropa `FormsResult`-objektets `getOutputXML`-metod för att hämta XML-data som motsvarar XDP/XML-data. (Objektet `FormsResult` returneras av metoden `processFormSubmission` som förklaras i nästa delsteg.)
 
-   * Anropa `FormsServiceClient` objektets `processFormSubmission` och skicka följande värden:
+   * Anropa `FormsServiceClient`-objektets `processFormSubmission`-metod och skicka följande värden:
 
-      * The `com.adobe.idp.Document` som innehåller formulärdata.
-      * Ett strängvärde som anger miljövariabler inklusive alla relevanta HTTP-huvuden. Ange den innehållstyp som ska hanteras. Om du vill hantera XML-data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=text/xml`. Om du vill hantera PDF data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=application/pdf`.
-      * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, till exempel . `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Det här parametervärdet är valfritt.
-      * A `RenderOptionsSpec` objekt som lagrar körningsalternativ.
+      * Objektet `com.adobe.idp.Document` som innehåller formulärdata.
+      * Ett strängvärde som anger miljövariabler inklusive alla relevanta HTTP-huvuden. Ange den innehållstyp som ska hanteras. Om du vill hantera XML-data anger du följande strängvärde för parametern: `CONTENT_TYPE=text/xml`. Om du vill hantera PDF data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=application/pdf`.
+      * Ett strängvärde som anger rubrikvärdet `HTTP_USER_AGENT`, till exempel . `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`. Det här parametervärdet är valfritt.
+      * Ett `RenderOptionsSpec`-objekt som lagrar körningsalternativ.
 
-     The `processFormSubmission` returnerar en `FormsResult` objekt som innehåller resultaten av formuläröverföringen.
+     Metoden `processFormSubmission` returnerar ett `FormsResult`-objekt som innehåller resultaten av formuläröverföringen.
 
-   * Kontrollera om Forms-tjänsten har bearbetat formulärdata genom att anropa `FormsResult` objektets `getAction` -metod. Om den här metoden returnerar värdet `0`är data färdiga att bearbetas.
+   * Avgör om Forms-tjänsten har slutfört bearbetningen av formulärdata genom att anropa `FormsResult`-objektets `getAction`-metod. Om den här metoden returnerar värdet `0` är data klara att bearbetas.
 
 1. Kontrollera om formuläröverföringen innehåller bifogade filer
 
-   * Anropa `FormsResult` objektets `getAttachments` -metod. Den här metoden returnerar en `java.util.List` objekt som innehåller filer som har skickats med formuläret.
-   * Iterera genom `java.util.List` -objekt för att avgöra om det finns bifogade filer. Om det finns bifogade filer är varje element ett `com.adobe.idp.Document` -instans. Du kan spara de bifogade filerna genom att anropa `com.adobe.idp.Document` objektets `copyToFile` metod och skicka en `java.io.File` -objekt.
+   * Anropa metoden `getAttachments` för objektet `FormsResult`. Den här metoden returnerar ett `java.util.List`-objekt som innehåller filer som har skickats med formuläret.
+   * Iterera genom objektet `java.util.List` för att avgöra om det finns bifogade filer. Om det finns bifogade filer är varje element en `com.adobe.idp.Document`-instans. Du kan spara de bifogade filerna genom att anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod och skicka ett `java.io.File`-objekt.
 
    >[!NOTE]
    >
@@ -235,20 +236,20 @@ Hantera inskickade formulär med Forms API (Java):
 
 1. Bearbeta skickade data
 
-   * Om datainnehållstypen är `application/vnd.adobe.xdp+xml` eller `text/xml`skapar du programlogik för att hämta XML-datavärden.
+   * Om datainnehållstypen är `application/vnd.adobe.xdp+xml` eller `text/xml` skapar du programlogik för att hämta XML-datavärden.
 
-      * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objektets `getOutputContent` -metod.
-      * Skapa en `java.io.InputStream` genom att anropa `java.io.DataInputStream` konstruktorn och skickar `com.adobe.idp.Document` -objekt.
-      * Skapa en `org.w3c.dom.DocumentBuilderFactory` genom att anropa det statiska `org.w3c.dom.DocumentBuilderFactory` objektets `newInstance` -metod.
-      * Skapa en `org.w3c.dom.DocumentBuilder` genom att anropa `org.w3c.dom.DocumentBuilderFactory` objektets `newDocumentBuilder` -metod.
-      * Skapa en `org.w3c.dom.Document` genom att anropa `org.w3c.dom.DocumentBuilder` objektets `parse` metoden och skicka `java.io.InputStream` -objekt.
-      * Hämta värdet för varje nod i XML-dokumentet. Ett sätt att utföra den här uppgiften är att skapa en anpassad metod som accepterar två parametrar: `org.w3c.dom.Document` och namnet på noden vars värde du vill hämta. Den här metoden returnerar ett strängvärde som representerar nodens värde. I kodexemplet som följer den här processen anropas den här anpassade metoden `getNodeText`. Innehållet i den här metoden visas.
+      * Skapa ett `com.adobe.idp.Document`-objekt genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+      * Skapa ett `java.io.InputStream`-objekt genom att anropa konstruktorn `java.io.DataInputStream` och skicka objektet `com.adobe.idp.Document`.
+      * Skapa ett `org.w3c.dom.DocumentBuilderFactory`-objekt genom att anropa det statiska `org.w3c.dom.DocumentBuilderFactory`-objektets `newInstance`-metod.
+      * Skapa ett `org.w3c.dom.DocumentBuilder`-objekt genom att anropa `org.w3c.dom.DocumentBuilderFactory`-objektets `newDocumentBuilder`-metod.
+      * Skapa ett `org.w3c.dom.Document`-objekt genom att anropa `org.w3c.dom.DocumentBuilder`-objektets `parse`-metod och skicka `java.io.InputStream`-objektet.
+      * Hämta värdet för varje nod i XML-dokumentet. Ett sätt att utföra den här uppgiften är att skapa en anpassad metod som accepterar två parametrar: objektet `org.w3c.dom.Document` och namnet på noden vars värde du vill hämta. Den här metoden returnerar ett strängvärde som representerar nodens värde. I kodexemplet som följer den här processen kallas den här anpassade metoden `getNodeText`. Innehållet i den här metoden visas.
 
-   * Om datainnehållstypen är `application/pdf`skapar du programlogik för att spara inskickade PDF-data som en PDF-fil.
+   * Om datainnehållstypen är `application/pdf` skapar du programlogik för att spara skickade PDF-data som en PDF-fil.
 
-      * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objektets `getOutputContent` -metod.
-      * Skapa en `java.io.File` genom att använda dess public-konstruktor. Ange PDF som filnamnstillägg.
-      * Fylla i PDF-filen genom att anropa `com.adobe.idp.Document` objektets `copyToFile` metoden och skicka `java.io.File` -objekt.
+      * Skapa ett `com.adobe.idp.Document`-objekt genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+      * Skapa ett `java.io.File`-objekt med hjälp av dess offentliga konstruktor. Ange PDF som filnamnstillägg.
+      * Fyll i PDF-filen genom att anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod och skicka `java.io.File`-objektet.
 
 **Se även**
 
@@ -273,58 +274,58 @@ Hantera inskickade formulär med Forms API (webbtjänst):
 
 1. Skapa ett Forms Client API-objekt
 
-   Skapa en `FormsService` och ange autentiseringsvärden.
+   Skapa ett `FormsService`-objekt och ange autentiseringsvärden.
 
 1. Hämta formulärdata
 
-   * Skapa en `BLOB` genom att använda dess konstruktor.
-   * Skapa en `java.io.InputStream` genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getInputStream` -metod.
-   * Skapa en `java.io.ByteArrayOutputStream` genom att använda dess konstruktor och skicka längden på `java.io.InputStream` -objekt.
-   * Kopiera innehållet i `java.io.InputStream` objektet i `java.io.ByteArrayOutputStream` -objekt.
-   * Skapa en bytearray genom att anropa `java.io.ByteArrayOutputStream` objektets `toByteArray` -metod.
-   * Fyll i `BLOB` genom att anropa dess `setBinaryData` och skicka bytearrayen som ett argument.
-   * Skapa en `RenderOptionsSpec` genom att använda dess konstruktor. Ange språkvärdet genom att anropa `RenderOptionsSpec` objektets `setLocale` och skickar ett strängvärde som anger språkvärdet.
-   * Anropa `FormsService` objektets `processFormSubmission` och skicka följande värden:
+   * Om du vill hämta formulärdata som har publicerats på en Java-server skapar du ett `BLOB`-objekt med hjälp av dess konstruktor.
+   * Skapa ett `java.io.InputStream`-objekt genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getInputStream`-metod.
+   * Skapa ett `java.io.ByteArrayOutputStream`-objekt med hjälp av dess konstruktor och skicka längden på `java.io.InputStream`-objektet.
+   * Kopiera innehållet i objektet `java.io.InputStream` till objektet `java.io.ByteArrayOutputStream`.
+   * Skapa en bytearray genom att anropa metoden `toByteArray` för objektet `java.io.ByteArrayOutputStream`.
+   * Fyll i objektet `BLOB` genom att anropa dess `setBinaryData`-metod och skicka bytearrayen som ett argument.
+   * Skapa ett `RenderOptionsSpec`-objekt med hjälp av dess konstruktor. Ange språkvärdet genom att anropa `RenderOptionsSpec`-objektets `setLocale`-metod och skicka ett strängvärde som anger språkvärdet.
+   * Anropa `FormsService`-objektets `processFormSubmission`-metod och skicka följande värden:
 
-      * The `BLOB` som innehåller formulärdata.
-      * Ett strängvärde som anger miljövariabler inklusive alla relevanta HTTP-huvuden. Ange den innehållstyp som ska hanteras. Om du vill hantera XML-data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=text/xml`. Om du vill hantera PDF data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=application/pdf`.
-      * Ett strängvärde som anger `HTTP_USER_AGENT` rubrikvärde, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
-      * A `RenderOptionsSpec` objekt som lagrar körningsalternativ.
-      * En tom `BLOBHolder` objekt som fylls i av metoden.
-      * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden.
-      * En tom `BLOBHolder` objekt som fylls i av metoden.
-      * En tom `BLOBHolder` objekt som fylls i av metoden.
-      * En tom `javax.xml.rpc.holders.ShortHolder` objekt som fylls i av metoden.
-      * En tom `MyArrayOf_xsd_anyTypeHolder` objekt som fylls i av metoden. Den här parametern används för att lagra bifogade filer som skickas tillsammans med formuläret.
-      * En tom `FormsResultHolder` objekt som fylls i av metoden med det formulär som skickas.
+      * Objektet `BLOB` som innehåller formulärdata.
+      * Ett strängvärde som anger miljövariabler inklusive alla relevanta HTTP-huvuden. Ange den innehållstyp som ska hanteras. Om du vill hantera XML-data anger du följande strängvärde för parametern: `CONTENT_TYPE=text/xml`. Om du vill hantera PDF data anger du följande strängvärde för den här parametern: `CONTENT_TYPE=application/pdf`.
+      * Ett strängvärde som anger rubrikvärdet `HTTP_USER_AGENT`, till exempel `Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)`.
+      * Ett `RenderOptionsSpec`-objekt som lagrar körningsalternativ.
+      * Ett tomt `BLOBHolder`-objekt som fylls i av metoden.
+      * Ett tomt `javax.xml.rpc.holders.StringHolder`-objekt som fylls i av metoden.
+      * Ett tomt `BLOBHolder`-objekt som fylls i av metoden.
+      * Ett tomt `BLOBHolder`-objekt som fylls i av metoden.
+      * Ett tomt `javax.xml.rpc.holders.ShortHolder`-objekt som fylls i av metoden.
+      * Ett tomt `MyArrayOf_xsd_anyTypeHolder`-objekt som fylls i av metoden. Den här parametern används för att lagra bifogade filer som skickas tillsammans med formuläret.
+      * Ett tomt `FormsResultHolder`-objekt som fylls i av metoden med formuläret som skickas.
 
-     The `processFormSubmission` metoden fyller i `FormsResultHolder` parametern med resultaten av formuläröverföringen.
+     Metoden `processFormSubmission` fyller i parametern `FormsResultHolder` med resultatet av formuläröverföringen.
 
-   * Kontrollera om Forms-tjänsten har bearbetat formulärdata genom att anropa `FormsResult` objektets `getAction` -metod. Om den här metoden returnerar värdet `0`är formulärdata färdiga att bearbetas. Du kan få en `FormsResult` genom att hämta värdet för `FormsResultHolder` objektets `value` datamedlem.
+   * Avgör om Forms-tjänsten har slutfört bearbetningen av formulärdata genom att anropa `FormsResult`-objektets `getAction`-metod. Om den här metoden returnerar värdet `0` är formulärdata klara att bearbetas. Du kan hämta ett `FormsResult`-objekt genom att hämta värdet för `FormsResultHolder`-objektets `value`-datamedlem.
 
 1. Kontrollera om formuläröverföringen innehåller bifogade filer
 
-   Hämta värdet för `MyArrayOf_xsd_anyTypeHolder` objektets `value` datamedlem ( `MyArrayOf_xsd_anyTypeHolder` objektet skickades till `processFormSubmission` metod). Den här datamedlemmen returnerar en array med `Objects`. Varje element i `Object` är en `Object`som motsvarar de filer som har skickats in tillsammans med formuläret. Du kan hämta varje element i arrayen och omvandla det till en `BLOB` -objekt.
+   Hämta värdet för `MyArrayOf_xsd_anyTypeHolder`-objektets `value`-datamedlem (objektet `MyArrayOf_xsd_anyTypeHolder` skickades till metoden `processFormSubmission`). Den här datamedlemmen returnerar en matris på `Objects`. Varje element i arrayen `Object` är en `Object` som motsvarar de filer som har skickats in tillsammans med formuläret. Du kan hämta varje element i arrayen och omvandla det till ett `BLOB`-objekt.
 
 1. Bearbeta skickade data
 
-   * Om datainnehållstypen är `application/vnd.adobe.xdp+xml` eller `text/xml`skapar du programlogik för att hämta XML-datavärden.
+   * Om datainnehållstypen är `application/vnd.adobe.xdp+xml` eller `text/xml` skapar du programlogik för att hämta XML-datavärden.
 
-      * Skapa en `BLOB` genom att anropa `FormsResult` objektets `getOutputContent` -metod.
-      * Skapa en bytearray genom att anropa `BLOB` objektets `getBinaryData` -metod.
-      * Skapa en `java.io.InputStream` genom att anropa `java.io.ByteArrayInputStream` och skickar bytearrayen.
-      * Skapa en `org.w3c.dom.DocumentBuilderFactory` genom att anropa det statiska `org.w3c.dom.DocumentBuilderFactory` objektets `newInstance` -metod.
-      * Skapa en `org.w3c.dom.DocumentBuilder` genom att anropa `org.w3c.dom.DocumentBuilderFactory` objektets `newDocumentBuilder` -metod.
-      * Skapa en `org.w3c.dom.Document` genom att anropa `org.w3c.dom.DocumentBuilder` objektets `parse` metoden och skicka `java.io.InputStream` -objekt.
-      * Hämta värdet för varje nod i XML-dokumentet. Ett sätt att utföra den här uppgiften är att skapa en anpassad metod som accepterar två parametrar: `org.w3c.dom.Document` och namnet på noden vars värde du vill hämta. Den här metoden returnerar ett strängvärde som representerar nodens värde. I kodexemplet som följer den här processen anropas den här anpassade metoden `getNodeText`. Innehållet i den här metoden visas.
+      * Skapa ett `BLOB`-objekt genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+      * Skapa en bytearray genom att anropa metoden `getBinaryData` för objektet `BLOB`.
+      * Skapa ett `java.io.InputStream`-objekt genom att anropa konstruktorn `java.io.ByteArrayInputStream` och skicka bytearrayen.
+      * Skapa ett `org.w3c.dom.DocumentBuilderFactory`-objekt genom att anropa det statiska `org.w3c.dom.DocumentBuilderFactory`-objektets `newInstance`-metod.
+      * Skapa ett `org.w3c.dom.DocumentBuilder`-objekt genom att anropa `org.w3c.dom.DocumentBuilderFactory`-objektets `newDocumentBuilder`-metod.
+      * Skapa ett `org.w3c.dom.Document`-objekt genom att anropa `org.w3c.dom.DocumentBuilder`-objektets `parse`-metod och skicka `java.io.InputStream`-objektet.
+      * Hämta värdet för varje nod i XML-dokumentet. Ett sätt att utföra den här uppgiften är att skapa en anpassad metod som accepterar två parametrar: objektet `org.w3c.dom.Document` och namnet på noden vars värde du vill hämta. Den här metoden returnerar ett strängvärde som representerar nodens värde. I kodexemplet som följer den här processen kallas den här anpassade metoden `getNodeText`. Innehållet i den här metoden visas.
 
-   * Om datainnehållstypen är `application/pdf`skapar du programlogik för att spara inskickade PDF-data som en PDF-fil.
+   * Om datainnehållstypen är `application/pdf` skapar du programlogik för att spara skickade PDF-data som en PDF-fil.
 
-      * Skapa en `BLOB` genom att anropa `FormsResult` objektets `getOutputContent` -metod.
-      * Skapa en bytearray genom att anropa `BLOB` objektets `getBinaryData` -metod.
-      * Skapa en `java.io.File` genom att använda dess public-konstruktor. Ange PDF som filnamnstillägg.
-      * Skapa en `java.io.FileOutputStream` genom att använda konstruktorn och skicka `java.io.File` -objekt.
-      * Fylla i PDF-filen genom att anropa `java.io.FileOutputStream` objektets `write` och skicka bytearrayen.
+      * Skapa ett `BLOB`-objekt genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+      * Skapa en bytearray genom att anropa metoden `getBinaryData` för objektet `BLOB`.
+      * Skapa ett `java.io.File`-objekt med hjälp av dess offentliga konstruktor. Ange PDF som filnamnstillägg.
+      * Skapa ett `java.io.FileOutputStream`-objekt med hjälp av dess konstruktor och skicka `java.io.File`-objektet.
+      * Fyll i PDF-filen genom att anropa `java.io.FileOutputStream`-objektets `write`-metod och skicka bytearrayen.
 
 **Se även**
 

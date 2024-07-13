@@ -26,25 +26,25 @@ Filbiblioteksfunktionen är en plats där besökare på den inloggade webbplatse
 I det här avsnittet av dokumentationen beskrivs:
 
 * Lägga till filbiblioteksfunktionen på en AEM.
-* Konfigurationsinställningar för `File Library` -komponenten.
+* Konfigurationsinställningar för komponenten `File Library`.
 
 ### Lägga till ett filbibliotek på en sida {#adding-a-file-library-to-a-page}
 
-Lägga till en `File Library` till en sida i redigeringsläge, leta reda på komponenten:
+Om du vill lägga till en `File Library`-komponent på en sida i redigeringsläge letar du reda på komponenten:
 
 * `Communities / File Library`
 
 Och dra den till rätt plats på en sida.
 
-Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När [nödvändiga bibliotek på klientsidan](/help/communities/essentials-file-library.md#essentials-for-client-side) ingår, det är så `File Library` visas:
+När de [nödvändiga klientbiblioteken](/help/communities/essentials-file-library.md#essentials-for-client-side) inkluderas visas komponenten `File Library` så här:
 
 ![file-library1](assets/file-library1.png)
 
 ### Konfigurerar filbibliotek {#configuring-file-library}
 
-Markera den monterade `File Library` så att du kan komma åt och välja `Configure` -ikonen som öppnar dialogrutan för redigering.
+Markera den monterade `File Library`-komponenten så att du kan komma åt och markera ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
@@ -52,15 +52,15 @@ Markera den monterade `File Library` så att du kan komma åt och välja `Config
 
 #### Fliken Kommentarer {#comments-tab}
 
-Under **Kommentar** anger du om och hur kommentarer för överförda filer ska visas:
+Under fliken **Kommentarer** anger du om och hur kommentarer för överförda filer ska visas:
 
-* **Tillåt kommentarer om filer**
+* **Tillåt kommentarer för filer**
 
   Om det här alternativet är markerat tillåts kommentarer för överförda filer. Standard är avmarkerat.
 
 * **Kommentarer per sida**
 
-  Begränsar antalet kommentarer som visas per sida och antalet svar som visas. Standard är **10**.
+  Begränsar antalet kommentarer som visas per sida och antalet svar som visas. Standardvärdet är **10**.
 
 * **Maximal filstorlek**
 
@@ -100,19 +100,19 @@ Under **Kommentar** anger du om och hur kommentarer för överförda filer ska v
 
 * **Tillåt följande**
 
-  Om du markerar det här alternativet inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelad](/help/communities/notifications.md) av nya tjänster. Standard är avmarkerat.
+  Om du markerar det här alternativet inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelas](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
 
-* **Aktivera omnämns**
+* **Aktivera omnämnande**
 
   Om det här alternativet är aktiverat kan registrerade communityanvändare identifiera andra registrerade medlemmar (med förnamn, efternamn, användarnamn) och tagga dem med den vanliga @användarnamnssyntaxen. De taggade användarna får meddelanden om sina omnämnanden.
 
-* **Max. omnämnanden**
+* **Max antal omnämnanden**
 
   Begränsa det maximala antalet omnämnanden som tillåts i ett inlägg. Standardvärdet är 10.
 
-* **Mönster för användargränssnittets omnämnande**
+* **Mönster för gränssnittets omnämnande**
 
-  Ange den tillåtna mönstersträngen så att du taggar (@mention) den registrerade användaren i ett inlägg. Till exempel: `~{{familyName}}{{givenName}}`.
+  Ange den tillåtna mönstersträngen så att du taggar (@mention) den registrerade användaren i ett inlägg. Exempel: `~{{familyName}}{{givenName}}`.
 
 * **Tillåt kopplade svar**
 
@@ -120,9 +120,9 @@ Under **Kommentar** anger du om och hur kommentarer för överförda filer ska v
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Under **Användarmoderering** -fliken, konfigurera moderering av kommentarer, om kommentarer tillåts:
+Konfigurera moderering av kommentarer under fliken **Användarmoderering**, om kommentarer tillåts:
 
-* **Före moderering**
+* **Före-moderering**
 
   Om det här alternativet är markerat måste kommentarerna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
@@ -156,7 +156,7 @@ Under **Användarmoderering** -fliken, konfigurera moderering av kommentarer, om
 
 * **Flaggningsgräns**
 
-  Ange hur många gånger en kommentar måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **Modereringströskel**. Standardvärdet är 5.
+  Ange hur många gånger en kommentar måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **modereringströskeln**. Standardvärdet är 5.
 
 ### Fliken Sorteringsinställningar {#sort-settings-tab}
 
@@ -166,8 +166,8 @@ Ange som standard
 
 ### Ytterligare information {#additional-information}
 
-Mer information finns på [Grundläggande om filbibliotek](/help/communities/essentials-file-library.md) för utvecklare.
+Mer information finns på sidan [Grundläggande om filbibliotek](/help/communities/essentials-file-library.md) för utvecklare.
 
-moderering av inlägg och kommentarer finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
+moderering av publicerade ämnen och kommentarer finns i [Moderering av användargenererat innehåll](/help/communities/moderate-ugc.md).
 
 Information om hur du taggar publicerade ämnen och kommentarer finns i [Tagga användargenererat innehåll](/help/communities/tag-ugc.md).

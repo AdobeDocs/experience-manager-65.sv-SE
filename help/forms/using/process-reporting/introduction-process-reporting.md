@@ -26,12 +26,12 @@ Processrapportering innehåller en uppsättning användningsklara rapporter som 
 
 Dessutom innehåller Process Reporting ett gränssnitt för att köra ad hoc-frågor och för att integrera anpassade rapportvyer i användargränssnittet för Process Reporting.
 
-En lista över webbläsare som stöds finns i [Plattformar som stöds av AEM Forms](/help/forms/using/aem-forms-jee-supported-platforms.md).
+En lista över webbläsare som stöds finns i [AEM Forms-plattformar som stöds](/help/forms/using/aem-forms-jee-supported-platforms.md).
 
 Processrapportering bygger på moduler som:
 
 * Läs processdata från AEM Forms-databasen
-* Publicera processdata till en inbäddad Process Reporting-databas
+* Publish processdata till en inbäddad Process Reporting-databas
 * Tillhandahåller ett webbläsarbaserat användargränssnitt för att visa rapporter
 
 ## Nyckelfunktioner {#key-capabilities}

@@ -20,7 +20,7 @@ Användarhantering är en AEM Forms JEE-komponent som gör det möjligt att skap
 
 **Lokala domäner**: Den här typen av domän är inte ansluten till ett tredjepartslagringssystem. I stället skapas användare och grupper lokalt och finns i databasen för användarhantering. Lösenord lagras lokalt och autentisering görs med en lokal databas.
 
-**Hybrid-domäner**: Den här typen av domän är inte ansluten till ett tredjepartslagringssystem. I stället skapas användare och grupper lokalt och finns i databasen för användarhantering. Till skillnad från lokala domäner använder hybriddomäner en extern autentiseringsprovider, som kan vara LDAP, Kerberos, SAML eller en anpassad autentiseringsprovider.
+**Hybrid-domäner**: Den här typen av domän är inte ansluten till ett tredjeparts lagringssystem. I stället skapas användare och grupper lokalt och finns i databasen för användarhantering. Till skillnad från lokala domäner använder hybriddomäner en extern autentiseringsprovider, som kan vara LDAP, Kerberos, SAML eller en anpassad autentiseringsprovider.
 
 **Företagsdomäner**: Består av användare och grupper som finns i ett tredjepartslagringssystem, till exempel en LDAP-katalog. Användarhantering skriver inte till lagringssystemet från tredje part. I stället synkroniserar Hantering av användare användar- och gruppinformationen med databasen för användarhantering. Enterprise-domäner använder också en extern autentiseringsprovider, som kan vara LDAP, Kerberos, SAML eller en anpassad autentiseringsprovider.
 
@@ -28,7 +28,7 @@ Användarhantering är en AEM Forms JEE-komponent som gör det möjligt att skap
 
 ## Användardata och datalager {#user-data-and-data-stores}
 
-Användarhantering lagrar användardata i en databas, t.ex. My SQL, Oracle, MS® SQL Server och IBM® DB2®. Dessutom kan användare som har loggat in minst en gång i Forms-program på AEM författare på `https://'[server]:[port]'lc`, skapas användaren i AEM. Därför lagras användarhantering i följande datalager:
+Användarhantering lagrar användardata i en databas, t.ex. My SQL, Oracle, MS® SQL Server och IBM® DB2®. Dessutom skapas en användare som har loggat in minst en gång i Forms-program på AEM författare på `https://'[server]:[port]'lc`, AEM databasen. Därför lagras användarhantering i följande datalager:
 
 * Databas
 * AEM
@@ -87,7 +87,7 @@ Användarhantering lagrar användardata i följande databastabeller:
 
 ### AEM {#aem-repository}
 
-Användarhanteringsdata för användare som minst en gång har använt Forms-programmen under `https://'[server]:[port]'lc` lagras även i AEM.
+Användarhanteringsdata för användare som minst en gång har använt Forms-programmen under `https://'[server]:[port]'lc` lagras också i AEM.
 
 ## Få åtkomst till och ta bort användardata {#access-and-delete-user-data}
 
@@ -95,9 +95,9 @@ Du kan komma åt och exportera användarhanteringsdata för användare i använd
 
 ### Databas {#database-1}
 
-Om du vill exportera eller ta bort användardata från användarhanteringsdatabasen måste du ansluta till databasen med en databasklient och ta reda på det huvud-ID som baseras på användarens PII-kod. Om du till exempel vill hämta användarens huvud-ID med ett inloggnings-ID kör du följande `select` i databasen.
+Om du vill exportera eller ta bort användardata från användarhanteringsdatabasen måste du ansluta till databasen med en databasklient och ta reda på det huvud-ID som baseras på användarens PII-kod. Om du till exempel vill hämta användarens huvud-ID med ett inloggnings-ID kör du följande `select`-kommando i databasen.
 
-I `select` kommando, ersätta `<user_login_id>` med användar-ID:t för den användare vars huvud-ID du vill hämta.
+Ersätt `<user_login_id>` med inloggnings-ID:t för den användare vars huvud-ID du vill hämta i kommandot `select`.
 
 ```sql
 select refprincipalid from EdcPrincipalUserEntity where uidstring = <user_login_id>
@@ -107,7 +107,7 @@ När du känner till ditt huvuds-ID kan du exportera eller ta bort användardata
 
 #### Exportera användardata {#export-user-data}
 
-Kör följande databaskommandon så att du kan exportera användarhanteringsdata för ett huvuds-ID från databastabeller. I `select` kommando, ersätt `<principal_id>` med användarens huvud-ID vars data du vill exportera.
+Kör följande databaskommandon så att du kan exportera användarhanteringsdata för ett huvuds-ID från databastabeller. Ersätt `<principal_id>` i kommandot `select` med det huvud-ID för användaren vars data du vill exportera.
 
 >[!NOTE]
 >
@@ -146,7 +146,7 @@ Så här tar du bort användarhanteringsdata för ett huvuds-ID från databastab
 
 1. Ta bort användardata från AEM, om tillämpligt, enligt beskrivningen i [Ta bort användardata](/help/forms/using/user-management-handling-user-data.md#delete-aem).
 1. Stäng av AEM Forms Server.
-1. Kör följande databaskommandon så att du kan ta bort användarhanteringsdata för ett huvuds-ID från databastabeller. I `Delete` kommando, ersätt `<principal_id>` med användarens huvud-ID vars data du vill ta bort.
+1. Kör följande databaskommandon så att du kan ta bort användarhanteringsdata för ett huvuds-ID från databastabeller. Ersätt `<principal_id>` i kommandot `Delete` med det huvud-ID för användaren vars data du vill ta bort.
 
    ```sql
    Delete from EdcPrincipalLocalAccountEntity where refuserprincipalid in (Select id from EdcPrincipalUserEntity where refprincipalid in (select id from EdcPrincipalEntity where id='<principal_id>'));
@@ -174,13 +174,13 @@ Forms JEE-användare har sina data i AEM om de har öppnat minst en av AEM Forms
 
 #### Åtkomst till användardata {#access-user-data}
 
-Om du vill visa användare som skapats i AEM databas loggar du in på `https://'[server]:[port]'/lc/useradmin` med AEM administratörsuppgifter. Observera att `server` och `port` i URL:en är den för AEM författarinstans. Här kan du söka efter användare med deras användarnamn. Dubbelklicka på en användare så att du kan visa information om användarens egenskaper, behörigheter och grupper. The `Path` -egenskap för en användare anger sökvägen till användarnoden som skapas AEM databasen.
+Logga in på `https://'[server]:[port]'/lc/useradmin` med AEM administratörsautentiseringsuppgifter om du vill visa användare som skapats i AEM. Observera att `server` och `port` i URL:en är samma som i AEM författarinstans. Här kan du söka efter användare med deras användarnamn. Dubbelklicka på en användare så att du kan visa information om användarens egenskaper, behörigheter och grupper. Egenskapen `Path` för en användare anger sökvägen till användarnoden som skapas i AEM.
 
 #### Ta bort användardata {#delete-aem}
 
 Ta bort en användare:
 
 1. Gå till `https://'[server]:[port]'/lc/useradmin` med AEM administratörsuppgifter.
-1. Sök efter en användare och dubbelklicka på användarnamnet för att öppna användaregenskaperna. Kopiera `Path` -egenskap.
-1. Gå till AEM CRXDE Lite på `https://'[server]:[port]'/lc/crx/de/index.jsp` och navigera eller söka i användarsökvägen.
-1. Ta bort banan och klicka **[!UICONTROL Save All]** för att permanent ta bort användaren från AEM.
+1. Sök efter en användare och dubbelklicka på användarnamnet för att öppna användaregenskaperna. Kopiera egenskapen `Path`.
+1. Gå till AEM CRXDE Lite på `https://'[server]:[port]'/lc/crx/de/index.jsp` och navigera eller sök i användarsökvägen.
+1. Ta bort sökvägen och klicka på **[!UICONTROL Save All]** för att permanent ta bort användaren från AEM.

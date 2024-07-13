@@ -28,7 +28,7 @@ Du kan:
 
 * [Definiera ytterligare paket som ska installeras för ett visst läge](#defining-additional-bundles-to-be-installed-for-a-run-mode).
 
-Alla inställningar och definitioner lagras i en databas och aktiveras genom att du anger **Körningsläge**.
+Alla inställningar och definitioner lagras i en databas och aktiveras genom att **körningsläget** anges.
 
 ## Körningslägen för installation {#installation-run-modes}
 
@@ -49,9 +49,9 @@ Det här är två par körningslägen som inte kan köras samtidigt. Du kan till
 
 >[!CAUTION]
 >
->När du använder något av ovanstående körningslägen (författare, publicera, sampla innehåll, nosamplingsinnehåll), definierar det värde som används vid installationen körningsläget för *hela livstiden* av den installationen.
+>När du använder något av ovanstående körningslägen (författare, publicera, sampla innehåll, nosamplingsinnehåll), definierar det värde som används vid installationen körningsläget för den *kompletta körningstiden* för den installationen.
 >
->För dessa körningslägen *inte* ändra dem efter installationen.
+>För dessa körningslägen kan du *inte* ändra dem efter installationen.
 
 ## Anpassade körningslägen {#customized-run-modes}
 
@@ -73,9 +73,9 @@ Du kan också välja anpassade körningslägen vid varje start.
 
 Med dessa lägen kan du styra användningen av exempelinnehåll. Exempelinnehållet definieras innan snabbstarten byggs och kan innehålla paket, konfigurationer och så vidare:
 
-* The `samplecontent` i körningsläge installeras det här innehållet (standardläget).
+* Körningsläget `samplecontent` installerar innehållet (standardläget).
 
-* The `nosamplecontent` exempelinnehållet installeras inte i det här läget.
+* `nosamplecontent`-läget installerar inte exempelinnehållet.
 
 Körningsläget nosampling-innehåll är utformat för produktionsinstallationer.
 
@@ -101,11 +101,11 @@ Körningsläget anges med ett suffix i mappnamnet. På så sätt kan du spara al
 
   Används för det tillämpliga körningsläget, till exempel config
 
-Se [OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository) om du vill ha mer information om hur du definierar enskilda konfigurationsnoder i dessa mappar och om hur du skapar konfigurationer för kombinationer av flera körningslägen.
+Mer information om hur du definierar enskilda konfigurationsnoder i dessa mappar och hur du skapar konfigurationer för kombinationer av flera körningslägen finns i [OSGi-konfiguration i databasen](/help/sites-deploying/configuring-osgi.md#osgi-configuration-in-the-repository).
 
 >[!NOTE]
 >
->För [Körningslägen för installation](#installation-run-modes) (till exempel författare) Körningsläget kan inte ändras efter installationen. Ändringar av de enskilda konfigurationsegenskaperna börjar dock gälla efter omstart.
+>För [installationskörningslägen](#installation-run-modes) (till exempel författare) kan körningsläget inte ändras efter installationen. Ändringar av de enskilda konfigurationsegenskaperna börjar dock gälla efter omstart.
 
 ## Definiera ytterligare paket som ska installeras för ett körningsläge {#defining-additional-bundles-to-be-installed-for-a-run-mode}
 
@@ -129,7 +129,7 @@ När du använder en programserver kan du även [definiera körningsläget i web
 
 ### Använda filen sling.properties {#using-the-sling-properties-file}
 
-The `sling.properties` filen kan användas för att definiera det körningsläge som krävs:
+Filen `sling.properties` kan användas för att definiera det körningsläge som krävs:
 
 1. Redigera konfigurationsfilen:
 
@@ -141,7 +141,7 @@ The `sling.properties` filen kan användas för att definiera det körningsläge
 
 ### Använda alternativet -r {#using-the-r-option}
 
-Ett anpassat körningsläge kan aktiveras med `-r` när snabbstarten startas. Använd till exempel följande kommando för att starta en AEM med körningsläget inställt på dev. &quot;
+Ett anpassat körningsläge kan aktiveras med alternativet `-r` när snabbstarten startas. Använd till exempel följande kommando för att starta en AEM med körningsläget inställt på dev. &quot;
 
 ```shell
 java -jar cq-56-p4545.jar -r dev
@@ -166,7 +166,7 @@ jar-filen måste ha samma namn:
 
 `cq5-<run-mode>-p<port-number>`
 
-Ange till exempel `publish` körningsläge genom att ge filen ett namn:
+Ange till exempel körningsläget `publish` genom att ge filen jar ett namn:
 
 `cq5-publish-p4503`
 
@@ -180,6 +180,6 @@ i filen:
 
 `WEB-INF/web.xml`
 
-Det här är i AEM `war` filen och ska uppdateras före distributionen.
+Detta finns i AEM `war`-filen och bör uppdateras före distributionen.
 
-Se [Installera AEM med en programserver](/help/sites-deploying/application-server-install.md) för mer information.
+Mer information finns i [Installera AEM med en programserver](/help/sites-deploying/application-server-install.md).

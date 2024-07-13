@@ -20,11 +20,11 @@ ht-degree: 0%
 
 ## Ökning {#overview}
 
-FFmpeg är en lösning för konvertering och direktuppspelning av ljud och video och används, när den är installerad, för korrekt transkodning av [videomaterial](../../help/sites-authoring/default-components-foundation.md#video).
+FFmpeg är en lösning för konvertering och direktuppspelning av ljud och video. När den är installerad används den för korrekt omkodning av [videomaterial](../../help/sites-authoring/default-components-foundation.md#video).
 
 ## Installerar FFmpeg {#installing-ffmpeg}
 
-FFmpeg ska vara installerat på de servrar där AEM finns *författare* instans(er).
+FFmpeg ska vara installerat på servern/servrarna som är värd för AEM *author* instans(er).
 
 1. Gå till [https://www.ffmpeg.org](https://www.ffmpeg.org/).
 1. Hämta den senaste versionen av MPEG för just din miljö (Macintosh, Windows eller Linux).
@@ -37,30 +37,30 @@ FFmpeg ska vara installerat på de servrar där AEM finns *författare* instans(
 
    Du bör kunna köra MPEG från vilken katalog som helst i systemet.
 
-   * Till exempel: `ffmpeg -version`.
+   * Exempel: `ffmpeg -version`.
 
 ## Konfigurera MPEG-omkodningstjänsten {#configure-ffmpeg-transcoding-service}
 
-När FFmpeg är installerat konfigureras som standard flera återgivningar (omkodningar) enligt [!UICONTROL DAM Update Asset] arbetsflödesdefinition.
+När FFmpeg är installerat konfigureras som standard flera renderingar (transkoding) enligt arbetsflödesdefinitionen [!UICONTROL DAM Update Asset].
 
 Eftersom omkodningarna är processorintensiva bör du ändra listan över målåtergivningar. I de flesta fall behövs inte omkodning.
 
-Ändra [!UICONTROL DAM Update Asset] arbetsflöde och i det här exemplet för att inaktivera omkodning:
+Så här ändrar du arbetsflödet [!UICONTROL DAM Update Asset] och i det här exemplet stänger du av omkodning:
 
 * Logga in på författarinstansen med administratörsbehörighet.
 * Navigera från global navigering till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-* Sök **[!UICONTROL DAM Update Asset]**.
+* Sök efter **[!UICONTROL DAM Update Asset]**.
 * Dubbelklicka för att öppna arbetsflödet för redigering i det klassiska användargränssnittet.
 
   Resultatplats: [http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html](http://localhost:4502/cf#/etc/workflow/models/dam/update_asset.html)
 
-* Dubbelklicka på **[!UICONTROL FFmpeg transcoding]** för att öppna dialogrutan Stegegenskaper.
-* Under **[!UICONTROL Process]** tab:
+* Dubbelklicka på steget **[!UICONTROL FFmpeg transcoding]** för att öppna dialogrutan Stegegenskaper.
+* Under fliken **[!UICONTROL Process]**:
 
-   * **[!UICONTROL Arugments]**: Rensa alla poster för att inaktivera omkodning Standardvärden: `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
+   * **[!UICONTROL Arugments]**: Rensa alla poster om du vill inaktivera standardvärden för omkodning: `profile:format_ogg,profile:format_aac,profile:format_flv,profile:format_aac_ie`
 
   ![configure-ffmpeg](assets/configure-ffmpeg.png)
 
-* Välj **[!UICONTROL OK]** för att stänga `Step Properties` -dialogrutan.
+* Välj **[!UICONTROL OK]** för att stänga dialogrutan `Step Properties`.
 
-* Välj **[!UICONTROL Save]** för att spara `DAM Update Asset` arbetsflöde.
+* Välj **[!UICONTROL Save]** om du vill spara arbetsflödet för `DAM Update Asset`.

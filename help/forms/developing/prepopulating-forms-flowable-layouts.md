@@ -37,9 +37,9 @@ Det måste finnas ett XML-element för varje formulärfält som du vill fylla i 
 
 När du fyller i ett formulär som redan innehåller data i förväg måste du ange de data som redan visas i XML-datakällan. Anta att ett formulär som innehåller 10 fält innehåller data i fyra fält. Anta sedan att du vill fylla i de återstående sex fälten i förväg. I det här fallet måste du ange 10 XML-element i XML-datakällan som används för att fylla i formuläret i förväg. Om du bara anger sex element är de fyra ursprungliga fälten tomma.
 
-Du kan t.ex. fylla i ett formulär i förväg, t.ex. exempelbekräftelseformuläret. (Se&quot;Bekräftelseformulär&quot; i [Återger interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md).)
+Du kan t.ex. fylla i ett formulär i förväg, t.ex. exempelbekräftelseformuläret. (Se&quot;Bekräftelseformulär&quot; i [Återge interaktiv PDF forms](/help/forms/developing/rendering-interactive-pdf-forms.md).)
 
-Om du vill fylla i exempelbekräftelseformuläret i förväg måste du skapa en XML-datakälla som innehåller tre XML-element som matchar de tre fälten i formuläret. Formuläret innehåller följande tre fält: `FirstName`, `LastName`och `Amount`. Det första steget är att skapa en XML-datakälla som innehåller XML-element som matchar fälten i formulärdesignen. Nästa steg är att tilldela datavärden till XML-elementen, vilket visas i följande XML-kod.
+Om du vill fylla i exempelbekräftelseformuläret i förväg måste du skapa en XML-datakälla som innehåller tre XML-element som matchar de tre fälten i formuläret. Det här formuläret innehåller följande tre fält: `FirstName`, `LastName` och `Amount`. Det första steget är att skapa en XML-datakälla som innehåller XML-element som matchar fälten i formulärdesignen. Nästa steg är att tilldela datavärden till XML-elementen, vilket visas i följande XML-kod.
 
 ```xml
      <Untitled>
@@ -51,7 +51,7 @@ Om du vill fylla i exempelbekräftelseformuläret i förväg måste du skapa en 
 
 När du har fyllt i bekräftelseformuläret i förväg med den här XML-datakällan och sedan återger formuläret, visas de datavärden som du har tilldelat XML-elementen, vilket visas i följande diagram.
 
-![pf_pf_confirmationxml3](assets/pf_pf_confirmxml3.png)
+![pf_pf_confirmXML3](assets/pf_pf_confirmxml3.png)
 
 ### Fylla i formulär i förväg med flödeslayouter {#prepopulating_forms_with_flowable_layouts-1}
 
@@ -174,9 +174,9 @@ Observera att varje datagrupp innehåller fyra XML-element som motsvarar denna i
 * Antal artiklar
 * Enhetspris
 
-Namnet på en undergrupps överordnade XML-element måste matcha namnet på delformuläret som finns i formulärdesignen. I föregående diagram kan du till exempel observera att namnet på den överordnade XML-elementet för dataundergruppen är `detail`. Detta motsvarar namnet på delformuläret som är i den formulärdesign som inköpsorderformuläret baseras på. Om namnet på undergruppens överordnade XML-element och delformuläret inte matchar, fylls inte formuläret på serversidan i i förväg.
+Namnet på en undergrupps överordnade XML-element måste matcha namnet på delformuläret som finns i formulärdesignen. Observera till exempel att namnet på undergruppens överordnade XML-element i föregående diagram är `detail`. Detta motsvarar namnet på delformuläret som är i den formulärdesign som inköpsorderformuläret baseras på. Om namnet på undergruppens överordnade XML-element och delformuläret inte matchar, fylls inte formuläret på serversidan i i förväg.
 
-Varje dataundergrupp måste innehålla XML-element som matchar fältnamnen i delformuläret. The `detail` delformuläret i formulärdesignen innehåller följande fält:
+Varje dataundergrupp måste innehålla XML-element som matchar fältnamnen i delformuläret. Delformuläret `detail` i formulärdesignen innehåller följande fält:
 
 * txtPartNum
 * txtDescription
@@ -185,7 +185,7 @@ Varje dataundergrupp måste innehålla XML-element som matchar fältnamnen i del
 
 >[!NOTE]
 >
->Om du försöker fylla i ett formulär i förväg med en datakälla som innehåller upprepade XML-element och du anger `RenderAtClient` alternativ till `No`är det bara den första dataposten som sammanfogas i formuläret. Om du vill vara säker på att alla dataposter sammanfogas i formuläret anger du `RenderAtClient` till `Yes`. Mer information om `RenderAtClient` alternativ, se [Återger Forms på klienten](/help/forms/developing/rendering-forms-client.md).
+>Om du försöker fylla i ett formulär i förväg med en datakälla som innehåller upprepade XML-element och du anger alternativet `RenderAtClient` till `No` sammanfogas endast den första dataposten i formuläret. Om du vill vara säker på att alla dataposter sammanfogas i formuläret anger du `RenderAtClient` till `Yes`. Mer information om alternativet `RenderAtClient` finns i [Återge Forms på klienten](/help/forms/developing/rendering-forms-client.md).
 
 >[!NOTE]
 >
@@ -210,19 +210,19 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa en XML-datakälla i minnet**
 
-Du kan använda `org.w3c.dom` klasser för att skapa en XML-datakälla i minnet för att fylla i ett formulär med flödeslayout i förväg. Placera data i en XML-datakälla som överensstämmer med formuläret. Mer information om relationen mellan ett formulär med flödeslayout och XML-datakällan finns i [Förstå undergrupper av data](#understanding-data-subgroups).
+Du kan använda `org.w3c.dom`-klasser för att skapa en XML-datakälla i minnet för att fylla i ett formulär med flödeslayout i förväg. Placera data i en XML-datakälla som överensstämmer med formuläret. Mer information om relationen mellan ett formulär med flödeslayout och XML-datakällan finns i [Om datagrupper](#understanding-data-subgroups).
 
 **Konvertera XML-datakällan**
 
-En XML-datakälla i minnet som skapas med `org.w3c.dom` kan konverteras till `com.adobe.idp.Document` -objekt innan det kan användas för att fylla i ett formulär i förväg. En XML-datakälla i minnet kan konverteras med hjälp av Java XML-omformningsklasser.
+En XML-datakälla i minnet som skapas med hjälp av `org.w3c.dom`-klasser kan konverteras till ett `com.adobe.idp.Document`-objekt innan det kan användas för att fylla i ett formulär i förväg. En XML-datakälla i minnet kan konverteras med hjälp av Java XML-omformningsklasser.
 
 >[!NOTE]
 >
->Om du använder WSDL för Forms-tjänsten för att fylla i ett formulär i förväg måste du konvertera en `org.w3c.dom.Document` objekt till `BLOB` -objekt.
+>Om du använder Forms-tjänstens WSDL för att fylla i ett formulär i förväg måste du konvertera ett `org.w3c.dom.Document`-objekt till ett `BLOB`-objekt.
 
 **Återge ett förifyllt formulär**
 
-Du återger ett förifyllt formulär precis som andra formulär. Den enda skillnaden är att du använder `com.adobe.idp.Document` objekt som innehåller XML-datakällan för att fylla i formuläret i förväg.
+Du återger ett förifyllt formulär precis som andra formulär. Den enda skillnaden är att du använder objektet `com.adobe.idp.Document` som innehåller XML-datakällan för att fylla i formuläret i förväg.
 
 **Se även**
 
@@ -242,67 +242,67 @@ Så här fyller du i ett formulär med flödeslayout med Forms API (Java) i för
 
 1. Inkludera projektfiler
 
-   Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+   Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg. Mer information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 1. Skapa en XML-datakälla i minnet
 
-   * Skapa ett Java `DocumentBuilderFactory` genom att anropa `DocumentBuilderFactory` class&#39; `newInstance` -metod.
-   * Skapa ett Java `DocumentBuilder` genom att anropa `DocumentBuilderFactory` objektets `newDocumentBuilder` -metod.
-   * Ring `DocumentBuilder` objektets `newDocument` metod för att instansiera en `org.w3c.dom.Document` -objekt.
-   * Skapa XML-datakällans rotelement genom att anropa `org.w3c.dom.Document` objektets `createElement` -metod. Detta skapar en `Element` som representerar rotelementet. Skicka ett strängvärde som representerar elementets namn till `createElement` -metod. Skicka returvärdet till `Element`. Lägg sedan till rotelementet i dokumentet genom att anropa `Document` objektets `appendChild` och skicka rotelementobjektet som ett argument. Följande kodrader visar den här programlogiken:
+   * Skapa ett Java `DocumentBuilderFactory`-objekt genom att anropa metoden `DocumentBuilderFactory` class&#39; `newInstance` .
+   * Skapa ett Java `DocumentBuilder`-objekt genom att anropa `DocumentBuilderFactory`-objektets `newDocumentBuilder`-metod.
+   * Anropa `DocumentBuilder`-objektets `newDocument`-metod för att instansiera ett `org.w3c.dom.Document`-objekt.
+   * Skapa XML-datakällans rotelement genom att anropa `org.w3c.dom.Document`-objektets `createElement`-metod. Detta skapar ett `Element`-objekt som representerar rotelementet. Skicka ett strängvärde som representerar elementets namn till metoden `createElement`. Skicka returvärdet till `Element`. Lägg sedan till rotelementet i dokumentet genom att anropa `Document`-objektets `appendChild`-metod och skicka rotelementobjektet som ett argument. Följande kodrader visar den här programlogiken:
 
      ` Element root = (Element)document.createElement("transaction");  document.appendChild(root);`
 
-   * Skapa XML-datakällans rubrikelement genom att anropa `Document` objektets `createElement` -metod. Skicka ett strängvärde som representerar elementets namn till `createElement` -metod. Skicka returvärdet till `Element`. Lägg sedan till rubrikelementet i rotelementet genom att anropa `root` objektets `appendChild` och skicka rubrikelementobjektet som ett argument. De XML-element som läggs till i rubrikelementet motsvarar den statiska delen av formuläret. Följande kodrader visar den här programlogiken:
+   * Skapa XML-datakällans rubrikelement genom att anropa `Document`-objektets `createElement`-metod. Skicka ett strängvärde som representerar elementets namn till metoden `createElement`. Skicka returvärdet till `Element`. Lägg sedan till rubrikelementet i rotelementet genom att anropa `root`-objektets `appendChild`-metod och skicka rubrikelementsobjektet som ett argument. De XML-element som läggs till i rubrikelementet motsvarar den statiska delen av formuläret. Följande kodrader visar den här programlogiken:
 
      ` Element header = (Element)document.createElement("header");  root.appendChild(header);`
 
-   * Skapa ett underordnat element som tillhör rubrikelementet genom att anropa `Document` objektets `createElement` och skicka ett strängvärde som representerar elementets namn. Skicka returvärdet till `Element`. Ange sedan ett värde för det underordnade elementet genom att anropa dess `appendChild` och skicka `Document` objektets `createTextNode` -metoden som ett argument. Ange ett strängvärde som visas som det underordnade elementets värde. Slutligen lägger du till det underordnade elementet i rubrikelementet genom att anropa rubrikelementets `appendChild` och skicka det underordnade elementobjektet som ett argument. Följande kodrader visar den här programlogiken:
+   * Skapa ett underordnat element som tillhör rubrikelementet genom att anropa `Document`-objektets `createElement`-metod och skicka ett strängvärde som representerar elementets namn. Skicka returvärdet till `Element`. Ange sedan ett värde för det underordnade elementet genom att anropa dess `appendChild`-metod och skicka `Document`-objektets `createTextNode`-metod som ett argument. Ange ett strängvärde som visas som det underordnade elementets värde. Lägg slutligen till det underordnade elementet i rubrikelementet genom att anropa rubrikelementets `appendChild`-metod och skicka det underordnade elementobjektet som ett argument. Följande kodrader visar den här programlogiken:
 
      ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
 
-   * Lägg till alla återstående element i rubrikelementet genom att upprepa det sista delsteget för varje fält som visas i den statiska delen av formuläret (i XML-datakälldiagrammet visas dessa fält i avsnitt A. (Se [Förstå undergrupper av data](#understanding-data-subgroups).)
-   * Skapa XML-datakällans detail-element genom att anropa `Document` objektets `createElement` -metod. Skicka ett strängvärde som representerar elementets namn till `createElement` -metod. Skicka returvärdet till `Element`. Lägg sedan till detail-elementet i rotelementet genom att anropa `root` objektets `appendChild` och skicka detail-elementobjektet som ett argument. XML-elementen som läggs till i detail-elementet motsvarar den dynamiska delen av formuläret. Följande kodrader visar den här programlogiken:
+   * Lägg till alla återstående element i rubrikelementet genom att upprepa det sista delsteget för varje fält som visas i den statiska delen av formuläret (i XML-datakällsdiagrammet visas dessa fält i avsnitt A. (Se [Förstå undergrupper för data](#understanding-data-subgroups)).
+   * Skapa XML-datakällans detail-element genom att anropa `Document`-objektets `createElement`-metod. Skicka ett strängvärde som representerar elementets namn till metoden `createElement`. Skicka returvärdet till `Element`. Lägg sedan till detail-elementet i rotelementet genom att anropa `root`-objektets `appendChild` -metod och skicka detail-elementobjektet som ett argument. XML-elementen som läggs till i detail-elementet motsvarar den dynamiska delen av formuläret. Följande kodrader visar den här programlogiken:
 
      ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`
 
-   * Skapa ett underordnat element som tillhör detaljelementet genom att anropa `Document` objektets `createElement` och skicka ett strängvärde som representerar elementets namn. Skicka returvärdet till `Element`. Ange sedan ett värde för det underordnade elementet genom att anropa dess `appendChild` och skicka `Document` objektets `createTextNode` -metoden som ett argument. Ange ett strängvärde som visas som det underordnade elementets värde. Slutligen lägger du till det underordnade elementet i detail-elementet genom att anropa detail-elementets `appendChild` och skicka det underordnade elementobjektet som ett argument. Följande kodrader visar den här programlogiken:
+   * Skapa ett underordnat element som tillhör detail-elementet genom att anropa `Document`-objektets `createElement`-metod och skicka ett strängvärde som representerar elementets namn. Skicka returvärdet till `Element`. Ange sedan ett värde för det underordnade elementet genom att anropa dess `appendChild`-metod och skicka `Document`-objektets `createTextNode`-metod som ett argument. Ange ett strängvärde som visas som det underordnade elementets värde. Lägg slutligen till det underordnade elementet i detail-elementet genom att anropa detail-elementets `appendChild`-metod och skicka det underordnade elementobjektet som ett argument. Följande kodrader visar den här programlogiken:
 
      ` Element txtPartNum = (Element)document.createElement("txtPartNum");  txtPartNum.appendChild(document.createTextNode("00010-100"));  detail.appendChild(txtPartNum);`
 
-   * Upprepa det sista delsteget för alla XML-element som ska läggas till i detail-elementet. Om du vill skapa den XML-datakälla som används för att fylla i inköpsorderformuläret måste du lägga till följande XML-element i detail-elementet: `txtDescription`, `numQty`och `numUnitPrice`.
+   * Upprepa det sista delsteget för alla XML-element som ska läggas till i detail-elementet. Om du vill skapa den XML-datakälla som används för att fylla i inköpsorderformuläret måste du lägga till följande XML-element i detail-elementet: `txtDescription`, `numQty` och `numUnitPrice`.
    * Upprepa de två sista delstegen för alla dataobjekt som används för att fylla i formuläret i förväg.
 
 1. Konvertera XML-datakällan
 
-   * Skapa en `javax.xml.transform.Transformer` genom att anropa `javax.xml.transform.Transformer` objektets statiska `newInstance` -metod.
-   * Skapa en `Transformer` genom att anropa `TransformerFactory` objektets `newTransformer` -metod.
-   * Skapa en `ByteArrayOutputStream` genom att använda dess konstruktor.
-   * Skapa en `javax.xml.transform.dom.DOMSource` genom att använda konstruktorn och skicka `org.w3c.dom.Document` objekt som skapades i steg 1.
-   * Skapa en `javax.xml.transform.dom.DOMSource` genom att använda konstruktorn och skicka `ByteArrayOutputStream` -objekt.
-   * Fyll i Java `ByteArrayOutputStream` genom att anropa `javax.xml.transform.Transformer` objektets `transform` metoden och skicka `javax.xml.transform.dom.DOMSource` och `javax.xml.transform.stream.StreamResult` objekt.
-   * Skapa en bytearray och tilldela storleken på `ByteArrayOutputStream` till bytearrayen.
-   * Fylla i bytearrayen genom att anropa `ByteArrayOutputStream` objektets `toByteArray` -metod.
-   * Skapa en `com.adobe.idp.Document` genom att använda dess konstruktor och skicka bytearrayen.
+   * Skapa ett `javax.xml.transform.Transformer`-objekt genom att anropa `javax.xml.transform.Transformer`-objektets statiska `newInstance`-metod.
+   * Skapa ett `Transformer`-objekt genom att anropa `TransformerFactory`-objektets `newTransformer`-metod.
+   * Skapa ett `ByteArrayOutputStream`-objekt med hjälp av dess konstruktor.
+   * Skapa ett `javax.xml.transform.dom.DOMSource`-objekt med hjälp av dess konstruktor och skicka det `org.w3c.dom.Document`-objekt som skapades i steg 1.
+   * Skapa ett `javax.xml.transform.dom.DOMSource`-objekt med hjälp av dess konstruktor och skicka `ByteArrayOutputStream`-objektet.
+   * Fyll i Java `ByteArrayOutputStream`-objektet genom att anropa `javax.xml.transform.Transformer`-objektets `transform`-metod och skicka `javax.xml.transform.dom.DOMSource`- och `javax.xml.transform.stream.StreamResult`-objekten.
+   * Skapa en bytearray och tilldela storleken på `ByteArrayOutputStream`-objektet till bytearrayen.
+   * Fyll i bytearrayen genom att anropa `ByteArrayOutputStream`-objektets `toByteArray`-metod.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka bytearrayen.
 
 1. Återge ett förifyllt formulär
 
-   Anropa `FormsServiceClient` objektets `renderPDFForm` och skicka följande värden:
+   Anropa `FormsServiceClient`-objektets `renderPDFForm`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget.
-   * A `com.adobe.idp.Document` objekt som innehåller data som ska sammanfogas med formuläret. Se till att du använder `com.adobe.idp.Document` objekt som skapats i steg ett och två.
-   * A `PDFFormRenderSpec` objekt som lagrar körningsalternativ.
-   * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
-   * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * Ett `com.adobe.idp.Document`-objekt som innehåller data som ska sammanfogas med formuläret. Se till att du använder det `com.adobe.idp.Document`-objekt som skapats i steg ett och två.
+   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ.
+   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten.
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
 
-   The `renderPDFForm` returnerar en `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `renderPDFForm` returnerar ett `FormsResult`-objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
-   * Skapa en `javax.servlet.ServletOutputStream` som används för att skicka en formulärdataström till klientens webbläsare.
-   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt `getOutputContent` -metod.
-   * Skapa en `java.io.InputStream` genom att anropa `com.adobe.idp.Document` objektets `getInputStream` -metod.
-   * Skapa en bytearray som fyller i den med formulärdataströmmen genom att anropa `InputStream` objektets `read` och skicka bytearrayen som ett argument.
-   * Anropa `javax.servlet.ServletOutputStream` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skicka en formulärdataström till klientens webbläsare.
+   * Skapa ett `com.adobe.idp.Document`-objekt genom att anropa metoden `getOutputContent` för `FormsResult`-objektet.
+   * Skapa ett `java.io.InputStream`-objekt genom att anropa `com.adobe.idp.Document`-objektets `getInputStream`-metod.
+   * Skapa en bytearray som fyller i den med formulärdataströmmen genom att anropa `InputStream`-objektets `read`-metod och skicka bytearrayen som ett argument.
+   * Anropa `javax.servlet.ServletOutputStream`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 
@@ -318,77 +318,77 @@ Så här fyller du i ett formulär med flödeslayout med Forms API (webbtjänste
 
 1. Inkludera projektfiler
 
-   * Skapa Java-proxyklasser som använder Forms tjänst-WSDL. (Se [Skapa Java-proxyklasser med Apache-axeln](/help/forms/developing/invoking-aem-forms-using-web.md#creating-java-proxy-classes-using-apache-axis).)
+   * Skapa Java-proxyklasser som använder Forms tjänst-WSDL. (Se [Skapa Java-proxyklasser med Apache Axis](/help/forms/developing/invoking-aem-forms-using-web.md#creating-java-proxy-classes-using-apache-axis).)
    * Inkludera Java-proxyklasserna i klassökvägen.
 
 1. Skapa en XML-datakälla i minnet
 
-   * Skapa ett Java `DocumentBuilderFactory` genom att anropa `DocumentBuilderFactory` class&#39; `newInstance` -metod.
-   * Skapa ett Java `DocumentBuilder` genom att anropa `DocumentBuilderFactory` objektets `newDocumentBuilder` -metod.
-   * Ring `DocumentBuilder` objektets `newDocument` metod för att instansiera en `org.w3c.dom.Document` -objekt.
-   * Skapa XML-datakällans rotelement genom att anropa `org.w3c.dom.Document` objektets `createElement` -metod. Detta skapar en `Element` som representerar rotelementet. Skicka ett strängvärde som representerar elementets namn till `createElement` -metod. Skicka returvärdet till `Element`. Lägg sedan till rotelementet i dokumentet genom att anropa `Document` objektets `appendChild` och skicka rotelementobjektet som ett argument. Följande kodrader visar den här programlogiken:
+   * Skapa ett Java `DocumentBuilderFactory`-objekt genom att anropa metoden `DocumentBuilderFactory` class&#39; `newInstance` .
+   * Skapa ett Java `DocumentBuilder`-objekt genom att anropa `DocumentBuilderFactory`-objektets `newDocumentBuilder`-metod.
+   * Anropa `DocumentBuilder`-objektets `newDocument`-metod för att instansiera ett `org.w3c.dom.Document`-objekt.
+   * Skapa XML-datakällans rotelement genom att anropa `org.w3c.dom.Document`-objektets `createElement`-metod. Detta skapar ett `Element`-objekt som representerar rotelementet. Skicka ett strängvärde som representerar elementets namn till metoden `createElement`. Skicka returvärdet till `Element`. Lägg sedan till rotelementet i dokumentet genom att anropa `Document`-objektets `appendChild`-metod och skicka rotelementobjektet som ett argument. Följande kodrader visar den här programlogiken:
 
      ` Element root = (Element)document.createElement("transaction");  document.appendChild(root);`
 
-   * Skapa XML-datakällans rubrikelement genom att anropa `Document` objektets `createElement` -metod. Skicka ett strängvärde som representerar elementets namn till `createElement` -metod. Skicka returvärdet till `Element`. Lägg sedan till rubrikelementet i rotelementet genom att anropa `root` objektets `appendChild` och skicka rubrikelementobjektet som ett argument. De XML-element som läggs till i rubrikelementet motsvarar den statiska delen av formuläret. Följande kodrader visar den här programlogiken:
+   * Skapa XML-datakällans rubrikelement genom att anropa `Document`-objektets `createElement`-metod. Skicka ett strängvärde som representerar elementets namn till metoden `createElement`. Skicka returvärdet till `Element`. Lägg sedan till rubrikelementet i rotelementet genom att anropa `root`-objektets `appendChild`-metod och skicka rubrikelementsobjektet som ett argument. De XML-element som läggs till i rubrikelementet motsvarar den statiska delen av formuläret. Följande kodrader visar den här programlogiken:
 
      ` Element header = (Element)document.createElement("header");  root.appendChild(header);`
 
-   * Skapa ett underordnat element som tillhör rubrikelementet genom att anropa `Document` objektets `createElement` och skicka ett strängvärde som representerar elementets namn. Skicka returvärdet till `Element`. Ange sedan ett värde för det underordnade elementet genom att anropa dess `appendChild` och skicka `Document` objektets `createTextNode` -metoden som ett argument. Ange ett strängvärde som visas som det underordnade elementets värde. Slutligen lägger du till det underordnade elementet i rubrikelementet genom att anropa rubrikelementets `appendChild` och skicka det underordnade elementobjektet som ett argument. Följande kodrader visar den här programlogiken:
+   * Skapa ett underordnat element som tillhör rubrikelementet genom att anropa `Document`-objektets `createElement`-metod och skicka ett strängvärde som representerar elementets namn. Skicka returvärdet till `Element`. Ange sedan ett värde för det underordnade elementet genom att anropa dess `appendChild`-metod och skicka `Document`-objektets `createTextNode`-metod som ett argument. Ange ett strängvärde som visas som det underordnade elementets värde. Lägg slutligen till det underordnade elementet i rubrikelementet genom att anropa rubrikelementets `appendChild`-metod och skicka det underordnade elementobjektet som ett argument. Följande kodrader visar den här programlogiken:
 
      ` Element poNum= (Element)document.createElement("txtPONum");  poNum.appendChild(document.createTextNode("8745236985"));  header.appendChild(LastName);`
 
-   * Lägg till alla återstående element i rubrikelementet genom att upprepa det sista delsteget för varje fält som visas i den statiska delen av formuläret (i XML-datakälldiagrammet visas dessa fält i avsnitt A. (Se [Förstå undergrupper av data](#understanding-data-subgroups).)
-   * Skapa XML-datakällans detail-element genom att anropa `Document` objektets `createElement` -metod. Skicka ett strängvärde som representerar elementets namn till `createElement` -metod. Skicka returvärdet till `Element`. Lägg sedan till detail-elementet i rotelementet genom att anropa `root` objektets `appendChild` och skicka detail-elementobjektet som ett argument. XML-elementen som läggs till i detail-elementet motsvarar den dynamiska delen av formuläret. Följande kodrader visar den här programlogiken:
+   * Lägg till alla återstående element i rubrikelementet genom att upprepa det sista delsteget för varje fält som visas i den statiska delen av formuläret (i XML-datakällsdiagrammet visas dessa fält i avsnitt A. (Se [Förstå undergrupper för data](#understanding-data-subgroups)).
+   * Skapa XML-datakällans detail-element genom att anropa `Document`-objektets `createElement`-metod. Skicka ett strängvärde som representerar elementets namn till metoden `createElement`. Skicka returvärdet till `Element`. Lägg sedan till detail-elementet i rotelementet genom att anropa `root`-objektets `appendChild` -metod och skicka detail-elementobjektet som ett argument. XML-elementen som läggs till i detail-elementet motsvarar den dynamiska delen av formuläret. Följande kodrader visar den här programlogiken:
 
      ` Element detail = (Element)document.createElement("detail");  root.appendChild(detail);`
 
-   * Skapa ett underordnat element som tillhör detaljelementet genom att anropa `Document` objektets `createElement` och skicka ett strängvärde som representerar elementets namn. Skicka returvärdet till `Element`. Ange sedan ett värde för det underordnade elementet genom att anropa dess `appendChild` och skicka `Document` objektets `createTextNode` -metoden som ett argument. Ange ett strängvärde som visas som det underordnade elementets värde. Slutligen lägger du till det underordnade elementet i detail-elementet genom att anropa detail-elementets `appendChild` och skicka det underordnade elementobjektet som ett argument. Följande kodrader visar den här programlogiken:
+   * Skapa ett underordnat element som tillhör detail-elementet genom att anropa `Document`-objektets `createElement`-metod och skicka ett strängvärde som representerar elementets namn. Skicka returvärdet till `Element`. Ange sedan ett värde för det underordnade elementet genom att anropa dess `appendChild`-metod och skicka `Document`-objektets `createTextNode`-metod som ett argument. Ange ett strängvärde som visas som det underordnade elementets värde. Lägg slutligen till det underordnade elementet i detail-elementet genom att anropa detail-elementets `appendChild`-metod och skicka det underordnade elementobjektet som ett argument. Följande kodrader visar den här programlogiken:
 
      ` Element txtPartNum = (Element)document.createElement("txtPartNum");  txtPartNum.appendChild(document.createTextNode("00010-100"));  detail.appendChild(txtPartNum);`
 
-   * Upprepa det sista delsteget för alla XML-element som ska läggas till i detail-elementet. Om du vill skapa den XML-datakälla som används för att fylla i inköpsorderformuläret måste du lägga till följande XML-element i detail-elementet: `txtDescription`, `numQty`och `numUnitPrice`.
+   * Upprepa det sista delsteget för alla XML-element som ska läggas till i detail-elementet. Om du vill skapa den XML-datakälla som används för att fylla i inköpsorderformuläret måste du lägga till följande XML-element i detail-elementet: `txtDescription`, `numQty` och `numUnitPrice`.
    * Upprepa de två sista delstegen för alla dataobjekt som används för att fylla i formuläret i förväg.
 
 1. Konvertera XML-datakällan
 
-   * Skapa en `javax.xml.transform.Transformer` genom att anropa `javax.xml.transform.Transformer` objektets statiska `newInstance` -metod.
-   * Skapa en `Transformer` genom att anropa `TransformerFactory` objektets `newTransformer` -metod.
-   * Skapa en `ByteArrayOutputStream` genom att använda dess konstruktor.
-   * Skapa en `javax.xml.transform.dom.DOMSource` genom att använda konstruktorn och skicka `org.w3c.dom.Document` objekt som skapades i steg 1.
-   * Skapa en `javax.xml.transform.dom.DOMSource` genom att använda konstruktorn och skicka `ByteArrayOutputStream` -objekt.
-   * Fyll i Java `ByteArrayOutputStream` genom att anropa `javax.xml.transform.Transformer` objektets `transform` metoden och skicka `javax.xml.transform.dom.DOMSource` och `javax.xml.transform.stream.StreamResult` objekt.
-   * Skapa en bytearray och tilldela storleken på `ByteArrayOutputStream` till bytearrayen.
-   * Fylla i bytearrayen genom att anropa `ByteArrayOutputStream` objektets `toByteArray` -metod.
-   * Skapa en `BLOB` genom att använda dess konstruktor och anropa dess `setBinaryData` och skicka bytearrayen.
+   * Skapa ett `javax.xml.transform.Transformer`-objekt genom att anropa `javax.xml.transform.Transformer`-objektets statiska `newInstance`-metod.
+   * Skapa ett `Transformer`-objekt genom att anropa `TransformerFactory`-objektets `newTransformer`-metod.
+   * Skapa ett `ByteArrayOutputStream`-objekt med hjälp av dess konstruktor.
+   * Skapa ett `javax.xml.transform.dom.DOMSource`-objekt med hjälp av dess konstruktor och skicka det `org.w3c.dom.Document`-objekt som skapades i steg 1.
+   * Skapa ett `javax.xml.transform.dom.DOMSource`-objekt med hjälp av dess konstruktor och skicka `ByteArrayOutputStream`-objektet.
+   * Fyll i Java `ByteArrayOutputStream`-objektet genom att anropa `javax.xml.transform.Transformer`-objektets `transform`-metod och skicka `javax.xml.transform.dom.DOMSource`- och `javax.xml.transform.stream.StreamResult`-objekten.
+   * Skapa en bytearray och tilldela storleken på `ByteArrayOutputStream`-objektet till bytearrayen.
+   * Fyll i bytearrayen genom att anropa `ByteArrayOutputStream`-objektets `toByteArray`-metod.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor, anropa dess `setBinaryData`-metod och skicka bytearrayen.
 
 1. Återge ett förifyllt formulär
 
-   Anropa `FormsService` objektets `renderPDFForm` och skicka följande värden:
+   Anropa `FormsService`-objektets `renderPDFForm`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget.
-   * A `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Se till att du använder `BLOB` objekt som skapades i steg ett och två.
-   * A `PDFFormRenderSpecc` objekt som lagrar körningsalternativ. Mer information finns i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-   * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
-   * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
-   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Det här används för att lagra det återgivna PDF-formuläret.
-   * En tom `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret).
-   * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde).
-   * En tom `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+   * Ett `BLOB`-objekt som innehåller data som ska sammanfogas med formuläret. Se till att du använder objektet `BLOB` som skapades i steg ett och två.
+   * Ett `PDFFormRenderSpecc`-objekt som lagrar körningsalternativ. Mer information finns i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten.
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * Ett tomt `com.adobe.idp.services.holders.BLOBHolder`-objekt som fylls i av metoden. Det här används för att lagra det återgivna PDF-formuläret.
+   * Ett tomt `javax.xml.rpc.holders.LongHolder`-objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret).
+   * Ett tomt `javax.xml.rpc.holders.StringHolder`-objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde).
+   * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder`-objekt som innehåller resultatet av den här åtgärden.
 
-   The `renderPDFForm` metoden fyller i `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `renderPDFForm` fyller i objektet `com.adobe.idp.services.holders.FormsResultHolder` som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
-   * Skapa en `FormResult` genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder` objektets `value` datamedlem.
-   * Skapa en `BLOB` objekt som innehåller formulärdata genom att anropa `FormsResult` objektets `getOutputContent` -metod.
-   * Hämta innehållstypen för `BLOB` genom att anropa dess `getContentType` -metod.
-   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `BLOB` -objekt.
-   * Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` -metod.
-   * Skapa en bytearray och fylla i den genom att anropa `BLOB` objektets `getBinaryData` -metod. Den här aktiviteten tilldelar innehållet i `FormsResult` till bytearrayen.
-   * Anropa `javax.servlet.http.HttpServletResponse` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
+   * Skapa ett `FormResult`-objekt genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder`-objektets `value`-datamedlem.
+   * Skapa ett `BLOB`-objekt som innehåller formulärdata genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+   * Hämta innehållstypen för objektet `BLOB` genom att anropa dess `getContentType`-metod.
+   * Ange innehållstypen för objektet `javax.servlet.http.HttpServletResponse` genom att anropa dess `setContentType`-metod och skicka innehållstypen för objektet `BLOB`.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientwebbläsaren genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
+   * Skapa en bytearray och fyll i den genom att anropa `BLOB`-objektets `getBinaryData`-metod. Den här aktiviteten tilldelar innehållet i objektet `FormsResult` till bytearrayen.
+   * Anropa `javax.servlet.http.HttpServletResponse`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
    >[!NOTE]
    >
-   >The `renderPDFForm` metoden fyller i `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
+   >Metoden `renderPDFForm` fyller i objektet `com.adobe.idp.services.holders.FormsResultHolder` som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 **Se även**
 

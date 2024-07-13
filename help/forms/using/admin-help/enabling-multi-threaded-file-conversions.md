@@ -43,7 +43,7 @@ När du lägger till användare för OpenOffice, Microsoft® Word eller Microsof
 I ett Windows-operativsystem måste administratörsanvändarkonton som används för PDF-konvertering (PDFG-användare) ersätta tokenbehörighet på processnivå. Du kan lägga till den här rättigheten med hjälp av grupprincipredigeraren:
 
 1. Klicka på Kör på Start-menyn i Windows och ange gpedit.msc.
-1. Klicka på Lokal datorprincip > Datorkonfiguration > Windows-inställningar > Skyddsinställningar > Lokala principer > Tilldelning av användarrättigheter. Redigera *Ersätta en processnivåtoken* princip som ska inkludera gruppen Administratörer.
+1. Klicka på Lokal datorprincip > Datorkonfiguration > Windows-inställningar > Skyddsinställningar > Lokala principer > Tilldelning av användarrättigheter. Redigera principen *Ersätt en token* på processnivå om du vill inkludera gruppen Administratörer.
 1. Lägg till användaren i posten Ersätt en processnivåtoken.
 
 ### Ytterligare konfiguration krävs för OpenOffice, Microsoft® Word och Microsoft® PowerPoint på Windows Server 2008 {#additional-configuration-required-for-openoffice-microsoft-word-and-microsoft-powerpoint-on-windows-server-2008}
@@ -69,7 +69,7 @@ Om du kör OpenOffice, Microsoft® Word eller Microsoft® PowerPoint på Windows
 
    >[!NOTE]
    >
-   >Kontrollera att du har tilldelat användarroller för system och PDFG till user1 och user2. Om du vill tilldela en PDFG-roll till en användare läser du [Lägg till ett användarkonto](enabling-multi-threaded-file-conversions.md#add-a-user-account)
+   >Kontrollera att du har tilldelat användarroller för system och PDFG till user1 och user2. Information om hur du tilldelar en PDFG-roll till en användare finns i [Lägg till ett användarkonto](enabling-multi-threaded-file-conversions.md#add-a-user-account)
 
 1. I /etc/sudoers-filen kan du söka efter och kommentera den här raden genom att lägga till ett nummertecken (#) i början av raden:
 
@@ -80,7 +80,7 @@ Om du kör OpenOffice, Microsoft® Word eller Microsoft® PowerPoint på Windows
    Detta gör att du kan lägga till Linux®-användare.
 
 1. Ändra behörigheten för filen etc/sudoers tillbaka till 440.
-1. Tillåt alla användare som du har lagt till via [Lägg till ett användarkonto](enabling-multi-threaded-file-conversions.md#add-a-user-account) för att ansluta till Forms Server. Om du till exempel vill ge en lokal användare med namnet user1 behörighet att ansluta till Forms Server använder du följande kommando
+1. Tillåt alla användare som du har lagt till via [Lägg till ett användarkonto](enabling-multi-threaded-file-conversions.md#add-a-user-account) att ansluta till Forms Server. Om du till exempel vill ge en lokal användare med namnet user1 behörighet att ansluta till Forms Server använder du följande kommando
 
    `xhost +local:user1@`
 

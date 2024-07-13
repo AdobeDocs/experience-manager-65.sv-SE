@@ -43,13 +43,13 @@ Innan du ger en översikt över specifika detaljer finns det en liten samling al
 
 * Ändra ordning på sidor i en mapp
 
-   * Detta kan göras i [Listvy](/help/sites-authoring/basic-handling.md#list-view). Ändringarna används och visas i andra vyer.
+   * Detta kan du göra i [listvyn](/help/sites-authoring/basic-handling.md#list-view). Ändringarna används och visas i andra vyer.
 
 #### Sidredigering {#page-authoring}
 
 * Navigera i länkar
 
-   * ***Länkar är inte tillgängliga för navigering*** när du är **Redigera** läge. Om du vill navigera med länkar måste du [förhandsgranska sidan](/help/sites-authoring/editing-content.md#previewing-pages) med antingen
+   * ***Länkar är inte tillgängliga för navigering*** när du är i läget **Redigera**. Om du vill navigera med länkar måste du [förhandsgranska sidan](/help/sites-authoring/editing-content.md#previewing-pages) med något av följande:
 
       * [Förhandsgranskningsläge](/help/sites-authoring/editing-content.md#preview-mode)
       * [Visa som publicerad](/help/sites-authoring/editing-content.md#view-as-published)
@@ -68,30 +68,30 @@ Innan du ger en översikt över specifika detaljer finns det en liten samling al
 
 Det finns olika aspekter av att hitta en sida. Du kan navigera och/eller söka efter:
 
-1. Öppna **Webbplatser** konsol (med **Webbplatser** i [Global navigering](/help/sites-authoring/basic-handling.md#global-navigation)) - den här utlöses (nedrullningsbar) när du väljer länken Adobe Experience Manager (överst till vänster).
+1. Öppna konsolen **Platser** (med alternativet **Platser** i [Global navigering](/help/sites-authoring/basic-handling.md#global-navigation)) - den utlöses (nedrullningsbar) när du väljer länken Adobe Experience Manager (överst till vänster).
 
-1. Navigera nedåt i trädet genom att trycka/klicka på lämplig sida. Hur sidresurserna visas beror på vilken vy du använder - [Kort, lista eller kolumn](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources):
+1. Navigera nedåt i trädet genom att trycka/klicka på lämplig sida. Hur sidresurserna visas beror på vilken vy du använder - [Kort, Lista eller Kolumn](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources):
 
    ![screen_shot_2018-03-21at160214](assets/screen_shot_2018-03-21at160214.png)
 
-1. Navigera uppåt i trädet med [sidhuvudet på väggen](/help/sites-authoring/basic-handling.md#theheaderwithbreadcrumbs)som gör att du kan gå tillbaka till den valda platsen:
+1. Navigera uppåt i trädet med hjälp av [den synliga sökvägen i huvudet](/help/sites-authoring/basic-handling.md#theheaderwithbreadcrumbs), som gör att du kan gå tillbaka till den valda platsen:
 
    ![qgtap-01](assets/qgtap-01.png)
 
-1. Du kan också [Sök](/help/sites-authoring/search.md) för en sida. Du kan välja din sida bland de resultat som visas.
+1. Du kan också [söka](/help/sites-authoring/search.md) efter en sida. Du kan välja din sida bland de resultat som visas.
 
    ![qgtap-03](assets/qgtap-03.png)
 
 ### Skapa en ny sida {#creating-a-new-page}
 
-Till [skapa en sida](/help/sites-authoring/managing-pages.md#creating-a-new-page):
+Så här [skapar du en sida](/help/sites-authoring/managing-pages.md#creating-a-new-page):
 
 1. [Navigera till platsen](#finding-your-page) där du vill skapa sidan.
-1. Använd **Skapa** ikon och sedan markera **Sida** från listan:
+1. Använd ikonen **Skapa** och välj sedan **Sida** i listan:
 
    ![qgtap-02](assets/qgtap-02.png)
 
-1. Då öppnas guiden som vägleder dig genom att samla in den information som behövs när [skapa en ny sida](/help/sites-authoring/managing-pages.md#creating-a-new-page). Följ instruktionerna på skärmen.
+1. Guiden som vägleder dig genom att samla in den information som behövs när [du skapar den nya sidan](/help/sites-authoring/managing-pages.md#creating-a-new-page) öppnas. Följ instruktionerna på skärmen.
 
 ### Välja sida för ytterligare åtgärd {#selecting-your-page-for-further-action}
 
@@ -109,10 +109,10 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
 1. Kortvy:
 
-   * Ange markeringsläge med [välja den resurs som krävs](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources) med:
+   * Ange markeringsläge genom att [välja den nödvändiga resursen](/help/sites-authoring/basic-handling.md#viewingandselectingyourresources) med:
 
       * Mobil enhet: markera och hålla kvar
-      * Skrivbord: [snabbåtgärd](/help/sites-authoring/basic-handling.md#quick-actions) - ikon:
+      * Skrivbord: [snabbåtgärden](/help/sites-authoring/basic-handling.md#quick-actions) - skalningsikonen:
 
    ![screen_shot_2018-03-21at160503](assets/screen_shot_2018-03-21at160503.png)
 
@@ -120,20 +120,20 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
    >[!NOTE]
    >
-   >När du är i markeringsläge **Välj** ikonen (en bock) ändras till **Avmarkera** ikon (ett kors).
+   >I markeringsläge ändras ikonen **Markera** (en bock) till ikonen **Avmarkera** (ett kryss).
 
 ### Snabbåtgärder (endast kortvyn/skrivbordet) {#quick-actions-card-view-desktop-only}
 
 [Snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions) är tillgängliga:
 
-1. [Navigera till sidan](#finding-your-page) du vill vidta åtgärder för.
+1. [Navigera till sidan ](#finding-your-page) som du vill vidta åtgärder på.
 1. Håll muspekaren över kortet som representerar den resurs du behöver. Snabbåtgärderna visas:
 
    ![screen_shot_2018-03-21at160503-1](assets/screen_shot_2018-03-21at160503-1.png)
 
 ### Redigera sidinnehåll {#editing-your-page-content}
 
-1. [Navigera till sidan](#finding-your-page) du vill redigera.
+1. [Navigera till sidan](#finding-your-page) som du vill redigera.
 1. [Öppna sidan för redigering](/help/sites-authoring/managing-pages.md#opening-a-page-for-editing) med ikonen Redigera (penna):
 
    ![screen_shot_2018-03-21at160607](assets/screen_shot_2018-03-21at160607.png)
@@ -145,10 +145,10 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
 1. När redigeraren öppnas kan du:
 
-   * [Lägga till en ny komponent på sidan](/help/sites-authoring/editing-content.md#inserting-a-component) av:
+   * [Lägg till en ny komponent på sidan](/help/sites-authoring/editing-content.md#inserting-a-component) genom att:
 
       * öppna sidopanelen
-      * välja fliken Komponenter (på [komponentwebbläsare](/help/sites-authoring/author-environment-tools.md#components-browser))
+      * välja fliken Komponenter ([komponentwebbläsaren](/help/sites-authoring/author-environment-tools.md#components-browser))
       * dra den nödvändiga komponenten till sidan.
 
      Sidpanelen kan öppnas (och stängas) med:
@@ -157,7 +157,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
    * [Redigera innehållet i en befintlig komponent](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) på sidan:
 
-      * Öppna komponentens verktygsfält med ett klick. Använd **Redigera** (penna) för att öppna dialogrutan.
+      * Öppna komponentens verktygsfält med ett klick. Använd ikonen **Redigera** (penna) för att öppna dialogrutan.
       * Öppna komponentens in-place-redigerare genom att markera och hålla ned eller dubbelklicka. De tillgängliga åtgärderna visas (för vissa komponenter är det ett begränsat urval).
       * Om du vill visa alla tillgängliga åtgärder går du till helskärmsläge med:
 
@@ -165,101 +165,101 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
    * [Konfigurera egenskaperna för en befintlig komponent](/help/sites-authoring/editing-content.md#component-edit-dialog)
 
-      * Öppna komponentens verktygsfält med ett klick. Använd **Konfigurera** (skiftnyckel) för att öppna dialogrutan.
+      * Öppna komponentens verktygsfält med ett klick. Använd ikonen **Konfigurera** (skiftnyckel) för att öppna dialogrutan.
 
    * [Flytta en komponent](/help/sites-authoring/editing-content.md#moving-a-component) antingen:
 
       * Dra den önskade komponenten till dess nya plats.
-      * Öppna komponentens verktygsfält med ett klick. Använd **Klipp ut** sedan **Klistra in** ikoner där det behövs.
+      * Öppna komponentens verktygsfält med ett klick. Använd ikonerna **Klipp ut** och **Klistra in** där det behövs.
 
    * [Kopiera (och klistra in)](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) en komponent:
 
-      * Öppna komponentens verktygsfält med ett klick. Använd **Kopiera** sedan **Klistra in** vid behov.
+      * Öppna komponentens verktygsfält med ett klick. Använd ikonerna **Kopiera** och sedan **Klistra in** efter behov.
 
    >[!NOTE]
    >
-   >Du kan **Klistra in** till antingen samma sida eller en annan sida. Om du klistrar in på en annan sida som redan var öppen före klipp ut/kopiera-åtgärden, måste sidan uppdateras.
+   >Du kan **klistra in** komponenter på samma sida eller på en annan sida. Om du klistrar in på en annan sida som redan var öppen före klipp ut/kopiera-åtgärden, måste sidan uppdateras.
 
    * [Ta bort](/help/sites-authoring/editing-content.md#edit-configure-copy-cut-delete-paste) en komponent:
 
-      * Öppna komponentverktygsfältet med ett klick och använd sedan kommandot **Ta bort** -ikon.
+      * Öppna komponentens verktygsfält med ett klick och använd sedan ikonen **Ta bort** .
 
-   * [Lägg till anteckningar](/help/sites-authoring/annotations.md#annotations) till sidan:
+   * [Lägg till anteckningar](/help/sites-authoring/annotations.md#annotations) på sidan:
 
-      * Välj **Anteckna** läge (pratbubblarikon). Lägg till anteckningar med **Lägg till anteckning** (plus). Avsluta anteckningsläget med X överst till höger.
+      * Välj läget **Anteckning** (ikonen för pratbubbla). Lägg till anteckningar med ikonen **Lägg till anteckning** (plus). Avsluta anteckningsläget med X överst till höger.
 
      ![Anteckna](do-not-localize/screen_shot_2018-03-21at160813.png)
 
-   * [Förhandsgranska en sida](/help/sites-authoring/editing-content.md#preview-mode) (för att se hur det kommer att se ut i publiceringsmiljön)
+   * [Förhandsgranska en sida](/help/sites-authoring/editing-content.md#preview-mode) (för att se hur den kommer att se ut i publiceringsmiljön)
 
       * Välj **Förhandsgranska** i verktygsfältet.
 
-   * Återgå till redigeringsläget (eller välj ett annat läge) med **Redigera** väljare.
+   * Återgå till redigeringsläget (eller välj ett annat läge) med den nedrullningsbara väljaren **Redigera**.
 
    >[!NOTE]
    >
-   >Om du vill navigera med länkar i innehållet måste du använda [Förhandsgranskningsläge](/help/sites-authoring/editing-content.md#preview-mode).
+   >Om du vill navigera med hjälp av länkar i innehållet måste du använda [förhandsgranskningsläget](/help/sites-authoring/editing-content.md#preview-mode).
 
 ### Redigera sidegenskaperna {#editing-the-page-properties}
 
-Det finns två (huvudsakliga) metoder för [redigera sidegenskaper](/help/sites-authoring/editing-page-properties.md):
+Det finns två (huvudmetoder) metoder för att [redigera sidegenskaper](/help/sites-authoring/editing-page-properties.md):
 
-* Från **Webbplatser** konsol:
+* Från konsolen **Platser**:
 
-   1. [Navigera till sidan](#finding-your-page) du vill publicera.
-   1. Välj **Egenskaper** ikon från antingen
+   1. [Navigera till sidan](#finding-your-page) som du vill publicera.
+   1. Välj ikonen **Egenskaper** från antingen:
 
       * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för lämplig resurs.
       * Verktygsfältet när [sidan har valts](#selectiingyourpageforfurtheraction).
 
-  ![screen_shot_2018-03-2160850](assets/screen_shot_2018-03-21at160850.png)
+  ![screen_shot_2018-03-21at160850](assets/screen_shot_2018-03-21at160850.png)
 
    1. Sidegenskaperna visas. Du kan göra nödvändiga uppdateringar och sedan använda Spara för att behålla dessa
 
-* När [redigera sidan](#editing-your-page-content):
+* När du [redigerar sidan](#editing-your-page-content):
 
-   1. Öppna **Sidinformation** -menyn.
+   1. Öppna menyn **Sidinformation**.
    1. Välj **Öppna egenskaper** för att öppna dialogrutan för redigering av egenskaperna.
 
-  ![screen_shot_2018-03-2160920](assets/screen_shot_2018-03-21at160920.png)
+  ![screen_shot_2018-03-21at160920](assets/screen_shot_2018-03-21at160920.png)
 
 ### Publicera din sida (eller avpublicera) {#publishing-your-page-or-unpublishing}
 
-Det finns två metoder [publicera din sida](/help/sites-authoring/publishing-pages.md) (och även för avpublicering):
+Det finns två huvudmetoder för att [publicera sidan](/help/sites-authoring/publishing-pages.md) (och även för att avpublicera):
 
-* Från **Webbplatser** konsol:
+* Från konsolen **Platser**:
 
-   1. [Navigera till sidan](#finding-your-page) du vill publicera.
-   1. Välj **Snabbpublicering** ikon från antingen
+   1. [Navigera till sidan](#finding-your-page) som du vill publicera.
+   1. Välj ikonen **Snabb Publish** på något av följande sätt:
 
       * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för lämplig resurs.
-      * Verktygsfältet när [sidan har valts](#selectiingyourpageforfurtheraction) (ger även tillgång till [Publicera senare](/help/sites-authoring/publishing-pages.md#main-pars-title-12)).
+      * Verktygsfältet när [sidan har valts](#selectiingyourpageforfurtheraction) (ger även åtkomst till [Publish SENARE](/help/sites-authoring/publishing-pages.md#main-pars-title-12)).
 
-  ![screen_shot_2018-03-2160957](assets/screen_shot_2018-03-21at160957.png)
+  ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
 
-* När [redigera sidan](#editing-your-page-content):
+* När du [redigerar sidan](#editing-your-page-content):
 
-   1. Öppna **Sidinformation** -menyn.
-   1. Välj **Publicera sida**.
+   1. Öppna menyn **Sidinformation**.
+   1. Välj **Publish Page**.
 
   ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 
 * Du kan bara avpublicera en sida från konsolen via alternativet **Hantera publikation**, som bara är tillgängligt i verktygsfältet (inte via snabbåtgärderna).
 
-  The **Avpublicera sida** är fortfarande tillgängligt via **Sidinformation** i redigeraren.
+  Alternativet **Avpublicera sida** är fortfarande tillgängligt via menyn **Sidinformation** i redigeraren.
 
-  ![screen_shot_2018-03-2161059](assets/screen_shot_2018-03-21at161059.png)
+  ![screen_shot_2018-03-21at161059](assets/screen_shot_2018-03-21at161059.png)
 
-  Se [Publicera sidor](/help/sites-authoring/publishing-pages.md#unpublishing-pages) för mer information.
+  Mer information finns i [Publicera sidor](/help/sites-authoring/publishing-pages.md#unpublishing-pages).
 
 ### Flytta, kopiera och klistra in eller ta bort sidan {#move-copy-and-paste-or-delete-your-page}
 
 Alla dessa åtgärder kan utlösas av:
 
-1. [Navigera till sidan](#finding-your-page) du vill flytta, kopiera och klistra in eller ta bort.
+1. [Navigera till sidan](#finding-your-page) som du vill flytta, kopiera och klistra in eller ta bort.
 1. Välj ikonen för kopiera (och sedan klistra in), flytta eller ta bort efter behov på något av följande sätt:
 
-   * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för den resurs som krävs.
+   * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för den nödvändiga resursen.
    * Verktygsfältet när [sidan har valts](#selecting-your-page-for-further-action).
 
    Sedan, beroende på vad du gör:
@@ -285,20 +285,20 @@ Alla dessa åtgärder kan utlösas av:
 [När du låser en sida](/help/sites-authoring/editing-content.md#locking-a-page) kan andra författare inte arbeta med den. Ikonen/knappen Lås (och Lås upp) finns:
 
 * Verktygsfältet när [sidan har valts](#selecting-your-page-for-further-action).
-* The [Listrutan Sidinformation](#editing-the-page-properties) när du redigerar en sida.
+* Listrutan [Sidinformation](#editing-the-page-properties) när du redigerar en sida.
 * Sidans verktygsfält när du redigerar en sida (när sidan är låst)
 
 Låsikonen ser till exempel ut så här:
 
-![screen_shot_2018-03-2161124](assets/screen_shot_2018-03-21at161124.png)
+![screen_shot_2018-03-21at161124](assets/screen_shot_2018-03-21at161124.png)
 
 ### Åtkomst till sidreferenser {#accessing-page-references}
 
-[Snabb åtkomst till referenser](/help/sites-authoring/author-environment-tools.md#references) till en sida eller från en sida är tillgängliga i Reference Rail.
+[Snabb åtkomst till referenser](/help/sites-authoring/author-environment-tools.md#references) till en sida eller från en sida finns i Reference Rail.
 
-1. Välj **Referenser** med verktygsfältsikonen (antingen före eller efter [markera sidan](#selecting-your-page-for-further-action)):
+1. Välj **Referenser** med verktygsfältsikonen (antingen före eller efter [att du har valt sidan](#selecting-your-page-for-further-action)):
 
-   ![screen_shot_2018-03-2161210](assets/screen_shot_2018-03-21at161210.png)
+   ![screen_shot_2018-03-21at161210](assets/screen_shot_2018-03-21at161210.png)
 
    En lista över referenstyper visas:
 
@@ -308,23 +308,23 @@ Låsikonen ser till exempel ut så här:
 
 ### Skapa en version av din sida {#creating-a-version-of-your-page}
 
-Skapa en [version](/help/sites-authoring/working-with-page-versions.md) på sidan:
+Så här skapar du en [version](/help/sites-authoring/working-with-page-versions.md) av sidan:
 
-1. Om du vill öppna tidslinjen markerar du **[Tidslinje](/help/sites-authoring/basic-handling.md#timeline)** med verktygsfältsikonen (antingen före eller efter [markera sidan](#selecting-your-page-for-further-action)):
+1. Om du vill öppna tidslinjen väljer du **[Tidslinje](/help/sites-authoring/basic-handling.md#timeline)** med verktygsfältsikonen (antingen före eller efter [att du har valt sidan](#selecting-your-page-for-further-action)):
 
-   ![screen_shot_2018-03-21at16135](assets/screen_shot_2018-03-21at161355.png)
+   ![screen_shot_2018-03-21at161355](assets/screen_shot_2018-03-21at161355.png)
 
-1. Klicka på uppilen längst ned till höger i tidslinjen för att visa extra knappar, inklusive **Spara som version**.
+1. Klicka på uppåtpilen längst ned till höger i tidslinjen för att visa extra knappar, inklusive **Spara som version**.
 
    ![screen-shot_2019-03-05at114600](assets/screen-shot_2019-03-05at114600.png)
 
-1. Välj **Spara som version** sedan **Skapa**.
+1. Välj **Spara som version** och sedan **Skapa**.
 
 ### Återställa/jämföra en version av sidan {#restoring-comparing-a-version-of-your-page}
 
 Samma grundläggande funktion används när du återställer och/eller jämför versioner av sidan:
 
-1. Välj **[Tidslinje](/help/sites-authoring/basic-handling.md#timeline)** med verktygsfältsikonen (antingen före eller efter [markera sidan](#selecting-your-page-for-further-action)):
+1. Välj **[Tidslinje](/help/sites-authoring/basic-handling.md#timeline)** med verktygsfältsikonen (antingen före eller efter [att du har valt sidan](#selecting-your-page-for-further-action)):
 
    ![screen_shot_2018-03-21at161355-1](assets/screen_shot_2018-03-21at161355-1.png)
 

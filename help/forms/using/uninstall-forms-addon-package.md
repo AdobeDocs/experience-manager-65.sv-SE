@@ -26,15 +26,15 @@ Se till att säkerhetskopiera för att undvika dataförlust.
 
 Så här avinstallerar du AEM Forms Add-on Package:
 
-1. **Avinstallera AEM Forms Add-on-paketet:**
+1. **Avinstallera AEM Forms-tilläggspaketet:**
    1. Navigera till `http://[host]:[port]/crx/de/index.jsp`.
-   1. Hitta och avinstallera `AEM Forms add-on package`.
+   1. Leta upp och avinstallera `AEM Forms add-on package`.
 
    ![Avinstallera paket](/help/forms/using/assets/uninstall-aem-forms-package.png)
 
 1. **Ta bort den ursprungliga mappen från CRXDE:**
    1. Navigera till `http://[host]:[port]/crx/de/index.jsp`.
-   1. Gå till `/libs/fd/native/install` och ta bort `native` i CRXDE.
+   1. Gå till `/libs/fd/native/install` och ta bort mappen `native` i CRXDE.
 
       ![Ta bort intern nod från CRX/de](/help/forms/using/assets/native-install-folder-crxde.png)
    1. Spara ändringarna.
@@ -42,17 +42,17 @@ Så här avinstallerar du AEM Forms Add-on Package:
 1. **Stoppa AEM Forms SDK:**
    1. Stoppa AEM Forms SDK-instansen med kommandot Ctrl + C.
 
-1. **Kontrollera om det finns mappar i grunden och installera mappar i mappen crx-quickstart**
-   1. Navigera till `..author\crx-quickstart` i AEM Forms SDK-instansen.
-   1. Sök efter namngivna mappar `bedrock` och `install`.
-Om de hittas kontrollerar du att de tas bort från `crx-quickstart` i AEM Forms SDK-instansen.
+1. **Kontrollera om det finns mappar i grunden och installera dem i mappen crx-quickstart**
+   1. Navigera till mappen `..author\crx-quickstart` i AEM Forms SDK-instansen.
+   1. Sök efter mappar med namnen `bedrock` och `install`.
+Om de hittas kontrollerar du att de tas bort från mappen `crx-quickstart` i AEM Forms SDK-instansen.
 
    >[!NOTE]
    >
-   > The `bedrock` skapas mappen igen automatiskt när du startar om AEM Forms SDK-instansen.
+   > Mappen `bedrock` skapas automatiskt igen när du startar om AEM Forms SDK-instansen.
 
 1. **Starta om AEM:**
-   1. När alla föregående steg är slutförda [starta om AEM Forms SDK-instansen](/help/forms/using/restart-aem-sdk.md).
+   1. När alla föregående steg har slutförts [startar du om AEM Forms SDK-instansen](/help/forms/using/restart-aem-sdk.md).
 
 
 

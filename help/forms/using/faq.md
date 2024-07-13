@@ -26,11 +26,11 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. Varför visas inte streckkoder och signaturfält i mitt formulär?
 
-   Svar: Streckkoder och signaturfält är inte relevanta i HTML eller mobilscenarier. Dessa fält visas som icke-interaktiva områden. AEM Forms Designer har dock ett nytt signaturskriptfält som kan användas i stället för signaturfält. Du kan också lägga till en [anpassad widget](../../forms/using/custom-widgets.md) för streckkoder och integrera dem.
+   Svar: Streckkoder och signaturfält är inte relevanta i HTML eller mobilscenarier. Dessa fält visas som icke-interaktiva områden. AEM Forms Designer har dock ett nytt signaturskriptfält som kan användas i stället för signaturfält. Du kan också lägga till en [anpassad widget](../../forms/using/custom-widgets.md) för streckkoder och integrera den.
 
 1. Stöds RTF för XFA-textfältet?
 
-   Svar: XFA-fältet, som tillåter multimediematerial i AEM Forms Designer, stöds inte och återges som vanlig text utan stöd för formatering av texten från användargränssnittet. Dessutom visas XFA-fält med kombinationsegenskaper som ett vanligt fält, även om det fortfarande finns begränsningar för antalet tillåtna tecken baserat på värdet för kombinationssiffror.
+   Svar: XFA-fältet, som tillåter multimediematerial i AEM Forms Designer, stöds inte och återges som normal text utan stöd för formatering av texten från användargränssnittet. Dessutom visas XFA-fält med kombinationsegenskaper som ett vanligt fält, även om det fortfarande finns begränsningar för antalet tillåtna tecken baserat på värdet för kombinationssiffror.
 
 1. Finns det några begränsningar för användning av repeterbara delformulär?
 
@@ -38,7 +38,7 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
    1. Ange startvärdet för det repeterbara delformuläret till 1.
 
-      ![initialräkning](assets/intial-count.png)
+      ![Inledande antal](assets/intial-count.png)
 
    1. Använd händelsen initialize för formuläret för att dölja den primära instansen av delformuläret. Koden nedan döljer till exempel den primära instansen av delformuläret vid formulärinitiering. Den verifierar också apptypen för att säkerställa att skriptet bara körs på klientsidan:
 
@@ -90,15 +90,15 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. Varför viss text trunkeras eller visas felaktigt i HTML5?
 
-   Svar: Om ett Draw- eller Caption-textelement inte har fått tillräckligt med utrymme för att visa innehåll, visas texten som trunkerad i mobil formuläråtergivning. Den här trunkeringen visas även i designvyn i AEM Forms Designer. Även om den här trunkeringen kan hanteras i PDF kan den inte hanteras i HTML5-formulären. Du kan undvika problemet genom att ange tillräckligt med utrymme för Rita eller Bildtext så att den inte kortas av i designläget i AEM Forms Designer.
+   Svar: Om ett Draw- eller bildtextelement inte har fått tillräckligt med utrymme för att visa innehåll, visas texten som trunkerad i mobil formuläråtergivning. Den här trunkeringen visas även i designvyn i AEM Forms Designer. Även om den här trunkeringen kan hanteras i PDF kan den inte hanteras i HTML5-formulären. Du kan undvika problemet genom att ange tillräckligt med utrymme för Draw eller bildtext så att den inte kortas av i designläget för AEM Forms Designer.
 
 1. Jag observerar layoutproblem med saknat innehåll eller överlappande innehåll. Vad är orsaken?
 
-   Svar: Om det finns ett element av typen Rita text eller Rita bild tillsammans med ett annat överlappande element på samma plats (till exempel en rektangel), visas inte innehållet i Rita text om det kommer senare i dokumentordningen (i hierarkivyn i AEM Forms Designer). PDF har stöd för genomskinliga lager, men HTML/webbläsare har inte stöd för genomskinliga lager.
+   Svar: Om det finns ett Draw Text- eller Draw Image-element tillsammans med ett annat överlappande element på samma plats (till exempel en rektangel), visas inte Draw-textinnehållet om det kommer senare i dokumentordningen (i AEM Forms Designer-hierarkivy). PDF har stöd för genomskinliga lager, men HTML/webbläsare har inte stöd för genomskinliga lager.
 
 1. Varför visas vissa teckensnitt i HTML som skiljer sig från dem som används när formuläret utformas?
 
-   Svar: HTML5 Forms tillåter inte inbäddning av teckensnitt (till skillnad från PDF forms där teckensnitt är inbäddade i formuläret). För att HTML-versionen av ett formulär ska kunna återges som förväntat måste teckensnitten vara tillgängliga i CRX-databasen (AEM Content Repository) på AEM Forms-servern och på den dator där AEM Designer är installerat. När teckensnitten inte är tillgängliga i CRX-databasen på din AEM Forms-server eller på den plats där AEM Designer är installerat, återges formuläret med reservteckensnitt.
+   Svar: HTML5 Forms tillåter inte inbäddning av teckensnitt (till skillnad från PDF forms där teckensnitt är inbäddade i formuläret). Kontrollera att teckensnitten finns i CRX-databasen (AEM Content Repository) på AEM Forms-servern och på den dator där du har AEM Designer installerat för att formulärversionen ska kunna återges som förväntat. När teckensnitten inte är tillgängliga på AEM Forms-serverns CRX-databas eller på den plats där AEM Designer är installerat, återges formuläret med reservteckensnitt.
 
 1. Stöds vAlign- och hAlign-attribut i HTML-formulär?
 
@@ -135,7 +135,7 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
    * Kapslade tabeller och delformulär i en tabell stöds inte.
    * Rubriker stöds bara för tabellens övre och vänstra kolumner. Huvuden stöds inte för element i mellantabeller. Du kan använda rubriker på flera rad- och kolumnrubriker, förutsatt att alla sådana rader och kolumner finns tillsammans med den översta raden eller kolumnen längst till vänster i tabellen.
-   * `Rowspan`och `colspan`från en slumpmässig plats i tabellen stöds inte.
+   * `Rowspan` och `colspan` från en slumpmässig plats i tabellen stöds inte.
 
    * Du kan inte lägga till eller ta bort instanser av rader som innehåller element med ett radintervallvärde som är större än 1.
 
@@ -155,7 +155,7 @@ Det finns några vanliga frågor och svar om layout, skriptstöd och HTML5-formu
 
 1. När ett HTML5-formulär öppnas i en webbläsare som stöds justeras inte kantlinjen för de fält som placeras intill korrekt, eller så visas delformulär som överlappande. När samma HTML5-formulär förhandsgranskas i Forms Designer ser inte fält och layout feljusterade ut och delformulär visas i rätt position. Hur löser jag problemet?
 
-   Svar: När ett delformulär är inställt på att flöda innehåll och delformuläret har ett dolt ramelement, justeras inte kanten på de fält som placeras intill korrekt eller så visas delformulär som överlappande. För att lösa problemet kan du ta bort eller kommentera det dolda &lt;border> -element från motsvarande XDP. Till exempel följande &lt;border> -elementet markeras som en kommentar:
+   Svar: När ett delformulär är inställt på att flöda innehåll och delformuläret har ett dolt ramelement, justeras inte kanten på de fält som placeras intill korrekt eller så visas delformulär som överlappande. Du kan lösa problemet genom att ta bort eller kommentera dolda &lt;border>-element från motsvarande XDP. Följande &lt;border>-element markeras som en kommentar:
 
    ```xml
                <!--<border>
@@ -177,13 +177,13 @@ Svar: Datumfältet accepterar ISO-formatet ÅÅÅÅ-MM-DD. Om du anger ett datum
 
 ### Skript {#scripting}
 
-1. Finns det några begränsningar i JavaScript-implementeringen för HTML Forms?
+1. Finns det några begränsningar i JavaScript för HTML Forms?
 
    Svar:
 
    * Stödet för xfa.connectionSet-skriptet är begränsat. För connectionSet stöds endast anrop på serversidan av webbtjänsten. Mer information finns i [Skriptstöd](/help/forms/using/scripting-support.md).
    * Det finns inget stöd för $record och $data i klientskript. Men om skripten skrivs i ett formReady, layoutReady-block fungerar skripten fortfarande eftersom dessa händelser körs på serversidan.
-   * XFA Draw-elementspecifika skript som att ändra Draw-texten (eller Bildtext om det finns fält) stöds inte.
+   * XFA Draw-elementspecifika skript som att ändra Draw-text (eller bildtext om det finns fält) stöds inte.
 
 1. Finns det några begränsningar för att använda FormCalc?
 
@@ -192,8 +192,8 @@ Svar: Datumfältet accepterar ISO-formatet ÅÅÅÅ-MM-DD. Om du anger ett datum
 1. Finns det någon rekommenderad namnkonvention och finns det några reserverade nyckelord att undvika?
 
    Svar:
-   * I AEM Forms Designer rekommenderas att namnet på ett objekt (till exempel ett delformulär eller ett textfält) inte inleds med ett understreck (_). Om du vill använda understreck i början av namnet lägger du till ett prefix efter understrecket,_&lt;prefix>&lt;objectname>.
-   * Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med för anpassade API:er/funktioner [HTML5-formulär-API:er](/help/forms/using/scripting-support.md).
+   * I AEM Forms Designer rekommenderar vi att du inte börjar namnet på ett objekt (till exempel ett delformulär eller ett textfält) med ett understreck (_). Om du vill använda understreck i början av namnet lägger du till ett prefix efter understrecket_&lt;prefix>&lt;objektnamn>.
+   * Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med [HTML5-formulär-API:er](/help/forms/using/scripting-support.md) för anpassade API:er/funktioner.
 
 1. Har HTML5-formulär stöd för flytande fält?
 
@@ -201,11 +201,11 @@ Svar: Datumfältet accepterar ISO-formatet ÅÅÅÅ-MM-DD. Om du anger ett datum
 
    >[!NOTE]
    >
-   >Som standard är fälten inte aktiverade för flytande. Du kan använda Forms Designer för att ange den flytande egenskapen för fälten.
+   >Som standard är fälten inte aktiverade för flytande. Du kan använda Forms Designer för att ställa in den flytande egenskapen för fälten.
 
-   1. Öppna CRXde lite och navigera till `/content/xfaforms/profiles/default` nod.
-   1. Lägg till en egenskap `mfDataDependentFloatingField`av typen String och ange värdet för egenskapen till `true`.
-   1. Klicka **Spara alla**. Nu aktiveras de flytande fälten för HTML Forms med den uppdaterade återgivningsprofilen.
+   1. Öppna CRXde lite och navigera till noden `/content/xfaforms/profiles/default`.
+   1. Lägg till egenskapen `mfDataDependentFloatingField` av typen String och ange värdet för egenskapen till `true`.
+   1. Klicka på **Spara alla**. Nu aktiveras de flytande fälten för HTML Forms med den uppdaterade återgivningsprofilen.
 
       >[!NOTE]
       >
@@ -219,4 +219,4 @@ Svar: Datumfältet accepterar ISO-formatet ÅÅÅÅ-MM-DD. Om du anger ett datum
 
 1. Finns det några reserverade nyckelord i HTML5-formulär?
 
-   Svar: Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med för anpassade API:er/funktioner [HTML5-formulär-API:er](/help/forms/using/scripting-support.md). Förutom reserverade nyckelord bör du lägga till ett unikt prefix efter understrecket om du använder objektnamn som börjar med ett understreck (_). Genom att lägga till ett prefix undviker du eventuella konflikter med interna API:er för HTML5-formulär. Exempel: `_fpField1`
+   Svar: Alla HTML5-formulär-API:er är reserverade nyckelord. Använd ett namn som inte är identiskt med [HTML5-formulär-API:er](/help/forms/using/scripting-support.md) för anpassade API:er/funktioner. Förutom reserverade nyckelord bör du lägga till ett unikt prefix efter understrecket om du använder objektnamn som börjar med ett understreck (_). Genom att lägga till ett prefix undviker du eventuella konflikter med interna API:er för HTML5-formulär. Exempel: `_fpField1`

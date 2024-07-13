@@ -32,7 +32,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 ## Snabbstart (SOAP): Konvertera ett dokument till ett PDF/A-dokument med Java™ API {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-document-using-the-java-api}
 
-I följande Java™-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett PDF/A-dokument som har sparats som en PDF-fil med namnet *LoanArchive.pdf*. (Se [Konvertera dokument till PDF/A-dokument](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents).)
+I följande Java™-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett PDF/A-dokument som sparas som en PDF-fil med namnet *LoanArchive.pdf*. (Se [Konverterar dokument till PDF/A-dokument](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents).)
 
 ```java
  /*
@@ -135,7 +135,7 @@ I följande Java™-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf
 
 ## Snabbstart (SOAP läge): fastställa kompatibiliteten PDF/A med Java™ API {#quick-start-soap-mode-determining-pdf-a-compliancy-using-the-java-api}
 
-I följande Java™-kodexempel avgörs om indatadokumentet PDF är PDF/A-kompatibelt. Det inmatade PDF-dokumentet som skickas till tjänsten DocConverter har ett namn *LoanArchive.pdf*. Valideringsresultat skrivs till en XML-fil med namnet *ValidationResults.xml*. (Se [Programmerat fastställa PDF/A-överensstämmelse](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
+I följande Java™-kodexempel avgörs om indatadokumentet PDF är PDF/A-kompatibelt. Det inmatade PDF-dokumentet som skickas till tjänsten DocConverter heter *LoanArchive.pdf*. Valideringsresultat skrivs till en XML-fil med namnet *ValidationResults.xml*. (Se [Programmatiskt fastställa kompatibiliteten PDF/A](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
 
 ```java
  /*

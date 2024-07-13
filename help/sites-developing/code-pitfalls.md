@@ -20,11 +20,11 @@ ht-degree: 0%
 
 ## Undvik att skicka bindningar i Java-kod {#avoid-sling-bindings-in-java-code}
 
-Sling Bindings är ett olämpligt sätt att få tillgång till en tjänst i 90 % av fallen. I stället bör du använda *@Referens* eller *@Input* anteckningar.
+Sling Bindings är ett olämpligt sätt att få tillgång till en tjänst i 90 % av fallen. Du bör i stället använda anteckningarna *@Reference* eller *@Inject*.
 
 ## Undvik tråd.avbrott i Java-kod {#avoid-thread-interrupt-in-java-code}
 
-*Tråd.avbrott* är farligt eftersom det kan stänga filer, inklusive Lucene-filer och beständiga cachefiler, när de anropas vid fel tidpunkt.
+*Thread.Intert* är farligt eftersom det kan stänga filer, inklusive Lucene-filer och beständiga cachefiler, när de anropas vid fel tidpunkt.
 
 ## Undvik att blanda Java-synkronisering med ReadWriteLocks {#avoid-mixing-java-synchronization-with-readwritelocks}
 

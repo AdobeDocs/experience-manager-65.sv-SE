@@ -35,14 +35,14 @@ När Silverpop Engage har konfigurerats kan du publicera nyhetsbrev och e-postme
 
 ## Skapa en Silverpop-konfiguration {#creating-a-silverpop-configuration}
 
-Silverpop-konfigurationer kan läggas till via **Cloud Service**, **verktyg**, eller **API-slutpunkter**. Alla metoder beskrivs i det här avsnittet.
+Silverpop-konfigurationer kan läggas till med **Cloud Service**, **Verktyg** eller **API-slutpunkter**. Alla metoder beskrivs i det här avsnittet.
 
 ### Konfigurera Silverpop med hjälp av Cloud Service {#configuring-silverpop-via-cloudservices}
 
 Så här skapar du en Silverpop-konfiguration i Cloud Service:
 
-1. I AEM klickar du på **verktyg** > **Distribution** > **Cloud Service**. (Eller direkt åtkomst på `https://<hostname>:<port>/etc/cloudservices.html`.)
-1. Klicka på under tredjepartstjänster **Silverop Engage** och sedan **Konfigurera**. Konfigurationsfönstret Silverpop öppnas.
+1. I AEM klickar du på **Verktyg** > **Distribution** > **Cloud Service**. (Eller direkt åtkomst på `https://<hostname>:<port>/etc/cloudservices.html`.)
+1. Under tredjepartstjänster klickar du på **Silverop Engage** och sedan på **Konfigurera**. Konfigurationsfönstret Silverpop öppnas.
 
    >[!NOTE]
    >
@@ -50,31 +50,31 @@ Så här skapar du en Silverpop-konfiguration i Cloud Service:
 
 1. Ange en titel och eventuellt ett namn och klicka på **Skapa**. Konfigurationsfönstret** Silverpop Settings** öppnas.
 1. Ange användarnamn, lösenord och välj en API-slutpunkt i listrutan.
-1. Klicka **Anslut till Silverpop.** När du har anslutit visas en dialogruta om att anslutningen lyckades. Klicka **OK** så att du stänger fönstret. Gå till Silverpop genom att klicka **Gå till Silverpop Engage**.
+1. Klicka på **Anslut till Silverpop.** När du har anslutit visas en dialogruta om att anslutningen lyckades. Klicka på **OK** så att du stänger fönstret. Du kan gå till Silverpop genom att klicka på **Gå till Silverpop Engage**.
 1. Silverpop har konfigurerats. Du kan redigera konfigurationen genom att klicka på **Redigera**.
 1. Silverpop Engage-ramverket kan även konfigureras för anpassade åtgärder genom att tillhandahålla rubrik och namn (valfritt). Klicka på Skapa för att skapa ramverket för den redan konfigurerade Silverpop-anslutningen.
 
-   Importerade datatilläggskolumner kan senare användas via komponenten AEM - **Text och personalisering**.
+   Importerade datatilläggskolumner kan senare användas via AEM - **Text och Personalization**.
 
 ### Konfigurera Silverpop via verktyg {#configuring-silverpop-via-tools}
 
 Så här skapar du en Silverpop-konfiguration i Verktyg:
 
-1. I AEM klickar du på **verktyg** > **Distribution** > **Cloud Service**. Eller navigera direkt genom att gå till `https://<hostname>:<port>/misadmin#/etc`.
-1. Välj **verktyg** sedan **Cloud Service, konfigurationer,** sedan **Silverpop Engage**.
-1. Klicka **Nytt**.
+1. I AEM klickar du på **Verktyg** > **Distribution** > **Cloud Service**. Eller navigera dit direkt genom att gå till `https://<hostname>:<port>/misadmin#/etc`.
+1. Välj **Verktyg**, sedan **Cloud Service,** och sedan **Silverpop Engage**.
+1. Klicka på **Ny**.
 
    ![chlimage_1-6](assets/chlimage_1-6.jpeg)
 
-1. I **Skapa sida** -fönstret, ange **Titel** och **Namn** och klicka **Skapa**.
+1. I fönstret **Skapa sida** anger du **Rubrik** och eventuellt **Namn**. Klicka sedan på **Skapa**.
 1. Ange konfigurationsinformationen enligt steg 4 i föregående procedur. Följ den proceduren så att du kan slutföra konfigurationen av Silverpop.
 
 ### Lägga till flera konfigurationer {#adding-multiple-configurations}
 
 Så här lägger du till flera konfigurationer:
 
-1. Klicka på på välkomstsidan **Cloud Service** och klicka **Silverpop Engage**. Klicka **Visa konfigurationer** som visas om en eller flera Silverpop-konfigurationer är tillgängliga. Alla tillgängliga konfigurationer visas.
-1. Klicka på **+** signera bredvid Tillgängliga konfigurationer. Den öppnar **Skapa konfigurationer** -fönstret. Följ föregående konfigurationsprocedur så att du kan skapa en konfiguration.
+1. Klicka på **Cloud Service** på välkomstsidan och klicka på **Silverpop Engage**. Klicka på knappen **Visa konfigurationer** som visas om en eller flera Silverpop-konfigurationer är tillgängliga. Alla tillgängliga konfigurationer visas.
+1. Klicka på **+** bredvid Tillgängliga konfigurationer. Fönstret **Skapa konfigurationer** öppnas. Följ föregående konfigurationsprocedur så att du kan skapa en konfiguration.
 
 ### Konfigurera API-slutpunkter för anslutning till Silverpop {#configuring-api-end-points-for-connecting-to-silverpop}
 
@@ -83,8 +83,8 @@ För närvarande har AEM sex osäkra slutpunkter (Engage 1 - 6). Silverpop har n
 Så här konfigurerar du API-slutpunkterna:
 
 1. Gå till `/libs/mcm/silverpop/components/silverpoppage/dialog/items/general/items/apiendpoint/options node` på `https://<hostname>:<port>/crxde.`
-1. Högerklicka och välj **Skapa** sedan **Skapa nod**.
-1. Ange **Namn** as `sp-e0` och välja **Typ** as `cq:Widget`.
+1. Högerklicka och välj **Skapa** och sedan **Skapa nod**.
+1. Ange **Namn** som `sp-e0` och välj **Typ** som `cq:Widget`.
 1. Lägg till två egenskaper i den nyligen tillagda noden:
 
    1. **Namn**: `text`, **Typ**: `String`, **Värde**: `Engage 0`
@@ -94,7 +94,7 @@ Så här konfigurerar du API-slutpunkterna:
 
    Klicka på Spara alla.
 
-1. Skapa en till nod med **Namn** as `sp-e7` och **Typ** as `cq:Widget`.
+1. Skapa en till nod med **Namn** som `sp-e7` och **Typ** som `cq:Widget`.
 
    Lägg till två egenskaper i den nyligen tillagda noden:
 
@@ -112,6 +112,6 @@ Så här konfigurerar du API-slutpunkterna:
    | sp-e5 | `https://api.engage5.silverpop.com/XMLAPI` | `https://api5.silverpop.com` |
    | sp-e6 | `https://api.pilot.silverpop.com/XMLAPI` | `https://api6.silverpop.com` |
 
-1. Klicka **Spara alla**. AEM är nu redo att ansluta till Silverpop över skyddade slutpunkter.
+1. Klicka på **Spara alla**. AEM är nu redo att ansluta till Silverpop över skyddade slutpunkter.
 
    ![chlimage_1-7](assets/chlimage_1-7.jpeg)

@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Egenskaper för konfiguration av korrespondenshantering {#correspondence-management-configuration-properties}
 
-Om du vill konfigurera de här egenskaperna öppnar du följande URL-adress i en webbläsare: `https://<server>:<port>/<contextPath>/system/console/configMgr` och markera **Konfigurationer för korrespondenshantering**.
+Om du vill konfigurera de här egenskaperna öppnar du följande URL-adress i en webbläsare: `https://<server>:<port>/<contextPath>/system/console/configMgr` och väljer **Correspondence Management Configurations**.
 
 Correspondence Management har följande konfigurationsegenskaper:
 
@@ -162,8 +162,8 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td>—<p> </p> </td>
   </tr>
   <tr>
-   <td><p>Hantera bokstavsinstanser vid publicering</p> </td>
-   <td><p>Aktivera/inaktivera funktionen Hantera brev (gäller endast för Publish Server)</p> </td>
+   <td><p>Hantera bokstavsinstanser på Publish</p> </td>
+   <td><p>Aktivera/avaktivera funktionen Hantera brev (gäller endast Publish Server)</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -198,7 +198,7 @@ Correspondence Management har följande konfigurationsegenskaper:
    <td><p>true / false</p> </td>
   </tr>
   <tr>
-   <td><p>Aktivera publiceringsgranskning</p> </td>
+   <td><p>Aktivera Publish Audit</p> </td>
    <td><p>Aktivera/inaktivera granskningsfunktioner för publicering av resurser</p> </td>
    <td><p>false</p> </td>
    <td><p>true / false</p> </td>
@@ -247,13 +247,13 @@ Correspondence Management har följande konfigurationsegenskaper:
   </tr>
   <tr>
    <td><p>Storlek på bokstavscache</p> </td>
-   <td><p>Ange maximalt antal bokstäver som ska behållas i cachen.</p> <p>Om du ändrar det här värdet rensas <code>in-memory</code> cache.</p> </td>
+   <td><p>Ange maximalt antal bokstäver som ska behållas i cachen.</p> <p>Om du ändrar det här värdet rensas <code>in-memory</code>-cachen.</p> </td>
    <td><p>100</p> </td>
    <td><p>Valfritt numeriskt värde</p> </td>
   </tr>
   <tr>
    <td><p>Aktivera bokstavscache</p> </td>
-   <td><p>Aktivera/inaktivera bokstavscachen.</p> <p>Om du ändrar det här värdet rensas <code>in-memory </code> cache.</p> </td>
+   <td><p>Aktivera/inaktivera bokstavscachen.</p> <p>Om du ändrar det här värdet rensas <code>in-memory </code>-cachen.</p> </td>
    <td><p>true</p> </td>
    <td><p>true / false</p> </td>
   </tr>
@@ -289,7 +289,7 @@ Correspondence Management har följande konfigurationsegenskaper:
   </tr>
   <tr>
    <td><p>Felsökningskatalog </p> <p> </p> </td>
-   <td>Sökväg till filsystemmappen för felsökning. Om katalogen inte gör det <code>exists</code>kommer inga felsökningsdumpar att genereras.</td>
+   <td>Sökväg till filsystemmappen för felsökning. Om katalogen inte <code>exists</code> genereras inga felsökningsdumpar.</td>
    <td>acm.debugDirectory</td>
    <td> </td>
   </tr>

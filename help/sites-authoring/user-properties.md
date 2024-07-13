@@ -23,19 +23,19 @@ AEM ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författ
 
 Med alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i [sidhuvudet](/help/sites-authoring/basic-handling.md#the-header) och den tillhörande dialogrutan [Mina inställningar](#userpreferences) kan du ändra dina användaralternativ.
 
-Börja med att gå till [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
+Börja med att gå till alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
 
 ## Användarinställningar {#user-settings}
 
-The **Användare** dialogrutan ger dig tillgång till:
+Dialogrutan **Användare** ger dig åtkomst till:
 
 * Personifiera som
 
-   * Med [Personifiera som](/help/sites-administering/security.md#impersonating-another-user) funktioner som en användare kan arbeta för en annan användares räkning.
+   * Med funktionen [Personifiera som](/help/sites-administering/security.md#impersonating-another-user) kan en användare arbeta för en annan användares räkning.
 
 * Profil
 
-   * En praktisk länk till [användarinställningar](/help/sites-administering/security.md))
+   * Erbjuder en praktisk länk till dina [användarinställningar](/help/sites-administering/security.md))
 
 * [Mina inställningar](/help/sites-authoring/user-properties.md#my-preferences)
 
@@ -45,7 +45,7 @@ The **Användare** dialogrutan ger dig tillgång till:
 
 ### Mina inställningar {#my-preferences}
 
-The **Mina inställningar** öppnas via [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
+Dialogrutan **Mina inställningar** är tillgänglig via alternativet [Användare](/help/sites-authoring/user-properties.md#user-settings) i sidhuvudet.
 
 Varje användare kan ange vissa egenskaper för sig själv.
 
@@ -61,7 +61,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
   Detta definierar beteendet för att öppna fönster. Välj antingen:
 
-   * **Flera fönster** (Standard)
+   * **Flera fönster** (standard)
 
       * Sidorna öppnas i ett nytt fönster.
 
@@ -87,13 +87,13 @@ Varje användare kan ange vissa egenskaper för sig själv.
   Det här alternativet definierar hur datum i systemet visas. Följande alternativ är tillgängliga:
 
    * **Visa alltid exakt datum**: Det exakta datumet visas alltid (aldrig ett relativt datum).
-   * **1 dag**: Det relativa datumet visas för datum inom en dag, annars visas ett exakt datum.
+   * **1 Dag**: Det relativa datumet visas för datum inom en dag, annars visas ett exakt datum.
 
    * **7 dagar (standard)**: Det relativa datumet visas för datum inom sju dagar, annars visas ett exakt datum.
 
-   * **1 månad**: Det relativa datumet visas för datum inom en månad, annars visas ett exakt datum.
+   * **1 Month**: Det relativa datumet visas för datum inom en månad, annars visas ett exakt datum.
 
-   * **1 år**: Det relativa datumet visas för datum inom ett år, annars visas ett exakt datum.
+   * **1 År**: Det relativa datumet visas för datum inom ett år, annars visas ett exakt datum.
 
    * **Visa alltid relativt datum**: Exakta datum visas aldrig och endast relativa datum visas.
 
@@ -108,12 +108,12 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Använd klassisk redigeringsmiljö**
 
-  Det här alternativet aktiverar [klassiskt användargränssnitt](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)-baserad framtagning av sidor. Standardgränssnittet används som standard.
+  Med det här alternativet aktiveras [klassisk gränssnittsbaserad ](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)-sidredigering. Standardgränssnittet används som standard.
 
-* **Aktivera startsidan för resurser**
+* **Aktivera Assets hemsida**
 
-  Det här alternativet är bara tillgängligt om systemadministratören har aktiverat Assets Home Page (Startsidan för resurser) för hela organisationen.
+  Det här alternativet är endast tillgängligt om systemadministratören har aktiverat Assets hemsida för hela organisationen.
 
 * **Stock-konfiguration**
 
-  Med det här alternativet kan du ange önskad Adobe Stock-konfiguration och det är bara tillgängligt om systemadministratören har aktiverat [Integrering med Adobe Stock](/help/assets/aem-assets-adobe-stock.md).
+  Med det här alternativet kan du ange den önskade Adobe Stock-konfigurationen och det är bara tillgängligt om systemadministratören har aktiverat [Adobe Stock-integrering](/help/assets/aem-assets-adobe-stock.md).

@@ -22,13 +22,13 @@ Du kan söka efter formulär eller formulärresurser med hjälp av en textsträn
 
 När du markerar ett eller flera villkor och även anger en textsträng, returneras skärningspunkten för texten och villkoren som sökresultat. Sökresultaten är lika bra som de metadata för formulär och resurser som finns.
 
-Klicka ![aem6forms_search](assets/aem6forms_search.png), om du vill visa eller dölja sökpanelen.
+Klicka på ![aem6forms_search](assets/aem6forms_search.png) om du vill visa eller dölja sökpanelen.
 
 ## Grundläggande sökning {#basic-search}
 
 En grundläggande sökning är standardsökningen, som körs utan att du behöver ange några filter. En textsökning av metadataegenskaper utförs av AEM Forms.
 
-Om du vill utföra en grundläggande sökning anger du sökfrågan i textfältet och trycker på Retur. Du kan också skriva jokertecknet (&#42;) för att matcha ett valfritt antal tecken.
+Om du vill utföra en grundläggande sökning anger du sökfrågan i textfältet och trycker på Retur. Du kan också ange jokertecknet (&#42;) så att det matchar ett valfritt antal tecken.
 
 Adobe Experience Manager söker efter den angivna texten i metadataegenskaperna och returnerar motsvarande resultat. Om du skriver mer än ett ord matchar sökningen hela texten.
 
@@ -36,10 +36,10 @@ Observera följande om grundsökningen:
 
 * Sökningen utförs med hjälp av egenskaperna för metadata för formulär och resurser.
 * Om du skriver mer än ett ord matchar sökningen hela texten.
-* Sökningen är inte skiftlägeskänslig. När du skriver till exempel `geometrixx`, resurser med titlar `Geometrixx`, `GEOMETRIXX`och `GeoMetRixx` visas i sökresultaten.
+* Sökningen är inte skiftlägeskänslig. När du till exempel skriver `geometrixx` visas resurser med rubrikerna `Geometrixx`, `GEOMETRIXX` och `GeoMetRixx` i sökresultaten.
 
-* Partiella matchningar av ett ord stöds inte. Om du vill söka genom att använda delar av strängar använder du &#42; jokertecken. Om sökfrågan däremot matchar ett fullständigt ord visas motsvarande formulär eller resurs.
-* Extra blanksteg bevaras och trimmas inte under sökningen. Till exempel: `My form` är inte samma sökfråga som `My form`.
+* Partiella matchningar av ett ord stöds inte. Använd jokertecknet &#42; om du vill söka med partiella strängar. Om sökfrågan däremot matchar ett fullständigt ord visas motsvarande formulär eller resurs.
+* Extra blanksteg bevaras och trimmas inte under sökningen. `My form` är till exempel inte samma sökfråga som `My form`.
 
 * Om data- och visningsvärdena för fälten i metadataegenskaperna är olika kan du inte använda visningsvärden som sökparametrar. Du kan till exempel inte söka baserat på en status, till exempel Ändrad eller Publicerad, eftersom dessa egenskaper lagras i ett annat format.
 
@@ -47,7 +47,7 @@ Observera följande om grundsökningen:
 
 Förutom frågan kan du i sökvillkoren ange vissa sökparametrar för att göra den grundläggande sökningen effektivare och mer fokuserad.
 
-![Sökfält och parametrar eller filter AEM formulär- och resurssökning](assets/search_forms_assets.png)
+![Sökfält och parametrar eller filter för AEM av formulär och resurser](assets/search_forms_assets.png)
 
 Sökfält och parametrar eller filter AEM formulär- och resurssökning
 
@@ -70,11 +70,11 @@ Välj något av följande alternativ om du vill söka bland alla resurser som ha
 
 Du kan söka efter resurser med hjälp av någon av följande statusar:
 
-* **Publicerad**: Sök i alla resurser som publiceras och inte ändras efter publiceringen.
+* **Publicerad**: Sök i alla resurser som har publicerats och inte ändrats efter publiceringen.
 
 * **Opublicerad**: Sök i alla resurser som aldrig publiceras.
 
-* **Ändrad**: Sök i alla resurser som har ändrats eller publicerats efter publiceringen.
+* **Ändrad**: Sök i alla resurser som har ändrats eller inte publicerats efter publiceringen.
 
 ### Resurstyp {#asset-type}
 
@@ -87,7 +87,7 @@ Du kan välja valfritt antal resurstyper. Sökningen returnerar en union av alla
    <th>Beskrivning</th> 
   </tr>
   <tr>
-   <td>Formulärmall<br /> </td> 
+   <td>Formulärmall <br /> </td> 
    <td>Sök i alla formulärmallar.<br /> </td> 
   </tr>
   <tr>
@@ -99,7 +99,7 @@ Du kan välja valfritt antal resurstyper. Sökningen returnerar en union av alla
    <td>Sök i alla dokument.</td> 
   </tr>
   <tr>
-   <td>Adaptiv form<br /> </td> 
+   <td>Anpassat formulär <br /> </td> 
    <td>Sök i alla anpassade formulär.</td> 
   </tr>
   <tr>

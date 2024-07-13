@@ -18,53 +18,53 @@ ht-degree: 0%
 
 # Anpassning på klientsidan  {#client-side-customization}
 
-| **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
+| **[⇐ Feature Essentials](essentials.md)** | **[Anpassning på serversidan¥](server-customize.md)** |
 |---|---|
-|   | **[SCF Handlebars Helpers](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers¥](handlebars-helpers.md)** |
 
 Det finns flera sätt att anpassa utseendet och/eller beteendet för en AEM Communities-komponent på klientsidan.
 
 Två större metoder är att täcka över eller utöka en komponent.
 
-[Överläggning](#overlays) en komponent ändrar standardkomponenten och påverkar alla referenser till komponenten.
+[Om du ersätter](#overlays) en komponent ändras standardkomponenten och alla referenser till komponenten påverkas.
 
-[Utöka](#extensions) en -komponent, som får ett unikt namn, begränsar omfattningen av ändringarna. Termen&quot;utöka&quot; används omväxlande med&quot;åsidosätt&quot;.
+[Om du utökar](#extensions) en komponent, som har unika namn, begränsas ändringsomfånget. Termen&quot;utöka&quot; används omväxlande med&quot;åsidosätt&quot;.
 
 ## Övertäckningar {#overlays}
 
 Att täcka över en komponent är ett sätt att göra ändringar i en standardkomponent och påverka alla förekomster som använder standardkomponenten.
 
-Övertäckningen uppnås genom att en kopia av standardkomponenten i / ändras **appar** i stället för att ändra den ursprungliga komponenten i **libs** katalog. Komponenten är konstruerad med en identisk relativ sökväg, förutom att &#39;libs&#39; har ersatts med &#39;apps&#39;.
+Övertäckningen uppnås genom att ändra en kopia av standardkomponenten i katalogen /**apps** i stället för att ändra originalkomponenten i katalogen /**libs** . Komponenten är konstruerad med en identisk relativ sökväg, förutom att &#39;libs&#39; har ersatts med &#39;apps&#39;.
 
 Katalogen /apps är den första plats som genomsöks för att lösa begäranden, och om den inte hittas används standardversionen i katalogen /libs.
 
 Standardkomponenten i katalogen /libs får aldrig ändras eftersom framtida korrigeringar och uppgraderingar är fria att ändra katalogen /libs på det sätt som behövs, samtidigt som de allmänna gränssnitten bibehålls.
 
-Det här skiljer sig från [utöka](#extensions) en standardkomponent där du vill göra ändringar för en viss användning, skapa en unik sökväg till komponenten och förlita dig på att referera den ursprungliga standardkomponenten i katalogen /libs till den överordnade resurstypen.
+Detta skiljer sig från [att utöka](#extensions) en standardkomponent där du vill göra ändringar för en viss användning, skapa en unik sökväg till komponenten och förlita dig på att referera den ursprungliga standardkomponenten i katalogen /libs som den överordnade resurstypen.
 
-Ett snabbt exempel på hur kommentarkomponenten kan placeras över finns i [Komponenten Overlay Comments, genomgång](overlay-comments.md).
+Om du snabbt vill se ett exempel på hur kommentarskomponenten överlappas provar du självstudiekursen [Komponenten för överläggskommentarer](overlay-comments.md).
 
 ## Tillägg {#extensions}
 
 Att utöka (åsidosätta) en komponent är ett sätt att göra ändringar för en viss användning utan att påverka alla instanser som använder standardvärdet. Den utökade komponenten har ett unikt namn i mappen /apps och refererar till standardkomponenten i mappen /libs, vilket innebär att en komponents standarddesign och beteende inte ändras.
 
-Det här skiljer sig från [överläggning](#overlays) standardkomponenten där Sling-typen löser relativa referenser till apparna/mappen innan sökning görs i mappen libs/, vilket innebär att en komponents design eller beteende ändras globalt.
+Detta skiljer sig från [överlägg](#overlays) som är standardkomponent där Sling-typen löser relativa referenser till appar/-mappen innan sökning sker i libs/-mappen, vilket innebär att en komponents design eller beteende ändras globalt.
 
-Ett snabbt exempel på hur du utökar kommentarkomponenten finns i [Utöka kommentarkomponent, självstudiekurs](extend-comments.md).
+Om du snabbt vill se ett exempel på hur du utökar kommentarkomponenten kan du prova självstudiekursen [Utöka kommentarkomponent](extend-comments.md).
 
-## JavaScript-bindning {#javascript-binding}
+## JavaScript Binding {#javascript-binding}
 
-HBS-skriptet för komponenten måste vara bundet till JavaScript-objekt, modeller och vyer som implementerar den här funktionen.
+HBS-skriptet för komponenten måste vara bundet till JavaScript objekt, modeller och vyer, som implementerar den här funktionen.
 
-Värdet för `data-scf-component` attribut kan vara standard, till exempel **`social/tally/components/hbs/rating`** eller en utökad (anpassad) komponent för anpassade funktioner, som **werdetail/components/hbs/rating**.
+Värdet för attributet `data-scf-component` kan vara standardvärdet, till exempel **`social/tally/components/hbs/rating`**, eller en utökad (anpassad) komponent för anpassade funktioner, till exempel **Nöjda komponenter/hbs/klassificering**.
 
-Om du vill binda en komponent måste hela komponentskriptet inneslutas i en &lt;div> element med följande attribut:
+Om du vill binda en komponent måste hela komponentskriptet inneslutas i ett &lt;div>-element med följande attribut:
 
-* `data-component-id`=&quot;`{{id}}`&quot;
+* `data-component-id`=`{{id}}`
 
   matchar egenskapen id från kontexten
 
-* `data-scf-component`=&quot;*&lt;resourcetype>*
+* `data-scf-component`=&quot;*&lt;resourceType>*
 
 Från `/apps/weretail/components/hbs/rating/rating.hbs`:
 
@@ -95,7 +95,7 @@ Så här skalförändrar du en komponent:
 1. Identifiera de element som du vill ändra (t.ex. dispositionsområde, knappar i verktygsfält, meddelandeteckensnitt).
 1. Identifiera CSS-klassen/reglerna som påverkar dessa element.
 1. Skapa en formatmall (.css).
-1. Inkludera formatmallen i en klientbiblioteksmapp ([klientlibs](#clientlibs-for-scf)) för din webbplats och se till att den ingår i dina mallar och sidor med [ui:includeClientLib](../../help/sites-developing/clientlibs.md).
+1. Inkludera formatmallen i en klientbiblioteksmapp ([clientlibs](#clientlibs-for-scf)) för platsen och se till att den tas med från dina mallar och sidor med [ui:includeClientLib](../../help/sites-developing/clientlibs.md).
 
 1. Definiera om CSS-klasserna och reglerna som du har identifierat (#2) i formatmallen och lägg till format.
 
@@ -103,16 +103,16 @@ De anpassade formaten åsidosätter nu standardramverksformaten och komponenten 
 
 >[!CAUTION]
 >
->Alla CSS-klassnamn som har prefixet `scf-js` har en specifik användning i JavaScript-kod. Dessa klasser påverkar en komponents tillstånd (till exempel växla från dold till synlig) och bör varken åsidosättas eller tas bort.
+>Alla CSS-klassnamn som har prefixet `scf-js` används specifikt i JavaScript-kod. Dessa klasser påverkar en komponents tillstånd (till exempel växla från dold till synlig) och bör varken åsidosättas eller tas bort.
 >
->Med `scf-js` -klasser påverkar inte format. Klassnamnen kan användas i formatmallar med det intrycket att det kan finnas biverkningar när de styr elementens lägen.
+>Klasserna `scf-js` påverkar inte format, men klassnamnen kan användas i formatmallar med det intrycket att det kan finnas biverkningar när de styr elementens lägen.
 
 ## Utöka JavaScript {#extending-javascript}
 
-Om du vill utöka en komponents JavaScript-implementering måste du:
+Om du vill utöka en JavaScript-implementering måste du:
 
 1. Skapa en komponent för programmet med jcr:resourceSuperType inställd på värdet för den utökade komponentens jcr:resourceType, till exempel social/forum/components/hbs/forum.
-1. Granska standardkomponentens JavaScript för att avgöra vilka metoder som behöver registreras med SCF.registerComponent().
+1. Undersök standardkomponentens JavaScript för SCF för att avgöra vilka metoder som behöver registreras med SCF.registerComponent().
 1. Kopiera den utökade komponentens JavaScript eller börja från början.
 1. Utöka metoden.
 1. Använd SCF.registerComponent() för att registrera alla metoder med antingen standardvärdena eller anpassade objekt och vyer.
@@ -150,14 +150,14 @@ Skripttaggar i SCF-skript bör inte tas bort när komponenter åsidosätts eller
 
 ## Clientlibs for SCF {#clientlibs-for-scf}
 
-Användning av [bibliotek på klientsidan](../../help/sites-developing/clientlibs.md) (clientlibs) är ett sätt att ordna och optimera JavaScript och CSS som används för att återge innehåll på klienten.
+Med hjälp av [klientbibliotek](../../help/sites-developing/clientlibs.md) (klientbibliotek) kan du ordna och optimera JavaScript och CSS som används för att återge innehåll på klienten.
 
 Klientlibs for SCF följer ett mycket specifikt namngivningsmönster för två varianter, som endast varierar beroende på om det finns &#39;author&#39; i kategorinamnet:
 
 | Clientlib-variant | Mönster för kategoriegenskap |
 |--- |--- |
-| complete clientlib | cq.social.hbs.&lt;component name> |
-| författare clientlib | cq.social.author.hbs.&lt;component name> |
+| complete clientlib | cq.social.hbs.&lt;komponentnamn> |
+| författare clientlib | cq.social.author.hbs.&lt;komponentnamn> |
 
 ### Fullständiga klienter {#complete-clientlibs}
 
@@ -169,16 +169,16 @@ Dessa versioner finns i:
 
 Till exempel:
 
-* Klientmappsnod: `/etc/clientlibs/social/hbs/forum`
+* Klientmappnod: `/etc/clientlibs/social/hbs/forum`
 * Kategoriegenskap: `cq.social.hbs.forum`
 
-The [Community Components Guide](components-guide.md) listar de fullständiga klientlibs som krävs för varje SCF-komponent.
+I guiden [Community Components](components-guide.md) visas de fullständiga klientlibs som krävs för varje SCF-komponent.
 
 [Clientlibs for Communities Components](clientlibs.md) beskriver hur du lägger till clientlibs på en sida.
 
 ### Författarklipp {#author-clientlibs}
 
-Klientlibs för författarversionen tas bort från det minsta JavaScript som behövs för att implementera komponenten.
+Klientlibs för författarversionen tas bort från den minimala JavaScript som behövs för att implementera komponenten.
 
 Dessa clientlibs ska aldrig tas med direkt, utan kan bäddas in i andra clientlibs, som har skapats för en webbplats för hand.
 
@@ -188,7 +188,7 @@ Dessa versioner finns i mappen SCF libs:
 
 Till exempel:
 
-* Klientmappsnod: `/libs/social/forum/hbs/forum/clientlibs`
+* Klientmappnod: `/libs/social/forum/hbs/forum/clientlibs`
 * Kategoriegenskap: `cq.social.author.hbs.forum`
 
 Obs! Medan författarklienter aldrig bäddar in andra bibliotek listar de sina beroenden. När beroendena är inbäddade i andra bibliotek hämtas de inte automatiskt in och måste även bäddas in.
@@ -199,10 +199,10 @@ Du kan identifiera de nödvändiga författarklientlibs genom att infoga&quot;f�
 
 Alla webbplatser är olika när det gäller hantering av klientbibliotek. Olika faktorer kan vara:
 
-* Generell hastighet: kanske önskas att webbplatsen ska vara responsiv, men det är acceptabelt att den första sidan är lite långsam att läsa in. Om många av sidorna använder samma JavaScript kan de olika JavaScript-skript bäddas in i ett clientlib och refereras från den första sidan som ska läsas in. JavaScript-koden i den här hämtningen förblir cachelagrad, vilket minimerar mängden data som ska hämtas för efterföljande sidor.
-* Kort tid till första sidan: Kanske vill man att första sidan ska läsas in snabbt. I det här fallet finns JavaScript i flera små filer som bara ska refereras där det behövs.
+* Generell hastighet: kanske önskas att webbplatsen ska vara responsiv, men det är acceptabelt att den första sidan är lite långsam att läsa in. Om många av sidorna använder samma JavaScript kan de olika JavaScript-sidorna bäddas in i ett clientlib och refereras från den första sidan som ska läsas in. JavaScript i den här nedladdningen är fortfarande cachelagrad, vilket minimerar mängden data som ska hämtas för efterföljande sidor.
+* Kort tid till första sidan: Kanske vill man att första sidan ska läsas in snabbt. I det här fallet finns JavaScript i flera små filer som bara kan refereras till där det behövs.
 * Balans mellan första sidinläsning och efterföljande nedladdningar.
 
-| **[⇐ - funktioner](essentials.md)** | **[Anpassning på serversidan](server-customize.md)** |
+| **[⇐ Feature Essentials](essentials.md)** | **[Anpassning på serversidan¥](server-customize.md)** |
 |---|---|
-|   | **[SCF Handlebars Helpers](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers¥](handlebars-helpers.md)** |

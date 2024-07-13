@@ -36,13 +36,13 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 ## Assets {#assets}
 
-De effektivaste strategierna kring Assets, inklusive Dynamic Media-funktioner och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
+De effektivaste strategierna för Assets, inklusive Dynamic Media-funktioner och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
 
 <table>
  <tbody>
   <tr>
    <td>Filformat</td>
-   <td><a href="/help/assets/assets-file-format-best-practices.md">Metodtips för filformat för resurser</a></td>
+   <td><a href="/help/assets/assets-file-format-best-practices.md">Assets-filformat God praxis</a></td>
    <td>Beskriver de effektivaste strategierna för filstöd i AEM Assets.</td>
   </tr>
   <tr>
@@ -56,7 +56,7 @@ De effektivaste strategierna kring Assets, inklusive Dynamic Media-funktioner oc
    <td><p>Beskriver hur du kan förbättra skärpan i en bild och det bästa sättet att optimera bildkvaliteten om du använder Dynamic Media eller integrerar med Dynamic Media Classic. </p> </td>
   </tr>
   <tr>
-   <td>Flerspråkiga resurser</td>
+   <td>Flerspråkig Assets</td>
    <td><a href="/help/assets/best-practices-for-translating-assets-efficiently.md">Bästa praxis för översättning</a></td>
    <td>Beskriver de bästa sätten att effektivt översätta AEM resurser.</td>
   </tr>
@@ -69,7 +69,7 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
 |  |  |  |
 |---|---|---|
-| Redigeringsverktyg | [Designmiljö och verktyg](/help/sites-authoring/author-environment-tools.md) | Innehåller en översikt över de verktyg som används för att skapa sidor. |
+| Redigeringsverktyg | [Redigeringsmiljö och -verktyg](/help/sites-authoring/author-environment-tools.md) | Innehåller en översikt över de verktyg som används för att skapa sidor. |
 | Ordna sidor | [Skapa och ordna sidor](/help/sites-authoring/managing-pages.md) | Ger en översikt över hur du bäst ordnar sidorna, inklusive namnkonventioner. |
 
 ## Forms {#forms}
@@ -77,4 +77,4 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 |  |  |  |
 |---|---|---|
 | Anpassningsbara formulär | [Bästa tillvägagångssätt för arbete med anpassningsbara formulär](/help/forms/using/adaptive-forms-best-practices.md) | Beskriver de bästa sätten att skapa, redigera och anpassa anpassade formulär. |
-| HTML5-formulär | [Bästa praxis för utformning av HTML5-formulär](/help/forms/using/best-practices-for-html5-forms.md) | Beskriver de bästa sätten att arbeta med layout och design av HTML5-formulär. |
+| HTML5-formulär | [Bästa tillvägagångssätt för att utforma HTML5-formulär](/help/forms/using/best-practices-for-html5-forms.md) | Beskriver de bästa sätten att arbeta med layout och design av HTML5-formulär. |

@@ -20,7 +20,7 @@ ht-degree: 2%
 
 I följande diagram visas hur stöd för flera webbplatser för riktat innehåll är strukturerat.
 
-Områden visas under **/content/campaign/&lt;brand>** och som standard har varje varumärke ett originalområde som skapas automatiskt. Varje område innehåller egna aktiviteter, upplevelser och erbjudanden.
+Områden visas under **/content/campaign/&lt;brand>** och som standard har varje varumärke ett huvudområde, som skapas automatiskt. Varje område innehåller egna aktiviteter, upplevelser och erbjudanden.
 
 ![chlimage_1-268](assets/chlimage_1-268.png)
 

@@ -35,24 +35,24 @@ Innan du börjar konfigurera eller koda komponenten bör du fråga:
    * En tydlig specifikation hjälper till i alla faser av utveckling, testning och överlämning. Detaljerna kan förändras över tid, men specifikationen kan uppdateras (men ändringarna bör också dokumenteras).
 * Behöver du skapa komponenten från grunden, eller kan du ärva grunderna från en befintlig komponent?
    * Man behöver inte förnya hjulet.
-   * Det finns flera mekanismer i AEM som gör att du kan ärva och utöka detaljer från en annan komponentdefinition, inklusive åsidosättning, övertäckning och [Samla resurser](/help/sites-developing/sling-resource-merger.md).
+   * Det finns flera mekanismer från AEM som gör att du kan ärva och utöka information från en annan komponentdefinition, inklusive åsidosättning, övertäckning och [delningskonvertering](/help/sites-developing/sling-resource-merger.md).
 * Kräver komponenten logik för att markera eller ändra innehållet?
    * Logiken ska hållas åtskild från användargränssnittslagret. HTML är utformat för att säkerställa att detta sker.
 * Behöver komponenten CSS-formatering?
    * CSS-formateringen ska hållas åtskild från komponentdefinitionerna. Definiera konventioner för att namnge elementen i HTML så att du kan ändra dem via externa CSS-filer.
 * Vilka säkerhetsaspekter bör jag tänka på?
-   * Se [Checklista för säkerhet - Bästa metoder för utveckling](/help/sites-administering/security-checklist.md#development-best-practices) för mer information.
+   * Mer information finns i [Säkerhetschecklista - Bästa metoder för utveckling](/help/sites-administering/security-checklist.md#development-best-practices).
 
 ### Pekaktiverat jämfört med klassiskt gränssnitt {#touch-enabled-vs-classic-ui}
 
 Innan något allvarligt samtal börjar om att utveckla komponenter måste du veta vilket gränssnitt författarna använder:
 
-* **Pekaktiverat användargränssnitt**
-  [Standardanvändargränssnittet](/help/sites-developing/touch-ui-concepts.md) bygger på Adobe Experience Cloud enhetliga användarupplevelse, med hjälp av de underliggande teknikerna i [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite-gränssnitt](/help/sites-developing/touch-ui-concepts.md#granite-ui).
+* **Pekaktiverat gränssnitt**
+  [Standardanvändargränssnittet](/help/sites-developing/touch-ui-concepts.md) baseras på den enhetliga användarupplevelsen för Adobe Experience Cloud med hjälp av de underliggande teknikerna i [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite-gränssnittet](/help/sites-developing/touch-ui-concepts.md#granite-ui).
 * **Klassiskt användargränssnitt**
 Användargränssnitt som bygger på ExtJS-teknik som ersatts med AEM 6.4.
 
-Se [Gränssnittet Recommendations för kunder](/help/sites-deploying/ui-recommendations.md) för mer information.
+Mer information finns i [Gränssnittet Recommendations för kunder](/help/sites-deploying/ui-recommendations.md).
 
 Komponenter kan implementeras för att stödja det beröringsaktiverade användargränssnittet, det klassiska användargränssnittet eller båda. När du tittar på en standardinstans ser du även färdiga komponenter som ursprungligen designats för det klassiska användargränssnittet, det pekaktiverade användargränssnittet eller båda.
 
@@ -60,19 +60,19 @@ Grunderna för båda beskrivs på den här sidan och hur du känner igen dem.
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder användargränssnittet med pekskärm för att utnyttja den senaste tekniken. [Verktyg för AEM](modernization-tools.md) kan göra migreringen enklare.
+>Adobe rekommenderar att du använder användargränssnittet med pekskärm för att utnyttja den senaste tekniken. [AEM Moderniseringsverktyg](modernization-tools.md) kan göra migreringen enklare.
 
 ### Innehållslogik och återgivningsmarkeringar  {#content-logic-and-rendering-markup}
 
 Adobe rekommenderar att koden som ansvarar för kod och återgivning hålls åtskild från koden som styr logiken som används för att markera komponentens innehåll.
 
-Denna filosofi stöds av [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), ett mallspråk som är avsiktligt begränsat för att säkerställa att ett verkligt programmeringsspråk används för att definiera den underliggande affärslogiken. Den här (valfria) logiken anropas från HTML med ett specifikt kommando. Den här mekanismen markerar koden som anropas för en viss vy och, om det behövs, tillåter specifik logik för olika vyer av samma komponent.
+Den här filosofin stöds av [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), ett mallspråk som är avsiktligt begränsat för att säkerställa att ett verkligt programmeringsspråk används för att definiera den underliggande affärslogiken. Den här (valfria) logiken anropas från HTML med ett specifikt kommando. Den här mekanismen markerar koden som anropas för en viss vy och, om det behövs, tillåter specifik logik för olika vyer av samma komponent.
 
 ### HTL vs JSP {#htl-vs-jsp}
 
 HTML är ett mallspråk för HTML som introducerades med AEM 6.0.
 
-Diskussion om huruvida du ska använda [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) eller JSP (Java™ Server Pages) när du utvecklar egna komponenter bör vara okomplicerat eftersom HTML nu är det rekommenderade skriptspråket för AEM.
+Diskussionen om du ska använda [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) eller JSP (Java™ Server Pages) när du utvecklar egna komponenter bör vara okomplicerad eftersom HTML nu är det rekommenderade skriptspråket för AEM.
 
 Både HTML och JSP kan användas för att utveckla komponenter för både det klassiska och det beröringskänsliga användargränssnittet. Även om det finns en tendens att anta att HTML bara är för det beröringsaktiverade användargränssnittet och JSP för det klassiska användargränssnittet, är detta en missuppfattning och beror mer på timing. Användargränssnittet med pekfunktion och HTML integrerades i AEM under ungefär samma period. Eftersom HTML nu är det rekommenderade språket används det för nya komponenter, som ofta används för användargränssnittet med pekfunktioner.
 
@@ -89,16 +89,16 @@ Information om hur du skapar egna komponenter för rätt användargränssnitt fi
 
 Ett snabbt sätt att komma igång är att kopiera en befintlig komponent och sedan göra de ändringar du vill. Mer information om hur du skapar egna komponenter och lägger till dem i styckesystemet finns i:
 
-* [Utveckla komponenter](/help/sites-developing/developing-components-samples.md) (fokuserat på användargränssnittet med pekskärm)
+* [Utveckla komponenter](/help/sites-developing/developing-components-samples.md) (fokuserat på det beröringsaktiverade användargränssnittet)
 
-### Flytta komponenter till publiceringsinstansen {#moving-components-to-the-publish-instance}
+### Flytta komponenter till Publish-instansen {#moving-components-to-the-publish-instance}
 
 Komponenterna som återger innehåll måste distribueras på samma AEM som innehållet. Därför måste alla komponenter som används för att skapa och återge sidor på författarinstansen distribueras på publiceringsinstansen. När de distribueras är komponenterna tillgängliga för återgivning av aktiverade sidor.
 
 Använd följande verktyg för att flytta dina komponenter till publiceringsinstansen:
 
-* [Använd pakethanteraren](/help/sites-administering/package-manager.md) om du vill lägga till dina komponenter i ett paket och flytta dem till en annan AEM.
-* [Använda verktyget Aktivera trädreplikering](/help/sites-authoring/publishing-pages.md#manage-publication) för att replikera komponenterna.
+* [Använd Package Manager](/help/sites-administering/package-manager.md) för att lägga till dina komponenter i ett paket och flytta dem till en annan AEM.
+* [Använd verktyget Aktivera trädreplikering](/help/sites-authoring/publishing-pages.md#manage-publication) för att replikera komponenterna.
 
 >[!NOTE]
 >
@@ -108,7 +108,7 @@ Använd följande verktyg för att flytta dina komponenter till publiceringsinst
 
 * Sida:
 
-   * AEM har *page* komponent ( `cq:Page`).
+   * AEM har komponenten *page* ( `cq:Page`).
    * Detta är en specifik typ av resurs som är viktig för innehållshantering.
       * En sida motsvarar en webbsida med innehåll för webbplatsen.
 
@@ -117,7 +117,7 @@ Använd följande verktyg för att flytta dina komponenter till publiceringsinst
    * Styckesystemet är en viktig del av en webbplats när det hanterar en lista med stycken. Den används för att hålla kvar och strukturera de enskilda komponenterna som innehåller det faktiska innehållet.
    * Du kan skapa, flytta, kopiera och ta bort stycken i styckesystemet.
    * Du kan också välja vilka komponenter som ska vara tillgängliga för användning i ett visst styckesystem.
-   * Det finns olika styckesystem i en standardinstans (till exempel `parsys`, ` [responsivegrid](/help/sites-authoring/responsive-layout.md)`).
+   * Det finns olika styckesystem tillgängliga i en standardinstans (till exempel `parsys`, ` [responsivegrid](/help/sites-authoring/responsive-layout.md)`).
 
 ## Struktur {#structure}
 
@@ -156,11 +156,11 @@ Definitionen av en komponent kan delas upp enligt följande:
 
    * `/apps/<myApp>/components`
 
-* AEM standardkomponenter definieras som `cq:Component` och har de viktigaste elementen:
+* AEM standardkomponenter definieras som `cq:Component` och har nyckelelementen:
 
    * jcr-egenskaper:
 
-     En lista med jcr-egenskaper. Dessa är variabla och vissa kan vara valfria genom att grundstrukturen för en komponentnod, dess egenskaper och undernoder definieras av `cq:Component` definition
+     En lista med jcr-egenskaper. Dessa är variabla och vissa kan vara valfria genom att grundstrukturen för en komponentnod, dess egenskaper och undernoder definieras av definitionen `cq:Component`
 
    * Resurser:
 
@@ -176,8 +176,8 @@ Definitionen av en komponent kan delas upp enligt följande:
 
 * **Viktiga egenskaper**:
 
-   * `jcr:title` - Komponenttitel, som exempelvis används som etikett när komponenten visas i komponentwebbläsaren eller i sidledaren.
-   * `jcr:description` - Beskrivning av komponenten. Kan användas som muspekare i komponentwebbläsaren eller i sidledaren.
+   * `jcr:title` - Komponenttitel, som till exempel används som etikett när komponenten visas i komponentwebbläsaren eller i sidledaren.
+   * `jcr:description` - Beskrivning för komponenten. Kan användas som muspekningstecken i komponentwebbläsaren eller i sidledaren.
    * Klassiskt användargränssnitt:
 
       * `icon.png` - Ikon för komponenten.
@@ -185,9 +185,9 @@ Definitionen av en komponent kan delas upp enligt följande:
 
    * Pekgränssnitt
 
-      * Se avsnittet [Komponentikon i Touch UI](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) för mer information.
+      * Mer information finns i avsnittet [Komponentikon i Touch-gränssnittet](/help/sites-developing/components-basics.md#component-icon-in-touch-ui).
 
-* **Vitala underordnade noder**:
+* **Viktiga underordnade noder**:
 
    * `cq:editConfig (cq:EditConfig)` - Definierar redigeringsegenskaperna för komponenten och aktiverar komponenten att visas i komponentwebbläsaren eller Sidekick.
 
@@ -202,37 +202,37 @@ Definitionen av en komponent kan delas upp enligt följande:
    * Klassiskt användargränssnitt:
 
       * `dialog` ( `cq:Dialog`) - Dialog för den här komponenten. Definierar gränssnittet som låter användaren konfigurera komponenten, redigera innehåll eller båda.
-      * `design_dialog` ( `cq:Dialog`) - Designredigering för den här komponenten.
+      * `design_dialog` ( `cq:Dialog`) - Designredigering för komponenten.
 
 #### Komponentikon i Touch UI {#component-icon-in-touch-ui}
 
 Ikonen eller förkortningen för komponenten definieras via JCR-egenskaperna för komponenten när komponenten skapas av utvecklaren. Dessa egenskaper utvärderas i följande ordning och den första giltiga egenskapen som hittas används.
 
-1. `cq:icon` - String-egenskap som pekar på en standardikon i [Coral UI-bibliotek](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/Coral.Icon.html) som visas i komponentwebbläsaren
+1. `cq:icon` - Strängegenskapen pekar på en standardikon i [Coral UI-biblioteket](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/Coral.Icon.html) som ska visas i komponentwebbläsaren
    * Använd värdet för HTML-attributet för ikonen Koral.
-1. `abbreviation` - String-egenskap för att anpassa förkortningen av komponentnamnet i komponentwebbläsaren
+1. `abbreviation` - Strängegenskapen för att anpassa förkortningen av komponentnamnet i komponentwebbläsaren
    * Förkortningen ska vara begränsad till två tecken.
-   * Genom att ange en tom sträng skapas förkortningen från de två första tecknen i `jcr:title` -egenskap.
+   * Om du anger en tom sträng skapas förkortningen från de två första tecknen i egenskapen `jcr:title`.
       * Exempel: &quot;Im&quot; för &quot;Bild&quot;
       * Den lokaliserade titeln används för att skapa förkortningen.
-   * Förkortningen översätts bara om komponenten har en `abbreviation_commentI18n` -egenskapen, som sedan används som översättningstips.
+   * Förkortningen översätts bara om komponenten har en `abbreviation_commentI18n`-egenskap, som sedan används som översättningstips.
 1. `cq:icon.png` eller `cq:icon.svg` - Ikon för den här komponenten, som visas i komponentwebbläsaren
    * 20 x 20 pixlar är storleken på ikonerna för standardkomponenter.
       * Storleken på större ikoner ändras (klientsidan).
    * Den rekommenderade färgen är rgb(112, 112, 112) > #707070
    * Bakgrunden för standardkomponentikoner är genomskinlig.
-   * Endast `.png` och `.svg` filer stöds.
-   * Om du importerar från filsystemet med Eclipse-plugin-programmet måste filnamn escape-konverteras `_cq_icon.png` eller `_cq_icon.svg` till exempel.
-   * `.png` tar över sitt prejudikat `.svg` om båda finns
+   * Endast `.png`- och `.svg`-filer stöds.
+   * Om du importerar från filsystemet med Eclipse-plugin-programmet måste filnamnen escape-konverteras till exempel som `_cq_icon.png` eller `_cq_icon.svg`.
+   * `.png` har företräde framför `.svg` om båda finns
 
-Om ingen av ovanstående egenskaper ( `cq:icon`, `abbreviation`, `cq:icon.png`, eller `cq:icon.svg`) finns på komponenten:
+Om inga av ovanstående egenskaper ( `cq:icon`, `abbreviation`, `cq:icon.png` eller `cq:icon.svg`) hittas i komponenten:
 
-* Systemet söker efter samma egenskaper i de överordnade komponenterna efter `sling:resourceSuperType` -egenskap.
-* Om inget eller en tom förkortning hittas på den överordnade komponentnivån skapas förkortningen från de första bokstäverna i `jcr:title` den aktuella komponentens egenskap.
+* Systemet söker efter samma egenskaper i de överordnade komponenterna efter egenskapen `sling:resourceSuperType`.
+* Om inget eller en tom förkortning hittas på den överordnade komponentnivån skapas förkortningen från de första bokstäverna i egenskapen `jcr:title` för den aktuella komponenten.
 
-Om du vill avbryta arvet av ikoner från superkomponenter anger du ett tomt värde `abbreviation` egenskapen för komponenten återgår till standardbeteendet.
+Om du vill avbryta arvet av ikoner från superkomponenter återställs standardbeteendet om du anger en tom `abbreviation`-egenskap för komponenten.
 
-The [Komponentkonsol](/help/sites-authoring/default-components-console.md#component-details) visar hur ikonen för en viss komponent definieras.
+[Komponentkonsolen](/help/sites-authoring/default-components-console.md#component-details) visar hur ikonen för en viss komponent definieras.
 
 #### Exempel på SVG-ikon {#svg-icon-example}
 
@@ -264,12 +264,12 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
   <tr>
    <td>.<br /> </td>
    <td><code>cq:Component</code></td>
-   <td>Aktuell komponent. En komponent är av nodtyp <code>cq:Component</code>.<br /> </td>
+   <td>Aktuell komponent. En komponent är av nodtypen <code>cq:Component</code>.<br /> </td>
   </tr>
   <tr>
    <td><code>componentGroup</code></td>
    <td><code>String</code></td>
-   <td>Grupp under vilken komponenten kan väljas i komponentwebbläsaren (användargränssnitt med pekfunktion) eller Sidekick (klassiskt användargränssnitt).<br /> Värdet för <code>.hidden</code> används för komponenter som inte är tillgängliga för val från gränssnittet, t.ex. det faktiska styckesystemet.</td>
+   <td>Grupp under vilken komponenten kan väljas i komponentwebbläsaren (användargränssnitt med pekfunktion) eller Sidekick (klassiskt användargränssnitt).<br /> Värdet <code>.hidden</code> används för komponenter som inte är tillgängliga för val från användargränssnittet, till exempel det faktiska styckesystemet.</td>
   </tr>
   <tr>
    <td><code>cq:isContainer</code></td>
@@ -314,17 +314,17 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
   <tr>
    <td><code>cq:cellName</code></td>
    <td><code>String</code></td>
-   <td>Om den anges används den här egenskapen som cell-ID. Mer information finns i artikeln i kunskapsbasen <a href="https://helpx.adobe.com/experience-manager/kb/DesigneCellId.html">Hur skapas ID:n för designceller?</a>.<br /> </td>
+   <td>Om den anges används den här egenskapen som cell-ID. Mer information finns i kunskapsbasartikeln <a href="https://helpx.adobe.com/experience-manager/kb/DesigneCellId.html">How are Design Cell IDs built</a>.<br /> </td>
   </tr>
   <tr>
    <td><code>cq:childEditConfig</code></td>
    <td><code>cq:EditConfig</code></td>
-   <td>När komponenten är en behållare - till exempel ett styckesystem - styr det redigeringskonfigurationen för de underordnade noderna.<br /> </td>
+   <td>När komponenten är en behållare - till exempel ett styckesystem - kör den redigeringskonfigurationen för de underordnade noderna.<br /> </td>
   </tr>
   <tr>
    <td><code>cq:editConfig</code></td>
    <td><code>cq:EditConfig</code></td>
-   <td><a href="#edit-behavior">Redigera komponentens konfiguration</a>.<br /> </td>
+   <td><a href="#edit-behavior">Redigera konfigurationen för komponenten</a>.<br /> </td>
   </tr>
   <tr>
    <td><code>cq:htmlTag</code></td>
@@ -344,12 +344,12 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
   <tr>
    <td><code>cq:templatePath</code></td>
    <td><code>String</code></td>
-   <td>Sökväg till en nod som ska användas som innehållsmall när komponenten läggs till från komponentwebbläsaren eller Sidekick. Detta måste vara en absolut sökväg, inte relativ till komponentnoden.<br /> Om du inte vill återanvända innehåll som redan finns på en annan plats krävs inte detta och <code>cq:template</code> är tillräckligt (se nedan).</td>
+   <td>Sökväg till en nod som ska användas som innehållsmall när komponenten läggs till från komponentwebbläsaren eller Sidekick. Detta måste vara en absolut sökväg, inte relativ till komponentnoden.<br /> Om du inte vill återanvända innehåll som redan är tillgängligt någon annanstans är detta inte nödvändigt och <code>cq:template</code> är tillräckligt (se nedan).</td>
   </tr>
   <tr>
    <td><code>jcr:created</code></td>
    <td><code>Date</code></td>
-   <td>Datum då komponenten skapades.<br /> </td>
+   <td>Datum när komponenten skapades.<br /> </td>
   </tr>
   <tr>
    <td><code>jcr:description</code></td>
@@ -364,7 +364,7 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
   <tr>
    <td><code>sling:resourceSuperType</code></td>
    <td><code>String</code></td>
-   <td>När den är inställd ärver komponenten från den här komponenten.<br /> </td>
+   <td>När den anges ärver komponenten från den här komponenten.<br /> </td>
   </tr>
   <tr>
    <td><code>virtual</code></td>
@@ -379,7 +379,7 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
   <tr>
    <td><code>icon.png</code></td>
    <td><code>nt:file</code></td>
-   <td>Ikonen för komponenten visas bredvid rubriken i Sidekick.<br /> </td>
+   <td>Ikon för komponenten visas bredvid rubriken i Sidekick.<br /> </td>
   </tr>
   <tr>
    <td><code>thumbnail.png</code></td>
@@ -389,9 +389,9 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
  </tbody>
 </table>
 
-Om du tittar på **Text** -komponent (båda versionerna) kan du se följande element:
+Om du tittar på komponenten **Text** (någon version) kan du se följande element:
 
-* HTL ( `/libs/wcm/foundation/components/text`)
+* HTML ( `/libs/wcm/foundation/components/text`)
 
   ![chlimage_1-241](assets/chlimage_1-241.png)
 
@@ -401,22 +401,22 @@ Om du tittar på **Text** -komponent (båda versionerna) kan du se följande ele
 
 Egenskaper av särskilt intresse är:
 
-* `jcr:title` - komponentens titel; den kan användas för att identifiera komponenten, t.ex. visas den i komponentlistan i komponentwebbläsaren eller sidosparken
-* `jcr:description` - beskrivning av komponenten; kan användas som muspekare i komponentlistan i sidosparken
-* `sling:resourceSuperType`: detta anger arvssökvägen när en komponent utökas (genom att åsidosätta en definition)
+* `jcr:title` - komponentens titel. Den kan användas för att identifiera komponenten, t.ex. så visas den i komponentlistan i komponentwebbläsaren eller i sidosparken
+* `jcr:description` - beskrivning för komponenten; kan användas som muspekare i komponentlistan i sidosparken
+* `sling:resourceSuperType`: Detta anger arvssökvägen när en komponent utökas (genom att åsidosätta en definition)
 
 Underordnade noder av särskilt intresse är:
 
-* `cq:editConfig` ( `cq:EditConfig`) - det här styr visuella aspekter, till exempel utseendet på en stapel eller widget, eller kan lägga till anpassade kontroller
-* `cq:childEditConfig` ( `cq:EditConfig`) - detta styr de visuella aspekterna för underordnade komponenter som inte har egna definitioner
+* `cq:editConfig` ( `cq:EditConfig`) - det här styr visuella aspekter, till exempel utseendet på ett fält eller en widget, eller kan lägga till anpassade kontroller
+* `cq:childEditConfig` ( `cq:EditConfig`) - Detta styr de visuella aspekterna för underordnade komponenter som inte har egna definitioner
 * Pekaktiverat användargränssnitt:
    * `cq:dialog` ( `nt:unstructured`) - definierar dialogrutan för redigering av innehåll i den här komponenten
    * `cq:design_dialog` ( `nt:unstructured`) - anger designredigeringsalternativen för den här komponenten
 * Klassiskt användargränssnitt:
    * `dialog` ( `cq:Dialog`) - definierar dialogrutan för redigering av innehåll i den här komponenten (specifik för det klassiska användargränssnittet)
    * `design_dialog` ( `cq:Dialog`) - anger designredigeringsalternativen för den här komponenten
-   * `icon.png` - bildfil som ska användas som ikon för komponenten i Sidekick
-   * `thumbnail.png` - bildfil som ska användas som miniatyrbild för komponenten när den dras från Sidekick
+   * `icon.png` - grafikfil som ska användas som ikon för komponenten i Sidekick
+   * `thumbnail.png` - grafikfil som ska användas som miniatyrbild för komponenten när den dras från Sidekick
 
 ### Dialogrutor {#dialogs}
 
@@ -429,7 +429,7 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
 >[!NOTE]
 >
 >* Av kompatibilitetsskäl kan det beröringsaktiverade användargränssnittet använda definitionen för en klassisk användargränssnittsdialogruta när ingen dialogruta har definierats för det beröringsaktiverade användargränssnittet.
->* The [Verktyg för AEM](/help/sites-developing/modernization-tools.md) finns även för att du ska kunna utöka/konvertera komponenter som bara har dialogrutor definierade för det klassiska användargränssnittet.
+>* Verktygen [AEM Modernisering](/help/sites-developing/modernization-tools.md) finns också för att hjälpa dig att utöka/konvertera komponenter som bara har dialogrutor definierade för det klassiska användargränssnittet.
 >
 
 * Pekaktiverat användargränssnitt
@@ -437,10 +437,10 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
       * definiera dialogrutan för redigering av innehåll i den här komponenten
       * specifikt för det pekaktiverade användargränssnittet
       * definieras med gränssnittskomponenter i Granite
-      * har en egenskap `sling:resourceType`, som standard för Sling-innehållsstruktur
-      * kan ha en egenskap `helpPath` om du vill definiera den sammanhangsberoende hjälpresursen (absolut eller relativ sökväg) som ska användas när hjälpikonen (ikonen `?` ) är markerat.
+      * har egenskapen `sling:resourceType` som standard-Sling-innehållsstruktur
+      * kan ha egenskapen `helpPath` för att definiera den sammanhangsberoende hjälpresursen (absolut eller relativ sökväg) som nås när hjälpikonen (ikonen `?` ) väljs.
          * För körklara komponenter refererar detta ofta till en sida i dokumentationen.
-         * Om nej `helpPath` anges visas standardwebbadressen (dokumentationsöversiktssidan).
+         * Om `helpPath` inte anges visas standardwebbadressen (dokumentationsöversiktssidan).
 
   ![chlimage_1-242](assets/chlimage_1-242.png)
 
@@ -453,10 +453,10 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
       * definiera dialogrutan för redigering av innehåll i den här komponenten
       * specifikt för det klassiska användargränssnittet
       * definieras med ExtJS-widgetar
-      * har en egenskap `xtype`, som refererar till ExtJS
-      * kan ha en egenskap `helpPath` för att definiera den sammanhangsberoende hjälpresursen (absolut eller relativ sökväg) som ska användas när **Hjälp** knappen är markerad.
+      * har egenskapen `xtype` som refererar till ExtJS
+      * kan ha egenskapen `helpPath` för att definiera den sammanhangsberoende hjälpresursen (absolut eller relativ sökväg) som nås när knappen **Hjälp** väljs.
          * För körklara komponenter refererar detta ofta till en sida i dokumentationen.
-         * Om nej `helpPath` anges visas standardwebbadressen (dokumentationsöversiktssidan).
+         * Om `helpPath` inte anges visas standardwebbadressen (dokumentationsöversiktssidan).
 
   ![chlimage_1-243](assets/chlimage_1-243.png)
 
@@ -466,14 +466,14 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
 
   I en klassisk dialogruta:
 
-   * du kan skapa dialogrutan som `cq:Dialog`som ger en enda flik, som i textkomponenten, eller om du behöver flera flikar, som med textimagekomponenten, kan dialogrutan definieras som `cq:TabPanel`.
-   * a `cq:WidgetCollection` ( `items`) används som bas för båda inmatningsfälten ( `cq:Widget`) eller fler tabbar ( `cq:Widget`). Den här hierarkin kan utökas.
+   * Du kan skapa dialogrutan som `cq:Dialog`, vilket ger en enda flik, som i textkomponenten, eller om du behöver flera flikar, som med textimagekomponenten, kan dialogrutan definieras som `cq:TabPanel`.
+   * a `cq:WidgetCollection` ( `items`) används för att tillhandahålla en bas för antingen inmatningsfält ( `cq:Widget`) eller fler flikar ( `cq:Widget`). Den här hierarkin kan utökas.
 
 ### Designdialogrutor {#design-dialogs}
 
 Designdialogrutor liknar dialogrutorna som används för att redigera och konfigurera innehåll, men de tillhandahåller gränssnittet för författare att konfigurera och tillhandahålla designinformation för den komponenten.
 
-[Designdialogrutor är tillgängliga i designläge](/help/sites-authoring/default-components-designmode.md)trots att de inte behövs för alla komponenter, till exempel **Titel** och **Bild** båda har designdialogrutor, men **Text** inte.
+[Designdialogrutor är tillgängliga i designläge](/help/sites-authoring/default-components-designmode.md), men de behövs inte för alla komponenter, till exempel har både **Rubrik** och **Bild** designdialogrutor, vilket inte **Text** har.
 
 Designdialogrutan för styckesystemet (till exempel parsys) är ett specialfall eftersom den gör att användaren kan välja specifika andra komponenter (från komponentwebbläsaren eller sidosparken) på sidan.
 
@@ -481,8 +481,8 @@ Designdialogrutan för styckesystemet (till exempel parsys) är ett specialfall 
 
 När en komponent har definierats måste den göras tillgänglig för användning. Om du vill göra en komponent tillgänglig för användning i ett styckesystem kan du antingen:
 
-1. Öppna [Designläge](/help/sites-authoring/default-components-designmode.md) för en sida och aktivera den nödvändiga komponenten.
-1. Lägg till nödvändiga komponenter i `components` egenskapen för malldefinitionen under:
+1. Öppna [designläge](/help/sites-authoring/default-components-designmode.md) för en sida och aktivera den nödvändiga komponenten.
+1. Lägg till de nödvändiga komponenterna i egenskapen `components` för malldefinitionen under:
 
    `/etc/designs/<*yourProject*>/jcr:content/<*yourTemplate*>/par`
 
@@ -494,7 +494,7 @@ När en komponent har definierats måste den göras tillgänglig för användnin
 
 ### Komponenter och det innehåll de skapar {#components-and-the-content-they-create}
 
-Om du skapar och konfigurerar en instans av **Titel** på sidan: `<content-path>/Prototype.html`
+Om du skapar och konfigurerar en instans av komponenten **Title** på sidan: `<content-path>/Prototype.html`
 
 * Pekaktiverat användargränssnitt
 
@@ -508,14 +508,14 @@ Sedan kan du se strukturen för innehållet som skapas i databasen:
 
 ![screen_shot_2012-02-13at61405pm](assets/screen_shot_2012-02-13at61405pm.png)
 
-Om du tittar på den faktiska texten för en **Titel**:
+Om du tittar på den faktiska texten för en **titel**:
 
-* definitionen (för båda användargränssnitten) har egenskapen `name`= `./jcr:title`
+* definitionen (för båda gränssnitten) har egenskapen `name`= `./jcr:title`
 
    * `/libs/foundation/components/title/cq:dialog/content/items/column/items/title`
    * `/libs/foundation/components/title/dialog/items/title`
 
-* i innehållet genererar detta egenskapen `jcr:title` som innehåller författarens innehåll.
+* i innehållet genererar detta egenskapen `jcr:title` med författarens innehåll.
 
 De egenskaper som definieras beror på de enskilda definitionerna. Även om de kan vara mer komplexa än ovan följer de fortfarande samma grundläggande principer.
 
@@ -523,9 +523,9 @@ De egenskaper som definieras beror på de enskilda definitionerna. Även om de k
 
 Komponenterna i AEM har tre olika hierarkier:
 
-* **Hierarki för resurstyp**
+* **Hierarki för resurstyper**
 
-  Detta används för att utöka komponenter med hjälp av egenskapen `sling:resourceSuperType`. Detta gör att komponenten kan ärva. En textkomponent ärver till exempel olika attribut från standardkomponenten.
+  Detta används för att utöka komponenter med egenskapen `sling:resourceSuperType`. Detta gör att komponenten kan ärva. En textkomponent ärver till exempel olika attribut från standardkomponenten.
 
    * skript (lösta av Sling)
    * dialogrutor
@@ -537,13 +537,13 @@ Komponenterna i AEM har tre olika hierarkier:
 
   Till exempel kan konfigurationsinställningar för redigeringsfältsknappar, kontrolluppsättningens layout (redigeringsfält, överrullning) och dialogrutans layout (textbunden, flytande) definieras för den överordnade komponenten och spridas till de underordnade komponenterna.
 
-  Konfigurationsinställningar (för redigeringsfunktioner) i `cq:editConfig` och `cq:childEditConfig` är spridda.
+  Konfigurationsinställningar (som är relaterade till redigeringsfunktioner) i `cq:editConfig` och `cq:childEditConfig` sprids.
 
 * **Inkludera hierarki**
 
   Detta anges vid körning av sekvensen inkluderingar.
 
-  Den här hierarkin används av Designer, som i sin tur fungerar som bas för olika designaspekter av återgivningen, inklusive layoutinformation, css-information, tillgängliga komponenter i en parsys bland annat.
+  Den här hierarkin används av Designer, som i sin tur fungerar som bas för olika designaspekter av återgivningen, inklusive layoutinformation, css-information, tillgängliga komponenter på en parsys med flera.
 
 ## Redigera beteende {#edit-behavior}
 
@@ -551,9 +551,9 @@ I det här avsnittet beskrivs hur du konfigurerar redigeringsbeteendet för en k
 
 Konfigurationen är gemensam för det beröringsaktiverade och klassiska användargränssnittet, men med vissa specifika skillnader.
 
-En komponents redigeringsbeteende konfigureras genom att en `cq:editConfig` nod av typen `cq:EditConfig` nedanför komponentnoden (av typen `cq:Component`) och genom att lägga till specifika egenskaper och underordnade noder. Följande egenskaper och underordnade noder är tillgängliga:
+Redigeringsbeteendet för en komponent konfigureras genom att en `cq:editConfig`-nod av typen `cq:EditConfig` läggs till under komponentnoden (av typen `cq:Component`) och genom att specifika egenskaper och underordnade noder läggs till. Följande egenskaper och underordnade noder är tillgängliga:
 
-* [`cq:editConfig` nodegenskaper](#configuring-with-cq-editconfig-properties):
+* [`cq:editConfig`-nodegenskaper ](#configuring-with-cq-editconfig-properties):
 
    * `cq:actions` ( `String array`): definierar de åtgärder som kan utföras på komponenten.
    * `cq:layout` ( `String`): definierar hur komponenten redigeras i det klassiska användargränssnittet.
@@ -565,9 +565,9 @@ En komponents redigeringsbeteende konfigureras genom att en `cq:editConfig` nod 
    * `cq:inherit` ( `Boolean`): definierar om saknade värden ärvs från komponenten som den ärver från.
    * `dialogLayout` (String): definierar hur dialogrutan ska öppnas.
 
-* [`cq:editConfig` underordnade noder](#configuring-with-cq-editconfig-child-nodes):
+* [`cq:editConfig` underordnade noder ](#configuring-with-cq-editconfig-child-nodes):
 
-   * `cq:dropTargets` (nodtyp `nt:unstructured`): definierar en lista med släppmål som kan acceptera en släppning från en resurs i innehållshanteraren
+   * `cq:dropTargets` (nodtyp `nt:unstructured`): definierar en lista med släppmål som kan acceptera en släppning från en resurs i innehållssökaren
 
       * Det finns bara flera släppmål i det klassiska användargränssnittet.
       * I det beröringskänsliga användargränssnittet tillåts en enda släppåtgärd.
@@ -575,7 +575,7 @@ En komponents redigeringsbeteende konfigureras genom att en `cq:editConfig` nod 
    * `cq:actionConfigs` (nodtyp `nt:unstructured`): definierar en lista med nya åtgärder som läggs till i cq:actions-listan.
    * `cq:formParameters` (nodtyp `nt:unstructured`): definierar ytterligare parametrar som läggs till i dialogformuläret.
    * `cq:inplaceEditing` (nodtyp `cq:InplaceEditingConfig`): definierar en redigeringskonfiguration på plats för komponenten.
-   * `cq:listeners` (nodtyp `cq:EditListenersConfig`): definierar vad som händer före eller efter att en åtgärd inträffar för komponenten.
+   * `cq:listeners` (nodtyp `cq:EditListenersConfig`): definierar vad som händer före eller efter en åtgärd som utförs på komponenten.
 
 >[!NOTE]
 >
@@ -595,11 +595,11 @@ En komponents redigeringsbeteende konfigureras genom att en `cq:editConfig` nod 
 
 Det finns många befintliga konfigurationer i databasen. Du kan enkelt söka efter specifika egenskaper eller underordnade noder:
 
-* Leta efter en egenskap i `cq:editConfig` nod, till exempel `cq:actions`kan du använda frågeverktyget i **CRXDE Lite** och söka med följande XPath-frågesträng:
+* Om du vill söka efter en egenskap för noden `cq:editConfig`, till exempel `cq:actions`, kan du använda frågeverktyget i **CRXDE Lite** och söka med följande XPath-frågesträng:
 
   `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* Leta efter en underordnad nod till `cq:editConfig`Du kan till exempel söka efter `cq:dropTargets`, som är av typen `cq:DropTargetConfig`; du kan använda frågeverktyget i** CRXDE Lite** och söka med följande XPath-frågesträng:
+* Om du till exempel vill söka efter en underordnad nod till `cq:editConfig` kan du söka efter `cq:dropTargets`, som är av typen `cq:DropTargetConfig`. Du kan använda frågeverktyget i* CRXDE Lite** och söka med följande XPath-frågesträng:
 
   `//element(cq:dropTargets, cq:DropTargetConfig)`
 
@@ -607,7 +607,7 @@ Det finns många befintliga konfigurationer i databasen. Du kan enkelt söka eft
 
 Komponenter måste alltid återge viss HTML som är synlig för författaren, även när komponenten inte har något innehåll. I annat fall försvinner det visuellt från redigerarens gränssnitt, vilket gör det tekniskt möjligt men osynligt på sidan och i redigeraren. I så fall kan författarna inte markera och interagera med den tomma komponenten.
 
-Därför bör komponenterna återge en platshållare så länge de inte återger några synliga utdata när sidan återges i sidredigeraren (när WCM-läget är `edit` eller `preview`).
+Därför bör komponenter återge en platshållare så länge de inte återger några synliga utdata när sidan återges i sidredigeraren (när WCM-läget är `edit` eller `preview`).
 Den typiska HTML-koden för en platshållare är följande:
 
 ```HTML
@@ -621,9 +621,9 @@ Det typiska HTL-skriptet som återger platshållaren HTML är följande:
      data-sly-test="${(wcmmode.edit || wcmmode.preview) && isEmpty}"></div>
 ```
 
-I föregående exempel `isEmpty` är en variabel som bara är true när komponenten inte har något innehåll och som är osynlig för författaren.
+I föregående exempel är `isEmpty` en variabel som bara är true när komponenten inte har något innehåll och är osynlig för författaren.
 
-För att undvika upprepningar rekommenderar Adobe att komponentimplementerare använder en HTML-mall för dessa platshållare. [som den som finns i Core Components.](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html)
+För att undvika upprepningar rekommenderar Adobe att komponentimplementerare använder en HTML-mall för dessa platshållare, [som den som finns i Core Components.](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html)
 
 Mallen i den föregående länken används sedan med följande rad i HTML:
 
@@ -632,15 +632,15 @@ Mallen i den föregående länken används sedan med följande rad i HTML:
      data-sly-call="${template.placeholder @ isEmpty=!model.text}"></sly>
 ```
 
-I föregående exempel `model.text` är variabeln som är true bara när innehållet har innehåll och är synlig.
+I det föregående exemplet är `model.text` variabeln som är sann bara när innehållet har innehåll och är synligt.
 
-Ett exempel på hur den här mallen används finns i Core Components, [som i komponenten Title.](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27)
+Ett exempel på hur den här mallen används visas i kärnkomponenterna, [t.ex. i titelkomponenten.](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/title/v2/title/title.html#L27)
 
 ### Konfigurera med cq:EditConfig-egenskaper {#configuring-with-cq-editconfig-properties}
 
 ### cq:åtgärder {#cq-actions}
 
-The `cq:actions` egenskap ( `String array`) definierar en eller flera åtgärder som kan utföras på komponenten. Följande värden är tillgängliga för konfiguration:
+Egenskapen `cq:actions` ( `String array`) definierar en eller flera åtgärder som kan utföras på komponenten. Följande värden är tillgängliga för konfiguration:
 
 <table>
  <tbody>
@@ -650,11 +650,11 @@ The `cq:actions` egenskap ( `String array`) definierar en eller flera åtgärder
   </tr>
   <tr>
    <td><code>text:&lt;some text&gt;</code></td>
-   <td>Visar det statiska textvärdet &lt;some text=""&gt;<br /> Endast synligt i klassiskt användargränssnitt. Det beröringskänsliga användargränssnittet visar inte åtgärder på en sammanhangsberoende meny, så detta är inte tillämpligt.</td>
+   <td>Visar det statiska textvärdet &lt;text&gt;<br /> Endast synligt i det klassiska användargränssnittet. Det beröringskänsliga användargränssnittet visar inte åtgärder på en sammanhangsberoende meny, så detta är inte tillämpligt.</td>
   </tr>
   <tr>
    <td>-</td>
-   <td>Lägger till ett mellanrum.<br /> Endast synligt i klassiskt användargränssnitt. Det beröringskänsliga användargränssnittet visar inte åtgärder på en sammanhangsberoende meny, så detta är inte tillämpligt.</td>
+   <td>Lägger till ett mellanrum.<br /> Endast synlig i klassiskt användargränssnitt. Det beröringskänsliga användargränssnittet visar inte åtgärder på en sammanhangsberoende meny, så detta är inte tillämpligt.</td>
   </tr>
   <tr>
    <td><code>edit</code></td>
@@ -662,7 +662,7 @@ The `cq:actions` egenskap ( `String array`) definierar en eller flera åtgärder
   </tr>
       <tr>
     <td><code>editannotate</code></td>
-    <td>Lägger till en knapp för att redigera komponenten och tillåta <a href="/help/sites-authoring/annotations.md">anteckningar</a>.</td>
+    <td>Lägger till en knapp för att redigera komponenten och tillåter <a href="/help/sites-authoring/annotations.md">anteckningar</a>.</td>
    </tr>
   <tr>
    <td><code>delete</code></td>
@@ -699,7 +699,7 @@ Följande konfiguration lägger till texten&quot;Ärvda konfigurationer från ba
 
 ### cq:layout (endast Classic UI) {#cq-layout-classic-ui-only}
 
-The `cq:layout` egenskap ( `String`) definierar hur komponenten kan redigeras i det klassiska användargränssnittet. Följande värden är tillgängliga:
+Egenskapen `cq:layout` ( `String`) definierar hur komponenten kan redigeras i det klassiska användargränssnittet. Följande värden är tillgängliga:
 
 <table>
  <tbody>
@@ -738,7 +738,7 @@ I följande konfiguration läggs en redigeringsknapp till i komponentens rediger
 
 ### cq:dialogMode (endast Classic UI) {#cq-dialogmode-classic-ui-only}
 
-Komponenten kan länkas till en redigeringsdialogruta. The `cq:dialogMode` egenskap ( `String`) definierar hur komponentdialogen öppnas i det klassiska användargränssnittet. Följande värden är tillgängliga:
+Komponenten kan länkas till en redigeringsdialogruta. Egenskapen `cq:dialogMode` ( `String`) definierar hur komponentdialogen öppnas i det klassiska användargränssnittet. Följande värden är tillgängliga:
 
 <table>
  <tbody>
@@ -756,7 +756,7 @@ Komponenten kan länkas till en redigeringsdialogruta. The `cq:dialogMode` egens
   </tr>
   <tr>
    <td><code>auto</code></td>
-   <td>Om komponentbredden är mindre än klientsidan <code>CQ.themes.wcm.EditBase.INLINE_MINIMUM_WIDTH</code> värdet, dialogrutan är flytande, annars är den textbunden.</td>
+   <td>Om komponentbredden är mindre än klientsidans <code>CQ.themes.wcm.EditBase.INLINE_MINIMUM_WIDTH</code>-värde flyter dialogrutan, annars är den textbunden.</td>
   </tr>
  </tbody>
 </table>
@@ -778,17 +778,17 @@ I följande konfiguration definieras ett redigeringsfält med en redigeringsknap
 
 ### cq:emptyText {#cq-emptytext}
 
-The `cq:emptyText` egenskap ( `String`) definierar text som visas utan visuellt innehåll. Standardvärdet är: `Drag components or assets here`.
+Egenskapen `cq:emptyText` ( `String`) definierar text som visas utan visuellt innehåll. Standardvärdet är: `Drag components or assets here`.
 
 ### cq:inherit {#cq-inherit}
 
-The `cq:inherit` egenskap ( `boolean`) definierar om saknade värden ärvs från den komponent som de ärver från. Standardvärdet är `false`.
+Egenskapen `cq:inherit` ( `boolean`) definierar om saknade värden ärvs från komponenten som den ärver från. Standardvärdet är `false`.
 
 ### dialogLayout {#dialoglayout}
 
-The `dialogLayout` -egenskapen definierar hur en dialogruta ska öppnas som standard.
+Egenskapen `dialogLayout` definierar hur en dialogruta ska öppnas som standard.
 
-* Värdet för `fullscreen` öppnar dialogrutan i helskärmsläge.
+* Värdet `fullscreen` öppnar dialogrutan i helskärmsläge.
 * Ett tomt värde eller en frånvaro av egenskapen öppnar normalt dialogrutan.
 * Användaren kan alltid växla helskärmsläge i dialogrutan.
 * Gäller inte det klassiska användargränssnittet.
@@ -797,7 +797,7 @@ The `dialogLayout` -egenskapen definierar hur en dialogruta ska öppnas som stan
 
 ### cq:dropTargets {#cq-droptargets}
 
-The `cq:dropTargets` node (node type `nt:unstructured`) definierar en lista med släppmål som kan acceptera en släppning från en resurs som dras från innehållssökaren. Det fungerar som en samling noder av typen `cq:DropTargetConfig`.
+Noden `cq:dropTargets` (nodtypen `nt:unstructured`) definierar en lista med släppmål som kan acceptera en släppning från en resurs som dras från innehållssökaren. Den fungerar som en samling noder av typen `cq:DropTargetConfig`.
 
 >[!NOTE]
 >
@@ -812,11 +812,12 @@ Varje underordnad nod av typen `cq:DropTargetConfig` definierar ett släppmål i
  <node name of the drop target in the edit configuration>
 ```
 
-The `<drag and drop prefix>` definieras av egenskapen Java™:
+`<drag and drop prefix>` definieras av Java™-egenskapen:
 
 `com.day.cq.wcm.api.components.DropTarget.CSS_CLASS_PREFIX`.
 
-Klassnamnet definieras så här i JSP för komponenten Download ( `/libs/foundation/components/download/download.jsp`), där `file` är nodnamnet för släppmålet i redigeringskonfigurationen för komponenten Download:
+Klassnamnet definieras så här i JSP:n för komponenten Download
+( `/libs/foundation/components/download/download.jsp`), där `file` är nodnamnet för släppmålet i redigeringskonfigurationen för hämtningskomponenten:
 
 `String ddClassName = DropTarget.CSS_CLASS_PREFIX + "file";`
 
@@ -843,7 +844,7 @@ Noden av typen `cq:DropTargetConfig` måste ha följande egenskaper:
  </tbody>
 </table>
 
-Följande konfiguration hämtas från komponenten Download. Den aktiverar alla resurser (mime-typen kan vara vilken sträng som helst) från `media` grupp som ska tas bort från innehållssökaren i komponenten. Komponentegenskapen efter släppningen `fileReference` uppdateras:
+Följande konfiguration hämtas från komponenten Download. Det gör att alla resurser (mime-typen kan vara valfri sträng) från gruppen `media` kan tas bort från innehållssökaren till komponenten. Efter släppningen uppdateras komponentegenskapen `fileReference`:
 
 ```
     <cq:dropTargets jcr:primaryType="nt:unstructured">
@@ -857,7 +858,7 @@ Följande konfiguration hämtas från komponenten Download. Den aktiverar alla r
 
 ### cq:actionConfigs (endast Classic UI) {#cq-actionconfigs-classic-ui-only}
 
-The `cq:actionConfigs` node (node type `nt:unstructured`) definierar en lista med nya åtgärder som läggs till i listan som definieras av `cq:actions` -egenskap. Varje underordnad nod till `cq:actionConfigs` definierar en ny åtgärd genom att definiera en widget.
+Noden `cq:actionConfigs` (nodtypen `nt:unstructured`) definierar en lista med nya åtgärder som läggs till i listan som definieras av egenskapen `cq:actions`. Varje underordnad nod till `cq:actionConfigs` definierar en ny åtgärd genom att definiera en widget.
 
 I följande exempelkonfiguration definieras en ny knapp (med en avgränsare för det klassiska användargränssnittet):
 
@@ -886,13 +887,13 @@ I följande exempelkonfiguration definieras en ny knapp (med en avgränsare för
 
 >[!NOTE]
 >
->Se [Lägg till ny åtgärd i ett komponentverktygsfält](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar) som ett exempel för det pekaktiverade användargränssnittet.
+>Se [Lägg till ny åtgärd i ett komponentverktygsfält](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar) som exempel för det beröringsaktiverade användargränssnittet.
 
 ### cq:formParameters {#cq-formparameters}
 
-The `cq:formParameters` node (node type `nt:unstructured`) definierar ytterligare parametrar som läggs till i dialogformuläret. Varje egenskap mappas till en formulärparameter.
+Noden `cq:formParameters` (nodtypen `nt:unstructured`) definierar ytterligare parametrar som läggs till i dialogformuläret. Varje egenskap mappas till en formulärparameter.
 
-Följande konfiguration lägger till en parameter med namnet `name`, anges med värdet `photos/primary` till dialogrutan:
+Följande konfiguration lägger till en parameter med namnet `name` som anges med värdet `photos/primary` i dialogformuläret:
 
 ```
     <cq:formParameters
@@ -902,7 +903,7 @@ Följande konfiguration lägger till en parameter med namnet `name`, anges med v
 
 ### cq:inplaceEditing {#cq-inplaceediting}
 
-The `cq:inplaceEditing` node (node type `cq:InplaceEditingConfig`) definierar en redigeringskonfiguration på plats för komponenten. Den kan ha följande egenskaper:
+Noden `cq:inplaceEditing` (nodtypen `cq:InplaceEditingConfig`) definierar en redigeringskonfiguration för komponenten på plats. Den kan ha följande egenskaper:
 
 <table>
  <tbody>
@@ -912,7 +913,7 @@ The `cq:inplaceEditing` node (node type `cq:InplaceEditingConfig`) definierar en
   </tr>
   <tr>
    <td><code>active</code></td>
-   <td>(<code>boolean</code>) True to enable the inplace editing of the component.</td>
+   <td>(<code>boolean</code>) True för att aktivera redigering på plats av komponenten.</td>
   </tr>
   <tr>
    <td><code>configPath</code></td>
@@ -924,13 +925,13 @@ The `cq:inplaceEditing` node (node type `cq:InplaceEditingConfig`) definierar en
     <ul>
      <li>plaintext: ska användas för innehåll som inte är HTML.<br /> </li>
      <li>title: är en förbättrad textredigerare som konverterar grafiska titlar till klartext innan redigeringen börjar. Används av Geometrixx titelkomponent.<br /> </li>
-     <li>text: som ska användas för HTML (använder RTF-redigeraren).<br /> </li>
+     <li>text: som ska användas för HTML-innehåll (använder RTF-redigeraren).<br /> </li>
     </ul> </td>
   </tr>
  </tbody>
 </table>
 
-Följande konfiguration aktiverar redigering på plats av komponenten och definierar `plaintext` som redigeringstyp:
+Följande konfiguration aktiverar redigering på plats av komponenten och definierar `plaintext` som redigerartyp:
 
 ```
     <cq:inplaceEditing
@@ -941,7 +942,7 @@ Följande konfiguration aktiverar redigering på plats av komponenten och defini
 
 ### cq:avlyssnare {#cq-listeners}
 
-The `cq:listeners` node (node type `cq:EditListenersConfig`) definierar vad som händer före eller efter en åtgärd på komponenten. I följande tabell definieras dess möjliga egenskaper.
+Noden `cq:listeners` (nodtyp `cq:EditListenersConfig`) definierar vad som händer före eller efter en åtgärd på komponenten. I följande tabell definieras dess möjliga egenskaper.
 
 <table>
  <tbody>
@@ -972,7 +973,7 @@ The `cq:listeners` node (node type `cq:EditListenersConfig`) definierar vad som 
   </tr>
   <tr>
    <td><code>beforeinsert</code></td>
-   <td>Hanteraren aktiveras innan komponenten infogas.<br /> Endast för det beröringskänsliga användargränssnittet.</td>
+   <td>Hanteraren aktiveras innan komponenten infogas.<br /> Kan endast användas för det beröringskänsliga användargränssnittet.</td>
    <td> </td>
   </tr>
   <tr>
@@ -1015,7 +1016,7 @@ The `cq:listeners` node (node type `cq:EditListenersConfig`) definierar vad som 
 
 >[!NOTE]
 >
->The `REFRESH_INSERTED` och `REFRESH_SELFMOVED` -hanterare är bara tillgängliga i det klassiska användargränssnittet.
+>Hanterarna `REFRESH_INSERTED` och `REFRESH_SELFMOVED` är bara tillgängliga i det klassiska användargränssnittet.
 
 >[!NOTE]
 >
@@ -1023,23 +1024,23 @@ The `cq:listeners` node (node type `cq:EditListenersConfig`) definierar vad som 
 
 >[!NOTE]
 >
->Om det finns kapslade komponenter finns det vissa begränsningar för åtgärder som definierats som egenskaper i `cq:listeners` nod:
+>Om det finns kapslade komponenter finns det vissa begränsningar för åtgärder som definierats som egenskaper på noden `cq:listeners`:
 >
->* För kapslade komponenter är värdena för följande egenskaper *måste* be `REFRESH_PAGE`: >
+>* För kapslade komponenter måste värdena för följande egenskaper *vara*: `REFRESH_PAGE`: >
 >  * `aftermove`
 >  * `aftercopy`
 
-Händelsehanteraren kan implementeras med en anpassad implementering. Där `project.customerAction` är en statisk metod:
+Händelsehanteraren kan implementeras med en anpassad implementering. Där `project.customerAction` till exempel är en statisk metod:
 
 `afteredit = "project.customerAction"`
 
-Följande exempel motsvarar `REFRESH_INSERTED` konfiguration:
+Följande exempel motsvarar konfigurationen `REFRESH_INSERTED`:
 
 `afterinsert="function(path, definition) { this.refreshCreated(path, definition); }"`
 
 >[!NOTE]
 >
->Om du vill se vilka parametrar som kan användas i hanterarna läser du i det klassiska användargränssnittet `before<action>` och `after<action>` händelseavsnittet i [`CQ.wcm.EditBar`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditBar) och [`CQ.wcm.EditRollover`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditRollover) widgetdokumentation.
+>Det klassiska användargränssnittet visar vilka parametrar som kan användas i hanterarna i avsnittet `before<action>` och `after<action>` händelser i dokumentationen för [`CQ.wcm.EditBar`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditBar) och [`CQ.wcm.EditRollover`](https://developer.adobe.com/experience-manager/reference-materials/6-5/widgets-api/index.html?class=CQ.wcm.EditRollover)-widgeten.
 
 Med följande konfiguration uppdateras sidan när komponenten har tagits bort, redigerats, infogats eller flyttats:
 

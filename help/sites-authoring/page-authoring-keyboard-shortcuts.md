@@ -22,33 +22,33 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
 
 >[!NOTE]
 >
->The [modifieringstangenter](/help/sites-authoring/page-authoring-keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
+>De [modifieringstangenter](/help/sites-authoring/page-authoring-keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
 
 ## Redigera kortkommandon {#editing-keyboard-shortcuts}
 
 | Plats | Genväg | Beskrivning |
 |---|---|---|
-| Alla redigeringsfönsterlägen | `Ctrl-Shift-m` | Växla mellan **Förhandsgranska** och de markerade [läge](/help/sites-authoring/author-environment-tools.md#page-modes)</a> (till exempel **Redigera**, **Layout** och så vidare) |
-| **Redigera** läge | `Ctrl-z` | [Ångra senaste ändring](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
-|  | `Ctrl-y` | [Gör om senaste ändring](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
+| Alla redigeringsfönsterlägen | `Ctrl-Shift-m` | Växla mellan **Förhandsgranska** och det markerade [läget](/help/sites-authoring/author-environment-tools.md#page-modes)</a> (till exempel **Redigera**, **Layout**) |
+| **Redigera**-läge | `Ctrl-z` | [Ångra senaste ändring](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
+|  | `Ctrl-y` | [Gör om den senaste ändringen](/help/sites-authoring/editing-content.md#undoing-and-redoing-page-edits) |
 |  | `Ctrl-Click` | Markera flera stycken |
 |  | `Ctrl-c` | Kopiera markerade stycken |
 |  | `Ctrl-x` | Klipp ut markerade stycken (urklippta stycken försvinner inte i användargränssnittet förrän de klistras in) |
 |  | `Ctrl-v` | Klistra in stycken som tidigare klippts ut eller kopierats |
 |  | `Ctrl-Backspace` | Ta bort markerade stycken |
-| **Redigera** läge - RTF-redigerare | `Ctrl-b` | Fet |
+| **Redigera** - Rich Text Editor | `Ctrl-b` | Fet |
 |  | `Ctrl-I` | Kursiv |
 |  | `Ctrl-u` | Understruken |
 
 >[!NOTE]
 >
->&amp;ast; När användaren börjar interagera med sidan i förhandsgranskningsläget visas `Ctrl-Shift-m` kortkommandot är inte längre tillgängligt. Användaren måste klicka på det övre redigeringsfältet eller gå tillbaka till redigeringsläget för genvägen för att bli tillgänglig igen.
+>&amp;ast; När användaren börjar interagera med sidan i förhandsgranskningsläget är genvägen `Ctrl-Shift-m` inte längre tillgänglig. Användaren måste klicka på det övre redigeringsfältet eller gå tillbaka till redigeringsläget för genvägen för att bli tillgänglig igen.
 
-Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [konsoler](/help/sites-authoring/keyboard-shortcuts.md).
+Olika kortkommandon är också tillgängliga för skrivbordsanvändare när de använder [konsolerna](/help/sites-authoring/keyboard-shortcuts.md).
 
 >[!NOTE]
 >
-Kortkommandon för redigeraren är alltid aktiva oavsett om [konsolgenvägar har inaktiverats](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts).
+Kortkommandon för redigeraren är alltid aktiva oavsett om kortkommandona för [konsolen har inaktiverats](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts).
 
 ## Operativspecifika modifieringstangenter {#os-specific-modifier-keys}
 

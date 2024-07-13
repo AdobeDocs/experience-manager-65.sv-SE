@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Konfigurera AEM DS-inställningar{#configuring-aem-ds-settings}
 
-I den här artikeln beskrivs hur du konfigurerar **Tjänsten AEM DS-inställningar**. Den här inställningen kan användas i flera scenarier, till exempel:
+I den här artikeln beskrivs hur du konfigurerar tjänsten **AEM DS-inställningar**. Den här inställningen kan användas i flera scenarier, till exempel:
 
 * I korrespondenshantering
 
@@ -27,26 +27,26 @@ I den här artikeln beskrivs hur du konfigurerar **Tjänsten AEM DS-inställning
 
 * I adaptiva formulär, till exempel när ett adaptivt formulär skickas från en publiceringsinstans
 
-Följ de här stegen för att konfigurera **[!UICONTROL AEM DS Settings]**:
+Så här konfigurerar du **[!UICONTROL AEM DS Settings]**:
 
 1. Öppna Configuration Manager på publiceringsinstansen med URL:en:\
    *https://localhost:port/system/console/configMgr*.
 
-   ![Konfiguration av AEM webbkonsol](assets/web_configuration_console_new.png)
+   ![AEM Konfiguration av webbkonsol](assets/web_configuration_console_new.png)
 
-1. I **[!UICONTROL Adobe Experience Manager Web Console Configuration]** fönster, leta upp och klicka på **[!UICONTROL AEM DS Settings]** alternativ.
+1. Leta reda på och klicka på alternativet **[!UICONTROL AEM DS Settings]** i fönstret **[!UICONTROL Adobe Experience Manager Web Console Configuration]**.
 
    ![DS-inställningar](assets/ds_settings_new.png)
 
-1. The **[!UICONTROL AEM DS Settings Service]** I visas de vanliga konfigurationsinställningarna för AEM DS-komponenter.
+1. Fönstret **[!UICONTROL AEM DS Settings Service]** visar de vanliga konfigurationsinställningarna för AEM DS-komponenter.
 
-   ![Tjänsten DS Settings](assets/ds_settings_service_new.png)
+   ![DS-inställningstjänst](assets/ds_settings_service_new.png)
 
 1. Lägg till följande information i respektive fält:
 
    **[!UICONTROL Processing Server URL]**: Bearbetningsservern är den server där Forms- eller AEM-arbetsflödet måste aktiveras. Detta kan vara samma URL som till den AEM författarinstansen eller den andra server-URL:en (d.v.s. https://localhost:port/).
 
-   **[!UICONTROL Processing Server User Name]**: Arbetsflödets användarnamn [baserat på den server-URL som används]
+   **[!UICONTROL Processing Server User Name]**: Arbetsflödesanvändarens användarnamn [baserat på den server-URL som används]
 
    **[!UICONTROL Processing Server Password]**: Lösenord för arbetsflödesanvändare
 

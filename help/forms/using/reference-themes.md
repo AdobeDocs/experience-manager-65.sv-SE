@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Referensteman{#reference-themes}
 
-[Teman](../../forms/using/themes.md) gör att du kan formatera formulär utan djupare kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera [AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en):
+Med [Teman](../../forms/using/themes.md) kan du formatera formulär utan djupa kunskaper om CSS. Förutom standardtemat kan du hämta följande teman genom att installera [AEM Forms-tilläggspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en):
 
 * Beryl
 * Exec
@@ -34,13 +34,13 @@ Varje tema innehåller en unik och elegant stil som du kan använda för att ska
 
 Teman som ingår i det här paketet är responsiva, och stilen i dessa teman definieras för mobilskärmar och datorskärmar. De flesta moderna webbläsare på en mängd olika enheter kan återge formulär som används med något av dessa teman utan krångel.
 
-Mer information om hur du installerar paketet finns i [Så här arbetar du med paket](/help/sites-administering/package-manager.md).
+Mer information om hur du installerar paketet finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 
 ## Beryl {#beryl}
 
 Beryltemat används av den anpassade formen We.Gov och betonar användningen av bakgrundsbilder, genomskinlighet och stora, platta ikoner. På skärmbilden nedan ser du hur Beryl-temat ser ut och hur det kan förbättra formateringen av ditt formulär.
 
-![Beryltema](assets/beryl.png)
+![Berytema](assets/beryl.png)
 
 <!--[Click to enlarge
 
@@ -50,7 +50,7 @@ Beryltemat används av den anpassade formen We.Gov och betonar användningen av 
 
 Exec-temat undviker heltäckande bakgrundsfyllningar för att framhäva formulärkomponenter. Om du markerar och klickar på komponenter ändras teckenfärgerna. Jämfört med standardtemat för arbetsytan ändras teckenfärgen för texten på den valda fliken till mörkblå. Lägg märke till hur navigerings- och skickaknapparna skiljer sig från Beryl-temat.
 
-![Exektionstema](assets/exec.png)
+![Kör tema](assets/exec.png)
 
 <!--[Click to enlarge
 
@@ -60,7 +60,7 @@ Exec-temat undviker heltäckande bakgrundsfyllningar för att framhäva formulä
 
 Exec Light-temat använder tomrum för att skapa en sömlös upplevelse. Knapparna Nästa och Skicka ger en heltäckande fyllning och 3D-skugga. De markerade flikarna till vänster får en pil i stället för dubbelbockmarkeringar.
 
-![Exakt ljustema](assets/exec-light.png)
+![Kör ljustema](assets/exec-light.png)
 
 <!--[Click to enlarge
 
@@ -80,7 +80,7 @@ Frihetstemat använder en minimalistisk strategi för att lyfta fram det viktiga
 
 Med det tillfälliga temat får du ljusa och mörka nyanser av det Tranquil-färgschemat för att framhäva olika komponenter i ett formulär. Alternativknappar, paneler och flikar får till exempel en annan grön ton.
 
-![Löpande tema](assets/tranquil.png)
+![Transiärt tema](assets/tranquil.png)
 
 <!--[Click to enlarge
 
@@ -98,7 +98,7 @@ Ultramarintemat använder djupa blå skuggor för att framhäva komponenter som 
 
 Urbane-temat betonar ett minimalistiskt och funktionellt utseende på ditt formulär. När du använder Urbane-temat i ditt formulär ser du att komponenterna är platta. Panelerna får tunna konturer för att skapa ett modernt utseende.
 
-![Urbantema](assets/urbane.png)
+![Urban-tema](assets/urbane.png)
 
 <!--[Click to enlarge
 
@@ -108,7 +108,7 @@ Urbane-temat betonar ett minimalistiskt och funktionellt utseende på ditt formu
 
 I temat U.S. Web Design Standards, som namnet antyder, används teckensnitt och format som beskrivs på webbplatsen Draft U.S. Web Design Standards. Webbstandarden används av federala organisationer för att skapa enhetliga webbupplevelser på statliga webbplatser.
 
-![U.S. Web Design Standards Theme](assets/us-web-standards.png)
+![USA Standardtema för webbdesign ](assets/us-web-standards.png)
 
 <!--[Click to enlarge
 

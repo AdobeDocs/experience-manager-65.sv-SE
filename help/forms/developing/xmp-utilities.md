@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Arbeta med XMP {#working-with-xmp-utilities}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 **Om tjänsten XMP Utilities**
 
@@ -39,9 +39,9 @@ Du kan utföra dessa uppgifter med hjälp av tjänsten XMP:
 
 Du kan använda Java- och webbtjänstprogrammeringsgränssnitten i XMP Utilities för att importera XMP metadata i ett PDF-dokument. Metadata innehåller information om ett PDF-dokument, t.ex. dokumentets författare och nyckelord som är relaterade till dokumentet. Metadata kan finnas i dokumentets dialogruta Dokumentegenskaper, som på följande bild.
 
-![ww_ww_metadata, dialogruta](assets/ww_ww_metadatadialog.png)
+![ww_ww_metadata_dialog](assets/ww_ww_metadatadialog.png)
 
-Om du vill importera metadata programmatiskt till ett PDF-dokument kan du använda ett befintligt XML-dokument som anger metadatavärdena eller använda ett objekt av typen `XMPUtilityMetadata`. (Se [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).)
+Om du vill importera metadata till ett PDF-dokument programmatiskt kan du använda ett befintligt XML-dokument som anger metadatavärdena eller så kan du använda ett objekt av typen `XMPUtilityMetadata`. (Se [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).)
 
 >[!NOTE]
 >
@@ -130,7 +130,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa en XMPUtilityService-klient**
 
-Innan du programmässigt kan utföra en XMP Utilities-åtgärd måste du skapa en XMPUtilityService-klient. Med Java-API:t uppnås detta genom att skapa en `XMPUtilityServiceClient` -objekt. Med webbtjänstens API:er uppnås detta genom att använda en `XMPUtilityServiceService` -objekt.
+Innan du programmässigt kan utföra en XMP Utilities-åtgärd måste du skapa en XMPUtilityService-klient. Med Java-API:t uppnås detta genom att ett `XMPUtilityServiceClient`-objekt skapas. Med webbtjänstens API:er uppnås detta med hjälp av ett `XMPUtilityServiceService`-objekt.
 
 **Anropa importen av XMP metadata**
 
@@ -160,23 +160,23 @@ Importera XMP metadata med hjälp av Java (XMP Utilities API):
 
 1. Skapa en XMPUtilityService-klient
 
-   Skapa en `XMPUtilityServiceClient` genom att använda konstruktorn och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `XMPUtilityServiceClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Anropa importen av XMP metadata
 
-   Om du vill ändra XMP metadata anropar du antingen `XMPUtilityServiceClient` objektets `importMetadata` metod eller dess `importXMP` -metod.
+   Om du vill ändra XMP metadata anropar du antingen `XMPUtilityServiceClient`-objektets `importMetadata`-metod eller dess `importXMP`-metod.
 
-   Om du använder `importMetadata` -metoden skickar du följande värden:
+   Om du använder metoden `importMetadata` skickar du följande värden:
 
-   * A `com.adobe.idp.Document` det objekt som representerar filen PDF.
-   * An `XMPUtilityMetadata` objekt som innehåller de metadata som ska importeras.
+   * Ett `com.adobe.idp.Document`-objekt som representerar filen PDF.
+   * Ett `XMPUtilityMetadata`-objekt som innehåller de metadata som ska importeras.
 
-   Om du använder `importXMP` -metoden skickar du följande värden:
+   Om du använder metoden `importXMP` skickar du följande värden:
 
-   * A `com.adobe.idp.Document` det objekt som representerar filen PDF.
-   * A `com.adobe.idp.Document` objekt som representerar en XML-fil som innehåller de metadata som ska importeras.
+   * Ett `com.adobe.idp.Document`-objekt som representerar filen PDF.
+   * Ett `com.adobe.idp.Document`-objekt som representerar en XML-fil som innehåller de metadata som ska importeras.
 
-   I båda fallen är det returnerade värdet `com.adobe.idp.Document` -objekt som representerar PDF-filen med de nya metadata som har importerats. Du kan sedan spara objektet på hårddisken.
+   I båda fallen är det returnerade värdet ett `com.adobe.idp.Document`-objekt som representerar PDF-filen med de metadata som nyligen har importerats. Du kan sedan spara objektet på hårddisken.
 
 **Se även**
 
@@ -197,23 +197,23 @@ Så här importerar du XMP metadata med hjälp av XMP Utilities-webbtjänstens A
 
 1. Skapa en XMPUtilityService-klient
 
-   Skapa en `XMPUtilityServiceService` -objekt med hjälp av din proxyklasskonstruktor.
+   Skapa ett `XMPUtilityServiceService`-objekt med hjälp av din proxyklasskonstruktor.
 
 1. Anropa importen av XMP metadata
 
-   Om du vill ändra XMP metadata anropar du antingen `XMPUtilityServiceService` objektets `importMetadata` metod eller dess `importXMP` -metod.
+   Om du vill ändra XMP metadata anropar du antingen `XMPUtilityServiceService`-objektets `importMetadata`-metod eller dess `importXMP`-metod.
 
-   Om du använder `importMetadata` -metoden skickar du följande värden:
+   Om du använder metoden `importMetadata` skickar du följande värden:
 
-   * A `BLOB` det objekt som representerar filen PDF.
-   * An `XMPUtilityMetadata` objekt som innehåller de metadata som ska importeras.
+   * Ett `BLOB`-objekt som representerar filen PDF.
+   * Ett `XMPUtilityMetadata`-objekt som innehåller de metadata som ska importeras.
 
-   Om du använder `importXMP` -metoden skickar du följande värden:
+   Om du använder metoden `importXMP` skickar du följande värden:
 
-   * A `BLOB` det objekt som representerar filen PDF.
-   * A `BLOB` objekt som representerar en XML-fil som innehåller de metadata som ska importeras.
+   * Ett `BLOB`-objekt som representerar filen PDF.
+   * Ett `BLOB`-objekt som representerar en XML-fil som innehåller de metadata som ska importeras.
 
-   I båda fallen är det returnerade värdet `BLOB` -objekt som representerar PDF-filen med de nya metadata som har importerats. Du kan sedan spara objektet på hårddisken.
+   I båda fallen är det returnerade värdet ett `BLOB`-objekt som representerar PDF-filen med de metadata som nyligen har importerats. Du kan sedan spara objektet på hårddisken.
 
 **Se även**
 
@@ -247,9 +247,9 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa en XMPUtilityService-klient**
 
-Innan du programmässigt kan utföra en XMP Utilities-åtgärd måste du skapa en XMPUtilityService-klient. Med Java AP kan du uppnå detta genom att skapa en `XMPUtilityServiceClient` -objekt. Med webbtjänstens API:er uppnås detta med en `XMPUtilityServiceService` -objekt.
+Innan du programmässigt kan utföra en XMP Utilities-åtgärd måste du skapa en XMPUtilityService-klient. Med Java-AP uppnås detta genom att ett `XMPUtilityServiceClient`-objekt skapas. Med webbtjänstens API:er uppnås detta med ett `XMPUtilityServiceService`-objekt.
 
-**Anropa export av XMP metadata**
+**Starta export av XMP metadata**
 
 När du har skapat tjänstklienten kan du starta en av de XMP metadataexportåtgärderna, som kan användas för att undersöka XMP metadata eller spara dem på hårddisken.
 
@@ -277,13 +277,13 @@ Exportera XMP metadata med hjälp av XMP Utilities API (Java):
 
 1. Skapa en XMPUtilityService-klient
 
-   Skapa en `XMPUtilityServiceClient` genom att använda konstruktorn och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `XMPUtilityServiceClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Anropa importen av XMP metadata
 
-   Om du vill inspektera XMP metadata anropar du `XMPUtilityServiceClient` objektets `exportMetadata` metoden och skicka in en `com.adobe.idp.Document` det objekt som representerar filen PDF. Metoden returnerar en `XMPUtilityMetadata` som innehåller hämtade metadata.
+   Om du vill inspektera XMP metadata anropar du `XMPUtilityServiceClient`-objektets `exportMetadata`-metod och skickar ett `com.adobe.idp.Document`-objekt som representerar PDF-filen. Metoden returnerar ett `XMPUtilityMetadata`-objekt som innehåller de hämtade metadata.
 
-   Om du vill hämta och spara XMP metadata anropar du `XMPUtilityServiceClient` objektets `exportXMP` metoden och skicka in en `com.adobe.idp.Document` det objekt som representerar filen PDF. Metoden returnerar en `com.adobe.idp.Document` som innehåller hämtade metadata, som du sedan kan spara på disken som en XML-fil.
+   Om du vill hämta och spara XMP metadata anropar du `XMPUtilityServiceClient`-objektets `exportXMP`-metod och skickar ett `com.adobe.idp.Document`-objekt som representerar PDF-filen. Metoden returnerar ett `com.adobe.idp.Document`-objekt som innehåller hämtade metadata, som du sedan kan spara på disken som en XML-fil.
 
 **Se även**
 
@@ -304,13 +304,13 @@ Exportera XMP metadata med hjälp av XMP Utilities API (webbtjänst):
 
 1. Skapa en XMPUtilityService-klient
 
-   Skapa en `XMPUtilityServiceService` -objekt med hjälp av din proxyklasskonstruktor.
+   Skapa ett `XMPUtilityServiceService`-objekt med hjälp av din proxyklasskonstruktor.
 
 1. Anropa importen av XMP metadata
 
-   Om du vill inspektera XMP metadata anropar du `XMPUtilityServiceClient` objektets `exportMetadata` metoden och skicka in en `BLOB` det objekt som representerar filen PDF. Metoden returnerar en `XMPUtilityMetadata` som innehåller hämtade metadata.
+   Om du vill inspektera XMP metadata anropar du `XMPUtilityServiceClient`-objektets `exportMetadata`-metod och skickar ett `BLOB`-objekt som representerar PDF-filen. Metoden returnerar ett `XMPUtilityMetadata`-objekt som innehåller de hämtade metadata.
 
-   Om du vill hämta och spara XMP metadata anropar du `XMPUtilityServiceClient` objektets `exportXMP` metoden och skicka in en `BLOB` det objekt som representerar filen PDF. Metoden returnerar en `BLOB` som innehåller hämtade metadata, som du sedan kan spara på disken som en XML-fil.
+   Om du vill hämta och spara XMP metadata anropar du `XMPUtilityServiceClient`-objektets `exportXMP`-metod och skickar ett `BLOB`-objekt som representerar PDF-filen. Metoden returnerar ett `BLOB`-objekt som innehåller hämtade metadata, som du sedan kan spara på disken som en XML-fil.
 
 **Se även**
 

@@ -40,9 +40,9 @@ AEM Communities-funktionerna som kan konfigureras för att tillåta taggning är
 
 Se [Administrera taggar](../../help/sites-administering/tags.md#tagging-console) för att skapa och hantera taggnamnutrymmen och taxonomier.
 
-Se [Tagg Essentials](tag.md) för utvecklarinformation.
+Mer utvecklarinformation finns i [Tagga viktiga](tag.md).
 
-Se [Använda molnet för sociala taggar](tagcloud.md) för att lägga till en komponent i Social Tag Cloud på en sida för att underlätta sökning efter publicerad UGC med de använda taggarna.
+Se [Använda molnet för sociala taggar](tagcloud.md) för att lägga till en komponent i molnet för sociala taggar på en sida för att underlätta sökning efter publicerad UGC med de använda taggarna.
 
 ### Taggbehörigheter {#tag-permissions}
 
@@ -54,4 +54,4 @@ Se [Ange taggbehörigheter](../../help/sites-administering/tags.md#setting-tag-p
 
 Så här visas det i CRXDE när en administratör tillämpar läsbehörigheter på `/etc/tag/discussions` för gruppen `Community Engage Members`.
 
-![tag-permissions](assets/tag-permissions.png)
+![tagg-permissions](assets/tag-permissions.png)

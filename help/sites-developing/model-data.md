@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Datamodellering - David Nuescheler&#39;s Model{#data-modeling-david-nuescheler-s-model}
 
-## Källa {#source}
+## Source {#source}
 
 Följande detaljer är idéer och kommentarer från David Nuescheler.
 
@@ -56,7 +56,7 @@ Ytterligare databegränsningar som obligatoriska eller typ- och värdebegränsni
 
 #### Exempel {#example-1}
 
-Ovanstående exempel på en `lastModified` Date-egenskapen för till exempel noden&quot;blog post&quot; innebär inte att det finns ett behov av en särskild nodtyp. Jag skulle definitivt använda `nt:unstructured` för mina blogginläggsnoder åtminstone från början. Allt jag gör i mitt bloggprogram är att visa datumet lastModified i alla fall (eventuellt &quot;order by&quot;). Jag bryr mig knappt om det är ett datum alls. Eftersom jag ändå litar på att mitt blogginläggsprogram ska placera ett &quot;datum&quot; så finns det ingen anledning att deklarera en `lastModified` datum i form av en nodtyp.
+Ovanstående exempel på hur du använder en `lastModified` Date-egenskap på till exempel en bloggpost-nod innebär inte att det behövs en särskild nodtyp. Jag skulle definitivt använda `nt:unstructured` för mina blogginläggsnoder åtminstone från början. Allt jag gör i mitt bloggprogram är att visa datumet lastModified i alla fall (eventuellt &quot;order by&quot;). Jag bryr mig knappt om det är ett datum alls. Eftersom jag i alla fall har förtroende för att mitt bloggskrivande-program ska placera ett &quot;datum&quot; behöver jag inte deklarera ett `lastModified`-datum i form av en nodtyp.
 
 ### Regel 2: Kör innehållshierarkin, låt det inte ske. {#rule-drive-the-content-hierarchy-don-t-let-it-happen}
 
@@ -100,7 +100,7 @@ Med innehållsmodellen ovan kan jag enkelt låta den anonyma användaren&quot;sk
 
 #### Förklaring {#explanation-3}
 
-Om du inte `clone()`, `merge()` eller `update()` metoder i programmet som bara har en arbetsyta är antagligen den rätta.
+Om du inte använder metoderna `clone()`, `merge()` eller `update()` i ditt program är en enda arbetsyta antagligen den rätta vägen.
 
 &quot;Motsvarande noder&quot; är ett koncept som definieras i JCR-specifikationen. Det handlar i princip om noder som representerar samma innehåll, i olika så kallade arbetsytor.
 
@@ -173,13 +173,13 @@ Jag tror att det finns fall där ett system verkligen inte fungerar om en refere
 
 #### Förklaring {#explanation-6}
 
-Om en innehållsmodell visar något som till och med känns som en fil eller en mapp på fjärrbasis, försöker jag använda (eller utöka från) `nt:file`, `nt:folder`och `nt:resource`.
+Om en innehållsmodell visar något som till och med luktar på fjärrbasis som en fil eller en mapp försöker jag använda (eller utöka från) `nt:file`, `nt:folder` och `nt:resource`.
 
 Enligt min erfarenhet tillåter många generiska program interaktion med nt:folder och nt:files implicit och vet hur de ska hantera och visa dessa händelser om de har anrikats med ytterligare metainformation. En direkt interaktion med filserverimplementeringar som CIF eller WebDAV som sitter ovanpå JCR blir till exempel implicit.
 
-Jag tycker att en bra tumregel kan ha följande i åtanke: Om du måste lagra filnamnet och mime-typen då `nt:file`/ `nt:resource` är en bra match. Om du kan ha flera &quot;filer&quot; kan det vara bra att lagra mappen int:folder.
+Som tumregel kan jag använda följande: Om du måste lagra filnamnet och mime-typen så är `nt:file`/ `nt:resource` en bra matchning. Om du kan ha flera &quot;filer&quot; kan det vara bra att lagra mappen int:folder.
 
-Om du måste lägga till metainformation för resursen kan du utöka `nt:resource` inte `nt:file`. Jag utökar sällan inte:fil och utökar ofta `nt:resource`.
+Om du måste lägga till metainformation för resursen, kan vi säga &quot;författare&quot; eller &quot;beskrivning&quot;, utöka `nt:resource` inte `nt:file`. Jag utökar sällan ingen:file och utökar `nt:resource` ofta.
 
 #### Exempel {#example-6}
 
@@ -207,13 +207,13 @@ I relationsdatabaser är id:n ett nödvändigt sätt att uttrycka relationer, s�
 
 Om innehållsmodellen är full av egenskaper som slutar på&quot;ID&quot; använder du förmodligen inte hierarkin korrekt.
 
-Det är sant att vissa noder behöver en stabil identifiering under hela sin livscykel, men färre än du tror. Men `mix:referenceable` har en sådan inbyggd funktion i databasen, så det finns inget behov av att komma fram med ett extra sätt att identifiera en nod på ett stabilt sätt.
+Det är sant att vissa noder behöver en stabil identifiering under hela sin livscykel, men färre än du tror. Men `mix:referenceable` har en sådan inbyggd funktion i databasen, så det finns inget behov av att hitta ett extra sätt att identifiera en nod på ett stabilt sätt.
 
 Tänk också på att objekt kan identifieras med hjälp av sökväg. Och så mycket som &quot;symlinks&quot; är mycket mer vettigt för de flesta användare än för hårda länkar i ett UNIX®-filsystem, är en sökväg bra om de flesta program ska referera till en målnod.
 
-Ännu viktigare är det **mix**:referenable, vilket betyder att det kan användas på en nod vid den tidpunkt då du faktiskt måste referera till den.
+Viktigare är att det är **mix**:referenable, vilket betyder att det kan tillämpas på en nod vid den tidpunkt då du faktiskt måste referera till den.
 
-Bara för att du vill kunna referera till en nod av typen &quot;Dokument&quot; innebär det inte att nodtypen &quot;Dokument&quot; måste sträcka sig från `mix:referenceable` på ett statiskt sätt. Det beror på att det kan läggas till dynamiskt i alla instanser av &quot;Dokument&quot;.
+Bara för att du vill kunna referera till en nod av typen Dokument innebär det inte att nodtypen Dokument måste sträcka sig från `mix:referenceable` på ett statiskt sätt. Det beror på att det kan läggas till dynamiskt i alla instanser av &quot;Dokument&quot;.
 
 #### Exempel {#example-7}
 

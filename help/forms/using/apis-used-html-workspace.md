@@ -1,6 +1,6 @@
 ---
 title: API:er som används i AEM Forms arbetsyta
-description: Public Java&trade; och JavaScript API:er och metoder för arbetsytan i LiveCycle AEM Forms som kan anpassas och automatiseras.
+description: Offentlig Java&amp, handel och JavaScript API:er och metoder för LiveCycle AEM Forms-arbetsytan som kan anpassas och automatiseras.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
@@ -22,7 +22,7 @@ Följande API:er används på arbetsytan i AEM Forms.
 <table>
  <tbody>
   <tr>
-   <td><strong>JavaScript-metod</strong></td>
+   <td><strong>JavaScript</strong></td>
    <td><strong>Tjänstnamn</strong></td>
    <td><strong>API Name</strong></td>
    <td><strong>Kommentar</strong></td>
@@ -367,7 +367,7 @@ Följande API:er används på arbetsytan i AEM Forms.
    <td>setProperty</td>
    <td>WorkspacePropertyService</td>
    <td>setProperty</td>
-   <td>Den anger en Workspace-egenskap för en användare.</td>
+   <td>Den ställer in en Workspace-egenskap för en användare.</td>
   </tr>
   <tr>
    <td>getCurrentUserImageUrl</td>

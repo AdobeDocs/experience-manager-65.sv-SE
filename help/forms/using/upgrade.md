@@ -24,13 +24,13 @@ ht-degree: 1%
 | AEM 6.5 | Den här artikeln |
 
 
-AEM 6.5 Forms innehåller flera nya funktioner och förbättringar som effektiviserar framtagning, hantering och användarupplevelser med formulär och korrespondenser. Mer information om alla nya funktioner och förbättringar i AEM 6.5 Forms finns i [Översikt över nya funktioner](../../forms/using/whats-new.md).
+AEM 6.5 Forms innehåller flera nya funktioner och förbättringar som effektiviserar framtagning, hantering och användarupplevelser med formulär och korrespondenser. Mer information om alla nya funktioner och förbättringar i AEM 6.5 Forms finns i [Sammanfattningsdokument om nya funktioner](../../forms/using/whats-new.md).
 
 Du kan uppgradera din befintliga LiveCycle- eller AEM Forms-installation för att få tillgång till nya funktioner och förbättringar som finns i AEM 6.5 Forms samtidigt som befintliga data, processer och resurser bevaras intakta. Vid uppgradering bevaras också metadata och processernas status. Du kan välja ett uppgraderingsalternativ för att komma igång med uppgraderingen.
 
 I följande diagram visas de tillgängliga uppgraderingsmöjligheterna för AEM Forms på OSGi:
 
-![Uppgraderingsflöde för OSGi](do-not-localize/osgi-upgrade-path.png)
+![uppgraderingsflöde för OSGi](do-not-localize/osgi-upgrade-path.png)
 
 Du kan uppgradera direkt från:
 
@@ -45,7 +45,7 @@ Du kan också utföra en uppgradering från
 
 I följande diagram visas de tillgängliga uppgraderingsmöjligheterna för AEM Forms på JEE:
 
-![JEE upgrade 6.5](do-not-localize/jee-upgrade-6-5.png)
+![JEE-uppgradering 6.5](do-not-localize/jee-upgrade-6-5.png)
 
 
 Du kan uppgradera direkt från:
@@ -61,17 +61,17 @@ Du kan också utföra en uppgradering från
 * AEM 6.1 Forms on JEE
 * AEM 6.2 Forms on JEE
 
-AEM 6.5.18.0 Forms på JEE innehåller två typer av installationsprogram: [Fullständig installationsfil](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) och [Installationsprogram för korrigering](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+AEM 6.5.18.0 Forms i JEE innehåller två typer av installationsprogram: [Fullständigt installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) och [Patch-installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
-**Fullständig installationsfil**: Du kan använda det fullständiga installationsprogrammet för att ställa in nya AEM Forms-instanser eller utföra uppgraderingar från AEM 6.5.x.x Forms på JEE till AEM 6.5.18.0 Forms på JEE.
+**Fullständigt installationsprogram**: Du kan använda det fullständiga installationsprogrammet för att konfigurera nya AEM Forms-instanser eller utföra uppgraderingar från AEM 6.5.x.x Forms på JEE till AEM 6.5.18.0 Forms på JEE.
 
-**Installationsprogram för korrigering**: Patch installer är avsett för kunder som redan använder AEM 6.5.x.x. Du kan använda installationsprogrammet för korrigeringsfilen för att uppgradera till den senaste versionen av AEM Forms.
+**Patch installer**: Patch installer is for customers already using AEM 6.5.x.x versions. Du kan använda installationsprogrammet för korrigeringsfilen för att uppgradera till den senaste versionen av AEM Forms.
 
 I följande bild visas avsändare som använder det fullständiga installationsprogrammet och korrigeringsprogrammet.
 
-![Installationsprogram för fullständig installation och korrigering](/help/forms/using/assets/full-and-patch-installer.png)
+![Fullständigt installationsprogram och korrigeringsinstallationsprogram](/help/forms/using/assets/full-and-patch-installer.png)
 
-Se [Installationsanvisningar för AEM 6.5 Forms Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html) artikel för att installera den senaste Service Pack-versionen för JEE-miljön.
+Läs artikeln [AEM 6.5 Forms Service Pack - installationsanvisningar](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html) om hur du installerar den senaste Service Pack-versionen för JEE-miljön.
 
 <!--
 [Work in Progress]

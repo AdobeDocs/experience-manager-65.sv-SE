@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # Konfigurationsegenskaper för interaktiv kommunikation{#interactive-communications-configuration-properties}
 
-Interaktiv kommunikation innehåller egenskaper som konfigureras automatiskt efter installation av [AEM Forms-tillägg](../../forms/using/installing-configuring-aem-forms-osgi.md) paket. Författare av interaktiv kommunikation kan redigera dessa standardkonfigurationsegenskaper med **Konfiguration av Adobe Experience Manager Web Console** sida.
+Interaktiv kommunikation innehåller egenskaper som konfigureras automatiskt efter installation av [AEM Forms-tilläggspaketet](../../forms/using/installing-configuring-aem-forms-osgi.md). Författare av interaktiv kommunikation kan redigera dessa standardkonfigurationsegenskaper på sidan **Konfiguration av Adobe Experience Manager Web Console**.
 
-Öppna **Konfiguration av Adobe Experience Manager Web Console** sida med följande URL:
+Öppna sidan **Konfiguration av Adobe Experience Manager Web Console** med följande URL:
 
 `https:/[server]:[port]/<contextPath>/system/console/configMgr`
 
@@ -34,7 +34,7 @@ Konfigurationsegenskaperna omfattar:
 
 ## Konfiguration av dokumentfragment {#document-fragments-configuration}
 
-Välj **Konfiguration av dokumentfragment** på **Konfiguration av Adobe Experience Manager Web Console** för att visa konfigurationsegenskaperna för dokumentfragment.
+Välj **Dokumentfragmentskonfiguration** på sidan **Adobe Experience Manager Web Console Configuration** om du vill visa konfigurationsegenskaperna för dokumentfragment.
 
 <table>
  <tbody> 
@@ -80,7 +80,7 @@ Välj **Konfiguration av dokumentfragment** på **Konfiguration av Adobe Experie
 
 ## Skapa korrespondenskonfiguration {#create-correspondence-configuration}
 
-Välj **Skapa korrespondenskonfiguration** på **Konfiguration av Adobe Experience Manager Web Console** för att visa konfigurationsegenskaperna för agentens användargränssnitt.
+Välj **Skapa korrespondenskonfiguration** på sidan **Adobe Experience Manager Web Console Configuration** för att visa konfigurationsegenskaperna för agentens användargränssnitt.
 
 <table>
  <tbody> 
@@ -113,7 +113,7 @@ Välj **Skapa korrespondenskonfiguration** på **Konfiguration av Adobe Experien
 
 ## Konfiguration av webbkanal för adaptiv form och interaktiv kommunikation {#adaptive-form-and-interactive-communication-web-channel-configuration}
 
-Välj **Konfiguration av webbkanal för adaptiv form och interaktiv kommunikation** på **Konfiguration av Adobe Experience Manager Web Console** för att visa konfigurationsegenskaperna för webbkanalen Adaptive Forms och Interactive Communications. I följande tabell beskrivs egenskaperna för interaktiv kommunikation:
+Välj **Adaptiv form och Interactive Communication Web Channel Configuration** på sidan **Adobe Experience Manager Web Console Configuration** för att visa konfigurationsegenskaperna för Adaptiv Forms och Interactive Communications-webbkanalen. I följande tabell beskrivs egenskaperna för interaktiv kommunikation:
 
 | Egenskap | Beskrivning | Standard | Godtagbara värden |
 |---|---|---|---|
@@ -123,7 +123,7 @@ Välj **Konfiguration av webbkanal för adaptiv form och interaktiv kommunikatio
 
 ## Konfiguration av tema för adaptiv form och interaktiv kommunikation - webbkanal {#adaptive-form-and-interactive-communication-web-channel-theme-configuration}
 
-Välj **Konfiguration av tema för adaptiv form och interaktiv kommunikation - webbkanal** på **Konfiguration av Adobe Experience Manager Web Console** för att visa konfigurationsegenskaperna för teman för adaptiva Forms- och interaktiva kommunikationskanaler.
+Välj **Adaptiv form och Interactive Communication Web Channel Theme Configuration** på sidan **Adobe Experience Manager Web Console Configuration** om du vill visa konfigurationsegenskaperna för Adaptiv Forms och Interactive Communications Web Channel-teman.
 
 <table>
  <tbody> 

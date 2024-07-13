@@ -39,7 +39,7 @@ Tabellrapporter kan exporteras i CSV-format för efterföljande bearbetning.
 
 ### Rapporter om communitysajter {#reports-for-community-sites}
 
-* Från global navigering: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** >  **[!UICONTROL Reports]**
+* Från global navigering: **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Reports]**
 
 * Välj bland:
 
@@ -82,15 +82,15 @@ Välj villkor för rapporten:
    * De senaste 90 dagarna
    * Förra året
 
-Välj **[!UICONTROL Generate]** för att skapa rapporten.
+Välj **[!UICONTROL Generate]** om du vill skapa rapporten.
 
-![generera vyer](assets/generate-views.png)
+![generate-views](assets/generate-views.png)
 
 ## Inläggsrapport {#posts-report}
 
 På postkonsolen kan rapporter skapas om antalet inlägg i communityfunktioner under en viss tidsperiod.
 
-![postrapport](assets/posts-report.png)
+![inlägg-report](assets/posts-report.png)
 
 Välj villkor för rapporten:
 
@@ -111,7 +111,7 @@ Välj villkor för rapporten:
    * De senaste 90 dagarna
    * Förra året
 
-Välj **[!UICONTROL Generate]** för att skapa rapporten.
+Välj **[!UICONTROL Generate]** om du vill skapa rapporten.
 
 ![generate-report](assets/generate-posts-report.png)
 
@@ -123,6 +123,6 @@ Om det inte finns några communitysajter i listan kontrollerar du att Adobe Anal
 
 ### Rapporterna visas inte i AEM Author-instansen {#reports-do-not-show-in-aem-author-instance}
 
-Om rapporter inte visas i AEM Author-instansen kontrollerar du om anpassningarna finns, t.ex. URL-mappning i Publish-instansen. Om URL-mappning endast görs på AEM publiceringsinstans på communitywebbplatsen, kontrollerar du att samma har konfigurerats i AEM Author-instans i **Trend Report Social Component Factory för webbplats** konfiguration.
+Om rapporter inte visas i AEM Author-instansen kontrollerar du om det finns anpassningar, till exempel URL-mappning för Publish-instansen. Om URL-mappning endast görs på den AEM Publish-instansen av communitywebbplatsen kontrollerar du att samma har konfigurerats i AEM Author-instansen i konfigurationen **Platstrend Report Social Component Factory**.
 
-![URL-mappning AEM författare](assets/sitetrend.png)
+![URL-mappning på AEM författare](assets/sitetrend.png)

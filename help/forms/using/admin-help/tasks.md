@@ -44,19 +44,19 @@ Resultatet av en uppgiftssökning visas på sidan Uppgiftslista. Du kan välja e
 
 Uppgifterna visas med följande information:
 
-**Aktivitets-ID:** Det positiva heltal som formulärarbetsflödet tilldelar när uppgiften instansieras (initieras av en användare). Du kan använda den här identifieraren för att spåra uppgiften genom dess livscykel. Klicka på ett aktivitets-ID om du vill visa information om aktivitetshistoriken eller om du vill tilldela om uppgiften till en annan användare.
+**Aktivitets-ID:** Det positiva heltal som formulärarbetsflödet tilldelar när aktiviteten initieras (initieras av en användare). Du kan använda den här identifieraren för att spåra uppgiften genom dess livscykel. Klicka på ett aktivitets-ID om du vill visa information om aktivitetshistoriken eller om du vill tilldela om uppgiften till en annan användare.
 
-**Status:** Tilldelad innebär att uppgiften för närvarande är tilldelad användaren. Ej tilldelad innebär att uppgiften tidigare har tilldelats användaren. Status kan också vara Slutförd.
+**Status:** Tilldelad innebär att uppgiften är tilldelad användaren. Ej tilldelad innebär att uppgiften tidigare har tilldelats användaren. Status kan också vara Slutförd.
 
-**Aktivitet:** Visar formuläret och namnet på en inledande åtgärd eller processåtgärden som genererade uppgiften.
+**Aktivitet:** Visar formuläret och namnet på en inledande åtgärd eller processåtgärden som genererade aktiviteten.
 
 **Process-ID:** Detta positiva heltal som tilldelas av formulärarbetsflödet när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar en process). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
 
-**Processnamn - version:** Processens namn, enligt definition i Workbench.
+**Processnamn - Version:** Processens namn, enligt definition i Workbench.
 
-**Program:** Namnet på programmet som processen tillhör, enligt definitionen i Workbench.
+**Program:** Namnet på programmet som processen tillhör, enligt definition i Workbench.
 
-**Skapad:** Datum och tid då uppgiften skapades.
+**Skapad:** Datum och tid då aktiviteten skapades.
 
 ## Visa aktivitetshistorik och tilldela om uppgifter {#viewing-task-history-and-reassigning-tasks}
 
@@ -68,25 +68,25 @@ För varje uppgiftstilldelning visas följande information i listan:
 
 **Status:** Tilldelad innebär att uppgiften för närvarande är tilldelad användaren. Ej tilldelad innebär att uppgiften tidigare har tilldelats användaren.
 
-**Worklist-ID:** Den numeriska identifieraren för den användarkö som uppgiften tillhör. En process kan delas av flera användare.
+**Arbets-ID:** Den numeriska identifieraren för den användarkö som uppgiften tillhör. En process kan delas av flera användare.
 
 **Typ:** Anger hur uppgiften tilldelades:
 
-**Inledande:** Användaren tilldelades ursprungligen uppgiften.
+**Inledande:** Användaren tilldelades ursprungligen aktiviteten.
 
-**Framåt:** Den ursprungliga aktivitetsägaren tilldelade uppgiften till en annan användare.
+**Vidarebefordra:** Den ursprungliga aktivitetsägaren tilldelade uppgiften till en annan användare.
 
-**Avvisa:** En vidarebefordrad uppgift avvisades eller så returnerades en uppgift till en arbetslista utan att ha slutförts.
+**Avvisa:** En vidarebefordrad aktivitet avvisades eller så returnerades en aktivitet till en arbetslista utan att ha slutförts.
 
 **Anspråk:** Användaren gjorde anspråk på uppgiften i en delad arbetslista.
 
-**Eskalering:** En förbestämd tid förflutit (enligt inställningen i åtgärden Användare i Workbench) utan användarinteraktion och en annan användare tilldelades uppgiften.
+**Eskalering:** En förbestämd tid förflutit (som anges i användaråtgärden i Workbench) utan användarinteraktion och en annan användare tilldelades uppgiften.
 
-**Konsult:** Aktivitetsägaren har vidarebefordrat denna uppgift till en annan användare för konsultation som kan öppna formuläret, spara data, ändra bilagor och anteckningar, men inte slutföra steget. Användaren måste returnera uppgiften till aktivitetsägaren som har rådfrågat användaren.
+**Konsult:** Aktivitetsägaren har vidarebefordrat den här aktiviteten till en annan användare för konsultation som kan öppna formuläret, spara data, ändra bilagor och anteckningar, men inte slutföra steget. Användaren måste returnera uppgiften till aktivitetsägaren som har rådfrågat användaren.
 
-**Administratörsomtilldelning:** Uppgiften har tilldelats om av en administratör.
+**Administratörsomtilldelning:** Uppgiften har omtilldelats av en administratör.
 
-**Tilldelningsdatum:** Det datum och den tidpunkt då uppgiften tilldelades användaren.
+**Tilldelningsdatum:** Datum och tid då uppgiften tilldelades användaren.
 
 ### Tilldela en ny användare till en uppgift {#assigning-a-new-user-to-a-task}
 

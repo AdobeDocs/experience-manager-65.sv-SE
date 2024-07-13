@@ -31,15 +31,15 @@ Ett space är en praktisk plats där du kan lagra enheter som exponeras via Cont
 
 Om användaren vill visa en massa innehåll och resurser för en mobilapp skapar användaren utrymmet med AEM Mobile Dashboard.
 
-För första gången som användare, som inte har konfigurerat innehållstjänster för att arbeta med blanksteg, visas endast appar på AEM Mobile kontrollpanel efter att användaren har valt **Innehållstjänster**.
+För första gången som användare, som inte har konfigurerat innehållstjänster för att arbeta med mellanslag, visas endast appar på AEM Mobile-kontrollpanelen när **innehållstjänster** har valts.
 
 >[!CAUTION]
 >
->**Krav för att lägga till ett blanksteg**
+>**Förutsättningar för att lägga till ett blanksteg**
 >
->Kontrollera **Aktivera AEM** för att arbeta med Spaces och aktivera det på AEM Mobile kontrollpanel.
+>Markera **Aktivera AEM Content Services** för att arbeta med Spaces och aktivera det i AEM Mobile-programmets kontrollpanel.
 >
->Se [Administrera innehållstjänster](/help/mobile/developing-content-services.md) för mer information.
+>Mer information finns i [Administrera innehållstjänster](/help/mobile/developing-content-services.md).
 
 När du har konfigurerat Spaces på kontrollpanelen gör du så här för att skapa Spaces:
 
@@ -47,9 +47,9 @@ När du har konfigurerat Spaces på kontrollpanelen gör du så här för att sk
 
    ![chlimage_1-83](assets/chlimage_1-83.png)
 
-1. Välj **Skapa** för att skapa ett utrymme. Retur **Titel**, **Namn** och **Beskrivning** för utrymmet.
+1. Välj **Skapa** om du vill skapa ett space. Ange **Rubrik**, **Namn** och **Beskrivning** för utrymmet.
 
-   Klicka **Skapa**.
+   Klicka på **Skapa**.
 
    ![chlimage_1-84](assets/chlimage_1-84.png)
 
@@ -61,20 +61,20 @@ Du kan visa egenskaper för utrymmet, ta bort det eller publicera utrymmet och d
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
-**Visa och redigera egenskaper för ett blanksteg**
+**Egenskaper för visning och redigering av blanksteg**
 
 1. Markera utrymmet i listan
-1. Välj **Egenskaper** från verktygsfältet
-1. Klicka **Stäng** när det är klart
+1. Välj **Egenskaper** i verktygsfältet
+1. Klicka på **Stäng** när du är klar
 
-**Publicera blanksteg** När ett space publiceras publiceras även alla mappar och enheter i det utrymmet.
+**Publicera ett space** När ett space publiceras publiceras även alla mappar och entiteter i det utrymmet.
 
 1. Markera utrymmet genom att klicka på dess ikon i listan Space Console
-1. Välj **Publiceringsträd**
+1. Välj **Publish Tree**
 
 >[!NOTE]
 >
->Du kan **Avpublicera** a Space, som tar bort utrymmet från publiceringsinstansen.
+>Du kan **avpublicera** ett space, vilket tar bort utrymmet från publiceringsinstansen.
 >
 >Följande bild visar vilka åtgärder som kan utföras när du har publicerat utrymmet.
 
@@ -90,11 +90,11 @@ Blanksteg kan innehålla mappar för att ytterligare ordna utrymmets innehåll o
 
    ![chlimage_1-87](assets/chlimage_1-87.png)
 
-1. Ange **Titel**, **Namn,** och **Beskrivning** för mappen
+1. Ange **Rubrik**, **Namn,** och **Beskrivning** för mappen
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
-1. Klicka **Skapa** för att skapa mappen i ett space
+1. Klicka på **Skapa** för att skapa mappen i ett space
 
 ## Språkkopia {#language-copy}
 
@@ -102,7 +102,7 @@ Blanksteg kan innehålla mappar för att ytterligare ordna utrymmets innehåll o
 >
 >Språkkopian fungerar inte fullt ut i den här versionen. Den ställer bara in strukturen.
 
-The **Språkkopia** kan författare kopiera sin huvudspråkkopia och sedan skapa ett projekt och arbetsflöde för att automatiskt översätta innehållet. Med Language Copy skapas rätt struktur. När du har lagt till en mapp på ett space kan du lägga till språkkopia på ditt space.
+Med funktionen **Språkkopia** kan författare kopiera sin huvudspråkkopia och sedan skapa ett projekt och arbetsflöde för att automatiskt översätta innehållet. Med Language Copy skapas rätt struktur. När du har lagt till en mapp på ett space kan du lägga till språkkopia på ditt space.
 
 >[!NOTE]
 >
@@ -112,7 +112,7 @@ The **Språkkopia** kan författare kopiera sin huvudspråkkopia och sedan skapa
 
 1. När du har skapat utrymme klickar du på det för att skapa en språkkopia.
 
-   Klicka **Skapa** och välja **Språkkopia**.
+   Klicka på **Skapa** och välj **Språkkopia**.
 
    ![chlimage_1-89](assets/chlimage_1-89.png)
 
@@ -120,24 +120,24 @@ The **Språkkopia** kan författare kopiera sin huvudspråkkopia och sedan skapa
    >
    >Språkkopieringsnoder kan bara finnas som direkt underordnad till Space.
 
-1. Välj **Språk&amp;a för innehållspaket;** och anger **&amp;Titel;** in **Skapa språkkopia** -dialogrutan.
+1. Välj **Språk&amp;ämpel för innehållspaket;ast;** och ange **Title&amp;ast;** i dialogrutan **Skapa språkkopia**.
 
-   Klicka **Skapa**.
+   Klicka på **Skapa**.
 
    ![chlimage_1-90](assets/chlimage_1-90.png)
 
-1. När du har skapat en språkkopia visas den på ditt space i **Språkmallar**.
+1. När du har skapat en språkkopia visas den på ditt space på **språkmallsidor**.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
    >[!NOTE]
    >
-   >Välj **Språkmallar** om du vill visa språkkopieringsmappar.
+   >Välj **Språkmallsidor** om du vill visa mapparna för språkkopiering.
 
 ### Ta bort en mapp från utrymmet {#removing-a-folder-from-the-space}
 
 1. Markera mappen i listan med utrymmesinnehåll
-1. Klicka **Ta bort** från verktygsfältet
+1. Klicka på **Ta bort** i verktygsfältet
 
    >[!NOTE]
    >
@@ -169,11 +169,11 @@ Om underordnade entiteter, som är andra entiteter, samlas in för datamodelleri
 
    >[!NOTE]
    >
-   >Du kan välja **Resursmodell**, **Sidmodell** eller en modell av en enhetstyp som du skapade tidigare.
+   >Du kan välja **Assets-modell**, **Sidmodell** eller en modell av en entitetstyp som du har skapat tidigare.
    >
-   >Se [Skapa en modell](/help/mobile/administer-mobile-apps.md), för att skapa en egen enhet.
+   >Se [Skapa en modell](/help/mobile/administer-mobile-apps.md) om du vill skapa en anpassad entitet.
 
-1. Ange en **Titel**, **Namn**, **Beskrivning** och **Taggar** för företaget. Klicka **Skapa**.
+1. Ange en **titel**, **namn**, **beskrivning** och **taggar** för entiteten. Klicka på **Skapa**.
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
@@ -185,7 +185,7 @@ Om underordnade entiteter, som är andra entiteter, samlas in för datamodelleri
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
-1. Markera en enhet för redigering och klicka på **Redigera**.
+1. Markera en entitet som ska redigeras och klicka på **Redigera**.
 
    ![chlimage_1-96](assets/chlimage_1-96.png)
 
@@ -193,33 +193,33 @@ Om underordnade entiteter, som är andra entiteter, samlas in för datamodelleri
    >
    >Beroende på vilken mall du väljer för att skapa din enhet, kommer användargränssnittet att vara annorlunda för båda, för att redigera och visa egenskaper för din enhet. Se stegen nedan för mer information.
 
-   ***Om du väljer en mall för att skapa enheten som Assets Models***, klicka på **Redigera** gör att du kan lägga till resurser enligt bilden nedan:
+   ***Om du väljer en mall för att skapa enheten som Assets-modeller*** kan du lägga till resurser genom att klicka på **Redigera** enligt bilden nedan:
 
    ![chlimage_1-97](assets/chlimage_1-97.png)
 
-   Du kan också klicka **Förhandsgranska** för att visa json-länken.
+   Du kan också klicka på **Förhandsgranska** för att visa json-länken.
 
    ![chlimage_1-98](assets/chlimage_1-98.png)
 
-   ***Om du väljer en mall för att skapa enheten som Sidmodeller***, klicka på **Redigera** gör att du kan lägga till resurser enligt bilden nedan:
+   ***Om du väljer en mall för att skapa enheten som Sidmodeller*** kan du lägga till resurser genom att klicka på **Redigera** enligt bilden nedan:
 
    ![chlimage_1-99](assets/chlimage_1-99.png)
 
-   Klicka på ikonen i dialogrutan **Bana** lägga till en resurs
+   Klicka på ikonen i **Sökvägen** för att lägga till en resurs
 
    ![chlimage_1-100](assets/chlimage_1-100.png)
 
    >[!NOTE]
    >
-   >När du har lagt till en entitet måste den sparas för att länken Förhandsgranska ska fungera. Om du vill visa förhandsgranskningen klickar du på **Spara**. Klicka på **Förhandsgranska** visar den tillagda tillgångens json, vilket visas i figuren nedan:
+   >När du har lagt till en entitet måste den sparas för att länken Förhandsgranska ska fungera. Om du vill visa förhandsgranskningen klickar du på **Spara**. Om du klickar på **Förhandsgranska** visas den tillagda resursens json, vilket visas i figuren nedan:
 
    ![chlimage_1-101](assets/chlimage_1-101.png)
 
    >[!NOTE]
    >
-   >När du är klar med att lägga till resurser till din enhet kan du antingen välja **Spara** för att spara ändringarna eller välja **Spara och stäng** om du vill spara och omdirigera till Space-konsollistan där enheterna definieras.
+   >När du är klar med att lägga till resurser till din enhet kan du antingen välja **Spara** för att spara ändringarna eller välja **Spara och stäng** för att spara och omdirigera till den utrymmeskonsollista där enheterna är definierade.
 
-   Välj dessutom en enhet i listan över konsoler och klicka på **Egenskaper** om du vill visa och redigera egenskaperna för en definierad enhet.
+   Dessutom väljer du en enhet i utrymmeskonsollistan och klickar på **Egenskaper** för att visa och redigera egenskaperna för en definierad enhet.
 
    ![chlimage_1-102](assets/chlimage_1-102.png)
 
@@ -233,16 +233,16 @@ Om underordnade entiteter, som är andra entiteter, samlas in för datamodelleri
 
    ![chlimage_1-104](assets/chlimage_1-104.png)
 
-1. Klicka **Ta bort** från verktygsfältet för att ta bort den specifika enheten från utrymmet
+1. Klicka på **Ta bort** i verktygsfältet för att ta bort den specifika entiteten från utrymmet
 
 ### Publicera en enhet {#publishing-an-entity}
 
-Du kan välja **Publiceringsträd** eller **Snabbpublicering** för att publicera din enhet.
+Du kan välja **Publish Tree** eller **Quick Publish** för att publicera din entitet.
 
-1. Välj en entitet från utrymmeskonsollistan och klicka på **Publiceringsträd **för att publicera entiteten och dess underordnade objekt.
+1. Välj en enhet i utrymmeskonsollistan och klicka på **Publish Tree **för att publicera den enheten och dess underordnade objekt.
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 
    **eller**,
 
-   Klicka **Snabbpublicering** för att publicera den specifika enheten.
+   Klicka på **Snabba Publish** för att publicera den specifika entiteten.

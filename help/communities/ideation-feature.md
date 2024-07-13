@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Idéfunktionen är ett område där besökare på den inloggade webbplatsen (community-medlemmar) i publiceringsmiljön kan:
+Idéfunktionen är ett område där besökare (community-medlemmar) i Publish-miljön kan logga in för att:
 
 * Skapa idéer att dela med communityn.
 * Visa och kommentera idéer.
@@ -35,21 +35,21 @@ I det här avsnittet av dokumentationen beskrivs:
 
 ### Lägga till en idé på en sida {#adding-a-ideation-to-a-page}
 
-Lägga till en `Ideation` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp
+Om du vill lägga till en `Ideation`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att hitta
 
 * `Communities / Ideation`
 
 Dra den till en plats på en sida där idén ska visas.
 
-Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När [nödvändiga bibliotek på klientsidan](/help/communities/ideation.md#essentials-for-client-side) ingår så här `Ideation` visas:
+När de [nödvändiga klientbiblioteken](/help/communities/ideation.md#essentials-for-client-side) inkluderas visas `Ideation`-komponenten så här:
 
-![idéskiss](assets/ideation.png)
+![ideation](assets/ideation.png)
 
 ### Konfigurera en idé {#configuring-an-ideation}
 
-Markera den monterade `Ideation` så att du kan komma åt och välja `Configure` -ikonen som öppnar redigeringsdialogrutan.
+Markera den monterade `Ideation`-komponenten så att du kan komma åt och markera ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
@@ -57,18 +57,18 @@ Markera den monterade `Ideation` så att du kan komma åt och välja `Configure`
 
 #### Fliken Inställningar {#settings-tab}
 
-Under **[!UICONTROL Settings]** -fliken, ange inställningar för idéer och kommentarer:
+Ange inställningar för idéer och kommentarer på fliken **[!UICONTROL Settings]**:
 
 * **Tillåt miniatyrbild för bifogad fil**
-* **Maximal storlek på miniatyrbild**
+* **Maximal storlek för miniatyrbildsanslutning**
 * **Minsta bildstorlek för miniatyrbild**
 * **Maximal miniatyrstorlek**
 * **Tillåt behöriga medlemmar**
 * **Tillåtna behöriga medlemmar**
-* **Blockera användargenererat innehåll i redigeringsläge för författare**
-* **Idétitel**
+* **Blockera användargenererat innehåll i redigeringsläget för författare**
+* **Identitetstitel**
 
-* Idéns visningsrubrik. Standard är `Ideation`.
+* Idéns visningsrubrik. Standardvärdet är `Ideation`.
 * **Ideationsbeskrivning**
 
   En beskrivning som ska visas som underrubrik till idén. Standardvärdet är ingen beskrivning.
@@ -77,7 +77,7 @@ Under **[!UICONTROL Settings]** -fliken, ange inställningar för idéer och kom
 
   Definierar antalet idéer/inlägg som visas per sida. Standardvärdet är 10.
 
-* **Kontrollerad**
+* **Modererad**
 
   Om det här alternativet är markerat måste publicering av idéer och kommentarer godkännas innan de kan visas på en publiceringsplats. Standard är avmarkerat.
 
@@ -91,7 +91,7 @@ Under **[!UICONTROL Settings]** -fliken, ange inställningar för idéer och kom
 
 * **Tillåt taggning**
 
-  Tillåt medlemmar att lägga till taggetiketter i sina inlägg (se **[!UICONTROL Tag field]** -fliken). Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se fliken **[!UICONTROL Tag field]**). Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
@@ -99,11 +99,11 @@ Under **[!UICONTROL Settings]** -fliken, ange inställningar för idéer och kom
 
 * **Maximal filstorlek**
 
-  Endast relevant om `Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+  Endast relevant om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
 * **Tillåtna filtyper**
 
-  Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
+  Endast relevant om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de inte överföras. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **Maximal filstorlek för bifogad bild**
 
@@ -123,11 +123,11 @@ Under **[!UICONTROL Settings]** -fliken, ange inställningar för idéer och kom
 
 * **Tillåt följande**
 
-  Om du markerar det här alternativet inkluderas följande funktion för idéinlägg, som gör att medlemmar kan [meddelad](/help/communities/notifications.md) av nya tjänster. Standard är avmarkerat.
+  Om du markerar det här alternativet inkluderar du följande funktion för idéinlägg, som gör att medlemmar kan [meddelas](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
 
 * **Tillåt e-postprenumerationer**
 
-  Om det här alternativet är markerat, tillåt medlemmar att meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver `Allow Following` ska kontrolleras och [e-post konfigurerad](/help/communities/email.md). Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver att `Allow Following` kontrolleras och att [e-post konfigureras](/help/communities/email.md). Standard är avmarkerat.
 
 * **Tillåt röstning**
 
@@ -135,21 +135,21 @@ Under **[!UICONTROL Settings]** -fliken, ange inställningar för idéer och kom
 
 * **Visa emblem**
 
-  Om det här alternativet är markerat visas intjänad och tilldelad [emblem](/help/communities/implementing-scoring.md) med en medlems idé. Standard är avmarkerat.
+  Om det här alternativet är markerat visas intjänade och tilldelade [emblem](/help/communities/implementing-scoring.md) med en medlems idé. Standard är avmarkerat.
 
 * **Hämta inte svar på listsidan**
 
-* **Tillåt innehåll**
+* **Tillåt aktuellt innehåll**
 
-  Idén kan identifieras som om den är markerad [presenterat innehåll](/help/communities/featured.md). Standard är avmarkerat.
+  Om det här alternativet är markerat går det att identifiera idén som [aktuellt innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
-* **Aktivera omnämns**
-* **Max. omnämnanden**
-* **Mönster för användargränssnittets omnämnande**
+* **Aktivera omnämnande**
+* **Max antal omnämnanden**
+* **Mönster för gränssnittets omnämnande**
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Under **[!UICONTROL User Moderation]** anger du hur publicerade idéer och kommentarer (användargenererat innehåll) ska hanteras. Mer information finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
+Under fliken **[!UICONTROL User Moderation]** anger du hur publicerade idéer och kommentarer (användargenererat innehåll) hanteras. Mer information finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
 
 * **Neka inlägg**
 
@@ -181,31 +181,31 @@ Under **[!UICONTROL User Moderation]** anger du hur publicerade idéer och komme
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under **[!UICONTROL Tag field]** -fliken, de taggar som kan användas, om de tillåts under **[!UICONTROL Settings]** är begränsade enligt de namnutrymmen som har valts.
+Under fliken **[!UICONTROL Tag field]** är de taggar som kan användas, om de tillåts under fliken **[!UICONTROL Settings]**, begränsade enligt de namnutrymmen som har valts.
 
 * **Tillåtna namnutrymmen**
 
-  Relevant om `Allow Tagging` kontrolleras under **[!UICONTROL Settings]** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller&quot;Standardtaggar&quot; (standardnamnutrymmet) och&quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+  Relevant om `Allow Tagging` är markerat under fliken **[!UICONTROL Settings]**. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som kontrolleras. Listan med namnutrymmen innehåller&quot;Standardtaggar&quot; (standardnamnutrymmet) och&quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
-  Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet för **-1** betyder ingen gräns. Standardvärdet är 0.
+  Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet **-1** betyder ingen gräns. Standardvärdet är 0.
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-Under **[!UICONTROL Sort Settings]** anger du hur de bokförda kommentarerna ska sorteras när de visas.
+Under fliken **[!UICONTROL Sort Settings]** anger du hur de bokförda kommentarerna ska sorteras när de visas.
 
 * **Sortera efter**
 
-  Markera alla tillåtna sorteringsval: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standard är `Newest, Oldest, Last Updated`.
+  Kontrollera alla tillåtna sorteringsval: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standardvärdet är `Newest, Oldest, Last Updated`.
 
 * **Ange som standard**
 
-  Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standard är `Newest`.
+  Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standardvärdet är `Newest`.
 
-* **Välj tidsalternativ för Analytics-sortering**
+* **Välj tidsalternativ för sortering av analyser**
 
-  Dra ned för att välja något av `All, Last 24 Hours, Last 7 Days, Last 30 Days`. Standard är `All`.
+  Dra ned för att välja en av `All, Last 24 Hours, Last 7 Days, Last 30 Days`. Standardvärdet är `All`.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
@@ -219,24 +219,24 @@ När medlemmen har loggat in kan han eller hon skapa en idé.
 
 Innan du skickar in en idé kan medlemmen spara ett utkast.
 
-Genom att välja `Save as Draft` sparas ett utkast.
+Genom att markera knappen `Save as Draft` sparas ett utkast.
 
-![save-ideas](assets/save-idea.png)
+![save-idé](assets/save-idea.png)
 
-När du visar sparade utkast i `My Drafts` flik, välja `Read More` för att gå tillbaka till redigeringsläget:
+När du visar sparade utkast på fliken `My Drafts` väljer du `Read More` för att gå tillbaka till redigeringsläget:
 
 ![edit-ideas](assets/edit-idea.png)
 
 #### Ge feedback {#providing-feedback}
 
-När idén har publicerats kan andra medlemmar logga in, öppna idén ( `Read More`) och gillar idén, vilket ökar antalet röster och gör kommentarer.
+När idén har publicerats kan andra medlemmar logga in, öppna idén ( `Read More`) och gilla idén, och på så sätt lägga till fler röster och göra kommentarer.
 
 ![feedback](assets/feedback-idea.png)
 
 ### Ytterligare information {#additional-information}
 
-Mer information finns på [Grundläggande om identifiering](/help/communities/ideation.md) för utvecklare.
+Mer information finns på sidan [Ideation Essentials](/help/communities/ideation.md) för utvecklare.
 
-moderering av inlägg och kommentarer finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
+moderering av publicerade ämnen och kommentarer finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md) (Moderating User Generated Content).
 
 Information om hur du taggar publicerade ämnen och kommentarer finns i [Tagga användargenererat innehåll](/help/communities/tag-ugc.md).

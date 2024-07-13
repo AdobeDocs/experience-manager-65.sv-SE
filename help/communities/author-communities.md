@@ -30,17 +30,17 @@ Mer information om hur du skapar en community-webbplats finns på:
 
 >[!NOTE]
 >
->Om du inte är bekant med redigeringsmiljön kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och [snabbguide till framtagning av sidor](/help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till redigeringsmiljön kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidor](/help/sites-authoring/qg-page-authoring.md).
 
 ## Tillgängliga webbgruppskomponenter {#available-communities-components}
 
 I följande tabell visas de communitykomponenter som är synliga för författare när de är aktiverade i komponentwebbläsaren (sidespark).
 
-Se även de interaktiva [Community Components Guide](/help/communities/components-guide.md).
+Se även den interaktiva guiden [Community Components](/help/communities/components-guide.md).
 
 >[!NOTE]
 >
->Läs [Grunderna för communitykomponenter](/help/communities/basics.md) eftersom den innehåller information som behövs för att skapa med komponenter i Communities.
+>Läs [Grunderna för communitykomponenter](/help/communities/basics.md) eftersom den innehåller information som krävs för redigering med webbkomponenterna.
 
 | **Komponenttitel** | **Funktion** |
 |---|---|
@@ -48,18 +48,18 @@ Se även de interaktiva [Community Components Guide](/help/communities/component
 | Blogg | [Blogg](/help/communities/blog-feature.md) |
 | Blogg, marginallist | [Blogg](/help/communities/blog-feature.md) |
 | Kalender | [Kalender](/help/communities/calendar.md) |
-| Kommentar | [Kommentar](/help/communities/comments.md) |
+| Kommentar | [Kommentarer](/help/communities/comments.md) |
 | Lista över gemenskapsaktiviteter | [Aktivitetstrender](/help/communities/trends.md) |
 | Medlemslista för community | [Community-grupper](/help/communities/creating-groups.md) |
 | Disponera meddelande | [Meddelanden](/help/communities/configure-messaging.md) |
-| Innehåll | [Innehåll](/help/communities/featured.md) |
+| Innehåll | [Aktuellt innehåll](/help/communities/featured.md) |
 | Filbibliotek | [Filbibliotek](/help/communities/file-library.md) |
-| Följ | [Social Graph](/help/communities/socialgraph.md) |
-| Följande | [Social Graph](/help/communities/socialgraph.md) |
+| Följ | [Socialt diagram](/help/communities/socialgraph.md) |
+| Följande | [Socialt diagram](/help/communities/socialgraph.md) |
 | Forum | [Forum](/help/communities/forum.md) |
-| Ideation | [Ideation](/help/communities/ideation-feature.md) |
+| Ideation | [Identifiering](/help/communities/ideation-feature.md) |
 | Ledartavla | [Betygsättning och emblem](/help/communities/enabling-leaderboard.md) |
-| Länka | [Länka](/help/communities/liking.md) |
+| Länka | [Länkar](/help/communities/liking.md) |
 | Meddelande | [Meddelanden](/help/communities/configure-messaging.md) |
 | Meddelandelista | [Meddelanden](/help/communities/configure-messaging.md) |
 | QnA | [Frågor och svar](/help/communities/working-with-qna.md) |
@@ -70,7 +70,7 @@ Se även de interaktiva [Community Components Guide](/help/communities/component
 | Sammanfattning av granskningar (visning) | [Recensioner](/help/communities/reviews.md) |
 | Sök | [Sökning](/help/communities/search.md) |
 | Sökresultat | [Sökning](/help/communities/search.md) |
-| Social Tag Cloud | [Social Tag Cloud](/help/communities/tagcloud.md) |
+| Social Tag Cloud | [Moln för sociala taggar](/help/communities/tagcloud.md) |
 | Omröstning | [Omröstning](/help/communities/voting.md) |
 
 >[!NOTE]
@@ -79,8 +79,8 @@ Se även de interaktiva [Community Components Guide](/help/communities/component
 
 ## Dokumentation för relaterade communities {#related-communities-documentation}
 
-* Besök [Distribuera webbgrupper](/help/communities/deploy-communities.md) där du kan lära dig mer om rekommenderade distributioner.
+* Besök [Distribuera communityn](/help/communities/deploy-communities.md) där du kan läsa mer om rekommenderade distributioner.
 
-* Besök [Administrera webbgruppsplatser](/help/communities/administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, konfigurerar mallar för communitysajter, modererar communityinnehåll, hanterar medlemmar och konfigurerar meddelanden.
+* Besök [Administrera communityplatser](/help/communities/administer-landing.md) om du vill veta mer om hur du skapar en community-webbplats, konfigurerar mallar för communityplatser, modererar communityinnehåll, hanterar medlemmar och konfigurerar meddelanden.
 
-* Besök [Utveckla webbgrupper](/help/communities/communities.md) där du kan lära dig mer om det sociala ramverket (SCF) och hur du anpassar communitykomponenter och -funktioner.
+* Gå till [Utveckla communityn](/help/communities/communities.md) där du kan lära dig mer om det sociala komponentramverket (SCF) och anpassa webbcommunitykomponenter och -funktioner.

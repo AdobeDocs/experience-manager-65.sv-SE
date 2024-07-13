@@ -62,42 +62,42 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 0</strong></td>
    <td>Analysera flödet för förfrågningar</td>
-   <td><p>Du kan använda standardanalys av HTTP-begäran i webbläsaren för att analysera förfrågningsflödet. Mer information om hur du gör den här analysen i Chrome finns i:<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
+   <td><p>Du kan använda standardanalys av HTTP-begäran i webbläsaren för att analysera förfrågningsflödet. Mer information om hur du gör den här analysen på Chrome finns i:<br /> </p> <p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading">https://developer.chrome.com/docs/devtools/</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 2</strong></td>
    <td>Kommer förfrågningar från externa värdar?</td>
-   <td>Du kan använda standardanalys av HTTP-begäran i webbläsaren för att analysera förfrågningsflödet. Se länkarna ovan om hur du gör analysen i Chrome.<br /> </td>
+   <td>Du kan använda standardanalys av HTTP-begäran i webbläsaren för att analysera förfrågningsflödet. Se länkarna ovan om hur du gör den här analysen på Chrome.<br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 3</strong></td>
    <td>Kan förfrågningarna cachelagras?</td>
-   <td>Mer information om tillgängliga förfrågningar och allmänna råd om prestandaoptimering för Dispatcher finns i <a href="/help/sites-deploying/configuring-performance.md#optimizing-performance-when-using-the-dispatcher">Prestandaoptimering för Dispatcher</a>.</td>
+   <td>Mer information om tillgängliga begäranden och allmänna råd om prestandaoptimering för Dispatcher finns i <a href="/help/sites-deploying/configuring-performance.md#optimizing-performance-when-using-the-dispatcher">Dispatcher Performance Optimization</a>.</td>
   </tr>
   <tr>
    <td><strong>Steg 4</strong></td>
    <td>Kommer förfrågningar från Dispatcher?</td>
-   <td><p>Om du vill se om begäranden cachelagras på rätt sätt kontrollerar du <a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#debugging">Felsökningsdokumentation för Dispatcher</a>.<br /> </p> </td>
+   <td><p>Kontrollera <a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#debugging">Dispatcher-felsökningsdokumentationen</a> för att se om begäranden har cachelagrats korrekt.<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 5</strong></td>
    <td>Försöker Dispatcher autentisera varje begäran via AEM?</td>
-   <td>Kontrollera om Dispatcher skickar <code>HEAD</code> begäranden om AEM för autentisering innan den cachelagrade resursen levereras. Leta efter <code>HEAD</code> begäranden i AEM <code>access.log</code>. Mer information finns i <a href="/help/sites-deploying/configure-logging.md">Loggning</a>.<br /> </td>
+   <td>Kontrollera om Dispatcher skickar <code>HEAD</code> begäranden till AEM för autentisering innan den cachelagrade resursen levereras. Sök efter <code>HEAD</code> förfrågningar i AEM <code>access.log</code>. Mer information finns i <a href="/help/sites-deploying/configure-logging.md">Loggning</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 6</strong></td>
-   <td>Är den geografiska platsen för Dispatcher långt från användarna?</td>
+   <td>Är Dispatcher geografiska plats långt från användarna?</td>
    <td>Flytta Dispatcher närmare användarna.</td>
   </tr>
   <tr>
    <td><strong>Steg 7</strong></td>
-   <td>Går nätverkslagret för Dispatcher bra?</td>
+   <td>Går nätverkslagret i Dispatcher bra?</td>
    <td><br /> Undersök nätverkslagret för problem med mättnad och fördröjning.<p> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 8</strong></td>
    <td>Kan långsamheten reproduceras med en lokal instans?</td>
-   <td><br /> <p>Använd <a href="/help/sites-developing/tough-day.md">Tålig dag</a> för att återskapa"verkliga" förhållanden från produktionsinstanserna. Om det här scenariot inte är realistiskt för ditt utvecklingsområde måste du testa produktionsinstansen (eller en identisk mellanlagringsmodell) i ett annat nätverkskontext.<br /> </p> </td>
+   <td><br /> <p>Använd <a href="/help/sites-developing/tough-day.md">Tough Day</a> för att replikera verkliga förhållanden från produktionsinstanserna. Om det här scenariot inte är realistiskt för ditt utvecklingsområde måste du testa produktionsinstansen (eller en identisk mellanlagringsmodell) i en annan nätverkskontext.<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 9</strong></td>
@@ -107,7 +107,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 10 och 29</strong></td>
    <td>Undersök nätverkslager</td>
-   <td><p>Undersök nätverkslagret för problem med mättnad och fördröjning.</p> <p>För författarnivån rekommenderas att fördröjningen inte överstiger 100 millisekunder.</p> <p>Mer information om tips för prestandaoptimering finns i <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">den här sidan</a>.</p> </td>
+   <td><p>Undersök nätverkslagret för problem med mättnad och fördröjning.</p> <p>För författarnivån rekommenderas att fördröjningen inte överstiger 100 millisekunder.</p> <p>Mer information om tips för prestandaoptimering finns på <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">den här sidan</a>.</p> </td>
   </tr>
   <tr>
    <td><strong>Steg 11</strong></td>
@@ -122,7 +122,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 13</strong></td>
    <td>Kontrollera maskinvarukraven</td>
-   <td>Läs dokumentationen på <a href="/help/managing/hardware-sizing-guidelines.md">Riktlinjer för maskinvarans storlek</a>.<br /> </td>
+   <td>Läs dokumentationen om <a href="/help/managing/hardware-sizing-guidelines.md">Riktlinjer för maskinvarustorlek</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 14</strong></td>
@@ -132,7 +132,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 15</strong></td>
    <td>Hitta långsamma förfrågningar</td>
-   <td><p>Du kan söka efter långsamma begäranden genom att analysera <code>request.log</code> eller genom att använda <code>rlog.jar</code>.</p> <p>Mer information om hur du använder rlog.jar finns på den här sidan.</p> <p>Se <a href="/help/sites-deploying/monitoring-and-maintaining.md#using-rlog-jar-to-find-requests-with-long-duration-times">Söka efter förfrågningar med lång varaktighet med rlog.jar</a>.<br /> </p> <p> </p> </td>
+   <td><p>Du kan söka efter långsamma begäranden genom att analysera <code>request.log</code> eller genom att använda <code>rlog.jar</code>.</p> <p>Mer information om hur du använder rlog.jar finns på den här sidan.</p> <p>Se <a href="/help/sites-deploying/monitoring-and-maintaining.md#using-rlog-jar-to-find-requests-with-long-duration-times">Söka efter begäranden med lång varaktighet med rlog.jar</a>.<br /> </p> <p> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 16</strong></td>
@@ -147,7 +147,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 18</strong></td>
    <td>Vanliga scenarier för profilering</td>
-   <td>Se <a href="/help/sites-deploying/monitoring-and-maintaining.md#analyzing-specific-scenarios">Analyserar specifika scenarier</a> i avsnittet Prestandaoptimering.<br /> </td>
+   <td>Se <a href="/help/sites-deploying/monitoring-and-maintaining.md#analyzing-specific-scenarios">Analysera specifika scenarier</a> i avsnittet Prestandaoptimering.<br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 19</strong></td>
@@ -167,12 +167,12 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 21</strong></td>
    <td>Skiva-I/O</td>
-   <td><p>Se <a href="/help/sites-deploying/monitoring-and-maintaining.md#disk-i-o">Skiva-I/O</a> i övervakningsdokumentationen.</p> </td>
+   <td><p>Se avsnittet <a href="/help/sites-deploying/monitoring-and-maintaining.md#disk-i-o">Skiva-I/O</a> i dokumentationen för övervakning och underhåll.</p> </td>
   </tr>
   <tr>
    <td><strong>Steg 22 och 22.1</strong></td>
    <td>Cachenivåer</td>
-   <td>Se <a href="/help/sites-deploying/configuring-performance.md#calculating-the-dispatcher-cache-ratio">Beräkna Dispatcher-cachens förhållande</a>.<br /> <br /> </td>
+   <td>Se <a href="/help/sites-deploying/configuring-performance.md#calculating-the-dispatcher-cache-ratio">Beräkna Dispatcher-cacheförhållandet</a>.<br /> <br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 23</strong></td>
@@ -203,14 +203,14 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 26</strong></td>
    <td>MSM-infrastruktur</td>
-   <td><p><a href="/help/sites-administering/msm-best-practices.md">Metodtips för hantering av flera webbplatser</a><br /> </p> </td>
+   <td><p><a href="/help/sites-administering/msm-best-practices.md">Bästa praxis för hantering av flera webbplatser</a><br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 27</strong></td>
-   <td>Resursjustering</td>
+   <td>Assets-justering</td>
    <td>
     <ol>
-     <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">Resurssynkroniseringstjänst</a></li>
+     <li><a href="/help/sites-deploying/configuring-performance.md#cq-dam-asset-synchronization-service">Assets Synchronization Service</a></li>
      <li><a href="/help/sites-deploying/configuring-performance.md#multiple-dam-instances">Flera DAM-instanser</a></li>
      <li>Tipsartikel för prestandajustering <a href="https://helpx.adobe.com/customer-care-office-hours/aem/6x-performance-tuning-best-practices.html">här</a>.<br /> </li>
     </ol> </td>
@@ -232,7 +232,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   </tr>
   <tr>
    <td><strong>Steg 32</strong></td>
-   <td>Avlasta AEM server med sessionshantering på Dispatcher-nivå</td>
+   <td>Använd sessionshantering på Dispatcher-nivå för att avlasta AEM server</td>
    <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-secure-sessions-sessionmanagement">Aktivera säkra sessioner</a></p> </td>
   </tr>
   <tr>
@@ -242,7 +242,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
     <ol>
      <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html">Allmän Dispatcher-konfiguration</a></li>
      <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache">Konfigurera Dispatcher Cache</a></li>
-    </ol> <p>Så här förbättrar du cacheförhållandet: gör förfrågningar cachelagrade (Bästa tillvägagångssätt för Dispatcher)</p> <p>Titta också på inställningarna nedan för att optimera dina cachelagringskonfigurationer<br /> </p>
+    </ol> <p>Hur man förbättrar cachekvoten; gör förfrågningar cachelagrade (Dispatcher bästa praxis)</p> <p>Titta även på inställningarna nedan för att optimera cachelagringskonfigurationerna <br /> </p>
     <ol>
      <li>Ange en regel utan cache för HTTP-begäran som inte är GET</li>
      <li>Konfigurera frågesträngar som inte ska kunna cachelagras</li>
@@ -252,8 +252,8 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   </tr>
   <tr>
    <td><strong>Steg 34</strong></td>
-   <td>Uppgradera Dispatcher-version</td>
-   <td><p>Du kan hämta den senaste Dispatcher-versionen på den här platsen:</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html">Följ länk</a></p> </td>
+   <td>Uppgradera Dispatcher</td>
+   <td><p>Du kan ladda ned den senaste Dispatcher-versionen här:</p> <p><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html">Följ länk</a></p> </td>
   </tr>
   <tr>
    <td><strong>Steg 35</strong></td>
@@ -266,13 +266,13 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
    <td><br />
     <ul>
      <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-the-authoring-environment">Cacheinvalidering för författarnivån.</a></li>
-     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance">Cacheinvalidering för publiceringsnivån.</a></li>
+     <li><a href="https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/page-invalidate.html#invalidating-dispatcher-cache-from-a-publishing-instance">Cacheinvalidering för Publish-nivån.</a></li>
     </ul> </td>
   </tr>
   <tr>
    <td><strong>Steg 37 och 38</strong></td>
    <td>Lazyladdning</td>
-   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">Se Gem Session om AEM webbprestanda.</a><br /> </td>
+   <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">Visa Gem-sessionen AEM webbinsprestanda.</a><br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 39</strong></td>
@@ -287,17 +287,17 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
   <tr>
    <td><strong>Steg 45<br /> och 47</strong><br /> </td>
    <td>Använda HTTP/2</td>
-   <td>Se Gem Session för steg 37, 38 och 39. Du kan även checka ut <a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">this</a> foruminlägg om HTTP/2-stöd.<br /> </td>
+   <td>Se Gem Session för steg 37, 38 och 39. Du kan även ta en titt på <a href="https://help-forums.adobe.com/content/adobeforums/en/experience-manager-forum/adobe-experience-manager.topic.html/forum__kdzc-does_anyoneknowwhe.html">det här</a> foruminlägget om HTTP/2-stöd.<br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 49</strong></td>
    <td>Minska nyttolastens storlek</td>
-   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Aktivera Gzip</a> och <a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">minska bildstorleken</a>.<br /> </td>
+   <td><a href="/help/sites-deploying/osgi-configuration-settings.md">Aktivera Gzip</a> och <a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2016/aem-web-performance.html">Minska bildstorleken</a>.<br /> </td>
   </tr>
   <tr>
    <td><strong>Steg 42 och 43</strong></td>
    <td>Håll dig uppdaterad</td>
-   <td><p>Är <code>Keep-Alive</code> finns det en rubrik i de olika begärandena att återanvända anslutningar? I annat fall innebär det att varje begäran leder till en annan anslutningsanläggning, vilket medför onödiga kostnader. (Standardanalys av HTTP-begäran i webbläsaren)</p> <p>Du kan kontrollera <a href="/help/sites-administering/proxy-jar.md">Proxyserververktyget</a> om du vill kontrollera om det finns anslutningar som inte fungerar.<br /> </p> </td>
+   <td><p>Finns rubriken <code>Keep-Alive</code> i olika begäranden om att återanvända anslutningar? I annat fall innebär det att varje begäran leder till en annan anslutningsanläggning, vilket medför onödiga kostnader. (Standardanalys av HTTP-begäran i webbläsaren)</p> <p>Du kan kontrollera <a href="/help/sites-administering/proxy-jar.md">proxyserververktyget</a> för att kontrollera om det finns anslutningar som inte används.<br /> </p> </td>
   </tr>
   <tr>
    <td><strong>Steg 44</strong></td>
@@ -312,7 +312,7 @@ Analysen börjar med steg 0. Målet är att avgöra vilken enhet (Dispatcher, ex
      <li>Sammanfoga resurser (bilder, CSS-sprites, JSON)<br /> </li>
      <li>Inbäddning av klienter:
       <ol>
-       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">Skapar klientbiblioteksmappar</a> - se rubriken Använda inbäddning för att minimera förfrågningar</li>
+       <li><a href="/help/sites-developing/clientlibs.md#creating-client-library-folders">Skapar klientbiblioteksmappar</a> - se rubriken Använda inbäddning för att minimera begäranden</li>
       </ol> </li>
     </ol> </td>
   </tr>

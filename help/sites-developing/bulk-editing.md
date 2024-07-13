@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Konfigurera din sida för gruppredigering av sidegenskaper {#configuring-your-page-for-bulk-editing-of-page-properties}
 
-[Massredigering av sidegenskaper](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) Med kan du redigera egenskaper för flera sidor samtidigt.
+[Med gruppredigering av sidegenskaper](/help/sites-authoring/editing-page-properties.md#from-the-sites-console-multiple-pages) kan du redigera egenskaperna för flera sidor samtidigt.
 
 På grund av möjligheten att det finns olika värden är sidegenskaperna inte aktiverade för massredigering som standard. De måste vara uttryckligen tillåtna (aktiverade). När du definierar vilka sidegenskaper som ska vara tillgängliga för massredigering måste du ta hänsyn till vissa konsekvenser, till exempel:
 
@@ -38,7 +38,7 @@ På grund av möjligheten att det finns olika värden är sidegenskaperna inte a
 
 >[!NOTE]
 >
->Massredigering är också tillgängligt för Assets. Den är mycket lik, men skiljer sig på några punkter. Se [Redigera egenskaper för flera resurser](/help/assets/metadata.md) för fullständig information. Du kan anpassa fälten i redigeraren för massmetadata för resurser med hjälp av [Schemaredigerare](/help/assets/metadata-schemas.md).
+>Massredigering finns också för Assets. Den är mycket lik, men skiljer sig på några punkter. Mer information finns i [Redigera egenskaper för flera Assets](/help/assets/metadata.md). Du kan anpassa fälten i redigeraren för massmetadata för Assets med [schemaredigeraren](/help/assets/metadata-schemas.md).
 
 ## Aktivera ett fält {#enabling-a-field}
 
@@ -54,7 +54,7 @@ På grund av möjligheten att det finns olika värden är sidegenskaperna inte a
 >* `/libs/granite/ui/components/foundation/form/checkbox`
 >
 
-Fält är aktiverade i sidkomponenten (*not* på mallen):
+Fält är aktiverade i sidkomponenten (*inte* i mallen):
 
 1. Öppna sidkomponenten med CRXDE Lite (eller en motsvarande metod).
 
@@ -62,16 +62,16 @@ Fält är aktiverade i sidkomponenten (*not* på mallen):
 
    >[!NOTE]
    >
-   >I det här exemplet antas att kärnkomponenterna har installerats på instansen, vilket är fallet om instansen körs med exempelinnehållet We.Retail. Se [Dokumentation för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) för mer information.
+   >I det här exemplet antas att kärnkomponenterna har installerats på instansen, vilket är fallet om instansen körs med exempelinnehållet We.Retail. Mer information finns i [dokumentationen för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
 
-1. Navigera till det obligatoriska fältet i `cq:dialog` definition.
+1. Navigera till det obligatoriska fältet i definitionen `cq:dialog`.
 1. Definiera följande egenskap på fältnoden:
 
    * **Namn**: `allowBulkEdit`
    * **Typ**: `Boolean`
    * **Värde**: `true`
 
-   Till exempel för standardsidan [Foundation-komponent](/help/sites-authoring/default-components-foundation.md):
+   Exempel: för standardsidan [Foundation component](/help/sites-authoring/default-components-foundation.md):
 
    `/libs/foundation/components/page`
 
@@ -81,13 +81,13 @@ Fält är aktiverade i sidkomponenten (*not* på mallen):
 
    >[!CAUTION]
    >
-   >Du ***måste*** ändrar ingenting i dialogrutan `/libs` bana.
+   >Du ***får*** inte ändra något i sökvägen `/libs`.
    >
-   >Detta beror på innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
+   >Detta beror på att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
    >
    >Den rekommenderade metoden för konfiguration och andra ändringar är:
    >
-   >    1. Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
+   >    1. Återskapa det obligatoriska objektet (det vill säga som det finns i `/libs`) under `/apps`
    >    1. Gör ändringar i `/apps`
 
-1. Välj **Spara alla** för att behålla uppdateringarna.
+1. Välj **Spara alla** om du vill behålla uppdateringarna.

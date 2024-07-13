@@ -20,19 +20,19 @@ ht-degree: 0%
 
 # Community Groups Console {#community-groups-console}
 
-Konsolen Grupper ger åtkomst till att skapa communitygrupper när en communitywebbplats [mallstruktur](/help/communities/sites-console.md#step1) innehåller [gruppfunktion](/help/communities/functions.md#groups-function).
+Gruppkonsolen ger åtkomst till att skapa communitygrupper när en communityplats [mallstruktur](/help/communities/sites-console.md#step1) innehåller [gruppfunktionen](/help/communities/functions.md#groups-function).
 
-* AEM Communities stöder kapsling av grupper inom andra grupper. Gruppinkapsling är möjligt när [den nya gruppens struktur](/help/communities/tools-groups.md) innehåller gruppfunktionen.
+* AEM Communities stöder kapsling av grupper inom andra grupper. Gruppinkapsling är möjlig när [strukturen för den nya gruppen](/help/communities/tools-groups.md) innehåller gruppfunktionen.
 * Det finns bara en guide för att skapa grupper i författarmiljön som liknar guiden för att skapa webbplatser.
 * Oavsett om medlemmar kan skapa grupper i publiceringsmiljön eller inte kan de konfigureras när de lägger till en gruppfunktion i en community-webbplatsstruktur eller en community-gruppstruktur.
 
-Av de tre gruppmallarna som ingår är det bara `Reference Group` -mallen innehåller en gruppfunktion i sin struktur.
+Av de tre gruppmallarna som ingår är det bara mallen `Reference Group` som innehåller en gruppfunktion i sin struktur.
 
 De olika delarna av communitygrupper är:
 
-* **Skapande**: ny grupp kan skapas för författaren och eventuellt för publiceringsinstansen.
+* **Skapande**: Det går att skapa en ny grupp för författaren och eventuellt för publiceringsinstansen.
 * **Kontroll**: gruppen kan vara öppen eller hemlig.
-* **Kapsling**: grupp kan innehålla noll eller flera grupper.
+* **Kapsling**: gruppen kan innehålla noll eller flera grupper.
 
 <!-- This is a 404 on helpx. Update or remove.
 >[!NOTE]
@@ -42,9 +42,9 @@ De olika delarna av communitygrupper är:
 
 >[!NOTE]
 >
->Den här gruppkonsolen, som bara är tillgänglig från webbgruppskonsolen, ska inte blandas ihop med medlemmen [Gruppkonsol](/help/communities/members.md) för hantering av medlemsgrupper.
+>Den här gruppkonsolen, som bara är tillgänglig från webbgruppskonsolen, ska inte blandas ihop med medlemmens [gruppkonsol](/help/communities/members.md) för hantering av medlemsgrupper.
 >
->Medlemsgrupper är användargrupper som är registrerade i publiceringsmiljön och som du kommer åt från författarmiljön med hjälp av [tunneltjänst](/help/communities/deploy-communities.md#tunnel-service-on-author).
+>Medlemsgrupper är användargrupper som är registrerade i publiceringsmiljön och som nås från författarmiljön med hjälp av [tunneltjänsten](/help/communities/deploy-communities.md#tunnel-service-on-author).
 
 ## Skapa grupp {#group-creation}
 
@@ -56,23 +56,23 @@ Så här kommer du åt gruppkonsolen:
 * Välj en instans av en community-webbplats i mappen.
 
    * Strukturen på communitywebbplatsen måste innehålla en gruppfunktion.
-   * Skärmbilderna kommer från självstudiekursen Komma igång efter [skapa grupper vid publicering](/help/communities/published-site.md).
+   * Skärmbilderna kommer från självstudiekursen Komma igång efter [att grupper har skapats vid publicering](/help/communities/published-site.md).
 
   ![create-group](assets/create-group.png)
 
-* Välj **Grupper, mapp** så att du kan öppna den.
+* Markera mappen **Grupper** så att du kan öppna den.
 
-  När du öppnar dem visas alla befintliga grupper, oavsett om de har skapats på Författare eller Publicera.
+  När du öppnar dem visas alla befintliga grupper, oavsett om de har skapats på Författare eller Publish.
 
   Från den här gruppkonsolen går det att skapa nya grupper.
 
   ![create-new-group](assets/create-new-group.png)
 
-* Välj **Skapa grupp** -knappen.
+* Klicka på knappen **Skapa grupp**.
 
 ### Steg 1: Community Group Template {#step-community-group-template}
 
-![Flerspråkiga samhällsgrupper](assets/multi-lingual-group.png)
+![Flerspråkiga communitygrupper](assets/multi-lingual-group.png)
 
 * **Grupptitel**
 
@@ -88,20 +88,20 @@ Titeln visas på den publicerade webbplatsen för gruppen.
   Rotsökvägen till gruppen.
 Standardroten är den överordnade platsen, men roten kan flyttas till valfri plats på webbplatsen. Vi rekommenderar inte att du ändrar den.
 
-* **Ytterligare tillgängliga språk för communitygrupper** meny
+* **Fler tillgängliga språk för communitygrupper**-menyn
 
   Använd listrutan för att välja tillgängliga gruppspråk. Menyn innehåller alla språk som den överordnade communitywebbplatsen skapas på. Användarna kan välja mellan dessa språk för att skapa grupper i flera språkområden i det här steget. Samma grupp skapas på flera angivna språk i gruppkonsolen för respektive communityplats.
 
-* **Gruppnamn för community**
+* **Gruppnamn**
 
   Namnet på gruppens rotsida som visas i URL:en. Undvik att använda understreck (_) och nyckelord som resurser och konfiguration i gruppnamn.
 
    * Dubbelkontrollera namnet eftersom det inte är lätt att ändra efter att gruppen har skapats.
-   * Bas-URL:en visas under `Community Group Name`.
+   * Bas-URL visas under `Community Group Name`.
    * Lägg till &quot;.html&quot; för en giltig URL
      *till exempel*, `https://localhost:4502/content/sites/mysight/en/mygroup.html`.
 
-* **Community-gruppmall** meny
+* **Community-gruppmall**-menyn
 
   Använd listrutan för att välja en tillgänglig [community-gruppmall](/help/communities/tools.md).
 
@@ -117,7 +117,7 @@ När du väljer det här alternativet överlappas temat av en ogenomskinlig blå
 
 Du kan välja ett tema som skiljer sig från den överordnade webbplatsens tema.
 
-När communitywebbplatsen har publicerats kan du [redigera egenskaperna](#modifyinggroupproperties) och välj ett annat tema.
+När communitywebbplatsen har publicerats går det att [redigera egenskaperna](#modifyinggroupproperties) och välja ett annat tema.
 
 ### GEMENSKAPSGRUPPENS VARUMÄRKE {#community-group-branding}
 
@@ -138,7 +138,7 @@ Tänk på följande när du skapar eller markerar en bild:
 
 ### Steg 3: Inställningar {#step-settings}
 
-**MODERATION**
+**ÄNDRING**
 
 ![välj medlemsroller för community-grupper](assets/group-admin.png)
 
@@ -168,11 +168,11 @@ Med inställningen för medlemskap kan du välja ett av tre sätt att skydda en 
 
 * **Nödvändigt medlemskap**
 
-  Om du väljer det här alternativet är communitygruppen en öppen grupp. Medlemmar på en community kan visa innehållet i gruppen, men måste gå med i gruppen för att publicera innehållet. Medlemmar går med genom att välja `Join` i publiceringsmiljön. Standard är inte valt.
+  Om du väljer det här alternativet är communitygruppen en öppen grupp. Medlemmar på en community kan visa innehållet i gruppen, men måste gå med i gruppen för att publicera innehållet. Medlemmar ansluter genom att markera knappen `Join` i publiceringsmiljön. Standard är inte valt.
 
 * **Begränsat medlemskap**
 
-  Om du väljer det här alternativet är communitygruppen en hemlig grupp. Community-medlemmar måste uttryckligen bjudas in. Inbjudna medlemmar anges i sökrutan. Medlemmar kan läggas till senare med [Konsoler för medlemmar och grupper](/help/communities/members.md) författarmiljön. Standard är inte valt.
+  Om du väljer det här alternativet är communitygruppen en hemlig grupp. Community-medlemmar måste uttryckligen bjudas in. Inbjudna medlemmar anges i sökrutan. Medlemmar kan läggas till senare med konsolerna [Medlemmar och grupper](/help/communities/members.md) i författarmiljön. Standard är inte valt.
 
 **MINIATYRBILD**
 
@@ -190,9 +190,9 @@ Om ingen bild läggs till visas en standardbild.
 
 ![community-create-group](assets/community-create-group.png)
 
-Om det behövs justeringar använder du **Bakåt** för att skapa dem.
+Om det behövs justeringar använder du knappen **Bakåt** för att göra dem.
 
-En gång **Skapa** är markerat och startat kan processen att skapa gruppen inte avbrytas.
+När **Skapa** har valts och startats kan processen att skapa gruppen inte avbrytas.
 
 När processen är klar visas kortet för den nya undercommunitywebbplatsen (gruppen) i konsolen Webbplatsgrupper, varifrån författare kan lägga till sidinnehåll, eller så kan administratörer ändra webbplatsens egenskaper.
 
@@ -200,7 +200,7 @@ När processen är klar visas kortet för den nya undercommunitywebbplatsen (gru
 
 >[!NOTE]
 >
->Gruppen skapas på alla språk, enligt vad som anges i [Steg 1: Community Group Template](/help/communities/groups.md#step-community-group-template) i Additional Available Community Group Languages, in the Community Groups console of the respective community sites.
+>Gruppen skapas på alla språk, enligt vad som anges i [Steg 1: Gruppmall för community](/help/communities/groups.md#step-community-group-template) i Ytterligare tillgängliga gruppspråk, i gruppkonsolen Community Groups för respektive communityplatser.
 
 ## Författargruppinnehåll {#author-group-content}
 
@@ -214,7 +214,7 @@ Egenskaperna för en befintlig undergruppsplats, som anges när en community-gru
 
 ![edit-site](assets/edit-site.png)
 
-Information om följande egenskaper matchar beskrivningarna i [Skapa grupp](#group-creation) -avsnitt. Alla kapslade grupper kan ändras, oavsett om de har skapats i publiceringsmiljön eller författarmiljön.
+Information om följande egenskaper matchar beskrivningarna i avsnittet [Skapa grupp](#group-creation). Alla kapslade grupper kan ändras, oavsett om de har skapats i publiceringsmiljön eller författarmiljön.
 
 ![community-group-basic](assets/community-group-basic.png)
 
@@ -229,7 +229,7 @@ Det går inte att ändra användargruppnamnet.
 
 Om du väljer en annan mall för en community-grupp påverkas inte en befintlig community-gruppwebbplats eftersom det inte finns någon koppling mellan mallar och webbplatser.
 
-I stället [STRUKTUR](#modify-structure) kan ändras.
+I stället kan [STRUKTUREN](#modify-structure) för undergruppen ändras.
 
 ### Ändra struktur {#modify-structure}
 
@@ -239,7 +239,7 @@ STRUKTURpanelen gör det möjligt att ändra den struktur som ursprungligen skap
 * En instans av en communityfunktion i webbplatsstrukturen:
 
    * **`Gear icon`**
-Redigera inställningar, inklusive visningsrubrik, URL och [behöriga medlemsgrupper](/help/communities/users.md#privilegedmembersgroups).
+Redigera inställningar, inklusive visningsrubrik, URL och [behöriga medlemsgrupper](/help/communities/users.md#privilegedmembersgroups) .
 
    * **`Trashcan icon`**
 Ta bort funktioner från platsstrukturen.
@@ -255,9 +255,9 @@ Ta bort funktioner från platsstrukturen.
 
 >[!CAUTION]
 >
->Funktionen groups måste *not* vara *först eller bara* i platsstrukturen.
+>Gruppfunktionen får *inte* vara den *första eller den enda* funktionen i platsstrukturen.
 >
->Alla andra funktioner, till exempel [sidfunktion](/help/communities/functions.md#page-function), måste inkluderas och listas först.
+>Alla andra funktioner, till exempel [sidfunktionen](/help/communities/functions.md#page-function), måste inkluderas och listas först.
 
 **Exempel: Lägga till en kalenderfunktion i en undergruppsstruktur**
 
@@ -274,21 +274,21 @@ På designpanelen kan du ändra temat:
 
 ### Ändra inställningar {#modify-settings}
 
-På panelen INSTÄLLNINGAR kan du lägga till communityn [moderatorer](#moderation).
+På inställningspanelen kan du lägga till [moderatorer](#moderation) för communityn.
 
 ### Ändra medlemskap {#modify-membership}
 
-The [MEDLEMSKAP](#membership) panelen är endast informativ. Det går inte att ändra vilken typ av gruppmedlemskap som har upprättats, oavsett om det är valfritt, obligatoriskt eller begränsat.
+Panelen [MEDLEMSKAP](#membership) är endast informativ. Det går inte att ändra vilken typ av gruppmedlemskap som har upprättats, oavsett om det är valfritt, obligatoriskt eller begränsat.
 
 ### Ändra miniatyrbild {#modify-thumbnail}
 
-The [MINIATYRBILD](#thumbnail) På panelen kan en bild överföras för att representera communitygruppen för webbplatsbesökare i publiceringsmiljön och i gruppkonsolen för Communities-webbplatsen i författarmiljön.
+Panelen [MINIATYRBILD](#thumbnail) tillåter att en bild överförs för att representera communitygruppen för webbplatsbesökare i Publish-miljön och i gruppkonsolen för webbgrupper i författarmiljön.
 
-## Publicera gruppen {#publish-the-group}
+## Publish the Group {#publish-the-group}
 
-![publicera-webbplats](assets/publish-site.png)
+![publiceringsplats](assets/publish-site.png)
 
-När en community-grupp har skapats eller ändrats kan du publicera (aktivera) gruppen genom att välja `Publish Site` -ikon.
+När en community-grupp har skapats eller ändrats på nytt kan du publicera (aktivera) gruppen genom att välja ikonen `Publish Site`.
 
 När gruppen har publicerats visas följande meddelande:
 
@@ -302,7 +302,7 @@ När gruppen har publicerats visas följande meddelande:
 
 ## Ta bort gruppen {#delete-the-group}
 
-![ta bort ikon](assets/deleteicon.png)
+![Ta bort ikon](assets/deleteicon.png)
 
 Ta bort en grupp från gruppkonsolen genom att markera ikonen Ta bort grupp, som visas när du håller muspekaren över gruppen.
 

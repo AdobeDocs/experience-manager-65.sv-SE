@@ -35,16 +35,16 @@ Med preflight-appen Mobile On-Demand kan du visa alla projekt som du har tillgå
 ## Förhandsgranska med Preflight {#previewing-with-preflight-1}
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Klicka på ellipsen (..) på menyn **Hantera artiklar** (eller Banners/Collections).
+1. Klicka på ellipsen (..) i rutan **Hantera artiklar** (eller Banners/Collections).
 1. Välj **Preflight** i åtgärdsfältet.
-1. Klicka **Aktivera preflight** i dialogrutan.
+1. Klicka på **Aktivera preflight** i dialogrutan.
 1. Din app är nu klar för förhandsgranskning i preflight-appen Mobile On-Demand.
 
 ![chlimage_1-8](assets/chlimage_1-8.gif)
 
 >[!NOTE]
 >
->AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Om du vill veta mer om Preflight-appen klickar du [här](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html).
+>AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Klicka [här](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) om du vill veta mer om Preflight-appen.
 >
 
 ### Komma i förväg {#getting-ahead}

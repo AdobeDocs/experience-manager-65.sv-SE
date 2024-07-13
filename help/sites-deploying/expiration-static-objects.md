@@ -25,21 +25,21 @@ Detta har följande effekt:
 * Avlastar begäranden från serverinfrastrukturen.
 * Förbättrar sidinläsningens prestanda när webbläsaren cachelagrar objekt i webbläsarens cache.
 
-Förfallotider anges av HTTP-standarden med avseende på &quot;filernas förfallodatum&quot; (se t.ex. kapitel 14.21 i [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) &quot; Hypertext Transfer Protocol - HTTP 1.1&quot;). I den här standarden används rubriken för att tillåta klienter att cachelagra objekt tills de betraktas som inaktuella. Sådana objekt cachelagras under den angivna tiden utan att någon statuskontroll görs på den ursprungliga servern.
+Förfallotider anges av HTTP-standarden med avseende på &quot;förfallodatum&quot; för filer (se t.ex. kapitel 14.21 i [RFC 2616](https://www.ietf.org/rfc/rfc2616.txt) &quot; Hypertext Transfer Protocol - HTTP 1.1&quot;). I den här standarden används rubriken för att tillåta klienter att cachelagra objekt tills de betraktas som inaktuella. Sådana objekt cachelagras under den angivna tiden utan att någon statuskontroll görs på den ursprungliga servern.
 
 >[!NOTE]
 >
 >Den här konfigurationen är separat från (och fungerar inte för) Dispatcher.
 >
->Syftet med Dispatcher är att cachelagra data framför Adobe Experience Manager (AEM).
+>Syftet med Dispatcher är att cacha data framför Adobe Experience Manager (AEM).
 
 Alla filer, som inte är dynamiska och som inte ändras över tid, kan och bör cachas. Konfigurationen för Apache HTTPD-servern kan se ut som något av följande, beroende på miljön:
 
 >[!CAUTION]
 >
->Var försiktig när du definierar den tidsperiod under vilken ett objekt anses vara uppdaterat. Som det finns *ingen kontroll förrän den angivna tidsperioden har gått ut* kan klienten presentera gammalt innehåll från cachen.
+>Var försiktig när du definierar den tidsperiod under vilken ett objekt anses vara uppdaterat. Eftersom det finns *ingen kontroll förrän den angivna tidsperioden har gått ut* kan klienten visa gammalt innehåll från cachen.
 
-1. **För en Author-instans:**
+1. **För en författarinstans:**
 
    ```xml
    LoadModule expires_module modules/mod_expires.so
@@ -73,7 +73,7 @@ Alla filer, som inte är dynamiska och som inte ändras över tid, kan och bör 
    </Location>
    ```
 
-   På så sätt kan den mellanliggande cachen (till exempel webbläsarens cacheminne) lagra CSS-, JavaScript-, PNG- och GIF-filer i upp till en dag i klientcachen. I det här exemplet visas globala inställningar för allt nedan `/content` och `/etc/designs`bör du göra det mer granulärt.
+   Detta gör att det mellanliggande cacheminnet (till exempel webbläsarens cacheminne) kan lagra CSS-, JavaScript-, PNG- och GIF-filer för upp till en dag i klientcachen. Det här exemplet visar globala inställningar för allt under `/content` och `/etc/designs`, men du bör göra det mer detaljerat.
 
    Beroende på hur ofta webbplatsen uppdateras kan du även cachelagra HTML-sidor. En rimlig tidsperiod skulle vara en timme:
 
@@ -83,4 +83,4 @@ Alla filer, som inte är dynamiska och som inte ändras över tid, kan och bör 
    </Location>
    ```
 
-När du har konfigurerat statiska objekt kan du skanna `request.log`, när du markerar sidor som innehåller sådana objekt, för att bekräfta att inga (onödiga) begäranden görs för statiska objekt.
+När du har konfigurerat de statiska objekten kan du kontrollera `request.log`, medan du väljer sidor som innehåller sådana objekt, att inga (onödiga) begäranden görs för statiska objekt.

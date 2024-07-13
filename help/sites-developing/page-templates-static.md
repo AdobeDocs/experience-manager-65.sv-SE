@@ -23,7 +23,7 @@ En mall används för att skapa en sida och definierar vilka komponenter som kan
 
 Varje mall innehåller ett urval av komponenter som är tillgängliga för användning.
 
-* Mallar är inbyggda i [Komponenter](/help/sites-developing/components.md);
+* Mallar består av [komponenter](/help/sites-developing/components.md);
 * Komponenterna använder, och tillåter åtkomst till, widgetar och dessa används för att återge innehållet.
 
 >[!NOTE]
@@ -54,7 +54,7 @@ En mall är en nod av typen cq:Template och har följande egenskaper och underor
   <tr>
    <td> allowedParents</td>
    <td> Sträng[]</td>
-   <td>Sökväg till en mall som kan vara överordnad den här mallen.<br /> </td>
+   <td>Sökväg till en mall som tillåts vara överordnad den här mallen.<br /> </td>
   </tr>
   <tr>
    <td> allowedPaths</td>
@@ -64,7 +64,7 @@ En mall är en nod av typen cq:Template och har följande egenskaper och underor
   <tr>
    <td> jcr:skapad</td>
    <td> Datum</td>
-   <td>Datum när mallen skapades.<br /> </td>
+   <td>Skapad av mallen.<br /> </td>
   </tr>
   <tr>
    <td> jcr:description</td>
@@ -94,14 +94,14 @@ En mall är en nod av typen cq:Template och har följande egenskaper och underor
   <tr>
    <td> icon.png</td>
    <td> nt:fil</td>
-   <td>Mallens ikon.<br /> </td>
+   <td>Ikon för mallen.<br /> </td>
   </tr>
  </tbody>
 </table>
 
 En mall är grunden för en sida.
 
-Om du vill skapa en sida måste mallen kopieras (nodträd) `/apps/<myapp>/template/<mytemplate>`) till motsvarande position i platsträdet: detta händer om en sida skapas med **Webbplatser** -fliken.
+Om du vill skapa en sida måste mallen kopieras (nodträd `/apps/<myapp>/template/<mytemplate>`) till motsvarande position i platsträdet: detta händer om en sida skapas med fliken **Webbplatser** .
 
 Den här kopieringsåtgärden ger även sidan dess ursprungliga innehåll (vanligtvis innehåll på översta nivån) och egenskapen sling:resourceType, sökvägen till sidkomponenten som används för att återge sidan (allt i den underordnade noden jcr:content).
 
@@ -120,7 +120,7 @@ En mall skapas under en nod av typen **cq:Template**.
 
 Du kan ange olika egenskaper, särskilt:
 
-* **jcr:title** - mallens rubrik; visas i dialogrutan när du skapar en sida.
+* **jcr:title** - mallens rubrik visas i dialogrutan när du skapar en sida.
 * **jcr:description** - beskrivning av mallen; visas i dialogrutan när du skapar en sida.
 
 Den här noden innehåller en jcr:content-nod (cq:PageContent) som används som bas för innehållsnoden på de resulterande sidorna. Den här referensen använder sling:resourceType, den komponent som ska användas för återgivning av det faktiska innehållet på en ny sida.
@@ -133,11 +133,11 @@ Den här komponenten används för att definiera innehållets struktur och desig
 
 ### Innehållet som skapas av en mall {#the-content-produced-by-a-template}
 
-Mallar används för att skapa sidor av typen `cq:Page` (som tidigare nämnts är en sida en speciell typ av komponent). Varje AEM har en strukturerad nod `jcr:content`. Det:
+Mallar används för att skapa sidor av typen `cq:Page` (som tidigare nämnts är en sida en särskild typ av komponent). Varje AEM har en strukturerad nod `jcr:content`. Det:
 
 * är av typen cq:PageContent
 * är en strukturerad nodtyp som innehåller en definierad innehållsdefinition
-* har en egenskap `sling:resourceType` för att referera till komponenten som innehåller de snedskript som används för återgivning av innehållet
+* har egenskapen `sling:resourceType` som refererar till komponenten som innehåller de snedskriftsskript som används för återgivning av innehållet
 
 ### Standardmallar {#default-templates}
 
@@ -154,30 +154,31 @@ AEM innehåller till exempel flera mallar, inklusive en innehållssida och en he
 
 Om du vill se en lista över alla mallar i databasen gör du så här:
 
-1. Öppna CRXDE Lite i **verktyg** meny och klicka **Fråga**.
+1. Öppna menyn **Verktyg** i CRXDE Lite och klicka på **Fråga**.
 
 1. På fliken Fråga
-1. Som **Typ**, markera **XPath**.
+1. Som **typ** väljer du **XPath**.
 
-1. I **Fråga** indatafält, ange följande sträng: //element()&#42;, cq:Template)
+1. Ange följande sträng i indatafältet **Fråga**:
+//element(&#42;, cq:Template)
 
-1. Klicka **Kör**. Listan visas i resultatrutan.
+1. Klicka på **Kör**. Listan visas i resultatrutan.
 
-Oftast skapar du en befintlig mall och skapar en ny för eget bruk. Se [Utveckla sidmallar](#developing-page-templates) för mer information.
+Oftast skapar du en befintlig mall och skapar en ny för eget bruk. Mer information finns i [Utveckla sidmallar](#developing-page-templates).
 
-Om du vill aktivera en befintlig mall för webbplatsen och du vill att den ska visas i **Skapa sida** när du skapar en sida direkt under **Webbplatser** från **Webbplatser** konsol anger du egenskapen allowedPaths för mallnoden till: **/content(/.&#42;)?**
+Om du vill aktivera en befintlig mall för webbplatsen och du vill att den ska visas i dialogrutan **Skapa sida** när du skapar en sida direkt under **Webbplatser** från konsolen **Webbplatser** anger du egenskapen allowedPaths för mallnoden till: **/content(/).&#42;)?**
 
 ## Hur malldesigner används {#how-template-designs-are-applied}
 
-När format definieras i användargränssnittet med [Designläge](/help/sites-authoring/default-components-designmode.md), sparas designen på den exakta sökvägen till den innehållsnod som formatet definieras för.
+När format definieras i användargränssnittet med [designläget](/help/sites-authoring/default-components-designmode.md), behålls designen med den exakta sökvägen för den innehållsnod som formatet definieras för.
 
 >[!CAUTION]
 >
->Adobe rekommenderar att du bara använder designer via [Designläge](/help/sites-authoring/default-components-designmode.md).
+>Adobe rekommenderar att du bara använder designer via [designläget](/help/sites-authoring/default-components-designmode.md).
 >
 >Det är till exempel inte bra att ändra design i CRXDE Lite och tillämpningen av sådana designer kan variera från förväntat beteende.
 
-Om du bara använder designläge ska du följa följande avsnitt: [Design Path-upplösning](/help/sites-developing/page-templates-static.md#design-path-resolution), [Beslutsträd](/help/sites-developing/page-templates-static.md#decision-tree)och [Exempel](/help/sites-developing/page-templates-static.md#example) är inte tillämpliga.
+Om designer endast används i designläge gäller inte följande avsnitt, [Design Path Resolution](/help/sites-developing/page-templates-static.md#design-path-resolution), [Decision Tree](/help/sites-developing/page-templates-static.md#decision-tree) och [Example](/help/sites-developing/page-templates-static.md#example).
 
 ### Design Path-upplösning {#design-path-resolution}
 
@@ -193,7 +194,7 @@ Om det finns mer än en tillämplig design i de två sista fallen använder du d
 
 ### Beslutsträd {#decision-tree}
 
-Det här är en grafisk representation av [Design Path-upplösning](/help/sites-developing/page-templates-static.md#design-path-resolution) logik.
+Detta är en grafisk representation av logiken för [Design Path Resolution](/help/sites-developing/page-templates-static.md#design-path-resolution) .
 
 ![design_path_resolution](assets/design_path_resolution.png)
 
@@ -230,7 +231,7 @@ I följande tabell beskrivs hur AEM väljer en design.
    <td><code>leaf</code></td>
    <td><code>root</code></td>
    <td><code>root</code></td>
-   <td>Om allt annat misslyckas, ta det som återstår.<br /> </td>
+   <td>Om inget annat fungerar tar du det som återstår.<br /> </td>
   </tr>
   <tr>
    <td><code>branch</code></td>
@@ -257,7 +258,7 @@ I följande tabell beskrivs hur AEM väljer en design.
    <td><p><code>root</code></p> <p><code class="code">leaf
        </code></p> </td>
    <td><code>root</code></td>
-   <td><p>Om det inte finns någon exakt matchning tar du den längre ned i trädet.</p> <p>Antagandet är att detta alltid kommer att vara tillämpligt, men vidare kan trädet vara för specifikt.<br /> </p> </td>
+   <td><p>Om det inte finns någon exakt matchning tar du den längre ned i trädet.</p> <p>Förutsättningen är att detta alltid kommer att gälla, men ytterligare trädet kan vara för specifikt.<br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -274,51 +275,51 @@ Så här skapar du en mall baserad på en befintlig mall:
 
 1. Kopiera en befintlig mall (helst med en definition som ligger så nära den du vill uppnå) till en ny nod.
 
-   Mallar lagras i **/apps/&lt;website-name>/templates/&lt;template-name>**.
+   Mallar lagras i **/appar/**.
 
    >[!NOTE]
    >
    >Listan med tillgängliga mallar beror på den nya sidans plats och de placeringsbegränsningar som anges i respektive mall. Se [Malltillgänglighet](#templateavailibility).
 
-1. Ändra **jcr:title** för den nya mallnoden för att återspegla dess nya roll. Du kan även uppdatera **jcr:description** om det är lämpligt. Var noga med att ändra malltillgängligheten för sidan efter behov.
+1. Ändra **jcr:title** för den nya mallnoden så att den återspeglar dess nya roll. Du kan även uppdatera **jcr:description** om det behövs. Var noga med att ändra malltillgängligheten för sidan efter behov.
 
    >[!NOTE]
    >
-   >Om du vill att mallen ska visas i **Skapa sida** när du skapar en sida direkt under **Webbplatser** från **Webbplatser** konsol, ange `allowedPaths` mallnodens egenskap till: `/content(/.*)?`
+   >Om du vill att mallen ska visas i dialogrutan **Skapa sida** när du skapar en sida direkt under **Webbplatser** från konsolen **Webbplatser** anger du egenskapen `allowedPaths` för mallnoden till: `/content(/.*)?`
 
    ![chlimage_1-88](assets/chlimage_1-88.png)
 
-1. Kopiera komponenten som mallen är baserad på (anges av **sling:resourceType** egenskapen för **jcr:innehåll** -nod i mallen) för att skapa en instans.
+1. Kopiera komponenten som mallen baseras på (detta anges av egenskapen **sling:resourceType** för noden **jcr:content** i mallen) för att skapa en instans.
 
-   Komponenter lagras i **/apps/&lt;website-name>/components/&lt;component-name>**.
+   Komponenter lagras i **/apps/&lt;webbplatsnamn>/components/&lt;komponentnamn>**.
 
-1. Uppdatera **jcr:title** och **jcr:description** för den nya komponenten.
+1. Uppdatera den nya komponentens **jcr:title** och **jcr:description**.
 1. Ersätt thumbnail.png om du vill att en ny miniatyrbild ska visas i mallurvalslistan (storlek 128 x 98 px).
-1. Uppdatera **sling:resourceType** av mallens **jcr:innehåll** nod som refererar till den nya komponenten.
+1. Uppdatera noden **sling:resourceType** för mallens **jcr:content** så att den refererar till den nya komponenten.
 1. Gör ytterligare ändringar av mallens funktionalitet eller design, eller av dess underliggande komponent, eller både och.
 
    >[!NOTE]
    >
-   >Ändringar som gjorts i **/apps/&lt;website>/templates/&lt;template-name>** -noden påverkar mallinstansen (som i urvalslistan).
+   >Ändringar som görs i noden **/apps/&lt;webbplats>/templates/** påverkar mallinstansen (som i urvalslistan).
    >
    >
-   Ändringar som gjorts i **/apps/&lt;website>/components/&lt;component-name>** -noden påverkar innehållssidan som skapas när mallen används.
+   Ändringar som görs i noden **/apps/&lt;webbplats>/components/&lt;komponentnamn>** påverkar innehållssidan som skapas när mallen används.
 
    Nu kan du skapa en sida på webbplatsen med den nya mallen.
 
 >[!NOTE]
 >
-Redigerarens klientbibliotek förutsätter att det finns `cq.shared` namnutrymme på innehållssidor, och om det inte finns, JavaScript-felet `Uncaught TypeError: Cannot read property 'shared' of undefined` resultat.
+Redigeringsklientbiblioteket förutsätter att namnområdet `cq.shared` finns på innehållssidorna, och om det saknas returneras JavaScript-felet `Uncaught TypeError: Cannot read property 'shared' of undefined`.
 >
-Alla exempelinnehållssidor innehåller `cq.shared`så allt innehåll som baseras på dem automatiskt innehåller `cq.shared`. Om du däremot bestämmer dig för att skapa egna innehållssidor från grunden utan att basera dem på exempelinnehåll måste du se till att inkludera `cq.shared` namnutrymme.
+Alla exempelinnehållssidor innehåller `cq.shared`, så allt innehåll som baseras på dem inkluderar automatiskt `cq.shared`. Om du vill skapa egna innehållssidor från grunden utan att basera dem på exempelinnehåll måste du se till att inkludera namnutrymmet `cq.shared`.
 >
-Se [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md) för ytterligare information.
+Mer information finns i [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md).
 
 ## Göra en befintlig mall tillgänglig {#making-an-existing-template-available}
 
-I det här exemplet visas hur du tillåter att en mall används för vissa innehållssökvägar. De mallar som är tillgängliga för sidförfattaren när sidor skapas avgörs av logiken som definieras i [Malltillgänglighet](/help/sites-developing/templates.md#template-availability).
+I det här exemplet visas hur du tillåter att en mall används för vissa innehållssökvägar. Mallarna som är tillgängliga för sidförfattaren när sidor skapas avgörs av logiken som definieras i [Malltillgänglighet](/help/sites-developing/templates.md#template-availability).
 
 1. I CRXDE Lite går du till den mall som du vill använda för sidan, till exempel mallen Nyhetsbrev.
-1. Ändra `allowedPaths` egenskap och andra egenskaper som används för [malltillgänglighet](/help/sites-developing/templates.md#template-availability). Till exempel: `allowedPaths`: `/content/geometrixx-outdoors/[^/]+(/.*)?` betyder att den här mallen tillåts i alla sökvägar under `/content/geometrixx-outdoors`.
+1. Ändra egenskapen `allowedPaths` och andra egenskaper som används för [malltillgänglighet](/help/sites-developing/templates.md#template-availability). `allowedPaths`: `/content/geometrixx-outdoors/[^/]+(/.*)?` betyder till exempel att den här mallen tillåts i alla sökvägar under `/content/geometrixx-outdoors`.
 
    ![chlimage_1-89](assets/chlimage_1-89.png)

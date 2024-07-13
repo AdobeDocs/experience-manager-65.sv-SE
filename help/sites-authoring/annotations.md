@@ -40,18 +40,18 @@ En anteckning placerar en färgmarkör/anteckning på sidan. Med anteckningen ka
 
 ## Anteckningar {#annotations}
 
-En speciell [läge](/help/sites-authoring/author-environment-tools.md#page-modes) används för att skapa och visa anteckningar.
+Ett särskilt [läge](/help/sites-authoring/author-environment-tools.md#page-modes) används för att skapa och visa anteckningar.
 
 >[!NOTE]
 >
->Glöm inte det [kommentarer](/help/sites-authoring/basic-handling.md#timeline) finns även för att ge feedback på en sida.
+>Glöm inte att [kommentarer](/help/sites-authoring/basic-handling.md#timeline) också är tillgängliga för att ge feedback på en sida.
 
 >[!NOTE]
 >
 >Du kan anteckna en mängd olika resurser:
 >
->* [Anteckna resurser](/help/assets/manage-assets.md#annotating)
->* [Kommentera videomaterial](/help/assets/managing-video-assets.md#annotate-video-assets)
+>* [Antecknar resurser](/help/assets/manage-assets.md#annotating)
+>* [Kommenterar videomaterial](/help/assets/managing-video-assets.md#annotate-video-assets)
 >
 
 ### Kommentera en komponent {#annotating-a-component}

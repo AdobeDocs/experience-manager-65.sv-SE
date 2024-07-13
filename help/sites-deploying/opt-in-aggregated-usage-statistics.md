@@ -33,45 +33,45 @@ Du kan välja att samla in användningsstatistik med hjälp av Touch-gränssnitt
 
 >[!NOTE]
 >
->Du kan avanmäla dig när som helst genom att använda [Webbkonsol](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) eller genom att inte välja anmälningsalternativet på AEM anmälningsskärm.
+>Du kan när som helst avanmäla dig genom att antingen använda [webbkonsolen](/help/sites-deploying/opt-in-aggregated-usage-statistics.md#opt-in-by-using-the-web-console) eller genom att inte välja avanmälningsalternativet på AEM avanmälningsskärm.
 
 ## Anmäl dig med Touch-gränssnittet {#opt-in-by-using-the-touch-ui}
 
 Första gången du startar AEM kan du välja att använda Touch-gränssnittet på följande sätt:
 
-1. På AEM navigeringsskärm klickar du på **Inkorg** -ikon.
+1. Klicka på ikonen **Inkorg** (klocka) på AEM.
 
-   ![användningsstatistikNavigeringarskärm](assets/usage_statisticsnavigationscreen.png)
+   ![usage_StatisticsNavigationScreen](assets/usage_statisticsnavigationscreen.png)
 
-1. Klicka på &quot;**Aktivera insamling av aggregerad användningsstatistik**&quot;.
+1. I listrutan klickar du på **Aktivera samling av statistik om aggregerad användning**.
 
-   ![usage_staticNavigationsercreen2](assets/usage_statisticsnavigationscreen2.png)
+   ![usage_StatisticsNavigationScreen2](assets/usage_statisticsnavigationscreen2.png)
 
-1. Välj &quot;**Tillåt insamling av aggregerad användningsstatistik**&quot;.
+1. Välj **Tillåt insamling av aggregerad användningsstatistik** på skärmen för anmälan.
 
-   ![usage_staticSnapin-screen](assets/usage_statisticsopt-inscreen.png)
+   ![usage_staticScreen](assets/usage_statisticsopt-inscreen.png)
 
-1. Klicka på &quot;**Klar**&quot;.
+1. Klicka på **Klar**.
 
 ## Anmäl dig med webbkonsolen {#opt-in-by-using-the-web-console}
 
 Du kan välja att delta (eller välja bort) genom att använda webbkonsolen på följande sätt:
 
-1. På AEM navigeringsskärm klickar du på **verktyg** och sedan **Operationer**.
+1. Klicka på **Verktyg** och sedan **Åtgärder** på AEM navigeringsskärm.
 
-   ![usage_statistiticsopsdashboard](assets/usage_statisticsopsdashboard.png)
+   ![usage_StatisticsDashboard](assets/usage_statisticsopsdashboard.png)
 
-1. Klicka på **Webbkonsol**.
+1. Klicka på **Webbkonsol** i åtgärdsfönstret.
 
-   ![usage_statistiticswebconsole](assets/usage_statisticswebconsole.png)
+   ![usage_StatisticsSoundconsole](assets/usage_statisticswebconsole.png)
 
-1. Sök efter &quot;**Samling med aggregerad användningsstatistik**&quot;.
-1. Klicka på **Redigera** -ikon.
+1. Sök efter **Samlad användningsstatistik**.
+1. Klicka på ikonen **Redigera** .
 
-   ![usage_staticCollectionEdit](assets/usage_statisticscollectionedit.png)
+   ![usage_StatisticsCollectionEdit](assets/usage_statisticscollectionedit.png)
 
-1. Välj **Aktiverad** kryssrutan. Du kan också avmarkera kryssrutan om du vill avanmäla dig från insamling av användningsstatistik.
+1. Markera kryssrutan **Aktiverad**. Du kan också avmarkera kryssrutan om du vill avanmäla dig från insamling av användningsstatistik.
 
-   ![usage_statistiticselect](assets/usage_statisticsselect.png)
+   ![usage_staticSelect](assets/usage_statisticsselect.png)
 
-1. Klicka **Spara**.
+1. Klicka på **Spara**.

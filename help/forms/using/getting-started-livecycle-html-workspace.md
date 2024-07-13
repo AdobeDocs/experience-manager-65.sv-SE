@@ -62,11 +62,11 @@ När du navigerar på arbetsytan i AEM Forms med hjälp av ett tangentbord följ
 
 Du kan ange olika inställningar för AEM Forms-arbetsytan i följande kategorier:
 
-**Frånvarande:** Ange inställningar för att styra hur uppgifter tilldelas andra personer när du inte är på kontoret. Se [Ange inställningar utanför kontoret](todo-lists.md#setting-out-of-office-preferences).
+**Frånvarande:** Ange inställningar för hur uppgifter tilldelas andra personer när du inte är på kontoret. Se [Inställningar för frånvaro](todo-lists.md#setting-out-of-office-preferences).
 
 **Köer:** Ange inställningar för att dela din Att göra-lista med andra användare eller för att begära åtkomst till en annan användares lista. Se [Arbeta med uppgifter från grupper och delade köer](todo-lists.md#working-with-tasks-from-group-and-shared-queues).
 
-**Gränssnittsinställningar:** Ange inställningar för hur du interagerar med arbetsytan i AEM Forms. Se [Ange inställningar för användargränssnitt](#set-user-interface-preferences).
+**Användargränssnittsinställningar:** Ange inställningar för hur du interagerar med AEM Forms arbetsyta. Se [Ange användargränssnittsinställningar](#set-user-interface-preferences).
 
 ### Ange inställningar för användargränssnitt {#set-user-interface-preferences}
 
@@ -74,8 +74,8 @@ Ange gränssnittsinställningarna på fliken Inställningar > Användargränssni
 
 * **Startplats:** Anger den sida som visas när du loggar in på arbetsytan i AEM Forms. De fyra tillgängliga alternativen är Starta process, Att göra, Spårning och Favoriter.
 * **Utloggningsfråga:** Anger om du uppmanas att bekräfta att du vill logga ut när du klickar på Logga ut.
-* **Datum:** Anger vilket datumvisningsformat som används på AEM Forms arbetsyta.
-* **Tidsformat**: Anger vilket tidsvisningsformat som ska användas på AEM Forms arbetsyta.
+* **Datumformat:** Anger vilket datumvisningsformat som ska användas på AEM Forms-arbetsytan.
+* **Tidsformat**: Anger vilket tidsvisningsformat som ska användas på AEM Forms-arbetsytan.
 * **Meddela aktivitetshändelser via e-post:** Anger om du får e-postmeddelanden för aktivitetshändelser, inklusive aktivitetstilldelningar, påminnelser och deadlines för uppgifter i din Att göra-lista och i gruppAtt göra-listor som du tillhör.
 * **Bifoga Forms i e-post:** Anger om en kopia av formuläret är bifogad till e-postmeddelanden. Bifogade filer stöds bara för PDF- och XDP-formulär.
 * **Spara utkast regelbundet:** Anger om dina formulärutkast sparas automatiskt regelbundet eller inte. Om du vill spara dina utkast regelbundet aktiverar du det här alternativet och anger hur länge du vill spara automatiskt från 1 till 30 minuter. När Spara automatiskt är aktiverat och en användare arbetar med ett utkast, sparas utkastet regelbundet efter det angivna antalet minuter. Utkastet sparas bara automatiskt när det har ändrats sedan du senast sparade eller sparade det automatiskt. När utkastet sparas visas ett varningsmeddelande på skärmen.

@@ -23,22 +23,22 @@ ht-degree: 3%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-The **Mobile Metrics Tile** på kommandocentralen ger realtidsanalyser för mobilapplikationer.
+**Mobile Metrics Tile** på kommandocentralen ger realtidsanalyser för ditt mobilprogram.
 
-The [Adobe Mobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) SDK är tillgängligt via en PhoneGap-plugin. Mätvärden samlas in och cachelagras på enheten tills enheten är ansluten, då data överförs till Adobe Mobile Services Cloud för rapportering och analys.
+SDK:n [Adobe Mobile Analytics](https://www.adobe.com/ca/solutions/digital-analytics/mobile-web-apps-analytics.html) är tillgänglig via ett PhoneGap-plugin. Mätvärden samlas in och cachelagras på enheten tills enheten är ansluten, då data överförs till Adobe Mobile Services Cloud för rapportering och analys.
 
 Adobe Mobile Analytics SDK innehåller följande:
 
-1. **Datainsamling för mobila kanaler** - Samla in omfattande data för era mobilwebbplatser och -appar i alla större operativsystem.
-1. **Analys av mobilengagemang** - Förstå användarengagemanget i mobilappar, på webbplatser eller i videor, inklusive hur ofta kunderna öppnar kanalen, oavsett om de gör inköp från den eller inte, med mera.
-1. **Kontrollpaneler och rapporter för mobilappar** - Få användningsrapporter med livscykelstatistik för appar och appbutikstatistik - se trender för användare, starter, genomsnittlig sessionslängd, kvarhållningslängd och krascher.
-1. **Mobilkampanjanalys** - Mät effekten av mobilspecifika kampanjer som SMS, mobil sökannonsering, mobil displayannonsering och QR-koder.
-1. **Geolokaliseringsanalys** - Ta reda på var era appanvändare öppnar och interagerar med era mobilupplevelser via GPS-positionering eller intressepunkter.
-1. **Bananalys** - Se hur användarna navigerar i appen för att avgöra vilka skärmar och gränssnittselement som är engagerande användare och vilka som får användarna att släppa.
+1. **Datainsamling för mobila kanaler** - Samla in omfattande data för dina mobila webbplatser och appar på alla större operativsystem.
+1. **Analys av mobilengagemang** - Förstå användarengagemanget i mobilappen, på webbplatsen eller i videon, inklusive hur ofta konsumenterna öppnar kanalen, oavsett om de gör köp från den eller inte.
+1. **Kontrollpaneler och rapporter för mobilappar** - Få användningsrapporter med livscykelstatistik för dina appar och appbutiksmått - se trender för användare, starter, genomsnittlig sessionslängd, kvarhållningslängd och krascher.
+1. **Analys av mobilkampanjer** - Mät effekten av mobilspecifika kampanjer som SMS, mobil sökannonsering, mobil displayannonsering och QR-koder.
+1. **Geolokaliseringsanalys** - Hitta var era appanvändare startar och interagerar med era mobilupplevelser via GPS-platser eller intressepunkter.
+1. **Målningsanalys** - Se hur användarna navigerar i appen för att avgöra vilka skärmar och gränssnittselement som engagerar användarna och vilka som får användarna att sluta.
 
 >[!CAUTION]
 >
->The **Analysera mått** Panelen visas bara på instrumentpanelen om du har konfigurerat molntjänster.
+>**Analysera måttenhet** visas bara på kontrollpanelen om du har konfigurerat molntjänster.
 
 ![chlimage_1-22](assets/chlimage_1-22.png)
 
@@ -48,23 +48,23 @@ AEM Command Center Metrics Tile
 
 För att kunna dra nytta av Adobe Mobile Services Analytics måste du konfigurera AEM Mobile Analytics Cloud-tjänsten med din Adobe Analytics-kontoinformation.
 
-1. Klicka på ikonen längst upp till höger för att lägga till eller redigera Cloud Service från **Hantera Cloud Service** från appkontrollpanelen.
+1. Klicka på den övre högra ikonen för att lägga till eller redigera Cloud Service från panelen **Hantera Cloud Service** på appkontrollpanelen.
 
    ![chlimage_1-23](assets/chlimage_1-23.png)
 
-1. The **Lägg till eller redigera Cloud Service** visas. Välj **Adobe Mobile Services** och klicka **Nästa**.
+1. Skärmen **Lägg till eller redigera Cloud Service** visas. Välj **Adobe Mobile Services** och klicka på **Next**.
 
    ![chlimage_1-24](assets/chlimage_1-24.png)
 
-1. Välj en befintlig konfiguration på menyn **Mobiltjänster** eller välja **Skapa konfiguration** för att skapa en.
+1. Välj en befintlig konfiguration från **Mobiltjänster** eller välj **Skapa konfiguration** för att skapa en.
 
-   För ny konfiguration anger du **Egenskaper för mobiltjänster** och klicka **Verifiera.**
+   Ange **Mobile Services-egenskaperna** och klicka på **Verifiera för att få en ny konfiguration.**
 
    ![chlimage_1-25](assets/chlimage_1-25.png)
 
-   Om inloggningsuppgifterna verifieras visas **Verifiera** knappen ändras till **Verifierad**. Du kan välja en mobiltjänstapp från **Välj en mobilappstjänst**.
+   Om autentiseringsuppgifterna verifieras ändras knappen **Verifiera** till **Verifierad**. Du kan välja en mobiltjänstapp från **Välj en mobilappstjänst**.
 
-   Klicka **Skicka** för att konfigurera konfigurationen.
+   Klicka på **Skicka** för att konfigurera konfigurationen.
 
    ![chlimage_1-26](assets/chlimage_1-26.png)
 
@@ -74,6 +74,6 @@ För att kunna dra nytta av Adobe Mobile Services Analytics måste du konfigurer
 
    >[!NOTE]
    >
-   >När du har konfigurerat molnkonfigurationen kan du visa **Analysera mått** Lägg sida vid sida på appkontrollpanelen.
+   >När du har konfigurerat din molnkonfiguration kan du visa **Analysera måttpanel** på din appinstrumentpanel.
 
    ![chlimage_1-28](assets/chlimage_1-28.png)

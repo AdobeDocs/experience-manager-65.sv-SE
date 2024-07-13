@@ -27,7 +27,7 @@ RTF-redigeraren är en grundläggande byggsten för att infoga textinnehåll i A
 
 Dialogrutan för WYSIWYG-redigering innehåller många olika funktioner:
 
-![cq55_rte_basicchars](assets/cq55_rte_basicchars.png)
+![cq55_rate_basicchars](assets/cq55_rte_basicchars.png)
 
 >[!NOTE]
 >
@@ -49,15 +49,15 @@ Du kan redigera texten direkt på sidan i stället för i ett dialogrutefönster
 >
 >Om innehållssökaren inte är öppen visas inte verktygsfältet.
 
-För närvarande är läget Redigering på plats aktiverat för sidelement som genereras av **Text** och **Titel** -komponenter.
+För närvarande är läget Redigering på plats aktiverat för sidelement som genereras av komponenterna **Text** och **Title**.
 
 >[!NOTE]
 >
->The [!UICONTROL Title] -komponenten är utformad för att innehålla en kort text utan radbrytningar. När du redigerar en titel i läget för infogad redigering öppnas en ny radbrytning **Text** -komponenten under rubriken.
+>Komponenten [!UICONTROL Title] är utformad för att innehålla en kort text utan radbrytningar. När du redigerar en titel i läget för infogad redigering öppnas en ny **Text** -komponent under titeln när du anger en radbrytning.
 
 ## Funktioner i RTF-redigeraren {#features-of-the-rich-text-editor}
 
-RTF-redigeraren har en rad funktioner, som [beroende på konfigurationen](/help/sites-administering/rich-text-editor.md) för den enskilda komponenten. Funktionerna är tillgängliga för både pekoptimerade och klassiska användargränssnitt.
+I RTF-redigeraren finns ett antal funktioner, som är beroende av konfigurationen ](/help/sites-administering/rich-text-editor.md) för den enskilda komponenten. [ Funktionerna är tillgängliga för både pekoptimerade och klassiska användargränssnitt.
 
 ### Grundläggande teckenformat {#basic-character-formats}
 
@@ -79,7 +79,7 @@ Alla fungerar som en växlingsknapp, så om du väljer det tas formatet bort.
 
 ![cq55_rte_stylesparagraph](assets/cq55_rte_stylesparagraph.png)
 
-Installationen kan innehålla fördefinierade format och format. Dessa finns i **[!UICONTROL Style]** och **[!UICONTROL Format]** nedrullningsbara listor och kan användas på text som du har valt.
+Installationen kan innehålla fördefinierade format och format. Dessa är tillgängliga med listrutorna **[!UICONTROL Style]** och **[!UICONTROL Format]** och kan tillämpas på text som du har valt.
 
 Ett format kan användas på en viss sträng (ett format korrelerar till CSS):
 
@@ -89,7 +89,7 @@ Ett format tillämpas på hela textstycket (ett format är HTML-baserat):
 
 ![cq55_rte_paragraph_use](assets/cq55_rte_paragraph_use.png)
 
-Ett specifikt format kan bara ändras (standardvärdet är **[!UICONTROL Paragraph]**).
+Ett specifikt format kan bara ändras (standardformatet är **[!UICONTROL Paragraph]**).
 
 Ett format kan tas bort. Placera markören i texten som formatet har tillämpats på och klicka på ikonen Ta bort:
 
@@ -101,11 +101,12 @@ Ett format kan tas bort. Placera markören i texten som formatet har tillämpats
 
 ![Verktygsfältet Klipp ut, Kopiera, Klistra in](do-not-localize/cq55_rte_cutcopypaste.png)
 
-Standardfunktionerna i **[!UICONTROL Cut]** och **[!UICONTROL Copy]** är tillgängliga. Flera smaker av **[!UICONTROL Paste]** finns för olika format.
+Standardfunktionerna för **[!UICONTROL Cut]** och **[!UICONTROL Copy]** är tillgängliga. Flera varianter av **[!UICONTROL Paste]** tillhandahålls för att hantera olika format.
 
 * Klipp ut (Ctrl-X)
 * Kopiera (Ctrl-C)
-* Klistra in Det här är standardmekanismen för inklistring (Ctrl-V) av komponenten. När den är installerad utanför rutan är den konfigurerad att [!UICONTROL Paste from Word].
+* Klistra in
+Det här är standardmekanismen för inklistring (Ctrl-V) för komponenten. När den är installerad är den konfigurerad att vara [!UICONTROL Paste from Word].
 
 * Klistra in som text: Tar bort alla format och formatering så att endast den oformaterade texten klistras in.
 
@@ -127,7 +128,7 @@ AEM sparar information om dina senaste 50 åtgärder i den aktuella komponenten,
 
 ### Justering {#alignment}
 
-![Justering (verktygsfält)](do-not-localize/cq55_rte_alignment.png)
+![Justeringsverktygsfältet](do-not-localize/cq55_rte_alignment.png)
 
 Texten kan antingen vara vänsterjusterad, centrerad eller högerjusterad.
 
@@ -139,11 +140,11 @@ Texten kan antingen vara vänsterjusterad, centrerad eller högerjusterad.
 
 Indraget för ett stycke kan ökas eller minskas. Det markerade stycket dras in och ny text som matas in behåller den aktuella indragsnivån.
 
-![cq55_te_indent_use](assets/cq55_rte_indent_use.png)
+![cq55_rate_indent_use](assets/cq55_rte_indent_use.png)
 
 ### Listor {#lists}
 
-![Visar verktygsfältet](do-not-localize/cq55_rte_lists.png)
+![Listverktygsfältet](do-not-localize/cq55_rte_lists.png)
 
 Du kan skapa både punktlistor och numrerade listor i texten. Välj listtyp och börja skriva eller markera texten som ska konverteras. I båda fallen startar en radmatning ett nytt listobjekt.
 
@@ -151,7 +152,7 @@ Du kan skapa kapslade listor genom att dra in ett eller flera listobjekt.
 
 Du kan ändra formatet på en lista genom att placera markören i listan och sedan välja det andra formatet. En underlista kan också ha ett annat format än innehållslistan. Detta kan användas när underlistan har skapats (med indrag).
 
-![cq55_rte_lists_use](assets/cq55_rte_lists_use.png)
+![cq55_rate_lists_use](assets/cq55_rte_lists_use.png)
 
 ### Länkar {#links}
 
@@ -159,7 +160,7 @@ Du kan ändra formatet på en lista genom att placera markören i listan och sed
 
 En länk till en URL-adress (antingen på din webbplats eller på en extern plats) skapas genom att markera texten och sedan klicka på hyperlänkikonen:
 
-![Ikon för hyperlänk](do-not-localize/chlimage_1-9.png)
+![Hyperlänkikon](do-not-localize/chlimage_1-9.png)
 
 I en dialogruta kan du ange mål-URL:en och även ange om den ska öppnas i ett nytt fönster.
 
@@ -169,15 +170,15 @@ Du kan:
 
 * Skriv in en URI direkt
 * Använd webbplatskartan för att välja en sida på webbplatsen
-* Ange URI:n och lägg sedan till målankarpunkten, till exempel `www.TargetUri.org#AnchorName`
+* Ange URI och lägg sedan till målankarpunkten, till exempel `www.TargetUri.org#AnchorName`
 * Ange endast en ankarpunkt (för att referera till&quot;den aktuella sidan&quot;), till exempel `#anchor`
 * Söka efter en sida i innehållssökaren och dra och släpp sidikonen i hyperlänksdialogrutan
 
 >[!NOTE]
 >
->URI:n kan prepended med vilket som helst av de protokoll som är konfigurerade för din installation. I en standardinstallation finns följande `https://`, `ftp://`och `mailto:`. Protokoll som inte har konfigurerats för din installation kommer att avvisas och markeras som ogiltiga.
+>URI:n kan prepended med vilket som helst av de protokoll som är konfigurerade för din installation. I en standardinstallation är de `https://`, `ftp://` och `mailto:`. Protokoll som inte har konfigurerats för din installation kommer att avvisas och markeras som ogiltiga.
 
-Om du vill bryta länken placerar du markören någonstans i länktexten och klickar på knappen [!UICONTROL Unlink] ikon:
+Om du vill bryta länken placerar du markören var som helst i länktexten och klickar på ikonen [!UICONTROL Unlink]:
 
 ![Ikonen Bryt länk](do-not-localize/chlimage_1-10.png)
 
@@ -185,9 +186,9 @@ Om du vill bryta länken placerar du markören någonstans i länktexten och kli
 
 ![Verktygsfältet Ankarpunkter](do-not-localize/cq55_rte_anchor.png)
 
-Du kan skapa en ankarpunkt var som helst i texten genom att antingen placera markören eller markera text. Klicka sedan på **Ankarpunkt** för att öppna dialogrutan.
+Du kan skapa en ankarpunkt var som helst i texten genom att antingen placera markören eller markera text. Klicka sedan på ikonen **Ankarpunkt** för att öppna dialogrutan.
 
-Ange namnet på ankarpunkten och klicka sedan **OK** att spara.
+Ange namnet på ankaret och klicka sedan på **OK** för att spara.
 
 ![cq55_rte_anchor_use](assets/cq55_rte_anchor_use.png)
 
@@ -199,15 +200,15 @@ Fästpunkten visas när komponenten redigeras och kan nu användas inom ett län
 
 ![Verktygsfältet Sök och ersätt](do-not-localize/cq55_rte_findreplace.png)
 
-AEM tillhandahåller båda **Sök** och **Ersätt** funktionen (sök och ersätt).
+AEM innehåller både en **Sök**- och en **Ersätt**-funktion (sök och ersätt).
 
-Båda har en **Sök nästa** om du vill söka efter den angivna textens öppna komponent. Du kan också ange om du vill att skiftläget (övre/nedre) ska matchas.
+Båda har en **Sök nästa**-knapp för att söka efter den angivna texten i den öppna komponenten. Du kan också ange om du vill att skiftläget (övre/nedre) ska matchas.
 
 Sökningen startar alltid från den aktuella markörpositionen i texten. När komponentens slut nås visas ett meddelande om att nästa sökåtgärd kommer att starta uppifrån.
 
 ![cq55_rte_find_use](assets/cq55_rte_find_use.png)
 
-The **Ersätt** kan du **Sök** sedan **Ersätt** en enskild instans med den angivna texten, eller till **Ersätt alla** -instanser i den aktuella komponenten.
+Med alternativet **Ersätt** kan du **Sök**, sedan **Ersätt** en enskild instans med den angivna texten eller **Ersätt alla** instanser i den aktuella komponenten.
 
 ![cq55_rte_findreplace_use](assets/cq55_rte_findreplace_use.png)
 
@@ -219,7 +220,7 @@ Du kan dra bilder från innehållssökaren för att lägga till dem i texten.
 
 >[!NOTE]
 >
->AEM erbjuder också specialkomponenter för mer detaljerad bildkonfiguration. Till exempel **Bild** och **Textbild** finns tillgängliga.
+>AEM erbjuder också specialkomponenter för mer detaljerad bildkonfiguration. Komponenterna **Bild** och **Textbild** är till exempel tillgängliga.
 
 ### Stavningskontroll {#spelling-checker}
 
@@ -233,31 +234,31 @@ Felaktiga stavningar kommer att markeras:
 
 >[!NOTE]
 >
->Stavningskontrollen fungerar på webbplatsens språk antingen genom att använda underträdets language-egenskap eller genom att extrahera språket från URL:en. Till exempel `en` kommer att kontrolleras för engelska och `de` för tyska.
+>Stavningskontrollen fungerar på webbplatsens språk antingen genom att använda underträdets language-egenskap eller genom att extrahera språket från URL:en. Till exempel kommer grenen `en` att kontrolleras för engelska och grenen `de` för tyska.
 
 ### Tabeller {#tables}
 
 Tabeller är tillgängliga båda:
 
-* Som **Tabell** komponent
+* Som komponenten **Table**
 
   ![Tabellkomponent](assets/chlimage_1-105.png)
 
-* Från **Text** komponent
+* Från komponenten **Text**
 
-  ![Verktygsfältet Text](do-not-localize/chlimage_1-11.png)
+  ![Textverktygsfältet](do-not-localize/chlimage_1-11.png)
 
   >[!NOTE]
   >
-  >Även om tabeller är tillgängliga i RTE bör du använda **Tabell** -komponenten när du skapar tabeller.
+  >Även om tabeller är tillgängliga i textredigeraren bör du använda komponenten **Tabell** när du skapar tabeller.
 
-I båda **Text** och **Tabell** funktionaliteten i komponenttabellen är tillgänglig via snabbmenyn (oftast högermusknappen) som klickas i tabellen, till exempel:
+I både komponenttabellen **Text** och **Tabell** är funktionaliteten tillgängliga via snabbmenyn (oftast högermusknappen) som klickas i tabellen, till exempel:
 
 ![cq55_rte_tablemenu](assets/cq55_rte_tablemenu.png)
 
 >[!NOTE]
 >
->I **Tabell** finns det också ett specialverktygsfält, som innehåller olika RTF-redigeringsfunktioner och en delmängd av de tabellspecifika funktionerna.
+>I komponenten **Tabell** finns även ett specialverktygsfält tillgängligt, som innehåller olika RTF-redigeringsfunktioner, tillsammans med en delmängd av de tabellspecifika funktionerna.
 
 Tabellspecifika funktioner är:
 
@@ -273,11 +274,11 @@ Tabellspecifika funktioner är:
 
 #### Tabellegenskaper {#table-properties}
 
-![cq55_rte_tableproperties_icon](assets/cq55_rte_tableproperties_icon.png)
+![cq55_te_tableproperties_icon](assets/cq55_rte_tableproperties_icon.png)
 
-Tabellens grundläggande egenskaper kan konfigureras innan du klickar på **OK** att spara:
+Tabellens grundläggande egenskaper kan konfigureras innan du klickar på **OK** för att spara:
 
-![cq55_rte_tableproperties_dialog](assets/cq55_rte_tableproperties_dialog.png)
+![cq55_te_tableproperties_dialog](assets/cq55_rte_tableproperties_dialog.png)
 
 * **Bredd**: Tabellens totala bredd.
 
@@ -303,14 +304,14 @@ Tabellens grundläggande egenskaper kan konfigureras innan du klickar på **OK**
 
 Egenskaperna för en viss cell, eller serie med celler, kan konfigureras:
 
-![cq55_rte_cellproperties_dialog](assets/cq55_rte_cellproperties_dialog.png)
+![cq55_rate_cellproperties_dialog](assets/cq55_rte_cellproperties_dialog.png)
 
 * **Bredd**
 * **Höjd**
-* **Vågrät justering** - Vänster, Centrera eller Höger
-* **Lodrät justering** - Överkant, Mitten, Nederkant eller Baslinje
-* **Celltyp**- Data eller rubrik
-* **Använd för:** En cell, Hela raden, Hela kolumnen
+* **Vågrät justering** - vänster, mitten eller höger
+* **Lodrät justering** - Överkant, Mitten, Underkant eller Baslinje
+* **Celltyp** - Data eller rubrik
+* **Tillämpa på:** En cell, Hela raden, Hela kolumnen
 
 #### Lägg till eller ta bort rader {#add-or-delete-rows}
 
@@ -367,27 +368,27 @@ När du skapar en kapslad tabell skapas en tabell i den aktuella cellen som inne
 
 ![cq55_rte_removetable](assets/cq55_rte_removetable.png)
 
-Använd alternativet för att ta bort tabellen från **[!UICONTROL Text]** -komponenten.
+Använd alternativet för att ta bort tabellen från komponenten **[!UICONTROL Text]**.
 
 ### Specialtecken {#special-characters}
 
-![Verktygsfältet Specialtecken](do-not-localize/cq55_rte_specialchars.png)
+![Specialtecken, verktygsfält](do-not-localize/cq55_rte_specialchars.png)
 
 Specialtecken kan göras tillgängliga för textredigeraren. De kan variera beroende på installationen.
 
-![cq55_rte_specialchars_use](assets/cq55_rte_specialchars_use.png)
+![cq55_rate_specialchars_use](assets/cq55_rte_specialchars_use.png)
 
 Använd muspekaren för att se en förstorad version av tecknet och klicka sedan för att det ska tas med på den aktuella platsen i texten.
 
-### Källredigeringsläge {#source-editing-mode}
+### Source redigeringsläge {#source-editing-mode}
 
-![Verktygsfältet för källredigeringsläge](do-not-localize/cq55_rte_sourceedit.png)
+![Source verktygsfält för redigeringsläge](do-not-localize/cq55_rte_sourceedit.png)
 
 I källredigeringsläget kan du visa och redigera komponentens underliggande HTML.
 
 Så texten:
 
-![cq55_te_sourcemode_1](assets/cq55_rte_sourcemode_1.png)
+![cq55_rte_sourcemode_1](assets/cq55_rte_sourcemode_1.png)
 
 Ser ut så här i källäge (källan är ofta mycket längre, så du måste rulla):
 

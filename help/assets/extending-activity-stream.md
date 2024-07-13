@@ -1,6 +1,6 @@
 ---
-title: Integrera [!DNL Assets] med aktivitetsström
-description: Beskriver inspelningsfunktionerna i [!DNL Experience Manager] och hur du konfigurerar det för att registrera specifika händelser.
+title: Integrera [!DNL Assets] med aktivitetsströmmen
+description: Beskriver inspelningsfunktionerna för  [!DNL Experience Manager]  och hur du konfigurerar det för att spela in specifika händelser.
 contentOwner: AG
 role: Developer
 feature: Asset Management
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 # Integrera [!DNL Assets] med aktivitetsström {#integrating-assets-with-activity-stream}
 
-[!DNL Adobe Experience Manager Assets] -användare utför många åtgärder som att skapa, överföra och ta bort resurser. Dessa åtgärder kan spelas in så att du kan ange en historik över vad en användare har gjort. I det här avsnittet beskrivs inspelningsfunktionerna i [!DNL Experience Manager] och konfigurera [!DNL Experience Manager] för att registrera specifika händelser.
+[!DNL Adobe Experience Manager Assets] användare utför många åtgärder, till exempel att skapa, överföra och ta bort Assets. Dessa åtgärder kan spelas in så att du kan ange en historik över vad en användare har gjort. I det här avsnittet beskrivs inspelningsfunktionerna för [!DNL Experience Manager] och hur du konfigurerar [!DNL Experience Manager] för att spela in specifika händelser.
 
 ## Prestandaöverväganden och standardbeteende {#performance-considerations-and-default-behavior}
 
-Den här integreringen kan ta processorkraft och diskutrymme, till exempel vid massimport. Av dessa skäl är [!DNL Assets] integrering med aktivitetsströmmen är inaktiverad som standard.
+Den här integreringen kan ta processorkraft och diskutrymme, till exempel vid massimport. Av dessa anledningar är integreringen [!DNL Assets] med aktivitetsströmmen inaktiverad som standard.
 
 ## Åtgärdshändelser som stöds {#supported-action-events}
 
@@ -41,19 +41,19 @@ Du kan konfigurera följande händelser så att de spelas in:
 * Underresursen har uppdaterats (SUBASSET_UPDATED)
 * Underresurs borttagen (SUBASSET_REMOVED)
 
-## Konfigurera [!DNL Assets] inspelning av händelser {#configuring-aem-assets-events-recording}
+## Konfigurera inspelning av [!DNL Assets] händelser {#configuring-aem-assets-events-recording}
 
-The [Webbkonsol](/help/sites-deploying/configuring-osgi.md) ger åtkomst till justering av händelseinspelning för resurser. Så här konfigurerar du inspelningsfunktionen för Assets-händelser:
+[Webbkonsolen](/help/sites-deploying/configuring-osgi.md) ger åtkomst till Assets Event Recorder-inställningen. Så här konfigurerar du Assets Event Recorder:
 
 1. Navigera till **[!UICONTROL Web Console]**
 
 1. Klicka på **[!UICONTROL Configuration]**.
 
-1. Dubbelklicka **[!UICONTROL Day CQ DAM Event Recorder]**.
+1. Dubbelklicka på **[!UICONTROL Day CQ DAM Event Recorder]**.
 
 1. Kontrollera **[!UICONTROL Enables this service]**.
 
-1. Kontrollera vilken **[!UICONTROL Event Types]** som du vill spela in i användaraktivitetsströmmen.
+1. Kontrollera vilka **[!UICONTROL Event Types]** som du vill ska spelas in i användaraktivitetsströmmen.
 
 1. Klicka på **[!UICONTROL Save]**.
 

@@ -35,11 +35,11 @@ Du kan ange de intervall efter vilka appen sparar de angivna data.
 
 Så här använder du funktionen Spara automatiskt i AEM Forms-appen:
 
-1. Logga in på appen och navigera till **Inställningar > Allmänt**.
-1. På skärmen Allmänt använder du **Spara automatiskt, frekvens** om du vill välja med vilka intervall appen ska spara de angivna data.
-   [![Ställa in autosparfrekvens](assets/using-autosave-freq-07.png)](assets/using-autosave-freq-07-1.png)
+1. Logga in på appen och gå till **Inställningar > Allmänt**.
+1. På skärmen Allmänt använder du alternativet **Spara frekvens automatiskt** för att välja de intervall med vilka du vill att appen ska spara angivna data.
+   [![Anger automatiskt sparad frekvens](assets/using-autosave-freq-07.png)](assets/using-autosave-freq-07-1.png)
 
-1. När du startar om programmet och loggar in med samma användare uppmanas du att återställa uppgiften i dialogrutan Återställ osparad uppgift. Klicka **OK** i dialogrutan Återställ osparad uppgift för att fortsätta arbeta med den sparade uppgiften. Klicka **Avbryt** om du vill ta bort de sparade data som motsvarar den senast aktiverade autosparfunktionen och börja arbeta med en ny uppgift.
+1. När du startar om programmet och loggar in med samma användare uppmanas du att återställa uppgiften i dialogrutan Återställ osparad uppgift. Klicka på **OK** i dialogrutan Återställ osparad uppgift om du vill fortsätta arbeta med den sparade uppgiften. Du kan klicka på **Avbryt** om du vill ta bort de sparade data som motsvarar den senast aktiverade autosparfunktionen och börja arbeta med en ny uppgift.
 
-   När du klickar **OK**återställs aktiviteten med de data som motsvarar den senaste autosparfunktionen som utlöstes innan appen kraschade. Den innehåller formulärdata och alla bilagor som är associerade med uppgiften.
-   [![Hämta en uppgift som återställts ](assets/autosave-flow.png)](assets/using-autosave-freq-06.png)**S.** Ett pågående formulär **B.** Appen stängdes med tvång **C.** Programmet har startats om med dialogrutan Återställ osparad uppgift **D.** Formuläret har återställts med ursprungliga data
+   När du klickar på **OK** återställs aktiviteten med de data som motsvarar den senaste autosparfunktionen som utlöstes innan appen kraschade. Den innehåller formulärdata och alla bilagor som är associerade med uppgiften.
+   [![Hämtning av en uppgift återskapad ](assets/autosave-flow.png)](assets/using-autosave-freq-06.png)**A.** Ett pågående arbetsformulär **B.** Programmet stängdes med tvång **C.** Programmet startades om med dialogrutan Återställ osparad aktivitet **D.** Formuläret återställdes med originaldata

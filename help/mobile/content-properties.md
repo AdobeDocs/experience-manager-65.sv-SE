@@ -61,7 +61,7 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 | dps-authorURL | Sträng |  |
 | dps-hideFromBrowsePage | Boolean |  |
 | dps-access | Sträng | ProtectedAccess från {&quot;protected&quot;, &quot;metered&quot;, &quot;free&quot;} |
-| **Social** |  |  |
+| **Socialt** |  |  |
 | dps-socialShareURL | Sträng |  |
 | dps-articleText | Sträng |  |
 | dps-url | Sträng |  |

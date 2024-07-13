@@ -29,12 +29,12 @@ Den här sidan innehåller viktig information för att arbeta med idéfunktionen
    <td>social/ideation/components/hbs/ideation</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>oklanderlig</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>inkluderbar</strong></a></td>
    <td>Nej</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td>
-   <td>cq.social.hbs.röstning<br /> cq.social.hbs.like<br /> cq.social.hbs.ideation</td>
+   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td>cq.social.hbs.voice<br /> cq.social.hbs.like<br /> cq.social.hbs.ideation</td>
   </tr>
   <tr>
    <td> <strong>mallar</strong></td>
@@ -46,7 +46,7 @@ Den här sidan innehåller viktig information för att arbeta med idéfunktionen
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td>
-   <td>Se <a href="ideation-feature.md">Idéfunktion</a></td>
+   <td>Se <a href="ideation-feature.md">Ideationsfunktion</a></td>
   </tr>
  </tbody>
 </table>
@@ -55,4 +55,4 @@ Den här sidan innehåller viktig information för att arbeta med idéfunktionen
 
 ### Ideationsfunktion {#ideation-function}
 
-En community-webbplatsstruktur som innehåller [Ideationsfunktion](functions.md#ideation-function), innehåller en konfigurerad `ideation` -komponenten.
+En community-webbplatsstruktur som innehåller [identifieringsfunktionen](functions.md#ideation-function), innehåller en konfigurerad `ideation`-komponent.

@@ -25,8 +25,8 @@ När du konfigurerar MSSL för replikering utför du följande steg:
 1. Skapa eller hämta privata nycklar och certifikat för författaren och publiceringsinstanserna.
 1. Installera nycklarna och certifikaten på författaren och publicera instanserna:
 
-   * Författare: Författarens privata nyckel och Publiceringens certifikat.
-   * Publicera: Publicera den privata nyckeln och författarens certifikat. Certifikatet är associerat med det användarkonto som autentiseras med replikeringsagenten.
+   * Författare: Författarens privata nyckel och Publish certifikat.
+   * Publicera: Publish privata nyckel och författarens certifikat. Certifikatet är associerat med det användarkonto som autentiseras med replikeringsagenten.
 
 1. Konfigurera den Jetty-baserade HTTP-tjänsten på Publish-instansen.
 1. Konfigurera transport- och SSL-egenskaperna för replikeringsagenten.
@@ -47,7 +47,7 @@ Du behöver en privat nyckel och ett offentligt certifikat för författaren och
 
 Generera en privat nyckel och ett certifikat i JKS-format. Den privata nyckeln lagras i en KeyStore-fil och certifikatet lagras i en TrustStore-fil. Använd [Java `keytool`](https://docs.oracle.com/javase/7/docs/technotes/tools/solaris/keytool.html) för att skapa båda.
 
-Utför följande steg med Java `keytool` så här skapar du den privata nyckeln och autentiseringsuppgifterna:
+Utför följande steg med Java `keytool` för att skapa den privata nyckeln och autentiseringsuppgifterna:
 
 1. Skapa ett nyckelpar för privat-offentlig nyckel i en KeyStore.
 1. Skapa eller hämta certifikatet:
@@ -65,7 +65,7 @@ Använd följande procedur för att skapa en privat nyckel och ett självsignera
    keytool -genkeypair -keyalg RSA -validity 3650 -alias alias -keystore keystorename.keystore  -keypass key_password -storepass  store_password -dname "CN=Host Name, OU=Group Name, O=Company Name,L=City Name, S=State, C=Country_ Code"
    ```
 
-   | Alternativ | Författare | Publicera |
+   | Alternativ | Författare | Publish |
    |---|---|---|
    | -alias | författare | publicera |
    | -keystore | author.keystore | publish.keystore |
@@ -76,7 +76,7 @@ Använd följande procedur för att skapa en privat nyckel och ett självsignera
    keytool -exportcert -alias alias -file cert_file -storetype jks -keystore keystore -storepass store_password
    ```
 
-   | Alternativ | Författare | Publicera |
+   | Alternativ | Författare | Publish |
    |---|---|---|
    | -alias | författare | publicera |
    | -file | author.cer | publish.cer |
@@ -84,7 +84,7 @@ Använd följande procedur för att skapa en privat nyckel och ett självsignera
 
 ### pkcs#12-format {#pkcs-format}
 
-Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSSL](https://www.openssl.org/) för att skapa dem. Använd följande procedur för att skapa en privat nyckel och en certifikatbegäran. Om du vill få certifikatet signerar du begäran med din privata nyckel (självsignerade certifikat) eller skickar begäran till en certifikatutfärdare. Generera sedan arkivet pkcs#12 som innehåller den privata nyckeln och certifikatet.
+Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSSL](https://www.openssl.org/) för att generera dem. Använd följande procedur för att skapa en privat nyckel och en certifikatbegäran. Om du vill få certifikatet signerar du begäran med din privata nyckel (självsignerade certifikat) eller skickar begäran till en certifikatutfärdare. Generera sedan arkivet pkcs#12 som innehåller den privata nyckeln och certifikatet.
 
 1. Öppna ett kommandoradsfönster eller en terminal. Om du vill skapa den privata nyckeln anger du följande kommando med alternativvärden från tabellen nedan:
 
@@ -92,7 +92,7 @@ Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSS
    openssl genrsa -out keyname.key 2048
    ```
 
-   | Alternativ | Författare | Publicera |
+   | Alternativ | Författare | Publish |
    |---|---|---|
    | -out | author.key | publish.key |
 
@@ -102,7 +102,7 @@ Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSS
    openssl req -new -key keyname.key -out key_request.csr
    ```
 
-   | Alternativ | Författare | Publicera |
+   | Alternativ | Författare | Publish |
    |---|---|---|
    | -key | author.key | publish.key |
    | -out | author_request.csr | publish_request.csr |
@@ -115,7 +115,7 @@ Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSS
    openssl x509 -req -days 3650 -in key_request.csr -signkey keyname.key -out certificate.cer
    ```
 
-   | Alternativ | Författare | Publicera |
+   | Alternativ | Författare | Publish |
    |---|---|---|
    | -signkey | author.key | publish.key |
    | -in | author_request.csr | publish_request.csr |
@@ -127,7 +127,7 @@ Generera en privat nyckel och ett certifikat i formatet pkcs#12. Använd [openSS
    openssl pkcs12 -keypbe PBE-SHA1-3DES -certpbe PBE-SHA1-3DES -export -in certificate.cer -inkey keyname.key -out pkcs12_archive.pfx -name "alias"
    ```
 
-   | Alternativ | Författare | Publicera |
+   | Alternativ | Författare | Publish |
    |---|---|---|
    | -inkey | author.key | publish.key |
    | -out | author.pfx | publish.pfx |
@@ -162,7 +162,7 @@ Om du vill utföra följande procedur måste du vara inloggad som administratör
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-### Installera publiceringscertifikatet {#install-the-publish-certificate}
+### Installera Publish-certifikatet {#install-the-publish-certificate}
 
 1. Öppna sidan Användarhantering för författarinstansen. ([http://localhost:4502/libs/granite/security/content/useradmin.html](http://localhost:4502/libs/granite/security/content/useradmin.html))
 1. Klicka på ditt användarnamn för att öppna egenskaperna för ditt användarkonto.
@@ -177,7 +177,7 @@ Om du vill utföra följande procedur måste du vara inloggad som administratör
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
-## Installera privat nyckel och TrustStore vid publicering {#install-private-key-and-truststore-on-publish}
+## Installera privat nyckel och TrustStore på Publish {#install-private-key-and-truststore-on-publish}
 
 Installera följande objekt på publiceringsinstansen:
 
@@ -186,7 +186,7 @@ Installera följande objekt på publiceringsinstansen:
 
 Om du vill utföra följande procedur måste du vara inloggad som administratör för publiceringsinstansen.
 
-### Installera den privata nyckeln för publicering {#install-the-publish-private-key}
+### Installera Publish privata nyckel {#install-the-publish-private-key}
 
 1. Öppna sidan Användarhantering för publiceringsinstansen. ([http://localhost:4503/libs/granite/security/content/useradmin.html](http://localhost:4503/libs/granite/security/content/useradmin.html))
 1. Klicka på ditt användarnamn för att öppna egenskaperna för ditt användarkonto.
@@ -206,7 +206,7 @@ Om du vill utföra följande procedur måste du vara inloggad som administratör
 1. Kontrollera att alternativet Koppla certifikat till användare är markerat. Klicka på Välj certifikatfil, välj author.cer och klicka på Open.
 1. Klicka på Skicka och stäng sedan dialogrutan Hantera i TrustStore.
 
-## Konfigurera HTTP-tjänsten vid publicering {#configure-the-http-service-on-publish}
+## Konfigurera HTTP-tjänsten på Publish {#configure-the-http-service-on-publish}
 
 Konfigurera egenskaperna för Apache Felix Jetty Based HTTP Service på publiceringsinstansen så att HTTPS används vid åtkomst till Granite Keystore. Tjänstens PID är `org.apache.felix.http`.
 
@@ -221,7 +221,7 @@ I följande tabell visas de OSGi-egenskaper som du behöver för att konfigurera
 
 ## Konfigurera replikeringsagenten på författaren {#configure-the-replication-agent-on-author}
 
-Konfigurera replikeringsagenten på författarinstansen så att HTTPS-protokollet används vid anslutning till publiceringsinstansen. Fullständig information om hur du konfigurerar replikeringsagenter finns i [Konfigurerar replikeringsagenter](/help/sites-deploying/replication.md#configuring-your-replication-agents).
+Konfigurera replikeringsagenten på författarinstansen så att HTTPS-protokollet används vid anslutning till publiceringsinstansen. Fullständig information om hur du konfigurerar replikeringsagenter finns i [Konfigurera dina replikeringsagenter](/help/sites-deploying/replication.md#configuring-your-replication-agents).
 
 Om du vill aktivera MSSL konfigurerar du egenskaperna på fliken Transport enligt följande tabell:
 

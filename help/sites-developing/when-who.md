@@ -43,7 +43,7 @@ Olika roller kan vara involverade i testningen och i olika faser av projektutvec
     <ul>
      <li><p>Kunden får erfarenhet av det projekt som utvecklas.</p> </li>
      <li><p>Ger tidig feedback från kunden.</p> </li>
-     <li><p>Användarna uttrycker ofta sina krav i form av tidigare erfarenheter. Om kunderna deltar i testningen så tidigt som möjligt ökar deras upplevelse av det nya projektet i termer av <i>prydlig</i> upplevelse.</p> </li>
+     <li><p>Användarna uttrycker ofta sina krav i termer av tidigare erfarenhet. Om kunderna deltar i testningen så tidigt som möjligt ökar deras upplevelse av det nya projektet i form av en <i>praktisk</i>-upplevelse.</p> </li>
     </ul> </td>
    <td><p>Återigen är tidiga engagemang bra, men alla releaser som kunderna använder bör vara stabila, med rimlig funktionalitet.</p> <p>Första intrycket är alltid viktigt.</p> </td>
   </tr>

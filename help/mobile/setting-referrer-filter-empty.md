@@ -26,6 +26,6 @@ Om du vill att Adobe Experience Manager (AEM) Mobile Application Viewer ska kunn
 
 Om du inte tänker använda Application Viewer för att granska program i utvecklings- och mellanlagringslägen, behöver du inte ändra standardinställningen för referensfiltret.
 
-Navigera till följande i den Author-instans av AEM som du kör: [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr) och sök efter &#39;Apache Sling Referrer Filter&#39;. Klicka för att redigera referensfiltret och markera kryssrutan Tillåt tomt (se bilden nedan). Tryck sedan på knappen Spara och stäng webbläsarsidan.
+Gå till [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr) i den Author-instans av AEM som du kör och sök efter &#39;Apache Sling Referrer-filter&#39;. Klicka för att redigera referensfiltret och markera kryssrutan Tillåt tomt (se bilden nedan). Tryck sedan på knappen Spara och stäng webbläsarsidan.
 
 ![Inställningar för referensfilter](assets/chlimage_1-106.png)

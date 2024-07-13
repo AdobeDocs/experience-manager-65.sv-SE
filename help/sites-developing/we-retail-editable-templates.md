@@ -29,7 +29,7 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/equipment.html
 
 1. Lägesväljaren har inte längre något designläge. Alla sidor för webben.Detaljhandel baseras på redigerbara mallar och för att ändra designen av redigerbara mallar måste de redigeras i mallredigeraren.
-1. Från **Sidinformation** menyval **Redigera mall**.
+1. Välj **Redigera mall** på menyn **Sidinformation**.
 1. Nu redigerar du Hero Page-mallen.
 
    Med hjälp av sidans strukturläge kan du ändra mallens struktur. Detta inkluderar till exempel de komponenter som är tillåtna i layoutbehållaren.
@@ -66,12 +66,12 @@ Alla sidor i We.Retail baseras på redigerbara mallar, vilket gör att icke-utve
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
-1. I mallredigeraren kan du använda lägesväljaren för att ändra till **Ursprungligt innehåll** läge för att definiera vilket innehåll som krävs på sidan.
+1. I mallredigeraren kan du använda lägesväljaren för att ändra till läget **Inledande innehåll** för att definiera vilket innehåll som krävs på sidan.
 
-   **Layout** Du kan använda läget som det är på en normal sida för att definiera mallens layout.
+   **Layout**-läget kan användas på samma sätt som på en normal sida för att definiera mallens layout.
 
 ## Mer information {#more-information}
 
-Mer information finns i redigeringsdokumentet [Skapa sidmallar](/help/sites-authoring/templates.md) eller utvecklardokumentsidan [Mallar - redigerbara](/help/sites-developing/page-templates-editable.md) för fullständig teknisk information om redigerbara mallar.
+Mer information om redigerbara mallar finns i redigeringsdokumentet [Skapa sidmallar](/help/sites-authoring/templates.md) eller i utvecklardokumentet Sida [Mallar - Redigerbar](/help/sites-developing/page-templates-editable.md) .
 
-Du kanske också vill undersöka [kärnkomponenter](/help/sites-developing/we-retail-core-components.md). Se redigeringsdokumentet [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) för en översikt över de viktigaste komponenternas och utvecklardokumentets funktioner [Utveckla kärnkomponenter](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) för en teknisk översikt.
+Du kanske också vill undersöka [kärnkomponenter](/help/sites-developing/we-retail-core-components.md). En teknisk översikt finns i redigeringsdokumentet [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) om du vill ha en översikt över funktionerna i kärnkomponenterna och i utvecklardokumentet [Developing Core Components](https://helpx.adobe.com/experience-manager/core-components/using/developing.html) .

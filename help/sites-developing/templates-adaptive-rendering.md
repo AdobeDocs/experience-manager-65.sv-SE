@@ -39,21 +39,21 @@ Kom ihåg när du konfigurerar enhetsgrupper:
 
 ## Konfiguration {#configuration}
 
-Anpassningsbara återgivningsväljare kan konfigureras för befintliga enhetsgrupper eller till [grupper som du själv har skapat.](/help/sites-developing/mobile.md#device-groups)
+Anpassningsbara återgivningsväljare kan konfigureras för befintliga enhetsgrupper eller för [grupper som du själv har skapat.](/help/sites-developing/mobile.md#device-groups)
 
-I det här exemplet ska du konfigurera den befintliga enhetsgruppen **Smarta telefoner** för att ha en adaptiv återgivningsväljare som en del av **Experience Page** mall inom We.Retail.
+I det här exemplet ska du konfigurera den befintliga enhetsgruppen **Smarta telefoner** så att den har en adaptiv återgivningsväljare som en del av mallen **Experience Page** i We.Retail.
 
 1. Redigera enhetsgruppen som kräver en adaptiv väljare i `http://localhost:4502/miscadmin#/etc/mobile/groups`
 
-   Ange alternativ **Inaktivera emulatorn** och spara.
+   Ange alternativet **Inaktivera emulatorn** och spara.
 
    ![chlimage_1-157](assets/chlimage_1-157.png)
 
-1. Väljaren är tillgänglig för **BlackBerry®** och **IPHONE 4** tillhandahöll enhetsgruppen **Smart Phone** läggs till i mall- och sidstrukturerna i följande steg.
+1. Väljaren är tillgänglig för **BlackBerry®** och **iPhone 4** förutsatt att enhetsgruppen **Smart Phone** läggs till i mall- och sidstrukturerna i följande steg.
 
    ![chlimage_1-158](assets/chlimage_1-158.png)
 
-1. Tillåt att enhetsgruppen används i mallen med CRXDE Lite genom att lägga till den i egenskapen för flervärdessträngen `cq:deviceGroups` på mallens struktur.
+1. Använd CRXDE Lite för att tillåta att enhetsgruppen används i mallen genom att lägga till den i strängegenskapen `cq:deviceGroups` med flera värden i mallstrukturen.
 
    `/conf/<your-site>/settings/wcm/templates/<your-template>/structure/jcr:content`
 
@@ -63,19 +63,19 @@ I det här exemplet ska du konfigurera den befintliga enhetsgruppen **Smarta tel
 
    ![chlimage_1-159](assets/chlimage_1-159.png)
 
-1. Tillåt att enhetsgruppen kan användas på din plats med CRXDE Lite genom att lägga till den i egenskapen för flervärdessträngen `cq:deviceGroups` på webbplatsens struktur.
+1. Använd CRXDE Lite för att tillåta att enhetsgruppen används på din plats genom att lägga till den i strängegenskapen `cq:deviceGroups` med flera värden i platsens struktur.
 
    `/content/<your-site>/jcr:content`
 
-   Om du till exempel vill tillåta **Smart Phone** enhetsgrupp:
+   Om du till exempel vill tillåta enhetsgruppen **Smart Phone**:
 
    `/content/we-retail/jcr:content`
 
    ![chlimage_1-160](assets/chlimage_1-160.png)
 
-Nu när du använder [emulator](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) i sidredigeraren (till exempel när [ändra layout](/help/sites-authoring/responsive-layout.md)) och du väljer en enhet i den konfigurerade enhetsgruppen återges sidan med en väljare som en del av URL:en.
+När du nu använder [emulatorn](/help/sites-authoring/responsive-layout.md#layout-definitions-device-emulation-and-breakpoints) i sidredigeraren (till exempel när du [ändrar layouten](/help/sites-authoring/responsive-layout.md)) och väljer en enhet i den konfigurerade enhetsgruppen, återges sidan med en väljare som en del av URL:en.
 
-I det här exemplet, när du redigerar en sida baserat på **Experience Page** och väljer iPhone 4 i emulatorn återges sidan med väljaren som `arctic-surfing-in-lofoten.smart.html` i stället för `arctic-surfing-in-lofoten.html`
+I det här exemplet återges sidan med väljaren som `arctic-surfing-in-lofoten.smart.html` i stället för `arctic-surfing-in-lofoten.html` när du redigerar en sida baserat på mallen **Experience Page** och väljer iPhone 4 i emulatorn
 
 Du kan även anropa sidan direkt med den här väljaren.
 

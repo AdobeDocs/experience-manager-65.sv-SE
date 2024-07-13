@@ -19,7 +19,7 @@ För att komma igång med AEM och Commerce måste du installera AEM Content och 
 
 ## Lägsta programvarukrav
 
-[AEM 6.5 Service Pack](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 7 eller senare krävs.
+[AEM 6.5 Service Pack ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 7 eller senare krävs.
 
 ## Onboarding {#onboarding}
 
@@ -31,7 +31,7 @@ Introduktionen av AEM och Commerce är en tvåstegsprocess:
 
 ### Installera AEM och Commerce Add-on för AEM 6.5 {#install-add-on}
 
-Hämta och installera AEM Commerce Add-on för AEM 6.5 från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) portal.
+Hämta och installera AEM Commerce Add-On för AEM 6.5 från portalen [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 
 Starta och installera AEM 6.5 Service Pack. Vi rekommenderar att du installerar det senaste tillgängliga Service Pack-paketet.
 
@@ -45,17 +45,17 @@ AEM kan anslutas till alla handelssystem som har en tillgänglig GraphQL-slutpun
 
 Autentiseringshuvudet kan också anges om du vill använda ytterligare CIF funktioner som kräver autentisering.
 
-Projekt som genereras av [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)och [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia) som redan ingår i [standardkonfiguration](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json) måste justeras.
+Projekt som har genererats av [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) och [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia) som redan ingår i [standardkonfigurationen](https://github.com/adobe/aem-cif-guides-venia/blob/main/ui.config/src/main/content/jcr_root/apps/venia/osgiconfig/config/com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json) måste justeras.
 
-Ersätt värdet för `url` in `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` med GraphQL slutpunkt i e-handelssystemet. Denna konfiguration kan göras via OSGI-konsolen eller genom att distribuera OSGI-konfigurationen via projektet. Olika konfigurationer för staging- och produktionssystem stöds med olika AEM körningslägen.
+Ersätt värdet för `url` i `com.adobe.cq.commerce.graphql.client.impl.GraphqlClientImpl~default.cfg.json` med slutpunkten för GraphQL i e-handelssystemet. Denna konfiguration kan göras via OSGI-konsolen eller genom att distribuera OSGI-konfigurationen via projektet. Olika konfigurationer för staging- och produktionssystem stöds med olika AEM körningslägen.
 
-Komponenterna AEM Content och Commerce Add-On och CIF Core använder både anslutningar på serversidan och på klientsidan. Huvudkomponenterna CIF klientsidan och redigeringsverktygen för CIF tillägg ansluts som standard till `/api/graphql`. Detta kan vid behov justeras via CIF Cloud Service-konfigurationen (se nedan).
+Komponenterna AEM Content och Commerce Add-On och CIF Core använder både anslutningar på serversidan och på klientsidan. Huvudkomponenter CIF klientsidan och redigeringsverktygen för CIF tillägg ansluter som standard till `/api/graphql`. Detta kan vid behov justeras via CIF Cloud Service-konfigurationen (se nedan).
 
 CIF Add-On tillhandahåller en GraphQL-proxyserver på `/api/graphql` som kan användas för [lokal utveckling](develop.md). För produktionsdistributioner rekommenderar vi starkt att du skapar en omvänd proxy till e-handelsplatsen för GraphQL via AEM Dispatcher eller andra nätverkslager (som CDN).
 
 ## Konfigurera butiker och kataloger {#catalog}
 
-Tillägget och [CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer, och så vidare). Som standard distribueras CIF Add-On med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog.
+Tillägget och [CIF Core Components](https://github.com/adobe/aem-core-cif-components) kan användas på flera AEM webbplatsstrukturer som är anslutna till olika e-handelsbutiker (eller butiksvyer osv.). Som standard distribueras CIF Add-On med en standardkonfiguration som ansluter till Adobe Commerce standardbutik och -katalog.
 
 Den här konfigurationen kan justeras för projektet via konfigurationen för CIF Cloud Service enligt följande:
 
@@ -65,7 +65,7 @@ Den här konfigurationen kan justeras för projektet via konfigurationen för CI
 
 3. Öppna konfigurationsegenskaperna via åtgärdsfältet
 
-![Konfiguration för CIF Cloud Service](/help/commerce/cif/assets/cif-cloud-service-config.png)
+![Konfiguration CIF Cloud Service](/help/commerce/cif/assets/cif-cloud-service-config.png)
 
 Följande egenskaper kan konfigureras:
 
@@ -75,7 +75,7 @@ Följande egenskaper kan konfigureras:
 
   >[!NOTE]
   >
-  >I de flesta inställningar är standardvärdet `/api/graphql` får inte ändras. Endast avancerade inställningar som inte använder den angivna GraphQL-proxyn bör ändra den här inställningen.
+  >I de flesta inställningar får standardvärdet `/api/graphql` inte ändras. Endast avancerade inställningar som inte använder den angivna GraphQL-proxyn bör ändra den här inställningen.
 
 - Aktivera stöd för katalog-UID - aktivera stöd för UID i stället för ID i e-handelsserverdelens GraphQL-anrop.
 
@@ -87,14 +87,14 @@ Följande egenskaper kan konfigureras:
 
   >[!CAUTION]
   >
-  >Från och med CIF Core Components version 2.0.0 stöds `id` togs bort och ersattes med `uid`. Om ditt projekt använder CIF Core Components version 2.0.0 måste du aktivera stöd för katalog-UID och använda ett giltigt kategori-UID som&quot;Katalogens rotkategoriidentifierare&quot;.
+  >Från och med CIF Core Components version 2.0.0 har stödet för `id` tagits bort och ersatts med `uid`. Om ditt projekt använder CIF Core Components version 2.0.0 måste du aktivera stöd för katalog-UID och använda ett giltigt kategori-UID som&quot;Katalogens rotkategoriidentifierare&quot;.
 
 Konfigurationen som visas ovan är för referens. Projekten ska ha egna konfigurationer.
 
-Mer komplexa inställningar som använder flera AEM webbplatsstrukturer i kombination med olika e-handelskataloger finns i [Installation av Commerce Multi-Store](configuring/multi-store-setup.md) självstudie.
+Mer komplexa inställningar som använder flera AEM webbplatsstrukturer i kombination med olika e-handelskataloger finns i självstudiekursen [Commerce Multi-Store Setup](configuring/multi-store-setup.md).
 
 ## Ytterligare resurser {#additional-resources}
 
-- [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)
-- [AEM Venia Reference Store](https://github.com/adobe/aem-cif-guides-venia)
+- [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)
+- [AEM Venias referensarkiv](https://github.com/adobe/aem-cif-guides-venia)
 - [Installation av Commerce Multi-Store](configuring/multi-store-setup.md)

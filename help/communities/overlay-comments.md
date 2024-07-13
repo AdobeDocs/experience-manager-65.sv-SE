@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # Komponenter i överläggsgrupper {#overlay-communities-components}
 
-Avsikten med [överläggning](/help/communities/client-customize.md#overlays) en standardkomponent är att ändra utseendet eller beteendet för en komponent globalt, för alla relativa referenser till komponenten. Det är beroende av vilken typ av sling som du kan lösa till mappen /apps innan du söker i mappen /libs. Sökvägen till komponenten är alltså identisk med sökvägen till standardkomponenten, förutom att den finns i mappen /apps och inte i mappen /libs.
+Avsikten med att [täcka över](/help/communities/client-customize.md#overlays) en standardkomponent är att ändra utseendet eller beteendet för en komponent globalt, för alla relativa referenser till komponenten. Det är beroende av vilken typ av sling som du kan lösa till mappen /apps innan du söker i mappen /libs. Sökvägen till komponenten är alltså identisk med sökvägen till standardkomponenten, förutom att den finns i mappen /apps och inte i mappen /libs.
 
 ## Exempel {#example}
 
-**Komponenten Overlay-kommentarer**
+**Komponenten för överläggskommentarer**
 
 Anta att du vill ändra kommentarsfunktionen så att den matchar webbplatsens design genom att ändra kommentarsrubriken så att avataren inte längre visas för kommentarer. Lösningarna för att dölja avataren använder antingen CSS eller, som beskrivs här, åsidosätter header.jsp i programmappen så att HTML som innehåller avataren aldrig skickas till klienten.
 
@@ -33,11 +33,11 @@ Om du vill lägga över kommentarer måste du:
 1. [Skapa noder](/help/communities/overlay-create-nodes.md)
 1. [Ändra utseendet](/help/communities/overlay-alter-appearance.md)
 
-**E-postmeddelanden om överlägg**
+**Meddelanden om övertäckning**
 
-Anta att du vill anpassa e-postmeddelandena genom att [överläggning](/help/communities/client-customize.md#overlays) mallarna på `/libs/settings/community/templates/email/html`.
+Anta att du vill anpassa meddelandet med e-postmeddelanden genom att [ersätta](/help/communities/client-customize.md#overlays) mallarna på `/libs/settings/community/templates/email/html`.
 
-Anta till exempel att du vill redigera e-postmeddelandena om omnämnanden (för en specifik webbgruppskomponent där UGC skapas). I sådana fall lägger du till en **if** villkor för verb **hänvisa** i mallarna för de komponenter som du har aktiverat **@omnämnanden** support.
+Anta till exempel att du vill redigera e-postmeddelandena om omnämnanden (för en specifik webbgruppskomponent där UGC skapas). I sådana fall lägger du till ett **if**-villkor för verb **mention** i mallarna för de komponenter som du aktiverade stödet för **@mentions** för.
 
 ```java
 {{#equals this.verb "mention"}}\

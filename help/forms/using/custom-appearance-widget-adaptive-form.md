@@ -20,21 +20,21 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Adaptiva formulär använder [utseenderamverk](/help/forms/using/introduction-widgets.md) för att hjälpa dig att skapa anpassade utseenden för anpassningsbara formulärfält och ge en annan användarupplevelse. Ersätt till exempel alternativknappar och kryssrutor med växlingsknappar eller använd anpassade jQuery-plugin-program för att begränsa användarnas indata i fält som telefonnummer eller e-post-ID.
+Anpassade formulär använder [utseenderamverket](/help/forms/using/introduction-widgets.md) för att hjälpa dig att skapa anpassade utseenden för anpassningsbara formulärfält och ge en annan användarupplevelse. Ersätt till exempel alternativknappar och kryssrutor med växlingsknappar eller använd anpassade jQuery-plugin-program för att begränsa användarnas indata i fält som telefonnummer eller e-post-ID.
 
 I det här dokumentet förklaras hur du använder ett jQuery-plugin-program för att skapa dessa alternativa upplevelser för anpassningsbara formulärfält. Dessutom visas ett exempel om du vill skapa ett anpassat utseende för att en numerisk fältkomponent ska visas som en numerisk nummerlista eller skjutreglage.
 
 Först ska vi titta på de termer och begrepp som används i den här artikeln.
 
-**Utseende** Hänvisar till format, utseende och känsla samt hur de olika elementen i ett adaptivt formulärfält är organiserade. Det innehåller vanligtvis en etikett, ett interaktivt område med indata, en hjälpikon samt korta och långa fältbeskrivningar. Den anpassning av utseendet som beskrivs i den här artikeln kan användas för utseendet på indataområdet i fältet.
+**Utseende** Avser stil, utseende och funktion för olika element i ett anpassat formulärfält. Det innehåller vanligtvis en etikett, ett interaktivt område med indata, en hjälpikon samt korta och långa fältbeskrivningar. Den anpassning av utseendet som beskrivs i den här artikeln kan användas för utseendet på indataområdet i fältet.
 
-**jQuery plugin** Tillhandahåller en standardmekanism, baserad på jQuery-widgetramverket, för att implementera ett alternativt utseende.
+**jQuery-plugin** Tillhandahåller en standardmekanism, baserad på jQuery-widgetramverket, för att implementera ett alternativt utseende.
 
-**ClientLib** Ett bibliotekssystem på klientsidan för AEM bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Mer information finns i Använda bibliotek på klientsidan.
+**ClientLib** Ett bibliotekssystem på klientsidan AEM klientbearbetning som styrs av komplex JavaScript- och CSS-kod. Mer information finns i Använda bibliotek på klientsidan.
 
-**Arketyp** Ett Maven-projekt med mallverktyg som definieras som ett ursprungligt mönster eller en modell för Maven-projekt. Mer information finns i Introduktion till arkitekturer.
+**Arketyp** Ett Maven-projekt mallar verktyg som definieras som ett ursprungligt mönster eller en modell för Maven-projekt. Mer information finns i Introduktion till arkitekturer.
 
-**Användarkontroll** Avser huvudelementet i en widget som innehåller fältets värde och används av utseenderamverket för att binda det anpassade widgetgränssnittet med den adaptiva formulärmodellen.
+**Användarkontroll** Avser huvudelementet i en widget som innehåller fältets värde och används av utseenderamverket för att binda det anpassade widgetgränssnittet med den anpassade formulärmodellen.
 
 ## Steg för att skapa ett anpassat utseende {#steps-to-create-a-custom-appearance}
 
@@ -42,17 +42,17 @@ Stegen på en hög nivå för att skapa ett anpassat utseende är följande:
 
 1. **Skapa ett projekt**: Skapa ett Maven-projekt som genererar ett innehållspaket som ska distribueras AEM.
 1. **Utöka en befintlig widget-klass**: Utöka en befintlig widget-klass och åsidosätt de klasser som krävs.
-1. **Skapa ett klientbibliotek**: Skapa en `clientLib: af.customwidget` och lägga till de JavaScript- och CSS-filer som behövs.
+1. **Skapa ett klientbibliotek**: Skapa ett `clientLib: af.customwidget`-bibliotek och lägg till de JavaScript- och CSS-filer som krävs.
 
 1. **Bygg och installera projektet**: Bygg Maven-projektet och installera det genererade innehållspaketet på AEM.
-1. **Uppdatera det adaptiva formuläret**: Uppdatera egenskaper för anpassningsbara formulärfält så att de använder det anpassade utseendet.
+1. **Uppdatera det adaptiva formuläret**: Uppdatera egenskaper för adaptiva formulärfält så att det anpassade utseendet används.
 
 ### Skapa ett projekt {#create-a-project}
 
 En maven-arkityp är en startpunkt för att skapa ett anpassat utseende. Följande detaljer gäller för den arkitetyp som ska användas:
 
 * **Databas**: https://repo1.maven.org/maven2/com/adobe/
-* **Artefakt-ID**: custom-appearance-architype
+* **Artefakt-ID**: custom-appearance-archietype
 * **Grupp-ID**: com.adobe.aemforms
 * **Version**: 1.0.4
 
@@ -66,8 +66,8 @@ Kommandot hämtar Maven-pluginer och arkivtypsinformation från databasen och ge
 * **artifactId**: Artefakt-ID som används av det genererade Maven-projektet.
 * **version**: Version för det genererade Maven-projektet.
 * **package**: Paket som används för filstrukturen.
-* **artifactName**: Artefaktnamn för det genererade AEM.
-* **packageGroup**: Paketgrupp för det genererade AEM.
+* **artifactName**: Det genererade AEM-paketets artefaktnamn.
+* **packageGroup**: Paketgruppen för det genererade AEM.
 * **widgetName**: Utseendenamn som används som referens.
 
 Det genererade projektet har följande struktur:
@@ -112,9 +112,9 @@ När projektmallen har skapats gör du följande ändringar efter behov:
 
 1. Inkludera plugin-programmets beroende från tredje part i projektet.
 
-   1. Placera jQuery-plugin-program eller anpassade plugin-program från tredje part i `jqueryplugin/javascript` mapp och relaterade CSS-filer i `jqueryplugin/css` mapp. Mer information finns i JS- och CSS-filerna under `jqueryplugin/javascript and jqueryplugin/css` mapp.
+   1. Placera jQuery-plugin-program eller anpassade jQuery-plugin-program från tredje part i mappen `jqueryplugin/javascript` och relaterade CSS-filer i mappen `jqueryplugin/css`. Mer information finns i JS- och CSS-filerna i mappen `jqueryplugin/javascript and jqueryplugin/css`.
 
-   1. Ändra `js.txt` och `css.txt` -filer som ska innehålla ytterligare JavaScript- och CSS-filer för jQuery-plugin-programmet.
+   1. Ändra `js.txt`- och `css.txt`-filerna så att de innehåller eventuella ytterligare JavaScript- och CSS-filer för jQuery-plugin-programmet.
 
 1. Integrera plugin-programmet från tredje part med ramverket för att möjliggöra interaktion mellan det anpassade utseenderamverket och plugin-programmet jQuery. Den nya widgeten fungerar bara när du utökar eller åsidosätter följande funktioner.
 
@@ -126,13 +126,13 @@ När projektmallen har skapats gör du följande ändringar efter behov:
   </tr>
   <tr>
    <td><code>render</code></td>
-   <td>Återgivningsfunktionen returnerar jQuery-objektet för widgetens standardelement HTML. Standardelementet för HTML ska vara av fokuserbar typ. Till exempel: <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code>och <code>&lt;li&gt;</code>. Det returnerade elementet används som <code>$userControl</code>. Om <code>$userControl</code> anger ovanstående begränsning, <code>AbstractWidget</code> klassen fungerar som förväntat, men vissa av de vanliga API:erna (focus, click) kräver ändringar. </td>
+   <td>Återgivningsfunktionen returnerar jQuery-objektet för widgetens standardelement HTML. Standardelementet för HTML ska vara av fokuserbar typ. Till exempel <code>&lt;a&gt;</code>, <code>&lt;input&gt;</code> och <code>&lt;li&gt;</code>. Det returnerade elementet används som <code>$userControl</code>. Om <code>$userControl</code> anger begränsningen ovan fungerar funktionerna i klassen <code>AbstractWidget</code> som förväntat, men vissa av de gemensamma API:erna (focus, click) kräver ändringar. </td>
   </tr>
   <tr>
    <td><code>getEventMap</code></td>
    <td>Returnerar en karta som konverterar HTML-händelser till XFA-händelser. <br /> <code class="code">{
       blur: XFA_EXIT_EVENT,
-      }</code><br /> Det här exemplet visar att <code>blur</code> är en HTML-händelse och <code>XFA_EXIT_EVENT</code> är motsvarande XFA-händelse. </td>
+      }</code><br /> I det här exemplet visas att <code>blur</code> är en HTML-händelse och att <code>XFA_EXIT_EVENT</code> är motsvarande XFA-händelse. </td>
   </tr>
   <tr>
    <td><code>getOptionsMap</code></td>
@@ -144,50 +144,50 @@ När projektmallen har skapats gör du följande ändringar efter behov:
   </tr>
   <tr>
    <td><code>showValue</code></td>
-   <td>I XFA vid enter-händelse är <code>rawValue</code> av fältet visas. Den här funktionen anropas för att visa <code>rawValue</code> till användaren. </td>
+   <td>Som standard visas fältets <code>rawValue</code> i XFA vid enter-händelse. Den här funktionen anropas för att visa <code>rawValue</code> för användaren. </td>
   </tr>
   <tr>
    <td><code>showDisplayValue</code></td>
-   <td>I XFA vid exit-händelse är <code>formattedValue</code> av fältet visas. Den här funktionen anropas för att visa <code>formattedValue</code> till användaren. </td>
+   <td>Som standard visas <code>formattedValue</code> för fältet i XFA vid exit-händelse. Den här funktionen anropas för att visa <code>formattedValue</code> för användaren. </td>
   </tr>
  </tbody>
 </table>
 
-1. Uppdatera JavaScript-filen i `integration/javascript` mapp, efter behov.
+1. Uppdatera JavaScript-filen i mappen `integration/javascript` efter behov.
 
-   * Ersätta texten `__widgetName__` med det faktiska widgetnamnet.
-   * Utöka widgeten från en lämplig widgetklass. I de flesta fall är det widgetklassen som motsvarar den befintliga widget som ersätts. Det överordnade klassnamnet används på flera platser, så du bör söka efter alla förekomster av strängen `xfaWidget.textField` i filen och ersätt dem med den aktuella överordnade klassen som används.
-   * Utöka `render` metod för att ange ett alternativt användargränssnitt. Det är den plats från vilken jQuery-plugin-programmet anropas för att uppdatera användargränssnittet eller interaktionsbeteendet. The `render` -metoden ska returnera ett användarkontrollelement.
+   * Ersätt texten `__widgetName__` med widgetnamnet.
+   * Utöka widgeten från en lämplig widgetklass. I de flesta fall är det widgetklassen som motsvarar den befintliga widget som ersätts. Det överordnade klassnamnet används på flera platser, så du bör söka efter alla förekomster av strängen `xfaWidget.textField` i filen och ersätta dem med den överordnade klassen som används.
+   * Utöka metoden `render` om du vill ange ett alternativt användargränssnitt. Det är den plats från vilken jQuery-plugin-programmet anropas för att uppdatera användargränssnittet eller interaktionsbeteendet. Metoden `render` ska returnera ett användarkontrollelement.
 
-   * Utöka `getOptionsMap` metod för att åsidosätta en alternativinställning som påverkas på grund av en ändring i widgeten. Funktionen returnerar en mappning som innehåller information om åtgärden som ska utföras vid ändring av ett alternativ. Tangenterna är alternativen som tillhandahålls widgeten och värdena är de funktioner som anropas när en ändring av alternativet upptäcks.
-   * The `getEventMap` metoden mappar händelser som utlöses av widgeten, med de händelser som krävs av den adaptiva formulärmodellen. Standardvärdet mappar HTML-standardhändelser för standardwidgeten och måste uppdateras om en alternativ händelse aktiveras.
-   * The `showDisplayValue` och `showValue` använda satsen för visning och redigering av bild och kan åsidosättas för att få ett alternativt beteende.
+   * Utöka metoden `getOptionsMap` om du vill åsidosätta en alternativinställning som påverkas på grund av en ändring i widgeten. Funktionen returnerar en mappning som innehåller information om åtgärden som ska utföras vid ändring av ett alternativ. Tangenterna är alternativen som tillhandahålls widgeten och värdena är de funktioner som anropas när en ändring av alternativet upptäcks.
+   * Metoden `getEventMap` mappar händelser som utlöses av widgeten, med de händelser som krävs av den adaptiva formulärmodellen. Standardvärdet mappar HTML-standardhändelser för standardwidgeten och måste uppdateras om en alternativ händelse aktiveras.
+   * `showDisplayValue` och `showValue` tillämpar satsen för visning och redigering av bild och kan åsidosättas för att ha ett alternativt beteende.
 
-   * The `getCommitValue` -metoden anropas av det adaptiva formulärramverket när `commit`-händelsen inträffar. Vanligtvis är det händelsen exit (utom för elementen för listrutor, alternativknappar och kryssrutor där det sker vid ändring). Mer information finns i [Adaptiva Forms-uttryck](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p).
+   * Metoden `getCommitValue` anropas av det adaptiva formulärramverket när händelsen `commit` inträffar. Vanligtvis är det händelsen exit (utom för elementen för listrutor, alternativknappar och kryssrutor där det sker vid ändring). Mer information finns i [Adaptiva Forms-uttryck](../../forms/using/adaptive-form-expressions.md#p-value-commit-script-p).
 
    * Mallfilen innehåller exempelimplementering för olika metoder. Ta bort metoder som inte ska utökas.
 
 ### Skapa ett klientbibliotek {#create-a-client-library}
 
-Exempelprojektet som skapas av Maven-arkitypen skapar automatiskt nödvändiga klientbibliotek och omsluter dem till ett klientbibliotek med en kategori `af.customwidgets`. JavaScript- och CSS-filerna som finns i `af.customwidgets` inkluderas automatiskt vid körning.
+Exempelprojektet som genereras av Maven-arkitypen skapar automatiskt nödvändiga klientbibliotek och omsluter dem till ett klientbibliotek med kategorin `af.customwidgets`. De JavaScript- och CSS-filer som finns i `af.customwidgets` inkluderas automatiskt vid körning.
 
 ### Bygg och installera {#build-and-install}
 
-Om du vill skapa projektet kör du följande kommando på skalet för att generera ett CRX-paket som måste installeras på AEM.
+Om du vill skapa ett projekt kör du följande kommando på skalet för att generera ett CRX-paket som måste installeras på AEM.
 
 `mvn clean install`
 
 >[!NOTE]
 >
->Maven-projektet refererar till en fjärrdatabas inuti POM-filen. Detta är endast för referens, och enligt Maven-standard hämtas databasinformationen i `settings.xml` -fil.
+>Maven-projektet refererar till en fjärrdatabas inuti POM-filen. Detta är bara för referensändamål, och enligt Maven-standard hämtas databasinformationen i filen `settings.xml`.
 
 ### Uppdatera det adaptiva formuläret {#update-the-adaptive-form}
 
 Så här använder du det anpassade utseendet på ett anpassat formulärfält:
 
 1. Öppna det adaptiva formuläret i redigeringsläge.
-1. Öppna **Egenskap** för det fält där du vill använda det anpassade utseendet.
-1. I **Stilar** -fliken, uppdatera `CSS class` egenskapen för att lägga till utseendenamnet i `widget_<widgetName>` format. Till exempel: **widget_numeriskStepper**
+1. Öppna dialogrutan **Egenskap** för fältet som du vill använda det anpassade utseendet på.
+1. Uppdatera egenskapen `CSS class` på fliken **Format** för att lägga till utseendenamnet i formatet `widget_<widgetName>`. Till exempel: **widget_numeriskStepper**
 
 ## Exempel: Skapa ett anpassat utseende   {#sample-create-a-custom-appearance-nbsp}
 
@@ -198,7 +198,7 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
    `mvn archetype:generate -DarchetypeRepository=https://repo1.maven.org/maven2/com/adobe/ -DarchetypeGroupId=com.adobe.aemforms -DarchetypeArtifactId=custom-appearance-archetype -DarchetypeVersion=1.0.4`
 
    Du uppmanas att ange värden för följande parametrar.
-   *Värdena som används i det här exemplet är markerade med fetstil*.
+   *Värdena som används i det här exemplet är markerade med fet stil*.
 
    `Define value for property 'groupId': com.adobe.afwidgets`
 
@@ -214,7 +214,7 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
 
    `Define value for property 'widgetName': numericStepper`
 
-1. Navigera till `customWidgets` (angivet värde för `artifactID` egenskap) och köra följande kommando för att generera ett Eclipse-projekt:
+1. Navigera till katalogen `customWidgets` (angivet värde för egenskapen `artifactID`) och kör följande kommando för att generera ett Eclipse-projekt:
 
    `mvn eclipse:eclipse`
 
@@ -222,30 +222,30 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
 
    1. Välj **[!UICONTROL File > Import > Existing Projects into Workspace]**.
 
-   1. Bläddra och välj den mapp där du utförde `archetype:generate` -kommando.
+   1. Bläddra och välj den mapp där du utförde kommandot `archetype:generate`.
 
    1. Klicka på **[!UICONTROL Finish]**.
 
-      ![eclipse-screenshot](assets/eclipse-screenshot.png)
+      ![Förhandsvisa-bild](assets/eclipse-screenshot.png)
 
 1. Välj den widget som ska användas för det anpassade utseendet. I det här exemplet används följande numeriska nummerwidget:
 
    [https://www.jqueryscript.net/form/User-Friendly-Number-Input-Spinner-with-jQuery-Bootstrap.html](https://www.jqueryscript.net/form/User-Friendly-Number-Input-Spinner-with-jQuery-Bootstrap.html)
 
-   Granska plugin-programkoden i Eclipse-projektet i `plugin.js` för att se till att den uppfyller kraven för utseendet. I det här exemplet uppfyller utseendet följande krav:
+   Granska plugin-programkoden i filen `plugin.js` i Eclipse-projektet för att kontrollera att den matchar utseendekraven. I det här exemplet uppfyller utseendet följande krav:
 
    * Den numeriska nummerlistan ska sträcka sig från `- $.xfaWidget.numericInput`.
-   * The `set value` -metoden för widgeten ställer in värdet efter att fokus är på fältet. Det är ett obligatoriskt krav för en widget för anpassningsbara formulär.
-   * The `render` måste åsidosättas för att metoden ska kunna anropas `bootstrapNumber` -metod.
+   * Metoden `set value` i widgeten ställer in värdet efter att fokus är på fältet. Det är ett obligatoriskt krav för en widget för anpassningsbara formulär.
+   * Metoden `render` måste åsidosättas för att metoden `bootstrapNumber` ska kunna anropas.
 
    * Det finns inget ytterligare beroende för plugin-programmet förutom plugin-programmets huvudkällkod.
    * Exemplet utför ingen formatering på nummerlistan, så ingen ytterligare CSS krävs.
-   * The `$userControl` objektet ska vara tillgängligt för `render` -metod. Det är ett fält i `text` type som klonas med plugin-programkoden.
+   * Objektet `$userControl` ska vara tillgängligt för metoden `render`. Det är ett fält av typen `text` som klonas med plugin-koden.
 
-   * The **+** och **-** ska inaktiveras när fältet är inaktiverat.
+   * Knapparna **+** och **-** ska inaktiveras när fältet är inaktiverat.
 
-1. Ersätta innehållet i `bootstrap-number-input.js` (jQuery-plugin) med innehållet i `numericStepper-plugin.js` -fil.
-1. I `numericStepper-widget.js` lägg till följande kod för att åsidosätta återgivningsmetoden för att anropa plugin-programmet och returnera `$userControl` objekt:
+1. Ersätt innehållet i plugin-programmet `bootstrap-number-input.js` (jQuery) med innehållet i filen `numericStepper-plugin.js`.
+1. I filen `numericStepper-widget.js` lägger du till följande kod för att åsidosätta återgivningsmetoden för att anropa plugin-programmet och returnera objektet `$userControl`:
 
    ```javascript
    render : function() {
@@ -265,7 +265,7 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
    }
    ```
 
-1. I `numericStepper-widget.js` fil, åsidosätta `getOptionsMap` om du vill åsidosätta åtkomstalternativet och dölja knapparna + och - i inaktiverat läge.
+1. I filen `numericStepper-widget.js` åsidosätter du egenskapen `getOptionsMap` för att åsidosätta åtkomstalternativet och döljer knapparna + och - i inaktiverat läge.
 
    ```javascript
    getOptionsMap: function(){
@@ -307,7 +307,7 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
     }
    ```
 
-1. Spara ändringarna genom att navigera till den mapp som innehåller `pom.xml` och kör följande Maven-kommando för att bygga projektet:
+1. Spara ändringarna, navigera till mappen som innehåller filen `pom.xml` och kör följande Maven-kommando för att skapa projektet:
 
    `mvn clean install`
 
@@ -317,6 +317,6 @@ Nu ska vi titta på ett exempel för att skapa ett anpassat utseende så att ett
 
    1. Högerklicka på fältet som du vill använda utseendet på och klicka på **[!UICONTROL Edit]** för att öppna dialogrutan Redigera komponent.
 
-   1. Uppdatera **[!UICONTROL CSS class]** egenskap som ska läggas till `widget_numericStepper`.
+   1. Uppdatera egenskapen **[!UICONTROL CSS class]** på fliken Format för att lägga till `widget_numericStepper`.
 
 Det nya utseendet som du har skapat kan nu användas.

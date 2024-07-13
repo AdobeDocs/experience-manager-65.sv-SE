@@ -21,7 +21,7 @@ Integrationen av lösningar från andra företag än Adobe Commerce är ett vanl
 
 Den övergripande arkitekturen är följande:
 
-![Översikt över arkitektur för AEM utanför Magento/tredje part](../assets//AEM_nonMagento_Architecture.png)
+![AEM Översikt över arkitektur från andra företag än Magento/tredje part](../assets//AEM_nonMagento_Architecture.png)
 
 Syftet med detta integreringslager är att mappa tredjeparts-API:er och scheman mot de Adobe Commerce GraphQL-API:er och -scheman som stöds utanför Experience Manager. Tack vare den här inkapslingen kan integreringslogiken och -systemen uppdateras utan att koden i Experience Manager ändras.
 
@@ -31,7 +31,7 @@ När Experience Manager hämtar data on-demand krävs realtids-API:er för produ
 
 >[!TIP]
 >
->Om det inte finns några API:er i realtid bör en extern produktcache med API:er användas för integreringen. Exempel [Magento öppen källkod](https://business.adobe.com/products/magento/open-source.html).
+>Om det inte finns några API:er i realtid bör en extern produktcache med API:er användas för integreringen. Exempel: [Magento öppen källkod](https://business.adobe.com/products/magento/open-source.html).
 
 Du behöver inte implementera hela GraphQL-schemat, bara schemats objekt för att aktivera de önskade användningsfallen.
 
@@ -43,7 +43,7 @@ Integreringen av programmeringsgränssnitt för produktkataloger krävs för att
 
 ## Vanliga användningsfall
 
-[AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) hämta och utbyta data via de Adobe Commerce-API:er CIF stöds. Om du vill återanvända komponenter måste respektive API implementeras.
+[AEM CIF kärnkomponenter](https://github.com/adobe/aem-core-cif-components) hämtar och utbyter data via de Adobe Commerce-API:er som CIF stöds. Om du vill återanvända komponenter måste respektive API implementeras.
 
 Rekommendationen för prestandakrävande komponenter på klientsidan är att kommunicera direkt med tredjepartslösningen för att undvika latens.
 
@@ -51,7 +51,7 @@ Rekommendationen för prestandakrävande komponenter på klientsidan är att kom
 
 Adobe rekommenderar att du använder [Adobe I/O Runtime](https://developer.adobe.com/apis/experienceplatform/runtime.html) för integreringslagret. Det ingår i CIF för tredje part. Eftersom det fungerar med en mikrotjänstliknande metod är det lämpligt att integrera flera lösningar på ett enkelt sätt.
 
-The [referensimplementering](https://github.com/adobe/commerce-cif-graphql-integration-reference) är en bra startpunkt för att bygga integreringen i e-handelslösningen. Även om det har stöd för GraphQL kan det även integreras med andra typer av API som REST.
+Referensimplementeringen [av ](https://github.com/adobe/commerce-cif-graphql-integration-reference) är en bra utgångspunkt för att skapa integreringen med din e-handelslösning. Även om det har stöd för GraphQL kan det även integreras med andra typer av API som REST.
 
 Det här integreringslagret behövs inte om ett lager från tredje part är tillgängligt (till exempel Mulesoft) eller om integreringen byggs ovanpå tredjepartslösningen.
 
@@ -59,8 +59,8 @@ Det här integreringslagret behövs inte om ett lager från tredje part är till
 
 Kopplingar är en bra början för projekt. De levereras med en e-handelslösningsspecifik anslutning och standard-API-mappning. Dessa kontakter byggs av tredje part och underhålls inte av Adobe. Kontakta respektive partner för mer information.
 
-* [SAP COMMERCE](https://github.com/diconium/commerce-cif-graphql-integration-hybris), skapat av Diconium
-* [Commercetools](https://github.com/diconium/commerce-cif-graphql-integration-commercetool), skapat av Diconium
+* [SAP Commerce](https://github.com/diconium/commerce-cif-graphql-integration-hybris), skapat av Diconium
+* [Kommersiella verktyg](https://github.com/diconium/commerce-cif-graphql-integration-commercetool), skapade av Diconium
 
 >[!TIP]
 >

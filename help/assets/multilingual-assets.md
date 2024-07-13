@@ -21,11 +21,11 @@ ht-degree: 2%
 | AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html?lang=en) |
 | AEM 6.5 | Den här artikeln |
 
-[!DNL Adobe Experience Manager Assets] Med kan du automatisera arbetsflöden för översättning av resurser (inklusive binärfiler, metadata och taggar) för att generera resurser på andra språk för användning i flerspråkiga projekt.
+Med [!DNL Adobe Experience Manager Assets] kan du automatisera översättningsarbetsflöden för resurser (inklusive binärfiler, metadata och taggar) för att generera resurser på andra språk för användning i flerspråkiga projekt.
 
-Om du vill automatisera översättningsarbetsflöden integrerar du översättningstjänster med [!DNL Experience Manager] och skapa projekt för översättning av resurser till flera språk. [!DNL Experience Manager] har stöd för arbetsflöden för översättning mellan människor och datorer.
+Om du vill automatisera översättningsarbetsflöden integrerar du översättningstjänster med [!DNL Experience Manager] och skapar projekt för översättning av resurser till flera språk. [!DNL Experience Manager] har stöd för arbetsflöden för översättning mellan människor och datorer.
 
-Personlig översättning: De översatta resurserna returneras och importeras till [!DNL Experience Manager]. När översättningsleverantören är integrerad med [!DNL Experience Manager], skickas resurser automatiskt mellan [!DNL Experience Manager] och översättningsleverantören.
+Personlig översättning: De översatta resurserna returneras och importeras till [!DNL Experience Manager]. När din översättningsleverantör är integrerad med [!DNL Experience Manager] skickas resurser automatiskt mellan [!DNL Experience Manager] och översättningsleverantören.
 
 Maskinöversättning: Maskinöversättningstjänsten översätter omedelbart metadata och taggar för resurser.
 
@@ -37,6 +37,6 @@ Maskinöversättning: Maskinöversättningstjänsten översätter omedelbart met
 1. [Tillämpa översättningsmolntjänster på mappar](transition-cloud-services.md)
 1. [Skapa översättningsprojekt](translation-projects.md)
 
-Om översättningstjänstleverantören inte tillhandahåller någon koppling att integrera med [!DNL Experience Manager], använder en [alternativ process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
+Om översättningstjänstleverantören inte tillhandahåller någon koppling för integrering med [!DNL Experience Manager] använder du en [alternativ process](/help/sites-administering/tc-manage.md#exporting-a-translation-job).
 
 Se även [Skapa översättningsprojekt för innehållsfragment](creating-translation-projects-for-content-fragments.md).

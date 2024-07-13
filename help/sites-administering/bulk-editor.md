@@ -29,13 +29,13 @@ Med gruppredigeraren kan du redigera effektivt när den visuella sidkontexten in
 
 >[!NOTE]
 >
->Du kan även importera innehåll till databasen, men som standard är detta inaktiverat för gruppredigeraren så som det är tillgängligt i **verktyg** konsol.
+>Du kan även importera innehåll till databasen, men som standard är detta inaktiverat för gruppredigeraren så som det är tillgängligt i **verktygskonsolen**.
 
-I det här avsnittet beskrivs hur du arbetar med gruppredigeraren i **verktyg** konsol. Vanligtvis använder administratörer gruppredigeraren för att söka efter och redigera flera objekt. Det gör du genom att fylla i tabellen med en GQL-fråga och sedan genom att markera innehållsobjekten som du vill arbeta med. Författare använder vanligtvis gruppredigeraren som en del av ett anpassat gruppredigeringsprogram som är tillgängligt via [produktlista](/help/sites-authoring/default-components.md#productlist) -komponenten.
+I det här avsnittet beskrivs hur du arbetar med gruppredigeraren i **verktygskonsolen**. Vanligtvis använder administratörer gruppredigeraren för att söka efter och redigera flera objekt. Det gör du genom att fylla i tabellen med en GQL-fråga och sedan genom att markera innehållsobjekten som du vill arbeta med. Författare använder vanligtvis gruppredigeraren som en del av ett anpassat gruppredigeringsprogram som är tillgängligt via komponenten [produktlista](/help/sites-authoring/default-components.md#productlist).
 
 >[!CAUTION]
 >
->Med [borttagning av det klassiska användargränssnittet](/help/release-notes/deprecated-removed-features.md) i AEM 6.4 har gruppredigeraren också tagits bort och därför planerar Adobe inte att ytterligare förbättra gruppredigeraren.
+>Med [borttagningen av det klassiska gränssnittet](/help/release-notes/deprecated-removed-features.md) i AEM 6.4 har även gruppredigeraren tagits bort och Adobe planerar därför inte att förbättra gruppredigeraren ytterligare.
 
 ## Exempel på användningsfall för den grupperade redigeraren {#example-use-case-for-the-bulk-editor}
 
@@ -43,8 +43,8 @@ Om du t.ex. behöver alla namn och e-postadresser för användare som fyllt i en
 
 Ett exempel som illustrerar en sådan användning finns på Geometrixx webbplats:
 
-1. Navigera till **Support** sidan och sedan till **Nöjd kundtjänst** enkät.
-1. **Redigera** den **Formulärets början** stycke. Klicka på **Avancerat** -fliken, expandera **Åtgärdskonfiguration** och sedan klicka **Visa data...**.
+1. Navigera till sidan **Support** och sedan till enkäten **Kundtjänst** .
+1. **Redigera** stycket **Början av formulär**. Klicka på fliken **Avancerat** i dialogrutan, utöka **åtgärdskonfigurationen** och klicka sedan på **Visa data..**.
 
    ![Exempel på enkät om kundnöjdhet](assets/custsatsurvey.png)
 
@@ -65,8 +65,8 @@ Med gruppredigeraren kan du
 
 Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
 
-1. I **verktyg** klickar du på **Importörer** för att expandera den.
-1. Dubbelklicka på **Massredigerare**.
+1. Utöka mappen **Importers** genom att klicka på den i **verktygskonsolen**.
+1. Dubbelklicka på **Massredigeraren**.
 1. Ange dina urvalskrav:
 
 <table>
@@ -77,15 +77,15 @@ Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
   </tr>
   <tr>
    <td>Rotsökväg</td>
-   <td>Anger den rotsökväg som den gruppredigeraren söker efter.<br /> Till exempel: <code>/content/geometrixx/en</code>. I gruppredigeraren söks alla underordnade noder igenom.</td>
+   <td>Anger den rotsökväg som den gruppredigeraren söker efter.<br />, till exempel <code>/content/geometrixx/en</code>. I gruppredigeraren söks alla underordnade noder igenom.</td>
   </tr>
   <tr>
    <td>Frågeparametrar</td>
-   <td>Använd GQL-parametrar för att ange söksträngen som du vill att den gruppredigerade ska söka efter i databasen. Till exempel: <code>type:Page</code> söker efter alla sidor i rotsökvägen, <code>text:professional</code> söker efter alla sidor som innehåller ordet "professionell", och <code>"jcr:title":English</code> söker efter alla sidor som har "engelska" som titel. Du kan bara söka efter strängar.</td>
+   <td>Använd GQL-parametrar för att ange söksträngen som du vill att den gruppredigerade ska söka efter i databasen. <code>type:Page</code> söker till exempel efter alla sidor i rotsökvägen, <code>text:professional</code> söker efter alla sidor som innehåller ordet "professionell" och <code>"jcr:title":English</code> söker efter alla sidor som har "engelska" som titel. Du kan bara söka efter strängar.</td>
   </tr>
   <tr>
    <td>Kryssrutan Innehållsläge</td>
-   <td>Markera den här kryssrutan så att du kan läsa egenskaperna i <code>jcr:content</code> undernod till sökresultatet om sådan finns. Använd endast för sidor. Egenskapsnamn har prefixet <code>"jcr:content/"</code></td>
+   <td>Markera den här kryssrutan så att du kan läsa egenskaper i undernoden <code>jcr:content</code> i sökresultatet om det finns någon. Använd endast för sidor. Egenskapsnamn har prefixet <code>"jcr:content/"</code></td>
   </tr>
   <tr>
    <td>Egenskaper/kolumner</td>
@@ -93,16 +93,16 @@ Så här använder du gruppredigeraren för att redigera flera objekt samtidigt:
   </tr>
   <tr>
    <td>Anpassade egenskaper/kolumner</td>
-   <td>Ange andra egenskaper som inte finns med i listan <strong>Egenskaper/kolumner</strong> fält. Dessa anpassade egenskaper visas i resultatrutan. Du kan lägga till flera egenskaper genom att använda kommatecken för att skilja egenskaperna åt. <i>Obs!</i> Om du lägger till en anpassad egenskap som inte finns än visas en tom cell AEM WCM. När du ändrar den tomma cellen och sparar den läggs egenskapen till i noden. Den nya egenskapen måste respektera nodtypsbegränsningar och egenskapsnamnutrymmen.</td>
+   <td>Ange eventuella andra egenskaper som inte finns med i listan i fältet <strong>Egenskaper/kolumner</strong>. Dessa anpassade egenskaper visas i resultatrutan. Du kan lägga till flera egenskaper genom att använda kommatecken för att skilja egenskaperna åt. <i>Obs!</i> Om du lägger till en anpassad egenskap som inte finns än, visar AEM en tom cell. När du ändrar den tomma cellen och sparar den läggs egenskapen till i noden. Den nya egenskapen måste respektera nodtypsbegränsningar och egenskapsnamnutrymmen.</td>
   </tr>
  </tbody>
 </table>
 
 Till exempel:
 
-![Alternativ för filtret Massredigering](assets/searchfilter.png)
+![Filteralternativ för gruppredigerare](assets/searchfilter.png)
 
-1. Klicka **Sök**. Resultaten visas i gruppredigeraren.
+1. Klicka på **Sök**. Resultaten visas i gruppredigeraren.
 I exemplet ovan returneras alla sidor som uppfyller dina sökvillkor och visas med de begärda kolumnerna.
 
    ![Resultat av gruppredigering](assets/chlimage_1-39.png)
@@ -111,19 +111,19 @@ I exemplet ovan returneras alla sidor som uppfyller dina sökvillkor och visas m
 
    ![Gruppredigering](assets/srchresultedit.png)
 
-1. Klicka **Spara** för att spara dina ändringar **Spara** aktiveras när du har redigerat en cell).
+1. Klicka på **Spara** om du vill spara ändringarna (knappen **Spara** aktiveras när du har redigerat en cell).
 
    >[!CAUTION]
    >
-   >De ändringar du gör här skrivs till databasinnehållet, till exempel sidan som refereras i **Bana**.
+   >De ändringar du gör här skrivs till databasinnehållet, till exempel sidan som refereras i **Sökväg**.
 
 #### Ytterligare GQL-frågeparametrar {#additional-gql-query-parameters}
 
-* **sökväg:** bara söknoder under den här sökvägen. Om du anger mer än en term med ett sökvägsprefix beaktas endast den sista termen.
-* **typ:** bara returnera noder av den angivna nodtypen. Detta inkluderar primära och blandade typer. Du kan ange flera kommaavgränsade nodtyper. GQL returnerar noder som är av någon av de angivna typerna.
-* **beställning:** sortera resultatet efter de angivna egenskaperna. Du kan ange flera kommaavgränsade egenskapsnamn. Om du vill ordna resultatet i fallande ordning lägger du bara till ett minustecken som prefix för egenskapsnamnet. Till exempel order:-name. Om du använder ett plustecken returneras resultatet i stigande ordning, vilket också är standard.
-* **gräns:** begränsar antalet resultat med ett intervall. Till exempel limit:10..20 Intervallet är nollbaserat, start är inkluderat och slut är exklusivt. Du kan också ange en öppen `interval:limit:10..` eller `limit:..20`
-Om punkterna utelämnas och endast ett värde anges, returnerar GQL högst detta antal resultat. Till exempel: `limit:10` (returnerar de första tio resultaten).
+* **sökväg:** endast söknoder under den här sökvägen. Om du anger mer än en term med ett sökvägsprefix beaktas endast den sista termen.
+* **type:** returnerar bara noder av den angivna nodtypen. Detta inkluderar primära och blandade typer. Du kan ange flera kommaavgränsade nodtyper. GQL returnerar noder som är av någon av de angivna typerna.
+* **beställ:** om du vill sortera resultatet efter de angivna egenskaperna. Du kan ange flera kommaavgränsade egenskapsnamn. Om du vill ordna resultatet i fallande ordning lägger du bara till ett minustecken som prefix för egenskapsnamnet. Till exempel order:-name. Om du använder ett plustecken returneras resultatet i stigande ordning, vilket också är standard.
+* **limit:** begränsar antalet resultat som använder ett intervall. Till exempel limit:10..20 Intervallet är nollbaserat, start är inkluderat och slut är exklusivt. Du kan även ange en öppen `interval:limit:10..` eller `limit:..20`
+Om punkterna utelämnas och endast ett värde anges, returnerar GQL högst detta antal resultat. Till exempel `limit:10` (returnerar de första tio resultaten).
 
 ### Exporterar innehåll {#exporting-content}
 
@@ -132,7 +132,7 @@ Exportera vid behov innehållet till ett Excel-kalkylblad för att göra eventue
 Så här exporterar du innehåll:
 
 1. Sök efter innehåll enligt beskrivningen i [Söka och redigera innehåll](#searching-and-editing-content).
-1. Klicka **Exportera** så att du kan exportera ändringarna till ett tabbseparerat Excel-kalkylblad. AEM frågar var du vill hämta filen.
+1. Klicka på **Exportera** så att du kan exportera ändringarna till ett tabbseparerat Excel-kalkylblad. AEM frågar var du vill hämta filen.
 
    >[!NOTE]
    >
@@ -147,7 +147,7 @@ Så här exporterar du innehåll:
 
 ### Importera innehåll {#importing-content}
 
-Som standard är importfunktionen dold när du öppnar gruppredigeraren. Lägg bara till parametern `hib=false` till webbadressen visas **Importera** på sidan Massredigeraren. Du kan importera innehåll från valfri tabbavgränsad ( `.tsv`). För att importen ska fungera på rätt sätt måste kolumnrubrikerna (den första cellraden) matcha kolumnrubrikerna i tabellen som du importerar till.
+Som standard är importfunktionen dold när du öppnar gruppredigeraren. Om du bara lägger till parametern `hib=false` till URL:en visas knappen **Importera** på sidan för gruppredigering. Du kan importera innehåll från alla tabbseparerade filer ( `.tsv`). För att importen ska fungera på rätt sätt måste kolumnrubrikerna (den första cellraden) matcha kolumnrubrikerna i tabellen som du importerar till.
 
 >[!NOTE]
 >
@@ -156,7 +156,7 @@ Som standard är importfunktionen dold när du öppnar gruppredigeraren. Lägg b
 Så här importerar du innehåll:
 
 1. Öppna gruppredigeraren.
-1. Lägg till `?hib=false` till URL-adressen, till exempel:
+1. Lägg till `?hib=false` i URL:en, till exempel:
    `https://localhost:4502/etc/importers/bulkeditor.html?hib=false`
-1. Klicka **Importera**.
-1. Välj `.tsv` -fil. Data importeras till databasen.
+1. Klicka på **Importera**.
+1. Markera filen `.tsv`. Data importeras till databasen.

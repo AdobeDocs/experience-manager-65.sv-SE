@@ -25,8 +25,8 @@ Följande verktygsuppsättningar är tillgängliga för att utveckla dina JCR-, 
   CRXDE Lite rekommenderas när du inte har direktåtkomst till CRX/AEM-servern, när du utvecklar ett program genom att utöka eller ändra körklara komponenter och Java™-paket eller när du inte behöver en dedikerad felsökare, kodkomplettering och syntaxmarkering.
 
 * en uppsättning bestående av följande:
-   * En integrerad utvecklingsmiljö. Till exempel: [Eclipse](/help/sites-developing/howto-projects-eclipse.md) eller [IntelliJ](/help/sites-developing/ht-intellij.md).
-   * Ett byggverktyg. Till exempel: [Apache Maven](/help/sites-developing/ht-projects-maven.md).
+   * En integrerad utvecklingsmiljö. Exempel: [Eclipse](/help/sites-developing/howto-projects-eclipse.md) eller [IntelliJ](/help/sites-developing/ht-intellij.md).
+   * Ett byggverktyg. Exempel: [Apache Maven](/help/sites-developing/ht-projects-maven.md).
    * FileVault som har utvecklats av Adobe för att mappa en databas till ett filsystem, ett versionskontrollsystem. Exempel: Subversion.
    * Ett felsökningssystem. Till exempel Jira.
    * Ett centralt system för beroendehantering. Exempel: Apache Archiva.
@@ -58,8 +58,8 @@ AEM levereras med andra verktyg som underlättar utvecklingen:
 
 Verktyg som underlättar skapandet av nya projekt:
 
-* [AEM Project Archettype](https://github.com/adobe/aem-project-archetype)
-* [AEM Lazybone Templates](https://github.com/Adobe-Consulting-Services/lazybones-aem-templates)
+* [AEM Project Archetype](https://github.com/adobe/aem-project-archetype)
+* [AEM Lazybone-mallar](https://github.com/Adobe-Consulting-Services/lazybones-aem-templates)
 
 >[!NOTE]
 >

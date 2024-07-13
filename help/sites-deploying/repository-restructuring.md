@@ -46,7 +46,7 @@ När du planerar en uppgradering till AEM 6.5 ska du referera till följande sid
 * [Omstrukturering av AEM Assets Dynamic Media-arkiv](/help/sites-deploying/dynamicmedia-repository-restructuring-in-aem-6-5.md)
 * [Omstrukturering av AEM Forms-arkiv](/help/sites-deploying/forms-repository-restructuring-in-aem-6-5.md)
 * [Omstrukturering av AEM Communities-arkiv](/help/sites-deploying/communities-repository-restructuring-in-aem-6-5.md)
-* [Omstrukturering av AEM handelslager](/help/sites-deploying/ecommerce-repository-restructuring-in-aem-6-5.md)
+* [Omstrukturering av Commerce-databasen](/help/sites-deploying/ecommerce-repository-restructuring-in-aem-6-5.md)
 
 Varje sida innehåller två avsnitt som motsvarar hur brådskande de nödvändiga ändringarna är. Allt under&quot;Med 6.5-uppgradering&quot; ska hanteras som en del av uppgraderingsprojektet för AEM 6.5. Om du vill kan du skjuta upp allt under&quot;Före framtida uppgradering&quot; till efter uppgraderingen.
 

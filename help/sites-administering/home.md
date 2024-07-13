@@ -23,5 +23,5 @@ Läs om hur du administrerar AEM 6.5. Dessa användarhandböcker täcker webbpla
 * [MSM och översättning](/help/sites-administering/msm-and-translation.md)
 * [Instrumentpanel för åtgärder](/help/sites-administering/operations-dashboard.md)
 * [Säkerhetskopiering och återställning](/help/sites-administering/backup-and-restore.md)
-* [Personalisering](/help/sites-administering/personalization.md)
+* [Personalization](/help/sites-administering/personalization.md)
 * [Tredjepartsintegreringar](/help/sites-administering/third-party-services.md)

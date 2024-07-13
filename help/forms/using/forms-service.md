@@ -31,19 +31,19 @@ Använd tjänsten Forms för att göra följande:
 
 ## Skapar PDF forms  {#creating-pdf-forms-nbsp}
 
-Använd formulärtjänsten för att skapa PDF forms för datainhämtning. Vanligtvis börjar du med en AEM Forms Designer-mall. Använd `renderPDFForm` (länk till Javadoc) Hur Forms-tjänsten konverterar mallen till ett PDF-formulär.
+Använd formulärtjänsten för att skapa PDF forms för datainhämtning. Vanligtvis börjar du med en AEM Forms Designer-mall. Använd åtgärden `renderPDFForm` (länk till Javadoc) för Forms-tjänsten för att konvertera den här mallen till ett PDF-formulär.
 
-Den första parametern i `renderPDFForm` operation är namnet på mallfilen (till exempel `ExpenseClaim.xdp`). Du kan lagra mallfilen i ett lokalt filsystem, i en CRX-databas eller på en HTTP- eller FTP-plats. Du kan ange platsen för mallfilen genom att ange innehållsroten i `PDFFormRenderOptions` parametern för `renderPDFForm` operation. I Javadoc finns mer information om andra alternativ som du kan ange för `PDFFormRenderOptions` parameter.
+Den första parametern för åtgärden `renderPDFForm` är namnet på mallfilen (till exempel `ExpenseClaim.xdp`). Du kan lagra mallfilen i ett lokalt filsystem, i en CRX-databas eller på en HTTP- eller FTP-plats. Du kan ange platsen för mallfilen genom att ange innehållsroten i parametern `PDFFormRenderOptions` i åtgärden `renderPDFForm`. Mer information om andra alternativ som du kan ange för parametern `PDFFormRenderOptions` finns i Javadoc.
 
-The `renderPDFForm` -åtgärden kan också acceptera XML-data. XML-data sammanfogas med mallen när du skapar ett PDF-formulär så att det genererade PDF-formuläret innehåller angivna data. Den andra parametern för `renderPDFForm` kan acceptera ett Document-objekt (Javadoc) som innehåller XML-data.
+Åtgärden `renderPDFForm` kan också acceptera XML-data. XML-data sammanfogas med mallen när du skapar ett PDF-formulär så att det genererade PDF-formuläret innehåller angivna data. Den andra parametern för åtgärden `renderPDFForm` kan acceptera ett Document-objekt (Javadoc) som innehåller XML-data.
 
 ## Extrahera data från PDF forms  {#extracting-data-from-pdf-forms-nbsp}
 
-Använd `exportData` (Javadoc) Forms-tjänstens åtgärd för att extrahera data-XML från ett PDF-formulär. Den här åtgärden accepterar ett dokument som sin första parameter. Du kan exportera data antingen som ett XDP-dokument eller som en XML-fil. Om du exporterar data som en XML-fil tar exporterade data bort XDP-kuvertet och returnerar en vanlig XML-fil. Du kan ange den här ordningen med den andra parametern.
+Använd åtgärden `exportData` (Javadoc) för Forms-tjänsten för att extrahera data-XML från ett PDF-formulär. Den här åtgärden accepterar ett dokument som sin första parameter. Du kan exportera data antingen som ett XDP-dokument eller som en XML-fil. Om du exporterar data som en XML-fil tar exporterade data bort XDP-kuvertet och returnerar en vanlig XML-fil. Du kan ange den här ordningen med den andra parametern.
 
 ## Importera data till PDF forms {#importing-data-into-pdf-forms}
 
-Med tjänsten Forms kan du även sammanfoga formulär i PDF som skapats med antingen AEM Forms Designer eller `renderPDFForm` -åtgärd med XML-data. The `importData` (Javadoc) Forms-tjänsten godkänner PDF-blanketten och XML-data och returnerar ett PDF-formulär med data-XML.
+Med Forms-tjänsten kan du även sammanfoga ett PDF-formulär som skapats med antingen AEM Forms Designer eller åtgärden `renderPDFForm` med XML-data. Åtgärden `importData` (Javadoc) i Forms-tjänsten accepterar PDF-formulär och XML-data och returnerar ett PDF-formulär med data-XML.
 
 ## Återge formulär som bygger på fragment {#rendering-forms-based-on-fragments}
 
@@ -55,4 +55,4 @@ Nedan följer några fördelar med att använda fragment:
 
 * **Återanvändning av innehåll**: Du kan återanvända innehåll i flera formulärdesigner. Om du snabbt vill återanvända delar av samma innehåll i flera formulär skapar du ett fragment. Det tar längre tid att kopiera eller återskapa innehållet. Genom att använda fragment säkerställs också att de delar av en formulärdesign som används ofta har ett konsekvent innehåll och utseende i alla referensformulär.
 * **Globala uppdateringar**: Du kan bara göra globala ändringar i flera formulär en gång i en fil. Du kan ändra innehåll, skriptobjekt, databindningar, layout eller format i ett fragment. Alla XDP-formulär som refererar till fragmentet återspeglar ändringarna.
-* **Skapa delade formulär**: Du kan dela skapandet av formulär med flera resurser. Blankettutvecklare med expertkunskaper inom skript eller andra avancerade funktioner i AEM Forms Designer kan utveckla och dela fragment som använder skript och dynamiska egenskaper. Formulärdesigners kan använda fragmenten för att utforma formulär. Dessutom kan de använda fragmenten för att säkerställa att alla delar av ett formulär har ett konsekvent utseende och funktion i flera formulär.
+* **Skapa delade formulär**: Du kan dela skapandet av formulär mellan flera resurser. Blankettutvecklare med expertkunskaper inom skript eller andra avancerade funktioner i AEM Forms Designer kan utveckla och dela fragment som använder skript och dynamiska egenskaper. Formulärdesigners kan använda fragmenten för att utforma formulär. Dessutom kan de använda fragmenten för att säkerställa att alla delar av ett formulär har ett konsekvent utseende och funktion i flera formulär.

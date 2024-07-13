@@ -25,13 +25,13 @@ HTML 5-renderingen av en XFA-baserad formulärmall består av flera HTML-element
 >
 >I CSS-klasserna ska du inte ändra värdet för attributen width, height, border-tjocklek, top, left, right, bottom, padding, margin och other position and size. Alla ändringar i attributen position och storlek medför ändringar i formulärets layout.
 
-## CSS-klasser för element  {#css-classes-nbsp-for-elements-nbsp}
+## CSS-klasser  för element  {#css-classes-nbsp-for-elements-nbsp}
 
 Alla element innehåller väldefinierade CSS-klasser. Du kan ändra dessa klasser om du vill ändra utseendet på ett element. Alla element, förutom fältet och draw-elementen, har två CSS-klasser - Type-klassen och Name-klassen.
 
-* The **Klassen Type** representerar typen av XFA-fält. Du kan åsidosätta `type` -klass om du vill ändra stilarna för alla element av en viss typ.
+* Klassen **Type** representerar typen av XFA-fält. Du kan åsidosätta klassen `type` om du vill ändra formaten för alla element av en viss typ.
 
-* The **Klassen Name** motsvarar namnet på XFA-fältet. Du kan åsidosätta `name` -klass för att ändra och använda egna format på ett element.
+* Klassen **Name** motsvarar namnet på XFA-fältet. Du kan åsidosätta klassen `name` om du vill ändra och använda ett anpassat format på ett element.
 
 >[!NOTE]
 >
@@ -47,9 +47,9 @@ Fältelementet innehåller två kapslade element: widget och bildtext.
 
 Widgetelementet innehåller användargränssnittselementet för interaktion med användare. Den har tre CSS-klasser:
 
-* **Widget**: Alla widgetar har den här klassen.
-* **name**: Alla widgetar som levereras med AEM innehåller widgetnamnsklassen. För anpassade widgetar tillhandahåller widgetutvecklaren klassen Widget name.
-* **type**: Varje widget har ett element i användargränssnittet. Den här klassen definierar typen av användargränssnittselement.
+* **Widget**: Varje widget har den här klassen.
+* **namn**: Alla widgetar som levereras med AEM innehåller widgetnamnsklassen. För anpassade widgetar tillhandahåller widgetutvecklaren klassen Widget name.
+* **typ**: Varje widget har ett element i användargränssnittet. Den här klassen definierar typen av användargränssnittselement.
 
 ```xml
 <!--field with caption-->
@@ -68,7 +68,7 @@ Widgetelementet innehåller användargränssnittselementet för interaktion med 
 </div>
 ```
 
-Förutom klassen type och name innehåller fältkomponenten även en ytterligare CSS-klass med namnet **undertyp**. En undertyp identifierar vilken typ av fält det är, till exempel NumericField, DateField och TextField. Du kan åsidosätta undertypsklassen om du vill ändra formateringen för alla fält av typen, undertyp.
+Förutom klassen type och name innehåller fältkomponenten även en ytterligare CSS-klass med namnet **subtype**. En undertyp identifierar vilken typ av fält det är, till exempel NumericField, DateField och TextField. Du kan åsidosätta undertypsklassen om du vill ändra formateringen för alla fält av typen, undertyp.
 
 ## CSS-klasser för olika komponenter {#css-classes-for-different-components}
 
@@ -82,7 +82,7 @@ Förutom klassen type och name innehåller fältkomponenten även en ytterligare
   <tr>
    <td>Sida</td>
    <td>page</td>
-   <td>Användardefinierat namn<br /> eller<br /> Sida&lt;pagenumber&gt; (standard)</td>
+   <td>Användardefinierat namn <br /> eller<br /> Sida&lt;pageNumber&gt; (standard)</td>
   </tr>
   <tr>
    <td>Innehållsområde</td>
@@ -100,7 +100,7 @@ Förutom klassen type och name innehåller fältkomponenten även en ytterligare
    <td>Användardefinierat namn</td>
   </tr>
   <tr>
-   <td>Rita</td>
+   <td>Draw</td>
    <td>rita</td>
    <td>Användardefinierat namn</td>
   </tr>
@@ -142,18 +142,18 @@ Varje fält har en tillhörande widget som representerar gränssnittselementet. 
    <td>NA</td>
    <td>xfaButton<br type="_moz" /> </td>
    <td>buttonfieldwidget<br type="_moz" /> </td>
-   <td>input type=button<br type="_moz" /> </td>
+   <td>indatatyp=knapp<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>CheckButton<br type="_moz" /> </td>
    <td>kryssrutefält<br /> </td>
    <td>XfaCheckBox<br type="_moz" /> </td>
-   <td>kryssrutefältwidget<br type="_moz" /> </td>
+   <td>checkboxFieldWidget<br type="_moz" /> </td>
    <td>indatatyp=kryssruta<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>DateField<br type="_moz" /> </td>
-   <td>datafält<br type="_moz" /> </td>
+   <td>datefield<br type="_moz" /> </td>
    <td>dateField<br type="_moz" /> </td>
    <td>datefieldwidget<br type="_moz" /> </td>
    <td>indatatyp=text<br type="_moz" /> </td>
@@ -169,40 +169,40 @@ Varje fält har en tillhörande widget som representerar gränssnittselementet. 
    <td>DecimalField<br type="_moz" /> </td>
    <td>numeriskt fält<br type="_moz" /> </td>
    <td>numericInput<br type="_moz" /> </td>
-   <td>numerisk fältwidget<br type="_moz" /> </td>
+   <td>numeriskFieldWidget<br type="_moz" /> </td>
    <td>indatatyp=text<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>DropDown<br type="_moz" /> </td>
    <td>urvalslista<br type="_moz" /> </td>
    <td>dropDownListWidget<br type="_moz" /> </td>
-   <td>vallistorwidget<br type="_moz" /> </td>
+   <td>choicelistwidget<br type="_moz" /> </td>
    <td>välj</td>
   </tr>
   <tr>
    <td>ListBox<br type="_moz" /> </td>
    <td>urvalslista<br type="_moz" /> </td>
    <td>listBoxWidget<br type="_moz" /> </td>
-   <td>vallistorwidget<br type="_moz" /> </td>
+   <td>choicelistwidget<br type="_moz" /> </td>
    <td>ol</td>
   </tr>
   <tr>
    <td>NumericField<br type="_moz" /> </td>
    <td>numeriskt fält<br type="_moz" /> </td>
    <td>numericInput<br type="_moz" /> </td>
-   <td>numerisk fältwidget<br type="_moz" /> </td>
+   <td>numeriskFieldWidget<br type="_moz" /> </td>
    <td>indatatyp=text<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>PasswordField<br type="_moz" /> </td>
    <td>lösenordsfält<br type="_moz" /> </td>
    <td>defaultWidget<br type="_moz" /> </td>
-   <td>lösenordfältwidget<br type="_moz" /> </td>
-   <td>input type=password<br type="_moz" /> </td>
+   <td>passwordFieldWidget<br type="_moz" /> </td>
+   <td>indatatyp=lösenord<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>RadioButton<br type="_moz" /> </td>
-   <td>radiofält<br type="_moz" /> </td>
+   <td>radiofält <br type="_moz" /> </td>
    <td>XfaCheckBox<br type="_moz" /> </td>
    <td>radiofieldwidget<br type="_moz" /> </td>
    <td>indatatyp=radio<br type="_moz" /> </td>
@@ -211,24 +211,24 @@ Varje fält har en tillhörande widget som representerar gränssnittselementet. 
    <td>TextField<br type="_moz" /> </td>
    <td>textfält<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
-   <td>textfältwidget<br type="_moz" /> </td>
+   <td>textfieldwidget<br type="_moz" /> </td>
    <td>indatatyp=text<br type="_moz" /> </td>
   </tr>
   <tr>
    <td>TimeField<br type="_moz" /> </td>
    <td>textfält<br type="_moz" /> </td>
    <td>textField<br type="_moz" /> </td>
-   <td>textfältwidget<br type="_moz" /> </td>
+   <td>textfieldwidget<br type="_moz" /> </td>
    <td>indatatyp=text<br type="_moz" /> </td>
   </tr>
  </tbody>
 </table>
 
-## CSS-klasser för olika Draw-element {#css-classes-for-different-draw-elements}
+## CSS-klasser för olika Draw Elements {#css-classes-for-different-draw-elements}
 
 Du kan infoga statiska ritelement som text och bilder med AEM Forms Designer. För varje draw-element kopplas en separat CSS-klass till det elementet. Listan med CSS-klasser för draw-element visas nedan. Alla draw-element har en draw-klass kopplad till sig.
 
-| **Rita typ** | **CSS, klass** |
+| **Draw Type** | **CSS-klass** |
 |---|---|
 | Text | text |
 | Bild | image |
@@ -249,4 +249,4 @@ När valideringen av ett fält resulterar i en varning visas en intern varning n
 
 `Styling Fields with Validation Errors`
 
-När valideringen för ett fält misslyckas ändras formatet på widgeten. Den här formatändringen görs genom att en CSS-klass används **widgetError** på widgetkomponenten. Om du vill ändra standardformatet åsidosätter du **widgetError** klassen.
+När valideringen för ett fält misslyckas ändras formatet på widgeten. Den här formatändringen görs genom att tillämpa en CSS-klass **widgetError** på widgetkomponenten. Om du vill ändra standardformatet åsidosätter du klassen **widgetError**.

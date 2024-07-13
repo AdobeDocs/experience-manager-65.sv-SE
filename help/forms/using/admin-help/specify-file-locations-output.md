@@ -26,7 +26,7 @@ Du kan ange var utdata ska söka efter vissa typer av filer som krävs.
 
 ## Platsinställningar {#locations-settings}
 
-**Innehållsrot-URI:** URI eller absolut plats för databasen som formulär hämtas från. Detta värde kombineras med parametern sForm, som anges via API:t, för att skapa den absoluta sökvägen till det formulär som hämtas. Det här värdet kan referera till en katalog eller en webbplats som är tillgänglig via HTTP.
+**Innehållsrots-URI:** URI:n eller den absoluta platsen för databasen som formulär hämtas från. Detta värde kombineras med parametern sForm, som anges via API:t, för att skapa den absoluta sökvägen till det formulär som hämtas. Det här värdet kan referera till en katalog eller en webbplats som är tillgänglig via HTTP.
 
 Standardvärdet är en tom sträng.
 
@@ -34,7 +34,7 @@ Standardvärdet är en tom sträng.
 
 Standardvärdet är `com/adobe/formServer/PA/pa_output.xci`.
 
-**Cacheplats:** Anger platsen för cacheminnet för utdatadisken. När du ändrar den här inställningen återställs all befintlig cacheinformation från den aktuella platsen och en ny cache skapas på den nya platsen. Välj något av följande alternativ:
+**Cacheplats:** Anger platsen för cacheminnet för utdatadisk. När du ändrar den här inställningen återställs all befintlig cacheinformation från den aktuella platsen och en ny cache skapas på den nya platsen. Välj något av följande alternativ:
 
 **Standardplats:** Det här är standardvalet. När det här alternativet är markerat skapas cachen på en plats som är beroende av den programserver som du använder:
 
@@ -42,7 +42,7 @@ Standardvärdet är `com/adobe/formServer/PA/pa_output.xci`.
 * **WebLogic:** `[WebLogic Home]\user_projects\domains\[aem-forms domain Name]\adobe\[Forms Server name]\Output\Cache`
 * **WebSphere:** `[IBM Home]\WebSphere\AppServer\installedApps\adobe\server1\Output\Cache`
 
-**Tillfällig katalog för LC:** Cachen skapas i en underkatalog till den AEM formulärkatalogen temporp, som anges i administrationskonsolen under Inställningar > Systeminställningar > Konfigurationer > Plats för tillfällig katalog. Underkatalogen heter `adobeoutput_[servername]`.
+**Tillfällig LC-katalog:** Cachen skapas i en underkatalog till den tillfälliga katalogen för AEM formulär, som anges i administrationskonsolen under Inställningar > Systeminställningar > Konfigurationer > Plats för tillfällig katalog. Underkatalogen heter `adobeoutput_[servername]`.
 
 >[!NOTE]
 >

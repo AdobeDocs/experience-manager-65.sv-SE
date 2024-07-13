@@ -25,17 +25,17 @@ För formulär som återges som HTML visas formulärvalideringsfel som inträffa
 1. Klicka på Tjänster > Formulär i administrationskonsolen.
 1. Välj något av följande alternativ i rapportlistan under Valideringsutdata:
 
-   **Meddelanderuta:** Visa valideringsmeddelanden i en separat dialogruta.
+   **Meddelanderuta:** Om du vill visa valideringsmeddelanden i en separat dialogruta.
 
    **Ram:** Om du vill visa valideringsmeddelanden i en bildruta i samma fönster.
 
-   **Ingen bildruta:** Visa valideringsmeddelanden i samma fönster. Det här värdet är standardvärdet.
+   **Ingen bildruta:** Om du vill visa valideringsmeddelanden i samma fönster. Det här värdet är standardvärdet.
 
-   **Via API (med data):** Returnera valideringsmeddelandena via API (med data). Valideringsmeddelandena visas inte på skärmen.
+   **Via API (med data):** Returnera valideringsmeddelanden via API:t (med data). Valideringsmeddelandena visas inte på skärmen.
 
-   **Via API (med formulär):** Returnera valideringsmeddelandena via API (med formuläret). Valideringsmeddelandena visas inte på skärmen.
+   **Via API (med formulär):** Returnera valideringsmeddelanden via API:t (med formuläret). Valideringsmeddelandena visas inte på skärmen.
 
-   **Ingen:** Visa inte valideringsmeddelanden.
+   **Ingen:** Om du inte vill visa valideringsmeddelanden.
 
 1. Klicka på Spara.
 
@@ -49,7 +49,7 @@ Om Rapportering är inställt på Bildruta eller Ingen bildruta kan du ange plat
 
    **Höger:** Om du vill visa valideringsmeddelanden till höger i webbläsaren.
 
-   **Överkant**: Om du vill visa valideringsmeddelanden högst upp i webbläsaren. Det här värdet är standardvärdet.
+   **Övre**: Om du vill visa valideringsmeddelanden högst upp i webbläsaren. Det här värdet är standardvärdet.
 
    **Nederkant**: Om du vill visa valideringsmeddelanden längst ned i webbläsaren.
 

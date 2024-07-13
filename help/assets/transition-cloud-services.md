@@ -14,7 +14,7 @@ ht-degree: 45%
 
 # Tillämpa översättningsmolntjänster på mappar {#applying-translation-cloud-services-to-folders}
 
-[!DNL Adobe Experience Manager] Med kan du använda molnbaserade översättningstjänster från den översättningsleverantör som du väljer för att se till att dina resurser översätts baserat på dina behov.
+Med [!DNL Adobe Experience Manager] kan du använda molnbaserade översättningstjänster från den översättningsleverantör som du väljer för att se till att dina resurser översätts baserat på dina behov.
 
 Du kan använda översättningsmolntjänsten direkt i resursmappen så att den kan användas under översättningsarbetsflöden.
 
@@ -22,8 +22,8 @@ Du kan använda översättningsmolntjänsten direkt i resursmappen så att den k
 
 Genom att använda översättningsmolntjänster direkt i resursmappen behöver du inte konfigurera översättningstjänster när du skapar eller uppdaterar översättningsarbetsflöden.
 
-1. Från [!DNL Assets] -användargränssnittet väljer du den mapp som du vill använda översättningstjänster på.
-1. I verktygsfältet klickar du på **[!UICONTROL Properties]** för att visa **[!UICONTROL Folder Properties]** sida.
+1. I användargränssnittet [!DNL Assets] väljer du den mapp som du vill använda översättningstjänster på.
+1. Klicka på **[!UICONTROL Properties]** i verktygsfältet för att visa sidan **[!UICONTROL Folder Properties]**.
 
    ![chlimage_1-215](assets/chlimage_1-215.png)
 
@@ -36,19 +36,19 @@ Genom att använda översättningsmolntjänster direkt i resursmappen behöver d
 
    ![chlimage_1-217](assets/chlimage_1-217.png)
 
-1. I verktygsfältet klickar du på **[!UICONTROL Save]** och klicka sedan på **[!UICONTROL OK]** för att stänga dialogrutan.Översättningstjänsten används på mappen.
+1. Klicka på **[!UICONTROL Save]** i verktygsfältet och klicka sedan på **[!UICONTROL OK]** för att stänga dialogrutan. Översättningstjänsten används i mappen.
 
 ## Använd anpassad översättningskoppling  {#applying-custom-translation-connector}
 
 Du kan använda en anpassad koppling för de översättningstjänster som du vill använda i översättningsarbetsflöden. Om du vill använda en anpassad koppling måste du först installera kopplingen från pakethanteraren. Konfigurera sedan kopplingen från Cloud Services-konsolen. När du har konfigurerat kopplingen är den tillgänglig i listan över kopplingar på fliken Cloud Services som beskrivs i [Använda översättningstjänsterna](transition-cloud-services.md#applying-the-translation-services). När du har använt den anpassade kopplingen och kört översättningsarbetsflödena visas kopplingsinformationen under rubrikerna **[!UICONTROL Provider]** och **[!UICONTROL Method]** i rutan **[!UICONTROL Translation Summary]** för översättningsprojektet.
 
 1. Installera kopplingen från Package Manager.
-1. Klicka på [!DNL Experience Manager] logotyp och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**.
+1. Klicka på logotypen [!DNL Experience Manager] och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Cloud Services]**.
 1. Leta upp den koppling du installerade under **[!UICONTROL Third Party Services]** på sidan **[!UICONTROL Cloud Services]**.
 
    ![chlimage_1-218](assets/chlimage_1-218.png)
 
-1. Klicka på **[!UICONTROL Configure now]** länk för att öppna **[!UICONTROL Create Configuration]** -dialogrutan.
+1. Klicka på länken **[!UICONTROL Configure now]** för att öppna dialogrutan **[!UICONTROL Create Configuration]**.
 
    ![chlimage_1-219](assets/chlimage_1-219.png)
 

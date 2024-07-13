@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Det klassiska användargränssnittet är det skrivbordsorienterade användargränssnittet som har varit tillgängligt sedan CQ5 (det föregående AEM). Följande dokumentation om redigering är fokuserad på det här användargränssnittet.
 
-Det beröringskänsliga användargränssnittet är det nya standardgränssnittet för AEM, som är utformat för både pekskärmar och stationära enheter. Se [standarddokumentation](/help/sites-authoring/author.md) för mer information.
+Det beröringskänsliga användargränssnittet är det nya standardgränssnittet för AEM, som är utformat för både pekskärmar och stationära enheter. Mer information finns i [standarddokumentationen för redigering](/help/sites-authoring/author.md).
 
 >[!NOTE]
 >
@@ -30,4 +30,4 @@ Det beröringskänsliga användargränssnittet är det nya standardgränssnittet
 
 ## Begreppet redigering (och publicering) {#concept-of-authoring-and-publishing}
 
-Oavsett vilket gränssnitt du väljer finns det vissa begrepp och idéer som är gemensamma för redigering, och de beskrivs väl [här i standarddokumentationen](/help/sites-authoring/author.md#concept-of-authoring-and-publishing).
+Oavsett vilket gränssnitt du väljer finns det vissa begrepp och idéer som är gemensamma för redigering, som beskrivs väl [här i standardredigeringsdokumentationen](/help/sites-authoring/author.md#concept-of-authoring-and-publishing).

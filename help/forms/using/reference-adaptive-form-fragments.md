@@ -17,9 +17,9 @@ ht-degree: 0%
 
 # Referera till adaptiva formulärfragment{#reference-adaptive-form-fragments}
 
-[Adaptivt formulärfragment](../../forms/using/adaptive-form-fragments.md) är en grupp med fält eller en panel som innehåller en grupp med fält som du kan använda när du skapar ett formulär. Du kan skapa ett formulär snabbt och enkelt. Du kan dra och släppa ett anpassat formulärfragment i ett formulär med hjälp av resursläsaren i sidofältet, och du kan redigera det i formulärredigeraren.
+[Anpassat formulärfragment](../../forms/using/adaptive-form-fragments.md) är en grupp fält eller en panel som innehåller en grupp fält som du kan använda när du skapar ett formulär. Du kan skapa ett formulär snabbt och enkelt. Du kan dra och släppa ett anpassat formulärfragment i ett formulär med hjälp av resursläsaren i sidofältet, och du kan redigera det i formulärredigeraren.
 
-För formulärförfattare med adaptiv form finns referensfragment i [AEM Forms tilläggspaket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). Den innehåller följande fragment:
+För formulärförfattare med adaptiv formatering finns referensfragment i [AEM Forms-tilläggspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). Den innehåller följande fragment:
 
 * Adress
 * Kontaktinformation
@@ -32,9 +32,9 @@ För formulärförfattare med adaptiv form finns referensfragment i [AEM Forms t
 * Villkor
 * Villkor med Klottra
 
-När du installerar paketet skapas en referensfragmentmapp med referensfragment under Forms &amp; Documents. Information om hur du installerar ett paket finns i [Så här arbetar du med paket](/help/sites-administering/package-manager.md).
+När du installerar paketet skapas en referensfragmentmapp med referensfragment under Forms &amp; Documents. Information om hur du installerar ett paket finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 
-![Alla fragment listas](assets/ootb-frags.png)
+![Alla fragment listade](assets/ootb-frags.png)
 
 ## Adress {#address}
 
@@ -59,7 +59,7 @@ Inkluderar fält för att hämta telefonnummer och e-postadress.
 ## Kreditkortsinformation {#credit-card-information}
 
 Inkluderar fält för att samla in kreditkortsinformation som kan användas för att bearbeta betalningar.
-[![Information om kreditkort](assets/cc-info.png)](assets/cc-info-1.png)
+[![Information om kreditkort, fragment](assets/cc-info.png)](assets/cc-info-1.png)
 
 ## Aktuell anställning {#current-employment}
 
@@ -115,7 +115,7 @@ Inkluderar fält för att ange rubrik, förnamn, mellannamn och efternamn.
 
 Anger villkor som användare ska godkänna innan de skickar in ett formulär.
 
-![Fragment för villkor](assets/tnc.png)
+![Villkor för fragment](assets/tnc.png)
 
 <!--[Click to enlarge
 

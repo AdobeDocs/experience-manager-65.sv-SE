@@ -1,6 +1,6 @@
 ---
 title: Associerat innehåll
-description: Förstå hur AEM tillhörande innehållsfunktion tillhandahåller anslutningen så att resurser kan användas tillsammans med fragmentet när det läggs till på en innehållssida, vilket ger ytterligare flexibilitet för leverans av headless-innehåll.
+description: Förstå hur AEM tillhörande innehållsfunktion ger anslutningen så att resurser kan användas tillsammans med fragmentet när det läggs till på en innehållssida, vilket ger ytterligare flexibilitet för leverans av headless-innehåll.
 feature: Content Fragments
 role: User
 exl-id: 8b93fd6e-47d1-46fd-901b-621caa25be7b
@@ -14,15 +14,15 @@ ht-degree: 4%
 
 # Associerat innehåll{#associated-content}
 
-Funktionen AEM associerat innehåll tillhandahåller anslutningen så att resurser kan användas tillsammans med fragmentet när det läggs till på en innehållssida. Detta ger flexibilitet vid leverans av headless-innehåll genom att [tillhandahålla en mängd resurser som du kan komma åt när du använder innehållsfragmentet på en sida,](/help/sites-authoring/content-fragments.md#using-associated-content) samtidigt som det går snabbare att söka efter rätt resurs.
+Funktionen AEM associerat innehåll ger anslutningen så att resurser kan användas tillsammans med fragmentet när det läggs till på en innehållssida. Detta ger flexibilitet för leverans av headless-innehåll genom att [tillhandahålla ett intervall med resurser som du kan komma åt när du använder innehållsfragmentet på en sida](/help/sites-authoring/content-fragments.md#using-associated-content), samtidigt som det minskar den tid som krävs för att söka efter rätt resurs.
 
 ## Lägga till associerat innehåll {#adding-associated-content}
 
 >[!NOTE]
 >
->Det finns olika metoder att lägga till [visuella resurser (till exempel bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till fragmentet och/eller sidan.
+>Det finns olika metoder för att lägga till [visuella resurser (till exempel bilder)](/help/assets/content-fragments/content-fragments.md#fragments-with-visual-assets) till avsnittet och/eller sidan.
 
-För att kunna skapa associationen måste du först [lägga till medieresurser i en samling](/help/assets/manage-collections.md). När det är klart kan du:
+För att kunna skapa associationen måste du först [lägga till dina medieresurser i en samling](/help/assets/manage-collections.md). När det är klart kan du:
 
 1. Öppna fragmentet och välj **Associerat innehåll** på sidopanelen.
 
@@ -30,7 +30,7 @@ För att kunna skapa associationen måste du först [lägga till medieresurser i
 
 1. Beroende på om några samlingar redan har associerats eller inte väljer du antingen:
 
-   * **Associera innehåll** - det här blir den första associerade samlingen
+   * **Associera innehåll** - detta blir den första associerade samlingen
    * **Associera samling** - associerade samlingar som redan har konfigurerats
 
 1. Välj önskad samling.
@@ -39,7 +39,7 @@ För att kunna skapa associationen måste du först [lägga till medieresurser i
 
    ![Välj samling](assets/cfm-assoc-content-02.png)
 
-1. Bekräfta (med **Välj**). Samlingen listas som associerad.
+1. Bekräfta (med **Markera**). Samlingen listas som associerad.
 
    ![cfm-6420-05](assets/cfm-assoc-content-03.png)
 
@@ -48,6 +48,6 @@ För att kunna skapa associationen måste du först [lägga till medieresurser i
 När du har kopplat en samling kan du:
 
 * **Ta bort** associationen.
-* **Lägg till resurser** till samlingen.
+* **Lägg till Assets** i samlingen.
 * Välj en resurs för ytterligare åtgärder.
 * Redigera resursen.

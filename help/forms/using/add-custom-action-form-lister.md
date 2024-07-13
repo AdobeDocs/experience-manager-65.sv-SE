@@ -24,7 +24,7 @@ Du kan lägga till andra alternativ på portalsidan. Dessa alternativ eller åtg
 
 I den här artikeln beskrivs hur du skapar en knapp för att skicka länken till ett formulär direkt från en formulärportalsida. För den här anpassningen krävs att mallen för komponenten Sök efter och visa uppdateras.
 
-Nedan finns den kod som krävs för att lägga till åtgärden i mallen. The `onclick` i kodfragmentet har ett skript som skickar en länk till ett formulär via e-post.
+Nedan finns den kod som krävs för att lägga till åtgärden i mallen. Attributet `onclick` i kodfragmentet har ett skript som skickar en länk till ett formulär via e-post.
 
 ```html
 <div class="__FP_boxes-container __FP_single-color">
@@ -45,7 +45,7 @@ Nedan finns den kod som krävs för att lägga till åtgärden i mallen. The `on
 </div>
 ```
 
-Du kan lägga till liknande åtgärder i den anpassade mallen. Om du vill definiera en JavaScript-funktion lägger du till funktionen på ett skript på sidnivå och länkar den med det nödvändiga elementet HTML. I exemplet ovan är `onclick` -uttrycket är den länkade funktionen.
+Du kan lägga till liknande åtgärder i den anpassade mallen. Om du vill definiera en JavaScript-funktion lägger du till funktionen i ett skript på sidnivå och länkar den med det nödvändiga elementet HTML. I exemplet ovan är uttrycket `onclick` den länkade funktionen.
 
 När du har redigerat mallen innehåller exempelportalsidan en knapp för att skicka länken till formuläret via e-post, vilket visas nedan.
 

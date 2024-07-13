@@ -21,11 +21,11 @@ ht-degree: 0%
 
 När AEM är installerad i en körklar version är ett urval av komponenter omedelbart tillgängliga i sidosparken.
 
-Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att [Aktivera/inaktivera sådana komponenter](#enabledisablecomponentsusingdesignmode). När det är aktiverat och finns på sidan kan du sedan använda designläget för att [konfigurera komponentdesignens aspekter](#configuringcomponentsusingdesignmode) genom att redigera attributparametrarna.
+Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att [aktivera/inaktivera sådana komponenter](#enabledisablecomponentsusingdesignmode). När det är aktiverat och finns på sidan kan du sedan använda designläget för att [konfigurera komponentens design](#configuringcomponentsusingdesignmode) genom att redigera attributparametrarna.
 
 >[!NOTE]
 >
->Försiktighet måste iakttas vid redigering av dessa komponenter. Designinställningarna är ofta en viktig del av designen för hela webbplatsen, så de bör bara ändras av någon med rätt behörighet (och upplevelse), ofta administratör eller utvecklare. Se [Utveckla komponenter](/help/sites-developing/components.md) för mer information.
+>Försiktighet måste iakttas vid redigering av dessa komponenter. Designinställningarna är ofta en viktig del av designen för hela webbplatsen, så de bör bara ändras av någon med rätt behörighet (och upplevelse), ofta administratör eller utvecklare. Mer information finns i [Utveckla komponenter](/help/sites-developing/components.md).
 
 Detta innebär att lägga till, eller ta bort, de komponenter som är tillåtna i sidans styckesystem. Styckesystemet ( `parsys`) är en sammansatt komponent som innehåller alla andra styckekomponenter. Med styckesystemet kan författare lägga till komponenter av olika typer på en sida eftersom det innehåller alla andra styckekomponenter. Varje stycketyp representeras som en komponent.
 
@@ -38,7 +38,7 @@ Innehållet på en produktsida kan till exempel innehålla ett styckesystem som 
 
 >[!NOTE]
 >
->Se [Utveckla komponenter](/help/sites-developing/components.md#paragraphsystem) och [Riktlinjer för användning av mallar och komponenter](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components) för mer information om `parsys`.
+>Mer information om `parsys` finns i [Utveckla komponenter](/help/sites-developing/components.md#paragraphsystem) och [Riktlinjer för användning av mallar och komponenter](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components).
 
 ## Aktivera/inaktivera komponenter {#enable-disable-components}
 
@@ -48,7 +48,7 @@ I designläget minimeras sidosparken och du kan konfigurera komponenter som är 
 
    ![Designläge](do-not-localize/chlimage_1.png)
 
-1. Klicka **Redigera** på styckesystemet (**Partikeldesign**).
+1. Klicka på **Redigera** i styckesystemet (**Design av stycke**).
 
    ![screen_shot_2012-02-08at102726am](assets/screen_shot_2012-02-08at102726am.png)
 
@@ -64,7 +64,7 @@ I designläget minimeras sidosparken och du kan konfigurera komponenter som är 
 
 ## Konfigurera designen för en komponent {#configuring-the-design-of-a-component}
 
-I designläget kan du även konfigurera attribut för de enskilda komponenterna. Varje komponent har sina egna parametrar visas i följande exempel **Bild** komponent:
+I designläget kan du även konfigurera attribut för de enskilda komponenterna. Varje komponent har sina egna parametrar visas i följande exempel komponenten **Image**:
 
 1. Öppna en sida för redigering och använd ikonen Sidekick för att öppna designläget:
 
@@ -72,11 +72,11 @@ I designläget kan du även konfigurera attribut för de enskilda komponenterna.
 
 1. Du kan konfigurera komponenternas design.
 
-   Om du till exempel klickar **Redigera** på komponenten Bild (**Design av bild**) kan du konfigurera komponentspecifika parametrar:
+   Om du till exempel klickar på **Redigera** i bildkomponenten (**Design of image**) kan du konfigurera komponentspecifika parametrar:
 
    ![chlimage_1-5](assets/chlimage_1-5.png)
 
-1. Klicka **OK** för att spara ändringarna.
+1. Klicka på **OK** om du vill spara ändringarna.
 
 1. Sidekick minimeras i designläge. Genom att klicka på pilen kan du maximera Sidekick och återgå till redigeringsläget:
 

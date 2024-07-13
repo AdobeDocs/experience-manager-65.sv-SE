@@ -30,7 +30,7 @@ Du kan till exempel infoga följande specialtecken:
 
 Du kan infoga specialtecken med bokstäver:
 
-* I [textredigerare](/help/forms/using/document-fragments.md#createtext)
+* I [textredigeraren](/help/forms/using/document-fragments.md#createtext)
 * I en [redigerbar, infogad modul i korrespondens](../../forms/using/create-correspondence.md#managecontent)
 
 ![specialteckensinlinemodulen](assets/specialcharactersinlinemodule.png)
@@ -42,9 +42,9 @@ Administratören kan lägga till stöd för fler/anpassade specialtecken genom a
 Följ de här stegen för att lägga till stöd för anpassade specialtecken:
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
-1. Skapa en mapp med namnet i appmappen **[!UICONTROL specialcharacters]** med en sökväg/struktur som liknar specialteckenmappen (i mappen textEditorConfig under libs):
+1. I appmappen skapar du en mapp med namnet **[!UICONTROL specialcharacters]** med en sökväg/struktur som liknar specialteckenmappen (i mappen textEditorConfig under libs):
 
-   1. Högerklicka på **specialtecken** mapp på följande sökväg och välj **Överläggsnod**:
+   1. Högerklicka på mappen **specialcharacters** på följande sökväg och välj **Overlay Node**:
 
       `/libs/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters`
 
@@ -54,7 +54,7 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
 
       **Plats för övertäckning:** /apps/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** Markerade
 
       >[!NOTE]
       >
@@ -68,23 +68,23 @@ Följ de här stegen för att lägga till stöd för anpassade specialtecken:
       >
       >
 
-   1. Klicka **OK** och sedan klicka **Spara alla**. Mappen med specialtecken skapas i den angivna sökvägen.
+   1. Klicka på **OK** och sedan på **Spara alla**. Mappen med specialtecken skapas i den angivna sökvägen.
 
       Kontrollera nodstrukturtaggarna när du har skapat övertäckningen. Varje nod som skapas i /apps med övertäckningen ska ha samma klass och egenskaper som definieras i /libs för den noden. Om någon egenskap eller tagg saknas i nodstrukturen under /apps-platsen synkroniserar du dess taggar med motsvarande nod i /libs.
 
-1. Se till att **[!UICONTROL textEditorConfig]** noden har följande egenskaper och värden:
+1. Kontrollera att noden **[!UICONTROL textEditorConfig]** har följande egenskaper och värden:
 
    | Namn | Typ | Värde |
    |---|---|---|
    | cmConfigurationType | Sträng | cmTextEditorConfiguration |
    | cssPath | Sträng | /libs/fd/cm/ma/gui/components/admin/createasset/textcontrol/clientlibs/textcontrol |
 
-1. Högerklicka på **[!UICONTROL specialcharacters]** mapp på följande sökväg och välj **Skapa > Underordnad nod** och sedan klicka **Spara alla**:
+1. Högerklicka på mappen **[!UICONTROL specialcharacters]** på följande sökväg och välj **Skapa > Underordnad nod**. Klicka sedan på **Spara alla**:
 
-   /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters/&lt;yourchildnode>
+   /apps/fd/cm/ma/gui/configuration/textEditorConfig/specialcharacters/&lt;YourChildNode>
 
 1. Uppdatera sidan för textredigeraren\Skapa korrespondensgränssnitt. Noden som du har lagt till är den sista i listan med specialtecken i användargränssnittet.
-1. Klicka **Spara alla**.
+1. Klicka på **Spara alla**.
 1. Ändringar i specialtecknen efter behov:
 
 <table>

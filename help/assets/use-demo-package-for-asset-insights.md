@@ -17,10 +17,10 @@ ht-degree: 0%
 
 Med hjälp av demopaketet kan du göra det möjligt för Adobe Assets Insights att samla in data från och generera insikter för en exempelwebbsida.
 
-## [!DNL Use Experience Manager Assets] Insikter med exempelwebbsidor  {#using-aem-assets-insights-with-sample-web-page}
+## [!DNL Use Experience Manager Assets] Insikter med exempelwebbsida  {#using-aem-assets-insights-with-sample-web-page}
 
-1. Konfigurera resursinsikter med hjälp av instruktionerna i [Konfigurera resursinsikter](configure-asset-insights.md).
-1. Hämta exempelresurspaketet nedan och installera paketet från CRXDE Package Manager.
+1. Konfigurera Assets Insights med hjälp av instruktionerna i [Konfigurera Assets Insights](configure-asset-insights.md).
+1. Ladda ned exempelpaketet för Assets nedan och installera paketet från pakethanteraren för CRXDE.
 
 [Hämta fil](assets/insightsdemo.zip)
 
@@ -36,4 +36,4 @@ Med hjälp av demopaketet kan du göra det möjligt för Adobe Assets Insights a
 
    >[!NOTE]
    >
-   >Den externa webbsidan kan finnas i [!DNL Experience Manager] själv.
+   >Den externa webbsidan kan finnas i själva [!DNL Experience Manager].

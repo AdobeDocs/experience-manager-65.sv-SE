@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >Följande information uppdateras från och med den 14 maj 2018.
 
-I följande avsnitt visas Adobe Experience Manager (AEM) skärmuppspelare med respektive AEM Screens-version.
+I följande avsnitt visas Adobe Experience Manager (AEM) Screens Players med respektive AEM Screens-version.
 
 ## iOS Player {#ios-player}
 
@@ -28,11 +28,11 @@ I följande avsnitt visas Adobe Experience Manager (AEM) skärmuppspelare med re
    <td><strong>iOS Player</strong></td> 
   </tr>
   <tr>
-   <td><strong>AEM 6.3+SP1+Skärmar FP1(1.0.64_B002)</strong></td> 
+   <td><strong>AEM 6.3+SP1+Screens FP1(1.0.64_B002)</strong></td> 
    <td><p><strong>3.2.72</strong> - Finns i Apple Store</p> <p> </p> </td> 
   </tr>
   <tr>
-   <td><strong><strong>AEM 6.3+SP1+Skärmar FP2 (1.0.298)</strong></strong></td> 
+   <td><strong><strong>AEM 6.3+SP1+Screens FP2(1.0.298)</strong></strong></td> 
    <td><p><strong>3.3.0</strong> </p> <p> </p> </td> 
   </tr>
   <tr>
@@ -59,11 +59,11 @@ aem-screens-player-ios-3.3.0.ipa.zip
    <td><strong>Windows10 Player</strong></td> 
   </tr>
   <tr>
-   <td><strong>AEM 6.3+SP1+Skärmar FP1(1.0.64_B002)</strong></td> 
+   <td><strong>AEM 6.3+SP1+Screens FP1(1.0.64_B002)</strong></td> 
    <td><strong>1.0.12</strong><br /> </td> 
   </tr>
   <tr>
-   <td><strong><strong>AEM 6.3+SP1+Skärmar FP2 (1.0.298)</strong></strong></td> 
+   <td><strong><strong>AEM 6.3+SP1+Screens FP2(1.0.298)</strong></strong></td> 
    <td><strong>1.0.48 </strong></td> 
   </tr>
   <tr>
@@ -85,8 +85,8 @@ aem-screens-player-windows-1.0.48-signed.exe.zip
 
 | **AEM serverversion** | **Android Player** |
 |---|---|
-| **AEM 6.3+SP1+Skärmar FP1(1.0.64_B002)** | **3.2.68 -** (på Macromedia Site) och Google Play Store |
-| **AEM 6.3+SP1+Skärmar FP2 (1.0.298)** | **3.3.0** |
+| **AEM 6.3+SP1+Screens FP1(1.0.64_B002)** | **3.2.68 -** (tillgänglig på Macromedia Site) &amp; Google Play Store |
+| **AEM 6.3+SP1+Screens FP2(1.0.298)** | **3.3.0** |
 | **AEM 6.4** | **3.3.0** |
 
 ### Hämta länk {#download-link-2}
@@ -107,14 +107,14 @@ aem-screens-player-android-3.3.0.apk.zip
    <td><strong>Android Player</strong></td> 
   </tr>
   <tr>
-   <td><strong>AEM 6.3+SP1+Skärmar FP1(1.0.64_B002)</strong></td> 
-   <td><p><strong>3.2.72 - </strong>Finns i Apple store</p> <p><strong>3.3.0</strong> - Fungerar inte</p> <p> </p> </td> 
-   <td><strong>1.0.12</strong> - (Finns på Macromedia)</td> 
+   <td><strong>AEM 6.3+SP1+Screens FP1(1.0.64_B002)</strong></td> 
+   <td><p><strong>3.2.72 - </strong>Finns i Apple Store</p> <p><strong>3.3.0</strong> - Fungerar inte</p> <p> </p> </td> 
+   <td><strong>1.0.12</strong> - (tillgängligt på Macromedia)</td> 
    <td><p><strong>1.0.30 -</strong> Finns i Chrome Store.</p> <p>Stöds inte med funktionspaket 1</p> </td> 
-   <td><strong>3.2.68 -</strong> (på Macromedia Site) och Google Play Store</td> 
+   <td><strong>3.2.68 -</strong> (tillgänglig på Macromedia Site) &amp; Google Play Store</td> 
   </tr>
   <tr>
-   <td><strong><strong>AEM 6.3+SP1+Skärmar FP2 (1.0.298)</strong></strong></td> 
+   <td><strong><strong>AEM 6.3+SP1+Screens FP2(1.0.298)</strong></strong></td> 
    <td><p><strong>3.3.0</strong> - <a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></p> <p>Publiceras på Apple Store</p> <p> </p> </td> 
    <td><strong>1.0.48 -</strong> <a href="https://download.macromedia.com/screens/">https://download.macromedia.com/screens/</a></td> 
    <td><p><strong>1.0.42 - </strong></p> <p>Ska publiceras på Chrome Store</p> </td> 

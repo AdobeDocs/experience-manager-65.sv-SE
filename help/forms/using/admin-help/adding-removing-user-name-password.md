@@ -22,12 +22,12 @@ På sidan Hantering av betrodda lagringsplatser kan du lägga till och ta bort a
 
 ## Lägga till användarnamn och lösenord {#add-a-user-name-and-password-credential}
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Settings >Trust Store Management > User and Password Credentials]** och sedan klicka **[!UICONTROL Add]**.
-1. I **[!UICONTROL Profile Name]** anger du ett namn för autentiseringsuppgifterna.
-1. I **[!UICONTROL User Name]** anger du ett unikt användarnamn.
-1. I **[!UICONTROL Password]** anger du ett lösenord för användaren och klickar sedan på **[!UICONTROL OK]**.
+1. I administrationskonsolen klickar du på **[!UICONTROL Settings >Trust Store Management > User and Password Credentials]** och sedan på **[!UICONTROL Add]**.
+1. Ange ett namn för autentiseringsuppgifterna i rutan **[!UICONTROL Profile Name]**.
+1. Ange ett unikt användarnamn i rutan **[!UICONTROL User Name]**.
+1. Skriv ett lösenord för användaren i rutan **[!UICONTROL Password]** och klicka sedan på **[!UICONTROL OK]**.
 
 ## Ta bort användarnamn och lösenord {#delete-a-user-name-and-password-credential}
 
-1. I administrationskonsolen klickar du på **[!UICONTROL Settings > Trust Store Management > User and Password Credentials]**.
-1. Markera kryssrutorna för de inloggningsuppgifter som du vill ta bort och klicka på **[!UICONTROL Delete]** och klicka sedan på **[!UICONTROL OK]**.
+1. Klicka på **[!UICONTROL Settings > Trust Store Management > User and Password Credentials]** i administrationskonsolen.
+1. Markera kryssrutorna för de autentiseringsuppgifter som du vill ta bort, klicka på **[!UICONTROL Delete]** och sedan på **[!UICONTROL OK]**.

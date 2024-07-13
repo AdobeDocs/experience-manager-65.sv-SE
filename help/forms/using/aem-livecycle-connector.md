@@ -21,7 +21,7 @@ Adobe Experience Manager (AEM) LiveCycle Connector gör det enkelt att anropa Ad
 
 ## Ansluta AEM till Adobe LiveCycle {#connecting-aem-server-to-adobe-livecycle}
 
-AEM LiveCycle Connector ingår i [AEM Forms tilläggspaket](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har installerat AEM Forms-tilläggspaketet gör du följande så att du kan lägga till information om LiveCyclet på AEM webbkonsol.
+AEM LiveCycle Connector ingår i [AEM Forms-tilläggspaketet](/help/forms/using/installing-configuring-aem-forms-osgi.md). När du har installerat AEM Forms-tilläggspaketet gör du följande så att du kan lägga till information om LiveCyclet på AEM webbkonsol.
 
 1. Gå till konfigurationskomponenten Adobe LiveCycle Client SDK i AEM webbkonsolkonfigurationshanterare.
 1. Klicka på komponenten så att du kan redigera konfigurationsserverns URL-adress, användarnamn och lösenord.
@@ -38,9 +38,9 @@ AEM LiveCycle Connector ingår i [AEM Forms tilläggspaket](/help/forms/using/in
 
   alternativ.
 
-* **Användarnamn**- Anger användarnamnet för kontot som används för att upprätta kommunikation mellan AEM och LiveCycle. Kontot är ett användarkonto i LiveCyclet som har behörighet att starta Acrobat Services.
-* **Lösenord**- Anger lösenordet.
-* **Tjänstnamn** - Anger vilka tjänster som startas med de inloggningsuppgifter som anges i fälten Användarnamn och Lösenord. Som standard skickas inga autentiseringsuppgifter när LiveCyclet startas.
+* **Användarnamn** - Anger användarnamnet för kontot som används för att upprätta kommunikation mellan AEM och LiveCycle. Kontot är ett användarkonto i LiveCyclet som har behörighet att starta Acrobat Services.
+* **Lösenord** - Anger lösenordet.
+* **Tjänstnamn** - Anger vilka tjänster som startas med de användarautentiseringsuppgifter som anges i fälten Användarnamn och Lösenord. Som standard skickas inga autentiseringsuppgifter när LiveCyclet startas.
 
 ## Startar dokumenttjänster {#starting-document-services}
 
@@ -52,7 +52,7 @@ Klientapplikationer kan starta LiveCycle-tjänster med hjälp av Java™ API, We
 
 AEM LiveCycle Connector förenklar flödet genom att visa de här klientinstanserna som OSGi-tjänster som kan nås med vanliga OSGi-metoder. Anslutningsenheten för LiveCyclet har följande funktioner:
 
-* Klientinstanser som OSGi-tjänst: Klienterna som paketeras som OSGI-paket listas i [Acrobat Services-lista](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p) -avsnitt. Varje klientjar registrerar klientinstansen som en OSGi-tjänst med OSGi-tjänstregistret.
+* Klientinstanser som OSGi-tjänst: Klienterna som paketeras som OSGI-paket listas i avsnittet [Acrobat Services-lista](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p). Varje klientjar registrerar klientinstansen som en OSGi-tjänst med OSGi-tjänstregistret.
 * Spridning av autentiseringsuppgifter för användare: Anslutningsinformationen som krävs för att ansluta till LiveCyclet hanteras på en central plats.
 * ServiceClientFactory-tjänst: För att starta processerna kan klientprogrammet få åtkomst till ServiceClientFactory-instansen.
 
@@ -80,7 +80,7 @@ Så här startar du en exponerad tjänst inifrån AEM:
    </dependency>
    ```
 
-   Om du vill starta en tjänst lägger du till ett motsvarande Maven-beroende för tjänsten. En lista över beroenden finns i [Acrobat Services List](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p). Lägg till exempel till följande beroende för tjänsten Generate PDF:
+   Om du vill starta en tjänst lägger du till ett motsvarande Maven-beroende för tjänsten. En lista över beroenden finns i [Lista över Acrobat-tjänster](/help/forms/using/aem-livecycle-connector.md#p-document-services-list-p). Lägg till exempel till följande beroende för tjänsten Generate PDF:
 
    ```xml
    <dependency>

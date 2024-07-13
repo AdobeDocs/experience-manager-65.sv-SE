@@ -21,9 +21,9 @@ ht-degree: 13%
 
 Skapa en startsida för att möjliggöra uppdatering av en ny version av befintliga webbsidor för framtida aktivering. När du skapar en Launch anger du en titel och källsidan:
 
-* Titeln visas i [Referenser](/help/sites-authoring/author-environment-tools.md#references) på webben, där författarna kan arbeta med dem.
+* Titeln visas i fältet [Referenser](/help/sites-authoring/author-environment-tools.md#references), där författare kan komma åt dem för att arbeta med dem.
 * Källsidans underordnade sidor inkluderas som standard i starten. Du kan bara använda källsidan om du vill.
-* Som standard [Live Copy](/help/sites-administering/msm.md) uppdaterar startsidorna automatiskt när källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar.
+* Som standard uppdaterar [Live Copy](/help/sites-administering/msm.md) startsidorna automatiskt när källsidorna ändras. Du kan ange att en statisk kopia ska skapas för att förhindra automatiska ändringar.
 
 Du kan också ange **startdatum** (och starttid) för att definiera när startsidorna ska befordras och aktiveras. **Startdatumet** fungerar dock endast i kombination med flaggan **Produktionsklar** (se [Redigera en startkonfiguration](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration)). För att åtgärderna ska köras automatiskt måste båda anges.
 
@@ -31,17 +31,17 @@ Du kan också ange **startdatum** (och starttid) för att definiera när startsi
 
 Du kan skapa en start från Sites- eller Launches-konsolen:
 
-1. Öppna **Webbplatser** eller **Startar** konsol.
+1. Öppna konsolen **Platser** eller **Startar**.
 
    >[!NOTE]
    >
-   >När du använder **Webbplatser** konsol är det vanligt att navigera till källsidans plats, men det är inte obligatoriskt eftersom du kan navigera när du väljer **Startkälla** i guiden.
+   >När du använder konsolen **Platser** brukar du navigera till källsidans plats, men det är inte obligatoriskt eftersom du kan navigera när du väljer **Starta Source** i guiden.
 
 1. Beroende på vilken konsol du använder:
 
    * **Startar**:
 
-      1. Välj **Skapa start** Öppna guiden i verktygsfältet.
+      1. Välj **Skapa start** i verktygsfältet för att öppna guiden.
 
    * **Webbplatser**:
 
@@ -54,7 +54,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
    >
    >Då används den valda sidan som den ursprungliga källsidan.
 
-1. I **Välj källa** steg du behöver **Lägg till sidor**. Du kan markera flera sidor och ange sökvägen för varje sida:
+1. I steget **Välj Source** måste du **lägga till sidor**. Du kan markera flera sidor och ange sökvägen för varje sida:
 
    * Navigera till önskad plats.
    * Markera källsidorna och bekräfta.
@@ -81,33 +81,33 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
 
    ![Ange om sidor ska inkluderas](assets/chlimage_1-226.png)
 
-1. I **Egenskaper** steg i guiden som du kan ange:
+1. I steget **Egenskaper** i guiden kan du ange:
 
-   * **Starta titel**: Namnet på Launch. Namnet ska vara meningsfullt för författare.
+   * **Starttitel**: Namnet på starten. Namnet ska vara meningsfullt för författare.
    * **med befintligt innehåll**: det ursprungliga innehållet används för att skapa starten.
-   * **använda en ny mall för att ersätta sidan**: Se [Skapa start med ny mall](#create-launch-with-new-template) för mer information.
-   * **Ärv källsidans livedata**: Välj det här alternativet om du automatiskt vill uppdatera innehållet på startsidor när källsidorna ändras. Det här alternativet uppnår du genom att göra starten till [live copy](/help/sites-administering/msm.md).
+   * **använd en ny mall för att ersätta sidan**: Mer information finns i [Skapa start med ny mall](#create-launch-with-new-template).
+   * **Ärv källsidans livedata**: Välj det här alternativet om du automatiskt vill uppdatera innehållet på startsidor när källsidorna ändras. Det här alternativet uppnår detta genom att göra starten till en [live-kopia](/help/sites-administering/msm.md).
 
      Som standard är det här alternativet markerat.
 
-   * **Startdatum**: Det datum och den tidpunkt då startkopian ska aktiveras (beroende på **Produktionsklar** flagga, se [Startar - ordningen för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events)).
+   * **Startdatum**: Det datum och den tidpunkt då startkopian ska aktiveras (beroende på flaggan **Produktionsklar**; se [Startar - ordning för händelser](/help/sites-authoring/launches.md#launches-the-order-of-events)).
 
    ![Ange egenskaper](assets/chlimage_1-227.png)
 
 1. Använd **Skapa** för att slutföra processen och skapa en ny start. I bekräftelsedialogrutan får du frågan om du vill öppna starten direkt.
 
-   Om du returnerar konsolen (med **Klar**) kan du se (och få tillgång till) din programstart från:
+   Om du returnerar konsolen (med **Klar**) kan du se (och få tillgång till) din start från antingen:
 
-   * den [**Startar** konsol](/help/sites-authoring/launches.md#the-launches-console)
-   * den [**Referenser** i **Webbplatser** konsol](/help/sites-authoring/launches.md#launches-in-references-sites-console)
+   * [**Startar** console](/help/sites-authoring/launches.md#the-launches-console)
+   * [**Referenser** i konsolen **Platser**](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 
 ### Skapa start med ny mall {#create-launch-with-new-template}
 
-När [skapa en start](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) du kan välja om du vill använda en ny mall med alternativet: **använda en ny mall för att ersätta sidan**
+När du [skapar en start](/help/sites-authoring/launches-creating.md#create-launch-with-new-template) kan du välja om du vill använda en ny mall med alternativet: **använda en ny mall för att ersätta sidan**
 
 >[!CAUTION]
 >
->Det här alternativet är endast tillgängligt när du skapar en start från **Webbplatser** konsol. Det är inte tillgängligt när du skapar en start från **Startar** konsol.
+>Det här alternativet är endast tillgängligt när du skapar en start från konsolen **Platser**. Det är inte tillgängligt när du skapar en start från konsolen **Startar**.
 
 ![Använd en ny mall för att ersätta sidan](assets/chlimage_1-228.png)
 
@@ -122,7 +122,7 @@ Om du väljer det här alternativet kommer det att:
 >
 >Om du använder en annan mall kommer den nya sidan att vara tom. På grund av den annorlunda sidstrukturen kopieras inget innehåll.
 >
->Den här funktionen kan användas för att ändra mallen för en [befintlig sida](/help/sites-authoring/managing-pages.md#creating-a-new-page) - även om innehållsförlusten måste beaktas.
+>Den här mekanismen kan användas för att ändra mallen för en [befintlig sida](/help/sites-authoring/managing-pages.md#creating-a-new-page) - även om innehållsförlusten måste beaktas.
 
 ### Skapa en kapslad start {#creating-a-nested-launch}
 
@@ -134,25 +134,25 @@ Genom att skapa en kapslad programstart (starta vid en programstart) kan du skap
 
 #### Skapa en kapslad start - Startar konsolen {#creating-a-nested-launch-launches-console}
 
-Skapa en kapslad start från **Startar** konsolen är i stort sett densamma som att skapa andra former av programstart, med undantag för att du måste navigera till startgrenen `/content/launches`:
+Att skapa en kapslad start från konsolen **Launches** är i princip detsamma som att skapa någon annan typ av start, med undantag för att du måste navigera till startgrenen `/content/launches`:
 
-1. I **Startar** välj konsol **Skapa**.
+1. I konsolen **Startar** väljer du **Skapa**.
 1. Välj **Lägg till sidor** och navigera sedan till startgrenen genom att ange `/content/launches` i filtret. Välj önskad start och bekräfta med **Välj**:
 
    ![Välj start](assets/chlimage_1-230.png)
 
-1. Fortsätt med **Nästa** och fylla i **Egenskaper** som vid andra starter.
+1. Fortsätt med **Nästa** och fyll i **Egenskaper** som vid andra starter.
 
    ![Ange egenskaper](assets/chlimage_1-231.png)
 
 #### Skapa en kapslad start - platskonsol {#creating-a-nested-launch-sites-console}
 
-Skapa en kapslad programstart från **Webbplatser** konsol - baserat på en befintlig start:
+Så här skapar du en kapslad start från konsolen **Platser** - baserat på en befintlig start:
 
-1. Öppna [Starta från referenser (platskonsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder.
+1. Gå till [Starta från referenser (Sites-konsolen)](/help/sites-authoring/launches.md#launches-in-references-sites-console) för att visa tillgängliga åtgärder.
 1. Välj **Skapa start** för att öppna guiden (eftersom källan redan har valts hoppas steget **Välj källa** över).
 
-1. Ange **Starta titel** och annan nödvändig information (som vid normal start).
+1. Ange **Starttitel** och annan nödvändig information (som vid normal start).
 
 1. Använd **Skapa** för att slutföra processen och skapa en ny start. I bekräftelsedialogrutan får du frågan om du vill öppna starten direkt.
 
@@ -160,7 +160,7 @@ Skapa en kapslad programstart från **Webbplatser** konsol - baserat på en befi
 
 ### Ta bort en start {#deleting-a-launch}
 
-Du kan ta bort en programstart från [startar konsolen](/help/sites-authoring/launches.md#the-launches-console):
+Du kan ta bort en start från [startkonsolen](/help/sites-authoring/launches.md#the-launches-console):
 
 * Välj start genom att trycka på/klicka på miniatyrbilden.
 * Verktygsfältet visas. Välj Ta bort.

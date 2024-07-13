@@ -1,5 +1,5 @@
 ---
-title: Publicera inte publicera innehåll
+title: Publish UnPublish Content
 description: När du känner till innehållshanteringsåtgärder för artiklar, banners och samlingar kan du följa den här sidan för att lära dig mer om hur du kan publicera ditt innehåll. Du kan också avpublicera innehållet.
 contentOwner: User
 content-type: reference
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ---
 
-# Publicera inte publicera innehåll{#publish-unpublish-content}
+# Publish UnPublish Content{#publish-unpublish-content}
 
 >[!NOTE]
 >
@@ -30,7 +30,7 @@ När du känner till innehållshanteringsåtgärder för artiklar, banners och s
 
 ## Publicera/avpublicera innehållet {#publishing-unpublishing-the-content}
 
-Detta skiljer sig från en&quot;AEM-publicering&quot;. Du flyttar inte innehåll till en AEM publiceringsserverinstans för att göra den allmänt synlig. Här informerar du Mobile On-Demand om att det valda innehållet ska publiceras i den aktiva appen Mobile On-Demand.
+Detta skiljer sig från en&quot;AEM Publish&quot;. Du flyttar inte innehåll till en AEM Publish-serverinstans för att göra den allmänt synlig. Här informerar du Mobile On-Demand om att det valda innehållet ska publiceras i den aktiva appen Mobile On-Demand.
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ Det allmänna arbetsflödet för att publicera/avpublicera en artikel:
 1. Välj mobilappen i katalogen i Mobile On-Demand.
 1. Välj en artikel.
 1. Lägg till ytterligare artiklar om det behövs från listvyn.
-1. Välj Publicera i åtgärdsfältet. Efter en liten stund kommer dina artiklar nu att vara offentliga.
+1. Välj Publish i åtgärdsfältet. Efter en liten stund kommer dina artiklar nu att vara offentliga.
 1. Använd samma steg ovan för att avpublicera artiklar.
 
 <!-- FAIL >>[!NOTE]
@@ -57,4 +57,4 @@ När du har lärt dig att skapa och publicera innehåll kan du läsa följande:
 * [Utveckla AEM för AEM Mobile On-demand Services](/help/mobile/aem-mobile-on-demand.md)
 * [Administrera innehåll för användning av AEM Mobile On-demand Services](/help/mobile/aem-mobile.md)
 
-Om du fortfarande vill veta mer om redigeringsämnen kan du läsa [Skapa AEM innehåll för AEM Mobile On-demand Services-appar](/help/mobile/mobile-apps-ondemand.md).
+Om du fortfarande vill veta mer om redigeringsämnen kan du läsa [AEM innehåll för AEM Mobile On-demand Services-appar](/help/mobile/mobile-apps-ondemand.md).

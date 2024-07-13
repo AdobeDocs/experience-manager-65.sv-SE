@@ -27,7 +27,7 @@ Se även [Interaktiva bilder](/help/assets/interactive-images.md).
 
 ## Interaktiv video in action {#interactive-video-in-action}
 
-Om du vill se en interaktiv videoklipp i praktiken väljer du [Live Demos](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html), bläddra till **[!UICONTROL Shoppable Media]** på sidan och välj videon som kan köpas.
+Om du vill se en interaktiv, köpbar video in action väljer du [Livesändningar](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html), bläddrar till rubriken **[!UICONTROL Shoppable Media]** på sidan och väljer videon som kan köpas.
 
 * Under uppspelningen visas den identiska produkten till höger som en miniatyrbild när produkterna används i videon.
 
@@ -39,12 +39,12 @@ Om du vill se en interaktiv videoklipp i praktiken väljer du [Live Demos](https
 
 >[!NOTE]
 >
->Om du skapar en interaktiv video för att starta en webbsida när en användare väljer en miniatyrbild blockerar vissa enheter popup-webbsidan från att öppnas. I sådana fall måste du ändra inställningen för blockering av popup-fönster på enheten. På en Apple iPhone 6 går du till exempel till **[!UICONTROL Settings]** > **Safari** > **Blockera popup-fönster** och sedan flytta kontrollen till **[!UICONTROL Off]**. När du spelar upp en interaktiv video och väljer en miniatyrbild får du nu en fråga om du vill öppna popup-fönstret. Om du accepterar öppnas webbsidan.
+>Om du skapar en interaktiv video för att starta en webbsida när en användare väljer en miniatyrbild blockerar vissa enheter popup-webbsidan från att öppnas. I sådana fall måste du ändra inställningen för blockering av popup-fönster på enheten. På en Apple iPhone 6 går du till exempel till **[!UICONTROL Settings]** > **Safari** > **Blockera popup-fönster** och drar kontrollen till **[!UICONTROL Off]**. När du spelar upp en interaktiv video och väljer en miniatyrbild får du nu en fråga om du vill öppna popup-fönstret. Om du accepterar öppnas webbsidan.
 
 ### Se hur interaktiva videor skapas {#watch-how-interactive-videos-are-created}
 
-Spela en genomgång på [hur interaktiva videor skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo) (7 minuter och 30 sekunder).
-Även om videosjälvstudien är märkt med Assets on Demand gäller fortfarande principerna och stegen för Interactive Video i Adobe Experience Manager Assets.
+Spela upp en genomgång av [hur interaktiva videor skapas](https://s7d5.scene7.com/s7viewers/html5/VideoViewer.html?videoserverurl=https://s7d5.scene7.com/is/content/&amp;emailurl=https://s7d5.scene7.com/s7/emailFriend&amp;serverUrl=https://s7d5.scene7.com/is/image/&amp;config=Scene7SharedAssets/Universal_HTML5_Video_social&amp;contenturl=https://s7d5.scene7.com/skins/&amp;asset=S7tutorials/InteractiveVideo) (7 minuter och 30 sekunder).
+Även om videogenomgången märks med Assets on Demand, gäller fortfarande principerna och stegen för Interactive Video i Adobe Experience Manager Assets.
 
 ### Adobe Customer Solutions Webinar {#adobe-customer-success-webinar}
 
@@ -52,13 +52,13 @@ Webbseminariet&quot;Using Interactive Video, Link Sharing, and YouTube sharing i
 
 >[!NOTE]
 >
->[Använda interaktiv video, länkdelning och YouTube-delning i Experience Manager Assets](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/).
+>[Använder interaktiv video, länkdelning och YouTube-delning i Experience Manager Assets](https://adobecustomersuccess.adobeconnect.com/p1yxzdo4aec/).
 
 ## Snabbstart: Interaktiva videoklipp {#quick-start-interactive-videos}
 
 Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma igång snabbt med interaktiva videor i Dynamic Media.
 
-Leta efter **Exempel** i vissa snabbstartsåtgärder. Den innehåller en kort självstudiekurs som bygger på den här startsidan för en demo som *inte* har lagt till interaktivitet ännu:
+Leta efter rubriken **Exempel** i några av snabbstartsaktiviteterna. Den innehåller en kort självstudiekurs som baseras på den här startdemonstrationswebbsidan som *inte* har lagt till interaktivitet i den än:
 
 [https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html](https://experienceleague.adobe.com/tools/dynamic-media-demo/shoppable-video/john-lewis/landing-0.html)
 
@@ -70,17 +70,17 @@ När du är klar med självstudiekursen i det sista exempelavsnittet ser den slu
 
 Interaktiva videosteg:
 
-1. **(Valfritt) Identifiera QuickView-variabler** - Börja med att identifiera dynamiska variabler som används i den befintliga QuickView-implementeringen. Du använder variablerna för att mappa produktminiatyrbilder till deras motsvarande produkt-snabbvyn när du skapar en interaktiv video. Se [(Valfritt) Identifiera QuickView-variabler](#optional-identifying-quickview-variables).
+1. **(Valfritt) Identifiera QuickView-variabler** - Börja med att identifiera dynamiska variabler som används av den befintliga QuickView-implementeringen. Du använder variablerna för att mappa produktminiatyrbilder till deras motsvarande produkt-snabbvyn när du skapar en interaktiv video. Se [ (valfritt) Identifiera QuickView-variabler ](#optional-identifying-quickview-variables).
    *Det här steget krävs bara om alla följande är true*:
    * Du vill lägga till interaktivitet i videon genom att aktivera snabbvyn.
-   * Er implementering av Experience Manager gör *not* använda ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från alla e-handelslösningar som IBM® WebSphere® Commerce, Elastic Path, Hybris och Intershop. Se [e-handelskoncept i Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md).
+   * Din implementering av Experience Manager *använder inte* ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från en e-handelslösning som IBM® WebSphere® Commerce, Elastic Path, Hybris eller Intershop. Se [e-handelsbegrepp i Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md).
 
 1. **(Valfritt) Skapa en förinställning för Interactive Video Viewer** - Anpassa utseendet och beteendet för olika komponenter som utgör spelaren, t.ex. videobandspelaren och de interaktiva miniatyrbilderna.
-Det är inte nödvändigt att skapa en egen förinställning för Interactive Video Viewer om du tänker använda förinställningarna för Interactive Video Viewer `Shoppable_Video_Light` eller `Shoppable_Video_Dark` i stället.
-Se [Skapa en visningsförinställning](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) (valfritt) och [Specialöverväganden när du skapar en interaktiv visningsförinställning](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset).
+Det är inte nödvändigt att skapa en egen förinställning för Interactive Video Viewer om du tänker använda förinställningarna `Shoppable_Video_Light` eller `Shoppable_Video_Dark` som är klara att användas i stället.
+Se [Skapa en visningsförinställning](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) (valfritt) och [Specialöverväganden för att skapa en förinställning för interaktivt visningsprogram](/help/assets/managing-viewer-presets.md#special-considerations-for-creating-an-interactive-viewer-preset).
 
-1. **Överföra en video och dess associerade bildresurser** - Ladda upp en video och tillhörande bilder som du vill göra interaktiva.
-Se [Överföra en video och dess tillhörande miniatyrbilder](#uploading-a-video-and-its-associated-thumbnail-assets).
+1. **Överför en video och dess associerade bildresurser** - Överför en video och associerade bilder som du vill göra interaktiva.
+Se [Överför en video och dess associerade miniatyrbildsresurser](#uploading-a-video-and-its-associated-thumbnail-assets).
 
    >[!NOTE]
    >
@@ -89,12 +89,12 @@ Se [Överföra en video och dess tillhörande miniatyrbilder](#uploading-a-video
 1. **Lägg till interaktivitet i videon** - Lägg till ett eller flera tidssegment i videon. Associera sedan bildminiatyrer inom dessa tidssegment. Tilldela varje miniatyrbild till en åtgärd som en hyperlänk, en snabbvy eller ett Experience Fragment.
 (Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.)
 Slutför genom att publicera interaktiva videor. Publicering skapar den inbäddningskod eller URL som du så småningom kopierar och använder på webbplatsens landningssida. Se [Lägg till interaktivitet i videon](#adding-interactivity-to-your-video).
-Se [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md).
+Se [Publish Assets](/help/assets/publishing-dynamicmedia-assets.md).
 
-1. **Lägga till en interaktiv video på din webbplats eller på din webbplats i Experience Manager** - Om du använder Experience Manager Sites eller e-handel, eller båda, kan du lägga till den interaktiva videon på en webbsida. Dra Interactive Media-komponenten till sidan i Experience Manager. Se [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
-Använd inbäddningskoden eller URL-adressen för att integrera interaktiv video med webbplatsupplevelserna. Se [Integrera en interaktiv video med webbplatsen](#integrating-an-interactive-video-with-your-website).
-Om du använder en WCM-fil (Web Content Manager) från tredje part måste du integrera den nya interaktiva videon med den befintliga QuickView-implementeringen som används på webbplatsen. Se [Integrera en interaktiv video med en befintlig QuickView](#integrating-an-interactive-video-with-an-existing-quickview).
-   [Lägga till Dynamic Media-resurser på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md)
+1. **Lägg till en interaktiv video på din webbplats eller på din webbplats i Experience Manager** - Om du använder Experience Manager Sites eller eCommerce, eller båda, kan du lägga till den interaktiva videon på en webbsida. Dra Interactive Media-komponenten till sidan i Experience Manager. Se [Lägg till Dynamic Media Assets på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md).
+Använd inbäddningskoden eller URL-adressen för att integrera interaktiv video med webbplatsupplevelserna. Se [Integrera en interaktiv video med din webbplats](#integrating-an-interactive-video-with-your-website).
+Om du använder en WCM-fil (Web Content Manager) från tredje part måste du integrera den nya interaktiva videon med den befintliga QuickView-implementeringen som används på webbplatsen. Se [Integrera en interaktiv video med en befintlig snabbvy](#integrating-an-interactive-video-with-an-existing-quickview).
+   [Lägg till Dynamic Media Assets på sidor](/help/assets/adding-dynamic-media-assets-to-pages.md)
 
 ## (Valfritt) Identifiera QuickView-variabler {#optional-identifying-quickview-variables}
 
@@ -103,7 +103,7 @@ Om du använder en WCM-fil (Web Content Manager) från tredje part måste du int
 >Den här aktiviteten krävs bara om följande är sant:
 >
 >* Du vill lägga till interaktivitet i videon genom att aktivera snabbvyn.
->* Er implementering av Experience Manager gör *not* använda ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från alla e-handelslösningar som IBM® WebSphere® Commerce, Elastic Path, Hybris och Intershop. Se [e-handelskoncept i Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md).
+>* Din implementering av Experience Manager *använder inte* ett ramverk för e-handelsintegrering för att hämta produktdata till Experience Manager från en e-handelslösning som IBM® WebSphere® Commerce, Elastic Path, Hybris eller Intershop. Se [e-handelsbegrepp i Experience Manager Assets](/help/commerce/cif-classic/administering/concepts.md).
 >
 >Om din implementering av Experience Manager använder e-handel kan du hoppa över den här uppgiften och fortsätta med nästa uppgift.
 
@@ -126,15 +126,15 @@ Du bör därför besöka olika delar av webbplatsen där Quickview implementeras
 
 Normalt behöver du inte använda några specialverktyg för felsökning. Moderna webbläsare har webbinspektörer som klarar ett bra jobb. Nedan följer några exempel på webbläsare som innehåller webbinspektörer:
 
-* Om du vill se alla utgående HTTP-begäranden i Google Chrome trycker du på **F12** (Windows) eller **Kommando+Alternativ+I** (Mac) för att öppna panelen Utvecklingsverktyg och sedan välja **Nätverk** -fliken.
+* Om du vill visa alla utgående HTTP-begäranden i Google Chrome trycker du på **F12** (Windows) eller **Kommando+Alternativ+I** (Mac) för att öppna panelen Utvecklarverktyg och väljer sedan fliken **Nätverk** .
 
-* I Firefox kan du antingen aktivera Firebug-plugin genom att trycka på **F12** (Windows) eller **Kommando+Alt+I** (Mac) och använda **`[Net]`** eller så kan du använda det inbyggda verktyget Granska och fliken Nätverk.
+* I Firefox kan du antingen aktivera plugin-programmet för Firebug genom att trycka på **F12** (Windows) eller **Kommando+Alternativ+I** (Mac) och använda fliken **`[Net]`**. Du kan också använda det inbyggda verktyget Granska och fliken Nätverk.
 
 * Aktivera felsökningsverktyget i Internet Explorer genom att trycka på **F12**.
 
 När nätverksövervakning är aktiverat i webbläsaren utlöser du snabbvyn på sidan.
 
-Nu kan du hitta Quickview Ajax-URL:en i nätverksloggen och kopiera den inspelade URL:en för framtida analys. När du utlöser snabbvyn skickas vanligtvis flera begäranden till servern. Vanligtvis är Quickview Ajax-URL en en av de första i listan. Den har antingen en komplex frågesträngsdel eller sökväg och dess MIME-svarstyp är antingen `text/html`, `text/xml`, eller `text/javascript`.
+Nu kan du hitta Quickview Ajax-URL:en i nätverksloggen och kopiera den inspelade URL:en för framtida analys. När du utlöser snabbvyn skickas vanligtvis flera begäranden till servern. Vanligtvis är Quickview Ajax-URL en en av de första i listan. Den har antingen en komplex frågesträngsdel eller sökväg och dess MIME-svarstyp är antingen `text/html`, `text/xml` eller `text/javascript`.
 
 Under den här processen är det viktigt att du besöker olika delar av webbplatsen, med olika produktkategorier och typer. Anledningen är att URL-adresser för snabbvyn kan innehålla delar som är gemensamma för en viss webbplatskategori, men bara ändras om du besöker ett annat område på webbplatsen.
 
@@ -154,7 +154,7 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande miniatyr
       <li><p><code>https://server/json?productId=1196184&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1081492&amp;source=100</code></p> </li>
       <li><p><code>https://server/json?productId=1898294&amp;source=100</code></p> </li>
-    </ul> <p>Den enda variabeldelen i URL:en är värdet på <code>productId=</code> frågesträngsparameter, och det är tydligt ett SKU-värde. Därför behöver miniatyrbilderna bara innehålla SKU-fält med värden som <strong><code>866558</code></strong>, <strong><code>1196184</code></strong>, <strong><code>1081492</code></strong>, <strong><code>1898294</code></strong>.</p> </td>
+    </ul> <p>Den enda variabeldelen i URL:en är värdet på frågesträngsparametern <code>productId=</code>, och det är tydligt ett SKU-värde. Därför behöver dina miniatyrbilder bara SKU-fält med värden som <strong><code>866558</code></strong>, <strong><code>1196184</code></strong>, <strong><code>1081492</code></strong>, <strong><code>1898294</code></strong>.</p> </td>
   </tr>
   <tr>
     <td><p>En SKU, finns i URL-sökvägen.</p> </td>
@@ -163,7 +163,7 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande miniatyr
       <li><p><code>https://server/product/6422350843</code></p> </li>
       <li><p><code>https://server/product/1607745002</code></p> </li>
       <li><p><code>https://server/product/0086724882</code></p> </li>
-    </ul> <p>Variabeldelen finns i den sista delen av banan och blir SKU-värdet för miniatyrbilder i Experience Manager: <strong><code>6422350843</code></strong>, <strong><code>1607745002</code></strong>, <strong><code>0086724882</code></strong>.</p> </td>
+    </ul> <p>Variabeldelen finns i den sista delen av sökvägen och blir SKU-värdet för Experience Manager-miniatyrbilder: <strong><code>6422350843</code></strong>, <strong><code>1607745002</code></strong>, <strong><code>0086724882</code></strong>.</p> </td>
   </tr>
   <tr>
     <td><p>SKU och kategori-ID i frågesträngen.</p> </td>
@@ -172,7 +172,7 @@ Titta på följande exempel på QuickView-URL:er och deras resulterande miniatyr
       <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=305466</code></p> </li>
       <li><p><code>https://server/quickView/product/?category=1100004&amp;prodId=310181</code></p> </li>
       <li><p><code>https://server/quickView/product/?category=1740148&amp;prodId=308706</code></p> </li>
-    </ul> <p>I det här fallet finns det två olika delar i URL:en. SKU:n lagras i <code>prodId</code> -parametern och kategori-ID:t lagras i <code>category=</code> parameter.</p> <p>Miniatyrbildsdefinitionerna är par. Det vill säga ett SKU-värde och en extra variabel som kallas <code>categoryId</code>. De resulterande paren är följande:</p>
+    </ul> <p>I det här fallet finns det två olika delar i URL:en. SKU:n lagras i parametern <code>prodId</code> och kategori-ID:t lagras i parametern <code>category=</code>.</p> <p>Miniatyrbildsdefinitionerna är par. Det vill säga ett SKU-värde och en extra variabel som kallas <code>categoryId</code>. De resulterande paren är följande:</p>
     <ul>
       <li>SKU är <code>305466</code> och <code>categoryId</code> är <code>1100004</code></li>
       <li>SKU är <code>310181</code> och <code>categoryId</code> är <code>1100004</code></li>
@@ -220,13 +220,13 @@ Med hjälp av den här informationen har hela snabbvyns URL följande mönster:
 
 `/datafeed/$categoryId$-$SKU$.json`
 
-Utifrån en sådan analys kan du dra slutsatsen att du kan använda följande två variabler för miniatyrbilderna: `categoryId` och `SKU`.
+Utifrån en sådan analys kan du sluta dig till att du kan använda följande två variabler för miniatyrbilderna: `categoryId` och `SKU`.
 
 Du är nu redo att överföra en video och dess associerade miniatyrbildsresurser.
 
 ## (Valfritt) Skapa en förinställning för Interactive Video Viewer {#optional-creating-an-interactive-video-viewer-preset}
 
-Du kan hoppa över den här uppgiften och fortsätta till nästa om du tänker använda någon av de förinställda standardtyperna i det interaktiva visningsprogrammet `Shoppable_Video_dark` eller `Shoppable_Video_light`.
+Du kan hoppa över den här uppgiften och fortsätta till nästa om du tänker använda någon av de förinställda typerna `Shoppable_Video_dark` eller `Shoppable_Video_light` som är färdiga som standard, Interactive Video Viewer.
 
 När en miniatyrbild är markerad i redigeringsmiljön visas en förhandsvisning av dialogrutan Snabbvy.
 
@@ -236,13 +236,13 @@ Du kan också skapa en egen förinställning för Interactive Video Viewer. Du k
 
 En förinställning för Interactive Video Viewer återger videon och alla tidslinjesegment som du har lagt till. I förhandsvisningsläget används dessutom ett standardexempel för snabbvyn när du väljer en miniatyrbild av en produkt, så att du kan testa dess interaktivitet före publicering.
 
-När du har sparat visningsförinställningen ställs dess läge automatiskt in på **På** på sidan Förinställningar för visningsprogram. Det här läget innebär att den är synlig i komponenten Dynamic Media och när du förhandsgranskar en video med den. Se också till att du publicerar den nya visningsförinställningen manuellt.
+När du har sparat visningsförinställningen ställs dess läge automatiskt in på **På** på sidan Visningsförinställningar. Det här läget innebär att den är synlig i komponenten Dynamic Media och när du förhandsgranskar en video med den. Se också till att du publicerar den nya visningsförinställningen manuellt.
 
-Se [Skapa en ny visningsförinställning](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) för att skapa en egen förinställning för Interactive Video Viewer.
+Se [Skapa en ny visningsförinställning](/help/assets/managing-viewer-presets.md#creating-a-new-viewer-preset) om du vill skapa en egen förinställning för Interactive Video Viewer.
 
 ## Överföra en video och dess tillhörande miniatyrbilder {#uploading-a-video-and-its-associated-thumbnail-assets}
 
-Om du redan har laddat upp videoklipp och miniatyrbilder går du vidare till [Lägg till interaktivitet i videon](#adding-interactivity-to-your-video).
+Om du redan har överfört dina video- och miniatyrresurser går du vidare till [Lägg till interaktivitet i videon](#adding-interactivity-to-your-video).
 
 >[!NOTE]
 >
@@ -281,26 +281,26 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
 **Så här lägger du till interaktivitet i videon:**
 
-1. I resursvyn navigerar du till videon som du överförde och vill göra interaktiv.
+1. I vyn Assets navigerar du till videon som du överförde och vill göra interaktiv.
 1. Gör något av följande:
 
-   * Hovra över bilden och välj sedan **[!UICONTROL Select]** (bockmarkeringsikon). I verktygsfältet väljer du **[!UICONTROL Edit]**.
+   * Hovra över bilden och välj sedan **[!UICONTROL Select]** (bockmarkeringsikon). Välj **[!UICONTROL Edit]** i verktygsfältet.
 
-   * Hovra över bilden och välj sedan **[!UICONTROL More actions]** (ikon med tre punkter) **[!UICONTROL > Edit]**.
+   * Håll pekaren över bilden och välj sedan **[!UICONTROL More actions]** (ikonen med tre punkter) **[!UICONTROL > Edit]**.
 
-   * Markera bilden så att du kan öppna den på sidan Detaljvy. I verktygsfältet väljer du **[!UICONTROL Edit]**.
+   * Markera bilden så att du kan öppna den på sidan Detaljvy. Välj **[!UICONTROL Edit]** i verktygsfältet.
 
 1. Gör något av följande på sidan Skapa interaktiv video:
 
-   * För att börja spela upp videon väljer du **[!UICONTROL Play]** -knappen. När en viss produkt, tjänst eller detalj som du vill markera visas, väljer du **[!UICONTROL Add Segment]** i verktygsfältet. Upprepa tills du har nått slutet av videon.
+   * Välj knappen **[!UICONTROL Play]** för att börja spela upp videon. När en viss produkt, tjänst eller detalj som du vill markera visas väljer du **[!UICONTROL Add Segment]** i verktygsfältet. Upprepa tills du har nått slutet av videon.
 
      För varje tidssegment som du lägger till tilldelar du en eller flera miniatyrbilder till det och länkar sedan miniatyrbilderna till QuickView-produktsidor som kunderna kan köpa eller till webbsidor för mer information.
 
-   * För att börja spela upp videon väljer du **[!UICONTROL Play]** -knappen. När en viss produkt, tjänst eller detalj som du vill markera visas, väljer du **[!UICONTROL Pause]**. Välj **[!UICONTROL Add Segment]**.
+   * Välj knappen **[!UICONTROL Play]** för att börja spela upp videon. När en viss produkt, tjänst eller detalj som du vill markera visas väljer du **[!UICONTROL Pause]**. Välj **[!UICONTROL Add Segment]**.
 
      Fortsätt spela upp och pausa videon vid punkter längs tidslinjen där du vill lägga till ett segment tills du når slutet av videon.
 
-1. (Valfritt) Dra fältet till vänster **[!UICONTROL Timeline Scale Slider]** vänster för att zooma in eller höger för att zooma ut, så att du kan styra hur mycket av detaljerna som visas för de segment du har lagt till.
+1. (Valfritt) Dra fältet till vänster om du vill zooma in eller till höger om du vill zooma ut, så att du kan styra hur mycket detaljer som visas för de segment du har lagt till.**[!UICONTROL Timeline Scale Slider]**
 
    ![chlimage_1-22](assets/chlimage_1-128.png)
 
@@ -375,13 +375,13 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    * Ta bort ett segment
 
-     Markera det sista segmentet på tidslinjen och välj sedan i verktygsfältet **[!UICONTROL Delete Segment]**. Om två eller flera segment är markerade **[!UICONTROL Delete Segment]** är inaktiverat.
+     Markera det sista segmentet på tidslinjen och välj sedan **[!UICONTROL Delete Segment]** i verktygsfältet. Om två eller flera segment är markerade är **[!UICONTROL Delete Segment]** inaktiverat.
 
-     Du kan bara ta bort det sista segmentet. Om du till exempel vill ta bort alla segment på tidslinjen måste du alltid markera det sista segmentet och sedan markera **[!UICONTROL Delete Segment]**.
+     Du kan bara ta bort det sista segmentet. Om du till exempel vill ta bort alla segment på tidslinjen måste du alltid markera det sista och sedan välja **[!UICONTROL Delete Segment]**.
 
 1. Markera ett tidssegment som du vill associera en eller flera miniatyrbilder till.
-1. Till höger om videon väljer du **[!UICONTROL Content]** -fliken.
-1. Välj på fliken Innehåll **[!UICONTROL Select Assets]**, bläddra sedan bland och markera alla bildresurser som du vill använda med videon. De markerade resurserna läggs till på panelen Resursväljare på fliken Innehåll.
+1. Välj fliken **[!UICONTROL Content]** till höger om videon.
+1. Välj **[!UICONTROL Select Assets]** på fliken Innehåll och bläddra sedan bland och markera alla bildresurser som du vill använda med videon. De markerade resurserna läggs till på panelen Resursväljare på fliken Innehåll.
 
 1. Gör något av följande i resursväljaren under fliken Innehåll:
 
@@ -395,8 +395,8 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
         <td>Ta bort en miniatyrbild från det markerade tidslinjesegmentet</td>
         <td><p>Gör något av följande:</p>
           <ul>
-          <li>Avmarkera en bild med en bockmarkering på resurssväljarpanelen. Bildresursen tas bort från tidslinjesegmentet.<br /> </li>
-          <li>Markera en bild i det markerade tidslinjesegmentet och välj sedan i verktygsfältet <strong>Ta bort produkt</strong>.</li>
+          <li>Avmarkera en bild med en bockmarkering på resurssväljarpanelen. Bildresursen har tagits bort från tidslinjesegmentet.<br /> </li>
+          <li>Markera en bild i det markerade tidslinjesegmentet och välj sedan <strong>Ta bort produkt</strong> i verktygsfältet.</li>
           </ul> </td>
         </tr>
       </tbody>
@@ -406,26 +406,26 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    Om du väljer en bild på resurssväljarpanelen läggs den till i det valda tidslinjesegmentet.
 
-1. Markera en miniatyrbild i ett av tidslinjesegmenten och välj sedan **[!UICONTROL Actions]** -fliken.
+1. Markera en enda miniatyrbild i ett av tidslinjesegmenten och välj sedan fliken **[!UICONTROL Actions]**.
 1. Gör något av följande:
    <table> 
     <tbody> 
       <tr> 
       <td>Associera den markerade miniatyrbilden med en snabbvy</td> 
-      <td><p>Under Åtgärdstyp väljer du <strong>Quickview</strong>.</p> <p>Om du är kund inom Experience Manager Sites och e-handel:</p> 
+      <td><p>Välj <strong>Snabbvy</strong> under Åtgärdstyp.</p> <p>Om du är kund inom Experience Manager Sites och e-handel:</p> 
        <ul> 
        <li>Observera att textfältet SKU-värde är förifyllt med den valda produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Värdet fylls i automatiskt när bilden är kopplad till en produkt i Experience Manager Commerce.</li> 
        <li>Om den i förväg ifyllda SKU:n är felaktig väljer du produktväljarens ikon (förstoringsglas) för att öppna sidan Välj produkt. Markera den produkt du vill använda och markera sedan bockmarkeringen i det övre högra hörnet av sidan så att du kan gå tillbaka till Interactive Video Editor.</li> 
-       </ul> <p> Om du <em>not</em> en Experience Manager Sites- eller e-handelskund</p> 
+       </ul> <p> Om du <em>inte</em> är en Experience Manager Sites- eller e-handelskund</p> 
        <ul> 
        <li>Se <a href="/help/assets/carousel-banners.md#identifying-hotspot-and-image-map-variables">Identifiera hotspot-variabler</a>. Variablerna måste definieras.  </li> 
        <li>Som standard använder det här SKU-fältet bildresursens filnamn utan filnamnstillägget. Om du använder en standardnamngivningskonvention för dina filer som baseras på SKU, kräver vanligtvis inte det här filnamnet några ytterligare redigeringar. </li> 
        <li>I annat fall redigerar du standardvärdet och anger rätt SKU-värde. I textfältet SKU-värde skriver du produktens SKU (Stock Keeping Unit), som är en unik identifierare för varje separat produkt eller tjänst som du erbjuder. Det angivna SKU-värdet fyller automatiskt i variabeldelen av QuickView-mallen så att systemet vet att den valda bilden associeras med en viss SKU:s snabbvy.</li> 
-       </ul> <p>(Valfritt) Om det finns andra variabler i snabbvyn som du måste använda för att identifiera en produkt ytterligare väljer du <strong>Lägg till allmän variabel</strong>. Ange en extra variabel i textfältet. Till exempel: <code>category=Womens</code> är en tillagd variabel.</p> <p> </p> </td> 
+       </ul> <p>(Valfritt) Om det finns andra variabler i snabbvyn som du måste använda för att ytterligare identifiera en produkt väljer du <strong>Lägg till allmän variabel</strong>. Ange en extra variabel i textfältet. <code>category=Womens</code> är till exempel en tillagd variabel.</p> <p> </p> </td> 
       </tr> 
       <tr> 
       <td>Associera den markerade miniatyrbilden med en hyperlänk</td> 
-      <td><p>Under Åtgärdstyp väljer du <strong>Hyperlänk</strong>gör du något av följande:</p> 
+      <td><p>Välj <strong>Hyperlänk</strong> under Åtgärdstyp och gör sedan något av följande:</p> 
        <ul> 
        <li>Om du är kund hos Experience Manager Sites väljer du ikonen Platsväljare (mapp) för att navigera till en webbsida. Den URL-baserade länkningsmetoden är inte möjlig om det interaktiva innehållet har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.</li> 
        <li>Om du är en fristående Dynamic Media-kund anger du den fullständiga URL-sökvägen till en länkad webbsida i textfältet HREF.</li> 
@@ -433,29 +433,29 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
       </tr> 
       <tr> 
       <td>Associera den markerade miniatyrbilden med ett Experience Fragment</td> 
-      <td><p>Under Åtgärdstyp väljer du <strong>Experience Fragment</strong>gör du följande:<p> 
+      <td><p>Välj <strong>Experience Fragment</strong> under Åtgärdstyp och gör sedan följande:<p> 
        <ul> 
-       <li>Om du är Experience Manager Sites-kund väljer du sökikonen (förstoringsglas) för att öppna sidan Experience Fragment. Välj det Experience Fragment som du vill använda och välj sedan <strong>Välj </strong>i det övre högra hörnet av sidan så att du kan gå tillbaka till åtgärdspanelen på föregående sida.<br /> Se <a href="/help/sites-authoring/experience-fragments.md">Upplevelsefragment</a>.</li> 
+       <li>Om du är Experience Manager Sites-kund väljer du sökikonen (förstoringsglas) för att öppna sidan Experience Fragment. Markera det Experience Fragment som du vill använda och välj sedan <strong>Markera </strong> i det övre högra hörnet på sidan så att du kan gå tillbaka till åtgärdspanelen på föregående sida.<br /> Se <a href="/help/sites-authoring/experience-fragments.md">Upplevelsefragment</a>.</li> 
       </ul> 
        <ul> 
        <li>Ange bredden och höjden på Experience Fragment så som du vill att det ska visas i videon.</li>
-       </ul><strong>Anteckning</strong>: Verktygen för delning av sociala medier i interaktiv video stöds inte när du bäddar in visningsprogrammet i ett Experience Fragment. Du kan undvika det här problemet genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.</p></tr>&lt; 
+       </ul><strong>Obs!</strong>: Delningsverktygen för sociala medier i interaktiv video stöds inte när du bäddar in visningsprogrammet i ett Experience Fragment. Du kan undvika det här problemet genom att använda eller skapa visningsförinställningar som inte har verktyg för delning av sociala medier. Med sådana visningsförinställningar kan du bädda in dem i Experience Fragments.</p></tr>&lt; 
       <tr> 
       <td>Redigera en åtgärd som redan har tilldelats en miniatyrbild</td> 
-      <td>Markera en miniatyrbild som har en kedjelänk till höger om textetiketten i ett tidslinjesegment. Länken kedja anger att en åtgärd har tilldelats den. Välj <strong>Åtgärder</strong> så att du kan göra ändringarna.</td> 
+      <td>Markera en miniatyrbild som har en kedjelänk till höger om textetiketten i ett tidslinjesegment. Länken kedja anger att en åtgärd har tilldelats den. Välj fliken <strong>Åtgärder</strong> så att du kan göra ändringarna.</td> 
       </tr> 
       <tr> 
       <td>Ändra textetiketten för en miniatyrbild</td> 
-      <td><p>Som standard använder textetiketten miniatyrbildens <code>Title</code> metadatafält. If <code>Title</code> finns inte, används miniatyrbildens filnamn i stället, men utan filnamnstillägget.</p> <p>Ändra textetiketten för en miniatyrbild under <strong>Åtgärder </strong>anger du den önskade texten direkt under bildresursen som visas. Se skärmbilden nedan.</p> <p>Den nya textetiketten används bara av själva videospelaren och den miniatyrtext som visas i tidslinjesegmentet. Etikettändringen påverkar inte miniatyrbildens metadatafält Titel eller dess filnamn.</p> </td> 
+      <td><p>Som standard använder textetiketten miniatyrbildens <code>Title</code>-metadatafält. Om <code>Title</code> inte finns används miniatyrbildens filnamn i stället, men utan filnamnstillägget.</p> <p>Om du vill ändra textetiketten för en miniatyrbild anger du önskad text under fliken <strong>Åtgärder </strong>direkt under bildresursen som visas. Se skärmbilden nedan.</p> <p>Den nya textetiketten används bara av själva videospelaren och den miniatyrtext som visas i tidslinjesegmentet. Etikettändringen påverkar inte miniatyrbildens metadatafält Titel eller dess filnamn.</p> </td> 
       </tr> 
       <tr> 
       <td>Så här återställer du en ändring:</td> 
-      <td>I sidans övre högra hörn väljer du <strong>Ångra</strong> eller <strong>Gör om</strong>.</td> 
+      <td>I närheten av sidans övre högra hörn väljer du <strong>Ångra</strong> eller <strong>Gör om</strong>.</td> 
       </tr> 
     </tbody> 
    </table>
 
-   ![experience_efragment_interactiveVideos](assets/experiencefragment_interactivevideos.png)
+   ![ExperienceDefragment_interactiveVideos](assets/experiencefragment_interactivevideos.png)
 
    En ny textetikett läggs till i miniatyrbilden.
 
@@ -478,17 +478,17 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    * **[!UICONTROL Split Segment]** - Du kan dela upp ett enskilt segment i två lika långa segment. Om det redan finns produktminiatyrer för segmentet kombineras miniatyrbilderna till det vänstra segmentet.
 
-     Markera det segment som du vill dela upp i halva på tidslinjen och markera sedan **[!UICONTROL Split Segment]** i verktygsfältet.
+     På tidslinjen markerar du ett segment som du vill dela upp till hälften och väljer sedan **[!UICONTROL Split Segment]** i verktygsfältet.
 
-     Om du markerar två eller flera segment inaktiveras **[!UICONTROL Split Segment]** -funktion.
+     Om du markerar två eller flera segment inaktiveras funktionen **[!UICONTROL Split Segment]**.
 
    ![chlimage_1-135](assets/chlimage_1-135.png)
 
    Dela upp ett markerat segment på tio sekunder i två segment på fem sekunder vardera.
 
-1. Nära det övre högra hörnet av **[!UICONTROL Create Interactive Video]** visas namnet på den valda visningsförinställningen som används för videon. Markera namnet om du vill välja en annan visningsförinställning.
+1. I närheten av det övre högra hörnet på sidan **[!UICONTROL Create Interactive Video]** visas namnet på den valda visningsförinställningen som används med videon. Markera namnet om du vill välja en annan visningsförinställning.
 
-   Till exempel `Shoppable_Video_light` Med visningsförinställningen kan du spela upp videon med ett vitt visningsområde bredvid videon. Visningsområdet är där de valda miniatyrbilderna visas under uppspelningen. The `Shoppable_Video_dark` Med visningsförinställningen kan du spela upp videon med ett svart visningsområde bredvid videon.
+   Med visningsförinställningen `Shoppable_Video_light` kan du till exempel spela upp videon med ett vitt visningsområde bredvid videon. Visningsområdet är där de valda miniatyrbilderna visas under uppspelningen. Med visningsförinställningen `Shoppable_Video_dark` kan du spela upp videon med ett svart visningsområde bredvid videon.
 
    Om du har skapat en egen förinställning för Interactive Video Viewer visas den i listan med förinställningar som du kan välja mellan.
 
@@ -496,23 +496,23 @@ När du har sparat den interaktiva videon öppnas videon direkt i förhandsvisni
 
    >[!NOTE]
    >
-   >När du sparar den interaktiva videon sparas en associerad `.vtt`-fil automatiskt med den. The `.vtt` filen sparas i `_VTT` mapp i roten av **[!UICONTROL Assets]**. Filen och mappen är nödvändiga för att den interaktiva videon ska kunna spelas upp korrekt på webbplatsen. Därför ska du inte flytta, redigera eller ta bort mappen `_VTT` eller dess innehåll.
+   >När du sparar den interaktiva videon sparas en associerad `.vtt`-fil automatiskt med den. Filen `.vtt` sparas i mappen `_VTT` i roten av **[!UICONTROL Assets]**. Filen och mappen är nödvändiga för att den interaktiva videon ska kunna spelas upp korrekt på webbplatsen. Därför ska du inte flytta, redigera eller ta bort mappen `_VTT` eller dess innehåll.
 
-1. Publicera den interaktiva videon. Publicering skapar den inbäddningskod eller URL som du så småningom kopierar och klistrar in på webbplatsupplevelserna.
+1. Publish den interaktiva videon. Publicering skapar den inbäddningskod eller URL som du så småningom kopierar och klistrar in på webbplatsupplevelserna.
 
    Om du har lagt till interaktivitet med snabbvyn ska du bara använda inbäddningskoden. Om du har lagt till interaktivitet med hyperlänkade webbsidor kan du även använda den publicerade URL:en. Observera dock att den URL-baserade länkningsmetoden inte är möjlig om ditt interaktiva innehåll har länkar till relativa URL-adresser, särskilt länkar till Experience Manager Sites-sidor.
 
-   Se [Publicera resurser](publishing-dynamicmedia-assets.md).
+   Se [Publish-resurser](publishing-dynamicmedia-assets.md).
 
    >[!NOTE]
    >
    >Om du vill publicera en videoklipp som kan köpas med QuickView måste du även publicera videons relaterade bildresurser separat från din e-handelsplats.
 
-   När du har lagt till tidslinjesegment och publicerat den interaktiva videon kan du lägga till den på din befintliga startsida för webbplatsen. Se [Integrera en interaktiv video med webbplatsen](#integrating-an-interactive-video-with-your-website).
+   När du har lagt till tidslinjesegment och publicerat den interaktiva videon kan du lägga till den på din befintliga startsida för webbplatsen. Se [Integrera en interaktiv video med din webbplats](#integrating-an-interactive-video-with-your-website).
 
-## Publicera interaktivt videomaterial {#publishing-interactive-video-assets}
+## Publish interaktiva videomaterial {#publishing-interactive-video-assets}
 
-Se [Publicera resurser](/help/assets/publishing-dynamicmedia-assets.md) om du vill ha mer information om hur du publicerar interaktiva videoresurser.
+Mer information om hur du publicerar interaktiva videoresurser finns i [Publish-resurser](/help/assets/publishing-dynamicmedia-assets.md).
 
 ## Integrera en interaktiv video med webbplatsen {#integrating-an-interactive-video-with-your-website}
 
@@ -652,7 +652,7 @@ Den inbäddningskod som returneras av Experience Manager har redan en färdig h�
 
 Därför är det bara nödvändigt att avkommentera det markerade kodfragmentet ovan och ersätta dummy-hanterarbrödtexten med kod som är specifik för den aktuella webbsidan.
 
-Det finns två standardhanterare för återanrop i standardkoden för inbäddning: `quickViewActivate` och `initComplete`. The `quickViewActivate` hanteraren aktiveras när en miniatyrbild är markerad i visningsprogrammet. Använd det för att integrera visningsprogrammet med QuickView-aktiveringslogik. The `initComplete` hanteraren utlöses bara en gång när användaren läser in på sidan. Den här hanteraren används för att justera platsen för dialogrutan Snabbvy i webbsidans DOM.
+Det finns två standardhanterare för återanrop i standardkoden för inbäddning: `quickViewActivate` och `initComplete`. Hanteraren `quickViewActivate` aktiveras när en miniatyrbild väljs i visningsprogrammet. Använd det för att integrera visningsprogrammet med QuickView-aktiveringslogik. Hanteraren `initComplete` utlöser bara en gång när visningsprogrammet läses in på sidan. Den här hanteraren används för att justera platsen för dialogrutan Snabbvy i webbsidans DOM.
 
 Processen med att skapa en URL för snabbvyn är motsatt till processen att identifiera miniatyrbildsvariabler som beskrivs tidigare i det här avsnittet. Med hjälp av de tidigare identifierade exemplen på snabbvyns URL kan du se hur snabbvyns URL är uppbyggd i varje fall:
 
@@ -693,7 +693,7 @@ Du kan se hur dessa steg tillämpas på demowebbplatsen för att helt integrera 
 /datafeed/$CategoryId$-$SKU$.json
 ```
 
-Det är enkelt att rekonstruera URL:en i `quickViewActivate` hanterare med `categoryId` och `sku` fält som är tillgängliga i `inData` objekt som skickas till hanteraren via visningsprogrammets kod enligt följande:
+Det är enkelt att rekonstruera den här URL:en i hanteraren `quickViewActivate` genom att använda fälten `categoryId` och `sku` som är tillgängliga i objektet `inData` som skickas till hanteraren via visningsprogrammets kod enligt följande:
 
 ```xml
 var sku=inData.sku;
@@ -701,7 +701,7 @@ var categoryId=inData.categoryId;
 var quickViewUrl = "datafeed/" + categoryId + "-" + sku + ".json";
 ```
 
-Demonstrationswebbplatsen utlöser dialogrutan Snabb visning med en enkel `loadQuickView()` funktionsanrop. Den här funktionen har bara ett argument, vilket är snabbvydata-URL:en. Så det sista steget för att integrera den interaktiva videon är att lägga till följande kodrad i `quickViewActivate` hanterare:
+Demonstrationswebbplatsen utlöser dialogrutan Snabbvy med ett enkelt `loadQuickView()`-funktionsanrop. Den här funktionen har bara ett argument, vilket är snabbvydata-URL:en. Så det sista steget för att integrera den interaktiva videon är att lägga till följande kodrad i `quickViewActivate`-hanteraren:
 
 ```xml
 loadQuickView(quickViewUrl);
@@ -714,11 +714,11 @@ var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInner
 var inner_container = document.getElementById(sdkContainerId);
 ```
 
-Plats `inner_container` är en referens till `DIV` -element som hanteras av visningsprogrammet. Du vill att dialogrutan ska vara underordnad den `DIV`.
+Där `inner_container` är en referens till ett `DIV`-element som hanteras av visningsprogrammet. Du vill att dialogrutan ska vara underordnad `DIV`.
 
 Stegen för att hitta det modala dialogruteelementet och bifoga det till behållaren ovan är skiftlägeskänsliga. Återigen kan du få hjälp av den som är bekant med den QuickView-implementering som behövs.
 
-Om du använder exempelwebbplatsen implementeras den modala dialogrutan för snabbvyn som en `DIV` med det spärra/knipa-ID som är kopplat direkt till dokumentet `BODY`. Koden som flyttar dialogrutan till visningsprogrammets behållare är därför så enkel som följande:
+Om du använder exempelwebbplatsen implementeras den modala dialogrutan för snabbvyn som en `DIV` med det spärra/modala ID som bifogas direkt till dokumentet `BODY`. Koden som flyttar dialogrutan till visningsprogrammets behållare är därför så enkel som följande:
 
 ```xml
 var sdkContainerId = s7interactivevideoviewer.getComponent("container").getInnerContainerId(); // get viewer container component

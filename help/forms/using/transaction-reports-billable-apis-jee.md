@@ -30,7 +30,7 @@ Fakturerings-API:erna tar inte hänsyn till antalet sidor, längden på ett doku
 
 -->
 
-Nedan finns en lista med fakturerbara JEE-API:er. Hitta listan med [fakturerbara API:er för AEM Forms på OSGi](/help/forms/using/transaction-reports-billable-apis.md).
+Nedan finns en lista med fakturerbara JEE-API:er. Hitta listan med [fakturerbara API:er för AEM Forms i OSGi](/help/forms/using/transaction-reports-billable-apis.md).
 
 ## Fakturerbara API:er för dokumenttjänster {#billable-document-services-apis}
 
@@ -46,47 +46,47 @@ Nedan finns en lista med fakturerbara JEE-API:er. Hitta listan med [fakturerbara
    <tr>
    <td><a>CreatePDF</a></td>
    <td>Skapar Adobe PDF för filtyper som stöds.</td>
-   <td>Konvertering<br /> </td>
+   <td>Konvertering <br /> </td>
   </tr>
   <tr>
    <td><a>CreatePDF3</a></td>
    <td>Skapar Adobe PDF för filtyper som stöds. </td>
-   <td>Konvertering<br /> </td>
+   <td>Konvertering <br /> </td>
   </tr>
   <tr>
    <td><a> HTMLToPDF</a></td>
    <td>Konverterar filen HTML till Adobe PDF. </td>
-   <td>Konvertering<br /> </td>
+   <td>Konvertering <br /> </td>
   </tr>
   <tr>
    <td><a>ExportPDF</a></td>
    <td>Exporterar PDF till filtyper som stöds. </td>
-   <td>Konvertering<br /> </td>
+   <td>Konvertering <br /> </td>
   </tr>
   <tr>
    <td><a>ExportPDF2</a></td>
    <td><p>Exporterar PDF till filtyper som stöds.</p> </td>
-   <td>Konvertering<br /> </td>
+   <td>Konvertering <br /> </td>
   </tr>
   <tr>
    <td><a>ExportPDF3</a></td>
    <td>Exporterar PDF till filtyper som stöds.</td>
-   <td>Konvertering<br /> </td>
+   <td>Konvertering <br /> </td>
   </tr>
   <tr>
    <td><a>HTMLFileToPDF</a></td>
    <td>Konverterar filen HTML till PDF.</td>
-   <td>Konvertering<br /> </td>
+   <td>Konvertering <br /> </td>
   </tr>
   <tr>
    <td><a>HTMLToPDF2</a></td>
    <td>Konverterar filen HTML till PDF.</td>
-   <td>Konvertering<br /> </td>
+   <td>Konvertering <br /> </td>
   </tr>
   <tr>
    <td><a>OptimeraPDF</a></td>
    <td>Optimerar PDF för att minska filstorleken genom att ta bort onödiga metadata utan att påverka kvaliteten.</td>
-   <td>Konvertering<br /> </td>
+   <td>Konvertering <br /> </td>
   </tr>
  </tbody>
 </table>
@@ -306,14 +306,14 @@ Nedan finns en lista med fakturerbara JEE-API:er. Hitta listan med [fakturerbara
 </table>
 
 API:ts användning räknas som en transaktion när du utför en eller flera av följande åtgärder:
-1. Konvertering från andra format än PDF till PDF. Till exempel konverteringen från XDP-format till PDF.<!-- catering to both interactive and non-interactive forms of communication, and the conversion from Word to PDF.-->
+1. Konvertering från andra format än PDF till PDF. Konverteringen från XDP-format till PDF.<!-- catering to both interactive and non-interactive forms of communication, and the conversion from Word to PDF.-->
 1. Konvertering från PDF till PDF/A-format.
 1. Konvertering från PDF till andra format än PDF. Exempel omfattar omformningen från PDF till bildformat eller konverteringen från PDF till textformat.
 
 >[!NOTE]
 >
->* Anrop-API:t för sammansättartjänsten kan internt anropa ett fakturerbart API för en annan tjänst beroende på indata. Så `invoke API` kan redovisas som inga, enskilda eller flera transaktioner. Antalet transaktioner som räknas beror på indata och de interna API:erna som anropas.
->* Ett enda PDF-dokument som skapats med en monteringstjänst som `invoke` och `invokeDDX`, kan redovisas som inga, enskilda eller flera transaktioner. Antalet transaktioner som räknas beror på det angivna <!--DDX--> kod.
+>* Anrop-API:t för sammansättartjänsten kan internt anropa ett fakturerbart API för en annan tjänst beroende på indata. `invoke API` kan alltså räknas som inga, enskilda eller flera transaktioner. Antalet transaktioner som räknas beror på indata och de interna API:erna som anropas.
+>* Ett enda PDF-dokument som skapats med en sammansättningstjänst som `invoke` och `invokeDDX` kan räknas som inga, enstaka eller flera transaktioner. Antalet transaktioner som räknas beror på den angivna <!--DDX-->-koden.
 
 <!--
 ### PDF Utility Service  {#pdf-utility-service}

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Här följer en översikt över redigering med AEM:
 
-* [Steg 1 för författare](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md) - en introduktion för nya författare
+* [Första steget för författare](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md) - en introduktion för nya författare
 
 >[!NOTE]
 >
@@ -33,16 +33,16 @@ För att du ska få hjälp med att skapa sidor innehåller redigeringsmiljön fu
 * **Dra och släpp**
 Komponenter (t.ex. Text, Bild) och digitala resurser (t.ex. bilder) kan placeras på sidan genom att dra och släppa dem på önskad plats.
 
-* **Redigering**
+* **Redigerar**
 När du har placerat den på sidan kan du öppna en komponentspecifik dialogruta där du kan ange komponentens innehåll och/eller konfigurera egenskaper (till exempel bildstorlek).
 
-* **In-place Editing**
+* **Redigering på plats**
 Text- och bildkomponenter kan redigeras direkt på webbsidan utan att du behöver öppna en dialogruta eller någon explicit sparåtgärd.
 
 * **[Sidekick](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#sidekickclassicui)**
 Ett flytande &quot;kontrollfönster&quot; som visas på den redigerbara sidan. Härifrån kan nya komponenter dras till sidan och sidspecifika åtgärder kan utföras.
 
-* **[Content Finder](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
+* **[Innehållssökning](/help/sites-classic-ui-authoring/classic-page-author-env-tools.md#thecontentfinderclassicui)**
 Till vänster på varje redigerbar sida ger innehållssökaren snabb åtkomst till en rad olika resurser, inklusive digitala resurser (som andra Flashar, element och dokument), andra sidor och stycken. Dessa objekt kan dras till sidan, t.ex. för att placera resurser eller skapa länkar till andra sidor.
 
 * **Snabbmeny**

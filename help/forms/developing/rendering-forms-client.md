@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # Återger Forms på klienten {#rendering-forms-at-the-client}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 ## Återger Forms på klienten {#rendering-forms-at-the-client-inner}
 
 Du kan optimera leveransen av PDF-innehåll och förbättra Forms-tjänstens förmåga att hantera nätverksbelastningen genom att använda klientsidesrenderingsfunktionen i Acrobat eller Adobe Reader. Den här processen kallas att återge ett formulär på klienten. Om du vill återge ett formulär på klienten måste klientenheten (vanligtvis en webbläsare) använda Acrobat 7.0 eller Adobe Reader 7.0 eller senare.
 
-Ändringar i ett formulär som är ett resultat av skriptkörning på serversidan återspeglas inte i ett formulär som återges på klienten såvida inte rotdelformuläret innehåller `restoreState` attribut som är inställt på `auto`. Mer information om det här attributet finns i [Forms Designer.](https://www.adobe.com/go/learn_aemforms_designer_63)
+Ändringar i ett formulär som är ett resultat av skriptkörning på serversidan återspeglas inte i ett formulär som återges på klienten såvida inte rotdelformuläret innehåller attributet `restoreState` som är inställt på `auto`. Mer information om attributet finns i [Forms Designer.](https://www.adobe.com/go/learn_aemforms_designer_63)
 
 >[!NOTE]
 >
@@ -47,13 +47,13 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett Forms Client API-objekt**
 
-Innan du programmässigt kan utföra en API-åtgärd för Forms-tjänstklienten måste du skapa en Forms-tjänstklient. Om du använder Java API skapar du en `FormsServiceClient` -objekt. Om du använder Forms webbtjänst-API skapar du en `FormsService` -objekt.
+Innan du programmässigt kan utföra en API-åtgärd för Forms-tjänstklienten måste du skapa en Forms-tjänstklient. Om du använder Java API skapar du ett `FormsServiceClient`-objekt. Om du använder Forms webbtjänst-API:t skapar du ett `FormsService`-objekt.
 
 **Ange körningsalternativ för klientåtergivning**
 
-Ange körtidsalternativet för klientåtergivning för att återge ett formulär på klienten genom att ställa in `RenderAtClient` körningsalternativ till `true`. Detta resulterar i att formuläret levereras till klientenheten där det återges. If `RenderAtClient` är `auto` (standardvärdet) avgör formulärdesignen om formuläret återges hos klienten. Formulärdesignen måste vara en formulärdesign med flödeslayout.
+Ange körtidsalternativet för klientåtergivning för att återge ett formulär på klienten genom att ställa in körningsalternativet `RenderAtClient` på `true`. Detta resulterar i att formuläret levereras till klientenheten där det återges. Om `RenderAtClient` är `auto` (standardvärdet) avgör formulärdesignen om formuläret återges hos klienten. Formulärdesignen måste vara en formulärdesign med flödeslayout.
 
-Ett valfritt körningsalternativ som du kan ange är `SeedPDF` alternativ. The `SeedPDF` används för att kombinera PDF-behållaren (dirigerat PDF-dokument) med formulärdesignen och XML-data. Både formulärdesignen och XML-data levereras till Acrobat eller Adobe Reader, där formuläret återges. The `SeedPDF` kan användas när klientdatorn inte har teckensnitt som används i formuläret, till exempel när en slutanvändare inte har licens att använda ett teckensnitt som formulärägaren har licens att använda.
+Ett valfritt körningsalternativ som du kan ange är alternativet `SeedPDF`. Alternativet `SeedPDF` kombinerar PDF-behållaren (dirigerat PDF-dokument) med formulärdesignen och XML-data. Både formulärdesignen och XML-data levereras till Acrobat eller Adobe Reader, där formuläret återges. Alternativet `SeedPDF` kan användas när klientdatorn inte har teckensnitt som används i formuläret, till exempel när en slutanvändare inte har licens att använda ett teckensnitt som formulärägaren har licens att använda.
 
 Du kan använda Designer för att skapa en enkel dynamisk PDF-fil som du kan använda som startvärdesfil för PDF. Följande steg krävs för att utföra den här uppgiften:
 
@@ -69,7 +69,7 @@ Du kan använda Designer för att skapa en enkel dynamisk PDF-fil som du kan anv
 
 Om du vill återge ett formulär på klienten måste du se till att alternativen för klientåtergivning vid körning inkluderas i programlogiken för att återge ett formulär.
 
-**Skriv formulärdataströmmen till klientens webbläsare**
+**Skriv formulärdataströmmen till klientwebbläsaren**
 
 Forms skapar en formulärdataström som du måste skriva till klientens webbläsare. När formuläret skrivs till webbläsaren återges det av Acrobat 7.0 eller Adobe Reader 7.0 eller senare och är synligt för användaren.
 
@@ -99,35 +99,35 @@ Forms skapar en formulärdataström som du måste skriva till klientens webbläs
 
 1. Skapa ett Forms Client API-objekt
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `FormsServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `FormsServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Ange körningsalternativ för klientåtergivning
 
-   * Skapa en `PDFFormRenderSpec` genom att använda dess konstruktor.
-   * Ange `RenderAtClient` körningsalternativ genom att anropa `PDFFormRenderSpec` objektets `setRenderAtClient` och skicka enum-värdet `RenderAtClient.Yes`.
+   * Skapa ett `PDFFormRenderSpec`-objekt med hjälp av dess konstruktor.
+   * Ange körningsalternativet `RenderAtClient` genom att anropa `PDFFormRenderSpec`-objektets `setRenderAtClient`-metod och skicka uppräkningsvärdet `RenderAtClient.Yes`.
 
 1. Återge ett formulär på klienten
 
-   Anropa `FormsServiceClient` objektets `renderPDFForm` och skicka följande värden:
+   Anropa `FormsServiceClient`-objektets `renderPDFForm`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett AEM Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * A `com.adobe.idp.Document` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du en tom `com.adobe.idp.Document` -objekt.
-   * A `PDFFormRenderSpec` objekt som lagrar körningsalternativ som krävs för att återge ett formulär på klienten.
-   * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten för att återge ett formulär.
-   * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * Ett `com.adobe.idp.Document`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du ett tomt `com.adobe.idp.Document`-objekt.
+   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ som krävs för att återge ett formulär på klienten.
+   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten för att återge ett formulär.
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
 
-   The `renderPDFForm` returnerar en `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `renderPDFForm` returnerar ett `FormsResult`-objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt&quot;s `getOutputContent` -metod.
-   * Hämta innehållstypen för `com.adobe.idp.Document` genom att anropa dess `getContentType` -metod.
-   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `com.adobe.idp.Document` -objekt.
-   * Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` -metod.
-   * Skapa en `java.io.InputStream` genom att anropa `com.adobe.idp.Document` objektets `getInputStream` -metod.
-   * Skapa en bytearray och fylla den med formulärdataströmmen genom att anropa `InputStream` objektets `read` och skicka bytearrayen som ett argument.
-   * Anropa `javax.servlet.ServletOutputStream` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
+   * Skapa ett `com.adobe.idp.Document`-objekt genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+   * Hämta innehållstypen för objektet `com.adobe.idp.Document` genom att anropa dess `getContentType`-metod.
+   * Ange innehållstypen för objektet `javax.servlet.http.HttpServletResponse` genom att anropa dess `setContentType`-metod och skicka innehållstypen för objektet `com.adobe.idp.Document`.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientwebbläsaren genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
+   * Skapa ett `java.io.InputStream`-objekt genom att anropa `com.adobe.idp.Document`-objektets `getInputStream`-metod.
+   * Skapa en bytearray och fyll i den med formulärdataströmmen genom att anropa `InputStream`-objektets `read`-metod och skicka bytearrayen som ett argument.
+   * Anropa `javax.servlet.ServletOutputStream`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 
@@ -148,38 +148,38 @@ Forms skapar en formulärdataström som du måste skriva till klientens webbläs
 
 1. Skapa ett Forms Client API-objekt
 
-   Skapa en `FormsService` och ange autentiseringsvärden.
+   Skapa ett `FormsService`-objekt och ange autentiseringsvärden.
 
 1. Ange körningsalternativ för klientåtergivning
 
-   * Skapa en `PDFFormRenderSpec` genom att använda dess konstruktor.
-   * Ange `RenderAtClient` körningsalternativ genom att anropa `PDFFormRenderSpec` objektets `setRenderAtClient` metoden och skicka strängvärdet `RenderAtClient.Yes`.
+   * Skapa ett `PDFFormRenderSpec`-objekt med hjälp av dess konstruktor.
+   * Ange körningsalternativet `RenderAtClient` genom att anropa `PDFFormRenderSpec`-objektets `setRenderAtClient`-metod och skicka strängvärdet `RenderAtClient.Yes`.
 
 1. Återge ett formulär på klienten
 
-   Anropa `FormsService` objektets `renderPDFForm` och skicka följande värden:
+   Anropa `FormsService`-objektets `renderPDFForm`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * A `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
-   * A `PDFFormRenderSpec` objekt som lagrar körningsalternativ som krävs för att återge ett formulär på klienten.
-   * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
-   * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
-   * En tom `com.adobe.idp.services.holders.BLOBHolder` objekt som fylls i av metoden. Den här parametern används för att lagra det återgivna PDF-formuläret.
-   * En tom `javax.xml.rpc.holders.LongHolder` objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret).
-   * En tom `javax.xml.rpc.holders.StringHolder` objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde).
-   * En tom `com.adobe.idp.services.holders.FormsResultHolder` objekt som innehåller resultatet av den här åtgärden.
+   * Ett `BLOB`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du `null`. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
+   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ som krävs för att återge ett formulär på klienten.
+   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten.
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * Ett tomt `com.adobe.idp.services.holders.BLOBHolder`-objekt som fylls i av metoden. Den här parametern används för att lagra det återgivna PDF-formuläret.
+   * Ett tomt `javax.xml.rpc.holders.LongHolder`-objekt som fylls i av metoden. (Det här argumentet lagrar antalet sidor i formuläret).
+   * Ett tomt `javax.xml.rpc.holders.StringHolder`-objekt som fylls i av metoden. (Det här argumentet lagrar språkets värde).
+   * Ett tomt `com.adobe.idp.services.holders.FormsResultHolder`-objekt som innehåller resultatet av den här åtgärden.
 
-   The `renderPDFForm` metoden fyller i `com.adobe.idp.services.holders.FormsResultHolder` objekt som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `renderPDFForm` fyller i objektet `com.adobe.idp.services.holders.FormsResultHolder` som skickas som det sista argumentvärdet med en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa en `FormResult` genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder` objektets `value` datamedlem.
-   * Skapa en `BLOB` objekt som innehåller formulärdata genom att anropa `FormsResult` objektets `getOutputContent` -metod.
-   * Hämta innehållstypen för `BLOB` genom att anropa dess `getContentType` -metod.
-   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `BLOB` -objekt.
-   * Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` -metod.
-   * Skapa en bytearray och fylla i den genom att anropa `BLOB` objektets `getBinaryData` -metod. Den här aktiviteten tilldelar innehållet i `FormsResult` till bytearrayen.
-   * Anropa `javax.servlet.http.HttpServletResponse` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
+   * Skapa ett `FormResult`-objekt genom att hämta värdet för `com.adobe.idp.services.holders.FormsResultHolder`-objektets `value`-datamedlem.
+   * Skapa ett `BLOB`-objekt som innehåller formulärdata genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+   * Hämta innehållstypen för objektet `BLOB` genom att anropa dess `getContentType`-metod.
+   * Ange innehållstypen för objektet `javax.servlet.http.HttpServletResponse` genom att anropa dess `setContentType`-metod och skicka innehållstypen för objektet `BLOB`.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientwebbläsaren genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
+   * Skapa en bytearray och fyll i den genom att anropa `BLOB`-objektets `getBinaryData`-metod. Den här aktiviteten tilldelar innehållet i objektet `FormsResult` till bytearrayen.
+   * Anropa `javax.servlet.http.HttpServletResponse`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 

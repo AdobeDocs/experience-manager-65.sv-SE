@@ -23,15 +23,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Om du inte använder AEM som innehållshanteringskälla kan du läsa [Hjälp om AEM Mobile On-demand Services](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>Om du inte använder AEM som innehållshanteringskälla kan du läsa [AEM Mobile On-demand Services-hjälpen](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 >[!NOTE]
 >
 >Innan du börjar arbeta med AEM Mobile och följer stegen i den här guiden bör du känna till [AEM](/help/sites-deploying/deploy.md).
 >
->Information om hur du konfigurerar din miljö för AEM Mobile On-demand Services finns i [AEM Mobile Application Dashboard eller Control Center](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
+>Mer information om hur du konfigurerar din miljö för AEM Mobile On-demand Services finns i [AEM Mobile Application Dashboard eller Control Center](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-An **AEM** utökar och skapar anpassade webbmallar och komponenter för att aktivera *AEM* för att skapa vackra och engagerande mobilupplevelser. Dessa mallar och komponenter är inte bara optimerade för mobilappsvärlden utan kommunicerar både med enheten och med AEM server (valfri fjärrserver) till slutpunkter för flerkanalstjänster. AEM inbyggda innehållsredigeraren används av *AEM* för att skapa engagerande och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Marketing Cloud.
+En **AEM-utvecklare** utökar och skapar anpassade webbmallar och komponenter så att författaren *AEM* kan skapa tilltalande och engagerande mobilupplevelser. Dessa mallar och komponenter är inte bara optimerade för mobilappsvärlden utan kommunicerar både med enheten och med AEM server (valfri fjärrserver) till slutpunkter för flerkanalstjänster. AEM inbyggda innehållsredigerare används av *AEM* för att skapa avancerade och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Marketing Cloud.
 
 En AEM utvecklare ansvarar för följande när de skapar ett program med AEM Mobile On-demand Services:
 
@@ -43,7 +43,7 @@ Se [Utveckla AEM Mobile Content Services](/help/mobile/developing-content-servic
 
 >[!NOTE]
 >
->An *AEM* rollerna börjar och slutar inte med utvecklingen av mallar och komponenter. An *AEM* kan skapa ett helt nytt program i stället för att bara utöka det körklara referensimplementeringsexemplet.
+>En *AEM-utvecklares*-roll börjar och slutar inte med utvecklingen av mallar och komponenter. En *AEM-utvecklare* kan skapa ett helt nytt program i stället för att bara utöka det körklara referensimplementeringsexemplet.
 
 ## Ytterligare resurser {#additional-resources}
 

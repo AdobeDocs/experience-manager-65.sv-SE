@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Förbereder AEM Forms för säkerhetskopiering {#preparing-aem-forms-for-backup}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 ## Om tjänsten Säkerhetskopiering och återställning {#about-the-backup-and-restore-service}
 
-Med tjänsten för säkerhetskopiering och återställning kan du installera AEM Forms i *säkerhetskopieringsläge*, vilket möjliggör säkerhetskopiering under körning. Säkerhetskopierings- och återställningstjänsten utför inte någon säkerhetskopiering av AEM Forms eller återställning av systemet. I stället försätts servern i ett läge där det går att utföra konsekventa och tillförlitliga säkerhetskopieringar samtidigt som servern kan fortsätta att köras. Du ansvarar för åtgärderna för att säkerhetskopiera GDS (Global Document Storage) och databasen som är ansluten till Forms Server. GDS är en katalog som används för att lagra filer som används i en långvarig process.
+Med tjänsten Säkerhetskopiering och återställning kan du placera AEM Forms i *säkerhetskopieringsläge*, vilket gör att det går att utföra säkerhetskopiering under körning. Säkerhetskopierings- och återställningstjänsten utför inte någon säkerhetskopiering av AEM Forms eller återställning av systemet. I stället försätts servern i ett läge där det går att utföra konsekventa och tillförlitliga säkerhetskopieringar samtidigt som servern kan fortsätta att köras. Du ansvarar för åtgärderna för att säkerhetskopiera GDS (Global Document Storage) och databasen som är ansluten till Forms Server. GDS är en katalog som används för att lagra filer som används i en långvarig process.
 
 Säkerhetskopieringsläget är ett läge som servern försätts i så att filer i GDS inte rensas när en säkerhetskopieringsprocedur utförs. I stället skapas underkataloger under GDS-katalogen för att behålla en post med filer som ska rensas när säkerhetskopieringsläget har avslutats. En fil är avsedd att överleva systemomstarter och kan sträcka sig över flera dagar eller till och med år. Dessa filer är en viktig del av det övergripande tillståndet för Forms Server och kan innehålla PDF-filer, profiler eller formulärmallar. Om någon av dessa filer förloras eller skadas kan processerna på Forms Server bli instabila och data gå förlorade.
 
@@ -43,11 +43,11 @@ Du kan utföra följande åtgärder med tjänsten Säkerhetskopiera och återst�
 
 >[!NOTE]
 >
->Mer information om vad du bör tänka på när du gör säkerhetskopieringar för AEM Forms finns i [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).
+>Mer information om vad du bör tänka på när du gör säkerhetskopieringar för AEM Forms finns i [administrationshjälpen](https://www.adobe.com/go/learn_aemforms_admin_63).
 
 >[!NOTE]
 >
->Mer information om tjänsten Backup and Restore finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Säkerhetskopiering och återställning finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Läget för säkerhetskopiering på Forms Server aktiveras {#entering-backup-mode-on-the-forms-server}
 
@@ -57,11 +57,11 @@ Du aktiverar säkerhetskopieringsläget för att tillåta säkerhetskopiering av
 * Den tid det tar för säkerhetskopieringen att slutföras.
 * En flagga som anger om du ska vara i kontinuerligt säkerhetskopieringsläge, vilket bara är användbart om du utför rullande säkerhetskopiering.
 
-Innan du skriver program som ska gå in i säkerhetskopieringsläge bör du känna till de säkerhetskopieringsprocedurer som används när du har placerat Forms Server i säkerhetskopieringsläge. Mer information om vad du bör tänka på när du gör säkerhetskopieringar för AEM Forms finns i [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).
+Innan du skriver program som ska gå in i säkerhetskopieringsläge bör du känna till de säkerhetskopieringsprocedurer som används när du har placerat Forms Server i säkerhetskopieringsläge. Mer information om vad du bör tänka på när du gör säkerhetskopieringar för AEM Forms finns i [administrationshjälpen](https://www.adobe.com/go/learn_aemforms_admin_63).
 
 >[!NOTE]
 >
->Mer information om tjänsten Backup and Restore finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Säkerhetskopiering och återställning finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -78,15 +78,15 @@ Så här skapar du ett program som övergår till säkerhetskopieringsläge:
 
 Inkludera nödvändiga filer i utvecklingsprojektet. Dessa filer är viktiga att inkludera i ditt projekt för att kompilera koden på rätt sätt och använda API:t för tjänsten Backup and Restore.
 
-Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Mer information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett BackupService Client API-objekt**
 
 Om du vill lämna säkerhetskopieringsläget programmatiskt skapar du ett BackupService-klientobjekt som ska använda API:t för tjänsten för säkerhetskopiering och återställning.
 
-**Bestäm på en unik etikett, bestäm hur lång tid säkerhetskopieringen ska utföras och bestäm om den ska vara i kontinuerligt säkerhetskopieringsläge**
+**Bestäm dig för en unik etikett, bestäm hur lång tid det tar att utföra säkerhetskopieringen och bestäm om du ska vara i kontinuerligt säkerhetskopieringsläge**
 
-Innan du går in i säkerhetskopieringsläget bör du bestämma en unik etikett, fastställa hur lång tid du vill tilldela för att utföra säkerhetskopieringen och bestämma om du vill att Forms Server ska vara i säkerhetskopieringsläge. Dessa överväganden är viktiga att integrera med de säkerhetskopieringsprocedurer som din organisation har fastställt. (Se [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).)
+Innan du går in i säkerhetskopieringsläget bör du bestämma en unik etikett, fastställa hur lång tid du vill tilldela för att utföra säkerhetskopieringen och bestämma om du vill att Forms Server ska vara i säkerhetskopieringsläge. Dessa överväganden är viktiga att integrera med de säkerhetskopieringsprocedurer som din organisation har fastställt. (Se [Administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).)
 
 **Ange säkerhetskopieringsläge**
 
@@ -116,10 +116,10 @@ Ange säkerhetskopieringsläge med API:t för säkerhetskopiering och återstäl
 
 1. Skapa ett BackupService Client API-objekt
 
-   Du använder en `ServiceClientFactory` -objektet och BackupService-klient-API-objektet tillsammans.
+   Du använder ett `ServiceClientFactory`-objekt och BackupService-klient-API-objektet tillsammans.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-   * Skapa en `BackupService` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+   * Skapa ett `BackupService`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Bestäm på en unik etikett, bestäm hur lång tid säkerhetskopieringen ska utföras och bestäm om den ska vara i kontinuerligt säkerhetskopieringsläge
 
@@ -127,17 +127,17 @@ Ange säkerhetskopieringsläge med API:t för säkerhetskopiering och återstäl
 
 1. Ange säkerhetskopieringsläge
 
-   Aktivera säkerhetskopieringsläget genom att anropa `enterBackupMode` metod med följande parametrar:
+   Öppna säkerhetskopieringsläget genom att anropa metoden `enterBackupMode` med följande parametrar:
 
-   * A `String` värde som anger en unik etikett som kan läsas av människor och som identifierar sessionen för säkerhetskopieringsläget. Du bör inte använda blanksteg eller tecken som inte kan kodas i XML-format.
-   * An `int` värde som anger antalet minuter som ska behållas i säkerhetskopieringsläge. Du kan ange ett värde från `1` till `10080` (antalet minuter i en vecka). Detta värde ignoreras när läget för kontinuerlig säkerhetskopiering används.
-   * A `Boolean` ett värde som anger om du vill vara i kontinuerligt säkerhetskopieringsläge. Värdet för `True` används för att vara i kontinuerligt säkerhetskopieringsläge. I läget för kontinuerlig säkerhetskopiering ignoreras det värde du anger för hur många minuter som ska vara kvar i läget för säkerhetskopiering.
+   * Ett `String`-värde som anger en unik läsbar etikett som identifierar säkerhetskopieringslägessessionen. Du bör inte använda blanksteg eller tecken som inte kan kodas i XML-format.
+   * Ett `int`-värde som anger antalet minuter som ska behållas i säkerhetskopieringsläge. Du kan ange ett värde mellan `1` och `10080` (antalet minuter i en vecka). Detta värde ignoreras när läget för kontinuerlig säkerhetskopiering används.
+   * Ett `Boolean`-värde som anger om det ska vara i kontinuerligt säkerhetskopieringsläge. Värdet `True` anger att det ska vara i kontinuerligt säkerhetskopieringsläge. I läget för kontinuerlig säkerhetskopiering ignoreras det värde du anger för hur många minuter som ska vara kvar i läget för säkerhetskopiering.
 
-     Kontinuerligt säkerhetskopieringsläge innebär att en ny session i säkerhetskopieringsläge startas när den aktuella sessionen har slutförts. Värdet för `False` betyder att kontinuerligt säkerhetskopieringsläge inte används och att rensning av filer från GDS-systemet återupptas efter att säkerhetskopieringsläget har avslutats.
+     Kontinuerligt säkerhetskopieringsläge innebär att en ny session i säkerhetskopieringsläge startas när den aktuella sessionen har slutförts. Värdet `False` innebär att kontinuerligt säkerhetskopieringsläge inte används och att rensning av filer från GDS återupptas efter att säkerhetskopieringsläget har avslutats.
 
 1. Hämta information om sessionen för säkerhetskopieringsläge på servern
 
-   Hämta information med `BackupModeEntryResult` objekt som returneras efter anrop av `enterBackupMode` -metod. Den information du kan hämta när du har aktiverat säkerhetskopieringsläget kan vara användbar för integrering med dina säkerhetskopieringsprocedurer. Etiketten, säkerhetskopierings-ID:t och starttiden kan till exempel vara användbara som indata för filnamn för säkerhetskopieringsproceduren.
+   Hämta information med objektet `BackupModeEntryResult` som returneras efter att metoden `enterBackupMode` anropats. Den information du kan hämta när du har aktiverat säkerhetskopieringsläget kan vara användbar för integrering med dina säkerhetskopieringsprocedurer. Etiketten, säkerhetskopierings-ID:t och starttiden kan till exempel vara användbara som indata för filnamn för säkerhetskopieringsproceduren.
 
 1. Säkerhetskopiera GDS och databasen
 
@@ -154,7 +154,7 @@ Ange säkerhetskopieringsläge med webbtjänsten som tillhandahålls av API:t f�
 
 1. Skapa ett BackupService Client API-objekt
 
-   Skapa en `BackupServiceService` genom att anropa standardkonstruktorn och ange autentiseringsuppgifterna med `Credentials` -metod.
+   Skapa ett `BackupServiceService`-objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor och ange autentiseringsuppgifterna med metoden `Credentials`.
 
 1. Bestäm på en unik etikett, bestäm hur lång tid säkerhetskopieringen ska utföras och bestäm om den ska vara i kontinuerligt säkerhetskopieringsläge
 
@@ -164,11 +164,11 @@ Ange säkerhetskopieringsläge med webbtjänsten som tillhandahålls av API:t f�
 
    Aktivera metoden enterBackupMode och skicka följande värden för att aktivera säkerhetskopieringsläget:
 
-   * A `String` värde som anger en unik etikett som kan läsas av människor och som identifierar sessionen för säkerhetskopieringsläget. Du bör inte använda blanksteg eller tecken som inte kan kodas i XML-format.
-   * A `Uint32` värde som anger antalet minuter som ska behållas i säkerhetskopieringsläge. Du kan ange ett värde från `1` till `10080` (antal minuter i en vecka). Detta värde ignoreras när läget för kontinuerlig säkerhetskopiering används.
-   * A `Boolean` ett värde som anger om du vill vara i kontinuerligt säkerhetskopieringsläge. Värdet för `True` används för att vara i kontinuerligt säkerhetskopieringsläge. I läget för kontinuerlig säkerhetskopiering ignoreras det värde du anger för hur många minuter som ska vara kvar i läget för säkerhetskopiering. Kontinuerligt säkerhetskopieringsläge innebär att en ny session i säkerhetskopieringsläge startas när den aktuella sessionen har slutförts.
+   * Ett `String`-värde som anger en unik läsbar etikett som identifierar säkerhetskopieringslägessessionen. Du bör inte använda blanksteg eller tecken som inte kan kodas i XML-format.
+   * Ett `Uint32`-värde som anger antalet minuter som ska behållas i säkerhetskopieringsläge. Du kan ange ett värde mellan `1` och `10080` (antal minuter i en vecka). Detta värde ignoreras när läget för kontinuerlig säkerhetskopiering används.
+   * Ett `Boolean`-värde som anger om det ska vara i kontinuerligt säkerhetskopieringsläge. Värdet `True` anger att det ska vara i kontinuerligt säkerhetskopieringsläge. I läget för kontinuerlig säkerhetskopiering ignoreras det värde du anger för hur många minuter som ska vara kvar i läget för säkerhetskopiering. Kontinuerligt säkerhetskopieringsläge innebär att en ny session i säkerhetskopieringsläge startas när den aktuella sessionen har slutförts.
 
-     Värdet för `False` betyder att kontinuerligt säkerhetskopieringsläge inte används och att rensning av filer från GDS-systemet återupptas efter att säkerhetskopieringsläget har avslutats.
+     Värdet `False` innebär att kontinuerligt säkerhetskopieringsläge inte används och att rensning av filer från GDS återupptas efter att säkerhetskopieringsläget har avslutats.
 
 1. Hämta information om sessionen för säkerhetskopieringsläge på servern
 
@@ -182,11 +182,11 @@ Ange säkerhetskopieringsläge med webbtjänsten som tillhandahålls av API:t f�
 
 Du lämnar säkerhetskopieringsläget så att Forms Server fortsätter att tömma filer från GDS (Global Document Storage) på Forms Server.
 
-Innan du skriver program för att gå över till viloläge rekommenderar vi att du förstår de säkerhetskopieringsprocedurer som används med AEM Forms. Mer information om vad du bör tänka på när du gör säkerhetskopieringar för AEM Forms finns i [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_63).
+Innan du skriver program för att gå över till viloläge rekommenderar vi att du förstår de säkerhetskopieringsprocedurer som används med AEM Forms. Mer information om vad du bör tänka på när du gör säkerhetskopieringar för AEM Forms finns i [administrationshjälpen](https://www.adobe.com/go/learn_aemforms_admin_63).
 
 >[!NOTE]
 >
->Mer information om tjänsten Backup and Restore finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om tjänsten Säkerhetskopiering och återställning finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -201,7 +201,7 @@ Så här lämnar du säkerhetskopieringsläget:
 
 Inkludera alla nödvändiga filer i utvecklingsprojektet. De här filerna är viktiga för att kompilera koden på rätt sätt och för att använda API:t för tjänsten för säkerhetskopiering och återställning.
 
-Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Mer information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett BackupService Client API-objekt**
 
@@ -231,18 +231,18 @@ Lämna säkerhetskopieringsläget med hjälp av API:t för säkerhetskopiering o
 
 1. Skapa ett BackupService Client API-objekt
 
-   Du använder en `ServiceClientFactory` -objektet och BackupService-klient-API-objektet tillsammans.
+   Du använder ett `ServiceClientFactory`-objekt och BackupService-klient-API-objektet tillsammans.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-   * Skapa en `BackupService` genom att använda konstruktorn och skicka `ServiceClientFactory` objekt som parameter.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+   * Skapa ett `BackupService`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet som parameter.
 
 1. Ange säkerhetskopieringsläge
 
-   Lämna säkerhetskopieringsläget genom att anropa `leaveBackupMode` -metod.
+   Lämna säkerhetskopieringsläget genom att anropa metoden `leaveBackupMode`.
 
 1. Hämta information om sessionen för säkerhetskopieringsläge på servern
 
-   Hämta information om åtgärden med `BackupModeResult` objekt som returneras. Den information du kan hämta när du har aktiverat säkerhetskopieringsläget kan vara användbar för integrering med dina säkerhetskopieringsprocedurer. Etiketten, säkerhetskopierings-ID:t och starttiden kan till exempel vara användbara som indata för filnamn för säkerhetskopieringsproceduren.
+   Hämta information om åtgärden med det `BackupModeResult`-objekt som returneras. Den information du kan hämta när du har aktiverat säkerhetskopieringsläget kan vara användbar för integrering med dina säkerhetskopieringsprocedurer. Etiketten, säkerhetskopierings-ID:t och starttiden kan till exempel vara användbara som indata för filnamn för säkerhetskopieringsproceduren.
 
 ### Lämna säkerhetskopieringsläget med hjälp av webbtjänstens API {#leave-backup-mode-using-the-web-service-api}
 
@@ -257,11 +257,11 @@ Lämna säkerhetskopieringsläget med hjälp av API:t för säkerhetskopiering o
 
 1. Skapa ett BackupService Client API-objekt
 
-   Skapa en `BackupServiceService` genom att anropa dess standardkonstruktor.
+   Skapa ett `BackupServiceService`-objekt med Microsoft .NET-klientsammansättningen genom att anropa dess standardkonstruktor.
 
 1. Ange säkerhetskopieringsläge
 
-   Lämna säkerhetskopieringsläget genom att anropa `leaveBackupMode` webbtjänståtgärd.
+   Lämna säkerhetskopieringsläget genom att anropa webbtjänståtgärden `leaveBackupMode`.
 
 1. Hämta information om sessionen för säkerhetskopieringsläge på servern
 

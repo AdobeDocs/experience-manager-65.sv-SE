@@ -33,8 +33,8 @@ Så här använder du en anpassad layout för ett fält:
 
 ### Anpassa layouten för ett enskilt fält {#customize-layout-of-a-single-field}
 
-1. Öppna formuläret i **Stil** läge. Om du vill öppna formuläret i formatläge väljer du ![canvas-drop-down](assets/canvas-drop-down.png) > **Stil**.
-1. I sidlisten, under **Formulärobjekt** markerar du fältet och väljer redigeringsknappen ![edit-button](assets/edit-button.png).
+1. Öppna formuläret i läget **Format**. Om du vill öppna formuläret i formatläge väljer du ![arbetsytelistrutan](assets/canvas-drop-down.png) > **Format** i sidverktygsfältet.
+1. Markera fältet under **Formulärobjekt** i sidofältet och välj redigeringsknappen ![redigera-knapp](assets/edit-button.png).
 1. Markera läget för det fält som du vill anpassa och ange formatet för det läget.
 
    ![Ange infogad formatering för ett fält](assets/edit-error-state.png)
@@ -46,12 +46,12 @@ Med AEM Forms kan du nu skapa ett tema och använda det i ditt formulär. Med te
 Skapa ett tema med hjälp av temaredigeraren för att anpassa layouten för alla fält i formuläret. När du har skapat ett tema utför du följande steg för att tillämpa det på ett formulär:
 
 1. Öppna formuläret i redigeringsläge.
-1. Markera en komponent i redigeringsläget och välj sedan ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och sedan markera ![cmppr](assets/cmppr.png).
+1. Markera en komponent i redigeringsläget, välj ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och välj sedan ![cmpr](assets/cmppr.png).
 1. I sidlisten, under Adaptivt formulärtema, väljer du det tema du har skapat med hjälp av Theme Editor.
 
 ## Skapa en anpassad fältlayout {#create-a-custom-field-layout}
 
-1. Öppna CRXDE Lite. Standardwebbadressen är https://&#39;[server]:[port]&#39;/crx/de.
+1. Öppna CRXDE Lite. Standardwebbadressen är https://&#39;[server]:[port]/crx/de.
 1. Kopiera en fältlayout från noden /libs/fd/af/layouts/field (till exempel defaultFieldLayout) till noden /apps (till exempel /apps/af-field-layout).
 1. Byt namn på den kopierade noden och filen defaultFieldLayout.jsp. Till exempel errorOnRight.jsp.
 
@@ -81,7 +81,7 @@ Skapa ett tema med hjälp av temaredigeraren för att anpassa layouten för alla
    ```
 
 1. Om du vill förbättra utseendet och beteendet inkluderar du klientbiblioteket som skapades i layoutfilen (errorOnRight.jsp).
-1. Öppna redigeringsdialogrutan för fältet och välj **Stilar** -fliken. I **Konfigurera fältlayout** väljer du den nya layouten och klickar på **OK**.
+1. Öppna redigeringsdialogrutan för fältet och välj fliken **Format**. Markera den nyskapade layouten i listrutan **Konfigurera fältlayout** och klicka på **OK**.
 
 Paketet ErrorOnRight.zip innehåller kod som visar felmeddelanden till höger om fält.
 

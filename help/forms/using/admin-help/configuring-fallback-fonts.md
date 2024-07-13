@@ -24,12 +24,12 @@ Du kan konfigurera filen FontManagerResources.properties manuellt för att mappa
 >
 >Konfiguration av reservteckensnitt gäller även för monteringsverktyget.
 
-1. Navigera till adobe-livecycle-*`[appserver]`*.ear-filen i *`[aem-forms root]`*/configurationManager/export katalog, skapa en säkerhetskopia och packa upp originalet.
+1. Navigera till filen adobe-livecycle-*`[appserver]`*.ear i katalogen *`[aem-forms root]`*/configurationManager/export, skapa en säkerhetskopia och packa upp originalet.
 1. Leta reda på filen adobe-fontmanager.jar och packa upp den.
 1. Leta reda på filen FontManagerResources.properties och öppna den i en textredigerare.
 1. Ändra teckensnittsplatserna och namnen för generiska och reservalternativ efter behov och spara filen.
 
-   Teckensnittsposterna i filen FontManagerResources.properties är relativa till *`[aem-forms root]`*/fonts-katalog. Om du anger teckensnitt som inte är standard AEM formulärteckensnitt måste du installera dessa teckensnitt i den här katalogstrukturen (antingen i en befintlig katalog eller i en ny).
+   Teckensnittsposterna i filen FontManagerResources.properties är relativa till katalogen *`[aem-forms root]`*/fonts. Om du anger teckensnitt som inte är standard AEM formulärteckensnitt måste du installera dessa teckensnitt i den här katalogstrukturen (antingen i en befintlig katalog eller i en ny).
 
    >[!NOTE]
    >
@@ -40,8 +40,8 @@ Du kan konfigurera filen FontManagerResources.properties manuellt för att mappa
    * Generiskt teckensnitt, söks igenom efter ordningsföljd i reservtabellen
 
 1. Paketera om filen adobe-fontmanager.jar.
-1. Paketera om Adobe-livecycle-*`[appserver]`*.ear file and then redeploy it either manual or by running Configuration Manager.
+1. Paketera om filen adobe-livecycle-*`[appserver]`*.ear och distribuera den sedan manuellt eller genom att köra Configuration Manager.
 
 >[!NOTE]
 >
->Använd inte Configuration Manager för att paketera om adobe-livecycle-`[appserver]`.ear-filen eftersom den skriver över ändringarna med standardvärdena för AEM formulär.
+>Använd inte Configuration Manager för att paketera om filen adobe-livecycle-`[appserver]`.ear eftersom den skriver över ändringarna med standardvärdena för AEM formulär.

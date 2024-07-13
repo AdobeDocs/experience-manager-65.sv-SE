@@ -37,9 +37,9 @@ Ange samma attributnamn för båda tjänsterna. Attributet ingår i `SimpleCrede
 
 ## Konfigurerar enkel inloggning {#configuring-sso}
 
-Om du vill konfigurera enkel inloggning för en AEM instans konfigurerar du [Hanterare för SSO-autentisering](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
+Om du vill konfigurera enkel inloggning för en AEM instans konfigurerar du autentiseringshanteraren [för enkel inloggning](/help/sites-deploying/osgi-configuration-settings.md#adobegranitessoauthenticationhandler):
 
-1. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+1. När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information och rekommenderade tillvägagångssätt finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
 
    För NTLM:
 
@@ -47,13 +47,13 @@ Om du vill konfigurera enkel inloggning för en AEM instans konfigurerar du [Han
    * **Rubriknamn**: `LOGON_USER`
    * **ID-format**: `^<DOMAIN>\\(.+)$`
 
-     Plats `<*DOMAIN*>` ersätts med namnet på din egen domän.
+     Där `<*DOMAIN*>` ersätts av namnet på din egen domän.
 
    För CoSign:
 
    * **Sökväg:** efter behov, till exempel `/`
    * **Rubriknamn**: remote_user
-   * **ID-format:** asIs
+   * **ID-format:** AsIs
 
    För SiteMinder:
 
@@ -85,30 +85,30 @@ Om du vill konfigurera enkel inloggning för en AEM instans konfigurerar du [Han
 >* `disp_iis.ini`
 >* IIS
 >
->I `disp_iis.ini` set:
->(se [installera Dispatcher med Microsoft® Internet Information Server](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server) för fullständig information)
+>I `disp_iis.ini`-uppsättningen:
+>(Mer information finns i [installera Dispatcher med Microsoft® Internet Information Server](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html#microsoft-internet-information-server))
 >
->* `servervariables=1` (vidarebefordrar IIS-servervariabler som begäranrubriker till fjärrinstansen)
->* `replaceauthorization=1` (ersätter en rubrik med namnet&quot;Authorization&quot;, som inte är&quot;Basic&quot;, med motsvarande&quot;Basic&quot;)
+>* `servervariables=1` (vidarebefordrar IIS-servervariabler som begärandehuvuden till fjärrinstansen)
+>* `replaceauthorization=1` (ersätter en rubrik med namnet &quot;Authorization&quot;, annan än &quot;Basic&quot;, med motsvarande &quot;Basic&quot;)
 >
 >I IIS:
 >
->* disable **Anonym åtkomst**
+>* inaktivera **anonym åtkomst**
 >
->* enable **Integrerad Windows-autentisering**
+>* aktivera **integrerad Windows-autentisering**
 >
 
-Du kan se vilken autentiseringshanterare som används i vilken del av innehållsträdet som helst genom att använda **Autentiserare** till Felix Console, till exempel:
+Du kan se vilken autentiseringshanterare som tillämpas på valfri del av innehållsträdet med alternativet **Autentiserare** i Felix Console, till exempel:
 
 `http://localhost:4502/system/console/slingauth`
 
-Hanteraren som bäst matchar banan efterfrågas först. Om du till exempel konfigurerar handler-A för sökvägen `/` och handler-B för banan `/content`och därefter en begäran om att `/content/mypage.html` frågar hanteraren-B först.
+Hanteraren som bäst matchar banan efterfrågas först. Om du till exempel konfigurerar handler-A för sökvägen `/` och handler-B för sökvägen `/content` kommer en begäran till `/content/mypage.html` att fråga handler-B först.
 
 ![screen_shot_2012-02-15at21006pm](assets/screen_shot_2012-02-15at21006pm.png)
 
 ### Exempel {#example}
 
-För en cookie-begäran (med URL:en `http://localhost:4502/libs/wcm/content/siteadmin.html`):
+För en cookie-begäran (med URL `http://localhost:4502/libs/wcm/content/siteadmin.html`):
 
 ```xml
 GET /libs/cq/core/content/welcome.html HTTP/1.1
@@ -118,7 +118,7 @@ Cookie: TestCookie=admin
 
 Använda följande konfiguration:
 
-* **Bana**: `/`
+* **Sökväg**: `/`
 
 * **Rubriknamn**: `TestHeader`
 
@@ -149,7 +149,7 @@ Transfer-Encoding: chunked
 Detta fungerar även om du begär:
 `http://localhost:4502/libs/cq/core/content/welcome.html?TestParameter=admin`
 
-Du kan också använda följande bock-kommando för att skicka `TestHeader` sidhuvud till `admin:`
+Du kan också använda följande curl-kommando för att skicka `TestHeader`-rubriken till `admin:`
 `curl -D - -H "TestHeader: admin" http://localhost:4502/libs/cq/core/content/welcome.html`
 
 >[!NOTE]
@@ -162,14 +162,14 @@ När du använder enkel inloggning hanteras inloggning och utloggning externt, s
 
 Utloggningslänken på välkomstskärmen kan tas bort med följande steg.
 
-1. Övertäckning `/libs/cq/core/components/welcome/welcome.jsp` till `/apps/cq/core/components/welcome/welcome.jsp`
+1. Överlägg `/libs/cq/core/components/welcome/welcome.jsp` till `/apps/cq/core/components/welcome/welcome.jsp`
 1. ta bort följande del från jsp.
 
    `<a href="#" onclick="signout('<%= request.getContextPath() %>');" class="signout"><%= i18n.get("sign out", "welcome screen") %>`
 
 Så här tar du bort den utloggningslänk som är tillgänglig på användarens personliga meny i det övre högra hörnet:
 
-1. Övertäckning `/libs/cq/ui/widgets/source/widgets/UserInfo.js` till `/apps/cq/ui/widgets/source/widgets/UserInfo.js`
+1. Överlägg `/libs/cq/ui/widgets/source/widgets/UserInfo.js` till `/apps/cq/ui/widgets/source/widgets/UserInfo.js`
 
 1. Ta bort följande del från filen:
 

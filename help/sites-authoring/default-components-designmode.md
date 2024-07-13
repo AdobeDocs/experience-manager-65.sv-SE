@@ -16,21 +16,21 @@ ht-degree: 0%
 
 När AEM är installerad i körklart läge är ett urval av komponenter omedelbart tillgängliga i komponentwebbläsaren.
 
-Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att [aktivera/inaktivera sådana komponenter](#enable-disable-components). När det är aktiverat och finns på sidan kan du sedan använda designläget för att [konfigurera komponentdesignens aspekter](#configuring-the-design-of-a-component) genom att redigera attributparametrarna.
+Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att [aktivera/inaktivera sådana komponenter](#enable-disable-components). När det är aktiverat och finns på sidan kan du sedan använda designläget för att [konfigurera komponentens design](#configuring-the-design-of-a-component) genom att redigera attributparametrarna.
 
 >[!NOTE]
 >
->Försiktighet måste iakttas vid redigering av dessa komponenter. Designinställningarna är ofta en viktig del av designen för hela webbplatsen, så de bör bara ändras av någon med rätt behörighet och upplevelse, ofta en administratör eller en utvecklare. Se [Utveckla komponenter](/help/sites-developing/components.md) för mer information.
+>Försiktighet måste iakttas vid redigering av dessa komponenter. Designinställningarna är ofta en viktig del av designen för hela webbplatsen, så de bör bara ändras av någon med rätt behörighet och upplevelse, ofta en administratör eller en utvecklare. Mer information finns i [Utveckla komponenter](/help/sites-developing/components.md).
 
 >[!NOTE]
 >
->Designläget är bara tillgängligt för statiska mallar. Mallar som skapas med redigerbara mallar bör redigeras med [mallredigerare](/help/sites-authoring/templates.md).
+>Designläget är bara tillgängligt för statiska mallar. Mallar som skapas med redigerbara mallar bör redigeras med [mallredigeraren](/help/sites-authoring/templates.md).
 
 >[!NOTE]
 >
->Designläget är endast tillgängligt för designkonfigurationer som lagras som innehåll under ( `/etc`).
+>Designläget är bara tillgängligt för designkonfigurationer som lagras som innehåll under ( `/etc`).
 >
->Från och med AEM 6.4 rekommenderas att du lagrar designer som konfigurationsdata under `/apps` för att stödja scenarier för kontinuerlig driftsättning. Designer lagrade under `/apps` går inte att redigera under körning och designläget är inte tillgängligt för användare som inte är administratörer för sådana mallar.
+>Från och med AEM 6.4 rekommenderas att du lagrar designer som konfigurationsdata under `/apps` för att stödja scenarier för kontinuerlig distribution. Designer som lagras under `/apps` kan inte redigeras under körning och designläget är inte tillgängligt för användare som inte är administratörer för sådana mallar.
 
 Det innebär att du lägger till eller tar bort de komponenter som är tillåtna i sidans styckesystem. Styckesystemet ( `parsys`) är en sammansatt komponent som innehåller alla andra styckekomponenter. Med styckesystemet kan författare lägga till komponenter av olika typer på en sida eftersom det innehåller alla andra styckekomponenter. Varje stycketyp representeras som en komponent.
 
@@ -43,19 +43,19 @@ Innehållet på en produktsida kan till exempel innehålla ett styckesystem som 
 
 >[!NOTE]
 >
->Se [Utveckla komponenter](/help/sites-developing/components.md) och [Riktlinjer för användning av mallar och komponenter](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components) för mer information om `parsys`.
+>Mer information om `parsys` finns i [Utveckla komponenter](/help/sites-developing/components.md) och [Riktlinjer för användning av mallar och komponenter](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components).
 
 >[!CAUTION]
 >
 >Vi rekommenderar att du definierar design av statiska mallar genom att redigera designen i designläge enligt beskrivningen i den här artikeln
 >
->Det är till exempel inte bra att ändra designen i CRX DE, och tillämpningen av den typen av design kan variera från förväntat beteende. Se utvecklardokumentet [Sidmallar - statiska](/help/sites-developing/page-templates-static.md#how-template-designs-are-applied) för mer information.
+>Det är till exempel inte bra att ändra design i CRX DE, och tillämpningen av sådana designer kan variera från förväntat beteende. Mer information finns i utvecklardokumentet [Sidmallar - statisk](/help/sites-developing/page-templates-static.md#how-template-designs-are-applied).
 
 ## Aktivera/inaktivera komponenter {#enable-disable-components}
 
 Så här aktiverar eller inaktiverar du en komponent:
 
-1. Välj **Design** läge.
+1. Välj **designläget**.
 
    ![screen_shot_2018-03-22at103113](assets/screen_shot_2018-03-22at103113.png)
 
@@ -63,13 +63,13 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    ![screen_shot_2018-03-22at103204](assets/screen_shot_2018-03-22at103204.png)
 
-1. Klicka på **Överordnad** -ikon.
+1. Klicka på ikonen **Överordnad** .
 
    ![Överordnad](do-not-localize/screen_shot_2018-03-22at103204.png)
 
    Då väljs det styckesystem som innehåller den aktuella komponenten.
 
-1. The **Konfigurera** -ikonen för styckesystemet visas i det överordnade objektets åtgärdsfält.
+1. Ikonen **Konfigurera** för styckesystemet visas i det överordnade objektets åtgärdsfält.
 
    ![Konfigurera](do-not-localize/screen_shot_2018-03-22at103256.png)
 
@@ -86,7 +86,7 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    **Tillåtna komponenter**
 
-   På **Tillåtna komponenter** definierar du vilka komponenter som är tillgängliga för parsysen.
+   På fliken **Tillåtna komponenter** definierar du vilka komponenter som är tillgängliga för parsysen.
 
    * Komponenterna grupperas efter komponentgrupperna, som kan expanderas och komprimeras.
    * Du kan markera en hel grupp genom att markera gruppnamnet och avmarkera alla genom att avmarkera kryssrutan.
@@ -102,13 +102,13 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    **Inställningar**
 
-   På **Inställningar** kan du definiera ytterligare alternativ, t.ex. för att rita en ankarpunkt för varje komponent och för att definiera cellutfyllnaden för varje behållare.
+   På fliken **Inställningar** kan du definiera ytterligare alternativ som att rita en ankarpunkt för varje komponent och definiera cellutfyllnaden för varje behållare.
 
-1. Välj **Klar** för att spara konfigurationen.
+1. Välj **Klar** om du vill spara konfigurationen.
 
 ## Konfigurera designen för en komponent {#configuring-the-design-of-a-component}
 
-1. Välj **Design** läge.
+1. Välj **designläget**.
 
    ![screen_shot_2018-03-22at103113-1](assets/screen_shot_2018-03-22at103113-1.png)
 
@@ -116,9 +116,9 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    ![screen_shot_2018-03-22at103434](assets/screen_shot_2018-03-22at103434.png)
 
-1. Använd **Konfigurera** för att öppna dialogrutan.
+1. Använd ikonen **Konfigurera** för att öppna dialogrutan.
 
-   ![Ikonen Konfigurera](do-not-localize/screen_shot_2018-03-22at103256-1.png)
+   ![Konfigurera ikon](do-not-localize/screen_shot_2018-03-22at103256-1.png)
 
    I designdialogrutan kan du konfigurera komponenten enligt tillgängliga designparametrar.
 
@@ -132,28 +132,28 @@ Så här aktiverar eller inaktiverar du en komponent:
 
    **Egenskaper**
 
-   The **Egenskaper** Med -fliken kan du konfigurera komponentens viktiga designparametrar. För en bildkomponent kan du till exempel definiera den största och minsta tillåtna storleken för bilden.
+   På fliken **Egenskaper** kan du konfigurera komponentens viktiga designparametrar. För en bildkomponent kan du till exempel definiera den största och minsta tillåtna storleken för bilden.
 
    **Funktioner**
 
-   The **Funktioner** kan du aktivera eller inaktivera ytterligare funktioner för komponenten. För en bildkomponent kan du till exempel definiera bildens orientering, tillgängliga beskärningsalternativ och om en bild kan överföras.
+   På fliken **Funktioner** kan du aktivera eller inaktivera ytterligare funktioner för komponenten. För en bildkomponent kan du till exempel definiera bildens orientering, tillgängliga beskärningsalternativ och om en bild kan överföras.
 
-   **Stilar**
+   **Format**
 
-   The **Stilar** Med -fliken kan du definiera de CSS-klasser och -format som ska användas med komponenten.
+   På fliken **Format** kan du definiera de CSS-klasser och -format som ska användas med komponenten.
 
    ![screen_shot_2018-03-22at103741](assets/screen_shot_2018-03-22at103741.png)
 
-   Använd **Lägg till** om du vill lägga till fler poster i en flerpostsdialogrutelista.
+   Använd knappen **Lägg till** om du vill lägga till fler poster i en dialogrutelista med flera poster.
 
    ![Lägg till ytterligare post](assets/chlimage_1-94.png)
 
-   Använd **Ta bort** om du vill ta bort en post från en dialogruta med flera poster.
+   Använd ikonen **Ta bort** om du vill ta bort en post från en dialogrutelista med flera poster.
 
    ![Ta bort](do-not-localize/screen_shot_2018-03-22at103809.png)
 
-   Använd **Flytta** om du vill ändra ordningen på posterna i en dialogruta med flera poster.
+   Använd ikonen **Flytta** om du vill ändra ordningen på posterna i en lista med flera poster.
 
    ![Flytta](do-not-localize/screen_shot_2018-03-22at103816.png)
 
-1. Klicka på **Klar** -ikonen för att spara och stänga dialogrutan.
+1. Klicka på ikonen **Klar** för att spara och stänga dialogrutan.

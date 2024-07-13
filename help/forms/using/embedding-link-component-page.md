@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Förutsättningar {#prerequisites}
 
-Länkkomponenten är medlem i kategorin Dokumenttjänster. Kontrollera att kategorin Dokumenttjänster är synlig i AEM. Om kategorin inte finns med i listan följer du de steg som anges på [Aktivera komponenterna i formulärportalen](/help/forms/using/enabling-forms-portal-components.md).
+Länkkomponenten är medlem i kategorin Dokumenttjänster. Kontrollera att kategorin Dokumenttjänster är synlig i AEM. Om kategorin inte finns med i listan följer du stegen i [Aktivera komponenter i formulärportalen](/help/forms/using/enabling-forms-portal-components.md).
 
 ## Länkkomponent {#link-component}
 
@@ -28,28 +28,28 @@ Med länkkomponenten kan formulärportalförfattare skapa en länk till ett anpa
 
 Utför följande steg för att lägga till en länkkomponent på sidan:
 
-1. Dra **Länk** på sidan. Markera komponenten och markera ![cmppr](assets/cmppr.png). Dialogrutan Redigera länkkomponent öppnas.
+1. Dra **Link**-komponenten på sidan. Markera komponenten och välj ![cmpr](assets/cmppr.png). Dialogrutan Redigera länkkomponent öppnas.
 
    ![edit-link-component](assets/edit-link-component.png)
 
-1. I **Visa** anger du följande:
+1. Ange följande på fliken **Visning**:
 
    * **Länkbeskrivning**: Länka text eller bildtext för länken.
-   * **Länkverktygstips**: Verktygstips för länken.
-   * **Layoutmall**: Mall för layout för länkkomponenten.
+   * **Länkverktygstips**: Länkens verktygstips.
+   * **Layoutmall**: Mall för layouten för länkkomponenten.
 
-1. Öppna **Resursinformation** och ange resursens typ. En resurs kan vara en **formulär**. Beroende på vilken typ av resurs som valts visas alternativen nedan:
+1. Öppna fliken **Resursinformation** och ange resurstypen. En resurs kan vara ett **formulär**. Beroende på vilken typ av resurs som valts visas alternativen nedan:
 
    * **Resurssökväg**: Databassökväg där resursen lagras.
 
    * **Återgivningstyp**: Återgivningsformatet PDF, HTML eller Auto. Återgivningstypen Auto identifierar användarmiljön och återger formuläret som HTML eller PDF. Om formuläret till exempel nås från en mobil enhet återges formuläret i HTML av återgivningstypen Auto.
-   * **Skicka URL:**  URL till den server där formulärdata skickas.
+   * **Skicka URL:** till den server där formulärdata skickas.
    * **HTML-profil**: Profil för återgivning av formuläret som HTML.
    * **PDF-profil**: Profil för återgivning av formuläret som PDF-dokument.
 
-1. Öppna **Avancerat** -fliken. Du kan ange ytterligare parametrar i nyckelvärdepar-formatet. När användaren klickar på länken skickas dessa ytterligare parametrar tillsammans med formuläret.
+1. Öppna fliken **Avancerat**. Du kan ange ytterligare parametrar i nyckelvärdepar-formatet. När användaren klickar på länken skickas dessa ytterligare parametrar tillsammans med formuläret.
 
-   Välj **Klar** för att spara konfigurationen.
+   Välj **Klar** om du vill spara konfigurationen.
 
 ## Bästa tillvägagångssätt för att använda länkkomponenten {#best-practices-for-using-link-component-br}
 

@@ -35,7 +35,7 @@ Startar kan också vara:
 * Skapat för flera rotgrenar. Du kan skapa en start för hela webbplatsen (och göra ändringarna där), men det kan vara opraktiskt eftersom hela webbplatsen behöver kopieras. När det gäller hundratals eller till och med tusentals sidor påverkas systemkraven och prestandan av både kopieringsåtgärden och senare jämförelserna som krävs för kampanjuppgifterna.
 * Kapslad (en programstart inom en programstart) för att ge dig möjlighet att skapa en programstart från en befintlig programstart så att författare kan utnyttja redan gjorda ändringar i stället för att behöva göra samma ändringar flera gånger för varje programstart.
 
-I det här avsnittet beskrivs hur du skapar, redigerar och befordrar (och om det behövs) [delete](/help/sites-authoring/launches-creating.md#deleting-a-launch)) starta sidor från Sites-konsolen eller [startkonsolen](#the-launches-console):
+I det här avsnittet beskrivs hur du skapar, redigerar och befordrar (och vid behov [delete](/help/sites-authoring/launches-creating.md#deleting-a-launch)) startsidor från Sites-konsolen eller [startkonsolen](#the-launches-console):
 
 * [Skapa startprogram](/help/sites-authoring/launches-creating.md)
 * [Redigeringsövningar](/help/sites-authoring/launches-editing.md)
@@ -65,16 +65,16 @@ Med Launches:
 
    * Manuellt:
 
-      * Befordra ert startmaterial tillbaka till **Mål** (källsidor) när den är klar att publiceras.
-      * Publicera innehållet från källsidorna (efter att ha befordrat dem).
+      * Befordra startinnehållet tillbaka till **Target** (källsidor) när det är klart för publicering.
+      * Publish innehållet från källsidorna (efter att de har befordrats).
       * Befordra antingen alla sidor eller endast ändrade sidor.
 
    * Automatiskt - det innebär följande:
 
-      * The **Starta**(**Live**) **datum** fält: detta kan anges när du skapar eller redigerar en start.
+      * Fältet **Starta**(**Live**) **date**: detta kan anges när du skapar eller redigerar en start.
 
-      * The **Produktionsklar** flagga: detta kan bara anges när du redigerar en start.
-      * Om **Produktionsklar** -flaggan är inställd kommer lanseringen automatiskt att befordras till produktionssidorna på den angivna **Starta**(**Live**) **datum**. Efter kampanjen publiceras produktionssidorna automatiskt.\
+      * Flaggan **Produktionsklar**: den kan bara anges när du redigerar en start.
+      * Om flaggan **Production Ready** är inställd befordras starten automatiskt till produktionssidorna på den angivna **Launch**(**Live**) **date** . Efter kampanjen publiceras produktionssidorna automatiskt.\
         Om inget datum har angetts har flaggan ingen effekt.
 
 * Uppdatera käll- och startsidor parallellt:
@@ -84,10 +84,10 @@ Med Launches:
 
   ![Översikt över uppdateringar](assets/chlimage_1-112.png)
 
-* [Skapa en kapslad start](/help/sites-authoring/launches-creating.md#creating-a-nested-launch) - en programstart inom en programstart:
+* [Skapa en kapslad programstart](/help/sites-authoring/launches-creating.md#creating-a-nested-launch) - en programstart inom en programstart:
 
    * Källan är en befintlig start.
-   * Du kan [befordra en kapslad lansering](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch) till vilket mål som helst. Det kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
+   * Du kan [befordra en kapslad start](/help/sites-authoring/launches-promoting.md#promoting-a-nested-launch) till vilket mål som helst. Det kan vara en överordnad start eller källsidorna på den översta nivån (Produktion).
 
   ![Översikt över kapslad start](assets/chlimage_1-113.png)
 
@@ -97,7 +97,7 @@ Med Launches:
 
 >[!NOTE]
 >
->Att skapa och redigera starter kräver åtkomsträttigheter till `/content/launches` - som med standardgruppen `content-authors`.
+>Du måste ha behörighet till `/content/launches` för att kunna skapa och redigera starter, precis som med standardgruppen `content-authors`.
 >
 >Kontakta systemadministratören om du får problem.
 
@@ -112,18 +112,18 @@ Med Launches:
 
 På startkonsolen får du en översikt över dina starter och kan vidta åtgärder för dem som visas. Konsolen kan nås av:
 
-* The **verktyg** Konsol: **verktyg**, **Webbplatser**, **Startar**.
+* **Verktyg**-konsolen: **Verktyg**, **Webbplatser**, **Startar**.
 
 * Eller direkt med [https://localhost:4502/libs/launches/content/launches.html](https://localhost:4502/libs/launches/content/launches.html)
 
 ## Startar i referenser (platskonsolen) {#launches-in-references-sites-console}
 
-1. I **Webbplatser** navigera till startkällan (startfilerna).
-1. Öppna **Referenser** och välj källsidan.
-1. Välj **Startar**, kommer de befintliga starterna att listas:
+1. Gå till startkällan i konsolen **Platser**.
+1. Öppna listen **Referenser** och välj källsidan.
+1. Välj **Startar**. Befintliga starter visas:
 
-   ![Fliken Referens - Starta](assets/screen-shot_2019-03-05at121901-1.png)
+   ![Fliken Referens - startar](assets/screen-shot_2019-03-05at121901-1.png)
 
 1. Klicka på lämplig start så visas en lista med möjliga åtgärder:
 
-   ![Välj start för att visa möjliga åtgärder](assets/screen-shot_2019-03-05at121952-1.png)
+   ![Välj att starta om du vill visa möjliga åtgärder](assets/screen-shot_2019-03-05at121952-1.png)

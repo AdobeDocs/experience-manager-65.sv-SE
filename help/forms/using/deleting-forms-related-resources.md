@@ -19,11 +19,11 @@ ht-degree: 0%
 
 Du kan ta bort formulären och resurserna för att ta bort dessa resurser från databasen. Borttagningsåtgärden fungerar för alla resurstyper och mappar.
 
-Om du tar bort en resurs från författarinstansen tas även resursen bort från Publish-instansen. AEM Forms-servern består av Author- och Publish-instanser. Instansen Författare används för att skapa och hantera formulärresurser och -resurser. Publiceringsinstansen innehåller publicerade formulärresurser och relaterade resurser som är tillgängliga för slutanvändare.
+Om du tar bort en resurs från författarinstansen tas även resursen bort från Publish-instansen. AEM Forms-servern består av Author- och Publish-instanser. Instansen Författare används för att skapa och hantera formulärresurser och -resurser. Publish-instansen innehåller publicerade formulärresurser och relaterade resurser som är tillgängliga för slutanvändarna.
 
 ## Ta bort ett formulär {#how-to-delete-a-form}
 
-1. Logga in på AEM Forms användargränssnitt med `https://[hostname]:'port'/aem/forms.html.`
+1. Logga in på AEM Forms användargränssnitt genom att gå till `https://[hostname]:'port'/aem/forms.html.`
 1. Navigera till och markera det formulär som du vill ta bort. Klicka på Ta bort ![aem6forms_delete2](assets/aem6forms_delete2.png) i verktygsfältet och bekräfta borttagningsåtgärden.
 
    >[!NOTE]
@@ -44,6 +44,6 @@ Om du tar bort en resurs från författarinstansen tas även resursen bort från
 
 I AEM Forms kan en XFA-formulärmall refereras av ett adaptivt formulär eller en annan XFA-formulärmall. En mall kan även referera till en resurs eller en annan XFA-mall.
 
-Det är inte tillrådligt att ta bort ett XFA-formulär som refereras av ett adaptivt formulär, eftersom det kan skada det adaptiva formuläret. När ett adaptivt formulär refererar till ett XFA-formulär är fälten bundna. När XFA har tagits bort kan det adaptiva formuläret inte synkronisera sina fält med XFA-fälten och ett felmeddelande visas för sådana fält. Mer information om effekterna av XFA-borttagning och om smutsiga AF:er finns i [Uppdaterar refererade XFA-formulär](/help/forms/using/get-xdp-pdf-documents-aem.md#p-updating-referenced-xfa-forms-p).
+Det är inte tillrådligt att ta bort ett XFA-formulär som refereras av ett adaptivt formulär, eftersom det kan skada det adaptiva formuläret. När ett adaptivt formulär refererar till ett XFA-formulär är fälten bundna. När XFA har tagits bort kan det adaptiva formuläret inte synkronisera sina fält med XFA-fälten och ett felmeddelande visas för sådana fält. Mer information om effekten av den refererade XFA-borttagningen och om felaktiga AF:er finns i [Uppdatera refererade XFA-formulär](/help/forms/using/get-xdp-pdf-documents-aem.md#p-updating-referenced-xfa-forms-p).
 
 Om du vill ta bort ett sådant XFA-formulär uppdaterar du det adaptiva formuläret och tar bort bindningarna med XFA-fälten.

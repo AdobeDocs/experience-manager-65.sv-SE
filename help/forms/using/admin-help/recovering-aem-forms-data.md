@@ -28,9 +28,9 @@ AEM kan återställas på ett tillförlitligt sätt vid följande fel:
 
 **Diskfel:** Det senaste säkerhetskopieringsmediet krävs för att återställa databasinnehållet.
 
-**Skadade data:** Filsystemen registrerar inte tidigare transaktioner och systemen kan skriva över nödvändiga processdata av misstag.
+**Datafel:** Filsystem registrerar inte tidigare transaktioner och system kan av misstag skriva över nödvändiga processdata.
 
-**Användarfel:** Återställningen begränsas till de data som är tillgängliga i databasen. Om data har lagrats och är tillgängliga förenklas återställningen.
+**Användarfel:** Återställningen begränsas till data som är tillgängliga i databasen. Om data har lagrats och är tillgängliga förenklas återställningen.
 
 **Strömavbrott, systemkrasch:** Filsystems-API:er är ofta inte utformade eller används på ett robust sätt som skyddar mot oväntade systemfel. Om ett strömavbrott eller en systemkrasch inträffar är det troligare att dokumentinnehåll som lagras i databasen är uppdaterat än innehåll som lagras i ett filsystem.
 
@@ -61,22 +61,22 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
    * [Microsoft](/help/forms/using/admin-help/files-back-recover.md#sql-server)
    * [MySQL Backup and Recovery for AEM forms](/help/forms/using/admin-help/files-back-recover.md#mysql)
 
-1. Återställ GDS-katalogen genom att först ta bort innehållet i GDS-katalogen i den befintliga installationen av AEM formulär och sedan kopiera innehållet i GDS-katalogen från den säkerhetskopierade GDS-katalogen. Om du har ändrat GDS-katalogplatsen finns mer information i [Ändra GDS-platsen under återställning](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).
+1. Återställ GDS-katalogen genom att först ta bort innehållet i GDS-katalogen i den befintliga installationen av AEM formulär och sedan kopiera innehållet i GDS-katalogen från den säkerhetskopierade GDS-katalogen. Om du har ändrat GDS-katalogplatsen läser du [Ändra GDS-platsen under återställning](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).
 1. Byt namn på GDS-säkerhetskopieringskatalogen som ska återställas enligt följande exempel:
 
    >[!NOTE]
    >
    >Om katalogen /restore redan finns säkerhetskopierar du den och tar sedan bort den innan du byter namn på katalogen /backup som innehåller de senaste data.
 
-   * (JBoss®) Byt namn `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` till:
+   * (JBoss®) Byt namn på `[appserver root]/server/'server'/svcnative/DocumentStorage/backup` till:
 
      `[appserver root]/server/'server'/svcnative/DocumentStorage/restore`.
 
-   * (WebLogic) Byt namn `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` till:
+   * (WebLogic) Byt namn på `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/backup` till:
 
      `[appserverdomain]/'server'/adobe/AEMformsserver/DocumentStorage/restore`.
 
-   * (WebSphere®) Byt namn `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` till:
+   * (WebSphere®) Byt namn på `[appserver root]/installedApps/adobe/'server'/DocumentStorage/backup` till:
 
      `[appserver root]/installedApps/adobe/'server'/DocumentStorage/restore`.
 
@@ -86,32 +86,32 @@ Om en enskild nod i ett Multinode-kluster inte fungerar och de återstående nod
    >
    >Säkerhetskopian av rotkatalogen för innehållslagring måste återställas till platsen för rotkatalogen för innehållslagring så som den angavs under konfigurationen för innehållstjänster (borttagen).
 
-   **Fristående:** Återställ alla kataloger som säkerhetskopierades under återställningsprocessen. När katalogerna återställs och katalogen /backup-lucene-indexes finns byter du namn på den till /lucene-indexes. I annat fall ska katalogen lucene-indexes redan finnas och ingen åtgärd krävs.
+   **Fristående:** Återställ alla säkerhetskopierade kataloger under återställningsprocessen. När katalogerna återställs och katalogen /backup-lucene-indexes finns byter du namn på den till /lucene-indexes. I annat fall ska katalogen lucene-indexes redan finnas och ingen åtgärd krävs.
 
-   **Grupperad:** Återställ alla kataloger som säkerhetskopierades under återställningsprocessen. Om du vill återställa indexrotkatalogen utför du följande steg på varje nod i klustret:
+   **Grupperad:** Återställ alla säkerhetskopierade kataloger under återställningsprocessen. Om du vill återställa indexrotkatalogen utför du följande steg på varje nod i klustret:
 
    * Ta bort allt innehåll i indexrotkatalogen.
-   * Om katalogen /backup-lucene-indexes finns kopierar du innehållet i *Rotkatalog för innehållslagring*/backup-lucene-indexes directory to the Index Root directory and delete the *Rotkatalog för innehållslagring*/backup-lucene-indexes katalog.
-   * Om katalogen /lucene-indexes finns kopierar du innehållet i *Rotkatalog för innehållslagring*/lucene-indexes katalog till katalogen Index Root.
+   * Om katalogen /backup-lucene-indexes finns kopierar du innehållet i katalogen *Content Storage Root*/backup-lucene-indexes till katalogen Index Root och tar bort katalogen *Content Storage Root*/backup-lucene-indexes.
+   * Om katalogen /lucene-indexes finns kopierar du innehållet i katalogen *Content Storage Root*/lucene-indexes till katalogen Index Root.
 
 1. Återställ CRX-databasen.
 
    * **Fristående**
 
-     *Återställa författare och publicera instanser*: Om ett haveri inträffar kan du återställa databasen till det senast säkerhetskopierade tillståndet genom att utföra de steg som beskrivs i [Säkerhetskopiera och återställ.](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)
+     *Återställ författare och publicera instanser*: Om ett haveri inträffar kan du återställa databasen till det senaste säkerhetskopierade läget genom att utföra de steg som beskrivs i [Säkerhetskopiera och återställ.](https://helpx.adobe.com/experience-manager/kb/CRXBackupAndRestoreProcedure.html)
 
      När författarnoden återställs kontrolleras även återställningen av Forms Manager- och AEM Forms Workspace-data.
 
    * **Grupperad**
 
-     För återställning i en klustermiljö, se [Strategi för säkerhetskopiering och återställning i en klustrad miljö](/help/forms/using/admin-help/strategy-backup-restore-clustered-environment.md#strategy-for-backup-and-restore-in-a-clustered-environment).
+     För återställning i en klustrad miljö, se [Strategi för säkerhetskopiering och återställning i en klustrad miljö](/help/forms/using/admin-help/strategy-backup-restore-clustered-environment.md#strategy-for-backup-and-restore-in-a-clustered-environment).
 
 1. Ta bort eventuella AEM temporära filer som har skapats i katalogen java.io.temp eller i den tillfälliga Adobe-katalogen.
 1. Starta AEM formulär (se [Starta och stoppa tjänster](/help/forms/using/admin-help/starting-stopping-services.md#starting-and-stopping-services))<!-- BROKEN LINK and the application server(s) (see [Maintaining the Application Server](/help/forms/using/admin-help/topics/maintaining-the-application-server.md))-->.
 
 ## Ändra GDS-platsen under återställning {#changing-the-gds-location-during-recovery}
 
-Om ditt GDS återställs till en annan plats än den ursprungliga kör du LCSetGDS-skriptet och anger GDS till den nya platsen. Skriptet finns i `[aem-forms root]\sdk\misc\Foundation\SetGDSCommandline` mapp. Skriptet har två parametrar, `defaultGDS` och `newGDS`. Se `ReadMe.txt` i samma mapp för instruktioner om hur skriptet ska köras.
+Om ditt GDS återställs till en annan plats än den ursprungliga kör du LCSetGDS-skriptet och anger GDS till den nya platsen. Skriptet finns i mappen `[aem-forms root]\sdk\misc\Foundation\SetGDSCommandline`. Skriptet har två parametrar, `defaultGDS` och `newGDS`. Se filen `ReadMe.txt` i samma mapp för instruktioner om hur du kör skriptet.
 
 >[!NOTE]
 >
@@ -127,7 +127,7 @@ Om ditt GDS återställs till en annan plats än den ursprungliga kör du LCSetG
 
 ## Återställa GDS till en klustrad miljö {#recovering-the-gds-to-a-clustered-environment}
 
-Om du vill ändra GDS-platsen i en klustrad miljö stänger du av hela klustret och kör LCSetGDS-skriptet på en enskild nod i klustret. (Se [Ändra GDS-platsen under återställning](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).) Starta bara den noden. När den noden har startats kan andra noder i klustret startas på ett säkert sätt och pekar korrekt på den nya GDS-servern.
+Om du vill ändra GDS-platsen i en klustrad miljö stänger du av hela klustret och kör LCSetGDS-skriptet på en enskild nod i klustret. (Se [Ändra GDS-plats under återställning](recovering-aem-forms-data.md#changing-the-gds-location-during-recovery).) Starta bara den noden. När den noden har startats kan andra noder i klustret startas på ett säkert sätt och pekar korrekt på den nya GDS-servern.
 
 >[!NOTE]
 >

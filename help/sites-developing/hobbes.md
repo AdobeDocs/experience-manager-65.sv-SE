@@ -23,7 +23,7 @@ ht-degree: 2%
 >
 >Från och med AEM 6.5 är testningsramverket hobbes.js UI föråldrat. Adobe planerar inte att göra ytterligare förbättringar av det och rekommenderar sina kunder att använda Selenium Automation.
 >
->Se [Föråldrade och borttagna funktioner](/help/release-notes/deprecated-removed-features.md).
+>Se [Inaktuella och borttagna funktioner](/help/release-notes/deprecated-removed-features.md).
 
 AEM tillhandahåller ett ramverk för automatisering av tester för ditt AEM användargränssnitt. Med hjälp av ramverket kan du skriva och köra gränssnittstester direkt i en webbläsare. Ramverket innehåller ett JavaScript-API för att skapa tester.
 
@@ -31,16 +31,16 @@ I AEM testramverk används Hobbes.js, ett testbibliotek som är skrivet i JavaSc
 
 >[!NOTE]
 >
->Se Hobbes.js [dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html) om du vill ha fullständig information om API:t.
+>Mer information om API:t finns i [dokumentationen](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html) för Hobbes.js.
 
 ## Testernas struktur {#structure-of-tests}
 
 När du använder automatiska tester i AEM är följande termer viktiga att förstå:
 
-| Åtgärd | An **Åtgärd** är en specifik aktivitet på en webbsida, till exempel genom att klicka på en länk eller en knapp. |
+| Åtgärd | En **åtgärd** är en specifik aktivitet på en webbsida, som att klicka på en länk eller en knapp. |
 |---|---|
-| Testfall | A **Testfall** är en specifik situation som kan bestå av en eller flera **Åtgärder**. |
-| Test Suite | A **Test Suite** är en grupp av relaterade **Testfall** som tillsammans testar ett visst användningsfall. |
+| Testfall | **Testfall** är en specifik situation som kan bestå av en eller flera **åtgärder**. |
+| Test Suite | En **testsvit** är en grupp med relaterade **testfall** som tillsammans testar ett visst användningsfall. |
 
 ## Kör tester {#executing-tests}
 
@@ -48,7 +48,7 @@ När du använder automatiska tester i AEM är följande termer viktiga att för
 
 Öppna testkonsolen för att se de registrerade testsviterna. Testpanelen innehåller en lista med testsviter och deras testfall.
 
-Navigera till verktygskonsolen via **Global Navigation > Tools > Operations > Testing**.
+Navigera till verktygskonsolen via **Global navigering > Verktyg > Åtgärder > Testning**.
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -66,7 +66,7 @@ En bockmarkeringsikon anger att testet har slutförts:
 
 En X-ikon anger att testet misslyckades:
 
-![Ikonen för testet misslyckades, vilket indikeras av ett X inuti en cirkel.](do-not-localize/chlimage_1-3.png)
+![Det gick inte att testa ikonen som indikeras av ett X inuti en cirkel.](do-not-localize/chlimage_1-3.png)
 
 Så här kör du en testsvit:
 
@@ -74,7 +74,7 @@ Så här kör du en testsvit:
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. Klicka **Kör test**.
+1. Klicka på **Kör test**.
 
    ![En bild av knappen Kör test, som indikeras av en högerriktad pekare inuti en cirkel.](do-not-localize/chlimage_1-4.png)
 
@@ -82,7 +82,7 @@ Så här kör du en testsvit:
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. Granska resultatet av testfallet genom att trycka på eller klicka på beskrivningen för att öppna **Resultat** -panelen. Tryck eller klicka på namnet på testfallet i dialogrutan **Resultat** på panelen visas all information.
+1. Granska resultatet av testfallet genom att trycka på eller klicka på beskrivningen för att öppna panelen **Resultat**. Om du trycker eller klickar på namnet på testfallet på panelen **Resultat** visas all information.
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
@@ -92,23 +92,23 @@ Testsviter körs sekventiellt i den ordning som de visas i konsolen. Du kan för
 
 ![chlimage_1-68](assets/chlimage_1-68.png)
 
-1. På testpanelen klickar du på **Kör alla tester** eller **Kör tester** under namnet på testsviten som du vill köra.
+1. Klicka på knappen **Kör alla tester** eller knappen **Kör tester** under namnet på testsviten som du vill köra på testpanelen.
 
-   ![En bild av knappen Kör alla tester och knappen Kör test, som indikeras av en högerriktad pekare inuti en cirkel.](do-not-localize/chlimage_1-5.png)
+   ![En bild av knappen Kör alla test och knappen Kör test, som indikeras av en högerriktad pekare inuti en cirkel.](do-not-localize/chlimage_1-5.png)
 
-1. Om du vill visa resultatet av varje testfall klickar du på titeln på testfallet. Klicka på namnet på testet i **Resultat** på panelen visas all information.
+1. Om du vill visa resultatet av varje testfall klickar du på titeln på testfallet. Om du klickar på namnet på testet på panelen **Resultat** visas all information.
 
    ![chlimage_1-69](assets/chlimage_1-69.png)
 
 ## Skapa och använda en enkel testprogramsvit {#creating-and-using-a-simple-test-suite}
 
-I proceduren nedan beskrivs hur du skapar och kör en Test Suite med [Innehåll för webb.butik](/help/sites-developing/we-retail.md), men du kan enkelt ändra testet så att det använder en annan webbsida.
+Följande procedur hjälper dig att skapa och köra en testsvit med [We.Retail-innehåll](/help/sites-developing/we-retail.md), men du kan enkelt ändra testet så att det använder en annan webbsida.
 
-Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html).
+Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokumentationen](https://developer.adobe.com/experience-manager/reference-materials/6-5/test-api/index.html).
 
 1. Öppna CRXDE Lite. ([https://localhost:4502/crx/de](https://localhost:4502/crx/de))
-1. Högerklicka på `/etc/clientlibs` mapp och klicka på **Skapa > Skapa mapp**. Typ `myTests` för namnet och klicka på **OK**.
-1. Högerklicka på `/etc/clientlibs/myTests` mapp och klicka på **Skapa > Skapa nod**. Använd följande egenskapsvärden och klicka sedan på **OK**:
+1. Högerklicka på mappen `/etc/clientlibs` och klicka på **Skapa > Skapa mapp**. Skriv `myTests` som namn och klicka på **OK**.
+1. Högerklicka på mappen `/etc/clientlibs/myTests` och klicka på **Skapa > Skapa nod**. Använd följande egenskapsvärden och klicka sedan på **OK**:
 
    * Namn: `myFirstTest`
    * Typ: `cq:ClientLibraryFolder`
@@ -133,18 +133,18 @@ Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokument
    >
    >**beroenden**: `granite.testing.hobbes.testrunner, granite.testing.hobbes.af`
 
-1. Klicka **Spara alla**.
-1. Högerklicka på `myFirstTest` och klicka på **Skapa > Skapa fil**. Namnge filen `js.txt` och klicka **OK**.
-1. I `js.txt` anger du följande text:
+1. Klicka på **Spara alla**.
+1. Högerklicka på noden `myFirstTest` och klicka på **Skapa > Skapa fil**. Ge filen namnet `js.txt` och klicka på **OK**.
+1. Ange följande text i filen `js.txt`:
 
    ```
    #base=.
    myTestSuite.js
    ```
 
-1. Klicka **Spara alla** och stäng sedan `js.txt` -fil.
-1. Högerklicka på `myFirstTest` och klicka på **Skapa > Skapa fil**. Namnge filen `myTestSuite.js` och klicka **OK**.
-1. Kopiera följande kod till `myTestSuite.js` och sedan spara filen:
+1. Klicka på **Spara alla** och stäng sedan filen `js.txt`.
+1. Högerklicka på noden `myFirstTest` och klicka på **Skapa > Skapa fil**. Ge filen namnet `myTestSuite.js` och klicka på **OK**.
+1. Kopiera följande kod till filen `myTestSuite.js` och spara sedan filen:
 
    ```
    new hobs.TestSuite("Experience Content Test Suite", {path:"/etc/clientlibs/myTests/myFirstTest/myTestSuite.js"})
@@ -159,4 +159,4 @@ Mer information om hur du skapar egna testsviter finns i [Hobbes.js API-dokument
    );
    ```
 
-1. Navigera till **Testning** för att testa testsviten.
+1. Gå till **testkonsolen** och testa testsviten.

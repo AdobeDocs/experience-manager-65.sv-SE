@@ -21,7 +21,7 @@ Interaktiv kommunikation kan distribueras via två kanaler: tryck och webb. Tryc
 
 Författare av interaktiv kommunikation kan återanvända resurser som dokumentfragment och bilder för att skapa både utskrifts- och webbversioner av interaktiv kommunikation.
 
-En av förutsättningarna för [Skapa en interaktiv kommunikation](../../forms/using/create-interactive-communication.md) ska ha mallarna för utskrift och/eller webbkanal tillgängliga på servern. Mallförfattare skapar själva webbkanalsmallen i AEM, men utskriftskanalmallen XDP skapas i Adobe Forms Designer och överförs till servern.
+En av förutsättningarna för [att skapa en interaktiv kommunikation](../../forms/using/create-interactive-communication.md) är att mallarna för utskrift och/eller webbkanal är tillgängliga på servern. Mallförfattare skapar själva webbkanalsmallen i AEM, men utskriftskanalmallen XDP skapas i Adobe Forms Designer och överförs till servern.
 
 ## Utskriftskanal {#printchannel}
 
@@ -39,7 +39,7 @@ Om du vill överföra mallen måste du vara medlem i gruppen formulär-användar
 
 ## Webbkanal {#web-channel}
 
-Mallförfattare och administratörer kan skapa, redigera och aktivera webbmallar. Om du vill att andra användare ska kunna skapa webbmallar måste du ge dem behörighet. Mer information finns i [Behörighetsadministration för användare, grupp och åtkomst](/help/sites-administering/user-group-ac-admin.md).
+Mallförfattare och administratörer kan skapa, redigera och aktivera webbmallar. Om du vill att andra användare ska kunna skapa webbmallar måste du ge dem behörighet. Mer information finns i [Administrera användar-, grupp- och åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md).
 
 ### Redigerar webbkanalsmall {#authoring-web-channel-template}
 
@@ -47,12 +47,12 @@ Om du vill skapa en webbkanalmall måste du först skapa en mallmapp. När du ha
 
 Så här skapar du en webbkanalsmall:
 
-1. Skapa en mallmapp om du vill behålla dina webbmallar för interaktiv kommunikation, om du inte redan har en. Mer information finns i Mallmappar i [Sidmallar - redigerbara](/help/sites-developing/page-templates-editable.md).
+1. Skapa en mallmapp om du vill behålla dina webbmallar för interaktiv kommunikation, om du inte redan har en. Mer information finns i Mallmappar i [Sidmallar - Redigerbar](/help/sites-developing/page-templates-editable.md).
 
    1. Välj **[!UICONTROL Tools]** ![verktyg](assets/tools.png) > **[!UICONTROL Configuration Browser]**.
-      * Se [Konfigurationsläsaren](/help/sites-administering/configurations.md) mer information.
-   1. På sidan Configuration Browser väljer du **[!UICONTROL Create]**.
-   1. I dialogrutan Skapa konfiguration anger du en rubrik för mappen och markerar **[!UICONTROL Editable Templates]** och markera **[!UICONTROL Create]**.
+      * Mer information finns i dokumentationen för [Configuration Browser](/help/sites-administering/configurations.md).
+   1. Välj **[!UICONTROL Create]** på sidan Konfigurationsläsare.
+   1. I dialogrutan Skapa konfiguration anger du en rubrik för mappen, markerar **[!UICONTROL Editable Templates]** och väljer **[!UICONTROL Create]**.
 
       Mappen skapas och visas på sidan Konfigurationsläsare.
 
@@ -60,7 +60,7 @@ Så här skapar du en webbkanalsmall:
 
    1. Navigera till rätt mallmapp genom att välja **[!UICONTROL Tools]** > **[!UICONTROL Templates]** > **`[Folder]`**.
    1. Välj **[!UICONTROL Create]**.
-   1. Välj **[!UICONTROL Interactive Communication - Web Channel]** och markera **[!UICONTROL Next]**.
+   1. Välj **[!UICONTROL Interactive Communication - Web Channel]** och välj **[!UICONTROL Next]**.
    1. Ange en malltitel och beskrivning och välj sedan **[!UICONTROL Create]**.
 
       Mallen skapas och en dialogruta visas.
@@ -69,14 +69,14 @@ Så här skapar du en webbkanalsmall:
 
       Mallredigeraren visas.
 
-      ![webbkanalmall](assets/webchanneltemplate.png)
+      ![webchannelTemplate](assets/webchanneltemplate.png)
 
       När du skapar eller redigerar en mall finns det olika aspekter som mallskaparen kan definiera. Att skapa eller redigera en mall liknar att skapa sidor. Mer information finns i Redigera mallar - Mallförfattare i [Skapa sidmallar](/help/sites-authoring/templates.md).
 
 1. Aktivera mallen om du vill tillåta att den här mallen används för att skapa interaktiv kommunikation.
 
    1. Välj **[!UICONTROL Tools]** ![verktyg](assets/tools.png) > **[!UICONTROL Templates]**.
-   1. Navigera till rätt mall, markera den och markera **[!UICONTROL Enable]** och i varningsmeddelandet väljer du **[!UICONTROL Enable]**.
+   1. Navigera till rätt mall, markera den och markera **[!UICONTROL Enable]**. I varningsmeddelandet väljer du **[!UICONTROL Enable]**.
 
       Mallen är aktiverad och dess status visas som Aktiverad. Nu kan du skapa en interaktiv kommunikation där du kan använda den nya webbkanalsmallen.
 
@@ -84,4 +84,4 @@ Så här skapar du en webbkanalsmall:
 
 När du skapar en interaktiv kommunikation kan författare välja det här alternativet för att skapa webbkanalen synkroniserat med utskriftskanalen. Om du använder en tryckkanal som huvudkanal för webbkanalen kan du säkerställa att innehållet, arvet och databindningen för webbkanalen hämtas från tryckkanalen och att ändringarna som görs i den kan återspeglas i webbkanalen. De som skapar interaktiv kommunikation får dock bryta arvet för specifika komponenter i webbkanalen efter behov.
 
-![Skriva ut kanal som master](assets/create_ic_print_master_new.png) ![Webbkanal med utskriftskanal som master](assets/create_ic_print_master_web_new.png)
+![Skriv ut kanal som huvudkanal](assets/create_ic_print_master_new.png) ![Webbkanal med utskriftskanal som huvudkanal](assets/create_ic_print_master_web_new.png)

@@ -83,7 +83,7 @@ Använd de här länkarna för att komma åt de olika sidorna, där du skapar oc
 
 ## Konfigurera åtkomst till dokumentsäkerhet från klientprogram {#setting-up-access-to-document-security-from-client-applications}
 
-Klientprogram måste vara konfigurerade för att kunna ansluta till dokumentsäkerhet för att skydda dokument, öppna principskyddade dokument och ansluta till dokumentets säkerhetswebbsidor. Se *Hjälp om Acrobat* eller *RightsManagementExtension - hjälp* om du vill ha information om hur du konfigurerar anslutningen i klientprogrammet.
+Klientprogram måste vara konfigurerade för att kunna ansluta till dokumentsäkerhet för att skydda dokument, öppna principskyddade dokument och ansluta till dokumentets säkerhetswebbsidor. Mer information om hur du konfigurerar anslutningen i klientprogrammet finns i *Acrobat-hjälpen* eller i rätt *RightsManagementExtension-hjälp* .
 
 Dokumentsäkerhet nås via SSL (Secure Sockets Layer). Installera webbplatsens certifikat i certifikatarkivet så att du får åtkomst till dokumentsäkerhet via klientprogrammen.
 

@@ -18,7 +18,7 @@ I de Headless Getting Started Guides beskrivs en enkel väg för att skapa, hant
 
 1. [Skapa en konfiguration](create-configuration.md)
 1. [Skapa en innehållsfragmentmodell](create-content-model.md)
-1. [Skapa en resursmapp](create-assets-folder.md)
+1. [Skapa en Assets-mapp](create-assets-folder.md)
 1. [Skapa ett innehållsfragment](create-content-fragment.md)
 1. [Åtkomst och leverans av innehållsfragment](create-api-request.md)
 
@@ -26,7 +26,7 @@ I de Headless Getting Started Guides beskrivs en enkel väg för att skapa, hant
 >
 >Den här guiden för att komma igång förutsätter kunskap om både AEM och headless-teknik.
 >
->Om du inte har använt AEM eller utan huvud läser du i [Headless Documentation Journeys](/help/journey-headless/overview.md) för en heltäckande introduktion till både headless och hur AEM klarar det.
+>Om du inte är van vid AEM eller headless läser du [Headless Documentation Journeys](/help/journey-headless/overview.md) för att få en introduktion till både headless och hur AEM klarar det.
 
 ## Målgrupp {#audience}
 
@@ -34,12 +34,12 @@ De åtgärder som beskrivs i de Headless Getting Started Guides är nödvändiga
 
 I en produktionssituation utförs uppgifterna vanligtvis av olika personer, olika många gånger. Till exempel:
 
-* **Administratörer** måste ställa in den inledande konfigurationen och mappstrukturen för innehållet normalt bara en gång eller sporadiskt.
-* **Informationsarkitekter** lägga till nya modeller i takt med att organisationens behov utvecklas.
-* **Innehållsförfattare** skapa kontinuerligt innehåll som innehållsfragment baserat på de modeller som definieras av arkitekterna.
+* **Administratörer** måste konfigurera den inledande konfigurationen och mappstrukturen för innehållet, vanligtvis endast en gång eller sporadiskt.
+* **Informationsarkitekter** lägger till nya modeller i takt med att organisationens behov utvecklas.
+* **Innehållsförfattare** skapar kontinuerligt innehåll som innehållsfragment baserat på de modeller som definieras av arkitekterna.
 
 Guiderna Komma igång utan rubriker visar vem som i allmänhet utför de beskrivna åtgärderna och hur ofta.
 
 ## Nästa steg {#next-step}
 
-Vill du lära dig mer? Kom sedan igång genom att läsa den första delen av Headless Getting Started Guide: [Skapa en konfiguration.](create-configuration.md)
+Vill du lära dig mer? Kom sedan igång genom att läsa den första delen av guiden Komma igång med Headless: [Skapa en konfiguration.](create-configuration.md)

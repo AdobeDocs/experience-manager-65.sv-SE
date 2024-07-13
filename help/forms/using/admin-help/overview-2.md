@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # Grunderna för hantering av certifikat och autentiseringsuppgifter {#basics-of-managing-certificates-and-credentials}
 
-A *autentiseringsuppgifter* innehåller den privata nyckelinformation som behövs för att signera eller identifiera dokument. A *certifikat* är information om offentlig nyckel som du konfigurerar för förtroende. AEM använder certifikat och autentiseringsuppgifter för flera syften:
+En *autentiseringsuppgift* innehåller din privata nyckelinformation som behövs för att signera eller identifiera dokument. Ett *certifikat* är information om offentlig nyckel som du konfigurerar för förtroende. AEM använder certifikat och autentiseringsuppgifter för flera syften:
 
 * Acrobat Reader DC-tillägg använder en autentiseringsuppgift för att aktivera Adobe Reader användarrättigheter i PDF-dokument. (Se [Konfigurera autentiseringsuppgifter för användning med Acrobat Reader DC-tillägg](/help/forms/using/admin-help/configuring-credentials-acrobat-reader-dc.md#configuring-credentials-for-use-with-acrobat-reader-dc-extensions).)
 * Du kan konfigurera Rights Management så att autentiseringsuppgifter endast visas för användning i Acrobat från betrodda utfärdare. (Se [Konfigurera visningsinställningar för Rights Management](/help/forms/using/admin-help/configuring-client-server-options.md#configure-document-security-display-settings).) Det allmänna namnet (CN) måste finnas i certifikatet.
 * Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter. Mer information om signaturtjänsten finns i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_65).
 
-**Skapa en parnyckel**
+**Skapar en parnyckel**
 
 AEM använder sin Trust Store för att lagra och hantera certifikat, autentiseringsuppgifter och listor över återkallade certifikat (CRL). Dessutom kan du använda en oberoende HSM-enhet (Hardware Security Module) för att lagra privata nycklar.
 

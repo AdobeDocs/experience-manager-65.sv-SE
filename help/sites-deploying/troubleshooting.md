@@ -34,7 +34,7 @@ Följande beslutsträd ger vägledning för att minska flaskhalsen.
 
 ## Konfigurera loggfiler och granskningsloggar {#configuring-log-files-and-audit-logs}
 
-AEM loggar som du kan konfigurera för att felsöka installationsproblem. Mer information finns i [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) -avsnitt.
+AEM loggar som du kan konfigurera för att felsöka installationsproblem. Mer information finns i avsnittet [Arbeta med granskningsposter och loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files).
 
 ## Använda alternativet Detaljerad {#using-the-verbose-option}
 
@@ -70,7 +70,7 @@ Så här felsöker du:
 >Se även [Analysera minnesproblem](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html).
 
 
-CRX har i sig ett lågt minnesutrymme. Om programmet som körs i CRX har större minneskrav eller begär minnesintensiva åtgärder (till exempel stora transaktioner), måste JVM-instansen där CRX körs startas med lämpliga minnesinställningar.
+CRX har också lite minnesutrymme. Om programmet som körs i CRX har större minnesbehov eller begär minnesintensiva åtgärder (till exempel stora transaktioner), måste JVM-instansen där CRX körs startas med lämpliga minnesinställningar.
 
 Använd Java™-kommandoalternativen för att definiera minnesinställningar för JVM (t.ex. java -Xmx512m -jar crx&amp;ast;.jar för att ange heapsize till 512 MB).
 
@@ -89,7 +89,7 @@ Det krävs ofta tre stackdumpfiler, som samlats in under en tidsperiod, för att
 * Innan ett fel inträffar
 * Vid fel 1
 * Vid fel 2
-* *Helst är det också bra att samla in information efter att händelsen har lösts*
+* *I idealfallet är det också bra att samla in information efter att händelsen har lösts*
 
 Dessa kan jämföras för att se ändringar och hur objekt använder minne.
 
@@ -115,7 +115,7 @@ Det finns ett känt fel med att AEM 6.5 körs på Java™ 11, där webbplatsen k
 
 Gör så här om problemet uppstår:
 
-1. Öppna `sling.properties` filen under `crx-quickstart/conf/` mapp
+1. Öppna filen `sling.properties` under mappen `crx-quickstart/conf/`
 1. Leta reda på följande rad:
 
    `org.osgi.framework.bootdelegation=sun.,com.sun.`
@@ -134,13 +134,13 @@ Gör så här om problemet uppstår:
 
 När en begäran om att geometrixx-outdoor/en-sida ska returnera 404 (Sidan hittades inte), kan du kontrollera att du har angett ytterligare sling-egenskapen i filen sling.properties som behövs för dessa specifika programservrar.
 
-Se i *Distribuera AEM webbprogram* steg för informationen.
+Mer information finns i *Distribuera AEM* -stegen.
 
 ### Svarshuvudstorleken kan vara större än 4 kB {#response-header-size-can-be-greater-than-kb}
 
 502 fel kan indikera att webbservern inte kan hantera storleken på AEM HTTP-svarshuvud. AEM kan generera HTTP-svarshuvuden som innehåller cookies som är större än 4 kB. Kontrollera att serverbehållaren är konfigurerad så att den maximala svarshuvudets storlek kan överskrida 4 kB.
 
-För Tomcat 7.0 är till exempel attributet maxHttpHeaderSize för [HTTP-anslutning](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html) styr begränsningar för rubrikstorlek.
+För Tomcat 7.0 styr till exempel attributet maxHttpHeaderSize för [HTTP Connector](https://tomcat.apache.org/tomcat-7.0-doc/config/http.html) begränsningar för rubrikstorlek.
 
 ## Avinstallerar Adobe Experience Manager {#uninstalling-adobe-experience-manager}
 
@@ -150,11 +150,11 @@ Om beständig lagring är inbäddad i installationskatalogen, till exempel i sta
 
 >[!NOTE]
 >
->Adobe rekommenderar att du säkerhetskopierar databasen innan du tar bort AEM. Om du tar bort hela &lt;cq-installation-directory>tar du även bort databasen. Behåll databasdata innan du tar bort, flytta eller kopiera &lt;cq-installation-directory>/crx-quickstart/databasmapp någon annanstans innan de andra mapparna tas bort.
+>Adobe rekommenderar att du säkerhetskopierar databasen innan du tar bort AEM. Om du tar bort hela &lt;cq-installation-directory> tar du även bort databasen. Om du vill behålla databasdata innan du tar bort, flyttar eller kopierar du mappen &lt;cq-installation-directory>/crx-quickstart/database någon annanstans innan du tar bort de andra mapparna.
 
 Om din installation av AEM använder extern lagring, till exempel en databasserver, tas inte data bort automatiskt när du tar bort mappen, men lagringskonfigurationen tas bort, vilket gör det svårt att återställa JCR-innehållet.
 
 ### JSP-filer kompileras inte på JBoss® {#jsp-files-are-not-compiled-on-jboss}
 
 Om du installerar eller uppdaterar JSP-filer till Experience Manager på JBoss® och motsvarande servrar inte kompileras kontrollerar du att JBoss® JSP-kompilatorn är korrekt konfigurerad. Mer information finns i
-[JSP-kompileringsproblem i JBoss®](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html) artikel.
+[JSP-kompileringsproblem i JBoss®](https://helpx.adobe.com/experience-manager/kb/jsps-dont-compile-jboss.html)-artikeln.

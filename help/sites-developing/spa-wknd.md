@@ -24,7 +24,7 @@ Gå SPA utveckling med den här självstudiekursen i flera delar. Implementera e
 
 Ett heltäckande exempel på hur du skapar ett eget ensidigt program som är redigerbart när AEM börjar med projektkonfigurationen via programroutning finns i WKND SPA Tutorials:
 
-* [Komma igång med AEM SPA Editor och Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
-* [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+* [Komma igång med AEM SPA och Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
+* [Komma igång med AEM SPA och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
 
-Innan du påbörjar ett eget SPA för AEM ska du dock också granska [Utveckla SPA för AEM](/help/sites-developing/spa-architecture.md) -dokument.
+Innan du börjar ett eget SPA för AEM ska du dock även granska dokumentet [Utveckla SPA för AEM](/help/sites-developing/spa-architecture.md).

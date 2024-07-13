@@ -1,5 +1,5 @@
 ---
-title: JavaAPI snabbstart (SOAP) för integreringstjänsten för formulärdata
+title: JavaAPI snabbstart(SOAP) för integreringstjänsten för formulärdata
 description: Använd tjänsten för integrering av formulärdata för att importera data till ett PDF-formulär och exportera data från ett PDF-formulär med Java API.
 contentOwner: admin
 content-type: reference
@@ -32,7 +32,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 ## Snabbstart (SOAP): Importera formulärdata med Java API {#quick-start-soap-mode-importing-form-data-using-the-java-api}
 
-I följande Java-kodexempel importeras data till ett PDF-formulär. Data finns i en XML-fil med namnet *Loan_data.xml* och formuläret PDF sparas som en PDF-fil med namnet *ResultLoanForm.pdf*. (Se [Importera formulärdata](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
+I följande Java-kodexempel importeras data till ett PDF-formulär. Data finns i en XML-fil med namnet *Loan_data.xml* och PDF-formuläret sparas som en PDF-fil med namnet *ResultLoanForm.pdf*. (Se [Importera formulärdata](/help/forms/developing/importing-exporting-data.md#importing-form-data).)
 
 ```java
  /*
@@ -134,7 +134,7 @@ I följande Java-kodexempel importeras data till ett PDF-formulär. Data finns i
 
 ## Snabbstart (SOAP): exportera formulärdata med Java API {#quick-start-soap-mode-exporting-form-data-using-the-java-api}
 
-I följande Java-kodexempel exporteras data från ett PDF-formulär. Formulärdata sparas som en XML-fil med namnet *Loan_data.xml*. (Se [Exporterar formulärdata](/help/forms/developing/importing-exporting-data.md#exporting-form-data).)
+I följande Java-kodexempel exporteras data från ett PDF-formulär. Formulärdata sparas som en XML-fil med namnet *Loan_data.xml*. (Se [Exportera formulärdata](/help/forms/developing/importing-exporting-data.md#exporting-form-data).)
 
 ```java
  /*

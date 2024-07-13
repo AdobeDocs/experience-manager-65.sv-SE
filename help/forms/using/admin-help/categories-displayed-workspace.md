@@ -1,6 +1,6 @@
 ---
-title: Hantera de kategorier som visas i Arbetsyta
-description: I Workspace visas de processer som en användare kan starta i kategorier i den vänstra navigeringsrutan. Lär dig hur du kan hantera de här kategorierna som visas i Arbetsyta.
+title: Hantera de kategorier som visas i Workspace
+description: I Workspace visas de processer som en användare kan starta i kategorier i den vänstra navigeringsrutan. Lär dig hur du kan hantera de här kategorierna som visas i Workspace.
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/configuring_workspace
@@ -16,15 +16,15 @@ ht-degree: 0%
 
 ---
 
-# Hantera de kategorier som visas i Arbetsyta {#managing-the-categories-displayed-in-workspace}
+# Hantera de kategorier som visas i Workspace {#managing-the-categories-displayed-in-workspace}
 
 I Workspace visas de processer som en användare kan starta i kategorier i den vänstra navigeringsrutan. Du kan konfigurera kategorierna i administrationskonsolen eller så kan processdesigners konfigurera dem i Workbench. När processdesigners skapar processer tilldelar de dem till kategorier.
 
-När du anger kategorinamn skapar du dem så att de visas korrekt i navigeringsrutan Arbetsyta. Som standard har den vänstra navigeringsrutan en fast bredd på 210 pixlar, vilket är ungefär 24 tecken. Om kategorinamnet som du anger är för långt för att få plats inom den fasta bredden i den vänstra navigeringsrutan, trunkeras det. Det fullständiga namnet visas bara när muspekaren är placerad över det. Undvik kategorinamn som kortas av. I följande exempel visas kategorinamn som passar och de som är trunkerade:
+När du anger kategorinamn skapar du dem så att de visas korrekt i navigeringsrutan i Workspace. Som standard har den vänstra navigeringsrutan en fast bredd på 210 pixlar, vilket är ungefär 24 tecken. Om kategorinamnet som du anger är för långt för att få plats inom den fasta bredden i den vänstra navigeringsrutan, trunkeras det. Det fullständiga namnet visas bara när muspekaren är placerad över det. Undvik kategorinamn som kortas av. I följande exempel visas kategorinamn som passar och de som är trunkerade:
 
-**Kategorinamn som passar:** Närvaro och tjänstledighet
+**Kategorinamn som passar:** Närvaro och lämna
 
-**Kategorinamn som trunkeras:** Närvaro och ledighet (USA)
+**Kategorinamn som har trunkerats:** Närvaro och ledighet (USA)
 
 I Workspace visas processer i en kategori vanligtvis som kort på sidan Starta process. I allmänhet kan sex kort visas på skärmen för en kategori innan användaren måste rulla för att visa återstående kort. Eftersom rullning gör det svårare att hitta en process bör du överväga att begränsa varje kategori till sex processer eller, beroende på upplösningen, begränsa antalet processer som kan visas på skärmen utan att någon bläddring behövs.
 
@@ -37,7 +37,7 @@ Om du använder MySQL som AEM formulärdatabas kan administrationskonsolen inte 
 1. Skriv ett namn för kategorin i rutan Namn och skriv en beskrivning av kategorin i rutan Beskrivning.
 1. Klicka på Lägg till. Kategorin visas på sidan Kategorihantering.
 
-   ***anteckning **: Du kan bara lägga till upp till fem nivåer i hierarkin när du skapar kategorier.*
+   ***Obs!**: Du kan bara lägga till upp till fem nivåer i hierarkin när du skapar kategorier.*
 
 ## Redigera en kategori {#edit-a-category}
 

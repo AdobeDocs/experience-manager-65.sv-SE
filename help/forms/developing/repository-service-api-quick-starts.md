@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Snabbstart för databastjänst-API {#repository-service-api-quick-starts}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 Följande snabbstarter är tillgängliga för tjänsten AEM Forms Repository.
 
@@ -46,9 +46,9 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 **Program/FormsApplication**
 
-De flesta AEM Forms-databastjänster startar snabbt och interagerar med ett program som heter `Applications/FormsApplication,` som på följande bild.
+De flesta AEM Forms-databastjänster startar interaktionen med ett program med namnet `Applications/FormsApplication,`, vilket visas på följande bild.
 
-Mappen FormsFolder är en plats i AEM Forms-databasen. Du kan till exempel lägga till den här mappen programmatiskt i `Applications/FormsApplication`. (Se [Snabbstart (SOAP): Skapa en mapp med Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api).)
+Mappen FormsFolder är en plats i AEM Forms-databasen. Du kan till exempel lägga till den här mappen i `Applications/FormsApplication` med programkod. (Se [Snabbstart (SOAP läge): Skapa en mapp med Java API](repository-service-api-quick-starts.md#quick-start-soap-mode-creating-a-folder-using-the-java-api).)
 
 Sökvägen till en resurs i AEM Forms-databasen:
 
@@ -64,7 +64,7 @@ Sökvägen till en resurs i AEM Forms-databasen:
 
 ## Snabbstart (SOAP): Skapa en mapp med Java API {#quick-start-soap-mode-creating-a-folder-using-the-java-api}
 
-I följande Java-kodexempel skapas en mapp med namnet *FormsFolder* på följande plats `/Applications/FormsApplication/1.0/`. (Se [Skapar mappar](/help/forms/developing/aem-forms-repository.md#creating-folders).)
+I följande Java-kodexempel skapas en mapp med namnet *FormsFolder* på följande plats `/Applications/FormsApplication/1.0/`. (Se [Skapa mappar](/help/forms/developing/aem-forms-repository.md#creating-folders).)
 
 ```java
  /*
@@ -170,7 +170,7 @@ I följande Java-kodexempel skapas en mapp med namnet *FormsFolder* på följand
 
 ## Snabbstart (SOAP): Skriva en resurs med Java API {#quick-start-soap-mode-writing-a-resource-using-the-java-api}
 
-I följande Java-kodexempel skrivs en resurs med namnet *lån.xdp* i databasen. Resursen läggs till i `/Applications/FormsApplication/1.0/FormsFolder` plats. (Se [Skriver resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
+I följande Java-kodexempel skrivs en resurs med namnet *lån.xdp* i databasen. Resursen läggs till på platsen `/Applications/FormsApplication/1.0/FormsFolder`. (Se [Skriver resurser](/help/forms/developing/aem-forms-repository.md#writing-resources).)
 
 ```java
  /*
@@ -298,7 +298,7 @@ I följande Java-kodexempel skrivs en resurs med namnet *lån.xdp* i databasen. 
 
 ## Snabbstart (SOAP): Visa resurser med Java API {#quick-start-soap-mode-listing-resources-using-the-java-api}
 
-I följande Java-kodexempel visas resurser som finns i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Resurser listas](/help/forms/developing/aem-forms-repository.md#listing-resources).)
+I följande Java-kodexempel visas resurser som finns i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Visa resurser](/help/forms/developing/aem-forms-repository.md#listing-resources).)
 
 ```java
  /*
@@ -397,7 +397,7 @@ I följande Java-kodexempel visas resurser som finns i `Applications/FormsApplic
 
 ## Snabbstart (SOAP): Läsa en resurs med Java API {#quick-start-soap-mode-reading-a-resource-using-the-java-api}
 
-I följande Java-kodexempel läses en resurs som kallas *Loan.xdp* från databasen. XDP-filen finns i `/Applications/FormsApplication/1.0/FormsFolder/`. (Se [Läser resurser](/help/forms/developing/aem-forms-repository.md#reading-resources).)
+I följande Java-kodexempel läses en resurs med namnet *Loan.xdp* från databasen. XDP-filen finns i `/Applications/FormsApplication/1.0/FormsFolder/`. (Se [Läser resurser](/help/forms/developing/aem-forms-repository.md#reading-resources).)
 
 ```java
  /*
@@ -498,7 +498,7 @@ I följande Java-kodexempel läses en resurs som kallas *Loan.xdp* från databas
 
 ## Snabbstart (SOAP): Uppdatera en resurs med Java API {#quick-start-soap-mode-updating-a-resource-using-the-java-api}
 
-Följande Java-kodexempel uppdateras `/Applications/FormsApplication/1.0/FormsFolder` genom att ändra dess beskrivning. (Se [Uppdaterar resurser](/help/forms/developing/aem-forms-repository.md#updating-resources).)
+I följande Java-kodexempel uppdateras `/Applications/FormsApplication/1.0/FormsFolder` genom att dess beskrivning ändras. (Se [Uppdatera resurser](/help/forms/developing/aem-forms-repository.md#updating-resources).)
 
 ```java
  /*
@@ -610,7 +610,7 @@ Följande Java-kodexempel uppdateras `/Applications/FormsApplication/1.0/FormsFo
 
 ## Snabbstart (SOAP): Söka efter resurser med Java API {#quick-start-soap-mode-searching-for-resources-using-the-java-api}
 
-Följande Java-kodexempel söker efter Loan.xdp i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Söker efter resurser](/help/forms/developing/aem-forms-repository.md#searching-for-resources).)
+Följande Java-kodexempel söker efter Loan.xdp i `Applications/FormsApplication/1.0/FormsFolder`. (Se [Söka efter resurser](/help/forms/developing/aem-forms-repository.md#searching-for-resources).)
 
 ```java
  /*
@@ -734,7 +734,7 @@ Följande Java-kodexempel söker efter Loan.xdp i `Applications/FormsApplication
 
 ## Snabbstart (SOAP läge): Skapa relationer mellan resurser med Java API {#quick-start-soap-mode-creating-relationships-between-resources-using-the-java-api}
 
-I följande Java-kodexempel skapas en relation mellan två resurser i AEM Forms-databasen. (Se [Skapar resursrelationer](/help/forms/developing/aem-forms-repository.md#creating-resource-relationships).)
+I följande Java-kodexempel skapas en relation mellan två resurser i AEM Forms-databasen. (Se [Skapa resursrelationer](/help/forms/developing/aem-forms-repository.md#creating-resource-relationships).)
 
 ```java
  /*
@@ -1101,7 +1101,7 @@ I följande Java-kodexempel läses och skapas ACL-listor (access control lists) 
 
 ## Snabbstart (SOAP): Ta bort en resurs med Java API {#quick-start-soap-mode-deleting-a-resource-using-the-java-api}
 
-I följande Java-kodexempel tas Loan.xdp bort från `Applications/FormsApplication/1.0/FormsFolder`. Om XDP-filen inte finns i den här mappen genereras ett undantag. (Se [Resurser tas bort](/help/forms/developing/aem-forms-repository.md#deleting-resources).)
+I följande Java-kodexempel tas Loan.xdp bort från `Applications/FormsApplication/1.0/FormsFolder`. Om XDP-filen inte finns i den här mappen genereras ett undantag. (Se [Ta bort resurser](/help/forms/developing/aem-forms-repository.md#deleting-resources).)
 
 ```java
  /*

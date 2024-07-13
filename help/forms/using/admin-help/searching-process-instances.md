@@ -34,7 +34,7 @@ Ange grundläggande villkor för att utföra en allmän sökning. Om du anger fl
    * **Process-ID:** Det positiva heltal som identifierar varje unik processinstans.
    * **Processstatus:** Välj en status i listan.
    * **Program:** Välj ett program i listan. Endast distribuerade program visas.
-   * **Processnamn - version:** Välj ett processnamn på menyn. Endast distribuerade processer visas.
+   * **Processnamn - Version:** Välj ett processnamn på menyn. Endast distribuerade processer visas.
 
 1. Klicka på Sök. Sidan Processinstans visas med en lista över de hittade instanserna.
 

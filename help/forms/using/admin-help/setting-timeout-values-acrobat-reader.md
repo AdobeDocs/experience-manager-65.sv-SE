@@ -20,11 +20,11 @@ ht-degree: 0%
 
 När du arbetar med många PDF-filer i Acrobat Reader DC Extensions måste du se till att följande tidsgränsvärden är korrekt inställda för att förhindra att jobben tajmar ut och misslyckas:
 
-**Tidsgräns för borttagning av dokument**
+**Tidsgräns för dokumentborttagning**
 
 Det här värdet kan anges i administrationskonsolen. Klicka på Inställningar > Systeminställningar > Konfigurationer och ange ett värde för Standardtidsgräns för dokumentborttagning.
 
-**Timeout för AEM för användarhanterare:** Det här värdet kan anges genom att redigera filen config.xml. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler och sedan på Exportera. Öppna den exporterade filen config.xml och redigera följande rader:
+**Timeout för användarhanterarens AEM:** Det här värdet kan anges genom redigering av filen config.xml. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler och sedan på Exportera. Öppna den exporterade filen config.xml och redigera följande rader:
 
 &lt;entry key=&quot;assertionValidityInMinutes&quot; value=&quot;600&quot;/>
 

@@ -36,7 +36,7 @@ Andra formulär sparas som utkast på fliken Utkast. Se [Spara ett utkast](/help
 
 **Öppna ett program**
 
-1. Välj **program** i **Forms** -fliken.
+1. Markera **programmet** på fliken **Forms**.
 
    När du väljer ett program visas programbeskrivningen under programnamnet. Efter beskrivningen visas den användaråtgärd/de användaråtgärder som är kopplade till programmet.
 

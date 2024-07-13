@@ -31,17 +31,17 @@ Om du vill söka efter formulär med REST API skickar du en GET-förfrågan till
   </tr>
   <tr>
    <td>func<br /> </td>
-   <td><p>Anger den funktion som ska anropas. Om du vill söka efter formulär anger du värdet för <code>func </code>attribut till <code>searchForms</code>.</p> <p>Exempel: <code class="code">
+   <td><p>Anger den funktion som ska anropas. Om du vill söka efter formulär anger du värdet <code>func </code> för attributet <code>searchForms</code>.</p> <p>Exempel: <code class="code">
        URLParameterBuilder entityBuilder=new URLParameterBuilder ();
        entityBuilder.add("func", "searchForms");</code></p> <p><strong>Obs!</strong> <em>Den här parametern är obligatorisk.</em><br /> </p> </td>
   </tr>
   <tr>
    <td>appPath<br /> </td>
-   <td><p>Anger den programsökväg som ska användas för att söka efter formulär. Som standard söker attributet appPath igenom alla program som finns på rotnodnivån.<br /> </p> <p>Du kan ange flera programsökvägar i en enda sökfråga. Avgränsa flera banor med vertikalstreck (|). </p> </td>
+   <td><p>Anger den programsökväg som ska användas för att söka efter formulär. Som standard söker attributet appPath igenom alla program som finns på rotnodnivå.<br /> </p> <p>Du kan ange flera programsökvägar i en enda sökfråga. Avgränsa flera banor med vertikalstreck (|). </p> </td>
   </tr>
   <tr>
    <td>cutPoints<br /> </td>
-   <td><p>Anger vilka egenskaper som ska hämtas med resurserna. Du kan använda asterisk (*) för att hämta alla egenskaper samtidigt. Använd vertikalstrecksoperatorn (|) om du vill ange flera egenskaper. </p> <p>Exempel: <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>Anteckning</strong>: </p>
+   <td><p>Anger vilka egenskaper som ska hämtas med resurserna. Du kan använda asterisk (*) för att hämta alla egenskaper samtidigt. Använd vertikalstrecksoperatorn (|) om du vill ange flera egenskaper. </p> <p>Exempel: <code>cutPoints=propertyName1|propertyName2|propertyName3</code></p> <p><strong>Obs!</strong>: </p>
     <ul>
      <li><em>Egenskaper som id, sökväg och namn hämtas alltid. </em></li>
      <li><em>Alla resurser har olika egenskapsuppsättningar. Egenskaper som formUrl, pdfUrl och guideUrl är inte beroende av attributet cutpoints. Dessa egenskaper beror på resurstypen och hämtas därefter. </em></li>
@@ -52,8 +52,8 @@ Om du vill söka efter formulär med REST API skickar du en GET-förfrågan till
    <td>Anger de relaterade resurser som ska hämtas tillsammans med sökresultaten. Du kan välja något av följande alternativ för att hämta relaterade resurser:
     <ul>
      <li><strong>NO_RELATION</strong>: Hämta inte relaterade resurser.</li>
-     <li><strong>OMEDELBART</strong>: Hämtar resurser som är direkt relaterade till sökresultat.</li>
-     <li><strong>ALLA</strong>: Hämta direkt och indirekt relaterade tillgångar.</li>
+     <li><strong>OMEDELBART</strong>: Hämtar resurser som är direkt relaterade till sökresultaten.</li>
+     <li><strong>ALL</strong>: Hämta direkt och indirekt relaterade resurser.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -77,7 +77,7 @@ Om du vill söka efter formulär med REST API skickar du en GET-förfrågan till
        statement.put("operator", "EQ"); statementArray.put(statement);</code></p> <p>I exemplet ovan </p>
     <ul>
      <li><strong>name</strong>: anger namnet på egenskapen som ska sökas efter.</li>
-     <li><strong>value</strong>: anger värdet på egenskapen som ska sökas efter.</li>
+     <li><strong>värde</strong>: anger värdet på egenskapen som ska sökas efter.</li>
      <li><strong>operator</strong>: anger vilken operator som ska användas vid sökning. Följande operatorer stöds:
       <ul>
        <li>EQ - lika med </li>
@@ -96,7 +96,7 @@ Om du vill söka efter formulär med REST API skickar du en GET-förfrågan till
     </ul> </td>
   </tr>
   <tr>
-   <td>orderfunktioner<br /> </td>
+   <td>beställningar<br /> </td>
    <td><p>Anger sökresultatens ordningsvillkor. Kriterierna definieras i JSON-formatet. Du kan sortera sökresultat i mer än ett fält. Resultatet sorteras i den ordning som fälten visas i frågan.</p> <p>Exempel:</p> <p>Om du vill hämta frågeresultat ordnade efter title-egenskap i stigande ordning lägger du till följande parameter: </p> <p><code class="code">JSONArray orderingsArray=new JSONArray();
        JSONObject orderings=new JSONObject();
        orderings.put("name", "title");
@@ -104,17 +104,17 @@ Om du vill söka efter formulär med REST API skickar du en GET-förfrågan till
        orderingsArray.put(orderings);
        entityBuilder.add("orderings", orderingsArray.toString());</code></p>
     <ul>
-     <li><strong>name</strong>: Anger namnet på den egenskap som ska användas för att ordna sökresultaten.</li>
-     <li><strong>kriterier</strong>: Anger resultatordningen. Attributet order accepterar följande värden:
+     <li><strong>namn</strong>: Anger namnet på egenskapen som ska användas för att ordna sökresultaten.</li>
+     <li><strong>villkor</strong>: Anger resultatordningen. Attributet order accepterar följande värden:
       <ul>
-       <li>ASC - Använd ASC för att ordna resultatet i stigande ordning.<br /> </li>
+       <li>ASC - Använd ASC för att ordna resultat i stigande ordning.<br /> </li>
        <li>DES - Använd DES för att ordna resultatet i fallande ordning.</li>
       </ul> </li>
     </ul> </td>
   </tr>
   <tr>
    <td>includeXdp</td>
-   <td>Anger om det binära innehållet ska hämtas eller inte. The <code>includeXdp</code> attribut kan användas för tillgångar av typen <code>FORM</code>, <code>PDFFORM</code>och <code>PRINTFORM</code>.</td>
+   <td>Anger om det binära innehållet ska hämtas eller inte. Attributet <code>includeXdp</code> gäller för resurser av typen <code>FORM</code>, <code>PDFFORM</code> och <code>PRINTFORM</code>.</td>
   </tr>
   <tr>
    <td>assetType</td>

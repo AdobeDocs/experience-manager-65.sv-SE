@@ -26,28 +26,28 @@ Konsolen Communities Sites ger åtkomst till:
 * Platshantering
 * [Skapa och redigera kapslade grupper](/help/communities/groups.md) (undergrupper)
 
-Se [Komma igång med AEM Communities](/help/communities/getting-started.md) där du kan se hur snabbt en community-webbplats kan skapas i författarmiljön och hur du skapar communitygrupper från författarmiljön och publiceringsmiljöer.
+Se [Komma igång med AEM Communities](/help/communities/getting-started.md) där du kan se hur snabbt en communitywebbplats kan skapas i författarmiljön och hur du skapar communitygrupper från författar- och publiceringsmiljöer.
 
 >[!NOTE]
 >
->De viktigaste webbgruppsmenyerna för att skapa [communitysajter](/help/communities/sites-console.md), [mallar för communitywebbplatser](/help/communities/sites.md), [community-gruppmallar](/help/communities/tools-groups.md)och [communityfunktioner](/help/communities/functions.md) används endast i författarmiljön.
+>De viktigaste webbgruppsmenyerna för att skapa [communitywebbplatser](/help/communities/sites-console.md), [mallar för communitywebbplatser](/help/communities/sites.md), [mallar för communitygrupper](/help/communities/tools-groups.md) och [communityfunktioner](/help/communities/functions.md) är endast avsedda att användas i författarmiljön.
 
 ## Förutsättningar {#prerequisites}
 
-Innan du skapar en community-webbplats är det *obligatoriskt* till:
+Innan du skapar en community-webbplats är det *obligatoriskt* att:
 
-* Kontrollera att en eller flera publiceringsinstanser körs.
-* Aktivera [tunneltjänst](/help/communities/deploy-communities.md#tunnel-service-on-author) för att hantera medlemmar och medlemsgrupper.
-* Identifiera [primär utgivare](/help/communities/deploy-communities.md#primary-publisher).
+* Kontrollera att en eller flera Publish-instanser körs.
+* Aktivera [tunneltjänsten](/help/communities/deploy-communities.md#tunnel-service-on-author) för att hantera medlemmar och medlemsgrupper.
+* Identifiera den [primära utgivaren](/help/communities/deploy-communities.md#primary-publisher).
 * [Konfigurera replikering](/help/communities/deploy-communities.md#replication-agents-on-author) när den primära utgivarporten inte är standard (4503).
 
 Det bästa sättet att se till att webbplatsen är förberedd för många funktioner är att utföra följande steg:
 
-* Installera [senaste funktionspaketet](/help/communities/deploy-communities.md#latestfeaturepack).
+* Installera det [senaste funktionspaketet](/help/communities/deploy-communities.md#latestfeaturepack).
 * Aktivera [Adobe Analytics](/help/communities/analytics.md) för AEM Communities.
 * Konfigurera [e-post](/help/communities/email.md)
-* Identifiera [Community-administratörer](/help/communities/users.md#creating-community-members).
-* [Aktivera OAuth-hanterare](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler) för social inloggning.
+* Identifiera [communityadministratörer](/help/communities/users.md#creating-community-members).
+* [Aktivera OAuth-hanteraren](/help/communities/social-login.md#adobe-granite-oauth-authentication-handler) för social inloggning.
 
 ## Åtkomst till webbgruppskonsolen {#accessing-communities-sites-console}
 
@@ -57,19 +57,19 @@ Om du vill nå konsolen Webbplatser i redigeringsmiljön:
 
 Konsolen Communities Sites visar alla befintliga communityplatser. Från den här konsolen kan communitywebbplatser skapas, redigeras, hanteras och tas bort.
 
-Om du vill skapa en community-webbplats väljer du **Skapa** -ikon.
+Om du vill skapa en community-webbplats väljer du ikonen **Skapa** .
 
 Om du vill komma åt en befintlig communitywebbplats för att redigera, ändra, publicera, exportera eller lägga till en kapslad grupp, markerar du platsens mappikon.
 
 ## Skapa webbplats {#site-creation}
 
-Konsolen för att skapa webbplatser är en stegvis metod för att sätta ihop funktioner på webbplatsen baserat på ett valt [mall för communitywebbplats](/help/communities/sites.md) och inställningar.
+Konsolen för att skapa webbplatser innehåller ett stegvis tillvägagångssätt för att samla ihop funktioner på webbplatsen baserat på en vald [community-webbplatsmall](/help/communities/sites.md) och inställningar.
 
 Varje webbplats som skapas innehåller en inloggningsfunktion eftersom besökarna måste logga in innan de kan publicera innehåll, skicka meddelanden eller delta i en grupp. Andra funktioner är användarprofiler, meddelanden, meddelanden, webbplatsmenyer, sökning, teman och varumärken.
 
-Processen startas genom att du väljer `Create` överst i webbgruppskonsolen.
+Processen startas genom att du väljer knappen `Create` högst upp i konsolen Webbplatser för communities.
 
-Skapandeprocessen är en serie steg som presenteras som paneler med en uppsättning funktioner som ska konfigureras (presenteras som underpaneler). Det går att gå vidare till **Nästa** steg eller **Bakåt** till föregående steg innan webbplatsen implementeras i det sista steget.
+Skapandeprocessen är en serie steg som presenteras som paneler med en uppsättning funktioner som ska konfigureras (presenteras som underpaneler). Det går att gå vidare till **Nästa**-steget eller **Tillbaka** till föregående steg innan webbplatsen implementeras i det sista steget.
 
 ### Steg 1: Platsmall {#step-site-template}
 
@@ -77,7 +77,7 @@ Skapandeprocessen är en serie steg som presenteras som paneler med en uppsättn
 
 På panelen Platsmall anges titel, beskrivning, platsrot, grundspråk, namn och platsmall:
 
-* **Rubrik för communitywebbplats**
+* **Webbplatstitel för communityn**
 
   En visningsrubrik för webbplatsen.
 
@@ -89,30 +89,30 @@ På panelen Platsmall anges titel, beskrivning, platsrot, grundspråk, namn och 
 
   Beskrivningen visas inte på den publicerade webbplatsen.
 
-* **Community-platsrot**
+* **Webbplatsrot för community**
 
   Rotsökvägen till platsen.
 
   Standardroten är `/content/sites`, men roten kan flyttas till valfri plats på webbplatsen.
 
-* **Bas-språk för communitywebbplats**
+* **Bas för communitywebbplats**
 
-  (Lämna orört för engelska) Använd den nedrullningsbara menyn för att välja ett språk *eller mer* basspråk från tillgängliga språk - tyska, italienska, franska, japanska, spanska, portugisiska (Brasilien), kinesiska (traditionell) och kinesiska (förenklad). En communitywebbplats skapas för varje språk som läggs till och finns i samma webbplatsmapp enligt de rutiner som beskrivs i [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md). Rotsidan för varje webbplats innehåller en underordnad sida som namnges med språkkoden för ett av de valda språken, till exempel &quot;en&quot; för engelska eller &quot;fr&quot; för franska.
+  (Låt vara orört för ett språk: engelska) Använd listrutan för att välja ett *eller flera* basspråk från de tillgängliga språken - tyska, italienska, franska, japanska, spanska, portugisiska (Brasilien), kinesiska (traditionell) och kinesiska (förenklad). En community-webbplats skapas för varje språk som läggs till och finns i samma webbplatsmapp enligt den bästa metoden som beskrivs i [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md). Rotsidan för varje webbplats innehåller en underordnad sida som namnges med språkkoden för ett av de valda språken, till exempel &quot;en&quot; för engelska eller &quot;fr&quot; för franska.
 
 * **Namn på communitywebbplats**:
 
   Namnet på webbplatsens rotsida som visas i URL:en.
 
    * Dubbelkontrollera namnet eftersom det inte är lätt att ändra efter att webbplatsen har skapats.
-   * Bas-URL ( `https://server:port/site root/site name)` visas under `Community Site Name`.
+   * Bas-URL ( `https://server:port/site root/site name)`) visas under `Community Site Name`.
 
    * Ange en giltig URL genom att lägga till en baskod + &quot;.html&quot;
 
      *Till exempel*, `https://localhost:4502/content/sites/mysight/en.html`
 
-* **Community-webbplatsmall** meny
+* **Webbplatsmall för communityn**-menyn
 
-  Använd listrutan för att välja en tillgänglig [mall för communitywebbplats](/help/communities/tools.md).
+  Använd listrutan för att välja en tillgänglig mall för [communitywebbplats](/help/communities/tools.md).
 
 * Välj **Nästa**.
 
@@ -122,13 +122,13 @@ Designpanelen innehåller två underpaneler för att välja tema och varumärkes
 
 #### TEMA PÅ GEMENSKAPENS WEBBPLATS {#community-site-theme}
 
-![sitetema](assets/sitetheme.png)
+![platstema](assets/sitetheme.png)
 
 Ramverket använder `Twitter Bootstrap` för att ge webbplatsen en responsiv, flexibel design. Ett av de många förinlästa Bootstrap-temana kan väljas för att formatera den valda communitywebbplatsmallen, eller så kan ett Bootstrap-tema överföras.
 
 När du väljer det här alternativet överlappas temat av en ogenomskinlig blå bockmarkering.
 
-När communitywebbplatsen har publicerats kan du [redigera egenskaperna](#modifying-site-properties) och välj ett annat tema.
+När communitywebbplatsen har publicerats går det att [redigera egenskaperna](#modifying-site-properties) och välja ett annat tema.
 
 #### GEMENSKAPENS WEBBPLATSHANTERING {#community-site-branding}
 
@@ -166,27 +166,27 @@ Panelen Inställningar innehåller flera underpaneler med funktioner som ska kon
 >
 >Flera av underpanelerna Settings tillåter tilldelning av en betrodd medlem till måttlig användargenererad katalog, hantera grupper eller vara kontakter för aktiveringsresurser i publiceringsmiljön.
 >
->Konventionen gäller för publicering [användare och användargrupper](/help/communities/users.md) (medlemmar och medlemsgrupper) ska inte dupliceras i författarmiljön.
+>Konventionen används för att [användare och användargrupper](/help/communities/users.md) (medlemmar och medlemsgrupper) på publiceringssidan inte ska dupliceras i författarmiljön.
 >
 >När du skapar en community-webbplats i författarmiljön och tilldelar betrodda medlemmar till olika roller måste du därför hämta medlemsdata från publiceringsmiljön.
 >
->Detta uppnås genom att aktivera ` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)` för redigeringsmiljön.
+>Detta uppnås genom att ` [AEM Communities Publish Tunnel Service](/help/communities/deploy-communities.md#tunnel-service-on-author)` aktiveras för författarmiljön.
 
 #### ANVÄNDARHANTERING {#user-management}
 
-![createplatserinställningar](assets/createsitesettings.png)
+![skaparplatsinställningar](assets/createsitesettings.png)
 
 * **Tillåt användarregistrering**
 
   Om det här alternativet är markerat kan besökarna bli communitymedlemmar genom självregistrering.
-Om alternativet inte är markerat är communitywebbplatsen *begränsad* och besökare måste tilldelas gruppplatsens medlemsgrupp, göra en förfrågan eller få en inbjudan via e-post. Om alternativet inte är markerat bör anonym åtkomst inte tillåtas.
-Avmarkera *private* communitysajt. Standard är markerat.
+Om alternativet inte är markerat är communitywebbplatsen *begränsad* och webbplatsbesökarna måste tilldelas medlemsgruppen för communitywebbplatsen, göra en begäran eller skickas en inbjudan via e-post. Om alternativet inte är markerat bör anonym åtkomst inte tillåtas.
+Avmarkera om det finns en *privat* community-webbplats. Standard är markerat.
 
 * **Tillåt anonym åtkomst**
 
-  Om det här alternativet är markerat är communitywebbplatsen *open* och alla besökare kan komma åt webbplatsen.
+  Om det här alternativet är markerat är communitywebbplatsen *öppen* och alla besökare kan komma åt webbplatsen.
 Om alternativet inte är markerat kan bara inloggade medlemmar få åtkomst till webbplatsen.
-Avmarkera *private* communitysajt. Standard är markerat.
+Avmarkera om det finns en *privat* community-webbplats. Standard är markerat.
 
 * **Tillåt meddelanden**
 
@@ -196,27 +196,27 @@ Standard är avmarkerat.
 
 * **Tillåt sociala inloggningar: Facebook**
 
-  Om det här alternativet är markerat kan webbplatsbesökare logga in med sina Facebook-kontouppgifter. Den markerade [Facebook molnkonfiguration](/help/communities/social-login.md#create-a-facebook-connect-cloud-service) bör konfigureras så att användare läggs till i communityplatsens medlemsgrupp när communitywebbplatsen har skapats.
+  Om det här alternativet är markerat kan webbplatsbesökare logga in med sina Facebook-kontouppgifter. Den valda [molnkonfigurationen för Facebook](/help/communities/social-login.md#create-a-facebook-connect-cloud-service) bör konfigureras att lägga till användare i medlemsgruppen för communitywebbplatsen när communitywebbplatsen har skapats.
 Om du inte markerar det här alternativet visas ingen Facebook-inloggning.
-Låt vara omarkerad för en *private* communitysajt. Standard är avmarkerat.
+Låt vara omarkerat för en *privat*-communitywebbplats. Standard är avmarkerat.
 
 * **Tillåt sociala inloggningar: Twitter**
 
-  Om det här alternativet är markerat tillåter du webbplatsbesökare att logga in med sina Twitter. Den markerade [Twitter cloud configuration](/help/communities/social-login.md#create-a-twitter-connect-cloud-service) bör konfigureras så att användare läggs till i communityplatsens medlemsgrupp när communitywebbplatsen har skapats.
+  Om det här alternativet är markerat tillåter du webbplatsbesökare att logga in med sina Twitter. Den markerade [Twitter-molnkonfigurationen](/help/communities/social-login.md#create-a-twitter-connect-cloud-service) bör konfigureras att lägga till användare i communityplatsens medlemsgrupp när community-webbplatsen har skapats.
 Om du inte markerar det här alternativet visas ingen inloggning för Twitter.
-Låt vara omarkerad för en *private* communitysajt. Standard är avmarkerat.
+Låt vara omarkerat för en *privat*-communitywebbplats. Standard är avmarkerat.
 
 >[!NOTE]
 >
 >**Tillåta sociala inloggningar**
 >
->Det kan finnas exempelkonfigurationer för Facebook och Twitter och de kan väljas för en [produktionsmiljö](/help/sites-administering/production-ready.md)måste du skapa anpassade Facebook- och Twitter-program. Se [Social inloggning med Facebook och Twitter](/help/communities/social-login.md).
+>Det kan finnas exempelkonfigurationer för Facebook och Twitter och de kan väljas för en [produktionsmiljö](/help/sites-administering/production-ready.md), men du måste skapa anpassade Facebook- och Twitter-program. Se [Social inloggning med Facebook och Twitter](/help/communities/social-login.md).
 
 #### TAGGNING {#tagging}
 
 ![webbplatstaggning](assets/site-tagging.png)
 
-De taggar som kan användas för communityinnehåll (CMS) styrs genom att du väljer Taggnamnutrymmen som tidigare definierats i [Taggningskonsolen](/help/sites-administering/tags.md#tagging-console).
+De taggar som kan användas för communityinnehåll styrs genom att du väljer Taggnamnutrymmen som tidigare definierats via [taggningskonsolen](/help/sites-administering/tags.md#tagging-console).
 
 Om du väljer taggnamnutrymmen för communitywebbplatsen begränsas dessutom det urval som visas när du definierar kataloger och resurser.
 
@@ -226,7 +226,7 @@ Om du väljer taggnamnutrymmen för communitywebbplatsen begränsas dessutom det
 
 ![Community-roller](assets/site-admin-2.png)
 
-The [roller för communitymedlemmar](/help/communities/users.md) har tilldelats med dessa inställningar.
+[rollerna för communitymedlemmar](/help/communities/users.md) har tilldelats med de här inställningarna.
 
 Det är enkelt att hitta communitymedlemmar med hjälp av typsnittssökning.
 
@@ -238,7 +238,7 @@ Det är enkelt att hitta communitymedlemmar med hjälp av typsnittssökning.
 
   Börja skriva för att välja en eller flera communitymedlemmar eller medlemsgrupper som ska betraktas som pålitliga som moderatorer för användargenererat innehåll.
 
-* **Medlemmar med behörighet i communityn**
+* **Behöriga communitymedlemmar**
 
   Börja skriva för att välja en eller flera communitymedlemmar eller medlemsgrupper som ska kunna skapa innehåll när `Allow Privileged Member` har valts för en [communityfunktion](/help/communities/functions.md).
 
@@ -248,7 +248,7 @@ Det är enkelt att hitta communitymedlemmar med hjälp av typsnittssökning.
 
 #### MODERATION {#moderation}
 
-![webbplatsmoderering](assets/site-moderation.png)
+![moderering av webbplats](assets/site-moderation.png)
 
 Den globala inställningen för moderering av användargenererat innehåll (UGC) styrs av dessa inställningar. Enskilda komponenter har ytterligare inställningar för att styra modereringen.
 
@@ -256,7 +256,7 @@ Den globala inställningen för moderering av användargenererat innehåll (UGC)
 
   Om det här alternativet är markerat visas inte publicerat communityinnehåll förrän det har godkänts av en moderator. Standard är avmarkerat. Mer information finns i [Moderating Community Content](/help/communities/moderate-ugc.md#premoderation).
 
-* **Tröskelvärde för flagga innan innehåll döljs**
+* **Tröskelvärde för flaggning innan innehållet döljs**
 
   Om värdet är större än 0 måste antalet gånger ett ämne eller ett inlägg flaggas innan det döljs för den offentliga vyn. Om värdet är -1 döljs aldrig det markerade ämnet eller inlägget från den offentliga vyn. Standardvärdet är 5.
 
@@ -266,41 +266,41 @@ Den globala inställningen för moderering av användargenererat innehåll (UGC)
 
 * **Aktivera analys**
 
-  Endast tillgängligt när Adobe Analytics har [konfigurerad](/help/communities/analytics.md) för webbgrupper.
+  Endast tillgängligt när Adobe Analytics har [konfigurerats](/help/communities/analytics.md) för webbgruppsfunktioner.
 Standard är avmarkerat. När det här alternativet är markerat visas ytterligare en markeringsmeny:
 
-![webbplatsanalys-aktivera](assets/site-analytics-enable.png)
+![site-analytics-enable](assets/site-analytics-enable.png)
 
-* **Referens för Cloud Config Framework**
+* **Referens för konfigurationsramverk för molnet**
 
   I listrutan väljer du Analytics Cloud tjänstramverk som konfigurerats för den här communitywebbplatsen.
-  `Communities` är ramverkets exempel från [Analyskonfiguration för communityfunktioner](/help/communities/analytics.md#aem-analytics-framework-configuration) dokumentation.
+  `Communities` är ramverksexemplet från dokumentationen för [Analyskonfiguration för communityfunktioner](/help/communities/analytics.md#aem-analytics-framework-configuration).
 
 #### ÖVERSÄTTNING {#translation}
 
-![webbplatsöversättning](assets/site-translation.png)
+![site-translation](assets/site-translation.png)
 
 * **Tillåt maskinöversättning**
 
-  När det här alternativet är markerat (standardinställningen är avmarkerad) aktiveras maskinöversättning för UGC på platsen. Detta påverkar inte annat innehåll, t.ex. sidinnehåll, även om webbplatsen har konfigurerats som en flerspråkig webbplats. Se [Översätter användargenererat innehåll](/help/communities/translate-ugc.md) för information om hur du konfigurerar en licensierad översättningstjänst för AEM Communities. Se [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md) för en fullständig översikt.
+  När det här alternativet är markerat (standardinställningen är avmarkerad) aktiveras maskinöversättning för UGC på platsen. Detta påverkar inte annat innehåll, t.ex. sidinnehåll, även om webbplatsen har konfigurerats som en flerspråkig webbplats. Mer information om hur du konfigurerar en licensierad översättningstjänst för AEM Communities finns i [Översätta användargenererat innehåll](/help/communities/translate-ugc.md). En fullständig översikt finns i [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md).
 
 ![allow-machine-translation](assets/allow-machine-translation.png)
 
 * **Aktivera maskinöversättning för valda språk**
 
-  Språken som är aktiverade för maskinöversättning är standardinställningen för den systeminställning som anges av [konfiguration av översättningsintegrering](/help/communities/translate-ugc.md#translation-integration-configuration). Dessa standardinställningar kan åsidosättas för den här webbplatsen genom att standardinställningar tas bort och/eller genom att andra språk väljs i den nedrullningsbara menyn.
+  Språken som är aktiverade för maskinöversättning är standardinställningen för den systeminställning som anges av [integrationskonfigurationen för översättning](/help/communities/translate-ugc.md#translation-integration-configuration). Dessa standardinställningar kan åsidosättas för den här webbplatsen genom att standardinställningar tas bort och/eller genom att andra språk väljs i den nedrullningsbara menyn.
 
 * **Välj en översättningsleverantör**
 
-  Som standard är tjänsteleverantören en provtjänst som använder `microsoft` endast för demonstrationer. Om ingen översättningstjänstleverantör är licensierad **Tillåt maskinöversättning** ska avmarkeras.
+  Som standard är tjänsteleverantören en provtjänst som endast använder `microsoft` som exempel. Om ingen översättningstjänstprovider är licensierad bör **Tillåt maskinöversättning** avmarkeras.
 
 * **Välj ett globalt delat arkiv**
 
   För en webbplats med flera språkkopior innehåller ett globalt delat arkiv en enda konversationstråd, som visas från varje språkkopia. Detta uppnås genom att välja ett av språken som ingår som en språkkopia. Standardvärdet är *Inget globalt delat arkiv*.
 
-* **Välj konfiguration för översättningsprovider**
+* **Välj konverteringsproviderkonfiguration**
 
-  Välj en [översättningsintegreringsramverk](/help/sites-administering/tc-tic.md) har skapats för den licensierade översättningsleverantören.
+  Välj ett [ramverk för översättningsintegrering](/help/sites-administering/tc-tic.md) som skapats för den licensierade översättningsprovidern.
 
 * **Välj översättningsalternativ för communitywebbplatsen**
 
@@ -308,19 +308,19 @@ Standard är avmarkerat. När det här alternativet är markerat visas ytterliga
 
      Om du väljer det här alternativet översätts all UGC på en sida till sidans basspråk.
 
-     Standard är *inte markerad*.
+     Standard är *inte markerat*.
 
    * **Översätt endast markering**
 
      Om du väljer det här alternativet visas ett översättningsalternativ intill varje inlägg som gör att enskilda inlägg kan översättas till sidans grundspråk.
-Standard är *markerad*.
+Standard är *markerat*.
 
 * **Välj alternativ för beständighet**
 
-   * **Översätt avgifter på användarens begäran och fortsätt efteråt**
+   * **Översätt avgifter på användarbegäran och spara dem efteråt**
 Om du väljer det här alternativet översätts inte innehållet förrän en begäran har gjorts. När översättningen är klar sparas översättningen i databasen.
 
-     Standard är *inte markerad*.
+     Standard är *inte markerat*.
 
    * **Behåll inte översättningar**
 
@@ -328,7 +328,7 @@ Om du väljer det här alternativet översätts inte innehållet förrän en beg
 
      Om det inte är markerat bevaras översättningar.
 
-     Standard är *inte markerad*.
+     Standard är *inte markerat*.
 
 * **Smart rendering**
 
@@ -340,16 +340,16 @@ Om du väljer det här alternativet översätts inte innehållet förrän en beg
 
 ### Steg 4: Skapa webbgruppswebbplats {#step-create-communities-site}
 
-Om det behövs justeringar använder du **Bakåt** för att skapa dem.
+Om det behövs justeringar använder du knappen **Bakåt** för att göra dem.
 
-En gång **Skapa** är markerat och startat kan processen att skapa platsen inte avbrytas.
+När **Skapa** har valts och startats kan processen att skapa webbplatsen inte avbrytas.
 
 När webbplatsen har skapats:
 
 * Det går inte att ändra URL:en (nodnamn).
 * Framtida ändringar av communitywebbplatsmallen påverkar inte den skapade communitywebbplatsen.
 * Om du inaktiverar communityplatsmallen påverkas inte den skapade communitywebbplatsen.
-* Du kan redigera [STRUKTUR](#modify-structure) av en communitywebbplats genom att ändra dess egenskaper.
+* Det går att redigera [STRUKTUREN](#modify-structure) för en community-webbplats genom att ändra dess egenskaper.
 
 ![create-site](assets/create-site1.png)
 
@@ -371,21 +371,21 @@ När du hovrar över en plats med en mus eller vidrör ett platskort visas ikone
 
 ## Skapa webbplatsinnehåll {#authoring-site-content}
 
-Innehållet i en webbplats kan redigeras med samma verktyg som andra AEM. Om du vill öppna webbplatsen för redigering väljer du `Open Site` ikonen som visas när du hovrar webbplatsen med musen. Webbplatsen öppnas på en ny flik så att konsolen Webbplatser fortfarande är tillgänglig.
+Innehållet i en webbplats kan redigeras med samma verktyg som andra AEM. Om du vill öppna webbplatsen för redigering väljer du ikonen `Open Site` som visas när du hovrar webbplatsen med musen. Webbplatsen öppnas på en ny flik så att konsolen Webbplatser fortfarande är tillgänglig.
 
 ![webbplatsinnehåll](assets/site-content.png)
 
 >[!NOTE]
 >
->Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och [snabbguide till framtagning av sidor](/help/sites-authoring/qg-page-authoring.md).
+>Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](/help/sites-authoring/basic-handling.md) och en [snabbguide till redigeringssidor](/help/sites-authoring/qg-page-authoring.md).
 
 ## Ändra webbplatsegenskaper {#modifying-site-properties}
 
 ![edit-site](assets/edit-site.png)
 
-Egenskaperna för en befintlig plats som anges när webbplatsen skapas kan ändras genom att välja `Edit Site`ikonen som visas när du hovrar webbplatsen med musen.
+Egenskaperna för en befintlig plats, som anges när webbplatsen skapas, kan ändras genom att markera ikonen `Edit Site` som visas när du håller muspekaren över webbplatsen.
 
-`Details of the following properties match the descriptions provided in the` [Skapa webbplats](#site-creation) -avsnitt.
+Avsnittet `Details of the following properties match the descriptions provided in the` [Skapa webbplats](#site-creation).
 
 ![modify-site-basicinfo](assets/modify-site-basicinfo.png)
 
@@ -400,7 +400,7 @@ Det går inte att ändra namnet på communityplatsen.
 
 Om du väljer en annan mall för en community-webbplats påverkas inte en befintlig community-webbplats eftersom det inte finns någon koppling mellan mallar och webbplatser.
 
-I stället [STRUKTUR](#modify-structure) av communitywebbplatsen kan ändras.
+I stället kan [STRUKTUREN](#modify-structure) för communitywebbplatsen ändras.
 
 ### Ändra struktur {#modify-structure}
 
@@ -433,9 +433,9 @@ STRUKTURpanelen gör att du kan ändra den struktur som ursprungligen skapades f
 
 >[!CAUTION]
 >
->Funktionen groups måste *not* vara *först eller bara* i platsstrukturen.
+>Gruppfunktionen får *inte* vara den *första eller den enda* funktionen i platsstrukturen.
 >
->Alla andra funktioner, till exempel [sidfunktion](/help/communities/functions.md#page-function), måste inkluderas och listas först.
+>Alla andra funktioner, till exempel [sidfunktionen](/help/communities/functions.md#page-function), måste inkluderas och listas först.
 
 #### Exempel: Lägga till en katalogfunktion i en community-platsstruktur {#example-adding-a-catalog-function-to-a-community-site-structure}
 
@@ -467,29 +467,29 @@ På panelen MINIATYRBILD kan en bild överföras för att representera webbplats
 
 ## Publicera webbplatsen {#publishing-the-site}
 
-När en community-webbplats har skapats eller ändrats på nytt kan du publicera (aktivera) webbplatsen genom att välja `Publish Site` som visas när du håller muspekaren över platsen.
+När en community-webbplats har skapats eller ändrats på nytt kan du publicera (aktivera) webbplatsen genom att välja ikonen `Publish Site` som visas när du håller muspekaren över webbplatsen.
 
-![publicera-webbplats](assets/publish-site.png)
+![publiceringsplats](assets/publish-site.png)
 
 Det finns en indikation när webbplatsen har publicerats.
 
-![webbpublicerad](assets/site-published.png)
+![webbplats-publicerad](assets/site-published.png)
 
 ### Publicera med kapslade grupper {#publishing-with-nested-groups}
 
-Efter publicering av en community-webbplats är det nödvändigt att publicera varje undergrupp (kapslad grupp) som skapats med [Gruppkonsol](/help/communities/groups.md).
+När du har publicerat en community-webbplats måste du publicera varje undergrupp (kapslad grupp) som skapats med [gruppkonsolen](/help/communities/groups.md) separat.
 
 ## Exportera platsen {#exporting-the-site}
 
 ![export-site](assets/export-site.png)
 
-Markera exportikonen när du hovrar musen över webbplatsen, så att du kan skapa ett paket av communitywebbplatsen som båda lagras i [Pakethanteraren](/help/sites-administering/package-manager.md) och laddas ned.
+Markera exportikonen när du för muspekaren över webbplatsen, så att du kan skapa ett paket av communitywebbplatsen som både lagras i [pakethanteraren](/help/sites-administering/package-manager.md) och hämtas.
 
 UGC ingår inte i webbplatspaketet.
 
 ## Tar bort platsen {#deleting-the-site}
 
-![deleteicon](assets/deleteicon.png)
+![deleteIcon](assets/deleteicon.png)
 
 Om du vill ta bort communitywebbplatsen väljer du ikonen Ta bort plats som visas när du håller muspekaren över webbplatsen i Webbplatskonsolen. Den här åtgärden tar bort alla objekt som är associerade med platsen, till exempel UGC, användargrupper, resurser och databasposter.
 
@@ -497,7 +497,7 @@ Om du vill ta bort communitywebbplatsen väljer du ikonen Ta bort plats som visa
 
 När den nya communitywebbplatsen har publicerats skapas nya medlemsgrupper (användargrupper i publiceringsmiljön) som har rätt behörigheter för olika administrativa roller och medlemsroller.
 
-Namnet som skapas för medlemsgrupperna innehåller *site-name* anges i [Steg 1](#step13asitetemplate) (namnet som visas i URL:en). Det innehåller också ett unikt ID för att undvika konflikter med communitysajter och grupper som har samma platsnamn för olika communityrötter.
+Namnet som skapas för medlemsgrupperna innehåller *site-name* som anges i [Steg 1](#step13asitetemplate) (namnet som visas i URL:en). Det innehåller också ett unikt ID för att undvika konflikter med communitysajter och grupper som har samma platsnamn för olika communityrötter.
 
 Om namnet till exempel är &quot;engage&quot; för en webbplats med namnet &quot;Getting Started Tutorial&quot;, skulle användargruppen för moderatorer vara:
 
@@ -510,24 +510,24 @@ Mer information finns i [Hantera användare och användargrupper](/help/communit
 
 >[!NOTE]
 >
->If [Tillåt social inloggning: Facebook](#user-management) aktiveras när användargruppen `community-<site-name>-<uid>-members`
->skapas, används [Facebook molntjänst](/help/communities/social-login.md#createafacebookcloudservice) bör konfigureras för att lägga till användare i den här gruppen.
+>Om [Tillåt social inloggning: Facebook](#user-management) aktiveras när användargruppen `community-<site-name>-<uid>-members`
+>har skapats bör den [Facebook molntjänst](/help/communities/social-login.md#createafacebookcloudservice) som används konfigureras för att lägga till användare i den här gruppen.
 
 ## Konfigurera för autentiseringsfel {#configure-for-authentication-error}
 
-Som standard dirigeras en community-webbplats om till en exempelinloggningssida när användaren anger fel inloggningsuppgifter och inte kan logga in. Denna exempelinloggning finns inte på en [produktionsserver](/help/sites-administering/production-ready.md).
+Som standard dirigeras en community-webbplats om till en exempelinloggningssida när användaren anger fel inloggningsuppgifter och inte kan logga in. Den här exempelinloggningen finns inte på en [produktionsserver](/help/sites-administering/production-ready.md).
 
 Om du vill omdirigera korrekt, när en webbplats har konfigurerats och publicerats, slutför du de här stegen för att få autentiseringsfel att omdirigera till communitywebbplatsen:
 
 * På varje AEM publiceringsinstans.
 * Logga in med administratörsbehörighet.
-* Öppna [Webbkonsol](/help/sites-deploying/configuring-osgi.md).
+* Gå till [webbkonsolen](/help/sites-deploying/configuring-osgi.md).
 
-   * Till exempel: [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
+   * Exempel: [https://localhost:4503/system/console/configMgr](https://localhost:4503/system/console/configMgr).
 
-* Sök `Adobe Granite Login Selector Authentication Handler`.
-* Välj `pencil` så att du kan öppna konfigurationen för redigering.
-* Ange en **Mappningar av inloggningssidor** enligt följande:
+* Sök efter `Adobe Granite Login Selector Authentication Handler`.
+* Markera ikonen `pencil` så att du kan öppna konfigurationen för redigering.
+* Ange **Inloggningssidmappningar** enligt följande:
 
   `/content/sites/<site-name>/path/to/login/page:/content/sites/<site-name>`
 
@@ -544,7 +544,7 @@ På samma AEM har publiceringsinstansen konfigurerats med en inloggningssidmappn
 
 * Bläddra till startsidan för communitywebbplatsen.
 
-   * Till exempel: [https://localhost:4503/content/sites/engage/en.html](https://localhost:4503/content/sites/engage/en.html)
+   * Exempel: [https://localhost:4503/content/sites/engage/en.html](https://localhost:4503/content/sites/engage/en.html)
 
 * Välj Logga ut.
 * Välj Logga in.
@@ -555,8 +555,8 @@ På samma AEM har publiceringsinstansen konfigurerats med en inloggningssidmappn
 
 ## Åtkomst till communityplatser från huvudplatskonsolen {#accessing-community-sites-from-main-sites-console}
 
-På den globala webbplatskonsolen finns communitywebbplatser i `Community Sites` mapp.
+Från den globala webbplatskonsolen finns communityplatser i mappen `Community Sites`.
 
 Det går att komma åt en community-webbplats på det här sättet, men för administrativa uppgifter bör communitywebbplatsen nås från konsolen Webbplatser för communities.
 
-![webbplats](assets/access-site.png)
+![åtkomstplats](assets/access-site.png)

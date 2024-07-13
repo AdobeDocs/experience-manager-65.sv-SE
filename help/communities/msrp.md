@@ -30,7 +30,7 @@ Se även [Egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of
 
    * Version 2.6 eller senare
    * Du behöver inte konfigurera mongor eller delningar
-   * Rekommendera [replikuppsättning](#mongoreplicaset)
+   * Rekommendera starkt en [replikuppsättning](#mongoreplicaset)
    * Kan köras på samma värd som AEM eller fjärrköras
 
 * [Apache Solr](https://lucene.apache.org/solr/):
@@ -49,11 +49,11 @@ Se även [Egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of
 
 ### Välj MSRP {#select-msrp}
 
-The [Konsol för lagringskonfiguration](srp-config.md) gör det möjligt att välja standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
+Konsolen [Lagringskonfiguration](srp-config.md) tillåter val av standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
 
 På författaren, för att komma åt lagringskonsolen:
 
-* Välj **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]**.
+* Välj **[!UICONTROL Tools]** > **[!UICONTROL Communities]** > **[!UICONTROL Storage Configuration]** från global navigering.
 
 ![msrp](assets/msrp.png)
 
@@ -78,11 +78,11 @@ På författaren, för att komma åt lagringskonsolen:
 
 * **[!UICONTROL SolrConfiguration]**
 
-   * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files) Värd**
+   * **[Zookeeper](https://cwiki.apache.org/confluence/display/solr/Using+ZooKeeper+to+Manage+Configuration+Files) Host**
 
-     Vid körning [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till `HOST:PORT` för ZooKeeper, till exempel *my.server.com:2181*
+     När du kör i [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till `HOST:PORT` för ZooKeeper, till exempel *my.server.com:2181*
 
-     Ange kommaavgränsade för en ZooKeeper Ensemble `HOST:PORT` värden, som *host1:2181,host2:2181*
+     Ange kommaavgränsade `HOST:PORT`-värden för en ZooKeeper Ensemble, till exempel *host1:2181,host2:2181*
 
      Lämna tomt om du kör Solr i fristående läge med den interna ZooKeeper.
      *Standard*: *&lt;blank>*
@@ -94,21 +94,21 @@ Lämna tomt om du kör i SolrCloud-läge.
 
       * **[!UICONTROL Solr Collection]**
 Solr-samlingens namn.
-        *Standard*: collection1
+        *Standard*: samling1
 
 * Välj **[!UICONTROL Submit]**
 
 >[!NOTE]
 >
->MongoDB-databasen som standard har namnet `communities`, ska inte anges med namnet på en databas som används för [nodarkiv eller datalager (binära)](../../help/sites-deploying/data-store-config.md). Se även [Lagringselement i AEM 6.5](../../help/sites-deploying/storage-elements-in-aem-6.md).
+>MongoDB-databasen, som har standardvärdet `communities`, ska inte anges till namnet på en databas som används för [nodarkiv eller datalager (binära)](../../help/sites-deploying/data-store-config.md). Se även [Lagringselement i AEM 6.5](../../help/sites-deploying/storage-elements-in-aem-6.md).
 
 ### MongoDB-replikuppsättning {#mongodb-replica-set}
 
 För produktionsmiljön rekommenderar vi starkt att du skapar en replikuppsättning, ett kluster av MongoDB-servrar som implementerar primär-sekundär replikering och automatiserad failover.
 
-Mer information om replikuppsättningar finns på MongoDB:er [Replikering](https://docs.mongodb.org/manual/replication/) dokumentation.
+Mer information om replikuppsättningar finns i MongoDB:s [Replication](https://docs.mongodb.org/manual/replication/) -dokumentation.
 
-Om du vill arbeta med replikuppsättningar och lära dig hur du definierar anslutningar mellan program och MongoDB-instanser går du till MongoDB:er [URI-format för anslutningssträng](https://docs.mongodb.org/manual/reference/connection-string/) dokumentation.
+Om du vill arbeta med replikuppsättningar och lära dig hur du definierar anslutningar mellan program och MongoDB-instanser går du till dokumentationen för [anslutningssträngens URI-format](https://docs.mongodb.org/manual/reference/connection-string/) för MongoDB.
 
 #### Exempel-URL för anslutning till en replikuppsättning  {#example-url-for-connecting-to-a-replica-set}
 
@@ -126,19 +126,20 @@ En Solr-installation kan delas mellan nodbutiken (Oak) och den gemensamma lagrin
 
 Om både Oak- och MSRP-samlingarna används intensivt kan en andra Solr installeras av prestandaskäl.
 
-För produktionsmiljöer [SolrCloud-läge](solr.md#solrcloud-mode) ger bättre prestanda jämfört med fristående läge (en enda lokal Solr-inställning).
+I produktionsmiljöer ger [SolrCloud-läget](solr.md#solrcloud-mode) bättre prestanda jämfört med fristående läge (en enda lokal Solr-inställning).
 
-Konfigurationsinformation finns i [Solr-konfiguration för SRP](solr.md).
+Mer konfigurationsinformation finns i [Solr Configuration for SRP](solr.md).
 
 ### Uppgraderar {#upgrading}
 
 Om du uppgraderar från en tidigare version som konfigurerats med MSRP måste du:
 
-1. Utför [uppgradera till AEM Communities](upgrade.md)
+1. Utför [uppgraderingen till AEM Communities](upgrade.md)
 1. Installera nya Solr-konfigurationsfiler
    * För [standard-MLS](solr.md#installing-standard-mls)
    * För [avancerad MLS](solr.md#installing-advanced-mls)
-1. Indexera om avsnittet MSRP Se [MSRP Reindex Tool](#msrp-reindex-tool)
+1. Indexera om MSRP
+Se avsnittet [MSRP Reindex Tool](#msrp-reindex-tool)
 
 ## Publicera konfigurationen {#publishing-the-configuration}
 
@@ -154,7 +155,7 @@ Om du vill göra den identiska konfigurationen tillgänglig i publiceringsmiljö
 
 ## Hantera användardata {#managing-user-data}
 
-För information om *användare*, *användarprofiler* och *användargrupper*, som ofta används i publiceringsmiljön, besök
+Mer information om *användare*, *användarprofiler* och *användargrupper* som ofta anges i publiceringsmiljön finns på
 
 * [Användarsynkronisering](sync.md)
 * [Hantera användare och användargrupper](users.md)
@@ -163,7 +164,7 @@ För information om *användare*, *användarprofiler* och *användargrupper*, so
 
 Det finns en HTTP-slutpunkt för omindexering av Solr för MSRP när nya konfigurationsfiler installeras eller när ett skadat Solr-index repareras.
 
-Med det här verktyget är MongoDB källan till *sanning* för MSRP; säkerhetskopior behöver bara göras av MongoDB.
+Med det här verktyget är MongoDB källan till *sanningen* för MSRP. Säkerhetskopieringar behöver bara göras för MongoDB.
 
 Hela UGC-trädet kan indexeras om, eller endast ett visst underträd, enligt parametern *path *data.
 
@@ -182,27 +183,28 @@ Följande cURL-kommando visar vad som krävs för att en HTTP-begäran ska kunna
 
 Grundformatet är:
 
-cURL -u *signera* -d *data* *reindex-url*
+cURL -u *signin* -d *data* *reindex-url*
 
-*signera* = administrator-id:password Till exempel: admin:admin
+*inloggning* = administrator-id:password
+Till exempel: admin:admin
 
-*data* = &quot;batchSize=*size*&amp;path=*sökväg&quot;*
+*data* = &quot;batchSize=*size*&amp;path=*path&quot;*
 
 *size* = hur många UGC-poster som ska indexeras om per åtgärd
 `/content/usergenerated/asi/mongo/`
 
-*bana* = rotplatsen för UGC-trädet som ska indexeras om
+*sökväg* = rotplatsen för UGC-trädet som ska indexeras om
 
-* Om du vill indexera om all UGC anger du värdet för `asipath`egenskap för
+* Om du vill indexera om all UGC anger du värdet för egenskapen `asipath` för
   `/etc/socialconfig/srpc/defaultconfiguration`
-* Om du vill begränsa indexvärdet till en del UGC anger du ett underträd till `asipath`
+* Om du vill begränsa indexvärdet till en del UGC anger du ett underträd av `asipath`
 
 *reindex-url* = slutpunkten för omindexering av SRP
 `http://localhost:4503/services/social/datastore/mongo/reindex`
 
 >[!NOTE]
 >
->Om du [indexerar om DSRP Solr](dsrp.md), är URL:en **/services/social/datastore/rdb/reindex**
+>Om du [omindexerar DSRP-servern ](dsrp.md) är URL:en **/services/social/datastore/rdb/reindex**
 
 ### Exempel på omindexering av MSRP {#msrp-reindex-example}
 
@@ -220,12 +222,12 @@ Information om hur du konfigurerar MSRP för en demonstration- eller utvecklings
 
 Kontrollera att MSRP har konfigurerats som standardprovider genom att kontrollera konfigurationen av lagringsalternativet. Som standard är lagringsresursprovidern JSRP.
 
-Om du skriver och publicerar AEM kan du gå till [Konsol för lagringskonfiguration](srp-config.md) eller kontrollera AEM:
+Gå till [Konsolen för lagringskonfiguration](srp-config.md) eller kontrollera den AEM databasen på alla författare och publicerade AEM:
 
 * I JCR, om [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/)
 
-   * Innehåller inte [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) -nod betyder det att lagringsprovidern är JSRP.
-   * Om srpc-noden finns och innehåller nod [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)ska standardkonfigurationens egenskaper definiera MSRP som standardprovider.
+   * Innehåller ingen [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)-nod, vilket betyder att lagringsprovidern är JSRP.
+   * Om srpc-noden finns och innehåller noden [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration), ska standardkonfigurationens egenskaper definiera MSRP som standardprovider.
 
 ### UGC försvinner efter uppgradering {#ugc-disappears-after-upgrade}
 
@@ -251,7 +253,7 @@ at com.adobe.cq.social.scf.core.BaseSocialComponent.toJSONString(BaseSocialCompo
 ... 124 common frames omitted
 ```
 
-För att åtgärda felet, när du följer instruktionerna för [Installerar standard-MLS](solr.md#installing-standard-mls), se till att
+Om du vill åtgärda felet måste du kontrollera följande när du följer instruktionerna för [Installera standard-MLS](solr.md#installing-standard-mls):
 
 * XML-konfigurationsfilerna kopierades till rätt Solr-plats.
 * Solr startades om efter att de nya konfigurationsfilerna ersatt de befintliga.

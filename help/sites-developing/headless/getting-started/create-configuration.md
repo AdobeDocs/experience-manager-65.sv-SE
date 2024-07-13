@@ -24,28 +24,28 @@ När det gäller headless content management i AEM kan du tänka på en konfigur
 
 >[!NOTE]
 >
->Om du känner till [sidmallar i en AEM-implementering,](/help/sites-authoring/templates.md) Användningen av konfigurationer för hantering av innehållsmodeller är likartad.
+>Om du är bekant med [sidmallar i en AEM-implementering i en hel hög ](/help/sites-authoring/templates.md) är användningen av konfigurationer för hantering av innehållsmodeller likartad.
 
 ## Så här skapar du en konfiguration {#how-to-create-a-configuration}
 
 En administratör behöver bara skapa en konfiguration en gång, eller mycket sällan, när det krävs en ny arbetsyta för att kunna ordna dina innehållsmodeller. I den här guiden behöver vi bara skapa en konfiguration.
 
-1. Logga in AEM och välj **Verktyg > Allmänt > Konfigurationsläsaren**.
-1. Ange en **Titel** för din konfiguration.
+1. Logga in AEM och välj **Verktyg > Allmänt > Konfigurationsläsaren** på huvudmenyn.
+1. Ange en **titel** för din konfiguration.
    * Ett namn genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/sites-developing/naming-conventions.md). Det blir nodnamnet i databasen.
 1. Markera följande alternativ:
    * **Modeller för innehållsfragment**
-   * **GraphQL Beständiga frågor**
+   * **GraphQL - beständiga frågor**
 
    ![Skapa konfiguration](assets/create-configuration.png)
 
-1. Klicka **Skapa**
+1. Klicka på **Skapa**
 
 Du kan skapa flera konfigurationer om det behövs. Konfigurationer kan också kapslas.
 
 >[!NOTE]
 >
->Konfigurationsalternativ utöver **Modeller för innehållsfragment** och **GraphQL Beständiga frågor** kan vara nödvändigt beroende på implementeringskraven.
+>Konfigurationsalternativ utöver **modeller för innehållsfragment** och **GraphQL beständiga frågor** kan vara nödvändiga beroende på implementeringskraven.
 
 ## Nästa steg {#next-steps}
 

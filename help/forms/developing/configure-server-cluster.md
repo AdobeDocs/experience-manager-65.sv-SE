@@ -38,7 +38,7 @@ Ett AEM Forms i JEE-kluster är beroende av den underliggande programserverns kl
 
 ### GemFire-cache {#gemfire-cache}
 
-GemFire-cachen är en distribuerad cachemekanism som implementeras i varje klusternod. Noderna hittar varandra och skapar ett enda logiskt cache-minne som är konsekvent mellan noderna. De noder som hittar varandras hörn för att behålla en enda teoretisk cache som visas som ett moln i bild 1. Till skillnad från GDS och databasen är cachen en rent traditionell enhet. Det faktiska cachelagrade innehållet lagras i minnet och i `LC_TEMP` på var och en av klusternoderna.
+GemFire-cachen är en distribuerad cachemekanism som implementeras i varje klusternod. Noderna hittar varandra och skapar ett enda logiskt cache-minne som är konsekvent mellan noderna. De noder som hittar varandras hörn för att behålla en enda teoretisk cache som visas som ett moln i bild 1. Till skillnad från GDS och databasen är cachen en rent traditionell enhet. Det faktiska cachelagrade innehållet lagras i minnet och i katalogen `LC_TEMP` på var och en av klusternoderna.
 
 ### Databas {#database}
 
@@ -120,7 +120,7 @@ GemFire skapar loggningsinformation som kan användas för att diagnostisera vil
 
 `.../LC_TEMP/adobeZZ__123456/Caching/Gemfire.log`
 
-Strängen efter `adobeZZ_` är unik för servernoden och därför måste du söka i det faktiska innehållet i din tillfälliga katalog. De två tecknen efter `adobe` beroende på programservertypen: antingen `wl`, `jb`, eller `ws`.
+Den numeriska strängen efter `adobeZZ_` är unik för servernoden och du måste därför söka i det faktiska innehållet i din tillfälliga katalog. De två tecknen efter `adobe` beror på programservertypen: `wl`, `jb` eller `ws`.
 
 Följande exempelloggar visar vad som händer när ett tvånodskluster hittar sig självt.
 
@@ -170,7 +170,7 @@ I det här fallet arbetar Bootstrapper med GemFire för att komma åt de tabelle
 
 Även om en dubblerad port ofta blir tydlig under Bootstrap kan den här situationen dyka upp senare. Detta kan inträffa när ett kluster startas om efter att ha stängts av Bootstrap i det andra klustret. Eller när nätverkskonfigurationen ändras så att kluster som tidigare isolerats, för multicast-syften, blir synliga för varandra.
 
-Om du vill diagnostisera sådana situationer tittar du på GemFire-loggarna och funderar noggrant på om bara de förväntade noderna hittas. För att åtgärda problemet måste du ändra `adobe.cache.multicast-port` -egenskapen till ett annat värde för ett eller båda klustren.
+Om du vill diagnostisera sådana situationer tittar du på GemFire-loggarna och funderar noggrant på om bara de förväntade noderna hittas. För att åtgärda problemet måste du ändra egenskapen `adobe.cache.multicast-port` till ett annat värde för ett eller båda klustren.
 
 ### 2) GDS-delning {#gds-sharing}
 
@@ -188,7 +188,7 @@ På UNIX® kan det sätt på vilket NFS-monteringar mappas till katalogstrukture
 
 * LCES anger sökvägen till GDS: /u01/iapply/livecycle_gds
 
-Om monteringen på nod 1 misslyckas innehåller katalogstrukturen fortfarande en sökväg `/u01/iapply/livecycle_gds` till den tomma monteringspunkten och noden verkar fungera korrekt. Men eftersom GDS-innehållet inte delas med den andra noden fungerar inte klustret korrekt. Detta kan och händer, och resultatet blir att klustret misslyckas på mystiska sätt.
+Om monteringen på nod 1 misslyckas innehåller katalogstrukturen fortfarande sökvägen `/u01/iapply/livecycle_gds` till den tomma monteringspunkten och noden verkar köras korrekt. Men eftersom GDS-innehållet inte delas med den andra noden fungerar inte klustret korrekt. Detta kan och händer, och resultatet blir att klustret misslyckas på mystiska sätt.
 
 Det bästa sättet är att ordna saker så att Linux®-monteringspunkten inte används som roten för GDS, utan i stället används en del katalog i den som GDS-rot:
 
@@ -263,11 +263,12 @@ I den ena inställningen används en punkt mellan &quot;kluster&quot; och &quot;
 
 Om du vill se hur Quartz har konfigurerat sig själv måste du titta på de meddelanden som genereras av AEM Forms i JEE Scheduler-tjänsten under start. Dessa meddelanden genereras med INFO-allvarlighetsgrad och det kan vara nödvändigt att justera loggnivån och starta om för att få meddelanden. I AEM Forms vid JEE-startsekvens börjar Quartz-initieringen med följande rad:
 
-INFORMATION  `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPSchedulerService onLoad Det är viktigt att hitta den första raden i loggarna. Orsaken är att vissa programservrar använder Quartz också, och deras Quartz-instanser inte bör blandas ihop med de instanser som används av AEM Forms i JEE Scheduler-tjänsten. Det här är indikationen på att tjänsten Schemaläggaren startas och de rader som följer efter den talar om för dig om den startar i grupperat läge korrekt. Flera meddelanden visas i den här sekvensen, och det är det sista&quot;startade&quot; meddelandet som visar hur Quartz är konfigurerat:
+INFO `[com.adobe.idp.scheduler.SchedulerServiceImpl]` IDPSchedulerService onLoad
+Det är viktigt att hitta den första raden i loggarna. Orsaken är att vissa programservrar använder Quartz också, och deras Quartz-instanser inte bör blandas ihop med de instanser som används av AEM Forms i JEE Scheduler-tjänsten. Det här är indikationen på att tjänsten Schemaläggaren startas och de rader som följer efter den talar om för dig om den startar i grupperat läge korrekt. Flera meddelanden visas i den här sekvensen, och det är det sista&quot;startade&quot; meddelandet som visar hur Quartz är konfigurerat:
 
-Här anges namnet på Quartz-instansen: `IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`. Namnet på schemaläggarens Quartz-instans börjar alltid med strängen `IDPSchedulerService_$_`. Strängen som läggs till i slutet av detta anger om Quartz körs i grupperat läge. Den långa unika identifieraren som genereras från nodens värdnamn och en lång sträng med siffror, här `ap-hp8.ottperflab.adobe.com1312883903975`, anger att den används i ett kluster. Om den fungerar som en enda nod är identifieraren ett tvåsiffrigt nummer, &quot;20&quot;:
+Här anges namnet på Quartz-instansen: `IDPSchedulerService_$_ap-hp8.ottperflab.adobe.com1312883903975`. Namnet på schemaläggarens Quartz-instans börjar alltid med strängen `IDPSchedulerService_$_`. Strängen som läggs till i slutet av detta anger om Quartz körs i grupperat läge. Den långa unika identifieraren som genereras från nodens värdnamn och en lång sträng med siffror, här `ap-hp8.ottperflab.adobe.com1312883903975`, anger att den körs i ett kluster. Om den fungerar som en enda nod är identifieraren ett tvåsiffrigt nummer, &quot;20&quot;:
 
-INFORMATION  `[org.quartz.core.QuartzScheduler]` Schemaläggare `IDPSchedulerService_$_20` igång.
+INFO `[org.quartz.core.QuartzScheduler]` Schemaläggaren `IDPSchedulerService_$_20` har startats.
 Den här kontrollen måste göras separat på alla klusternoder eftersom varje nods schemaläggare avgör separat om de ska användas i klusterläge eller inte.
 
 ### Vilken typ av problem uppstår om Quartz körs i fel läge? {#quartz-running-in-wrong-mode}

@@ -1,6 +1,6 @@
 ---
 title: ConvertPDF Service
-description: Använd tjänsten Adobe Experience Manager Forms ConvertPDF för att konvertera PDF-dokument till PostScript- eller bildfiler.
+description: Använd tjänsten Adobe Experience Manager Forms ConvertPDF för att konvertera PDF-dokument till PostScript eller bildfiler.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: document_services
@@ -19,16 +19,16 @@ ht-degree: 0%
 
 ## Ökning {#overview}
 
-Med tjänsten Konvertera PDF kan du konvertera PDF-dokument till PostScript- eller bildfiler (JPEG, JPEG 2000, PNG och TIFF). Att konvertera ett PDF-dokument till PostScript är användbart för oövervakad serverbaserad utskrift på en PostScript-skrivare. Det är praktiskt att konvertera ett PDF-dokument till en flersidig TIFF-fil när du arkiverar dokument i innehållshanteringssystem som inte stöder PDF.
+Med tjänsten Konvertera PDF kan du konvertera PDF-dokument till PostScript- eller bildfiler (JPEG, JPEG 2000, PNG och TIFF). Att konvertera ett PDF-dokument till PostScript är användbart för oövervakad serverbaserad utskrift på alla PostScript-skrivare. Det är praktiskt att konvertera ett PDF-dokument till en flersidig TIFF-fil när du arkiverar dokument i innehållshanteringssystem som inte stöder PDF.
 
 Du kan göra följande med tjänsten Convert PDF:
 
-* Konvertera PDF-dokument till PostScript. När du konverterar till PostScript kan du använda konverteringsåtgärden för att ange källdokumentet och om det ska konverteras till PostScript-nivå 2 eller 3. Det PDF-dokument som du konverterar till en PostScript-fil måste vara icke-interaktivt.
+* Konvertera PDF-dokument till PostScript. När du konverterar till PostScript kan du använda konverteringsåtgärden för att ange källdokumentet och om det ska konverteras till PostScript nivå 2 eller 3. Det PDF-dokument som du konverterar till en PostScript-fil måste vara icke-interaktivt.
 * Konvertera PDF-dokument till bildformaten JPEG, JPEG 2000, PNG och TIFF. När du konverterar till något av dessa bildformat kan du använda konverteringsåtgärden för att ange källdokumentet och en bildalternativsspecifikation. Specifikationen innehåller olika inställningar, till exempel bildkonverteringsformat, bildupplösning och färgkonvertering.
 
 ## Konfigurera egenskaper för tjänsten   {#properties}
 
-Du kan använda **AEMFD ConvertPDF Service** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen AEM konsolen är `https://[host]:'port'/system/console/configMgr`.
+Du kan använda **AEMFD ConvertPDF-tjänsten** i AEM Console för att konfigurera egenskaper för den här tjänsten. Standardwebbadressen för AEM är `https://[host]:'port'/system/console/configMgr`.
 
 ## Använda tjänsten {#using-the-service}
 
@@ -133,7 +133,9 @@ String documentPath = "/content/dam/formsanddocuments/ExpenseClaimFlat.pdf";
 
 Att köra ConvertPDF-tjänsten från ett arbetsflöde påminner om att köra från JSP/Servlet.
 
-Den enda skillnaden är när tjänsten körs från JSP/Servlet som dokumentobjektet automatiskt hämtar en instans av ResourceResolver-objektet från objektet ResourceResolverHelper. Den här automatiska mekanismen fungerar inte när koden anropas från ett arbetsflöde. För ett arbetsflöde skickar du en instans av ResourceResolver-objektet explicit till Document-klasskonstruktorn. Dokumentobjektet använder sedan det angivna ResourceResolver-objektet för att läsa innehåll från databasen.
+Den enda skillnaden är när tjänsten körs från JSP/Servlet som dokumentobjektet automatiskt hämtar en instans av ResourceResolver-objektet från objektet ResourceResolverHelper. Denna automatiska mekanism
+fungerar inte när koden anropas från ett arbetsflöde. För ett arbetsflöde skickar du en instans av ResourceResolver-objektet explicit till Document-klasskonstruktorn. Dokumentobjektet använder sedan
+tillhandahåller ResourceResolver-objekt för att läsa innehåll från databasen.
 
 Följande exempelarbetsflödesprocess konverterar indatadokumentet till ett PostScript-dokument. Koden skrivs i ECMAScript och dokumentet skickas som arbetsflödets nyttolast:
 

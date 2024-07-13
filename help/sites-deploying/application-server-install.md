@@ -20,10 +20,10 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->`JAR` och `WAR` är filtyperna som Adobe Experience Manager (AEM) släpps i. Dessa format genomgår kvalitetssäkring för att passa de supportnivåer som Adobe har åtagit sig.
+>`JAR` och `WAR` är de filtyper som Adobe Experience Manager (AEM) släpps i. Dessa format genomgår kvalitetssäkring för att passa de supportnivåer som Adobe har åtagit sig.
 >
 
-I det här avsnittet beskrivs hur du installerar Adobe Experience Manager (AEM) med en programserver. Läs [Plattformar som stöds](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers) om du vill läsa om de specifika supportnivåerna för de enskilda programservrarna.
+I det här avsnittet beskrivs hur du installerar Adobe Experience Manager (AEM) med en programserver. Gå till avsnittet [Plattformar som stöds](/help/sites-deploying/technical-requirements.md#servlet-engines-application-servers) om du vill läsa mer om de specifika supportnivåer som finns för de enskilda programservrarna.
 
 Installationsstegen för följande programservrar beskrivs:
 
@@ -47,21 +47,21 @@ AEM kommer som en enda krigsfil att distribuera.
 Om den distribueras händer följande som standard:
 
 * körningsläget är `author`
-* instansen (Repository, Felix OSGI environment, bundles, osv.) installeras i `${user.dir}/crx-quickstart`där `${user.dir}` är den aktuella arbetskatalogen, den här sökvägen till crx-quickstart anropas `sling.home`
+* instansen (databas, Felix OSGI-miljö, paket och så vidare) är installerad i `${user.dir}/crx-quickstart`där `${user.dir}` är den aktuella arbetskatalogen. Sökvägen till crx-quickstart kallas `sling.home`
 
-* kontextroten är exempelvis krigsfilens namn,  `aem-6`
+* kontextroten är krigsfilens namn, till exempel `aem-6`
 
 #### Konfiguration {#configuration}
 
 Du kan ändra standardbeteendet på följande sätt:
 
-* körningsläge: konfigurera `sling.run.modes` -parametern i `WEB-INF/web.xml` fil för AEM krigsfil före distribution
+* körningsläge: konfigurera parametern `sling.run.modes` i filen `WEB-INF/web.xml` i AEM krigsfil före distribution
 
-* sling.home: konfigurera `sling.home` -parametern i `WEB-INF/web.xml`fil för AEM krigsfil före distribution
+* sling.home: konfigurera parametern `sling.home` i filen `WEB-INF/web.xml` i AEM krigsfil före distributionen
 
 * kontextrot: ändra namn på AEM krigsfil
 
-#### Publicera installation {#publish-installation}
+#### Installation av Publish {#publish-installation}
 
 Om du vill distribuera en publiceringsinstans måste du ange att körningsläget ska publiceras:
 
@@ -74,8 +74,8 @@ Om du vill distribuera en publiceringsinstans måste du ange att körningsläget
 
 Om du vill kontrollera om alla är installerade kan du:
 
-* svansa `error.log`för att se att allt innehåll är installerat
-* titta in `/system/console` att alla paket är installerade
+* svansen för filen `error.log` för att se att allt innehåll är installerat
+* kontrollera i `/system/console` att alla paket är installerade
 
 #### Två instanser på samma programserver {#two-instances-on-the-same-application-server}
 
@@ -97,7 +97,7 @@ I demonstrationssyfte kan det vara lämpligt att installera författaren och pub
 
 ### WebSphere® 8.5 {#websphere}
 
-Före en distribution ska du läsa [Allmän beskrivning](#general-description) ovan.
+Läs [Allmän beskrivning](#general-description) ovan före en distribution.
 
 **Serverförberedelse**
 
@@ -105,7 +105,7 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
 
    * Ett sätt för AEM att autentisera en användare är att inaktivera den globala administrativa säkerheten för WebSphere®-servern: gå till Säkerhet > Global säkerhet och avmarkera kryssrutan Aktivera administrativ säkerhet, spara och starta om servern.
 
-* set `"JAVA_OPTS= -Xmx2048m"`
+* ange `"JAVA_OPTS= -Xmx2048m"`
 * Om du vill installera AEM med kontextroten = /, ändrar du kontextroten för det befintliga standardwebbprogrammet.
 
 **Distribuera AEM webbprogram**
@@ -126,7 +126,7 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
 
 #### JBoss® EAP 6.3.0/6.4.0 {#jboss-eap}
 
-Före en distribution ska du läsa [Allmän beskrivning](#general-description) ovan.
+Läs [Allmän beskrivning](#general-description) ovan före en distribution.
 
 **Förbered JBoss®-server**
 
@@ -134,7 +134,7 @@ Ange minnesargument i din conf-fil (till exempel `standalone.conf`)
 
 * JAVA_OPTS=&quot;-Xms64m -Xmx2048m&quot;
 
-Om du använder distributionsskannern för att installera AEM kan det vara bra att öka `deployment-timeout,` för den uppsättningen `deployment-timeout` i xml-filen för instansen (till exempel `configuration/standalone.xml)`:
+Om du använder distributionsskannern för att installera det AEM webbprogrammet kan det vara bra att öka `deployment-timeout,` för det angivna attributet `deployment-timeout` i xml-filen för instansen (till exempel `configuration/standalone.xml)`:
 
 ```xml
 <subsystem xmlns="urn:jboss:domain:deployment-scanner:1.1">
@@ -150,7 +150,7 @@ Om du använder distributionsskannern för att installera AEM kan det vara bra a
 
 #### Oracle WebLogic 12.1.3/12.2 {#oracle-weblogic}
 
-Före en distribution ska du läsa [Allmän beskrivning](#general-description) ovan.
+Läs [Allmän beskrivning](#general-description) ovan före en distribution.
 
 Detta använder en enkel serverlayout med endast en Admin Server.
 
@@ -158,22 +158,22 @@ Detta använder en enkel serverlayout med endast en Admin Server.
 
 * I `${myDomain}/config/config.xml`lägg till i avsnittet för säkerhetskonfiguration:
 
-   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>` se [https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) för rätt position (standardinställningen är att placera den i slutet av avsnittet är OK)
+   * `<enforce-valid-basic-auth-credentials>false</enforce-valid-basic-auth-credentials>` finns på [https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd](https://xmlns.oracle.com/weblogic/domain/1.0/domain.xsd) för att se rätt position (som standard är OK för att placera den i slutet av avsnittet)
 
 * Öka inställningarna för virtuellt minne:
 
-   * open `${myDomain}/bin/setDomainEnv.cmd` (Svara .sh) sök efter WLS_MEM_ARGS, ange till exempel set `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
+   * öppna `${myDomain}/bin/setDomainEnv.cmd` (svara .sh) sökning efter WLS_MEM_ARGS, ange till exempel `WLS_MEM_ARGS_64BIT=-Xms256m -Xmx2048m`
    * starta om WebLogic-server
 
-* Skapa i `${myDomain}` en paketmapp och i en cq-mapp och i den en Plan-mapp
+* Skapa en paketmapp i `${myDomain}` och i en cq-mapp och i den en planmapp
 
 **Distribuera AEM webbprogram**
 
 * Ladda ned AEM
-* Lägg AEM krigsfil i ${myDomain}/packages/cq mapp
-* Gör dina konfigurationer till `WEB-INF/web.xml` vid behov (se ovan i den allmänna beskrivningen)
+* Placera AEM i mappen ${myDomain}/packages/cq
+* Gör dina konfigurationer i `WEB-INF/web.xml` om det behövs (se ovan i den allmänna beskrivningen)
 
-   * Packa upp `WEB-INF/web.xml`fil
+   * Packa upp filen `WEB-INF/web.xml`
    * ändra sling.run.modes-parameter för publicering
    * avkommentera sling.home initial parameter och ange den här sökvägen efter behov (se General Description)
    * Replikera filen web.xml
@@ -185,18 +185,18 @@ Detta använder en enkel serverlayout med endast en Admin Server.
 
 #### Tomcat 8/8.5 {#tomcat}
 
-Före en distribution ska du läsa [Allmän beskrivning](#general-description) ovan.
+Läs [Allmän beskrivning](#general-description) ovan före en distribution.
 
 * **Förbered Tomcat Server**
 
    * Öka inställningarna för virtuellt minne:
 
-      * I `bin/catalina.bat` (rep `catalina.sh` på UNIX®) lägger du till följande inställning:
+      * I `bin/catalina.bat` (svara `catalina.sh` på UNIX®) lägger du till följande inställning:
       * `set "JAVA_OPTS= -Xmx2048m`
 
-   * Tomcat ger inte administratörs- eller hanteraråtkomst vid installationen. Därför måste du redigera manuellt `tomcat-users.xml` för att ge åtkomst till dessa konton:
+   * Tomcat ger inte administratörs- eller hanteraråtkomst vid installationen. Därför måste du redigera `tomcat-users.xml` manuellt för att tillåta åtkomst för dessa konton:
 
-      * Redigera `tomcat-users.xml` för att ge åtkomst till administratörer och chefer. Konfigurationen bör se ut ungefär som i följande exempel:
+      * Redigera `tomcat-users.xml` om du vill inkludera åtkomst för administratör och hanterare. Konfigurationen bör se ut ungefär som i följande exempel:
 
         ```xml
         <?xml version='1.0' encoding='utf-8'?>
@@ -223,7 +223,7 @@ Före en distribution ska du läsa [Allmän beskrivning](#general-description) o
 
      `webapps/manager/WEB-INF/web.xml`
 
-     och öka max-file-size och max-request-size till minst 500 MB, se följande `multipart-config` exempel på en sådan `web.xml` -fil.
+     och öka storleken för max-file och max-request-size till minst 500 MB, se följande `multipart-config` exempel på en sådan `web.xml` -fil.
 
      ```xml
      <multipart-config>

@@ -21,53 +21,53 @@ ht-degree: 0%
 
 ## Ökning {#overview}
 
-AEM Communities funktioner kräver ofta att besökarna är registrerade och inloggade innan de deltar i en community i publiceringsmiljön. Användarregistreringen behöver bara finnas i publiceringsmiljön och kallas ofta för *medlemmar* för att skilja dem från *användare* som registrerats i författarmiljön.
+AEM Communities funktioner kräver ofta att besökarna är registrerade och inloggade innan de deltar i en community i publiceringsmiljön. Användarregistreringen behöver bara finnas i publiceringsmiljön och kallas vanligtvis *medlemmar* för att skilja dem från *användare* som är registrerade i författarmiljön.
 
-### Medlemmar (användare) vid publicering {#members-users-on-publish}
+### Medlemmar (användare) på Publish {#members-users-on-publish}
 
-Använda konsolerna Communities Members and Groups, medlemmar och medlemsgrupper som är registrerade i *publicera* kan skapas och hanteras från *författare* miljö. Detta är bara möjligt om [tunneltjänst](deploy-communities.md#tunnel-service-on-author) är aktiverat.
+Med konsolerna Webbgruppsmedlemmar och -grupper kan medlemmar och medlemsgrupper som är registrerade i miljön *publish* skapas och hanteras från miljön *author* . Detta är bara möjligt när [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) är aktiverad.
 
 ### Användare på författare {#users-on-author}
 
-För hantering av användare och grupper som är registrerade i *författare* -miljön måste du använda plattformens säkerhetskonsol:
+För att hantera användare och grupper som är registrerade i miljön *author* måste du använda plattformens säkerhetskonsol:
 
-* Välj **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
-* Välj **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Groups]**.
+* Välj **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]** från global navigering.
+* Välj **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Groups]** från global navigering.
 
 >[!NOTE]
 >
->När exempelinnehåll är distribuerat och aktiverat finns det många exempelanvändare i både författar- och publiceringsmiljöer. De här användarna kommer inte att vara närvarande när de körs med [nosampling, innehållskörningsläge](../../help/sites-administering/production-ready.md).
+>När exempelinnehåll är distribuerat och aktiverat finns det många exempelanvändare i både författar- och publiceringsmiljöer. De här användarna kommer inte att vara närvarande när de körs med [inget exempelinnehåll, körningsläge](../../help/sites-administering/production-ready.md).
 
 ## Medlemskonsolen {#members-console}
 
 I författarmiljön kan du nå Medlemskonsolen för att hantera medlemmar som är registrerade i publiceringsmiljön:
 
-* Välj **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Members]**
+* Välj **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Members]** från global navigering
 
 >[!CAUTION]
 >
->Det går inte att använda medlemskonsolen om [tunneltjänst](deploy-communities.md#tunnel-service-on-author) är inte aktiverat.
+>Det går inte att använda medlemskonsolen om [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) inte är aktiverad.
 
 ![Medlemskonsolen](assets/member-console1.png)
 
 ### Sök {#search-features}
 
-Markera sidpanelsikonen till vänster på sidan `Members` för att växla mellan att öppna panelen på söksidan.
+Markera sidopanelsikonen till vänster om rubriken `Members` om du vill växla till att öppna söksidpanelen.
 
-![Ikon för sidopanelen Sök.](assets/leftpanel-icon.png)
+![Ikon för panelen Sök.](assets/leftpanel-icon.png)
 
 
 ![Filteralternativ för medlemskonsolen](assets/member-console2.png)
 
-Välj sökikonen till vänster i dialogrutan `Members` för att växla till att växla panelen på söksidan stängd.
+Välj sökikonen till vänster om rubriken `Members` om du vill växla panelen på söksidan till stängd.
 
 ### Medlemsstatistik {#member-statistics}
 
-Kolumnerna som visas `Views`, `Posts`, `Follows` och `Likes` uppdateras när användaren är medlem i en eller flera communitysajter med Adobe Analytics [aktiverad](sites-console.md#analytics).
+Kolumnerna som visar `Views`, `Posts`, `Follows` och `Likes` uppdateras när användaren är medlem i en eller flera communitywebbplatser med Adobe Analytics [enabled](sites-console.md#analytics).
 
 ### Exportera CSV {#export-csv}
 
-Markera `Export CSV` leder till att alla medlemmar hämtas som en lista med kommaavgränsade värden som är lämpliga för import till ett kalkylblad.
+Om du väljer länken `Export CSV` hämtas alla medlemmar som en lista med kommaavgränsade värden som är lämpliga för import till ett kalkylblad.
 
 Kolumnrubrikerna är
 
@@ -75,7 +75,7 @@ Kolumnrubrikerna är
 
 ## Skapa ny medlem {#create-new-member}
 
-Välj `Create Member` för att skapa en användare i publiceringsmiljön.
+Välj `Create Member` om du vill skapa en användare i publiceringsmiljön.
 
 ![Fönstret Skapa ny medlem](assets/create-member1.png)
 
@@ -85,14 +85,15 @@ De flesta fält är valfria fält som medlemmen kan fylla i senare i sin profil.
 
 * **[!UICONTROL ID]**
 
-(*Obligatoriskt*) Behörighetsbart ID är medlemmens inloggnings-ID.
+(*Obligatoriskt*) Det auktoriserbara ID:t är medlemmens inloggnings-ID.
 Som standard är ID inställt på värdet för den e-postadress som krävs.
-*När ID:t har skapats får det inte ändras*.
+*När det har skapats kan ID:t inte ändras*.
 
 * **[!UICONTROL Email Address]**
 
-(*Obligatoriskt*) Medlemmens e-postadress.
-Medlemmen kan ändra sin e-postadress när profilen uppdateras.I Om ID:t som standard är e-postadressen, kommer ID:t att *not* ändras när e-postadressen ändras.
+(*Obligatorisk*) Medlemmens e-postadress.
+Medlemmen kan ändra sin e-postadress när profilen uppdateras.I
+Om ID:t som standard är e-postadressen ändras *inte* när e-postadressen ändras.
 
 * **[!UICONTROL Password]**
 
@@ -104,11 +105,11 @@ Medlemmen kan ändra sin e-postadress när profilen uppdateras.I Om ID:t som sta
 
 * **[!UICONTROL Add Member to Sites]**
 
-  (*Valfritt*) Välj bland befintliga communitysajter för att lägga till medlemmen i communityplatsens medlemsgrupp.
+  (*Valfritt*) Välj bland befintliga communitysajter för att lägga till medlemmen i medlemsgruppen för communitywebbplatsen.
 
 * **[!UICONTROL Add Member to Groups]**
 
-  (*Valfritt*) Välj bland befintliga medlemsgrupper för att lägga till medlemmen i den gruppen.
+  (*Valfritt*) Välj bland befintliga medlemsgrupper om du vill lägga till medlemmen i den gruppen.
 
 * Välj **[!UICONTROL Save]**
 
@@ -117,17 +118,19 @@ Medlemmen kan ändra sin e-postadress när profilen uppdateras.I Om ID:t som sta
 Under Kontoinställningar kan en community-administratör:
 
 * **[!UICONTROL Status]**
-   * Banned En medlem kan inte logga in, vilket förhindrar dem från att visa sidor eller delta i aktiviteter som kräver inloggning. De kan fortfarande anonymt besöka en öppen communitysajt.
+   * Banned
+En medlem kan inte logga in, vilket förhindrar dem från att visa sidor eller delta i aktiviteter som kräver inloggning. De kan fortfarande anonymt besöka en öppen communitysajt.
 
-   * Ej förbjuden En medlem har fullständig åtkomst till communitywebbplatsen.
+   * Ej bannlyst
+En medlem har fullständig åtkomst till communitywebbplatsen.
 
-  Standard är `Not Banned`.
+  Standardvärdet är `Not Banned`.
 
 * **[!UICONTROL Contribution Limits]**
 
   Om det här alternativet är markerat är medlemmens möjlighet att publicera innehåll begränsad.
 Standardvärdet beror på konfigurationen av bidragsgränser.
-Se [Gränser för medlemsbidrag](limits.md).
+Se [Medlemmens bidragsgränser](limits.md).
 
 * **[!UICONTROL Change Password]**
 
@@ -135,7 +138,7 @@ Se [Gränser för medlemsbidrag](limits.md).
 
 ### ALLMÄNT - Foto {#general-photo}
 
-Börja med att välja en avatar för medlemmen **[!UICONTROL Upload Image]** och väljer en bild av typen .jpg, .png, .tif eller .gif. Bildens önskade storlek är 240 x 240 pixlar vid 72 dpi.
+Om du vill ange en avatar för medlemmen börjar du med att markera **[!UICONTROL Upload Image]** och väljer en bild av typen .jpg, .png, .tif eller .gif. Bildens önskade storlek är 240 x 240 pixlar vid 72 dpi.
 
 ### ALLMÄNT - Lägg till medlem på webbplatser {#general-add-member-to-sites}
 
@@ -147,14 +150,14 @@ Medlemmen kan läggas till i en eller flera medlemsgrupper. Börja med att ange 
 
 ### Fliken BADGES {#badges-tab}
 
-The `BADGES` kan du tilldela märken manuellt och återkalla dem. Märken kan vara till för tilldelade roller och märken som vanligtvis införskaffas.
+På panelen `BADGES` kan du tilldela märken manuellt och återkalla dem. Märken kan vara till för tilldelade roller och märken som vanligtvis införskaffas.
 
 Se även [Betygsättning och emblem](implementing-scoring.md).
 
 ![Fönstret Redigera medlemskapsinställningar](assets/create-member2.png)
 
 * **[!UICONTROL Add badges]**
-   * Börja skriva för att välja bland [tillgängliga emblem](badges.md). När du har valt ett märke väljer du varje webbplats, eller alla webbplatser, där märket ska visas tillsammans med medlemmens avatar.
+   * Börja skriva för att välja bland [tillgängliga märken](badges.md). När du har valt ett märke väljer du varje webbplats, eller alla webbplatser, där märket ska visas tillsammans med medlemmens avatar.
    * Flera märken och sajter kan väljas.
 * **[!UICONTROL Remove badges]**
    * Markera papperskorgsikonen bredvid ett märke för att ta bort det.
@@ -164,15 +167,15 @@ Se även [Betygsättning och emblem](implementing-scoring.md).
 Gruppkonsolen, som är tillgänglig från författarmiljön, gör det möjligt att skapa och hantera medlemsgrupper som är registrerade i publiceringsmiljön. Det är särskilt användbart för [Behöriga medlemsgrupper](users.md#privilegedmembersgroups).
 
 Så här kommer du åt gruppkonsolen:
-* Välj **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Groups]**.
+* Välj **[!UICONTROL Navigation]** > **[!UICONTROL Communities]** > **[!UICONTROL Groups]** från global navigering.
 
 >[!CAUTION]
 >
->Det går inte att använda gruppkonsolen om [tunneltjänst](deploy-communities.md#tunnel-service-on-author) är inte aktiverat.
+>Det går inte att använda gruppkonsolen om [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) inte är aktiverad.
 
 ### Skapa ny grupp {#create-new-group}
 
-Välj `Add Group` för att skapa en grupp i publiceringsmiljön.
+Välj `Add Group` om du vill skapa en grupp i publiceringsmiljön.
 
 ![Fönstret Skapa ny grupp](assets/group-console1.png)
 
@@ -182,7 +185,7 @@ Följande fält krävs för att skapa en medlemsgrupp på publiceringssidan:
 
   (*Obligatoriskt*) Gruppens unika ID.
 
-  *När ID:t har skapats kan det inte ändras.*
+  *När det har skapats kan ID:t inte ändras.*
 
 * **[!UICONTROL Name]**
 
@@ -196,14 +199,14 @@ Följande fält krävs för att skapa en medlemsgrupp på publiceringssidan:
 
 * **[!UICONTROL Add Members To Group]**
 
-  (*Valfritt*) Välj medlemmar på publiceringssidan som ska inkluderas som initiala medlemmar i gruppen.
+  (*Valfritt*) Välj de medlemmar på publiceringssidan som ska inkluderas som initiala medlemmar i gruppen.
 
 * Välj **[!UICONTROL Save]**
 
 ## Auktoriserade administratörer {#authorized-administrators}
 
-När du arbetar med medlemmar i communitymedlemskonsolen måste du logga in som en användare med lämplig behörighet och för den replikeringsagent som används av [tunneltjänst](deploy-communities.md#tunnel-service-on-author) att vara korrekt konfigurerade.
+När du arbetar med medlemmar i communitymedlemskonsolen måste du logga in som en användare med lämplig behörighet och replikeringsagenten som används av [tunneltjänsten](deploy-communities.md#tunnel-service-on-author) måste vara korrekt konfigurerad.
 
-Om inte inloggad som `admin`måste den inloggade användaren vara medlem i `administrators` användargrupp.
+Om användaren inte är inloggad som `admin` måste den inloggade användaren vara medlem i användargruppen `administrators`.
 
 Se även [Replikeringsagenter på författare](deploy-communities.md#replication-agents-on-author).

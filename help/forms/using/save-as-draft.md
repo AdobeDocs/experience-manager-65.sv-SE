@@ -19,10 +19,10 @@ ht-degree: 0%
 
 Alternativet Spara som utkast sparar en ögonblicksbild av en uppgift eller ett formulär tillsammans med de data som är ifyllda i det associerade formuläret. Du kan också skapa ett utkast från en mall. Utkasten sparas i den mobila enheten och synkroniseras med Adobe Experience Manager Forms-servern för senare hämtning.
 
-Du kan [uppdatera formuläret](/help/forms/using/working-with-form.md), [kommentera det](/help/forms/using/add-attachments.md) med foton och klottrar. När du fortsätter att uppdatera ett formulär bör du spara det som ett utkast. I situationer där du bestämmer dig för att skicka ett ifyllt formulär vid ett senare tillfälle är det bra att spara det som ett utkast.
+Du kan [uppdatera formuläret](/help/forms/using/working-with-form.md), [göra anteckningar](/help/forms/using/add-attachments.md) med foton och anteckningar. När du fortsätter att uppdatera ett formulär bör du spara det som ett utkast. I situationer där du bestämmer dig för att skicka ett ifyllt formulär vid ett senare tillfälle är det bra att spara det som ett utkast.
 
-Information om hur du aktiverar funktionen Spara som utkast för formulär som sparats på formulärportalen finns i [Spara ett HTML5-formulär som ett utkast](/help/forms/using/saving-html5-form-draft.md).
-Information om hur du konfigurerar sändning av adaptiva formulär finns i [Komponenten Utkast och inskickat material](/help/forms/using/draft-submission-component.md). (Gäller inte för formulär som synkroniseras med AEM Forms JEE-servern.)
+Information om hur du aktiverar funktionen Spara som utkast för formulär som har sparats på formulärportalen finns i [Spara ett HTML5-formulär som ett utkast](/help/forms/using/saving-html5-form-draft.md).
+Mer information om hur du konfigurerar sändning av adaptiva formulär finns i [Komponenten för utkast och inskickning](/help/forms/using/draft-submission-component.md). (Gäller inte för formulär som synkroniseras med AEM Forms JEE-servern.)
 
 Om du vill skapa ett utkast öppnar du formuläret och väljer **Spara som utkast** ![spara som utkast](assets/save-as-draft.png). Ange namnet på utkastet och välj **Spara**. Utkastet sparas i mappen Utkast och synkroniseras med servern. Den sparas i Utkorgen om programmet är offline.
 
@@ -40,7 +40,7 @@ Du kan ta bort utkast både offline och online. När utkast tas bort i offlinel�
 
 Så här tar du bort ett utkast:
 
-1. I AEM Forms går du till **Forms.**
+1. Gå till **Forms.** i AEM Forms-appen.
 1. Välj **Utkast** i listrutan bredvid Sök.
-1. Ett formulär med ikonen Redigera ![edit-draft-app](assets/edit-draft-app.png) betecknar ett utkast. Markera den vågräta ellipsen bredvid utkastet.
-1. Välj de alternativ som visas när du markerar den vågräta ellipsen **Ta bort utkast**.
+1. Ett formulär med redigeringsikonen ![edit-draft-app](assets/edit-draft-app.png) betecknar ett utkast. Markera den vågräta ellipsen bredvid utkastet.
+1. Välj **Ta bort utkast** i de alternativ som visas när du markerar den vågräta ellipsen.

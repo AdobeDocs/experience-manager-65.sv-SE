@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Asynkron inlämning av adaptiva formulär{#asynchronous-submission-of-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -35,12 +35,12 @@ Läs vidare för mer information om asynkron överföring i adaptiva formulär.
 
 Så här konfigurerar du asynkron sändning för ett adaptivt formulär:
 
-1. I redigeringsläget för anpassningsbara formulär väljer du objektet Formulärbehållare och väljer ![cmppr1](assets/cmppr1.png) för att öppna dess egenskaper.
-1. I **[!UICONTROL Submission]** egenskapsavsnittet, aktivera **[!UICONTROL Use asynchronous submission]**.
-1. I **[!UICONTROL On Submit]** väljer du något av följande alternativ när formuläret har skickats.
+1. I redigeringsläget för anpassningsbara formulär markerar du objektet Formulärbehållare och väljer ![cmpr1](assets/cmppr1.png) för att öppna dess egenskaper.
+1. Aktivera **[!UICONTROL Use asynchronous submission]** i egenskapsavsnittet för **[!UICONTROL Submission]**.
+1. I avsnittet **[!UICONTROL On Submit]** väljer du något av följande alternativ för att skicka formulär.
 
-   * **[!UICONTROL Redirect to URL]**: Omdirigerar till angiven URL eller sida när formulär skickas. Du kan ange en URL-adress eller bläddra för att välja sökvägen till en sida i dialogrutan **[!UICONTROL Redirect URL/Path]** fält.
-   * **[!UICONTROL Show Message]**: Visar ett meddelande när formulär skickas. Du kan skriva ett meddelande i textfältet under alternativet Visa meddelande. Textfältet har stöd för RTF-formatering.
+   * **[!UICONTROL Redirect to URL]**: Omdirigerar till angiven URL eller sida när formulär skickas. Du kan ange en URL eller bläddra för att välja sökvägen till en sida i fältet **[!UICONTROL Redirect URL/Path]**.
+   * **[!UICONTROL Show Message]**: Visar ett meddelande om att formulär har skickats. Du kan skriva ett meddelande i textfältet under alternativet Visa meddelande. Textfältet har stöd för RTF-formatering.
 
 1. Välj ![check-button1](assets/check-button1.png) för att spara egenskaperna.
 
@@ -104,9 +104,9 @@ Formulärutvecklare och författare kan skriva regler på formulärnivå i kodre
 
 Utför följande steg för att skriva regler i kodredigeraren för att hantera lyckade händelser och felhändelser.
 
-1. Öppna det anpassningsbara formuläret i redigeringsläge, markera ett formulärobjekt och välj ![edit-rules1](assets/edit-rules1.png) för att öppna regelredigeraren.
+1. Öppna det adaptiva formuläret i redigeringsläge, markera ett formulärobjekt och välj ![edit-rules1](assets/edit-rules1.png) för att öppna regelredigeraren.
 1. Välj **[!UICONTROL Form]** i trädet Formulärobjekt och välj **[!UICONTROL Create]**.
 1. Välj **[!UICONTROL Code Editor]** i listrutan för lägesval.
-1. Välj **[!UICONTROL Edit Code]**. Välj **[!UICONTROL Edit]** i bekräftelsedialogrutan.
-1. Välj **[!UICONTROL Successful Submission]** eller **[!UICONTROL Error in Submission]** från **[!UICONTROL Event]** nedrullningsbar meny.
+1. Välj **[!UICONTROL Edit Code]** i kodredigeraren. Välj **[!UICONTROL Edit]** i bekräftelsedialogrutan.
+1. Välj **[!UICONTROL Successful Submission]** eller **[!UICONTROL Error in Submission]** i listrutan **[!UICONTROL Event]**.
 1. Skriv en regel för den valda händelsen och välj **[!UICONTROL Done]** för att spara regeln.

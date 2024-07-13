@@ -17,14 +17,14 @@ ht-degree: 0%
 
 # Anpassa flikar för en uppgift {#customizing-tabs-for-a-task}
 
-Du kan anpassa tabbnamn för `Start Process` -komponenten i `Start Process` Användarvy och `Task Details` -komponenten i `ToDo` Uber-vy.
+Du kan anpassa fliknamn för komponenten `Start Process` i `Start Process` nummervyn och för komponenten `Task Details` i `ToDo` användarvyn.
 
-1. Följ [Allmänna steg för anpassning av AEM Forms arbetsyta](/help/forms/using/generic-steps-html-workspace-customization.md).
-1. Ändra värdet för `tabname`i `translation.json` -fil.
+1. Följ de [allmänna stegen för anpassning av arbetsytan i AEM Forms](/help/forms/using/generic-steps-html-workspace-customization.md).
+1. Ändra värdet för `tabname` i filen `translation.json`.
 
-   Ändra till exempel `/apps/ws/locales/en-US/translation.json` för engelska till följande:
+   Ändra till exempel `/apps/ws/locales/en-US/translation.json` för engelska till följande.
 
-   * Använd följande utdrag från `"startprocess" : {}` -block.
+   * Använd följande utdrag från blocket `"startprocess" : {}` för uppgifter som initieras i startprocessen.
 
    ```json
    "tabname" : {
@@ -35,7 +35,7 @@ Du kan anpassa tabbnamn för `Start Process` -komponenten i `Start Process` Anv�
            }
    ```
 
-   * Använd följande kodutdrag från `"todo" : {}` -block.
+   * Använd följande utdrag från blocket `"todo" : {}` för uppgifter i Att göra.
 
    ```json
    "tabname" : {

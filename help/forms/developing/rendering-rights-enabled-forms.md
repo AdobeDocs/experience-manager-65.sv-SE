@@ -29,7 +29,7 @@ Om du vill lägga in användarrättigheter i ett formulär måste Acrobat Reader
 
 >[!NOTE]
 >
->Du kan inte fylla i ett formulär i förväg med XML-data när du anger följande användningsbehörighet: `enableComments`, `enableCommentsOnline`, `enableEmbeddedFiles`, eller `enableDigitalSignatures`. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
+>Du kan inte fylla i ett formulär i förväg med XML-data när du anger följande användningsbehörighet: `enableComments`, `enableCommentsOnline`, `enableEmbeddedFiles` eller `enableDigitalSignatures`. (Se [Förifyll Forms med flödeslayouter](/help/forms/developing/prepopulating-forms-flowable-layouts.md).)
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ Om du vill återge ett rättighetsaktiverat formulär använder du samma program
 >
 >När du återger ett rättighetsaktiverat formulär med Forms webbtjänst-API:t kan du inte bifoga filer till formuläret.
 
-**Skriv formulärdataströmmen till klientens webbläsare**
+**Skriv formulärdataströmmen till klientwebbläsaren**
 
 När Forms-tjänsten återger ett rättighetsaktiverat formulär returneras en formulärdataström som du måste skriva till klientens webbläsare. När formuläret har skrivits till webbläsaren visas det för användaren. En användare som visar det aktiverade formuläret i Adobe Reader kan utföra åtgärder som är aktiverade för det formuläret.
 
@@ -95,40 +95,40 @@ När Forms-tjänsten återger ett rättighetsaktiverat formulär returneras en f
 
 1. Skapa ett Forms Client API-objekt
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `FormsServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `FormsServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Ange körningsalternativ för användningsrättigheter
 
-   * Skapa en `ReaderExtensionSpec` genom att använda dess konstruktor.
-   * Ange alias för autentiseringsuppgifterna genom att anropa `ReaderExtensionSpec` objektets `setReCredentialAlias` och ange ett strängvärde som representerar aliasvärdet.
-   * Ställ in varje användningsbehörighet genom att anropa motsvarande metod som tillhör `ReaderExtensionSpec` -objekt. Du kan dock bara ange användarbehörighet om du kan göra det med de referenser du anger. Det innebär att du inte kan ange en användningsbehörighet om du inte kan ange den i inloggningsuppgifterna. Till exempel. för att ställa in användarbehörighet som gör att användaren kan fylla i formulärfält och spara formuläret, anropa `ReaderExtensionSpec` objektets `setReFillIn` metod och skicka `true`.
+   * Skapa ett `ReaderExtensionSpec`-objekt med hjälp av dess konstruktor.
+   * Ange alias för autentiseringsuppgiften genom att anropa `ReaderExtensionSpec`-objektets `setReCredentialAlias`-metod och ange ett strängvärde som representerar aliasvärdet.
+   * Ställ in varje användningsbehörighet genom att anropa motsvarande metod som tillhör objektet `ReaderExtensionSpec`. Du kan dock bara ange användarbehörighet om du kan göra det med de referenser du anger. Det innebär att du inte kan ange en användningsbehörighet om du inte kan ange den i inloggningsuppgifterna. Till exempel. Om du vill ange användarbehörighet som gör att en användare kan fylla i formulärfält och spara formuläret, anropar du `setReFillIn`-metoden för `ReaderExtensionSpec`-objektet och skickar `true`.
 
    >[!NOTE]
    >
-   >Du behöver inte anropa `ReaderExtensionSpec` objektets `setReCredentialPassword` -metod. Den här metoden används inte av Forms-tjänsten.
+   >Du behöver inte anropa `ReaderExtensionSpec`-objektets `setReCredentialPassword`-metod. Den här metoden används inte av Forms-tjänsten.
 
 1. Återge ett rättighetsaktiverat formulär
 
-   Anropa `FormsServiceClient` objektets `renderPDFFormWithUsageRights` och skicka följande värden:
+   Anropa `FormsServiceClient`-objektets `renderPDFFormWithUsageRights`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * A `com.adobe.idp.Document` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du en tom `com.adobe.idp.Document` -objekt.
-   * A `PDFFormRenderSpec` objekt som lagrar körningsalternativ.
-   * A `ReaderExtensionSpec` objekt som lagrar körningsalternativ för användningsrättigheter.
-   * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
+   * Ett `com.adobe.idp.Document`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data skickar du ett tomt `com.adobe.idp.Document`-objekt.
+   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ.
+   * Ett `ReaderExtensionSpec`-objekt som lagrar körningsalternativ för användningsrättigheter.
+   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten.
 
-   The `renderPDFFormWithUsageRights` returnerar en `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `renderPDFFormWithUsageRights` returnerar ett `FormsResult`-objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt `getOutputContent` -metod.
-   * Hämta innehållstypen för `com.adobe.idp.Document` genom att anropa dess `getContentType` -metod.
-   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `com.adobe.idp.Document` -objekt.
-   * Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` -metod.
-   * Skapa en `java.io.InputStream` genom att anropa `com.adobe.idp.Document` objektets `getInputStream` -metod.
-   * Skapa en bytearray som fyller i den med formulärdataströmmen genom att anropa `InputStream` objektets `read` och skicka bytearrayen som ett argument.
-   * Anropa `javax.servlet.ServletOutputStream` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
+   * Skapa ett `com.adobe.idp.Document`-objekt genom att anropa metoden `getOutputContent` för `FormsResult`-objektet.
+   * Hämta innehållstypen för objektet `com.adobe.idp.Document` genom att anropa dess `getContentType`-metod.
+   * Ange innehållstypen för objektet `javax.servlet.http.HttpServletResponse` genom att anropa dess `setContentType`-metod och skicka innehållstypen för objektet `com.adobe.idp.Document`.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientwebbläsaren genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
+   * Skapa ett `java.io.InputStream`-objekt genom att anropa `com.adobe.idp.Document`-objektets `getInputStream`-metod.
+   * Skapa en bytearray som fyller i den med formulärdataströmmen genom att anropa `InputStream`-objektets `read`-metod och skicka bytearrayen som ett argument.
+   * Anropa `javax.servlet.ServletOutputStream`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 
@@ -149,34 +149,34 @@ När Forms-tjänsten återger ett rättighetsaktiverat formulär returneras en f
 
 1. Skapa ett Forms Client API-objekt
 
-   Skapa en `FormsService` och ange autentiseringsvärden.
+   Skapa ett `FormsService`-objekt och ange autentiseringsvärden.
 
 1. Ange körningsalternativ för användningsrättigheter
 
-   * Skapa en `ReaderExtensionSpec` genom att använda dess konstruktor.
-   * Ange alias för autentiseringsuppgifterna genom att anropa `ReaderExtensionSpec` objektets `setReCredentialAlias` och ange ett strängvärde som representerar aliasvärdet.
-   * Ställ in varje användningsbehörighet genom att anropa motsvarande metod som tillhör `ReaderExtensionSpec` -objekt. Du kan dock bara ange användarbehörighet om du kan göra det med de referenser du anger. Det innebär att du inte kan ange en användningsbehörighet om du inte kan ange den i inloggningsuppgifterna. Om du vill ange användarbehörighet som gör det möjligt för en användare att fylla i formulärfält och spara formuläret, anropar du `ReaderExtensionSpec` objektets `setReFillIn` metod och skicka `true`.
+   * Skapa ett `ReaderExtensionSpec`-objekt med hjälp av dess konstruktor.
+   * Ange alias för autentiseringsuppgiften genom att anropa `ReaderExtensionSpec`-objektets `setReCredentialAlias`-metod och ange ett strängvärde som representerar aliasvärdet.
+   * Ställ in varje användningsbehörighet genom att anropa motsvarande metod som tillhör objektet `ReaderExtensionSpec`. Du kan dock bara ange användarbehörighet om du kan göra det med de referenser du anger. Det innebär att du inte kan ange en användningsbehörighet om du inte kan ange den i inloggningsuppgifterna. Om du vill ange användarbehörighet som gör att en användare kan fylla i formulärfält och spara formuläret, anropar du `setReFillIn`-metoden för `ReaderExtensionSpec`-objektet och skickar `true`.
 
 1. Återge ett rättighetsaktiverat formulär
 
-   Anropa `FormsService` objektets `renderPDFFormWithUsageRights` och skicka följande värden:
+   Anropa `FormsService`-objektets `renderPDFFormWithUsageRights`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget. Om du refererar till en formulärdesign som ingår i ett Forms-program måste du ange den fullständiga sökvägen, till exempel `Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`.
-   * A `BLOB` objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data med formuläret måste du skicka ett `BLOB` -objekt som baseras på en tom XML-datakälla. Du kan inte skicka en `BLOB` -objekt som är null. I annat fall genereras ett undantag.
-   * A `PDFFormRenderSpec` objekt som lagrar körningsalternativ.
-   * A `ReaderExtensionSpec` objekt som lagrar körningsalternativ för användningsrättigheter.
-   * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten.
+   * Ett `BLOB`-objekt som innehåller data som ska sammanfogas med formuläret. Om du inte vill sammanfoga data med formuläret måste du skicka ett `BLOB`-objekt som är baserat på en tom XML-datakälla. Du kan inte skicka ett `BLOB`-objekt som är null, annars genereras ett undantag.
+   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ.
+   * Ett `ReaderExtensionSpec`-objekt som lagrar körningsalternativ för användningsrättigheter.
+   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten.
 
-   The `renderPDFFormWithUsageRights` returnerar en `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `renderPDFFormWithUsageRights` returnerar ett `FormsResult`-objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
 1. Skriv formulärdataströmmen till klientens webbläsare
 
-   * Skapa en `BLOB` objekt som innehåller formulärdata genom att anropa `FormsResult` objektets `getOutputContent` -metod.
-   * Hämta innehållstypen för `BLOB` genom att anropa dess `getContentType` -metod.
-   * Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `BLOB` -objekt.
-   * Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` -metod.
-   * Skapa en bytearray och fylla i den genom att anropa `BLOB` objektets `getBinaryData` -metod. Den här aktiviteten tilldelar innehållet i `FormsResult` till bytearrayen.
-   * Anropa `javax.servlet.http.HttpServletResponse` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
+   * Skapa ett `BLOB`-objekt som innehåller formulärdata genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+   * Hämta innehållstypen för objektet `BLOB` genom att anropa dess `getContentType`-metod.
+   * Ange innehållstypen för objektet `javax.servlet.http.HttpServletResponse` genom att anropa dess `setContentType`-metod och skicka innehållstypen för objektet `BLOB`.
+   * Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientwebbläsaren genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
+   * Skapa en bytearray och fyll i den genom att anropa `BLOB`-objektets `getBinaryData`-metod. Den här aktiviteten tilldelar innehållet i objektet `FormsResult` till bytearrayen.
+   * Anropa `javax.servlet.http.HttpServletResponse`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 **Se även**
 

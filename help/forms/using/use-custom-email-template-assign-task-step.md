@@ -18,11 +18,11 @@ ht-degree: 0%
 
 Du kan använda steget Tilldela uppgift för att skapa och tilldela uppgifter till en användare eller grupp. När en uppgift tilldelas en användare eller grupp skickas ett e-postmeddelande till den angivna användaren eller till varje medlem i den definierade gruppen. Ett vanligt e-postmeddelande innehåller en länk till den tilldelade uppgiften och information om uppgiften. I följande bild visas ett exempel på ett e-postmeddelande:
 
-![E-postavisering med mall utanför rutan](do-not-localize/default_email_template_new.png)
+![E-postmeddelande med mall utanför rutan](do-not-localize/default_email_template_new.png)
 
 Du kan anpassa utseendet och använda anpassade metadata i ett e-postmeddelande. AEM Forms tillhandahåller en färdig mall för e-postmeddelanden. Du kan anpassa mallen som inte finns i kartongen eller skapa en helt ny mall.
 
-Mallar för e-postmeddelanden baseras på [HTML email](https://en.wikipedia.org/wiki/HTML_email). Dessa e-postmeddelanden anpassas efter olika e-postklienter och skärmstorlekar. Dessutom definieras formatet för e-postmeddelandet i mallen.
+Mallar för e-postmeddelanden baseras på [HTML-e-post](https://en.wikipedia.org/wiki/HTML_email). Dessa e-postmeddelanden anpassas efter olika e-postklienter och skärmstorlekar. Dessutom definieras formatet för e-postmeddelandet i mallen.
 
 I följande bild visas ett anpassat e-postmeddelande:
 
@@ -40,7 +40,7 @@ När allt är klart tillhandahåller AEM Forms en mall för e-postmeddelanden. M
 
 1. Ersätt innehållet i filen htmlEmailTemplate.txt med anpassat innehåll.
 
-   En e-postmeddelandemall är en [HTML email](https://en.wikipedia.org/wiki/HTML_email). Du kan ersätta den befintliga HTML-koden med din egen kod om du vill ändra mallens utseende.
+   En e-postmeddelandemall är ett [HTML-e-postmeddelande](https://en.wikipedia.org/wiki/HTML_email). Du kan ersätta den befintliga HTML-koden med din egen kod om du vill ändra mallens utseende.
 
 1. Spara filen. Nu är den anpassade mallen klar att användas.
 
@@ -56,7 +56,7 @@ När allt är klart tillhandahåller AEM Forms en mall för e-postmeddelanden. M
 
 1. Lägg till egen HTML-kod i filen.
 
-   En e-postmeddelandemall är en [HTML email](https://en.wikipedia.org/wiki/HTML_email). Du kan lägga till egen HTML-kod i filen för att skapa en mall.
+   En e-postmeddelandemall är ett [HTML-e-postmeddelande](https://en.wikipedia.org/wiki/HTML_email). Du kan lägga till egen HTML-kod i filen för att skapa en mall.
 
 1. Spara filen. Mallen är klar att användas i steget Tilldela uppgift.
 
@@ -72,4 +72,4 @@ Utför åtgärden Tilldela är konfigurerad att använda standardmallen htmlEmai
 
 1. Klicka på OK. Mallen ändras.
 
-Ett e-postmeddelande använder också [metadata](../../forms/using/use-metadata-in-email-notifications.md). Exempel: förfallodatum, prioritet, arbetsflödets namn med mera. Du kan också konfigurera mallen så att den används [anpassade metadata](../../forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).
+Ett e-postmeddelande använder också [metadata](../../forms/using/use-metadata-in-email-notifications.md). Exempel: förfallodatum, prioritet, arbetsflödets namn med mera. Du kan också konfigurera mallen så att den använder [anpassade metadata](../../forms/using/use-metadata-in-email-notifications.md#using-custom-metadata-in-an-email-notification).

@@ -1,6 +1,6 @@
 ---
-title: "[!DNL Adobe Camera Raw] stöd för bearbetning av digitala resurser"
-description: Lär dig hur du aktiverar [!DNL Adobe Camera Raw] stöd i [!DNL Adobe Experience Manager Assets]
+title: "[!DNL Adobe Camera Raw]-stöd för bearbetning av digitala resurser"
+description: Lär dig hur du aktiverar  [!DNL Adobe Camera Raw] stöd i [!DNL Adobe Experience Manager Assets]
 contentOwner: AG
 role: Admin
 feature: Developer Tools
@@ -15,30 +15,30 @@ ht-degree: 3%
 
 # Bearbeta bilder med [!DNL Adobe Camera Raw] {#camera-raw-support}
 
-Du kan aktivera [!DNL Adobe Camera Raw] har stöd för att bearbeta råfilsformat, t.ex. CR2, NEF och RAF, och återge bilderna i JPEG-format. Funktionen stöds i [!DNL Adobe Experience Manager Assets] med [Camera Raw paket](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) som kan köpas från Software Distribution.
+Du kan aktivera [!DNL Adobe Camera Raw]-stödet för att bearbeta råfilsformat, som CR2, NEF och RAF, och återge bilderna i JPEG-format. Funktionen stöds i [!DNL Adobe Experience Manager Assets] med det [Camera Raw paketet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/aem630/product/assets/aem-assets-cameraraw-pkg) som är tillgängligt från programvarudistribution.
 
 >[!NOTE]
 >
 >Funktionen har bara stöd för JPEG-renderingar. Det stöds i Windows 64-bitars, Mac OS och RHEL 7.x.
 
-Aktivera [!DNL Camera Raw] stöd i [!DNL Experience Manager Assets]gör du så här:
+Så här aktiverar du stöd för [!DNL Camera Raw] i [!DNL Experience Manager Assets]:
 
-1. Ladda ned [[!DNL Camera Raw] package](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-cameraraw-pkg-1.4.8.zip) från [!DNL Software Distribution].
-1. Åtkomst `https://[aem_server]:[port]/workflow`. Öppna **[!UICONTROL DAM Update Asset]** arbetsflöde.
-1. Redigera **[!UICONTROL Process Thumbnails]** steg.
-1. Ange följande konfiguration i **[!UICONTROL Thumbnails]** tab:
+1. Hämta [[!DNL Camera Raw] paketet](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/aem-assets-cameraraw-pkg-1.4.8.zip) från [!DNL Software Distribution].
+1. Åtkomst till `https://[aem_server]:[port]/workflow`. Öppna arbetsflödet **[!UICONTROL DAM Update Asset]**.
+1. Redigera steget **[!UICONTROL Process Thumbnails]**.
+1. Ange följande konfiguration på fliken **[!UICONTROL Thumbnails]**:
 
    * **[!UICONTROL Thumbnails]**: `140:100:false, 48:48:false, 319:319:false`
    * **[!UICONTROL Skip Mime Types]**: `skip:image/dng, skip:image/x-raw-(.*)`
 
    ![chlimage_1-128](assets/chlimage_1-334.png)
 
-1. I **[!UICONTROL Web Enabled Image]** -fliken, i **[!UICONTROL Skip List]** fält, ange `audio/mpeg, video/(.*), image/dng, image/x-raw-(.*)`.
+1. Ange `audio/mpeg, video/(.*), image/dng, image/x-raw-(.*)` i fältet **[!UICONTROL Skip List]** på fliken **[!UICONTROL Web Enabled Image]**.
 
    ![chlimage_1-129](assets/chlimage_1-335.png)
 
-1. Lägg till **[!UICONTROL Camera Raw/DNG Handler]** steg nedanför **[!UICONTROL Process Thumbnails]** steg.
-1. I **[!UICONTROL Camera Raw/DNG Handler]** lägger du till följande konfiguration i **[!UICONTROL Arguments]** tab:
+1. Lägg till steget **[!UICONTROL Camera Raw/DNG Handler]** under steget **[!UICONTROL Process Thumbnails]** från sidopanelen.
+1. I steget **[!UICONTROL Camera Raw/DNG Handler]** lägger du till följande konfiguration på fliken **[!UICONTROL Arguments]**:
 
    * **[!UICONTROL Mime Types]**: `image/dng` och `image/x-raw-(.*)`
    * **[!UICONTROL Command]**:
@@ -54,19 +54,19 @@ Aktivera [!DNL Camera Raw] stöd i [!DNL Experience Manager Assets]gör du så h
 
 >[!NOTE]
 >
->Kontrollera att ovanstående konfiguration är samma som **[!UICONTROL Sample DAM Update Asset With Camera RAW and DNG Handling Step]** konfiguration.
+>Kontrollera att ovanstående konfiguration är samma som **[!UICONTROL Sample DAM Update Asset With Camera RAW and DNG Handling Step]**-konfigurationen.
 
-Nu kan du importera Camera Raw-filer till Assets. När du har installerat det Camera Raw paketet och konfigurerat arbetsflödet, **[!UICONTROL Image Adjust]** visas i listan med sidorutor.
+Nu kan du importera Camera Raw-filer till Assets. När du har installerat det Camera Raw paketet och konfigurerat det arbetsflöde som krävs visas alternativet **[!UICONTROL Image Adjust]** i listan över sidorutor.
 
 ![chlimage_1-131](assets/chlimage_1-337.png)
 
-*Bild: Alternativ på sidopanelen.*
+*Figur: Alternativ i sidopanelen.*
 
 ![chlimage_1-132](assets/chlimage_1-338.png)
 
-*Bild: Använd alternativet om du vill göra små ändringar i dina bilder.*
+*Figur: Använd alternativet om du vill göra små ändringar i dina bilder.*
 
-När du har sparat redigeringarna i en [!DNL Camera Raw] bild, en ny rendering `AdjustedPreview.jpg` genereras för bilden. För andra bildtyper förutom [!DNL Camera Raw]återspeglas ändringarna i alla återgivningar.
+När du har sparat redigeringarna i en [!DNL Camera Raw]-bild skapas en ny återgivning `AdjustedPreview.jpg` för bilden. För andra bildtyper förutom [!DNL Camera Raw] återspeglas ändringarna i alla återgivningar.
 
 ## God praxis, kända problem och begränsningar {#best-practices}
 
@@ -74,4 +74,4 @@ Funktionen har följande begränsningar:
 
 * Funktionen har bara stöd för JPEG-renderingar. Det stöds på 64-bitars Windows, Mac OS och RHEL 7.x.
 * Metadatatillbakaskrivning stöds inte för RAW- och DNG-format.
-* The [!DNL Camera Raw] biblioteket har begränsningar för det totala antalet pixlar som kan bearbetas samtidigt. För närvarande kan programmet bearbeta maximalt 65 000 pixlar på den långa sidan av en fil eller 512 MP, oavsett vilket villkor som påträffas först.
+* Biblioteket [!DNL Camera Raw] har begränsningar för det totala antalet pixlar som kan bearbetas samtidigt. För närvarande kan programmet bearbeta maximalt 65 000 pixlar på den långa sidan av en fil eller 512 MP, oavsett vilket villkor som påträffas först.

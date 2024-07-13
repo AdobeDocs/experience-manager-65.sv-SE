@@ -20,20 +20,20 @@ ht-degree: 0%
 
 Som standard visas uppgiftens visningsnamn och beskrivning i listan Uppgift på arbetsytan i AEM Forms. Du kan dock lägga till annan information, t.ex. skapandedatum och slutdatum. Du kan också lägga till ikoner och ändra visningsformatet.
 
-![En titt på fliken Uppgift på arbetsyta i HTML som visar standardkonfigurationen](assets/html-todo-list.png)
+![En titt på fliken Workspace Att göra i HTML som visar standardkonfigurationen](assets/html-todo-list.png)
 
 I den här artikeln beskrivs stegen för hur du lägger till information för varje uppgift i Att göra-listan.
 
 ## Vad kan läggas till {#what-can-be-added}
 
-Du kan lägga till den tillgängliga informationen i `task.json` skickas av servern. Informationen kan läggas till som oformaterad text eller formateras med hjälp av format.
+Du kan lägga till den tillgängliga informationen i `task.json` som har skickats av servern. Informationen kan läggas till som oformaterad text eller formateras med hjälp av format.
 
-Mer information om JSON-objektbeskrivningen finns i [this](/help/forms/using/html-workspace-json-object-description.md) artikel.
+Mer information om JSON-objektbeskrivningen finns i [den här](/help/forms/using/html-workspace-json-object-description.md)-artikeln.
 
 ## Visa information om en uppgift {#displaying-information-on-a-task}
 
-1. Följ [Allmänna steg för anpassning av AEM Forms arbetsyta](../../forms/using/generic-steps-html-workspace-customization.md).
-1. Om du vill visa ytterligare information för en uppgift måste motsvarande nyckelvärdepar läggas till i aktivitetsblocket för `translation.json`.
+1. Följ de [allmänna stegen för anpassning av arbetsytan i AEM Forms](../../forms/using/generic-steps-html-workspace-customization.md).
+1. Om du vill visa ytterligare information för en aktivitet måste motsvarande nyckelvärdepar läggas till i aktivitetsblocket `translation.json`.
 
    Ändra till exempel `/apps/ws/locales/en-US/translation.json` för engelska:
 
@@ -143,7 +143,7 @@ Slutligen måste du ta med en post i dev-paketet för varje egenskap som du vill
    * från: `/libs/ws/js/runtime/templates/`
    * till: `/apps/ws/js/runtime/templates/`
 
-1. Lägg till ny information i `/apps/ws/js/runtime/templates/task.html`.
+1. Lägg till den nya informationen i `/apps/ws/js/runtime/templates/task.html`.
 
    Lägg till under `div class="taskProperties"`:
 

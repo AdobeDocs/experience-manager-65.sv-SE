@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Med AEM Communities kan företag skapa varumärkesanpassade communityupplevelser från ett bibliotek med webbplatsmallar. Forum, grupper, bloggar, fildelning, kalendrar, aktivitetsflöden och utökade användarprofiler kan integreras på webbplatsen för att främja interaktionen mellan prospekt, kunder och företag.
 
-Här följer en självstudiekurs om hur du snabbt ställer in en [engagemangscommunity](/help/communities/overview.md#engagement-community) för demonstrations- eller utvecklingsändamål.
+Här följer en självstudiekurs om hur du snabbt konfigurerar en [engagemangscommunity](/help/communities/overview.md#engagement-community) för demonstrations- eller utvecklingsändamål.
 
 * [Inledande konfiguration](/help/communities/setup.md)
 

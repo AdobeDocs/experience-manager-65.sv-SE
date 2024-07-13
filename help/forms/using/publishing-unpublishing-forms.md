@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Publicera och avpublicera formulär och dokument{#publishing-and-unpublishing-forms-and-documents}
 
-Med AEM Forms kan du enkelt skapa, publicera och avpublicera formulär. Mer information om AEM Forms finns i [Introduktion till hantering av formulär](../../forms/using/introduction-managing-forms.md).
+Med AEM Forms kan du enkelt skapa, publicera och avpublicera formulär. Mer information om AEM Forms finns i [Introduktion till formulärhantering](../../forms/using/introduction-managing-forms.md).
 
 AEM Forms-servern har två instanser: Författare och Publish. Författarinstans används för att skapa och hantera formulärresurser och resurser. Publish-instans används för att hålla resurser och relaterade resurser tillgängliga för slutanvändare. Du kan importera XDP och PDF forms i redigeringsläget. Mer information finns i [Hämta XDP- och PDF-dokument i AEM Forms](../../forms/using/get-xdp-pdf-documents-aem.md).
 
@@ -61,26 +61,26 @@ En resurs kan ha följande lägen:
 
 * **Opublicerad:** En resurs som aldrig har publicerats (det opublicerade läget gäller endast för Forms-resurser. Resurser för korrespondenshantering har inte ett opublicerat läge.)
 * **Publicerad**: En resurs som har publicerats och är tillgänglig på Publish-instansen
-* **Ändrad**: En resurs som ändras efter att ha publicerats
+* **Ändrad**: En resurs som har ändrats efter att ha publicerats
 
 ## Publish en mediefil {#publish-an-asset}
 
 1. Logga in på AEM Forms-servern.
 1. Använd något av följande för att välja och publicera en resurs.
 
-   1. Flytta pekaren över en resurs och markera **[!UICONTROL Publish]** ![aem6forms_globe](assets/aem6forms_globe.pngasset.png).
+   1. Flytta pekaren över en resurs och välj **[!UICONTROL Publish]** ![aem6forms_globe](assets/aem6forms_globe.pngasset.png).
    1. Gör något av följande och välj sedan Publish:
 
-      * Om du är i kortvyn väljer du **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)och välj resursen. Resursen har valts.
+      * Om du är i kortvyn väljer du **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png) och väljer resursen. Resursen har valts.
       * Om du är i listvyn markerar du kryssrutan för en resurs. Resursen har valts.
       * Välj en resurs om du vill visa information om den.
-      * Visa egenskaper för en resurs genom att trycka på Visa egenskaper ![visningsegenskaper](assets/viewproperties.png).
+      * Visa egenskaperna för en resurs genom att trycka på Visa egenskaper ![visningsegenskaper](assets/viewproperties.png).
 
       >[!NOTE]
       >
       >Markera inte flera resurser. Det går inte att publicera flera resurser samtidigt.
 
-1. När Publish-processen startar visas en bekräftelsedialogruta med alla relaterade resurser och resurser. I dialogrutan som innehåller relaterade resurser väljer du **[!UICONTROL Publish]**. Resursen publiceras och dialogrutan Publish Assets Success visas.
+1. När Publish-processen startar visas en bekräftelsedialogruta med alla relaterade resurser och resurser. Välj **[!UICONTROL Publish]** i dialogrutan som innehåller relaterade resurser. Resursen publiceras och dialogrutan Publish Assets Success visas.
 
    >[!NOTE]
    >
@@ -98,7 +98,7 @@ En resurs kan ha följande lägen:
 
    När du har publicerat en resurs kan du använda Forms Portal för att visa alla resurser på en webbsida. Mer information finns i [Introduktion till att publicera formulär på en portal](../../forms/using/introduction-publishing-forms.md).
 
-## Publish alla Correspondence Management Assets {#publish-all-the-correspondence-management-assets}
+## Publish all Correspondence Management Assets {#publish-all-the-correspondence-management-assets}
 
 Med AEM Forms kan du publicera alla Correspondence Management-resurser på en server på en gång. De publicerade resurserna innehåller alla Correspondence Management-resurser och relaterade beroenden.
 
@@ -106,48 +106,48 @@ Följ de här stegen för att publicera alla Correspondence Management-resurser 
 
 1. Logga in på AEM Forms-servern.
 1. Välj **Adobe Experience Manager** i det globala navigeringsfältet.
-1. Välj ![verktyg](assets/tools.png)och sedan markera **Forms**.
+1. Välj ![verktyg](assets/tools.png) och sedan **Forms**.
 1. Välj **Publish Correspondence Management Assets**.
 
    ![publish-cmp-assets](assets/publish-cmp-assets.png)
 
-   Sidan Publish All Correspondence Management Assets visas och innehåller information om den senaste gången Publish Correspondence Management Assets-processen gjordes.
+   Assets-sidan Publish All Correspondence Management visas och innehåller information om den senaste gången Publish Correspondence Management Assets-processen gjordes.
 
    ![publish-last-run-details](assets/publish-last-run-details.png)
 
-1. Välj **Publicera** och i bekräftelsemeddelandet väljer du **OK**.
+1. Välj **Publish** och välj **OK** i bekräftelsemeddelandet.
 
    När en gruppbearbetning är klar kan du visa information om den senaste körningen. Detta inkluderar information som administratörsinloggning och om batchkörningen lyckades eller misslyckades.
 
    >[!NOTE]
    >
-   >Publish-processen kan inte avbrytas när den väl har initierats. När Publish-åtgärden pågår ska du inte skapa, ta bort, ändra eller publicera några resurser eller initiera åtgärden Exportera alla Correspondence Management Assets.
+   >Publish-processen kan inte avbrytas när den väl har initierats. När Publish-åtgärden pågår ska du inte skapa, ta bort, ändra eller publicera något material eller initiera Assets-åtgärden Exportera all korrespondenshantering.
 
 ## Automatisera publicering och avpublicering för Forms &amp; Documents {#automate-publishing-and-unpublishing-for-forms-amp-documents}
 
-Med AEM Forms kan du schemalägga publicering och avpublicering av material för Forms &amp; Documents. Du kan ange schemat i metadataredigeraren. Mer information om hur du hanterar metadata för formulär finns i [Hantera formulärmetadata.](../../forms/using/manage-form-metadata.md)
+Med AEM Forms kan du schemalägga publicering och avpublicering av material för Forms &amp; Documents. Du kan ange schemat i metadataredigeraren. Mer information om hur du hanterar metadata för formulär finns i [Hantera metadata för formulär.](../../forms/using/manage-form-metadata.md)
 
 Följ de här stegen för att schemalägga datum och tid för publicering och avpublicering av Forms- och dokumentresurser:
 
 1. Välj en resurs och välj **[!UICONTROL View Properties]**. Sidan Metadataegenskaper öppnas.
-1. På sidan Metadataegenskaper väljer du **[!UICONTROL Advanced]** och sedan markera **[!UICONTROL Edit]** ![illustrator_cc_penciltool_cur_edit_2_17](assets/illustratorcc_penciltool_cur_edit_2_17.png).
-1. I **[!UICONTROL Publish On Time]** och **[!UICONTROL Publish Off Time]** väljer du datum och tid.\
+1. På sidan Metadataegenskaper väljer du **[!UICONTROL Advanced]** och sedan **[!UICONTROL Edit]** ![illustrator_penciltool_cur_edit_2_17](assets/illustratorcc_penciltool_cur_edit_2_17.png).
+1. Välj datum och tid i fälten **[!UICONTROL Publish On Time]** och **[!UICONTROL Publish Off Time]**.\
    Välj **[!UICONTROL Done]** ![aem6forms_check](assets/aem6forms_check.png).
 
 ## Avpublicera en resurs {#unpublish-an-asset}
 
-1. Välj en publicerad resurs och välj **[!UICONTROL Unpublish]** ![avpublicera](assets/unpublish.png).
+1. Välj en publicerad resurs och välj **[!UICONTROL Unpublish]** ![unpublish](assets/unpublish.png).
 1. Använd något av följande för att välja och avpublicera en resurs.
 
-   1. Flytta pekaren över en resurs och markera **[!UICONTROL Unpublish]** ![avpublicera](assets/unpublish.png).
+   1. Flytta pekaren över en resurs och välj **[!UICONTROL Unpublish]** ![unpublish](assets/unpublish.png).
    1. Gör något av följande och välj sedan Avpublicera:
 
-      * Om du är i kortvyn väljer du **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png)och välj resursen. Resursen har valts.
+      * Om du är i kortvyn väljer du **[!UICONTROL Enter Selection]** ![aem6forms_check-circle](assets/aem6forms_check-circle.png) och väljer resursen. Resursen har valts.
 
-      * Om du är i listvyn håller du pekaren över en resurs och väljer ![selectassetbock](assets/selectassetcheckmark.png) . Resursen har valts.
+      * Om du är i listvyn håller du pekaren över en resurs och väljer ![selectAssetCheckMark](assets/selectassetcheckmark.png) . Resursen har valts.
 
       * Välj en resurs om du vill visa information om den.
-      * Visa egenskaper för en resurs genom att trycka på Visa egenskaper ![visningsegenskaper](assets/viewproperties.png).
+      * Visa egenskaperna för en resurs genom att trycka på Visa egenskaper ![visningsegenskaper](assets/viewproperties.png).
 
 1. När avpubliceringsprocessen startar visas en bekräftelsedialogruta. Välj **[!UICONTROL Unpublish]**.
 
@@ -163,7 +163,7 @@ Varje gång du publicerar en resurs eller ett brev efter att ha redigerat den sk
 >
 >Återställ inte ett brev till ett senast publicerat tillstånd om någon beroende resurs som används i det publicerade brevet tas bort från systemet.
 
-1. Välj en resurs och välj **[!UICONTROL Revert to Previously Published Version]** ![återgår till publicerad version](assets/reverttopreviouslypublishedversion.png).
+1. Markera en resurs och välj **[!UICONTROL Revert to Previously Published Version]** ![omvända, publicerade versioner](assets/reverttopreviouslypublishedversion.png).
 1. Innan resursen återställs visas en bekräftelsedialogruta. Välj **[!UICONTROL Revert]**.
 
    Resursen eller bokstaven återställs till den tidigare publicerade versionen.
@@ -174,17 +174,17 @@ Varje gång du publicerar en resurs eller ett brev efter att ha redigerat den sk
 >
 >Om du tar bort en resurs tas den bort från publiceringsinstansen. När du tar bort ett objekt tas även dess versionshistorik bort, förutom basversionen.
 
-1. Välj en resurs och välj **[!UICONTROL Delete]** ![delete](assets/delete.png).
+1. Markera en resurs och välj **[!UICONTROL Delete]** ![delete](assets/delete.png).
 
    >[!NOTE]
    >
-   >Alternativet Ta bort är också tillgängligt när du visar resursinformation genom att trycka på en resurs eller genom att trycka på Visa egenskaper för en resurs ![visningsegenskaper](assets/viewproperties.png).
+   >Alternativet Ta bort är också tillgängligt när du visar resursinformation genom att trycka på en resurs eller genom att trycka på ![Visa egenskaper](assets/viewproperties.png) för en resurs.
 
 1. Innan resursen tas bort visas en bekräftelsedialogruta. Välj **[!UICONTROL Delete]**.
 
    >[!NOTE]
    >
-   >Endast den markerade resursen tas bort och de beroende resurserna tas inte bort. Om du vill kontrollera referenser till en resurs väljer du ![referenser](assets/references.png) och sedan välja en resurs.
+   >Endast den markerade resursen tas bort och de beroende resurserna tas inte bort. Om du vill kontrollera referenser till en resurs väljer du ![referenser](assets/references.png) och sedan en resurs.
    >
    >
    >Om den resurs du försöker ta bort är underordnad en annan resurs tas den inte bort. Om du vill ta bort en sådan resurs tar du bort referenser till den från andra resurser och försöker sedan igen.
@@ -198,6 +198,6 @@ Så här aktiverar du autentisering för dina formulär:
 1. Öppna configMgr i publiceringsinstansen i webbläsaren.\
    URL: `https://<hostname>:<PublishPort>/system/console/configMgr`
 
-1. I Adobe Experience Manager Web Console-konfigurationen klickar du på **Autentiseringstjänst för Apache Sling** för att konfigurera den.
-1. I dialogrutan Apache Sling Authentication Service som visas använder du **+** för att lägga till banor.\
+1. Klicka på **Apache Sling Authentication Service** i Adobe Experience Manager Web Console Configuration för att konfigurera den.
+1. I dialogrutan Apache Sling Authentication Service som visas använder du knappen **+** för att lägga till sökvägar.\
    När du lägger till en sökväg aktiveras autentiseringstjänsten för formulär i den sökvägen.

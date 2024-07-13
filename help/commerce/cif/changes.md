@@ -36,7 +36,7 @@ Slutpunkten konfigureras via OSGi-konsolen.
 
 ## Driftsättning CIF Veniaprojektet
 
-Projektet är tillgängligt på [GitHub AEM Guides - CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) och driftsättning via AEM Package Manager.
+Projektet är tillgängligt på [GitHub AEM Guides - CIF Venia Project](https://github.com/adobe/aem-cif-guides-venia) och distributionen görs via AEM Package Manager.
 
 **Tidigare CIF versioner**
 
@@ -56,8 +56,8 @@ AEM återger produktkatalogupplevelser direkt med hjälp AEM katalogmallar som h
 
 **Tidigare CIF versioner**
 
-* CIF Classic: AEM skapar en AEM sida för varje kategori/produkt med hjälp av katalogritningsverktyget. Dessa sidor replikeras till AEM.
+* CIF Classic: AEM skapar en AEM sida för varje kategori/produkt med hjälp av katalogritningsverktyget. Dessa sidor replikeras till AEM Publish.
 
 >[!NOTE]
 >
->Mer information om hur du använder CIF med AEM Managed Service eller AEM On-Premise finns i [Commerce integration framework](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)
+>Mer information om hur du använder CIF med AEM hanterade tjänster eller AEM lokalt finns i [Commerce integration framework](https://www.adobe.io/apis/experiencecloud/commerce-integration-framework/getting-started.html)

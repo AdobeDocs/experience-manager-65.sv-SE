@@ -34,10 +34,10 @@ När du har extraherat paketet öppnar du mappen CustomErrorManager-1.0-SNAPSHOT
 
 ### Anpassa felmeddelandenas placering  {#customizing-the-position-of-error-messages-nbsp}
 
-Om du vill anpassa felmeddelandets position lägger du till en &lt;div> -taggen för varje fel- och varningsfält, placera &lt;div> till vänster eller höger och tillämpa CSS-format på &lt;div> -tagg. Detaljerade anvisningar finns i proceduren nedan:
+Om du vill anpassa positionen för felmeddelandet lägger du till en &lt;div>-tagg för varje fel- och varningsfält, placerar &lt;div>-taggen till vänster eller höger och tillämpar CSS-format på &lt;div>-taggen. Detaljerade anvisningar finns i proceduren nedan:
 
-1. Navigera till `CustomErrorManager-1.0-SNAPSHOT`och öppna `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript` mapp.
-1. Öppna `customErrorManager.js` fil för redigering. The `markError` -funktionen i filen accepterar följande parametrar:
+1. Navigera till mappen `CustomErrorManager-1.0-SNAPSHOT` och öppna mappen `etc\clientlibs\mf-custom-error-manager\CustomErrorManager\javascript`.
+1. Öppna filen `customErrorManager.js` för redigering. Funktionen `markError` i filen accepterar följande parametrar:
 
    |   |  |
    |---|---|
@@ -75,7 +75,7 @@ Om du vill anpassa felmeddelandets position lägger du till en &lt;div> -taggen 
    ```
 
 1. Spara och stäng filen.
-1. Navigera till `CustomErrorManager-1.0-SNAPSHOT` och skapa ett arkiv med mapparna jcr_root och META-INF. Byt namn på arkivet till CustomErrorManager-1.0-SNAPSHOT.zip.
+1. Navigera till mappen `CustomErrorManager-1.0-SNAPSHOT` och skapa ett arkiv med mapparna jcr_root och META-INF. Byt namn på arkivet till CustomErrorManager-1.0-SNAPSHOT.zip.
 1. Använd pakethanteraren för att överföra och installera paketet.
 
 ## Visa felmeddelanden för flera fält  {#display-error-messages-for-multiple-fields-nbsp}
@@ -118,7 +118,7 @@ Använd det bifogade paketet för att samtidigt visa felmeddelanden för alla f�
 
 ## Rendera formuläret med den nya profilen.  {#render-the-form-with-the-new-profile-nbsp}
 
-HTML5-formulär har en standardprofil som standard: `https://&lt;server&gt;/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location&gt;&template=&lt;name of the xdp&gt;`
+HTML5-formulär använder en standardprofil som inte finns i rutan: `https://&lt;server&gt;/content/xfaforms/profiles/default.html?contentRoot=&lt;xdp location&gt;&template=&lt;name of the xdp&gt;`
 
 Om du vill visa ett formulär med anpassade felmeddelanden återger du formuläret med felprofilen: `https://&lt;server&gt;/content/xfaforms/profiles/error.html?contentRoot=&lt;xdp location&gt;&template=&lt;name of the xdp&gt;`
 

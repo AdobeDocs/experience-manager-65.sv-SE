@@ -17,11 +17,11 @@ ht-degree: 1%
 
 # Anpassa feldialogrutor {#customizing-error-dialogs}
 
-Med AEM Forms arbetsyta kan du anpassa feldialogrutor. Utför [Allmänna steg för anpassning av AEM Forms arbetsyta](/help/forms/using/generic-steps-html-workspace-customization.md) följt av stegen nedan för att anpassa feldialogrutor.
+Med AEM Forms arbetsyta kan du anpassa feldialogrutor. Utför de [allmänna stegen för anpassning av arbetsytan i AEM Forms](/help/forms/using/generic-steps-html-workspace-customization.md) följt av stegen nedan för att anpassa feldialogrutor.
 
 ## Anpassa text {#customizing-text}
 
-1. I `/apps/ws/locales/en-US/translation.json` fil, ändra värdena för `wserror` till de anpassade värdena. Till exempel:
+1. Ändra värdena för `wserror` i filen `/apps/ws/locales/en-US/translation.json` till anpassade värden. Till exempel:
 
    ```json
    "wserror" : {
@@ -51,7 +51,7 @@ Med AEM Forms arbetsyta kan du anpassa feldialogrutor. Utför [Allmänna steg f�
 
 ## Anpassa CSS {#customizing-css}
 
-1. Du kan uppdatera dialogruta, rubrik, innehållsområde, fotstangent, fotfältsknappar och andra kollaterala genom att lägga till följande utdrag i dialogrutan `/apps/ws/css/newStyle.css` fil:
+1. Du kan uppdatera dialogruta, rubrik, innehållsområde, fotstreck, fotfältsknappar och andra kollateraler genom att lägga till följande utdrag i filen `/apps/ws/css/newStyle.css`:
 
    ```css
    /*-------- Error Dialog -------------------------------------------------------------------------------------------------------------------*/
@@ -186,7 +186,7 @@ Med AEM Forms arbetsyta kan du anpassa feldialogrutor. Utför [Allmänna steg f�
    }
    ```
 
-1. Avgränsa `.error-dialog` och `.foot-bar` i den sammansatta listan. Om du vill göra den här ändringen lägger du till följande i filen newStyle.css:
+1. Avgränsa knappintervallen `.error-dialog` och `.foot-bar` från den sammansatta listan för fotfältets knappintervall. Om du vill göra den här ändringen lägger du till följande i filen newStyle.css:
 
    ```css
    .browse-btn span, .attachementbtn span, .cancelAttachmentUpdate span, #taskAttachmentsContainer .uploadStatus span, .submitNoteButton span, .updateNoteButton span, .cancelNoteUpdate span,
@@ -227,7 +227,7 @@ Med AEM Forms arbetsyta kan du anpassa feldialogrutor. Utför [Allmänna steg f�
 
 ## Exempel {#examples}
 
-* **Om du vill anpassa feldialogrutan ändrar du:**
+* **Ändra** om du vill anpassa feldialogrutan
 
 ```css
 .error-dialog{

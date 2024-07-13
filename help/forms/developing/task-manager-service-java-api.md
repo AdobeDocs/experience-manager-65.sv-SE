@@ -1,5 +1,5 @@
 ---
-title: Java API QuickStart (SOAP) för tjänsten Task Manager
+title: Java API QuickStart(SOAP) för tjänsten Task Manager
 description: Använd tjänsten Task Manager för att tilldela uppgifter, låsa uppgifter, hämta uppgifter som tilldelats användare, hämta formulärdata från uppgifter, ändra formulärdata, hämta bifogade filer och hämta uppgiftsinformation.
 contentOwner: admin
 content-type: reference
@@ -38,7 +38,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 >[!NOTE]
 >
->Du kan inte söka efter uppgifter som tilldelats användare med hjälp av webbtjänstens API. Orsaken är att du inte kan anropa `taskList` -metod, vilket är ett nödvändigt metodanrop för att utföra den här uppgiften.
+>Du kan inte söka efter uppgifter som tilldelats användare med hjälp av webbtjänstens API. Orsaken är att du inte kan anropa metoden `taskList`, som är ett nödvändigt metodanrop för att utföra den här aktiviteten.
 
 >[!NOTE]
 >
@@ -268,7 +268,7 @@ I följande Java-kodexempel låses en aktivitet som motsvarar aktivitetsidentifi
 
 ## Snabbstart (SOAP läge): Hämta uppgifter som tilldelats användare med Java API {#quick-start-soap-mode-retrieving-tasks-assigned-to-users-using-the-java-api}
 
-I följande Java-kodexempel hämtas alla uppgifter som tilldelats en användare med namnet *tonblå*. Observera att den här användaren anges i anslutningsegenskaperna. Information om returnerade uppgifter, som identifierarvärde och beskrivning, visas.
+I följande Java-kodexempel hämtas alla uppgifter som tilldelats en användare med namnet *tony blue*. Observera att den här användaren anges i anslutningsegenskaperna. Information om returnerade uppgifter, som identifierarvärde och beskrivning, visas.
 
 ```java
  /*
@@ -394,7 +394,7 @@ I följande Java-kodexempel hämtas alla uppgifter som tilldelats en användare 
 
 ## Snabbstart (SOAP läge): Hämta formulärdata från uppgifter med Java API {#quick-start-soap-mode-retrieving-form-data-from-tasks-using-the-java-api}
 
-I följande Java-kodexempel hämtas formulärdata från en uppgift med identifierarvärdet 304. Formulärdata skrivs till en XML-fil med namnet *FormData.xml* på C:\Adobe.
+I följande Java-kodexempel hämtas formulärdata från en uppgift med identifierarvärdet 304. Formulärdata skrivs till en XML-fil med namnet *FormData.xml* som finns på C:\Adobe.
 
 ```java
  /*
@@ -500,7 +500,7 @@ I följande Java-kodexempel hämtas formulärdata från en uppgift med identifie
 
 ## Snabbstart (SOAP): Ändra formulärdata med Java API {#quick-start-soap-mode-modifying-form-data-using-the-java-api}
 
-I följande Java-kodexempel uppdateras ett formulär med data som finns i *FormData.xml* -fil.
+I följande Java-kodexempel uppdateras ett formulär med data som finns i filen *FormData.xml*.
 
 ```java
  /*
@@ -714,7 +714,7 @@ Följande Java-kodexempel hämtar bifogade filer. Varje bifogad fil sparas som e
 
 ## Snabbstart (SOAP): Hämta aktivitetsinformation med Java API {#quick-start-soap-mode-retrieving-task-information-using-the-java-api}
 
-I följande Java-kodexempel hämtas alla uppgifter som är baserade på en process med namnet *Lån - fördefinierat*. Statusen för varje returnerad uppgift kontrolleras för att säkerställa att den är en slutförd uppgift. Information som namnet på den användare som slutförde uppgiften och datumet då uppgiften slutfördes hämtas och visas.
+I följande Java-kodexempel hämtas alla uppgifter som är baserade på en process som heter *MortgageLoan - Prebuilt*. Statusen för varje returnerad uppgift kontrolleras för att säkerställa att den är en slutförd uppgift. Information som namnet på den användare som slutförde uppgiften och datumet då uppgiften slutfördes hämtas och visas.
 
 ```java
  /*

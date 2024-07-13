@@ -21,9 +21,9 @@ ht-degree: 0%
 
 Följ de här stegen för att definiera en URL för författarinstansen för återställning av författarinstansversion:
 
-1. Gå till *https://:&lt;publishhost>:&lt;publishport>/lc/system/console/configMgr*. Logga in med användarautentiseringsuppgifter för OSGi Management Console. Standardautentiseringsuppgifterna är admin/admin.
-1. Sök och klicka på **[!UICONTROL Edit]** -ikonen bredvid **[!UICONTROL com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name]** inställning.
-1. I **[!UICONTROL VersionRestoreManager Author URL]** anger du URL:en till författarinstansen av VersionRestoreManager.
+1. Gå till *https://:&lt;PublishHost>:&lt;PublishPort>/lc/system/console/configMgr*. Logga in med användarautentiseringsuppgifter för OSGi Management Console. Standardautentiseringsuppgifterna är admin/admin.
+1. Sök och klicka på ikonen **[!UICONTROL Edit]** bredvid inställningen **[!UICONTROL com.adobe.livecycle.content.activate.impl.VersionRestoreManagerImpl.name]**.
+1. I fältet **[!UICONTROL VersionRestoreManager Author URL]** anger du URL:en för författarinstansen av VersionRestoreManager.
 
    **URL-sträng**:
 
@@ -31,24 +31,24 @@ Följ de här stegen för att definiera en URL för författarinstansen för åt
 
    >[!NOTE]
    >
-   >Om det finns flera författarinstanser (grupperade) som föregås av en belastningsutjämnare anger du URL:en till belastningsutjämnaren i dialogrutan **[!UICONTROL VersionRestoreManager Author URL]** fält.
+   >Om det finns flera författarinstanser (grupperade) som föregås av en belastningsutjämnare anger du URL:en till belastningsutjämnaren i fältet **[!UICONTROL VersionRestoreManager Author URL]**.
 
 1. Klicka på **[!UICONTROL Save]**.
 
-## Definiera publiceringsinstansens URL för ActivationManagerImpl (hanteraren för aktivering av offentlig instans) {#defining-the-publish-instance-url-for-activationmanagerimpl-public-instance-activation-manager}
+## Definiera Publish instans-URL:en för ActivationManagerImpl (hanterare för aktivering av offentlig instans) {#defining-the-publish-instance-url-for-activationmanagerimpl-public-instance-activation-manager}
 
-Följ de här stegen för att definiera publiceringsinstansens URL för aktiveringshanteraren för den offentliga instansen:
+Följ de här stegen för att definiera Publish instans-URL:en för aktiveringshanteraren för den offentliga instansen:
 
-1. Gå till *https://:&lt;authorhost>:&lt;authorport>/lc/system/console/configMgr*. Logga in med användarautentiseringsuppgifter för OSGi Management Console. Standardautentiseringsuppgifterna är admin/admin.
-1. Sök och klicka på **[!UICONTROL Edit]** -ikonen bredvid **[!UICONTROL com.adobe.livecycle.content.activate.impl.ActivationManagerImpl.name]** inställning.
-1. I **[!UICONTROL ActivationManager Publish URL]** anger du URL:en för åtkomst till Publish-instansen ActivationManager. Du kan ange följande URL:er.
+1. Gå till *https://:&lt;authorHost>:&lt;authorPort>/lc/system/console/configMgr*. Logga in med användarautentiseringsuppgifter för OSGi Management Console. Standardautentiseringsuppgifterna är admin/admin.
+1. Sök och klicka på ikonen **[!UICONTROL Edit]** bredvid inställningen **[!UICONTROL com.adobe.livecycle.content.activate.impl.ActivationManagerImpl.name]**.
+1. I fältet **[!UICONTROL ActivationManager Publish URL]** anger du URL:en för åtkomst till Publish-instansen ActivationManager. Du kan ange följande URL:er.
 
-   * **URL för belastningsutjämnare (rekommenderas)**: Ange URL för belastningsutjämnare om du har en webbserver som fungerar som belastningsutjämnare framför publiceringsservergruppen (flera icke-klustrade publiceringsinstanser).
-   * **Publicera instans-URL**: Ange en URL för en publiceringsinstans. Om du har en enda publiceringsinstans eller webbservern där publiceringsgruppen finns är den inte tillgänglig från författarmiljön på grund av begränsningar. Om den angivna publiceringsinstansen är nere finns det en reservmekanism att hantera på författarsidan.
+   * **URL för belastningsutjämnare (rekommenderas)**: Ange URL för belastningsutjämnare, om du har en webbserver som fungerar som belastningsutjämnare framför publiceringsgruppen (flera icke-grupperade publiceringsinstanser).
+   * **Publish-instans-URL**: Ange en publiceringsinstans-URL. Om du har en publiceringsinstans eller webbservern där publiceringsgruppen finns är den inte tillgänglig från författarmiljön på grund av begränsningar. Om den angivna publiceringsinstansen är nere finns det en reservmekanism att hantera på författarsidan.
    * **URL-sträng**:
 
      `https://<hostname>:<port>:/libs/fd/fdm/content/crud/lc.content.remote.activate.activationManager`
 
 1. Klicka på **[!UICONTROL Save]**.
 
-Mer information om hur du konfigurerar Correspondence Management finns i [Egenskaper för konfiguration av korrespondenshantering](https://helpx.adobe.com/aem-forms/6-2/cm-configuration-properties.html).
+Mer information om hur du konfigurerar Correspondence Management finns i [Egenskaper för Correspondence Management-konfiguration](https://helpx.adobe.com/aem-forms/6-2/cm-configuration-properties.html).

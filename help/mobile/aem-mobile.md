@@ -24,21 +24,21 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Om du inte använder Adobe Experience Manager (AEM) som innehållshanteringskälla kan du läsa [Hjälp om AEM Mobile On-demand Services](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>Om du inte använder Adobe Experience Manager (AEM) som innehållshanteringskälla kan du läsa [AEM Mobile On-demand Services-hjälpen](https://helpx.adobe.com/digital-publishing-solution/topics.html).
 
 ## AEM-administratör {#aem-administrator}
 
 >[!NOTE]
 >
->**Krav:**
+>**Förutsättning:**
 >
->Innan du börjar konfigurera din miljö för AEM Mobile On-demand Services, se [AEM Mobile Application Dashboard eller Control Center](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
+>Innan du börjar konfigurera din miljö för AEM Mobile On-demand Services ska du läsa [AEM Mobile Application Dashboard eller Control Center](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-An ***AEM*** ansvarar för att lägga till ett program i AEM Mobile-katalogen, antingen genom att skapa ett program med hjälp av guiden Skapa eller genom att importera ett befintligt program. AEM som skapar ett program med AEM Mobile *guide* oftast väljer du en av de önskade programmallarna antingen bland Adobe färdiga referensexempel eller (vanligtvis) en anpassad programmall som skapas av *AEM.*
+En ***AEM-administratör*** ansvarar för att lägga till ett program i AEM Mobile-katalogen, antingen genom att skapa ett program med hjälp av guiden Skapa eller genom att importera ett befintligt program. AEM administratörer som skapar en app med hjälp av AEM Mobile *skapandeguide* väljer vanligtvis en av de önskade appmallarna antingen från Adobe körklara referensexempel eller (vanligtvis) en anpassad appmall som skapats av *AEM utvecklare.*
 
 >[!NOTE]
 >
->Mer information om hur du konfigurerar AEM Grupper och behörigheter finns i [Skapa användarroller och bevilja åtkomst](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) i onlinehjälpen.
+>Mer information om hur du konfigurerar AEM Grupper och behörigheter får du genom att klicka på [Skapa användarroller och bevilja åtkomst](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) i onlinehjälpen.
 
 En AEM är ansvarig för följande när du skapar ett program med AEM Mobile On-demand Services:
 

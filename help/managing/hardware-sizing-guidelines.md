@@ -51,23 +51,23 @@ Grundläggande faktorer att beakta är (i denna ordning):
 
 ## Arkitektur {#architecture}
 
-En vanlig AEM består av en författare och en publiceringsmiljö. De här miljöerna har olika krav på den underliggande maskinvarans storlek och systemkonfiguration. Detaljerade överväganden för båda miljöerna beskrivs i [författarmiljö](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations) och [publiceringsmiljö](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations) -avsnitt.
+En vanlig AEM består av en författare och en publiceringsmiljö. De här miljöerna har olika krav på den underliggande maskinvarans storlek och systemkonfiguration. Detaljerade överväganden för båda miljöerna beskrivs i avsnitten [författarmiljö](/help/managing/hardware-sizing-guidelines.md#author-environment-specific-calculations) och [publiceringsmiljö](/help/managing/hardware-sizing-guidelines.md#publish-environment-specific-calculations).
 
 I en typisk projektkonfiguration har du flera miljöer där du ska fasa ut projektet:
 
 * **Utvecklingsmiljö**
 Om du vill utveckla nya funktioner eller göra betydande ändringar. Bästa praxis är att arbeta i en utvecklingsmiljö per utvecklare (lokala installationer på deras personliga system).
 
-* **Författartestmiljö**
+* **Redigeringstestmiljö**
 Verifiera ändringar. Antalet testmiljöer kan variera beroende på projektkraven (t.ex. separat för kvalitetskontroll, integrationstestning eller testning av användaracceptans).
 
-* **Publicera testmiljö**
+* **Publish testmiljö**
 Detta gäller främst för testning av användningsfall för socialt samarbete och/eller interaktionen mellan författare och flera publiceringsinstanser.
 
 * **Författarproduktionsmiljö**
 För författare som vill redigera innehåll.
 
-* **Publicera produktionsmiljö**
+* **Publish produktionsmiljö**
 För publicerat innehåll.
 
 Miljöerna kan dessutom variera, från ett enserversystem som kör AEM och en programserver till en mycket skalad uppsättning multiserverinstanser med flera processorer. Adobe rekommenderar att du använder en separat dator för varje produktionssystem och att du inte kör andra program på dessa datorer.
@@ -76,7 +76,7 @@ Miljöerna kan dessutom variera, från ett enserversystem som kör AEM och en pr
 
 Avsnitten nedan ger vägledning om hur maskinvarukraven ska beräknas, med beaktande av olika överväganden. För stora system föreslår Adobe att du utför en enkel uppsättning interna prestandatester på en referenskonfiguration.
 
-Prestandaoptimering är en grundläggande uppgift som måste utföras innan det går att utföra riktmärkning för ett visst projekt. Var noga med att följa anvisningarna i [Dokumentation om prestandaoptimering](/help/sites-deploying/configuring-performance.md) innan du utför några prestandatester och använder resultaten för beräkningar av maskinvarustorlek.
+Prestandaoptimering är en grundläggande uppgift som måste utföras innan det går att utföra riktmärkning för ett visst projekt. Var noga med att följa anvisningarna i [dokumentationen för prestandaoptimering](/help/sites-deploying/configuring-performance.md) innan du utför några prestandatester och använder resultaten för beräkningar av maskinvarustorlek.
 
 Krav på maskinvarustorlek för fall med avancerad användning måste baseras på en detaljerad prestandautvärdering av projektet. Karakteristika för avancerade användningsområden som kräver exceptionella maskinvaruresurser omfattar följande kombinationer:
 
@@ -107,24 +107,24 @@ AEM fungerar bra i virtualiserade miljöer, men det kan finnas faktorer som CPU 
 
 #### Parallalisering av AEM {#parallelization-of-aem-instances}
 
-**Säkert fel**
+**Felskydd**
 
 En felsäker webbplats används i minst två separata system. Om ett system kraschar kan ett annat system ta över och därmed kompensera för systemfelet.
 
 **Skalbarhet för systemresurser**
 
-Alla system körs, men det finns bättre datorprestanda. Den extra prestandan är inte nödvändigtvis linjär med antalet klusternoder eftersom relationen är mycket beroende av den tekniska miljön. Se [Klusterdokumentation](/help/sites-deploying/recommended-deploys.md) för mer information.
+Alla system körs, men det finns bättre datorprestanda. Den extra prestandan är inte nödvändigtvis linjär med antalet klusternoder eftersom relationen är mycket beroende av den tekniska miljön. Mer information finns i [Klusterdokumentation](/help/sites-deploying/recommended-deploys.md).
 
 Beräkningen av hur många klusternoder som behövs baseras på de grundläggande kraven och specifika användningsfall för det aktuella webbprojektet:
 
 * När det gäller felsäkerhet är det nödvändigt att för alla miljöer fastställa hur allvarligt felet är och hur lång tid det tar för en klusternod att återställa felet.
-* När det gäller skalbarhet är antalet skrivåtgärder i grunden den viktigaste faktorn; se [Författare som arbetar parallellt](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) för redigeringsmiljön och [Samverkan i samhället](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) för publiceringsmiljön. Belastningsutjämning kan upprättas för åtgärder som enbart använder systemet för att bearbeta läsåtgärder. Se [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) för mer information.
+* När det gäller skalbarhet är antalet skrivåtgärder den viktigaste faktorn. Se [Författare arbetar parallellt](/help/managing/hardware-sizing-guidelines.md#authors-working-in-parallel) i författarmiljön och [Sociala Collaboration](/help/managing/hardware-sizing-guidelines.md#socialcollaborationspecificconsiderations) för publiceringsmiljön. Belastningsutjämning kan upprättas för åtgärder som enbart använder systemet för att bearbeta läsåtgärder. Mer information finns i [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html).
 
 ## Skapa miljöspecifika beräkningar {#author-environment-specific-calculations}
 
 I syfte att göra jämförelser har Adobe utvecklat några test för fristående författarinstanser.
 
-* **Benchmark test 1**
+* **Benchmark-test 1**
 Beräkna maximal genomströmning för en inläsningsprofil där användarna utför en enkel arbetsmoment på en basbelastning på 300 befintliga sidor som alla är av samma typ. Stegen som berördes var att logga in på webbplatsen, skapa en sida med SWF och bild/text, lägga till ett taggmoln och sedan aktivera sidan.
 
    * **Resultat**
@@ -152,7 +152,7 @@ I redigeringsmiljön är antalet författare som arbetar parallellt och den bela
 
 För sådana scenarier utförde Adobe prestandatester på ett kluster av författare som inte har någon delad nod.
 
-* **Benchmark test 1a**
+* **Prestandatest 1a**
 Med ett aktivt-aktivt kluster utan delning av innehåll på 2 författarinstanser kan du beräkna den maximala genomströmningen med en inläsningsprofil där användarna utför en enkel övning av skapelsesidan utöver en basbelastning på 300 befintliga sidor, allt av liknande natur.
 
    * **Resultat**
@@ -176,9 +176,9 @@ Du kan beräkna antalet datorer (eller CPU:er) som krävs för författarmiljön
 
 `n = numberOfParallelAuthors / 30`
 
-Den här formeln kan fungera som en allmän riktlinje för skalning av CPU:er när författare utför grundläggande åtgärder med AEM. Det förutsätter att systemet och programmet är optimerade. Formeln kommer dock inte att innehålla true för avancerade funktioner som MSM eller Assets (se avsnitten nedan).
+Den här formeln kan fungera som en allmän riktlinje för skalning av CPU:er när författare utför grundläggande åtgärder med AEM. Det förutsätter att systemet och programmet är optimerade. Formeln gäller dock inte för avancerade funktioner som MSM eller Assets (se avsnitten nedan).
 
-Se även [Parallellisering](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances) och [Prestandaoptimering](/help/sites-deploying/configuring-performance.md).
+Se även [Parallalisering](/help/managing/hardware-sizing-guidelines.md#parallelization-of-aem-instances) och [Prestandaoptimering](/help/sites-deploying/configuring-performance.md).
 
 ### Maskinvarubaserad Recommendations {#hardware-recommendations}
 
@@ -195,11 +195,11 @@ Testerna på Adobe utfördes med operativsystemet Red Hat® 5.5, som körs på e
 
 AEM kördes med en minsta stackstorlek på 256 MB, som är den maximala stackstorleken 1 024 MB.
 
-## Publicera miljöspecifika beräkningar {#publish-environment-specific-calculations}
+## Publish miljöspecifika beräkningar {#publish-environment-specific-calculations}
 
 ### Cachelagring av effektivitet och trafik {#caching-efficiency-and-traffic}
 
-Cache-effektiviteten är avgörande för webbplatsens hastighet. I följande tabell visas hur många sidor per sekund ett optimerat AEM kan hantera med hjälp av en omvänd proxy, som Dispatcher:
+Cache-effektiviteten är avgörande för webbplatsens hastighet. I följande tabell visas hur många sidor per sekund ett optimerat AEM kan hantera med hjälp av en omvänd proxy, t.ex. Dispatcher:
 
 | Cachenivåer | Sidor/s (topp) | Miljoner sidor/dag (genomsnitt) |
 |---|---|---|
@@ -214,7 +214,7 @@ Cache-effektiviteten är avgörande för webbplatsens hastighet. I följande tab
 >
 >Ansvarsfriskrivning: Numren baseras på en standardmaskinvarukonfiguration och kan variera beroende på vilken maskinvara som används.
 
-Cachekvoten är den procentandel sidor som Dispatcher kan returnera utan att behöva komma åt AEM. 100 % anger att Dispatcher besvarar alla förfrågningar, 0 % betyder att AEM beräknar varje sida.
+Cachekvoten är den procentandel sidor som Dispatcher kan returnera utan att behöva komma åt AEM. 100 % anger att Dispatcher besvarar alla förfrågningar, 0 % innebär att AEM beräknar varje sida.
 
 ### Komplexa mallar och tillämpningar {#complexity-of-templates-and-applications}
 
@@ -267,15 +267,15 @@ Variablerna i ekvationen är följande:
 Om du har en mer komplex webbplats behöver du också kraftfullare webbservrar så att AEM kan besvara en förfrågan inom en rimlig tid.
 
 * Komplexitet under 4:
-   * 1 024 MB JVM RAM&#42;
+   * 1 024 MB JVM RAM &#42;
    * CPU med låg till medelhög prestanda
 
 * Komplexitet från 4 till 8:
-   * 2 048 MB JVM RAM&#42;
+   * 2 048 MB JVM RAM &#42;
    * Processor med medelhög till hög prestanda
 
 * Komplexitet över 8:
-   * 4 096 MB JVM RAM&#42;
+   * 4 096 MB JVM RAM &#42;
    * Högpresterande processor
 
 >[!NOTE]
@@ -286,11 +286,11 @@ Om du har en mer komplex webbplats behöver du också kraftfullare webbservrar s
 
 Förutom beräkningen för ett standardwebbprogram bör du ta hänsyn till specifika faktorer för följande användningsområden. De beräknade värdena ska läggas till i standardberäkningen.
 
-### Resursspecifika överväganden {#assets-specific-considerations}
+### Assets-specifika överväganden {#assets-specific-considerations}
 
 Omfattande bearbetning av digitala resurser kräver optimerade maskinvaruresurser, de viktigaste faktorerna är bildstorlek och högsta genomströmning för bearbetade bilder.
 
-Allokera minst 16 GB stackutrymme och konfigurera [!UICONTROL DAM Update Asset] arbetsflöde för att använda [Camera Raw paket](/help/assets/camera-raw.md) för konsumtion av råbilder.
+Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet [!UICONTROL DAM Update Asset] så att det använder det [Camera Raw paketet](/help/assets/camera-raw.md) för konsumtion av råbilder.
 
 >[!NOTE]
 >
@@ -300,7 +300,7 @@ Om du använder separata diskar för tarPM, datalager och sökindex kan det hjä
 
 >[!NOTE]
 >
-Se även [Prestandahandbok för resurser](/help/sites-deploying/assets-performance-sizing.md).
+Se även [Assets Performance Guide](/help/sites-deploying/assets-performance-sizing.md).
 
 ### Hanterare för flera platser {#multi-site-manager}
 

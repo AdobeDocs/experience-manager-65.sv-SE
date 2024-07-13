@@ -32,19 +32,19 @@ I det här dokumentet förklaras hur dessa renderare fungerar när det gäller s
 
 PDF forms återges av `PdfTaskForm View`.
 
-När ett XDP-formulär återges som PDF, `FormBridge` JavaScript™ läggs till av tjänsten FormsAugmenter. Denna JavaScript™ (i PDF) hjälper dig att utföra åtgärder som att skicka formulär, spara formulär eller ta formulär offline.
+När ett XDP-formulär återges som PDF läggs en `FormBridge` JavaScript™ till av tjänsten FormsAugmenter. Denna JavaScript™ (i PDF) hjälper dig att utföra åtgärder som att skicka formulär, spara formulär eller ta formulär offline.
 
-I AEM Forms-arbetsytan kommunicerar PDFTaskForm-vyn med `FormBridge`JavaScript, genom en mellanhand i HTML som finns `/lc/libs/ws/libs/ws/pdf.html`. Flödet är:
+I AEM Forms-arbetsytan kommunicerar PDFTaskForm-vyn med `FormBridge`JavaScript via en mellanliggande HTML i `/lc/libs/ws/libs/ws/pdf.html`. Flödet är:
 
-**PDFTaskForm view - pdf.html**
+**Vyn PDFTaskForm - pdf.html**
 
-kommunicerar med `window.postMessage` / `window.attachEvent('message')`
+Kommunicerar med `window.postMessage` / `window.attachEvent('message')`
 
 Den här metoden är standardmetoden för kommunikation mellan en överordnad bildruta och en iframe. De befintliga händelseavlyssnarna från tidigare öppnade PDF forms tas bort innan en ny läggs till. Denna rensning tar även hänsyn till växlingen mellan fliken Formulär och fliken Historik i vyn med aktivitetsinformation.
 
-**pdf.html `FormBridge`JavaScript i den renderade PDF**
+**pdf.html - `FormBridge`JavaScript inuti den återgivna PDF**
 
-kommunicerar med `pdfObject.postMessage` / `pdfObject.messageHandler`
+Kommunicerar med `pdfObject.postMessage` / `pdfObject.messageHandler`
 
 Den här metoden är standardmetoden för kommunikation med ett PDFJavaScript från en HTML. Vyn PdfTaskForm hanterar även en platt PDF och återger den på ett vanligt sätt.
 
@@ -56,9 +56,9 @@ Den här metoden är standardmetoden för kommunikation med ett PDFJavaScript fr
 
 Nya HTML-formulär återges i vyn NewHTMLTaskForm.
 
-När ett XDP-formulär återges som HTML med det mobila formulärpaketet som distribueras på CRX, läggs även ytterligare `FormBridge`JavaScript i formuläret, som visar olika metoder för att spara och skicka formulärdata.
+När ett XDP-formulär återges som HTML med det mobilformulärspaket som är distribuerat på CRX, läggs även ytterligare `FormBridge`JavaScript till i formuläret, som visar olika metoder för att spara och skicka formulärdata.
 
-Detta JavaScript skiljer sig från det som anges i PDF forms ovan, men har ett liknande syfte.
+Denna JavaScript skiljer sig från den som nämns i PDF forms ovan, men har ett liknande syfte.
 
 >[!NOTE]
 >
@@ -68,30 +68,30 @@ Detta JavaScript skiljer sig från det som anges i PDF forms ovan, men har ett l
 
 Flex Forms återges av SWFTaskForm och stödlinjer återges av HTMLTaskForm-vyer.
 
-I AEM Forms-arbetsytan kommunicerar dessa vyer med SWF som utgör formuläret/stödlinjen för Flex® med hjälp av en mellanhand som är i SWF `/lc/libs/ws/libs/ws/WSNextAdapter.swf`
+I AEM Forms-arbetsytan kommunicerar dessa vyer med det faktiska SWF som utgör formuläret/stödlinjen för Flex® med hjälp av en mellanhand som finns på `/lc/libs/ws/libs/ws/WSNextAdapter.swf`
 
 Kommunikationen sker med `swfObject.postMessage` / `window.flexMessageHandler`.
 
-Detta protokoll definieras av `WsNextAdapter.swf`. Befintliga `flexMessageHandlers`i fönsterobjekt tas tidigare öppnade SWF-formulär bort innan ett nytt läggs till. Logiken tar också hänsyn till växlingen mellan fliken Formulär och fliken Historik i vyn med uppgiftsdetaljer. The `WsNextAdapter.swf` används för att utföra olika formuläråtgärder som att spara eller skicka.
+Detta protokoll definieras av `WsNextAdapter.swf`. Det befintliga `flexMessageHandlers` i fönsterobjektet, från tidigare öppnade SWF-formulär, tas bort innan ett nytt läggs till. Logiken tar också hänsyn till växlingen mellan fliken Formulär och fliken Historik i vyn med uppgiftsdetaljer. `WsNextAdapter.swf` används för att utföra olika formuläråtgärder som att spara eller skicka.
 
 >[!NOTE]
 >
->Du bör inte ändra `WSNextAdapter.swf` eller innehållet i vyn SwfTaskForm/HtmlTaskForm.
+>Du bör inte ändra `WSNextAdapter.swf` eller innehållet i vyn SWfTaskForm/HtmlTaskForm.
 
 ## Tredjepartsprogram (till exempel Korrespondenshantering) {#third-party-applications-for-example-correspondence-management}
 
 Tredjepartsprogram återges med vyn ExtAppTaskForm.
 
-**Tredjepartsprogram för AEM Forms arbetsytekommunikation**
+**Tredjepartsprogram för kommunikation på AEM Forms-arbetsytan**
 
 AEM Forms arbetsyta lyssnar på `window.global.postMessage([Message],[Payload])`
 
-[Meddelande] kan vara en sträng som anges som `SubmitMessage`| `CancelMessage`| `ErrorMessage`| `actionEnabledMessage`i `runtimeMap`. Tredjepartsprogram måste använda det här gränssnittet för att meddela AEM Forms-arbetsytan efter behov. Det är obligatoriskt att använda det här gränssnittet eftersom AEM Forms-arbetsytan måste känna till att när uppgiften skickas så att den kan rensa upp aktivitetsfönstret.
+[Meddelande] kan vara en sträng som anges som `SubmitMessage`| `CancelMessage`| `ErrorMessage`| `actionEnabledMessage` i `runtimeMap` . Tredjepartsprogram måste använda det här gränssnittet för att meddela AEM Forms-arbetsytan efter behov. Det är obligatoriskt att använda det här gränssnittet eftersom AEM Forms-arbetsytan måste känna till att när uppgiften skickas så att den kan rensa upp aktivitetsfönstret.
 
-**AEM Forms arbetsyta till kommunikation med program från tredje part**
+**AEM Forms arbetsyta till kommunikation mellan program från tredje part**
 
-Om direktåtgärdsknapparna för AEM Forms-arbetsytan visas anropas `window.[External-App-Name].getMessage([Action])`, där `[Action]` läses från `routeActionMap`. Tredjepartsprogrammet måste lyssna på det här gränssnittet och sedan meddela AEM Forms via `postMessage ()` API.
+Om direktåtgärdsknapparna för AEM Forms-arbetsytan visas anropas `window.[External-App-Name].getMessage([Action])`, där `[Action]` läses från `routeActionMap`. Tredjepartsprogrammet måste lyssna på det här gränssnittet och sedan meddela AEM Forms-arbetsytan via API:t `postMessage ()`.
 
-Ett Flex-program kan till exempel definiera `ExternalInterface.addCallback('getMessage', listener)` för att stödja denna kommunikation. Om tredjepartsprogrammet vill hantera formulärskickning med sina egna knappar, bör du ange `hideDirectActions = true() in the runtimeMap` och du kan hoppa över den här avlyssnaren. Denna konstruktion är alltså valfri.
+Ett Flex-program kan till exempel definiera `ExternalInterface.addCallback('getMessage', listener)` som stöd för den här kommunikationen. Om tredjepartsprogrammet vill hantera formulärsändning med sina egna knappar, bör du ange `hideDirectActions = true() in the runtimeMap` och du kan hoppa över den här lyssnaren. Denna konstruktion är alltså valfri.
 
-Du kan läsa mer om integrering av tredjepartsprogram för Correspondence Management på [Integrera korrespondenshantering i AEM Forms arbetsyta](/help/forms/using/integrating-correspondence-management-html-workspace.md).
+Du kan läsa mer om integrering av tredjepartsprogram för Korrespondenshantering på [Integrera korrespondenshantering i AEM Forms arbetsyta](/help/forms/using/integrating-correspondence-management-html-workspace.md).

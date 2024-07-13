@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Konfigurera Connector för IBM FileNet {#configuring-connector-for-ibm-filenet}
 
-Koppling för IBM FileNet möjliggör kommunikation mellan AEM och IBM FileNet. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_63).
+Koppling för IBM FileNet möjliggör kommunikation mellan AEM och IBM FileNet. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
 
 >[!NOTE]
 >
@@ -41,8 +41,8 @@ IBM FileNet P8 Content Engine tillhandahåller programvarutjänster för hanteri
 
 1. Välj en av följande skyddsnivåer i listan över autentiseringsskyddssystem:
 
-   * **Rensa:** Skickar autentiseringsuppgifter i oskyddat läge över nätverket
-   * **Symmetrisk:** Skickar krypterade inloggningsuppgifter i nätverket
+   * **Rensa:** Skickar autentiseringsuppgifter över nätverket i oskyddat läge
+   * **Symmetrisk:** Skickar krypterade autentiseringsuppgifter i nätverket
 
 1. Ange sökvägen till krypteringsfilen i rutan Plats för krypteringsfil:
 
@@ -79,9 +79,9 @@ Du kan konfigurera vilken databastjänstleverantör som ska användas med FileNe
 
 Följande alternativ är tillgängliga:
 
-**Aktuellt databasprovidernamn:** Namnet på den aktuella databastjänstprovidern
+**Aktuellt databasprovidernamn:** Namnet på den aktuella databasprovidern
 
-**IBM FileNet-databasprovider:** Gör FileNet-databasprovidern till databasprovidern. Det här alternativet har tagits bort.
+**IBM FileNet-databasprovider:** gör FileNet-databasprovidern till databasprovidern. Det här alternativet har tagits bort.
 
 **databasprovider:** Gör den inbyggda databasprovidern till databasprovidern
 

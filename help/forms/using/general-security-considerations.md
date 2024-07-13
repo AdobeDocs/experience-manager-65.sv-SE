@@ -142,12 +142,12 @@ Säkerhetsinformation om databaser som stöds av AEM Forms på JEE finns i resur
   </tr>
   <tr>
    <td><p>Oracle® 12c</p> </td>
-   <td><p>Se kapitlet Säkerhet i <a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oraclets 12g-dokumentation</a></p> </td>
+   <td><p>Se kapitlet om säkerhet i <a href="https://docs.oracle.com/database/121/TDPSG/GUID-6E2F4E53-5D87-4FCD-9C9C-6792217D7014.htm#TDPSG94426" target="_blank">Oraclets 12g-dokumentation</a></p> </td>
   </tr>
  </tbody>
 </table>
 
-I den här tabellen beskrivs de standardportar som krävs för att vara öppna under konfigurationsprocessen för AEM Forms on JEE. Om du ansluter via https kan du justera portinformationen och IP-adresserna i enlighet med detta. Mer information om hur du konfigurerar portar finns i *Installera och distribuera AEM Forms på JEE* -dokument för programservern.
+I den här tabellen beskrivs de standardportar som krävs för att vara öppna under konfigurationsprocessen för AEM Forms on JEE. Om du ansluter via https kan du justera portinformationen och IP-adresserna i enlighet med detta. Mer information om hur du konfigurerar portar finns i dokumentet *Installera och distribuera AEM Forms på JEE* för programservern.
 
 <table>
  <thead>
@@ -210,11 +210,11 @@ JBoss® Application Server använder 8080 som standard-HTTP-port. JBoss® har ä
 
 1. Öppna följande fil för redigering:
 
-   Single-Server-installation: [JBoss®-rot]/standalone/configuration/standalone.xml
+   Single-Server-installation: [JBoss® root]/standalone/configuration/standalone.xml
 
-   Klusterinstallationer: [JBoss®-rot]/domain/configuration/domain.xml
+   Klusterinstallationer: [JBoss® root]/domain/configuration/domain.xml
 
-1. Ändra värdet för **port** i **&lt;socket-binding>** -taggen till ett anpassat portnummer. I följande exempel används port 8090:
+1. Ändra värdet för attributet **port** i taggen **&lt;socket-binding>** till ett anpassat portnummer. I följande exempel används port 8090:
 
    &lt;socket-binding name=&quot;http&quot; port=&quot;8090&quot;/>
 
@@ -241,7 +241,7 @@ AEM Forms on JEE använder AEM Forms on JEE-databasen för att lagra känslig do
 
 Programservern som används för att köra AEM Forms på JEE kräver en egen konfiguration för åtkomst till databasen via en datakälla som är konfigurerad på programservern. Se till att programservern inte visar databaslösenordet i klartext i sin datakällkonfigurationsfil.
 
-The lc_[databas]XML-filen får inte innehålla lösenord i klartextformat. Kontakta programserverleverantören om hur du krypterar dessa lösenord för programservern.
+Filen lc_[database].xml får inte innehålla lösenord i klartextformat. Kontakta programserverleverantören om hur du krypterar dessa lösenord för programservern.
 
 >[!NOTE]
 >

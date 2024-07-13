@@ -20,7 +20,7 @@ Lär dig hur du väljer en användare eller grupp för ett AEM Forms-arbetsflöd
 
 I stora organisationer finns det krav på att dynamiskt välja användare för en process. Du kan till exempel välja en fältagent som ska betjäna en kund baserat på hur nära kunden är agenten. I så fall väljs agenten dynamiskt.
 
-Tilldela uppgifter och Adobe Sign steg i [Forms-centrerade arbetsflöden på OSGi](/help/forms/using/aem-forms-workflow.md) innehåller alternativ för att dynamiskt välja en användare. Du kan använda ECMAScript- eller OSGi-paket för att dynamiskt välja en tilldelare för steget Tilldela uppgift eller för att välja signerare för steget Signera dokument.
+Tilldela uppgifter och Adobe Sign-steg för [Forms-centrerade arbetsflöden i OSGi](/help/forms/using/aem-forms-workflow.md) innehåller alternativ för att dynamiskt välja en användare. Du kan använda ECMAScript- eller OSGi-paket för att dynamiskt välja en tilldelare för steget Tilldela uppgift eller för att välja signerare för steget Signera dokument.
 
 ## Använd ECMAScript för att dynamiskt välja en användare eller grupp {#use-ecmascript-to-dynamically-select-a-user-or-group}
 
@@ -30,7 +30,7 @@ ECMAScript är ett skriptspråk. Det används för skript och serverprogram på 
 1. Skapa en fil med filtillägget .ecma i följande sökväg. Om sökvägen (nodstrukturen) inte finns skapar du den:
 
    * (Sökväg för steget Tilldela uppgift) `/apps/fd/dashboard/scripts/participantChooser`
-   * (Sökväg för signering, steg) `/apps/fd/workflow/scripts/adobesign`
+   * (Sökväg för signatursteg) `/apps/fd/workflow/scripts/adobesign`
 
 1. Lägg till ECMAScript som har logik att dynamiskt välja en användare i .ecma-filen. Klicka på **[!UICONTROL Save All]**.
 
@@ -38,17 +38,17 @@ ECMAScript är ett skriptspråk. Det används för skript och serverprogram på 
 
 1. Lägg till skriptets visningsnamn. Det här namnet visas i arbetsflödessteg. Så här anger du namnet:
 
-   1. Expandera skriptnoden genom att högerklicka på **[!UICONTROL jcr:content]** och klicka på **[!UICONTROL Mixins]**.
-   1. Lägg till `mix:title` i dialogrutan Redigera mixar och klicka på **OK**.
+   1. Expandera skriptnoden, högerklicka på noden **[!UICONTROL jcr:content]** och klicka på **[!UICONTROL Mixins]**.
+   1. Lägg till egenskapen `mix:title` i dialogrutan Redigera mixar och klicka på **OK**.
    1. Lägg till följande egenskap i jcr:content-noden i skriptet:
 
       | Namn | Typ | Värde |
       |--- |--- |--- |
       | jcr:title | Sträng | Ange namnet på skriptet. Välj till exempel närmaste fältagent. Det här namnet visas i Tilldela uppgift och Signera dokument. |
 
-   1. Klicka **Spara alla**. Skriptet blir tillgängligt för val i komponenterna i AEM.
+   1. Klicka på **Spara alla**. Skriptet blir tillgängligt för val i komponenterna i AEM.
 
-      ![script](assets/script.png)
+      ![skript](assets/script.png)
 
 ### Exempel på ECMAScript för att dynamiskt välja en användare eller grupp {#sample-ecmascripts-to-dynamically-choose-a-user-or-a-group}
 
@@ -115,13 +115,13 @@ function getAdobeSignRecipients() {
 
 ## Använd Java-gränssnittet för att dynamiskt välja en användare eller grupp {#use-java-interface-to-dynamically-choose-a-user-or-group}
 
-Du kan använda [MottagareInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java-gränssnittet gör att du dynamiskt kan välja en användare eller en grupp för steg i Adobe Sign och Tilldela uppgift. Du kan skapa ett OSGi-paket som använder [MottagareInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java-gränssnittet och distribuera det till AEM Forms-servern. Det gör alternativet tillgängligt för val i komponenterna Tilldela uppgift och Adobe Sign i AEM arbetsflöde.
+Du kan använda Java-gränssnittet [RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) för att dynamiskt välja en användare eller en grupp för Adobe Sign och tilldela uppgiftssteg. Du kan skapa ett OSGi-paket som använder Java-gränssnittet [RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) och distribuera det till AEM Forms-servern. Det gör alternativet tillgängligt för val i komponenterna Tilldela uppgift och Adobe Sign i AEM arbetsflöde.
 
-Du behöver [AEM Forms Client SDK](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) jar och [granit burk](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) filer för att kompilera kodexemplet som anges nedan. Lägg till dessa jar-filer som externa beroenden i OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
+Du behöver [AEM Forms Client SDK](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) jar- och [granite jar](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.workflow.api/1.0.2/) -filer för att kompilera kodexemplet som listas nedan. Lägg till dessa jar-filer som externa beroenden i OSGi-paketprojektet. Du kan använda vilken Java-utvecklingsmiljö som helst för att skapa ett OSGi-paket. I följande procedur beskrivs hur du använder Eclipse för att skapa ett OSGi-paket:
 
 1. Öppna Eclipse IDE. Navigera till **[!UICONTROL File]**> **[!UICONTROL New Project]**.
-1. Välj **[!UICONTROL Maven Project]** och klicka **[!UICONTROL Next]**.
-1. I New Maven Project håller du ned standardinställningarna och klickar **[!UICONTROL Next]**. Markera en arkityp och klicka på **[!UICONTROL Next]**. Exempel: maven-arketype-quickstart. Ange **[!UICONTROL Group Id]**, **[!UICONTROL Artifact Id]**, **[!UICONTROL version]** och **[!UICONTROL package]** för projektet och klicka på **[!UICONTROL Finish]**. Projektet skapas.
+1. På skärmen Välj en guide väljer du **[!UICONTROL Maven Project]** och klickar på **[!UICONTROL Next]**.
+1. I New Maven-projektet behåller du standardinställningarna och klickar på **[!UICONTROL Next]**. Välj en arketyp och klicka på **[!UICONTROL Next]**. Exempel: maven-arketype-quickstart. Ange **[!UICONTROL Group Id]**, **[!UICONTROL Artifact Id]**, **[!UICONTROL version]** och **[!UICONTROL package]** för projektet och klicka på **[!UICONTROL Finish]**. Projektet skapas.
 1. Öppna filen pom.xml och redigera och ersätt allt innehåll i filen med följande:
 
    ```xml
@@ -224,7 +224,7 @@ Du behöver [AEM Forms Client SDK](https://experienceleague.adobe.com/docs/exper
    </project>
    ```
 
-1. Lägg till källkod som använder [MottagareInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) Java-gränssnittet för att dynamiskt välja en användare eller en grupp för steget Tilldela uppgift. Exempelkod finns i [Exempel för dynamiskt val av användare eller grupp med Java-gränssnittet](#-sample-scripts-for).
+1. Lägg till källkod som använder Java-gränssnittet [RecipientInfoSpecifier](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/workflow/adobesign/api/RecipientInfoSpecifier.html) för att dynamiskt välja en användare eller en grupp för tilldelningssteget. Exempelkod finns i [Exempel på dynamiskt val av användare eller grupp med Java-gränssnittet](#-sample-scripts-for).
 1. Öppna en kommandotolk och navigera till katalogen som innehåller OSGi-paketprojektet. Använd följande kommando för att skapa OSGi-paketet:
 
    `mvn clean install`

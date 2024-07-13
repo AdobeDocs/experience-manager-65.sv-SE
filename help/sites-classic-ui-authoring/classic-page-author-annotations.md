@@ -43,7 +43,7 @@ En anteckning placerar en färgmarkör/anteckning på sidan. Med anteckningen ka
 
 Beroende på styckedesignen är anteckningen antingen tillgänglig som ett alternativ på snabbmenyn (vanligtvis högerknappen när den placeras över det önskade stycket) eller som en knapp på styckets redigeringsfält.
 
-Välj i båda fallen **Anteckna**. En färgad anteckning används i stycket. Du är direkt i redigeringsläget och kan lägga till text direkt:
+I båda fallen väljer du **Anteckning**. En färgad anteckning används i stycket. Du är direkt i redigeringsläget och kan lägga till text direkt:
 
 ![chlimage_1-137](assets/chlimage_1-137.png)
 
@@ -97,7 +97,7 @@ Skisser är en funktion av anteckningar som gör att du kan skapa enkla linjereg
 * När du har avslutat skissläget kan du klicka på en skiss för att markera den.
 * Flytta en skiss genom att markera skissen och sedan dra den till önskad plats.
 * En skiss täcker över innehållet. Det innebär att du inte kan klicka på det underliggande stycket i skissens fyra hörn. Om du till exempel måste redigera eller komma åt en länk. Om det här blir ett problem (du till exempel har en skiss som täcker ett stort område på sidan) minimerar du sedan lämplig anteckning, eftersom detta även minimerar alla relaterade skisser och ger dig tillgång till det underliggande området.
-* Om du vill ta bort en enskild skiss markerar du önskad skiss och trycker sedan på **Ta bort** tangent (**fn**-**backspace** på en Mac).
+* Om du vill ta bort en enskild skiss markerar du önskad skiss och trycker sedan på tangenten **Delete** (**fn**-**backspace** på en Mac).
 
 * Om du flyttar, eller kopierar, ett stycke flyttas eller kopieras även alla relaterade anteckningar och skisser, och deras placering i förhållande till stycket ändras inte.
 * Om du tar bort en anteckning tas även alla skisser som är kopplade till den anteckningen bort.

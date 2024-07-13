@@ -27,7 +27,7 @@ Du kan övervaka AEM formulärdistributioner både på systemnivå och intern ni
 AEM Forms tillhandahåller två registrerade MBeans med navigerings- och statistikinformation. De här delarna är de enda MBeans som stöds för integrering och inspektion:
 
 * **ServiceStatistic:** Denna MBean ger information om tjänstens namn och version.
-* **OperationStatistic:** Denna MBean ger statistik över alla AEM Forms-servertjänster. I det här MBean-värdet kan administratörer få information om en viss tjänst, som starttid och antal fel.
+* **OperationStatistic:** Denna MBean tillhandahåller statistik för alla AEM Forms-servertjänster. I det här MBean-värdet kan administratörer få information om en viss tjänst, som starttid och antal fel.
 
 ### ServiceStatisticMbean public interfaces {#servicestatisticmbean-public-interfaces}
 
@@ -73,7 +73,7 @@ Med en JMX-konsol (JConsole) finns statistik från OperationStatistic MBean till
 
 **MBean-träd**
 
-**Domännamn för Adobe:** Beroende på programserver. Om programservern inte definierar domänen är standardvärdet adobe.com.
+**Adobe-domännamnet:** är beroende av programservern. Om programservern inte definierar domänen är standardvärdet adobe.com.
 
 **ServiceType:** AdobeService är det namn som används för att lista alla tjänster.
 
@@ -83,21 +83,21 @@ Med en JMX-konsol (JConsole) finns statistik från OperationStatistic MBean till
 
 **Åtgärdsstatistik**
 
-**Anropstid:** Tidsåtgång för körning av metoden. Den här anropet inkluderar inte den tid då begäran serialiseras, överförs från klient till server och avserialiseras.
+**Anropstid:** Tid för körning av metoden. Den här anropet inkluderar inte den tid då begäran serialiseras, överförs från klient till server och avserialiseras.
 
 **Antal anrop:** Antalet gånger som tjänsten anropas.
 
-**Genomsnittlig anropstid:** Genomsnittlig tid för alla anrop som har körts sedan servern startades.
+**Genomsnittlig starttid:** Genomsnittlig tid för alla anrop som har körts sedan servern startades.
 
 **Maximal starttid:** Varaktigheten för det längsta anropet som har körts sedan servern startades.
 
-**Minsta anropstid:** Varaktigheten för det kortaste anropet som har körts sedan servern startades.
+**Minimal starttid:** Varaktigheten för det kortaste anropet som har körts sedan servern startades.
 
 **Antal undantag:** Antal anrop som har resulterat i fel.
 
 **Undantagsmeddelande:** Felmeddelandet för det senaste undantaget som inträffade.
 
-**Datum och tid för senaste provtagning:** Datum för det senaste anropet.
+**Senaste samplingsdatum och tid:** Datum för det senaste anropet.
 
 **Tidsenhet:** Standardvärdet är millisekunder.
 
@@ -144,7 +144,7 @@ Om du vill visa MBeans från JConsole konfigurerar du JBoss-programserverns JVM-
     -Djavax.management.builder.initial= -Dcom.sun.management.jmxremote
    ```
 
-1. Lägg till eller ta bort kommentarer för följande tre rader i /opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.properties (eller &lt;your websphere=&quot;&quot; jre=&quot;&quot;>lib/management/management.properties):
+1. Lägg till eller avkommentera följande tre rader i /opt/IBM/WebSphere/AppServer/java/jre/lib/management/management.properties (eller &lt;Your Websphere JRE>/ lib/management/management.properties):
 
    ```shell
     com.sun.management.jmxremote.port=9999 //any port you like, but make sure you use this port when you connect

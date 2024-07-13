@@ -41,8 +41,8 @@ På sidan Ändra licens visas information om din licens:
 
    * **EVAL:** 60-dagars utvärderingslicens
    * **DEV:** Permanent utvecklingslicens
-   * **NFR:** 2-årig utvärderingslicens
-   * **IDEV:** 1-årsprenumeration på Adobe Developer
+   * **NFR:** Tvåårig utvärderingslicens
+   * **IDEV:** Ettårsprenumeration på Adobe Developer Program
    * **Produktion:** Permanent licens
 
 1. Välj Ja, licensändringen är giltig för alla distribuerade moduler.

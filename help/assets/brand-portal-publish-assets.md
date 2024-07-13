@@ -1,5 +1,5 @@
 ---
-title: Publicera material i Brand Portal
+title: Publish-material till Brand Portal
 description: Lär dig hur du publicerar och avpublicerar resurser på Brand Portal.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -18,7 +18,7 @@ ht-degree: 39%
 
 ---
 
-# Publicera material i Brand Portal {#publish-assets-to-brand-portal}
+# Publish-material till Brand Portal {#publish-assets-to-brand-portal}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -33,37 +33,37 @@ När replikeringen är klar kan du publicera resurser, mappar och samlingar till
 >
 >Adobe rekommenderar stegvis publicering, helst vid tidpunkter med låg belastning, för att AEM-författaren inte ska uppta för mycket resurser.
 
-1. I resurskonsolen markerar du de resurser/mappar som du vill publicera och klickar på **[!UICONTROL Quick Publish]** i verktygsfältet.
+1. På Assets-konsolen väljer du de resurser/den mapp som du vill publicera och klickar på alternativet **[!UICONTROL Quick Publish]** i verktygsfältet.
 
    Du kan också välja de mediefiler du vill publicera till Brand Portal.
 
    ![publish2bp-2](assets/publish2bp.png)
 
 1. Följande två alternativ är tillgängliga när du vill publicera mediefiler till Brand Portal:
-   * [Publicera resurser direkt](#publish-to-bp-now)
-   * [Publicera resurser senare](#publish-to-bp-now)
+   * [Publish-resurser omedelbart](#publish-to-bp-now)
+   * [Publish-resurser senare](#publish-to-bp-now)
 
-## Publicera resurser nu {#publish-to-bp-now}
+## Publish-resurser nu {#publish-to-bp-now}
 
 Gör något av följande för att publicera de markerade resurserna på varumärkesportalen:
 
-* Välj **[!UICONTROL Quick Publish]** i verktygsfältet. Välj sedan **[!UICONTROL Publish to Brand Portal]**.
+* Välj **[!UICONTROL Quick Publish]** i verktygsfältet. Välj sedan **[!UICONTROL Publish to Brand Portal]** på menyn.
 
 * Välj **[!UICONTROL Manage Publication]** i verktygsfältet.
 
-   1. Sedan från **[!UICONTROL Action]** välj **[!UICONTROL Publish to Brand Portal]** och från **[!UICONTROL Scheduling]** välj **[!UICONTROL Now]**. Klicka på **[!UICONTROL Next]**.
+   1. Från **[!UICONTROL Action]** väljer du sedan **[!UICONTROL Publish to Brand Portal]** och från **[!UICONTROL Scheduling]** väljer du **[!UICONTROL Now]**. Klicka på **[!UICONTROL Next]**.
 
-   2. Inom **[!UICONTROL Scope]**, bekräfta ditt val och klicka på **[!UICONTROL Publish to Brand Portal]**.
+   2. Bekräfta ditt val i **[!UICONTROL Scope]** och klicka på **[!UICONTROL Publish to Brand Portal]**.
 
 Ett meddelande visas som anger att resurserna har placerats i kö för publicering på varumärkesportalen. Logga in på gränssnittet för varumärkesportalen för att visa de publicerade resurserna.
 
-## Publicera resurser senare {#publish-to-bp-later}
+## Publish-resurser senare {#publish-to-bp-later}
 
 Gör så här för att schemalägga publicering av resurser på varumärkesportalen till ett senare datum eller en senare tid:
 
 1. När du har valt resurser/mappar att publicera väljer du **[!UICONTROL Manage Publication]** i verktygsfältet högst upp.
 
-1. På **[!UICONTROL Manage Publication]** sida, markera **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]** och markera **[!UICONTROL Later]** från **[!UICONTROL Scheduling]**.
+1. På sidan **[!UICONTROL Manage Publication]** väljer du **[!UICONTROL Publish to Brand Portal]** från **[!UICONTROL Action]** och sedan **[!UICONTROL Later]** från **[!UICONTROL Scheduling]**.
 
    ![publishlaterbp-1](assets/publishlaterbp-1.png)
 
@@ -85,7 +85,7 @@ Logga sedan in på Brand Portal för att se om de publicerade resurserna finns t
 
    ![bp_landingpage](assets/bp_landingpage.png)
 
-1. Växla till listvyn ![Listvy](assets/list-view.svg) om du vill visa resursens aktuella publiceringsstatus.
+1. Växla till listvyn ![listvyn](assets/list-view.svg) om du vill visa resursens aktuella publiceringsstatus.
 
 <!--2. On the [Asset Reports page](#https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/asset-reports), you can see the current state of the report job, for example, Success, Failed, Queued, or Scheduled.-->
 

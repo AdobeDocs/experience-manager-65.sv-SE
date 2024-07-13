@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Omstrukturering av Forms-lager i AEM 6.5{#forms-repository-restructuring-in-aem}
 
-Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/sites-deploying/repository-restructuring.md) på denna sida bör kunder som uppgraderar till AEM 6.5 använda denna sida för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Forms-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
+Så som beskrivs på den överordnade sidan [Databasomstrukturering på sidan AEM 6.5](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.5 använda den här sidan för att utvärdera arbetsinsatsen som är kopplad till databasändringar som påverkar AEM Forms-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
 
 **Med 6.5-uppgradering**
 
@@ -95,7 +95,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
 | **Föregående plats** | `/etc/cloudservices/echosign` |
 |---|---|
 | **Ny plats** | `/conf/<tenant>/settings/cloudconfigs/echosign` |
-| **Omstruktureringsvägledning** | The [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) verktyg som ska utlösas från Forms migreringsgränssnitt. |
+| **Omstruktureringsvägledning** | Verktyget [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som ska utlösas från användargränssnittet för Forms-migrering. |
 | **Anteckningar** | Ej tillämpligt |
 
 ### Konfigurationer av Recaptcha-Cloud Service {#recaptcha-cloud-service-configurations}
@@ -103,7 +103,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
 | **Föregående plats** | `/etc/cloudservices/recaptcha` |
 |---|---|
 | **Ny plats** | `/conf/<tenant>/settings/cloudconfigs/recaptcha` |
-| **Omstruktureringsvägledning** | The [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) verktyg som ska utlösas från Forms migreringsgränssnitt. |
+| **Omstruktureringsvägledning** | Verktyget [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som ska utlösas från användargränssnittet för Forms-migrering. |
 | **Anteckningar** | Ej tillämpligt |
 
 ### Konfigurationer av Typekit-Cloud Service {#typekit-cloud-service-configurations}
@@ -111,7 +111,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
 | **Föregående plats** | `/etc/cloudservices/typekit` |
 |---|---|
 | **Ny plats** | `/conf/<tenant>/settings/cloudconfigs/typekit` |
-| **Omstruktureringsvägledning** | The [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) verktyg som ska utlösas från Forms migreringsgränssnitt. |
+| **Omstruktureringsvägledning** | Verktyget [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som ska utlösas från användargränssnittet för Forms-migrering. |
 | **Anteckningar** | Ej tillämpligt |
 
 ### Diverse {#misc-1}
@@ -119,11 +119,11 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
 | **Föregående plats** | `/etc/cloudservices/fdm` |
 |---|---|
 | **Ny plats** | `/conf/<tenant>/settings/cloudconfigs/fdm` |
-| **Omstruktureringsvägledning** | The [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) verktyg som ska utlösas från Forms migreringsgränssnitt. |
+| **Omstruktureringsvägledning** | Verktyget [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md) som ska utlösas från användargränssnittet för Forms-migrering. |
 | **Anteckningar** | Ej tillämpligt |
 
 | **Föregående plats** | `/etc/designs/fd/fp` |
 |---|---|
 | **Ny plats** | `/libs/fd/fp` |
-| **Omstruktureringsvägledning** | Uppdatera referenser till mallarna /etc för att peka på dem `/libs` motpart. |
+| **Omstruktureringsvägledning** | Uppdatera alla referenser till mallarna /etc så att de pekar på sina `/libs` motsvarigheter. |
 | **Anteckningar** | Ej tillämpligt |

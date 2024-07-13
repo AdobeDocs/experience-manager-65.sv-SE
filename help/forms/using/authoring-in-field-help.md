@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Sammanhangsberoende hjälp för formulärfält{#authoring-in-context-help-for-form-fields}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 ## Introduktion {#introduction}
 
@@ -46,7 +46,7 @@ Fältet Kort beskrivning ger snabba och korta tips om hur du fyller i ett formul
 
 >[!NOTE]
 >
->Välj **Visa alltid kort beskrivning** för att permanent visa hjälptexten under fältet.
+>Välj **Visa alltid kort beskrivning** om du vill visa hjälptexten under fältet permanent.
 
 ![Permanent kort sammanhangsberoende hjälp nedanför fältet](assets/short1.png)
 
@@ -56,9 +56,9 @@ Du kan använda fältet Lång beskrivning för att ange lång text eller bädda 
 
 ![Lägga till multimedia som sammanhangsberoende hjälp för formulärfält](assets/long-descriptions.png)
 
-Om du lägger till lång beskrivning visas en **?** -ikonen bredvid fältet. När du klickar på ikonen visas det innehåll som lagts till i avsnittet med lång beskrivning.
+Om du lägger till lång beskrivning visas en **?**-ikon bredvid fältet. När du klickar på ikonen visas det innehåll som lagts till i avsnittet med lång beskrivning.
 
-![Exempel på sammanhangsberoende multimediahjälp](assets/photoshop.png)
+![Exempel på sammanhangsberoende hjälp för multimedia](assets/photoshop.png)
 
 ### Hjälp på panelnivå {#panel-level-help}
 
@@ -66,6 +66,6 @@ Utöver sammanhangsberoende hjälp för formulärfält kan du ange hjälp på pa
 
 ![Lägga till sammanhangsberoende hjälp för en formulärpanel](assets/panel-level-help.png)
 
-Om du lägger till hjälp för panelen visas en **?** -ikonen bredvid panelbeskrivningen. När du klickar på ikonen visas det innehåll som lagts till i hjälpdelen i dialogrutan Redigera i panelen.
+Om du lägger till hjälp för panelen visas en **?Ikonen** bredvid panelbeskrivningen. När du klickar på ikonen visas det innehåll som lagts till i hjälpdelen i dialogrutan Redigera i panelen.
 
 ![Exempel på sammanhangsberoende hjälp på formulärpanelsnivå](assets/photoshop-1.png)

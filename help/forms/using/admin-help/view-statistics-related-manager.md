@@ -27,7 +27,7 @@ Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. D
 
 ### Kategori {#category}
 
-**Standard:** Alla arbetsobjekt som klienten inte tilldelade en kategori till när de skickades. Work Manager hanterar dessa objekt och statusvärdena tillhör Work Manager.
+**Standard:** Alla arbetsobjekt som klienten inte tilldelade någon kategori till när de skickades. Work Manager hanterar dessa objekt och statusvärdena tillhör Work Manager.
 
 **Jobbhanteraren:** Alla jobb som tillhör jobbhanteraren. Jobbhanteraren hanterar sina egna jobb och har egna jobbstatusvärden. Se de specifika jobbstatusarna som beskrivs nedan.
 
@@ -39,13 +39,13 @@ Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. D
 
 **Visa alla:** Visar alla aktuella arbetsuppgifter.
 
-**Schemalagd:** Visar alla arbetsobjekt som är klara för körning av programservern men som ännu inte startats.
+**Schemalagd:** Visar alla arbetsobjekt som kan köras av programservern men som inte har startats ännu.
 
-**Pausad:** Visar alla schemalagda arbetsuppgifter som klientprogrammet har pausat. Dessa objekt kan köras eller tas bort. (Se Hantera arbetsobjekt eller jobb.)
+**Pausad:** Visar alla schemalagda arbetsobjekt som klientprogrammet har pausat. Dessa objekt kan köras eller tas bort. (Se Hantera arbetsobjekt eller jobb.)
 
 **Pågår:** Visar alla arbetsobjekt som programserverns Work Manager har hämtat och som antingen kommer att slutföras eller misslyckas. Du kan inte använda åtgärder för dessa arbetsobjekt.
 
-**Fullständigt:** Visar alla arbetsobjekt som har körts. Beständiga arbetsobjekt behålls i det här läget och icke-beständiga objekt tas bort när återanrop till återanropshanterarna slutförs. Du kan ta bort dessa objekt genom att använda åtgärden Ta bort objekt. (Se Hantera arbetsobjekt eller jobb.)
+**Slutförd:** Visar alla arbetsobjekt som har körts. Beständiga arbetsobjekt behålls i det här läget och icke-beständiga objekt tas bort när återanrop till återanropshanterarna slutförs. Du kan ta bort dessa objekt genom att använda åtgärden Ta bort objekt. (Se Hantera arbetsobjekt eller jobb.)
 
 **Misslyckades:** Visar alla arbetsobjekt som inte slutfördes korrekt på grund av ett feltillstånd. Du kan göra om de här arbetsobjekten några gånger genom att använda åtgärden Försök igen. (Se Hantera arbetsobjekt eller jobb.) En fellänk i statuskolumnen ger dig åtkomst till information om felet.
 
@@ -55,23 +55,23 @@ Fliken Arbetshanterare visar statistik som relaterar till Work Manager-objekt. D
 
 **Slutförd:** Visar alla jobb som har slutförts. Beständiga arbetsobjekt behålls i det här läget och icke-beständiga objekt tas bort när återanrop till återanropshanterarna slutförs.
 
-**Fullständigt begärt:** Visar jobb för vilka en fullständig begäran har gjorts.
+**Fullständigt begärd:** Visar jobb för vilka en fullständig begäran har gjorts.
 
-**Misslyckades:** Visar jobb för vilka en misslyckad begäran har gjorts.
+**Misslyckades begärd:** Visar jobb för vilka en misslyckad begäran gjordes.
 
 **Misslyckades:** Visar jobb som inte slutfördes korrekt på grund av ett feltillstånd. En fellänk i statuskolumnen ger dig åtkomst till information om felet.
 
 **Avsluta begärd:** Visar jobb för vilka en avslutningsbegäran har gjorts.
 
-**Avbruten:** Visar jobb som avslutats utan att slutföras.
+**Avbruten:** Visar jobb som avslutades utan att slutföras.
 
 **Begärt uppehåll:** Visar jobb för vilka en pausbegäran har gjorts.
 
-**Avbruten:** Visar jobb som har pausats.
+**Avbrutet:** Visar jobb som har pausats.
 
-**Återuppta begärd:** Visar jobb för vilka en CV-begäran har gjorts.
+**Återuppta begärd:** Visar jobb för vilka en CV-begäran gjordes.
 
-**I kö:** Visar jobb som finns i kön.
+**Köad:** Visar jobb som finns i kön.
 
 **Körs:** Visar jobb som körs.
 
@@ -107,7 +107,7 @@ När du klickar på Mer information visas en lista med de arbetsobjekt eller job
    >
    >Åtgärderna är tillgängliga beroende på objektets status.
 
-   **Ta bort objekt:** Tar bort den valda arbetsuppgiften eller jobbet.
+   **Ta bort objekt:** Tar bort det markerade arbetsobjektet eller jobbet.
 
    **Pausa objekt:** Pausar det markerade arbetsobjektet eller jobbet.
 

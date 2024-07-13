@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Guide för communitykomponenter  {#community-components-guide}
 
-Community Components Guide är ett interaktivt utvecklingsverktyg för [ramverk för sociala komponenter (SCF)](scf.md). Här finns en lista med tillgängliga komponenter för Adobe Experience Manager (AEM) Communities eller de mer komplexa funktioner som byggts av flera komponenter.
+Guide för communitykomponenter är ett interaktivt utvecklingsverktyg för det [sociala komponentramverket (SCF)](scf.md). Här finns en lista med tillgängliga komponenter för Adobe Experience Manager (AEM) Communities eller de mer komplexa funktioner som byggts av flera komponenter.
 
 Tillsammans med grundläggande information för varje komponent kan guiden experimentera med hur SCF-komponenterna/-funktionerna fungerar och hur de kan konfigureras eller anpassas.
 
-Mer information om grundläggande utvecklingsfunktioner för varje komponent finns i [Grundläggande funktioner och komponenter](essentials.md).
+Information om grundläggande utvecklingsfunktioner för varje komponent finns i [Grundläggande om funktioner och komponenter](essentials.md).
 
 ## Komma igång {#getting-started}
 
@@ -37,9 +37,9 @@ Interaktionen med komponenterna i Communities varierar beroende på:
 * Servern (författare eller publicerad).
 * Anger om besökaren är inloggad eller inte.
 * Om du är inloggad, de privilegier som tilldelats medlemmen.
-* Om standardmetoden för SRP, [JSRP](jsrp.md), används.
+* Anger om standardmetoden för SRP, [JSRP](jsrp.md), används.
 
-Vid författare anger du redigeringsläget genom att infoga `editor.html` eller `cf#` som det första sökvägssegmentet efter servernamnet:
+Om du vill gå till redigeringsläge infogar du `editor.html` eller `cf#` som det första sökvägssegmentet efter servernamnet:
 
 * Standardgränssnitt:
 
@@ -47,7 +47,7 @@ Vid författare anger du redigeringsläget genom att infoga `editor.html` eller 
 
 * Klassiskt användargränssnitt:
 
-  [https://&lt;server>:&lt;port>/content/community-components/en.html](http://localhost:4502/cf#/content/community-components/en.html)
+  [https://](http://localhost:4502/cf#/content/community-components/en.html)
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ Vid författare anger du redigeringsläget genom att infoga `editor.html` eller 
 >
 >När komponentsidan visas i webbläsaren går du tillbaka till redigeringsläget och öppnar komponentens redigeringsdialogruta.
 >
->Allmän redigeringsinformation finns i [snabbguide till framtagning av sidor](../../help/sites-authoring/qg-page-authoring.md).
+>Allmän redigeringsinformation finns i [snabbguiden för redigering av sidor](../../help/sites-authoring/qg-page-authoring.md).
 >
 >Om du inte känner till AEM kan du läsa dokumentationen om [grundläggande hantering](../../help/sites-authoring/basic-handling.md).
 
@@ -78,8 +78,8 @@ Markera en komponent i listan till vänster på sidan.
 Huvudtexten i guiden visar:
 
 1. Titel: Namnet på den markerade komponenten
-1. [Klientbibliotek](#client-side-libraries): En lista över en eller flera obligatoriska kategorier
-1. [Inkluderande](scf.md#add-or-include-a-communities-component): Om komponenten kan inkluderas dynamiskt kan läget växlas i redigeringsläget för författare:
+1. [Bibliotek på klientsidan](#client-side-libraries): En lista med en eller flera nödvändiga kategorier
+1. [Inkluderbar](scf.md#add-or-include-a-communities-component): Om komponenten kan inkluderas dynamiskt kan läget aktiveras i redigeringsläget för författare:
 
    * Om den här texten läggs till visas den:&quot;Den här komponenten inkluderas via dess parnod.&quot;
    * Om den här texten inkluderas visas den:&quot;Den här komponenten inkluderas dynamiskt.&quot;
@@ -93,13 +93,13 @@ Huvudtexten i guiden visar:
 
 ### Författarinteraktioner {#author-interactions}
 
-När du använder guiden för en författarinstans kan du uppleva hur en komponent konfigureras genom att öppna dess dialogruta. Information för utvecklare finns i [Grundläggande om komponenter och funktioner](essentials.md) i dokumentationen, medan inställningarna för dialogrutorna beskrivs i [Communities-komponenter](author-communities.md) för författare.
+När du använder guiden för en författarinstans kan du uppleva hur en komponent konfigureras genom att öppna dess dialogruta. Information för utvecklare finns i avsnittet [Komponent- och Funktionsfunktioner](essentials.md) i dokumentationen, medan inställningarna för dialogrutorna beskrivs i avsnittet [Webbgruppskomponenter](author-communities.md) för författare.
 
-För guiden Community Components (Community-komponenter) har vissa inställningar för komponentdialogrutor ersatts med [Inkluderande](scf.md#add-or-include-a-communities-component) växla läge. Om du vill växla mellan att använda den befintliga resursen eller en resurs som ingår dynamiskt markerar du både komponenten och den inkluderbara texten i redigeringsläget och dubbelklickar för att öppna redigeringsdialogrutan:
+För guiden Community Components (Community-komponenter) har vissa inställningar i komponentdialogrutorna överlappats med växlingsläget [Inkluderbar](scf.md#add-or-include-a-communities-component). Om du vill växla mellan att använda den befintliga resursen eller en resurs som ingår dynamiskt markerar du både komponenten och den inkluderbara texten i redigeringsläget och dubbelklickar för att öppna redigeringsdialogrutan:
 
 ![community-component3](assets/community-component3.png)
 
-Under **Mallar** tab:
+Under fliken **Mallar**:
 
 ![community-component4](assets/community-component4.png)
 
@@ -115,23 +115,23 @@ Under **Mallar** tab:
 
   Standard är avmarkerat.
 
-### Publicera interaktioner {#publish-interactions}
+### Publish Interactions {#publish-interactions}
 
 När du använder guiden för en publiceringsinstans är det möjligt att uppleva komponenterna och funktionerna som en besökare (inte inloggad) och som medlemmar med olika behörigheter när de loggas in.
 
 >[!NOTE]
 >
->Tänk på att om SRP lämnas som standard till [JSRP](jsrp.md), kommer den UGC som anges i publiceringsinstansen endast att vara synlig vid publiceringen och kommer att *not* vara synlig från [moderering](moderate-ugc.md) konsol på författarinstansen.
+>Observera att om SRP lämnas som standard till [JSRP](jsrp.md) så syns bara den UGC som anges i publiceringsinstansen vid publiceringen och *inte* visas från konsolen [moderation](moderate-ugc.md) på författarinstansen.
 
 ## Bibliotek på klientsidan {#client-side-libraries}
 
-Klientsidans bibliotek (klientlibs) för varje komponent är de som *obligatoriskt* som ska refereras när komponenten placeras på en sida. Klientlibs är ett sätt att hantera och optimera nedladdningen av JavaScript och CSS som används för att återge komponenten i webbläsaren.
+Klientsidans bibliotek (klientlibs) som anges för varje komponent är de *som krävs* som ska refereras när komponenten placeras på en sida. Klientlibs är ett sätt att hantera och optimera nedladdningen av JavaScript och CSS som används för att återge komponenten i webbläsaren.
 
 Mer information finns på [Clientlibs for Communities Components](clientlibs.md).
 
 ## Personifiering {#impersonation}
 
-I författarinstansen, där en användare ofta är inloggad som administratör eller utvecklare, kan du använda textrutan till vänster om **[!UICONTROL Impersonate]** för att antingen skriva in användarnamnet eller välja i listrutan och sedan klicka på knappen. Klicka på Återställ för att logga ut och avsluta personifieringen.
+På författarinstansen, där en användare ofta är inloggad som administratör eller utvecklare, kan du använda textrutan till vänster om knappen **[!UICONTROL Impersonate]** för att antingen skriva in användarnamnet eller välja i listrutan och sedan klicka på knappen. Klicka på Återställ för att logga ut och avsluta personifieringen.
 
 Publiceringsinstansen behöver inte personifiera. Använd bara länken Login/Logout för att personifiera olika användare, till exempel [demoanvändare](tutorials.md#demo-users).
 
@@ -145,15 +145,15 @@ När det här alternativet är aktiverat är varje SCF-komponent tillgänglig f�
 >
 >**Det här verktyget är skrivskyddat**. Ingen av de ändringar som gjorts i mallar, CSS eller data sparas i databasen.
 
-Om du snabbt vill experimentera med anpassningar `scg:showIde`-egenskapen måste läggas till i komponentsidans innehåll-JCR-nod och ställas in på true.
+Om du snabbt vill experimentera med anpassningar måste egenskapen `scg:showIde` läggas till i komponentsidans innehåll-JCR-nod och ställas in på true.
 
 Använda kommentarkomponenten som exempel, på antingen författaren eller publiceringsinstansen, inloggad med administratörsbehörighet:
 
 1. Bläddra till [CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)
 
-   Till exempel: [http://localhost:4503/crx/de](http://localhost:4503/crx/de)
+   Exempel: [http://localhost:4503/crx/de](http://localhost:4503/crx/de)
 
-1. Markera komponentens `jcr:content` nod
+1. Markera komponentens `jcr:content`-nod
 
    Exempel: `/content/community-components/en/comments/jcr:content`
 

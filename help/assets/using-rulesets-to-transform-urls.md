@@ -23,18 +23,18 @@ Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er.
 * Lägga till ett MIME-typsuffix. Många tjänster och webbplatser kräver bildsuffix, som att lägga till `.jpg` till en URL.
 * Skapa en mappsökväg till URL:en för sökmotoroptimering (SEO).
 
-  Se [Hur Adobe Dynamic Media Classic stöder SEO](/help/assets/assets/s7_seo.pdf).
+  Se [Så här stöder Adobe Dynamic Media Classic SEO](/help/assets/assets/s7_seo.pdf).
 
 * Lägga till metadata i URL:en för sökmotoroptimering.
 
-  Se [Hur Adobe Dynamic Media Classic stöder SEO](/help/assets/assets/s7_seo.pdf).
+  Se [Så här stöder Adobe Dynamic Media Classic SEO](/help/assets/assets/s7_seo.pdf).
 
 * Ställa in innehållets disposition för att utlösa en hämtning.
-* Förenkla bildhanteringen genom att ange URL:er för personalisering. Till exempel: sväng `rgb{XX,YY,ZZ}` i RTF-klart `\redXX\greenYY\blueZZ`
+* Förenkla bildhanteringen genom att ange URL:er för personalisering. Gör till exempel `rgb{XX,YY,ZZ}` till RTF-klar `\redXX\greenYY\blueZZ`
 
-* Begär att vissa tecken ska kodas, till exempel `$`, `{`och `}`och vissa tecken som ska avkodas mot ImageServer. Facebook fungerar till exempel inte så bra med URL:er som innehåller specialtecken.
+* Begär att vissa tecken ska kodas, till exempel `$`, `{` och `}`, och vissa tecken ska avkodas mot ImageServer. Facebook fungerar till exempel inte så bra med URL:er som innehåller specialtecken.
 
-  Se [Ta bort specialtecken från URL-adresser](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/remove-special-characters-urls.html).
+  Se [Ta bort specialtecken från URL:er](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/remove-special-characters-urls.html).
 
 I Dynamic Media-sammanhang kan webbplatser som använder ett XML-baserat system för att hantera resursinformation överföra XML-filer till Dynamic Media. Du kan ange en av dessa filer som förbearbetningsregeluppsättningsfil för Dynamic Media-resurser. Den här filen omstrukturerar URL-protokollets standardformat så att det uppfyller affärslogiken i system som integreras med Dynamic Media. Du anger en XML-fil som ska fungera som sökväg till definitionsfilen för regeluppsättningen.
 
@@ -51,36 +51,36 @@ Se även [Felsöka regeluppsättningar](https://helpx.adobe.com/experience-manag
 Kontrollera också först att du testar regeluppsättningen i en staging-miljö som inte påverkar produktionsmiljön.
 Produktionsmiljöer och staging-miljöer kräver normalt olika inloggningar.
 
-Se [Adobe Dynamic Media Classic-datorprogram för inloggningsinformation](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app).
+Se [Adobe Dynamic Media Classic-datorprogrammet för inloggningsinformation](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app).
 
 <!-- OBSOLETE INFORMATION * **NA staging environment** login page: [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
 * **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
 * **JAPAC staging environment** login page: [https://s7sps5-staging.scene7.com/IpsWeb/](https://s7sps5-staging.scene7.com/IpsWeb/) -->
 
-Se även [Använd&quot;resurs&quot; i stället för&quot;is&quot;-bild i en regeluppsättning](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html).
+Se även [Använd resursen i stället för bilden är i en regeluppsättning](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html).
 
-**Så här distribuerar du XML-regler:**
+**Så här distribuerar du XML-regeluppsättningar:**
 
-1. Logga in på [Dynamic Media Classic desktop application](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app).
+1. Logga in på ditt [Dynamic Media Classic-datorprogram](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html#sign-in-dmc-app).
 
    Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
 
 1. Överför regeluppsättningsfilen genom att göra följande:
 
-   * I fältet Global navigering väljer du **[!UICONTROL Upload]**.
-   * På **[!UICONTROL Upload]** sida, nära det övre vänstra hörnet, markera **[!UICONTROL Browse]**.
-   * I **[!UICONTROL Open]** bläddra till regeluppsättningsfilen (XML).
+   * Välj **[!UICONTROL Upload]** i fältet Global navigering.
+   * På sidan **[!UICONTROL Upload]**, nära det övre vänstra hörnet, väljer du **[!UICONTROL Browse]**.
+   * Bläddra till regeluppsättningsfilen (XML) i dialogrutan **[!UICONTROL Open]**.
    * Markera filen och välj sedan **[!UICONTROL Open]**.
    * Till höger på sidan **[!UICONTROL Upload]** väljer du en målmapp för regeluppsättningsfilen.
-   * Långt ned på sidan ser du till att **[!UICONTROL Publish After Uploading]** är markerad.
-   * Välj i sidans nedre högra hörn **[!UICONTROL Submit Upload]**.
-   * I fältet Global navigering väljer du **[!UICONTROL Jobs]** för att kontrollera överföringsjobbets status. När **[!UICONTROL Status]** kolumn på **[!UICONTROL Job]** fortsätter sidan till nästa steg.
+   * Kontrollera att **[!UICONTROL Publish After Uploading]** är markerat i närheten av sidans nederkant.
+   * Välj **[!UICONTROL Submit Upload]** längst ned till höger på sidan.
+   * I fältet Global navigering väljer du **[!UICONTROL Jobs]** för att kontrollera överföringsjobbets status. När kolumnen **[!UICONTROL Status]** på sidan **[!UICONTROL Job]** säger Överföring klar fortsätter du till nästa steg.
 
-1. I navigeringsfältet uppe på sidan väljer du **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
-1. På **[!UICONTROL Image Server Publish]** sida, under **[!UICONTROL Catalog Management]** grupp, leta upp **[!UICONTROL Rule Set Definition File Path]** väljer **[!UICONTROL Select]**.
-1. På **[!UICONTROL Select Rule Set Definition File (XML)]** bläddrar du till regeluppsättningsfilen och väljer sedan i det nedre högra hörnet av sidan **[!UICONTROL Select]**.
-1. I det nedre högra hörnet av sidan Inställningar väljer du **[!UICONTROL Close]**.
-1. Kör ett Image Server-publiceringsjobb.
+1. Välj **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]** i navigeringsfältet nära sidans överkant.
+1. På sidan **[!UICONTROL Image Server Publish]**, under gruppen **[!UICONTROL Catalog Management]**, letar du reda på **[!UICONTROL Rule Set Definition File Path]** och väljer sedan **[!UICONTROL Select]**.
+1. På sidan **[!UICONTROL Select Rule Set Definition File (XML)]** bläddrar du till regeluppsättningsfilen och väljer **[!UICONTROL Select]** i det nedre högra hörnet på sidan.
+1. Välj **[!UICONTROL Close]** i det nedre högra hörnet på sidan Inställningar.
+1. Kör ett Image Server Publish-jobb.
 
    Regeluppsättningsvillkoren tillämpas på begäranden till Dynamic Media Image-servrar.
 

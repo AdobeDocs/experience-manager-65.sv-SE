@@ -31,12 +31,12 @@ Kommentarskomponenten skapar ett kommentarsystem så att varje inlägg represent
    <td> social/gemensam/komponent/hbs/comments</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>inkluderbar</strong></a></td>
-   <td>Ja - egenskaper kan redigeras i <i>design </i>läge</td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>include</strong></a></td>
+   <td>Ja - egenskaper kan redigeras i <i>designläge </i></td>
   </tr>
   <tr>
-   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>klientlibs</strong></a></td>
-   <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.röstning</td>
+   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
+   <td>cq.ckeditor<br /> cq.social.hbs.comments<br /> cq.social.hbs.voice</td>
   </tr>
   <tr>
    <td> <strong>mallar</strong></td>
@@ -78,7 +78,7 @@ Detta gäller alla komponenter som utökar ett kommentarsystem.
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
-* [API för kommentarer](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
+* [Kommentar-API](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/comments/api/package-summary.html)
 
 * [Kommentarsslutpunkter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/commons/comments/endpoints/package-summary.html)
 
@@ -89,13 +89,13 @@ Detta gäller alla komponenter som utökar ett kommentarsystem.
 UGC bör modereras med någon av standardmetoderna för moderering.
 Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
-**Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
+**Platsen och formatet för användargenererat innehåll i databasen kan ändras utan varning**.
 
 Se:
 
-* [Översikt över lagringsresursprovider](srp.md) - Översikt över introduktion och databasanvändning.
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel.
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - Riktlinjer för kodning.
+* [Lagringsresursprovideröversikt](srp.md) - Översikt över introduktion och databasanvändning.
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
 * [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.

@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Projekt {#projects}
 
-Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas för Plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektpaneler.](#project-tiles)
+Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas för Plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor.](#project-tiles)
 
 Som användare kan du:
 
@@ -27,9 +27,9 @@ Som användare kan du:
 
 Projicerar en AEM och kräver ingen ytterligare konfiguration.
 
-Men för användare i projekt som vill se andra användare/grupper medan de använder projekt, till exempel när de skapar projekt, skapar uppgifter/arbetsflöden eller visar och hanterar teamet, måste de användarna ha läsåtkomst på `/home/users` och `/home/groups`.
+För användare i projekt som vill se andra användare/grupper medan de använder projekt, till exempel när de skapar projekt, skapar uppgifter/arbetsflöden eller visar och hanterar teamet, måste dessa användare ha läsåtkomst på `/home/users` och `/home/groups`.
 
-Det enklaste sättet är att ge **projekt-användare** gruppläsåtkomst till `/home/users` och `/home/groups`.
+Det enklaste sättet att göra detta är att ge gruppen **projects-users** läsåtkomst till `/home/users` och `/home/groups`.
 
 ## Projektkonsol {#projects-console}
 
@@ -51,7 +51,7 @@ Endast innehåll är standardläge när konsolen öppnas. Den visar alla dina pr
 
 #### Tidslinje {#timeline}
 
-I tidslinjevyn kan du välja ett enskilt projekt och visa aktiviteten på det. Använda järnvägsväljaren eller snabbtangenten `alt+1` om du vill ändra till den här vyn.
+I tidslinjevyn kan du välja ett enskilt projekt och visa aktiviteten på det. Använd spårväljaren eller snabbtangenten `alt+1` för att ändra till den här vyn.
 
 ![Tidslinjeläge](assets/project-timeline.png)
 
@@ -75,11 +75,11 @@ Visa detaljerna för ett projekt genom att klicka på det för att detaljgranska
 
 ### Skapa nya projekt {#creating}
 
-Klicka **Skapa** för att lägga till ett nytt projekt.
+Klicka på **Skapa** om du vill lägga till ett nytt projekt.
 
 ## Projektpaneler {#project-tiles}
 
-Projekt består av olika typer av information som du vill hantera tillsammans. Informationen representeras av olika **Plattor**.
+Projekt består av olika typer av information som du vill hantera tillsammans. Den här informationen representeras av olika **plattor**.
 
 Du kan associera följande rutor med ditt projekt.
 
@@ -101,15 +101,15 @@ Klicka på ellipsknappen längst ned till höger i en ruta för att öppna rutan
 
 ### Assets {#assets}
 
-I **Resurser** kan du samla alla resurser som du använder för ett visst projekt.
+I rutan **Assets** kan du samla alla resurser som du använder för ett visst projekt.
 
-![Resurspanel](assets/project-tile-assets.png)
+![Assets-panel](assets/project-tile-assets.png)
 
 Du överför resurser direkt i rutan.
 
 ### Resurssamlingar {#asset-collections}
 
-Precis som resurser kan du lägga till [resurssamlingar](/help/assets/manage-collections.md) direkt till projektet. Du definierar samlingar i Resurser.
+På liknande sätt som resurser kan du lägga till [resurssamlingar](/help/assets/manage-collections.md) direkt i ditt projekt. Du definierar samlingar i Assets.
 
 ![Resurssamlingsplatta](assets/project-tile-asset-collection.png)
 
@@ -117,9 +117,9 @@ Lägg till en samling genom att klicka på **Lägg till samling** och välja ön
 
 ### Erfarenheter {#experiences}
 
-The **Erfarenheter** kan du lägga till en mobilapp, en webbplats eller en publikation i projektet.
+Med panelen **Erfarenheter** kan du lägga till en mobilapp, en webbplats eller en publikation i projektet.
 
-![Erfarenheter](assets/project-tile-experiences.png)
+![Panelen Erfarenheter](assets/project-tile-experiences.png)
 
 Ikonerna anger vilken typ av upplevelse som visas.
 
@@ -128,7 +128,7 @@ Ikonerna anger vilken typ av upplevelse som visas.
 
 ### Länkar {#links}
 
-The **Länkar** kan du koppla externa länkar till projektet.
+Med rutan **Länkar** kan du koppla externa länkar till ditt projekt.
 
 ![Länkplatta](assets/project-tile-links.png)
 
@@ -136,13 +136,13 @@ Du kan namnge länken med ett lättkänt namn och ändra miniatyrbilden.
 
 ### Projektinformation {#project-info}
 
-The **Projektinformation** panel ger allmän information om projektet, inklusive en beskrivning, projektstatus (inaktiv eller aktiv), ett förfallodatum och medlemmar. Dessutom kan du lägga till en projektminiatyr, som visas på huvudprojektsidan.
+Panelen **Projektinformation** innehåller allmän information om projektet, inklusive en beskrivning, projektstatus (inaktiv eller aktiv), ett förfallodatum och medlemmar. Dessutom kan du lägga till en projektminiatyr, som visas på huvudprojektsidan.
 
 ![Projektinformationsruta](assets/project-tile-info.png)
 
 ### Översättningsjobb {#translation-job}
 
-The **Översättningsjobb** Där du börjar en översättning och där du ser status för dina översättningar.
+Under **Översättningsjobb** startar du en översättning och du ser även status för dina översättningar.
 
 ![Översättningsjobbpanel](assets/project-tile-translation.png)
 
@@ -154,29 +154,29 @@ I den här rutan kan du ange medlemmarna i projektteamet. När du redigerar kan 
 
 ![Teampanel](assets/project-tile-team.png)
 
-Du kan lägga till och ta bort teammedlemmar från teamet. Dessutom kan du redigera [användarroll](#userroles) som tilldelats teammedlemmen.
+Du kan lägga till och ta bort teammedlemmar från teamet. Dessutom kan du redigera den [användarroll](#userroles) som tilldelats teammedlemmen.
 
 ### Landningssidor {#landing-pages}
 
-The **Landningssidor** kan du begära en ny landningssida.
+Med plattan **Landningssidor** kan du begära en ny landningssida.
 
-![Landing page tile](assets/project-tile-landing.png)
+![Landningssidoruta](assets/project-tile-landing.png)
 
-Arbetsflödet beskrivs i dokumentet[Skapa ett arbetsflöde för landningssida.](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow)
+Det här arbetsflödet beskrivs i dokumentet[Skapa en startsida.](/help/sites-authoring/projects-with-workflows.md#request-landing-page-workflow)
 
 ### E-post {#emails}
 
-The **E-post** hjälper dig att hantera e-postförfrågningar. Det börjar med **Begär e-post** arbetsflöde.
+Med rutan **E-post** kan du hantera e-postbegäranden. Arbetsflödet **Begär e-post** startas.
 
 ![E-postpanel](assets/project-tile-email.png)
 
-Mer information finns i [Begär e-postarbetsflöde.](/help/sites-authoring/projects-with-workflows.md#request-email-workflow)
+Mer information beskrivs i arbetsflödet [Begär e-post.](/help/sites-authoring/projects-with-workflows.md#request-email-workflow)
 
 ### Arbetsflöden {#workflows}
 
-Du kan starta arbetsflöden för ditt projekt. Om något arbetsflöde körs visas deras status i **Arbetsflöden** platta.
+Du kan starta arbetsflöden för ditt projekt. Om några arbetsflöden körs visas deras status i rutan **Arbetsflöden**.
 
-![Arbetsflödespanel](assets/project-tile-workflows.png)
+![Arbetsflödesplatta](assets/project-tile-workflows.png)
 
 Beroende på vilket projekt du skapar finns det olika arbetsflöden tillgängliga.
 
@@ -184,13 +184,13 @@ Dessa beskrivs i [Arbeta med projektarbetsflöden.](/help/sites-authoring/projec
 
 ### Launches {#launches}
 
-The **Startar** visas alla starter som har begärts med en [Begär startarbetsflöde.](/help/sites-authoring/projects-with-workflows.md)
+I rutan **Startar** visas alla starter som har begärts med ett [begäranstartsarbetsflöde.](/help/sites-authoring/projects-with-workflows.md)
 
 ![Startar panel](assets/project-tile-launches.png)
 
 ### Uppgifter {#tasks}
 
-Med uppgifter kan du övervaka status för projektrelaterade uppgifter, inklusive arbetsflöden. Uppgifterna behandlas i detalj på [Arbeta med uppgifter](/help/sites-authoring/task-content.md).
+Med uppgifter kan du övervaka status för projektrelaterade uppgifter, inklusive arbetsflöden. Uppgifter beskrivs mer ingående i [Arbeta med uppgifter](/help/sites-authoring/task-content.md).
 
 ![Aktivitetspanelen](assets/project-tile-tasks.png)
 
@@ -199,9 +199,9 @@ Med uppgifter kan du övervaka status för projektrelaterade uppgifter, inklusiv
 Mallar är grunden för ditt projekt. AEM innehåller dessa standardprojektmallar.
 
 * **Medieprojekt** - Detta är ett referensexempelprojekt för medierelaterade aktiviteter. Den innehåller flera medierelaterade projektroller och innehåller även arbetsflöden för medieinnehåll.
-* **[Fotoprojekt för produkt](/help/sites-authoring/managing-product-information.md)** - Det här är ett referensexempel för hantering av e-handelsrelaterade produktfotografier.
-* **[Översättningsprojekt](/help/sites-administering/translation.md)** - Det här är ett referensexempel för hantering av översättningsrelaterade aktiviteter. Det innehåller grundläggande roller och arbetsflöden för hantering av översättning.
-* **Enkelt projekt** - Det här är ett referensexempel för projekt som inte passar in i andra kategorier. Det innehåller tre grundläggande roller och fyra allmänna AEM arbetsflöden.
+* **[Produktfotoprojekt](/help/sites-authoring/managing-product-information.md)** - Detta är ett referensexempel för hantering av produktfotografi i eCommerce.
+* **[Översättningsprojekt](/help/sites-administering/translation.md)** - Detta är ett referensexempel för hantering av översättningsrelaterade aktiviteter. Det innehåller grundläggande roller och arbetsflöden för hantering av översättning.
+* **Enkelt projekt** - Detta är ett referensexempel för projekt som inte passar in i andra kategorier. Det innehåller tre grundläggande roller och fyra allmänna AEM arbetsflöden.
 
 Beroende på vilken mall du väljer kan du välja mellan olika alternativ i projektet, t.ex. användarroller och arbetsflöden.
 
@@ -217,8 +217,8 @@ Alla projekt har stöd för följande standardroller så att du kan administrera
 | Roll | Beskrivning | Behörigheter | Gruppmedlemskap |
 |---|---|---|---|
 | Observer | En användare i den här rollen kan visa projektinformation, inklusive projektstatus. | Skrivskyddade behörigheter i ett projekt | `workflow-users` grupp |
-| Redigerare | En användare med den här rollen kan överföra och redigera innehållet i ett projekt. | Läs- och skrivåtkomst för ett projekt, tillhörande metadata och relaterade resurser<br>Behörigheter att ladda upp en tagningslista, fotografera samt granska och godkänna material<br>Skrivbehörighet för `/etc/commerce`<br>Ändra behörighet för ett visst projekt | `workflow-users` grupp |
-| Ägare | En användare med den här rollen kan skapa ett projekt, initiera arbete i ett projekt och flytta godkända resurser till produktionsmappen. Alla andra uppgifter i projektet kan också visas och utföras av ägaren. | Skrivbehörighet för `/etc/commerce` | `dam-users` grupp för att kunna skapa ett projekt<br>`projects-administrators` grupp för att kunna skapa ett projekt och flytta resurser |
+| Redigerare | En användare med den här rollen kan överföra och redigera innehållet i ett projekt. | Läs- och skrivbehörighet för ett projekt, associerade metadata och relaterade resurser<br>Behörigheter att överföra en tagningslista, fotografera och granska och godkänna resurser<br>Skrivbehörighet för `/etc/commerce`<br>Ändra behörighet för ett specifikt projekt | `workflow-users` grupp |
+| Ägare | En användare med den här rollen kan skapa ett projekt, initiera arbete i ett projekt och flytta godkända resurser till produktionsmappen. Alla andra uppgifter i projektet kan också visas och utföras av ägaren. | Skrivbehörighet för `/etc/commerce` | `dam-users`-grupp för att kunna skapa ett projekt<br>`projects-administrators`-grupp för att kunna skapa ett projekt och flytta resurser |
 
 För kreativa projekt finns även andra roller, som fotografer. Du kan använda de här rollerna för att skapa anpassade roller för ett visst projekt.
 
@@ -226,9 +226,9 @@ För kreativa projekt finns även andra roller, som fotografer. Du kan använda 
 
 När du skapar projektet och lägger till användare till de olika rollerna skapas grupper som är kopplade till projektet automatiskt för att hantera associerade behörigheter.
 
-Ett projekt med namnet Myproject skulle till exempel ha tre grupper **Mina projektägare**, **Myproject Editors**, **Myproject-observatörer**.
+Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **MyProject Owners**, **MyProject Editors**, **MyProject Observers**.
 
-Om projektet tas bort tas dessa grupper bara bort om du väljer lämpligt alternativ [när du tar bort projektet.](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project) En administratör kan även ta bort grupper manuellt i **verktyg** > **Säkerhet** > **Grupper**.
+Om projektet tas bort tas dessa grupper endast bort om du väljer lämpligt alternativ [ när du tar bort projektet.](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project) En administratör kan även ta bort grupper manuellt i **Verktyg** > **Dokumentskydd** > **Grupper**.
 
 ## Ytterligare resurser {#additional-resources}
 

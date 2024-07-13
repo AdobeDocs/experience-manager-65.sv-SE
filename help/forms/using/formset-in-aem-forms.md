@@ -65,16 +65,16 @@ Så här skapar du en formuläruppsättning:
 
    * Formulärordning: Dra och släpp formulären för att ordna om dem. Formulärordningen definierar den ordning i vilken formulären visas för slutanvändaren i AEM Forms-appen och i en fristående återgivning.
    * Formuläridentifierare: Anger en unik identitet för de formulär som ska användas i berättigandeuttryck.
-   * Datarot: För varje formulär i formuläruppsättningen kan författaren konfigurera XPATH där data i det aktuella formuläret placeras i skickad XML. Som standard är värdet /. Om alla formulär i formuläruppsättningen är schemabundna och har samma XML-schema kan du ändra det här värdet. Vi rekommenderar att alla fält i formuläret har rätt databindning angiven i XDP. Om två fält i två olika formulär har samma gemensamma databindning, visar fältet i det andra formuläret förfyllda värden från det första formuläret. Bind inte två delformulär med samma interna innehåll till samma XML-nod. Mer information om XML-strukturen för formuläruppsättningar finns i [Förifyll XML för formuläruppsättning](../../forms/using/formset-in-aem-forms.md#p-prefill-xml-for-form-set-p).
+   * Datarot: För varje formulär i formuläruppsättningen kan författaren konfigurera XPATH där data i det aktuella formuläret placeras i skickad XML. Som standard är värdet /. Om alla formulär i formuläruppsättningen är schemabundna och har samma XML-schema kan du ändra det här värdet. Vi rekommenderar att alla fält i formuläret har rätt databindning angiven i XDP. Om två fält i två olika formulär har samma gemensamma databindning, visar fältet i det andra formuläret förfyllda värden från det första formuläret. Bind inte två delformulär med samma interna innehåll till samma XML-nod. Mer information om XML-strukturen i formuläruppsättningen finns i [Förifyll XML för formuläruppsättningen](../../forms/using/formset-in-aem-forms.md#p-prefill-xml-for-form-set-p).
    * Kvalifikationsuttryck: Anger ett JavaScript-uttryck som utvärderar ett booleskt värde och anger om ett formulär i formuläruppsättningen kan fyllas i. Om värdet är false tillfrågas inte användaren och visas inte heller formuläret för att fyllas i. Uttrycket baseras vanligtvis på värdena i de fält som har hämtats före det här formuläret. Uttrycken innehåller även anrop till formuläruppsättningens API fs.valueOf för att extrahera de värden som användaren fyller i i ett fält i ett formulär i formuläruppsättningen:
 
-   *fs.valueOf(&lt;form identifier=&quot;&quot;>, &lt;fieldsom expression=&quot;&quot;>) > &lt;value>*
+   *fs.valueOf(&lt;Form Identifier>, &lt;fieldAs expression>) > &lt;value>*
 
-   Om du till exempel har två formulär i formuläruppsättningen: utgift för företag och resekostnader, kan du lägga till ett JavaScript-utdrag i fältet Berättigandeuttryck för båda dessa formulär för att kontrollera vilka typer av utgifter användaren anger i formuläret. Om användaren väljer Affärskostnad återges formuläret Affärskostnad för slutanvändaren. Eller om användaren väljer en resekostnad, återges ett annat formulär för slutanvändaren. Mer information finns i Kvalificeringsuttryck.
+   Om du t.ex. har två formulär i formuläruppsättningen: utgift för företag och resekostnader, kan du lägga till ett JavaScript-utdrag i fältet Berättigandeuttryck för båda dessa formulär för att kontrollera vilka typer av utgifter användaren anger i formuläret. Om användaren väljer Affärskostnad återges formuläret Affärskostnad för slutanvändaren. Eller om användaren väljer en resekostnad, återges ett annat formulär för slutanvändaren. Mer information finns i Kvalificeringsuttryck.
 
-   Dessutom kan författaren välja att ta bort ett formulär från formuläruppsättningen med hjälp av ikonen Ta bort i det högra hörnet av varje rad eller lägga till ytterligare en uppsättning formulär med hjälp av **+** ikonen i verktygsfältet. Detta &#39;**+**&#39; anger att användaren ska gå tillbaka till föregående steg i guiden som användes för att välja formulär. De befintliga markeringarna behålls och eventuella ytterligare markeringar som görs måste läggas till i formuläruppsättningen med hjälp av ikonen Lägg till i formuläruppsättning på den sidan.
+   Dessutom kan författaren välja att ta bort ett formulär från formuläruppsättningen med ikonen Ta bort i det högra hörnet av varje rad eller lägga till en annan uppsättning formulär med ikonen **+** i verktygsfältet. Den här ikonen **+** dirigerar användaren tillbaka till föregående steg i guiden som användes för att välja formulär. De befintliga markeringarna behålls och eventuella ytterligare markeringar som görs måste läggas till i formuläruppsättningen med hjälp av ikonen Lägg till i formuläruppsättning på den sidan.
 
-   ![Formuläruppsättning: Konfigurera formulär](assets/createformset2.png)
+   ![Formuläruppsättning: Konfigurera formulär ](assets/createformset2.png)
 
    >[!NOTE]
    >
@@ -94,14 +94,14 @@ När en formuläruppsättning har skapats kan du utföra följande åtgärder f�
 * Förhandsgranska: Förhandsgranska innehåller två alternativ: Förhandsgranska som HTML (utan data) och anpassad förhandsvisning med exempeldata.
 * Visa/redigera egenskaper: Du kan visa/redigera metadataegenskaperna för en markerad formuläruppsättning.
 
-![createformset3](assets/createformset3.png)
+![createForset3](assets/createformset3.png)
 
 ### Redigera en formuläruppsättning {#edit-a-form-set}
 
 Så här redigerar du en formuläruppsättning:
 
 1. Välj Forms > Forms och Dokument.
-1. Leta reda på den formuläruppsättning som du vill redigera. Håll pekaren över den och välj Redigera ( ![diticon](assets/editicon.png)).
+1. Leta reda på den formuläruppsättning som du vill redigera. Håll pekaren över den och välj Redigera ( ![redigering](assets/editicon.png)).
 1. På sidan Konfigurera formulär kan du redigera följande:
 
    * Formulärordning
@@ -117,13 +117,13 @@ När du har skapat en formuläruppsättning med användargränssnittet i AEM For
 
 ### Använda formuläruppsättning i Aktivitet eller Startpunkt {#using-form-set-in-task-or-start-point}
 
-1. När du utformar en process väljer du under Presentation &amp; Data under Tilldela uppgift/startpunkt **använda en CRX-resurs**. Webbläsaren CRX Asset visas.
+1. När du utformar en process väljer du **Använd en CRX-resurs** under Presentation &amp; Data i Tilldela uppgift/startpunkt. Webbläsaren CRX Asset visas.
 
-   ![Utforma en process: använd en CRX-resurs](assets/formsetinprocessmgmt1.png)
+   ![Designa en process: använd en CRX-resurs](assets/formsetinprocessmgmt1.png)
 
 1. Välj formuläruppsättning för att filtrera formuläruppsättningen i AEM (CRX).
 
-   ![Designa en process: Dialogrutan Välj formulärresurs](assets/formsetinprocessmgmt2.png)
+   ![Utforma en process: Välj formulärresurs, dialogruta](assets/formsetinprocessmgmt2.png)
 
 1. Markerar en formuläruppsättning och klickar på OK.
 
@@ -131,13 +131,13 @@ När du har skapat en formuläruppsättning med användargränssnittet i AEM For
 
 Kvalifikationsuttryck i en formuläruppsättning används för att definiera och dynamiskt kontrollera formulär som visas för en användare. Om du till exempel bara vill visa ett visst formulär om användaren tillhör en viss åldersgrupp. Ange och redigera ett berättigandeuttryck med formulärhanteraren.
 
-Ett kvalificeringsuttryck kan vara vilken giltig JavaScript-programsats som helst som returnerar ett booleskt värde. Den sista programsatsen i JavaScript-kodfragmentet behandlas som ett booleskt värde som avgör om formuläret är kvalificerat baserat på bearbetningen i resten (tidigare rader) av JavaScript-kodfragmentet. Om värdet för uttrycket är true kan formuläret visas för användaren. Sådana formulär kallas för bidragsberättigande formulär.
+Ett kvalificeringsuttryck kan vara vilken giltig JavaScript-sats som helst som returnerar ett booleskt värde. Den sista programsatsen i JavaScript-kodfragmentet behandlas som ett booleskt värde som avgör om formuläret är kvalificerat baserat på bearbetningen i resten (tidigare rader) av JavaScript-kodfragmentet. Om värdet för uttrycket är true kan formuläret visas för användaren. Sådana formulär kallas för bidragsberättigande formulär.
 
 >[!NOTE]
 >
 >Kvalifikationsuttrycket för det första formuläret i formuläruppsättningen körs inte. Det första formuläret visas alltid, oavsett vilket uttryck det gäller.
 
-Utöver JavaScript-standardfunktionerna visar formuläruppsättningen även API:t fs.valueOf som ger åtkomst till värdet för ett fält i ett formulär i en formuläruppsättning. Använd detta API för att komma åt värdet i ett formulärfält i en formuläruppsättning. API-syntaxen är fs.valueOf (formUid, fieldSOM), där:
+Förutom JavaScript standardfunktioner visar formuläruppsättningen även API:t fs.valueOf som ger åtkomst till värdet i ett formulärfält i en formuläruppsättning. Använd detta API för att komma åt värdet i ett formulärfält i en formuläruppsättning. API-syntaxen är fs.valueOf (formUid, fieldSOM), där:
 
 * formUid (sträng): Ett unikt ID för ett formulär i formuläruppsättningen. Du kan ange det när du skapar formuläruppsättningen i användargränssnittet för formulärhanteraren. Som standard är det formulärets namn.
 * fieldSOM (string): A SOM expression of the field in the form specified by the formUid. SOM-uttryck eller skriptobjektmodelluttryck används för att referera till värden, egenskaper och metoder i en viss dokumentobjektmodell (DOM). Du kan visa den i Form Designer under fliken Skript när fältet är markerat.
@@ -169,17 +169,20 @@ Du har till exempel tre formulär (formulär1, formulär2 och formulär3) i form
 
 formulär1
 
-fält formulär1fält
+fält
+form1field
 
 formulär2
 
-fält formulär2fält
+fält
+form2field
 
 form3
 
-fält formulär3fält
+fält
+form3field
 
-Varje formulär har ett gemensamt namngivet fält med namnet&quot;field&quot; och ett unikt namngivet fält med namnet&quot;formfield&quot;.
+Varje formulär har ett gemensamt namngivet fält med namnet&quot;field&quot; och ett unikt namngivet fält med namnet&quot;form&lt;i>field&quot;.
 
 Du kan förifylla den här formuläruppsättningen med en XML-kod med följande struktur:
 

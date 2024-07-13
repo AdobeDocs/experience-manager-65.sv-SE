@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Hantera Dynamic Media-resurser - bilder, video och interaktiva resurser - efter att de har överförts innebär många uppgifter, bland annat att förhandsgranska, hämta eller publicera dem.
 
-När du förhandsgranskar kan du även använda bildförinställningar (endast för bilder) eller visningsförinställningar (för video och bilder). Du kan inte använda båda för en resurs. Se [Använda förinställningar för visningsprogram](/help/assets/viewer-presets.md) och [Använda bildförinställningar](/help/assets/image-sets.md).
+När du förhandsgranskar kan du även använda bildförinställningar (endast för bilder) eller visningsförinställningar (för video och bilder). Du kan inte använda båda för en resurs. Se [Använda visningsförinställningar](/help/assets/viewer-presets.md) och [Använda bildförinställningar](/help/assets/image-sets.md).
 
 Allmän information om hur du hanterar resurser finns i [Hantera resurser](/help/assets/manage-assets.md).
 

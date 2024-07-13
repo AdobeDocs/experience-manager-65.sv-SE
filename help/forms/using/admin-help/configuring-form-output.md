@@ -23,9 +23,9 @@ ht-degree: 0%
 1. Klicka på Tjänster > Formulär i administrationskonsolen.
 1. Välj något av följande alternativ i listan Utdatatyp under Formulärutdata:
 
-   **Full HTML:** Om du vill återge formuläret med fullständiga HTML-taggar (en hel HTML-sida). Det här värdet är standardvärdet.
+   **Fullt HTML:** Om du vill återge formuläret med fullständiga HTML-taggar (en fullständig HTML-sida). Det här värdet är standardvärdet.
 
-   **Formulärtext:** Återge formuläret inom `<BODY>` taggar (inte en fullständig HTML-sida).
+   **Formulärbrödtext:** Återge formuläret inom `<BODY>` -taggar (inte en fullständig HTML-sida).
 
 1. Klicka på Spara.
 
@@ -35,9 +35,9 @@ ht-degree: 0%
 
    **Klient:** Återge PDF forms i Adobe Acrobat eller Adobe Reader. Klientsidorendering förbättrar prestanda för AEM formulär och gäller endast för PDFForm-omvandling.
 
-   **Server:** Om du vill återge PDF forms på programservern.
+   **Server:** Återge PDF forms på programservern.
 
-   **Auto:** Återge formuläret PDF på den plats som anges av `dynamicRender` XDP-filens konfigurationsvärde. Det här värdet är standardvärdet.
+   **Auto:** Om du vill återge formuläret PDF på den plats som anges av konfigurationsvärdet `dynamicRender` för XDP-filen. Det här värdet är standardvärdet.
 
 1. Klicka på Spara.
 
@@ -53,4 +53,4 @@ Gör så här för att aktivera funktionen:
 
    >[!NOTE]
    >
-   >*Om du vill inaktivera funktionen kan du ta bort JavaScript-variabeln eller ange värdet 0.*
+   >*Om du vill inaktivera funktionen kan du ta bort variabeln JavaScript eller ange värdet 0.*

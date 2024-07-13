@@ -36,7 +36,7 @@ För närvarande finns det två nodlagringsimplementationer i AEM6: Tjärlagring
 
 >[!CAUTION]
 >
->PID:t för segmentnodarkivet har ändrats från org.apache.jackrabbit.oak.**plugin-program**.segment.SegmentNodeStoreService i tidigare versioner av AEM 6 till org.apache.jackrabbit.oak.segment.SegmentNodeStoreService i AEM 6.3. Kontrollera att nödvändiga konfigurationsjusteringar görs så att ändringarna återspeglas.
+>PID:t för segmentnodarkivet har ändrats från org.apache.jackrabbit.oak.**plugins**.segment.SegmentNodeStoreService i tidigare versioner av AEM 6 till org.apache.jackrabbit.oak.segment.SegmentNodeStoreService i AEM 6.3. Kontrollera att nödvändiga konfigurationsjusteringar görs så att ändringarna återspeglas.
 
 Som standard använder AEM 6 Tjära-lagringen för att lagra noder och binärfiler med standardkonfigurationsalternativen. Du kan konfigurera lagringsinställningarna manuellt genom att göra följande:
 
@@ -47,9 +47,9 @@ Som standard använder AEM 6 Tjära-lagringen för att lagra noder och binärfil
 
 1. Skapa en mapp med namnet `crx-quickstart\install` i installationskatalogen.
 
-1. Skapa en fil med namnet `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg` i den nya mappen.
+1. Skapa en fil med namnet `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.cfg` i den nyligen skapade mappen.
 
-1. Redigera filen och ange konfigurationsalternativ. Följande alternativ är tillgängliga för segmentnodarkivet, som är grunden för implementering av AEM tjärlagring:
+1. Redigera filen och ange konfigurationsalternativ. Följande alternativ är tillgängliga för Segment Node Store, som är grunden för AEM av TAR-lagringsimplementering:
 
    * `repository.home`: Sökväg till databasstartplats där olika databasrelaterade data lagras. Som standard lagras segmentfiler under katalogen crx-quickstart/segmentstore.
    * `tarmk.size`: Maximal storlek för ett segment i MB. Standardvärdet är 256 MB.
@@ -67,21 +67,21 @@ AEM 6 kan konfigureras för att köras med MongoDB-lagring enligt följande proc
 
    `java -jar cq-quickstart-6.jar -unpack`
 
-1. Kontrollera att MongoDB är installerat och att det finns en instans av `mongod` är igång. Mer information finns på [Installerar MongoDB](https://docs.mongodb.org/manual/installation/).
+1. Kontrollera att MongoDB är installerat och att en instans av `mongod` körs. Mer information finns i [Installera MongoDB](https://docs.mongodb.org/manual/installation/).
 1. Skapa en mapp med namnet `crx-quickstart\install` i installationskatalogen.
-1. Konfigurera nodarkivet genom att skapa en konfigurationsfil med namnet på konfigurationen som du vill använda i `crx-quickstart\install` katalog.
+1. Konfigurera nodarkivet genom att skapa en konfigurationsfil med namnet på konfigurationen som du vill använda i katalogen `crx-quickstart\install`.
 
-   I Document Node Store (som är grunden för AEM MongoDB-lagringsimplementering) används en fil som kallas `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.cfg`
+   I Document Node Store (som är grunden för AEM av MongoDB-lagringsimplementering) används en fil med namnet `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.cfg`
 
 1. Redigera filen och ange konfigurationsalternativ. Följande alternativ är tillgängliga:
 
-   * `mongouri`: [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) krävs för att ansluta till Mongo-databasen. Standardvärdet är `mongodb://localhost:27017`
-   * `db`: Namnet på Mongo-databasen. Som standard används nya AEM 6-installationer **aem-author** som databasnamn.
+   * `mongouri`: [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) som krävs för att ansluta till Mongo-databasen. Standardvärdet är `mongodb://localhost:27017`
+   * `db`: Namnet på Mongo-databasen. Som standard använder nya AEM 6-installationer **aem-author** som databasnamn.
    * `cache`: Cachestorleken i MB. Cachestorleken fördelas mellan olika cacheminnen som används i DocumentNodeStore. Standardvärdet är 256.
-   * `changesSize`: Storlek i MB på en kopplad samling som används i Mongo för cache-lagring av diff-utdata. Standardvärdet är 256.
+   * `changesSize`: Storlek i MB på den skyddade samlingen som används i Mongo för att cachelagra diff-utdata. Standardvärdet är 256.
    * `customBlobStore`: Ett booleskt värde som anger att ett anpassat datalager används. Standardvärdet är false.
 
-1. Skapa en konfigurationsfil med PID för det datalager som du vill använda och redigera filen för att ange konfigurationsalternativen. Mer information finns på [Konfigurera nodarkiv och datalager](/help/sites-deploying/data-store-config.md).
+1. Skapa en konfigurationsfil med PID för det datalager som du vill använda och redigera filen för att ange konfigurationsalternativen. Mer information finns i [Konfigurera nodarkiv och datalager](/help/sites-deploying/data-store-config.md).
 
 1. Starta AEM 6 jar med en MongoDB-lagringsserver genom att köra:
 
@@ -89,14 +89,14 @@ AEM 6 kan konfigureras för att köras med MongoDB-lagring enligt följande proc
    java -jar cq-quickstart-6.jar -r crx3,crx3mongo
    ```
 
-   Där serverdelens körningsläge är **`-r`** börjar exemplet med stöd för MongoDB.
+   När serverdelens körningsläge är **`-r`** börjar exemplet med stöd för MongoDB.
 
 #### Inaktivera genomskinliga stora sidor {#disabling-transparent-huge-pages}
 
 Red Hat® Linux® använder en minneshanteringsalgoritm som kallas för Transparent Huge Pages (THP). Medan AEM utför finkorniga läsningar och skrivningar är THP optimerat för stora operationer. Därför rekommenderar vi att du inaktiverar THP för både Tjärs- och Mongo-lagring. Så här inaktiverar du algoritmen:
 
-1. Öppna `/etc/grub.conf` i valfri textredigerare.
-1. Lägg till följande rad i **grob.conf** fil:
+1. Öppna filen `/etc/grub.conf` i valfri textredigerare.
+1. Lägg till följande rad i filen **grub.conf**:
 
    ```
    transparent_hugepage=never
@@ -118,10 +118,10 @@ Red Hat® Linux® använder en minneshanteringsalgoritm som kallas för Transpar
 >
 >Se följande resurser:
 >
->* Mer information om genomskinliga stora sidor i Red Hat® Linux® finns i [artikel](https://access.redhat.com/solutions/46111).
->* Linux®-justeringstips finns här [artikel](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
+>* Mer information om genomskinliga stora sidor på Red Hat® Linux® finns i den här [artikeln](https://access.redhat.com/solutions/46111).
+>* Linux®-justeringstips finns i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
 >
 
 ## Underhålla databasen {#maintaining-the-repository}
 
-Varje uppdatering av databasen skapar en innehållsändring. Det innebär att databasstorleken ökar för varje uppdatering. För att undvika okontrollerad databastillväxt måste äldre versioner rensas för att frigöra diskutrymme. Den här underhållsfunktionen kallas Revision Cleanup. Revision Cleanup-funktionen frigör diskutrymme genom att ta bort föråldrade data från databasen. Mer information om Revision Cleanup finns i [Sidan Revision Cleanup](/help/sites-deploying/revision-cleanup.md).
+Varje uppdatering av databasen skapar en innehållsändring. Det innebär att databasstorleken ökar för varje uppdatering. För att undvika okontrollerad databastillväxt måste äldre versioner rensas för att frigöra diskutrymme. Den här underhållsfunktionen kallas Revision Cleanup. Revision Cleanup-funktionen frigör diskutrymme genom att ta bort föråldrade data från databasen. Mer information om Revision Cleanup finns på sidan [Revision Cleanup](/help/sites-deploying/revision-cleanup.md).

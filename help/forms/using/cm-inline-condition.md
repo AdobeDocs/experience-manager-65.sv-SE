@@ -46,17 +46,17 @@ Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundn
 >
 >Om dina befintliga resurser innehåller gamla villkor/repeteringsuttryck (före 6.2 SP1 CFP 4) visar resurserna gammal syntax för villkor och repetering. Det gamla villkoret/upprepningen fungerar dock. De nya och gamla villkors-/upprepningsuttrycken är kompatibla med varandra för att skapa en kapslad blandning av gamla och nya villkor-/upprepningsuttryck.
 
-1. Markera i den relevanta textmodulen den del av texten som du vill göra villkorsstyrd och markera **Villkor**.
+1. Markera i den relevanta textmodulen den del av texten som du vill göra villkorlig och välj **Villkor**.
 
-   ![1_selectext](assets/1_selecttext.png)
+   ![1_selectText](assets/1_selecttext.png)
 
    Dialogrutan Villkor visas med ett tomt villkor.
 
-   ![2_conditionDialog](assets/2_conditiondialog.png)
+   ![2_Conditiondialog](assets/2_conditiondialog.png)
 
    >[!NOTE]
    >
-   >Ett tomt eller ogiltigt villkorsuttryck kan inte sparas. Det måste finnas ett giltigt villkorsuttryck inuti `${}` för att spara uttrycket.
+   >Ett tomt eller ogiltigt villkorsuttryck kan inte sparas. Det måste finnas ett giltigt villkorsuttryck i `${}` för att uttrycket ska kunna sparas.
 
 1. Gör följande för att skapa ett villkor för att utvärdera om den markerade/villkorade texten visas i bokstaven och markera sedan bockmarkeringen för att spara uttrycket:
 
@@ -66,11 +66,11 @@ Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundn
    ${DD_creditcard_Gender=="Male"}
    ```
 
-   Mer information om hur du skapar uttrycket finns i **Skapa uttryck och fjärrfunktioner med uttrycksverktyget** in [Expression Builder](../../forms/using/expression-builder.md). Värdet som anges i uttrycket måste ha stöd för elementet i dataordlistan. Mer information finns i [Dataordlista](../../forms/using/data-dictionary.md).
+   Mer information om hur du skapar uttrycket finns i **Skapa uttryck och fjärrfunktioner med uttrycksverktyget** i [Expression Builder](../../forms/using/expression-builder.md). Värdet som anges i uttrycket måste ha stöd för elementet i dataordlistan. Mer information finns i [Dataordlista](../../forms/using/data-dictionary.md).
 
    När villkoret har infogats kan du hålla muspekaren över handtaget till vänster om villkoret för att visa det. Du kan markera handtaget om du vill visa snabbmenyn för villkoret, så att du kan redigera eller ta bort villkoret.
 
-   ![3_hoverhandle](assets/3_hoverhandle.png) ![4_editConditionremoveconderpopup](assets/4_editconditionremoveconditionpopup.png)
+   ![3_hoverhandle](assets/3_hoverhandle.png) ![4_editConditionremoveconreparpopup](assets/4_editconditionremoveconditionpopup.png)
 
 1. Infoga liknande villkor genom att markera texten `Ma'am`.
 
@@ -85,7 +85,7 @@ Du kan infoga ett textbundet villkor i en bokstav genom att infoga det textbundn
 
    Mer information finns i [Dataordlista](../../forms/using/data-dictionary.md).
 
-   ![5_letterutdata](assets/5_letteroutput.png)
+   ![5_letteroutput](assets/5_letteroutput.png)
 
 ## Upprepa {#repeat}
 
@@ -107,13 +107,13 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
 1. Välj det innehåll som ska upprepas.
 
-   ![2_markering](assets/2_selection.png)
+   ![2_selection](assets/2_selection.png)
 
 1. Välj Upprepa.
 
    Dialogrutan Upprepa visas.
 
-   ![3_repetera dialogruta](assets/3_repeatdialog.png)
+   ![3_repeatDialogrutan](assets/3_repeatdialog.png)
 
 1. Välj Radbrytning som avgränsare och välj vid behov Lägg till villkor för att skapa en regel. Du kan också använda text som avgränsare och ange vilka tecken som ska användas som avgränsare.
 
@@ -154,7 +154,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
 1. Bädda in texten i DD-elementen för att göra satsen mer läsbar, till exempel:
 
-   ![1_upprepa](assets/1_repeat.png)
+   ![1_repeat](assets/1_repeat.png)
 
    ```javascript
    Date: {^DD_creditcard_TransactionDate^} Amount (USD): {^DD_creditcard_TransactionAmount^} Transaction Type: {^DD_creditcard_TransactionType^}
@@ -162,7 +162,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    Jobbet att återge en välformaterad programsats är dock inte klart än. Om du återger en bokstav baserat på det arbete du har gjort hittills visas den som följande:
 
-   ![1_1renderwithout outrepeat](assets/1_1renderwithoutrepeat.png)
+   ![1_1renderwithoutrepeat](assets/1_1renderwithoutrepeat.png)
 
    Om du vill upprepa den statiska texten tillsammans med DD-elementen måste du upprepa enligt anvisningarna i de följande stegen.
 
@@ -180,11 +180,11 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
    ${DD_creditcard_TransactionAmount > 0.5}
    ```
 
-   Om du inte behöver återge informationen (här transaktioner) selektivt, ska du annars låta villkoret vara tomt genom att ta bort följande i dialogrutan: `${}`. Att spara ett upprepningsuttryck aktiveras antingen när fönstret för upprepningsuttrycket är tomt (utan ${} när ingen upprepning behövs) eller när den innehåller ett giltigt villkor för upprepning.
+   Annars, om du inte behöver återge informationen (här transaktioner) selektivt, låter du villkoret vara tomt genom att ta bort följande i dialogrutan: `${}`. Att spara ett upprepningsuttryck aktiveras antingen när fönstret för upprepningsuttrycket är tomt (utan ${} när ingen upprepning behövs) eller när det innehåller ett giltigt villkor för upprepning.
 
 1. Välj en avgränsare för formatering av den dynamiska texten och markera bockmarkeringen som ska sparas:
 
-   * **Radbrytning**: Infogar radbrytning efter varje transaktionspost i utdatabokstaven.
+   * **Radbrytning**: Infogar radbrytning efter varje transaktionspost i utdatabrevet.
    * **Text**: Infogar det angivna texttecknet efter varje transaktionspost i utdatabokstaven.
 
    När villkoret har infogats markeras den upprepade texten i rött och ett handtag visas till vänster. Du kan hålla muspekaren över handtaget till vänster om upprepningen för att visa den upprepade konstruktionen.
@@ -204,7 +204,7 @@ I följande exempel visas hur du använder upprepning för att strukturera och �
 
    ![6_repeatOutputPreview](assets/6_repeatoutputpreview.png)
 
-   Den statiska texten upprepas med transaktionsinformationen. Upprepad statisk text underlättas av den upprepning som används för texten i den här proceduren. Villkoret ${DD_creditcard_TransactionAmount > 0.5}, säkerställer att transaktioner under USD 5 inte återges i brevet.
+   Den statiska texten upprepas med transaktionsinformationen. Upprepad statisk text underlättas av den upprepning som används för texten i den här proceduren. Villkoret ${DD_creditcard_TransactionAmount > 0.5} säkerställer att transaktioner under USD 5 inte återges i brevet.
 
    >[!NOTE]
    >
@@ -218,9 +218,9 @@ Du kan behöva upprepa detta inom ett villkor. Med Korrespondence Management kan
 
 Till exempel upprepas följande (med rött format) i ett villkor (med grönt format).
 
-När upprepningen återger kreditkortstransaktionerna är villkoret ${DD_creditcard_nooftransaction > 0} säkerställer att den upprepade konstruktionen endast återges om det finns minst en transaktion.
+När upprepningen återger kreditkortstransaktionerna säkerställer villkoret ${DD_creditcard_nooftransaction > 0} att den upprepade konstruktionen endast återges om det finns minst en transaktion.
 
-![upprepningsvillkor](assets/repeatwitincondition.png)
+![repeatWindowCondition](assets/repeatwitincondition.png)
 
 På samma sätt kan du skapa:
 
@@ -232,6 +232,6 @@ På samma sätt kan du skapa:
 
 Du kan behöva infoga tomma textbundna villkor och bädda in text och DD-element senare. Med Correspondence Management kan ni göra det.
 
-![emptycondition](assets/emptycondition.png)
+![Emptycondition](assets/emptycondition.png)
 
 Vi rekommenderar dock att du, om det är möjligt, infogar text- och DD-elementen först i textmodulen med avsedd formatering, t.ex. punkter, och därefter infogar ett textbundet villkor.

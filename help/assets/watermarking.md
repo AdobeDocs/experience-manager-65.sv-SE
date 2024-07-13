@@ -21,34 +21,34 @@ ht-degree: 1%
 | AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/watermark-assets.html?lang=en) |
 | AEM 6.5 | Den här artikeln |
 
-[!DNL Adobe Experience Manager Assets] Med kan du lägga till en digital vattenstämpel till resurser som hjälper användarna att verifiera autenticiteten och upphovsrättsinnehållet i resurserna. [!DNL Experience Manager Assets] stöder text som ska användas som vattenstämpel i PNG- och JPEG-filer.
+Med [!DNL Adobe Experience Manager Assets] kan du lägga till en digital vattenstämpel till resurser som hjälper användarna att verifiera autenticiteten och copyrightäganderätten för resurserna. [!DNL Experience Manager Assets] stöder text som ska användas som vattenstämpel i PNG- och JPEG-filer.
 
-Om du vill kunna använda vattenstämpel på resurser lägger du till vattenstämpelsteget i [!UICONTROL DAM Update Asset] arbetsflöde.
+Om du vill kunna använda vattenstämpel på resurser lägger du till vattenstämpelsteget i [!UICONTROL DAM Update Asset]-arbetsflödet.
 
-1. Öppna [!DNL Experience Manager] användargränssnitt och gå till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. Från **[!UICONTROL Workflow Models]** väljer du **[!UICONTROL DAM Update Asset]** och klicka **[!UICONTROL Edit]**.
+1. Gå till användargränssnittet för [!DNL Experience Manager] och gå till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. Välj arbetsflödet **[!UICONTROL DAM Update Asset]** på sidan **[!UICONTROL Workflow Models]** och klicka på **[!UICONTROL Edit]**.
 
-1. Dra från sidopanelen **[!UICONTROL Add Watermark]** till [!UICONTROL DAM Update Asset] arbetsflöde.
+1. Dra **[!UICONTROL Add Watermark]**-steget från sidopanelen till arbetsflödet i [!UICONTROL DAM Update Asset].
 
-   ![Dra [!UICONTROL Add Watermark] steg och lägga till [!UICONTROL DAM Update Asset] arbetsflöde](assets/add_watermark_step_aem_assets.png)
+   ![Dra [!UICONTROL Add Watermark]-steget och lägg till i [!UICONTROL DAM Update Asset]-arbetsflödet](assets/add_watermark_step_aem_assets.png)
 
-   *Bild: Dra [!UICONTROL Add Watermark] steg och lägga till [!UICONTROL DAM Update Asset] arbetsflöde.*
+   *Figur: Dra steget [!UICONTROL Add Watermark] och lägg till i arbetsflödet för [!UICONTROL DAM Update Asset].*
 
    >[!NOTE]
    >
-   >Placera [!UICONTROL Add Watermark] var som helst före [!UICONTROL Process Thumbnail] steg.
+   >Placera steget [!UICONTROL Add Watermark] var som helst före steget [!UICONTROL Process Thumbnail].
 
-1. Öppna **[!UICONTROL Add Watermark]** för att visa dess egenskaper.
-1. I **[!UICONTROL Arguments]** anger du giltiga värden i de olika fälten, inklusive text, teckensnittstyp, storlek, färg, position, orientering och så vidare. Bekräfta ändringarna genom att klicka **[!UICONTROL Done]**.
+1. Öppna steget **[!UICONTROL Add Watermark]** för att visa dess egenskaper.
+1. På fliken **[!UICONTROL Arguments]** anger du giltiga värden i de olika fälten, inklusive text, teckensnittstyp, storlek, färg, position, orientering och så vidare. Bekräfta ändringarna genom att klicka på **[!UICONTROL Done]**.
 
    ![Ange argumenten i steget Lägg till vattenstämpel i [!DNL Assets]](assets/arguments_add_watermark_aem_assets.png)
 
    *Bild: Ange argumenten i steget Lägg till vattenstämpel i [!DNL Assets].*
 
-1. Spara **[!UICONTROL DAM Update Asset]** arbetsflöde med vattenstämpelsteget.
-1. Från [!DNL Assets] -användargränssnittet, överföra en exempelresurs. Vattenstämpeln visas med teckensnittsstorlek, färg o.s.v. på den plats som du konfigurerade i ovanstående steg.
+1. Spara arbetsflödet **[!UICONTROL DAM Update Asset]** med vattenstämpelsteget.
+1. Ladda upp en exempelresurs från användargränssnittet [!DNL Assets]. Vattenstämpeln visas med teckensnittsstorlek, färg o.s.v. på den plats som du konfigurerade i ovanstående steg.
 
-Om du vill lägga till en vattenstämpel i PDF-dokument med programkod eller med dynamisk information bör du överväga att använda [Experience Manager dokumenttjänster](/help/forms/using/overview-aem-document-services.md) erbjuder.
+Om du vill lägga till en vattenstämpel i PDF-dokument med programkod eller med dynamisk information bör du överväga att använda erbjudandet [Experience Manager Document Services](/help/forms/using/overview-aem-document-services.md).
 
 ## Tips och begränsningar {#tips-limitations}
 

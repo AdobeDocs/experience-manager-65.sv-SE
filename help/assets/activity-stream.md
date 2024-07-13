@@ -15,26 +15,26 @@ ht-degree: 7%
 
 # Aktivitetsström på tidslinjen {#activity-stream-in-timeline}
 
-Den här funktionen visar aktivitetsloggar för resurser på tidslinjen. Om du utför någon av följande resursrelaterade åtgärder i [!DNL Adobe Experience Manager Assets]uppdaterar aktivitetsströmfunktionen tidslinjen för att återspegla aktiviteten.
+Den här funktionen visar aktivitetsloggar för resurser på tidslinjen. Om du utför någon av följande resursrelaterade åtgärder i [!DNL Adobe Experience Manager Assets] uppdaterar aktivitetsströmfunktionen tidslinjen så att aktiviteten återspeglas.
 
 Följande åtgärder är loggade i aktivitetsströmmen:
 
 * Skapa
 * Ta bort
 * Ladda ned (inklusive återgivningar)
-* Publicera
+* Publish
 * Avpublicera
 * Godkänn
 * Avvisa
 * Flytta
 
-Aktivitetsloggarna som ska visas på tidslinjen hämtas från platsen `/var/audit/com.day.cq.dam/content/dam` i CRX, där loggfiler lagras. Dessutom loggas tidslinjeaktiviteten när nya resurser överförs eller befintliga resurser ändras och checkas in i [!DNL Experience Manager] via [Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) eller [Experience Manager datorprogram](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
+Aktivitetsloggarna som ska visas på tidslinjen hämtas från platsen `/var/audit/com.day.cq.dam/content/dam` i CRX, där loggfiler lagras. Dessutom loggas tidslinjeaktiviteten när nya resurser överförs eller befintliga resurser ändras och checkas in i [!DNL Experience Manager] via [Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-assets-using-adobe-asset-link.ug.html) eller [Experience Manager-datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html).
 
 >[!NOTE]
 >
 >Övergående arbetsflöden visas inte på tidslinjen eftersom ingen historikinformation sparas för dessa arbetsflöden.
 
-Om du vill visa aktivitetsströmmen utför du en eller flera av åtgärderna för resursen, markerar resursen och väljer sedan **[!UICONTROL Timeline]** från listan GlobalNav.
+Om du vill visa aktivitetsströmmen utför du en eller flera av åtgärderna för resursen, markerar resursen och väljer sedan **[!UICONTROL Timeline]** i listan GlobalNav.
 
 ![tidslinje-2](assets/timeline-2.png)
 

@@ -24,7 +24,7 @@ Med tjänsten Forms kan du skapa interaktiva klientapplikationer för datainhäm
 * som HTML i olika webbläsarmiljöer, inklusive kompatibel XHTML 1.0-återgivning
 * som formulärguider i olika webbläsarmiljöer med stöd för Adobe Flash Player.
 
-Mer information om tjänsten Forms finns i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_63).
+Mer information om Forms-tjänsten finns i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_63).
 
 Med hjälp av Forms-sidan i administrationskonsolen kan du konfigurera beteendet för Forms-tjänsten. De här inställningarna gäller för alla anrop av tjänsten. Alla parametrar som skickas via AEM formulär SDK åsidosätter inställningarna som angetts i administrationskonsolen, men de påverkar bara det specifika anropet.
 

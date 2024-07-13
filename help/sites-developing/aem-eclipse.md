@@ -22,7 +22,7 @@ ht-degree: 2%
 
 ## Ökning {#overview}
 
-&quot;AEM Developer Tools&quot; är en Eclipse-plugin som bygger på [Eclipse-plugin för Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html) som släpps under Apache License 2.
+&quot;AEM Developer Tools&quot; är en Eclipse-plugin som baseras på [Eclipse-pluginen för Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html) som släppts under Apache License 2.
 
 Den har flera funktioner som gör AEM enklare:
 
@@ -36,42 +36,42 @@ Den har flera funktioner som gör AEM enklare:
 
 Innan du använder AEM Developer Tools ska du göra följande:
 
-* Hämta och installera [Eclipse IDE for Java™ EE Developers](https://www.eclipse.org/downloads/packages/release/luna/r/eclipse-ide-java-ee-developers). AEM Developer Tools har för närvarande stöd för Eclipse Kepler eller senare
+* Hämta och installera [Eclipse IDE för Java™ EE-utvecklare](https://www.eclipse.org/downloads/packages/release/luna/r/eclipse-ide-java-ee-developers). AEM Developer Tools har för närvarande stöd för Eclipse Kepler eller senare
 
 * Kan användas med AEM version 5.6.1 eller senare
-* Konfigurera förmörkelseinstallationen för att säkerställa att du har minst 1 GB stackminne genom att redigera `eclipse.ini` konfigurationsfilen enligt beskrivningen i [Vanliga frågor om Eclipse](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F).
+* Konfigurera din förmörkande installation för att säkerställa att du har minst 1 GB stackminne genom att redigera konfigurationsfilen `eclipse.ini` enligt beskrivningen i [Vanliga frågor om Eclipse](https://wiki.eclipse.org/FAQ_How_do_I_increase_the_heap_size_available_to_Eclipse%3F).
 
 >[!NOTE]
 >
->I macOS högerklickar du **Eclipse.app** och sedan markera **Visa paketinnehåll** för att hitta `eclipse.ini`.
+>I macOS högerklickar du på **Eclipse.app** och väljer sedan **Visa paketinnehåll** för att hitta `eclipse.ini`.
 
 ## Installera AEM Developer Tools for Eclipse {#how-to-install-the-aem-developer-tools-for-eclipse}
 
-När du har uppfyllt [krav](#requirements) ovan kan du installera plugin-programmet på följande sätt:
+När du har uppfyllt [kraven](#requirements) ovan kan du installera plugin-programmet på följande sätt:
 
-1. Sök i **AEM Developer Tools** webbplats på `https://eclipse.adobe.com/aem/dev-tools/`.
+1. Bläddra på webbplatsen **AEM Developer Tools** på `https://eclipse.adobe.com/aem/dev-tools/`.
 
-1. Kopiera **Installationslänk**.
+1. Kopiera **installationslänken**.
 
    Du kan även hämta ett arkiv i stället för att använda installationslänken. Om du gör det kan du installera offline, men du saknar meddelanden om automatiska uppdateringar.
 
-1. Öppna **Hjälp** -menyn.
-1. Klicka **Installera ny programvara**.
-1. Klicka **Lägg till...**.
-1. I **Namn** AEM Developer Tools.
-1. I **Plats** kopiera installations-URL:en.
-1. Klicka **OK**.
-1. Markera båda **AEM** och **Sling** plugins.
+1. Öppna menyn **Hjälp** i Eclipse.
+1. Klicka på **Installera ny programvara**.
+1. Klicka på **Lägg till..**.
+1. I **Namn** AEM du Utvecklarverktyg.
+1. I **Plats** kopierar du installations-URL:en.
+1. Klicka på **OK**.
+1. Kontrollera både **AEM** och **Sling** plugin-program.
 1. Klicka på **Nästa**.
 1. Klicka på **Nästa**.
-1. Godkänn de linjära avtalen och klicka på **Slutför**.
-1. Klicka **Ja** för att starta om Eclipse.
+1. Acceptera de länkade avtalen och klicka på **Slutför**.
+1. Klicka på **Ja** för att starta om Eclipse.
 
 ## Importera befintliga projekt {#how-to-import-existing-projects}
 
 >[!NOTE]
 >
->Se [Så här arbetar du med ett paket i Eclipse när det hämtades från AEM](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407).
+>Se [Arbeta med ett paket i Eclipse när det hämtades från AEM](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407).
 
 ## AEM {#the-aem-perspective}
 
@@ -81,11 +81,11 @@ AEM utvecklingsverktyg för Eclipse levereras med ett perspektiv som ger dig ful
 
 ## Exempel på flermodulsprojekt {#sample-multi-module-project}
 
-&quot;AEM utvecklingsverktyg&quot; innehåller ett exempel på ett flermodulsprojekt som hjälper dig att snabbt komma igång med projektkonfigurationen i Eclipse. Det är också en praktisk guide till flera AEM funktioner. [Läs mer om Project Archetype](https://github.com/adobe/aem-project-archetype).
+&quot;AEM utvecklingsverktyg&quot; innehåller ett exempel på ett flermodulsprojekt som hjälper dig att snabbt komma igång med projektkonfigurationen i Eclipse. Det är också en praktisk guide till flera AEM funktioner. [Läs mer om projekttypen](https://github.com/adobe/aem-project-archetype).
 
 Så här skapar du exempelprojektet:
 
-1. I **Fil** > **Nytt** > **Projekt** -menyn, bläddra till **AEM** avsnitt och markera **Exempel på AEM-projekt med flera moduler**.
+1. I menyn **Arkiv** > **Nytt** > **Projekt** bläddrar du till avsnittet **AEM** och väljer **AEM Exempelprojekt med flera moduler** .
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -97,11 +97,11 @@ Så här skapar du exempelprojektet:
 
    ![chlimage_1-70](assets/chlimage_1-70a.png)
 
-1. Välj **com.adobe.granite.archietypes : sample-project-architype : (högsta antal)** från menyn och sedan klicka på **Nästa**.
+1. Välj **com.adobe.granite.archietypes : sample-project-architype : (högsta antal)** på menyn och klicka sedan på **Nästa**.
 
    ![chlimage_1-71](assets/chlimage_1-71a.png)
 
-1. Fyll i en **Namn**, **Grupp-ID** och en **Artefakt-ID** för exempelprojektet. Du kan också välja att ange vissa avancerade egenskaper.
+1. Fyll i ett **namn**, **grupp-ID** och ett **artefakt-ID** för exempelprojektet. Du kan också välja att ange vissa avancerade egenskaper.
 
    ![chlimage_1-72](assets/chlimage_1-72a.png)
 
@@ -115,11 +115,11 @@ Så här skapar du exempelprojektet:
 
    ![chlimage_1-73](assets/chlimage_1-73a.png)
 
-1. Klicka **Slutför**. Projektstrukturen skapas.
+1. Klicka på **Slutför**. Projektstrukturen skapas.
 
    >[!NOTE]
    >
-   >I en ny installation (närmare bestämt: när större beroenden aldrig har hämtats) kan du få projektet skapat med fel. I så fall följer du det förfarande som beskrivs i [Löser ogiltig projektdefinition](#resolving-invalid-project-definition).
+   >I en ny installation (närmare bestämt: när större beroenden aldrig har hämtats) kan du få projektet skapat med fel. I det här fallet följer du proceduren som beskrivs i [Lösa ogiltig projektdefinition](#resolving-invalid-project-definition).
 
 ## Felsökning {#troubleshooting}
 
@@ -128,9 +128,9 @@ Så här skapar du exempelprojektet:
 Så här löser du ogiltiga beroenden och projektdefinitioner:
 
 1. Markera alla skapade projekt.
-1. Högerklicka. På menyn **Maven**, markera **Uppdatera projekt**.
-1. Kontrollera **Tvinga uppdateringar av ögonblicksbild/releaser**.
-1. Klicka **OK**. Eclipse försöker hämta nödvändiga beroenden.
+1. Högerklicka. Välj **Uppdatera projekt** på menyn **Maven**.
+1. Kontrollera **Tvinga uppdateringar av ögonblicksbild/släppningar**.
+1. Klicka på **OK**. Eclipse försöker hämta nödvändiga beroenden.
 
 ### Aktivera automatisk komplettering av taggbibliotek i JSP-filer {#enabling-tag-library-autocompletion-in-jsp-files}
 
@@ -152,12 +152,12 @@ Se till att du lägger till rätt version för din distribution av AEM.
 
 Den officiella versionen av Apache Sling IDE-verktygen för Eclipse-webbplatsen innehåller användbar information:
 
-* The [**Apache Sling IDE-verktyg för Eclipse** Användarhandbok](https://sling.apache.org/documentation/development/ide-tooling.html)I den här dokumentationen får du hjälp med de övergripande begreppen, serverintegreringen och distributionsfunktionerna som stöds av AEM utvecklingsverktyg.
-* The [Felsökningsavsnitt](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting).
-* The [Lista över kända fel](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues).
+* [**Apache Sling IDE-verktygen för Eclipse** Användarhandbok](https://sling.apache.org/documentation/development/ide-tooling.html) hjälper dig igenom de övergripande begreppen, serverintegrationen och distributionsfunktionerna som stöds av AEM utvecklingsverktyg.
+* Avsnittet [Felsökning](https://sling.apache.org/documentation/development/ide-tooling.html#troubleshooting).
+* Listan [Kända fel](https://sling.apache.org/documentation/development/ide-tooling.html#known-issues).
 
-Följande tjänsteman [Eclipse](https://www.eclipse.org/) dokumentation kan hjälpa dig att konfigurera miljön:
+Följande officiella [Eclipse](https://www.eclipse.org/)-dokumentation kan hjälpa dig att konfigurera miljön:
 
 * [Komma igång med Eclipse](https://eclipseide.org/getting-started/)
-* [Hjälpsystemet Eclipse Luna](https://help.eclipse.org/latest/index.jsp)
+* [Eclipse Luna Help System](https://help.eclipse.org/latest/index.jsp)
 * [Maven Integration (m2eclipse)](https://www.eclipse.org/m2e/)

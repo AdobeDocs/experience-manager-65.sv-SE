@@ -77,7 +77,8 @@ I det här avsnittet beskrivs maskinvaru- och programvarukraven samt vilka platt
 ### Lägsta maskin- och programvarukrav {#minimum-hardware-software-requirements}
 
 **Workbench**
-Följande krav rekommenderas som minimum: Diskutrymme för installation:
+Följande krav rekommenderas som minimum:
+Diskutrymme för installation:
 * 680 MB endast för Workbench.
 * 2,15 GB på en enda enhet för en fullständig installation av Workbench, Designer och exempelpaketet.
 * 400 MB för temporära installationskataloger - 200 MB i användarens \temp-katalog och 200 MB i Windows temporära katalog.
@@ -99,7 +100,7 @@ Följande krav rekommenderas som minimum: Diskutrymme för installation:
 
 ### Plattformar som stöds {#supported-platforms}
 
-Se hela listan över plattformar som stöds för Workbench på [Plattformar som stöds av AEM Forms](https://www.adobe.com/go/learn_aemforms_supportedplatforms_65).
+Se den fullständiga listan över plattformar som stöds för Workbench på [AEM Forms Supported Platforms](https://www.adobe.com/go/learn_aemforms_supportedplatforms_65).
 
 ## Installationsfrågor för Designer {#designer-installation-considerations}
 
@@ -121,7 +122,7 @@ Olika versioner av Designer kan samexistera i samma system, till exempel Designe
   </tr>
   <tr>
    <td><p>Designer (fristående)</p> </td>
-   <td><p>Ingen. <br />Den version av Designer som ingår i Workbench är endast engelsk. <br />Installationsprogrammet för Workbench installerar inte om en ny version av Designer. Istället patchas en uppdaterad version som medföljer installationsprogrammet för Workbench. På så sätt kan du även använda din lokaliserade version av Designer i Workbench.<br /> </p> </td>
+   <td><p>Ingen. <br />Den version av Designer som ingår i Workbench är endast engelsk. <br />Installationsprogrammet för Workbench installerar inte om en ny version av Designer. Istället patchas en uppdaterad version som medföljer installationsprogrammet för Workbench. Detta gör även att du kan använda din lokaliserade version av Designer i Workbench.<br /> </p> </td>
   </tr>
  </tbody>
 </table>
@@ -129,8 +130,8 @@ Olika versioner av Designer kan samexistera i samma system, till exempel Designe
 ### Avinstallera Designer (fristående) i Windows 10 {#uninstall-designer-standalone-windows10}
 
 1. Gå till **Kontrollpanelen > Program > Program och funktioner**
-1. I listan Aktuella installerade program väljer du **Adobe Designer**.
-1. Klicka **Avinstallera** och sedan klicka **Ja**.
+1. I listan Installerade program väljer du **Adobe Designer**.
+1. Klicka på **Avinstallera** och sedan på **Ja**.
 
 ## Installerar Workbench {#installing-workbench}
 
@@ -138,7 +139,7 @@ I det här kapitlet beskrivs hur du installerar Workbench.
 
 ### Installera och köra Workbench {#installing-and-running-workbench}
 
-Innan du installerar Workbench måste du kontrollera att miljön innehåller den programvara och maskinvara som krävs för att köra den (se avsnitt: **Före installationen**).
+Innan du installerar Workbench måste du se till att din miljö innehåller den programvara och maskinvara som krävs för att köra den (se avsnittet **Innan du installerar**).
 
 **Så här installerar och kör du Workbench:**
 
@@ -172,9 +173,9 @@ Innan du installerar Workbench måste du kontrollera att miljön innehåller den
 1. Granska installationssammanfattningen. Välj Starta AEM Forms Workbench så att du kan starta Workbench och klicka sedan på Nästa.
 1. Granska versionsinformationen och klicka på Klar.
 1. Följande objekt är nu installerade på datorn:
-   * **Workbench**: Om du vill köra Workbench från Start-menyn väljer du Alla program > AEM Forms > Workbench, om du väljer att spara genvägsmappen där. Mer information finns i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Använda Workbench</a> dokumentation.
-   * **Designer**: Du kan komma åt Designer inifrån Workbench. Mer information finns i avsnittet Komma igång i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Hjälp om Designer</a>.
-   * **AEM Forms SDK**: Mer information om hur du använder SDK finns i <a href="https://helpx.adobe.com/pdf/aem-forms/6-3/programming-with-aem-forms.pdf">Programmera med AEM Forms</a>.
+   * **Workbench**: Om du vill köra Workbench från Start-menyn väljer du Alla program > AEM Forms > Workbench, om du väljer att spara genvägsmappen där. För information,   se <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/WorkbenchHelp.pdf">Använda Workbench</a> -dokumentationen.
+   * **Designer**: Du kan komma åt Designer inifrån Workbench. Mer information finns i avsnittet Komma igång i <a href="https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf">Designer-hjälpen</a>.
+   * **AEM Forms SDK**: Mer information om hur du använder SDK finns i <a href="https://helpx.adobe.com/pdf/aem-forms/6-3/programming-with-aem-forms.pdf">Programmering med AEM Forms</a>.
 
 ## Uppgraderingsprocesser {#upgrading-processes}
 
@@ -190,11 +191,11 @@ Om du vill använda Workbench måste du ha en instans av AEM Forms igång, vanli
 
 ### Konfigurera timeout-inställningar {#configuring-timeout-settings}
 
-Workbench gör som standard en timeout efter två timmar, oavsett aktivitet eller inaktivitet. Mer information om hur du redigerar timeout-inställningen finns i&quot;Konfigurera användarhantering > Konfigurera avancerade systemattribut&quot; i <a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">Hjälp för administrationskonsol</a>.
+Workbench gör som standard en timeout efter två timmar, oavsett aktivitet eller inaktivitet. Mer information om hur du redigerar timeout-inställningen finns i&quot;Konfigurera användarhantering > Konfigurera avancerade systemattribut&quot; i hjälpen för <a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">administrationskonsolen</a>.
 
 ### Konfigurera Workbench för anslutning via HTTPS {#configuring-workbench-to-connect-over-HTTPS}
 
-Om du vill ansluta Workbench till en AEM Forms-server via HTTPS måste du se till att den certifikatutfärdare (CA) som utfärdade den offentliga nyckeln tolkas som tillförlitlig av Workbench. Om certifikatet inte identifieras som att det kommer från en betrodd källa måste du uppdatera cacert-filen i [Workbench_HOME]/workbench/jre/lib/security directory.
+Om du vill ansluta Workbench till en AEM Forms-server via HTTPS måste du se till att den certifikatutfärdare (CA) som utfärdade den offentliga nyckeln tolkas som tillförlitlig av Workbench. Om certifikatet inte identifieras som att det kommer från en betrodd källa måste du uppdatera cacert-filen i katalogen [Workbench_HOME]/workbench/jre/lib/security.
 
 >[!NOTE]
 >
@@ -202,23 +203,23 @@ Om du vill ansluta Workbench till en AEM Forms-server via HTTPS måste du se til
 
 Kontrollera att du ansluter till HTTPS med det namn som anges i certifikatet. Det här namnet är vanligtvis det fullständiga, kvalificerade värdnamnet.
 
-**Uppdatera cacert-filen**:
+**Så här uppdaterar du cacert-filen**:
 1. Kontrollera att du har en kopia av SSL-certifikatet (Secure Sockets Layer). Kontakta antingen administratören som konfigurerade SSL-servern eller exportera certifikatet med en webbläsare.
 
    >[!NOTE]
    >
-   >Om du vill exportera certifikatet öppnar du en webbläsare och loggar in på administrationskonsolen. Installera certifikatet i webbläsaren och exportera sedan certifikatet från webbläsaren till en tillfällig lagringsplats (eller direkt till [Workbench_HOME]/workbench/jre/lib/security directory).
+   >Om du vill exportera certifikatet öppnar du en webbläsare och loggar in på administrationskonsolen. Installera certifikatet i webbläsaren och exportera sedan certifikatet från webbläsaren till en tillfällig lagringsplats (eller direkt till katalogen [Workbench_HOME]/workbench/jre/lib/security).
 
-1. Kopiera certifikatet till [Workbench_HOME]/workbench/jre/lib/security directory.
+1. Kopiera certifikatet till katalogen [Workbench_HOME]/workbench/jre/lib/security.
 
-1. Öppna kommandotolken, navigera till [Workbench_HOME]/workbench/jre/bin och skriv sedan följande kommando:
+1. Öppna ett kommandotolkfönster, navigera till [Workbench_HOME]/workbench/jre/bin och skriv sedan följande kommando:
    `keytool -import -storepass changeit -file [Workbench_HOME]\workbench\jre\lib\security\ssl_cert_for_certname.cer -keystore [Workbench_HOME]\workbench\jre\lib\security\cacerts -alias example`
 Var:
    * `changeit` är standardlösenordet för kontots nyckelbehållare.
    * certname är det certifikat som du valde i steg 1.
    * exempel är det alias som du väljer för certifikatet. Det här värdet kan ändras.
 
-1. När du uppmanas att lita på certifikatet skriver du Yes (Ja) och trycker på Enter. Nyckelverktyget fortsätter att importera kontofilen till [Workbench_HOME]/workbench/jre/lib/security directory.
+1. När du uppmanas att lita på certifikatet skriver du Yes (Ja) och trycker på Enter. Nyckelverktyget fortsätter att importera kontofilen till katalogen [Workbench_HOME]/workbench/jre/lib/security.
 
 1. Stäng och starta om Workbench för att tillämpa ändringarna.
 
@@ -229,13 +230,13 @@ Följande aspekter av cacheåtgärden bör beaktas om programmet genererar unika
 När formulärgeneratorn eller utdataanvändaren söker efter, eller uppdaterar, poster i cachen efter en viss formulärmall, används flera nyckelvärden för att hitta den specifika cachepost som är tillgänglig.
 
 * **Mallfilnamn**: Plats och filnamn för mallen som används som primär unik identifierare för det cachelagrade formuläret.
-* **Tidsstämpel**: Mallfilen innehåller en tidsstämpel som används för att fastställa formulärets senaste uppdateringstid.
-* **Mall-UID**: Designer infogar i varje mall en unik identifierare (UUID) för formuläret och dess version. Varje gång formuläret uppdateras uppdateras det inbäddade UUID:t. En XDP-mall kan till exempel visa följande innehåll:
+* **Tidsstämpel**: Mallfilen innehåller en tidsstämpel som används för att bestämma formulärets senaste uppdateringstid.
+* **Mall-UID**: Designer infogar en unik identifierare (UUID) för formuläret och dess version i varje mall. Varje gång formuläret uppdateras uppdateras det inbäddade UUID:t. En XDP-mall kan till exempel visa följande innehåll:
 
   `<?xml version="1.0" encoding="UTF-8"?>`
   `<?xfa generator="AdobeAEM formsDesignerES_V8.2" APIVersion="2.6.7185.0"?><xdp:xdp xmlns:xdp=https://ns.adobe.com/xdp/ timeStamp="2008-07-29T21:22:12Z" uuid="823e538f-ff6c-4961-b759-f7626978a223"><template xmlns="https://www.xfa.org/schema/xfa-template/2.6/">`
 
-* **Återgivningsalternativ**: I den återgivna formulärcachen lagras cacheinnehållet separat för varje uppsättning unika återgivningsalternativ.
+* **Återgivningsalternativ**: I den återgivna formulärcachen lagras cacheinnehållet separat för varje uppsättning med unika återgivningsalternativ.
 
 
 Forms-tjänsten tar emot mallar utifrån filnamn eller databasplats, eller efter värde som ett XML-objekt i minnet.
@@ -270,12 +271,12 @@ Med XDC-redigeringsprogrammet kan nätverksskrivaradministratörer skapa och än
 
 Innan administratören för nätverksskrivaren använder XDC-redigeringsprogrammet ska du flytta XDC-exempelfilerna och läsa Skapa enhetsprofiler med XDC-redigeringsprogrammet.
 
-**Hämta XDC-exempelfilerna**:
+**Så här hämtar du XDC-exempelfilerna**:
 
 1. På AEM Forms Server letar du reda på XDC-mappen i [AEM Forms root]\sdk\samples\Output\IVS.
 1. Kopiera innehållet i den här mappen till en katalog som är tillgänglig från Workbench- eller Eclipse-systemet.
 
-**Få hjälp om XDC Editor**:
+**Så här får du hjälp om XDC Editor**:
 
 1. Gå till AEM Forms dokumentationswebbplats.
-1. Klicka på **Utveckla** och navigera till Skapa enhetsprofiler med XDC-redigeringsprogrammet. Hämta filen xdc_editor_help_web.zip och installera hjälpfilerna genom att följa instruktionerna i Viktigt-filen.
+1. Klicka på fliken **Framkalla** och navigera till Skapa enhetsprofiler med XDC-redigeringsprogrammet. Hämta filen xdc_editor_help_web.zip och installera hjälpfilerna genom att följa instruktionerna i Viktigt-filen.

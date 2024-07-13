@@ -37,7 +37,7 @@ På Content Insight-sidan finns rapporter som använder Adobe SiteCatalyst-, Ado
 * Mål: Rapporter om kampanjaktiviteter som din sida innehåller erbjudanden för.
 * BrightEdge: Rapporterar på sidan funktioner som gör sidan mer synlig för sökmotorer och rekommenderar funktioner som bör implementeras.
 
-Se [Öppna Analytics och Recommendations för en sida](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page).
+Gå till [Öppnar Analytics och Recommendations för en sida](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page).
 
 ## Rapporteringsperiod
 
@@ -45,15 +45,15 @@ Rapporterna visar data för en tidsperiod som du bestämmer. När du justerar ra
 
 >[!NOTE]
 >
->Tidslinjen för kontrollpanelen för Content Insight finns i `GMT`.
+>Tidslinjen för kontrollpanelen för Content Insight är i `GMT`.
 
 Du kan också ange hur detaljerad den rapporterade informationen är. Du kan till exempel se data varje dag, vecka, månad eller år.
 
-Se [Ändra rapporteringsperioden](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period).
+Se [Ändra rapporteringsperiod](/help/sites-authoring/ci-analyze.md#changing-the-reporting-period).
 
 >[!NOTE]
 >
->Content Insights-rapporterna kräver att administratören har integrerat AEM med SiteCatalyst, Target och BrightEdge. Se [Integrera med SightCatalyst](/help/sites-administering/adobeanalytics.md), [Integrera med Adobe Target](/help/sites-administering/target.md)och [Integrera med BrightEdge](/help/sites-administering/brightedge.md).
+>Content Insights-rapporterna kräver att administratören har integrerat AEM med SiteCatalyst, Target och BrightEdge. Se [Integrera med SightCatalyst](/help/sites-administering/adobeanalytics.md), [Integrera med Adobe Target](/help/sites-administering/target.md) och [Integrera med BrightEdge](/help/sites-administering/brightedge.md).
 
 ## Vyrapporten {#the-views-report}
 
@@ -90,7 +90,7 @@ Satsrapporten innehåller ett diagram som visar antalet studsar som har inträff
 
 ## Kampanjaktivitetsrapporten {#the-campaign-activity-report}
 
-För varje kampanj som sidan är aktiv för visas en rapport med namnet *Kampanjnamn* Aktivitet. Rapporten visar hur många sidor och konverteringar som gjorts för varje segment som erbjudandet gäller.
+För varje kampanj som sidan är aktiv för visas en rapport med namnet *Kampanjnamn* Activity. Rapporten visar hur många sidor och konverteringar som gjorts för varje segment som erbjudandet gäller.
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 

@@ -17,11 +17,11 @@ ht-degree: 0%
 
 # Anpassa uppgiftsåtgärder {#customizing-task-actions}
 
-Med AEM Forms arbetsyta kan användare anpassa uppgiftsåtgärderna. Innan du anpassar uppgiftsåtgärderna måste du följa de steg som anges på [Allmänna steg för anpassning av AEM Forms arbetsyta](/help/forms/using/generic-steps-html-workspace-customization.md).
+Med AEM Forms arbetsyta kan användare anpassa uppgiftsåtgärderna. Innan du anpassar uppgiftsåtgärderna måste du följa de steg som beskrivs i [Allmänna steg för anpassning av AEM Forms-arbetsytan](/help/forms/using/generic-steps-html-workspace-customization.md).
 
 ## Anpassa textstil {#customizing-text-style}
 
-Om du vill anpassa textformatet lägger du till följande kodfragment i `/apps/ws/css/newStyle.css` fil:
+Om du vill anpassa textformatet lägger du till följande kodfragment i filen `/apps/ws/css/newStyle.css`:
 
 ```css
 /*-------- For Task Actions visible in task list task action popup ----------------------------------------------------*/
@@ -109,7 +109,7 @@ Om du vill anpassa textformatet lägger du till följande kodfragment i `/apps/w
 
 ## Anpassa bilder {#customizing-images}
 
-Om du vill anpassa bilderna lägger du till följande kodfragment i `/apps/ws/css/newStyle.css` -fil. Följande kodfragment anpassar bilden för *lock* åtgärd:
+Om du vill anpassa bilderna lägger du till följande kodfragment i filen `/apps/ws/css/newStyle.css`. Följande kodfragment anpassar bilden för åtgärden *lock*:
 
 ```css
 #taskarea .taskActionsPopUp .lock, .task .taskActionsPopUp .lock{
@@ -136,7 +136,7 @@ Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i 
 
 ### Åtgärdssnabbmeny för uppgiftslistans åtgärd {#task-list-task-action-nbsp-pop-up-menu}
 
-1. Du behöver ett utvecklingspaket för att kunna anpassa alternativ på åtgärdsmenyn Åtgärd för arbetsytan i AEM Forms. Mer information om hur du skapar utvecklingspaket finns i [Skapar AEM Forms-arbetsytekod.](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
+1. Du behöver ett utvecklingspaket för att kunna anpassa alternativ på åtgärdsmenyn Åtgärd för arbetsytan i AEM Forms. Mer information om hur du skapar utvecklingspaket finns i [Skapa AEM Forms-arbetsytekod.](/help/forms/using/introduction-customizing-html-workspace.md#building-html-workspace-code)
 
 1. Kopiera /libs/ws/js/runtime/templates/task.html till `/apps/ws/js/runtime/templates/task.html`ersätt följande kodfragment:
 
@@ -211,7 +211,7 @@ Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i 
        </div>
    ```
 
-1. Ta bort den fasta bredden som tilldelats en ankartagg från `/apps/ws/css/newStyle.css` fil:
+1. Ta bort den fasta bredden som tilldelats en ankartagg från filen `/apps/ws/css/newStyle.css`:
 
    ```css
    .task .taskActionsPopUp ul{
@@ -265,8 +265,8 @@ Om du bara vill visa bilder för åtgärder anpassar du bilderna som används i 
 
 Utför följande steg för att anpassa snabbmenyn Detaljåtgärdsåtgärder:
 
-* Kopiera /libs/ws/js/runtime/templates/taskdetails.html till `/apps/ws/js/runtime/templates/` mapp:
-* Kapsla in ikontaggen inuti ankartaggen i stället för text. Till exempel *ny kod* som visas nedan kapslar in ikontaggen i ankartaggen:
+* Kopiera /libs/ws/js/runtime/templates/taskdetails.html till mappen `/apps/ws/js/runtime/templates/`:
+* Kapsla in ikontaggen inuti ankartaggen i stället för text. Den *nya koden* nedan kapslar till exempel in ikontaggen i ankartaggen:
 
 ```html
 // Original code
@@ -358,5 +358,5 @@ Utför följande steg för att anpassa snabbmenyn Detaljåtgärdsåtgärder:
 ```
 
 * Öppna /apps/ws/js/registry.js för redigering.
-* Leta reda på följande text: `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
+* Sök efter följande text: `text!/lc/libs/ws/js/runtime/templates/taskdetails.html`
 * Ersätt den placerade texten med följande text: `text!/lc/apps/ws/js/runtime/templates/taskdetails.html`

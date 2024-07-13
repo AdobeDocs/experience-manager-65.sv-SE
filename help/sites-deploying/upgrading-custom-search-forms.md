@@ -30,22 +30,22 @@ Därför krävs manuella justeringar efter en uppgradering för att formulären 
 
 Detta gäller nya Search Forms och Forms som har anpassats som standard.
 
-Mer information finns i dokumentationen om [Sök efter ansikten](/help/assets/search-facets.md).
+Mer information finns i dokumentationen om [sökansikten](/help/assets/search-facets.md).
 
 ## Ändra egenskapen resourceType {#changing-the-resourcetype-property}
 
-Om inget annat anges måste de flesta justeringar som måste göras efter uppgraderingen ändras `sling:resourceType` för den konfigurerade anpassade söknings-Forms. Detta behövs så att egenskapen pekar på rätt plats för återgivningsskriptet.
+Om inget annat anges krävs det att egenskapen `sling:resourceType` ändras för den konfigurerade anpassade söknings-Forms för de flesta justeringar som behöver göras efter uppgraderingen. Detta behövs så att egenskapen pekar på rätt plats för återgivningsskriptet.
 
 Du kan ändra egenskapen genom att göra följande:
 
 1. Öppna CRXDE Lite genom att gå till `https://server:port/crx/de/index.jsp`
-1. Bläddra till platsen för noden som behöver justeras, enligt listan med [Anpassad sökning i Forms](/help/sites-deploying/upgrading-custom-search-forms.md#list-of-custom-search-forms) nedan.
-1. Klicka på noden. Klicka på och ändra i den högra egenskapspanelen **sling:resourceType** -egenskap.
-1. Spara ändringarna genom att trycka på **Spara alla** -knappen.
+1. Bläddra till platsen för den nod som behöver justeras, enligt listan [Anpassad sökning i Forms](/help/sites-deploying/upgrading-custom-search-forms.md#list-of-custom-search-forms) nedan.
+1. Klicka på noden. Klicka på och ändra egenskapen **sling:resourceType** i den högra egenskapspanelen.
+1. Spara slutligen ändringarna genom att trycka på knappen **Spara alla** .
 
 ## Lista över anpassade sökningar i Forms {#list-of-custom-search-forms}
 
-Här nedan hittar du en lista över alla anpassade sökningar i Forms och de ändringar de kräver efter uppgraderingen. De hänvisar till namnen i `/conf/global/settings/cq/search/facets/sites/items`.
+Här nedan hittar du en lista över alla anpassade sökningar i Forms och de ändringar de kräver efter uppgraderingen. De refererar till namnen i `/conf/global/settings/cq/search/facets/sites/items`.
 
 ### Fulltextpredikat med nodnamnet &quot;fulltext&quot; {#fulltext-predicate-with-node-name-fulltext}
 
@@ -89,7 +89,7 @@ I AEM 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har f
  </tbody>
 </table>
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2).
 
 ### Förutsägelser för sökvägsläsare {#path-browser-predicates}
 
@@ -110,7 +110,7 @@ I AEM 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har f
  </tbody>
 </table>
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2).
 
 ### Förutsägelser för taggar {#tags-predicates}
 
@@ -131,7 +131,7 @@ I AEM 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har f
  </tbody>
 </table>
 
-**Åtgärd:** Justera **resourceType** egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen **resourceType** (lägg till **/coral** på samma sätt som i 6.2-platsen som anges ovan).
 
 ### Sidstatuspredikat {#page-status-predicate}
 
@@ -154,9 +154,9 @@ I AEM 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har f
 
 Sidstatus har ersatts med två alternativ för egenskapspredikat, en för publicering och en för LiveCopy-status.
 
-**Funktionsmakron:**
+**Åtgärder:**
 
-* Ta bort `pagestatuspredicate` nod
+* Ta bort noden `pagestatuspredicate`
 * Kopiera nod
 
    * `/libs/settings/cq/search/facets/sites/jcr:content/items/publishstatuspredicate`
@@ -167,7 +167,7 @@ Sidstatus har ersatts med två alternativ för egenskapspredikat, en för public
    * `/libs/settings/cq/search/facets/sites/jcr:content/items/livecopystatuspredicate`
    * till `/conf/global/settings/cq/search/facets/sites/jcr:content/items`
 
-* Se till att du anger `listOrder` -egenskapen för `analyticspredicate` nod till **8**&quot;. Detta behövs för att undvika konflikter.
+* Se till att du anger egenskapen `listOrder` för noden `analyticspredicate` till **8**. Detta behövs för att undvika konflikter.
 
 ### Förutsägelser för datumintervall {#date-range-predicates}
 
@@ -188,7 +188,7 @@ Sidstatus har ersatts med två alternativ för egenskapspredikat, en för public
  </tbody>
 </table>
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2).
 
 ### Dolt filter {#hidden-filter}
 
@@ -209,7 +209,7 @@ Sidstatus har ersatts med två alternativ för egenskapspredikat, en för public
  </tbody>
 </table>
 
-**Åtgärd:** Inget att justera.
+**Åtgärd:** Det finns inget att justera.
 
 ### Analytics Predicate {#analytics-predicate}
 
@@ -225,12 +225,12 @@ Sidstatus har ersatts med två alternativ för egenskapspredikat, en för public
   </tr>
   <tr>
    <td>Resurstyp i 6.2</td>
-   <td><p>cq/gui/components<strong>/coral/</strong>siteadmin/admin/searchpanel/searchpredikates/analyticspredicate</p> </td>
+   <td><p>cq/gui/components<strong>/coral/</strong>siteadmin/admin/searchpanel/searchpreates/analyticspredicate</p> </td>
   </tr>
  </tbody>
 </table>
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2).
 
 ### Intervallpredikering {#range-predicate}
 
@@ -246,12 +246,12 @@ Sidstatus har ersatts med två alternativ för egenskapspredikat, en för public
   </tr>
   <tr>
    <td>Resurstyp i 6.2</td>
-   <td><p>cq/gui/components<strong>/coral/</strong>siteadmin/admin/searchpanel/searchpredikates/rangepredicate</p> </td>
+   <td><p>cq/gui/components<strong>/coral/</strong>siteadmin/admin/searchpanel/searchpreates/rangepredicate</p> </td>
   </tr>
  </tbody>
 </table>
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2).
 
 >[!NOTE]
 >
@@ -271,12 +271,12 @@ Sidstatus har ersatts med två alternativ för egenskapspredikat, en för public
   </tr>
   <tr>
    <td>Resurstyp i 6.2</td>
-   <td><p>cq/gui/components<strong>/coral/</strong>siteadmin/admin/searchpanel/searchpredikates/optionspredicate</p> </td>
+   <td><p>cq/gui/components<strong>/coral/</strong>siteadmin/admin/searchpanel/searchpreates/optionspredicate</p> </td>
   </tr>
  </tbody>
 </table>
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2).
 
 ### Slider-intervallpredikat {#slider-range-predicate}
 
@@ -297,7 +297,7 @@ Sidstatus har ersatts med två alternativ för egenskapspredikat, en för public
  </tbody>
 </table>
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2).
 
 ### Komponentpredikat {#components-predicate}
 
@@ -318,7 +318,7 @@ Sidstatus har ersatts med två alternativ för egenskapspredikat, en för public
  </tbody>
 </table>
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2).
 
 ### Författarpredikat {#author-predicate}
 
@@ -339,7 +339,7 @@ Sidstatus har ersatts med två alternativ för egenskapspredikat, en för public
  </tbody>
 </table>
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2).
 
 ### Mallar - predikat {#templates-predicate}
 
@@ -355,14 +355,14 @@ Sidstatus har ersatts med två alternativ för egenskapspredikat, en för public
   </tr>
   <tr>
    <td>Resurstyp i 6.2</td>
-   <td><p>cq/gui/components<strong>/coral/</strong>siteadmin/admin/searchpanel/searchpreates/templatesSpreda</p> </td>
+   <td><p>cq/gui/components<strong>/coral/</strong>siteadmin/admin/searchpanel/searchpreates/templatesPredikate</p> </td>
   </tr>
  </tbody>
 </table>
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2).
 
-## Resursadministratörssökväg {#assets-admin-search-rail}
+## Assets Admin Search Rail {#assets-admin-search-rail}
 
 Nedan visas namnen i `/conf/global/settings/dam/search/facets/assets/items`
 
@@ -384,7 +384,7 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/pathbrowserpredikate |
 | Resurstyp i 6.2 | dam/gui/coral/components/admin/customsearch/searchpreates/pathbrowserpredikate |
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2).
 
 ### Mime Type Predicates {#mime-type-predicates}
 
@@ -393,7 +393,7 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpredikates/optionspredicate |
 | Resurstyp i 6.2 | dam/gui/coral/components/admin/customsearch/searchpreates/optionspredicate |
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som i 6.2-positionen ovan).
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2).
 
 ### Filstorleksprognoser {#file-size-predicates}
 
@@ -402,7 +402,7 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/filesizepredicate |
 | Resurstyp i 6.2 | dam/gui/coral/components/admin/customsearch/searchpreates/sliderangepredicate |
 
-**Åtgärd:** Justera `resourceType` som visas på platsen 6.2 ovan.
+**Åtgärd:** Justera `resourceType` så som visas på platsen 6.2 ovan.
 
 ### Predikat för senast ändrade resurs {#asset-last-modified-predicates}
 
@@ -413,20 +413,20 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 
 Åtgärd: Justera egenskapen resourceType (lägg till&quot;/coral&quot; på samma sätt som i 6.2-platsen som anges ovan).
 
-### Publicera predikat {#publish-predicate}
+### Publish Predicate {#publish-predicate}
 
 | Nod/noder i standardsökformuläret i 6.1 | publicera |
 |---|---|
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/publishpredikate |
 | Resurstyp i 6.2 | dam/gui/coral/components/admin/customsearch/searchpreates/publishate |
 
-**Funktionsmakron:**
+**Åtgärder:**
 
-* Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som på den plats som anges ovan i 6.2)
+* Justera egenskapen `resourceType` (lägg till **/coral** som på platsen 6.2 ovan)
 
-* Lägg till en `optionPaths` (av typen String), egenskap med värdet: `/libs/dam/options/predicates/publish`
+* Lägg till en `optionPaths`-egenskap (av typen String) med värdet: `/libs/dam/options/predicates/publish`
 
-* Lägg till `singleSelect` egenskap med booleskt värde `true`.
+* Lägg till egenskapen `singleSelect` med det booleska värdet `true`.
 
 ### Statusprognoser {#status-predicates}
 
@@ -435,7 +435,7 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpredikates/optionspredicate |
 | Resurstyp i 6.2 | dam/gui/coral/components/admin/customsearch/searchpreates/optionspredicate |
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som på den plats som anges ovan i 6.2)
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2)
 
 ### Förutsägelser för förfallostatus {#expiry-status-predicates}
 
@@ -444,7 +444,7 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/expirredassetpredikate |
 | Resurstyp i 6.2 | dam/gui/coral/components/admin/customsearch/searchpreates/expirredassetpredikate |
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som på den plats som anges ovan i 6.2)
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2)
 
 ### Giltighetspredikat för metadata {#metadata-validity-predicates}
 
@@ -453,7 +453,7 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpredikates/optionspredicate |
 | Resurstyp i 6.2 | dam/gui/coral/components/admin/customsearch/searchpreates/optionspredicate |
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som på den plats som anges ovan i 6.2)
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2)
 
 ### Klassificeringsprognoser {#rating-predicates}
 
@@ -462,7 +462,7 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/ratingpredikate |
 | Resurstyp i 6.2 | dam/gui/coral/components/admin/customsearch/searchpreates/sliderangepredicate |
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som på den plats som anges ovan i 6.2)
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2)
 
 ### Orienteringspredikat {#orientation-predicate}
 
@@ -471,15 +471,15 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/tagsfilterpredikate |
 | Resurstyp i 6.2 | cq/gui/components/coral/common/admin/customsearch/searchpreates/tagspredicate |
 
-**Funktionsmakron:**
+**Åtgärder:**
 
-* Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som på den plats som anges ovan i 6.2)
+* Justera egenskapen `resourceType` (lägg till **/coral** som på platsen 6.2 ovan)
 
-* Lägg till en `fieldLabel` egenskap med samma värde som `text` på samma nod.
+* Lägg till en `fieldLabel`-egenskap med samma värde som egenskapen `text` på samma nod.
 
-* Lägg till en `emptyText` egenskap med samma värde som `text` på samma nod.
+* Lägg till en `emptyText`-egenskap med samma värde som egenskapen `text` på samma nod.
 
-* Lägg till en `rootPath` egenskap med samma värde som `optionPaths` på samma nod.
+* Lägg till en `rootPath`-egenskap med samma värde som egenskapen `optionPaths` på samma nod.
 
 ### Formatpredikat {#style-predicate}
 
@@ -488,15 +488,15 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpreates/tagsfilterpredikate |
 | Resurstyp i 6.2 | cq/gui/components/coral/common/admin/customsearch/searchpreates/tagspredicate |
 
-**Funktionsmakron:**
+**Åtgärder:**
 
-* Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som på den plats som anges ovan i 6.2)
+* Justera egenskapen `resourceType` (lägg till **/coral** som på platsen 6.2 ovan)
 
-* Lägg till en `fieldLabel` egenskap med samma värde som `text` på samma nod.
+* Lägg till en `fieldLabel`-egenskap med samma värde som egenskapen `text` på samma nod.
 
-* Lägg till en `emptyText` egenskap med samma värde som `text` på samma nod.
+* Lägg till en `emptyText`-egenskap med samma värde som egenskapen `text` på samma nod.
 
-* Lägg till en `rootPath` egenskap med samma värde som `optionPaths` på samma nod.
+* Lägg till en `rootPath`-egenskap med samma värde som egenskapen `optionPaths` på samma nod.
 
 ### Videoformatsprognoser {#video-format-predicates}
 
@@ -505,7 +505,7 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | dam/gui/components/admin/customsearch/searchpredikates/optionspredicate |
 | Resurstyp i 6.2 | dam/gui/coral/components/admin/customsearch/searchpreates/optionspredicate |
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som på den plats som anges ovan i 6.2)
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2)
 
 ### Förutsägelse av huvudtillgång {#mainasset-predicate}
 
@@ -514,4 +514,4 @@ I 6.1 ingick standardpredikatet för fulltext i sökformuläret. I 6.2 har fullt
 | Resurstyp i 6.1 | granite/ui/components/foundation/form/hidden |
 | Resurstyp i 6.2 | granite/ui/components/coral/foundation/form/hidden |
 
-**Åtgärd:** Justera `resourceType` egenskap (lägg till &quot;**/coral**&quot; som på den plats som anges ovan i 6.2)
+**Åtgärd:** Justera egenskapen `resourceType` (lägg till **/coral** som på den plats som anges ovan i 6.2)

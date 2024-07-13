@@ -29,7 +29,7 @@ När AEM Forms har installerats och konfigurerats på JEE är många tjänster t
 
 Även om AEM Forms på JEE-tjänster kräver att giltiga autentiseringsuppgifter skickas för en auktoriserad anropare, bör du endast tillåta fjärråtkomst till de tjänster som du behöver för att kunna fjärråtkomst. För att uppnå begränsad tillgänglighet bör du minska uppsättningen fjärranslutna tjänster till minsta möjliga för ett fungerande system och sedan aktivera fjärranrop för de ytterligare tjänster du behöver.
 
-AEM Forms på JEE-tjänster behöver alltid minst SOAP åtkomst. Dessa tjänster krävs vanligtvis för Workbench, men omfattar även tjänster som anropas av Workspace-webbprogrammet.
+AEM Forms på JEE-tjänster behöver alltid minst SOAP åtkomst. Dessa tjänster krävs vanligtvis för Workbench, men omfattar även tjänster som anropas av Workspace webbprogram.
 
 Gör så här med webbsidan Program och tjänster i administrationskonsolen:
 
@@ -39,13 +39,13 @@ Gör så här med webbsidan Program och tjänster i administrationskonsolen:
             https://[host name]:'port'/adminui
    ```
 
-1. Klicka **Tjänster > Program och tjänster > Inställningar**.
+1. Klicka på **Tjänster > Program och tjänster > Inställningar**.
 1. Ställ in inställningarna så att upp till 200 tjänster och slutpunkter visas på samma sida.
-1. Klicka **Tjänster** > **Program och tjänster** > **Hantering av slutpunkter**.
-1. Välj **EJB** från **Provider** lista och klicka sedan på **Filter**.
+1. Klicka på **Tjänster** > **Program och tjänster** > **Endpoint Management**.
+1. Välj **EJB** i listan **Provider** och klicka sedan på **Filter**.
 1. Om du vill inaktivera alla EJB-slutpunkter markerar du kryssrutan bredvid var och en av dem i listan och klickar på **Inaktivera**.
-1. Klicka **Nästa** och upprepa föregående steg för alla EJB-slutpunkter. Kontrollera att EJB finns med i leverantörskolumnen innan du inaktiverar slutpunkterna.
-1. Välj **SOAP** från **Provider** lista och klicka sedan på **Filter**.
+1. Klicka på **Nästa** och upprepa föregående steg för alla EJB-slutpunkter. Kontrollera att EJB finns med i leverantörskolumnen innan du inaktiverar slutpunkterna.
+1. Välj **SOAP** i listan **Provider** och klicka sedan på **Filter**.
 1. Om du vill ta bort SOAP slutpunkter markerar du kryssrutan bredvid var och en av dem i listan och klickar på **Ta bort**. Ta inte bort följande slutpunkter:
 
    * AuthenticationManagerService
@@ -62,7 +62,7 @@ Gör så här med webbsidan Program och tjänster i administrationskonsolen:
    * WorkspaceSingleSignOn
    * ApplicationManager
 
-1. Klicka **Nästa** och upprepa föregående steg för SOAP slutpunkter som inte finns i ovanstående lista. Se till att SOAP finns med i leverantörskolumnen innan du tar bort slutpunkterna.
+1. Klicka på **Nästa** och upprepa föregående steg för SOAP slutpunkter som inte finns i ovanstående lista. Se till att SOAP finns med i leverantörskolumnen innan du tar bort slutpunkterna.
 
 ## Inaktiverar onödvändig anonym åtkomst till tjänster {#disabling-non-essential-anonymous-access-to-services}
 
@@ -74,9 +74,9 @@ Vissa Forms Server-tjänster tillåter oautentiserade (anonyma) anrop för vissa
             https://[host name]:'port'/adminui
    ```
 
-1. Klicka **Tjänster > Program och tjänster > Tjänsthantering**.
+1. Klicka på **Tjänster > Program och tjänster > Tjänsthantering**.
 1. Klicka på namnet på den tjänst som du vill inaktivera (till exempel AuthenticationManagerService).
-1. Klicka på **Fliken Säkerhet**, avmarkera **Anonym åtkomst tillåten** och klicka **Spara**.
+1. Klicka på fliken **Säkerhet**, avmarkera **Anonym åtkomst tillåten** och klicka på **Spara**.
 1. Slutför steg 3 och 4 för följande tjänster:
 
    * AuthenticationManagerService
@@ -117,8 +117,8 @@ Slutanvändare kan autentisera till AEM Forms via Workbench, AEM Forms webbprogr
             https://[host name]:'port'/adminui
    ```
 
-1. Klicka **Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler**.
-1. Klicka **Exportera** för att skapa en config.xml-fil med de befintliga AEM Forms-inställningarna.
+1. Klicka på **Inställningar > Användarhantering > Konfiguration > Importera och exportera konfigurationsfiler**.
+1. Klicka på **Exportera** om du vill skapa en config.xml-fil med de befintliga AEM Forms-inställningarna.
 1. Öppna XML-filen i en redigerare och leta reda på följande post:
 
    `<entry key="assertionValidityInMinutes" value="120"/>`
@@ -126,4 +126,4 @@ Slutanvändare kan autentisera till AEM Forms via Workbench, AEM Forms webbprogr
 1. Ändra värdet till ett tal som är större än 5 (i minuter) och spara filen.
 1. Gå till sidan Importera och exportera konfigurationsfiler i administrationskonsolen.
 1. Ange sökvägen till den ändrade filen config.xml eller klicka på Bläddra för att navigera till den.
-1. Klicka **Importera** för att ladda upp den ändrade filen config.xml och sedan klicka på **OK**.
+1. Klicka på **Importera** för att överföra den ändrade filen config.xml och klicka sedan på **OK**.

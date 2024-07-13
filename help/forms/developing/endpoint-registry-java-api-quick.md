@@ -1,5 +1,5 @@
 ---
-title: Endpoint Registry Java&trade; API QuickStart(SOAP)
+title: Endpoint Registry Java&handel; API QuickStart(SOAP)
 description: Lär dig hur du lägger till slutpunkter som EJB, SOAP, bevakad mapp, e-postslutpunkt och fjärrslutpunkt och redigerar, tar bort och hämtar slutpunkter med Java&trade; API.
 contentOwner: admin
 content-type: reference
@@ -149,7 +149,7 @@ I följande Java™-kodexempel läggs en EJB-slutpunkt till i en tjänst med nam
 
 ## QuickStart: Lägga till en SOAP-slutpunkt med Java™ API {#quickstart-adding-a-soap-endpoint-using-the-java-api}
 
-I följande Java™-kodexempel läggs en SOAP slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. (Se [Lägga till SOAP](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints).)
+I följande Java™-kodexempel läggs en SOAP slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. (Se [Lägga till SOAP slutpunkter](/help/forms/developing/programmatically-endpoints.md#adding-soap-endpoints).)
 
 ```java
  /*
@@ -253,7 +253,7 @@ I följande Java™-kodexempel läggs en bevakad mappslutpunkt till i en tjänst
 
 >[!NOTE]
 >
->Inkludera filen WatchedFolderEndpointConfigConstants.java i ditt projekt så att du kan kompilera och köra följande snabbstart. (Se [Konstanta filer för mappkonfigurationsvärden som bevakas](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file).)
+>Inkludera filen WatchedFolderEndpointConfigConstants.java i ditt projekt så att du kan kompilera och köra följande snabbstart. (Se [Konstanta filer för övervakade mappkonfigurationsvärden](/help/forms/developing/programmatically-endpoints.md#watched-folder-configuration-values-constant-file).)
 
 ```java
  /*
@@ -384,7 +384,7 @@ I följande Java™-kodexempel läggs en bevakad mappslutpunkt till i en tjänst
 
 ## QuickStart: Lägga till en e-postslutpunkt med Java™ API {#quickstart-adding-an-email-endpoint-using-the-java-api}
 
-I följande Java™-kodexempel läggs en e-postslutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument* t. (Se [Lägga till e-postslutpunkter](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints).)
+I följande Java™-kodexempel läggs en e-postslutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument* t. (Se [Lägga till e-postslutpunkter ](/help/forms/developing/programmatically-endpoints.md#adding-email-endpoints) .)
 
 >[!NOTE]
 >
@@ -632,7 +632,7 @@ I följande Java™-kodexempel läggs en fjärrslutpunkt till i en tjänst med n
 
 ## QuickStart: Lägga till en TaskManager-slutpunkt med Java™ API {#quickstart-adding-a-taskmanager-endpoint-using-the-java-api}
 
-I följande Java™-kodexempel läggs en TaskManager-slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. Observera att namnet på kategorin är *EncryptProcess*. (Se [Lägger till TaskManager-slutpunkter](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints).)
+I följande Java™-kodexempel läggs en TaskManager-slutpunkt till i en tjänst med namnet *MyApplication/EncryptDocument*. Observera att namnet på kategorin är *EncryptProcess*. (Se [Lägga till slutpunkter för TaskManager](/help/forms/developing/programmatically-endpoints.md#adding-taskmanager-endpoints).)
 
 ```java
  /*
@@ -891,7 +891,7 @@ I följande Java™-kodexempel ändras slutpunkten för en bevakad mapp. Slutpun
 
 ## QuickStart: Ta bort en slutpunkt med Java™ API {#quickstart-removing-an-endpoint-using-the-java-api}
 
-Följande Java™-kod tar bort en EJB-slutpunkt från en tjänst med namnet *MyApplication/EncryptDocument*. (Se [Tar bort slutpunkter](/help/forms/developing/programmatically-endpoints.md#removing-endpoints).)
+Följande Java™-kod tar bort en EJB-slutpunkt från en tjänst med namnet *MyApplication/EncryptDocument*. (Se [Ta bort slutpunkter](/help/forms/developing/programmatically-endpoints.md#removing-endpoints).)
 
 ```java
  /*

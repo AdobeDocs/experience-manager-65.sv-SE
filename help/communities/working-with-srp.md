@@ -25,19 +25,19 @@ Från och med AEM Communities 6.1 lagras användargenererat innehåll (UGC) i en
 
 Till skillnad från tidigare versioner finns det ingen omvänd/framåtriktad replikering av UGC över AEM instanser. I stället gör SRP att UGC är direkt tillgängligt för att skapa, läsa, uppdatera och ta bort (CRUD) åtgärder från alla författare- och publiceringsinstanser, med undantag för JSRP.
 
-Följande är [egenskaper för varje SRP-alternativ](#characteristics-of-srp-options), som är viktig information för beslutsprocessen när man väljer lämplig SRP och [underliggande distribution](/help/communities/topologies.md).
+Nedan följer egenskaperna [för varje SRP-alternativ](#characteristics-of-srp-options), som är viktig information för beslutsprocessen när du väljer lämplig SRP och [underliggande distribution](/help/communities/topologies.md).
 
-Mer information om användning av SRP för användargenererat innehåll finns i [Översikt över lagringsresursprovider](/help/communities/srp.md).
+Mer information om användningen av SRP för UGC finns i [Översikt över lagringsresursprovidern](/help/communities/srp.md).
 
 >[!NOTE]
 >
->SRP gäller endast för communityinnehåll. Det påverkar inte var webbplatsinnehållet lagras ([nodarkiv](/help/sites-deploying/data-store-config.md)) och påverkar inte den säkra hanteringen av användarregistrering, användarprofiler och användargrupper mellan AEM (se även [Hantera användardata](#managing-user-data)).
+>SRP gäller endast för communityinnehåll. Det påverkar inte var webbplatsinnehållet lagras ([nodstore](/help/sites-deploying/data-store-config.md)) och påverkar inte den säkra hanteringen av användarregistrering, användarprofiler och användargrupper mellan AEM instanser (se även [Hantera användardata](#managing-user-data)).
 
 >[!CAUTION]
 >
->AEM 6.1 [UGC replikeras aldrig](#ugc-never-replicated).
+>Från och med AEM 6.1 replikeras aldrig [UGC](#ugc-never-replicated).
 >
->När distributionen inte innehåller någon gemensam butik, till exempel standardbutiken [JSRP](/help/communities/topologies.md#jsrp) topologi kommer UGC endast att vara synligt på den AEM publicerings- eller författarinstansen som den angavs för. Endast om topologin innehåller ett publiceringskluster visas UGC:n på alla publiceringsinstanser.
+>När distributionen inte innehåller någon gemensam butik, till exempel standardtopologin [JSRP](/help/communities/topologies.md#jsrp) , visas bara UGC i den AEM publicerings- eller författarinstansen som den angavs för. Endast om topologin innehåller ett publiceringskluster visas UGC:n på alla publiceringsinstanser.
 
 ## Egenskaper för SRP-alternativ {#characteristics-of-srp-options}
 
@@ -105,7 +105,7 @@ JSRP:
 
 ## Konfigurerar SRP {#configuring-srp}
 
-Ange standardlagringsalternativet, baserat på den underliggande distributionen, via [Konsol för lagringskonfiguration](/help/communities/srp-config.md).
+Ange standardlagringsalternativet, baserat på den underliggande distributionen, via konsolen [Lagringskonfiguration](/help/communities/srp-config.md).
 
 Konfigurationsinformation om varje alternativ finns i:
 
@@ -130,7 +130,7 @@ När platsinnehållet replikeras replikeras aldrig UGC.
 
 ### Hantera användardata {#managing-user-data}
 
-CommunitIes är också intresserat av [*användare*, *användargrupper* och *användarprofiler*](/help/communities/users.md). Dessa användarrelaterade data, som skapas och uppdateras i publiceringsmiljön, måste göras tillgängliga för andra publiceringsinstanser när topologin är en [publicera servergrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm).
+CommunitIes är också av intresse för [*användare*, *användargrupper* och *användarprofiler*](/help/communities/users.md). Dessa användarrelaterade data, som skapas och uppdateras i publiceringsmiljön, måste göras tillgängliga för andra publiceringsinstanser när topologin är en [publiceringsgrupp](/help/sites-deploying/recommended-deploys.md#tarmk-farm).
 
 Från och med AEM Communities 6.1 synkroniseras användarrelaterade data med Sling-distribution i stället för replikering. Mer information finns på [Användarsynkronisering](/help/communities/sync.md).
 

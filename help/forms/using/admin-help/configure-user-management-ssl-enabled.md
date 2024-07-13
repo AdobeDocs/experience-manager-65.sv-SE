@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Konfigurera användarhantering för en SSL-aktiverad LDAP-server {#configure-user-management-for-an-ssl-enabled-ldap-server}
 
-För att synkroniseringen ska fungera korrekt i stället för LDAPS måste LDAP-certifikaten som utfärdades av certifikatutfärdaren finnas i programserverns JRE (Java Runtime Environment). Importera certifikatet till programserverns JRE-cacerts-fil, som vanligtvis finns i *[JAVA_HOME]*/jre/lib/security/cacerts-katalog.
+För att synkroniseringen ska fungera korrekt i stället för LDAPS måste LDAP-certifikaten som utfärdades av certifikatutfärdaren finnas i programserverns JRE (Java Runtime Environment). Importera certifikatet till programserverns JRE-kontofil, som vanligtvis finns i katalogen *[JAVA_HOME]*/jre/lib/security/cacerts.
 
 1. Aktivera SSL på katalogservern. Mer information finns i dokumentationen från katalogleverantören.
 1. Exportera ett klientcertifikat från katalogservern.
@@ -27,7 +27,7 @@ För att synkroniseringen ska fungera korrekt i stället för LDAPS måste LDAP-
    `keytool -import -alias`*alias* `-file certificatename -keystore C:\bea\jdk15_04\jre\lib\security\cacerts`
 
 1. Skriv lösenordet när du uppmanas till det. (För Java är standardlösenordet `changeit`.) Ett meddelande om att certifikatet har importerats visas.
-1. Skriv när du uppmanas att göra det `Yes` för att lita på certifikatet.
+1. Ange `Yes` som betrodd för certifikatet när du uppmanas att göra det.
 1. Aktivera SSL i Användarhantering och, när du konfigurerar kataloginställningarna, välj Ja för SSL-alternativet och ändra portinställningarna därefter. Standardportnumret är 636.
 
 >[!NOTE]

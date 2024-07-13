@@ -29,14 +29,14 @@ Vi.Finance är en organisation som gör det möjligt för sökande att ansöka o
 
 >[!NOTE]
 >
->Personalrekryteringsexempel finns både på referenswebbplatserna We.Finance och We.Gov. De exempel, bilder och beskrivningar som används i genomgången använder referenswebbplatsen We.Finance. Du kan dock köra de här användningsexemplen och granska artefakter med Web.Gov. Om du vill göra det ersätter du **vi-finansiering** med **we-gov** i de angivna URL-adresserna.
+>Personalrekryteringsexempel finns både på referenswebbplatserna We.Finance och We.Gov. De exempel, bilder och beskrivningar som används i genomgången använder referenswebbplatsen We.Finance. Du kan dock köra de här användningsexemplen och granska artefakter med Web.Gov. Om du vill göra det ersätter du **we-Finance** med **we-gov** i de angivna URL:erna.
 
 ### Arbetsflödesmodeller {#workflow-models-involved}
 
 Handlingen för rekrytering av personal omfattar två arbetsflöden:
 
 * Före intervjun - Vi finansierar arbetsflödet för personalrekrytering
-* Efter intervjun - Arbetsflödet för rekrytering av medarbetare efter intervjun är ekonomiskt
+* Efter intervjun - Vi finansierar arbetsflödet för rekrytering av Post Interview
 
 De här arbetsflödena skapas i AEM och finns på:
 
@@ -48,11 +48,11 @@ Här följer en modell för det arbetsflöde för rekrytering av webbpersonal so
 
 ![we-Finance-employee-rekryiting-workflow](assets/we-finance-employee-recruiting-workflow.png)
 
-#### Arbetsflöde för rekrytering av medarbetare efter intervju {#we-finance-employee-recruiting-post-interview-workflow}
+#### Arbetsflöde för rekrytering av Post Interview-medarbetare {#we-finance-employee-recruiting-post-interview-workflow}
 
-Här följer en modell för det arbetsflöde för rekrytering efter intervju som följs i det här dokumentet.
+Här följer en modell för det arbetsflöde för Post Interview Recruiting som följs i det här dokumentet.
 
-![vi-Finance-employee-rekryiting-post-Intervju-workflow](assets/we-finance-employee-recruiting-post-interview-workflow.png)
+![we-Finance-employee-rekryiting-post-intervju-workflow](assets/we-finance-employee-recruiting-post-interview-workflow.png)
 
 ### Personas {#personas}
 
@@ -85,7 +85,7 @@ Startsidan för We.Finance och karriärsidan är AEM Sites sidor. På karriärsi
 
 ### Se det själv {#see-it-yourself}
 
-Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` och klicka **[!UICONTROL Career]**. Klicka **[!UICONTROL Search]** så att du fyller i jobblistan och sedan klickar på **[!UICONTROL Apply]** för ett jobb. Fyll i uppgifterna i formuläret och skicka in ansökan.
+Gå till `https://[publishHost]:[publishPort]/content/we-finance/global/en.html` och klicka på **[!UICONTROL Career]**. Klicka på **[!UICONTROL Search]** så att du fyller i jobblistan och klicka sedan på **[!UICONTROL Apply]** för ett jobb. Fyll i uppgifterna i formuläret och skicka in ansökan.
 
 Se till att du anger ett giltigt e-post-ID i programmet eftersom all kommunikation genom genomgången skickas till det angivna e-post-ID:t.
 
@@ -117,7 +117,7 @@ Gloria, anställningschef, får den genlistade profilen som en uppgift i sin AEM
 
 Gloria&#39;s AEM Inbox
 
-![gloriaschedulesintervju](assets/gloriaschedulesinterview.png)
+![gloriaschedulesIntervju](assets/gloriaschedulesinterview.png)
 
 Gloria godkänner Sarah Rose för en intervju
 
@@ -139,7 +139,7 @@ John Doe får i uppdrag att schemalägga en intervju i sin inkorg. John Doe väl
 
 John Doe&#39;s AEM Inbox
 
-![johndoescheduleintervju](assets/johndoescheduleinterview.png)
+![johndoescheduleIntervju](assets/johndoescheduleinterview.png)
 
 John Doe schemalägger intervjun och skickar detaljerna till Sarah Rose
 
@@ -147,7 +147,7 @@ John Doe schemalägger intervjun och skickar detaljerna till Sarah Rose
 
 Sarah Rose får e-postmeddelandet med intervju, plats och annan information. Sarah klickar på Godkänn för att bekräfta att hon är okej med intervjuschemat och platsen. Enligt den exakta informationen gör Sarah det till intervjuerna.
 
-![sarahaförhandsvisa e-post](assets/sarahroseinterviewemail.png)
+![sarahroseinterviewemail](assets/sarahroseinterviewemail.png)
 
 Sarah Rose får intervjuschemat
 
@@ -175,7 +175,7 @@ John Doe begär mer information från Sarah Rose om hennes utbildning och arbets
 
 Sarah Rose får ett mejl som meddelar henne att ytterligare information krävs för att behandla hennes ansökan om anställning. E-postmeddelandet innehåller en länk till formuläret för att fylla i den information som krävs.
 
-![sarahroseemailmoreinformation](assets/sarahroseemailmoredetails.png)
+![sarahroseemailmoredetails](assets/sarahroseemailmoredetails.png)
 
 Sarah Rose får ett mejl som meddelar att ytterligare information krävs för att behandla hennes ansökan om anställning
 
@@ -193,7 +193,7 @@ Sarah fyller i ytterligare information som John Doe begärt och klickar på Skic
 
 John Doe väljer begäran om kandidatgranskning och öppnar den. John Doe hittar att Sarah har fyllt i all information som behövs. När John Doe granskat programmet klickar han på Godkänn. Efter godkännande av John Doe vidarebefordras begäran om bakgrundskontroll av Sarah Rose till John Jacobs.
 
-![johndoeadditionainformationinkorg](assets/johndoeadditionainformationinbox.png)
+![johndoeadditionainformationinbox](assets/johndoeadditionainformationinbox.png)
 
 John Doe&#39;s AEM Inbox
 
@@ -205,11 +205,11 @@ John Doe granskar den ytterligare information som Sarah lämnat och godkänner d
 
 John Jacobs ser begäran om bakgrundskontroll i sin inkorg. John Jacobs öppnar uppgiften och läser informationen från Sarah Rose. När John Jacobs gjort en bakgrundskontroll klickar han på Gå framåt för att ange att bakgrundskontrollen har lyckats.
 
-![johnjacobsbackgroundCheckInbox](assets/johnjacobsbackgroundcheckinbox.png)
+![johnjacobsbackgroundCheckkinbox](assets/johnjacobsbackgroundcheckinbox.png)
 
 John Jacobs&#39;s AEM Inbox
 
-![johnjacobsbackground checkgoahead](assets/johnjacobsbackgroundcheckgoahead.png)
+![johnjacobsbackgroundCheckgoahead](assets/johnjacobsbackgroundcheckgoahead.png)
 
 När John Jacobs utfört bakgrundskontrollen klickar han på Gå framåt
 

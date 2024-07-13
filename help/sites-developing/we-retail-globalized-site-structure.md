@@ -22,7 +22,7 @@ Vi. Detaljhandeln har byggts med en global webbplatsstruktur som erbjuder en spr
 
 ## Prova {#trying-it-out}
 
-1. Öppna webbplatskonsolen från **Global Navigation > Sites**.
+1. Öppna webbplatskonsolen från **Global navigering > Platser**.
 1. Växla till kolumnvyn (om den inte redan är aktiv) och välj We.Retail. Lägg märke till landstrukturen med Schweiz, USA, Frankrike och så vidare, tillsammans med Language Master.
 
    ![chlimage_1-87](assets/chlimage_1-87a.png)
@@ -41,11 +41,11 @@ Vi. Detaljhandeln har byggts med en global webbplatsstruktur som erbjuder en spr
 
    ![chlimage_1-90](assets/chlimage_1-90a.png)
 
-1. När den engelska språkmallen är markerad öppnar du **Referenser** i webbplatskonsolen och välj **Språkkopior**.
+1. När den engelska språkversionen är markerad öppnar du **References** i webbplatskonsolen och väljer **Språkkopior**.
 
    ![chlimage_1-91](assets/chlimage_1-91.png)
 
-1. Markera kryssrutan bredvid **Språkkopior** etikett för att välja alla språkkopior. I **Uppdatera språkkopior** markerar du alternativet **Skapa ett nytt översättningsprojekt**. Ange ett namn för projektet och klicka på **Uppdatera**.
+1. Markera kryssrutan bredvid etiketten **Språkkopior** om du vill välja alla språkkopior. I avsnittet **Uppdatera språkkopior** på listen väljer du alternativet **Skapa ett nytt översättningsprojekt**. Ange ett namn för projektet och klicka på **Uppdatera**.
 
    ![chlimage_1-92](assets/chlimage_1-92.png)
 
@@ -53,7 +53,7 @@ Vi. Detaljhandeln har byggts med en global webbplatsstruktur som erbjuder en spr
 
    ![chlimage_1-93](assets/chlimage_1-93.png)
 
-1. Klicka på tyska för att se information om översättningsprojektet. Statusen är **Utkast**. Om du vill starta översättningen med Microsoft® översättningstjänst klickar du på markören bredvid **Översättningsjobb** rubrik och markera **Starta**.
+1. Klicka på tyska för att se information om översättningsprojektet. Status är i **Utkast**. Om du vill starta översättningen med Microsoft® översättningstjänst klickar du på markören bredvid rubriken **Översättningsjobb** och väljer **Start**.
 
    ![chlimage_1-94](assets/chlimage_1-94.png)
 
@@ -61,14 +61,14 @@ Vi. Detaljhandeln har byggts med en global webbplatsstruktur som erbjuder en spr
 
    ![chlimage_1-95](assets/chlimage_1-95.png)
 
-1. Markera en av sidorna i listan och sedan **Förhandsgranska på platser** i verktygsfältet öppnar den översatta sidan i sidredigeraren.
+1. Om du väljer en av sidorna i listan och sedan **Förhandsgranska på platser** i verktygsfältet öppnas den översatta sidan i sidredigeraren.
 
    ![chlimage_1-96](assets/chlimage_1-96.png)
 
 >[!NOTE]
 >
->Den här proceduren demonstrerade den inbyggda integrationen med maskinöversättning från Microsoft®. Använda [AEM Translation Integration Framework](/help/sites-administering/translation.md)kan ni integrera med många standardöversättningstjänster för att samordna översättningen av AEM.
+>Den här proceduren demonstrerade den inbyggda integrationen med maskinöversättning från Microsoft®. Med [AEM Translation Integration Framework](/help/sites-administering/translation.md) kan du integrera med många standardöversättningstjänster för att samordna översättning av AEM.
 
 ## Mer information {#further-information}
 
-Mer information finns i redigeringsdokumentet [Översätta innehåll för flerspråkiga webbplatser](/help/sites-administering/translation.md) för fullständig teknisk information.
+Mer information finns i redigeringsdokumentet [Översätta innehåll för flerspråkiga platser](/help/sites-administering/translation.md) för fullständig teknisk information.

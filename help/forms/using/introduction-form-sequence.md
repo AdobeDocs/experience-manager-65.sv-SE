@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Introduktion till formulärsekvenser i flera steg{#introduction-to-multi-step-form-sequence}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs ett äldre sätt att skapa adaptiva Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs ett äldre sätt att skapa adaptiva Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -26,7 +26,7 @@ ht-degree: 0%
 | AEM 6.5 | Den här artikeln |
 
 
-Med adaptiva blanketter kan man enkelt skapa datainhämtning i flera steg. Den har inbyggt stöd för att skapa flera paneler och koppla ihop varje panel med olika navigeringsmönster. Formulärförfattare kan gruppera formulärfält i logiska avsnitt och representera en grupp som en panel. Den övergripande navigeringen mellan paneler styrs med hjälp av panellayouten. Författare kan välja att ordna paneler i olika layouter, t.ex. placera sekventiellt med guidelayouten eller på ett ad hoc-sätt med hjälp av fliklayouten. Mer information om panellayouter finns i [Layoutfunktioner i anpassningsbara formulär](../../forms/using/layout-capabilities-adaptive-forms.md).
+Med adaptiva blanketter kan man enkelt skapa datainhämtning i flera steg. Den har inbyggt stöd för att skapa flera paneler och koppla ihop varje panel med olika navigeringsmönster. Formulärförfattare kan gruppera formulärfält i logiska avsnitt och representera en grupp som en panel. Den övergripande navigeringen mellan paneler styrs med hjälp av panellayouten. Författare kan välja att ordna paneler i olika layouter, t.ex. placera sekventiellt med guidelayouten eller på ett ad hoc-sätt med hjälp av fliklayouten. Mer information om panellayouter finns i [Layoutfunktioner i adaptiva formulär](../../forms/using/layout-capabilities-adaptive-forms.md).
 
 I en typisk miljö för ifyllnad av formulär finns det fler steg att utföra än att bara hämta in data. En fullständig inlämning av formulär kan omfatta andra steg, t.ex. signera formuläret digitalt, verifiera den information som fylls i formuläret och betala för behandlingen. Det skiljer sig från fall till fall.
 
@@ -42,16 +42,16 @@ Låt oss ta ett exempel där du behöver skapa en sekvens för att fylla i, veri
 
    * **Fyllning**: Den innehåller formulärfält för datainhämtning. Här kan du ta med kapslade underpaneler för att skapa avsnitt för olika typer av information, till exempel personlig information, familjeinformation och ekonomisk information.
 
-   * **Verifiera**: Den innehåller **Verifiera** -komponent som kan användas i en XFA-baserad adaptiv form. Den information som hämtas på panelen Fyllning visas i skrivskyddat läge för verifiering.
+   * **Verifiera**: Den innehåller komponenten **Verifiera** som kan användas i ett XFA-baserat adaptivt formulär. Den information som hämtas på panelen Fyllning visas i skrivskyddat läge för verifiering.
 
-   * **E-signera**: Den innehåller **Signera** -komponent som kan användas i en XFA-baserad adaptiv form. den tillhandahåller följande signeringstjänster:
+   * **E-signatur**: Den innehåller komponenten **Sign** som kan användas i ett XFA-baserat adaptivt formulär. den tillhandahåller följande signeringstjänster:
 
       * Adobe Document Cloud eSign-tjänster
       * Klottra signaturer
 
-   * **Bekräftelse**: Den innehåller **Sammanfattning** som visar ett meddelande som bekräftar att formuläret skickas när en användare har signerat formuläret och når steget Bekräfta (Sammanfattning) i sekvensen. Författare kan konfigurera texten i komponenten Sammanfattning, visa ett tackmeddelande, visa en länk till det genererade PDF och så vidare.
+   * **Bekräftelse**: Den innehåller komponenten **Sammanfattning** som visar ett meddelande som bekräftar att formuläret har skickats när en användare har signerat och når steget Bekräfta (Sammanfattning) i sekvensen. Författare kan konfigurera texten i komponenten Sammanfattning, visa ett tackmeddelande, visa en länk till det genererade PDF och så vidare.
 
-1. Markera rotpanelens layout som **[!UICONTROL Wizard]**.
+1. Välj layout för rotpanelen som **[!UICONTROL Wizard]**.
 1. Slutför de återstående stegen så att du kan skapa formulärmallen. Se [Skapa en anpassad anpassad formulärmall](../../forms/using/custom-adaptive-forms-templates.md).
 
 När du har definierat formulärsekvensen i formulärmallen kan du använda den för att skapa formulär som har den grundläggande strukturen definierad som sekvensen på plats. Du kan alltid anpassa formuläret efter dina behov.

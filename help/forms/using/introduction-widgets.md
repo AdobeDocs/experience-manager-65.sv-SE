@@ -17,7 +17,7 @@ ht-degree: 1%
 
 # Appearance Framework for adaptive and HTML5 forms {#appearance-framework-for-adaptive-and-html-forms}
 
-Forms (adaptiva formulär och HTML 5-formulär) använder [jQuery](https://jquery.com/), [Backbone.js](https://backbonejs.org/) och [Understreck.js](https://underscorejs.org/) bibliotek för utseende och skript. Formulären använder också [jQuery-gränssnitt](https://jqueryui.com/) **Widgetar** arkitektur för alla interaktiva element (till exempel fält och knappar) i formuläret. Med den här arkitekturen kan formulärutvecklare använda en mängd tillgängliga jQuery-widgetar och plugin-program i Forms. Du kan också implementera formulärspecifik logik samtidigt som du hämtar in data från användare som leadDigits/trailDigits-begränsningar eller implementerar bildklausuler. Formulärutvecklare kan skapa och använda anpassade utseenden för att förbättra datainhämtningen och göra den mer användarvänlig.
+Forms (adaptiva formulär och HTML5-formulär) använder biblioteken [jQuery](https://jquery.com/), [Backbone.js](https://backbonejs.org/) och [Underscore.js](https://underscorejs.org/) för utseende och skript. Formulären använder också [jQuery-gränssnittets](https://jqueryui.com/) **widgetarkitektur** för alla interaktiva element (till exempel fält och knappar) i formuläret. Med den här arkitekturen kan formulärutvecklare använda en mängd tillgängliga jQuery-widgetar och plugin-program i Forms. Du kan också implementera formulärspecifik logik samtidigt som du hämtar in data från användare som leadDigits/trailDigits-begränsningar eller implementerar bildklausuler. Formulärutvecklare kan skapa och använda anpassade utseenden för att förbättra datainhämtningen och göra den mer användarvänlig.
 
 Den här artikeln är avsedd för utvecklare med tillräcklig kunskap om jQuery- och jQuery-widgetar. Den ger insikt i utseenderamverket och gör det möjligt för utvecklare att skapa ett alternativt utseende för ett formulärfält.
 
@@ -100,19 +100,19 @@ För att interagera med formulärramverket utlöser en widget vissa händelser s
   </tr>
   <tr>
    <td>XFA_ENTER_EVENT</td>
-   <td>Den här händelsen utlöses när fältet är i fokus. Det gör att skriptet "enter" kan köras på fältet. Syntaxen för att utlösa händelsen är<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
+   <td>Den här händelsen utlöses när fältet är i fokus. Det gör att skriptet "enter" kan köras på fältet. Syntaxen för att utlösa händelsen är <br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_ENTER_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_EXIT_EVENT</td>
-   <td>Den här händelsen utlöses när användaren lämnar fältet. Det gör att motorn kan ställa in fältets värde och köra dess "exit"-skript. Syntaxen för att utlösa händelsen är<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
+   <td>Den här händelsen utlöses när användaren lämnar fältet. Det gör att motorn kan ställa in fältets värde och köra dess "exit"-skript. Syntaxen för att utlösa händelsen är <br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_EXIT_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CHANGE_EVENT</td>
-   <td>Den här händelsen utlöses för att motorn ska kunna köra "change"-skriptet som skrivits i fältet. Syntaxen för att utlösa händelsen är<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
+   <td>Den här händelsen utlöses för att motorn ska kunna köra "change"-skriptet som skrivits i fältet. Syntaxen för att utlösa händelsen är <br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_CHANGE_EVENT)<br /> </td>
   </tr>
   <tr>
    <td>XFA_CLICK_EVENT</td>
-   <td>Den här händelsen utlöses när användaren klickar på fältet. gör att motorn kan köra klickskriptet som skrivits i fältet. Syntaxen för att utlösa händelsen är<br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
+   <td>Den här händelsen utlöses när användaren klickar på fältet. gör att motorn kan köra klickskriptet som skrivits i fältet. Syntaxen för att utlösa händelsen är <br /> (widget)._trigger(xfalib.ut.XfaUtil.prototype.XFA_CLICK_EVENT)<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -136,11 +136,11 @@ Utseenderamverket anropar vissa funktioner i widgeten som implementeras i de anp
    <td>Fokuserar på fältet och anropar XFA_CLICK_EVENT.</td>
   </tr>
   <tr>
-   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>errorMessage: string </em>som representerar felet<br /> <em>errorType: sträng ("warning"/"error")</em></p> <p><strong>Anteckning</strong>: Gäller endast för HTML5-formulär.</p> </td>
+   <td><p>markError:function(errorMessage, errorType)<br /> <br /> <em>erorMessage: string </em>representing the error<br /> <em>errorType: string ("warning"/"error")</em></p> <p><strong>Obs!</strong>: Gäller endast för HTML5-formulär.</p> </td>
    <td>Skickar felmeddelande och feltyp till widgeten. Widgeten visar felet.</td>
   </tr>
   <tr>
-   <td><p>clearError: function()</p> <p><strong>Anteckning</strong>: Gäller endast för HTML5-formulär.</p> </td>
+   <td><p>clearError: function()</p> <p><strong>Obs!</strong>: Gäller endast för HTML5-formulär.</p> </td>
    <td>Anropas om felen i fältet är åtgärdade. Widgeten döljer felet.</td>
   </tr>
  </tbody>
@@ -167,7 +167,7 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
    <td>Maximalt antal tecken som kan anges i fältet.</td>
   </tr>
   <tr>
-   <td><p>limitLengthToVisibleArea</p> <p><strong>Anteckning</strong>: Gäller endast för HTML5-formulär</p> </td>
+   <td><p>limitLengthToVisibleArea</p> <p><strong>Obs</strong>: Gäller endast för HTML5-formulär</p> </td>
    <td>Anger textfältets beteende när textbredden överskrider bredden på widgeten.</td>
   </tr>
  </tbody>
@@ -182,20 +182,20 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td>value<br /> </td>
-   <td>Array med valda värden.<br /> </td>
+   <td>värde<br /> </td>
+   <td>Matris med valda värden.<br /> </td>
   </tr>
   <tr>
    <td>objekt<br /> </td>
-   <td>Array med objekt som ska visas som alternativ. Varje objekt innehåller två egenskaper -<br /> spara: värde att spara, visa: värde att visa.<br /> <br /> </td>
+   <td>Array med objekt som ska visas som alternativ. Varje objekt innehåller två egenskaper - <br /> save: värde att spara, visa: värde att visa.<br /> <br /> </td>
   </tr>
   <tr>
-   <td><p>redigerbar</p> <p><strong>Anteckning</strong>: Gäller endast för HTML5-formulär.<br /> </p> </td>
-   <td>Om värdet är true aktiveras anpassad text i widgeten.<br /> </td>
+   <td><p>redigerbar</p> <p><strong>Obs</strong>: Gäller endast för HTML5-formulär.<br /> </p> </td>
+   <td>Om värdet är true aktiveras anpassad textinmatning i widgeten.<br /> </td>
   </tr>
   <tr>
    <td>displayValue<br /> </td>
-   <td>Array med värden som ska visas.<br /> </td>
+   <td>Matris med värden som ska visas.<br /> </td>
   </tr>
   <tr>
    <td>multiselect<br /> </td>
@@ -213,11 +213,11 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
    <th>Beskrivning</th>
   </tr>
   <tr>
-   <td><p>addItem:<em> function(itemValues)<br /> itemValues: objekt som innehåller värdet för att visa och spara <br /> {sDisplayVal: &lt;displayvalue&gt;, sSaveVal: &lt;save value=""&gt;}</em></p> </td>
+   <td><p>addItem:<em> function(itemValues)<br /> itemValues: objekt som innehåller visnings- och sparningsvärdet <br /> {sDisplayVal: &lt;displayValue&gt;, sSaveVal: &lt;save Value&gt;}</em></p> </td>
    <td>Lägger till ett objekt i listan.</td>
   </tr>
   <tr>
-   <td>deleteItem<em>: function(nIndex)<br /> nIndex: index för det objekt som ska tas bort från listan<br /> </em><br /> <br /> </td>
+   <td>deleteItem<em>: function(nIndex)<br /> nIndex: index för det objekt som ska tas bort från listan <br /> </em><br /> <br /> </td>
    <td>Tar bort ett alternativ från listan.</td>
   </tr>
   <tr>
@@ -247,7 +247,7 @@ Alla anpassade widgetar ska följa ovanstående specifikationer. Om du vill anv�
   </tr>
   <tr>
    <td>values</td>
-   <td><p>Array med värden (på/av/neutral).</p> <p>Det är en array med värden för de olika lägena för checkButton. värdena[0] är värdet när läget är PÅ, värden[1] är värdet när läget är AV,<br /> values[2] is the value when the state is NEUTRAL. Värdearrayens längd är lika med värdet för lägesalternativet.<br /> </p> </td>
+   <td><p>Array med värden (på/av/neutral).</p> <p>Det är en array med värden för de olika lägena för checkButton. värden[0] är värdet när läget är PÅ, värden[1] är värdet när läget är AV, <br /> värden[2] är värdet när läget är NEUTRAL. Värdearrayens längd är lika med värdet för tillståndsalternativet.<br /> </p> </td>
   </tr>
   <tr>
    <td>lägen</td>

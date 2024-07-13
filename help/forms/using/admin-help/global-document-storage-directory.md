@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Global dokumentlagringskatalog{#global-document-storage-directory}
 
-The *global dokumentlagring (GDS)* katalog är en katalog som används för att lagra långlivade filer som används i en process. Dessa filer innehåller PDF, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM. Om vissa eller alla långlivade dokument förloras eller skadas kan Forms Server bli instabil. Indatadokument för asynkrona jobbanrop lagras också i GDS-katalogen och måste vara tillgängliga för bearbetning av begäranden. Det är viktigt att du tar hänsyn till tillförlitligheten i det filsystem som är värd för GDS-katalogen. Använd en redundant matris med oberoende diskar (RAID) eller annan teknik som är lämplig för din kvalitet och nivå av servicebehov.
+Katalogen *Global Document Storage (GDS)* är en katalog som används för att lagra långlivade filer som används i en process. Dessa filer innehåller PDF, profiler och formulärmallar. Långvariga filer är en viktig del av det övergripande tillståndet för många AEM. Om vissa eller alla långlivade dokument förloras eller skadas kan Forms Server bli instabil. Indatadokument för asynkrona jobbanrop lagras också i GDS-katalogen och måste vara tillgängliga för bearbetning av begäranden. Det är viktigt att du tar hänsyn till tillförlitligheten i det filsystem som är värd för GDS-katalogen. Använd en redundant matris med oberoende diskar (RAID) eller annan teknik som är lämplig för din kvalitet och nivå av servicebehov.
 
 Långa filer kan innehålla känslig användarinformation. Den här informationen kan kräva särskilda autentiseringsuppgifter när den används med AEM formulär-API:er eller användargränssnitt. Det är viktigt att GDS-katalogen är ordentligt skyddad via operativsystemet. Det är bara administratörskontot som används för att köra programservern som ska ha läs- och skrivåtkomst till GDS-katalogen.
 
@@ -97,10 +97,10 @@ AEM består av två typer av distributionsfiler, servicebehållarna och Java 2 P
 * adobe-core-*[appserver]*.ear
 * adobe-core-*[appserver]*-*[OS]*.ear
 
-Implementera AEM innebär att du distribuerar sammansatta EAR-filer och stödfiler till programservern där du tänker köra din AEM formulärlösning. Om du konfigurerade och satte ihop flera moduler paketeras de driftsättningsbara modulerna i de driftsättningsbara EAR-filerna. Om du vill distribuera de här filerna kopierar du dem till *[appserver - startsida]*\server\all\deploy.
+Implementera AEM innebär att du distribuerar sammansatta EAR-filer och stödfiler till programservern där du tänker köra din AEM formulärlösning. Om du konfigurerade och satte ihop flera moduler paketeras de driftsättningsbara modulerna i de driftsättningsbara EAR-filerna. Om du vill distribuera de här filerna kopierar du dem till katalogen *[appserver home]*\server\all\deploy.
 
 Moduler och AEM arkivfiler för formulär paketeras i JAR-filer. Eftersom de inte är J2EE-typfiler distribueras de inte till programservern. I stället kopieras de till GDS-katalogen och en referens till deras plats lagras i AEM formulärdatabas. Därför måste GDS-katalogen delas mellan alla noder i klustret. Alla noder måste ha tillgång till den centrala lagringskatalogen för DSC:er.
 
 >[!NOTE]
 >
->Kontrollera att du har skapat och konfigurerat GDS-katalogen innan du distribuerar tjänstbehållarna. (Se [Konfigurera GDS-katalogen](global-document-storage-directory.md#configuring-the-gds-directory))
+>Kontrollera att du har skapat och konfigurerat GDS-katalogen innan du distribuerar tjänstbehållarna. (Se [Konfigurera GDS-katalogen](global-document-storage-directory.md#configuring-the-gds-directory).)

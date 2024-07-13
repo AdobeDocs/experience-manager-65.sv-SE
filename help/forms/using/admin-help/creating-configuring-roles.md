@@ -24,7 +24,7 @@ Användarhantering har två typer av roller:
 
 **Muterbara roller:** Den här typen av roll kan redigeras och tas bort, och rollbehörigheter kan läggas till och tas bort från de här rolltyperna. Alla roller som du skapar betraktas som ändringsbara. Du kan lägga till eller ta bort användare och grupper som tilldelats till ändringsbara roller.
 
-**Oändringsbara roller:** Standardrollerna som ingår i användarhantering är oföränderliga roller. Dessa roller kan inte redigeras eller tas bort. Du kan dock lägga till eller ta bort användare och grupper som tilldelats oföränderliga roller.
+**Oföränderliga roller:** Standardrollerna som ingår i användarhantering är oföränderliga roller. Dessa roller kan inte redigeras eller tas bort. Du kan dock lägga till eller ta bort användare och grupper som tilldelats oföränderliga roller.
 
 Både ändringsbara och oföränderliga roller kan också skapas via API:er för AEM formulär.
 
@@ -32,67 +32,67 @@ Både ändringsbara och oföränderliga roller kan också skapas via API:er för
 
 Följande standardroller ingår i databasen för användarhantering.
 
-**användare i administrationskonsolen:** Kan komma åt administrationskonsolen.
+**administrationskonsol Användare:** Kan komma åt administrationskonsolen.
 
 **Programadministratör:** Kan använda alla Workbench-funktioner. Kan använda sidorna för program och tjänster i administrationskonsolen för att konfigurera egenskaper, slutpunkter och säkerhet för tjänstens körtid.
 
 **AEM formuläradministratör:** Kan utföra alla åtgärder för alla installerade tjänster.
 
-**Säkerhetsadministratör:** Styr inställningarna för användarhantering och hanterar användare och grupper som är associerade med en användarhanterardomän
+**Säkerhetsadministratör:** Styr inställningarna för användarhantering och hanterar användare och grupper som är associerade med valfri användarhanterardomän
 
 **Tjänstanvändare:** Kan visa och anropa vilken tjänst som helst
 
-**Superadministratör:** Har tillgång till alla administrativa funktioner i systemet, inklusive tjänster
+**Superadministratör:** Har åtkomst till alla administrativa funktioner i systemet, inklusive tjänster
 
-**Förtroendeadministratör:** Kan hantera PKI-förtroendeinställningar och PKI-autentiseringsuppgifter som hanteras från sidan Hantering av förtroendearkivet i administrationskonsolen
+**Lita på administratör:** Kan hantera PKI-förtroendeinställningar och PKI-autentiseringsuppgifter som hanteras från sidan Lita på arkivhantering i administrationskonsolen
 
 ### Ytterligare standardroller {#additional-default-roles}
 
 Följande extra standardroller kan inkluderas, beroende på vilka AEM du har installerat
 
-**Användare av program för dokumentöverföring:** Kan överföra dokument med Flex Remoting.
+**Programanvändare för dokumentöverföring:** Kan överföra dokument med Flex Remoting.
 
 **Forms Administrator:** Kan visa och ändra inställningar från Forms-sidan i administrationskonsolen
 
-**AEM Contentspace Administrator:** Kan visa och ändra inställningar från sidan Innehållstjänster (inaktuellt) i administrationskonsolen
+**AEM formulärinnehållsyteadministratör:** Kan visa och ändra inställningar från sidan Innehållstjänster (inaktuellt) i administrationskonsolen
 
-**AEM Contentspace User:** Kan logga in på webbsidor i innehållsområdet (borttaget)
+**AEM formulär Contentspace-användare:** Kan logga in på webbsidor för innehållsytan (inaktuellt)
 
-**Documentum Connector Administrator:** Kan visa och ändra inställningar från sidan Connector for EMC Documentum i administrationskonsolen
+**Documentum Connector Administrator:** Kan visa och ändra inställningar från Connector for EMC Documentum-sidan i administrationskonsolen
 
 **AEM formulär FileNet Connector Administrator:** Kan visa och ändra inställningar från Connector for IBM FileNet-sidan i administrationskonsolen
 
-**AEM formulär IBM CM Connector Administrator:** Kan visa och ändra inställningar från Connector for IBM Content Manager-sidan i administrationskonsolen
+**AEM formulär från IBM CM Connector Administrator:** Kan visa och ändra inställningar från Connector för IBM Content Manager-sidan i administrationskonsolen
 
-**Rights Management Administrator:** Utför alla åtgärder som krävs för alla serverkonfigurationer på de relevanta Rights Management-sidorna
+**Rights Management Administrator:** Utför alla åtgärder som krävs för alla serverkonfigurationer på de aktuella Rights Management-sidorna
 
-**Rights Management-slutanvändare:** Har åtkomst till slutanvändarwebbsidor i Rights Management
+**Slutanvändare i Rights Management:** Kan komma åt slutanvändarwebbsidor i Rights Management
 
-**Rights Management Invite User:** Kan bjuda in användare
+**Rights Management Bjud in användare:** Kan bjuda in användare
 
-**Rights Management Hantera inbjudna och lokala användare:** Kan utföra åtgärder som krävs för att hantera alla inbjudna och lokala användare på relevanta Rights Management-sidor
+**Rights Management Hantera inbjudna och lokala användare:** Kan utföra åtgärder som krävs för att hantera alla inbjudna och lokala användare på de relevanta Rights Management-sidorna
 
-**Administratör för principuppsättning i Rights Management:** Utför alla uppgifter som krävs för alla principuppsättningar på de relevanta Rights Management-sidorna
+**Administratör för Rights Management-principuppsättning:** Utför alla åtgärder som krävs för alla principuppsättningar på de relevanta Rights Management-sidorna
 
 **Rights Management Super Administrator:** Utför alla åtgärder som krävs från Rights Management-sidan
 
-**AEM Workspace Administrator:** Kan visa och ändra inställningar från sidan Arbetsyta i administrationskonsolen
+**AEM formulär Workspace Administrator:** Kan visa och ändra inställningar från Workspace-sidan i administrationskonsolen
 
-***anteckning **: Flex Workspace är föråldrat för AEM formulärrelease.*
+***Obs!**Flex Workspace är föråldrat för AEM formulärrelease.*
 
-**Arbetsytans användare:** Kan logga in på slutanvändarprogrammet för arbetsytan
+**Workspace-användare:** Kan logga in på Workspace slutanvändarprogram
 
 **Utdataadministratör:** Kan visa och ändra inställningar från utdatasidan i administrationskonsolen
 
 **PDFG-administratör:** Kan visa och ändra inställningar från PDF Generator-sidan i administrationskonsolen
 
-**PDFG-användare:** Har tillgång till alla icke-administrativa funktioner för PDF Generator
+**PDFG-användare:** Kan komma åt alla icke-administrativa funktioner för PDF Generator
 
-**Acrobat Reader DC Extensions Web Application:** Kan använda webbprogrammet Acrobat Reader DC Extensions
+**Acrobat Reader DC-tillägg - webbprogram:** Kan använda webbprogrammet för Acrobat Reader DC-tillägg
 
 >[!NOTE]
 >
->Användare med vissa typer av administratörsbehörighet kan av säkerhetsskäl inte komma åt arbetsytans slutanvändarsidor. Eftersom dessa sidor kan finnas utanför en brandvägg kan ett tillstånd för åtgärder på administrationsnivå utgöra en säkerhetsrisk. Endast användare som har AEM Workspace Administrator eller AEM form Workspace User kan komma åt Workspace-slutanvändarens webbsidor.
+>Användare med vissa typer av administratörsbehörighet kan av säkerhetsskäl inte komma åt Workspace slutanvändares webbsidor. Eftersom dessa sidor kan finnas utanför en brandvägg kan ett tillstånd för åtgärder på administrationsnivå utgöra en säkerhetsrisk. Endast användare som har AEM formulär som Workspace Administrator eller AEM formulär som Workspace User har åtkomst till Workspace slutanvändares webbsidor.
 
 >[!NOTE]
 >
@@ -184,39 +184,39 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **Certifikatändring:** Ändra pålitlighetsinställningarna för alla certifikat i förtroendearkivet
 
-**Certifikatet har lästs:** Läs alla certifikat i Trust Store
+**Certifikatet har lästs:** Läs alla certifikat i förtroendearkivet
 
 **Certifikatskrivning:** Lägg till ett certifikat i förtroendearkivet
 
-**Lägg till komponent:** Installera en ny komponent i systemet
+**Komponenttillägg:** Installera en ny komponent i systemet
 
-**Ta bort komponent:** Ta bort valfri komponent i systemet
+**Ta bort komponent:** Ta bort alla komponenter i systemet
 
 **Komponenten har lästs:** Läs alla komponenter i systemet
 
-**ContentSpace Administrator:** Behörighet för ContentSpace-administratör (borttagen)
+**Contentspace-administratör:** Behörighet för ContentSpace-administratör (borttagen)
 
-**Konsolinloggning för Contentspace:** Behörighet för Console-inloggning (borttagen)
+**Konsolinloggning för Contentspace-konsol:** Inloggning för Contentspace-konsol (borttagen)
 
-**Styrning av kärninställningar:** Hantera inställningarna på sidan Core System Settings i administrationskonsolen
+**Kontroll av kärninställningar:** Hantera inställningarna på sidan med huvudsysteminställningar i administrationskonsolen
 
 **CREATE_VERSION_PERM:** Skapa en tjänstversion
 
-**Ändra autentiseringsuppgifter:** Ändra eventuella signeringsreferenser i Trust Store
+**Ändra autentiseringsuppgifter:** Ändra eventuella signeringsreferenser i förtroendearkivet
 
-**Läs autentiseringsuppgifter:** Läs alla autentiseringsuppgifter för signering i Trust Store
+**Autentiseringsuppgifter läses:** Läs alla autentiseringsuppgifter för signering i förtroendearkivet
 
-**Skrivning av autentiseringsuppgifter:** Lägg till en signeringsreferens i Trust Store
+**Skrivning av autentiseringsuppgifter:** Lägg till en autentiseringsuppgift för undertecknande i förtroendearkivet
 
-**CRL-ändring:** Ändra en lista över återkallade certifikat (Certificate Revocation List) i pålitlighetsarkivet
+**Ändra lista över återkallade certifikat:** Ändra en lista över återkallade certifikat (CRL) i förtroendearkivet
 
-**CRL-läsning:** Läs alla listor över återkallade certifikat i Trust Store
+**CRL-läsning:** Läs alla CRL-listor i förtroendearkivet
 
-**CRL-skrivning:** Lägg till en CRL i Trust Store
+**CRL-skrivning:** Lägg till en CRL i förtroendearkivet
 
 **Delegat:** Ange en åtkomstkontrollista för en resurs
 
-**DELETE_VERSION_PERM:** Ta bort en tjänstversion
+**DELETE_VERSION_PERM:** Ta bort en version av en tjänst
 
 **Dokumentöverföring:** Överför dokument i AEM formulär
 
@@ -224,25 +224,25 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **Redigera händelsetyp:** Redigera till händelsetyper
 
-**Identity Impersonation Control:** Personifiera identitet i användarhanteraren
+**Identity Impersonation Control:** Personifiera identitet i User Manager
 
 **INVOKE_PERM:** Anropa alla åtgärder för en tjänst
 
-**Kontroll av LCDS-datamodell:** Läs och distribuera datamodeller i datatjänster
+**Kontroll av LCDS-datamodell:** Läsa och distribuera datamodeller i datatjänster
 
-**Uppdatering av License Manager:** Uppdatera licensinformation
+**Uppdatering för Licenshanteraren:** Uppdatera licensinformation
 
-**ÄNDRA_KONFIG_PERM:** Ändra konfigurationen för en tjänst
+**ÄNDRA_CONFIG_PERM:** Ändra konfigurationen för en tjänst
 
 **TERM** Ändra versionen av en tjänst
 
-**PDFGAdminBehörighet:** PDFG-administratör
+**PDFGAdminPermission:** PDFG-administratör
 
 **PDFGUserPermission:** PDFG-användare
 
 **PERM_DCTM_ADMIN:** Documentum Connector-administratör
 
-**PERM_FILENET_ADMIN:** FileNet Connector-administratör
+**PERM_FILENET_ADMIN:** Administratör för FileNet Connector
 
 **PERM_FORMS_ADMIN:** Forms-administratör
 
@@ -250,17 +250,17 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **PERM_OUTPUT_ADMIN:** Utdataadministratör
 
-**PERM_READER_EXTENSIONS_WEB_APPLICATION:** Använda webbprogrammet Acrobat Reader DC Extensions
+**PERM_READER_EXTENSIONS_WEB_APPLICATION:** Använd webbprogrammet för Acrobat Reader DC-tillägg
 
 **PERM_SP_ADMIN:** Hantera inställningar för SharePoint Connector
 
-**PERM_WORKSPACE_ADMIN:** Hantera arbetsyteinställningar
+**PERM_WORKSPACE_ADMIN:** Hantera Workspace-inställningar
 
-**PERM_WORKSPACE_USER:** Logga in i slutanvändarprogrammet för arbetsytan
+**PERM_WORKSPACE_USER:** Logga in i Workspace slutanvändarprogram
 
 **Principal Control:** Hantera användare och grupper för alla domäner och hantera rolltilldelningar för alla användare och grupper i alla domäner
 
-**Läs/ta bort processinspelning:** Visa och hämta arbetsflödesgranskningsinstanser
+**Bearbeta inspelning Läs/Ta bort:** Visa och hämta instanser för arbetsflödesgranskning
 
 **PROCESS_OWNER_PERM:** Visa trenddata och utföra administrativa åtgärder för en tjänst som skapats från en process
 
@@ -268,19 +268,19 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **READ_PERM:** Läsa eller visa en tjänst
 
-**Förnya försäkran:** Förnya bekräftelser i användarhantering
+**Förnya försäkran:** Förnya försäkran i användarhantering
 
 **Databasdelegat:** Ange en åtkomstkontrollista för en resurs
 
 **Databasläsning:** Läs innehållet i en resurs
 
-**Databasgenomgång:** Inkludera en resurs i en resursbegäran eller läs metadata för en resurs
+**Databasgenomgång:** Inkludera en resurs i en resursbegäran i en lista eller läs metadata för en resurs
 
-**Databasskrivning:** Skriv databasmetadata och -innehåll
+**Databasskrivning:** Skriva databasmetadata och -innehåll
 
-**Ägare av ändringsprofil för Rights Management:** Ändra principägare
+**Ägare av ändringsprincip för Rights Management:** Ägare av ändringsprincip
 
-**Inloggning på Rights Management slutanvändarkonsol:** Logga in på användargränssnittet i Rights Management
+**Rights Management-användarkonsolens inloggning:** Logga in på användargränssnittet i Rights Management
 
 **Konfiguration för hantering av Rights Management:** Hantera serverkonfiguration
 
@@ -288,43 +288,43 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **Hantera principuppsättningar i Rights Management:** Hantera alla profiler och dokument i alla principuppsättningar
 
-**Lägg till koordinator för Rights Management-principuppsättning:** Lägga till, ta bort och ändra behörigheter för koordinatorer för principuppsättningar
+**Lägg till koordinator för principuppsättning i Rights Management:** Lägg till, ta bort och ändra behörigheter för koordinatorer för principuppsättningar
 
-**Skapa princip för Rights Management-principuppsättning:** Skapa en profil för en principuppsättning
+**Skapa princip för principuppsättning i Rights Management:** Skapa en princip för en principuppsättning
 
-**Ta bort princip för uppsättningsuppsättning för Rights Management-princip:** Ta bort en profil från en principuppsättning
+**Ta bort princip för Ta bort princip för principuppsättning i Rights Management:** Ta bort en princip från en principuppsättning
 
-**Redigera princip för Rights Management-principuppsättning:** Redigera en profil i en principuppsättning
+**Redigera princip för grupprincip i Rights Management:** Redigera en princip i en principuppsättning
 
-**Rights Management Policy Set Manage Document Publisher (Hantera dokumentutgivare):** När du skapar principuppsättningar tilldelar du användare rollen som dokumentutgivare. Dokumentets utgivare är den användare som skyddar dokumentet med en profil.
+**Rights Management Policy Set Manage Document Publisher:** När du skapar principuppsättningar tilldelar du användare rollen som dokumentutgivare. Dokumentets utgivare är den användare som skyddar dokumentet med en profil.
 
-**Ta bort koordinator för Rights Management-principuppsättning:** Ta bort en koordinator för principuppsättning från en principuppsättning
+**Ta bort koordinator för principuppsättning i Rights Management:** Ta bort en koordinator för principuppsättning från en principuppsättning
 
-**Rights Management Policy Set Refoke Document:** Återkalla åtkomst till dokument i en principuppsättning
+**Återkalla dokument i en principuppsättning i Rights Management:** Återkalla åtkomst till dokument i en principuppsättning
 
-**Byteprincip för Rights Management-principuppsättning:** Byta profil för ett dokument
+**Byt princip för principuppsättning i Rights Management:** Byt profil för ett dokument
 
-**Rights Management-princip Ange Unrevoke-dokument:** Återkalla ett dokument
+**Rights Management-principuppsättning Ta bort dokument:** Återkalla ett dokument
 
-**Vyhändelse för Rights Management Policy Set:** Visa policy- och dokumenthändelser för alla profiler eller dokument i en principuppsättning
+**Vyhändelse för principuppsättningsvy för Rights Management:** Visa princip- och dokumenthändelser för alla profiler och dokument i en principuppsättning
 
-**Serverhändelser för Rights Management View:** Söka efter och visa alla granskningshändelser
+**Serverhändelser i Rights Management-vyn:** Sök efter och visa alla granskningshändelser
 
-**Rollkontroll:** Skapa, ta bort och ändra roller i Användarhantering
+**Rollkontroll:** Skapa, ta bort och ändra roller i användarhantering
 
-**Aktivera tjänst:** Starta en tjänst och göra den tillgänglig för anrop
+**Aktivera tjänst:** Starta en tjänst och gör den tillgänglig för anrop
 
 **Tjänsttillägg:** Distribuera en ny tjänst till tjänstregistret. Detta innefattar att lägga till nya processer och processvarianter
 
-**Inaktivering av tjänst:** Stoppa alla tjänster i systemet
+**Tjänst inaktiverad:** Stoppa alla tjänster i systemet
 
-**Borttagning av tjänst:** Ta bort alla tjänster i systemet, inklusive processer och processvarianter
+**Ta bort tjänst:** Ta bort alla tjänster i systemet, inklusive processer och processvarianter
 
 **Anropa tjänst:** Anropa alla tjänster i tjänstregistret som är tillgängliga vid körning
 
 **Tjänständring:** Ändra konfigurationsegenskaperna för alla tjänster i systemet. Detta inkluderar låsning och upplåsning av en tjänst i utvecklingsmiljön samt tillägg eller borttagning av slutpunkter från en tjänst
 
-**Tjänstläsning:** Läs alla tjänster i systemet. Detta inkluderar alla processer och processvarianter
+**Tjänsten har lästs:** Alla tjänster i systemet har lästs. Detta inkluderar alla processer och processvarianter
 
 **SERVICE_AGENT_PERM:** Visa data och interagera med processinstanser för en tjänst som skapats från en process
 
@@ -334,11 +334,11 @@ Du kan ändra behörigheterna för alla roller som du har skapat. Du kan inte ä
 
 **SUPERVISOR_PERM:** Visa processinstansdata för en tjänst som skapats från en process
 
-**Gå igenom:** Inkludera en resurs i en resursbegäran eller läs metadata för en resurs
+**Bläddra:** Inkludera en resurs i en resursbegäran i en lista eller läs metadata för en resurs
 
-**Skriv:** Skriv databasmetadata och -innehåll
+**Skriv:** Skriva databasmetadata och innehåll
 
-**Öppna filer i Workbench**
+**Öppnar filer i Workbench**
 
 Om du vill visa innehållet i resursvyn i Workbench och öppna filer för visning, måste användaren ha följande behörigheter:
 

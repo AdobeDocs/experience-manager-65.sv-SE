@@ -26,13 +26,13 @@ AEM Communities poäng och badges ger möjlighet att identifiera och belöna com
 
 De viktigaste aspekterna på poängsättning och märkning är:
 
-* [Tilldela märken](#assign-and-revoke-badges) identifiera en medlems roll i communityn.
+* [Tilldela emblem](#assign-and-revoke-badges) för att identifiera en medlems roll i communityn.
 
-* [Grundläggande tilldelning av märken](#enable-scoring) till medlemmarna för att uppmuntra dem att delta (mängden innehåll som skapas).
+* [Grundläggande tilldelning av emblem](#enable-scoring) till medlemmar för att uppmuntra dem att delta (antal skapade innehåll).
 
 * [Avancerad tilldelning av märken](/help/communities/advanced.md) för att identifiera medlemmar som experter (kvaliteten på det innehåll som skapas).
 
-**Anteckning** att det är [inte aktiverat som standard](/help/communities/implementing-scoring.md#main-pars-text-237875536).
+**Obs!** Att tilldela emblem är [inte aktiverat som standard](/help/communities/implementing-scoring.md#main-pars-text-237875536).
 
 >[!CAUTION]
 >
@@ -52,26 +52,26 @@ UGC har olika märken oavsett om de har tilldelats eller förvärvats enligt reg
 
 ### Användargränssnitt för hantering av emblem {#badge-management-ui}
 
-Communities [Badges Console](/help/communities/badges.md) Med kan du lägga till egna emblem som kan visas för en medlem när den har tjänats in (tilldelats) eller när de får en viss roll i communityn (tilldelats).
+Med konsolen [emblem](/help/communities/badges.md) kan du lägga till egna emblem som kan visas för en medlem när den har tjänats in (tilldelats) eller när de har en specifik roll i communityn (tilldelats).
 
 ### Tilldelade märken {#assigned-badges}
 
 Rollbaserade märken tilldelas av en administratör till communitymedlemmar baserat på deras roll i communityn.
 
-Tilldelade (och tilldelade) märken lagras i det valda [SRP](/help/communities/srp.md) och är inte direkt tillgängliga. Det enda sättet att tilldela rollbaserade emblem är att göra det med kod eller cURL tills ett GUI är tillgängligt. Instruktioner för cURL finns i avsnittet med rubriken [Tilldela och återkalla märken](#assign-and-revoke-badges).
+Tilldelade (och tilldelade) märken lagras i den valda [SRP](/help/communities/srp.md) och är inte direkt tillgängliga. Det enda sättet att tilldela rollbaserade emblem är att göra det med kod eller cURL tills ett GUI är tillgängligt. Instruktioner för cURL finns i avsnittet [Tilldela och återkalla emblem](#assign-and-revoke-badges).
 
 I releasen finns tre rollbaserade märken:
 
 * **moderator**
   `/libs/settings/community/badging/images/moderator/jcr:content/moderator.png`
 
-* **gruppansvarig**
+* **grupphanterare**
   `/libs/settings/community/badging/images/group-manager/jcr:content/group-manager.png`
 
-* **behörig medlem**
+* **privilegierad medlem**
   `/libs/settings/community/badging/images/privileged-member/jcr:content/privileged-member.png`
 
-  ![tilldelad-badges](assets/assigned-badges.png)
+  ![tilldelade-emblem](assets/assigned-badges.png)
 
 ### Tilldelade märken {#awarded-badges}
 
@@ -79,8 +79,8 @@ Belöningsbaserade märken delas ut av betygstjänsten till communitymedlemmar b
 
 För att emblem ska visas som en belöning för aktivitet måste två saker hända:
 
-* Badging måste vara [aktiverad](#enableforcomponent) för funktionskomponenten.
-* Regler för poängsättning och märkning måste vara [använd](#applytopage) till den sida (eller det överordnade objekt) som komponenten är placerad på.
+* Badging måste vara [enabled](#enableforcomponent) för funktionskomponenten.
+* Regler för klassificering och märkning måste [tillämpas](#applytopage) på sidan (eller det överordnade objektet) som komponenten placeras på.
 
 I releasen ingår tre belöningsbaserade märken:
 
@@ -93,17 +93,17 @@ I releasen ingår tre belöningsbaserade märken:
 * **brons**
   `/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
-  ![tilldelade-emblem](assets/awarded-badges.png)
+  ![tilldelad-badges](assets/awarded-badges.png)
 
 >[!NOTE]
 >
 >Poängregler kan konfigureras för att tilldela negativa punkter för inlägg som markerats som olämpliga och därmed påverka poängvärdet. När ett märke har skapats tas det dock inte bort automatiskt på grund av ändringar i poängsättningsregeln eller poängsättningsregeln.
 >
->Tilldelade märken kan återkallas på samma sätt som tilldelade märken. Se [Tilldela och återkalla märken](#assign-and-revoke-badges) -avsnitt. Framtida förbättringar kommer att omfatta ett användargränssnitt för att hantera medlemmarnas märken.
+>Tilldelade märken kan återkallas på samma sätt som tilldelade märken. Se avsnittet [Tilldela och återkalla märken](#assign-and-revoke-badges). Framtida förbättringar kommer att omfatta ett användargränssnitt för att hantera medlemmarnas märken.
 
 ### Egna märken {#custom-badges}
 
-Anpassade märken kan installeras med [Badges Console](/help/communities/badges.md) och antingen har tilldelats eller angetts i märkningsreglerna.
+Anpassade emblem kan installeras med [Badges-konsolen](/help/communities/badges.md) och antingen tilldelas eller anges i badging-regler.
 
 Anpassade märken replikeras automatiskt till publiceringsmiljön när de installeras från badges-konsolen.
 
@@ -111,38 +111,38 @@ Anpassade märken replikeras automatiskt till publiceringsmiljön när de instal
 
 Poängen är inte aktiverad som standard. De grundläggande stegen för att sätta upp och aktivera poängsättning och tilldelning av märken är:
 
-* Identifiera regler för intäktspunkter ([poängregler](#scoring-rules)).
-* För poäng som ackumuleras per poängregler tilldelar du [emblem](#badges) ([regler för emblem](#badging-rules)).
+* Identifiera regler för inkomstpunkter ([poängregler](#scoring-rules)).
+* Tilldela [emblem](#badges) ([badging-regler](#badging-rules)) för poäng som samlas per poängregler.
 
-* [Använd regler för poäng och utmärkelser på en communitywebbplats](#apply-rules-to-content).
+* [Använd reglerna för poäng och badging på en communitywebbplats](#apply-rules-to-content).
 * [Aktivera märkning för communityfunktioner](#enable-badges-for-component).
 
-Se [Snabbtest](#quick-test) om du vill aktivera poängsättning för en communitywebbplats med standardreglerna för poäng och märkning för forum och kommentarer.
+Gå till avsnittet [Snabbtest](#quick-test) om du vill aktivera poängsättning för en community-webbplats med standardreglerna för bedömning och märkning av forum och kommentarer.
 
 ### Använd regler för innehåll {#apply-rules-to-content}
 
-Om du vill aktivera poängsättning och märken lägger du till egenskaperna `scoringRules` och `badgingRules` till valfri nod i platsens innehållsträd.
+Lägg till egenskaperna `scoringRules` och `badgingRules` till en nod i platsens innehållsträd om du vill aktivera poängsättning och emblem.
 
 Om webbplatsen redan är publicerad, efter att du har tillämpat alla regler och aktiverat komponenter, publicerar du om den.
 
 Reglerna som gäller för en komponent som har aktiverats för badging är de som gäller för den aktuella noden eller dess överordnade nod.
 
-Om noden är av typen `cq:Page` (rekommenderas) och sedan använda CRXDE|Lite för att lägga till egenskaperna i `jcr:content` nod.
+Om noden är av typen `cq:Page` (rekommenderas) lägger du sedan till egenskaperna i noden `jcr:content` med CRXDE|Lite.
 
 | **Egenskap** | **Typ** | **Beskrivning** |
 |---|---|---|
-| badgingRules | Sträng | en matrislista med [regler för emblem](#badging-rules) |
+| badgingRules | Sträng | en matrislista med [märkningsregler](#badging-rules) |
 | scoringRules | Sträng | en matrislista med [poängregler](#scoring-rules) |
 
 >[!NOTE]
 >
->Om en bedömningsregel inte verkar ha någon effekt på att dela ut taggar kontrollerar du att resultatregeln inte har blockerats av spårningsregelns egenskap scoringRules. Se avsnittet som heter [Märkningsregler](#badging-rules).
+>Om en bedömningsregel inte verkar ha någon effekt på att dela ut taggar kontrollerar du att resultatregeln inte har blockerats av spårningsregelns egenskap scoringRules. Se avsnittet [Badging Rules](#badging-rules).
 
 ### Aktivera emblem för komponent {#enable-badges-for-component}
 
-Poäng- och streckreglerna gäller endast för instanser av komponenter som har aktiverat badging genom att redigera komponentkonfigurationen i [redigeringsläge](/help/communities/author-communities.md).
+Poängreglerna och reglerna för radavstånd gäller endast för instanser av komponenter som har aktiverat badging genom att redigera komponentkonfigurationen i [redigeringsläget](/help/communities/author-communities.md).
 
-En boolesk egenskap, `allowBadges`, aktiverar/inaktiverar visning av emblem för en komponentinstans. Den kan konfigureras i [redigeringsdialogruta för komponent](/help/communities/author-communities.md) för forum, QnA och kommentarkomponenter via en kryssruta med etiketten **Visa emblem**.
+En boolesk egenskap, `allowBadges`, aktiverar/inaktiverar visning av emblem för en komponentinstans. Den kan konfigureras i [komponentredigeringsdialogrutan](/help/communities/author-communities.md) för forum-, QnA- och kommentarskomponenter via en kryssruta med namnet **Display Badges**.
 
 #### Exempel: allowBadges för instans av forumkomponent {#example-allowbadges-for-forum-component-instance}
 
@@ -162,14 +162,14 @@ Poängregler ärvs men är inte additiva. Till exempel:
 
 * Om sidan 2 innehåller resultatregel 2 och dess överordnade sida 1 innehåller resultatregel 1.
 * En åtgärd på en sidkomponent2 anropar både regel1 och regel2.
-* Om båda reglerna innehåller tillämpliga delregler för samma `topic/verb`:
+* Om båda reglerna innehåller tillämpliga underlinjer för samma `topic/verb`:
 
    * Bara delpennan från regel2 påverkar poängen.
    * Poängen från båda undergrupperna läggs inte till.
 
 Om det finns mer än en resultatregel bevaras poängen separat för varje regel.
 
-Poängregler är noder av typen `cq:Page` med egenskaper på `jcr:content` nod som anger listan med underlinjer som definierar den.
+Poängregler är noder av typen `cq:Page` med egenskaper på noden `jcr:content` som anger listan med underlinjer som definierar den.
 
 Bakgrundsmusik lagras i SRP.
 
@@ -179,7 +179,7 @@ Bakgrundsmusik lagras i SRP.
 >
 >Poängregelnamn ska vara globalt unika. De får inte sluta med samma namn.
 >
->Ett exempel på vad *not* att göra:
+>Ett exempel på vad *inte* ska göra:
 >
 >/libs/settings/community/scoring/rules/site1/forums-scoring
 >/libs/settings/community/scoring/rules/site2/forums-scoring
@@ -194,16 +194,16 @@ Varje bedömningsdelpensel identifierar:
 * Vilken specifik communityfunktion är inblandad?
 * Hur många poäng tilldelas?
 
-Som standard tilldelas poäng till den medlem som utför åtgärden, såvida inte delpennan anger att ägaren av innehållet tar emot poängen ( `forOwner`).
+Som standard tilldelas poäng till den medlem som utför en åtgärd, såvida inte delpennan anger att ägaren av innehållet tar emot punkterna ( `forOwner`).
 
 Varje subrul kan ingå i en eller flera poängregler.
 
-Namnet på subruLen följer vanligtvis mönstret för att använda en *ämne*, *object* och *verb*. Till exempel:
+Namnet på underpennan följer vanligtvis mönstret för att använda ett *ämne*, *objekt* och *verb*. Till exempel:
 
 * medlem-comment-create
 * medlem-receive-voice
 
-Underlinjer är noder av typen `cq:Page` med egenskaper på `jcr:content`nod som anger [verb och ämnen](#topics-and-verbs) .
+Underlinjer är noder av typen `cq:Page` med egenskaper på noden `jcr:content` som anger [verbs and topics](#topics-and-verbs) .
 
 <table>
  <tbody>
@@ -223,7 +223,7 @@ Underlinjer är noder av typen `cq:Page` med egenskaper på `jcr:content`nod som
      <li>det kan finnas flera verb-egenskaper, men inga dubbletter</li>
      <li>värdet är poängvärdet som ska användas för den här händelsen</li>
      <li>värdet kan vara positivt eller negativt</li>
-     <li>en lista över verb som stöds i den här versionen finns i <a href="#topics-and-verbs">Ämnen och verb</a> section</li>
+     <li>en lista över verb som stöds i den här versionen finns i avsnittet <a href="#topics-and-verbs">Ämnen och verb</a></li>
     </ul> </td>
   </tr>
   <tr>
@@ -233,7 +233,7 @@ Underlinjer är noder av typen `cq:Page` med egenskaper på `jcr:content`nod som
     <ul>
      <li>frivilligt; begränsar delpensel till communitykomponenter som identifieras av händelseämnen</li>
      <li>if specified : value is multi-value string of event topics</li>
-     <li>en lista med ämnen i releasen finns i <a href="#topics-and-verbs">Ämnen och verb</a> section</li>
+     <li>en lista med ämnen i releasen finns i avsnittet <a href="#topics-and-verbs">Ämnen och verb</a></li>
      <li>standard ska gälla för alla ämnen som är kopplade till verberna</li>
     </ul> </td>
   </tr>
@@ -260,7 +260,7 @@ Underlinjer är noder av typen `cq:Page` med egenskaper på `jcr:content`nod som
       </ul> </li>
      <li>om "avancerat", anger poängsättningsmotorn baserat på kvalitet och kvantitet
       <ul>
-       <li>kräver <a href="/help/communities/advanced.md">extra paket</a></li>
+       <li>kräver ett <a href="/help/communities/advanced.md">extra paket</a></li>
       </ul> </li>
      <li>default is "basic"</li>
     </ul> </td>
@@ -270,21 +270,29 @@ Underlinjer är noder av typen `cq:Page` med egenskaper på `jcr:content`nod som
 
 ### Inkluderade poängsättningsregler och underregler {#included-scoring-rules-and-sub-rules}
 
-I releasen finns två poängregler för [Forum](/help/communities/functions.md#forum-function) (en för var och en för forumfunktionen och kommentarskomponenterna för forumfunktionen):
+I releasen finns två poängregler för [forumfunktionen](/help/communities/functions.md#forum-function) (en för respektive forum och kommentarkomponenter för forumfunktionen):
 
 1. /libs/settings/community/scoring/rules/comments-scoring
 
-   * subRules[] = /libs/settings/community/scoring/rules/sub-rules/member-comment-create /libs/settings/community/scoring/rules/sub-rules/member-receive-voice /libs/settings/community/scoring/rules/sub-rules/member-give-voice /libs/settings/community/scoring/rules/sub-rules/member-is-moderated
+   * subRules[] =
+/libs/settings/community/scoring/rules/sub-rules/member-comment-create
+/libs/settings/community/scoring/rules/sub-rules/member-receive-voice
+/libs/settings/community/scoring/rules/sub-rules/member-give-voice
+/libs/settings/community/scoring/rules/sub-rules/member-is-moderated
 
 1. /libs/settings/community/scoring/rules/forums-scoring
 
-   * subRules[] = /libs/settings/community/scoring/rules/sub-rules/member-forum-create /libs/settings/community/scoring/rules/sub-rules/member-receive-voice /libs/settings/community/scoring/rules/sub-rules/member-give-voice /libs/settings/community/scoring/rules/sub-rules/member-is-moderated
+   * subRules[] =
+/libs/settings/community/scoring/rules/sub-rules/member-forum-create
+/libs/settings/community/scoring/rules/sub-rules/member-receive-voice
+/libs/settings/community/scoring/rules/sub-rules/member-give-voice
+/libs/settings/community/scoring/rules/sub-rules/member-is-moderated
 
 **Anteckningar:**
 
-* Båda `rules` och `sub-rules` noder är av typen cq:Page.
+* Både `rules`- och `sub-rules`-noder är av typen cq:Page.
 
-* `subRules` är ett attribut av typen String[] på regelns `jcr:content` nod.
+* `subRules` är ett attribut av typen String [] i regelnoden `jcr:content`.
 
 * `sub-rules` kan delas mellan olika poängregler.
 * `rules` ska finnas på en databasplats med läsbehörighet för alla.
@@ -302,9 +310,9 @@ Regler för märkning länkar till poängregler genom att ange:
 * Poängregel
 * Poäng som krävs för att tilldelas ett specifikt märke
 
-Badging-regler är noder av typen `cq:Page` med egenskaper på `jcr:content` nod som korrelerar poängregler till poäng och emblem.
+Badging-regler är noder av typen `cq:Page` med egenskaper på dess `jcr:content`-nod som korrelerar poängregler till poäng och emblem.
 
-Reglerna för märkning består av ett obligatoriskt `thresholds` egenskap som är en ordnad lista över bakgrundsmusik mappad till emblem. Poängen måste ordnas i högre värde. Till exempel:
+Reglerna för märkning består av en obligatorisk `thresholds`-egenskap som är en ordnad lista med poäng mappade till emblem. Poängen måste ordnas i högre värde. Till exempel:
 
 * `1|/libs/settings/community/badging/images/bronze-badge/jcr:content/bronze.png`
 
@@ -318,9 +326,9 @@ Reglerna för märkning består av ett obligatoriskt `thresholds` egenskap som �
 
    * En guldbricka utdelas när 80 poäng har samlats.
 
-Betygsregler kombineras med poängregler, som bestämmer hur poäng ackumuleras. Se avsnittet som heter [Använd regler för innehåll](#apply-rules-to-content).
+Betygsregler kombineras med poängregler, som bestämmer hur poäng ackumuleras. Se avsnittet [Använd regler för innehåll](#apply-rules-to-content).
 
-The `scoringRules` egenskapen för en badging-regel begränsar helt enkelt vilka poängregler som kan kombineras med den speciella badging-regeln.
+Egenskapen `scoringRules` i en badging-regel begränsar helt enkelt vilka poängregler som kan paras med den speciella badging-regeln.
 
 >[!NOTE]
 >
@@ -338,7 +346,7 @@ The `scoringRules` egenskapen för en badging-regel begränsar helt enkelt vilka
   <tr>
    <td>tröskelvärden</td>
    <td>Sträng</td>
-   <td><em>(obligatoriskt)</em> En sträng med flera värden i formatet 'number|path'
+   <td><em>(obligatoriskt)</em> En sträng med flera värden i formatet number|path
     <ul>
      <li>number = score</li>
      <li>| = den lodräta linjen char (U+007C)</li>
@@ -348,19 +356,19 @@ The `scoringRules` egenskapen för en badging-regel begränsar helt enkelt vilka
   <tr>
    <td>badgingType</td>
    <td>Sträng</td>
-   <td><em>(valfritt)</em> Identifierar bedömningsmotorn som antingen "grundläggande" eller "avancerad". Om du vill använda den avancerade bedömningsmotorn läser du <a href="/help/communities/advanced.md">Advanced Scoring and Badges</a>. Standardvärdet är "basic".</td>
+   <td><em>(valfritt)</em> Identifierar bedömningsmotorn som antingen grundläggande eller avancerad. Om du vill använda den avancerade bedömningsmotorn läser du <a href="/help/communities/advanced.md">Avancerade poäng och märken</a>. Standardvärdet är "basic".</td>
   </tr>
   <tr>
    <td>scoringRules</td>
    <td>Sträng</td>
-   <td>(<em>valfri</em>) En sträng med flera värden som begränsar badging-regeln till bedömningshändelser som identifieras av poängsättningsreglerna</td>
+   <td>(<em>valfri</em>) En sträng med flera värden som begränsar badging-regeln till bedömningshändelser som identifieras av poängreglerna</td>
   </tr>
  </tbody>
 </table>
 
 ### Inkluderade märkningsregler {#included-badging-rules}
 
-I releasen finns två badging-regler som motsvarar [Ordningsregler för forum och kommentarer](#includedscoringrules).
+I utgåvan finns två märkningsregler som motsvarar [Forums- och kommentarsbedömningsreglerna](#includedscoringrules).
 
 * `/libs/settings/community/badging/rules/comments-badging`
 
@@ -379,30 +387,34 @@ Alla ändringar eller tillägg som görs i märkningsregler eller bilder som gjo
 
 ## Tilldela och återkalla märken {#assign-and-revoke-badges}
 
-Medlemmar kan tilldelas märken antingen med [medlemskonsol](/help/communities/members.md#badges-tab) eller programmatiskt med cURL-kommandon.
+Märkningar kan tilldelas medlemmar antingen med [medlemskonsolen](/help/communities/members.md#badges-tab) eller via programmering med cURL-kommandon.
 
 Följande cURL-kommandon visar vad som krävs för en HTTP-begäran om att tilldela och återkalla emblem. Grundformatet är:
 
-cURL -i -X POST -H *header* -u *signera* -F *operation* -F *bricka* *member-profile-url*
+cURL -i -X POST -H *header* -u *signin* -F *operation* -F *badge* *member-profile-url*
 
-*header* = &quot;Acceptera:program/json&quot;, anpassad rubrik som ska skickas till servern (obligatoriskt)
+*header* = &quot;Accept:application/json&quot;
+anpassad rubrik som ska skickas till servern (obligatoriskt)
 
-*signera* = administrator-id:password, till exempel, admin:admin
+*inloggning* = administrator-id:password
+till exempel admin:admin
 
 *operation* = &quot;:operation=social:assignBadge&quot; OR &quot;:operation=social:deleteBadge&quot;
 
-*bricka* = &quot;badgeContentPath=*badge-image-file*&quot;
+*badge* = &quot;badgeContentPath=*badge-image-file*&quot;
 
-*badge-image-file* = platsen för badge-bildfilen i databasen, till exempel /libs/settings/community/badging/images/moderator/jcr:content/moderator.png
+*badge-image-file* = platsen för badge-bildfilen i databasen
+till exempel /libs/settings/community/badging/images/moderator/jcr:content/moderator.png
 
-*member-profile-url* = slutpunkten för medlemmens profil vid publicering, t.ex. https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
+*member-profile-url* = slutpunkten för medlemmens profil vid publicering
+till exempel https://&lt;server>:&lt;port>/home/users/community/riley/profile.social.json
 
 >[!NOTE]
 >
->The *member-profile-url*:
+>*Member-profile-url*:
 >
->* Kan referera till en författarinstans om [Tunneltjänst](/help/communities/users.md#tunnel-service) är aktiverat.
->* Kan vara ett otydligt, slumpmässigt namn - se [Säkerhetschecklista](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) om auktoriseringsbart ID.
+>* Kan referera till en författarinstans om [tunneltjänsten](/help/communities/users.md#tunnel-service) är aktiverad.
+>* Kan vara ett otydligt, slumpmässigt namn - se [Checklista för säkerhet](/help/sites-administering/security-checklist.md#verify-that-you-are-not-disclosing-personally-identifiable-information-in-the-users-home-path) angående auktoriseringsbart ID.
 
 ### Exempel: {#examples}
 
@@ -430,13 +442,13 @@ Du kan skapa regler för klassificering och märkning för anpassade komponenter
 
 När medlemmar interagerar med communityfunktioner skickas händelser som kan utlösa asynkrona avlyssnare, som meddelanden och poängsättning.
 
-En komponents SocialEvent-instans registrerar händelserna som `actions` som inträffar för en `topic`. SocialEvent innehåller en metod för att returnera en `verb` som är associerad med åtgärden. Det finns en *n-1* relation mellan `actions` och `verbs`.
+En komponents SocialEvent-instans registrerar händelserna som `actions` som inträffar för en `topic`. SocialEvent innehåller en metod för att returnera en `verb` som är associerad med åtgärden. Det finns en *n-1*-relation mellan `actions` och `verbs`.
 
-För de communitykomponenter som levereras beskrivs följande tabeller `verbs` definierad för varje `topic` finns att använda i [betygsdelkurvor](#scoring-sub-rules).
+För de communitykomponenter som levereras beskrivs `verbs` som definierats för varje `topic` som är tillgänglig för användning i [poängdelsregler](#scoring-sub-rules) i följande tabeller.
 
 >[!NOTE]
 >
->En ny boolesk egenskap, `allowBadges`, aktiverar/inaktiverar visning av emblem för en komponentinstans. Den kan konfigureras i uppdaterad [dialogrutor för redigering av komponenter](/help/communities/author-communities.md) genom en kryssruta med etiketten **Visa emblem**.
+>En ny boolesk egenskap, `allowBadges`, aktiverar/inaktiverar visning av emblem för en komponentinstans. Den kan konfigureras i uppdaterade [komponentredigeringsdialogrutor](/help/communities/author-communities.md) via en kryssruta med namnet **Visa emblem**.
 
 **[Kalenderkomponent](/help/communities/calendar.md)**
 SocialEvent `topic`= com/adobe/cq/social/calendar
@@ -468,7 +480,7 @@ SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 | UPPDATERA | medlemmen uppdaterar en mapp eller fil |
 | DELETE | medlem tar bort en mapp eller fil |
 
-**[Forum-komponent](/help/communities/forum.md)**
+**[Forumkomponent](/help/communities/forum.md)**
 SocialEvent `topic`= com/adobe/cq/social/forum
 
 | **Verb** | **Beskrivning** |
@@ -518,7 +530,7 @@ SocialEvent `topic`= com/adobe/cq/social/tally/rating
 | TA BORT KLASSIFICERING | medlemmens innehåll har nedgraderats |
 
 **[Röstkomponent](/help/communities/voting.md)**
-SocialEvent `topic`= com/adobe/cq/social/tally/röstande
+SocialEvent `topic`= com/adobe/cq/social/tally/voice
 
 | **Verb** | **Beskrivning** |
 |---|---|
@@ -541,7 +553,7 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 
 För en anpassad komponent instansieras en SocialEvent för att spela in komponentens händelser som `actions` som inträffar för en `topic`.
 
-SocialEvent måste åsidosätta metoden för att stödja poängsättningen `getVerb()` så att `verb` returneras för varje `action`. The `verb` som returneras för en åtgärd kan vara en vanlig åtgärd (t.ex. `POST`) eller en som är specialiserad på komponenten (till exempel `ADD RATING`). Det finns en *n-1* relation mellan `actions` och `verbs`.
+SocialEvent måste åsidosätta metoden `getVerb()` så att en lämplig `verb` returneras för varje `action` för att stödja poängsättningen. `verb` som returneras för en åtgärd kan vara en vanlig (t.ex. `POST`) eller en speciell för komponenten (t.ex. `ADD RATING`). Det finns en *n-1*-relation mellan `actions` och `verbs`.
 
 ## Felsökning {#troubleshooting}
 
@@ -555,7 +567,7 @@ Se [Aktivera emblem för komponent](#enable-badges-for-component).
 
 Om regler för poängsättning och märkning har tillämpats på webbplatsens innehåll, och emblem tilldelas för vissa åtgärder, men inte andra, kontrollerar du att badging-regeln inte har begränsat de poängregler som den gäller för.
 
-Se `scoringRules` egenskap för [Märkningsregler](#badging-rules).
+Se egenskapen `scoringRules` i [Badging Rules](#badging-rules).
 
 ### Skiftlägeskänslig typo {#case-sensitive-typo}
 
@@ -565,7 +577,7 @@ Om funktionen inte fungerar som förväntat kontrollerar du att data har angetts
 
 ## Snabbtest {#quick-test}
 
-Det går snabbt att testa poängsättning och märkning med [Komma igång, självstudiekurs](/help/communities/getting-started.md) (engagera) webbplats:
+Det går snabbt att testa poängsättning och märkning med hjälp av webbplatsen [Komma igång med självstudiekursen](/help/communities/getting-started.md) (engagera):
 
 * Öppna CRXDE Lite på författaren.
 * Bläddra till bassidan:
@@ -576,22 +588,22 @@ Det går snabbt att testa poängsättning och märkning med [Komma igång, själ
 
    * **Namn**: `badgingRules`
    * **Typ**: `String`
-   * Välj **Flera**
+   * Välj **Multi**
    * Välj **Lägg till**
-   * Retur `/libs/settings/community/badging/rules/forums-badging`
-   * Välj **+**
-   * Retur `/libs/settings/community/badging/rules/comments-badging`
+   * Ange `/libs/settings/community/badging/rules/forums-badging`
+   * Markera **+**
+   * Ange `/libs/settings/community/badging/rules/comments-badging`
    * Välj **OK**
 
 * Lägg till egenskapen scoringRules:
 
    * **Namn**: `scoringRules`
    * **Typ**: `String`
-   * Välj **Flera**
+   * Välj **Multi**
    * Välj **Lägg till**
-   * Retur `/libs/settings/community/scoring/rules/forums-scoring`
-   * Välj **+**
-   * Retur `/libs/settings/community/scoring/rules/comments-scoring`
+   * Ange `/libs/settings/community/scoring/rules/forums-scoring`
+   * Markera **+**
+   * Ange `/libs/settings/community/scoring/rules/comments-scoring`
    * Välj **OK**
 
 * Välj **Spara alla**.
@@ -613,13 +625,13 @@ Kontrollera sedan att forumkomponenterna och kommentarkomponenterna tillåter at
 
 ![test-forum-component](assets/test-forum-component.png)
 
-Nästa, [publicera igen](/help/communities/sites-console.md#publishing-the-site) communitywebbplatsen.
+[Publicera](/help/communities/sites-console.md#publishing-the-site) igen på communitywebbplatsen.
 
 Äntligen
 
 * Bläddra till komponenten i publiceringsinstansen.
 * Logga in som community-medlem (till exempel weston.mccall@dodgit.com/lösenord).
-* Lägg upp ett nytt forumtema.
+* Post är ett nytt forum.
 * Sidan måste uppdateras för att emblemet ska kunna visas.
 
    * Logga ut och logga in som en annan community-medlem (till exempel: aaron.mcdonald@mailinator.com/password).
@@ -632,8 +644,8 @@ Detta bör göra att communitymedlemmen får ett bronze-märke synligt med sitt 
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på [Grundläggande om poäng och emblem](/help/communities/configure-scoring.md) för utvecklare.
+Mer information finns på sidan [Värderingsläge och emblem Essentials](/help/communities/configure-scoring.md) för utvecklare.
 
-Mer information om den avancerade bedömningsmotorn finns i [Advanced Scoring and Badges](/help/communities/advanced.md).
+Mer information om den avancerade bedömningsmotorn finns i [Avancerade poäng och märken](/help/communities/advanced.md).
 
-Konfigurerbar huvudpanel [komponent](/help/communities/enabling-leaderboard.md) och [function](/help/communities/functions.md#leaderboard-function) gör det enklare att visa medlemmar och deras poäng på en communitywebbplats.
+Den konfigurerbara huvudpanelen [component](/help/communities/enabling-leaderboard.md) och [function](/help/communities/functions.md#leaderboard-function) förenklar visningen av medlemmar och deras poäng på en communitywebbplats.

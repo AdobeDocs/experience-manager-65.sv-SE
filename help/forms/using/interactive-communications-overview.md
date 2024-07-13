@@ -20,7 +20,7 @@ ht-degree: 3%
 
 Den här artikeln innehåller översikt, exempel på användningsområden, arbetsflöde för att skapa och skillnader mellan interaktiv kommunikation och brev.
 
-![hero-image](do-not-localize/correspondence-management.png)
+![hjältebild](do-not-localize/correspondence-management.png)
 
 Interactive Communications centraliserar och hanterar framtagning, sammanställning och leverans av säkra, personaliserade och interaktiva korrespondenser som affärskorrespondens, dokument, kontoutdrag, förmånsmeddelanden, marknadsföringsmejl, räkningar och välkomstpaket.
 
@@ -41,13 +41,13 @@ Här följer några av de viktigaste funktionerna i Interactive Communications:
 
 ### Arbetsflöde {#workflow}
 
-Skapa en interaktiv kommunikation med [byggstenar](#buildingblocks) för Interactive Communication och utför sedan följande steg:
+Om du vill skapa en interaktiv kommunikation ska du förbereda [byggstenarna](#buildingblocks) för interaktiv kommunikation och sedan utföra följande steg:
 
-1. Välj [skapa en interaktiv kommunikation](/help/forms/using/create-interactive-communication.md).
+1. Välj att [skapa en interaktiv kommunikation](/help/forms/using/create-interactive-communication.md).
 
-1. Ange [formulärdatamodell](/help/forms/using/data-integration.md), förifyllningstjänst och [mallar för tryck och webbkanaler](/help/forms/using/web-channel-print-channel.md). Du kan välja att generera en webbkanal från utskriftskanalen.
+1. Ange [formulärdatamodellen](/help/forms/using/data-integration.md), förifyllningstjänsten och [utskrifts- och webbkanalsmallarna](/help/forms/using/web-channel-print-channel.md). Du kan välja att generera en webbkanal från utskriftskanalen.
 
-1. Använda [dra-och-släpp-gränssnitt](/help/forms/using/introduction-interactive-communication-authoring.md), lägger till dokumentfragment, bilder, komponenter i utskriften och webbkanalen i interaktiv kommunikation efter behov.
+1. Använd gränssnittet [dra och släpp](/help/forms/using/introduction-interactive-communication-authoring.md) för att lägga till dokumentfragment, bilder, komponenter i utskrift och webbkanal för den interaktiva kommunikationen efter behov.
 1. Konfigurera egenskaperna för de infogade komponenterna, till exempel följande:
 
    1. [Bilder](/help/forms/using/create-interactive-communication.md#step2)
@@ -56,7 +56,7 @@ Skapa en interaktiv kommunikation med [byggstenar](#buildingblocks) för Interac
    1. [Dokumentfragment](/help/forms/using/create-interactive-communication.md#document-fragment-properties)
 
 1. Förhandsgranska tryck- och webbkanaler och redigera vid behov interaktiv kommunikation.
-1. Agentens användargränssnitt använder [färdigställa interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) för att skicka det till mottagar-/postprocessen.
+1. Agentens användargränssnitt används för att [förbereda interaktiv kommunikation](/help/forms/using/prepare-send-interactive-communication.md) för att skicka den till mottagar-/postprocessen.
 
 ### Byggblock {#buildingblocks}
 

@@ -18,15 +18,15 @@ ht-degree: 0%
 
 # AEM{#aem-repo-tool}
 
-AEM är en enkel lösning för att överföra JCR-innehåll mellan det lokala filsystemet och den AEM servern via kommandoraden som kan jämföras med FTP. AEM liknar [Jackrabbit FileVault-verktyget](/help/sites-developing/ht-vlttool.md), men är snabbare, har minimalt med beroenden och är ett enkelt basskript.
+AEM är en enkel lösning för att överföra JCR-innehåll mellan det lokala filsystemet och den AEM servern via kommandoraden som kan jämföras med FTP. AEM Repo-verktyget liknar [Jackrabbit FileVault-verktyget](/help/sites-developing/ht-vlttool.md), men är snabbare, har minimalt med beroenden och är ett enkelt basskript.
 
 Det här verktyget förenklar filöverföringen för utvecklaren och kan även integreras i IntelliJ och Eclipse för att göra utvecklingen ännu effektivare.
 
 ## Ökning {#overview}
 
-För en given bana inuti en `jcr_root` filsystemens struktur AEM postverktyget skapar ett paket med ett enda filter för hela underträdet och skickar det till servern (liknande FTP) `put`), hämtar den från servern ( `get`) eller jämför skillnaderna ( `status` och `diff`).
+För en given sökväg i en `jcr_root`-fillevaultstruktur i filsystemet skapar AEM ett paket med ett enda filter för hela underträdet och skickar det till servern (som FTP `put`), hämtar det från servern ( `get`) eller jämför skillnaderna ( `status` och `diff`).
 
-Verktyget stöder inte flera filtersökvägar eller FileVault-filer `filter.xml`.
+Verktyget stöder inte flera filtersökvägar eller FileVault-objektets `filter.xml`.
 
 >[!CAUTION]
 >
@@ -34,7 +34,7 @@ Verktyget stöder inte flera filtersökvägar eller FileVault-filer `filter.xml`
 
 ## Ladda ned och dokumentation {#download-and-documentation}
 
-The [AEM finns på GitHub via den här länken](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) tillsammans med detaljerade installations- och användningsanvisningar.
+[AEM Repo Tool är tillgängligt på GitHub via den här länken](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) tillsammans med detaljerade installations- och användningsinstruktioner.
 
 Om du vill hämta källan till AEM kan du läsa GitHub-projektet som är länkat nedan.
 

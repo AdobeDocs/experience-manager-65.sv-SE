@@ -16,13 +16,13 @@ ht-degree: 0%
 
 Här följer två typer av översiktstyper för att skapa med AEM:
 
-* [Steg 1 för författare](/help/sites-authoring/first-steps.md) - en introduktion för nya författare
+* [Första steget för författare](/help/sites-authoring/first-steps.md) - en introduktion för nya författare
 
-* [Snabbguide till framtagning av sidor](/help/sites-authoring/qg-page-authoring.md) - en snabbguide (på hög nivå) till de viktigaste åtgärderna
+* [Snabbguide till redigering av sidor](/help/sites-authoring/qg-page-authoring.md) - en snabbguide (på hög nivå) till huvudåtgärderna
 
 >[!NOTE]
 >
->I det här avsnittet beskrivs de uppgifter som ska utföras när en innehållssida redigeras. Det finns många andra funktioner som är närbesläktade med sidutvecklingen och som beskrivs i andra avsnitt av [Redigeringshandbok](/help/sites-authoring/first-steps.md).
+>I det här avsnittet beskrivs de uppgifter som ska utföras när en innehållssida redigeras. Det finns många andra funktioner som är närbesläktade med sidredigering och som beskrivs i andra avsnitt i [redigeringshandboken](/help/sites-authoring/first-steps.md).
 
 ## Snabböversikt över funktioner som används för att skapa sidor {#quick-overview-of-features-used-for-authoring-pages}
 
@@ -31,10 +31,10 @@ För att du ska få hjälp med att skapa sidor innehåller redigeringsmiljön fu
 * **Dra och släpp**
 Komponenter (t.ex. Text, Bild) och digitala resurser (t.ex. bilder) kan placeras på sidan genom att dra och släppa dem på önskad plats.
 
-* **Redigering**
+* **Redigerar**
 När du har placerat den på sidan kan du öppna en komponentspecifik dialogruta där du kan ange komponentens innehåll och/eller konfigurera egenskaper (till exempel bildstorlek).
 
-* **In-place Editing**
+* **Redigering på plats**
 Text- och bildkomponenter kan redigeras direkt på webbsidan utan att du behöver öppna en dialogruta eller någon explicit sparåtgärd.
 
 * **[Komponentbläddraren](/help/sites-authoring/author-environment-tools.md#componentsbrowsertouchoptimizedui)**

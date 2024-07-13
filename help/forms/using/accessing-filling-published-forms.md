@@ -75,7 +75,7 @@ Varje formulär innehåller hjälpinformation som gör att användaren kan fylla
 
 #### Utkast och inlämning {#drafts-and-submission}
 
-En användare kan spara ett utkast av ett formulär genom att klicka **Spara**. Detta gör att användaren kan arbeta med ett formulär under en tidsperiod innan formuläret skickas.
+En användare kan välja att spara ett utkast av ett formulär genom att klicka på **Spara**. Detta gör att användaren kan arbeta med ett formulär under en tidsperiod innan formuläret skickas.
 
 De data som fylls i formuläret (inklusive bilagor) sparas som ett utkast på servern. Utkastet kan sparas hur många gånger som helst. Det sparade formuläret visas på fliken Utkast i delen Utkast &amp; överföring på sidan.
 
@@ -83,9 +83,9 @@ När formuläret har fyllts i skickar användaren formulären genom att klicka p
 
 >[!NOTE]
 >
->Skickade formulär visas bara på fliken Skickat Forms om skicka-åtgärden för det adaptiva formuläret har konfigurerats som Forms Portal Submit Action (Skicka-åtgärd). Mer information om Skicka-åtgärder finns i [Konfigurera åtgärden Skicka](../../forms/using/configuring-submit-actions.md).
+>Skickade formulär visas bara på fliken Skickat Forms om skicka-åtgärden för det adaptiva formuläret har konfigurerats som Forms Portal Submit Action (Skicka-åtgärd). Mer information om Skicka-åtgärder finns i [Konfigurera Skicka-åtgärden](../../forms/using/configuring-submit-actions.md).
 
-![Komponenten Utkast och inskickat material](assets/draft-submission.png)
+![Komponenten för utkast och inskickade dokument](assets/draft-submission.png)
 
 Komponenten Utkast och inskickat material
 
@@ -93,7 +93,7 @@ Komponenten Utkast och inskickat material
 
 Det finns vissa formulär som du måste fylla i och skicka ofta. Formuläret för att skicka in en individuell skattedeklaration skickas till exempel varje år. I sådana fall ändras en del av informationen varje gång du fyller i formuläret, men de flesta av dem, som personuppgifter och familjeuppgifter, ändras inte. Du måste dock ändå fylla i hela formuläret från grunden igen.
 
-AEM Forms kan hjälpa till att optimera formulärifyllningen och avsevärt minska tiden för att fylla i och skicka in ett formulär igen. Slutanvändare kan starta ett nytt formulär med data från ett skickat formulär. Den här funktionen är inbyggd i [Komponenten Utkast och inskickat material](../../forms/using/draft-submission-component.md). När du lägger till komponenterna Utkast och Skicka på din Forms Portal-sida och publicerar den ser slutanvändarna ett alternativ på flikarna Skickat Forms och Utkast till Forms. Med det här alternativet kan du starta ett nytt formulär med data från ett skickat formulär. Följande bild markerar det alternativet.
+AEM Forms kan hjälpa till att optimera formulärifyllningen och avsevärt minska tiden för att fylla i och skicka in ett formulär igen. Slutanvändare kan starta ett nytt formulär med data från ett skickat formulär. Den här funktionen är inbyggd i komponenten [Utkast och överföringar](../../forms/using/draft-submission-component.md). När du lägger till komponenterna Utkast och Skicka på din Forms Portal-sida och publicerar den ser slutanvändarna ett alternativ på flikarna Skickat Forms och Utkast till Forms. Med det här alternativet kan du starta ett nytt formulär med data från ett skickat formulär. Följande bild markerar det alternativet.
 
 ![start-a-new-form](assets/start-a-new-form.png)
 

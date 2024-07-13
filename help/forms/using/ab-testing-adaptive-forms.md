@@ -38,33 +38,33 @@ Innan du börjar skapa och analysera A/B-tester för adaptiva formulär måste d
 
 Om du vill integrera AEM med Target måste du ha ett giltigt Adobe Target-konto. När du registrerar dig hos Adobe Target får du en klientkod. Du behöver klientkoden, e-postadressen som är kopplad till Target-kontot och lösenordet för att kunna ansluta AEM till Target.
 
-Klientkoden identifierar Adobe Target-kundkontot och används som en underdomän i URL:en när Adobe Target-servern anropas. Logga in på [https://experience.adobe.com/](https://experience.adobe.com/) och, om du har åtkomst, visa [!DNL Adobe Target] i [!UICONTROL Quick Access] -avsnitt.
+Klientkoden identifierar Adobe Target-kundkontot och används som en underdomän i URL:en när Adobe Target-servern anropas. Logga in på [https://experience.adobe.com/](https://experience.adobe.com/) och, om du har åtkomst, visa alternativet [!DNL Adobe Target] i avsnittet [!UICONTROL Quick Access] innan du fortsätter.
 
 ### Integrera en målserver som körs med AEM Forms {#integrate-target-in-aem-forms}
 
 1. På AEM går du till https://&lt;*värdnamn*>:&lt;*port*>/libs/cq/core/content/tools/cloudservices.html.
 
-1. I **Adobe Target** avsnitt, klicka **Visa konfigurationer** och sedan **+** -ikon för att lägga till en konfiguration.
+1. Klicka på **Visa konfigurationer** i avsnittet **Adobe Target** och sedan på ikonen **+** för att lägga till en konfiguration.
 Om du konfigurerar ett mål för första gången klickar du på **Konfigurera nu.**
 
-1. I dialogrutan Skapa konfiguration anger du **Titel** och eventuellt en **Namn** för konfigurationen.
+1. I dialogrutan Skapa konfiguration anger du en **titel** och eventuellt ett **namn** för konfigurationen.
 
-1. Klicka **Skapa**. Dialogrutan Redigera komponent öppnas.
+1. Klicka på **Skapa**. Dialogrutan Redigera komponent öppnas.
 1. Ange information om ditt Target-konto, till exempel klientkod, e-post och lösenord.
-1. Välj **Vila** från listrutan API-typ.
+1. Välj **Resten** i listrutan API-typ.
 
-1. Klicka **Anslut till Adobe Target** så att du kan initiera anslutningen med Target. Om anslutningen lyckas visas meddelandet Anslutningen lyckades. Klicka **OK** i meddelandet och sedan **OK** i dialogrutan. Målkontot är konfigurerat.
+1. Klicka på **Anslut till Adobe Target** så att du kan initiera anslutningen med Target. Om anslutningen lyckas visas meddelandet Anslutningen lyckades. Klicka på **OK** i meddelandet och sedan på **OK** i dialogrutan. Målkontot är konfigurerat.
 
 1. Skapa ett målramverk enligt beskrivningen i [Lägg till ett ramverk](/help/sites-administering/target.md).
 
-1. Gå till https://*värdnamn*>:&lt;*port*>/system/console/configMgr.
+1. Gå till https://&lt;*värdnamn*>:&lt;*port*>/system/console/configMgr.
 
-1. Klicka **Konfiguration av AEM Forms Target**.
-1. Välj en **Målram**.
-1. I **Mål-URL:er** anger du alla URL:er där A/B-tester körs. Till exempel https://&lt;*värdnamn*>:&lt;*port*>/ för AEM Forms Server on OSGi eller https://&lt;*värdnamn*>:&lt;*port*>/lc/ för AEM Forms Server on JEE.
-Tänk på att du vill konfigurera en mål-URL för en Publish-instans och att dina kunder kan komma åt den via värdnamnet eller IP-adressen. I så fall måste du konfigurera både som mål-URL:er med värdnamnet och IP-adressen. Om du bara konfigurerar en av URL:erna körs inte A/B-testet för kunder som kommer från den andra URL:en. Klicka **+** om du vill ange flera URL-adresser.
+1. Klicka på **AEM Forms Target Configuration**.
+1. Välj ett **målramverk**.
+1. I fältet **Mål-URL:er** anger du alla URL:er där A/B-tester körs. Exempel: https://&lt;*värdnamn*>:&lt;*port*>/ för AEM Forms Server på OSGi eller https://&lt;*värdnamn*>:&lt;*port*>/lc/ för AEM Forms Server på JEE.
+Tänk på att du vill konfigurera en mål-URL för en Publish-instans och att dina kunder kan komma åt den via värdnamnet eller IP-adressen. I så fall måste du konfigurera både som mål-URL:er med värdnamnet och IP-adressen. Om du bara konfigurerar en av URL:erna körs inte A/B-testet för kunder som kommer från den andra URL:en. Klicka på **+** för att ange flera URL:er.
 
-1. Klicka **Spara**.
+1. Klicka på **Spara**.
 
 Målservern är integrerad med AEM Forms. Du kan nu aktivera A/B-testning om du har en fullständig licens för att använda Adobe Target.
 
@@ -72,7 +72,7 @@ Om du har en fullständig licens för att använda Adobe Target måste du starta
 
 `parameter -Dabtesting.enabled=true java -Xmx2048m -XX:MaxPermSize=512M -jar -Dabtesting.enabled=true`
 
-Om AEM körs på JBoss® började den som en tjänst från körningsnyckeln i `jboss\bin\standalone.conf.bat` file, add -Dabtesting.enabled=true parameter i följande post:
+Om AEM körs på JBoss®, startades som en tjänst från körningsnyckeln, lägg till parametern -Dabtesting.enabled=true i följande post i filen `jboss\bin\standalone.conf.bat`:
 
 `set "JAVA_OPTS=%JAVA_OPTS% -Dadobeidp.serverName=server1 -Dfile.encoding=utf8 -Djava.net.preferIPv4Stack=true -Dabtesting.enabled=true"`
 
@@ -80,44 +80,44 @@ Förutom JBoss®-servern kan du lägga till argumentet -Dabtesting.enabled=true 
 
 >[!NOTE]
 >
->Om du uppdaterar de konfigurerade mål-URL:erna senare måste du uppdatera alla A/B-tester som körs så att de pekar på de aktuella URL:erna. Information om hur du uppdaterar A/B-tester finns i [Uppdatera A/B-test](/help/forms/using/ab-testing-adaptive-forms.md#p-update-a-b-test-p).
+>Om du uppdaterar de konfigurerade mål-URL:erna senare måste du uppdatera alla A/B-tester som körs så att de pekar på de aktuella URL:erna. Mer information om hur du uppdaterar A/B-tester finns i [Uppdatera A/B-test](/help/forms/using/ab-testing-adaptive-forms.md#p-update-a-b-test-p).
 >
 
 ## Skapa målgrupper i AEM {#create-audiences-within-aem}
 
 Med AEM kan du skapa en målgrupp och använda den för ett A/B-test. Den målgrupp du skapar i AEM är tillgänglig i AEM Forms. Så här skapar du målgrupper i AEM:
 
-1. I redigeringsinstansen väljer du **Adobe Experience Manager** > **Personalisering** > **Målgrupper**.
+1. I redigeringsinstansen väljer du **Adobe Experience Manager** > **Personalization** > **Publiker**.
 
 1. På sidan Publiker väljer du **Skapa publik > Skapa målgrupp**.
 1. I dialogrutan Adobe Target-konfiguration väljer du en målkonfiguration och klickar på **OK**.
 1. Skapa regler på sidan Skapa ny publik. Med regler kan ni kategorisera målgruppen. Du vill till exempel kategorisera målgrupper baserat på operativsystem. Din målgrupp A kommer från Windows, och målgrupp B kommer från Linux®.
 
-   1. Om du vill kategorisera en målgrupp baserat på Windows väljer du **OS** attributtyp. I listrutan När väljer du **Windows.**
+   1. Om du vill kategorisera en målgrupp baserat på Windows väljer du attributtypen **OS** i regel 1. I listrutan När väljer du **Windows.**
 
-   1. Om du vill kategorisera målgrupper baserat på Linux® väljer du **OS** attributtyp. Från **När** nedrullningsbar meny, välja **Linux®** och klicka **Nästa**.
+   1. Om du vill kategorisera målgrupper baserat på Linux® väljer du attributtypen **OS** i regel 2. I listrutan **När** väljer du **Linux®** och klickar på **Nästa**.
 
-1. Ange ett namn för målgruppen och klicka på **Spara**.
+1. Ange ett namn för målgruppen som skapats och klicka på **Spara**.
 
 Du kan välja målgrupp när du konfigurerar A/B-testning för ett formulär, vilket visas nedan.
 
 ## Skapa A/B-test för ett anpassat formulär {#create-a-b-test}
 
-1. Gå till **Forms och dokument** på https://&lt;*värdnamn*>:&lt;*port*>/aem/forms.html/content/dam/formsanddocuments.
+1. Gå till **Forms &amp; Documents** på https://&lt;*värdnamn*>:&lt;*port*>/aem/forms.html/content/dam/formsanddocuments.
 
 1. Navigera till mappen som innehåller det adaptiva formuläret.
-1. Klicka på **Välj** i verktygsfältet och välj det anpassade formuläret.
-1. Klicka **Mer** i verktygsfältet och väljer **Konfigurera A/B-testning**. Sidan Konfigurera A/B-testning öppnas.
+1. Klicka på verktyget **Markera** i verktygsfältet och välj det anpassade formuläret.
+1. Klicka på **Mer** i verktygsfältet och välj **Konfigurera A/B-testning**. Sidan Konfigurera A/B-testning öppnas.
 
 [](assets/ab-test-configure-1.png)
 
-1. Ange en **Aktivitetsnamn** för A/B-testet.
+1. Ange ett **aktivitetsnamn** för A/B-testet.
 
-1. I listrutan Målgrupp väljer du en målgrupp till vilken du vill leverera olika upplevelser av formuläret. Till exempel: **Besökare som använder Chrome**. Målgruppslistan fylls i från den konfigurerade målservern.
+1. I listrutan Målgrupp väljer du en målgrupp till vilken du vill leverera olika upplevelser av formuläret. Exempel: **Besökare som använder Chrome**. Målgruppslistan fylls i från den konfigurerade målservern.
 
-1. I **Experience Distribution** fält för upplevelserna A och B, ange fördelningen, uttryckt i procent, för att avgöra hur upplevelserna ska fördelas mellan den totala publiken. Om du till exempel anger 40, 60 för upplevelserna A respektive B får upplevelsen A 40 % av publiken och de återstående 60 % ser upplevelsen B.
-1. Klicka **Konfigurera**. En dialogruta visas som bekräftar att A/B-testet har skapats.
-1. Klicka **Redigera upplevelse B** så att du kan öppna det adaptiva formuläret i redigeringsläge. Ändra formuläret genom att skapa en annan upplevelse än standardupplevelsen A. Möjliga variationer som tillåts i Experience B är förändringar i:
+1. I fälten **Experience Distribution** för upplevelserna A och B anger du fördelningen, uttryckt i procent, för att avgöra hur upplevelserna ska fördelas mellan den totala publiken. Om du till exempel anger 40, 60 för upplevelserna A respektive B får upplevelsen A 40 % av publiken och de återstående 60 % ser upplevelsen B.
+1. Klicka på **Konfigurera**. En dialogruta visas som bekräftar att A/B-testet har skapats.
+1. Klicka på **Redigera upplevelse B** så att du kan öppna det anpassade formuläret i redigeringsläge. Ändra formuläret genom att skapa en annan upplevelse än standardupplevelsen A. Möjliga variationer som tillåts i Experience B är förändringar i:
 
    * CSS eller formatering
    * Ordning på fält i olika paneler eller på samma panel
@@ -128,7 +128,7 @@ Du kan välja målgrupp när du konfigurerar A/B-testning för ett formulär, vi
    * Valideringar (både klient- och serversidor)
    * Tema för upplevelse B. (Du kan välja ett alternativt tema för upplevelse B)
 
-1. Gå till användargränssnittet för Forms och dokument, välj det anpassningsbara formuläret, klicka på **Mer** och markera **Starta A/B-testning**.
+1. Gå till användargränssnittet för Forms och dokument, markera det adaptiva formuläret, klicka på **Mer** och välj **Starta A/B-testning**.
 
 Ditt A/B-test körs nu och den angivna målgruppen får slumpvis de upplevelser som baseras på den angivna distributionen.
 
@@ -140,10 +140,10 @@ Så här uppdaterar du A/B-testet:
 
 1. I användargränssnittet för Forms &amp; Documents navigerar du till den mapp som innehåller det adaptiva formuläret som A/B-testet körs på.
 1. Markera det adaptiva formuläret.
-1. Klicka **Mer** och sedan **Redigera A/B-tester**. Sidan Uppdatera A/B-testning öppnas.
+1. Klicka på **Mer** och välj sedan **Redigera A/B-testning**. Sidan Uppdatera A/B-testning öppnas.
 
 1. Uppdatera målgrupps- och upplevelsedistributionen efter behov.
-1. Klicka **Uppdatera**.
+1. Klicka på **Uppdatera**.
 
 ## Visa och analysera A/B-testrapport {#view-and-analyze-a-b-test-report}
 
@@ -151,12 +151,12 @@ När du har tillåtit A/B-testet att köras under den önskade perioden kan du g
 
 Så här visar och analyserar du A/B-testrapporten:
 
-1. Välj det adaptiva formuläret, klicka på **Mer** och klicka sedan på **A/B-testrapport**. Rapporten visas.
+1. Markera det adaptiva formuläret, klicka på **Mer** och sedan på **A/B-testrapport**. Rapporten visas.
 
 [](assets/ab-test-report-3.png)
 
 1. Analysera rapporten och se om ni har tillräckligt många datapunkter för att kunna deklarera en av de mest framgångsrika upplevelserna som en vinnare. Du kan välja att fortsätta med samma A/B-test längre eller deklarera en vinnare och avsluta A/B-testet.
-1. Om du vill deklarera en vinnare och avsluta A/B-testet klickar du på **Avsluta A/B-test** på rapportkontrollpanelen. En dialogruta uppmanar dig att deklarera en av de två upplevelserna som vinnare. Välj en vinnare och bekräfta att du vill avsluta A/B-testet.
-Du kan också först deklarera en vinnare genom att klicka på **Deklarera vinnare** för respektive upplevelse. Du uppmanas att bekräfta vinnaren. Klicka **Ja** för att avsluta A/B-testet.
+1. Om du vill deklarera en vinnare och avsluta A/B-testet klickar du på knappen **End A/B test** på kontrollpanelen för rapporter. En dialogruta uppmanar dig att deklarera en av de två upplevelserna som vinnare. Välj en vinnare och bekräfta att du vill avsluta A/B-testet.
+Du kan också först deklarera en vinnare genom att klicka på knappen **Deklarera vinnare** för respektive upplevelse. Du uppmanas att bekräfta vinnaren. Klicka på **Ja** för att avsluta A/B-testet.
 
 Om ni valde upplevelsen A som vinnare får A/B-testet slut, och om ni fortsätter kommer bara Experience A att användas för målgrupperna.

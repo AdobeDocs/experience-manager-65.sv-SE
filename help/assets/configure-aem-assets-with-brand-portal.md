@@ -31,7 +31,7 @@ AEM Assets konfigureras med Brand Portal via Adobe Developer Console, som köper
 
 >[!NOTE]
 >
->Det finns stöd för att konfigurera AEM Assets med Brand Portal via Adobe Developer Console i AEM 6.5.4.0 och senare.
+>Konfigurering av AEM Assets med Brand Portal via Adobe Developer Console stöds i AEM 6.5.4.0 och senare.
 >
 <!--
 >Earlier, Brand Portal was configured via legacy OAuth Gateway, which uses the JSON Web Token (JWT) exchange to obtain an IMS Access token for authorization. 
@@ -73,17 +73,17 @@ Du behöver följande för att konfigurera AEM Assets med varumärkesportalen:
 
 Vi rekommenderar att AEM 6.5 konfigurerar en AEM Author-instans. Om du inte har AEM igång kan du hämta det från följande platser:
 
-* Om du redan AEM kan du ladda ned AEM 6.5 från [Adobe licenswebbplats](https://licensing.adobe.com).
+* Om du är en befintlig AEM kan du hämta AEM 6.5 från [Adobe Licensing-webbplatsen](https://licensing.adobe.com).
 
-* Om du är Adobe-partner använder du [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) att begära AEM 6.5.
+* Om du är Adobe-partner kan du använda [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) för att begära AEM 6.5.
 
-När du har laddat ned AEM finns instruktioner om hur du konfigurerar en AEM Author-instans i [driftsätta och underhålla](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#default-local-install).
+När du har laddat ned AEM finns instruktioner om hur du konfigurerar en AEM Author-instans i [Distribuera och underhålla](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html#default-local-install).
 
 ### Hämta och installera AEM senaste Service Pack {#servicepack}
 
-Detaljerade instruktioner finns i den aktuella [AEM 6.5 Service Pack versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html).
+Detaljerade anvisningar finns i den aktuella [AEM 6.5 Service Pack versionsinformationen](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html).
 
-**Kontakta Adobe kundsupport** om du inte kan hitta det senaste AEM eller Service Pack.
+**Kontakta Adobe kundsupport** om du inte hittar det senaste AEM eller Service Pack.
 
 ## Skapa konfiguration {#configure-new-integration-65}
 
@@ -91,9 +91,9 @@ Detaljerade instruktioner finns i den aktuella [AEM 6.5 Service Pack versionsinf
 >
 >Du kan inte skapa nya JWT-autentiseringsuppgifter från och med juni 2024. Härifrån skapas endast OAuth-autentiseringsuppgifter. Mer information om hur du skapar en OAuth-konfiguration.
 
-Konfigurationen av AEM Assets med Brand Portal kräver konfigurationer i både AEM Assets Author-instansen och Adobe Developer Console.
+Konfigurationen av AEM Assets med Brand Portal kräver konfigurationer i både AEM Assets Author och Adobe Developer Console.
 
-1. Skapa ett projekt för din Brand Portal-klient (organisation) i Adobe Developer Console.
+1. I Adobe Developer Console skapar du ett projekt för din Brand Portal-klient (organisation).
 1. I Experience Manager Assets konfigurerar du Brand Portal molntjänst med hjälp av IMS-kontot och Brand Portal slutpunkt (organisations-URL).
 1. Testa konfigurationen genom att publicera en resurs från Experience Manager Assets till Brand Portal.
 
@@ -123,11 +123,11 @@ Utför följande steg i den angivna sekvensen för att konfigurera Experience Ma
 
 #### Konfigurera OAuth-autentiseringsuppgifterna i Adobe Developer Console {#config-oauth}
 
-[Konfigurera OAuth-autentiseringsuppgifterna i Adobe Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#credentials-in-the-developer-console)  och väljer Brand Portal API.
+[Konfigurera OAuth-autentiseringsuppgifterna i Adobe Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#credentials-in-the-developer-console) och välj Brand Portal API.
 
 #### Skapa ny Adobe IMS-integrering med OAuth {#create-ims-account-configuration}
 
-[Skapa en ny Adobe IMS-integrering med OAuth](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#creating-oauth-configuration) och väljer Brand Portal i listrutan.
+[Skapa en ny Adobe IMS-integrering med OAuth](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#creating-oauth-configuration) och välj Brand Portal i listrutan.
 
 #### Konfigurera molntjänst {#configure-cloud-service}
 
@@ -315,17 +315,17 @@ To configure the IMS account:
 
 1. Logga in på din AEM Assets Author-instans.
 
-1. Från **verktyg** ![verktyg](assets/do-not-localize/tools.png) navigera till **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]**.
+1. Gå till **[!UICONTROL Cloud Services]** > **[!UICONTROL AEM Brand Portal]** på panelen **Verktyg** ![Verktyg](assets/do-not-localize/tools.png).
 
-1. På sidan Brand Portal Configurations klickar du på **[!UICONTROL Create]**.
+1. Klicka på **[!UICONTROL Create]** på sidan Brand Portal-konfigurationer.
 
 1. Ange en **[!UICONTROL Title]** för konfigurationen.
 
-   Välj den IMS-konfiguration som du har skapat när [konfigurera IMS-kontot](#create-ims-account-configuration).
+   Välj den IMS-konfiguration som du skapade när du [konfigurerade IMS-kontot](#create-ims-account-configuration).
 
-   I **[!UICONTROL Service URL]** anger du din Brand Portal tenant-URL (organisation).
+   I fältet **[!UICONTROL Service URL]** anger du din Brand Portal tenant-URL (organisation).
 
-   ![Fönstret Brand Portal Configuration](assets/create-cloud-service.png)
+   ![Fönstret Brand Portal-konfiguration](assets/create-cloud-service.png)
 
 1. Klicka på **[!UICONTROL Save & Close]**. Molnkonfigurationen skapas.
 

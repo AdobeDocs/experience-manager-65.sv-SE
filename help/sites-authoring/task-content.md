@@ -19,15 +19,15 @@ ht-degree: 2%
 
 # Arbeta med uppgifter {#working-with-tasks}
 
-Uppgifter representerar arbetsuppgifter som ska utföras med avseende på innehåll. När du tilldelas en uppgift visas den i Inkorgen för arbetsflöde. Uppgiftsobjekt kan särskiljas från arbetsflödesobjekt med värdet för **Typ** kolumn.
+Uppgifter representerar arbetsuppgifter som ska utföras med avseende på innehåll. När du tilldelas en uppgift visas den i Inkorgen för arbetsflöde. Uppgiftsobjekt kan särskiljas från arbetsflödesobjekt med värdet i kolumnen **Typ**.
 
 Uppgifter används också i projekt för att fastställa projektets fullständighetsnivå.
 
 ## Spåra projektförlopp {#tracking-project-progress}
 
-Du kan spåra projektförloppet genom att titta på aktiva/slutförda uppgifter i ett projekt som representeras av **Uppgifter** platta. Projektets förlopp kan avgöras av:
+Du kan spåra projektförloppet genom att titta på de aktiva/slutförda aktiviteterna i ett projekt som representeras av **aktivitetspanelen**. Projektets förlopp kan avgöras av:
 
-* **Åtgärdsfönster:** Ett övergripande förlopp för projektet visas i aktivitetspanelen, som finns på sidan med projektinformation.
+* **Åtgärdspanel:** Ett övergripande förlopp för projektet visas i aktivitetspanelen, som finns på sidan med projektinformation.
 
 * **Uppgiftslista:** När du klickar på aktivitetspanelen visas en lista med uppgifter. Den här listan innehåller detaljerad information om alla uppgifter som rör projektet.
 
@@ -61,10 +61,10 @@ Om du vill ha mer information om en viss uppgift klickar du i inkorgen på uppgi
 
 Du kan visa, redigera och lägga till information i en uppgift via olika flikar.
 
-* **Uppgift** - Allmän uppgiftsinformation
-* **Projektinformation** - Sammanfattning av projektet som aktiviteten är kopplad till
-* **Arbetsflöde in** - Sammanfattning av arbetsflödet som aktiviteten är kopplad till (om tillämpligt)
-* **Kommentar** - Allmänna kommentarer om själva uppgiften
+* **Aktivitet** - Allmän aktivitetsinformation
+* **Projektinformation** - Sammanfattning av projektet som aktiviteten är associerad med
+* **Arbetsflöde i** - Sammanfattning av arbetsflödet som aktiviteten är kopplad till (om tillämpligt)
+* **Kommentarer** - Allmänna kommentarer för själva aktiviteten
 
 ### Lägga till uppgifter {#adding-tasks}
 
@@ -72,13 +72,13 @@ Du kan lägga till nya uppgifter i projekt. Dessa uppgifter visas sedan i aktivi
 
 Så här lägger du till en uppgift:
 
-1. Leta reda på **Uppgifter** panel
-1. Klicka på nedåtvinklingen längst upp till höger på plattan och välj **Skapa uppgift**.
-1. I **Lägg till uppgift** -fönstret, ange uppgiftsinformation som prioritet, tilldelad och förfallodatum.
+1. Leta reda på **aktivitetspanelen** i projektet
+1. Klicka på nedåtpilen längst upp till höger i rutan och välj **Skapa aktivitet**.
+1. I fönstret **Lägg till uppgift** anger du aktivitetsinformation som prioritet, tilldelad och förfallodatum.
 
-   ![Lägga till en uppgift](assets/project-add-task.png)
+   ![Lägger till en aktivitet](assets/project-add-task.png)
 
-1. Klicka **Skicka**.
+1. Klicka på **Skicka**.
 
 ## Arbeta med uppgifter i Inkorgen {#working-with-tasks-in-the-inbox}
 
@@ -88,4 +88,4 @@ I inkorgen kan du öppna uppgifterna och ange aktivitetsstatus. Uppgifter visas 
 
 ![Inkorg](assets/project-inbox.png)
 
-Om du vill slutföra en uppgift markerar du uppgiften och klickar på **Complete** i verktygsfältet. Lägg till information till uppgiften och klicka sedan på **Klar**. Se [Din inkorg](/help/sites-authoring/inbox.md) för mer information.
+Slutför en åtgärd genom att markera den och klicka på **Slutför** i verktygsfältet. Lägg till information för aktiviteten och klicka sedan på **Klar**. Mer information finns i [Inkorgen](/help/sites-authoring/inbox.md).

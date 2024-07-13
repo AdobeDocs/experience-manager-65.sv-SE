@@ -32,18 +32,18 @@ Information om ditt program kan visas på kontrollpanelen eller i AEM Mobile Con
 >
 >Kontrollpanelen är en serie användbara paneler som ger en översikt över programmets innehåll, metadata och anslutningsstatus för AEM Mobile On-Demand.
 >
->Se [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) för mer information.
+>Mer information finns i [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-**Så här skapar du en on demand-app:**
+**Så här skapar du en app på begäran:**
 
 1. Välj **Mobil** från sidospåret.
-1. Välj **Appar** från Navigation.
-1. Klicka **Skapa** och markera **App** i listrutan.
+1. Välj **Appar** i navigeringen.
+1. Klicka på **Skapa** och välj **App** i listrutan.
 1. Välj mallen för mobilappar och klicka på **Nästa**.
-1. Ange appegenskaper som **Titel**, **Namn**, **Beskrivning**.
+1. Ange appegenskaper som **Title**, **Name**, **Description**.
 1. Klicka på **Nästa**.
 1. Om du känner till detta anger du information om molnkonfigurationen. Klicka annars på **Skapa**.
-1. Klicka **Klar** för att visa din nya AEM Mobile-app i katalogen.
+1. Klicka på **Klar** för att visa din nya AEM Mobile-app i katalogen.
 
 ![chlimage_1](assets/chlimage_1.gif)
 
@@ -64,19 +64,19 @@ Du måste ha en befintlig mobilappsmall (eller en app som har en appmall) för a
 
 När du har skapat en On-Demand-app från kontrollpanelen för program är nästa steg att koppla din app till molnkonfigurationen.
 
-Se [Koppla ditt program till molnkonfigurationen](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) för mer information.
+Mer information finns i [Koppla din app till molnkonfigurationen](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md).
 
 ### Komma i förväg {#getting-ahead}
 
-När du är bekant med att skapa ett on-demand-program och därmed koppla det programmet till en molnkonfiguration kan du läsa [Innehållshanteringsåtgärder](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
+När du är bekant med att skapa ett on demand-program och därmed koppla det programmet till en molnkonfiguration, se [Åtgärder för innehållshantering](/help/mobile/mobile-apps-ondemand-manage-content-ondemand.md).
 
-**Innehållshanteringsåtgärder** innebär att följande innehåll skapas och hanteras:
+**Åtgärder för innehållshantering** innebär att följande innehåll skapas och hanteras:
 
 * [Hantera artiklar](/help/mobile/mobile-on-demand-managing-articles.md)
 * [Hantera banners](/help/mobile/mobile-on-demand-managing-banners.md)
 * [Hantera samlingar](/help/mobile/mobile-on-demand-managing-collections.md)
 * [Överför delade resurser](/help/mobile/mobile-on-demand-shared-resources.md)
-* [Publicera inte publicera innehåll](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
+* [Publish UnPublish Content](/help/mobile/mobile-on-demand-publishing-unpublishing.md)
 
 Mer information om roller och ansvar för en administratör och utvecklare finns i resurserna nedan:
 

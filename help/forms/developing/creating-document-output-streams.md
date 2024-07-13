@@ -1,6 +1,6 @@
 ---
 title: Skapa dokumentutdataströmmar
-description: Använd utdatatjänsten för att konvertera dokument till PDF (inklusive PDF/A-dokument), PostScript, Printer Control Language (PCL) och Zebra - ZPL, Intermec - IPL, Datamax - DPL och TecToshiba - TPCL-etikettformat.
+description: Använd utdatatjänsten för att konvertera dokument i formaten PDF (inklusive PDF/A-dokument), PostScript, Printer Control Language (PCL) och Zebra - ZPL, Intermec - IPL, Datamax - DPL och TecToshiba - TPCL.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Skapa dokumentutdataströmmar  {#creating-document-output-streams}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 **Om utdatatjänsten**
 
-Med Output-tjänsten kan du skriva ut dokument som PDF (inklusive PDF/A-dokument), PostScript, Printer Control Language (PCL) och följande etikettformat:
+Med Output Service kan du skriva ut dokument som PDF (inklusive PDF/A-dokument), PostScript, Printer Control Language (PCL) och följande etikettformat:
 
 * Zebra - ZPL
 * Intermec - IPL
@@ -31,7 +31,7 @@ Med Output-tjänsten kan du skriva ut dokument som PDF (inklusive PDF/A-dokument
 
 Med hjälp av utdatatjänsten kan du sammanfoga XML-formulärdata med en formulärdesign och skicka dokumentet till en nätverksskrivare eller fil.
 
-Det finns två sätt att skicka en formulärdesign (en XDP-fil) till utdatatjänsten. Du kan skicka en `com.adobe.idp.Document` -instans som innehåller en formulärdesign för Output-tjänsten. Du kan också skicka ett URI-värde som anger platsen för formulärdesignen. Båda dessa sätt diskuteras i *Programmera med AEM*.
+Det finns två sätt att skicka en formulärdesign (en XDP-fil) till utdatatjänsten. Du kan skicka en `com.adobe.idp.Document`-instans som innehåller en formulärdesign till utdatatjänsten. Du kan också skicka ett URI-värde som anger platsen för formulärdesignen. Båda dessa sätt beskrivs i *Programmering med AEM formulär*.
 
 >[!NOTE]
 >
@@ -42,18 +42,18 @@ I följande avsnitt visas hur du skickar en formulärdesign till utdatatjänsten
 * [Skapa PDF-dokument](creating-document-output-streams.md#creating-pdf-documents)
 * [Skapa PDF/A-dokument](creating-document-output-streams.md#creating-pdf-a-documents)
 
-I följande avsnitt visas hur du skickar en formulärdesign i en `com.adobe.idp.Document` instans:
+I följande avsnitt visas hur du skickar en formulärdesign inom en `com.adobe.idp.Document`-instans:
 
 * [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)
 * [Skapa PDF-dokument med fragment](creating-document-output-streams.md#creating-pdf-documents-using-fragments)
 
-När du bestämmer vilken teknik du ska använda är det viktigt att du hämtar formulärdesignen från en annan AEM Forms-tjänst och sedan skickar den i en `com.adobe.idp.Document` -instans. Båda *Skicka dokument till Output Service* och *Skapa PDF-dokument med fragment* visas hur du hämtar en formulärdesign från en annan AEM Forms-tjänst. Det första avsnittet hämtar formulärdesignen från innehållstjänster (borttagen). Det andra avsnittet hämtar formulärdesignen från Assembler-tjänsten.
+När du bestämmer vilken teknik du ska använda är det viktigt att du hämtar formulärdesignen från en annan AEM Forms-tjänst och skickar den inom en `com.adobe.idp.Document`-instans. I avsnitten *Skicka dokument till utdatatjänsten* och *Skapa PDF-dokument med fragment* visas hur du hämtar en formulärdesign från en annan AEM Forms-tjänst. Det första avsnittet hämtar formulärdesignen från innehållstjänster (borttagen). Det andra avsnittet hämtar formulärdesignen från Assembler-tjänsten.
 
-Om du hämtar formulärdesignen från en fast plats, t.ex. i filsystemet, kan du använda vilken teknik som helst. Du kan alltså ange URI-värdet till en XDP-fil eller använda en `com.adobe.idp.Document` -instans.
+Om du hämtar formulärdesignen från en fast plats, t.ex. i filsystemet, kan du använda vilken teknik som helst. Det innebär att du kan ange URI-värdet till en XDP-fil eller använda en `com.adobe.idp.Document`-instans.
 
-Om du vill skicka ett URI-värde som anger platsen för formulärdesignen när du skapar ett PDF-dokument använder du `generatePDFOutput` -metod. På samma sätt kan du skicka ett `com.adobe.idp.Document` -instans till Output-tjänsten när du skapar ett PDF-dokument använder du `generatePDFOutput2` -metod.
+Om du vill skicka ett URI-värde som anger platsen för formulärdesignen när du skapar ett PDF-dokument använder du metoden `generatePDFOutput`. Om du vill skicka en `com.adobe.idp.Document`-instans till utdatatjänsten när du skapar ett PDF-dokument använder du metoden `generatePDFOutput2` .
 
-När du skickar en utdataström till en nätverksskrivare kan du också använda båda teknikerna. Skicka en utdataström till en skrivare genom att skicka en `com.adobe.idp.Document` -instans som innehåller en formulärdesign använder du `sendToPrinter2`-metod. Om du vill skicka en utdataström till en skrivare genom att skicka ett URI-värde använder du `sendToPrinter`-metod. The *Skicka utskriftsströmmar till skrivare* -avsnittet använder `sendToPrinter` -metod.
+När du skickar en utdataström till en nätverksskrivare kan du också använda båda teknikerna. Om du vill skicka en utdataström till en skrivare genom att skicka en `com.adobe.idp.Document`-instans som innehåller en formulärdesign använder du metoden `sendToPrinter2`. Om du vill skicka en utdataström till en skrivare genom att skicka ett URI-värde använder du metoden `sendToPrinter`. Avsnittet *Skicka utskriftsströmmar till skrivare* använder metoden `sendToPrinter`.
 
 Du kan utföra följande uppgifter med hjälp av utdatatjänsten:
 
@@ -77,7 +77,7 @@ Du kan använda utdatatjänsten för att skapa ett PDF-dokument som är baserat 
 
 Om du vill skapa ett PDF-dokument som är avsett för långsiktig lagring rekommenderar vi att du skapar ett PDF/A-dokument. (Se [Skapa PDF/A-dokument](creating-document-output-streams.md#creating-pdf-a-documents).)
 
-Använd tjänsten Forms om du vill skapa ett interaktivt PDF-formulär där användaren kan ange data. (Se [Återger interaktiv PDF forms](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms).)
+Använd tjänsten Forms om du vill skapa ett interaktivt PDF-formulär där användaren kan ange data. (Se [Återge interaktiv PDF forms](/help/forms/developing/rendering-forms.md#rendering-interactive-pdf-forms).)
 
 >[!NOTE]
 >
@@ -111,9 +111,9 @@ Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, 
 
 **Skapa ett Output Client-objekt**
 
-Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Om du använder webbtjänstens API för utdata skapar du en `OutputServiceService` -objekt.
+Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du ett `OutputClient`-objekt. Skapa ett `OutputServiceService`-objekt om du använder API:t för webbtjänsten för utdata.
 
-**Referera en XML-datakälla**
+**Referera till en XML-datakälla**
 
 Om du vill sammanfoga data med formulärdesignen måste du referera till en XML-datakälla som innehåller data. Det måste finnas ett XML-element för varje formulärfält som du vill fylla i med data. XML-elementnamnet måste matcha fältnamnet. Ett XML-element ignoreras om det inte motsvarar ett formulärfält eller om XML-elementnamnet inte matchar fältnamnet. Det är inte nödvändigt att matcha den ordning i vilken XML-elementen visas om alla XML-element har angetts.
 
@@ -166,31 +166,31 @@ Ange filens URI-alternativ när du skapar ett PDF-dokument. Det här alternative
 
 Du kan ange alternativ för återgivning vid körning när du skapar ett PDF-dokument. Även om dessa alternativ inte är nödvändiga (till skillnad från körningsalternativ för PDF som krävs) kan du utföra åtgärder som att förbättra prestanda för utdatatjänsten. Du kan till exempel cachelagra den formulärdesign som Output-tjänsten använder för att förbättra dess prestanda.
 
-Om du använder ett taggat Acrobat-formulär som indata kan du inte använda Java- eller webbtjänstens API för utdatatjänsten för att inaktivera den taggade inställningen. Om du försöker att programmatiskt ange det här alternativet till `false`, är det resulterande PDF-dokumentet fortfarande taggat.
+Om du använder ett taggat Acrobat-formulär som indata kan du inte använda Java- eller webbtjänstens API för utdatatjänsten för att inaktivera den taggade inställningen. Om du försöker ange det här alternativet till `false` programmatiskt taggas PDF-resultatdokumentet fortfarande.
 
 >[!NOTE]
 >
->Om du inte anger alternativ för återgivning vid körning används standardvärden. Mer information om alternativ för återgivning vid körning finns i `RenderOptionsSpec` klassreferens. (Se [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)).
+>Om du inte anger alternativ för återgivning vid körning används standardvärden. Mer information om alternativ för återgivning vid körning finns i klassreferensen `RenderOptionsSpec`. (Se [API-referens för AEM Forms](https://www.adobe.com/go/learn_aemforms_javadocs_63_en)).
 
 **Skapa ett PDF-dokument**
 
 När du har refererat till en giltig XML-datakälla som innehåller formulärdata och angett körningsalternativ, kan du anropa utdatatjänsten, vilket resulterar i att ett PDF-dokument skapas.
 
-När du genererar ett PDF-dokument anger du URI-värden som krävs av utdatatjänsten för att skapa ett PDF-dokument. En formulärdesign kan lagras på platser som serverfilsystemet eller som en del av ett AEM Forms-program. En formulärdesign (eller andra resurser som en bildfil) som finns som en del av ett Forms-program kan refereras med hjälp av innehållsrots-URI-värdet `repository:///`. Ta till exempel följande formulärdesign med namnet *Loan.xdp* som finns i ett Forms-program med namnet *Program/FormsApplication*:
+När du genererar ett PDF-dokument anger du URI-värden som krävs av utdatatjänsten för att skapa ett PDF-dokument. En formulärdesign kan lagras på platser som serverfilsystemet eller som en del av ett AEM Forms-program. En formulärdesign (eller andra resurser som en bildfil) som finns som en del av ett Forms-program kan refereras med hjälp av URI-värdet `repository:///` för innehållsroten. Ta till exempel följande formulärdesign *Loan.xdp* som finns i ett Forms-program med namnet *Applications/FormsApplication*:
 
 ![cp_cp_formdatabase](assets/cp_cp_formrepository.png)
 
-Om du vill få åtkomst till filen Loan.xdp som visades i föregående bild anger du `repository:///Applications/FormsApplication/1.0/FormsFolder/` som den tredje parametern som skickas till `OutputClient` objektets `generatePDFOutput` -metod. Ange formulärnamnet (*Loan.xdp*) som den andra parametern som skickas till `OutputClient` objektets `generatePDFOutput` -metod.
+Om du vill komma åt filen Loan.xdp som visas på föregående bild anger du `repository:///Applications/FormsApplication/1.0/FormsFolder/` som den tredje parametern som skickas till `OutputClient`-objektets `generatePDFOutput` -metod. Ange formulärnamnet (*Loan.xdp*) som den andra parametern som skickas till `OutputClient`-objektets `generatePDFOutput`-metod.
 
-Om XDP-filen innehåller bilder (eller andra resurser som fragment) placerar du resurserna i samma programmapp som XDP-filen. AEM Forms använder innehållets rot-URI som grundsökväg för att lösa referenser till bilder. Om filen Loan.xdp till exempel innehåller en bild kontrollerar du att du placerar bilden i `Applications/FormsApplication/1.0/FormsFolder/`.
-
->[!NOTE]
->
->Du kan referera till en Forms-program-URI när du anropar `OutputClient` objektets `generatePDFOutput` eller `generatePrintedOutput` metoder.
+Om XDP-filen innehåller bilder (eller andra resurser som fragment) placerar du resurserna i samma programmapp som XDP-filen. AEM Forms använder innehållets rot-URI som grundsökväg för att lösa referenser till bilder. Om filen Loan.xdp till exempel innehåller en bild måste du montera bilden i `Applications/FormsApplication/1.0/FormsFolder/`.
 
 >[!NOTE]
 >
->Om du vill se en fullständig snabbstart som skapar ett PDF-dokument genom att referera till en XDP-fil i ett Forms-program går du till [Snabbstart (EJB-läge): Skapa ett PDF-dokument baserat på en program-XDP-fil med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api).
+>Du kan referera till en Forms-program-URI när du anropar `OutputClient`-objektets `generatePDFOutput`- eller `generatePrintedOutput`-metoder.
+
+>[!NOTE]
+>
+>Om du vill se en fullständig snabbstart som skapar ett PDF-dokument genom att referera till en XDP-fil i ett Forms-program läser du [Snabbstart (EJB-läge): Skapa ett PDF-dokument baserat på en XDP-programfil med Java API ](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api) .
 
 **Hämta resultatet av åtgärden**
 
@@ -218,64 +218,64 @@ Skapa ett PDF-dokument med hjälp av utdata-API (Java):
 
 1. Skapa ett Output Client-objekt.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `OutputClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `OutputClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera till en XML-datakälla.
 
-   * Skapa en `java.io.FileInputStream` -objekt som representerar XML-datakällan som används för att fylla i PDF-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
-   * Skapa en `com.adobe.idp.Document` genom att använda dess konstruktor. Skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar XML-datakällan som används för att fylla i PDF-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor. Skicka objektet `java.io.FileInputStream`.
 
 1. Ange körningsalternativ för PDF.
 
-   * Skapa en `PDFOutputOptionsSpec` genom att använda dess konstruktor.
-   * Ange alternativet Fil-URI genom att anropa `PDFOutputOptionsSpec` objektets `setFileURI` -metod. Skicka ett strängvärde som anger platsen för den PDF-fil som utdatatjänsten genererar. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
+   * Skapa ett `PDFOutputOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Ange alternativet Fil-URI genom att anropa `PDFOutputOptionsSpec`-objektets `setFileURI`-metod. Skicka ett strängvärde som anger platsen för den PDF-fil som utdatatjänsten genererar. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
 
 1. Ange alternativ för återgivning vid körning.
 
-   * Skapa en `RenderOptionsSpec` genom att använda dess konstruktor.
-   * Cachelagra formulärdesignen för att förbättra prestanda för Output-tjänsten genom att anropa `RenderOptionsSpec` objektets `setCacheEnabled` och skicka `true`.
+   * Skapa ett `RenderOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Cachelagra formulärdesignen för att förbättra utdatatjänstens prestanda genom att anropa `setCacheEnabled` för `RenderOptionsSpec`-objektet och skicka `true`.
 
    >[!NOTE]
    >
-   >Du kan inte ange version för PDF-dokumentet med `RenderOptionsSpec` objektets `setPdfVersion` om indatadokumentet är ett Acrobat-formulär (ett formulär som har skapats i Acrobat) eller ett XFA-dokument som är signerat eller certifierat. Dokumentet PDF behåller den ursprungliga versionen av PDF. På samma sätt kan du inte ange taggade Adobe PDF-alternativ genom att anropa `RenderOptionsSpec` objektets `setTaggedPDF` om indatadokumentet är ett Acrobat-formulär eller ett signerat eller certifierat XFA-dokument.
+   >Du kan inte ange versionen av PDF-dokumentet med `RenderOptionsSpec`-objektets `setPdfVersion`-metod om indatadokumentet är ett Acrobat-formulär (ett formulär som har skapats i Acrobat) eller ett XFA-dokument som är signerat eller certifierat. Dokumentet PDF behåller den ursprungliga versionen av PDF. På samma sätt kan du inte ange alternativet taggad Adobe PDF genom att anropa `RenderOptionsSpec`-objektets `setTaggedPDF`-metod om indatadokumentet är ett Acrobat-formulär eller ett signerat eller certifierat XFA-dokument.
 
    >[!NOTE]
    >
-   >Du kan inte ange alternativet för linjär PDF med `RenderOptionsSpec` objektets `setLinearizedPDF` metod om det inmatade PDF-dokumentet är certifierat eller digitalt signerat. (Se [Signera PDF-dokument digitalt ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)*.)*
+   >Du kan inte ange alternativet för linjär PDF med `RenderOptionsSpec`-objektets `setLinearizedPDF`-metod om indata-PDF är certifierad eller digitalt signerad. (Se [Signera PDF-dokument digitalt ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)*.)*
 
 1. Skapa ett PDF-dokument.
 
-   Skapa ett PDF-dokument genom att anropa `OutputClient` objektets `generatePDFOutput` och skicka följande värden:
+   Skapa ett PDF-dokument genom att anropa `OutputClient`-objektets `generatePDFOutput`-metod och skicka följande värden:
 
-   * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`.
+   * Ett `TransformationFormat`-uppräkningsvärde. Ange `TransformationFormat.PDF` om du vill generera ett PDF-dokument.
    * Ett strängvärde som anger formulärdesignens namn.
    * Ett strängvärde som anger innehållsroten där formulärdesignen finns.
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
-   * The `com.adobe.idp.Document` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF.
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
+   * Objektet `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
 
-   The `generatePDFOutput` returnerar en `OutputResult` objekt som innehåller resultatet av åtgärden.
-
-   >[!NOTE]
-   >
-   >När ett PDF-dokument skapas genom att `generatePDFOutput` kan du inte sammanfoga data med ett XFA PDF-formulär som är signerat eller certifierat. (Se [Digitalt signera och certifiera dokument ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
+   Metoden `generatePDFOutput` returnerar ett `OutputResult`-objekt som innehåller resultatet av åtgärden.
 
    >[!NOTE]
    >
-   >The `OutputResult` objektets `getRecordLevelMetaDataList` metodreturer `null`*.*
+   >När du genererar ett PDF-dokument genom att anropa metoden `generatePDFOutput` kan du inte sammanfoga data med ett signerat eller certifierat XFA PDF-formulär. (Se [Signera och certifiera dokument digitalt ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
 
    >[!NOTE]
    >
-   >Du kan också skapa ett PDF-dokument genom att anropa `OutputClient` objektets `generatePDFOutput2` -metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
+   >`OutputResult`-objektets `getRecordLevelMetaDataList`-metod returnerar `null`*.*
+
+   >[!NOTE]
+   >
+   >Du kan också skapa ett PDF-dokument genom att anropa `OutputClient`-objektets `generatePDFOutput2`-metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
 
 1. Hämta resultatet av åtgärden.
 
-   * Hämta en `com.adobe.idp.Document` objekt som representerar statusen för `generatePDFOutput` genom att anropa `OutputResult` objektets `getStatusDoc` -metod. Den här metoden returnerar status-XML-data som anger om åtgärden lyckades.
-   * Skapa en `java.io.File` objekt som innehåller resultatet av åtgärden. Kontrollera att filnamnstillägget är .xml.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` till filen (se till att du använder `com.adobe.idp.Document` objekt som returneras av `getStatusDoc` metod).
+   * Hämta ett `com.adobe.idp.Document`-objekt som representerar statusen för `generatePDFOutput`-åtgärden genom att anropa `OutputResult`-objektets `getStatusDoc`-metod. Den här metoden returnerar status-XML-data som anger om åtgärden lyckades.
+   * Skapa ett `java.io.File`-objekt som innehåller resultatet av åtgärden. Kontrollera att filnamnstillägget är .xml.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `com.adobe.idp.Document`-objektet till filen (se till att du använder det `com.adobe.idp.Document`-objekt som returnerades av metoden `getStatusDoc`).
 
-   Även om utdatatjänsten skriver PDF-dokumentet till den plats som anges av argumentet som skickas till `PDFOutputOptionsSpec` objektets `setFileURI` kan du hämta PDF/A-dokumentet genom att anropa `OutputResult` objektets `getGeneratedDoc` -metod.
+   Även om utdatatjänsten skriver PDF-dokumentet till den plats som anges av argumentet som skickas till `PDFOutputOptionsSpec`-objektets `setFileURI` -metod, kan du hämta PDF/A-dokumentet genom att anropa `OutputResult`-objektets `getGeneratedDoc` -metod.
 
 **Se även**
 
@@ -299,75 +299,75 @@ Skapa ett PDF-dokument med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett Output Client-objekt.
 
-   * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `OutputServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `OutputServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Ange `?blob=mtom` om du vill använda MTOM.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `OutputServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `OutputServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Referera till en XML-datakälla.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra XML-data som ska sammanfogas med dokumentet PDF.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för XML-filen som innehåller formulärdata.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra XML-data som ska sammanfogas med dokumentet PDF.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för XML-filen som innehåller formulärdata.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Ange körningsalternativ för PDF
 
-   * Skapa en `PDFOutputOptionsSpec` genom att använda dess konstruktor.
-   * Ange alternativet Fil-URI genom att tilldela ett strängvärde som anger platsen för den PDF-fil som utdatatjänsten genererar till `PDFOutputOptionsSpec` objektets `fileURI` datamedlem. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
+   * Skapa ett `PDFOutputOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Ange alternativet Fil-URI genom att tilldela ett strängvärde som anger platsen för den PDF-fil som utdatatjänsten genererar till `fileURI`-objektets `PDFOutputOptionsSpec`-datamedlem. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
 
 1. Ange alternativ för återgivning vid körning.
 
-   * Skapa en `RenderOptionsSpec` genom att använda dess konstruktor.
-   * Cachelagra formulärdesignen för att förbättra prestanda för Output-tjänsten genom att tilldela värdet `true` till `RenderOptionsSpec` objektets `cacheEnabled` datamedlem.
+   * Skapa ett `RenderOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Cachelagra formulärdesignen för att förbättra utdatatjänstens prestanda genom att tilldela värdet `true` till `RenderOptionsSpec`-objektets `cacheEnabled`-datamedlem.
 
    >[!NOTE]
    >
-   >Du kan inte ange version för PDF-dokumentet med `RenderOptionsSpec` objektets `setPdfVersion` om indatadokumentet är ett Acrobat-formulär (ett formulär som har skapats i Acrobat) eller ett XFA-dokument som är signerat eller certifierat. Dokumentet PDF behåller den ursprungliga versionen av PDF. På samma sätt kan du inte ange taggade Adobe PDF-alternativ genom att anropa `RenderOptionsSpec` objektets `setTaggedPDF`* om indatadokumentet är ett Acrobat-formulär eller ett signerat eller certifierat XFA-dokument.*
+   >Du kan inte ange versionen av PDF-dokumentet med `RenderOptionsSpec`-objektets `setPdfVersion`-metod om indatadokumentet är ett Acrobat-formulär (ett formulär som har skapats i Acrobat) eller ett XFA-dokument som är signerat eller certifierat. Dokumentet PDF behåller den ursprungliga versionen av PDF. Du kan inte heller ange alternativet taggad Adobe PDF genom att anropa `RenderOptionsSpec`-objektets `setTaggedPDF`*-metod om indatadokumentet är ett Acrobat-formulär eller ett signerat eller certifierat XFA-dokument.*
 
    >[!NOTE]
    >
-   >Du kan inte ange alternativet för linjär PDF med `RenderOptionsSpec` objektets `linearizedPDF` medlem om det inmatade PDF-dokumentet är certifierat eller digitalt signerat. (Se [Signera PDF-dokument digitalt ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)*.)*
+   >Du kan inte ange alternativet för linjär PDF genom att använda `RenderOptionsSpec`-objektets `linearizedPDF`-medlem om indatadokumentet är certifierat eller digitalt signerat. (Se [Signera PDF-dokument digitalt ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents)*.)*
 
 1. Skapa ett PDF-dokument.
 
-   Skapa ett PDF-dokument genom att anropa `OutputServiceService` objektets `generatePDFOutput`och skicka följande värden:
+   Skapa ett PDF-dokument genom att anropa `OutputServiceService`-objektets `generatePDFOutput`metod och skicka följande värden:
 
-   * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`.
+   * Ett `TransformationFormat`-uppräkningsvärde. Ange `TransformationFormat.PDF` om du vill generera ett PDF-dokument.
    * Ett strängvärde som anger formulärdesignens namn.
    * Ett strängvärde som anger innehållsroten där formulärdesignen finns.
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
-   * The `BLOB` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
-   * A `BLOB` objekt som fylls i av `generatePDFOutput` -metod. The `generatePDFOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs bara för webbtjänstanrop).
-   * A `BLOB` objekt som fylls i av `generatePDFOutput` -metod. The `generatePDFOutput` -metoden fyller i det här objektet med resultatdata. (Det här parametervärdet krävs bara för webbtjänstanrop).
-   * An `OutputResult` objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs bara för webbtjänstanrop).
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF.
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
+   * Objektet `BLOB` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+   * Ett `BLOB`-objekt som fylls i av metoden `generatePDFOutput`. Metoden `generatePDFOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs bara för webbtjänstanrop).
+   * Ett `BLOB`-objekt som fylls i av metoden `generatePDFOutput`. Metoden `generatePDFOutput` fyller i det här objektet med resultatdata. (Det här parametervärdet krävs bara för webbtjänstanrop).
+   * Ett `OutputResult`-objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs bara för webbtjänstanrop).
 
    >[!NOTE]
    >
-   >När ett PDF-dokument skapas genom att `generatePDFOutput` kan du inte sammanfoga data med ett XFA PDF-formulär som är signerat eller certifierat. (Se [Digitalt signera och certifiera dokument ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
+   >När du genererar ett PDF-dokument genom att anropa metoden `generatePDFOutput` kan du inte sammanfoga data med ett signerat eller certifierat XFA PDF-formulär. (Se [Signera och certifiera dokument digitalt ](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-and-certifying-documents)*.)*
 
    >[!NOTE]
    >
-   >Du kan också skapa ett PDF-dokument genom att anropa `OutputClient` objektets `generatePDFOutput2` -metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
+   >Du kan också skapa ett PDF-dokument genom att anropa `OutputClient`-objektets `generatePDFOutput2`-metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten ](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service)*.)*
 
 1. Hämta resultatet av åtgärden.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar en XML-filplats som innehåller resultatdata. Kontrollera att filnamnstillägget är .xml.
-   * Skapa en bytearray som lagrar datainnehållet i `BLOB` objekt som fylldes i med resultatdata av `OutputServiceService` objektets `generatePDFOutput` metod (den åttonde parametern). Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` `field`.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till XML-filen genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar en plats för en XML-fil som innehåller resultatdata. Kontrollera att filnamnstillägget är .xml.
+   * Skapa en bytearray som lagrar datainnehållet för objektet `BLOB` som fylldes med resultatdata av metoden `generatePDFOutput` för objektet `OutputServiceService` (den åttonde parametern). Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM` `field`.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till XML-filen genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
    Se även
 
@@ -379,7 +379,7 @@ Skapa ett PDF-dokument med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >The `OutputServiceService` objektets `generateOutput` -metoden är inaktuell.
+   >`OutputServiceService`-objektets `generateOutput`-metod är inaktuell.
 
 ## Skapa PDF/A-dokument {#creating-pdf-a-documents}
 
@@ -389,13 +389,13 @@ Specifikationen PDF/A-1 består av två överensstämmelsenivåer, nämligen a o
 
 Även om PDF/A är standarden för arkivering av dokument från PDF är det inte obligatoriskt att använda PDF/A för arkivering om ett standarddokument från PDF uppfyller företagets behov. Syftet med PDF/A-standarden är att upprätta en PDF-fil som kan lagras under lång tid och som uppfyller kraven på dokumentarkivering. En URL kan till exempel inte bäddas in i PDF/A eftersom URL:en kan bli ogiltig över tiden.
 
-Organisationen måste bedöma sina egna behov, hur lång tid du tänker behålla dokumentet, ta hänsyn till filstorlek och fastställa en egen arkiveringsstrategi. Med tjänsten DocConverter kan du programmässigt avgöra om ett PDF-dokument är PDF/A-kompatibelt. (Se [Programmerat fastställa PDF/A-överensstämmelse](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
+Organisationen måste bedöma sina egna behov, hur lång tid du tänker behålla dokumentet, ta hänsyn till filstorlek och fastställa en egen arkiveringsstrategi. Med tjänsten DocConverter kan du programmässigt avgöra om ett PDF-dokument är PDF/A-kompatibelt. (Se [Programmatiskt fastställa kompatibiliteten PDF/A](/help/forms/developing/pdf-a-documents.md#programmatically-determining-pdf-a-compliancy).)
 
 Ett PDF/A-dokument måste ha det teckensnitt som är angivet i formulärdesignen och teckensnitt kan inte ersättas. Om ett teckensnitt som finns i ett PDF-dokument inte finns i operativsystemet (OS) inträffar därför ett undantag.
 
 När ett PDF/A-dokument öppnas i Acrobat visas ett meddelande som bekräftar att dokumentet är ett PDF/A-dokument, vilket visas på följande bild.
 
-![cp_cp_pdfamessage](assets/cp_cp_pdfamessage.png)
+![cp_cp_pdframe](assets/cp_cp_pdfamessage.png)
 
 >[!NOTE]
 >
@@ -433,9 +433,9 @@ Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, 
 
 **Skapa ett Output Client-objekt**
 
-Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Om du använder webbtjänstens API för utdata skapar du en `OutputServiceService` -objekt.
+Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du ett `OutputClient`-objekt. Skapa ett `OutputServiceService`-objekt om du använder API:t för webbtjänsten för utdata.
 
-**Referera en XML-datakälla**
+**Referera till en XML-datakälla**
 
 Om du vill sammanfoga data med formulärdesignen måste du referera till en XML-datakälla som innehåller data. Det måste finnas ett XML-element för varje formulärfält som du vill fylla i med data. XML-elementnamnet måste matcha fältnamnet. Ett XML-element ignoreras om det inte motsvarar ett formulärfält eller om XML-elementnamnet inte matchar fältnamnet. Det är inte nödvändigt att matcha den ordning i vilken XML-elementen visas om alla XML-element har angetts.
 
@@ -445,15 +445,15 @@ Du kan ange alternativet Fil-URI när du skapar ett PDF/A-dokument. URI:n är re
 
 **Ange alternativ för återgivning vid körning**
 
-Du kan ange alternativ för återgivning vid körning när du skapar PDF/A-dokument. Två alternativ för PDF/A som du kan ange är `PDFAConformance` och `PDFARevisionNumber` värden. The `PDFAConformance` värde avser hur ett PDF-dokument uppfyller krav som anger hur långfristiga elektroniska dokument bevaras. Giltiga värden för det här alternativet är `A` och `B`. Mer information om överensstämmelse för nivå a och b finns i ISO-specifikationen PDF/A-1 som heter *ISO 19005-1 Dokumenthantering*.
+Du kan ange alternativ för återgivning vid körning när du skapar PDF/A-dokument. Två alternativ för PDF/A som du kan ange är värdena `PDFAConformance` och `PDFARevisionNumber`. Värdet `PDFAConformance` refererar till hur ett PDF-dokument uppfyller krav som anger hur långtidsdokument bevaras. Giltiga värden för det här alternativet är `A` och `B`. Mer information om överensstämmelse för nivå a och b finns i ISO-specifikationen PDF/A-1 som heter *ISO 19005-1 Document Management*.
 
-The `PDFARevisionNumber` värde är revisionsnumret för ett PDF/A-dokument. Mer information om revisionsnumret för ett PDF/A-dokument finns i ISO-specifikationen PDF/A-1 som heter *ISO 19005-1 Dokumenthantering*.
+Värdet `PDFARevisionNumber` refererar till revisionsnumret för ett PDF/A-dokument. Mer information om revisionsnumret för ett PDF/A-dokument finns i ISO-specifikationen PDF/A-1 som heter *ISO 19005-1 Document Management*.
 
 >[!NOTE]
 >
->Du kan inte ange att taggade Adobe PDF-alternativ ska `false` när du skapar ett PDF/A 1A-dokument. PDF/A 1A är alltid ett taggat PDF-dokument. Du kan inte heller ställa in alternativet tagged Adobe PDF på `true` när du skapar ett PDF/A 1B-dokument. PDF/A 1B kommer alltid att vara ett otaggat PDF-dokument.
+>Du kan inte ange alternativet för taggad Adobe PDF till `false` när du skapar ett PDF/A 1A-dokument. PDF/A 1A är alltid ett taggat PDF-dokument. Du kan inte heller ställa in alternativet för taggad Adobe PDF på `true` när du skapar ett PDF/A 1B-dokument. PDF/A 1B kommer alltid att vara ett otaggat PDF-dokument.
 
-**Generera ett PDF/A-dokument**
+**Skapa ett PDF/A-dokument**
 
 När du har refererat till en giltig XML-datakälla som innehåller formulärdata och angett körningsalternativ, kan du anropa utdatatjänsten, vilket gör att den genererar ett PDF/A-dokument.
 
@@ -483,59 +483,59 @@ Skapa ett PDF/A-dokument med hjälp av utdata-API (Java):
 
 1. Skapa ett Output Client-objekt.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `OutputClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `OutputClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera till en XML-datakälla.
 
-   * Skapa en `java.io.FileInputStream` objekt som representerar XML-datakällan som används för att fylla i PDF/A-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar XML-datakällan som används för att fylla i PDF/A-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ange körningsalternativ för PDF/A.
 
-   * Skapa en `PDFOutputOptionsSpec` genom att använda dess konstruktor.
-   * Ange alternativet Fil-URI genom att anropa `PDFOutputOptionsSpec` objektets `setFileURI` -metod. Skicka ett strängvärde som anger platsen för den PDF-fil som utdatatjänsten genererar. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
+   * Skapa ett `PDFOutputOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Ange alternativet Fil-URI genom att anropa `PDFOutputOptionsSpec`-objektets `setFileURI`-metod. Skicka ett strängvärde som anger platsen för den PDF-fil som utdatatjänsten genererar. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
 
 1. Ange alternativ för återgivning vid körning.
 
-   * Skapa en `RenderOptionsSpec` genom att använda dess konstruktor.
-   * Ange `PDFAConformance` genom att anropa `RenderOptionsSpec` objektets `setPDFAConformance` metod och skicka en `PDFAConformance` uppräkningsvärde som anger anpassningsnivån. Om du till exempel vill ange överensstämmelsenivå A skickar du `PDFAConformance.A`.
-   * Ange `PDFARevisionNumber` genom att anropa `RenderOptionsSpec` objektets `setPDFARevisionNumber` metod och att skicka `PDFARevisionNumber.Revision_1`.
+   * Skapa ett `RenderOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Ange värdet `PDFAConformance` genom att anropa `RenderOptionsSpec`-objektets `setPDFAConformance`-metod och skicka ett `PDFAConformance` enum-värde som anger överensstämmelsenivån. Om du till exempel vill ange överensstämmelsenivå A skickar du `PDFAConformance.A`.
+   * Ange värdet `PDFARevisionNumber` genom att anropa `RenderOptionsSpec`-objektets `setPDFARevisionNumber`-metod och skicka `PDFARevisionNumber.Revision_1`.
 
    >[!NOTE]
    >
-   >PDF-versionen av ett PDF/A-dokument är 1.4 oavsett vilket värde du anger för `RenderOptionsSpec` objektets `setPdfVersion`*-metod.*
+   >PDF-versionen av ett PDF/A-dokument är 1.4 oavsett vilket värde du anger för `RenderOptionsSpec`-objektets `setPdfVersion`*metod.*
 
 1. Skapa ett PDF/A-dokument.
 
-   Skapa ett PDF/A-dokument genom att anropa `OutputClient` objektets `generatePDFOutput` och skicka följande värden:
+   Skapa ett PDF/A-dokument genom att anropa `OutputClient`-objektets `generatePDFOutput`-metod och skicka följande värden:
 
-   * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett PDF/A-dokument anger du `TransformationFormat.PDFA`.
+   * Ett `TransformationFormat`-uppräkningsvärde. Om du vill generera ett PDF/A-dokument anger du `TransformationFormat.PDFA`.
    * Ett strängvärde som anger formulärdesignens namn.
    * Ett strängvärde som anger innehållsroten där formulärdesignen finns.
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
-   * The `com.adobe.idp.Document` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF.
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
+   * Objektet `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
 
-   The `generatePDFOutput` returnerar en `OutputResult` objekt som innehåller resultatet av åtgärden.
-
-   >[!NOTE]
-   >
-   >The `OutputResult` objektets `getRecordLevelMetaDataList` metodreturer `null`.
+   Metoden `generatePDFOutput` returnerar ett `OutputResult`-objekt som innehåller resultatet av åtgärden.
 
    >[!NOTE]
    >
-   >Du kan också skapa ett PDF/A-dokument genom att anropa `OutputClient` objektets `generatePDFOutput`2-metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
+   >`OutputResult`-objektets `getRecordLevelMetaDataList`-metod returnerar `null`.
+
+   >[!NOTE]
+   >
+   >Du kan också skapa ett PDF/A-dokument genom att anropa `OutputClient`-objektets `generatePDFOutput` 2-metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 1. Hämta resultatet av åtgärden.
 
-   * Skapa en `com.adobe.idp.Document` objekt som representerar statusen för `generatePDFOutput` metod genom att anropa `OutputResult` objektets `getStatusDoc` -metod.
-   * Skapa en `java.io.File` -objekt som innehåller resultatet av åtgärden. Kontrollera att filnamnstillägget är .xml.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` till filen (se till att du använder `com.adobe.idp.Document` objekt som returneras av `getStatusDoc` metod).
+   * Skapa ett `com.adobe.idp.Document`-objekt som representerar `generatePDFOutput`-metodens status genom att anropa `OutputResult`-objektets `getStatusDoc`-metod.
+   * Skapa ett `java.io.File`-objekt som innehåller resultatet av åtgärden. Kontrollera att filnamnstillägget är .xml.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `com.adobe.idp.Document`-objektet till filen (se till att du använder det `com.adobe.idp.Document`-objekt som returnerades av metoden `getStatusDoc`).
 
    >[!NOTE]
    >
-   >Även om Output-tjänsten skriver PDF/A-dokumentet till den plats som anges av argumentet som skickas till `PDFOutputOptionsSpec` objektets `setFileURI` kan du hämta PDF/A-dokumentet genom att anropa `OutputResult` objektets `getGeneratedDoc` -metod.
+   >Även om Output-tjänsten skriver PDF/A-dokumentet till den plats som anges av argumentet som skickas till `PDFOutputOptionsSpec`-objektets `setFileURI` -metod, kan du hämta PDF/A-dokumentet genom att anropa `OutputResult`-objektets `getGeneratedDoc` -metod.
 
 **Se även**
 
@@ -545,7 +545,7 @@ Skapa ett PDF/A-dokument med hjälp av utdata-API (Java):
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+[Anger anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ### Skapa ett PDF/A-dokument med webbtjänstens API {#create-a-pdf-a-document-using-the-web-service-api}
 
@@ -557,39 +557,39 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett Output Client-objekt.
 
-   * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `OutputServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `OutputServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Ange `?blob=mtom` om du vill använda MTOM.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `OutputServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `OutputServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Referera till en XML-datakälla.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra data som ska sammanfogas med PDF/A-dokumentet.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det PDF-dokument som ska krypteras och läget i vilket filen ska öppnas.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra data som ska sammanfogas med PDF/A-dokumentet.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det PDF-dokument som ska krypteras och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll `BLOB`-objektet genom att tilldela dess `MTOM`-fält med bytearrayinnehållet.
 
 1. Ange körningsalternativ för PDF/A.
 
-   * Skapa en `PDFOutputOptionsSpec` genom att använda dess konstruktor.
-   * Ange alternativet Fil-URI genom att tilldela ett strängvärde som anger platsen för den PDF-fil som utdatatjänsten genererar till `PDFOutputOptionsSpec` objektets `fileURI` datamedlem. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn
+   * Skapa ett `PDFOutputOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Ange alternativet Fil-URI genom att tilldela ett strängvärde som anger platsen för den PDF-fil som utdatatjänsten genererar till `fileURI`-objektets `PDFOutputOptionsSpec`-datamedlem. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn
 
 1. Ange alternativ för återgivning vid körning.
 
-   * Skapa en `RenderOptionsSpec` genom att använda dess konstruktor.
-   * Ange `PDFAConformance` genom att tilldela en `PDFAConformance` enum-värde till `RenderOptionsSpec` objektets `PDFAConformance` datamedlem. Om du till exempel vill ange överensstämmelsenivå A tilldelar du `PDFAConformance.A` till denna datamedlem.
-   * Ange `PDFARevisionNumber` genom att tilldela en `PDFARevisionNumber` enum-värde till `RenderOptionsSpec` objektets `PDFARevisionNumber` datamedlem. Tilldela `PDFARevisionNumber.Revision_1` till denna datamedlem.
+   * Skapa ett `RenderOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Ange värdet `PDFAConformance` genom att tilldela ett `PDFAConformance` enum-värde till `RenderOptionsSpec`-objektets `PDFAConformance`-datamedlem. Om du till exempel vill ange överensstämmelsenivå A tilldelar du `PDFAConformance.A` till den här datamedlemmen.
+   * Ange värdet `PDFARevisionNumber` genom att tilldela ett `PDFARevisionNumber` enum-värde till `RenderOptionsSpec`-objektets `PDFARevisionNumber`-datamedlem. Tilldela `PDFARevisionNumber.Revision_1` till den här datamedlemmen.
 
    >[!NOTE]
    >
@@ -597,28 +597,28 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
 
 1. Skapa ett PDF/A-dokument.
 
-   Skapa ett PDF-dokument genom att anropa `OutputServiceService` objektets `generatePDFOutput`och skicka följande värden:
+   Skapa ett PDF-dokument genom att anropa `OutputServiceService`-objektets `generatePDFOutput`metod och skicka följande värden:
 
-   * Ett TransformationFormat-uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDFA`.
+   * Ett TransformationFormat-uppräkningsvärde. Ange `TransformationFormat.PDFA` om du vill generera ett PDF-dokument.
    * Ett strängvärde som anger formulärdesignens namn.
    * Ett strängvärde som anger innehållsroten där formulärdesignen finns.
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
-   * The `BLOB` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
-   * A `BLOB` objekt som fylls i av `generatePDFOutput` -metod. The `generatePDFOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs endast för webbtjänstanrop.)
-   * A `BLOB` objekt som fylls i av `generatePDFOutput` -metod. The `generatePDFOutput` -metoden fyller i det här objektet med resultatdata. (Det här parametervärdet krävs endast för webbtjänstanrop.)
-   * An `OutputResult` objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs endast för webbtjänstanrop.)
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF.
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
+   * Objektet `BLOB` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+   * Ett `BLOB`-objekt som fylls i av metoden `generatePDFOutput`. Metoden `generatePDFOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs endast för webbtjänstanrop.)
+   * Ett `BLOB`-objekt som fylls i av metoden `generatePDFOutput`. Metoden `generatePDFOutput` fyller i det här objektet med resultatdata. (Det här parametervärdet krävs endast för webbtjänstanrop.)
+   * Ett `OutputResult`-objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs endast för webbtjänstanrop.)
 
    >[!NOTE]
    >
-   >Du kan också skapa ett PDF/A-dokument genom att anropa `OutputClient` objektets `generatePDFOutput`2-metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
+   >Du kan också skapa ett PDF/A-dokument genom att anropa `OutputClient`-objektets `generatePDFOutput` 2-metod. (Se [Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten](creating-document-output-streams.md#passing-documents-located-in-content-services-deprecated-to-the-output-service).)
 
 1. Hämta resultatet av åtgärden.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar en XML-filplats som innehåller resultatdata. Kontrollera att filnamnstillägget är .xml.
-   * Skapa en bytearray som lagrar datainnehållet i `BLOB` objekt som fylldes i med resultatdata av `OutputServiceService` objektets `generatePDFOutput` metod (den åttonde parametern). Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` fält.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till XML-filen genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar en plats för en XML-fil som innehåller resultatdata. Kontrollera att filnamnstillägget är .xml.
+   * Skapa en bytearray som lagrar datainnehållet för objektet `BLOB` som fylldes med resultatdata av metoden `generatePDFOutput` för objektet `OutputServiceService` (den åttonde parametern). Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-fält.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till XML-filen genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -630,11 +630,11 @@ Skapa ett PDF/A-dokument med hjälp av Output API (webbtjänsten):
 
 ## Skicka dokument i innehållstjänster (borttaget) till utdatatjänsten {#passing-documents-located-in-content-services-deprecated-to-the-output-service}
 
-Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka en `com.adobe.idp.Document` objekt som innehåller formulärdesignen för Output-tjänsten. Utdatatjänsten återger sedan formulärdesignen i `com.adobe.idp.Document` -objekt.
+Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka ett `com.adobe.idp.Document`-objekt som innehåller formulärdesignen till utdatatjänsten. Utdatatjänsten återger sedan formulärdesignen i objektet `com.adobe.idp.Document`.
 
-En fördel med att skicka en `com.adobe.idp.Document` -objektet till Output-tjänsten är att andra AEM Forms-serviceåtgärder returnerar ett `com.adobe.idp.Document` -instans. Du kan alltså få en `com.adobe.idp.Document` -instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i en Content Services-nod (utgått) med namnet `/Company Home/Form Designs`, vilket visas på följande bild.
+En fördel med att skicka ett `com.adobe.idp.Document`-objekt till utdatatjänsten är att andra AEM Forms-tjänståtgärder returnerar en `com.adobe.idp.Document`-instans. Det innebär att du kan hämta en `com.adobe.idp.Document`-instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i en Content Services-nod (utgått) med namnet `/Company Home/Form Designs`, vilket visas på följande bild.
 
-Du kan hämta Loan.xdp programmatiskt från Content Services (utgått) och skicka XDP-filen till Output-tjänsten i en `com.adobe.idp.Document` -objekt.
+Du kan hämta Loan.xdp via programkod från Content Services (utgått) och skicka XDP-filen till Output-tjänsten i ett `com.adobe.idp.Document`-objekt.
 
 >[!NOTE]
 >
@@ -658,17 +658,17 @@ Inkludera de filer som behövs i utvecklingsprojektet. Om du skapar ett klientpr
 
 Innan du programmässigt kan utföra en API-åtgärd för en utdatatjänst skapar du ett API-objekt för utdataklienten. Eftersom det här arbetsflödet hämtar en XDP-fil från Content Services (utgått) skapar du också ett API-objekt för dokumenthantering.
 
-**Hämta formulärdesignen från innehållstjänster (borttagen)**
+**Hämta formulärdesignen från Content Services (utgått)**
 
-Hämta XDP-filen från Content Services (utgått) med Java- eller webbtjänstens API. XDP-filen returneras inom en `com.adobe.idp.Document` instans (eller en `BLOB` om du använder webbtjänster). Du kan sedan skicka `com.adobe.idp.Document` -instans till Output-tjänsten.
+Hämta XDP-filen från Content Services (utgått) med Java- eller webbtjänstens API. XDP-filen returneras i en `com.adobe.idp.Document`-instans (eller en `BLOB`-instans om du använder webbtjänster). Du kan sedan skicka instansen `com.adobe.idp.Document` till utdatatjänsten.
 
 **Återge det icke-interaktiva PDF-formuläret**
 
-Om du vill återge ett icke-interaktivt formulär skickar du `com.adobe.idp.Document` -instans som returnerades från innehållstjänster (utgått) till utdatatjänsten.
+Om du vill återge ett icke-interaktivt formulär skickar du `com.adobe.idp.Document`-instansen som returnerades från Content Services (utgått) till utdatatjänsten.
 
 >[!NOTE]
 >
->Två nya metoder namngivna `generatePDFOutput2`och g `eneratePrintedOutput2`acceptera `com.adobe.idp.Document` objekt som innehåller en formulärdesign. Du kan också skicka en `com.adobe.idp.Document`som innehåller formulärdesignen till utdatatjänsten när en utskriftsström skickas till en nätverksskrivare.
+>Två nya metoder med namnen `generatePDFOutput2` och g `eneratePrintedOutput2`accepterar ett `com.adobe.idp.Document`-objekt som innehåller en formulärdesign. Du kan också skicka en `com.adobe.idp.Document` som innehåller formulärdesignen till utdatatjänsten när du skickar en utskriftsström till en nätverksskrivare.
 
 **Utför en åtgärd med formulärdataströmmen**
 
@@ -698,38 +698,38 @@ Skicka ett dokument som hämtats från Content Services (utgått) med hjälp av 
 
 1. Skapa ett utdata och ett API-objekt för dokumenthanteringsklienten.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-   * Skapa en `OutputClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
-   * Skapa en `DocumentManagementServiceClientImpl` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+   * Skapa ett `OutputClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
+   * Skapa ett `DocumentManagementServiceClientImpl`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta formulärdesignen från Content Services (utgått).
 
-   Anropa `DocumentManagementServiceClientImpl` objektets `retrieveContent` och skicka följande värden:
+   Anropa `DocumentManagementServiceClientImpl`-objektets `retrieveContent`-metod och skicka följande värden:
 
    * Ett strängvärde som anger den lagringsplats där innehållet läggs till. Standardarkivet är `SpacesStore`. Detta värde är en obligatorisk parameter.
-   * Ett strängvärde som anger den fullständiga, kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
+   * Ett strängvärde som anger den fullständigt kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger versionen. Det här värdet är en valfri parameter och du kan skicka en tom sträng. I det här fallet hämtas den senaste versionen.
 
-   The `retrieveContent` returnerar en `CRCResult` -objekt som innehåller XDP-filen. Hämta en `com.adobe.idp.Document` instans genom att anropa `CRCResult` objektets `getDocument` -metod.
+   Metoden `retrieveContent` returnerar ett `CRCResult`-objekt som innehåller XDP-filen. Hämta en `com.adobe.idp.Document`-instans genom att anropa `CRCResult`-objektets `getDocument`-metod.
 
 1. Rendera det icke-interaktiva PDF-formuläret.
 
-   Anropa `OutputClient` objektets `generatePDFOutput2` och skicka följande värden:
+   Anropa `OutputClient`-objektets `generatePDFOutput2`-metod och skicka följande värden:
 
-   * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`.
+   * Ett `TransformationFormat`-uppräkningsvärde. Ange `TransformationFormat.PDF` om du vill generera ett PDF-dokument.
    * Ett strängvärde som anger innehållsroten där de ytterligare resurserna, t.ex. bilderna, finns.
-   * A `com.adobe.idp.Document` objektet som representerar formulärdesignen (använd instansen som returneras av `CRCResult` objektets `getDocument` metod).
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
-   * The `com.adobe.idp.Document` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+   * Ett `com.adobe.idp.Document`-objekt som representerar formulärdesignen (använd instansen som returneras av `CRCResult`-objektets `getDocument` -metod).
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF.
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
+   * Objektet `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
 
-   The `generatePDFOutput2` returnerar en `OutputResult` objekt som innehåller resultatet av åtgärden.
+   Metoden `generatePDFOutput2` returnerar ett `OutputResult`-objekt som innehåller resultatet av åtgärden.
 
 1. Utför en åtgärd med formulärdataströmmen.
 
-   * Hämta en `com.adobe.idp.Document` objekt som representerar det icke-interaktiva formuläret genom att anropa `OutputResult` objektets `getGeneratedDoc` -metod.
-   * Skapa en `java.io.File` objekt som innehåller resultatet av åtgärden. Kontrollera att filnamnstillägget är .pdf.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` till filen (se till att du använder `com.adobe.idp.Document` objekt som returneras av `getGeneratedDoc` metod).
+   * Hämta ett `com.adobe.idp.Document`-objekt som representerar det icke-interaktiva formuläret genom att anropa `OutputResult`-objektets `getGeneratedDoc`-metod.
+   * Skapa ett `java.io.File`-objekt som innehåller resultatet av åtgärden. Kontrollera att filnamnstillägget är .pdf.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `com.adobe.idp.Document`-objektet till filen (se till att du använder det `com.adobe.idp.Document`-objekt som returnerades av metoden `getGeneratedDoc`).
 
 **Se även**
 
@@ -749,25 +749,25 @@ Skicka ett dokument som hämtats från innehållstjänster (borttaget) med hjäl
 
 1. Inkludera projektfiler.
 
-   Skapa ett Microsoft .NET-projekt som använder MTOM. Eftersom klientprogrammet anropar två AEM Forms-tjänster skapar du två tjänstreferenser. Använd följande WSDL-definition för den tjänstreferens som är kopplad till utdatatjänsten: `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
+   Skapa ett Microsoft .NET-projekt som använder MTOM. Eftersom klientprogrammet anropar två AEM Forms-tjänster skapar du två tjänstreferenser. Använd följande WSDL-definition för den tjänstreferens som är associerad med utdatatjänsten: `http://localhost:8080/soap/services/OutputService?WSDL&lc_version=9.0.1`.
 
-   Använd följande WSDL-definition för den tjänstreferens som är kopplad till dokumenthanteringstjänsten: `http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`.
+   Använd följande WSDL-definition för den tjänstreferens som är associerad med dokumenthanteringstjänsten: `http://localhost:8080/soap/services/DocumentManagementService?WSDL&lc_version=9.0.1`.
 
-   På grund av `BLOB` datatypen är gemensam för båda tjänstreferenserna, och kvalificera fullt ut `BLOB` datatyp när du använder den. I motsvarande webbtjänsts snabbstart är alla `BLOB` -instanser är kvalificerade.
+   Eftersom datatypen `BLOB` är gemensam för båda tjänstreferenserna kan du kvalificera datatypen `BLOB` fullständigt när du använder den. I motsvarande snabbstart för webbtjänsten är alla `BLOB` instanser kvalificerade.
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett utdata och ett API-objekt för dokumenthanteringsklienten.
 
-   * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `OutputServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `OutputServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `OutputServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `OutputServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
 
@@ -775,41 +775,41 @@ Skicka ett dokument som hämtats från innehållstjänster (borttaget) med hjäl
 
    >[!NOTE]
    >
-   >Upprepa dessa steg för `DocumentManagementServiceClient`tjänstklient.
+   >Upprepa dessa steg för tjänstklienten `DocumentManagementServiceClient`.
 
 1. Hämta formulärdesignen från Content Services (utgått).
 
-   Hämta innehåll genom att anropa `DocumentManagementServiceClient` objektets `retrieveContent` och skicka följande värden:
+   Hämta innehåll genom att anropa `DocumentManagementServiceClient`-objektets `retrieveContent`-metod och skicka följande värden:
 
    * Ett strängvärde som anger den lagringsplats där innehållet läggs till. Standardarkivet är `SpacesStore`. Detta värde är en obligatorisk parameter.
-   * Ett strängvärde som anger den fullständiga, kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
+   * Ett strängvärde som anger den fullständigt kvalificerade sökvägen för innehållet som ska hämtas (till exempel `/Company Home/Form Designs/Loan.xdp`). Detta värde är en obligatorisk parameter.
    * Ett strängvärde som anger versionen. Det här värdet är en valfri parameter och du kan skicka en tom sträng. I det här fallet hämtas den senaste versionen.
    * En strängutdataparameter som lagrar värdet för bläddringslänken.
-   * A `BLOB` utdataparameter som lagrar innehållet. Du kan använda den här utdataparametern för att hämta innehållet.
-   * A `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType` utdataparameter som lagrar innehållsattribut.
-   * A `CRCResult` output-parameter. Du kan använda kommandot `BLOB` output-parameter för att hämta innehållet.
+   * En `BLOB`-utdataparameter som lagrar innehållet. Du kan använda den här utdataparametern för att hämta innehållet.
+   * En `ServiceReference1.MyMapOf_xsd_string_To_xsd_anyType`-utdataparameter som lagrar innehållsattribut.
+   * En `CRCResult`-utdataparameter. I stället för att använda det här objektet kan du använda utdataparametern `BLOB` för att hämta innehållet.
 
 1. Rendera det icke-interaktiva PDF-formuläret.
 
-   Anropa `OutputServiceClient` objektets `generatePDFOutput2` och skicka följande värden:
+   Anropa `OutputServiceClient`-objektets `generatePDFOutput2`-metod och skicka följande värden:
 
-   * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`.
+   * Ett `TransformationFormat`-uppräkningsvärde. Ange `TransformationFormat.PDF` om du vill generera ett PDF-dokument.
    * Ett strängvärde som anger innehållsroten där de ytterligare resurserna, t.ex. bilderna, finns.
-   * A `BLOB` det objekt som representerar formulärdesignen (använd `BLOB` -instans returnerad av Content Services (utgått).
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
-   * The `BLOB` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
-   * Ett utvärde `BLOB` objekt som fylls i av `generatePDFOutput2` -metod. The `generatePDFOutput2` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs bara för webbtjänstanrop).
-   * Ett utvärde `OutputResult` objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs bara för webbtjänstanrop).
+   * Ett `BLOB`-objekt som representerar formulärdesignen (använd den `BLOB`-instans som returneras av Content Services (utgått)).
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF.
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
+   * Objektet `BLOB` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+   * Ett utdataobjekt, `BLOB`, som fylls i av metoden `generatePDFOutput2`. Metoden `generatePDFOutput2` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs bara för webbtjänstanrop).
+   * Ett `OutputResult`-utdataobjekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs bara för webbtjänstanrop).
 
-   The `generatePDFOutput2` returnerar en `BLOB` objekt som innehåller det icke-interaktiva PDF-formuläret.
+   Metoden `generatePDFOutput2` returnerar ett `BLOB`-objekt som innehåller det icke-interaktiva PDF-formuläret.
 
 1. Utför en åtgärd med formulärdataströmmen.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för det interaktiva PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `BLOB` objektet har hämtats från `generatePDFOutput2` -metod. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för det interaktiva PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `BLOB` som hämtats från metoden `generatePDFOutput2`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -819,23 +819,23 @@ Skicka ett dokument som hämtats från innehållstjänster (borttaget) med hjäl
 
 ## Skicka dokument i databasen till utdatatjänsten {#passing-documents-located-in-the-repository-to-the-output-service}
 
-Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka en `com.adobe.idp.Document` objekt som innehåller formulärdesignen för Output-tjänsten. Utdatatjänsten återger sedan formulärdesignen i `com.adobe.idp.Document` -objekt.
+Output-tjänsten återger ett icke-interaktivt PDF-formulär som är baserat på en formulärdesign som vanligtvis sparas som en XDP-fil och skapas i Designer. Du kan skicka ett `com.adobe.idp.Document`-objekt som innehåller formulärdesignen till utdatatjänsten. Utdatatjänsten återger sedan formulärdesignen i objektet `com.adobe.idp.Document`.
 
-En fördel med att skicka en `com.adobe.idp.Document` -objektet till Output-tjänsten är att andra AEM Forms-serviceåtgärder returnerar ett `com.adobe.idp.Document` -instans. Du kan alltså få en `com.adobe.idp.Document` -instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i AEM Forms-databasen, vilket visas i följande bild.
+En fördel med att skicka ett `com.adobe.idp.Document`-objekt till utdatatjänsten är att andra AEM Forms-tjänståtgärder returnerar en `com.adobe.idp.Document`-instans. Det innebär att du kan hämta en `com.adobe.idp.Document`-instans från en annan tjänståtgärd och återge den. Anta till exempel att en XDP-fil lagras i AEM Forms-databasen, vilket visas i följande bild.
 
 ![pd_pd_formdatabas](assets/pd_pd_formrepository.png)
 
-The *FormsFolder* är en användardefinierad plats i AEM Forms-databasen (den här platsen är ett exempel och finns inte som standard). I det här exemplet finns en formulärdesign med namnet Loan.xdp i den här mappen. Förutom formulärdesignen kan andra formulärdata, t.ex. bilder, lagras på den här platsen. Sökvägen till en resurs i AEM Forms-databasen:
+Mappen *FormsFolder* är en användardefinierad plats i AEM Forms-databasen (den här platsen är ett exempel och finns inte som standard). I det här exemplet finns en formulärdesign med namnet Loan.xdp i den här mappen. Förutom formulärdesignen kan andra formulärdata, t.ex. bilder, lagras på den här platsen. Sökvägen till en resurs i AEM Forms-databasen:
 
 `Applications/Application-name/Application-version/Folder.../Filename`
 
-Du kan hämta Loan.xdp programmatiskt från AEM Forms-databasen och skicka det till Output-tjänsten i en `com.adobe.idp.Document` -objekt.
+Du kan hämta Loan.xdp programmatiskt från AEM Forms-databasen och skicka det till utdatatjänsten inom ett `com.adobe.idp.Document`-objekt.
 
 Du kan skapa en PDF baserad på en XDP-fil i databasen på något av två sätt. Du kan skicka XDP-platsen med referens eller så kan du hämta XDP-filen från databasen programmässigt och skicka den till utdatatjänsten i en XDP-fil.
 
-[Snabbstart (EJB-läge): Skapa ett PDF-dokument baserat på en program-XDP-fil med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api) (visar hur du skickar platsen för XDP-filen med referens).
+[Snabbstart (EJB-läge): Skapa ett PDF-dokument baserat på en program-XDP-fil med Java-API:t ](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-creating-a-pdf-document-based-on-an-application-xdp-file-using-the-java-api) (visar hur du skickar platsen för XDP-filen med referens).
 
-[Snabbstart (EJB-läge): skicka ett dokument i AEM Forms-databasen till utdatatjänsten med Java API](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (visar hur du programmässigt hämtar XDP-filen från AEM Forms-databasen och skickar den till Output-tjänsten i en `com.adobe.idp.Document` -instans). (I det här avsnittet beskrivs hur du utför den här uppgiften)
+[Snabbstart (EJB-läge): Skickar ett dokument i AEM Forms-databasen till utdatatjänsten med Java-API:t ](/help/forms/developing/output-service-java-api-quick.md#quick-start-soap-mode-passing-a-document-located-in-the-repository-to-the-output-service-using-the-java-api) (visar hur du hämtar XDP-filen programmatiskt från AEM Forms-databasen och skickar den till utdatatjänsten i en `com.adobe.idp.Document`-instans). (I det här avsnittet beskrivs hur du utför den här uppgiften)
 
 >[!NOTE]
 >
@@ -859,19 +859,19 @@ Inkludera de filer som behövs i utvecklingsprojektet. Om du skapar ett klientpr
 
 Innan du programmässigt kan utföra en API-åtgärd för en utdatatjänst skapar du ett API-objekt för utdataklienten. Eftersom det här arbetsflödet hämtar en XDP-fil från Content Services (utgått) skapar du också ett API-objekt för dokumenthantering.
 
-**Hämta formulärdesignen från AEM Forms Repository**
+**Hämta formulärdesignen från AEM Forms-databasen**
 
 Hämta XDP-filen från AEM Forms-databasen med API:t för databas. (Se [Läser resurser](/help/forms/developing/aem-forms-repository.md#reading-resources).)
 
-XDP-filen returneras inom en `com.adobe.idp.Document` instans (eller en `BLOB` om du använder webbtjänster). Du kan sedan skicka `com.adobe.idp.Document` -instans i Output-tjänsten.
+XDP-filen returneras i en `com.adobe.idp.Document`-instans (eller en `BLOB`-instans om du använder webbtjänster). Du kan sedan skicka `com.adobe.idp.Document`-instansen till utdatatjänsten.
 
 **Återge det icke-interaktiva PDF-formuläret**
 
-Om du vill återge ett icke-interaktivt formulär skickar du `com.adobe.idp.Document` instans som returnerades med AEM Forms Repository API.
+Om du vill återge ett icke-interaktivt formulär skickar du `com.adobe.idp.Document`-instansen som returnerades med AEM Forms Repository API.
 
 >[!NOTE]
 >
->Två nya metoder namngivna `generatePDFOutput2`och `generatePrintedOutput2`acceptera `com.adobe.idp.Document`objekt som innehåller en formulärdesign. Du kan också skicka en `com.adobe.idp.Document` som innehåller formulärdesignen till utdatatjänsten när en utskriftsström skickas till en nätverksskrivare.
+>Två nya metoder med namnen `generatePDFOutput2` och `generatePrintedOutput2`godkänner ett `com.adobe.idp.Document`-objekt som innehåller en formulärdesign. Du kan också skicka en `com.adobe.idp.Document` som innehåller formulärdesignen till utdatatjänsten när du skickar en utskriftsström till en nätverksskrivare.
 
 **Utför en åtgärd med formulärdataströmmen**
 
@@ -899,32 +899,32 @@ Skicka ett dokument som hämtats från databasen med hjälp av utdatatjänsten o
 
 1. Skapa ett utdata och ett API-objekt för dokumenthanteringsklienten.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-   * Skapa en `OutputClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
-   * Skapa en `DocumentManagementServiceClientImpl` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+   * Skapa ett `OutputClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
+   * Skapa ett `DocumentManagementServiceClientImpl`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta formulärdesignen från AEM Forms Repository.
 
-   Anropa `ResourceRepositoryClient` objektets `readResourceContent` och skicka ett strängvärde som anger URI-platsen till XDP-filen. Till exempel: `/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`. Detta värde är obligatoriskt. Den här metoden returnerar en `com.adobe.idp.Document` -instans som representerar XDP-filen.
+   Anropa `ResourceRepositoryClient`-objektets `readResourceContent`-metod och skicka ett strängvärde som anger URI-platsen till XDP-filen. Exempel: `/Applications/FormsApplication/1.0/FormsFolder/Loan.xdp`. Detta värde är obligatoriskt. Den här metoden returnerar en `com.adobe.idp.Document`-instans som representerar XDP-filen.
 
 1. Rendera det icke-interaktiva PDF-formuläret.
 
-   Anropa `OutputClient` objektets `generatePDFOutput2` och skicka följande värden:
+   Anropa `OutputClient`-objektets `generatePDFOutput2`-metod och skicka följande värden:
 
-   * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`.
-   * Ett strängvärde som anger innehållsroten där de ytterligare resurserna, t.ex. bilderna, finns. Till exempel: `repository:///Applications/FormsApplication/1.0/FormsFolder/`.
-   * A `com.adobe.idp.Document` objektet som representerar formulärdesignen (använd instansen som returneras av `ResourceRepositoryClient` objektets `readResourceContent` metod).
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
-   * The `com.adobe.idp.Document` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+   * Ett `TransformationFormat`-uppräkningsvärde. Ange `TransformationFormat.PDF` om du vill generera ett PDF-dokument.
+   * Ett strängvärde som anger innehållsroten där de ytterligare resurserna, t.ex. bilderna, finns. Exempel: `repository:///Applications/FormsApplication/1.0/FormsFolder/`.
+   * Ett `com.adobe.idp.Document`-objekt som representerar formulärdesignen (använd instansen som returneras av `ResourceRepositoryClient`-objektets `readResourceContent` -metod).
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF.
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
+   * Objektet `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
 
-   The `generatePDFOutput2` returnerar en `OutputResult` objekt som innehåller resultatet av åtgärden.
+   Metoden `generatePDFOutput2` returnerar ett `OutputResult`-objekt som innehåller resultatet av åtgärden.
 
 1. Utför en åtgärd med formulärdataströmmen.
 
-   * Hämta en `com.adobe.idp.Document` objekt som representerar det icke-interaktiva formuläret genom att anropa `OutputResult` objektets `getGeneratedDoc` -metod.
-   * Skapa en `java.io.File` objekt som innehåller resultatet av åtgärden. Kontrollera att filnamnstillägget är .pdf.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` till filen (se till att du använder `com.adobe.idp.Document` objekt som returneras av `getGeneratedDoc` metod).
+   * Hämta ett `com.adobe.idp.Document`-objekt som representerar det icke-interaktiva formuläret genom att anropa `OutputResult`-objektets `getGeneratedDoc`-metod.
+   * Skapa ett `java.io.File`-objekt som innehåller resultatet av åtgärden. Kontrollera att filnamnstillägget är .pdf.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `com.adobe.idp.Document`-objektet till filen (se till att du använder det `com.adobe.idp.Document`-objekt som returnerades av metoden `getGeneratedDoc`).
 
 **Se även**
 
@@ -944,7 +944,7 @@ Följande bild visar det här arbetsflödet.
 
 ![cp_cp_outputassemblefragments](assets/cp_cp_outputassemblefragments.png)
 
-Före läsning *Skapa PDF-dokument med fragment* Vi rekommenderar att du lär dig att använda Assembler-tjänsten för att sammanställa flera XDP-dokument. (Se [Sammanställa flera XDP-fragment](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments).)
+Innan du läser *Skapa PDF-dokument med fragment* bör du känna till hur du använder Assembler-tjänsten för att samla ihop flera XDP-dokument. (Se [Sammanställa flera XDP-fragment](/help/forms/developing/assembling-pdf-documents.md#assembling-multiple-xdp-fragments).)
 
 >[!NOTE]
 >
@@ -974,11 +974,11 @@ Innan du programmässigt kan utföra en API-åtgärd för en utdatatjänst skapa
 
 **Använd Assembler-tjänsten för att generera formulärdesignen**
 
-Använd Assembler-tjänsten för att generera formulärdesignen med fragment. Assembler-tjänsten returnerar `com.adobe.idp.Document` -instans som innehåller formulärdesignen.
+Använd Assembler-tjänsten för att generera formulärdesignen med fragment. Assembler-tjänsten returnerar en `com.adobe.idp.Document`-instans som innehåller formulärdesignen.
 
-**Använd utdatatjänsten för att generera PDF-dokumentet**
+**Använd utdatatjänsten för att generera dokumentet PDF**
 
-Du kan använda utdatatjänsten för att skapa ett PDF-dokument med hjälp av den formulärdesign som Assembler-tjänsten skapade. Skicka `com.adobe.idp.Document` instans när Assembler-tjänsten returnerade till Output-tjänsten.
+Du kan använda utdatatjänsten för att skapa ett PDF-dokument med hjälp av den formulärdesign som Assembler-tjänsten skapade. Skicka `com.adobe.idp.Document`-instansen som Assembler-tjänsten returnerade till utdatatjänsten.
 
 **Spara PDF-dokumentet som en PDF-fil**
 
@@ -1010,42 +1010,42 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
 
 1. Skapa ett Output and Assembler Client-objekt.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `OutputClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
-   * Skapa en `AssemblerServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `OutputClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
+   * Skapa ett `AssemblerServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Använd Assembler-tjänsten för att generera formulärdesignen.
 
-   Anropa `AssemblerServiceClient` objektets `invokeDDX` och skicka följande obligatoriska värden:
+   Anropa `AssemblerServiceClient`-objektets `invokeDDX`-metod och skicka följande obligatoriska värden:
 
-   * A `com.adobe.idp.Document` -objekt som representerar det DDX-dokument som ska användas.
-   * A `java.util.Map` -objekt som innehåller XDP-indatafilerna.
-   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` -objekt som anger körningsalternativen, inklusive standardteckensnitt och jobbloggsnivå.
+   * Ett `com.adobe.idp.Document`-objekt som representerar det DDX-dokument som ska användas.
+   * Ett `java.util.Map`-objekt som innehåller XDP-indatafilerna.
+   * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec`-objekt som anger körningsalternativen, inklusive standardteckensnittet och jobbloggsnivån.
 
-   The `invokeDDX` returnerar en `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller det monterade XDP-dokumentet. Så här hämtar du det monterade XDP-dokumentet:
+   Metoden `invokeDDX` returnerar ett `com.adobe.livecycle.assembler.client.AssemblerResult`-objekt som innehåller det sammansatta XDP-dokumentet. Så här hämtar du det monterade XDP-dokumentet:
 
-   * Anropa `AssemblerResult` objektets `getDocuments` -metod. Den här metoden returnerar en `java.util.Map` -objekt.
-   * Iterera genom `java.util.Map` tills du hittar resultatet `com.adobe.idp.Document` -objekt.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera det monterade XDP-dokumentet.
+   * Anropa metoden `getDocuments` för objektet `AssemblerResult`. Den här metoden returnerar ett `java.util.Map`-objekt.
+   * Upprepa genom objektet `java.util.Map` tills du hittar det resulterande `com.adobe.idp.Document`-objektet.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att extrahera det monterade XDP-dokumentet.
 
 1. Använd utdatatjänsten för att generera PDF-dokumentet.
 
-   Anropa `OutputClient` objektets `generatePDFOutput2` och skicka följande värden:
+   Anropa `OutputClient`-objektets `generatePDFOutput2`-metod och skicka följande värden:
 
-   * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`
+   * Ett `TransformationFormat`-uppräkningsvärde. Om du vill generera ett PDF-dokument anger du `TransformationFormat.PDF`
    * Ett strängvärde som anger innehållsroten där de ytterligare resurserna, till exempel bilder, finns
-   * A `com.adobe.idp.Document` objekt som representerar formulärdesignen (använd instansen som returneras av tjänsten Assembler)
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning
-   * The `com.adobe.idp.Document` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen
+   * Ett `com.adobe.idp.Document`-objekt som representerar formulärdesignen (använd instansen som returneras av Assembler-tjänsten)
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning
+   * Objektet `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen
 
-   The `generatePDFOutput2` returnerar en `OutputResult` objekt som innehåller resultatet av åtgärden
+   Metoden `generatePDFOutput2` returnerar ett `OutputResult`-objekt som innehåller resultatet av åtgärden
 
 1. Spara PDF-dokumentet som en PDF-fil.
 
-   * Hämta en `com.adobe.idp.Document` det objekt som representerar PDF-dokumentet genom att anropa `OutputResult` objektets `getGeneratedDoc` -metod.
-   * Skapa en `java.io.File` objekt som innehåller resultatet av åtgärden. Kontrollera att filnamnstillägget är .pdf.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` till filen. (Se till att du använder `com.adobe.idp.Document` det objekt som `getGeneratedDoc` returnerad metod.)
+   * Hämta ett `com.adobe.idp.Document`-objekt som representerar PDF-dokumentet genom att anropa `OutputResult`-objektets `getGeneratedDoc`-metod.
+   * Skapa ett `java.io.File`-objekt som innehåller resultatet av åtgärden. Kontrollera att filnamnstillägget är .pdf.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `com.adobe.idp.Document`-objektet till filen. (Kontrollera att du använder objektet `com.adobe.idp.Document` som metoden `getGeneratedDoc` returnerade.)
 
 **Se även**
 
@@ -1057,7 +1057,7 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+[Anger anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ### Skapa ett PDF-dokument baserat på fragment med webbtjänstens API {#create-a-pdf-document-based-on-fragments-using-the-web-service-api}
 
@@ -1077,64 +1077,64 @@ Skapa ett PDF-dokument baserat på fragment med hjälp av API:t för utdatatjän
     http://localhost:8080/soap/services/AssemblerService?WSDL&lc_version=9.0.1.
    ```
 
-   På grund av `BLOB` datatypen är gemensam för båda tjänstreferenserna, och kvalificera fullt ut `BLOB` datatyp när du använder den. I motsvarande webbtjänsts snabbstart är alla `BLOB` -instanser är kvalificerade.
+   Eftersom datatypen `BLOB` är gemensam för båda tjänstreferenserna kan du kvalificera datatypen `BLOB` fullständigt när du använder den. I motsvarande snabbstart för webbtjänsten är alla `BLOB` instanser kvalificerade.
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett Output and Assembler Client-objekt.
 
-   * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `OutputServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `OutputServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Ange `?blob=mtom` om du vill använda MTOM.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `OutputServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela användarnamnet för AEM formulär till `OutputServiceClient.ClientCredentials.UserName.UserName`fält.
-      * Tilldela motsvarande lösenordsvärde till `OutputServiceClient.ClientCredentials.UserName.Password`fält.
-      * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till `BasicHttpBindingSecurity.Transport.ClientCredentialType`fält.
+      * Tilldela användarnamnet för AEM formulär till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela motsvarande lösenordsvärde till fältet `OutputServiceClient.ClientCredentials.UserName.Password`.
+      * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
 
-   * Tilldela `BasicHttpSecurityMode.TransportCredentialOnly` konstantvärdet till `BasicHttpBindingSecurity.Security.Mode`fält.
+   * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
    >[!NOTE]
    >
-   >Upprepa dessa steg för `AssemblerServiceClient`-objekt.
+   >Upprepa dessa steg för objektet `AssemblerServiceClient`.
 
 1. Använd Assembler-tjänsten för att generera formulärdesignen.
 
-   Anropa `AssemblerServiceClient` objektets `invokeDDX` och skicka följande värden:
+   Anropa `AssemblerServiceClient`-objektets `invokeDDX`-metod och skicka följande värden:
 
-   * A `BLOB` objekt som representerar DDX-dokumentet
-   * The `MyMapOf_xsd_string_To_xsd_anyType` objekt som innehåller de nödvändiga filerna
-   * An `AssemblerOptionSpec` objekt som anger körningsalternativ
+   * Ett `BLOB`-objekt som representerar DDX-dokumentet
+   * Objektet `MyMapOf_xsd_string_To_xsd_anyType` som innehåller de nödvändiga filerna
+   * Ett `AssemblerOptionSpec`-objekt som anger körningsalternativ
 
-   The `invokeDDX` returnerar en `AssemblerResult` som innehåller resultatet av jobbet och eventuella undantag som inträffade. Utför följande åtgärder för att hämta det nya XDP-dokumentet:
+   Metoden `invokeDDX` returnerar ett `AssemblerResult`-objekt som innehåller resultatet av jobbet och eventuella undantag som inträffade. Utför följande åtgärder för att hämta det nya XDP-dokumentet:
 
-   * Öppna `AssemblerResult` objektets `documents` fält, vilket är ett `Map` objekt som innehåller de resulterande PDF-dokumenten.
-   * Iterera genom `Map` objekt för att hämta den sammansatta formulärdesignen. Kasta den arraymedlemmens `value` till `BLOB`. Godkänn `BLOB` -instans till Output-tjänsten.
+   * Öppna `AssemblerResult`-objektets `documents`-fält, som är ett `Map`-objekt som innehåller de resulterande PDF-dokumenten.
+   * Iterera genom objektet `Map` för att hämta den sammansatta formulärdesignen. Kasta den arraymedlemmens `value` till en `BLOB`. Skicka den här `BLOB`-instansen till utdatatjänsten.
 
 1. Använd utdatatjänsten för att generera PDF-dokumentet.
 
-   Anropa `OutputServiceClient` objektets `generatePDFOutput2` och skicka följande värden:
+   Anropa `OutputServiceClient`-objektets `generatePDFOutput2`-metod och skicka följande värden:
 
-   * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`.
+   * Ett `TransformationFormat`-uppräkningsvärde. Ange `TransformationFormat.PDF` om du vill generera ett PDF-dokument.
    * Ett strängvärde som anger innehållsroten där de ytterligare resurserna, t.ex. bilder, finns.
-   * A `BLOB` det objekt som representerar formulärdesignen (använd `BLOB` -instans som returneras av Assembler-tjänsten).
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
-   * The `BLOB` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
-   * Ett utvärde `BLOB` det objekt som `generatePDFOutput2` metoden fylls i. The `generatePDFOutput2` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs bara för webbtjänstanrop).
-   * Ett utvärde `OutputResult` objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs bara för webbtjänstanrop).
+   * Ett `BLOB`-objekt som representerar formulärdesignen (använd instansen `BLOB` som returneras av Assembler-tjänsten).
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF.
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
+   * Objektet `BLOB` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+   * Ett `BLOB`-utdataobjekt som fylls i av metoden `generatePDFOutput2`. Metoden `generatePDFOutput2` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs bara för webbtjänstanrop).
+   * Ett `OutputResult`-utdataobjekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs bara för webbtjänstanrop).
 
-   The `generatePDFOutput2` returnerar en `BLOB` objekt som innehåller det icke-interaktiva PDF-formuläret.
+   Metoden `generatePDFOutput2` returnerar ett `BLOB`-objekt som innehåller det icke-interaktiva PDF-formuläret.
 
 1. Spara PDF-dokumentet som en PDF-fil.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för det interaktiva PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `BLOB` objektet har hämtats från `generatePDFOutput2` -metod. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för det interaktiva PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `BLOB` som hämtats från metoden `generatePDFOutput2`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -1188,21 +1188,21 @@ Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, 
 
 **Skapa ett Output Client-objekt**
 
-Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Om du använder webbtjänstens API för utdata skapar du en `OutputServiceService` -objekt.
+Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du ett `OutputClient`-objekt. Skapa ett `OutputServiceService`-objekt om du använder API:t för webbtjänsten för utdata.
 
-**Referera en XML-datakälla**
+**Referera till en XML-datakälla**
 
 Om du vill skriva ut ett dokument som innehåller data måste du referera till en XML-datakälla som innehåller XML-element för varje formulärfält som du vill fylla i med data. XML-elementnamnet måste matcha fältnamnet. Ett XML-element ignoreras om det inte motsvarar ett formulärfält eller om XML-elementnamnet inte matchar fältnamnet. Det är inte nödvändigt att matcha den ordning i vilken XML-elementen visas om alla XML-element har angetts.
 
-**Ange körningsalternativ för utskrift som krävs för att skriva ut till en fil**
+**Ange nödvändiga alternativ för utskriftskörning för att skriva ut till en fil**
 
-Om du vill skriva ut till en fil måste du ange körningsalternativet Fil-URI genom att ange plats och namn för filen som utdatatjänsten skriver ut på. Om du till exempel vill instruera Output-tjänsten att skriva ut en PostScript-fil med namnet *MortgageForm.ps* Om du vill C:\Adobe anger du C:\Adobe\MortgageForm.ps.
+Om du vill skriva ut till en fil måste du ange körningsalternativet Fil-URI genom att ange plats och namn för filen som utdatatjänsten skriver ut på. Om du till exempel vill instruera Output-tjänsten att skriva ut en PostScript-fil med namnet *MortgageForm.ps* till C:\Adobe anger du C:\Adobe\MortgageForm.ps.
 
 >[!NOTE]
 >
->Det finns valfria körningsalternativ som du kan definiera. Information om alla alternativ du kan ange finns i `PrintedOutputOptionsSpec` klassreferens i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+>Det finns valfria körningsalternativ som du kan definiera. Mer information om alla alternativ som du kan ange finns i klassreferensen `PrintedOutputOptionsSpec` i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
 
-**Skriva ut utskriftsströmmen till en fil**
+**Skriv ut utskriftsströmmen till en fil**
 
 När du har refererat till en giltig XML-datakälla som innehåller formulärdata och angett alternativ för utskriftskörning, kan du anropa utdatatjänsten, vilket gör att den skriver ut en fil.
 
@@ -1232,42 +1232,42 @@ Skriva ut till en fil med hjälp av utdata-API (Java):
 
 1. Skapa ett Output Client-objekt.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `OutputClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `OutputClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera till en XML-datakälla.
 
-   * Skapa en `java.io.FileInputStream` -objekt som representerar XML-datakällan som används för att fylla i dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar XML-datakällan som används för att fylla i dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ange alternativ för utskriftskörning som krävs för att skriva ut till en fil.
 
-   * Skapa en `PrintedOutputOptionsSpec` genom att använda dess konstruktor.
-   * Ange filen genom att anropa PrintedOutputOptionsSpec-objektets `setFileURI` och skickar ett strängvärde som representerar filens namn och plats. Om du till exempel vill att utdatatjänsten ska skriva ut till en PostScript-fil med namnet MortgageForm.ps i C:\Adobe anger du C:\\Adobe\MortgageForm.ps.
-   * Ange antalet kopior som ska skrivas ut genom att anropa `PrintedOutputOptionsSpec` objektets `setCopies` och skickar ett heltalsvärde som representerar antalet kopior.
+   * Skapa ett `PrintedOutputOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Ange filen genom att anropa PrintOutputOptionsSpec-objektets `setFileURI`-metod och skicka ett strängvärde som representerar filens namn och plats. Om du till exempel vill att utdatatjänsten ska skriva ut till en PostScript-fil med namnet MortgageForm.ps i C:\Adobe anger du C:\\Adobe\MortgageForm.ps.
+   * Ange antalet kopior som ska skrivas ut genom att anropa `PrintedOutputOptionsSpec`-objektets `setCopies`-metod och skicka ett heltalsvärde som representerar antalet kopior.
 
 1. Skriv ut utskriftsströmmen till en fil.
 
-   Skriva ut till en fil genom att anropa `OutputClient` objektets `generatePrintedOutput` och skicka följande värden:
+   Skriv ut till en fil genom att anropa `OutputClient`-objektets `generatePrintedOutput`-metod och skicka följande värden:
 
-   * A `PrintFormat` uppräkningsvärde som anger vilket utskriftsströmformat som ska skapas. Om du till exempel vill skapa en PostScript-utskriftsström skickar du `PrintFormat.PostScript`.
+   * Ett `PrintFormat`-uppräkningsvärde som anger vilket utskriftsdataströmformat som ska skapas. Om du till exempel vill skapa en PostScript-utskriftsström skickar du `PrintFormat.PostScript`.
    * Ett strängvärde som anger formulärdesignens namn.
    * Ett strängvärde som anger platsen för relaterade säkerhetsfiler, t.ex. bildfiler.
-   * Ett strängvärde som anger platsen för XDC-filen som ska användas (du kan skicka `null` om du har angett att XDC-filen ska användas med `PrintedOutputOptionsSpec` -objekt).
-   * The `PrintedOutputOptionsSpec` objekt som innehåller körningsalternativ som krävs för att skriva ut till en fil.
-   * The `com.adobe.idp.Document` -objekt som innehåller XML-datakällan som innehåller formulärdata.
+   * Ett strängvärde som anger platsen för XDC-filen som ska användas (du kan skicka `null` om du har angett XDC-filen som ska användas med objektet `PrintedOutputOptionsSpec`).
+   * Objektet `PrintedOutputOptionsSpec` som innehåller körningsalternativ som krävs för att skriva ut till en fil.
+   * Objektet `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller formulärdata.
 
-   The `generatePrintedOutput` returnerar en `OutputResult` objekt som innehåller resultatet av åtgärden.
+   Metoden `generatePrintedOutput` returnerar ett `OutputResult`-objekt som innehåller resultatet av åtgärden.
 
    >[!NOTE]
    >
-   >The `OutputResult` objektets `getRecordLevelMetaDataList` metodreturer `null`.
+   >`OutputResult`-objektets `getRecordLevelMetaDataList`-metod returnerar `null`.
 
 1. Hämta resultatet av åtgärden.
 
-   * Skapa en `com.adobe.idp.Document` objekt som representerar statusen för `generatePrintedOutput` metod genom att anropa `OutputResult` objektets `getStatusDoc` metoden `OutputResult` objektet returnerades av `generatePrintedOutput` metod).
-   * Skapa en `java.io.File` -objekt som innehåller resultatet av åtgärden. Kontrollera att filtillägget är XML.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` till filen (se till att du använder `com.adobe.idp.Document` objekt som returneras av `getStatusDoc` metod).
+   * Skapa ett `com.adobe.idp.Document`-objekt som representerar `generatePrintedOutput`-metodens status genom att anropa `OutputResult`-objektets `getStatusDoc`-metod (objektet `OutputResult` returnerades av metoden `generatePrintedOutput`).
+   * Skapa ett `java.io.File`-objekt som innehåller resultatet av åtgärden. Kontrollera att filtillägget är XML.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `com.adobe.idp.Document`-objektet till filen (se till att du använder det `com.adobe.idp.Document`-objekt som returnerades av metoden `getStatusDoc`).
 
 **Se även**
 
@@ -1277,7 +1277,7 @@ Skriva ut till en fil med hjälp av utdata-API (Java):
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 
-[Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
+[Anger anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).
 
 ### Skriva ut till filer med hjälp av webbtjänstens API {#print-to-files-using-the-web-service-api}
 
@@ -1289,55 +1289,55 @@ Skriva ut till en fil med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett Output Client-objekt.
 
-   * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `OutputServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `OutputServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Ange `?blob=mtom` om du vill använda MTOM.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `OutputServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `OutputServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Referera till en XML-datakälla.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra formulärdata.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen som innehåller formulärdata.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `binaryData` med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra formulärdata.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen som innehåller formulärdata.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll objektet `BLOB` genom att tilldela dess `binaryData`-egenskap med innehållet i bytearrayen.
 
 1. Ange alternativ för utskriftskörning som krävs för att skriva ut till en fil.
 
-   * Skapa en `PrintedOutputOptionsSpec` genom att använda dess konstruktor.
-   * Ange filen genom att tilldela ett strängvärde som representerar platsen och namnet på filen till `PrintedOutputOptionsSpec` objektets `fileURI` datamedlem. Om du till exempel vill att utdatatjänsten ska skriva ut till en PostScript-fil med namnet *MortgageForm.ps* i C:\Adobe anger du C:\\Adobe\MortgageForm.ps.
-   * Ange antalet kopior som ska skrivas ut genom att tilldela ett heltalsvärde som representerar antalet kopior till `PrintedOutputOptionsSpec` objektets `copies` datamedlemmar.
+   * Skapa ett `PrintedOutputOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Ange filen genom att tilldela ett strängvärde som representerar platsen och namnet på filen till `PrintedOutputOptionsSpec`-objektets `fileURI`-datamedlem. Om du till exempel vill att utdatatjänsten ska skriva ut till en PostScript-fil med namnet *MortgageForm.ps* i C:\Adobe anger du C:\\Adobe\MortgageForm.ps.
+   * Ange antalet kopior som ska skrivas ut genom att tilldela ett heltalsvärde som representerar antalet kopior till `copies`-objektets `PrintedOutputOptionsSpec`-datamedlemmar.
 
 1. Skriv ut utskriftsströmmen till en fil.
 
-   Skriva ut till en fil genom att anropa `OutputServiceService` objektets `generatePrintedOutput` och skicka följande värden:
+   Skriv ut till en fil genom att anropa `OutputServiceService`-objektets `generatePrintedOutput`-metod och skicka följande värden:
 
-   * A `PrintFormat` uppräkningsvärde som anger vilket utskriftsströmformat som ska skapas. Om du till exempel vill skapa en PostScript-utskriftsström skickar du `PrintFormat.PostScript`.
+   * Ett `PrintFormat`-uppräkningsvärde som anger vilket utskriftsdataströmformat som ska skapas. Om du till exempel vill skapa en PostScript-utskriftsström skickar du `PrintFormat.PostScript`.
    * Ett strängvärde som anger formulärdesignens namn.
    * Ett strängvärde som anger platsen för relaterade säkerhetsfiler, t.ex. bildfiler.
-   * Ett strängvärde som anger platsen för XDC-filen som ska användas (du kan skicka `null` om du har angett att XDC-filen ska användas med `PrintedOutputOptionsSpec` -objekt).
-   * The `PrintedOutputOptionsSpec` objekt som innehåller alternativ för utskriftskörning som krävs för att skriva ut till en fil.
-   * The `BLOB` -objektet som innehåller XML-datakällan som innehåller formulärdata.
-   * A `BLOB` objekt som fylls i av `generatePDFOutput` -metod. The `generatePDFOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs endast för webbtjänstanrop.)
-   * A `BLOB` objekt som fylls i av `generatePDFOutput` -metod. The `generatePDFOutput` -metoden fyller i det här objektet med resultatdata. (Det här parametervärdet krävs endast för webbtjänstanrop.)
-   * An `OutputResult` objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs endast för webbtjänstanrop.)
+   * Ett strängvärde som anger platsen för XDC-filen som ska användas (du kan skicka `null` om du har angett XDC-filen som ska användas med objektet `PrintedOutputOptionsSpec`).
+   * Objektet `PrintedOutputOptionsSpec` som innehåller alternativ för utskriftskörning som krävs för att skriva ut till en fil.
+   * Objektet `BLOB` som innehåller XML-datakällan som innehåller formulärdata.
+   * Ett `BLOB`-objekt som fylls i av metoden `generatePDFOutput`. Metoden `generatePDFOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs endast för webbtjänstanrop.)
+   * Ett `BLOB`-objekt som fylls i av metoden `generatePDFOutput`. Metoden `generatePDFOutput` fyller i det här objektet med resultatdata. (Det här parametervärdet krävs endast för webbtjänstanrop.)
+   * Ett `OutputResult`-objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs endast för webbtjänstanrop.)
 
 1. Hämta resultatet av åtgärden.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar en XML-filplats som innehåller resultatdata. Kontrollera att filtillägget är XML.
-   * Skapa en bytearray som lagrar datainnehållet i `BLOB` objekt som fylldes i med resultatdata av `OutputServiceService` objektets `generatePDFOutput` metod (den åttonde parametern). Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till XML-filen genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar en plats för en XML-fil som innehåller resultatdata. Kontrollera att filtillägget är XML.
+   * Skapa en bytearray som lagrar datainnehållet för objektet `BLOB` som fylldes med resultatdata av metoden `generatePDFOutput` för objektet `OutputServiceService` (den åttonde parametern). Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till XML-filen genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -1393,9 +1393,9 @@ Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, 
 
 **Skapa ett Output Client-objekt**
 
-Skapa ett klientobjekt för utdatatjänsten innan du programmässigt utför en åtgärd. Om du använder Java API skapar du en `OutputClient` -objekt. Om du använder webbtjänstens API för utdata skapar du en `OutputServiceClient` -objekt.
+Skapa ett klientobjekt för utdatatjänsten innan du programmässigt utför en åtgärd. Om du använder Java API skapar du ett `OutputClient`-objekt. Skapa ett `OutputServiceClient`-objekt om du använder API:t för webbtjänsten för utdata.
 
-**Referera en XML-datakälla**
+**Referera till en XML-datakälla**
 
 Om du vill skriva ut ett dokument som innehåller data måste du referera till en XML-datakälla som innehåller XML-element för varje formulärfält som du vill fylla i med data. XML-elementnamnet måste matcha fältnamnet. Ett XML-element ignoreras om det inte motsvarar ett formulärfält eller om XML-elementnamnet inte matchar fältnamnet. Det är inte nödvändigt att matcha den ordning i vilken XML-elementen visas om alla XML-element har angetts.
 
@@ -1405,12 +1405,12 @@ Du kan ange körningsalternativ när du skickar en utskriftsström till en skriv
 
 * **Kopior**: Anger antalet kopior som ska skickas till skrivaren. Standardvärdet är 1.
 * **Häftning**: Ett XCI-alternativ anges när en häftare används. Det här alternativet kan anges i konfigurationsmodellen av elementet staple och används endast för PS- och PCL-skrivare.
-* **OutputJog**: Ett XCI-alternativ anges när utdatasidor ska sammanfogas (fysiskt flyttas i utmatningsfacket). Det här alternativet gäller endast för PS- och PCL-skrivare.
-* **OutputBin**: XCI-värde som används för att aktivera skrivardrivrutinen för att välja lämplig utmatningsfack.
+* **OutputJog**: Ett XCI-alternativ anges när utdatasidor ska joggas (fysiskt flyttas i utmatningsfacket). Det här alternativet gäller endast för PS- och PCL-skrivare.
+* **OutputBin**: XCI-värde som används för att aktivera skrivardrivrutinen för att välja lämplig utdatabing.
 
 >[!NOTE]
 >
->Information om alla körningsalternativ som du kan ange finns i `PrintedOutputOptionsSpec` klassreferens.
+>Mer information om alla körningsalternativ som du kan ange finns i klassreferensen `PrintedOutputOptionsSpec`.
 
 **Hämta ett dokument som ska skrivas ut**
 
@@ -1420,7 +1420,7 @@ Du kan välja att skicka en PDF-fil om skrivaren stöder PDF. Ett problem med at
 
 En annan begränsning för att skicka ett PDF-dokument till en skrivare är att det bara skrivs ut. Det går inte att komma åt dubbelsidig utskrift, val av pappersfack och häftning, förutom via skrivarinställningarna.
 
-Om du vill hämta ett dokument att skriva ut använder du `generatePrintedOutput` -metod. I följande tabell anges innehållstyper som ställs in för en viss utskriftsström när du använder `generatePrintedOutput` -metod.
+Om du vill hämta ett dokument som ska skrivas ut använder du metoden `generatePrintedOutput`. Följande tabell anger innehållstyper som ställs in för en given utskriftsström när metoden `generatePrintedOutput` används.
 
 <table>
  <thead>
@@ -1452,7 +1452,7 @@ Om du vill hämta ett dokument att skriva ut använder du `generatePrintedOutput
   </tr>
   <tr>
    <td><p>GenericPSLevel3 </p></td>
-   <td><p>Skapar en allmän PostScript Level 3-utdataström.</p></td>
+   <td><p>Skapar en generisk utdataström för PostScript Level 3.</p></td>
   </tr>
   <tr>
    <td><p>IPL </p></td>
@@ -1472,7 +1472,7 @@ Om du vill hämta ett dokument att skriva ut använder du `generatePrintedOutput
   </tr>
   <tr>
    <td><p>PostScript </p></td>
-   <td><p>Skapar en allmän PostScript Level 2-utdataström.</p></td>
+   <td><p>Skapar en generisk PostScript Level 2-utdataström.</p></td>
   </tr>
   <tr>
    <td><p>TPCL </p></td>
@@ -1499,7 +1499,7 @@ Om du vill hämta ett dokument att skriva ut använder du `generatePrintedOutput
 
 >[!NOTE]
 >
->Du kan också skicka en utskriftsström till en skrivare med hjälp av `generatePrintedOutput2` -metod. Men snabbstarterna som är kopplade till avsnittet Skicka utskriftsströmmar till skrivare använder `generatePrintedOutput` -metod.
+>Du kan också skicka en utskriftsström till en skrivare med metoden `generatePrintedOutput2`. Snabbstarten som är associerad med avsnittet Skicka utskriftsströmmar till skrivare använder metoden `generatePrintedOutput`.
 
 **Skicka utskriftsströmmen till en nätverksskrivare**
 
@@ -1521,49 +1521,49 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av utdata-API (Ja
 
 1. Skapa ett Output Client-objekt
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `OutputClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `OutputClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera en XML-datakälla
 
-   * Skapa en `java.io.FileInputStream` -objekt som representerar XML-datakällan som används för att fylla i dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar XML-datakällan som används för att fylla i dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ange alternativ för utskriftskörning
 
-   Skapa en `PrintedOutputOptionsSpec` objekt som representerar alternativ för utskriftskörning. Du kan till exempel ange hur många kopior som ska skrivas ut genom att anropa `PrintedOutputOptionsSpec` objektets `setCopies` -metod.
+   Skapa ett `PrintedOutputOptionsSpec`-objekt som representerar alternativ för utskriftskörning. Du kan till exempel ange antalet kopior som ska skrivas ut genom att anropa metoden `setCopies` för objektet `PrintedOutputOptionsSpec`.
 
    >[!NOTE]
    >
-   >Du kan inte ange sidnumreringsvärdet med `PrintedOutputOptionsSpec` objektets `setPagination` om du genererar en ZPL-utskriftsström. Du kan inte heller ange följande alternativ för en ZPL-utskriftsström: OutputJog, PageOffset och Staple. The `setPagination` metoden är inte giltig för PostScript-generering. Den gäller endast för PCL-generering.
+   >Du kan inte ange sidnumreringsvärdet med `PrintedOutputOptionsSpec`-objektets `setPagination`-metod om du genererar en ZPL-utskriftsström. Du kan inte heller ange följande alternativ för en ZPL-utskriftsström: OutputJog, PageOffset och Staple. Metoden `setPagination` är inte giltig för PostScript-generering. Den gäller endast för PCL-generering.
 
 1. Hämta ett dokument som ska skrivas ut
 
-   * Hämta ett dokument som ska skrivas ut genom att anropa `OutputClient` objektets `generatePrintedOutput` och skicka följande värden:
+   * Hämta ett dokument som ska skrivas ut genom att anropa `OutputClient`-objektets `generatePrintedOutput`-metod och skicka följande värden:
 
-      * A `PrintFormat` uppräkningsvärde som anger utskriftsströmmen. Om du till exempel vill skapa en PostScript-utskriftsström skickar du `PrintFormat.PostScript`.
+      * Ett `PrintFormat`-uppräkningsvärde som anger utskriftsströmmen. Om du till exempel vill skapa en PostScript-utskriftsström skickar du `PrintFormat.PostScript`.
       * Ett strängvärde som anger formulärdesignens namn.
       * Ett strängvärde som anger platsen för relaterade säkerhetsfiler, t.ex. bildfiler.
       * Ett strängvärde som anger platsen för XDC-filen som ska användas.
-      * The `PrintedOutputOptionsSpec` objekt som innehåller körningsalternativ som krävs för att skriva ut till en fil.
-      * The `com.adobe.idp.Document` objekt som representerar XML-datakällan som innehåller formulärdata som ska sammanfogas med formulärdesignen.
+      * Objektet `PrintedOutputOptionsSpec` som innehåller körningsalternativ som krävs för att skriva ut till en fil.
+      * Objektet `com.adobe.idp.Document` som representerar XML-datakällan som innehåller formulärdata som ska sammanfogas med formulärdesignen.
 
-     Den här metoden returnerar en `OutputResult` objekt som innehåller resultatet av åtgärden.
+     Den här metoden returnerar ett `OutputResult`-objekt som innehåller resultatet av åtgärden.
 
-   * Skapa en `com.adobe.idp.Document` objekt som ska skickas till skrivaren genom att anropa `OutputResult` objekt `getGeneratedDoc` -metod. Den här metoden returnerar en `com.adobe.idp.Document` -objekt.
+   * Skapa ett `com.adobe.idp.Document`-objekt som ska skickas till skrivaren genom att anropa metoden `OutputResult` object&#39;s `getGeneratedDoc` . Den här metoden returnerar ett `com.adobe.idp.Document`-objekt.
 
 1. Skicka utskriftsströmmen till en nätverksskrivare
 
-   Skicka utskriftsströmmen till en nätverksskrivare genom att anropa `OutputClient` objektets `sendToPrinter` och skicka följande värden:
+   Skicka utskriftsströmmen till en nätverksskrivare genom att anropa `OutputClient`-objektets `sendToPrinter`-metod och skicka följande värden:
 
-   * A `com.adobe.idp.Document` objekt som representerar utskriftsströmmen som ska skickas till skrivaren.
-   * A `PrinterProtocol` uppräkningsvärde som anger vilket skrivarprotokoll som ska användas. Om du till exempel vill ange SharedPrinter-protokollet skickar du `PrinterProtocol.SharedPrinter`.
-   * Ett strängvärde som anger utskriftsserverns namn. Anta att namnet på utskriftsservern är PrintServer1, skicka `\\\PrintSever1`.
-   * Ett strängvärde som anger skrivarens namn. Om skrivarens namn till exempel är Skrivare1, kan du skicka `\\\PrintSever1\Printer1`.
+   * Ett `com.adobe.idp.Document`-objekt som representerar utskriftsströmmen som ska skickas till skrivaren.
+   * Ett `PrinterProtocol`-uppräkningsvärde som anger vilket skrivarprotokoll som ska användas. Om du till exempel vill ange SharedPrinter-protokollet skickar du `PrinterProtocol.SharedPrinter`.
+   * Ett strängvärde som anger utskriftsserverns namn. Om till exempel namnet på utskriftsservern är PrintServer1, skickar du `\\\PrintSever1`.
+   * Ett strängvärde som anger skrivarens namn. Om skrivarens namn till exempel är Skrivare1, skickar du `\\\PrintSever1\Printer1`.
 
    >[!NOTE]
    >
-   >The `sendToPrinter` i AEM Forms API i version 8.2.1.
+   >Metoden `sendToPrinter` lades till i AEM Forms API i version 8.2.1.
 
 ### Skicka en utskriftsström till en skrivare med hjälp av webbtjänstens API {#send-a-print-stream-to-a-printer-using-the-web-service-api}
 
@@ -1575,66 +1575,66 @@ Skicka en utskriftsström till en nätverksskrivare med hjälp av Output API (we
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett Output Client-objekt.
 
-   * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `OutputServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `OutputServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Ange `?blob=mtom` om du vill använda MTOM.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `OutputServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `OutputServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Referera till en XML-datakälla.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra formulärdata.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som anger platsen för XML-filen som innehåller formulärdata.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Bestäm bytearraylängden genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra formulärdata.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som anger platsen för XML-filen som innehåller formulärdata.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Ta reda på bytearraylängden genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Ange alternativ för utskriftskörning.
 
-   Skapa en `PrintedOutputOptionsSpec` genom att använda dess konstruktor. Du kan till exempel ange antalet kopior som ska skrivas ut genom att tilldela ett heltalsvärde som representerar antalet kopior till `PrintedOutputOptionsSpec` objektets `copies` datamedlem.
+   Skapa ett `PrintedOutputOptionsSpec`-objekt med hjälp av dess konstruktor. Du kan till exempel ange antalet kopior som ska skrivas ut genom att tilldela ett heltalsvärde som representerar antalet kopior till `copies`-objektets `PrintedOutputOptionsSpec`-datamedlem.
 
    >[!NOTE]
    >
-   >Du kan inte ange sidnumreringsvärdet med `PrintedOutputOptionsSpec` objektets `pagination` datamedlem om du genererar en ZPL-utskriftsström. Du kan inte heller ange följande alternativ för en ZPL-utskriftsström: OutputJog, PageOffset och Staple. The `pagination` datamedlemmen är inte giltig för PostScript-generering. Den gäller endast för PCL-generering.
+   >Du kan inte ange sidnumreringsvärdet med `pagination`-objektets `PrintedOutputOptionsSpec`-datamedlem om du genererar en ZPL-utskriftsström. Du kan inte heller ange följande alternativ för en ZPL-utskriftsström: OutputJog, PageOffset och Staple. Datamedlemmen `pagination` är inte giltig för PostScript-generering. Den gäller endast för PCL-generering.
 
 1. Hämta ett dokument som ska skrivas ut.
 
-   * Hämta ett dokument som ska skrivas ut genom att anropa `OutputServiceService` objektets `generatePrintedOutput` och skicka följande värden:
+   * Hämta ett dokument som ska skrivas ut genom att anropa `OutputServiceService`-objektets `generatePrintedOutput`-metod och skicka följande värden:
 
-      * A `PrintFormat` uppräkningsvärde som anger utskriftsströmmen. Om du till exempel vill skapa en PostScript-utskriftsström skickar du `PrintFormat.PostScript`.
+      * Ett `PrintFormat`-uppräkningsvärde som anger utskriftsströmmen. Om du till exempel vill skapa en PostScript-utskriftsström skickar du `PrintFormat.PostScript`.
       * Ett strängvärde som anger formulärdesignens namn.
       * Ett strängvärde som anger platsen för relaterade säkerhetsfiler, t.ex. bildfiler.
       * Ett strängvärde som anger platsen för XDC-filen som ska användas.
-      * The `PrintedOutputOptionsSpec` objekt som innehåller alternativ för utskriftskörning som används när en utskriftsström skickas till en nätverksskrivare.
-      * The `BLOB` -objektet som innehåller XML-datakällan som innehåller formulärdata.
-      * A `BLOB` objekt som fylls i av `generatePrintedOutput` -metod. The `generatePrintedOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs endast för webbtjänstanrop.)
-      * A `BLOB` objekt som fylls i av `generatePrintedOutput` -metod. The `generatePrintedOutput` -metoden fyller i det här objektet med resultatdata. (Det här parametervärdet krävs endast för webbtjänstanrop.)
-      * An `OutputResult` objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs endast för webbtjänstanrop.)
+      * Objektet `PrintedOutputOptionsSpec` som innehåller alternativ för utskriftskörning som används när en utskriftsström skickas till en nätverksskrivare.
+      * Objektet `BLOB` som innehåller XML-datakällan som innehåller formulärdata.
+      * Ett `BLOB`-objekt som fylls i av metoden `generatePrintedOutput`. Metoden `generatePrintedOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs endast för webbtjänstanrop.)
+      * Ett `BLOB`-objekt som fylls i av metoden `generatePrintedOutput`. Metoden `generatePrintedOutput` fyller i det här objektet med resultatdata. (Det här parametervärdet krävs endast för webbtjänstanrop.)
+      * Ett `OutputResult`-objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs endast för webbtjänstanrop.)
 
-   * Skapa en `BLOB` objekt som ska skickas till skrivaren genom att hämta värdet för `OutputResult` objekt `generatedDoc` -metod. Den här metoden returnerar en `BLOB` som innehåller PostScript-data som returneras av `generatePrintedOutput` -metod.
+   * Skapa ett `BLOB`-objekt som ska skickas till skrivaren genom att hämta värdet för metoden `generatedDoc` för `OutputResult`-objektet. Den här metoden returnerar ett `BLOB`-objekt som innehåller PostScript-data som returneras av metoden `generatePrintedOutput`.
 
 1. Skicka utskriftsströmmen till en nätverksskrivare.
 
-   Skicka utskriftsströmmen till en nätverksskrivare genom att anropa `OutputClient` objektets `sendToPrinter` och skicka följande värden:
+   Skicka utskriftsströmmen till en nätverksskrivare genom att anropa `OutputClient`-objektets `sendToPrinter`-metod och skicka följande värden:
 
-   * A `BLOB` objekt som representerar utskriftsströmmen som ska skickas till skrivaren.
-   * A `PrinterProtocol` uppräkningsvärde som anger vilket skrivarprotokoll som ska användas. Om du till exempel vill ange SharedPrinter-protokollet skickar du `PrinterProtocol.SharedPrinter`.
-   * A `bool` värde som anger om föregående parametervärde ska användas. Skicka värdet `true`. (Det här parametervärdet krävs endast för webbtjänstanrop.)
+   * Ett `BLOB`-objekt som representerar utskriftsströmmen som ska skickas till skrivaren.
+   * Ett `PrinterProtocol`-uppräkningsvärde som anger vilket skrivarprotokoll som ska användas. Om du till exempel vill ange SharedPrinter-protokollet skickar du `PrinterProtocol.SharedPrinter`.
+   * Ett `bool`-värde som anger om föregående parametervärde ska användas. Skicka värdet `true`. (Det här parametervärdet krävs endast för webbtjänstanrop.)
    * Ett strängvärde som anger utskriftsserverns namn. Om du till exempel antar att namnet på utskriftsservern är PrintServer1, skickar du `\\\PrintSever1`.
    * Ett strängvärde som anger skrivarens namn. Om du till exempel antar att skrivarens namn är Skrivare1, skickar du `\\\PrintSever1\Printer1`.
 
    >[!NOTE]
    >
-   >The `sendToPrinter` i AEM Forms API i version 8.2.1.
+   >Metoden `sendToPrinter` lades till i AEM Forms API i version 8.2.1.
 
 ## Skapa flera utdatafiler {#creating-multiple-output-files}
 
@@ -1733,11 +1733,11 @@ Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, 
 
 **Skapa ett Output Client-objekt**
 
-Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Om du använder webbtjänstens API för utdata skapar du en `OutputServiceService` -objekt.
+Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du ett `OutputClient`-objekt. Skapa ett `OutputServiceService`-objekt om du använder API:t för webbtjänsten för utdata.
 
-**Referera en XML-datakälla**
+**Referera till en XML-datakälla**
 
-Referera till en XML-datakälla som innehåller flera poster. Ett XML-element måste användas för att separera dataposterna. I exempelkoden för XML-datakällan som visades tidigare i det här avsnittet får XML-elementet som avgränsar dataposter ett namn `LoanRecord`.
+Referera till en XML-datakälla som innehåller flera poster. Ett XML-element måste användas för att separera dataposterna. I XML-datakällan som visades tidigare i det här avsnittet får till exempel XML-elementet som avgränsar dataposter namnet `LoanRecord`.
 
 Det måste finnas ett XML-element för varje formulärfält som du vill fylla i med data. XML-elementnamnet måste matcha fältnamnet. Ett XML-element ignoreras om det inte motsvarar ett formulärfält eller om XML-elementnamnet inte matchar fältnamnet. Det är inte nödvändigt att matcha den ordning i vilken XML-elementen visas om alla XML-element har angetts.
 
@@ -1747,7 +1747,7 @@ Ange följande körningsalternativ för Output-tjänsten för att skapa flera fi
 
 * **Många filer**: Anger om utdatatjänsten skapar ett eller flera dokument. Du kan ange true eller false. Om du vill skapa ett separat dokument för varje datapost i XML-datakällan anger du true.
 * **Fil-URI**: Anger platsen för de filer som genereras av utdatatjänsten. Anta till exempel att du anger C:\\Adobe\forms\Loan.pdf. I sådana fall skapar Output-tjänsten en fil med namnet Loan.pdf och placerar filen i mappen C:\\Adobe\forms. När det finns flera filer är filnamnen Loan0001.pdf, Loan0002.pdf, Loan003.pdf och så vidare. Om du anger en filplats placeras filerna på servern, inte på klientdatorn.
-* **Postnamn**: Anger XML-elementnamnet i datakällan som avgränsar dataposterna. I XML-datakällan som visas tidigare i det här avsnittet anropas till exempel XML-elementet som avgränsar dataposter `LoanRecord`. (I stället för att ange alternativet Postnamn vid körning kan du ange postnivån genom att tilldela den ett numeriskt värde som anger elementnivån som innehåller dataposter. Du kan dock bara ange postnamn eller postnivå. Du kan inte ange båda värdena.)
+* **Postnamn**: Anger XML-elementnamnet i datakällan som avgränsar dataposterna. I XML-datakällan som visades tidigare i det här avsnittet kallas till exempel XML-elementet som avgränsar dataposter `LoanRecord`. (I stället för att ange alternativet Postnamn vid körning kan du ange postnivån genom att tilldela den ett numeriskt värde som anger elementnivån som innehåller dataposter. Du kan dock bara ange postnamn eller postnivå. Du kan inte ange båda värdena.)
 
 **Ange alternativ för återgivning vid körning**
 
@@ -1755,11 +1755,11 @@ Du kan ange alternativ för återgivning vid körning när du skapar flera filer
 
 När utdatatjänsten bearbetar batchposter, läses data som innehåller flera poster stegvis. Det innebär att Output-tjänsten läser data till minnet och frigör data när en grupp med poster bearbetas. Utdatatjänsten läser in data stegvis när något av två körningsalternativ är inställt. Om du anger körningsalternativet Postnamn läser utdatatjänsten in data stegvis. Om du anger körningsalternativet Postnivå till 2 eller högre läser utdatatjänsten in data stegvis.
 
-Du kan kontrollera om utdatatjänsten utför inkrementell inläsning med hjälp av `PDFOutputOptionsSpec` eller `PrintedOutputOptionSpec` objektets `setLazyLoading` -metod. Du kan skicka värdet `false` till den här metoden som inaktiverar inkrementell inläsning.
+Du kan kontrollera om utdatatjänsten utför inkrementell inläsning med metoden `PDFOutputOptionsSpec` eller `PrintedOutputOptionSpec`-objektets `setLazyLoading`. Du kan skicka värdet `false` till den här metoden som inaktiverar inkrementell inläsning.
 
-**Generera flera PDF-filer**
+**Skapa flera PDF-filer**
 
-När du har refererat till en giltig XML-datakälla som innehåller flera dataposter och angett körningsalternativ, kan du anropa utdatatjänsten, vilket gör att den genererar flera filer. När du genererar flera poster `OutputResult` objektets `getGeneratedDoc` metodreturer `null`.
+När du har refererat till en giltig XML-datakälla som innehåller flera dataposter och angett körningsalternativ, kan du anropa utdatatjänsten, vilket gör att den genererar flera filer. När du genererar flera poster returnerar `OutputResult`-objektets `getGeneratedDoc`-metod `null`.
 
 **Hämta resultatet av åtgärden**
 
@@ -1812,43 +1812,43 @@ Skapa flera PDF-filer med hjälp av utdata-API (Java):
 
 1. Skapa ett Output Client-objekt
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `OutputClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `OutputClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera en XML-datakälla
 
-   * Skapa en `java.io.FileInputStream` objekt som representerar XML-datakällan som innehåller flera poster med hjälp av dess konstruktor och som skickar ett strängvärde som anger platsen för XML-filen.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar XML-datakällan som innehåller flera poster genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ange körningsalternativ för PDF
 
-   * Skapa en `PDFOutputOptionsSpec` genom att använda dess konstruktor.
-   * Ange alternativet Många filer genom att anropa `PDFOutputOptionsSpec` objektets `setGenerateManyFiles` -metod. Skicka till exempel värdet `true` för att instruera Output-tjänsten att skapa en separat PDF-fil för varje post i XML-datakällan. (Om du ger dig `false`, genererar Output-tjänsten ett enda PDF-dokument som innehåller alla poster).
-   * Ange alternativet Fil-URI genom att anropa `PDFOutputOptionsSpec` objektets `setFileUri` och skickar ett strängvärde som anger platsen för de filer som genereras av Output-tjänsten. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
-   * Ange alternativet Postnamn genom att anropa alternativet `OutputOptionsSpec` objektets `setRecordName` och skickar ett strängvärde som anger XML-elementnamnet i datakällan som avgränsar dataposterna. (Ta till exempel en titt på XML-datakällan som visades tidigare i det här avsnittet. Namnet på XML-elementet som avgränsar dataposter är LoanRecord).
+   * Skapa ett `PDFOutputOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Ange alternativet Många filer genom att anropa `PDFOutputOptionsSpec`-objektets `setGenerateManyFiles`-metod. Skicka till exempel värdet `true` för att instruera utdatatjänsten att skapa en separat PDF-fil för varje post i XML-datakällan. (Om du skickar `false` genererar utdatatjänsten ett enda PDF-dokument som innehåller alla poster).
+   * Ange alternativet Fil-URI genom att anropa `PDFOutputOptionsSpec`-objektets `setFileUri`-metod och skicka ett strängvärde som anger platsen för de filer som genereras av utdatatjänsten. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
+   * Ange alternativet Postnamn genom att anropa `OutputOptionsSpec`-objektets `setRecordName`-metod och skicka ett strängvärde som anger XML-elementnamnet i datakällan som avgränsar dataposterna. (Ta till exempel en titt på XML-datakällan som visades tidigare i det här avsnittet. Namnet på XML-elementet som avgränsar dataposter är LoanRecord).
 
 1. Ange alternativ för återgivning vid körning
 
-   * Skapa en `RenderOptionsSpec` genom att använda dess konstruktor.
-   * Cachelagra formulärdesignen för att förbättra prestanda för Output-tjänsten genom att anropa `RenderOptionsSpec` objektets `setCacheEnabled` och skicka `Boolean` värde för `true`.
+   * Skapa ett `RenderOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Cachelagra formulärdesignen för att förbättra utdatatjänstens prestanda genom att anropa `RenderOptionsSpec`-objektets `setCacheEnabled` och skicka `Boolean`-värdet `true`.
 
 1. Generera flera PDF-filer
 
-   Generera flera PDF-filer genom att anropa `OutputClient` objektets `generatePDFOutput` och skicka följande värden:
+   Generera flera PDF-filer genom att anropa `OutputClient`-objektets `generatePDFOutput`-metod och skicka följande värden:
 
-   * A `TransformationFormat` enum-värde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`.
+   * Ett enum-värde på `TransformationFormat`. Ange `TransformationFormat.PDF` om du vill generera ett PDF-dokument.
    * Ett strängvärde som anger formulärdesignens namn.
    * Ett strängvärde som anger innehållsroten där formulärdesignen finns.
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
-   * The `com.adobe.idp.Document` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF.
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
+   * Objektet `com.adobe.idp.Document` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
 
-   The `generatePDFOutput` returnerar en `OutputResult` objekt som innehåller resultatet av åtgärden.
+   Metoden `generatePDFOutput` returnerar ett `OutputResult`-objekt som innehåller resultatet av åtgärden.
 
 1. Hämta resultatet av åtgärden
 
-   * Skapa en `java.io.File` objekt som representerar en XML-fil som innehåller resultaten av `generatePDFOutput` -metod. Kontrollera att filnamnstillägget är .xml.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` till filen (se till att du använder `com.adobe.idp.Document` objekt som returneras av `applyUsageRights` metod).
+   * Skapa ett `java.io.File`-objekt som representerar en XML-fil som ska innehålla resultatet av metoden `generatePDFOutput`. Kontrollera att filnamnstillägget är .xml.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `com.adobe.idp.Document`-objektet till filen (se till att du använder det `com.adobe.idp.Document`-objekt som returnerades av metoden `applyUsageRights`).
 
 **Se även**
 
@@ -1870,62 +1870,62 @@ Skapa flera PDF-filer med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett Output Client-objekt.
 
-   * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `OutputServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `OutputServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Ange `?blob=mtom` om du vill använda MTOM.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `OutputServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `OutputServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Referera till en XML-datakälla.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra formulärdata som innehåller flera poster.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för XML-filen som innehåller flera poster.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra formulärdata som innehåller flera poster.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för XML-filen som innehåller flera poster.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Ange körningsalternativ för PDF.
 
-   * Skapa en `PDFOutputOptionsSpec` genom att använda dess konstruktor.
-   * Ange alternativet Många filer genom att tilldela ett booleskt värde till `OutputOptionsSpec` objektets `generateManyFiles` datamedlem. Tilldela till exempel värdet `true` till denna datamedlem för att instruera Output-tjänsten att skapa en separat PDF-fil för varje post i XML-datakällan. (Om du tilldelar `false` till den här datamedlemmen genererar Output-tjänsten en enda PDF som innehåller alla poster).
-   * Ange filens URI-alternativ genom att tilldela ett strängvärde som anger platsen för filen/filerna som utdatatjänsten genererar till `OutputOptionsSpec` objektets `fileURI` datamedlem. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
-   * Ange alternativet för postnamn genom att tilldela ett strängvärde som anger XML-elementnamnet i datakällan som avgränsar dataposterna till `OutputOptionsSpec` objektets `recordName` datamedlem.
-   * Ange alternativet för kopior genom att tilldela ett heltalsvärde som anger antalet kopior som utdatatjänsten genererar till `OutputOptionsSpec` objektets `copies` datamedlem.
+   * Skapa ett `PDFOutputOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Ange alternativet Många filer genom att tilldela ett booleskt värde till `generateManyFiles`-objektets `OutputOptionsSpec`-datamedlem. Tilldela till exempel värdet `true` till den här datamedlemmen för att instruera utdatatjänsten att skapa en separat PDF-fil för varje post i XML-datakällan. (Om du tilldelar `false` till den här datamedlemmen genererar utdatatjänsten en enda PDF som innehåller alla poster).
+   * Ange fil-URI-alternativet genom att tilldela ett strängvärde som anger platsen för filen/filerna som genereras av utdatatjänsten till `OutputOptionsSpec`-objektets `fileURI`-datamedlem. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
+   * Ange alternativet för postnamn genom att tilldela ett strängvärde som anger XML-elementnamnet i datakällan som avgränsar dataposterna till `recordName`-objektets `OutputOptionsSpec`-datamedlem.
+   * Ange alternativet för kopior genom att tilldela ett heltalsvärde som anger antalet kopior som utdatatjänsten genererar till `copies`-objektets `OutputOptionsSpec`-datamedlem.
 
 1. Ange alternativ för återgivning vid körning.
 
-   * Skapa en `RenderOptionsSpec` genom att använda dess konstruktor.
-   * Cachelagra formulärdesignen för att förbättra prestanda för Output-tjänsten genom att tilldela värdet `true` till `RenderOptionsSpec` objektets `cacheEnabled` datamedlem.
+   * Skapa ett `RenderOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Cachelagra formulärdesignen för att förbättra utdatatjänstens prestanda genom att tilldela värdet `true` till `RenderOptionsSpec`-objektets `cacheEnabled`-datamedlem.
 
 1. Generera flera PDF-filer.
 
-   Skapa flera PDF-filer genom att anropa `OutputServiceService` objektets `generatePDFOutput`och skicka följande värden:
+   Skapa flera PDF-filer genom att anropa `OutputServiceService`-objektets `generatePDFOutput`-metod och skicka följande värden:
 
-   * Ett TransformationFormat-uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`.
+   * Ett TransformationFormat-uppräkningsvärde. Ange `TransformationFormat.PDF` om du vill generera ett PDF-dokument.
    * Ett strängvärde som anger formulärdesignens namn.
    * Ett strängvärde som anger innehållsroten där formulärdesignen finns.
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
-   * The `BLOB` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
-   * A `BLOB` objekt som fylls i av `generatePDFOutput` -metod. The `generatePDFOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet.
-   * A `BLOB` objekt som fylls i av `generatePDFOutput` -metod. The `generatePDFOutput` -metoden fyller i det här objektet med resultatdata.
-   * An `OutputResult` objekt som innehåller resultatet av åtgärden.
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF.
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
+   * Objektet `BLOB` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+   * Ett `BLOB`-objekt som fylls i av metoden `generatePDFOutput`. Metoden `generatePDFOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet.
+   * Ett `BLOB`-objekt som fylls i av metoden `generatePDFOutput`. Metoden `generatePDFOutput` fyller i det här objektet med resultatdata.
+   * Ett `OutputResult`-objekt som innehåller resultatet av åtgärden.
 
 1. Hämta resultatet av åtgärden
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar en XML-filplats som innehåller resultatdata. Kontrollera att filnamnstillägget är .xml.
-   * Skapa en bytearray som lagrar datainnehållet i `BLOB` objekt som fylldes i med resultatdata av `OutputServiceService` objektets `generatePDFOutput` metod (den åttonde parametern). Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `binaryData` datamedlem.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till XML-filen genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar en plats för en XML-fil som innehåller resultatdata. Kontrollera att filnamnstillägget är .xml.
+   * Skapa en bytearray som lagrar datainnehållet för objektet `BLOB` som fylldes med resultatdata av metoden `generatePDFOutput` för objektet `OutputServiceService` (den åttonde parametern). Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `binaryData`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till XML-filen genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -1937,7 +1937,7 @@ Skapa flera PDF-filer med hjälp av Output API (webbtjänsten):
 
 ## Skapa sökregler {#creating-search-rules}
 
-Du kan skapa sökregler som resulterar i att Output-tjänsten undersöker indata och använder olika formulärdesigner baserade på datainnehållet för att generera utdata. Om texten *pantbrev* finns i indata, kan Output-tjänsten använda en formulärdesign som heter Mortgage.xdp. På samma sätt om texten *bil* finns i indata kan Output-tjänsten använda en formulärdesign som sparas som AutomobleLoan.xdp. Även om utdatatjänsten kan generera olika utdatatyper förutsätter det här avsnittet att utdatatjänsten genererar en PDF-fil. I följande diagram visas hur Output-tjänsten genererar en PDF-fil genom att bearbeta en XML-datafil och använda en av många formulärdesigner.
+Du kan skapa sökregler som resulterar i att Output-tjänsten undersöker indata och använder olika formulärdesigner baserade på datainnehållet för att generera utdata. Om texten *inteckning* till exempel finns i indata kan utdatatjänsten använda formulärdesignen Mortgage.xdp. Om texten *car* finns i indata kan Output-tjänsten använda en formulärdesign som har sparats som AutomobleLoan.xdp. Även om utdatatjänsten kan generera olika utdatatyper förutsätter det här avsnittet att utdatatjänsten genererar en PDF-fil. I följande diagram visas hur Output-tjänsten genererar en PDF-fil genom att bearbeta en XML-datafil och använda en av många formulärdesigner.
 
 Dessutom kan utdatatjänsten generera dokumentpaket där flera poster finns i datauppsättningen och varje post matchas mot en formulärdesign och ett dokument skapas som består av flera formulärdesigner.
 
@@ -1978,13 +1978,13 @@ Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, 
 
 Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten.
 
-**Referera en XML-datakälla**
+**Referera till en XML-datakälla**
 
 Det måste finnas ett XML-element för varje formulärfält som du vill fylla i med data. XML-elementnamnet måste matcha fältnamnet. Ett XML-element ignoreras om det inte motsvarar ett formulärfält eller om XML-elementnamnet inte matchar fältnamnet. Det är inte nödvändigt att matcha den ordning i vilken XML-elementen visas, förutsatt att alla XML-element har angetts.
 
 **Definiera sökregler**
 
-Om du vill definiera sökregler definierar du ett eller flera textmönster som Output Services söker efter i indata. För varje textmönster som du definierar anger du en motsvarande formulärdesign som används om textmönstret finns. Om det finns ett textmönster använder Output-tjänsten motsvarande formulärdesign för att generera utdata. Ett exempel på ett textmönster är *pantbrev*.
+Om du vill definiera sökregler definierar du ett eller flera textmönster som Output Services söker efter i indata. För varje textmönster som du definierar anger du en motsvarande formulärdesign som används om textmönstret finns. Om det finns ett textmönster använder Output-tjänsten motsvarande formulärdesign för att generera utdata. Ett exempel på ett textmönster är *inteckning*.
 
 >[!NOTE]
 >
@@ -2028,57 +2028,57 @@ Skapa sökregler med hjälp av utdata-API (Java):
 
 1. Skapa ett Output Client-objekt.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `OutputClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `OutputClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera till en XML-datakälla.
 
-   * Skapa en `java.io.FileInputStream` -objekt som representerar XML-datakällan som används för att fylla i PDF-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar XML-datakällan som används för att fylla i PDF-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för XML-filen.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Definiera sökregler.
 
-   * Skapa en `Rule` genom att använda dess konstruktor.
-   * Definiera ett textmönster genom att anropa `Rule` objektets `setPattern` och skickar ett strängvärde som anger ett textmönster.
-   * Definiera motsvarande formulärdesign genom att anropa `Rule` objektets `setForm` metod . Skicka ett strängvärde som anger formulärdesignens namn.
+   * Skapa ett `Rule`-objekt med hjälp av dess konstruktor.
+   * Definiera ett textmönster genom att anropa metoden `setPattern` för objektet `Rule` och skicka ett strängvärde som anger ett textmönster.
+   * Definiera motsvarande formulärdesign genom att anropa `Rule`-objektets `setForm`-metod. Skicka ett strängvärde som anger formulärdesignens namn.
 
    >[!NOTE]
    >
    >För varje textmönster som du vill definiera upprepar du de tre föregående delstegen.
 
-   * Skapa en `java.util.List` objekt genom att använda `java.util.ArrayList` konstruktor.
-   * För varje `Rule` som du skapade, anropar `java.util.List` objektets `add` och skicka `Rule` -objekt.
+   * Skapa ett `java.util.List`-objekt med hjälp av en `java.util.ArrayList`-konstruktor.
+   * För varje `Rule`-objekt som du har skapat anropar du `java.util.List`-objektets `add`-metod och skickar `Rule`-objektet.
 
 1. Ange körningsalternativ för PDF.
 
-   * Skapa en `PDFOutputOptionsSpec` genom att använda dess konstruktor.
-   * Ange namn och plats för den PDF-fil som utdatatjänsten genererar genom att anropa `PDFOutputOptionsSpec` objektets `setFileURI` -metod. Skicka ett strängvärde som anger platsen för PDF-filen. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
-   * Ange reglerna som du definierade genom att anropa `PDFOutputOptionsSpec` objektets `setRules` -metod. Skicka `java.util.List` objektet som innehåller `Rule` objekt.
-   * Ange antalet byte som ska genomsökas efter definierade textmönster genom att anropa `PDFOutputOptionsSpec` objektets `setLookAhead` -metod. Skicka ett heltalsvärde som representerar antalet byte.
+   * Skapa ett `PDFOutputOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Ange namn och plats för den PDF-fil som utdatatjänsten genererar genom att anropa `PDFOutputOptionsSpec`-objektets `setFileURI`-metod. Skicka ett strängvärde som anger platsen för PDF-filen. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
+   * Ange reglerna som du definierade genom att anropa `PDFOutputOptionsSpec`-objektets `setRules`-metod. Skicka `java.util.List`-objektet som innehåller `Rule`-objekten.
+   * Ange antalet byte som ska genomsökas efter definierade textmönster genom att anropa `PDFOutputOptionsSpec`-objektets `setLookAhead`-metod. Skicka ett heltalsvärde som representerar antalet byte.
 
 1. Ange alternativ för återgivning vid körning.
 
-   * Skapa en `RenderOptionsSpec` genom att använda dess konstruktor.
-   * Cachelagra formulärdesignen för att förbättra prestanda för Output-tjänsten genom att anropa `RenderOptionsSpec` objektets `setCacheEnabled` och skicka `true`.
+   * Skapa ett `RenderOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Cachelagra formulärdesignen för att förbättra utdatatjänstens prestanda genom att anropa `setCacheEnabled` för `RenderOptionsSpec`-objektet och skicka `true`.
 
 1. Skapa ett PDF-dokument.
 
-   Generera ett PDF-dokument som baseras på flera formulärdesigner genom att anropa `OutputClient` objektets `generatePDFOutput` och skicka följande värden:
+   Generera ett PDF-dokument som baseras på flera formulärdesigner genom att anropa `OutputClient`-objektets `generatePDFOutput`-metod och skicka följande värden:
 
-   * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`.
+   * Ett `TransformationFormat`-uppräkningsvärde. Ange `TransformationFormat.PDF` om du vill generera ett PDF-dokument.
    * Ett strängvärde som anger namnet på standardformulärdesignen. Det vill säga den formulärdesign som används om det inte finns något textmönster.
    * Ett strängvärde som anger innehållsroten där formulärdesignen finns.
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
-   * The `com.adobe.idp.Document` objekt som innehåller formulärdata som söks igenom av Output-tjänsten efter definierade textmönster.
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF.
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
+   * Objektet `com.adobe.idp.Document` som innehåller formulärdata som söks igenom av utdatatjänsten efter definierade textmönster.
 
-   The `generatePDFOutput` returnerar en `OutputResult` objekt som innehåller resultatet av åtgärden.
+   Metoden `generatePDFOutput` returnerar ett `OutputResult`-objekt som innehåller resultatet av åtgärden.
 
 1. Hämta resultatet av åtgärden.
 
-   * Skapa en `com.adobe.idp.Document` objekt som representerar statusen för `generatePDFOutput` metod genom att anropa `OutputResult` objektets `getStatusDoc` -metod.
-   * Skapa en `java.io.File` -objekt som innehåller resultatet av åtgärden. Kontrollera att filtillägget är .xml.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` till filen (se till att du använder `com.adobe.idp.Document` objekt som returneras av `getStatusDoc` metod).
+   * Skapa ett `com.adobe.idp.Document`-objekt som representerar `generatePDFOutput`-metodens status genom att anropa `OutputResult`-objektets `getStatusDoc`-metod.
+   * Skapa ett `java.io.File`-objekt som innehåller resultatet av åtgärden. Kontrollera att filtillägget är .xml.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `com.adobe.idp.Document`-objektet till filen (se till att du använder det `com.adobe.idp.Document`-objekt som returnerades av metoden `getStatusDoc`).
 
 **Se även**
 
@@ -2102,87 +2102,87 @@ Skapa sökregler med hjälp av Output API (webbtjänsten):
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett Output Client-objekt.
 
-   * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `OutputServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `OutputServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Ange `?blob=mtom` om du vill använda MTOM.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `OutputServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `OutputServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Referera till en XML-datakälla.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra data som ska sammanfogas med dokumentet PDF.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det PDF-dokument som ska krypteras och läget i vilket filen ska öppnas.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra data som ska sammanfogas med dokumentet PDF.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det PDF-dokument som ska krypteras och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Definiera sökregler.
 
-   * Skapa en `Rule` genom att använda dess konstruktor.
-   * Definiera ett textmönster genom att tilldela ett strängvärde som anger ett textmönster till `Rule` objektets `pattern` datamedlem.
-   * Definiera motsvarande formulärdesign genom att tilldela ett strängvärde som anger formulärdesignen till `Rule` objektets `form` datamedlem.
+   * Skapa ett `Rule`-objekt med hjälp av dess konstruktor.
+   * Definiera ett textmönster genom att tilldela ett strängvärde som anger ett textmönster till `pattern`-objektets `Rule`-datamedlem.
+   * Definiera motsvarande formulärdesign genom att tilldela ett strängvärde som anger formulärdesignen till `form`-objektets `Rule`-datamedlem.
 
    >[!NOTE]
    >
    >För varje textmönster som du vill definiera upprepar du de tre föregående delstegen.
 
-   * Skapa en `MyArrayOf_xsd_anyType` objekt som lagrar reglerna.
-   * Tilldela varje `Rule` objekt till ett element i `MyArrayOf_xsd_anyType` array. Anropa `MyArrayOf_xsd_anyType` objektets `Add` metod för varje `Rule` -objekt.
+   * Skapa ett `MyArrayOf_xsd_anyType`-objekt som lagrar reglerna.
+   * Tilldela varje `Rule`-objekt till ett element i arrayen `MyArrayOf_xsd_anyType`. Anropa `MyArrayOf_xsd_anyType`-objektets `Add`-metod för varje `Rule`-objekt.
 
 1. Ange körningsalternativ för PDF
 
-   * Skapa en `PDFOutputOptionsSpec` genom att använda dess konstruktor.
-   * Ange filens URI-alternativ genom att tilldela ett strängvärde som anger platsen för den PDF-fil som utdatatjänsten genererar till `PDFOutputOptionsSpec` objektets `fileURI` datamedlem. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
-   * Ange alternativet för kopior genom att tilldela ett heltalsvärde som anger antalet kopior som utdatatjänsten genererar till `PDFOutputOptionsSpec` objektets `copies` datamedlem.
-   * Ange reglerna som du definierade genom att tilldela `MyArrayOf_xsd_anyType` det objekt som lagrar reglerna till `PDFOutputOptionsSpec` objektets `rules` datamedlem.
-   * Ange antalet byte som ska genomsökas efter definierade textmönster genom att tilldela ett heltalsvärde som representerar antalet byte som ska genomsökas till `PDFOutputOptionsSpec` objektets `lookAhead` datametod.
+   * Skapa ett `PDFOutputOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Ange fil-URI-alternativet genom att tilldela ett strängvärde som anger platsen för den PDF-fil som utdatatjänsten genererar till `fileURI`-objektets `PDFOutputOptionsSpec`-datamedlem. Alternativet Fil-URI är relativt till J2EE-programservern som är värd för AEM Forms, inte klientdatorn.
+   * Ange alternativet för kopior genom att tilldela ett heltalsvärde som anger antalet kopior som utdatatjänsten genererar till `copies`-objektets `PDFOutputOptionsSpec`-datamedlem.
+   * Ange reglerna som du definierade genom att tilldela `MyArrayOf_xsd_anyType`-objektet som lagrar reglerna till `PDFOutputOptionsSpec`-objektets `rules`-datamedlem.
+   * Ange antalet byte som ska genomsökas efter definierade textmönster genom att tilldela ett heltalsvärde som representerar antalet byte som ska genomsökas till `lookAhead`-objektets `PDFOutputOptionsSpec`-datametod.
 
 1. Ange alternativ för återgivning vid körning
 
-   * Skapa en `RenderOptionsSpec` genom att använda dess konstruktor.
-   * Cachelagra formulärdesignen för att förbättra prestanda för Output-tjänsten genom att tilldela värdet `true` till `RenderOptionsSpec` objektets `cacheEnabled` datamedlem.
+   * Skapa ett `RenderOptionsSpec`-objekt med hjälp av dess konstruktor.
+   * Cachelagra formulärdesignen för att förbättra utdatatjänstens prestanda genom att tilldela värdet `true` till `RenderOptionsSpec`-objektets `cacheEnabled`-datamedlem.
 
    >[!NOTE]
    >
-   >Du kan inte ange version för PDF-dokumentet med `RenderOptionsSpec` objektets `pdfVersion` medlem om indatadokumentet är ett Acrobat-formulär. Dokumentet för utdata från PDF behåller PDF-versionen av Acrobat-formuläret. På samma sätt kan du inte ange alternativet PDF med märkord med hjälp av `RenderOptionsSpec` objektets `taggedPDF` om indatadokumentet är ett Acrobat-formulär.
+   >Du kan inte ange versionen av PDF-dokumentet med `RenderOptionsSpec`-objektets `pdfVersion`-medlem om indatadokumentet är ett Acrobat-formulär. Dokumentet för utdata från PDF behåller PDF-versionen av Acrobat-formuläret. På samma sätt kan du inte ange alternativet PDF med taggar med hjälp av `RenderOptionsSpec`-objektets `taggedPDF`-metod om indatadokumentet är ett Acrobat-formulär.
 
    >[!NOTE]
    >
-   >Du kan inte ange alternativet för linjär PDF med `RenderOptionsSpec` objektets `linearizedPDF` medlem om det inmatade PDF-dokumentet är certifierat eller digitalt signerat. Mer information finns i [Signera PDF-dokument digitalt](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).
+   >Du kan inte ange alternativet för linjär PDF genom att använda `RenderOptionsSpec`-objektets `linearizedPDF`-medlem om indatadokumentet är certifierat eller digitalt signerat. Mer information finns i [Signera PDF-dokument digitalt](/help/forms/developing/digitally-signing-certifying-documents.md#digitally-signing-pdf-documents).
 
 1. Skapa ett PDF-dokument
 
-   Skapa ett PDF-dokument genom att anropa `OutputServiceService` objektets `generatePDFOutput`och skicka följande värden:
+   Skapa ett PDF-dokument genom att anropa `OutputServiceService`-objektets `generatePDFOutput`metod och skicka följande värden:
 
-   * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett dokument i PDF anger du `TransformationFormat.PDF`.
+   * Ett `TransformationFormat`-uppräkningsvärde. Ange `TransformationFormat.PDF` om du vill generera ett PDF-dokument.
    * Ett strängvärde som anger formulärdesignens namn.
    * Ett strängvärde som anger innehållsroten där formulärdesignen finns.
-   * A `PDFOutputOptionsSpec` objekt som innehåller körningsalternativ för PDF.
-   * A `RenderOptionsSpec` objekt som innehåller alternativ för återgivning vid körning.
-   * The `BLOB` objekt som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
-   * A `BLOB` objekt som fylls i av `generatePDFOutput` -metod. The `generatePDFOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs bara för webbtjänstanrop).
-   * A `BLOB` objekt som fylls i av `generatePDFOutput` -metod. The `generatePDFOutput` -metoden fyller i det här objektet med resultatdata. (Det här parametervärdet krävs bara för webbtjänstanrop).
-   * An `OutputResult` objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs bara för webbtjänstanrop).
+   * Ett `PDFOutputOptionsSpec`-objekt som innehåller körningsalternativ för PDF.
+   * Ett `RenderOptionsSpec`-objekt som innehåller alternativ för återgivning vid körning.
+   * Objektet `BLOB` som innehåller XML-datakällan som innehåller data som ska sammanfogas med formulärdesignen.
+   * Ett `BLOB`-objekt som fylls i av metoden `generatePDFOutput`. Metoden `generatePDFOutput` fyller i det här objektet med genererade metadata som beskriver dokumentet. (Det här parametervärdet krävs bara för webbtjänstanrop).
+   * Ett `BLOB`-objekt som fylls i av metoden `generatePDFOutput`. Metoden `generatePDFOutput` fyller i det här objektet med resultatdata. (Det här parametervärdet krävs bara för webbtjänstanrop).
+   * Ett `OutputResult`-objekt som innehåller resultatet av åtgärden. (Det här parametervärdet krävs bara för webbtjänstanrop).
 
    >[!NOTE]
    >
-   >När ett PDF-dokument skapas genom att `generatePDFOutput` kan du inte sammanfoga data med ett XFA PDF-formulär som är signerat, certifierat eller innehåller användningsrättigheter. Mer information om användningsrättigheter finns i [Använda användningsbehörighet för PDF-dokument](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
+   >När du genererar ett PDF-dokument genom att anropa metoden `generatePDFOutput` kan du inte sammanfoga data med ett XFA PDF-formulär som är signerat, certifierat eller innehåller användningsrättigheter. Mer information om användningsrättigheter finns i [Använda användningsrättigheter i PDF-dokument](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
 
 1. Hämta resultatet av åtgärden
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar en XML-filplats som innehåller resultatdata. Kontrollera att filtillägget är XML.
-   * Skapa en bytearray som lagrar datainnehållet i `BLOB` objekt som fylldes i med resultatdata av `OutputServiceService` objektets `generatePDFOutput` metod (den åttonde parametern). Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till XML-filen genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar en plats för en XML-fil som innehåller resultatdata. Kontrollera att filtillägget är XML.
+   * Skapa en bytearray som lagrar datainnehållet för objektet `BLOB` som fylldes med resultatdata av metoden `generatePDFOutput` för objektet `OutputServiceService` (den åttonde parametern). Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till XML-filen genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -2194,7 +2194,7 @@ Skapa sökregler med hjälp av Output API (webbtjänsten):
 
 ## Förenklar dokument i PDF {#flattening-pdf-documents}
 
-Du kan använda utdatatjänsten för att omvandla ett interaktivt PDF-dokument till ett icke-interaktivt PDF. Med ett interaktivt PDF-dokument kan användare ange eller ändra data som finns i dokumentfälten i PDF. Processen att omforma ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument kallas för *förenkling*. När ett PDF-dokument förenklas kan användaren inte ändra data i dokumentfälten. Ett skäl till att förenkla ett PDF-dokument är att se till att data inte kan ändras.
+Du kan använda utdatatjänsten för att omvandla ett interaktivt PDF-dokument till ett icke-interaktivt PDF. Med ett interaktivt PDF-dokument kan användare ange eller ändra data som finns i dokumentfälten i PDF. Processen att omforma ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument kallas *förenkling*. När ett PDF-dokument förenklas kan användaren inte ändra data i dokumentfälten. Ett skäl till att förenkla ett PDF-dokument är att se till att data inte kan ändras.
 
 Du kan förenkla följande typer av PDF-dokument:
 
@@ -2229,11 +2229,11 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
-Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Om AEM Forms körs på en J2EE-programserver som stöds och som inte är JBoss, måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern som AEM Forms är distribuerad på. Mer information om platsen för alla AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett Output Client-objekt**
 
-Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du en `OutputClient` -objekt. Om du använder webbtjänstens API för utdata skapar du en `OutputServiceService` -objekt.
+Innan du programmässigt kan utföra en utdatatjänståtgärd måste du skapa ett klientobjekt för utdatatjänsten. Om du använder Java API skapar du ett `OutputClient`-objekt. Skapa ett `OutputServiceService`-objekt om du använder API:t för webbtjänsten för utdata.
 
 **Hämta ett interaktivt PDF-dokument**
 
@@ -2269,30 +2269,30 @@ Förenkla ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument me
 
 1. Skapa ett Output Client-objekt.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `OutputClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `OutputClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta ett interaktivt PDF-dokument.
 
-   * Skapa en `java.io.FileInputStream` objekt som representerar det interaktiva PDF-dokumentet som ska omformas med hjälp av dess konstruktor och som skickar ett strängvärde som anger platsen för den interaktiva PDF-filen.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det interaktiva PDF-dokumentet som ska omformas med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för den interaktiva PDF-filen.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Omforma PDF-dokumentet.
 
-   Omvandla det interaktiva PDF-dokumentet till ett icke-interaktivt PDF-dokument genom att anropa `OutputServiceService` objektets `transformPDF` och skicka följande värden:
+   Omvandla det interaktiva PDF-dokumentet till ett icke-interaktivt PDF-dokument genom att anropa `OutputServiceService`-objektets `transformPDF`-metod och skicka följande värden:
 
-   * The `com.adobe.idp.Document` det objekt som innehåller det interaktiva PDF-dokumentet.
-   * A `TransformationFormat` enum-värde. Om du vill generera ett icke-interaktivt PDF-dokument anger du `TransformationFormat.PDF`.
-   * A `PDFARevisionNumber` uppräkningsvärde som anger revisionsnumret. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `null`.
+   * Objektet `com.adobe.idp.Document` som innehåller det interaktiva PDF-dokumentet.
+   * Ett enum-värde på `TransformationFormat`. Om du vill generera ett icke-interaktivt PDF-dokument anger du `TransformationFormat.PDF`.
+   * Ett `PDFARevisionNumber`-uppräkningsvärde som anger revisionsnumret. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `null`.
    * Ett strängvärde som representerar ändringsnumret och året, avgränsat med ett kolon. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `null`.
-   * A `PDFAConformance` uppräkningsvärde som representerar PDF/A-överensstämmelsenivå. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `null`.
+   * Ett `PDFAConformance`-uppräkningsvärde som representerar PDF/A-överensstämmelsenivån. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `null`.
 
-   The `transformPDF` returnerar en `com.adobe.idp.Document` objekt som innehåller ett icke-interaktivt PDF-dokument.
+   Metoden `transformPDF` returnerar ett `com.adobe.idp.Document`-objekt som innehåller ett icke-interaktivt PDF-dokument.
 
 1. Spara det icke-interaktiva PDF-dokumentet som en PDF-fil.
 
-   * Skapa en `java.io.File` och se till att filnamnstillägget är .pdf.
-   * Anropa `Document` objektets `copyToFile` metod för att kopiera innehållet i `Document` till filen (se till att du använder `Document` objekt som returneras av `transformPDF` metod).
+   * Skapa ett `java.io.File`-objekt och kontrollera att filnamnstillägget är .pdf.
+   * Anropa `Document`-objektets `copyToFile`-metod för att kopiera innehållet i `Document`-objektet till filen (se till att du använder det `Document`-objekt som returnerades av metoden `transformPDF`).
 
 **Se även**
 
@@ -2316,49 +2316,49 @@ Förenkla ett interaktivt PDF-dokument till ett icke-interaktivt PDF-dokument me
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett Output Client-objekt.
 
-   * Skapa en `OutputServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `OutputServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`.) Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Ange dock `?blob=mtom` för att använda MTOM.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `OutputServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `OutputServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `OutputServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/OutputService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Ange `?blob=mtom` om du vill använda MTOM.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `OutputServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `OutputServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `OutputServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta ett interaktivt PDF-dokument.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra det interaktiva PDF-dokumentet.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det interaktiva PDF-dokumentet.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra det interaktiva PDF-dokumentet.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det interaktiva PDF-dokumentet.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll objektet `BLOB` genom att tilldela dess `MTOM`-egenskap med innehållet i bytearrayen.
 
 1. Omforma PDF-dokumentet.
 
-   Omvandla det interaktiva PDF-dokumentet till ett icke-interaktivt PDF-dokument genom att anropa `OutputClient` objektets `transformPDF` och skicka följande värden:
+   Omvandla det interaktiva PDF-dokumentet till ett icke-interaktivt PDF-dokument genom att anropa `OutputClient`-objektets `transformPDF`-metod och skicka följande värden:
 
-   * A `BLOB` det objekt som innehåller det interaktiva PDF-dokumentet.
-   * A `TransformationFormat` uppräkningsvärde. Om du vill generera ett icke-interaktivt PDF-dokument anger du `TransformationFormat.PDF`.
-   * A `PDFARevisionNumber` uppräkningsvärde som anger revisionsnumret.
-   * Ett booleskt värde som anger om `PDFARevisionNumber` enum-värde används. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `false`.
+   * Ett `BLOB`-objekt som innehåller det interaktiva PDF-dokumentet.
+   * Ett `TransformationFormat`-uppräkningsvärde. Om du vill generera ett icke-interaktivt PDF-dokument anger du `TransformationFormat.PDF`.
+   * Ett `PDFARevisionNumber`-uppräkningsvärde som anger revisionsnumret.
+   * Ett booleskt värde som anger om enum-värdet `PDFARevisionNumber` används. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `false`.
    * Ett strängvärde som representerar ändringsnumret och året, avgränsat med ett kolon. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `null`.
-   * A `PDFAConformance` uppräkningsvärde som representerar PDF/A-överensstämmelsenivå.
-   * Booleskt värde som anger om `PDFAConformance` enum-värde används. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `false`.
+   * Ett `PDFAConformance`-uppräkningsvärde som representerar PDF/A-överensstämmelsenivån.
+   * Booleskt värde som anger om enum-värdet `PDFAConformance` används. Eftersom den här parametern är avsedd för ett PDF/A-dokument kan du ange `false`.
 
-   The `transformPDF` returnerar en `BLOB` objekt som innehåller ett icke-interaktivt PDF-dokument.
+   Metoden `transformPDF` returnerar ett `BLOB`-objekt som innehåller ett icke-interaktivt PDF-dokument.
 
 1. Spara det icke-interaktiva PDF-dokumentet som en PDF-fil.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det icke-interaktiva PDF-dokumentet.
-   * Skapa en bytearray som lagrar datainnehållet i `BLOB` objekt som returneras av `transformPDF` -metod. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det icke-interaktiva PDF-dokumentet.
+   * Skapa en bytearray som lagrar datainnehållet för objektet `BLOB` som returnerades av metoden `transformPDF`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 

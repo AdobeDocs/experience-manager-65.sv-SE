@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # Anpassning på serversidan {#server-side-customization}
 
-| **[⇐ - funktioner](essentials.md)** | **[Anpassning på klientsidan](client-customize.md)** |
+| **[⇐ Feature Essentials](essentials.md)** | **[Anpassning på klientsidan¥](client-customize.md)** |
 |---|---|
-|   | **[SCF Handlebars Helpers](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers¥](handlebars-helpers.md)** |
 
 ## Java™-API:er {#java-apis}
 
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 SocialComponents är POJO som representerar en resurs för en AEM Communities-funktion. Helst representerar varje SocialComponent en specifik resourceType med exponerade GETters som tillhandahåller data till klienten så att resursen representeras korrekt. All affärslogik och vylogik är inkapslad i SocialComponent, inklusive webbplatsbesökarens sessionsinformation, om det behövs.
 
-Gränssnittet definierar en grundläggande uppsättning GETters som krävs för att representera en resurs. Viktigt är att gränssnittet anger kartan&lt;string object=&quot;&quot;> metoderna getAsMap() och String toJSONString() som behövs för att återge Handlebars-mallar och visa GET JSON-slutpunkter för resurser.
+Gränssnittet definierar en grundläggande uppsättning GETters som krävs för att representera en resurs. Viktigt är att gränssnittet innehåller metoderna Map&lt;String, Object> getAsMap() och String toJSONString() som krävs för att återge Handlebars-mallar och visa GET JSON-slutpunkter för resurser.
 
 Alla SocialComponent-klasser måste implementera gränssnittet `com.adobe.cq.social.scf.SocialComponent`
 
@@ -60,33 +60,33 @@ SocialComponentFactoryManager (hanterare) hanterar alla SocialComponents som är
 
 En SocialComponentFactoryManager är en OSGi-tjänst och har tillgång till andra OSGi-tjänster som kan skickas till SocialComponent via en konstruktor.
 
-En referens till OSGi-tjänsten erhålls genom att anropa `com.adobe.cq.social.scf.SocialComponentFactoryManager`
+En referens till OSGi-tjänsten hämtas genom att `com.adobe.cq.social.scf.SocialComponentFactoryManager` anropas
 
 ### HTTP API - POST-begäranden {#http-api-post-requests}
 
 #### Klassen PostOperation {#postoperation-class}
 
-Slutpunkterna för HTTP API-POSTEN är PostOperation-klasser som definieras genom implementering av `SlingPostOperation` interface (package `org.apache.sling.servlets.post`).
+Slutpunkterna för HTTP API-POSTEN är PostOperation-klasser som definieras genom implementering av `SlingPostOperation`-gränssnittet (paket `org.apache.sling.servlets.post`).
 
-The `PostOperation` implementeringsuppsättningar för slutpunkter `sling.post.operation` till ett värde som åtgärden svarar på. Alla POST-begäranden med en:operation-parameter inställd på det värdet delegeras till den här implementeringsklassen.
+Slutpunktsimplementeringen `PostOperation` ställer in `sling.post.operation` på ett värde som åtgärden svarar på. Alla POST-begäranden med en:operation-parameter inställd på det värdet delegeras till den här implementeringsklassen.
 
-The `PostOperation` anropar `SocialOperation` som utför de åtgärder som krävs för åtgärden.
+`PostOperation` anropar `SocialOperation` som utför de åtgärder som krävs för åtgärden.
 
-The `PostOperation` tar emot resultatet från `SocialOperation` och returnerar rätt svar till klienten.
+`PostOperation` tar emot resultatet från `SocialOperation` och returnerar det rätta svaret till klienten.
 
 #### Klassen SocialOperation {#socialoperation-class}
 
-Varje `SocialOperation` slutpunkten utökar klassen AbstractSocialOperation och åsidosätter metoden `performOperation()`. Den här metoden utför alla åtgärder som behövs för att slutföra åtgärden och returnera en `SocialOperationResult` eller i annat fall kasta `OperationException`. I så fall returneras en HTTP-felstatus med ett meddelande, om ett sådant finns, i stället för den vanliga JSON-svarskoden eller HTTP-statuskoden för lyckade åtgärder.
+Varje `SocialOperation`-slutpunkt utökar klassen AbstractSocialOperation och åsidosätter metoden `performOperation()`. Den här metoden utför alla åtgärder som krävs för att slutföra åtgärden och returnerar en `SocialOperationResult` eller utlöser en `OperationException`. I så fall returneras en HTTP-felstatus med ett meddelande, om ett sådant finns, i stället för den vanliga JSON-svarskoden eller HTTP-statuskoden för lyckade åtgärder.
 
-Utöka `AbstractSocialOperation` möjliggör återanvändning av `SocialComponents` för att skicka JSON-svar.
+Om du utökar `AbstractSocialOperation` kan du återanvända `SocialComponents` för att skicka JSON-svar.
 
 #### Klassen SocialOperationResult {#socialoperationresult-class}
 
-The `SocialOperationResult` klassen returneras som resultatet av `SocialOperation` och består av en `SocialComponent`, HTTP-statuskod och HTTP-statusmeddelande.
+Klassen `SocialOperationResult` returneras som resultatet av `SocialOperation` och består av ett `SocialComponent`-, HTTP-statuskod- och HTTP-statusmeddelande.
 
-The `SocialComponent` representerar den resurs som påverkades av åtgärden.
+`SocialComponent` representerar resursen som påverkades av åtgärden.
 
-För en Skapa-åtgärd finns följande i `SocialComponent` som ingår i `SocialOperationResult` representerar den skapade resursen och för en Update-åtgärd representerar den resursen som ändrades av åtgärden. Nej `SocialComponent` returneras för en Delete-åtgärd.
+För en Skapa-åtgärd representerar `SocialComponent` som ingår i `SocialOperationResult` den skapade resursen och för en Update-åtgärd representerar den resursen som ändrades av åtgärden. Ingen `SocialComponent` returneras för en borttagningsåtgärd.
 
 De HTTP-statuskoder som används är:
 
@@ -96,13 +96,13 @@ De HTTP-statuskoder som används är:
 
 #### Klassen OperationException {#operationexception-class}
 
-An `OperationExcepton` genereras när en åtgärd utförs om begäran inte är giltig eller om något annat fel inträffar. Exempel: interna fel, felaktiga parametervärden eller felaktiga behörigheter. An `OperationException` består av en HTTP-statuskod och ett felmeddelande, som returneras till klienten som svar på `PostOperatoin`.
+Ett `OperationExcepton` genereras när en åtgärd utförs om begäran inte är giltig eller om något annat fel inträffar. Exempel: interna fel, felaktiga parametervärden eller felaktiga behörigheter. En `OperationException` består av en HTTP-statuskod och ett felmeddelande, som returneras till klienten som svar på `PostOperatoin`.
 
 #### Klassen OperationService {#operationservice-class}
 
-Ramverket för den sociala komponenten rekommenderar att den affärslogik som ansvarar för att utföra åtgärden inte implementeras i `SocialOperation` i stället delegeras till en OSGi-tjänst. Med en OSGi-tjänst för affärslogik kan man `SocialComponent`, som `SocialOperation` -slutpunkt, som ska integreras med annan kod och ha olika affärslogik.
+Ramverket för sociala komponenter rekommenderar att den affärslogik som ansvarar för att utföra åtgärden inte implementeras i klassen `SocialOperation`, utan istället delegeras till en OSGi-tjänst. Om du använder en OSGi-tjänst för affärslogik kan en `SocialComponent`, som hanteras av en `SocialOperation`-slutpunkt, integreras med annan kod och ha en annan affärslogik.
 
-Alla `OperationService` klasser utöka `AbstractOperationService`, vilket tillåter ytterligare tillägg som kan knytas till den åtgärd som utförs. Varje åtgärd i tjänsten representeras av en `SocialOperation` klassen. The `OperationExtensions` klassen kan anropas under körning genom att anropa metoderna
+Alla `OperationService`-klasser utökar `AbstractOperationService`, vilket tillåter ytterligare tillägg som kan ansluta till den åtgärd som utförs. Varje åtgärd i tjänsten representeras av en `SocialOperation`-klass. Klassen `OperationExtensions` kan anropas under körningen genom att anropa metoderna
 
 * `performBeforeActions()`
 
@@ -113,18 +113,18 @@ Alla `OperationService` klasser utöka `AbstractOperationService`, vilket tillå
 
 #### Klassen OperationExtension {#operationextension-class}
 
-The `OperationExtension` klasser är anpassade koddelar som kan injiceras i en åtgärd som gör det möjligt att anpassa operationer efter affärsbehov. Konsumenterna av komponenten kan dynamiskt och stegvis lägga till funktioner i komponenten. Med hjälp av tilläggs-/krokmönstret kan utvecklare fokusera enbart på själva tilläggen och ta bort behovet av att kopiera och åsidosätta hela åtgärder och komponenter.
+Klasserna `OperationExtension` är anpassade koddelar som kan injiceras i en åtgärd som gör att åtgärder kan anpassas efter affärsbehoven. Konsumenterna av komponenten kan dynamiskt och stegvis lägga till funktioner i komponenten. Med hjälp av tilläggs-/krokmönstret kan utvecklare fokusera enbart på själva tilläggen och ta bort behovet av att kopiera och åsidosätta hela åtgärder och komponenter.
 
 ## Exempelkod {#sample-code}
 
-Exempelkod finns i [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) databas. Sök efter projekt med antingen `aem-communities` eller `aem-scf`.
+Exempelkod finns i [Adobe Experience Cloud GitHub](https://github.com/Adobe-Marketing-Cloud) -databasen. Sök efter projekt som har prefix med antingen `aem-communities` eller `aem-scf`.
 
 ## Bästa praxis {#best-practices}
 
-Visa [Riktlinjer för kodning](code-guide.md) för olika riktlinjer för kodning och metodtips för AEM Communities-utvecklare.
+I avsnittet [Riktlinjer för kodning](code-guide.md) finns olika riktlinjer för kodning och metodtips för AEM Communities-utvecklare.
 
-Se även [Lagringsresursleverantör (SRP) för UGC](srp.md) om du vill veta mer om hur du får åtkomst till användargenererat innehåll.
+Se även [Lagringsresursprovidern (SRP) för UGC](srp.md) om du vill veta mer om hur du får åtkomst till användargenererat innehåll.
 
-| **[⇐ - funktioner](essentials.md)** | **[Anpassning på klientsidan](client-customize.md)** |
+| **[⇐ Feature Essentials](essentials.md)** | **[Anpassning på klientsidan¥](client-customize.md)** |
 |---|---|
-|   | **[SCF Handlebars Helpers](handlebars-helpers.md)** |
+|   | **[SCF Handlebars Helpers¥](handlebars-helpers.md)** |

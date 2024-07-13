@@ -21,7 +21,7 @@ Du kan konfigurera RTF-redigeraren i Adobe Experience Manager så att den har fl
 
 ## Konfigurera flera redigerare {#configure-multiple-editors}
 
-Så här aktiverar du flera redigerare på plats strukturen för en `cq:InplaceEditingConfig` nodtypen har förbättrats med definitionen av `cq:ChildEditorConfig` nodtyp.
+Om du vill aktivera flera redigerare på plats har strukturen för en `cq:InplaceEditingConfig`-nodtyp förbättrats med definitionen för nodtypen `cq:ChildEditorConfig`.
 
 Till exempel:
 
@@ -58,7 +58,7 @@ Till exempel:
 
 Så här konfigurerar du flera redigerare:
 
-1. På noden `cq:inplaceEditing` (av typ `cq:InplaceEditingConfig`) definierar du följande egenskaper:
+1. Definiera följande egenskaper på noden `cq:inplaceEditing` (av typen `cq:InplaceEditingConfig`):
 
    * Namn:`editorType`
    * Typ: `String`
@@ -69,26 +69,26 @@ Så här konfigurerar du flera redigerare:
    * Namn: `cq:ChildEditors`
    * Typ: `nt:unstructured`
 
-1. Under `cq:childEditors` skapar du en nod för varje redigerare på plats:
+1. Under noden `cq:childEditors` skapar du en nod för varje lokal redigerare:
 
-   * Namn: Namnet på varje nod är namnet på den egenskap som den representerar, vilket är fallet med släppmål. Till exempel: `image` och `text`.
+   * Namn: Namnet på varje nod är namnet på den egenskap som den representerar, vilket är fallet med släppmål. Till exempel `image` och `text`.
    * Typ: `cq:ChildEditorConfig`
 
    >[!NOTE]
    >
-   >Det finns en korrelation mellan de definierade släppmålen och de underordnade redigerarna. Namnet på `cq:ChildEditorConfig` noden betraktas som det släppmål-ID som används som parameter till den markerade underordnade redigeraren. Om det redigerbara delområdet inte har något släppmål, till exempel i en textkomponent, betraktas namnet på den underordnade redigeraren fortfarande som ett ID som identifierar motsvarande redigerbara område.
+   >Det finns en korrelation mellan de definierade släppmålen och de underordnade redigerarna. Namnet på noden `cq:ChildEditorConfig` betraktas som mål-ID för släppning, som används som parameter till den markerade underordnade redigeraren. Om det redigerbara delområdet inte har något släppmål, till exempel i en textkomponent, betraktas namnet på den underordnade redigeraren fortfarande som ett ID som identifierar motsvarande redigerbara område.
 
-1. På var och en av dessa noder (`cq:ChildEditorConfig`) definierar egenskaperna:
+1. Definiera egenskaperna för var och en av dessa noder (`cq:ChildEditorConfig`):
 
    * Namn: `type`.
    * Värde: Namnet på den registrerade redigeraren på plats, till exempel `image` och `text`.
 
    * Namn: `title`.
-   * Värde: Den titel som visas i komponentens urvalslista med tillgängliga redigerare. Till exempel: `Image` och `Text`.
+   * Värde: Den titel som visas i komponentens urvalslista med tillgängliga redigerare. Till exempel `Image` och `Text`.
 
 ### Ytterligare konfiguration för RTF-redigerare {#additional-configuration-for-rich-text-editors}
 
-Konfigurationen för flera textredigerare är något annorlunda eftersom du kan konfigurera varje enskild RTE-instans separat. Mer information finns i [konfigurera RTF-redigeraren](/help/sites-administering/rich-text-editor.md). Om du vill ha flera textredigerare skapar du en konfiguration för varje fast textredigerare. Adobe rekommenderar att du skapar den nya konfigurationsnoden under `cq:InplaceEditingConfig` eftersom varje enskild RTE kan ha olika konfigurationer. Under den nya noden skapar du varje enskild RTE-konfiguration.
+Konfigurationen för flera textredigerare är något annorlunda eftersom du kan konfigurera varje enskild RTE-instans separat. Mer information finns i [Konfigurera RTF-redigeraren](/help/sites-administering/rich-text-editor.md). Om du vill ha flera textredigerare skapar du en konfiguration för varje fast textredigerare. Adobe rekommenderar att du skapar den nya konfigurationsnoden under `cq:InplaceEditingConfig` eftersom varje enskild RTE kan ha olika konfigurationer. Under den nya noden skapar du varje enskild RTE-konfiguration.
 
 ```xml
     texttext
@@ -105,7 +105,7 @@ Konfigurationen för flera textredigerare är något annorlunda eftersom du kan 
 
 >[!NOTE]
 >
->För RTE gäller dock att `configPath` -egenskapen stöds när det bara finns en instans av textredigeraren (redigerbart delområde) i komponenten. Detta använder `configPath` har stöd för bakåtkompatibilitet med äldre användargränssnittsdialogrutor för komponenten.
+>För RTE stöds egenskapen `configPath` om det bara finns en instans av textredigeraren (redigerbart delområde) i komponenten. Den här användningen av `configPath` har stöd för bakåtkompatibilitet med äldre användargränssnittsdialogrutor för komponenten.
 
 >[!CAUTION]
 >
@@ -113,12 +113,12 @@ Konfigurationen för flera textredigerare är något annorlunda eftersom du kan 
 
 ## Kodexempel {#code-samples}
 
-Koden för den här sidan finns på [aem-authoring-hybrideditors project on GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors). Du kan hämta hela projektet som [ett ZIP-arkiv](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip).
+Du hittar koden för den här sidan i projektet [aem-authoring-hybrideditors på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors). Du kan hämta hela projektet som [ett ZIP-arkiv](https://github.com/Adobe-Marketing-Cloud/aem-authoring-hybrideditors/archive/master.zip).
 
 ## Lägga till en lokal redigerare {#add-an-in-place-editor}
 
-Allmän information om hur du lägger till en redigerare på plats finns i dokumentet [anpassa redigering av sidor](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor).
+Allmän information om hur du lägger till en lokal redigerare finns i dokumentet [Anpassa sidredigering](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor).
 
 >[!MORELIKETHIS]
 >
->* [Konfigurera RTF-redigeraren i Experience Manager](/help/sites-administering/rich-text-editor.md).
+>* [Konfigurera RTF-redigerare i Experience Manager](/help/sites-administering/rich-text-editor.md).

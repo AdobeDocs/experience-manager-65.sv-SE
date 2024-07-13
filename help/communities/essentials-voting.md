@@ -18,9 +18,9 @@ ht-degree: 0%
 
 # Grundläggande röstning {#voting-essentials}
 
-Röstningskomponenten, [tally](tally.md) underklass, är ett användbart verktyg som gör att medlemmar kan betygsätta en viss del av innehållet genom att bara markera upp- eller nedpilarna för att ange sin åsikt.
+Röstkomponenten, en [tally](tally.md)-underklass, är ett användbart verktyg som gör att medlemmar kan betygsätta en viss del av innehållet genom att bara markera upp- eller nedpilarna för att ange sin åsikt.
 
-Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. Varje instans måste konfigureras med en unik `tally name` -egenskap.
+Det är tillåtet att placera flera instanser av en röstkomponent på samma sida. Varje instans måste konfigureras med en unik `tally name`-egenskap.
 
 Anonym publicering av en röst stöds inte. Besökare på webbplatsen måste registrera sig och logga in för att kunna rösta endast en gång. Den inloggade besökaren (medlemmen) kan när som helst ändra sin röst.
 
@@ -33,11 +33,11 @@ Anonym publicering av en röst stöds inte. Besökare på webbplatsen måste reg
    <td>social/tally/components/hbs/voice</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>oklanderlig</strong></a></td>
-   <td>Ja - egenskaper kan redigeras i <i>design </i>läge</td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>inkluderbar</strong></a></td>
+   <td>Ja - egenskaper kan redigeras i <i>designläge </i></td>
   </tr>
   <tr>
-   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>klientlibs</strong></a></td>
+   <td> <a href="client-customize.md#clientlibs-for-scf"><strong>clientlibs</strong></a></td>
    <td> cq.social.hbs.voting</td>
   </tr>
   <tr>
@@ -61,7 +61,7 @@ Anonym publicering av en röst stöds inte. Besökare på webbplatsen måste reg
 
 * [Tally API:er](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [Slutpunkter](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [Slutpunkter ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [Anpassningar på serversidan](server-customize.md)
 
@@ -70,13 +70,13 @@ Anonym publicering av en röst stöds inte. Besökare på webbplatsen måste reg
 UGC bör modereras med någon av standardmetoderna för moderering.
 Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
-**Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
+**Platsen och formatet för användargenererat innehåll i databasen kan ändras utan varning**.
 
 Se:
 
-* [Översikt över lagringsresursprovider](srp.md) - introduktion och översikt över databasanvändningen.
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel.
+* [Lagringsresursprovideröversikt](srp.md) - introduktion och översikt över databasanvändningen.
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
 * [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utfasade verktygsmetoder till aktuella SRP-verktygsmetoder.

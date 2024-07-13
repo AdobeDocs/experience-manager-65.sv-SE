@@ -30,7 +30,7 @@ Nedan finns omfattande instruktioner om hur du aktiverar transaktioner, listan m
 * [Lista över fakturerbara API:er för AEM Forms i JEE](/help/forms/using/transaction-reports-billable-apis-jee.md)
 * [Registrera en transaktion för anpassade komponent-API:er](/help/forms/using/record-transaction-custom-component-jee.md)
 
-**Transaction Reporting for AEM Forms on OSGi**
+**Transaktionsrapportering för AEM Forms på OSGi**
 
 * [Transaktionsrapporter för AEM Forms på OSGi](/help/forms/using/transaction-reports-overview.md)
 * [Visa och förstå transaktionsrapporter för AEM Forms på OSGi](/help/forms/using/viewing-and-understanding-transaction-reports.md)

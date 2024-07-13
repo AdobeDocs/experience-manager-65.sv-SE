@@ -33,10 +33,10 @@ Helst behöver inte en annan programmerare öppna en modul för att förstå vad
 I AEM används följande konventioner:
 
 
-* En enskild implementering av ett gränssnitt namnges `<Interface>Impl`, det vill säga `ReaderImpl`.
-* Flera implementeringar av ett gränssnitt namnges `<Variant><Interface>`, det vill säga `JcrReader` och `FileSystemReader`.
-* Abstrakta basklasser namnges `Abstract<Interface>` eller `Abstract<Variant><Interface>`.
-* Paket namnges `com.adobe.product.module`. Varje Maven-artefakt eller OSGi-paket måste ha ett eget paket.
+* En enskild implementering av ett gränssnitt heter `<Interface>Impl`, det vill säga `ReaderImpl`.
+* Flera implementeringar av ett gränssnitt har namnet `<Variant><Interface>`, det vill säga `JcrReader` och `FileSystemReader`.
+* Abstrakta basklasser har namnet `Abstract<Interface>` eller `Abstract<Variant><Interface>`.
+* Paket har namnet `com.adobe.product.module`. Varje Maven-artefakt eller OSGi-paket måste ha ett eget paket.
 * Java™-implementeringar placeras i ett impl-paket under deras API.
 
 
@@ -55,7 +55,7 @@ Helst borde namn visa sin avsikt. Ett vanligt kodtest för när namn inte är s�
    <td><p>int elapsedTimeInDays;</p> </td>
   </tr>
   <tr>
-   <td><p>//hämta taggade bilder<br /> public List getItems() {}</p> </td>
+   <td><p>//get tagged images<br /> public List getItems() {}</p> </td>
    <td><p>public List getTaggedImages() {}</p> </td>
   </tr>
  </tbody>
@@ -67,7 +67,7 @@ DRY anger att samma koduppsättning aldrig ska dupliceras. Detta gäller även f
 
 ### Undvik nakna CSS-regler {#avoid-naked-css-rules}
 
-CSS-reglerna ska vara specifika för målelementet i programmets sammanhang. En CSS-regel används till exempel på *.content.center* skulle vara alltför brett och skulle kunna påverka mycket av innehållet i hela systemet, vilket skulle kräva att andra åsidosätter den här stilen i framtiden. med beaktande av följande: *.myapp-centertext* skulle vara en mer specifik regel eftersom den anger centrerad *text* i programmets sammanhang.
+CSS-reglerna ska vara specifika för målelementet i programmets sammanhang. En CSS-regel som tillämpas på *.content.center* skulle till exempel vara alltför bred och skulle kunna påverka mycket innehåll i hela systemet, vilket kräver att andra åsidosätter den här stilen i framtiden. *.myapp-centertext* skulle vara en mer specifik regel eftersom den anger centrerad *text* i programmets sammanhang.
 
 ### Eliminera användning av inaktuella API:er {#eliminate-usage-of-deprecated-apis}
 
@@ -79,11 +79,11 @@ Alla strängar som inte tillhandahålls av en författare ska kapslas in i ett a
 
 ### Escape-resurssökvägar för säkerhet {#escape-resource-paths-for-safety}
 
-Även om sökvägar i JCR inte får innehålla blanksteg, bör koden inte brytas om de finns. Jackrabbit tillhandahåller en textverktygsklass med *escape()* och *escapePath()* metoder. För JSP:er visar Granite-gränssnittet en *granite:encodeURIPath() EL* funktion.
+Även om sökvägar i JCR inte får innehålla blanksteg, bör koden inte brytas om de finns. Jackrabbit tillhandahåller en textverktygsklass med metoderna *escape()* och *escapePath()* . För JSP:er visar Granite-gränssnittet en *granite:encodeURIPath() EL* -funktion.
 
 ### Använd XSS API och/eller HTML för att skydda mot serveröverskridande skriptattacker (cross-site scripting) {#use-the-xss-api-and-or-htl-to-protect-against-cross-site-scripting-attacks}
 
-AEM tillhandahåller ett XSS-API för att enkelt rensa parametrar och säkerställa säkerheten vid serveröverskridande skriptattacker (cross-site scripting). HTML har dessutom dessa skydd inbyggda direkt i mallspråket. Ett API-kalkylblad finns att ladda ned på [Utveckling - Riktlinjer och bästa praxis](/help/sites-developing/dev-guidelines-bestpractices.md).
+AEM tillhandahåller ett XSS-API för att enkelt rensa parametrar och säkerställa säkerheten vid serveröverskridande skriptattacker (cross-site scripting). HTML har dessutom dessa skydd inbyggda direkt i mallspråket. Ett API-kalkylblad finns tillgängligt för hämtning på [Development - Guidelines and Best Practices](/help/sites-developing/dev-guidelines-bestpractices.md).
 
 ### Implementera lämplig loggning {#implement-appropriate-logging}
 
@@ -95,7 +95,7 @@ För Java™-kod har AEM stöd för slf4j som standard-API för loggningsmeddela
 * FELSÖK: Information om bearbetning på lägre nivå. Användbart vid felsökning av supportproblem.
 * TRACE: Information på lägsta nivå, till exempel genom att ange/avsluta metoder. Detta används vanligtvis bara av utvecklare.
 
-Om det finns JavaScript, *console.log* ska bara användas under utvecklingen och alla loggsatser ska tas bort före lanseringen.
+Om det finns JavaScript bör *console.log* endast användas under utvecklingen och alla loggsatser bör tas bort före lanseringen.
 
 ### Undvik lasthanteringsprogrammering {#avoid-cargo-cult-programming}
 

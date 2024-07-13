@@ -26,15 +26,15 @@ Produkt- och kategoriväljare är modala användargränssnittsdialogrutor som ge
 
 Den här väljaren kan användas för att bläddra i katalogstrukturen eller för fulltextsökning för att hitta produkten. Produkter med variationer erbjuder en mappikon i kolumnen&quot;Typ&quot;. När du klickar på mappikonen öppnas variationerna för den valda produkten.
 
-![Produktväljare](/help/commerce/cif/assets/authoring/product-picker.png)
+![Produktväljaren](/help/commerce/cif/assets/authoring/product-picker.png)
 
 Om du klickar på den överordnade kategorin återgår författaren till produktnivån.
 
-![Produktväljare](/help/commerce/cif/assets/authoring/product-picker-variation.png)
+![Produktväljaren](/help/commerce/cif/assets/authoring/product-picker-variation.png)
 
 **Exempel på produktteaser**
 
-![Teaser component without selection](/help/commerce/cif/assets/authoring/teaser_component_without_selection.png)
+![Teaser-komponent utan markering](/help/commerce/cif/assets/authoring/teaser_component_without_selection.png)
 
 Konfigurationsdialogrutan för den här komponenten kräver en produkt. CIF använder SKU:n som produktidentifierare. Författare kan antingen ange sku för hand eller klicka på mappikonen för att öppna produktväljaren. När du har valt och stängt väljaren visas namnet på den valda produkten i komponentdialogrutan
 
@@ -46,7 +46,7 @@ Den här väljaren kan erbjuda bläddring i katalogstrukturen för att hitta kat
 
 ![Kategoriväljaren](/help/commerce/cif/assets/authoring/category-picker.png)
 
-**Exempel på karusell**
+**Exempel på kategorikarusell**
 
 ![Carousel-komponent utan markering](/help/commerce/cif/assets/authoring/carousel_component_without_selection.png)
 
@@ -60,9 +60,9 @@ Den universella redigeraren har utökat med funktioner för att komma åt realti
 
 ### Åtkomst till produktdata {#access-product-data}
 
-Fliken Resurser i redigerarens sidpanel ger åtkomst till produktdata genom att välja typen Produkter. Data hämtas live från den konfigurerade slutpunkten för e-handel. Filtret är en textsökning på slutpunkten för e-handel för att hitta specifika produkter.
+På fliken Assets i redigerarens sidpanel kan du få tillgång till produktdata genom att välja typen Produkter. Data hämtas live från den konfigurerade slutpunkten för e-handel. Filtret är en textsökning på slutpunkten för e-handel för att hitta specifika produkter.
 
-![Sidopanel för produktdata](/help/commerce/cif/assets/authoring/products-side-panel.png)
+![Panelen Produktdata](/help/commerce/cif/assets/authoring/products-side-panel.png)
 
 I motsats till resurser kan produkter läggas till på en sida (vilket skapar en produktlaserkomponent som standard) eller komponenter (som för närvarande stöds är produktteaser och produktkarusell).
 
@@ -80,9 +80,9 @@ Då skapas en platshållarlänk som ersätts med en riktig länk när sidan åte
 
 ### Åtkomst till associerat produktinnehåll {#associated-content}
 
-Om 1:n-produkterna känns igen på en sida visas automatiskt fliken &quot;Associerat Commerce-innehåll&quot; på sidopanelen. På den här fliken kan författare snabbt komma åt AEM som taggats med produkten (se [förbättra produktdata med tillhörande AEM](./enrich-product-associated-content.md) för mer information). På den här fliken finns listrutor som du kan använda för att filtrera efter innehållstyp och specifika produkter om det finns flera produkter på sidan. Att använda innehållet fungerar på samma sätt som att använda innehåll från fliken Resurser.
+Om 1:n-produkterna känns igen på en sida visas automatiskt fliken &quot;Associerat Commerce-innehåll&quot; på sidopanelen. På den här fliken kan författare snabbt komma åt AEM innehåll som taggats med produkten (mer information finns i [Förbättra produktdata med associerat AEM](./enrich-product-associated-content.md)). På den här fliken finns listrutor som du kan använda för att filtrera efter innehållstyp och specifika produkter om det finns flera produkter på sidan. Det fungerar precis som att använda innehåll från fliken&quot;Assets&quot;.
 
-![Sidopanel för produktdata](/help/commerce/cif/assets/authoring/associated-commerce-content-tab.png)
+![Panelen Produktdata](/help/commerce/cif/assets/authoring/associated-commerce-content-tab.png)
 
 ### Förhandsgranska mellanlagrade produktdata {#staged-data}
 
@@ -92,7 +92,7 @@ I Timewarp-läget i redigeraren kan författare förhandsgranska och bläddra i 
 
 Komponenterna visar en visuell indikator om det använda datumet mellanlagras.
 
-![Mellanliggande indikator](/help/commerce/cif/assets/authoring/staged-indicator.png)
+![Mellanlagrad indikator](/help/commerce/cif/assets/authoring/staged-indicator.png)
 
 ## Omnisearch {#omnisearch}
 
@@ -102,6 +102,6 @@ Att använda Omnisearch är ett enkelt sätt för användarna att hitta AEM inne
 
 Resultatet grupperas efter typ.
 
-    >[!OBS!]
+    >[!NOTE]
     >
     >Fulltextsökning i Omnissearch stöder inte associerade innehållsfragment. Använd SKU eller UID för att hitta associerade innehållsfragment.

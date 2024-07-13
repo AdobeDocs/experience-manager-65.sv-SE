@@ -38,7 +38,7 @@ Slutligen publicerar administratörer det uppdaterade programinnehållet strateg
 
 ## Hantera programpanel {#the-manage-app-tile}
 
-The **Hantera program** Tile visar tillgänglig programinformation:
+**Hantera app**-panelen visar tillgänglig programinformation:
 
 * Titel
 * Beskrivning
@@ -50,7 +50,7 @@ The **Hantera program** Tile visar tillgänglig programinformation:
 
 ## Hantera anslutningspanel {#the-manage-connection-tile}
 
-The **Hantera anslutning** visas anslutningsinformationen för AEM Mobile On-demand Services:
+Under **Hantera anslutning** visas anslutningsinformationen för AEM Mobile On-demand Services:
 
 * Namn på molnkonfiguration
 * Projektnamn och ID
@@ -60,7 +60,7 @@ The **Hantera anslutning** visas anslutningsinformationen för AEM Mobile On-dem
 >
 >Klicka på kugghjulet i det övre högra hörnet för att konfigurera en molnkonfiguration för mobil på begäran.
 >
->Se [Konfigurera Mobile On Demand Services](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md) för mer information.
+>Mer information finns i [Konfigurera Mobile On-Demand Services](/help/mobile/mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md).
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
@@ -76,16 +76,16 @@ Du kan expandera varje ruta för att få en mer detaljerad listvy genom att klic
 
 ### Panelen Hantera banderoller {#the-manage-banners-tile}
 
-The **Hantera banderoller** kan du hantera innehållet för en banderoll. Följande information visas för en banderoll:
+Med rutan **Hantera banderoller** kan du hantera innehållet för en banderoll. Följande information visas för en banderoll:
 
 * image
-* **RUBRIK**: bannerns namn
-* **ÄNDRAD**: senast ändrad i AEM
-* **ÖVERFÖRD**: senast överförd från AEM
-* **PUBLICERAT**: senaste publicerade AEM
-* **KÄLLA**: källa (AEM lokal eller fjärransluten från Mobile On Demand)
+* **TITLE**: bannerns namn
+* **ÄNDRAT**: senast ändrat i AEM
+* **ÖVERFÖRT**: senast överfört från AEM
+* **PUBLICERAD**: AEM för senaste publicerade begäran
+* **SOURCE**: källa (AEM lokal eller fjärransluten från Mobile On Demand)
 
-Följande bild visar **Hantera banderoller** i AEM Mobile Application Dashboard:
+I följande bild visas panelen **Hantera banners** på AEM Mobile Application Dashboard:
 
 ![chlimage_1-57](assets/chlimage_1-57.png)
 
@@ -95,16 +95,16 @@ Följande bild visar **Hantera banderoller** i AEM Mobile Application Dashboard:
 
 ### Panelen Hantera artiklar {#the-manage-articles-tile}
 
-The **Hantera artiklar** kan du hantera innehållet i en artikel. Följande information visas för en artikel:
+Med rutan **Hantera artiklar** kan du hantera innehållet för en artikel. Följande information visas för en artikel:
 
 * image
-* **RUBRIK**: artikelns namn
-* **ÄNDRAD**: senast ändrad i AEM
-* **ÖVERFÖRD**: senast överförd från AEM
-* **PUBLICERAT**: senaste publicerade AEM
-* **KÄLLA**: källa (AEM lokal eller fjärransluten från Mobile On-Demand)
+* **TITLE**: artikelns namn
+* **ÄNDRAT**: senast ändrat i AEM
+* **ÖVERFÖRT**: senast överfört från AEM
+* **PUBLICERAD**: AEM för senaste publicerade begäran
+* **SOURCE**: källa (AEM lokal eller fjärransluten från Mobile On-Demand)
 
-Följande bild visar **Hantera artiklar** i AEM Mobile Application Dashboard:
+Följande bild visar panelen **Hantera artiklar** på AEM Mobile Application Dashboard:
 
 ![chlimage_1-58](assets/chlimage_1-58.png)
 
@@ -114,16 +114,16 @@ Följande bild visar **Hantera artiklar** i AEM Mobile Application Dashboard:
 
 ### Panelen Hantera samlingar {#the-manage-collections-tile}
 
-The **Hantera samlingar** kan du hantera innehållet i en samling. Följande information visas för en samling:
+Med rutan **Hantera samlingar** kan du hantera innehåll för en samling. Följande information visas för en samling:
 
 * image
-* **RUBRIK**: samlingens namn
-* **ÄNDRAD**: senast ändrad i AEM
-* **ÖVERFÖRD**: senast överförd från AEM
-* **PUBLICERAT**: senaste publicerade AEM
-* **KÄLLA**: källa (AEM lokal eller fjärransluten från Mobile On-Demand)
+* **TITLE**: samlingens namn
+* **ÄNDRAT**: senast ändrat i AEM
+* **ÖVERFÖRT**: senast överfört från AEM
+* **PUBLICERAD**: AEM för senaste publicerade begäran
+* **SOURCE**: källa (AEM lokal eller fjärransluten från Mobile On-Demand)
 
-Följande bild visar **Hantera samlingar** i AEM Mobile Application Dashboard:
+I följande bild visas panelen **Hantera samlingar** på AEM Mobile Application Dashboard:
 
 ![chlimage_1-59](assets/chlimage_1-59.png)
 

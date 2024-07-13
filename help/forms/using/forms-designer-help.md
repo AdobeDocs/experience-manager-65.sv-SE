@@ -18,8 +18,8 @@ ht-degree: 0%
 # Hjälp för Forms Designer {#form-designer-help}
 
 [Använda Designer](https://www.adobe.com/go/learn_aemforms_designer_65)
-[Snabbstart för Designer Tutorials](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
-[Exempel för Designer](https://www.adobe.com/go/learn_aemforms_designer_samples_65)
-[Skriptgrunder för Designer](https://www.adobe.com/go/learn_aemforms_scriptingBasics_65)
-[Skriptreferens för Designer](https://www.adobe.com/go/learn_aemforms_scriptingReference_65)
-[FormCalc-referens för Designer](https://www.adobe.com/go/learn_aemforms_formCalc_65)
+[ Designer Quick Start Tutorials ](https://www.adobe.com/go/learn_aemforms_designer_quick_start_65)
+[Designer Samples](https://www.adobe.com/go/learn_aemforms_designer_samples_65)
+[Designer Skriptgrunder](https://www.adobe.com/go/learn_aemforms_scriptingBasics_65)
+[Designer skriptreferens](https://www.adobe.com/go/learn_aemforms_scriptingReference_65)
+[Referens för Designer FormCalc](https://www.adobe.com/go/learn_aemforms_formCalc_65)

@@ -24,7 +24,7 @@ Med funktionen för begränsning av bidrag kan du begränsa bidragen från commu
 
 När en medlem är begränsad kommer alla inlägg som överskrider det tillåtna antalet bidrag att resultera i en varning om att gränsen har överskridits och att inlägget avvisas. Community-medlemmen kan sedan gå till communitymeddelandecentret och kontakta en community-ansvarig som kan ta bort begränsningarna om det är lämpligt.
 
-Bidragsgränser kan aktiveras individuellt från [Medlemskonsol](members.md) och/eller konfigureras att aktiveras automatiskt när besökarna blir nya medlemmar.
+Tilläggsgränser kan aktiveras individuellt från [medlemskonsolen](members.md) och/eller konfigureras så att de aktiveras automatiskt när besökarna blir nya medlemmar.
 
 Med hjälp av medlemskonsolen kan bidragsgränser tas bort proaktivt för en medlem av en community-chef när som helst, eller tas bort reaktivt när en medlem skickar ett meddelande till en community-administratör som gör en sådan begäran.
 
@@ -40,18 +40,18 @@ Så här når du OSGi-konfigurationen:
 
 * På den primära utgivaren:
 * Logga in med administratörsbehörighet.
-* Öppna [Webbkonsol](../../help/sites-deploying/configuring-osgi.md).
+* Gå till [webbkonsolen](../../help/sites-deploying/configuring-osgi.md).
 
-   * Till exempel: [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
+   * Exempel: [http://localhost:4503/system/console/configMgr](http://localhost:4503/system/console/configMgr)
 
-* Sök `AEM Communities User Generated Content Contribution Limits Configuration`.
+* Sök efter `AEM Communities User Generated Content Contribution Limits Configuration`.
 * Välj redigeringsikonen.
 
 ![configure-limits](assets/configure-limits.png)
 
 * **[!UICONTROL Automatically Apply UGC Contribution Limits]**
 
-  Om det här alternativet är markerat anger automatiskt bidragsgränser för användare när de registrerar sig som community-medlemmar. Detta återspeglas i communitymedlemmens profil och kan aktiveras/inaktiveras från [medlemskonsol](members.md). Nya medlemmar med en e-postadress från ett tillåtelselista av domäner begränsas aldrig.
+  Om det här alternativet är markerat anger automatiskt bidragsgränser för användare när de registrerar sig som community-medlemmar. Detta återspeglas i communitymedlemmens profil och kan aktiveras/inaktiveras från [medlemskonsolen](members.md). Nya medlemmar med en e-postadress från ett tillåtelselista av domäner begränsas aldrig.
 
   Standard är avmarkerat.
 
@@ -71,7 +71,7 @@ Så här når du OSGi-konfigurationen:
 
   En lista med tillåtelselista i en eller flera e-postdomäner. Markera +-ikonen om du vill göra fler poster.
 
-  Användare med e-postadresser tillåtelselista i domäner påverkas inte när UGC-bidragsgränser tillämpas automatiskt. Exempel: om domän `mycompany.com` läggs till i listan över domäner och sedan en medlem med e-postadress `me@mycompany.com` begränsas aldrig från publicering.
+  Användare med e-postadresser tillåtelselista i domäner påverkas inte när UGC-bidragsgränser tillämpas automatiskt. Om till exempel domänen `mycompany.com` läggs till i listan över domäner, begränsas aldrig en medlem med e-postadressen `me@mycompany.com` från publicering.
 
   Standard är en tom tillåtelselista.
 

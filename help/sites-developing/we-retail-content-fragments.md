@@ -18,50 +18,50 @@ ht-degree: 0%
 
 # Testa innehållsfragment i webb.detaljhandel{#trying-out-content-fragments-in-we-retail}
 
-Med innehållsfragment kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. **Vi.butik** (som är tillgängligt i en körklar instans av Adobe Experience Manager) innehåller fragmentet **Arktisk surfning i Lofoten** som ett grundläggande urval. Detta visar att:
+Med innehållsfragment kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. **We.Retail** (som tillgängligt i en körklar instans av Adobe Experience Manager) innehåller fragmentet **Arktisk surfning i Lofoten** som ett grundläggande exempel. Detta visar att:
 
-* Adobe Experience Manager (AEM) innehållsfragment är [skapat och hanterat som sidoberoende resurser](/help/assets/content-fragments/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer.
+* Adobe Experience Manager (AEM) innehållsfragment [skapas och hanteras som sidoberoende resurser](/help/assets/content-fragments/content-fragments.md). Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer.
 
-   * Se [Var kan du hitta resurser för innehållsfragment i webb.butik](#where-to-find-content-fragments-in-we-retail)
+   * Se [Var du kan hitta resurser för innehållsfragment i We.Retail](#where-to-find-content-fragments-in-we-retail)
 
-* Då kan du [använda dessa fragment och deras variationer vid redigering](/help/sites-authoring/content-fragments.md) dina innehållssidor.
+* Du kan sedan [använda dessa fragment och deras varianter när du redigerar](/help/sites-authoring/content-fragments.md) dina innehållssidor.
 
-   * Se [Där innehållsfragment används i webb.butik](#where-content-fragments-are-used-in-we-retail)
+   * Se [Var innehållsfragment används i Web.Retail](#where-content-fragments-are-used-in-we-retail)
 
 Den fullständiga dokumentationen om hur du skapar, hanterar, använder och utvecklar innehållsfragment finns i:
 
-* Se [Ytterligare information](#further-information)
+* Se [Mer information](#further-information)
 
 >[!NOTE]
 >
->**Innehållsfragment** och **[Upplevelsefragment](/help/sites-authoring/experience-fragments.md)** har olika funktioner i AEM:
+>**Innehållsfragment** och **[Upplevelsefragment](/help/sites-authoring/experience-fragments.md)** är olika funktioner i AEM:
 >
->* **Innehållsfragment** är redaktionellt innehåll, främst text, och relaterade bilder. De är rent innehåll, utan design och layout.
+>* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Upplevelsefragment** är helt utformat för innehåll, ett fragment av en webbsida.
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 
 ## Var kan man hitta innehållsfragment i webb.butik {#where-to-find-content-fragments-in-we-retail}
 
-Det finns flera exempelinnehållsfragment i We.Retail; navigera via **Resurser**, **Filer**, **Vi.butik**, **Engelska**, **Erfarenheter**.
+Det finns flera exempelinnehållsfragment i We.Retail; navigera via **Assets**, **Files**, **We.Retail**, **English**, **Experiences**.
 
-Dessa innehåller **Arktisk surfning i Lofoten**, ett fragment tillsammans med relaterade visuella resurser:
+Detta inkluderar **Arktisk surfning i Lofoten**, ett fragment tillsammans med relaterade visuella resurser:
 
-* Navigera genom **Resurser**, **Filer**, **Vi.butik**, **Engelska**, **Erfarenheter**, **Arktisk surfning i Lofoten**:
+* Navigera med hjälp av **Assets**, **Filer**, **We.Retail**, **English**, **Experiences**, **Arktisk surfning i Lofoten**:
 
    * [http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten](http://localhost:4502/assets.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten)
 
-![cf-4](assets/cf-44.png)
+![cf-44](assets/cf-44.png)
 
-Du kan markera och redigera **Arktisk surfning i Lofoten** fragment:
+Du kan markera och redigera **arktisk surfning i fragmentet Lofoten**:
 
 * [http://localhost:4502/editor.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten](http://localhost:4502/editor.html/content/dam/we-retail/en/experiences/arctic-surfing-in-lofoten/arctic-surfing-in-lofoten)
 
-Här kan du [redigera och hantera](/help/assets/content-fragments/content-fragments.md) fragmentet med hjälp av flikarna (vänster sida):
+Här kan du [redigera och hantera](/help/assets/content-fragments/content-fragments.md) dina fragment med hjälp av flikarna (vänsterpanelen):
 
 <!--![cf-45-aa](do-not-localize/cf-45-aa.png) ![cf-45-a](do-not-localize/cf-45-a.png) ASSET does not exist-->
 
-* **[Variationer](/help/assets/content-fragments/content-fragments-variations.md)** inkluderar [Markering](/help/assets/content-fragments/content-fragments-markdown.md)
+* **[Variationer](/help/assets/content-fragments/content-fragments-variations.md)** inklusive [Markdown](/help/assets/content-fragments/content-fragments-markdown.md)
 * **[Associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md)**
 * **[Metadata](/help/assets/content-fragments/content-fragments-metadata.md)**
 
@@ -69,13 +69,13 @@ Här kan du [redigera och hantera](/help/assets/content-fragments/content-fragme
 
 ## Där innehållsfragment används i webb.butik {#where-content-fragments-are-used-in-we-retail}
 
-För att illustrera [skapa sidor med ett innehållsfragment](/help/sites-authoring/content-fragments.md) det finns flera exempelsidor i, till exempel:
+För att illustrera [sidredigering med ett innehållsfragment](/help/sites-authoring/content-fragments.md) finns det flera exempelsidor under, till exempel:
 
 * [http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience](http://localhost:4502/sites.html/content/we-retail/language-masters/en/experience)
 
-Till exempel **Arktisk surfning i Lofoten** Det finns referenser till innehållsfragment på sidan Platser:
+Innehållsfragmentet **Arktisk surfning i Lofoten** refereras till på sidan Platser:
 
-* Navigera via **Webbplatser**, **Vi.butik**, **Språkmallar**, **Engelska**, **Upplevelse**. Öppna **Arktisk surfning i Lofoten** för redigering:
+* Navigera via **Sites**, **We.Retail**, **Language Masters**, **English**, **Experience**. Öppna sedan **Arktisk surfning i Lofoten** för redigering:
 
    * [http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html](http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html)
 

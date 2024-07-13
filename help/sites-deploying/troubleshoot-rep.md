@@ -29,7 +29,7 @@ Replikering (icke-omvänd replikering) misslyckas av någon anledning.
 
 Det finns olika orsaker till att replikeringen misslyckas. I den här artikeln förklaras den metod som kan användas vid analys av dessa problem.
 
-**Utlöses replikeringar alls när du klickar på knappen Aktivera? Om INTE, gör du följande:**
+**Utlöses replikeringar överhuvudtaget när du klickar på knappen Aktivera? Om INTE, gör du följande:**
 
 1. Gå till /crx/explorer och logga in som administratör.
 1. Öppna &quot;Innehållsutforskaren&quot;
@@ -41,7 +41,7 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
 
 **Om en agentkö eller ett fåtal agentköer har fastnat:**
 
-1. Visas kön **blockerad** status? Om så är fallet, körs inte publiceringsinstansen eller svarar den inte? Kontrollera publiceringsinstansen för att se vad som är fel med den. Kontrollera loggarna och se om det finns ett OutOfMemory-fel eller något annat problem. Om det bara är långsamt tar du tråd och analyserar dem.
+1. Visar kön status **Blockerad**? Om så är fallet, körs inte publiceringsinstansen eller svarar den inte? Kontrollera publiceringsinstansen för att se vad som är fel med den. Kontrollera loggarna och se om det finns ett OutOfMemory-fel eller något annat problem. Om det bara är långsamt tar du tråd och analyserar dem.
 1. Visar köstatusen **Kön är aktiv - # väntande**? Replikeringsjobbet kan i princip fastna i en socketläsning som väntar på att publiceringsinstansen eller Dispatcher ska svara. Det kan innebära att publiceringsinstansen eller Dispatcher är under hög belastning eller sitter fast i ett lås. Ta tråddumpar från författaren och publicera i det här fallet.
 
    * Öppna trådsdumpar från författaren i en tråddumpsanalyserare, kontrollera om det visar att replikeringsagentens snedningsjobb har fastnat i en socketRead.
@@ -55,7 +55,7 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
    1. Klicka på&quot;Verktyg&quot; i den övre menyn.
    1. Klicka på knappen för förstoringsglas.
    1. Välj &quot;XPath&quot; som Typ.
-   1. I rutan Fråga anger du den här frågan /jcr:root/var/eventing/job//element(&#42;,slingevent:Job) sortera efter @slingevent:created
+   1. I rutan Fråga anger du den här frågans/jcr:root/var/eventing/job//element(&#42;,slingevent:Job) ordning av @slingevent:created
    1. Klicka på Sök.
    1. I resultatet är de viktigaste objekten de senaste snedsättningsjobben. Klicka på var och en och hitta de kvarvarande replikeringar som matchar det som visas högst upp i kön.
 
@@ -74,7 +74,7 @@ Kontrollera detta genom att gå till /etc/replication/agents.author.html och sed
 Ibland kan det vara praktiskt att ange att all replikeringsloggning ska läggas till i en separat loggfil på DEBUG-nivå. Så här gör du:
 
 1. Gå till https://host:port/system/console/configMgr och logga in som administratör.
-1. Hitta fabriken Apache Sling Logging Logger och skapa en instans genom att klicka på **+** till höger om fabrikskonfigurationen. Detta skapar en ny loggningslogg.
+1. Hitta Apache Sling Logging Logger-fabriken och skapa en instans genom att klicka på knappen **+** till höger om fabrikskonfigurationen. Detta skapar en ny loggningslogg.
 1. Ställ in konfigurationen så här:
 
    * Loggnivå: FELSÖKNING
@@ -96,18 +96,18 @@ Sidbehörigheter replikeras inte eftersom de lagras under noderna som åtkomst b
 
 I allmänhet bör sidbehörigheter inte replikeras från författaren till publiceringen och är inte standard. Detta beror på att åtkomsträttigheterna bör vara olika i dessa två miljöer. Därför rekommenderar Adobe att du konfigurerar åtkomstkontrollistor vid publicering, separat från författaren.
 
-## Replikeringskön har blockerats vid replikering av namnområdesinformation från författare till publicering {#replication-queue-blocked-when-replicating-namespace-information-from-author-to-publish}
+## Replikeringskön har blockerats vid replikering av namnområdesinformation från författaren till Publish {#replication-queue-blocked-when-replicating-namespace-information-from-author-to-publish}
 
-Ibland blockeras replikeringskön vid försök att replikera namnområdesinformation från författarinstansen till publiceringsinstansen. Detta beror på att replikeringsanvändaren inte har `jcr:namespaceManagement` privilegium. Undvik problemet genom att se till att:
+Ibland blockeras replikeringskön vid försök att replikera namnområdesinformation från författarinstansen till publiceringsinstansen. Detta inträffar eftersom replikeringsanvändaren inte har privilegiet `jcr:namespaceManagement`. Undvik problemet genom att se till att:
 
-* Replikeringsanvändaren (konfigurerad under [Transport](/help/sites-deploying/replication.md#replication-agents-configuration-parameters) tab>User) finns också på Publish-instansen.
+* Replikeringsanvändaren (som konfigurerats under fliken [Transport](/help/sites-deploying/replication.md#replication-agents-configuration-parameters)>Användare) finns också på Publish-instansen.
 * Användaren har läs- och skrivbehörighet på sökvägen där innehållet är installerat.
-* Användaren har `jcr:namespaceManagement` behörighet på databasnivå. Du kan bevilja privilegiet enligt följande:
+* Användaren har privilegiet `jcr:namespaceManagement` på databasnivå. Du kan bevilja privilegiet enligt följande:
 
 1. Logga in på CRX/DE ( `https://localhost:4502/crx/de/index.jsp`) som administratör.
-1. Klicka på **Åtkomstkontroll** -fliken.
+1. Klicka på fliken **Åtkomstkontroll**.
 1. Välj **Databas**.
-1. Klicka **Lägg till post** (plusikonen).
+1. Klicka på **Lägg till post** (plusikonen).
 1. Ange användarens namn.
-1. Välj `jcr:namespaceManagement` från listan över behörigheter.
-1. Klicka **OK**.
+1. Välj `jcr:namespaceManagement` i listan över privilegier.
+1. Klicka på **OK**.

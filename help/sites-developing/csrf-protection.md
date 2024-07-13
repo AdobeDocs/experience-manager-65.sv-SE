@@ -30,18 +30,18 @@ Ramverket använder tokens för att garantera att kundens begäran är berättig
 
 ### Beroenden {#dependencies}
 
-Alla komponenter som är beroende av `granite.jquery` beroendet kan automatiskt dra nytta av CSRF Protection Framework. Om inte måste du deklarera ett beroende för någon av dina komponenter `granite.csrf.standalone` före ramverket.
+Alla komponenter som är beroende av `granite.jquery`-beroendet kan automatiskt dra nytta av CSRF Protection Framework. Om inte, för någon av dina komponenter, måste du deklarera ett beroende för `granite.csrf.standalone` innan du kan använda ramverket.
 
 ### Replikerar krypteringsnyckeln {#replicating-crypto-keys}
 
-Om du vill använda token måste du replikera HMAC-binärfilen till alla instanser i distributionen. Se [Replikerar HMAC-nyckeln](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key) för mer information.
+Om du vill använda token måste du replikera HMAC-binärfilen till alla instanser i distributionen. Mer information finns i [Replikera HMAC-nyckeln](/help/sites-administering/encapsulated-token.md#replicating-the-hmac-key).
 
 >[!NOTE]
 >
->Se också till att du gör nödvändiga [Konfigurationsändringar för Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) för att använda ramverket för skydd av CSRF.
+>Se också till att du gör de [konfigurationsändringar för Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/user-guide.html) som krävs för att använda CSRF Protection Framework.
 
 >[!NOTE]
 >
->Om du använder manifest-cachen tillsammans med webbprogrammet måste du lägga till &quot;**&amp;ast;**&quot; till manifestet för att säkerställa att token inte tar genereringsanropet för CSRF-token offline. Mer information finns i [link](https://www.w3.org/TR/offline-webapps/).
+>Om du använder manifestcachen med ditt webbprogram måste du lägga till **&amp;ast;** i manifestet för att se till att token inte tar CSRF-tokengenereringsanropet offline. Mer information finns i den här [länken](https://www.w3.org/TR/offline-webapps/).
 >
-Mer information om CSRF-attacker och sätt att mildra dem finns i [OWASP-sida för korsdomänbegäran](https://owasp.org/www-community/attacks/csrf).
+Mer information om CSRF-attacker och sätt att mildra dem finns på sidan [Cross-Site Request Falery OWASP](https://owasp.org/www-community/attacks/csrf).

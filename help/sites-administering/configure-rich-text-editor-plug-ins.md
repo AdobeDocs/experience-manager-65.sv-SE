@@ -18,24 +18,24 @@ ht-degree: 0%
 
 RTE-funktioner är tillgängliga via en serie plugin-program, var och en med features-egenskaper. Du kan konfigurera egenskapen features för att aktivera eller inaktivera en eller flera RTE-funktioner. I den här artikeln beskrivs hur du specifikt konfigurerar RTE-plugin-program.
 
-Mer information om de andra RTE-konfigurationerna finns i [Konfigurera RTF-redigerare](/help/sites-administering/rich-text-editor.md).
+Mer information om de andra RTE-konfigurationerna finns i [Konfigurera RTF-redigeraren](/help/sites-administering/rich-text-editor.md).
 
 >[!NOTE]
 >
->När du arbetar med CRXDE Lite bör du spara ändringarna regelbundet med [!UICONTROL Save All] alternativ.
+>När du arbetar med CRXDE Lite bör du spara ändringarna regelbundet med alternativet [!UICONTROL Save All].
 
 ## Aktivera ett plugin-program och konfigurera egenskapen features {#activateplugin}
 
 Följ de här stegen för att aktivera ett plugin-program. Vissa steg behövs bara när du konfigurerar ett plugin-program för första gången, eftersom motsvarande noder inte finns.
 
-Som standard `format`, `link`, `list`, `justify`och `control` plugin-program och alla deras funktioner är aktiverade i RTE.
+Som standard är plugin-programmen `format`, `link`, `list`, `justify` och `control` och alla deras funktioner aktiverade i RTE.
 
 >[!NOTE]
 >
->Motsvarande `rtePlugins` noden kallas `<rtePlugins-node>` för att undvika dubbletter i den här artikeln.
+>Motsvarande `rtePlugins`-nod kallas `<rtePlugins-node>` för att undvika dubbletter i den här artikeln.
 
 1. Leta reda på textkomponenten för ditt projekt med CRXDE Lite.
-1. Skapa den överordnade noden för `<rtePlugins-node>` om den inte finns, innan du konfigurerar några RTE-plugin-program:
+1. Skapa den överordnade noden `<rtePlugins-node>` om den inte finns innan du konfigurerar några RTE-plugin-program:
 
    * Beroende på vilken komponent du har är de överordnade noderna:
 
@@ -50,7 +50,7 @@ Som standard `format`, `link`, `list`, `justify`och `control` plugin-program och
       * **Typ** `String`
       * **Värde** `./text`
 
-1. Skapa en nod beroende på vilket gränssnitt du konfigurerar för `<rtePlugins-node>`, om den inte finns:
+1. Beroende på vilket gränssnitt du konfigurerar för kan du skapa en nod `<rtePlugins-node>`, om den inte finns:
 
    * **Namn** `rtePlugins`
    * **Typ** `nt:unstructured`
@@ -58,19 +58,19 @@ Som standard `format`, `link`, `list`, `justify`och `control` plugin-program och
 1. Under detta skapar du en nod för varje plugin-program som du vill aktivera:
 
    * **Typ** `nt:unstructured`
-   * **Namn** plug-in-id:t för plug-in-programmet krävs
+   * **Namn** plug-in-ID:t för plug-in-programmet krävs
 
-När du har aktiverat ett plugin-program följer du de här riktlinjerna för att konfigurera `features` -egenskap.
+När du har aktiverat ett plugin-program följer du de här riktlinjerna för att konfigurera egenskapen `features`.
 
 | | Aktivera alla funktioner | Aktivera några specifika funktioner | Inaktivera alla funktioner |
 |---|---|---|---|
 | Namn | funktioner | funktioner | funktioner |
-| Typ | Sträng | Sträng[] (multi-string; ange Type till String och klicka på Multi i CRXDE Lite) | Sträng |
+| Typ | Sträng | Sträng [] (multi-string; ange typen till String och klicka på Flera i CRXDE Lite) | Sträng |
 | Värde | `*` (en asterisk) | anges till ett eller flera funktionsvärden | - |
 
 ## Förstå plugin-programmet findreplace {#findreplace}
 
-The `findreplace` plug-in-programmet behöver ingen konfiguration. Det går som det ska.
+Plugin-programmet `findreplace` behöver ingen konfiguration. Det går som det ska.
 
 När du använder ersättningsfunktionen bör du ange ersättningssträngen samtidigt som söksträngen. Du kan dock fortfarande klicka på Sök för att söka efter strängen innan du ersätter den. Om ersättningssträngen anges efter att du klickat på Sök återställs sökningen till början av texten.
 
@@ -82,7 +82,7 @@ När du använder RTE kan författare klistra in innehåll i något av följande
 
 * **Webbläsarläge**: Klistra in text med webbläsarens standardimplementering för inklistring. Det är inte en rekommenderad metod eftersom den kan medföra oönskad markering.
 
-* **Oformaterad text, läge**: Klistra in urklippsinnehållet som ren text. Alla formatelement och formateringselement i det kopierade innehållet tas bort innan de infogas i [!DNL Experience Manager] -komponenten.
+* **Oformaterad text**: Klistra in urklippsinnehållet som oformaterad text. Den raderar alla formatelement från det kopierade innehållet innan den infogas i komponenten [!DNL Experience Manager].
 
 * **MS® Word-läge**: Klistra in texten, inklusive tabeller, med formatering när du kopierar från MS® Word. Det går inte att kopiera och klistra in text från en annan källa, t.ex. en webbsida eller MS® Excel, utan endast delvis formatering.
 
@@ -92,7 +92,7 @@ Du kan ange några, alla eller inga av dessa tre ikoner till författarna i verk
 
 * **[!UICONTROL Paste (Ctrl+V)]**: Kan förkonfigureras så att det motsvarar något av de tre inklistringslägena ovan.
 
-* **[!UICONTROL Paste as Text]**: Innehåller funktioner för normalt textläge.
+* **[!UICONTROL Paste as Text]**: Tillhandahåller funktioner för normalt textläge.
 
 * **[!UICONTROL Paste from Word]**: Tillhandahåller MS® Word-funktionalitet.
 
@@ -100,11 +100,11 @@ Följ de här stegen för att konfigurera RTE så att nödvändiga ikoner visas.
 
 1. Navigera till komponenten, till exempel `/apps/<myProject>/components/text`.
 1. Navigera till noden `rtePlugins/edit`. Se [aktivera ett plugin-program](#activateplugin) om noden inte finns.
-1. Skapa `features` -egenskapen på `edit` och lägga till en eller flera funktioner. Spara alla ändringar.
+1. Skapa egenskapen `features` på noden `edit` och lägg till en eller flera funktioner. Spara alla ändringar.
 
 ### Konfigurera beteendet för ikonen Klistra in (Ctrl+V) och genvägen {#configure-the-behavior-of-the-paste-ctrl-v-icon-and-shortcut}
 
-Du kan förkonfigurera beteendet för **[!UICONTROL Paste (Ctrl+V)]** -ikonen med följande steg. Den här konfigurationen definierar också beteendet för kortkommandot Ctrl+V som författare använder för att klistra in innehåll.
+Du kan förkonfigurera beteendet för ikonen **[!UICONTROL Paste (Ctrl+V)]** med följande steg. Den här konfigurationen definierar också beteendet för kortkommandot Ctrl+V som författare använder för att klistra in innehåll.
 
 Konfigurationen tillåter följande tre typer av användningsfall:
 
@@ -114,16 +114,16 @@ Konfigurationen tillåter följande tre typer av användningsfall:
 
 * Klistra in text, inklusive tabeller, med formatering när du kopierar från MS® Word. Det går inte att kopiera och klistra in text från en annan källa, t.ex. en webbsida eller MS® Excel, utan endast delvis formatering. Konfigurerad med `wordhtml` nedan.
 
-1. Navigera till `<rtePlugins-node>/edit` nod. Skapa noderna om de inte finns. Mer information finns i [aktivera ett plugin-program](#activateplugin).
-1. I `edit` -nod skapar du en egenskap med följande information:
+1. Gå till noden `<rtePlugins-node>/edit` i komponenten. Skapa noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
+1. Skapa en egenskap med följande information i noden `edit`:
 
    * **Namn** `defaultPasteMode`
    * **Typ** `String`
-   * **Värde** Ett av de obligatoriska inklistringslägena `browser`, `plaintext`, eller `wordhtml`.
+   * **Värde** Ett av de obligatoriska inklistringslägena `browser`, `plaintext` eller `wordhtml`.
 
 ### Konfigurera de format som tillåts när innehåll klistras in {#pasteformats}
 
-Klistra in som Microsoft-ord (`paste-wordhtml`) kan konfigureras ytterligare så att du uttryckligen kan definiera vilka format som tillåts när du klistrar in i AEM från ett annat program, till exempel Microsoft® Word.
+Läget Klistra in som Microsoft-Word (`paste-wordhtml`) kan konfigureras ytterligare så att du uttryckligen kan definiera vilka format som tillåts när du klistrar in i AEM från ett annat program, till exempel Microsoft® Word.
 
 Om t.ex. endast fetstilta format och listor ska tillåtas när du klistrar in i AEM kan du filtrera bort de andra formaten. Detta kallas konfigurerbar inklistringsfiltrering, vilket kan göras för båda:
 
@@ -134,18 +134,18 @@ För länkar kan du också definiera de protokoll som automatiskt godkänns.
 
 Så här konfigurerar du vilka format som tillåts när du klistrar in text i AEM från ett annat program:
 
-1. Navigera till noden i komponenten `<rtePlugins-node>/edit`. Skapa noderna om de inte finns. Mer information finns i [aktivera ett plugin-program](#activateplugin).
-1. Skapa en nod under `edit` så att du kan behålla inklistringsreglerna i HTML:
+1. Gå till noden `<rtePlugins-node>/edit` i din komponent. Skapa noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
+1. Skapa en nod under noden `edit` så att du kan behålla inklistringsreglerna för HTML:
 
    * **Namn** `htmlPasteRules`
    * **Typ** `nt:unstructured`
 
-1. Skapa en nod under `htmlPasteRules`så att du kan hålla reda på mer om de grundläggande formaten:
+1. Skapa en nod under `htmlPasteRules` så att du kan hålla reda på vilka grundläggande format som är tillåtna:
 
    * **Namn** `allowBasics`
    * **Typ** `nt:unstructured`
 
-1. Om du vill styra de enskilda formaten som godkänns skapar du en eller flera av följande egenskaper på `allowBasics` nod:
+1. Om du vill kontrollera vilka enskilda format som accepteras skapar du en eller flera av följande egenskaper på noden `allowBasics`:
 
    * **Namn** `bold`
    * **Namn** `italic`
@@ -153,24 +153,24 @@ Så här konfigurerar du vilka format som tillåts när du klistrar in text i AE
    * **Namn** `anchor` (för både länkar och namngivna ankare)
    * **Namn** `image`
 
-   Alla egenskaper är **Typ** `Boolean`, så att **Värde** Du kan antingen markera eller ta bort markeringen för att aktivera eller inaktivera funktionen.
+   Alla egenskaper har typen **Type** `Boolean`, så i rätt **Value** kan du antingen markera eller ta bort markeringen för att aktivera eller inaktivera funktionen.
 
    >[!NOTE]
    >
    >Om det inte uttryckligen definieras används standardvärdet true och formatet accepteras.
 
-1. Andra format kan också definieras med hjälp av en rad andra egenskaper eller noder, som även kan användas på `htmlPasteRules` nod. Spara alla ändringar.
+1. Andra format kan också definieras med hjälp av ett intervall av andra egenskaper eller noder, som även kan användas på noden `htmlPasteRules`. Spara alla ändringar.
 
 Du kan använda följande egenskaper för `htmlPasteRules`.
 
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
 | `allowBlockTags` | Sträng | Definierar listan med blocktaggar som tillåts. Några möjliga blocktaggar är: <ul> <li>rubriker (h1, h2, h3)</li> <li>stycken p</li> <li>listor (ol, ul)</li> <li>tabeller (tabell)</li> </ul> |
-| `fallbackBlockTag` | Sträng | Definierar den blocktagg som används för alla block som har en blocktagg som inte ingår i `allowBlockTags`. `p` brukar räcka. |
-| table | nt:ostrukturerad | Definierar beteendet när tabeller klistras in. Den här noden måste ha egenskapen `allow` (boolesk) för att definiera om inklistring av tabeller tillåts. Om tillåt är inställt på `false`måste du ange egenskapen `ignoreMode` (skriv String) för att definiera hur inklistrat tabellinnehåll hanteras. Giltiga värden för `ignoreMode` är: <ul> <li>`remove`: Tar bort tabellinnehåll.</li> <li>`paragraph`: Ändrar tabellceller till stycken.</li> </ul> |
-| list | nt:ostrukturerad | Definierar beteendet när listor klistras in. Måste ha egenskapen `allow` (boolesk) för att ange om inklistring av listor är tillåten. If `allow` är inställd på `false`måste du ange egenskapen `ignoreMode` (skriv String) för att definiera hur listinnehåll som klistras in ska hanteras. Giltiga värden för `ignoreMode` är: <ul><li> `remove`: Tar bort listinnehåll.</li> <li>`paragraph`: Omvandlar listobjekt till stycken.</li> </ul> |
+| `fallbackBlockTag` | Sträng | Definierar den blocktagg som används för alla block med en blocktagg som inte ingår i `allowBlockTags`. `p` är vanligtvis tillräckligt. |
+| table | nt:ostrukturerad | Definierar beteendet när tabeller klistras in. Den här noden måste ha egenskapen `allow` (Boolean-typ) för att definiera om det är tillåtet att klistra in tabeller. Om allow anges till `false` måste du ange egenskapen `ignoreMode` (type String) för att definiera hur inklistrat tabellinnehåll hanteras. Giltiga värden för `ignoreMode` är: <ul> <li>`remove`: Tar bort tabellinnehåll.</li> <li>`paragraph`: Ändrar tabellceller till stycken.</li> </ul> |
+| list | nt:ostrukturerad | Definierar beteendet när listor klistras in. Måste ha egenskapen `allow` (boolesk typ) för att definiera om inklistring av listor är tillåten. Om `allow` är inställt på `false` måste du ange egenskapen `ignoreMode` (typ String) för att definiera hur allt listinnehåll som klistras in ska hanteras. Giltiga värden för `ignoreMode` är: <ul><li> `remove`: Tar bort listinnehåll.</li> <li>`paragraph`: Omvandlar listobjekt till stycken.</li> </ul> |
 
-Ett exempel på en giltig `htmlPasteRules` strukturen är nedan.
+Ett exempel på en giltig `htmlPasteRules`-struktur visas nedan.
 
 ```xml
 "htmlPasteRules": {
@@ -194,7 +194,7 @@ Ett exempel på en giltig `htmlPasteRules` strukturen är nedan.
 
 ## Konfigurera textformat {#textstyles}
 
-Författare kan använda format för att ändra utseendet på en del av texten. Formaten baseras på CSS-klasser som du fördefinierar i din CSS-formatmall. Stiliserat innehåll omsluts av `span` taggar med `class` -attribut som refererar till CSS-klassen. Till exempel: `<span class=monospaced>Monospaced Text Here</span>`.
+Författare kan använda format för att ändra utseendet på en del av texten. Formaten baseras på CSS-klasser som du fördefinierar i din CSS-formatmall. Stiliserat innehåll omges av `span`-taggar som använder attributet `class` för att referera till CSS-klassen. Exempel: `<span class=monospaced>Monospaced Text Here</span>`.
 
 När plugin-programmet Styles är aktiverat för första gången finns det inga standardformat. Popup-listan är tom. Så här ger du författarna formatmallar:
 
@@ -212,8 +212,8 @@ Om du vill lägga till fler format vid ett senare tillfälle följer du bara ins
 
 Detta gör du genom att aktivera stilplugin-programmet.
 
-1. Navigera till noden i komponenten `<rtePlugins-node>/styles`. Skapa noderna om de inte finns. Mer information finns i [aktivera ett plugin-program](#activateplugin).
-1. Skapa `features` -egenskapen på `styles` nod:
+1. Gå till noden `<rtePlugins-node>/styles` i din komponent. Skapa noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
+1. Skapa egenskapen `features` på noden `styles`:
 
    * **Namn** `features`
    * **Typ** `String`
@@ -230,10 +230,10 @@ Detta gör du genom att aktivera stilplugin-programmet.
 Ange sedan platserna för de formatmallar som du vill referera till:
 
 1. Navigera till rotnoden för textkomponenten, till exempel `/apps/<myProject>/components/text`.
-1. Lägg till egenskapen `externalStyleSheets` till den överordnade noden för `<rtePlugins-node>`:
+1. Lägg till egenskapen `externalStyleSheets` i den överordnade noden för `<rtePlugins-node>`:
 
    * **Namn** `externalStyleSheets`
-   * **Typ** `String[]` (flersträng; klicka **Flera** i CRXDE)
+   * **Typ** `String[]` (flersträng; klicka på **Flera** i CRXDE)
    * **Värden** Sökvägen och filnamnet för alla formatmallar som du vill ta med. Använd databassökvägar.
 
    >[!NOTE]
@@ -246,7 +246,7 @@ Ange sedan platserna för de formatmallar som du vill referera till:
 >
 >När du använder textredigering i en dialogruta (Classic UI) kanske du vill ange formatmallar som är optimerade för textredigering. På grund av tekniska begränsningar förloras CSS-kontexten i redigeraren, så du kanske vill emulera den här kontexten för att förbättra WYSIWYG-upplevelsen.
 >
->RTF-redigeraren använder ett behållar-DOM-element med ID:t `CQrte` som kan användas för att skapa olika format för visning och redigering:
+>I Rich Text Editor används ett behållar-DOM-element med ID `CQrte` som kan användas för att tillhandahålla olika format för visning och redigering:
 >
 >`#CQ td {`
 >` // defines the style for viewing }`
@@ -256,28 +256,28 @@ Ange sedan platserna för de formatmallar som du vill referera till:
 
 ### Ange tillgängliga format i popup-listan {#stylesindropdown}
 
-1. Navigera till noden i komponentdefinitionen `<rtePlugins-node>/styles`, som i [Aktivera den nedrullningsbara formatväljaren](#styleselectorlist).
-1. Under noden `styles`, skapa en nod (kallas även `styles`) för att hålla listan tillgänglig:
+1. I komponentdefinitionen går du till noden `<rtePlugins-node>/styles`, som den har skapats i [Aktivera listruteväljaren för format](#styleselectorlist).
+1. Skapa en nod (kallas även `styles`) under noden `styles` för att hålla listan tillgänglig:
 
    * **Namn** `styles`
    * **Typ** `cq:WidgetCollection`
 
-1. Skapa en nod under `styles` så att du kan representera ett enskilt format:
+1. Skapa en nod under noden `styles` så att du kan representera ett enskilt format:
 
-   * **Namn** kan du ange namnet, men det bör vara lämpligt för formatet
+   * **Namn**, du kan ange namnet, men det bör vara lämpligt för formatet
    * **Typ** `nt:unstructured`
 
-1. Lägg till egenskapen `cssName` till den här noden så att du kan referera till CSS-klassen:
+1. Lägg till egenskapen `cssName` i den här noden så att du kan referera till CSS-klassen:
 
    * **Namn** `cssName`
    * **Typ** `String`
    * **Värde** Namnet på CSS-klassen (utan föregående &#39;.&#39;); till exempel `cssClass` i stället för `.cssClass`)
 
-1. Lägg till egenskapen `text` till samma nod. Detta definierar texten som visas i markeringsrutan:
+1. Lägg till egenskapen `text` i samma nod. Detta definierar texten som visas i markeringsrutan:
 
    * **Namn** `text`
    * **Typ** `String`
-   * **Värde** En beskrivning av formatet visas i den nedrullningsbara listrutan Format.
+   * **Värde** Beskrivning av formatet. Det visas i den nedrullningsbara listrutan Format.
 
 1. Spara ändringarna.
 
@@ -297,7 +297,7 @@ Så här skapar du det format som författare kan använda på japansk text:
    * Namn: `jpn-word-wrap`
    * Typ: `nt:unstructure`
 
-1. Lägg till egenskapen `cssName` till noden så att du kan referera till CSS-klassen. Klassnamnet är ett reserverat namn för japansk radbrytning.
+1. Lägg till egenskapen `cssName` i noden så att du kan referera till CSS-klassen. Klassnamnet är ett reserverat namn för japansk radbrytning.
    * Namn: `cssName`
    * Typ: `String`
    * Värde: `jpn-word-wrap` (utan föregående `.`)
@@ -307,7 +307,7 @@ Så här skapar du det format som författare kan använda på japansk text:
 *Typ: `String`
    * Värde: `Japanese word-wrap`
 
-1. Skapa en formatmall och ange dess sökväg. Se [ange plats för formatmall](#locationofstylesheet). Lägg till följande innehåll i formatmallen. Ändra bakgrundsfärgen efter behov.
+1. Skapa en formatmall och ange dess sökväg. Se [ange plats för formatmallen](#locationofstylesheet). Lägg till följande innehåll i formatmallen. Ändra bakgrundsfärgen efter behov.
 
    ```css
    .text span.jpn-word-wrap {
@@ -318,11 +318,11 @@ Så här skapar du det format som författare kan använda på japansk text:
    }
    ```
 
-   ![Formatmall som gör japansk radbrytning tillgänglig för författare](assets/rte_jpwordwrap_stylesheet.jpg)
+   ![Formatmall för att göra japansk radbrytning tillgänglig för författare](assets/rte_jpwordwrap_stylesheet.jpg)
 
 ## Konfigurera styckeformat {#paraformats}
 
-All text som skapas i textredigeraren placeras i en blocktagg med standardvärdet `<p>`. Genom att aktivera `paraformat` plugin-programmet anger du ytterligare blocktaggar som kan tilldelas stycken med hjälp av en nedrullningsbar markeringslista. Styckeformat bestämmer stycketypen genom att tilldela rätt blocktagg. Författaren kan markera och tilldela dem med formatväljaren. Exempelblocktaggarna innehåller bland annat standardstycket &lt;p> och rubriker &lt;h1>, &lt;h2>och så vidare.
+All text som har skapats i RTE placeras i en blocktagg, standardvärdet är `<p>`. Genom att aktivera plugin-programmet `paraformat` anger du ytterligare blocktaggar som kan tilldelas stycken med hjälp av en nedrullningsbar markeringslista. Styckeformat bestämmer stycketypen genom att tilldela rätt blocktagg. Författaren kan markera och tilldela dem med formatväljaren. Exempelblocktaggarna innehåller bland annat standardstycket &lt;p> och rubrikerna &lt;h1>, &lt;h2> och så vidare.
 
 >[!CAUTION]
 >
@@ -330,7 +330,7 @@ All text som skapas i textredigeraren placeras i en blocktagg med standardvärde
 
 >[!NOTE]
 >
->Om en blocktagg exempelvis &lt;hr> -tagg, kan inte tilldelas till ett stycke, det är inte ett giltigt användningsfall för ett plugin-program för paraformat.
+>Om en blocktagg, till exempel en &lt;hr>-tagg, inte kan tilldelas till ett stycke, är det inte ett giltigt användningsfall för ett plugin-program för paraformat.
 
 När plugin-programmet Styckeformat är aktiverat för första gången är inga standardstyckeformat tillgängliga. Popup-listan är tom. Så här förser du författarna med styckeformat:
 
@@ -343,8 +343,8 @@ För senare konfigurationer eller omkonfigurationer, till exempel för att lägg
 
 Aktivera först plugin-programmet för paraformat:
 
-1. Navigera till noden i komponenten `<rtePlugins-node>/paraformat`. Skapa noderna om de inte finns. Mer information finns i [aktivera ett plugin-program](#activateplugin).
-1. Skapa `features` -egenskapen på `paraformat` nod:
+1. Gå till noden `<rtePlugins-node>/paraformat` i din komponent. Skapa noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
+1. Skapa egenskapen `features` på noden `paraformat`:
 
    * **Namn** `features`
    * **Typ** `String`
@@ -362,28 +362,28 @@ Om plugin-programmet inte konfigureras ytterligare aktiveras följande standardf
 
 >[!CAUTION]
 >
-Ta inte bort stycketaggen när du konfigurerar styckeformatet för textredigeraren &lt;p> som ett formateringsalternativ. Om `<p>` -taggen tas bort och innehållsförfattaren kan inte markera **Styckeformat** även om ytterligare format har konfigurerats.
+När du konfigurerar styckeformatet för textredigeraren ska du inte ta bort stycketaggen &lt;p> som ett formateringsalternativ. Om taggen `<p>` tas bort kan innehållsförfattaren inte välja alternativet **Styckeformat** även om ytterligare format har konfigurerats.
 
 ### Ange tillgängliga styckeformat {#paraformatsindropdown}
 
 Styckeformat kan göras tillgängliga för markering genom att:
 
-1. Navigera till noden i komponentdefinitionen `<rtePlugins-node>/paraformat`, som i [Aktivera den nedrullningsbara formatväljaren](#styleselectorlist).
-1. Under `paraformat` skapar du en nod som innehåller listan med format:
+1. I komponentdefinitionen går du till noden `<rtePlugins-node>/paraformat`, som den har skapats i [Aktivera listruteväljaren för format](#styleselectorlist).
+1. Skapa en nod under noden `paraformat` som innehåller listan med format:
 
    * **Namn** `formats`
    * **Typ** `cq:WidgetCollection`
 
-1. Skapa en nod under `formats` nod, här finns information om ett enskilt format:
+1. Skapa en nod under noden `formats`. Detta innehåller information om ett enskilt format:
 
-   * **Namn** kan du ange namnet, men det ska vara lämpligt för formatet (till exempel minstycke, minrubrik1).
+   * **Namn**, du kan ange namnet, men det bör vara lämpligt för formatet (till exempel minstycke, minrubrik1).
    * **Typ** `nt:unstructured`
 
 1. I den här noden lägger du till egenskapen för att definiera den blocktagg som används:
 
    * **Namn** `tag`
    * **Typ** `String`
-   * **Värde** Blocktaggen för formatet, t.ex. p, h1, h2.
+   * **Värde** Blocktaggen för formatet, till exempel p, h1, h2.
 
      Du behöver inte ange vinkelavgränsare.
 
@@ -399,11 +399,11 @@ Styckeformat kan göras tillgängliga för markering genom att:
 
 >[!CAUTION]
 >
-Om du definierar anpassade format används standardformaten (`<p>`, `<h1>`, `<h2>`och `<h3>`) tas bort. Återskapa `<p>` som det är standardformatet.
+Om du definierar anpassade format tas standardformaten (`<p>`, `<h1>`, `<h2>` och `<h3>`) bort. Återskapa formatet `<p>` eftersom det är standardformatet.
 
 ## Konfigurera specialtecken {#spchar}
 
-I en standardinstallation AEM `misctools` plugin-programmet är aktiverat för specialtecken (`specialchars`) är en standardmarkering omedelbart tillgänglig för användning, till exempel copyright- och varumärkessymboler.
+I en AEM standardinstallation, när plugin-programmet `misctools` är aktiverat för specialtecken (`specialchars`), är ett standardval omedelbart tillgängligt för användning, till exempel copyright- och varumärkessymboler.
 
 Du kan konfigurera textredigeraren så att den gör ditt eget val av tecken tillgängligt, antingen genom att definiera distinkta tecken eller genom att definiera en hel sekvens.
 
@@ -413,67 +413,67 @@ Om du lägger till egna specialtecken åsidosätts standardinställningen. Defin
 
 ### Definiera ett enskilt tecken {#definesinglechar}
 
-1. Navigera till noden i komponenten `<rtePlugins-node>/misctools`. Skapa noderna om de inte finns. Mer information finns i [aktivera ett plugin-program](#activateplugin).
-1. Skapa `features` -egenskapen på `misctools` nod:
+1. Gå till noden `<rtePlugins-node>/misctools` i din komponent. Skapa noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
+1. Skapa egenskapen `features` på noden `misctools`:
 
    * **Namn** `features`
    * **Typ** `String[]`
    * **Värde** `specialchars`
 
-         (eller `String / *` om du använder alla funktioner för detta plugin-program)
+         (eller `String / *` om du använder alla funktioner för det här plugin-programmet)
 
-1. Under `misctools`skapar du en nod för specialteckenkonfigurationer:
+1. Under `misctools` skapar du en nod för specialteckenkonfigurationer:
 
    * **Namn** `specialCharsConfig`
    * **Typ** `nt:unstructured`
 
-1. Under `specialCharsConfig`skapar du en annan nod som innehåller listan med tecken:
+1. Skapa en annan nod under `specialCharsConfig` som innehåller teckenlistan:
 
    * **Namn** `chars`
    * **Typ** `nt:unstructured`
 
-1. Under `chars`, lägger du till en nod för en enskild teckendefinition:
+1. Under `chars` lägger du till en nod för en enskild teckendefinition:
 
-   * **Namn** Du kan ange namnet, men det ska återspegla tecknet, till exempel hälften.
+   * **Namn** kan du ange namnet, men det ska återspegla tecknet, till exempel hälften.
    * **Typ** `nt:unstructured`
 
 1. Lägg till följande egenskap i den här noden:
 
    * **Namn** `entity`
    * **Typ** `String`
-   * **Värde** representationen av det önskade tecknet i HTML, till exempel `&189;` för bråket ena halvan.
+   * **Värde** är HTML-representationen av det obligatoriska tecknet, till exempel `&189;` för bråket i halva.
 
 1. Spara ändringarna.
 
 I CRXDE visas det representerade tecknet när egenskapen har sparats. Se exemplet nedan. Upprepa stegen ovan så att du kan göra fler specialtecken tillgängliga för författare.
 
-![I CRXDE lägger du till ett enda tecken som ska vara tillgängligt i verktygsfältet för textredigering](assets/chlimage_1-106.png "I CRXDE lägger du till ett enda tecken som ska vara tillgängligt i verktygsfältet för textredigering")
+![I CRXDE lägger du till ett enda tecken som ska vara tillgängligt i RTE-verktygsfältet](assets/chlimage_1-106.png "I CRXDE lägger du till ett enda tecken som ska vara tillgängligt i RTE-verktygsfältet")
 
 ### Definiera ett teckenintervall {#definerangechar}
 
 1. Använd steg 1-3 från [Definiera ett enskilt tecken](#definesinglechar).
-1. Under `chars`, lägger du till en nod som innehåller definitionen av teckenintervallet:
+1. Under `chars` lägger du till en nod som innehåller definitionen av teckenintervallet:
 
-   * **Namn** Du kan ange namnet, men det bör återspegla teckenintervallet, till exempel pennor.
+   * **Namn** kan du ange namnet, men det bör återspegla teckenintervallet, till exempel pennor.
    * **Typ** `nt:unstructured`
 
 1. Lägg till följande två egenskaper under den här noden (namngivna enligt ditt teckenintervall):
 
    * **Namn** `rangeStart`
      **Typ** `Long`
-     **Värde** den [Unicode](https://unicode.org/) representation (decimal) av det första tecknet i intervallet
+     **Värde** för [Unicode](https://unicode.org/)-representationen (decimal) av det första tecknet i intervallet
 
    * **Namn** `rangeEnd`
      **Typ** `Long`
-     **Värde** den [Unicode](https://unicode.org/) representation (decimal) av det sista tecknet i intervallet
+     **Värde** för [Unicode](https://unicode.org/)-representationen (decimal) av det sista tecknet i intervallet
 
 1. Spara ändringarna.
 
    Om du till exempel definierar ett intervall på 9998 - 10000 får du följande tecken.
 
-   ![I CRXDE definierar du ett intervall med tecken som ska vara tillgängliga i RTE](assets/chlimage_1-107.png)
+   ![I CRXDE definierar du ett teckenintervall som ska vara tillgängligt i RTE](assets/chlimage_1-107.png)
 
-   *Bild: I CRXDE definierar du ett intervall med tecken som ska vara tillgängliga i textredigeraren*
+   *Bild: I CRXDE definierar du ett teckenintervall som ska vara tillgängligt i RTE*
 
    ![Specialtecken som är tillgängliga i textredigeraren visas för författare i ett popup-fönster](assets/rtepencil.png "Specialtecken som är tillgängliga i textredigeraren visas för författare i ett popup-fönster")
 
@@ -489,8 +489,8 @@ Du kan endast definiera format för tabeller och celler för det klassiska anvä
 >
 Kopiering och inklistring av tabeller i eller från RTE-komponenten är webbläsarberoende. Det stöds inte i alla webbläsare. Du kan få olika resultat beroende på tabellstruktur och webbläsare. Om du till exempel kopierar och klistrar in en tabell i en RTE-komponent i Mozilla Firefox i Classic UI och Touch UI, bevaras inte tabellens layout.
 
-1. Navigera till noden i komponenten `<rtePlugins-node>/table`. Skapa noderna om de inte finns. Mer information finns i [aktivera ett plugin-program](#activateplugin).
-1. Skapa `features` -egenskapen på `table` nod:
+1. Navigera till noden `<rtePlugins-node>/table` i komponenten. Skapa noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
+1. Skapa egenskapen `features` på noden `table`:
 
    * **Namn** `features`
    * **Typ** `String`
@@ -498,30 +498,30 @@ Kopiering och inklistring av tabeller i eller från RTE-komponenten är webbläs
 
    >[!NOTE]
    >
-   Om du inte vill aktivera alla tabellfunktioner kan du skapa `features` egenskap som:
+   Om du inte vill aktivera alla tabellfunktioner kan du skapa egenskapen `features` som:
    >
    * **Typ** `String[]`
    >
-   * **Värde** en eller båda av följande, beroende på vad som krävs:
-   * `table` så att tabellegenskaper, inklusive format, kan redigeras.
-   * `cellprops` för att tillåta redigering av cellegenskaper, inklusive format.
+   * **Värdet**, eller båda, av följande, efter behov:
+   * `table` om du vill tillåta redigering av tabellegenskaper, inklusive format.
+   * `cellprops` om du vill tillåta redigering av cellegenskaper, inklusive format.
 
-1. Definiera platsen för CSS-formatmallar så att du kan referera till dem. Se [Ange platsen för formatmallen](#locationofstylesheet) eftersom det är samma sak som när du definierar [format för text](#textstyles). Platsen kan definieras om du har definierat andra format.
-1. Under `table` skapar du följande nya noder (efter behov):
+1. Definiera platsen för CSS-formatmallar så att du kan referera till dem. Se [Ange platsen för formatmallen](#locationofstylesheet) eftersom detta är samma som när du definierar [format för text](#textstyles). Platsen kan definieras om du har definierat andra format.
+1. Skapa följande nya noder (efter behov) under noden `table`:
 
-   * Definiera format för hela tabellen (finns under **Tabellegenskaper**):
+   * Så här definierar du format för hela tabellen (tillgängliga under **Tabellegenskaper**):
 
       * **Namn** `tableStyles`
       * **Typ** `cq:WidgetCollection`
 
-   * Definiera format för de enskilda cellerna (finns under **Cellegenskaper**):
+   * Så här definierar du format för de enskilda cellerna (tillgängliga under **Cellegenskaper**):
 
       * **Namn** `cellStyles`
       * **Typ** `cq:WidgetCollection`
 
-1. Skapa en nod (under `tableStyles` eller `cellStyles` nod) så att du kan representera ett enskilt format:
+1. Skapa en nod (under noden `tableStyles` eller `cellStyles` efter behov) så att du kan representera ett enskilt format:
 
-   * **Namn** Du kan ange namnet, men det ska återspegla formatet.
+   * **Namn** kan du ange namnet, men det bör återspegla formatet.
    * **Typ** `nt:unstructured`
 
 1. Skapa egenskaperna på den här noden:
@@ -536,7 +536,7 @@ Kopiering och inklistring av tabeller i eller från RTE-komponenten är webbläs
 
       * **Namn** `text`
       * **Typ** `String`
-      * **Värde** texten som ska visas i urvalslistan
+      * **Värde** den text som ska visas i markeringslistan
 
 1. Spara alla ändringar.
 
@@ -549,26 +549,26 @@ Ibland kan du skapa datatabeller utan visuell text i en kolumnrubrik om rubriken
 RTE har stöd för dolda rubrikceller för att förbättra tillgängligheten i sådana scenarier. Dessutom innehåller den konfigurationsinställningar för dolda rubriker i tabeller. Med de här inställningarna kan du använda CSS-format på dolda rubriker i redigerings- och förhandsgranskningslägena. Om du vill hjälpa författare att identifiera dolda rubriker i redigeringsläget kan du inkludera följande parametrar i koden:
 
 * `hiddenHeaderEditingCSS`: Anger namnet på CSS-klassen som används i den dolda rubrikcellen när RTE redigeras.
-* `hiddenHeaderEditingStyle`: Anger en formatsträng som används i den dolda rubrikcellen när textredigeringsredigering används.
+* `hiddenHeaderEditingStyle`: Anger en formatsträng som används i den dolda rubrikcellen när textredigeringsmatrisen redigeras.
 
 Om du anger både CSS och formatsträngen i koden har CSS-klassen företräde framför formatsträngen och kan skriva över alla konfigurationsändringar som formatsträngen gör.
 
 För att hjälpa författare att använda CSS på dolda rubriker i förhandsgranskningsläget kan du inkludera följande parametrar i koden:
 
 * `hiddenHeaderClassName`: Anger namnet på CSS-klassen som används i den dolda rubrikcellen i förhandsgranskningsläge.
-* `hiddenHeaderStyle`: Anger en formatsträng som används i den dolda rubrikcellen i förhandsvisningsläget.
+* `hiddenHeaderStyle`: Anger en formatsträng som används i cellen med dolda rubriker i förhandsgranskningsläget.
 
 Om du anger både CSS och formatsträngen i koden har CSS-klassen företräde framför formatsträngen och kan skriva över alla konfigurationsändringar som formatsträngen gör.
 
 ## Lägg till ordlistor för stavningskontrollen {#adddict}
 
-När plugin-programmet för stavningskontroll är aktiverat används lexikon för respektive språk. Dessa väljs sedan enligt webbplatsens språk genom att antingen använda underträdets language-egenskap eller genom att extrahera språket från URL:en. Till exempel `/en/` grenen kontrolleras som engelsk, `/de/` som tysk.
+När plugin-programmet för stavningskontroll är aktiverat används lexikon för respektive språk. Dessa väljs sedan enligt webbplatsens språk genom att antingen använda underträdets language-egenskap eller genom att extrahera språket från URL:en. Branschen `/en/` kontrolleras till exempel som engelska, grenen `/de/` som tysk.
 
 >[!NOTE]
 >
-Meddelandet `Spell checking failed` visas om en kontroll görs för ett språk som inte är installerat. Standardordlistorna finns på `/libs/cq/spellchecker/dictionaries`, tillsammans med lämpliga Viktigt-filer. Ändra inte filerna.
+Meddelandet `Spell checking failed` visas om en kontroll görs för ett språk som inte är installerat. Standardordlistorna finns på `/libs/cq/spellchecker/dictionaries` tillsammans med lämpliga Viktigt-filer. Ändra inte filerna.
 
-En standardinstallation AEM innehåller ordlistorna för amerikansk engelska (`en_us`) och engelska (`en_gb`). Följ de här stegen om du vill lägga till fler ordlistor.
+En AEM innehåller ordlistor för amerikansk engelska (`en_us`) och brittisk engelska (`en_gb`). Följ de här stegen om du vill lägga till fler ordlistor.
 
 1. Navigera till sidan [https://extensions.openoffice.org/](https://extensions.openoffice.org/).
 
@@ -581,14 +581,14 @@ En standardinstallation AEM innehåller ordlistorna för amerikansk engelska (`e
 
    >[!CAUTION]
    >
-   Endast ordlistor i `MySpell` format för OpenOffice.org v2.0.1 eller tidigare stöds. Eftersom ordlistorna nu är arkivfiler rekommenderar vi att du kontrollerar arkivet efter nedladdningen.
+   Endast ordlistor i formatet `MySpell` för OpenOffice.org v2.0.1 eller tidigare stöds. Eftersom ordlistorna nu är arkivfiler rekommenderar vi att du kontrollerar arkivet efter nedladdningen.
 
-1. Leta reda på `.aff` och `.dic` filer. Behåll filnamnet med gemener. Till exempel: `de_de.aff` och `de_de.dic`.
-1. Läs in `.aff` och `.dic` filer i databasen på `/apps/cq/spellchecker/dictionaries`.
+1. Leta reda på filerna `.aff` och `.dic`. Behåll filnamnet med gemener. Till exempel `de_de.aff` och `de_de.dic`.
+1. Läs in filerna `.aff` och `.dic` i databasen på `/apps/cq/spellchecker/dictionaries`.
 
 >[!NOTE]
 >
-Stavningskontrollen för textredigering är tillgänglig på begäran. Den körs inte automatiskt när du börjar skriva text. Om du vill stavningskontrollera klickar du [!UICONTROL Spellchecker] i verktygsfältet. RTE kontrollerar stavningen av ord och markerar de felstavade orden.
+Stavningskontrollen för textredigering är tillgänglig på begäran. Den körs inte automatiskt när du börjar skriva text. Om du vill köra stavningskontrollen klickar du på [!UICONTROL Spellchecker] i verktygsfältet. RTE kontrollerar stavningen av ord och markerar de felstavade orden.
 >
 Om du infogar någon ändring som stavningskontrollen föreslår markeras inte längre textens status och felstavade ord. Om du vill stavningskontrollera klickar du på stavningskontrollknappen igen.
 
@@ -596,12 +596,12 @@ Om du infogar någon ändring som stavningskontrollen föreslår markeras inte l
 
 Med RTE kan författare ångra eller göra om några sista redigeringar. Som standard lagras 50 redigeringar i historiken. Du kan konfigurera det här värdet efter behov.
 
-1. Navigera till noden i komponenten `<rtePlugins-node>/undo`. Skapa de här noderna om de inte finns. Mer information finns i [aktivera ett plugin-program](#activateplugin).
-1. På `undo` -nod, skapa egenskapen:
+1. Navigera till noden `<rtePlugins-node>/undo` i komponenten. Skapa de här noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
+1. Skapa egenskapen på noden `undo`:
 
    * **Namn** `maxUndoSteps`
    * **Typ** `Long`
-   * **Värde** antalet ångra-steg som du vill spara i historiken. Standardvärdet är 50. Använd `0` för att helt inaktivera ångra/gör om.
+   * **Värde** anger antalet ångra-steg som du vill spara i historiken. Standardvärdet är 50. Använd `0` för att helt inaktivera ångra/gör om.
 
 1. Spara ändringarna.
 
@@ -611,12 +611,12 @@ När tabbtecknet trycks ned i en text infogas ett fördefinierat antal mellansla
 
 Så här definierar du tabbstorleken:
 
-1. Navigera till noden i komponenten `<rtePlugins-node>/keys`. Skapa noderna om de inte finns. Mer information finns i [aktivera ett plugin-program](#activateplugin).
-1. På `keys` -nod, skapa egenskapen:
+1. Gå till noden `<rtePlugins-node>/keys` i din komponent. Skapa noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
+1. Skapa egenskapen på noden `keys`:
 
    * **Namn** `tabSize`
    * **Typ** `String`
-   * **Värde** antalet blankstegstecken som ska användas för tabulatorn
+   * **Värde** anger antalet blanksteg som ska användas för tabulatorn
 
 1. Spara ändringarna.
 
@@ -628,8 +628,8 @@ När indrag är aktiverat (standard) kan du ange storleken på indraget:
 >
 Den här indragsstorleken används bara för stycken (block) i text. Den påverkar inte indraget för verkliga listor.
 
-1. Navigera till noden i komponenten `<rtePlugins-node>/lists`. Skapa de här noderna om de inte finns. Mer information finns i [aktivera ett plugin-program](#activateplugin).
-1. På `lists` nod, skapa `indentSize` parameter:
+1. Navigera till noden `<rtePlugins-node>/lists` i komponenten. Skapa de här noderna om de inte finns. Mer information finns i [Aktivera ett plugin-program](#activateplugin).
+1. Skapa parametern `indentSize` på noden `lists`:
 
    * **Namn**: `indentSize`
    * **Typ**: `Long`
@@ -643,11 +643,11 @@ Detta gäller endast när du använder textredigeraren i en dialogruta (inte red
 
 Du kan ange höjden på det redigerbara området som visas i komponentdialogrutan:
 
-1. På `../items/text` i dialogrutedefinitionen för komponenten skapar du en egenskap:
+1. Skapa en egenskap på noden `../items/text` i dialogdefinitionen för komponenten:
 
    * **Namn** `height`
    * **Typ** `Long`
-   * **Värde** redigeringsytans höjd i pixlar.
+   * **Värdet** är höjden på arbetsytan för redigering i pixlar.
 
    >[!NOTE]
    >
@@ -665,27 +665,27 @@ När du lägger till länkar i AEM kan du definiera:
 Om du vill konfigurera hur länkar läggs till i AEM från ett annat program definierar du reglerna för HTML.
 
 1. Leta reda på textkomponenten för ditt projekt med CRXDE Lite.
-1. Skapa en nod på samma nivå som `<rtePlugins-node>`, d.v.s. skapa noden under den överordnade noden för `<rtePlugins-node>`:
+1. Skapa en nod på samma nivå som `<rtePlugins-node>`, d.v.s. skapa noden under den överordnade noden `<rtePlugins-node>`:
 
    * **Namn** `htmlRules`
    * **Typ** `nt:unstructured`
 
    >[!NOTE]
    >
-   The `../items/text` -noden har egenskapen:
+   Noden `../items/text` har egenskapen:
    >
    * **Namn** `xtype`
    * **Typ** `String`
    * **Värde** `richtext`
    >
-   Platsen för `../items/text` noden kan variera beroende på dialogstrukturen; två exempel är `/apps/myProject>/components/text/dialog/items/text` och `/apps/<myProject>/components/text/dialog/items/panel/items/text`.
+   Platsen för noden `../items/text` kan variera beroende på strukturen i dialogrutan. Två exempel är `/apps/myProject>/components/text/dialog/items/text` och `/apps/<myProject>/components/text/dialog/items/panel/items/text`.
 
-1. Under `htmlRules`skapar du en nod.
+1. Skapa en nod under `htmlRules`.
 
    * **Namn** `links`
    * **Typ** `nt:unstructured`
 
-1. Under `links` -nod definierar du egenskaperna efter behov:
+1. Definiera egenskaperna under noden `links` efter behov:
 
    * CSS-format för interna länkar:
 
@@ -699,13 +699,13 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
       * **Typ** `String`
       * **Värde** namnet på CSS-klassen (utan föregående &#39;.&#39;); till exempel `cssClass` i stället för `.cssClass`)
 
-   * Giltig matris **protokoll**. Protokollen som stöds är `http://`, `https://`, `file://`och `mailto:`.
+   * Matris med giltiga **protokoll**. Protokollen som stöds är `http://`, `https://`, `file://` och `mailto:`.
 
       * **Namn** `protocols`
       * **Typ** `String[]`
       * **Värde** ett eller flera protokoll
 
-   * **defaultProtocol** (egenskap av typ **Sträng**): Protokoll som ska användas om användaren inte uttryckligen angav ett.
+   * **defaultProtocol** (egenskap av typen **String**): Protokoll som ska användas om användaren inte uttryckligen angav ett.
 
       * **Namn** `defaultProtocol`
       * **Typ** `String`
@@ -716,7 +716,7 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
       * **Namn** `targetConfig`
       * **Typ** `nt:unstructured`
 
-     På noden `targetConfig`definierar du de egenskaper som krävs:
+     Definiera de nödvändiga egenskaperna på noden `targetConfig`:
 
       * Ange målläge:
 
@@ -726,10 +726,10 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
 
             * `auto`: betyder att ett automatiskt mål har valts
 
-              (anges av `targetExternal` egenskap för externa länkar eller `targetInternal` för interna länkar).
+              (anges av egenskapen `targetExternal` för externa länkar eller `targetInternal` för interna länkar).
 
-            * `manual`: inte tillämpligt i detta sammanhang
-            * `blank`: inte tillämpligt i detta sammanhang
+            * `manual`: gäller inte i den här kontexten
+            * `blank`: gäller inte i den här kontexten
 
       * Målet för interna länkar:
 
@@ -741,6 +741,6 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
 
          * **Namn** `targetExternal`
          * **Typ** `String`
-         * **Värde** målet för externa länkar (används endast när läget är `auto`).
+         * **Värde** är målet för externa länkar (används endast när läget är `auto`).
 
 1. Spara alla ändringar.

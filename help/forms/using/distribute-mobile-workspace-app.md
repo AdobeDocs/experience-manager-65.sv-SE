@@ -38,10 +38,10 @@ MDM-administratören kan överföra både ipa- och apk-filer till MDM-servern oc
 
 Följande profilinställningar på enheten påverkar hur AEM Forms-appen fungerar på enheten:
 
-* **Tillåt användning av kamera** i **Enhetsfunktioner** section
+* **Tillåt användning av kameran** i avsnittet **Enhetsfunktioner**
 
-Om du inaktiverar **Tillåt användning av kamera**, kamerans funktion i [Fotografanteckning](/help/forms/using/add-attachments.md) fungerar inte. Aktivera det här alternativet om du vill använda kameran i appen.
+Om du inaktiverar **Tillåt användning av kameran** fungerar inte kamerafunktionen i [fotoanteckningen](/help/forms/using/add-attachments.md). Aktivera det här alternativet om du vill använda kameran i appen.
 
-* **Kräv lösenord på enheten** i avsnittet Lösenordspolicyer
+* **Kräv lösenord på enheten** i avsnittet Lösenordsprinciper
 
-Aktivera **kryptering av programdata** rekommenderar vi att du aktiverar **lösenord** på din enhet. Om lösenordet inte är inställt på enheten krypteras inte de programdata som lagras på enheten.
+Om du vill aktivera **kryptering av programdata** rekommenderar vi att du aktiverar **lösenkoden** på din enhet. Om lösenordet inte är inställt på enheten krypteras inte de programdata som lagras på enheten.

@@ -20,13 +20,13 @@ ht-degree: 0%
 
 ## Ladda ned {#download}
 
-Skriptet är gjort för att underlätta analysen av `access.log` filer som skapar en läsbar rapport för senare bearbetning.
+Det här skriptet görs för att underlätta analysen av de `access.log`-filer som skapar en läsbar rapport för senare bearbetning.
 
 [Hämta fil](assets/analyse-access.sh)
 
 ## Beskrivning {#description}
 
-Skriptet är gjort för att underlätta analysen av `access.log` filer som skapar en läsbar rapport för senare bearbetning.
+Det här skriptet görs för att underlätta analysen av de `access.log`-filer som skapar en läsbar rapport för senare bearbetning.
 
 Det genererar det totala antalet förfrågningar, GET kontra POST, Begär distribution över tid med mera.
 
@@ -36,7 +36,7 @@ Den kan analysera en anpassad sökväg som finns på kommandoraden.
 
 Utgå från kommentaren i filen som talar om hur den ska köras:
 
-Analysera CQ `access.log` extrapolera olika typer av information och producera ett markeringsresultat på `stdout`.
+Analysera CQ `access.log` genom att extrapolera olika uppgifter och skapa en Markdown-utdata på `stdout`.
 
 ## Användning {#usage}
 

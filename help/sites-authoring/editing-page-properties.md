@@ -24,7 +24,7 @@ Egenskaperna fördelas på flera flikar.
 
 * **Titel**
 
-  Sidans rubrik visas på olika platser. Till exempel **Webbplatser** tabblista och **Webbplatser** kort-/listvyer.
+  Sidans rubrik visas på olika platser. Till exempel fliklistan **Webbplatser** och vyerna **Webbplatser** kort/lista.
 
   Detta är ett obligatoriskt fält.
 
@@ -49,19 +49,19 @@ Egenskaperna fördelas på flera flikar.
 
 * **Varumärke**
 
-  Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Kärnkomponenter.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+  Använd en enhetlig varumärkesidentitet på alla sidor genom att lägga till en instruktionsmarginal till varje sidrubrik. Den här funktionen kräver att du använder Page Component från version 2.14.0 eller senare av [Core Components.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 
    * **Åsidosätt** - Markera för att definiera instruktionsmarginalen för varumärket på den här sidan.
-      * Värdet ärvs av alla underordnade sidor såvida de inte också har sina **Åsidosätt** värden har angetts.
+      * Värdet ärvs av alla underordnade sidor såvida inte deras **Åsidosätt**-värden också har angetts.
    * **Åsidosätt värde** - Texten i instruktionsmarginalen som ska läggas till i sidrubriken.
       * Värdet läggs till i sidrubriken efter ett lodstreck som &quot;Cycling Tuscany&quot; | Alltid redo för WKND&quot;
-* **Sidrubrik**
+* **Sidtitel**
 
-  En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom visas **Titel** används.
+  En rubrik som ska användas på sidan. Används vanligtvis av titelkomponenter. Om den är tom används **Title**.
 
-* **Navigeringsrubrik**
+* **Navigeringstitel**
 
-  Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom visas **Titel** används.
+  Du kan ange en separat rubrik som ska användas i navigeringen (om du till exempel vill ha något mer koncist). Om den är tom används **Title**.
 
 * **Underrubrik**
 
@@ -87,7 +87,7 @@ Egenskaperna fördelas på flera flikar.
 
   Ange en innehålls-URL för den här sidan, vilket kan ge dig en kortare och/eller mer uttrycksfull URL.
 
-  Om Vanity-URL:en till exempel är inställd på `welcome`till den sida som identifieras av sökvägen `/v1.0/startpage`för webbplatsen `http://example.com,` sedan `http://example.com/welcome`skulle vara den vanligaste URL:en för `http://example.com/content/v1.0/startpage`
+  Om Vanity-URL:en till exempel är inställd på `welcome` till den sida som identifieras av sökvägen `/v1.0/startpage` för webbplatsen `http://example.com,` blir `http://example.com/welcome` vanity-URL:en för `http://example.com/content/v1.0/startpage`
 
   >[!CAUTION]
   >
@@ -98,7 +98,7 @@ Egenskaperna fördelas på flera flikar.
   >* Ska inte anges till en befintlig sida.
   >
 
-  Konfigurera Dispatcher för att aktivera åtkomst till mål-URL:er. Se [Aktivera åtkomst till Vanity-URL:er](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls) för mer information.
+  Konfigurera Dispatcher för att aktivera åtkomst till mål-URL:er. Mer information finns i [Aktivera åtkomst till Vanity-URL:er](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#enabling-access-to-vanity-urls-vanity-urls).
 
 * **URL för omdirigering av vanity**
 
@@ -120,18 +120,18 @@ Egenskaperna fördelas på flera flikar.
 
 * **Design**
 
-  Ange [design](/help/sites-developing/designer.md) som ska användas för den här sidan.
+  Ange den [design](/help/sites-developing/designer.md) som ska användas för den här sidan.
 
 * **Alias**
 
   Ange ett alias som ska användas med den här sidan.
 
-   * Om du till exempel definierar ett alias för `private` för sidan `/content/wknd/us/en/magazine/members-only`kan den här sidan också öppnas via `/content/wknd/us/en/magazine/private`
-   * När du skapar ett alias anges `sling:alias` på sidnoden, vilket bara påverkar resursen, inte databassökvägen.
-   * Sidor som används av alias i redigeraren kan inte publiceras. [Publiceringsalternativ](/help/sites-authoring/publishing-pages.md) i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
-   * Mer information finns i [Lokaliserade sidnamn under SEO och URL Management Best Practices](/help/managing/seo-and-url-management.md#localized-page-names).
+   * Om du till exempel definierar aliaset `private` för sidan `/content/wknd/us/en/magazine/members-only` kan den här sidan också nås via `/content/wknd/us/en/magazine/private`
+   * Om du skapar ett alias anges egenskapen `sling:alias` på sidnoden, vilket bara påverkar resursen, inte databassökvägen.
+   * Sidor som används av alias i redigeraren kan inte publiceras. [Publish-alternativ](/help/sites-authoring/publishing-pages.md) i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
+   * Mer information finns i [Lokaliserade sidnamn under SEO och Bästa praxis för URL-hantering](/help/managing/seo-and-url-management.md#localized-page-names).
 
-* **Ärvs från &lt;*bana*>**
+* **Ärvd från &lt;*path*>**
 
   Anger om sidan ärvs. och varifrån kommer.
 
@@ -141,22 +141,22 @@ Egenskaperna fördelas på flera flikar.
 
 * **Tillåtna mallar**
 
-  [Definiera listan med tillgängliga mallar](/help/sites-authoring/templates.md#allowingatemplate) inom denna underavdelning.
+  [Definiera listan med mallar som är tillgängliga](/help/sites-authoring/templates.md#allowingatemplate) i den här undergrenen.
 
-* **Aktivera** (Autentiseringskrav)
+* **Aktivera** (autentiseringskrav)
 
   Aktivera (eller inaktivera) användningen av autentisering så att du kan komma åt sidan.
 
   >[!NOTE]
   >
-  >Stängda användargrupper för sidan definieras på **[Behörigheter](/help/sites-authoring/editing-page-properties.md#permissions)** -fliken.
+  >Stängda användargrupper för sidan definieras på fliken **[Behörigheter](/help/sites-authoring/editing-page-properties.md#permissions)**.
 
   >[!CAUTION]
   >
-  >The **[Behörigheter](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** kan du redigera CUG-konfigurationer baserat på närvaron av `granite:AuthenticationRequired` blanda. Om sidbehörigheter konfigureras med hjälp av inaktuella CUG-konfigurationer, baserat på förekomsten av `cq:cugEnabled` egenskap, visas ett varningsmeddelande under **Autentiseringskrav** och alternativet går inte att redigera, och inte heller [Behörigheter](/help/sites-authoring/editing-page-properties.md#permissions) redigerbar.
+  >På fliken **[Behörigheter](/help/sites-authoring/editing-page-properties.md#main-pars-procedure-949394300)** kan du redigera CUG-konfigurationer baserat på förekomsten av `granite:AuthenticationRequired`-mixinen. Om sidbehörigheter konfigureras med inaktuella CUG-konfigurationer, baserat på förekomsten av egenskapen `cq:cugEnabled`, visas ett varningsmeddelande under **Autentiseringskrav** och alternativet kan inte redigeras, och inte heller kan [Behörigheter](/help/sites-authoring/editing-page-properties.md#permissions) redigeras.
   >
   >
-  >I så fall måste CUG-behörigheterna redigeras i [klassiskt användargränssnitt](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
+  >I så fall måste CUG-behörigheterna redigeras i det [klassiska användargränssnittet](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
 
 * **Inloggningssida**
 
@@ -182,15 +182,15 @@ Visar sidminiatyrbilden. Du kan:
 
   Välj en befintlig resurs som du vill använda som miniatyrbild.
 
-* **Återställ**
+* **Återgå**
 
   Det här alternativet blir tillgängligt när du har ändrat miniatyrbilden. Om du inte vill behålla ändringen kan du återställa den innan du sparar.
 
 ### Sociala medier {#social-media}
 
-* **Delning i sociala medier**
+* **Delning via sociala medier**
 
-  Definierar de delningsalternativ som är tillgängliga på sidan. Visar de alternativ som är tillgängliga för [Dela kärnkomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html).
+  Definierar de delningsalternativ som är tillgängliga på sidan. Visar de alternativ som är tillgängliga för kärnkomponenten [Delning](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/sharing.html).
 
    * **Aktivera användardelning för Facebook**
    * **Aktivera användardelning för Pinterest**
@@ -203,18 +203,18 @@ Definiera Experience Fragment-variation som används för att generera metadata 
 
   Definiera egenskaper för [molntjänster](/help/sites-developing/extending-cloud-config.md).
 
-### Personalisering {#personalization}
+### Personalization {#personalization}
 
 * **ContextHub-konfigurationer**
 
-  Välj [KontextHub-konfiguration](/help/sites-developing/ch-configuring.md) och [Segmentsökväg](/help/sites-administering/segmentation.md).
+  Markera [ContextHub Configuration](/help/sites-developing/ch-configuring.md) och [Segments Path](/help/sites-administering/segmentation.md).
 
 * **Målkonfiguration**
 
-  Välj en [Varumärke som anger ett omfång för målanpassning](/help/sites-authoring/target-adobe-campaign.md).
+  Välj ett [varumärke om du vill ange ett omfång för ](/help/sites-authoring/target-adobe-campaign.md).
 
   >[!NOTE]
-  >Det här alternativet kräver att användarkontot finns i `Target Adminstrators`grupp.
+  >Det här alternativet kräver att användarkontot finns i gruppen `Target Adminstrators`.
 
 ### Behörigheter {#permissions}
 
@@ -225,22 +225,22 @@ Definiera Experience Fragment-variation som används för att generera metadata 
    * [Lägg till behörigheter](/help/sites-administering/user-group-ac-admin.md)
    * [Redigera stängd användargrupp](/help/sites-administering/cug.md#applying-your-closed-user-group-to-content-pages)
 
-   * Visa [Effektiva behörigheter](/help/sites-administering/user-group-ac-admin.md)
+   * Visa [gällande behörigheter](/help/sites-administering/user-group-ac-admin.md)
 
   >[!CAUTION]
   >
-  >The **Behörigheter** -fliken tillåter redigering av CUG-konfigurationer baserat på närvaron av `granite:AuthenticationRequired` blanda. Om sidbehörigheter konfigureras med hjälp av inaktuella CUG-konfigurationer, baserat på förekomsten av `cq:cugEnabled` -egenskapen visas ett varningsmeddelande och CUG-behörigheterna kan inte redigeras, inte heller är autentiseringskravet på [Avancerat](/help/sites-authoring/editing-page-properties.md#advanced) går att redigera.
+  >På fliken **Behörigheter** kan du redigera CUG-konfigurationer baserat på förekomsten av `granite:AuthenticationRequired`-mixinen. Om sidbehörigheter konfigureras med inaktuella CUG-konfigurationer, baserat på förekomsten av egenskapen `cq:cugEnabled`, visas ett varningsmeddelande och CUG-behörigheterna kan inte redigeras. Autentiseringskravet på fliken [ Avancerat](/help/sites-authoring/editing-page-properties.md#advanced) kan inte heller redigeras.
   >
   >
-  >I så fall måste CUG-behörigheterna redigeras i [klassiskt användargränssnitt](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
+  >I så fall måste CUG-behörigheterna redigeras i det [klassiska användargränssnittet](/help/sites-classic-ui-authoring/classic-page-author-edit-page-properties.md).
 
   >[!NOTE]
   >
-  >På fliken Behörigheter går det inte att skapa tomma CUG-grupper, vilket kan vara ett enkelt sätt att neka alla användare åtkomst. För att göra detta måste CRX Explorer användas. Se dokumentet [Behörighetsadministration för användare, grupper och åtkomst](/help/sites-administering/user-group-ac-admin.md) för mer information.
+  >På fliken Behörigheter går det inte att skapa tomma CUG-grupper, vilket kan vara ett enkelt sätt att neka alla användare åtkomst. För att göra detta måste CRX Explorer användas. Mer information finns i dokumentet [Behörighetsadministration för användare, grupp och åtkomst](/help/sites-administering/user-group-ac-admin.md).
 
 ### Blueprint {#blueprint}
 
-* **Blueprint**
+* **Utskrift**
 
   Definiera egenskaper för en designsida i [hantering av flera webbplatser](/help/sites-administering/msm.md). Styr under vilka omständigheter ändringar ska spridas till Live Copy.
 
@@ -252,17 +252,17 @@ Definiera Experience Fragment-variation som används för att generera metadata 
 
 ### Webbplatsstruktur {#site-structure}
 
-* Tillhandahålla länkar till sidor som innehåller funktioner för hela webbplatsen, till exempel **Registreringssida**, **Offlinesida**, bland annat.
+* Tillhandahåll länkar till sidor som innehåller funktioner för hela webbplatsen, till exempel **Registreringssida**, **Offlinesida**.
 
 ## Redigera sidegenskaper {#editing-page-properties-1}
 
 Du kan definiera sidegenskaper:
 
-* Från **Webbplatser** konsol:
+* Från konsolen **Platser**:
 
-   * [Skapa en sida](/help/sites-authoring/managing-pages.md#creating-a-new-page) (en delmängd av egenskaperna)
+   * [Skapa en sida](/help/sites-authoring/managing-pages.md#creating-a-new-page) (en deluppsättning av egenskaperna)
 
-   * Klicka eller peka **Egenskaper**
+   * Klicka eller peka på **Egenskaper**
 
       * För en enstaka sida
       * För flera sidor (endast en deluppsättning av egenskaperna är tillgängliga för redigering av en masse)
@@ -273,11 +273,11 @@ Du kan definiera sidegenskaper:
 
 ### Från webbplatskonsolen - en sida {#from-the-sites-console-single-page}
 
-Klicka eller peka **Egenskaper** för att definiera sidegenskaperna:
+Klicka eller tryck på **Egenskaper** för att definiera sidegenskaperna:
 
-1. Använda **Webbplatser** navigera till platsen för sidan som du vill visa och redigera egenskaper för.
+1. Använd konsolen **Platser** för att navigera till platsen för sidan som du vill visa och redigera egenskaper för.
 
-1. Välj **Egenskaper** för den önskade sidan med något av följande:
+1. Välj alternativet **Egenskaper** för den begärda sidan med något av följande alternativ:
 
    * [Snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions)
    * [Markeringsläge](/help/sites-authoring/basic-handling.md#selectionmode)
@@ -294,35 +294,35 @@ När du redigerar en sida kan du använda **Sidinformation** för att definiera 
 
 1. Öppna sidan som du vill redigera egenskaper för.
 
-1. Välj **Sidinformation** -ikon för att öppna markeringsmenyn:
+1. Välj ikonen **Sidinformation** för att öppna markeringsmenyn:
 
    ![screen_shot_2018-03-22at095740](assets/screen_shot_2018-03-22at095740.png)
 
-1. Välj **Öppna egenskaper** och en dialogruta öppnas där du kan redigera egenskaperna, sorterade efter lämplig flik. Följande knappar finns också till höger om verktygsfältet:
+1. Välj **Öppna egenskaper** så öppnas en dialogruta där du kan redigera egenskaperna, sorterade efter lämplig flik. Följande knappar finns också till höger om verktygsfältet:
 
    * **Avbryt**
    * **Spara och stäng**
 
-1. Använd **Spara och stäng** för att spara ändringarna.
+1. Använd knappen **Spara och stäng** för att spara ändringarna.
 
 ### Från webbplatskonsolen - flera sidor {#from-the-sites-console-multiple-pages}
 
-Från **Webbplatser** konsolen kan du markera flera sidor och sedan använda **Visa egenskaper** för att visa och/eller redigera sidegenskaperna. Detta kallas massredigering av sidegenskaper.
+I konsolen **Platser** kan du markera flera sidor och sedan använda **Visa egenskaper** för att visa och/eller redigera sidegenskaperna. Detta kallas massredigering av sidegenskaper.
 
 >[!NOTE]
 >
->Det finns även massredigering av egenskaper för Assets. Den liknar, men skiljer sig på några punkter. Se [Redigera egenskaper för flera resurser](/help/assets/metadata.md) för mer information.
+>Det finns även massredigering av egenskaper för Assets. Den liknar, men skiljer sig på några punkter. Mer information finns i [Redigera egenskaper för flera Assets](/help/assets/metadata.md).
 >
->Det finns också [Massredigerare](/help/sites-administering/bulk-editor.md). Med den här redigeraren kan du söka efter innehåll från flera sidor med hjälp av GQL (Google Query Language) och sedan redigera innehållet direkt med hjälp av gruppredigeraren innan du sparar ändringarna på originalsidorna.
+>Det finns också [gruppredigeraren](/help/sites-administering/bulk-editor.md). Med den här redigeraren kan du söka efter innehåll från flera sidor med hjälp av GQL (Google Query Language) och sedan redigera innehållet direkt med hjälp av gruppredigeraren innan du sparar ändringarna på originalsidorna.
 
 Du kan välja flera sidor för massredigering på olika sätt, bland annat:
 
-* När du bläddrar **Webbplatser** konsol
-* Efter användning **Sök** för att hitta en uppsättning sidor
+* När du bläddrar i konsolen **Platser**
+* När du har använt **Sök** för att hitta en uppsättning sidor
 
 ![epp-01](assets/epp-01.png)
 
-När du har markerat sidorna och sedan klickat eller tryckt på **Egenskaper, alternativ**, visas bulkegenskaperna:
+När du har markerat sidorna och sedan klickat eller tryckt på alternativet **Egenskaper** visas bulkegenskaperna:
 
 ![epp-02](assets/epp-02.png)
 
@@ -355,7 +355,7 @@ När du har valt Massredigering kan du göra följande:
    * Vanliga egenskaper med ett gemensamt värde
 
       * Endast egenskaper med ett gemensamt värde visas i visningsläget.
-      * När fältet har flera värden (till exempel Taggar) visas värden bara när *alla* är vanliga. Om bara vissa är vanliga visas de bara vid redigering.
+      * När fältet har flera värden (till exempel Taggar) visas värden bara när *all* är gemensamma. Om bara vissa är vanliga visas de bara vid redigering.
 
   När det inte finns några egenskaper med ett gemensamt värde visas ett meddelande.
 
@@ -365,10 +365,10 @@ När du har valt Massredigering kan du göra följande:
 
    * Du kan uppdatera värdena i de tillgängliga fälten.
 
-      * De nya värdena tillämpas på alla markerade sidor när du markerar **Klar**.
+      * De nya värdena tillämpas på alla markerade sidor när du väljer **Klar**.
       * När fältet har flera värden (till exempel Taggar) kan du antingen lägga till ett nytt värde eller ta bort ett gemensamt värde.
 
-   * Fält som är gemensamma, men har olika värden på de olika sidorna, anges med ett särskilt värde, t.ex. text `<Mixed Entries>`.
+   * Fält som är vanliga, men har olika värden på de olika sidorna, anges med ett särskilt värde som texten `<Mixed Entries>`.
 
 >[!NOTE]
 >

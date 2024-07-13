@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Så här uppdaterar du innehåll via AEM Assets API:er {#update-your-content}
 
-I den här delen av [AEM Headless Developer Journey](overview.md) Lär dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
+I den här delen av [AEM Headless Developer Journey ](overview.md) får du lära dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om den AEM resan utan headless [Få åtkomst till ditt innehåll via AEM-API:er](access-your-content.md) har du lärt dig hur du får tillgång till ditt headless-innehåll i AEM via det AEM GraphQL API:t, och du bör nu:
+I det tidigare dokumentet av den AEM resan [Hur du får åtkomst till ditt innehåll via AEM-API:er](access-your-content.md) fick du lära dig hur du får åtkomst till ditt headless-innehåll i AEM via AEM GraphQL API, och du bör nu:
 
 * Lär dig mer om GraphQL.
 * Förstå hur AEM GraphQL API fungerar.
@@ -29,7 +29,7 @@ Den här artikeln bygger på dessa grundläggande funktioner så att du förstå
 ## Syfte {#objective}
 
 * **Målgrupp**: Avancerat
-* **Syfte**: Lär dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment:
+* **Mål**: Lär dig hur du använder REST API för att komma åt och uppdatera innehållet i dina innehållsfragment:
    * Introducera AEM Assets HTTP API.
    * Presentera och diskutera stöd för innehållsfragment i API:t.
    * Visa information om API:t.
@@ -44,20 +44,20 @@ I det föregående steget i Headless Journey lärde du dig att använda AEM Grap
 
 Varför behövs en annan API?
 
-Med Assets HTTP API kan du **Läs** innehållet, men det gör det också möjligt för dig **Skapa**, **Uppdatera** och **Ta bort** content - åtgärder som inte är möjliga med GraphQL API.
+Med Assets HTTP API kan du **läsa** ditt innehåll, men du kan även använda det för att **skapa**, **uppdatera** och **ta bort** -innehåll - åtgärder som inte är möjliga med GraphQL API.
 
-Resursens REST API är tillgängligt för varje körklar installation av en nyligen använd Adobe Experience Manager-version.
+Assets REST API är tillgängligt för alla färdiga installationer av en nyligen använd Adobe Experience Manager-version.
 
-## Resurser för HTTP API {#assets-http-api}
+## ASSETS HTTP API {#assets-http-api}
 
-Resursens HTTP-API omfattar:
+Assets HTTP API omfattar:
 
-* Resurser REST API
+* ASSETS REST API
 * inklusive stöd för innehållsfragment
 
-Den aktuella implementeringen av Assets HTTP API baseras på **REST** arkitektoniskt format så att du kan komma åt innehåll (lagrat i AEM) via **CRUD** (Skapa, läsa, uppdatera, ta bort).
+Den aktuella implementeringen av Assets HTTP API baseras på arkitekturstilen **REST** och gör att du kan komma åt innehåll (som lagras i AEM) via **CRUD**-åtgärder (Skapa, Läs, Uppdatera, Ta bort).
 
-Med den här åtgärden kan du med API:t köra Adobe Experience Manager som ett headless CMS (Content Management System) genom att tillhandahålla Content Services till ett JavaScript-klientprogram. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar. Exempelvis kräver Single Page-program (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via ett API, ofta i JSON-format.
+Med den här åtgärden kan du med API:t köra Adobe Experience Manager som ett headless CMS (Content Management System) genom att tillhandahålla innehållstjänster till ett JavaScript front end-program. Eller något annat program som kan köra HTTP-begäranden och hantera JSON-svar. Exempelvis kräver Single Page-program (SPA), ramverksbaserade eller anpassade, innehåll som tillhandahålls via ett API, ofta i JSON-format.
 
 <!--
 >[!NOTE]
@@ -181,7 +181,7 @@ The binary data of an asset is exposed as a SIREN link of type `content`.
 Assets can have multiple renditions. These are typically exposed as child entities, one exception being a thumbnail rendition, which is exposed as a link of type `thumbnail` ( `rel="thumbnail"`).
 -->
 
-## Resurser för HTTP API och innehållsfragment {#assets-http-api-content-fragments}
+## Assets HTTP API och innehållsfragment {#assets-http-api-content-fragments}
 
 Innehållsfragment används för rubrikfri leverans och ett innehållsfragment är en särskild typ av resurs. De används för att komma åt strukturerade data, t.ex. texter, siffror och datum.
 
@@ -208,24 +208,24 @@ To create a content fragment, the (internal repository) path of the model has to
 Associated content is currently not exposed.
 -->
 
-## Använda REST API för resurser {#using-aem-assets-rest-api}
+## Använda Assets REST API {#using-aem-assets-rest-api}
 
 ### Åtkomst {#access}
 
-Resursens REST API använder `/api/assets` slutpunkten och kräver att sökvägen till resursen har åtkomst till den (utan radavståndet) `/content/dam`).
+Assets REST API använder slutpunkten `/api/assets` och kräver att resursens sökväg har åtkomst till den (utan inledande `/content/dam`).
 
 * Det innebär att du kan få tillgång till resursen på
    * `/content/dam/path/to/asset`
 * Du måste begära:
    * `/api/assets/path/to/asset`
 
-Till exempel för att komma åt `/content/dam/wknd/en/adventures/cycling-tuscany`, begäran `/api/assets/wknd/en/adventures/cycling-tuscany.json`
+Om du till exempel vill komma åt `/content/dam/wknd/en/adventures/cycling-tuscany` begär du `/api/assets/wknd/en/adventures/cycling-tuscany.json`
 
 >[!NOTE]
 >Åtkomst över:
 >
->* `/api/assets` **inte** behöver du använda `.model` väljare.
->* `/content/path/to/page` **gör** kräver att `.model` väljare.
+>* `/api/assets` **behöver inte** använda väljaren `.model`.
+>* `/content/path/to/page` **does** kräver att väljaren `.model` används.
 
 ### Åtgärd {#operation}
 
@@ -234,11 +234,11 @@ HTTP-metoden avgör vilken åtgärd som ska utföras:
 * **GET** - för att hämta en JSON-representation av en resurs eller en mapp
 * **POST** - för att skapa nya resurser eller mappar
 * **PUT** - för att uppdatera egenskaperna för en resurs eller mapp
-* **DELETE** - ta bort en resurs eller mapp
+* **DELETE** - om du vill ta bort en resurs eller mapp
 
 >[!NOTE]
 >
->Parametrarna för begärandeinnehåll och/eller URL kan användas för att konfigurera vissa av dessa åtgärder. Du kan till exempel definiera att en mapp eller en resurs ska skapas av en **POST** begäran.
+>Parametrarna för begärandeinnehåll och/eller URL kan användas för att konfigurera vissa av dessa åtgärder. Definiera till exempel att en mapp eller en resurs ska skapas av en **POST** -begäran.
 
 Det exakta formatet för begäranden som stöds definieras i API-referensdokumentationen.
 
@@ -257,7 +257,7 @@ Användningen kan variera beroende på om du använder en AEM författare eller 
 
 >[!NOTE]
 >
->Mer information finns i API-referensen. Särskilt gäller följande: [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html).
+>Mer information finns i API-referensen. Särskilt [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html).
 
 ### Läsning/leverans {#read-delivery}
 
@@ -282,7 +282,7 @@ Användning sker via:
 
 `POST /{cfParentPath}/{cfName}`
 
-Brödtexten måste innehålla en JSON-representation av det innehållsfragment som ska skapas, inklusive allt ursprungligt innehåll som ska anges för elementen i innehållsfragmentet. Det är obligatoriskt att ange `cq:model` och måste peka på en giltig innehållsfragmentmodell. Om du inte gör det kommer ett fel att uppstå. Du måste också lägga till en rubrik `Content-Type` som är inställd på `application/json`.
+Brödtexten måste innehålla en JSON-representation av det innehållsfragment som ska skapas, inklusive allt ursprungligt innehåll som ska anges för elementen i innehållsfragmentet. Det är obligatoriskt att ange egenskapen `cq:model` och den måste peka på en giltig innehållsfragmentmodell. Om du inte gör det kommer ett fel att uppstå. Du måste också lägga till rubriken `Content-Type` som är inställd på `application/json`.
 
 ### Uppdatera {#update}
 
@@ -320,18 +320,18 @@ Nu när du är klar med den här delen av AEM Headless Developer Journey ska du:
 
 <!--You should continue your AEM headless journey by next reviewing the document [How to Put It All Together - Your App and Your Content in AEM Headless](put-it-all-together.md) where you learn how to take your AEM Headless project and prepare it for going live.-->
 
-Du bör fortsätta den AEM resan utan trassel genom att nästa gång du granskar dokumentet [Så här Live med ditt headless-program](go-live.md) där du faktiskt tar ditt AEM Headless-projekt till hands!
+Du bör fortsätta din AEM resa utan att behöva lämna kontoret nästa gång du granskar dokumentet [Så här gör du live med ditt Headless-program](go-live.md) där du faktiskt gör ditt AEM Headless-projekt live!
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Resurser för HTTP API](/help/assets/mac-api-assets.md)
+* [ASSETS HTTP API](/help/assets/mac-api-assets.md)
 * [Innehållsfragment REST API](/help/assets/assets-api-content-fragments.md)
    * [API-referens](/help/assets/assets-api-content-fragments.md#api-reference)
 * [Adobe Experience Manager Assets API - innehållsfragment](https://www.adobe.io/experience-manager/reference-materials/6-5/assets-api-content-fragments/index.html)
 * [Arbeta med innehållsfragment](/help/assets/content-fragments/content-fragments.md)
 * [AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [CORS/AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
+* [CORS/AEM har förklarats](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-article-understand.html)
 * [Video - Utveckla för CORS med AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cors-security-technical-video-develop.html)
-* An [Introduktion till AEM som headless CMS](/help/sites-developing/headless/introduction.md)
-* The [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
+* En [introduktion till AEM som ett headless CMS](/help/sites-developing/headless/introduction.md)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 * [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

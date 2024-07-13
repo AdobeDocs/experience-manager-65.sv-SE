@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Generera HTML5-förhandsgranskning av ett XDP-formulär{#generate-html-preview-of-an-xdp-form}
 
-När du utformar ett formulär i AEM Forms Designer kan du, förutom att förhandsgranska PDF-återgivningen av ett formulär, även förhandsgranska en HTML 5-återgivning av det. Du kan använda **Förhandsgranska HTML** om du vill förhandsgranska ett formulär så som det skulle visas i en webbläsare.
+När du utformar ett formulär i AEM Forms Designer kan du, förutom att förhandsgranska PDF-återgivningen av ett formulär, även förhandsgranska en HTML 5-återgivning av det. Du kan använda fliken **Förhandsgranska HTML** om du vill förhandsgranska ett formulär så som det skulle visas i en webbläsare.
 
 ## Aktivera HTML Preview för XDP-formulär i Designer {#html-preview-of-forms-in-forms-designer}
 
@@ -31,9 +31,9 @@ Gör så här om du vill att Designer ska kunna generera en förhandsgranskning 
 
 1. Gå till `https://'[server]:[port]'/system/console/configMgr` på AEM Forms som körs på OSGi eller
    `https://'[server]:[port]'/lc/system/console/configMgr` på AEM Forms som körs på JEE.
-1. Leta reda på och klicka **Autentiseringstjänst för Apache Sling** för att öppna den i redigeringsläge.
+1. Leta reda på och klicka på konfigurationen för **Apache Sling Authentication Service** för att öppna den i redigeringsläge.
 
-1. Beroende på om du kör AEM Forms på OSGi eller JEE lägger du till följande i **Autentiseringskrav** fält:
+1. Beroende på om du kör AEM Forms på OSGi eller JEE lägger du till följande i fältet **Autentiseringskrav**:
 
    * AEM Forms på JEE
 
@@ -49,12 +49,12 @@ Gör så här om du vill att Designer ska kunna generera en förhandsgranskning 
    >
    >Kopiera inte och klistra in det angivna värdet i fältet Autentiseringskrav eftersom det kan skada specialtecknen i värdet. Skriv i stället det angivna värdet i fältet.
 
-1. Ange ett användarnamn och lösenord i **[!UICONTROL Anonymous User Name]** och **[!UICONTROL Anonymous User Password]** fält. De angivna autentiseringsuppgifterna används för att hantera anonym autentisering och ge åtkomst till anonyma användare.
-1. Klicka **Spara** för att spara konfigurationen.
+1. Ange ett användarnamn och lösenord i fälten **[!UICONTROL Anonymous User Name]** och **[!UICONTROL Anonymous User Password]**. De angivna autentiseringsuppgifterna används för att hantera anonym autentisering och ge åtkomst till anonyma användare.
+1. Klicka på **Spara** för att spara konfigurationen.
 
 ### Inaktivera skyddat läge {#disable-protected-mode}
 
-The [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) är aktiverat som standard. Låt det vara aktiverat för produktionsmiljöerna. Du kan inaktivera det för en utvecklingsmiljö och förhandsgranska HTML5 Forms i Designer. Utför följande steg för att inaktivera den:
+Det [skyddade läget ](../../forms/using/get-xdp-pdf-documents-aem.md) är aktiverat som standard. Låt det vara aktiverat för produktionsmiljöerna. Du kan inaktivera det för en utvecklingsmiljö och förhandsgranska HTML5 Forms i Designer. Utför följande steg för att inaktivera den:
 
 1. Logga in på AEM webbkonsol som administratör.
 
@@ -62,36 +62,36 @@ The [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) är aktivera
    * URL för AEM Forms på JEE är `https://'[server]:[port]'/lc/system/console/configMgr`
 
 1. Öppna **[!UICONTROL Mobile Forms Configurations]** för redigering.
-1. Avmarkera **[!UICONTROL Protected Mode]** och klicka **[!UICONTROL Save]**.
+1. Avmarkera alternativet **[!UICONTROL Protected Mode]** och klicka på **[!UICONTROL Save]**.
 
 ### Ange information om AEM Forms-server {#provide-details-of-aem-forms-server}
 
-1. I Designer går du till **verktyg** > **Alternativ**.
-1. I fönstret Alternativ väljer du **Serveralternativ** sida, ange följande information och klicka på **OK**.
+1. Gå till **Verktyg** > **Alternativ** i Designer.
+1. I fönstret Alternativ väljer du sidan **Serveralternativ**, anger följande information och klickar på **OK**.
 
    * **Server-URL**: AEM Forms server-URL.
 
    * **HTTP-portnummer**: AEM serverport. Standardvärdet är 4502.
-   * **Förhandsvisningskontext för HTML:** Sökväg till profilen för återgivning av XFA-formulär. Följande standardprofiler används för att förhandsgranska formuläret i Designer. Du kan också ange sökvägen till en anpassad profil.
+   * **Kontext för förhandsgranskning i HTML:** Sökväg till profilen för återgivning av XFA-formulär. Följande standardprofiler används för att förhandsgranska formuläret i Designer. Du kan också ange sökvägen till en anpassad profil.
 
-      * `/content/xfaforms/profiles/default.html` (AEM Forms on OSGi)
+      * `/content/xfaforms/profiles/default.html` (AEM Forms på OSGi)
 
-      * `/lc/content/xfaforms/profiles/default.html` (AEM Forms on JEE)
+      * `/lc/content/xfaforms/profiles/default.html` (AEM Forms på JEE)
 
-   * **Forms Manager Context:** Den kontextsökväg där användargränssnittet för Forms Manager distribueras. Standardvärdena är:
+   * **Forms Manager-kontext:** Kontextsökväg som Forms Manager-gränssnittet distribueras till. Standardvärdena är:
 
-      * `/aem/forms` (AEM Forms on OSGi)
-      * `/lc/forms` (AEM Forms on JEE)
+      * `/aem/forms` (AEM Forms på OSGi)
+      * `/lc/forms` (AEM Forms på JEE)
 
    >[!NOTE]
    >
-   >Kontrollera att AEM Forms-servern är igång. HTML-förhandsvisningen ansluter till CRX-servern till *generera* en förhandsgranskning.
+   >Kontrollera att AEM Forms-servern är igång. Förhandsgranskningen i HTML ansluter till CRX-servern för att *generera* en förhandsvisning.
 
    ![Alternativ för AEM Forms Designer ](assets/server_options.png)
 
    Alternativ för AEM Forms Designer
 
-1. Om du vill förhandsgranska ett formulär i HTML klickar du på **Förhandsgranska HTML** -fliken.
+1. Klicka på fliken **Förhandsgranska HTML** om du vill förhandsgranska ett formulär i HTML.
 
    >[!NOTE]
    >
@@ -111,15 +111,15 @@ The [skyddat läge](../../forms/using/get-xdp-pdf-documents-aem.md) är aktivera
 
 Med Designer kan du förhandsgranska och testa formuläret med XML-exempeldata. Vi rekommenderar att du ofta testar formuläret med exempeldata för att säkerställa att formuläret återges korrekt.
 
-Om du inte har några exempeldata kan Designer skapa dem eller så kan du skapa dem själv. (Se [Generera exempeldata automatiskt för att förhandsgranska formuläret](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7efe.2) och [Skapa exempeldata för att förhandsgranska formuläret](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7eff.2).)
+Om du inte har några exempeldata kan Designer skapa dem eller så kan du skapa dem själv. (Se [Generera exempeldata automatiskt för förhandsgranskning av formuläret](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7efe.2) och [Skapa exempeldata för förhandsgranskning av formuläret](https://help.adobe.com/en_US/AEMForms/6.1/DesignerHelp/WS107c29ade9134a2c136ae6f212a1f379c94-8000.2.html#WS92d06802c76abadb-728f46ac129b395660c-7eff.2).)
 
 Om du testar formuläret med en exempeldatakälla ser du till att data och fält mappas och att upprepade delformulär upprepas som du förväntade dig. Du kan skapa en balanserad formulärlayout som ger rätt utrymme för varje objekt för att visa sammanfogade data.
 
 1. Välj **Arkiv > Formuläregenskaper**.
 
-1. Klicka på **Förhandsgranska** och skriv den fullständiga sökvägen till testdatafilen i rutan Datafil. Du kan också använda knappen Bläddra för att navigera till filen.
+1. Klicka på fliken **Förhandsgranska** och skriv den fullständiga sökvägen till testdatafilen i rutan Datafil. Du kan också använda knappen Bläddra för att navigera till filen.
 
-1. Klicka **OK**. Nästa gång du förhandsgranskar formuläret i **Förhandsgranska HTML** -fliken visas datavärdena från XML-exempelfilen i respektive objekt.
+1. Klicka på **OK**. Nästa gång du förhandsgranskar formuläret på fliken **Förhandsgranska HTML** visas datavärdena från XML-exempelfilen i respektive objekt.
 
 ## Förhandsgranska formulär i en databas {#html-preview-of-forms-in-forms-manager}
 

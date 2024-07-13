@@ -39,21 +39,21 @@ Genomgången baseras på AEM och exempelappen WKND SPA Project. Om du vill följ
 
 * [AEM version 6.5.4 eller senare](/help/release-notes/release-notes.md)
    * Du måste ha administratörsbehörighet för systemet.
-* [Exempelappen WKND SPA Project som finns på GitHub](https://github.com/adobe/aem-guides-wknd-spa)
-   * Ladda ned [den senaste versionen av React-appen.](https://github.com/adobe/aem-guides-wknd-spa/releases) Namnet liknar det `wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`.
-   * Ladda ned [senaste exempelbilder](https://github.com/adobe/aem-guides-wknd-spa/releases) för appen. Namnet liknar det `wknd-spa-sample-images-X.Y.Z.zip`.
-   * [Använd pakethanteraren](/help/sites-administering/package-manager.md) om du vill installera paketen på samma sätt som andra paket i AEM.
+* [WKND-exempelprogrammet SPA Project som finns på GitHub](https://github.com/adobe/aem-guides-wknd-spa)
+   * Hämta den [ senaste versionen av React-appen.](https://github.com/adobe/aem-guides-wknd-spa/releases) Namnet liknar `wknd-spa-react.all.classic-X.Y.Z-SNAPSHOT.zip`.
+   * Hämta de [senaste exempelbilderna](https://github.com/adobe/aem-guides-wknd-spa/releases) för appen. Namnet liknar `wknd-spa-sample-images-X.Y.Z.zip`.
+   * [Använd pakethanteraren](/help/sites-administering/package-manager.md) för att installera paketen på samma sätt som andra paket i AEM.
    * Appen behöver inte installeras med Maven för den här genomgången.
 
 >[!CAUTION]
 >
->Det här dokumentet använder [WKND Spa Project-app](https://github.com/adobe/aem-guides-wknd-spa) endast i demonstrationssyfte. Använd inte för projektarbete.
+>Det här dokumentet använder [WKND Spa Project-programmet](https://github.com/adobe/aem-guides-wknd-spa) endast i demonstrationssyfte. Använd inte för projektarbete.
 >
->Alla AEM ska använda [AEM Project Archettype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) som stöder SPA projekt med React eller Angular och använder SPA SDK.
+>Alla AEM ska använda [AEM Project Archetype,](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) som har stöd för SPA projekt med React eller Angular och som använder SPA SDK.
 
 ### Vad är en SPA? {#what-is-a-spa}
 
-Ett enkelsidigt program (SPA) skiljer sig från en konventionell sida genom att det återges på klientsidan och i huvudsak är JavaScript-styrt, beroende på Ajax-anrop för att läsa in data och dynamiskt uppdatera sidan. Det mesta eller allt innehåll hämtas en gång på en sida, och ytterligare resurser läses in asynkront efter behov baserat på användarinteraktionen med sidan.
+Ett enkelsidigt program (SPA) skiljer sig från en konventionell sida på så sätt att det återges på klientsidan och i första hand är JavaScript-drivet, beroende på Ajax-anrop för att läsa in data och dynamiskt uppdatera sidan. Det mesta eller allt innehåll hämtas en gång på en sida, och ytterligare resurser läses in asynkront efter behov baserat på användarinteraktionen med sidan.
 
 Detta minskar behovet av siduppdatering och ger användaren en upplevelse som är smidig, snabb och som känns mer som en appupplevelse.
 
@@ -73,7 +73,7 @@ Genom att vara snabbare, smidigare och mer som ett systemspecifikt program blir 
 **Marknadsförare**
 
 * Marknadsförarna vill erbjuda innehållsrika, verklighetstrogna upplevelser som lockar besökarna att engagera sig fullt ut i innehållet.
-* Personalisering kan göra dessa upplevelser ännu mer övertygande.
+* Personalization kan göra dessa upplevelser ännu mer övertygande.
 
 **Utvecklare**
 
@@ -94,9 +94,9 @@ Genom att återge på klientsidan reagerar sidelementet snabbare och besökarens
 
 >[!NOTE]
 >
->Teknisk information om hur SPA fungerar i AEM finns i artikeln [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md).
+>Mer teknisk information om hur SPA fungerar i AEM finns i artikeln [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md).
 >
->Mer information om design, arkitektur och tekniska arbetsflöden i SPA Editor finns i artikeln [SPA](/help/sites-developing/spa-overview.md).
+>Mer information om design, arkitektur och tekniska arbetsflöden i SPA Editor finns i artikeln [SPA Editor Overview](/help/sites-developing/spa-overview.md).
 
 ## Innehållsredigering med SPA {#content-editing-experience-with-spa}
 
@@ -118,9 +118,9 @@ När en SPA har byggts för att använda AEM SPA Editor märker innehållsförfa
 
    >[!NOTE]
    >
-   >Se [SPA](spa-overview.md#requirements-limitations) för mer information om textredigeraren och SPA på plats.
+   >Mer information om textredigeraren på plats och SPA finns i [SPA Editor Overview](spa-overview.md#requirements-limitations).
 
-1. Använd Resursläsaren för att dra och släppa en ny bild i en bildkomponent.
+1. Använd Assets webbläsare för att dra och släppa en ny bild i en bildkomponent.
 
    ![Steg 4](assets/spa-walkthrough-step-4.png)
 
@@ -134,7 +134,7 @@ Ytterligare redigeringsverktyg som att dra och släppa ytterligare komponenter p
 >
 >SPA redigerare ändrar inte programmets DOM. SPA är själv ansvarig för DOM.
 >
->Fortsätt till nästa avsnitt i den här artikeln om du vill se hur det fungerar [SPA och AEM SPA](#spa-apps-and-the-aem-spa-editor).
+>Om du vill se hur det här fungerar fortsätter du till nästa avsnitt i den här artikeln: [SPA Appar och AEM SPA](#spa-apps-and-the-aem-spa-editor).
 
 ## SPA och AEM SPA {#spa-apps-and-the-aem-spa-editor}
 
@@ -142,7 +142,7 @@ Genom att uppleva hur en SPA fungerar för slutanvändaren och sedan inspektera 
 
 ### Använda ett SPA {#using-an-spa-application}
 
-1. Läs in WKND SPA Project-programmet antingen på publiceringsservern eller med alternativet **Visa som publicerad** från **Sidinformation** i sidredigeraren.
+1. Läs in WKND SPA Project-programmet antingen på publiceringsservern eller med alternativet **Visa som publicerad** på menyn **Sidinformation** i sidredigeraren.
 
    `http://<host>:<port>/content/wknd-spa-react/us/en/home.html`
 
@@ -164,11 +164,11 @@ Genom att uppleva hur en SPA fungerar för slutanvändaren och sedan inspektera 
 
 Så om sidan inte läses in igen när du navigerar genom de underordnade sidorna, hur läses den in?
 
-Nästa avsnitt, [Läsa in ett SPA,](#loading-an-spa-application) går djupare in i hur SPA läses in och hur innehåll kan läsas in synkront och asynkront.
+I nästa avsnitt, [Läsa in ett SPA,](#loading-an-spa-application) beskrivs mer ingående i mekanismerna för att läsa in SPA och hur innehåll kan läsas in synkront och asynkront.
 
 ### Läsa in ett SPA {#loading-an-spa-application}
 
-1. Om den inte redan är inläst läser du in WKND SPA Project-appen antingen på publiceringsservern eller med alternativet **Visa som publicerad** från **Sidinformation** i sidredigeraren.
+1. Om den inte redan är inläst läser du in WKND-SPA Project-appen antingen på publiceringsservern eller med alternativet **Visa som publicerad** på menyn **Sidinformation** i sidredigeraren.
 
    `http://<host>:<port>/content/wknd-spa-react/us/en/home.html`
 
@@ -177,16 +177,16 @@ Nästa avsnitt, [Läsa in ett SPA,](#loading-an-spa-application) går djupare in
 1. Använd det inbyggda verktyget i webbläsaren för att visa sidans källa.
 1. Källans innehåll är extremt begränsat.
 
-   * Sidan har inget innehåll i sin brödtext. Den består huvudsakligen av formatmallar och ett anrop till olika skript, som `clientlib-react.min.js`.
+   * Sidan har inget innehåll i sin brödtext. Den består huvudsakligen av formatmallar och ett anrop till olika skript, till exempel `clientlib-react.min.js`.
    * Dessa skript är de primära drivrutinerna för det här programmet och ansvarar för återgivningen av allt innehåll.
 
 1. Använd webbläsarens inbyggda verktyg för att inspektera sidan. Se innehållet i DOM som är fullständigt inläst.
 
    ![Steg 4](assets/spa-walkthrough-step-1-4.png)
 
-1. Växla till **Nätverk** -fliken för utvecklingsverktygen och läsa in sidan igen.
+1. Växla till fliken **Nätverk** för utvecklingsverktygen och läs in sidan igen.
 
-   När bildbegäranden ignoreras är de primära resurserna som har lästs in för sidan själva sidan, CSS, React JavaScript, dess beroenden och JSON-data för sidan.
+   När bildbegäranden ignoreras är de primära resurser som har lästs in för sidan själva sidan, CSS, React JavaScript, dess beroenden och JSON-data för sidan.
 
    ![Steg 5](assets/spa-walkthrough-step-1-5.png)
 
@@ -204,13 +204,13 @@ Nästa avsnitt, [Läsa in ett SPA,](#loading-an-spa-application) går djupare in
 
 1. Modellen kan också gruppera sidor så att de läses in synkront, vilket minskar antalet sidomladdningar som behövs.
 
-   I exemplet med WKND SPA Project-programmet `home`, `page-1`, `page-2`och `page-3` sidor läses in synkront eftersom besökarna vanligtvis besöker alla dessa sidor.
+   I exemplet med WKND SPA Project-appen läses sidorna `home`, `page-1`, `page-2` och `page-3` in synkront eftersom besökare vanligtvis besöker alla dessa sidor.
 
    Detta beteende är inte obligatoriskt och är helt definierbart.
 
    ![Steg 7](assets/spa-walkthrough-step-1-7.png)
 
-1. Om du vill visa den här skillnaden i beteende läser du in sidan igen och rensar nätverksaktiviteten för utvecklingsverktygen. Navigera till `page-1` på sidmenyn och se att den enda nätverksaktiviteten är en begäran om bilden av `page-1`. `page-1` behöver inte läsas in.
+1. Om du vill visa den här skillnaden i beteende läser du in sidan igen och rensar nätverksaktiviteten för utvecklingsverktygen. Navigera till `page-1` på sidmenyn och se att den enda nätverksaktiviteten är en begäran för bilden av `page-1`. `page-1` behöver inte läsas in.
 
    ![Steg 8](assets/spa-walkthrough-step-1-8.png)
 
@@ -222,13 +222,13 @@ Dessutom är det smidigt för innehållsförfattaren att skapa innehåll med en 
 
 I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Editor att relatera komponenter i SPA till AEM komponenter och uppnå denna smidiga redigeringsupplevelse.
 
-1. Läs in WKND SPA Project-programmet i redigeraren och växla till **Förhandsgranska** läge.
+1. Läs in WKND SPA Project-programmet i redigeraren och växla till läget **Förhandsgranska**.
 
    `http://<host>:<port>/editor.html/content/wknd-spa-react/us/en/home.html`
 
 1. Kontrollera sidans innehåll med hjälp av webbläsarens inbyggda utvecklarverktyg. Använd markeringsverktyget och markera en redigerbar komponent på sidan och visa elementinformationen.
 
-   Komponenten har ett nytt dataattribut `data-cq-data-path`.
+   Komponenten har ett nytt dataattribut, `data-cq-data-path`.
 
    ![Steg 2](assets/spa-walkthrough-step-2-2.png)
 
@@ -244,7 +244,7 @@ I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Edito
 
    >[!NOTE]
    >
-   >Detta är en förändring av serversidans renderade sidor i AEM, där det finns en `cq` -element infogat för varje redigerbar komponent.
+   >Detta är en förändring av serversidans renderade sidor i AEM, där ett `cq`-element infogas för varje redigerbar komponent.
    >
    >
    >Detta tillvägagångssätt i SPA tar bort behovet av att injicera anpassade element, endast genom att förlita sig på ett extra dataattribut, vilket gör markeringen enklare för klientutvecklaren.
@@ -253,6 +253,6 @@ I följande avsnitt utforskar vi kontraktet som gör det möjligt för SPA Edito
 
 Nu när du förstår SPA redigeringsupplevelsen i AEM och hur en SPA relaterar till SPA redigerare kan du fördjupa dig i hur en SPA byggs.
 
-* [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md) visar hur en grundläggande SPA fungerar med SPA Editor i AEM
-* [SPA](/help/sites-developing/spa-overview.md) fördjupar sig i kommunikationsmodellen mellan AEM och SPA.
-* [Utveckla SPA för AEM](/help/sites-developing/spa-architecture.md) beskriver hur man engagerar gränssnittsutvecklare för att utveckla en SPA för AEM och hur SPA interagerar med AEM arkitektur.
+* [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md) visar hur en grundläggande SPA har skapats för att fungera med SPA redigerare i AEM
+* [SPA Översikt över redigeraren](/help/sites-developing/spa-overview.md) går in mer i kommunikationsmodellen mellan AEM och SPA.
+* [Utveckla SPA för AEM](/help/sites-developing/spa-architecture.md) beskriver hur du kan engagera gränssnittsutvecklare för att utveckla en SPA för AEM och hur SPA interagerar med AEM arkitektur.

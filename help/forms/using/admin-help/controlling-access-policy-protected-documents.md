@@ -42,21 +42,21 @@ Du kan även visa mer information, som beskrivs nedan, om ett visst dokument på
 >
 >Använd länken Principnamn på sidan Dokumentinformation för att komma åt profiler som genereras automatiskt i Microsoft Outlook för mottagare av ett dokument som bifogas till ett e-postmeddelande. Dessa profiler visas inte på profilsidan.
 
-**Dokumentnamn:** Namnet på det markerade dokumentet.
+**Dokumentnamn:** Det markerade dokumentets namn.
 
-**Dokument-ID:** En unik identifierare som dokumentskyddet tilldelar när en profil tillämpas på dokumentet. dokumentskyddet använder det här numret för att spåra dokumentet.
+**Dokument-ID:** En unik identifierare som dokumentsäkerhet tilldelar när en profil tillämpas på dokumentet. dokumentskyddet använder det här numret för att spåra dokumentet.
 
-**Dokumentstatus:** Dokumentets status (till exempel aktiv eller återkallad).
+**Dokumentstatus:** Dokumentets status (t.ex. aktiv eller återkallad).
 
 **Utgivare:** Namnet på den användare som bifogade profilen till dokumentet.
 
-**Principnamn:** Namnet på den profil som används för att skydda dokumentet. Du kan klicka på namnet för att öppna profilen. Använd den här länken för att komma åt profiler som Acrobat genererar för mottagare av ett dokument som är kopplat till ett e-postmeddelande i Outlook. Dessa profiler visas inte på sidan Profiler.
+**Principnamn:** Namnet på den princip som används för att skydda dokumentet. Du kan klicka på namnet för att öppna profilen. Använd den här länken för att komma åt profiler som Acrobat genererar för mottagare av ett dokument som är kopplat till ett e-postmeddelande i Outlook. Dessa profiler visas inte på sidan Profiler.
 
-**Principtyp:** Typen av profil som tillämpades på dokumentet.
+**Principtyp:** Typen av princip som tillämpades på dokumentet.
 
 **Publiceringsdatum:** Det datum då profilen tillämpades på dokumentet.
 
-**Relaterade iterationer:** Om dokumentet innehåller relaterade iterationer visas även det här objektet i listan. Klicka på länken om du vill visa en lista med relaterade iterationer för dokumentet.
+**Relaterade iterationer:** Om dokumentet har relaterade iterationer visas även det här objektet i listan. Klicka på länken om du vill visa en lista med relaterade iterationer för dokumentet.
 
 Användare kan visa information om sina skyddade dokument. Administratörer kan visa information om dokument som alla användare har skyddat med en profil. Koordinatorer för principuppsättningar kan visa information om dokument som skyddas av profiler från sina principuppsättningar.
 
@@ -74,11 +74,11 @@ Om den här funktionen är aktiverad kan du visa relaterade versioner av ett dok
 1. Visa dokumentinformationssidan för ett dokument. (Se [Visa information om ett dokument](controlling-access-policy-protected-documents.md#view-information-about-a-document).)
 1. Klicka på Visa relaterade iterationer. Alternativet är bara tillgängligt om funktionen är aktiverad. Listan med relaterade iterationer visas. För varje upprepning kan du visa följande information:
 
-   * **Upprepning:** Filnamnet. Den kan skilja sig från det ursprungliga filnamnet och har ett versionsnummer tillagt till slutet av det.
+   * **Iteration:** Filnamnet. Den kan skilja sig från det ursprungliga filnamnet och har ett versionsnummer tillagt till slutet av det.
    * **Utgivare:** Utgivaren av originaldokumentet.
    * **Skapad av:** Den användare som sparade upprepningen.
-   * **Skapad:** Det datum och den tidpunkt då iterationen sparades.
-   * **Princip:** Den princip som skyddar iterationen. Olika iterationer kan skyddas av olika profiler.
+   * **Skapad:** Datum och tid då iterationen sparades.
+   * **Princip:** Den princip som skyddar upprepningen. Olika iterationer kan skyddas av olika profiler.
 
 1. Om du vill visa dokumentinformationssidan för den iterationen klickar du på filnamnet för en iteration.
 
@@ -86,11 +86,11 @@ Om den här funktionen är aktiverad kan du visa relaterade versioner av ett dok
 
 Du kan återkalla och återställa åtkomsten till profilskyddade dokument:
 
-**Användare:** Kan återkalla eller återskapa åtkomst till dokument som de skyddar med sina egna personliga profiler eller med delade profiler för vilka funktionen för återkallning är aktiverad för den användare som tillämpar profilen. Användare som inte kan återkalla åtkomst till ett dokument eller växla en profil måste kontakta administratören.
+**Användare:** Kan återkalla eller återskapa åtkomst till dokument som de skyddar med sina egna personliga principer eller med delade principer för vilka funktionen återkallad är aktiverad för den användare som tillämpar principen. Användare som inte kan återkalla åtkomst till ett dokument eller växla en profil måste kontakta administratören.
 
-**Administratörer:** Kan återkalla eller återskapa behörigheter till alla policyskyddade dokument, inklusive sådana som skyddas av personliga eller delade policyer. Om en administratör återkallar åtkomsten till ett dokument som är skyddat med en delad princip, kan bara en administratör återskapa åtkomstbehörighet för det dokumentet.
+**Administratörer:** Kan återkalla eller återskapa åtkomsträttigheter till alla principskyddade dokument, inklusive de som skyddas av personliga eller delade principer. Om en administratör återkallar åtkomsten till ett dokument som är skyddat med en delad princip, kan bara en administratör återskapa åtkomstbehörighet för det dokumentet.
 
-**Koordinatorer för principuppsättning:** Kan återkalla eller återskapa åtkomsträttigheter för dokument som skyddas av profiler från sina profiluppsättningar.
+**Principuppsättningskoordinatorer:** Kan återkalla eller återskapa åtkomstbehörigheter för dokument som skyddas av principer från sina principuppsättningar.
 
 När du återkallar eller återställer behörigheter för dokumentåtkomst gäller ändringen vid följande tidpunkter:
 
@@ -98,7 +98,7 @@ När du återkallar eller återställer behörigheter för dokumentåtkomst gäl
 * Om dokumentet är online och öppet börjar ändringen gälla när mottagaren stänger dokumentet.
 * Om dokumentet är offline, d.v.s. används utan internetanslutning, t.ex. på en bärbar dator, träder ändringen i kraft nästa gång mottagaren synkroniserar med dokumentsäkerheten.
 
-**Återkalla åtkomst till ett profilskyddat dokument**
+**Återkalla åtkomst till ett principskyddat dokument**
 
 1. Klicka på Dokument på dokumentsäkerhetssidan.
 1. Markera kryssrutan bredvid rätt dokument och klicka på Återkalla. Du kan återkalla åtkomsten till flera dokument samtidigt.
@@ -111,7 +111,7 @@ När du återkallar eller återställer behörigheter för dokumentåtkomst gäl
 1. (Valfritt) Om det finns en nyare version av dokumentet anger du URL:en och klickar på Testa för att verifiera URL:en.
 1. Klicka på OK och sedan på OK igen för att återgå till dokumentsidan.
 
-**Återställa behörigheter för dokumentåtkomst**
+**Återskapa dokumentbehörigheter**
 
 1. Klicka på Dokument på dokumentsäkerhetssidan.
 1. Klicka på rätt dokument i listan över dokument.
@@ -144,15 +144,15 @@ Du kan söka efter dokument på sidan Dokument genom att använda en kombination
 
 Ytterligare sökalternativ är bara tillgängliga för administratörer:
 
-**Dokument-ID:** Unikt ID-nummer som dokumentskyddet tilldelar dokumentet när profilen tillämpas.
+**Dokument-ID:** Unikt ID-nummer som dokumentsäkerhet tilldelar dokumentet när profilen tillämpas.
 
 **Dokumentnamn:** Dokumentets namn.
 
 **Utgivarnamn:** Namnet på den användare som bifogade profilen till dokumentet. Du kan välja användare från alla domäner eller en angiven domän.
 
-**Princip-ID:** ID-nummer för profilen som är kopplad till dokumentet.
+**Princip-ID:** ID-nummer för principen som är kopplad till dokumentet.
 
-**Principnamn:** Namnet på profilen som är kopplad till dokumentet.
+**Principnamn:** Namnet på principen som är kopplad till dokumentet.
 
 **Alla dokument:** Alla dokument som skyddas av administratörer och användare. Om du använder alternativet Alla dokument för att söka kan en lång lista med dokument returneras.
 
@@ -194,12 +194,13 @@ Du kan använda stödet för sidan 0 (Brytningsdokument) för att tillåta anvä
 
 Använd följande processer i workbench:
 
-**Protect Document with Cover Page:** Skyddar ett PDF-dokument med den angivna profilen och lägger till en försättsblad i dokumentet
+**Protect
+Dokument med försättsblad:** Skyddar ett PDF-dokument med den angivna profilen och lägger till en försättssida i dokumentet
 
-**Extract Protected Document:** Extraherar det policyskyddade PDF-dokumentet från PDF med försättsblad
+**Extrahera skyddat dokument:** Extraherar det policyskyddade PDF-dokumentet från PDF-dokumentet med försättsblad
 
 Använd följande API:er för dokumentsäkerhet:
 
-**protectDocumentWithCoverPage:** Skyddar ett givet PDF med den angivna profilen och returnerar ett dokument med en försättsblad och det skyddade dokumentet som en bifogad fil
+**protectDocumentWithCoverPage:** Skyddar ett givet PDF med den angivna profilen och returnerar ett dokument med en försättssida och det skyddade dokumentet som en bifogad fil
 `//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a PDF document to which a policy is applied FileInputStream fileInputStream = new FileInputStream("C:\\testFile.pdf"); Document inPDF = new Document(fileInputStream); //Reference a Cover Page document FileInputStream coverPageInputStream = new FileInputStream("C:\\CoverPage.pdf"); Document inCoverDoc = new Document(coverPageInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document RMSecureDocumentResult rmSecureDocument = documentManager.protectDocumentWithCoverPage( inPDF, "ProtectedPDF.pdf", "PolicySetName", "PolicyName", null, null, inCoverDoc, true); //Retrieve the policy-protected PDF document Document protectPDF = rmSecureDocument.getProtectedDoc(); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); protectPDF.copyToFile(myFile);` **extractProtectedDocument:** Extraherar det skyddade dokumentet, som är en bifogad fil i dokumentet med försättsblad. Dokumentet med omslagssidan kan skapas med metoden protectDocumentWithCoverPage
 `//Create a ServiceClientFactory instance ServiceClientFactory factory = ServiceClientFactory.createInstance(connectionProps); //Create a RightsManagementClient object RightsManagementClient rightsClient = new RightsManagementClient(factory); //Reference a protected PDF document with a Cover Page FileInputStream fileInputStream = new FileInputStream("C:\\policyProtectedDocWithCoverPage.pdf"); Document inPDF = new Document(fileInputStream); //Create a Document Manager object DocumentManager documentManager = rightsClient.getDocumentManager(); //Apply a policy to the PDF document Document extractedDoc = documentManager.extractProtectedDocument(inPDF); //Save the policy-protected PDF document File myFile = new File("C:\\PolicyProtectedDoc.pdf"); extractedDoc.copyToFile(myFile);`

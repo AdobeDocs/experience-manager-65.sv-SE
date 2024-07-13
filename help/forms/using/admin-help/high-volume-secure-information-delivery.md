@@ -28,4 +28,4 @@ Om det finns en månadsfakturagenerering för ett telekomföretag skapar du en a
 
 Det går bara att skapa en abstrakt profil via Java SDK för dokumentsäkerhet. Du kan dock administrera profilerna som du skapar utifrån den abstrakta profilen från dokumentsäkerhetswebbsidorna. Profiler som skapas med den här metoden har samma beteende som de som skapas från webbsidor för dokumentsäkerhet.
 
-Se [Programmera med AEM](https://www.adobe.com/go/learn_aemforms_programming_63) för mer information.
+Mer information finns i [Programmera med AEM formulär](https://www.adobe.com/go/learn_aemforms_programming_63).

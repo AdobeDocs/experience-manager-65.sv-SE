@@ -30,10 +30,10 @@ Enheterna grupperas i kategorierna, funktion, smart och touchfunktion enligt enh
 
 Använd följande procedur för att skapa en mobilsida:
 
-1. Öppna **Webbplatser** konsol.
-1. Öppna sidan **Vi.butik** > **Amerikas förenta stater** > **Engelska**.
+1. Öppna konsolen **Platser** från global navigering.
+1. Öppna sidan **We.Retail** > **United States** > **English**.
 
-1. Växla till **Förhandsgranska** läge.
+1. Växla till läget **Förhandsgranska**.
 1. Växla till önskad emulator genom att klicka på enhetsikonen högst upp på sidan.
 1. Dra och släpp komponenter från komponentwebbläsaren till sidan.
 

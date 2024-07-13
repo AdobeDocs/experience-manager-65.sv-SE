@@ -31,9 +31,9 @@ Starterkit hjälper dig att snabbt komma igång genom grunderna i AEM Mobile utv
 Utvecklarna kan använda det här exemplet som utgångspunkt för att testa ett AEM Mobile-program med PhoneGap. Genom att gå igenom startpaketet och referensprogrammet får du en god förståelse för grunderna för att skapa avancerade mobilprogram.
 
 * Använd [AEM PhoneGap Starter Kit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) för att skapa appar som passar för AEM Mobile-katalogen.
-* A [referensapp](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) med en komplett källa har skapats som demonstrerar många av de nya funktionerna i AEM Mobile, oavsett om du migrerar en befintlig app till AEM Mobile eller börjar om från början.
-* Alla exempel finns på github: [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) och backa projektet med Maven.
-* De flesta konferenssamtalen använder [Kitchen Sink, genomgång](https://github.com/blefebvre/aem-phonegap-kitchen-sink), som du också hittar i GitHub och fokuserar på användningen av den inbyggda utökningsbarheten för Apache Cordova.
+* En [referensapp](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) med fullständig källa har skapats som demonstrerar många av de nya funktionerna i AEM Mobile, oavsett om du migrerar en befintlig app till AEM Mobile eller börjar om från början.
+* Alla exempel finns på github: [https://github.com/Adobe-Marketing-Cloud-Apps](https://github.com/Adobe-Marketing-Cloud-Apps) och inkluderar att du startar ditt projekt med Maven.
+* I de flesta konferenssamtal används självstudiekursen [Kitchen Sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) som du också hittar i GitHub och som fokuseras på användningen av den inbyggda utbyggbarheten för Apache Cordova.
 
 >[!NOTE]
 >
@@ -41,7 +41,7 @@ Utvecklarna kan använda det här exemplet som utgångspunkt för att testa ett 
 
 ## Mallar och komponenter {#templates-and-components}
 
-AEM *Mallar* och *Komponenter* gör det möjligt för företagsägare att skapa anpassade upplevelser. Båda *mallarna *och *Komponenter* finns att få direkt eller kan utvecklas av dig, antingen genom att utöka befintliga komponenter eller genom att skapa grönfält (avancerat). *Mallar* och *Komponenter* gör det möjligt för AEM författare att dra och släppa för att skapa engagerande och relevanta upplevelser.
+AEM *Mallar* och *Komponenter* gör det möjligt för affärsområdeschefer att skapa anpassade upplevelser. Både *Mallar *och *Komponenter* är tillgängliga direkt eller kan anpassas av dig, antingen genom att utöka befintliga komponenter eller genom att skapa grönfält (avancerat). *Mallar* och *Komponenter* är de som gör att AEM författare kan dra och släppa för att skapa engagerande och relevanta upplevelser.
 
 1. [Skapa komponenter](/help/sites-developing/components.md)
 1. [Skapa mallar](/help/sites-developing/templates.md)

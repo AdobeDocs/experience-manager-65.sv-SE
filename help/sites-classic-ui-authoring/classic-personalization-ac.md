@@ -31,7 +31,7 @@ Se följande:
 * [Adobe Campaign Components](/help/sites-classic-ui-authoring/classic-personalization-ac-components.md)
 * [Rikta in er på Adobe Campaign](/help/sites-classic-ui-authoring/classic-personalization-ac-target.md)
 
-Du måste ha [integrerad AEM med Adobe Campaign](/help/sites-administering/campaign.md).
+Du måste tidigare ha [integrerat AEM med Adobe Campaign](/help/sites-administering/campaign.md).
 
 Om du dessutom vill anpassa dina integreringar ska du läsa följande avsnitt:
 

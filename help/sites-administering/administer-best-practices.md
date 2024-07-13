@@ -35,14 +35,14 @@ Specifika dokument beskrivs och länkas till i de tabeller som följer.
 
 ## Assets {#assets}
 
-De effektivaste strategierna kring Assets, inklusive Dynamic Media och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
+De effektivaste strategierna för Assets, inklusive Dynamic Media och Dynamic Media Classic-integrering, beskrivs i följande avsnitt:
 
 <table>
  <tbody>
   <tr>
-   <td>Bästa tillvägagångssätt inom olika områden kring Assets för att förbättra systemets stabilitet och prestanda vid inläsning</td>
-   <td><a href="/help/assets/best-practices-for-assets.md">Metodtips för Assets</a></td>
-   <td>Innehåller länkar till riktlinjer för bästa praxis inom olika områden kring Assets. När du har granskat dem får du de kunskaper och verktyg du behöver för att skapa och hantera ett resurshanteringssystem för företag.</td>
+   <td>Bästa tillvägagångssätt inom olika områden av Assets för att förbättra systemstabilitet och prestanda vid inläsning</td>
+   <td><a href="/help/assets/best-practices-for-assets.md">Best Practices for Assets</a></td>
+   <td>Innehåller länkar till metodtips på olika områden runt om i Assets. När du har granskat dem får du de kunskaper och verktyg du behöver för att skapa och hantera ett resurshanteringssystem för företag.</td>
   </tr>
   <tr>
    <td>Organisera ditt innehåll (mapphierarki)</td>
@@ -52,12 +52,12 @@ De effektivaste strategierna kring Assets, inklusive Dynamic Media och Dynamic M
   <tr>
    <td>Integrera Scene7 och AEM</td>
    <td><a href="/help/sites-administering/scene7.md#best-practices-for-integrating-scene-with-aem">Bästa tillvägagångssätt för att integrera Scene7 med AEM</a></td>
-   <td><p>Beskriver när avsökningsimporten ska aktiveras, hur integreringen ska testas och när innehållsläsaren ska användas jämfört med en direkt överföring till Assets.</p> </td>
+   <td><p>Beskriver när avsökningsimporten ska aktiveras, hur integreringen ska testas och när innehållsläsaren ska användas jämfört med en direktöverföring till Assets.</p> </td>
   </tr>
   <tr>
    <td>Alternativ för bildförinställningar</td>
-   <td>Förstå <a href="/help/assets/managing-image-presets.md#understanding-image-presets">bildförinställningar</a> och <a href="/help/assets/managing-image-presets.md#image-preset-options">god praxis för bildförinställningar</a></td>
-   <td>Som en del av dokumentationen om <a href="/help/assets/managing-image-presets.md">Hantera bildförinställningar</a>beskriver de här avsnitten vilka bildförinställningar som är och de bästa sätten att välja alternativ för bildförinställningar.</td>
+   <td>Om <a href="/help/assets/managing-image-presets.md#understanding-image-presets">bildförinställningar</a> och <a href="/help/assets/managing-image-presets.md#image-preset-options">bildförinställningar </a></td>
+   <td>Som en del av dokumentationen om <a href="/help/assets/managing-image-presets.md">Hantera bildförinställningar</a> beskriver dessa avsnitt vilka bildförinställningar som är och de bästa sätten att välja bildförinställningar.</td>
   </tr>
   <tr>
    <td>Dynamic Media jämfört med direktintegrering med Scene7</td>

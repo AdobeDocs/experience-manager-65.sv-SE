@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Prova Experience Fragments in We.Retail
 
-An [Experience Fragment](/help/sites-authoring/experience-fragments.md) är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor. De kan innehålla alla komponenter.
+Ett [Experience Fragment](/help/sites-authoring/experience-fragments.md) är en grupp med en eller flera komponenter, inklusive innehåll och layout, som kan refereras till på sidor. De kan innehålla alla komponenter.
 
 De gör att en författare kan återanvända delar av en sida (ett fragment av en upplevelse) utan att behöva kopiera och klistra in innehållet.
 
@@ -28,7 +28,7 @@ Detta har stöd för CMS-fall (headless Content Management System), där förfat
 
 >[!NOTE]
 >
->**[Innehållsfragment](/help/sites-developing/we-retail-content-fragments.md)** och **Upplevelsefragment** har olika funktioner i AEM:
+>**[Innehållsfragment](/help/sites-developing/we-retail-content-fragments.md)** och **Upplevelsefragment** är olika funktioner i AEM:
 >
 >* **Innehållsfragment** är redaktionellt innehåll, främst text och relaterade bilder. De är rent innehåll, utan design och layout.
 >* **Upplevelsefragment** är helt utformat för innehåll, ett fragment av en webbsida.
@@ -37,11 +37,11 @@ Detta har stöd för CMS-fall (headless Content Management System), där förfat
 
 ## Var kan ni skapa upplevelsefragment i vår.butik? {#where-to-create-experience-fragments-in-we-retail}
 
-Välj **Upplevelsefragment** från Global Navigation. Här konfigurerar du [skapa](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment) och [redigera](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment) era upplevelsefragment, och andra relaterade [variationer](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment-variation).
+Välj **Upplevelsefragment** i Global Navigation. Här konfigurerar du [skapa](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment) och [redigera](/help/sites-authoring/experience-fragments.md#editing-your-experience-fragment) dina Experience Fragments och alla relaterade [varianter](/help/sites-authoring/experience-fragments.md#creating-an-experience-fragment-variation).
 
 ## Var kan vi använda Experience Fragments i We.Retail? {#where-to-use-experience-fragments-in-we-retail}
 
-Du kan använda dina [Upplevelsefragment](/help/sites-authoring/experience-fragments.md#using-your-experience-fragment) (som med andra komponenter) på [alla sidor](/help/sites-authoring/editing-content.md) under **Webbplatser** i Global Navigation.
+Du kan använda dina [Experience Fragments](/help/sites-authoring/experience-fragments.md#using-your-experience-fragment) (som alla andra komponenter) på [valfri sida](/help/sites-authoring/editing-content.md) under **Platser** i Global Navigation.
 
 ## Ytterligare information {#further-information}
 

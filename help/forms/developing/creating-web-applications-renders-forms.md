@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Skapa webbprogram som återger Forms {#creating-web-applications-thatrenders-forms}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 ## Skapa webbprogram som återger Forms {#creating-web-applications-that-renders-forms}
 
@@ -53,17 +53,17 @@ I det här avsnittet används exempelfiler som kan finnas på följande plats:
 
 &lt;*Forms Designer installationskatalog*>/Samples/Forms/Purchase Order/Form Fragments
 
-där &lt;*installationskatalog*> är installationssökvägen. För klientprogrammet kopierades filen Purchase Order Dynamic.xdp från den här installationsplatsen och distribuerades till ett Forms-program med namnet *Program/FormsApplication*. Filen Purchase Order Dynamic.xdp placeras i en mapp som heter FormsFolder. På samma sätt placeras fragmenten i mappen Fragments, som på följande bild.
+där &lt;*installationskatalogen*> är installationssökvägen. För klientprogrammets syften kopierades filen Purchase Order Dynamic.xdp från den här installationsplatsen och distribuerades till ett Forms-program med namnet *Applications/FormsApplication*. Filen Purchase Order Dynamic.xdp placeras i en mapp som heter FormsFolder. På samma sätt placeras fragmenten i mappen Fragments, som på följande bild.
 
 ![cw_cw_fragmentsdatabas](assets/cw_cw_fragmentsrepository.png)
 
-Om du vill öppna formulärdesignen Purchase Order Dynamic.xdp anger du `Applications/FormsApplication/1.0/FormsFolder/Purchase Order Dynamic.xdp` som formulärnamnet (den första parametern som skickas till `renderPDFForm` metod) och `repository:///` som innehållsrots-URI-värde.
+Om du vill få åtkomst till formulärdesignen Purchase Order Dynamic.xdp anger du `Applications/FormsApplication/1.0/FormsFolder/Purchase Order Dynamic.xdp` som formulärnamn (den första parametern som skickas till metoden `renderPDFForm`) och `repository:///` som URI-värde för innehållsroten.
 
-De XML-datafiler som används av webbprogrammet har flyttats från mappen Data till `C:\Adobe`(filsystemet som tillhör J2EE-programservern som är värd för AEM Forms). Filnamnen är Inköpsorder *Canada.xml* och inköpsorder *US.xml*.
+De XML-datafiler som används av webbprogrammet har flyttats från datamappen till `C:\Adobe` (filsystemet som tillhör J2EE-programservern som är värd för AEM Forms). Filnamnen är Purchase Order *Canada.xml* och Purchase Order *US.xml*.
 
 >[!NOTE]
 >
->Mer information om hur du skapar ett Forms-program med Workbench finns i [Workbench - hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63).
+>Mer information om hur du skapar ett Forms-program med Workbench finns i [Workbench-hjälpen](https://www.adobe.com/go/learn_aemforms_workbench_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -82,7 +82,7 @@ Så här skapar du ett webbaserat program som återger formulär baserat på fra
 
 ### Skapa ett webbprojekt {#creating-a-web-project}
 
-Det första steget för att skapa ett webbprogram som innehåller en Java-server som kan anropa Forms-tjänsten är att skapa ett webbprojekt. Den Java-IDE som det här dokumentet är baserat på är Eclipse 3.3. Med Eclipse IDE skapar du ett webbprojekt och lägger till de JAR-filer som behövs i projektet. Lägg slutligen till en HTML-sida med namnet *index.html* och en Java-servlet till ditt projekt.
+Det första steget för att skapa ett webbprogram som innehåller en Java-server som kan anropa Forms-tjänsten är att skapa ett webbprojekt. Den Java-IDE som det här dokumentet är baserat på är Eclipse 3.3. Med Eclipse IDE skapar du ett webbprojekt och lägger till de JAR-filer som behövs i projektet. Lägg slutligen till en HTML-sida med namnet *index.html* och en Java-servlet i ditt projekt.
 
 I följande lista anges de JAR-filer som du måste lägga till i ditt webbprojekt:
 
@@ -95,35 +95,35 @@ Information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksf
 
 **Så här skapar du ett webbprojekt:**
 
-1. Starta Eclipse och klicka på **Fil** >  **Nytt projekt**.
-1. I **Nytt projekt** väljer **Webb** > **Dynamiskt webbprojekt**.
-1. Typ `FragmentsWebApplication` för namnet på projektet och klicka sedan på **Slutför**.
+1. Starta Eclipse och klicka på **Arkiv** > **Nytt projekt**.
+1. I dialogrutan **Nytt projekt** väljer du **Webb** > **Dynamiskt webbprojekt**.
+1. Skriv `FragmentsWebApplication` som namn på ditt projekt och klicka sedan på **Slutför**.
 
-**Så här lägger du till nödvändiga JAR-filer i projektet:**
+**Så här lägger du till nödvändiga JAR-filer i ditt projekt:**
 
-1. I fönstret Projektutforskaren högerklickar du på `FragmentsWebApplication` projekt och välj **Egenskaper**.
-1. Klicka **Java build path** och klicka sedan på **Bibliotek** -fliken.
-1. Klicka på **Lägg till externa JAR** och bläddra till de JAR-filer som ska inkluderas.
+1. Högerklicka på `FragmentsWebApplication`-projektet i projektutforskarfönstret och välj **Egenskaper**.
+1. Klicka på **Java build path** och sedan på fliken **Libraries** .
+1. Klicka på knappen **Lägg till externa JAR** och bläddra till de JAR-filer som ska inkluderas.
 
 **Så här lägger du till en Java-servlet i ditt projekt:**
 
-1. I fönstret Projektutforskaren högerklickar du på `FragmentsWebApplication` projekt och välj **Nytt** >  **Övriga**.
-1. Expandera **Webb** mapp, markera **Servlet** och klicka sedan på **Nästa**.
-1. I dialogrutan Skapa server skriver du `RenderFormFragment` för serverletens namn och klicka sedan på **Slutför**.
+1. Högerklicka på `FragmentsWebApplication`-projektet i projektutforskarfönstret och välj **Nytt** > **Annat**.
+1. Expandera mappen **Webb**, markera **Servlet** och klicka sedan på **Nästa**.
+1. Skriv `RenderFormFragment` som namn på servern i dialogrutan Skapa server och klicka sedan på **Slutför**.
 
 **Så här lägger du till en HTML-sida i ditt projekt:**
 
-1. I fönstret Projektutforskaren högerklickar du på `FragmentsWebApplication` projekt och välj **Nytt** > **Övriga**.
-1. Expandera **Webb** mapp, markera **HTML** och klicka **Nästa**.
-1. Skriv i dialogrutan Nytt HTML `index.html` för filnamnet och klicka sedan på **Slutför**.
+1. Högerklicka på `FragmentsWebApplication`-projektet i projektutforskarfönstret och välj **Nytt** > **Annat**.
+1. Utöka mappen **Webb**, markera **HTML** och klicka på **Nästa**.
+1. Skriv `index.html` som filnamn i dialogrutan Nytt HTML och klicka sedan på **Slutför**.
 
 >[!NOTE]
 >
->Mer information om hur du skapar HTML-sidan som anropar `RenderFormFragment` Java-servlet, se [Skapa webbsidan](/help/forms/developing/rendering-forms.md#creating-the-web-page).
+>Mer information om hur du skapar den HTML-sida som anropar Java-servern `RenderFormFragment` finns i [Skapa webbsidan](/help/forms/developing/rendering-forms.md#creating-the-web-page).
 
 ### Skapa Java-programlogik för serverleten {#creating-java-application-logic-for-the-servlet}
 
-Du skapar Java-programlogik som anropar Forms-tjänsten inifrån Java-servern. Följande kod visar syntaxen för `RenderFormFragment` Java Servlet:
+Du skapar Java-programlogik som anropar Forms-tjänsten inifrån Java-servern. I följande kod visas syntaxen för Java-servern `RenderFormFragment`:
 
 ```java
      public class RenderFormFragment extends HttpServlet implements Servlet {
@@ -138,35 +138,35 @@ Du skapar Java-programlogik som anropar Forms-tjänsten inifrån Java-servern. F
              }
 ```
 
-Normalt placerar du inte klientkod i en Java-servers `doGet` eller `doPost` -metod. En bättre programmeringsmetod är att placera den här koden i en separat klass och instansiera klassen inifrån `doPost` metod (eller `doGet` och anropa lämpliga metoder. För kodförkortning begränsas dock kodexemplen i det här avsnittet till ett minimum och kodexempel placeras i `doPost` -metod.
+Normalt placerar du inte klientkod i en Java-serverds `doGet`- eller `doPost`-metod. En bättre programmeringspraxis är att placera den här koden i en separat klass, instansiera klassen inifrån metoden `doPost` (eller metoden `doGet`) och anropa lämpliga metoder. För kodrasteri begränsas dock kodexemplen i det här avsnittet till ett minimum och kodexempel placeras i metoden `doPost`.
 
 Så här återger du ett formulär baserat på fragment med hjälp av Forms tjänst-API:
 
-1. Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
-1. Hämta värdet för alternativknappen som skickas från formuläret HTML och ange om amerikansk eller kanadensisk information ska användas. Skapa en `com.adobe.idp.Document` som lagrar data i *Purchase Order US.xml*. På samma sätt kan du skapa en `com.adobe.idp.Document` som lagrar data i *Purchase Order Canada.xml* -fil.
-1. Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-1. Skapa en `FormsServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
-1. Skapa en `URLSpec` objekt som lagrar URI-värden med hjälp av dess konstruktor.
-1. Anropa `URLSpec` objektets `setApplicationWebRoot` och skicka ett strängvärde som representerar programmets webbrot.
-1. Anropa `URLSpec` objektets `setContentRootURI` och skicka ett strängvärde som anger innehållets rot-URI-värde. Kontrollera att formulärdesignen och fragmenten finns i innehållets rot-URI. Annars genereras ett undantag. Om du vill referera till AEM Forms-databasen anger du `repository://`.
-1. Anropa `URLSpec` objektets `setTargetURL` och skicka ett strängvärde som anger det mål-URL-värde som formulärdata ska skickas till. Om du definierar mål-URL:en i formulärdesignen kan du skicka en tom sträng. Du kan också ange den URL dit ett formulär ska skickas för att utföra beräkningar.
-1. Anropa `FormsServiceClient` objektets `renderPDFForm` och skicka följande värden:
+1. Inkludera JAR-klientfiler, t.ex. adobe-forms-client.jar, i Java-projektets klassökväg. Mer information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+1. Hämta värdet för alternativknappen som skickas från formuläret HTML och ange om amerikansk eller kanadensisk information ska användas. Om USA skickas skapar du en `com.adobe.idp.Document` som lagrar data i *Purchase Order US.xml*. Om du har en kanadensisk version skapar du en `com.adobe.idp.Document` som lagrar data i filen *Purchase Order Canada.xml* .
+1. Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+1. Skapa ett `FormsServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
+1. Skapa ett `URLSpec`-objekt som lagrar URI-värden med hjälp av dess konstruktor.
+1. Anropa `URLSpec`-objektets `setApplicationWebRoot`-metod och skicka ett strängvärde som representerar programmets webbrot.
+1. Anropa `URLSpec`-objektets `setContentRootURI`-metod och skicka ett strängvärde som anger innehållets rot-URI-värde. Kontrollera att formulärdesignen och fragmenten finns i innehållets rot-URI. Annars genereras ett undantag. Om du vill referera till AEM Forms-databasen anger du `repository://`.
+1. Anropa `URLSpec`-objektets `setTargetURL`-metod och skicka ett strängvärde som anger mål-URL-värdet som formulärdata skickas till. Om du definierar mål-URL:en i formulärdesignen kan du skicka en tom sträng. Du kan också ange den URL dit ett formulär ska skickas för att utföra beräkningar.
+1. Anropa `FormsServiceClient`-objektets `renderPDFForm`-metod och skicka följande värden:
 
    * Ett strängvärde som anger formulärdesignens namn, inklusive filnamnstillägget.
-   * A `com.adobe.idp.Document` objekt som innehåller data som ska sammanfogas med formuläret (skapat i steg 2).
-   * A `PDFFormRenderSpec` objekt som lagrar körningsalternativ. Mer information finns i [AEM Forms API-referens](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
-   * A `URLSpec` objekt som innehåller URI-värden som krävs av Forms-tjänsten för att återge ett formulär baserat på fragment.
-   * A `java.util.HashMap` objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
+   * Ett `com.adobe.idp.Document`-objekt som innehåller data som ska sammanfogas med formuläret (skapat i steg 2).
+   * Ett `PDFFormRenderSpec`-objekt som lagrar körningsalternativ. Mer information finns i [AEM Forms API Reference](https://www.adobe.com/go/learn_aemforms_javadocs_63_en).
+   * Ett `URLSpec`-objekt som innehåller URI-värden som krävs av Forms-tjänsten för att återge ett formulär baserat på fragment.
+   * Ett `java.util.HashMap`-objekt som lagrar bifogade filer. Det här är en valfri parameter och du kan ange `null` om du inte vill bifoga filer till formuläret.
 
-   The `renderPDFForm` returnerar en `FormsResult` objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
+   Metoden `renderPDFForm` returnerar ett `FormsResult`-objekt som innehåller en formulärdataström som måste skrivas till klientens webbläsare.
 
-1. Skapa en `com.adobe.idp.Document` genom att anropa `FormsResult` objekt&quot;s `getOutputContent` -metod.
-1. Hämta innehållstypen för `com.adobe.idp.Document` genom att anropa dess `getContentType` -metod.
-1. Ange `javax.servlet.http.HttpServletResponse` objektets innehållstyp genom att anropa dess `setContentType` metoden och skicka innehållstypen för `com.adobe.idp.Document` -objekt.
-1. Skapa en `javax.servlet.ServletOutputStream` som används för att skriva formulärdataströmmen till klientens webbläsare genom att anropa `javax.servlet.http.HttpServletResponse` objektets `getOutputStream` -metod.
-1. Skapa en `java.io.InputStream` genom att anropa `com.adobe.idp.Document` objektets `getInputStream` -metod.
-1. Skapa en bytearray som fyller i den med formulärdataströmmen genom att anropa `InputStream` objektets `read`och skicka bytearrayen som ett argument.
-1. Anropa `javax.servlet.ServletOutputStream` objektets `write` metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till `write` -metod.
+1. Skapa ett `com.adobe.idp.Document`-objekt genom att anropa `FormsResult`-objektets `getOutputContent`-metod.
+1. Hämta innehållstypen för objektet `com.adobe.idp.Document` genom att anropa dess `getContentType`-metod.
+1. Ange innehållstypen för objektet `javax.servlet.http.HttpServletResponse` genom att anropa dess `setContentType`-metod och skicka innehållstypen för objektet `com.adobe.idp.Document`.
+1. Skapa ett `javax.servlet.ServletOutputStream`-objekt som används för att skriva formulärdataströmmen till klientwebbläsaren genom att anropa `javax.servlet.http.HttpServletResponse`-objektets `getOutputStream`-metod.
+1. Skapa ett `java.io.InputStream`-objekt genom att anropa `com.adobe.idp.Document`-objektets `getInputStream`-metod.
+1. Skapa en bytearray som fyller i den med formulärdataströmmen genom att anropa `InputStream`-objektets `read`-metod och skicka bytearrayen som ett argument.
+1. Anropa `javax.servlet.ServletOutputStream`-objektets `write`-metod för att skicka formulärdataströmmen till klientens webbläsare. Skicka bytearrayen till metoden `write`.
 
 Följande kodexempel representerar den Java-server som anropar Forms-tjänsten och återger ett formulär baserat på fragment.
 
@@ -307,7 +307,7 @@ Följande kodexempel representerar den Java-server som anropar Forms-tjänsten o
 
 ### Skapa webbsidan {#creating-the-web-page}
 
-På webbsidan index.html finns en startpunkt för Java-servleten och Forms-tjänsten anropas. Den här webbsidan är ett grundläggande formulär i HTML som innehåller två alternativknappar och en skicka-knapp. Alternativknapparnas namn är radio. När användaren klickar på skicka-knappen skickas formulärdata till `RenderFormFragment` Java servlet.
+På webbsidan index.html finns en startpunkt för Java-servleten och Forms-tjänsten anropas. Den här webbsidan är ett grundläggande formulär i HTML som innehåller två alternativknappar och en skicka-knapp. Alternativknapparnas namn är radio. När användaren klickar på skicka-knappen skickas formulärdata till Java-servern `RenderFormFragment`.
 
 Java-servleten hämtar data som har skickats från HTML-sidan med följande Java-kod:
 
@@ -377,9 +377,9 @@ Om du vill distribuera den Java-server som anropar Forms-tjänsten paketerar du 
 
 **Så här paketerar du ett webbprogram till en WAR-fil:**
 
-1. Från **Project Explorer** fönster, högerklicka på `FragmentsWebApplication` projekt och välj **Exportera** > **WAR-fil**.
-1. I **Webbmodul** textruta, skriva `FragmentsWebApplication` för Java-projektets namn.
-1. I **Mål** textruta, skriva `FragmentsWebApplication.war`**för** filnamn, ange platsen för WAR-filen och klicka sedan på Slutför.
+1. I fönstret **Projektutforskaren** högerklickar du på projektet `FragmentsWebApplication` och väljer **Exportera** > **WAR-fil**.
+1. Skriv `FragmentsWebApplication` som namn på Java-projektet i textrutan **Webbmodul**.
+1. I textrutan **Mål** skriver du `FragmentsWebApplication.war`**som** filnamn, anger platsen för WAR-filen och klickar sedan på Slutför.
 
 ### Distribuera WAR-filen till J2EE-programservern {#deploying-the-war-file-to-the-j2ee-application-server}
 

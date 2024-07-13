@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Om du inte känner till lagringsresursens leverantör (SRP) och dess relation till användargenererat innehåll (UGC) går du till [Community-innehåll](working-with-srp.md) och [Översikt över lagringsresursprovider](srp.md).
+Om du inte känner till lagringsresursens leverantör (SRP) och dess relation till användargenererat innehåll (UGC) går du till [Community Content Storage](working-with-srp.md) och [Storage Resource Provider Overview](srp.md).
 
 Detta avsnitt i dokumentationen innehåller viktig information om SRP och UGC.
 
@@ -36,7 +36,7 @@ SRP API är inte en abstrakt klass, utan ett gränssnitt. En anpassad implemente
 
 Sättet att använda SRP API är via tillhandahållna verktyg, t.ex. de som finns i paketet SocialResourceUtilities.
 
-När du uppgraderar från AEM 6.0 eller tidigare måste du migrera UGC för alla SRP som har ett verktyg för öppen källkod. Se [Uppgradera till AEM Communities 6.3](upgrade.md).
+När du uppgraderar från AEM 6.0 eller tidigare måste du migrera UGC för alla SRP som har ett öppet Source-verktyg. Se [Uppgradera till AEM Communities 6.3](upgrade.md).
 
 >[!NOTE]
 >
@@ -63,13 +63,13 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 }
 ```
 
-Andra SocialUtils-ersättningar finns i [Omfaktorisering för SocialUtils](socialutils.md).
+Andra ersättningar av SocialUtils finns i [Omfaktorisering av SocialUtils](socialutils.md).
 
-Riktlinjer för kodning finns på [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md).
+Information om riktlinjer för kodning finns på [Åtkomst av UGC med SRP](accessing-ugc-with-srp.md).
 
 >[!CAUTION]
 >
->Sökvägen resourceToUGCStoragePath() returnerar *not* lämplig för [ACL-kontroll](srp.md#for-access-control-acls).
+>Sökvägen resourceToUGCStoragePath() returnerar *passande* för [ACL-kontroll](srp.md#for-access-control-acls).
 
 ## Verktygsmetod för åtkomst till åtkomstkontrollistor {#utility-method-to-access-acls}
 
@@ -96,38 +96,38 @@ protected void doGet(final SlingHttpServletRequest request, final SlingHttpServl
 
 >[!CAUTION]
 >
->Sökvägen som returneras av resourceToACLPath() är *not* lämplig för [använda användargenererat innehåll](#utility-method-to-access-acls) själv.
+>Sökvägen som returneras av resourceToACLPath() är *inte* lämplig för [åtkomst till själva UGC](#utility-method-to-access-acls).
 
 ## UGC-relaterade lagringsplatser {#ugc-related-storage-locations}
 
-Följande beskrivningar av lagringsplats kan vara till hjälp när du utvecklar med JSRP eller kanske MSRP. Det finns för närvarande inget användargränssnitt som kan komma åt UGC som lagras i ASRP, vilket är fallet för JSRP ([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)) och MSRP (MongoDB-verktyg).
+Följande beskrivningar av lagringsplats kan vara till hjälp när du utvecklar med JSRP eller kanske MSRP. Det finns för närvarande inget användargränssnitt som kan komma åt UGC som lagras i ASRP, vilket finns för JSRP ([CRXDE Lite](../../help/sites-developing/developing-with-crxde-lite.md)) och MSRP (MongoDB-verktyg).
 
 **Komponentplats**
 
 När en medlem går in i UGC i publiceringsmiljön interagerar de med en komponent som en del av en AEM.
 
-Ett exempel på en sådan komponent är [kommentarkomponent](http://localhost:4502/content/community-components/en/comments.html) som finns i [Guide för communitykomponenter](components-guide.md) webbplats. Sökvägen till kommentarnoden i den lokala databasen är:
+Ett exempel på en sådan komponent är den [kommentarskomponent](http://localhost:4502/content/community-components/en/comments.html) som finns på [communitykomponentguiden](components-guide.md) . Sökvägen till kommentarnoden i den lokala databasen är:
 
 * Komponentsökväg = `/content/community-components/en/comments/jcr:content/content/includable/comments`
 
-**Skuggnodplats**
+**Skuggnodens plats**
 
-När du skapar UGC skapas också en [skuggnod](srp.md#about-shadow-nodes-in-jcr) som de nödvändiga åtkomstkontrollistorna tillämpas på. Sökvägen till motsvarande skuggnod i den lokala databasen är resultatet av att skuggnodens rotsökväg har försatts i komponentsökvägen:
+När du skapar UGC skapas även en [skuggnod](srp.md#about-shadow-nodes-in-jcr) som de nödvändiga åtkomstkontrollistorna tillämpas på. Sökvägen till motsvarande skuggnod i den lokala databasen är resultatet av att skuggnodens rotsökväg har försatts i komponentsökvägen:
 
 * Rotsökväg = `/content/usergenerated`
 * Kommentarens skuggnod = `/content/usergenerated/content/community-components/en/comments/jcr:content/content/includable/comments`
 
 **UGC-plats**
 
-Den användargenererade koden skapas inte på någon av dessa platser och ska bara nås med en [utility, metod](#utility-method-to-access-ugc) som anropar SRP API.
+UGC skapas på båda dessa platser och ska bara nås med en [verktygsmetod](#utility-method-to-access-ugc) som anropar SRP-API:t.
 
 * Rotsökväg = `/content/usergenerated/asi/srp-choice`
 * UGC-nod för JSRP = `/content/usergenerated/asi/jcr/content/community-components/en/comments/jcr:content/content/includable/comments/srzd-let_it_be_`
 
-*Var medveten* för JSRP kommer UGC-noden att *endast* vara närvarande på den AEM instansen (antingen författaren eller publiceringen) som den angavs för. Om det anges i en publiceringsinstans går det inte att moderera från modereringskonsolen på författaren.
+*Obs!* För JSRP kommer UGC-noden *endast* att finnas på den AEM instansen (antingen författaren eller publiceringen) som den angavs för. Om det anges i en publiceringsinstans går det inte att moderera från modereringskonsolen på författaren.
 
 ## Relaterad information {#related-information}
 
-* [Översikt över lagringsresursprovider](srp.md) - Översikt över introduktion och databasanvändning.
-* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - Riktlinjer för kodning.
+* [Lagringsresursprovideröversikt](srp.md) - Översikt över introduktion och databasanvändning.
+* [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
 * [Omfaktorisering för SocialUtils](socialutils.md) - Mappar borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.

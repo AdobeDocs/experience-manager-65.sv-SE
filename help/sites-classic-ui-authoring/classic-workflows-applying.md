@@ -36,7 +36,7 @@ När du använder arbetsflödet anger du följande information:
 
 Arbetsflödena kan startas antingen från webbplatskonsolen eller från Sidekick när du redigerar en sida.
 
-The **Status** kolumn i **Webbplatser** konsolen anger om ett arbetsflöde har tillämpats på en sida:
+Kolumnen **Status** i konsolen **Webbplatser** anger om ett arbetsflöde har tillämpats på en sida:
 
 ![arbetsflödesstatus](assets/workflowstatus.png)
 
@@ -52,8 +52,8 @@ The **Status** kolumn i **Webbplatser** konsolen anger om ett arbetsflöde har t
 1. Öppna webbplatskonsolen.
 1. Öppna önskad sida.
 1. Klicka på fliken Arbetsflöde i Sidekick.
-1. Expandera **Arbetsflöde** kan du välja **Arbetsflöde** och ange **Titel för arbetsflöde** och **Kommentar**.
+1. Utöka dialogrutan **Arbetsflöde** så att du kan välja **arbetsflöde** och ange **arbetsflödets titel** och **Kommentar** om du vill.
 
    ![arbetsflödenstartsidespark](assets/workflowstartsidekick.png)
 
-1. Klicka **Starta arbetsflöde** om du vill starta en ny arbetsflödesinstans med de egenskaper som du har konfigurerat och den aktuella sidan som nyttolast. Nu körs arbetsflödet.
+1. Klicka på **Starta arbetsflöde** om du vill starta en ny arbetsflödesinstans med de egenskaper som du har konfigurerat och den aktuella sidan som nyttolast. Nu körs arbetsflödet.

@@ -19,7 +19,7 @@ ht-degree: 20%
 
 # Verktygskonsoler{#tools-consoles}
 
-The **verktyg** -konsoler ger tillgång till flera specialverktyg som hjälper dig att administrera dina webbplatser, digitala resurser och andra aspekter av innehållsdatabasen. Det finns för närvarande två varianter av **verktyg** beroende på vilket gränssnitt du använder:
+**Verktygskonsolerna** ger åtkomst till flera specialiserade verktyg som du kan använda för att administrera webbplatser, digitala resurser och andra aspekter av innehållsdatabasen. Det finns för närvarande två varianter av konsolen **Tools** som är beroende av det användargränssnitt du använder:
 
 * [Verktyg - Touchoptimerat gränssnitt](#tools-touch-optimized-ui)
 * [Verktyg - Klassiskt användargränssnitt](#tools-classic-ui)
@@ -158,7 +158,7 @@ The **verktyg** -konsoler ger tillgång till flera specialverktyg som hjälper d
   </tr>
   <tr>
    <td> </td>
-   <td>Extern länkkontroll<br /> </td>
+   <td>Extern länkkontroll <br /> </td>
   </tr>
   <tr>
    <td>Assets</td>
@@ -286,7 +286,7 @@ The **verktyg** -konsoler ger tillgång till flera specialverktyg som hjälper d
   </tr>
   <tr>
    <td> </td>
-   <td>Dynamic Media Configuration<br /> </td>
+   <td>Dynamic Media-konfiguration<br /> </td>
   </tr>
   <tr>
    <td> </td>
@@ -306,7 +306,7 @@ The **verktyg** -konsoler ger tillgång till flera specialverktyg som hjälper d
   </tr>
   <tr>
    <td> </td>
-   <td>Konfiguration av facebook Social Login<br /> </td>
+   <td>Konfiguration för social inloggning för facebook<br /> </td>
   </tr>
   <tr>
    <td> </td>
@@ -314,7 +314,7 @@ The **verktyg** -konsoler ger tillgång till flera specialverktyg som hjälper d
   </tr>
   <tr>
    <td> </td>
-   <td>Konfiguration av pinterest Social Login<br /> </td>
+   <td>Konfiguration för social inloggning för pinterest<br /> </td>
   </tr>
   <tr>
    <td>Communities</td>
@@ -334,7 +334,7 @@ The **verktyg** -konsoler ger tillgång till flera specialverktyg som hjälper d
   </tr>
   <tr>
    <td> </td>
-   <td>Gruppmallar<br /> </td>
+   <td>Gruppmallar <br /> </td>
   </tr>
   <tr>
    <td> </td>
@@ -345,7 +345,7 @@ The **verktyg** -konsoler ger tillgång till flera specialverktyg som hjälper d
    <td>Community-emblem</td>
   </tr>
   <tr>
-   <td>Handel</td>
+   <td>Commerce</td>
    <td> </td>
   </tr>
   <tr>
@@ -372,11 +372,11 @@ The **verktyg** -konsoler ger tillgång till flera specialverktyg som hjälper d
    <td>Centraliserad plats för hantering av flera webbplatser.</td>
   </tr>
   <tr>
-   <td>Konfigurationer av klientkontext<br /> </td>
+   <td>Klientkonfigurationer <br /> </td>
    <td>Klientkontexten representerar en dynamiskt sammansatt samling med användardata. Standardkonfigurationerna och konfigurationerna för Experience Cloud finns här.<br /> </td>
   </tr>
   <tr>
-   <td>Konfigurationer av Cloud Service<br /> </td>
+   <td>Konfigurationer av Cloud Service <br /> </td>
    <td>Innehåller konfigurationer som rör integrering med Adobe Experience Cloud.</td>
   </tr>
   <tr>
@@ -384,7 +384,7 @@ The **verktyg** -konsoler ger tillgång till flera specialverktyg som hjälper d
    <td>Konfigurationshanterarens inställningar.</td>
   </tr>
   <tr>
-   <td>Handel</td>
+   <td>Commerce</td>
    <td>Ger importörer och olika produktdata tillgång.</td>
   </tr>
   <tr>

@@ -1,6 +1,6 @@
 ---
 title: Bloggfunktion
-description: Lär dig hur bloggfunktionen kan ge communityinformation i journalformat. Posterna görs i publiceringsmiljön av behöriga användare.
+description: Lär dig hur bloggfunktionen kan ge communityinformation i journalformat. Bidrag görs i Publish-miljön av behöriga användare.
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/COMMUNITIES
 topic-tags: authoring
@@ -21,20 +21,20 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Bloggfunktionen för AEM Communities har transformerats från en redigeringsaktivitet till en verklig community-aktivitet som äger rum i publiceringsmiljön.
+Bloggfunktionen för AEM Communities har utvecklats från en redigeringsaktivitet till en verklig community-aktivitet som äger rum i Publish-miljön.
 
-Bloggfunktionen har stöd för att tillhandahålla communityinformation i journalformat. Bloggposterna görs i publiceringsmiljön av behöriga medlemmar (registrerade, inloggade användare).
+Bloggfunktionen har stöd för att tillhandahålla communityinformation i journalformat. Bloggposterna görs i Publish-miljön av behöriga medlemmar (registrerade, inloggade användare).
 
 Bloggfunktionen innehåller:
 
-* Publicera och skapa bloggartiklar och kommentarer
+* Skapa bloggartiklar och kommentarer på Publish-sidan
 * Redigera avancerad text
 * Textbundna bilder (med stöd för dra och släpp)
-* Inbäddat innehåll i sociala nätverk ([Stöd för inbäddning](/help/communities/blog-developer-basics.md#allowing-rich-media))
+* Inbäddat innehåll för sociala nätverk ([Inbäddat stöd](/help/communities/blog-developer-basics.md#allowing-rich-media))
 * Utkastläge
 * Schemalagd publicering
-* Skapa för räkning (en [behörig medlem](/help/communities/users.md#privileged-members-group) kan skapa innehåll för en annan community-medlem)
-* [Kontext- och gruppmoderering](/help/communities/moderate-ugc.md) bloggartiklar och kommentarer
+* Disponera för (en [privilegierad medlem](/help/communities/users.md#privileged-members-group) kan skapa innehåll för en annan community-medlem)
+* [Kontext- och gruppmoderering](/help/communities/moderate-ugc.md) av bloggartiklar och kommentarer
 
 I det här avsnittet av dokumentationen beskrivs:
 
@@ -43,7 +43,7 @@ I det här avsnittet av dokumentationen beskrivs:
 
 >[!NOTE]
 >
->Komponenterna `Journal` och `Journal Sidebar` är namngivna `Blog` och `Blog Sidebar`.
+>Komponenterna `Journal` och `Journal Sidebar` har namnen `Blog` och `Blog Sidebar`.
 >
 >Bloggfunktionen i AEM 6.0 och tidigare versioner har nu tagits bort. Det baserades på en mall och tilläts endast författare att skapa innehåll i författarmiljön.
 
@@ -56,15 +56,15 @@ Om du vill lägga till en blogg på en sida i redigeringsläge använder du komp
 
 Dra dem till en plats på en sida där bloggen ska visas.
 
-Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När [nödvändiga bibliotek på klientsidan](/help/communities/blog-developer-basics.md#essentials-for-client-side) ingår `Blog` visas här:
+När de [nödvändiga klientbiblioteken](/help/communities/blog-developer-basics.md#essentials-for-client-side) ingår visas komponenten `Blog` enligt följande:
 
 ![add-blog-component](assets/add-blog-component.png)
 
 ### Konfigurerar blogg {#configuring-blog}
 
-Markera den monterade `Blog` så att du kan komma åt och välja `Configure` -ikonen som öppnar dialogrutan för redigering.
+Markera den monterade `Blog`-komponenten så att du kan komma åt och markera ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
@@ -72,13 +72,13 @@ Markera den monterade `Blog` så att du kan komma åt och välja `Configure` -ik
 
 #### Fliken Inställningar {#settings-tab}
 
-Under **Inställningar** anger du bloggens grundläggande funktioner:
+Ange bloggens grundläggande funktioner på fliken **Inställningar** :
 
 * **Tillåt miniatyrbild för bifogad fil**
 
   Om du markerar det här alternativet skapas en miniatyrbild av den bifogade bilden.
 
-* **Maximal storlek på miniatyrbild**
+* **Maximal storlek för miniatyrbildsanslutning**
 
   Maximal storlek (i pixlar) för miniatyrbilden för den bifogade filen. Standardvärdet är 800 x 800.
 
@@ -120,7 +120,7 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
   Definierar antalet blogginlägg/kommentarer som visas per sida. Standardvärdet är 10.
 
-* **Kontrollerad**
+* **Modererad**
 
   Om du markerar det här alternativet måste du godkänna att blogginlägg och kommentarer skickas innan de visas på en publicerad webbplats. Standardvärdet är avmarkerat.
 
@@ -134,7 +134,7 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Tillåt taggning**
 
-  Tillåt medlemmar att lägga till taggetiketter i sina inlägg (se **Taggfält** -fliken). Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se fliken **Taggfält**). Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
@@ -142,11 +142,11 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Maximal filstorlek**
 
-  Endast relevant om `Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+  Endast relevant om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
 * **Tillåtna filtyper**
 
-  Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges går det inte att överföra de filtyper som inte har angetts. Ingen standard har angetts så att alla filtyper tillåts.
+  Endast relevant om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp anges går det inte att överföra de filtyper som inte har angetts. Ingen standard har angetts så att alla filtyper tillåts.
 
 * **Maximal filstorlek för bifogad bild**
 
@@ -166,37 +166,37 @@ Under **Inställningar** anger du bloggens grundläggande funktioner:
 
 * **Tillåt följande**
 
-  Om du markerar det här alternativet inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelad](/help/communities/notifications.md) av nya tjänster. Standard är avmarkerat.
+  Om du markerar det här alternativet inkluderar du följande funktion för bloggartiklar, som gör att medlemmar kan [meddelas](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
 
 * **Tillåt e-postprenumerationer**
 
-  Om det här alternativet är markerat, tillåt medlemmar att meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver `Allow Following` ska kontrolleras och [e-post konfigurerad](/help/communities/email.md). Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver att `Allow Following` kontrolleras och att [e-post konfigureras](/help/communities/email.md). Standard är avmarkerat.
 
 * **Visa emblem**
 
-  Om det här alternativet är markerat visas intjänad och tilldelad [emblem](/help/communities/implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
+  Om det här alternativet är markerat visas intjänade och tilldelade [emblem](/help/communities/implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
 
 * **Hämta inte svar på listsidan**
 
-* **Tillåt innehåll**
+* **Tillåt aktuellt innehåll**
 
-  Om det här alternativet är markerat identifieras idén som [presenterat innehåll](/help/communities/featured.md). Standard är avmarkerat.
+  Om du markerar det här alternativet identifieras idén som [aktuellt innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
-* **Aktivera omnämns**
+* **Aktivera omnämnande**
 
   Om det här alternativet är aktiverat kan registrerade communityanvändare identifiera andra registrerade medlemmar (med förnamn, efternamn, användarnamn) och tagga dem med den vanliga @användarnamnssyntaxen. De taggade användarna får meddelanden om sina egna omnämnanden.
 
-* **Max. omnämnanden**
+* **Max antal omnämnanden**
 
   Begränsa det maximala antalet omnämnanden som tillåts i ett inlägg. Standardvärdet är 10.
 
-* **Mönster för användargränssnittets omnämnande**
+* **Mönster för gränssnittets omnämnande**
 
-  Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel: `~{{familyName}}{{givenName}}`.
+  Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Exempel: `~{{familyName}}{{givenName}}`.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Under **Användarmoderering** anger du modereringsinställningar:
+Under fliken **Användarmoderering** anger du modereringsinställningarna:
 
 * **Neka inlägg**
 
@@ -228,11 +228,11 @@ Under **Användarmoderering** anger du modereringsinställningar:
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under **Taggfält** anger du vilka taggar som kan användas om **Tillåt taggning** är markerad på **Inställningar** tab :
+Under fliken **Tagg field** anger du vilka taggar som kan användas om **Tillåt taggning** är markerat på fliken **Inställningar** :
 
 * **Tillåtna namnutrymmen**
 
-  Relevant om `Allow Tagging` kontrolleras under **Inställningar** -fliken. De taggar som kan användas är begränsade till de taggar som finns i de namnutrymmeskategorier som är markerade. Listan med namnutrymmen innehåller&quot;Standardtaggar&quot; (standardnamnutrymmet) och&quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+  Relevant om `Allow Tagging` är markerat under fliken **Inställningar**. De taggar som kan användas är begränsade till de taggar som finns i de namnutrymmeskategorier som är markerade. Listan med namnutrymmen innehåller&quot;Standardtaggar&quot; (standardnamnutrymmet) och&quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
@@ -240,11 +240,11 @@ Under **Taggfält** anger du vilka taggar som kan användas om **Tillåt taggnin
 
 ### Konfigurerar bloggmarginallist {#configuring-blog-sidebar}
 
-När du dubbelklickar på `Blog Sidebar` öppnas en redigeringsdialogruta.
+När du dubbelklickar på komponenten `Blog Sidebar` öppnas en redigeringsdialogruta.
 
-Under **Inställningar för journalmarginallist** anger du datumformatet för arkiv och vilken typ av poster som ska visas i sidofältet:
+Under fliken **Inställningar för journalmarginaler** anger du datumformatet för arkiv och vilken typ av poster som ska visas i sidofältet:
 
-![blog-component-sidebar](assets/blog-component-sidebar.png)
+![bloggkomponent-sidofält](assets/blog-component-sidebar.png)
 
 * **Datumformat**
 
@@ -266,7 +266,7 @@ Under **Inställningar för journalmarginallist** anger du datumformatet för ar
    * Kategorier
    * Arkiv
 
-* **Bloggkomponentsökväg**
+* **Sökväg till bloggkomponent**
 
   *(Valfritt)* Platsen för bloggresursen som bloggartiklar ska listas från. Om det lämnas tomt används komponenten för resourceType `social/journal/components/hbs/journal` som visas på samma sida.
 
@@ -290,27 +290,27 @@ Andra funktioner beror på om besökaren är en moderator, administratör, commu
 
 När du skapar en bloggartikel kan du göra följande:
 
-1. Publicera omedelbart
-1. Publicera ett utkast
-1. Publicera vid ett schemalagt datum och en schemalagd tidpunkt
+1. Publish Omedelbart
+1. Publish a Draft
+1. Publish på schemalagd tid och datum
 
 Bloggartiklarna visas under lämplig flik (Publicerad, Utkast eller Schemalagd) för medlemmar som kan skriva vid publicering.
 
 #### Styrelsemedlemmar och administratörer {#moderators-and-administrators}
 
-När den inloggade användaren har moderator- eller administratörsbehörighet kan de utföra [modereringsuppgifter](/help/communities/moderate-ugc.md) (enligt komponentens konfiguration) på alla bloggartiklar och kommentarer som har skickats till en blogg.
+När den inloggade användaren har moderator- eller administratörsbehörighet kan han/hon utföra [modereringsåtgärder](/help/communities/moderate-ugc.md) (vilket tillåts av komponentens konfiguration) på alla bloggartiklar och kommentarer som publicerats på en blogg.
 
-![moderator-hemsida](assets/moderator-homepage.png)
+![moderator-homepage](assets/moderator-homepage.png)
 
 #### Medlemmar {#members}
 
-När den inloggade användaren är en community-medlem eller [behörig medlem](/help/communities/users.md#privileged-members-group) (beroende på konfiguration) kan de välja `New Article` för att skapa och publicera en ny bloggartikel.
+När den inloggade användaren är en community-medlem eller [behörig medlem](/help/communities/users.md#privileged-members-group) (beroende på konfiguration) kan användaren välja `New Article` för att skapa och publicera en ny bloggartikel.
 
 De får särskilt
 
 * Skapa en bloggartikel
-* Skicka en ny bloggartikel för en annan medlem
-* Skicka en kommentar till en bloggartikel
+* Post en ny bloggartikel för en annan medlem
+* Post en kommentar till en bloggartikel
 * Redigera en egen bloggartikel eller kommentar
 * Ta bort en egen bloggartikel eller kommentar
 * Flagga andras blogginlägg eller kommentarer
@@ -323,14 +323,14 @@ De får särskilt
 
 Besökare som inte är inloggade kan endast läsa inlagda bloggartiklar och kommentarer, översätta dem om de stöds, men kan inte lägga till en bloggartikel eller kommentar eller flagga andras artiklar eller kommentarer.
 
-![anonym användarvy](assets/anonymous-user-view.png)
+![anonym-användarvy](assets/anonymous-user-view.png)
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på [Blog Essentials](/help/communities/blog-developer-basics.md) för utvecklare.
+Mer information finns på sidan [Blog Essentials](/help/communities/blog-developer-basics.md) för utvecklare.
 
-Mer information om moderering av blogginlägg och kommentarer finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
+moderering av blogginlägg och kommentarer finns i [Moderering av användargenererat innehåll](/help/communities/moderate-ugc.md).
 
 Information om hur du taggar blogginlägg och kommentarer finns i [Tagga användargenererat innehåll](/help/communities/tag-ugc.md).
 
-Information om översättning av blogginlägg och kommentarer finns i [Översätter användargenererat innehåll](/help/communities/translate-ugc.md).
+Mer information om översättning av blogginlägg och kommentarer finns i [Översätta användargenererat innehåll](/help/communities/translate-ugc.md).

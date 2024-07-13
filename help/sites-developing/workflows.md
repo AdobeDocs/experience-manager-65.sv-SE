@@ -40,28 +40,28 @@ Nedan beskrivs de viktigaste aspekterna, medan följande sidor innehåller mer i
 >
 >* Delta i arbetsflöden, se [Använda arbetsflöden](/help/sites-authoring/workflows.md).
 >* Administrera arbetsflöden och arbetsflödesinstanser, se [Administrera arbetsflöden](/help/sites-administering/workflows.md).
->* En gemenskapsartikel från början till slut finns på [Ändra digitala resurser med Adobe Experience Manager Workflows.](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html)
+>* En communityartikel från början till slut finns i [Ändra Digital Assets med Adobe Experience Manager-arbetsflöden.](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html)
 >* Se [Fråga webbinariet AEM experter om arbetsflöden](https://communities.adobeconnect.com/p5s33iburd54/).
->* Ändringar av informationsplatserna finns i [Omstrukturering av lager i AEM 6.5](/help/sites-deploying/repository-restructuring.md) och [Bästa praxis för arbetsflöden - platser](/help/sites-developing/workflows-best-practices.md#locations).
+>* Ändringar av informationsplatserna finns i [Databasomstrukturering i AEM 6.5](/help/sites-deploying/repository-restructuring.md) och [Bästa praxis för arbetsflöden - platser](/help/sites-developing/workflows-best-practices.md#locations).
 >
 
 ## Modell {#model}
 
-A `WorkflowModel` representerar en definition (modell) av ett arbetsflöde. Den är gjord av `WorkflowNodes` och `WorkflowTransitions`. Övergångarna ansluter noderna och definierar *flöde*. Modellen har alltid en startnod och en slutnod.
+En `WorkflowModel` representerar en definition (modell) av ett arbetsflöde. Den är gjord av `WorkflowNodes` och `WorkflowTransitions`. Övergångarna ansluter noderna och definierar *flödet*. Modellen har alltid en startnod och en slutnod.
 
 ### Körningsmodell {#runtime-model}
 
 Arbetsflödesmodeller är versionshanterade. När du kör en arbetsflödesinstans används och behålls arbetsflödets körningsmodell, så som den är tillgänglig när arbetsflödet startades.
 
-En körningsmodell är [genereras när **Synkronisera** aktiveras i arbetsflödesmodellredigeraren](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model).
+En körningsmodell [ genereras när **Synkronisering** aktiveras i arbetsflödesmodellredigeraren](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model).
 
-Redigeringar av arbetsflödesmodellen som inträffar, eller körningsmodeller som genereras, eller både och, *efter* den specifika instansen som startades inte tillämpas på den instansen.
+Redigeringar av arbetsflödesmodellen som inträffar, eller körningsmodeller som genereras, eller båda, *efter*, tillämpas inte på den instansen.
 
 >[!CAUTION]
 >
->Stegen som utförs definieras av [körningsmodell](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model)som genereras vid den tidpunkt **Synkronisera** åtgärden aktiveras i arbetsflödesmodellredigeraren.
+>Stegen som utförs definieras av [körningsmodellen](/help/sites-developing/workflows-models.md#sync-your-workflow-generate-a-runtime-model) som genereras när åtgärden **Synkronisera** aktiveras i arbetsflödesmodellredigeraren.
 >
->Om arbetsflödesmodellen ändras efter den här tidpunkten (utan **Synkronisera** när den aktiveras), kommer körningsinstansen inte att återspegla dessa ändringar. Endast körningsmodeller som genererats efter uppdateringen återspeglar ändringarna. Undantagen är de underliggande ECMA-skripten, som endast sparas en gång så att ändringarna genomförs.
+>Om arbetsflödesmodellen ändras efter den här tidpunkten (utan att **Synkronisera** aktiveras) återspeglas inte dessa ändringar i körningsinstansen. Endast körningsmodeller som genererats efter uppdateringen återspeglar ändringarna. Undantagen är de underliggande ECMA-skripten, som endast sparas en gång så att ändringarna genomförs.
 
 ### Steg {#step}
 
@@ -73,23 +73,23 @@ Varje steg ger en diskret uppgift. Det finns olika typer av arbetsflödessteg:
 * ELLER Dela/förena: Använd logik för att bestämma vilket steg som ska köras härnäst i arbetsflödet.
 * AND Split/Join: Tillåter att flera steg körs samtidigt.
 
-Alla steg har följande gemensamma egenskaper: `Autoadvance` och `Timeout` varningar (skriptbara).
+Alla steg delar följande gemensamma egenskaper: `Autoadvance` och `Timeout` varningar (skriptbara).
 
 ### Övergång {#transition}
 
-A `WorkflowTransition` representerar en övergång mellan två `WorkflowNodes` av `WorkflowModel`.
+En `WorkflowTransition` representerar en övergång mellan två `WorkflowNodes` av en `WorkflowModel`.
 
 * Den definierar länken mellan två på varandra följande steg.
 * Det är möjligt att tillämpa regler.
 
 ### WorkItem {#workitem}
 
-A `WorkItem` är den enhet som passeras genom en `Workflow` instans av en `WorkflowModel`. Den innehåller `WorkflowData` som instansen agerar på och en referens till `WorkflowNode` som beskriver det underliggande arbetsflödessteget.
+En `WorkItem` är den enhet som skickas genom en `Workflow`-instans av en `WorkflowModel`. Den innehåller `WorkflowData` som instansen agerar på och en referens till `WorkflowNode` som beskriver det underliggande arbetsflödessteget.
 
 * Den används för att identifiera uppgiften och placeras i respektive inkorg.
-* En arbetsflödesinstans kan ha en eller flera `WorkItems` samtidigt (beroende på arbetsflödesmodell).
-* The `WorkItem` refererar till arbetsflödesinstansen.
-* I databasen är `WorkItem` lagras under arbetsflödesinstansen.
+* En arbetsflödesinstans kan ha en eller flera `WorkItems` samtidigt (beroende på arbetsflödesmodellen).
+* `WorkItem` refererar till arbetsflödesinstansen.
+* I databasen lagras `WorkItem` under arbetsflödesinstansen.
 
 ### Nyttolast {#payload}
 
@@ -112,9 +112,9 @@ Slutförda och avslutade instanser arkiveras.
 
 ### Inkorg {#inbox}
 
-Varje användarkonto har en egen arbetsflödesinkorg där `WorkItems` är tillgängliga.
+Varje användarkonto har en egen arbetsflödesinkorg där den tilldelade `WorkItems` är tillgänglig.
 
-The `WorkItems` tilldelas antingen användarkontot direkt eller till den grupp som de tillhör.
+`WorkItems` tilldelas antingen användarkontot direkt eller till gruppen som de tillhör.
 
 ### Arbetsflödestyper {#workflow-types}
 
@@ -136,7 +136,7 @@ Det finns olika typer av arbetsflöden som anges i konsolen Arbetsflödesmodelle
 
 ### Övergående arbetsflöden {#transient-workflows}
 
-Standardarbetsflöden sparar körningsinformation (historik) under körningen. Du kan också definiera en arbetsflödesmodell som **Övergående** för att undvika att sådan historik sparas. Det här arbetsflödet används för prestandajustering eftersom det sparar tid och resurser som används för att lagra informationen.
+Standardarbetsflöden sparar körningsinformation (historik) under körningen. Du kan också definiera en arbetsflödesmodell som **Transient** för att undvika att den historiken sparas. Det här arbetsflödet används för prestandajustering eftersom det sparar tid och resurser som används för att lagra informationen.
 
 Övergående arbetsflöden kan användas för alla arbetsflöden som:
 
@@ -147,48 +147,48 @@ Standardarbetsflöden sparar körningsinformation (historik) under körningen. D
 
 >[!NOTE]
 >
->Se [Skapa ett tillfälligt arbetsflöde](/help/sites-developing/workflows-models.md#creating-a-transient-workflow) för mer information.
+>Mer information finns i [Skapa ett tillfälligt arbetsflöde](/help/sites-developing/workflows-models.md#creating-a-transient-workflow).
 
 >[!CAUTION]
 >
 >När en arbetsflödesmodell markeras som Transient finns det några scenarier när körningsinformationen fortfarande måste bevaras:
 >
 >* Nyttolasttypen (till exempel video) kräver externa steg för bearbetning. I sådana fall behövs körtidshistoriken för statusbekräftelse.
->* Arbetsflödet anger en **OCH dela**. I sådana fall krävs körtidshistoriken för statusbekräftelse.
+>* Arbetsflödet anger en **AND-delning**. I sådana fall krävs körtidshistoriken för statusbekräftelse.
 >* När det tillfälliga arbetsflödet går in i ett deltagarsteg ändras läget, vid körning, till icke-tillfälligt. När aktiviteten skickas till en person måste historiken sparas.
 >
 
 >[!CAUTION]
 >
->Inom ett tillfälligt arbetsflöde bör du inte använda en **Gå till steg**.
+>Inom ett tillfälligt arbetsflöde bör du inte använda ett **Gå till steg**.
 >
->Orsaken är att **Gå till steg** skapar ett sling-jobb för att fortsätta arbetsflödet på `goto` punkt. Det motverkar syftet att göra arbetsflödet övergående och genererar ett fel i loggfilen.
+>Orsaken är att **Gå till steg** skapar ett snedjobb som kan fortsätta arbetsflödet vid punkten `goto`. Det motverkar syftet att göra arbetsflödet övergående och genererar ett fel i loggfilen.
 >
 >Använd **ELLER Dela** för att göra val i ett tillfälligt arbetsflöde.
 
 >[!NOTE]
 >
->Se [Metodtips för Assets](/help/assets/performance-tuning-guidelines.md#transient-workflows) för mer information om hur Transient Workflows påverkar tillgångarnas prestanda.
+>Se [Bästa praxis för Assets](/help/assets/performance-tuning-guidelines.md#transient-workflows) för mer information om hur tillfälliga arbetsflöden påverkar tillgångsprestanda.
 
 ### Stöd för flera resurser {#multi-resource-support}
 
-Aktivera **Stöd för flera resurser** för arbetsflödesmodellen innebär att en arbetsflödesinstans startas även när du väljer flera resurser. Varje paket bifogas som ett paket.
+Om du aktiverar **Multi Resource Support** för arbetsflödesmodellen startas en enda arbetsflödesinstans även när du väljer flera resurser. Varje paket bifogas som ett paket.
 
-If **Stöd för flera resurser** är inte aktiverat för arbetsflödesmodellen och flera resurser har valts. En enskild arbetsflödesinstans startas för varje resurs.
+Om **Multi Resource Support** inte har aktiverats för arbetsflödesmodellen och flera resurser har valts, startas en enskild arbetsflödesinstans för varje resurs.
 
 >[!NOTE]
 >
->Se [Konfigurera ett arbetsflöde för stöd för flera resurser](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support) för mer information.
+>Mer information finns i [Konfigurera ett arbetsflöde för stöd för flera resurser](/help/sites-developing/workflows-models.md#configuring-a-workflow-for-multi-resource-support).
 
 ### Arbetsflödessteg {#workflow-stages}
 
-Med arbetsflödesfaser kan du visualisera förloppet för ett arbetsflöde när du hanterar uppgifter. De kan användas för att ge en översikt över hur långt arbetsflödet är genom bearbetning. När arbetsflödet körs kan användaren visa förloppet som beskrivs av **Scen** (till skillnad från enskilda steg).
+Med arbetsflödesfaser kan du visualisera förloppet för ett arbetsflöde när du hanterar uppgifter. De kan användas för att ge en översikt över hur långt arbetsflödet är genom bearbetning. När arbetsflödet körs kan användaren visa förloppet som beskrivs av **Stage** (till skillnad från enskilda steg).
 
 Eftersom namnen på de enskilda stegen kan vara specifika och tekniska, kan du definiera dem för att få en konceptuell vy över arbetsflödesförloppet.
 
 För ett arbetsflöde med sex steg och fyra steg:
 
-1. Du kan [konfigurera arbetsflödessteg (som visar arbetsflödets förlopp) och sedan tilldela rätt fas till varje steg i arbetsflödet](/help/sites-developing/workflows-models.md#configuring-workflow-stages-that-show-workflow-progress):
+1. Du kan [konfigurera arbetsflödesfaser (som visar arbetsflödets förlopp) och sedan tilldela rätt fas till varje steg i arbetsflödet](/help/sites-developing/workflows-models.md#configuring-workflow-stages-that-show-workflow-progress):
 
    * Du kan skapa flera scennamn.
    * Sedan tilldelas varje steg ett enskilt scennamn (ett scennamn kan tilldelas ett eller flera steg).
@@ -202,14 +202,14 @@ För ett arbetsflöde med sex steg och fyra steg:
    | Steg 5 | Complete |
    | Steg 6 | Complete |
 
-1. När arbetsflödet körs kan användaren visa förloppet enligt scennamnen (i stället för stegnamnen). Arbetsflödets förlopp visas i [Fliken INFO FÖR ARBETSFLÖDE i fönstret med uppgiftsinformation för arbetsflödesobjektet](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions) som anges i [Inkorg](/help/sites-authoring/inbox.md).
+1. När arbetsflödet körs kan användaren visa förloppet enligt scennamnen (i stället för stegnamnen). Arbetsflödesförloppet visas på fliken [ARBETSFLÖDESINFO i fönstret med uppgiftsinformation i arbetsflödesobjektet](/help/sites-authoring/workflows-participating.md#opening-a-workflow-item-to-view-details-and-take-actions) som visas i [Inkorgen](/help/sites-authoring/inbox.md).
 
 ### Arbetsflöden och Forms {#workflows-and-forms}
 
-Vanligtvis används arbetsflöden för att bearbeta formulärinskickade formulär i AEM. Det kan man göra med [grundkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html) finns i en AEM eller med [AEM Forms](/help/forms/using/aem-forms-workflow.md).
+Vanligtvis används arbetsflöden för att bearbeta formulärinskickade formulär i AEM. Det kan vara med [kärnkomponenterna från komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html) som är tillgängliga i en AEM eller med [AEM Forms-lösningen](/help/forms/using/aem-forms-workflow.md).
 
 När du skapar ett formulär kan du enkelt koppla formuläröverföringen till en arbetsflödesmodell. Du kan till exempel lagra innehållet på en viss plats i databasen eller meddela en användare om att formuläret skickas och dess innehåll.
 
 ### Arbetsflöden och översättning {#workflows-and-translation}
 
-Arbetsflödena ingår också i [Översättning](/help/sites-administering/translation.md) -processen.
+Arbetsflöden ingår också i [översättningsprocessen](/help/sites-administering/translation.md).

@@ -73,12 +73,12 @@ Adobe tillhandahåller två versioner av Commerce integrationa frameworken:
    <td>
     <ul>
      <li>Kan stödja upp till ett fåtal miljoner produkter (beroende på användningsfall)</li>
-     <li>Cachelagring av Dispatcher</li>
+     <li>Cachelagring i Dispatcher</li>
     </ul> </td>
    <td>
     <ul>
      <li>Ingen volymbegränsning</li>
-     <li>Cachelagring av Dispatcher eller CDN</li>
+     <li>Cachelagring i Dispatcher eller CDN</li>
     </ul> </td>
   </tr>
   <tr>
@@ -125,13 +125,13 @@ Implementeringen ger åtkomst i realtid till produktinformation. Detta kan anvä
 >
 >Om du vill använda integreringsramverket med externa e-handelsleverantörer måste du först installera de paket som krävs. Mer information finns i [Distribuera e-handel](/help/commerce/cif-classic/deploying/ecommerce.md).
 >
->Mer information om hur du utökar e-handelsfunktionerna finns i [Utveckla e-handeln](/help/commerce/cif-classic/developing/ecommerce.md).
+>Mer information om hur du utökar e-handelsfunktionerna finns i [Utveckla e-handel](/help/commerce/cif-classic/developing/ecommerce.md).
 
 ## Huvudfunktioner {#main-features}
 
 AEM eCommerce tillhandahåller:
 
-* Ett antal **färdiga AEM** för att illustrera vad du kan göra med ditt projekt:
+* Ett antal **färdiga AEM** som illustrerar vad du kan göra med ditt projekt:
 
    * Produktvisning
    * Kundvagn
@@ -146,7 +146,7 @@ AEM eCommerce tillhandahåller:
   >
   >Med integreringsramverket som AEM tillhandahåller kan du även skapa ytterligare AEM komponenter för handelsfunktioner oberoende av din specifika e-handelsmotor.
 
-* **Sök** - med antingen:
+* **Sök** - använder antingen:
 
    * AEM sökning
    * sökningen i e-handelssystemet
@@ -155,26 +155,26 @@ AEM eCommerce tillhandahåller:
 
   ![sökexempel](/help/sites-administering/assets/chlimage_1-131.png)
 
-* AEM kan **presentera innehållet i flera kanaler**, vara hela webbläsarfönstret eller den mobila enheten. Detta levererar innehållet i det format som besökarna behöver.
+* Använder AEM för att **presentera ditt innehåll i flera kanaler**, oavsett om det är hela webbläsarfönstret eller den mobila enheten. Detta levererar innehållet i det format som besökarna behöver.
 
-  ![mobilvy, exempel](/help/sites-administering/assets/chlimage_1-132.png)
+  ![exempel på mobilvy](/help/sites-administering/assets/chlimage_1-132.png)
 
-* Möjlighet att **utveckla er egen integrationsimplementering baserat på [AEM eCommerce Framework](#the-framework)**.
+* Möjligheten att **utveckla din egen integreringsimplementering baserat på [AEM eCommerce-ramverket](#the-framework)**.
 
   De två implementeringar som är tillgängliga för närvarande är båda byggda på samma grund - utöver det allmänna API:t (ramverket). Implementering av en ny integrering innebär bara implementering av de funktioner som din integrering behöver. Front end-komponenter kan användas av alla nya implementeringar när de använder gränssnitt (så är oberoende av implementeringen).
 
-* Möjligheten att utveckla **upplevelsestyrd e-handel baserad på kunddata och -aktivitet**. På så sätt kan du förverkliga många scenarier:
+* Möjligheten att utveckla **upplevelsestyrd handel baserat på kunddata och aktivitet**. På så sätt kan du förverkliga många scenarier:
 
    * Ett exempel kan vara minskade fraktkostnader när den totala ordern överstiger ett visst belopp.
    * Ett annat sätt kan vara att ange säsongserbjudanden som använder profildata (till exempel plats). Dessa kan sedan markeras ytterligare, beroende på andra faktorer vid behov.
 
   I exemplet nedan visas en teaser eftersom innehållet i vagnen är mindre än $75:
 
-  ![kundvagn med kundkontext](/help/sites-administering/assets/chlimage_1-133.png)
+  ![kundvagn med klientkontext](/help/sites-administering/assets/chlimage_1-133.png)
 
   Detta kan ändras när innehållet i kundvagnen överstiger $75:
 
-  ![kundvagn med kundkontext efter ändring](/help/sites-administering/assets/chlimage_1-134.png)
+  ![kundvagn med klientkontext efter ändring](/help/sites-administering/assets/chlimage_1-134.png)
 
 * Och andra funktioner:
 
@@ -184,7 +184,7 @@ AEM eCommerce tillhandahåller:
 
 ## Ramverket {#the-framework}
 
-The [Concepts](/help/commerce/cif-classic/administering/concepts.md) -avsnittet innehåller mer detaljerad information om ramverket, men följande ger en snabb översikt av ramverket på hög nivå:
+Avsnittet [Koncept](/help/commerce/cif-classic/administering/concepts.md) beskriver ramverket mer ingående, men i följande exempel visas ramverket på hög nivå och med hög hastighet:
 
 ### Vad? {#what}
 

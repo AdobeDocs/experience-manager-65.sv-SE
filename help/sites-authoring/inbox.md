@@ -18,14 +18,14 @@ Du kan få meddelanden från olika AEM, inklusive arbetsflöden och projekt, t.e
 
 * Uppgifter:
 
-   * dessa kan också skapas vid olika punkter i AEM, t.ex. under **Projekt**,
-   * kan vara produkten av ett arbetsflöde **Skapa uppgift** eller **Skapa projektuppgift** steg.
+   * dessa kan också skapas vid olika punkter i AEM, till exempel under **Projekt**,
+   * dessa kan vara produkten av ett **Skapa uppgift**- eller **Skapa projektuppgift**-steg i ett arbetsflöde.
 
 * Arbetsflöden:
 
    * Arbetsobjekt som representerar åtgärder som du måste utföra på sidinnehåll.
 
-      * det här är produkten av arbetsflöde **Deltagare** steg
+      * detta är produkten av arbetsflödet **Deltagare** steg
 
    * felobjekt, så att administratörer kan försöka utföra det misslyckade steget igen.
 
@@ -33,7 +33,7 @@ Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtg�
 
 >[!NOTE]
 >
->AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Se [Administrativa arbetsmoment som inte går att köra](#out-of-the-box-administrative-tasks) för mer information.
+>AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Mer information finns i [Administrativa åtgärder som inte är tillgängliga](#out-of-the-box-administrative-tasks).
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidh
 
 >[!NOTE]
 >
->Vissa åtgärder visas också i [kortvy över lämplig resurs](/help/sites-authoring/basic-handling.md#card-view).
+>Vissa åtgärder visas även i [kortvyn för den aktuella resursen](/help/sites-authoring/basic-handling.md#card-view).
 
 ## Administrativa arbetsmoment som inte går att köra  {#out-of-the-box-administrative-tasks}
 
@@ -70,10 +70,10 @@ Så här öppnar du AEM inkorg:
 
 1. Klicka på indikatorn i verktygsfältet.
 
-1. Välj **Visa alla**. The **AEM** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
+1. Välj **Visa alla**. Inkorgen **AEM** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
 1. Standardvyn är [Listvy](#inbox-list-view), men du kan även växla till [Kalendervy](#inbox-calendar-view). Detta görs med vyväljaren (verktygsfält, överst till höger).
 
-   För båda vyerna kan du även definiera [Visa inställningar](#inbox-view-settings); de tillgängliga alternativen beror på den aktuella vyn.
+   För båda vyerna kan du även definiera [visningsinställningar](#inbox-view-settings). Vilka alternativ som är tillgängliga beror på den aktuella vyn.
 
    ![wf-79](assets/inbox-list-view.png)
 
@@ -95,9 +95,9 @@ I den här vyn visas objekt efter deras placering i kalendern och den exakta vyn
 
 Du kan:
 
-* välja en specifik vy, **Tidslinje**, **Kolumn**, **Lista**
+* välj en specifik vy: **Tidslinje**, **Kolumn**, **Lista**
 
-* ange vilka uppgifter som ska visas enligt **Schema**; **Alla**, **Planerad**, **Pågår**, **Förfaller snart**, **Förfallodatum**
+* Ange vilka uppgifter som ska visas enligt **Schema**; **Alla**, **Planerade**, **Pågår**, **Förfaller snart**, **Förfallodatum**
 
 * detaljgranska för mer detaljerad information om ett objekt
 * markera ett datumintervall som vyn ska fokuseras i:
@@ -110,7 +110,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 * **Kalendervy**
 
-  För **Kalendervy** du kan konfigurera:
+  För **kalendervyn** kan du konfigurera:
 
    * **Gruppera efter**
    * **Schema** eller **Ingen**
@@ -120,7 +120,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 * **Listvy**
 
-  För **Listvy** du kan konfigurera sorteringsmekanismen:
+  För **listvyn** kan du konfigurera sorteringsmekanismen:
 
    * **Sorteringsfält**
    * **Sorteringsordning**
@@ -137,19 +137,19 @@ Med alternativet Admin Control kan administratörer:
 
 * Styra visningen av navigeringslänkar i sidhuvudet
 
-Alternativet Admin Control är bara synligt för medlemmarna i `administrators` eller `workflow-administrators` grupp.
+Alternativet Admin Control är bara synligt för medlemmarna i gruppen `administrators` eller `workflow-administrators`.
 
-* **Kolumnanpassning**: Anpassa en AEM Inkorg om du vill ändra standardrubriken för en kolumn, ändra ordning på positionen för en kolumn och visa ytterligare kolumner baserat på data i ett arbetsflöde.
-   * **Lägg till kolumn**: Välj en kolumn som ska läggas till AEM Inkorgen.
-   * **Redigera kolumn**: Håll muspekaren över kolumnrubriken och markera ![redigera](assets/edit.svg) om du vill ange ett kolumnvisningsnamn.
-   * **Ta bort kolumn**: Välj ![delete](assets/delete_updated.svg) om du vill ta bort kolumnen från AEM.
-   * **Flytta kolumn**: Dra ![move](assets/move_updated.svg) om du vill flytta en kolumn till en ny plats i AEM Inkorg.
+* **Kolumnanpassning**: Anpassa en AEM inkorg om du vill ändra standardtiteln för en kolumn, ändra ordning på en kolumns position och visa ytterligare kolumner baserat på data i ett arbetsflöde.
+   * **Lägg till kolumn**: Markera en kolumn som ska läggas till AEM Inkorgen.
+   * **Redigera kolumn**: Håll musen över kolumnrubriken och välj ikonen ![redigera](assets/edit.svg) för att ange ett kolumnvisningsnamn.
+   * **Ta bort kolumn**: Markera ikonen ![ta bort](assets/delete_updated.svg) om du vill ta bort kolumnen från AEM.
+   * **Flytta kolumn**: Dra ikonen ![move](assets/move_updated.svg) om du vill flytta en kolumn till en ny plats i AEM.
 
   ![admin-control](assets/admin-control-column-customize.png)
 
-* **Anpassning av varumärkesprofilering**
+* **Anpassning av profilering**
 
-   * **Anpassa rubriktext:** Ange den text som ska visas i sidhuvudet som ska ersätta standardtexten **Adobe Experience Manager** text.
+   * **Anpassa rubriktext:** Ange den text som ska visas i sidhuvudet för att ersätta standardtexten för **Adobe Experience Manager**.
 
    * **Anpassa logotyp:** Ange bilden som ska visas i sidhuvudet som logotyp. Överför en bild i DAM (Digital Asset Management) och hänvisa till den bilden i fältet.
 
@@ -170,15 +170,15 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
 
    Åtgärderna är lämpliga för objektet och omfattar:
 
-   * **Complete** åtgärd, till exempel en uppgift eller ett arbetsflödesobjekt.
-   * **Tilldela igen**/**Delegera** ett objekt.
+   * **Slutför**-åtgärd, till exempel en uppgift eller ett arbetsflödesobjekt.
+   * **Tilldela om**/**Delegera** ett objekt.
    * **Öppna** ett objekt. Beroende på objekttypen kan den här åtgärden:
 
       * visa objektegenskaperna
       * öppna en lämplig kontrollpanel eller guide för ytterligare åtgärder
       * öppna relaterad dokumentation
 
-   * **Gå bakåt** till ett föregående steg.
+   * **Gå tillbaka** till ett föregående steg.
    * Visa nyttolasten för ett arbetsflöde.
    * Skapa ett projekt från objektet.
 
@@ -186,7 +186,7 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
    >
    >Mer information finns i:
    >
-   >* Arbetsflödesartiklar - [Delta i arbetsflöden](/help/sites-authoring/workflows-participating.md)
+   >* Arbetsflödesobjekt - [Deltar i arbetsflöden](/help/sites-authoring/workflows-participating.md)
 
 1. Beroende på vilket objekt som är markerat startas en åtgärd, till exempel:
 
@@ -194,7 +194,7 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
    * en åtgärdsguide startas.
    * en dokumentationssida öppnas.
 
-   Till exempel: **Tilldela igen** öppnar en dialogruta:
+   Till exempel öppnar **Tilldela om** en dialogruta:
 
    ![wf-85](assets/wf-85.png)
 
@@ -208,15 +208,15 @@ Alternativet Admin Control är bara synligt för medlemmarna i `administrators` 
 
 I inkorgen kan du skapa uppgifter:
 
-1. Välj **Skapa** sedan **Uppgift**.
-1. Fyll i de nödvändiga fälten i **Grundläggande** och **Avancerat** tabbar; endast **Titel** är obligatoriskt, alla andra är valfria:
+1. Välj **Skapa** och sedan **Aktivitet**.
+1. Fyll i de nödvändiga fälten på flikarna **Grundläggande** och **Avancerat**. Endast **Titel** är obligatoriskt, alla andra är valfria:
 
    * **Grundläggande**:
 
       * **Titel**
       * **Projekt**
       * **Tilldelad**
-      * **Innehåll**; liknar Nyttolast är detta en referens från aktiviteten till en plats i databasen
+      * **Innehåll**; liknar nyttolast är detta en referens från aktiviteten till en plats i databasen
       * **Beskrivning**
       * **Aktivitetsprioritet**
       * **Startdatum**
@@ -226,7 +226,7 @@ I inkorgen kan du skapa uppgifter:
 
    * **Avancerat**
 
-      * **Namn**: den används för att skapa URL:en. Om den är tom kommer den att baseras på **Titel**.
+      * **Namn**: Detta används för att skapa URL:en. Om det är tomt baseras det på **Rubrik**.
 
    ![wf-87](assets/wf-87.png)
 
@@ -234,13 +234,13 @@ I inkorgen kan du skapa uppgifter:
 
 ## Skapa ett projekt {#creating-a-project}
 
-För vissa uppgifter kan du skapa en [Projekt](/help/sites-authoring/projects.md) baserat på den uppgiften:
+För vissa uppgifter kan du skapa ett [projekt](/help/sites-authoring/projects.md) baserat på den uppgiften:
 
 1. Välj lämplig åtgärd genom att trycka/klicka på miniatyrbilden.
 
    >[!NOTE]
    >
-   >Endast uppgifter som skapats med **Skapa** alternativ för **Inkorg** kan användas för att skapa ett projekt.
+   >Endast aktiviteter som skapats med alternativet **Skapa** i **Inkorgen** kan användas för att skapa ett projekt.
    >
    >Arbetsobjekt (från ett arbetsflöde) kan inte användas för att skapa ett projekt.
 
@@ -262,7 +262,7 @@ För vissa uppgifter kan du skapa en [Projekt](/help/sites-authoring/projects.md
 
    >[!NOTE]
    >
-   >Se [Skapa ett projekt](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project) för fullständig information.
+   >Mer information finns i [Skapa ett projekt](/help/sites-authoring/touch-ui-managing-projects.md#creating-a-project).
 
 1. Välj **Skapa** för att bekräfta åtgärden.
 
@@ -270,7 +270,7 @@ För vissa uppgifter kan du skapa en [Projekt](/help/sites-authoring/projects.md
 
 Du kan filtrera objekten i listan:
 
-1. Öppna **AEM**.
+1. Öppna **AEM Inkorg**.
 
 1. Öppna filterväljaren:
 
@@ -282,4 +282,4 @@ Du kan filtrera objekten i listan:
 
    >[!NOTE]
    >
-   >Med [Visa inställningar](#inbox-view-settings) Du kan också konfigurera sorteringsordningen när du använder [Listvy](#inbox-list-view).
+   >Med [Visa inställningar](#inbox-view-settings) kan du även konfigurera sorteringsordningen när du använder [listvyn](#inbox-list-view).

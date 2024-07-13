@@ -1,6 +1,6 @@
 ---
 title: Utöka sökfunktionen
-description: Utöka sökfunktionerna i [!DNL Adobe Experience Manager Assets] bortom standardvärdena.
+description: Utöka sökfunktionerna i  [!DNL Adobe Experience Manager Assets]  utöver standardvärdena.
 contentOwner: AG
 role: Developer
 feature: Search
@@ -15,52 +15,52 @@ ht-degree: 12%
 
 # Utöka resurssökning {#extending-assets-search}
 
-Du kan utöka [!DNL Adobe Experience Manager Assets] sökfunktioner. Ut ur lådan, [!DNL Experience Manager Assets] söker efter resurser efter strängar.
+Du kan utöka sökfunktionerna för [!DNL Adobe Experience Manager Assets]. [!DNL Experience Manager Assets] söker efter resurser efter strängar.
 
 Sökningen görs via gränssnittet i QueryBuilder så att sökningen kan anpassas med flera predikat. Du kan täcka över standarduppsättningen med predikat i följande katalog: `/apps/dam/content/search/searchpanel/facets`.
 
-Du kan också lägga till fler flikar i [!DNL Assets] admin panel.
+Du kan också lägga till fler flikar på administratörspanelen för [!DNL Assets].
 
 >[!CAUTION]
 >
->Från [!DNL Experience Manager] 6.4, Classic UI är föråldrat. Adobe rekommenderar att du använder ett användargränssnitt som har stöd för pekfunktioner. Information om anpassning finns i [sökfack](/help/assets/search-facets.md).
+>Från och med [!DNL Experience Manager] 6.4 är det klassiska användargränssnittet föråldrat. Adobe rekommenderar att du använder ett användargränssnitt som har stöd för pekfunktioner. Mer information om anpassning finns i [sökfaktorer](/help/assets/search-facets.md).
 
 ## Övertäckning {#overlaying}
 
-Om du vill täcka över de förkonfigurerade predikaten kopierar du `facets` från `/libs/dam/content/search/searchpanel` till `/apps/dam/content/search/searchpanel/` eller ange en annan `facetURL` -egenskapen i `searchpanel` konfiguration (standard är `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`).
+Om du vill täcka över de förkonfigurerade predikaten kopierar du noden `facets` från `/libs/dam/content/search/searchpanel` till `/apps/dam/content/search/searchpanel/` eller anger en annan `facetURL`-egenskap i `searchpanel`-konfigurationen (standardvärdet är `/libs/dam/content/search/searchpanel/facets.overlay.infinity.json`).
 
 ![screen_shot_2012-06-05at113619am](assets/screen_shot_2012-06-05at113619am.png)
 
 >[!NOTE]
 >
->Som standard är katalogstrukturen under `/apps` finns inte, så skapa den. Kontrollera att nodtyperna matchar dem under `/libs`.
+>Som standard finns inte katalogstrukturen under `/apps`, så skapa den. Kontrollera att nodtyperna matchar dem under `/libs`.
 
 ## Lägg till tabbar {#adding-tabs}
 
-Du kan lägga till fler sökflikar genom att konfigurera dem i dialogrutan [!DNL Assets] administratörsgränssnitt. Så här skapar du ytterligare flikar:
+Du kan lägga till fler sökflikar genom att konfigurera dem i administratörsgränssnittet för [!DNL Assets]. Så här skapar du ytterligare flikar:
 
-1. Skapa mappstrukturen `/apps/wcm/core/content/damadmin/tabs,`om den inte redan finns, och kopiera `tabs` från `/libs/wcm/core/content/damadmin` och klistra in den.
+1. Skapa mappstrukturen `/apps/wcm/core/content/damadmin/tabs,` om den inte redan finns, och kopiera `tabs`-noden från `/libs/wcm/core/content/damadmin` och klistra in den.
 1. Skapa och konfigurera den andra fliken efter behov.
 
    >[!NOTE]
    >
-   >När du skapar en sekund `siteadminsearchpanel`måste du ange en `id` -egenskap för att förhindra formulärkonflikter.
+   >När du skapar ytterligare en `siteadminsearchpanel` måste du ange en `id`-egenskap för att förhindra formulärkonflikter.
 
 ## Skapa anpassade predikat {#creating-custom-predicates}
 
-[!DNL Assets] innehåller en uppsättning fördefinierade predikat som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [skapa och konfigurera en resursdelningssida](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
+[!DNL Assets] innehåller en uppsättning fördefinierade predikat som kan användas för att anpassa en resursdelssida. Anpassa en resursresurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelningssida](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-Förutom att använda befintliga predikat [!DNL Experience Manager] utvecklare kan också skapa egna predikar med [Query Builder API](/help/sites-developing/querybuilder-api.md).
+Förutom att använda befintliga predikat kan [!DNL Experience Manager]-utvecklare även skapa egna predikat med [Query Builder API](/help/sites-developing/querybuilder-api.md) .
 
-Om du vill skapa anpassade predikat måste du ha grundläggande kunskaper om [Widgetramverk](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html).
+Det krävs grundläggande kunskaper om [widgetramverket](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/widgets-api/index.html) för att kunna skapa anpassade predikat.
 
-Det bästa sättet är att kopiera ett befintligt predikat och justera det. Exempelpredikat finns i **/libs/cq/search/components/preates**.
+Det bästa sättet är att kopiera ett befintligt predikat och justera det. Exempelpredikaten finns i **/libs/cq/search/components/predikates**.
 
 ### Exempel: Skapa ett enkelt egenskapspredikat {#example-build-a-simple-property-predicate}
 
 Så här skapar du ett egenskapspredikat:
 
-1. Skapa en komponentmapp i projektkatalogen, till exempel **/apps/weretail/components/titlepreate**.
+1. Skapa en komponentmapp i din projektkatalog, till exempel **/apps/werdetail/components/titlepreate**.
 1. Lägg till **content.xml**:
 
    ```xml
@@ -141,9 +141,9 @@ Så här skapar du ett egenskapspredikat:
    ```
 
 1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Om du vill göra en komponent redigerbar lägger du i CRXDE till en nod **cq:editConfig** av den primära typen **cq:EditConfig**. Du kan ta bort stycken genom att lägga till en egenskap med flera värden **cq:actions** med ett enda värde på **DELETE**.
-1. Navigera till webbläsaren och till exempelsidan (till exempel **press.html**) växla till designläge och aktivera den nya komponenten för det prediktiva styckesystemet (till exempel **vänster**).
+1. Navigera till webbläsaren och på exempelsidan (till exempel **press.html**) växla till designläge och aktivera den nya komponenten för det prediktiva styckesystemet (till exempel **left**).
 
-1. I **Redigera** läge, den nya komponenten är nu tillgänglig i sidledaren (finns i **Sök** grupp). Infoga komponenten i **Predikat** kolumn och ange ett sökord, till exempel **Diamant** och klicka på förstoringsglaset för att starta sökningen.
+1. I **redigeringsläget** är den nya komponenten nu tillgänglig i sidosparken (finns i gruppen **Sök**). Infoga komponenten i kolumnen **Predicates** och skriv ett sökord, till exempel **Diamant**, och klicka på förstoringsglaset för att starta sökningen.
 
    >[!NOTE]
    >
@@ -153,7 +153,7 @@ Så här skapar du ett egenskapspredikat:
 
 Så här skapar du ett grupppredikat:
 
-1. Skapa en komponentmapp i projektkatalogen, till exempel **/apps/weretail/components/picspredicate**.
+1. Skapa en komponentmapp i din projektkatalog, till exempel **/apps/werdetail/components/picspredicate**.
 1. Lägg till **content.xml**:
 
    ```xml
@@ -245,8 +245,8 @@ Så här skapar du ett grupppredikat:
    ```
 
 1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Om du vill göra en komponent redigerbar lägger du i CRXDE till en nod **cq:editConfig** av den primära typen **cq:EditConfig**. Du kan ta bort stycken genom att lägga till en egenskap med flera värden **cq:actions** med ett enda värde på **DELETE**.
-1. Navigera till webbläsaren och till exempelsidan (till exempel **press.html**) växla till designläge och aktivera den nya komponenten för det prediktiva styckesystemet (till exempel **vänster**).
-1. I **Redigera** läge, den nya komponenten är nu tillgänglig i sidledaren (finns i **Sök** grupp). Infoga komponenten i **Predikat** kolumn.
+1. Navigera till webbläsaren och på exempelsidan (till exempel **press.html**) växla till designläge och aktivera den nya komponenten för det prediktiva styckesystemet (till exempel **left**).
+1. I **redigeringsläget** är den nya komponenten nu tillgänglig i sidosparken (finns i gruppen **Sök**). Infoga komponenten i kolumnen **Predicates**.
 
 ## Installerade prediktiva widgetar {#installed-predicate-widgets}
 
@@ -257,7 +257,7 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 | Egenskap | Typ | Beskrivning |
 |---|---|---|
 | predikateName | Sträng | Predikatets namn. Standardvärdet är `fulltext` |
-| searchCallback | Funktion | Återanrop för att utlösa sökning vid händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
+| searchCallback | Funktion | Återanrop för att utlösa sökning för händelse `keyup`. Standardvärdet är `CQ.wcm.SiteAdmin.doSearch` |
 
 ### PropertyPredicate {#propertypredicate}
 
@@ -298,6 +298,6 @@ Följande predikat är tillgängliga som förkonfigurerade ExtJS-widgetar.
 
 ## Anpassa sökresultat {#customizing-search-results}
 
-Presentationen av sökresultaten på en resursdelningssida styrs av det valda objektivet. [!DNL Experience Manager Assets] innehåller en uppsättning fördefinierade objektiv som kan användas för att anpassa en resursdelssida. Att anpassa en resurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelningssida](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
+Presentationen av sökresultaten på en resursdelningssida styrs av det valda objektivet. [!DNL Experience Manager Assets] innehåller en uppsättning fördefinierade objektiv som kan användas för att anpassa en resursdelssida. Att anpassa en resursresurs på det här sättet beskrivs i [Skapa och konfigurera en resursdelningssida](/help/assets/assets-finder-editor.md#creating-and-configuring-an-asset-share-page).
 
-Förutom att använda befintliga linser [!DNL Experience Manager] utvecklare kan också skapa egna objektiv.
+Förutom att använda befintliga linser kan [!DNL Experience Manager]-utvecklare även skapa egna linser.

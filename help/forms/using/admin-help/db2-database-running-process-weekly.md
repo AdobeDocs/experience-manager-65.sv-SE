@@ -1,6 +1,6 @@
 ---
-title: "DB2&reg; databas: kör en process varje vecka"
-description: Lär dig hur du kan förbättra prestandan för din AEM Forms DB2&reg;-databas.
+title: "DB2&reg; database: Kör en process varje vecka"
+description: Lär dig hur du kan förbättra prestandan i din AEM Forms DB2&reg;-databas.
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/maintaining_the_aem_forms_database
@@ -24,7 +24,7 @@ Om AEM Forms DB2®-databasen börjar köras långsamt kan prestanda förbättras
 
    (Windows) Välj Start > Program > IBM® DB2® > General Administration Tools > Control Center.
 
-   (Linux® och UNIX®) I en kommandotolk skriver du `db2jcc` -kommando.
+   (Linux® och UNIX®) Skriv kommandot `db2jcc` från en kommandotolk.
 
 1. Klicka på Alla databaser i objektträdet i DB2® Control Center.
 1. Klicka på databasen som du skapade för AEM Forms och klicka på mappen Tabeller.

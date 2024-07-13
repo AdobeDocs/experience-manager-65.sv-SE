@@ -42,22 +42,22 @@ Enligt lagen om informationsfrihet begär Sarah en kopia av Handboken Administra
 
 ### Se det själv {#see-it-yourself}
 
-Öppna i webbläsaren `https://<hostname>:<PublishPort>/wegov`. Välj Program > Alla program på webbplatsen Web.Gov. På sidan Alla program väljer du Använd under Program för FOIA-begäran.
+Öppna `https://<hostname>:<PublishPort>/wegov` i webbläsaren. Välj Program > Alla program på webbplatsen Web.Gov. På sidan Alla program väljer du Använd under Program för FOIA-begäran.
 
 ## Sarah börjar sin ansökan om information under FOIA {#sarah-starts-her-application-for-information-under-foia}
 
-Sarah klickade **Använd** På sidan&quot;Freedom of Information Act Request Form&quot; (Formulär för begäran om informationsfrihet) anger Sarah bland annat följande uppgifter:
+Sarah klickar på **Använd** och på sidan om att begära information anger Sarah bland annat följande:
 
-* **Kontor:** Sarah anger vilken myndighet som begäran riktar sig till som justitiedepartementet - informationskontoret.
+* **Byrå:** Sarah anger vilken myndighet som förfrågan adresserades till som justitiedepartementet - informationspolicyn.
 
 * **Betala upp till**: Sarah anger att hon är beredd att betala upp till 100 USD för utskrifts- och portokostnader.
-* **Beskriv begäran i detalj**: Sarah specificerar&quot;Begär kopia av ärendeloggen Administration for Children and Families för räkenskapsåren 2013 till 2016&quot;.
+* **Beskriv begäran i detalj**: Sarah anger&quot;Requesting copy of the Administration for Children and Families case logs for Fiscal years 2013 through 2016&quot;.
 
-![Begär kopia av ärendeloggen Administration for Children and Families för räkenskapsåren 2013 till 2016](assets/sarahfiosform.png)
+![Begär en kopia av ärendeloggarna Administration för barn och familjer för räkenskapsåren 2013 till 2016](assets/sarahfiosform.png)
 
 Begär kopia av ärendeloggen Administration for Children and Families för räkenskapsåren 2013 till 2016
 
-Sarah kan när som helst välja **Spara** om du vill spara ett utkast av formuläret och komma tillbaka till det senare för att fylla i formuläret och skicka det. Sarah skickar formuläret.
+Sarah kan när som helst välja **Spara** för att spara ett utkast av formuläret och sedan gå tillbaka till det för att fylla i formuläret och skicka det. Sarah skickar formuläret.
 
 >[!NOTE]
 >
@@ -81,7 +81,7 @@ John Jacobs kan se, godkänna eller avvisa programmet från programkontrollpanel
 
 ![johnjacsticker-detail-1](assets/johnjacobstaskdetail-1.png)
 
-### <strong>Sarah får ett e-postmeddelande med en bekräftelse</strong> {#strong-sarah-receives-an-acknowledgement-email-strong}
+### <strong>Sarah får ett bekräftelsemeddelande via e-post</strong> {#strong-sarah-receives-an-acknowledgement-email-strong}
 
 När John Jacobs har godkänt ansökan får Sarah ett bekräftelsemeddelande från webbsidan We.Gov. Sarah informeras om de avgifter och den tid som krävs för att behandla hennes ansökan. E-postmeddelandet innehåller även e-post- och telefoninformation som Sarah kan kontakta för att få uppdateringar om sin app.
 
@@ -103,7 +103,7 @@ Du kommer åt AEM Inkorg på https://&lt;***värdnamn***>:&lt;***PublishPort***>
 
 Gloria öppnar förfrågan och undersöker informationen i FOIA-begäran. Efter att ha granskat detaljerna i begäran och kontrollerat om det går att skicka in de begärda dokumenten, godkänner Gloria begäran.
 
-![gloriarioGodkännanden](assets/gloriariosapproves.png)
+![gloriarioapproves](assets/gloriariosapproves.png)
 
 ## Sarah får ett meddelande om att hennes begäran har godkänts {#sarah-receives-notification-that-her-request-is-approved}
 

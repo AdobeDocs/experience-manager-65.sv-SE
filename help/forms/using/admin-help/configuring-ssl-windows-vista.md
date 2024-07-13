@@ -28,12 +28,12 @@ Du kan köra nyckelverktyget med ett enda kommando som innehåller all informati
 
 **Skapa ett SSL-certifikat**
 
-1. I en kommandotolk går du till *`[JAVA HOME]`*/bin och skriv följande kommando för att skapa certifikatet och nyckelbehållaren:
+1. I en kommandotolk går du till *`[JAVA HOME]`*/bin och skriver följande kommando för att skapa certifikatet och nyckelbehållaren:
 
-   `keytool -genkey -keyalg RSA -dname "CN=`*Värdnamn* `, OU=`*Gruppnamn* `, O=`*Företagsnamn* `,L=`*Ortsnamn* `, S=`*Läge* `, C=`*Landskod* `" -alias`*&quot;LC Cert&quot;* `-keypass` `key`*_* *lösenord* `-keystore`*keystorename* `.keystore`
+   `keytool -genkey -keyalg RSA -dname "CN=`*Värdnamn* `, OU=`*Gruppnamn* `, O=`*Företagsnamn* `,L=`*Ortnamn* `, S=`*Delstat* `, C=`*Landskod* `" -alias`*&quot;LC-certifikat&quot;* `-keypass` `key`*_* *password* `-keystore`*key. storename* `.keystore`
 
    >[!NOTE]
    >
-   >Ersätt *`[JAVA_HOME]`med den katalog där JDK är installerat och ersätt texten i kursiv stil med värden som motsvarar din miljö.*
+   >Ersätt *`[JAVA_HOME]`med katalogen där JDK är installerat och ersätt texten i kursiv stil med värden som motsvarar din miljö.*
 
-1. Typ `changeit` som lösenord. Det här lösenordet är standard för en Java-installation och systemadministratören kan ha ändrat det.
+1. Skriv `changeit` som lösenord. Det här lösenordet är standard för en Java-installation och systemadministratören kan ha ändrat det.

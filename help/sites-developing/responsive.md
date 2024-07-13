@@ -21,12 +21,12 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel _Reagera_). [Läs mer](/help/sites-developing/spa-overview.md).
+>Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel _React_). [Läs mer](/help/sites-developing/spa-overview.md).
 >
 
 >[!NOTE]
 >
->Olika exempel baseras på exempelinnehållet i Geometrixx, som inte längre levereras med AEM (Adobe Experience Manager), som har ersatts av We.Retail. Se dokumentet [Implementering av referens för Vi.butik](/help/sites-developing/we-retail.md#we-retail-geometrixx) för att hämta och installera Geometrixx.
+>Olika exempel baseras på exempelinnehållet i Geometrixx, som inte längre levereras med AEM (Adobe Experience Manager), som har ersatts av We.Retail. I dokumentet [Referensimplementering för butik](/help/sites-developing/we-retail.md#we-retail-geometrixx) finns information om hur du hämtar och installerar Geometrixx.
 
 Utforma dina webbsidor så att de anpassas till den klientvisningsruta där de visas. Med responsiv design kan samma sidor visas effektivt på flera enheter i båda riktningarna. I följande bild visas några sätt på vilka en sida kan reagera på ändringar i visningsrutans storlek:
 
@@ -52,7 +52,7 @@ Mer information om hur du implementerar responsiva designbeteenden finns i följ
 * [Flytande stödraster](/help/sites-developing/responsive.md#developing-a-fluid-grid)
 * [Adaptiva bilder](/help/sites-developing/responsive.md#using-adaptive-images)
 
-När du designar, använd **[!UICONTROL Sidekick]** om du vill förhandsgranska sidorna för olika skärmstorlekar.
+När du designar kan du använda **[!UICONTROL Sidekick]** för att förhandsgranska sidorna för olika skärmstorlekar.
 
 ## Innan du börjar utveckla {#before-you-develop}
 
@@ -66,7 +66,7 @@ Innan du utvecklar det AEM programmet som stöder dina webbsidor bör du fatta f
 
 Den typiska AEM programstrukturen har stöd för alla responsiva designimplementeringar:
 
-* Sidkomponenter finns nedanför /apps/*application_name*/components
+* Sidkomponenter finns under /apps/*application_name*/components
 * Mallar finns under /apps/*application_name*/templates
 * Designer finns under /etc/designs
 
@@ -74,7 +74,7 @@ Den typiska AEM programstrukturen har stöd för alla responsiva designimplement
 
 Mediefrågor möjliggör selektiv användning av CSS-format för sidåtergivning. Med AEM utvecklingsverktyg och funktioner kan du effektivt och effektivt implementera mediefrågor i dina program.
 
-W3C-gruppen tillhandahåller [Mediefrågor](https://www.w3.org/TR/mediaqueries-3/) rekommendation som beskriver denna CSS3-funktion och syntaxen.
+W3C-gruppen tillhandahåller rekommendationen [Mediefrågor](https://www.w3.org/TR/mediaqueries-3/) som beskriver den här CSS3-funktionen och syntaxen.
 
 ### Skapa CSS-filen {#creating-the-css-file}
 
@@ -85,7 +85,7 @@ I CSS-filen definierar du mediefrågor baserat på egenskaperna för de enheter 
 * Definiera format som är gemensamma för alla enheter i en separat CSS-fil.
 * I filen css.txt i ClientLibraryFolder ordnar du CSS-listfilerna så som krävs i den sammansatta CSS-filen.
 
-The `We.Retail` Medieexemplet använder den här strategin för att definiera format i webbplatsdesignen. CSS-filen som används av `We.Retail` är på `*/apps/weretail/clientlibs/clientlib-site/less/grid.less`.
+Medieexemplet `We.Retail` använder den här strategin för att definiera format i webbplatsdesignen. CSS-filen som används av `We.Retail` är på `*/apps/weretail/clientlibs/clientlib-site/less/grid.less`.
 
 I följande tabell visas filerna i css-mappen.
 
@@ -114,12 +114,12 @@ I följande tabell visas filerna i css-mappen.
   <tr>
    <td>responsive-980px-1199px.css</td>
    <td>Format för media som är mellan 980 pixlar och 1 199 pixlar breda.</td>
-   <td><p>@media (min-width: 980 px) and (max-width: 1199 px) {<br /> ...<br /> }</p> </td>
+   <td><p>@media (min-width: 980 px) och (max-width: 1199 px) {<br /> ...<br /> }</p> </td>
   </tr>
   <tr>
    <td>responsive-768px-979px.css</td>
    <td>Format för media som är mellan 768 pixlar och 979 pixlar breda. </td>
-   <td><p>@media (min-width: 768 px) and (max-width: 979 px) {<br /> ...<br /> }</p> </td>
+   <td><p>@media (min-width: 768 px) och (max-width: 979 px) {<br /> ...<br /> }</p> </td>
   </tr>
   <tr>
    <td>responsive-767px-max.css</td>
@@ -134,7 +134,7 @@ I följande tabell visas filerna i css-mappen.
  </tbody>
 </table>
 
-css.txt-filen i `/etc/designs/weretail/clientlibs` -mappen listar de CSS-filer som finns i klientbiblioteksmappen. Filernas ordning tillämpar formatprioritet. Format är mer specifika när enhetens storlek minskar.
+Filen css.txt i mappen `/etc/designs/weretail/clientlibs` visar de CSS-filer som finns i klientbiblioteksmappen. Filernas ordning tillämpar formatprioritet. Format är mer specifika när enhetens storlek minskar.
 
 `#base=css`
 
@@ -151,7 +151,7 @@ responsive-1200px.css
  responsive-480px.css
 ```
 
-**Tips**: Beskrivande filnamn gör det enkelt att identifiera den avsedda visningsrutans storlek.
+**Tips**: Med beskrivande filnamn kan du enkelt identifiera målvisningsrutans storlek.
 
 ### Använda mediefrågor med AEM sidor {#using-media-queries-with-aem-pages}
 
@@ -163,7 +163,7 @@ Inkludera klientbiblioteksmappen i JSP-skriptet för sidkomponenten. Om du gör 
 
 >[!NOTE]
 >
->The `apps.weretail.all` klientbiblioteksmappen bäddar in clientlibs-biblioteket.
+>Klientbiblioteksmappen `apps.weretail.all` bäddar in klientbiblioteksbiblioteket.
 
 JSP-skriptet genererar följande HTML-kod som refererar till formatmallarna:
 
@@ -174,34 +174,34 @@ JSP-skriptet genererar följande HTML-kod som refererar till formatmallarna:
 
 ## Förhandsgranska för specifika enheter {#previewing-for-specific-devices}
 
-Se förhandsgranskningar av sidorna i olika visningsrutestorlekar så att du kan testa beteendet i din responsiva design. I **[!UICONTROL Preview]** läge, **[!UICONTROL Sidekick]** innehåller **[!UICONTROL Devices]** nedrullningsbar meny som du använder för att välja en enhet. När du väljer en enhet ändras sidan så att den anpassas till visningsrutans storlek.
+Se förhandsgranskningar av sidorna i olika visningsrutestorlekar så att du kan testa beteendet i din responsiva design. I **[!UICONTROL Preview]**-läget innehåller **[!UICONTROL Sidekick]** en **[!UICONTROL Devices]**-listruta som du använder för att välja en enhet. När du väljer en enhet ändras sidan så att den anpassas till visningsrutans storlek.
 
 ![chlimage_1-5](assets/chlimage_1-5a.png)
 
-Aktivera enhetsförhandsvisning i **[!UICONTROL Sidekick]** måste du konfigurera sidan och **[!UICONTROL MobileEmulatorProvider]** service. En annan sidkonfiguration styr listan över enheter som visas i **[!UICONTROL Devices]** lista.
+Om du vill aktivera enhetsförhandsvisningen i **[!UICONTROL Sidekick]** måste du konfigurera sidan och tjänsten **[!UICONTROL MobileEmulatorProvider]**. En annan sidkonfiguration styr listan över enheter som visas i listan **[!UICONTROL Devices]**.
 
 ### Lägga till enhetslistan {#adding-the-devices-list}
 
-The **[!UICONTROL Devices]** listan visas i **[!UICONTROL Sidekick]** när sidan innehåller JSP-skriptet som återger **[!UICONTROL Devices]** lista. Lägg till **[!UICONTROL Devices]** lista till **[!UICONTROL Sidekick]**, inkluderar `/libs/wcm/mobile/components/simulator/simulator.jsp` skript i `head` på sidan.
+Listan **[!UICONTROL Devices]** visas i **[!UICONTROL Sidekick]** när sidan innehåller JSP-skriptet som återger listan **[!UICONTROL Devices]**. Om du vill lägga till listan **[!UICONTROL Devices]** i **[!UICONTROL Sidekick]** tar du med skriptet `/libs/wcm/mobile/components/simulator/simulator.jsp` i avsnittet `head` på sidan.
 
-Inkludera följande kod i JSP som definierar `head` avsnitt:
+Inkludera följande kod i JSP som definierar avsnittet `head`:
 
 `<cq:include script="/libs/wcm/mobile/components/simulator/simulator.jsp"/>`
 
-Öppna `/apps/weretail/components/page/head.jsp` i CRXDE Lite.
+Öppna filen `/apps/weretail/components/page/head.jsp` i CRXDE Lite om du vill se ett exempel.
 
 ### Registrerar sidkomponenter för simulering {#registering-page-components-for-simulation}
 
-Om du vill att enhetssimulatorn ska stödja dina sidor registrerar du dina sidkomponenter med fabrikstjänsten MobileEmulatorProvider och definierar `mobile.resourceTypes` -egenskap.
+Om du vill att enhetssimulatorn ska stödja dina sidor registrerar du dina sidkomponenter med fabrikstjänsten MobileEmulatorProvider och definierar egenskapen `mobile.resourceTypes`.
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
 
-Om du till exempel vill skapa en ` [sling:OsgiConfig](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)` i programmet:
+Så här skapar du till exempel en ` [sling:OsgiConfig](/help/sites-deploying/configuring-osgi.md#adding-a-new-configuration-to-the-repository)`-nod i ditt program:
 
 * Överordnad mapp: `/apps/application_name/config`
 * Namn: `com.day.cq.wcm.mobile.core.impl.MobileEmulatorProvider-*alias*`
 
-  The - `*alias*` suffix krävs eftersom MobileEmulatorProvider-tjänsten är en fabrikstjänst. Använd ett alias som är unikt för den här fabriken.
+  Suffixet - `*alias*` krävs eftersom MobileEmulatorProvider-tjänsten är en fabrikstjänst. Använd ett alias som är unikt för den här fabriken.
 
 * `jcr:primaryType`: `sling:OsgiConfig`
 
@@ -220,11 +220,11 @@ Lägg till följande nodegenskap:
 
 ### Ange enhetsgrupper {#specifying-the-device-groups}
 
-Om du vill ange de enhetsgrupper som visas i listan Enheter lägger du till en `cq:deviceGroups` egenskapen till `jcr:content` noden på webbplatsens rotsida. Värdet för egenskapen är en array med sökvägar till enhetsgruppsnoderna.
+Om du vill ange de enhetsgrupper som visas i listan Enheter lägger du till en `cq:deviceGroups`-egenskap i noden `jcr:content` på webbplatsens rotsida. Värdet för egenskapen är en array med sökvägar till enhetsgruppsnoderna.
 
-Enhetsgruppnoderna finns i `/etc/mobile/groups` mapp.
+Enhetsgruppnoderna finns i mappen `/etc/mobile/groups`.
 
-Rotsidan för Geometrixx Media-webbplatsen är till exempel `/content/geometrixx-media`. The `/content/geometrixx-media/jcr:content` noden innehåller följande egenskap:
+Rotsidan för Geometrixx Media-webbplatsen är till exempel `/content/geometrixx-media`. Noden `/content/geometrixx-media/jcr:content` innehåller följande egenskap:
 
 * Namn: `cq:deviceGroups`
 * Typ: `String[]`
@@ -247,25 +247,25 @@ Följande strategi läser in en enskild resurs som väljs med hjälp av mediefr�
 
 1. Lägg till ett DIV-element för varje version av resursen. Inkludera resursens URI som värde för ett attributvärde. Webbläsaren tolkar inte attributet som en resurs.
 1. Lägg till en mediefråga till varje DIV-element som är lämpligt för resursen.
-1. När dokumentet läses in eller fönstrets storlek ändras testas mediefrågan för varje DIV-element i JavaScript-koden.
+1. När dokumentet läses in eller fönstrets storlek ändras testas mediefrågan för varje DIV-element av JavaScript-koden.
 1. Utifrån resultaten av frågorna kan du avgöra vilken resurs som ska inkluderas.
 1. Infoga ett HTML-element i DOM som refererar till resursen.
 
 ### Utvärdera mediefrågor med JavaScript {#evaluating-media-queries-using-javascript}
 
-Implementering av [Gränssnittet MediaQueryList](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface) som W3C definierar gör att du kan utvärdera mediefrågor med JavaScript. Du kan lägga till logik i mediafrågeresultaten och köra skript som är avsedda för det aktuella fönstret:
+Implementeringar av [MediaQueryList-gränssnittet](https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface) som definieras av W3C gör att du kan utvärdera mediefrågor med JavaScript. Du kan lägga till logik i mediafrågeresultaten och köra skript som är avsedda för det aktuella fönstret:
 
-* Webbläsare som implementerar gränssnittet MediaQueryList stöder `window.matchMedia()` funktion. Den här funktionen testar mediefrågor mot en angiven sträng. Funktionen returnerar en `MediaQueryList` -objekt som ger åtkomst till frågeresultaten.
+* Webbläsare som implementerar MediaQueryList-gränssnittet stöder funktionen `window.matchMedia()`. Den här funktionen testar mediefrågor mot en angiven sträng. Funktionen returnerar ett `MediaQueryList`-objekt som ger åtkomst till frågeresultaten.
 
-* För webbläsare som inte implementerar gränssnittet kan du använda en `matchMedia()` Polyfyllning, som [matchMedia.js](https://github.com/paulirish/matchMedia.js), ett gratis JavaScript-bibliotek.
+* För webbläsare som inte implementerar gränssnittet kan du använda en `matchMedia()`-polyfyllning, till exempel [ matchMedia.js ](https://github.com/paulirish/matchMedia.js), ett kostnadsfritt tillgängligt JavaScript-bibliotek.
 
 #### Välja mediespecifika resurser {#selecting-media-specific-resources}
 
-W3C [bildelement](https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element) använder mediefrågor för att fastställa källan som ska användas för bildelement. Bildelementet använder elementattribut för att associera mediefrågor med bildsökvägar.
+W3C [picture-elementet](https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element) använder mediefrågor för att avgöra vilken källa som ska användas för bildelement. Bildelementet använder elementattribut för att associera mediefrågor med bildsökvägar.
 
-Kostnadsfritt [picturefill.js-bibliotek](https://github.com/scottjehl/picturefill) ger liknande funktionalitet som den som föreslås `picture` och använder en liknande strategi. Biblioteksanropen picturefill.js `window.matchMedia` att utvärdera mediefrågor som definierats för en uppsättning `div` -element. Varje `div` -elementet anger också en bildkälla. Källan används när mediefrågan för `div` elementen returnerar `true`.
+Biblioteket ](https://github.com/scottjehl/picturefill) [picturefill.js `picture` som är fritt tillgängligt har liknande funktioner som det föreslagna elementet  och använder en liknande strategi. Biblioteket picturefill.js anropar `window.matchMedia` för att utvärdera de mediefrågor som har definierats för en uppsättning med `div` element. Varje `div`-element anger också en bildkälla. Källan används när mediefrågan för elementet `div` returnerar `true`.
 
-The `picturefill.js` för biblioteket krävs HTML-kod som liknar följande exempel:
+Biblioteket `picturefill.js` kräver HTML-kod som liknar följande exempel:
 
 ```xml
 <div data-picture>
@@ -276,7 +276,7 @@ The `picturefill.js` för biblioteket krävs HTML-kod som liknar följande exemp
 </div>
 ```
 
-När sidan återges infogar picturefull.js en `img` element som sista underordnade element till `<div data-picture>` element:
+När sidan återges infogar picturefull.js ett `img`-element som det sista underordnade elementet i `<div data-picture>` -elementet:
 
 ```xml
 <div data-picture>
@@ -288,7 +288,7 @@ När sidan återges infogar picturefull.js en `img` element som sista underordna
 </div>
 ```
 
-På en AEM `data-src` -attribut är sökvägen till en resurs i databasen.
+På en AEM sida är värdet för attributet `data-src` sökvägen till en resurs i databasen.
 
 ### Implementera adaptiva bilder i AEM {#implementing-adaptive-images-in-aem}
 
@@ -300,10 +300,10 @@ Hämta följande JavaScript-bibliotek och inkludera dem i en klientbiblioteksmap
 
 * [matchMedia.js](https://github.com/paulirish/matchMedia.js) (för webbläsare som inte implementerar gränssnittet MediaQueryList)
 * [picturefill.js](https://github.com/scottjehl/picturefill)
-* jquery.js (tillgänglig via `/etc/clientlibs/granite/jquery` klientbiblioteksmapp (category = jquery)
+* jquery.js (tillgänglig via klientbiblioteksmappen `/etc/clientlibs/granite/jquery` (category = jquery)
 * [jquery.debouncedresize.js](https://github.com/louisremi/jquery-smartresize) (en jquery-händelse som inträffar en gång efter att fönstret har ändrat storlek)
 
-**Tips:** Du kan automatiskt sammanfoga flera klientbiblioteksmappar efter [bädda in](/help/sites-developing/clientlibs.md#embedding-code-from-other-libraries).
+**Tips!** Du kan automatiskt sammanfoga flera klientbiblioteksmappar genom att [bädda in](/help/sites-developing/clientlibs.md#embedding-code-from-other-libraries).
 
 **HTML**
 
@@ -351,9 +351,9 @@ När webbläsaren läser in sidan begär den bilden med hjälp av src-attributet
 * Väljare: `img`
 * Suffix: `1358372073597.jpg`
 
-The `image_0` noden har en `jcr:resourceType` värde för `foundation/components/image`, som har `sling:resourceSuperType` värde för `foundation/components/parbase`. Parbase-komponenten innehåller skriptet img.GET.java som matchar väljaren och filnamnstillägget för begärande-URL:en. CQ använder det här skriptet (servlet) för att återge bilden.
+Noden `image_0` har värdet `jcr:resourceType`, `foundation/components/image`, som har värdet `sling:resourceSuperType` `foundation/components/parbase`. Parbase-komponenten innehåller skriptet img.GET.java som matchar väljaren och filnamnstillägget för begärande-URL:en. CQ använder det här skriptet (servlet) för att återge bilden.
 
-Använd CRXDE Lite för att öppna skriptets källkod `/libs/foundation/components/parbase/img.GET.java`
+Använd CRXDE Lite för att öppna `/libs/foundation/components/parbase/img.GET.java` om du vill se skriptets källkod
 -fil.
 
 ## Skalförändra bilder för den aktuella visningsrutans storlek {#scaling-images-for-the-current-viewport-size}
@@ -387,8 +387,8 @@ AEM installerar följande implementeringar som du kan använda eller utöka.
 Komponenten Adaptiv bild genererar anrop till adaptiv bildkomponentserver för att återge en bild som har samma storlek som enhetsskärmen. Komponenten innehåller följande resurser:
 
 * JSP: Lägger till div-element som associerar mediefrågor med anrop till Adaptive Image Component Server.
-* Klientbibliotek: Mappen clientlibs är en `cq:ClientLibraryFolder` som sätter ihop JavaScript-biblioteket matchMedia polyfill och ett modifierat PictureFill JavaScript-bibliotek.
-* Dialogrutan Redigera: `cq:editConfig` node overrides the CQ Foundation image component so so that the drop target skapar en adaptive-image component istället för en Foundation image component.
+* Klientbibliotek: Mappen clientlibs är en `cq:ClientLibraryFolder` som sätter ihop JavaScript-biblioteket matchMedia polyfill och ett modifierat JavaScript-bibliotek för Picturefill.
+* Dialogrutan Redigera: Noden `cq:editConfig` åsidosätter CQ Foundation-bildkomponenten så att släppmålet skapar en adaptiv bildkomponent i stället för en grundläggande bildkomponent.
 
 #### Lägga till DIV-element {#adding-the-div-elements}
 
@@ -410,13 +410,13 @@ Skriptet adaptive-image.jsp innehåller följande kod som genererar div-element 
 </div>
 ```
 
-The `path` variabeln innehåller sökvägen för den aktuella resursen (komponentnoden adaptive-image). Koden genererar en serie `div` element med följande struktur:
+Variabeln `path` innehåller sökvägen för den aktuella resursen (komponentnoden adaptive-image). Koden genererar en serie med `div` element med följande struktur:
 
 `<div data-scr = "*path-to-parent-node*.adaptive-image.adapt.*width*.*quality*.jpg" data-media="*media query*"></div>`
 
-Värdet för `data-scr` är en URL som Sling löser till den Adaptive Image Component Server som återger bilden. Attributet data-media innehåller den mediefråga som utvärderas mot klientegenskaperna.
+Värdet för attributet `data-scr` är en URL som Sling löser till den Adaptive Image Component Server som återger bilden. Attributet data-media innehåller den mediefråga som utvärderas mot klientegenskaperna.
 
-Följande HTML-kod är ett exempel på `div` element som JSP genererar:
+Följande HTML-kod är ett exempel på `div`-element som JSP genererar:
 
 ```xml
 <div data-src='/content/geometrixx-media/en/events/the-lineup-you-ve-been-waiting-for/jcr:content/article-content-par/adaptive_image.adapt.320.low.jpg'></div>
@@ -447,7 +447,7 @@ Sling löser därför URL:er för HTTP-begäran i följande format till den här
 
 `*path-to-node*.img.*extension*`
 
-Till exempel Sling forwards HTTP requests with the URL `http://localhost:4502/content/geometrixx/adaptiveImage.img.jpg` till adaptiv Image Component Server.
+Till exempel Sling forwards HTTP-begäranden med URL:en `http://localhost:4502/content/geometrixx/adaptiveImage.img.jpg` till Adaptive Image Component Server.
 
 Två ytterligare väljare anger önskad bildbredd och JPEG-kvalitet. I följande exempel efterfrågas en bild med bredden 480 pixlar och medelkvaliteten:
 
@@ -468,16 +468,16 @@ Det fullständiga värdet anger ingen skalförändring.
 Följande värden för JPEG-kvalitet stöds:
 
 * LÅG
-* MEDEL
+* MEDIUM
 * HÖG
 
 De numeriska värdena är 0,4, 0,82 och 1,0.
 
 **Ändra standardbredderna som stöds**
 
-Använda webbkonsolen ([http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)) eller en sling:OsgiConfig-nod för att konfigurera de bredder som stöds i Adobe CQ Adaptive Image Component Server.
+Använd webbkonsolen ([http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr)) eller en sling:OsgiConfig-nod för att konfigurera bredderna som stöds i Adobe CQ Adaptive Image Component Server.
 
-Mer information om hur du konfigurerar AEM tjänster finns i [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md).
+Mer information om hur du konfigurerar AEM tjänster finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
 
 <table>
  <tbody>
@@ -509,7 +509,7 @@ Mer information om hur du konfigurerar AEM tjänster finns i [Konfigurerar OSGi]
 
 #### Implementeringsinformation {#implementation-details}
 
-The `com.day.cq.wcm.foundation.impl.AdaptiveImageComponentServlet` klassen utökar [AbstraktImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) klassen. Källkoden AdaptiveImageComponentServer finns i `/libs/foundation/src/impl/src/com/day/cq/wcm/foundation/impl` mapp.
+Klassen `com.day.cq.wcm.foundation.impl.AdaptiveImageComponentServlet` utökar klassen [ AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) . Källkoden för AdaptiveImageComponentServer finns i mappen `/libs/foundation/src/impl/src/com/day/cq/wcm/foundation/impl`.
 
 Klassen använder Felix SCR-anteckningar för att konfigurera resurstypen och filtillägget som serverleten är associerad med och namnet på den första väljaren.
 
@@ -542,13 +542,13 @@ Servottleten använder Property SCR-anteckningen för att ange bildkvalitet och 
             description = "List of widths this component is permitted to generate.")
 ```
 
-The `AbstractImageServlet` klassen innehåller `doGet` som bearbetar HTTP-begäran. Den här metoden avgör vilken resurs som är associerad med begäran, hämtar resursegenskaper från databasen och returnerar dem i en [ImageContext](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html) -objekt.
+Klassen `AbstractImageServlet` innehåller metoden `doGet` som bearbetar HTTP-begäran. Den här metoden avgör vilken resurs som är associerad med begäran, hämtar resursegenskaper från databasen och returnerar dem i ett [ImageContext](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html) -objekt.
 
 >[!NOTE]
 >
->The [com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) klassen innehåller `getFileReference method`som hämtar värdet för resursens `fileReference` -egenskap.
+>Klassen [com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) innehåller `getFileReference method`, som hämtar värdet för resursens `fileReference`-egenskap.
 
-The `AdaptiveImageComponentServlet` klassen åsidosätter `createLayer` -metod. Metoden hämtar sökvägen till bildresursen och den begärda bildbredden från `ImageContext` -objekt. Sedan anropas metoderna i `info.geometrixx.commons.impl.AdaptiveImageHelper` som utför den faktiska bildskalningen.
+Klassen `AdaptiveImageComponentServlet` åsidosätter metoden `createLayer`. Metoden hämtar sökvägen för bildresursen och den begärda bildbredden från objektet `ImageContext`. Därefter anropas metoderna för klassen `info.geometrixx.commons.impl.AdaptiveImageHelper` som utför den faktiska bildskalningen.
 
 Klassen AdaptiveImageComponentServer åsidosätter också writeLayer-metoden. Med den här metoden används bildens JPEG-kvalitet.
 
@@ -558,11 +558,11 @@ Exemplet Image Reference Modification Server genererar storleksattribut för img
 
 #### Anropa serverleten {#calling-the-servlet}
 
-Servern är bunden till `cq:page` och stöder filtillägget .jpg. Serverväljaren är `image`. Sling löser därför URL:er för HTTP-begäran i följande format till den här servern:
+Servern är bunden till `cq:page` resurser och stöder filtillägget .jpg. Serverväljaren är `image`. Sling löser därför URL:er för HTTP-begäran i följande format till den här servern:
 
 `path-to-page-node.image.jpg`
 
-Till exempel Sling forwards HTTP requests with the URL `http://localhost:4502/content/geometrixx/en.image.jpg` till Image Reference Modification Server.
+Exempel: Sling vidarebefordrar HTTP-begäranden med URL:en `http://localhost:4502/content/geometrixx/en.image.jpg` till Image Reference Modification Server.
 
 Tre ytterligare väljare anger den önskade bildens bredd, höjd och (valfritt) kvalitet. I följande exempel efterfrågas en bild med bredden 770 pixlar, höjden 360 pixlar och medelkvaliteten.
 
@@ -595,26 +595,26 @@ Följande värden för bildkvalitet stöds:
 * medium
 * hög
 
-När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
+När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
 
 #### Ange bildresursen {#specifying-the-image-resource}
 
 Bildsökvägen, dimensionerna och kvalitetsvärdena måste lagras som egenskaper för en nod i databasen:
 
 * Nodnamnet är `image`.
-* Den överordnade noden är `jcr:content` nod i en `cq:page` resurs.
+* Den överordnade noden är `jcr:content`-noden för en `cq:page`-resurs.
 
-* Bildsökvägen lagras som värdet för en egenskap med namnet `fileReference`.
+* Bildsökvägen lagras som värdet för egenskapen `fileReference`.
 
-När du skapar en sida ska du använda **Sidekick** för att ange bilden och lägga till `image` nod till sidegenskaperna:
+När du redigerar en sida använder du **Sidekick** för att ange bilden och lägga till noden `image` i sidegenskaperna:
 
-1. I **Sidekick** klickar du på **Sida** och sedan klicka på **Sidegenskaper**.
-1. Klicka på **Bild** och ange bilden.
-1. Klicka **OK**.
+1. I **Sidekick** klickar du på fliken **Sida** och sedan på **Sidegenskaper**.
+1. Klicka på fliken **Bild** och ange bilden.
+1. Klicka på **OK**.
 
 #### Implementeringsinformation {#implementation-details-1}
 
-Klassen info.geometrixx.Commons.impl.servlets.ImageReferenceModificationServer utökar [AbstraktImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) klassen. Om du har installerat paketet cq-geometrixx-Commons-pkg finns källkoden för ImageReferenceModificationServlet i `/apps/geometrixx-commons/src/core/src/main/java/info/geometrixx/commons/impl/servlets` mapp.
+Klassen info.geometrixx.Commons.impl.servlets.ImageReferenceModificationServlet utökar klassen [AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html). Om du har installerat paketet cq-geometrixx-Commons-pkg finns källkoden för ImageReferenceModificationServlet i mappen `/apps/geometrixx-commons/src/core/src/main/java/info/geometrixx/commons/impl/servlets`.
 
 Klassen använder Felix SCR-anteckningar för att konfigurera resurstypen och filtillägget som serverleten är associerad med och namnet på den första väljaren.
 
@@ -654,19 +654,19 @@ Servottleten använder Property SCR-anteckningen för att ange bildkvalitet och 
             description = "List of resolutions this component is permitted to generate.")
 ```
 
-The `AbstractImageServlet` klassen innehåller `doGet` som bearbetar HTTP-begäran. Den här metoden avgör vilken resurs som är associerad med anropet, hämtar resursegenskaper från databasen och sparar dem i en [ImageContext](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html) -objekt.
+Klassen `AbstractImageServlet` innehåller metoden `doGet` som bearbetar HTTP-begäran. Den här metoden avgör vilken resurs som är associerad med anropet, hämtar resursegenskaper från databasen och sparar dem i ett [ImageContext](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.ImageContext.html) -objekt.
 
-The `ImageReferenceModificationServlet` klassen åsidosätter `createLayer` och implementerar logiken som bestämmer vilken bildresurs som ska återges. Metoden hämtar en underordnad nod till sidans `jcr:content` nod namngiven `image`. An [Bild](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/foundation/Image.html) objektet skapas från `image` och `getFileReference` metoden returnerar sökvägen till bildfilen från `fileReference` bildnodens egenskap.
+Klassen `ImageReferenceModificationServlet` åsidosätter metoden `createLayer` och implementerar logiken som bestämmer vilken bildresurs som ska återges. Metoden hämtar en underordnad nod till sidans `jcr:content`-nod med namnet `image`. Ett [Bild](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/foundation/Image.html)-objekt skapas från den här `image`-noden och metoden `getFileReference` returnerar sökvägen till bildfilen från bildnodens `fileReference`-egenskap.
 
 >[!NOTE]
->The [com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) -klassen innehåller metoden getFileReference.
+>Klassen [com.day.cq.commons.DownloadResource](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/DownloadResource.html) innehåller metoden getFileReference.
 >
 
 ## Utveckla ett flytande stödraster {#developing-a-fluid-grid}
 
-AEM gör det möjligt att effektivt implementera flytande stödraster. På den här sidan beskrivs hur du kan integrera ditt flytande stödraster eller en befintlig stödrasterimplementering (till exempel [Bootstrap](https://github.com/topics/twitter-bootstrap?l=css)) i AEM.
+AEM gör det möjligt att effektivt implementera flytande stödraster. På den här sidan beskrivs hur du kan integrera ditt flytande stödraster eller en befintlig stödrasterimplementering (till exempel [Bootstrap](https://github.com/topics/twitter-bootstrap?l=css)) i ditt AEM.
 
-Om du inte är van vid flytande stödraster kan du läsa [Introduktion till flytande stödraster](/help/sites-developing/responsive.md#developing-a-fluid-grid) längst ned på den här sidan. Den här introduktionen ger en översikt över flytande stödraster och riktlinjer för hur du utformar dem.
+Om du inte känner till flytande stödraster läser du avsnittet [Introduktion till flytande stödraster](/help/sites-developing/responsive.md#developing-a-fluid-grid) längst ned på den här sidan. Den här introduktionen ger en översikt över flytande stödraster och riktlinjer för hur du utformar dem.
 
 ### Definiera stödrastret med en sidkomponent {#defining-the-grid-using-a-page-component}
 
@@ -675,11 +675,11 @@ Använd sidkomponenter för att generera de element i HTML som definierar inneh�
 * Sidkomponent: Lägger till div-element som representerar rader med innehållsblock. De div-element som representerar innehållsblock innehåller en parsyskomponent där författare lägger till innehåll.
 * Klientbiblioteksmapp: Tillhandahåller CSS-filen som innehåller mediefrågor och format för div-elementen.
 
-Exempelprogrammet för geometrixx-media innehåller exempelvis mediahemkomponenten. Den här sidkomponenten infogar två skript som genererar två `div` element i klass `row-fluid`:
+Exempelprogrammet för geometrixx-media innehåller exempelvis mediahemkomponenten. Den här sidkomponenten infogar två skript som genererar två `div` element av klassen `row-fluid`:
 
-* Den första raden innehåller en `div` klasselement `span12` (innehållet sträcker sig över 12 kolumner). The `div` -elementet innehåller parsys-komponenten.
+* Den första raden innehåller ett `div`-element av klassen `span12` (innehållet omfattar 12 kolumner). Elementet `div` innehåller parsys-komponenten.
 
-* Den andra raden innehåller två `div` element, en klass `span8` och den andra klassen `span4`. Varje `div` -elementet innehåller -komponenten.
+* Den andra raden innehåller två `div`-element, den ena av klassen `span8` och den andra av klassen `span4`. Varje `div`-element innehåller parsys-komponenten.
 
 ```xml
 <div class="page-content">
@@ -701,22 +701,22 @@ Exempelprogrammet för geometrixx-media innehåller exempelvis mediahemkomponent
 
 >[!NOTE]
 >
->När en komponent innehåller flera `cq:include` element som refererar till den parsys-komponenten, varje `path` -attribut måste ha ett annat värde.
+>När en komponent innehåller flera `cq:include`-element som refererar till den parsys-komponenten, måste varje `path`-attribut ha ett annat värde.
 >
 
 #### Skalförändra sidkomponentens stödraster {#scaling-the-page-component-grid}
 
-Den design som är associerad med sidkomponenten geometrixx-media (`/etc/designs/geometrixx-media`) innehåller `clientlibs` ClientLibraryFolder. Den här ClientLibraryFolder definierar CSS-format för `row-fluid` klasser, `span*` klasser och `span*` klasser som är underordnade `row-fluid` -klasser. Mediefrågor gör att format kan definieras om för olika visningsrutestorlekar.
+Designen som är associerad med sidkomponenten geometrixx-media (`/etc/designs/geometrixx-media`) innehåller `clientlibs` ClientLibraryFolder. Den här ClientLibraryFolder definierar CSS-format för `row-fluid`-klasser, `span*`-klasser och `span*`-klasser som är underordnade `row-fluid`-klasser. Mediefrågor gör att format kan definieras om för olika visningsrutestorlekar.
 
-Följande exempel på CSS är en deluppsättning av dessa format. Den här delmängden fokuserar på `span12`, `span8`och `span4` och mediefrågor för två visningsrutor. Observera följande egenskaper för CSS:
+Följande exempel på CSS är en deluppsättning av dessa format. Den här delmängden fokuserar på klasserna `span12`, `span8` och `span4` samt på mediefrågor för två visningsrutestorlekar. Observera följande egenskaper för CSS:
 
-* The `.span` format definierar elementbredder med absoluta tal.
-* The `.row-fluid .span*` format definierar elementbredder som procentandelar av det överordnade objektet. Procenttal beräknas utifrån de absoluta bredderna.
+* `.span`-formaten definierar elementbredder med absoluta tal.
+* `.row-fluid .span*`-formaten definierar elementbredder som procentandelar av det överordnade objektet. Procenttal beräknas utifrån de absoluta bredderna.
 * Mediefrågor för större visningsrutor tilldelar större absoluta bredder.
 
 >[!NOTE]
 >
->Geometrixx Media-exemplet integrerar [Bootstrap](https://getbootstrap.com/2.0.2/) JavaScript-ramverket ingår i implementeringen av flytande stödraster. Ramverket Bootstrap innehåller filen bootstrap.css.
+>Geometrixx Media-exemplet integrerar JavaScript-ramverket [Bootstrap](https://getbootstrap.com/2.0.2/) med dess flytande stödrasterimplementering. Ramverket Bootstrap innehåller filen bootstrap.css.
 
 ```xml
 /* default styles (no media queries) */
@@ -750,9 +750,9 @@ Följande exempel på CSS är en deluppsättning av dessa format. Den här delm�
 
 Geometrixx Medias exempelsidor distribuerar innehållsblockrader vågrätt i breda visningsrutor. I mindre visningsrutor fördelas samma block lodrätt. I följande exempel visas CSS-formaten som implementerar det här beteendet för HTML-koden som genereras av sidkomponenten media-home:
 
-* CSS-standardformatet för sidan mediavälkomstsida tilldelar `float:left` stil för `span*` klasser som finns inuti `row-fluid` -klasser.
+* CSS-standardformatet för sidan mediavälkomstsida tilldelar formatet `float:left` för `span*` -klasser som finns inuti `row-fluid` -klasser.
 
-* Mediefrågor för mindre visningsrutor tilldelar `float:none` stil för samma klasser.
+* Mediefrågor för mindre visningsrutor tilldelar formatet `float:none` för samma klasser.
 
 ```xml
 /* default styles (no media queries) */
@@ -773,17 +773,17 @@ Geometrixx Medias exempelsidor distribuerar innehållsblockrader vågrätt i bre
 
 Modularisera komponenterna så att du kan använda koden effektivt. På webbplatsen används förmodligen flera olika typer av sidor, som välkomstsidor, artikelsidor eller produktsidor. Varje sidtyp innehåller olika typer av innehåll och använder troligen olika layouter. Men om vissa element i varje layout är gemensamma för flera sidor kan du återanvända koden som implementerar den delen av layouten.
 
-**Använda sidkomponentövertäckningar**
+**Använd sidkomponentövertäckningar**
 
-Skapa en huvudsideskomponent som innehåller skript för generering av olika delar av en sida, till exempel `head` och `body` och `header`, `content`och `footer` i brödtexten.
+Skapa en huvudsideskomponent som innehåller skript för generering av olika delar av en sida, till exempel `head` och `body` avsnitt samt `header`, `content` och `footer` avsnitt i brödtexten.
 
 Skapa andra sidkomponenter som använder huvudsidkomponenten som `cq:resourceSuperType`. Dessa komponenter innehåller skript som åsidosätter skripten på huvudsidan efter behov.
 
-Till exempel innehåller goemetrixx-media-programmet sidkomponenten ( `sling:resourceSuperType` är bassidans komponent). Flera underordnade komponenter (till exempel artikel, kategori och mediehem) använder den här sidkomponenten som `sling:resourceSuperType`. Varje underordnad komponent innehåller en content.jsp-fil som åsidosätter content.jsp-filen för sidkomponenten.
+Till exempel innehåller goemetrixx-media-programmet sidkomponenten (`sling:resourceSuperType` är bassidans komponent). Flera underordnade komponenter (som artikel, kategori och media-home) använder den här sidkomponenten som `sling:resourceSuperType`. Varje underordnad komponent innehåller en content.jsp-fil som åsidosätter content.jsp-filen för sidkomponenten.
 
 **Återanvänd skript**
 
-Skapa flera JSP-skript som genererar rad- och kolumnkombinationer som är gemensamma för flera sidkomponenter. Till exempel `content.jsp` skript för artikeln och mediehemkomponenter refererar båda till `8x4col.jsp` skript.
+Skapa flera JSP-skript som genererar rad- och kolumnkombinationer som är gemensamma för flera sidkomponenter. Skriptet `content.jsp` för artikeln och mediahemskomponenterna refererar till exempel båda till skriptet `8x4col.jsp`.
 
 **Ordna CSS-format efter visningsrutans målstorlek**
 
@@ -795,7 +795,7 @@ När komponenter genererar ett enda innehållsblock styr vanligtvis stödrastret
 
 Som författare kan innehållsblocket återges i olika storlekar och relativa positioner. Innehållstext ska inte använda relativa riktningar för att referera till andra innehållsblock.
 
-Om det behövs bör komponenten tillhandahålla alla CSS- eller JavaScript-bibliotek som krävs för den HTML-kod som den genererar. Använd en klientbiblioteksmapp inuti komponenten så att CSS- och JS-filerna genereras. Visa filerna genom att [skapa ett beroende eller bädda in biblioteket](/help/sites-developing/clientlibs.md#creating-client-library-folders) i en annan biblioteksmapp under mappen /etc.
+Om det behövs ska komponenten tillhandahålla alla CSS- eller JavaScript-bibliotek som krävs för den HTML-kod som den genererar. Använd en klientbiblioteksmapp inuti komponenten så att CSS- och JS-filerna genereras. Om du vill visa filerna skapar [du ett beroende eller bäddar in biblioteket](/help/sites-developing/clientlibs.md#creating-client-library-folders) i en annan klientbiblioteksmapp under mappen /etc.
 
 **Underrutnät**
 
@@ -804,7 +804,7 @@ Om komponenten innehåller flera innehållsblock lägger du till innehållsblock
 * Använd samma klassnamn som den innehållande sidkomponenten så att du kan uttrycka div-element som rader och innehållsblock.
 * Om du vill åsidosätta beteendet som siddesignens CSS implementerar använder du ett andra klassnamn för rad-div-elementet och anger tillhörande CSS i en klientbiblioteksmapp.
 
-Till exempel `/apps/geometrixx-media/components/2-col-article-summary` -komponenten genererar två kolumner med innehåll. HTML som genereras har följande struktur:
+Komponenten `/apps/geometrixx-media/components/2-col-article-summary` genererar till exempel två kolumner med innehåll. HTML som genereras har följande struktur:
 
 ```xml
 <div class="row-fluid mutli-col-article-summary">
@@ -819,12 +819,12 @@ Till exempel `/apps/geometrixx-media/components/2-col-article-summary` -komponen
 </div>
 ```
 
-The `.row-fluid .span6` väljare för sidans CSS gäller för `div` element av samma klass och struktur i denna HTML. Komponenten innehåller dock även klientbiblioteksmappen /apps/geometrixx-media/components/2-col-article-summary/clientlibs:
+`.row-fluid .span6`-väljarna för sidans CSS gäller för `div`-elementen i samma klass och struktur i den här HTML. Komponenten innehåller dock även klientbiblioteksmappen /apps/geometrixx-media/components/2-col-article-summary/clientlibs:
 
 * CSS använder samma mediefrågor som sidkomponenten för att skapa ändringar i layouten med samma diskreta sidbredder.
-* Väljarna använder `multi-col-article-summary` radklass `div` element som åsidosätter sidans beteende `row-fluid` klassen.
+* Väljare använder klassen `multi-col-article-summary` i elementet row `div` för att åsidosätta beteendet för sidans `row-fluid`-klass.
 
-Följande format finns i `/apps/geometrixx-media/components/2-col-article-summary/clientlibs/css/responsive-480px.css` fil:
+Följande format ingår till exempel i filen `/apps/geometrixx-media/components/2-col-article-summary/clientlibs/css/responsive-480px.css`:
 
 ```xml
 @media (max-width: 480px) {
@@ -856,7 +856,7 @@ Med flytande stödraster kan sidlayouter anpassas efter kundens visningsruta. St
 
 Med HTML5-tekniken kan du implementera rutnätet och ändra det för att anpassa sidlayouter till olika visningsrutestorlekar:
 
-* HTML `div` -element innehåller innehållsblock som sträcker sig över flera kolumner.
+* HTML `div`-element innehåller innehållsblock som sträcker sig över vissa kolumner.
 * Ett eller flera av dessa div-element består av en rad när de delar ett gemensamt överordnat div-element.
 
 ### Använda diskreta bredder {#using-discrete-widths}
@@ -873,7 +873,7 @@ Använd rutnät för att skala innehållsblock så att de anpassas till olika vi
 
 Storleken på innehållsblock kan begränsas av en minsta bredd, bortom vilken skalningen inte längre är effektiv. För mindre visningsrutor kan stödrastret användas för att lodrätt distribuera innehållsblock i stället för vågrätt.
 
-![Bild av två stödraster, den ena som är mindre än den andra.](do-not-localize/chlimage_1-2a.png)
+![Bild av två stödraster, den ena som är placerad mindre än den andra.](do-not-localize/chlimage_1-2a.png)
 
 ### Utforma stödrastret {#designing-the-grid}
 
@@ -894,15 +894,15 @@ Använd rader för att styra den lodräta placeringen av innehållsblock. Bestä
 
 Skapa CSS-klasser och format så att du kan styra layouten för innehållsblocken på en sida. Siddesignen baseras ofta på den relativa storleken och placeringen av innehållsblocken i visningsrutan. Visningsrutan avgör den faktiska storleken på innehållsblocken. CSS måste ta hänsyn till de relativa och absoluta storlekarna. Du kan implementera ett flytande stödraster med hjälp av tre typer av CSS-klasser:
 
-* En klass för `div` -element som är en behållare för alla rader. Den här klassen anger stödrastrets absoluta bredd.
+* En klass för ett `div`-element som är en behållare för alla rader. Den här klassen anger stödrastrets absoluta bredd.
 * En klass för `div` element som representerar en rad. Den här klassen styr den vågräta eller lodräta placeringen av innehållsblocken som den innehåller.
-* Klasser för `div` element som representerar block med innehåll med olika bredd. Bredder anges i procent för det överordnade objektet (raden).
+* Klasser för `div` element som representerar innehållsblock med olika bredder. Bredder anges i procent för det överordnade objektet (raden).
 
 Målbredder (och tillhörande mediefrågor) avgränsar olika bredder som används för en sidlayout.
 
 #### Bredder på innehållsblock {#widths-of-content-blocks}
 
-I allmänhet är `width` stilar för innehållsblockklasser baseras på följande egenskaper för sidan och stödrastret:
+I allmänhet baseras `width`-formaten för innehållsblockklasserna på följande egenskaper för sidan och stödrastret:
 
 * Den absoluta sidbredd som du använder för varje avsedd visningsportstorlek. Kända värden.
 * Den absoluta bredden på stödrasterkolumnerna för varje sidbredd. Du bestämmer dessa värden.
@@ -932,33 +932,33 @@ Använd följande algoritm som utgångspunkt när du utvecklar elementklasser oc
 
 1. Definiera ett klassnamn för div-elementet som innehåller alla rader, till exempel `content.`
 1. Definiera en CSS-klass för div-element som representerar rader, till exempel `row-fluid`.
-1. Definiera klassnamn för innehållsblockelement. En klass krävs för alla möjliga bredder, vad gäller kolumnintervall. Använd till exempel `span3` klass för `div` element som spänner över tre kolumner, använda `span4` klasser för intervall om fyra kolumner. Definiera så många klasser som det finns kolumner i rutnätet.
+1. Definiera klassnamn för innehållsblockelement. En klass krävs för alla möjliga bredder, vad gäller kolumnintervall. Använd till exempel klassen `span3` för `div`-element som sträcker sig över tre kolumner, använd `span4`-klasser för intervall om fyra kolumner. Definiera så många klasser som det finns kolumner i rutnätet.
 
 1. För varje visningsrutestorlek som du anger som mål lägger du till motsvarande mediefråga i CSS-filen. Lägg till följande objekt i varje mediefråga:
 
-   * En väljare för `content` class, till exempel `.content{}`.
-   * Väljare för varje span-klass, till exempel `.span3{ }`.
-   * En väljare för `row-fluid` class, till exempel `.row-fluid{ }`
-   * Väljare för intervallklasser som finns inuti klasser för radflytande, till exempel `.row-fluid span3 { }`.
+   * En väljare för klassen `content`, till exempel `.content{}`.
+   * Väljare för varje intervallklass, till exempel `.span3{ }`.
+   * En väljare för klassen `row-fluid`, till exempel `.row-fluid{ }`
+   * Väljare för intervallklasser som finns inuti klasser för radflykt, till exempel `.row-fluid span3 { }`.
 
 1. Lägg till breddformat för varje väljare:
 
-   1. Ange bredden på `content` väljare till sidans absoluta storlek, till exempel `width:480px`.
+   1. Ange bredden för `content` väljare till den absoluta sidstorleken, till exempel `width:480px`.
    1. Ställ in bredden för alla väljare för radvätskor till 100 %.
-   1. Ange bredden för alla intervallväljare till innehållsblockets absoluta bredd. I ett trivialt rutnät används jämnt fördelade kolumner med samma bredd: `(absolute width of page)/(number of columns)`.
-   1. Ange bredden på `.row-fluid .span` väljare som en procentandel av den totala bredden. Beräkna den här bredden med `(absolute span width)/(absolute page width)*100` formel.
+   1. Ange bredden för alla intervallväljare till innehållsblockets absoluta bredd. Ett trivialt rutnät använder jämnt fördelade kolumner med samma bredd: `(absolute width of page)/(number of columns)`.
+   1. Ange bredden för `.row-fluid .span` väljare som en procentandel av den totala bredden. Beräkna den här bredden med formeln `(absolute span width)/(absolute page width)*100`.
 
 #### Placera innehållsblock i rader {#positioning-content-blocks-in-rows}
 
-Använda det flytande formatet i `.row-fluid` så att du kan styra om innehållsblocken i en rad ska ordnas vågrätt eller lodrätt.
+Använd det flytande formatet för klassen `.row-fluid` så att du kan kontrollera om innehållsblocken i en rad är ordnade vågrätt eller lodrätt.
 
-* The `float:left` eller `float:right` -format används för vågrät fördelning av underordnade element (innehållsblock).
+* Stilen `float:left` eller `float:right` skapar den vågräta fördelningen av underordnade element (innehållsblock).
 
-* The `float:none` -format används för lodrät fördelning av underordnade element.
+* Stilen `float:none` orsakar en lodrät fördelning av underordnade element.
 
-Lägg till formatet i `.row-fluid` väljare inuti varje mediefråga. Ange värdet enligt den sidlayout som du använder för den mediefrågan. I följande diagram visas en rad som fördelar innehållet vågrätt för breda visningsrutor och lodrätt för smala visningsrutor.
+Lägg till formatet i `.row-fluid`-väljaren i varje mediefråga. Ange värdet enligt den sidlayout som du använder för den mediefrågan. I följande diagram visas en rad som fördelar innehållet vågrätt för breda visningsrutor och lodrätt för smala visningsrutor.
 
-![Två bilder med innehållsblock i en rad, den andra bilden med radens placering.](do-not-localize/chlimage_1-3a.png)
+![Två bilder av innehållsblock i en rad, den andra bilden med raden flyttad.](do-not-localize/chlimage_1-3a.png)
 
 Följande CSS kan implementera detta beteende:
 

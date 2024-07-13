@@ -27,7 +27,7 @@ På AEM Foundation-nivå är de personuppgifter som lagras användarprofilen. D�
 
 ### Manuella steg {#manual-steps}
 
-1. Öppna konsolen för användaradministration genom att bläddra till **[!UICONTROL Settings - Security - Users]** eller genom att gå direkt till `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
+1. Öppna konsolen för användaradministration genom att bläddra till **[!UICONTROL Settings - Security - Users]** eller genom att bläddra direkt till `https://<serveraddress>:<serverport>/libs/granite/security/content/useradmin.html`
 
    ![useradmin2](assets/useradmin2.png)
 
@@ -35,7 +35,7 @@ På AEM Foundation-nivå är de personuppgifter som lagras användarprofilen. D�
 
    ![användarsökning](assets/usersearch.png)
 
-1. Öppna sedan användarprofilen genom att klicka på den och sedan kontrollera under **[!UICONTROL Details]** -fliken.
+1. Öppna sedan användarprofilen genom att klicka på den och kontrollera den på fliken **[!UICONTROL Details]**.
 
    ![userprofile_small](assets/userprofile_small.png)
 
@@ -43,7 +43,7 @@ På AEM Foundation-nivå är de personuppgifter som lagras användarprofilen. D�
 
 Som vi nämnt tillhandahåller Adobe API:er för åtkomst av användardata, för att underlätta automatisering. Det finns flera typer av API:er som du kan använda:
 
-**UserProperties API**
+**API för användaregenskaper**
 
 ```shell
 curl -u user:password http://localhost:4502/libs/granite/security/search/profile.userproperties.json\?authId\=cavery
@@ -51,7 +51,7 @@ curl -u user:password http://localhost:4502/libs/granite/security/search/profile
 
 **Sling API**
 
-*Identifierar användarens hemsida:*
+*Identifierar användarens startsida:*
 
 ```xml
 curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/authorizables.json?query={"condition":[{"named":"cavery"}]}'
@@ -101,23 +101,23 @@ curl -u user:password  'http://localhost:4502/home/users/we-retail/DSCP-athB1NYL
 
 1. Ta bort profilnoder och alla underordnade noder. Profilnoderna har två format, beroende på AEM:
 
-   1. Standardprofilen under `[!UICONTROL /profile]`
+   1. Den privata standardprofilen under `[!UICONTROL /profile]`
    1. `[!UICONTROL /profiles]`, för nya profiler som skapats med AEM 6.5.
 
    ![image2018-2-6_2-0-4](assets/image2018-2-6_2-0-4.png)
 
 ### HTTP-API {#http-api-1}
 
-Följande procedurer använder `curl` kommandoradsverktyg som illustrerar hur du inaktiverar användaren med **[!UICONTROL cavery]** `userId` och ta bort profiler för `cavery` som är tillgängliga på standardplatsen.
+Följande procedurer använder kommandoradsverktyget `curl` för att illustrera hur du inaktiverar användaren med **[!UICONTROL cavery]** `userId` och tar bort profiler för `cavery` som är tillgängliga på standardplatsen.
 
-* *Identifiera användarens hemsida*
+* *Identifierar användarens startsida*
 
 ```shell
 curl -g -u user:password 'http://localhost:4502/libs/granite/security/search/authorizables.json?query={"condition":[{"named":"cavery"}]}'
      {"authorizables":[{"type":"user","authorizableId_xss":"cavery","authorizableId":"cavery","name_xss":"Carlene Avery","name":"Carlene Avery","home":"/home/users/we-retail/DSCP-athB1NYLBXvdTuN"}],"total":1}
 ```
 
-* *Inaktivera användaren*
+* *Inaktiverar användaren*
 
 Använda nodsökvägen från egenskapen home för JSON-nyttolasten som returneras från ovanstående kommando:
 

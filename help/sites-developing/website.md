@@ -21,7 +21,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->I den här artikeln beskrivs hur du skapar en webbplats med JSP och baserat på det klassiska användargränssnittet. Adobe rekommenderar att du använder den senaste Adobe Experience Manager-tekniken (AEM) för dina webbplatser enligt den detaljerade beskrivningen i artikeln [Komma igång med att utveckla AEM Sites](/help/sites-developing/getting-started.md).
+>I den här artikeln beskrivs hur du skapar en webbplats med JSP och baserat på det klassiska användargränssnittet. Adobe rekommenderar att du använder den senaste Adobe Experience Manager-tekniken (AEM) för dina webbplatser enligt beskrivningen i artikeln [Komma igång med att utveckla AEM Sites](/help/sites-developing/getting-started.md).
 
 Med den här självstudiekursen kan du skapa en komplett webbplats med AEM. Webbplatsen kommer att vara baserad på en allmän webbplats och riktar sig främst till webbutvecklare. All utveckling sker i en författarmiljö.
 
@@ -47,11 +47,11 @@ När du har utfört alla steg ska sidorna se ut så här:
 
 ![chlimage_1-24](assets/chlimage_1-24.png)
 
-**Ladda ned slutresultatet**
+**Hämta det slutliga resultatet**
 
-Ladda ned webbplatsen-1.0.zip om du vill följa med i självstudiekursen i stället för att genomföra övningarna. Den här filen är ett AEM innehållspaket som innehåller resultatet av den här självstudiekursen. Använd [Pakethanteraren](/help/sites-administering/package-manager.md) för att installera paketet på författarinstansen.
+Ladda ned webbplatsen-1.0.zip om du vill följa med i självstudiekursen i stället för att genomföra övningarna. Den här filen är ett AEM innehållspaket som innehåller resultatet av den här självstudiekursen. Använd [Package Manager](/help/sites-administering/package-manager.md) för att installera paketet till din författarinstans.
 
-**OBS!** Om du installerar det här paketet skrivs resurser på den författarinstans som du har skapat med den här självstudiekursen över.
+**OBS!** Om du installerar det här paketet skrivs resurser över i din redigeringsinstans som du har skapat med den här självstudiekursen.
 
 Webbplatsinnehållspaket
 
@@ -59,7 +59,7 @@ Webbplatsinnehållspaket
 
 ## Installera Adobe Experience Manager {#installing-adobe-experience-manager}
 
-Om du vill installera en AEM för att utveckla webbplatsen följer du instruktionerna för att konfigurera en [distributionsmiljö med författare och publiceringsinstanser](/help/sites-deploying/deploy.md#author-and-publish-installs), eller utföra en [allmän installation](/help/sites-deploying/deploy.md#default-local-install). Den generiska installationen innefattar att hämta den AEM QuickStart JAR-filen, placera filen license.properties i samma katalog som JAR-filen och dubbelklicka på JAR-filen.
+Om du vill installera en AEM instans för att utveckla webbplatsen följer du instruktionerna för att konfigurera en [distributionsmiljö med författare- och publiceringsinstanser](/help/sites-deploying/deploy.md#author-and-publish-installs) eller utför en [allmän installation](/help/sites-deploying/deploy.md#default-local-install). Den generiska installationen innefattar att hämta den AEM QuickStart JAR-filen, placera filen license.properties i samma katalog som JAR-filen och dubbelklicka på JAR-filen.
 
 När du har installerat AEM kommer du åt utvecklingsmiljön i CRXDE Lite genom att klicka på länken CRXDE Lite på välkomstsidan:
 
@@ -73,15 +73,15 @@ När du har installerat AEM kommer du åt utvecklingsmiljön i CRXDE Lite genom 
 
 Använd CRXDE Lite för att skapa programstrukturen för mywebsite i databasen:
 
-1. Högerklicka i trädet till vänster om CRXDE Lite på **`/apps`** mapp och klicka på **Skapa** > **Skapa** **Mapp**. I **Skapa mapp** dialogruta, typ `mywebsite` som mappnamn och klicka på **OK**.
-1. Högerklicka på **`/apps/mywebsite`** mapp och klicka på **Skapa** > **Skapa mapp**. I **Skapa mapp** dialogruta, typ `components` som mappnamn och klicka på **OK**.
-1. Högerklicka på **`/apps/mywebsite`** mapp och klicka på **Skapa** > **Skapa mapp**. I **Skapa mapp** dialogruta, typ `templates` som mappnamn och klicka på **OK**.
+1. Högerklicka på mappen **`/apps`** i trädet till vänster om CRXDE Lite och klicka på **Skapa** > **Skapa** **Mapp**. I dialogrutan **Skapa mapp** skriver du `mywebsite` som mappnamn och klickar på **OK**.
+1. Högerklicka på mappen **`/apps/mywebsite`** och klicka på **Skapa** > **Skapa mapp**. I dialogrutan **Skapa mapp** skriver du `components` som mappnamn och klickar på **OK**.
+1. Högerklicka på mappen **`/apps/mywebsite`** och klicka på **Skapa** > **Skapa mapp**. I dialogrutan **Skapa mapp** skriver du `templates` som mappnamn och klickar på **OK**.
 
    Strukturen i trädet bör nu se ut ungefär så här:
 
    ![chlimage_1-26](assets/chlimage_1-26.png)
 
-1. Klicka **Spara alla**.
+1. Klicka på **Spara alla**.
 
 ### Konfigurera designen {#setting-up-the-design}
 
@@ -95,15 +95,15 @@ Exempel på static.css-fil och bilder
 
 [Hämta fil](assets/mywebsite.zip)
 
-1. På AEM välkomstsida klickar du på **verktyg**. ([https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html))
+1. Klicka på **Verktyg** på AEM välkomstsida. ([https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html))
 
    ![chlimage_1-27](assets/chlimage_1-27.png)
 
-1. Välj **Designer** mapp och klicka sedan på **Nytt** > **Ny sida**. Typ `mywebsite` som titel och klicka **Skapa**.
+1. Markera mappen **Designs** i mappträdet och klicka sedan på **Ny** > **Ny sida**. Skriv `mywebsite` som titel och klicka på **Skapa**.
 
 1. Om mywebsite-objektet inte visas i tabellen uppdaterar du trädet eller tabellen.
 
-1. [Använda WebDAV](/help/sites-administering/webdav-access.md) åtkomst till URL:en på https://localhost:4502, kopiera exemplet `static.css` och `images` mappen från den nedladdade filen minwebsite.zip till `/etc/designs/mywebsite` mapp.
+1. [Med WebDAV](/help/sites-administering/webdav-access.md)-åtkomst till URL:en på https://localhost:4502 kopierar du exempelfilen `static.css` och mappen `images` från den hämtade filen mywebsite.zip till mappen `/etc/designs/mywebsite` .
 
    ![chlimage_1-28](assets/chlimage_1-28.png)
 
@@ -121,51 +121,51 @@ Skapa en mall som du kan använda som bas för webbplatsens webbsidor.
 
 En mall definierar standardinnehållet för en ny sida. Komplexa webbplatser kan använda flera mallar för att skapa olika typer av sidor på webbplatsen. I den här övningen är alla sidor baserade på en enkel mall.
 
-1. Högerklicka i mappträdet i CRXDE Lite `/apps/mywebsite/templates` och klicka **Skapa** > **Skapa mall**.
+1. Högerklicka `/apps/mywebsite/templates` i mappträdet i CRXDE Lite och klicka på **Skapa** > **Skapa mall**.
 
 1. I dialogrutan Skapa mall skriver du följande värden och klickar sedan på **Nästa**:
 
-   * **Etikett**: innehållpage
-   * **Titel**: Min mall för webbplatsinnehåll
-   * **Beskrivning**: Det här är min mall för webbplatsens innehållssida
-   * **Resurstyp:** mywebsite/components/contentpage
+   * **Etikett**: innehållssida
+   * **Titel**: Mallen Min webbplatsinnehållssida
+   * **Beskrivning**: Det här är min mall för webbplatsinnehållssida
+   * **Resurstyp:** min webbplats/komponenter/innehållssida
 
    Använd standardvärdet för egenskapen Ranking.
 
    ![chlimage_1-29](assets/chlimage_1-29.png)
 
-   Resurstypen identifierar komponenten som återger sidan. I det här fallet återges alla sidor som skapats med innehållsidesmallen av `mywebsite/components/contentpage` -komponenten.
+   Resurstypen identifierar komponenten som återger sidan. I det här fallet återges alla sidor som skapats med innehållsidesmallen av komponenten `mywebsite/components/contentpage`.
 
 1. Om du vill ange sökvägarna för sidorna som kan använda den här mallen klickar du på plusknappen och skriver `/content(/.*)?` i textrutan som visas. Klicka sedan på **Nästa**.
 
    ![chlimage_1-30](assets/chlimage_1-30.png)
 
-   Värdet för den tillåtna sökvägsegenskapen är en *reguljärt uttryck.* Sidor som har en sökväg som matchar uttrycket kan använda mallen. I det här fallet matchar det reguljära uttrycket sökvägen för **/content** och alla undersidor.
+   Värdet för den tillåtna sökvägsegenskapen är ett *-reguljärt uttryck.* sidor som har en sökväg som matchar uttrycket kan använda mallen. I det här fallet matchar det reguljära uttrycket sökvägen till mappen **/content** och alla undersidor.
 
-   När en författare skapar en sida under /content, **innehållsida** -mallen visas i en lista med tillgängliga mallar som ska användas.
+   När en författare skapar en sida under /content visas mallen **contentpage** i en lista över tillgängliga mallar som ska användas.
 
-1. Klicka **Nästa** i **Tillåtna överordnade** och **Tillåtna underordnade** och klicka på **OK**. Klicka på CRXDE Lite **Spara alla**.
+1. Klicka på **Nästa** på panelerna **Tillåtna överordnade** och **Tillåtna underordnade** och klicka på **OK**. Klicka på **Spara alla** i CRXDE Lite.
 
    ![chlimage_1-31](assets/chlimage_1-31.png)
 
 #### Skapa innehållsideskomponenten {#creating-the-contentpage-component}
 
-Skapa *komponent* som definierar innehållet och återger sidorna som använder innehållsidesmallen. Platsen för komponenten måste motsvara värdet för egenskapen Resurstyp i innehållsidesmallen.
+Skapa *komponenten* som definierar innehållet och återger sidorna som använder innehållsidesmallen. Platsen för komponenten måste motsvara värdet för egenskapen Resurstyp i innehållsidesmallen.
 
-1. Högerklicka i CRXDE Lite `/apps/mywebsite/components` och klicka **Skapa** > **Komponent**.
-1. I **Skapa komponent** skriver du följande egenskapsvärden:
+1. Högerklicka `/apps/mywebsite/components` i CRXDE Lite och klicka på **Skapa** > **Komponent**.
+1. I dialogrutan **Skapa komponent** skriver du följande egenskapsvärden:
 
-   * **Etikett**: innehållpage
-   * **Titel**: Sidkomponent för mitt webbplatsinnehåll
-   * **Beskrivning**: Det här är komponenten för innehållssidan på min webbplats
+   * **Etikett**: innehållssida
+   * **Titel**: Komponenten Min webbplatsinnehållssida
+   * **Beskrivning**: Detta är sidkomponenten Min webbplats innehåll
 
    ![chlimage_1-32](assets/chlimage_1-32.png)
 
-   Platsen för den nya komponenten är `/apps/mywebsite/components/contentpage`. Den här sökvägen motsvarar innehållsmallens resurstyp (minus den ursprungliga **`/apps/`** del av banan).
+   Den nya komponentens plats är `/apps/mywebsite/components/contentpage`. Den här sökvägen motsvarar resurstypen för innehållsmallen (minus den inledande **`/apps/`** delen av sökvägen).
 
    Denna korrespondens kopplar mallen till komponenten och är avgörande för att webbplatsen ska fungera korrekt.
 
-1. Klicka **Nästa** tills panelen Tillåtna underordnade i dialogrutan visas och klicka sedan på **OK**. Klicka på CRXDE Lite **Spara alla**.
+1. Klicka på **Nästa** tills panelen Tillåtna underordnade i dialogrutan visas och klicka sedan på **OK**. Klicka på **Spara alla** i CRXDE Lite.
 
    Strukturen ser nu ut så här:
 
@@ -175,7 +175,7 @@ Skapa *komponent* som definierar innehållet och återger sidorna som använder 
 
 Lägg till kod i skriptet contentpage.jsp för att definiera sidinnehållet.
 
-1. Öppna filen i CRXDE Lite `contentpage.jsp` in `/apps/mywebsite/components/contentpage`. Filen innehåller följande kod som standard:
+1. Öppna filen `contentpage.jsp` i `/apps/mywebsite/components/contentpage` i CRXDE Lite. Filen innehåller följande kod som standard:
 
    ```java
    <%--
@@ -210,18 +210,18 @@ Lägg till kod i skriptet contentpage.jsp för att definiera sidinnehållet.
    </html>
    ```
 
-1. Klicka **Spara alla** för att spara ändringarna.
+1. Klicka på **Spara alla** för att spara ändringarna.
 
 ### Skapa webbsidor och innehållssidor {#creating-your-website-page-and-content-pages}
 
 I det här avsnittet skapar du följande sidor som alla använder innehållsmallen: Min webbplats, engelska, produkter, tjänster och kunder.
 
-1. På AEM välkomstsida ([https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html)) klickar du på Webbplatser.
+1. Klicka på Webbplatser på AEM välkomstsida ([https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html)).
 
    ![chlimage_1-34](assets/chlimage_1-34.png)
 
-1. Välj **Webbplatser** mapp och klicka sedan på **Nytt** > **Ny sida**.
-1. I **Skapa sida** anger du följande:
+1. Markera mappen **Webbplatser** i mappträdet och klicka sedan på **Ny** > **Ny sida**.
+1. I fönstret **Skapa sida** anger du följande:
 
    * Titel: `My Website`
    * Namn: `mywebsite`
@@ -229,27 +229,27 @@ I det här avsnittet skapar du följande sidor som alla använder innehållsmall
 
    ![chlimage_1-35](assets/chlimage_1-35.png)
 
-1. Klicka **Skapa**. Välj **/Webbplatser/Min webbplats** sida och klicka **Nytt** > **Ny sida**.
+1. Klicka på **Skapa**. I mappträdet väljer du sidan **/Webbplatser/Min webbplats** och klickar på **Ny** > **Ny sida**.
 1. Ange följande egenskapsvärden i dialogrutan Skapa sida och klicka sedan på Skapa:
 
    * Titel: engelska
    * Namn: en
    * Välj sidmallen Min webbplats innehåll
 
-1. Välj **/Webbplatser/Min webbplats/engelska** sida och klicka **Nytt**> **Ny sida**.
-1. I **Skapa sida** anger du följande egenskapsvärden och klickar sedan på **Skapa**:
+1. I mappträdet väljer du sidan **/Webbplatser/Min webbplats/engelska** och klickar på **Ny**> **Ny sida**.
+1. Ange följande egenskapsvärden i dialogrutan **Skapa sida** och klicka sedan på **Skapa**:
 
    * Title: Products
    * Välj sidmallen Min webbplats innehåll
 
-1. Välj **/Webbplatser/Min webbplats/engelska** sida och klicka **Nytt** > **Ny sida**.
-1. I **Skapa sida** anger du följande egenskapsvärden och klickar sedan på **Skapa**:
+1. I mappträdet väljer du sidan **/Webbplatser/Min webbplats/engelska** och klickar på **Ny** > **Ny sida**.
+1. Ange följande egenskapsvärden i dialogrutan **Skapa sida** och klicka sedan på **Skapa**:
 
    * Titel: Tjänster
    * Välj sidmallen Min webbplats innehåll
 
-1. Välj **/Webbplatser/Min webbplats/engelska** sida och klicka **Nytt** > **Ny sida**.
-1. I **Skapa sida** anger du följande egenskapsvärden och klickar sedan på **Skapa**:
+1. I mappträdet väljer du sidan **/Webbplatser/Min webbplats/engelska** och klickar på **Ny** > **Ny sida**.
+1. Ange följande egenskapsvärden i dialogrutan **Skapa sida** och klicka sedan på **Skapa**:
 
    * Title: Customers
    * Välj sidmallen Min webbplats innehåll
@@ -258,7 +258,7 @@ I det här avsnittet skapar du följande sidor som alla använder innehållsmall
 
    ![chlimage_1-36](assets/chlimage_1-36.png)
 
-1. Om du vill länka dina sidor till min webbplatsdesign väljer du i CRXDE Lite `/content/mywebsite/en/jcr:content` nod. På fliken Egenskaper anger du följande värden för en ny egenskap och klickar sedan på Lägg till:
+1. Om du vill länka dina sidor till mywebsite-designen väljer du noden `/content/mywebsite/en/jcr:content` i CRXDE Lite. På fliken Egenskaper anger du följande värden för en ny egenskap och klickar sedan på Lägg till:
 
    * Namn: cq:designPath
    * Typ: String
@@ -266,7 +266,7 @@ I det här avsnittet skapar du följande sidor som alla använder innehållsmall
 
    ![chlimage_1-37](assets/chlimage_1-37.png)
 
-1. Öppna på en ny webbläsarflik eller i ett nytt fönster [https://localhost:4502/content/mywebsite/en/products.html](https://localhost:4502/content/mywebsite/en/products.html) för att se sidan Produkter:
+1. Öppna [https://localhost:4502/content/mywebsite/en/products.html](https://localhost:4502/content/mywebsite/en/products.html) i en ny webbläsarflik eller ett nytt fönster för att visa sidan Produkter:
 
    ![chlimage_1-38](assets/chlimage_1-38.png)
 
@@ -274,7 +274,7 @@ I det här avsnittet skapar du följande sidor som alla använder innehållsmall
 
 I det här avsnittet beskrivs hur du förbättrar innehållsidesskriptet med AEM Foundation-komponentskript och genom att skriva egna skript.
 
-När du är klar **Produkter** sidan ska se ut så här:
+När du är klar bör sidan **Produkter** se ut så här:
 
 ![chlimage_1](assets/chlimage_1.jpeg)
 
@@ -284,18 +284,18 @@ I den här övningen konfigurerar du sidinnehållskomponenten så att dess över
 
 I en komponent-JSP-kod kan du till exempel referera till de skript som supertypskomponenten tillhandahåller som om de är inkluderade i komponenten.
 
-1. I CRXDE Lite lägger du till en egenskap i `/apps/mywebsite/components/contentpage` nod.
+1. Lägg till en egenskap i noden `/apps/mywebsite/components/contentpage` i CRXDE Lite.
 
-   1. Välj `/apps/mywebsite/components/contentpage` nod.
+   1. Markera noden `/apps/mywebsite/components/contentpage`.
    1. Ange följande egenskapsvärden längst ned på fliken Egenskaper och klicka sedan på Lägg till:
 
       * **Namn:** sling:resourceSuperType
-      * **Typ:** Sträng
+      * **Typ:** String
       * **Värde:** grund/komponenter/sida
 
    1. Klicka på Spara alla.
 
-1. Öppna `contentpage.jsp` fil under `/apps/mywebsite/components/contentpage` och ersätt den befintliga koden med följande kod:
+1. Öppna filen `contentpage.jsp` under `/apps/mywebsite/components/contentpage` och ersätt den befintliga koden med följande kod:
 
    ```xml
    <%@include file="/libs/foundation/global.jsp"%><%
@@ -325,15 +325,15 @@ I en komponent-JSP-kod kan du till exempel referera till de skript som supertyps
 
 I det här avsnittet skapar du flera skript som varje skript skapar en del av sidans brödtext. Sedan skapar du filen body.jsp i pagcontent-komponenten för att åsidosätta body.jsp i AEM Page-komponenten. I filen body.jsp tar du med skript som genererar olika delar av sidans brödtext.
 
-**Tips:** När en komponent innehåller en fil som har samma namn och relativa plats som en fil i komponentens supertyp, anropas den *överläggning*.
+**Tips!** När en komponent innehåller en fil som har samma namn och relativa plats som en fil i komponentens supertyp kallas den för *overlay*.
 
-1. Skapa filen i CRXDE Lite `left.jsp` under `/apps/mywebsite/components/contentpage`:
+1. Skapa filen `left.jsp` under `/apps/mywebsite/components/contentpage` i CRXDE Lite:
 
-   1. Högerklicka på noden `/apps/mywebsite/components/contentpage`väljer du **Skapa **och sedan **Skapa fil**.
+   1. Högerklicka på noden `/apps/mywebsite/components/contentpage` och välj sedan **Skapa **och sedan **Skapa fil**.
 
-   1. I fönstret skriver du `left.jsp` som **Namn** och klicka **OK**.
+   1. I fönstret skriver du `left.jsp` som **Namn** och klickar på **OK**.
 
-1. Redigera filen `left.jsp` för att ta bort befintligt innehåll och ersätta med följande kod:
+1. Redigera filen `left.jsp` om du vill ta bort det befintliga innehållet och ersätta det med följande kod:
 
    ```java
    <%@include file="/libs/foundation/global.jsp"%><%
@@ -345,11 +345,11 @@ I det här avsnittet skapar du flera skript som varje skript skapar en del av si
    ```
 
 1. Spara ändringarna.
-1. Skapa filen i CRXDE Lite `center.jsp` under `/apps/mywebsite/components/contentpage`:
+1. Skapa filen `center.jsp` under `/apps/mywebsite/components/contentpage` i CRXDE Lite:
 
-   1. Högerklicka på noden `/apps/mywebsite/components/contentpage`, markera **Skapa** sedan **Skapa fil**.
+   1. Högerklicka på noden `/apps/mywebsite/components/contentpage`, välj **Skapa** och sedan **Skapa fil**.
 
-   1. Skriv i dialogrutan `center.jsp` as **Namn** och klicka **OK**.
+   1. Skriv `center.jsp` som **Namn** i dialogrutan och klicka på **OK**.
 
 1. Redigera filen `center.jsp` om du vill ta bort det befintliga innehållet och ersätta det med följande kod:
 
@@ -363,13 +363,13 @@ I det här avsnittet skapar du flera skript som varje skript skapar en del av si
    ```
 
 1. Spara ändringarna.
-1. Skapa filen i CRXDE Lite `right.jsp` under `/apps/mywebsite/components/contentpage`:
+1. Skapa filen `right.jsp` under `/apps/mywebsite/components/contentpage` i CRXDE Lite:
 
-   1. Högerklicka på noden `/apps/mywebsite/components/contentpage`, markera **Skapa** sedan **Skapa fil**.
+   1. Högerklicka på noden `/apps/mywebsite/components/contentpage`, välj **Skapa** och sedan **Skapa fil**.
 
-   1. Skriv i dialogrutan `right.jsp` as **Namn** och klicka **OK**.
+   1. Skriv `right.jsp` som **Namn** i dialogrutan och klicka på **OK**.
 
-1. Redigera filen `right.jsp` för att ta bort befintligt innehåll och ersätta med följande kod:
+1. Redigera filen `right.jsp` om du vill ta bort det befintliga innehållet och ersätta det med följande kod:
 
    ```java
    <%@include file="/libs/foundation/global.jsp"%><%
@@ -379,8 +379,8 @@ I det här avsnittet skapar du flera skript som varje skript skapar en del av si
    ```
 
 1. Spara ändringarna.
-1. Skapa filen i CRXDE Lite `body.jsp` under `/apps/mywebsite/components/contentpage`:
-1. Redigera filen `body.jsp` för att ta bort befintligt innehåll och ersätta med följande kod:
+1. Skapa filen `body.jsp` under `/apps/mywebsite/components/contentpage` i CRXDE Lite:
+1. Redigera filen `body.jsp` om du vill ta bort det befintliga innehållet och ersätta det med följande kod:
 
    ```java
    <%@include file="/libs/foundation/global.jsp"%><%
@@ -416,8 +416,8 @@ När du är klar bör den övre navigeringen se ut så här:
 
 #### Skapa den övre navigeringskomponenten {#creating-the-top-navigation-component-1}
 
-1. Högerklicka i CRXDE Lite `/apps/mywebsite/components`, markera **Skapa** sedan **Skapa komponent**.
-1. I **Skapa komponent** anger du följande:
+1. I CRXDE Lite högerklickar du på `/apps/mywebsite/components`, väljer **Skapa** och sedan **Skapa komponent**.
+1. I fönstret **Skapa komponent** anger du följande:
 
    * **Etikett**: `topnav`
 
@@ -425,13 +425,13 @@ När du är klar bör den övre navigeringen se ut så här:
 
    * **Beskrivning**: `This is My Top Navigation Component`
 
-1. Klicka **Nästa** tills du kommer till det sista fönstret där du klickar **OK**. Spara ändringarna.
+1. Klicka på **Nästa** tills du kommer till det sista fönstret där du klickar på **OK**. Spara ändringarna.
 
 #### Skapa det övre navigeringsskriptet med textlänkar {#creating-the-top-navigation-script-with-textual-links}
 
 Lägg till återgivningsskriptet längst upp för att generera textlänkar till underordnade sidor:
 
-1. Öppna filen i CRXDE Lite `topnav.jsp` under `/apps/mywebsite/components/topnav`.
+1. Öppna filen `topnav.jsp` under `/apps/mywebsite/components/topnav` i CRXDE Lite.
 1. Ersätt koden som finns där genom att kopiera och klistra in följande kod:
 
    ```xml
@@ -458,7 +458,7 @@ Lägg till återgivningsskriptet längst upp för att generera textlänkar till 
 
 Så här inkluderar du topnav i innehållsideskomponenten:
 
-1. Öppna CRXDE Lite i `body.jsp` under `/apps/mywebsite/components/contentpage`och ersätt:
+1. Öppna `body.jsp` under `/apps/mywebsite/components/contentpage` i CRXDE Lite och ersätt:
 
    ```xml
    <div class="topnav">topnav</div>
@@ -479,31 +479,31 @@ Så här inkluderar du topnav i innehållsideskomponenten:
 
 Komponenten Sida definierar egenskaper som gör att du kan ange bildtexter för sidor. Lägg till bildtexter som innehåller information om sidinnehållet.
 
-1. Öppna **Produkter** sida.
-1. På Sidekick **Sida** flik, klicka **Sidegenskaper**.
-1. Utöka på fliken Grundläggande i dialogrutan **Fler rubriker och beskrivningar,** och **Underrubrik** egenskap, typ **vad vi gör**. Klicka **OK**.
-1. Upprepa föregående steg för att lägga till underrubriken **om våra tjänster** till **Tjänster** sida.
-1. Upprepa föregående steg för att lägga till underrubriken **det förtroende vi får** till **Kunder** sida.
+1. Öppna sidan **Produkter** i webbläsaren.
+1. Klicka på **Sidegenskaper** på Sidekick-fliken **Sida**.
+1. På fliken Grundläggande i dialogrutan expanderar du **Fler titlar och beskrivning** och för egenskapen **Underrubrik** skriver du **vad vi gör**. Klicka på **OK**.
+1. Upprepa föregående steg för att lägga till underrubriken **om våra tjänster** på sidan **Tjänster**.
+1. Upprepa föregående steg för att lägga till underrubriken **det förtroende vi tjänar** på sidan **Kunder**.
 
-   **Tips:** I CRXDE Lite väljer du noden /content/mywebsite/en/products/jcr:content för att se att undertextegenskapen har lagts till.
+   **Tips!** I CRXDE Lite väljer du noden /content/mywebsite/en/products/jcr:content för att se att undertextegenskapen har lagts till.
 
 #### Förbättra den övre navigeringen med hjälp av bildlänkar {#enhance-top-navigation-by-using-image-links}
 
 Förbättra återgivningsskriptet för den övre komponenten så att bildlänkar används i stället för hypertext för navigeringskontrollerna. Bilden innehåller länkmålets titel och underrubrik.
 
-Denna övning demonstrerar [Bearbetning av försäljningsbegäran](/help/sites-developing/the-basics.md#sling-request-processing). Skriptet topnav.jsp ändras för att anropa ett skript som dynamiskt genererar bilder som ska användas för sidnavigeringslänkarna. I den här övningen tolkar Sling URL:en för bildkällfiler för att avgöra vilket skript som ska användas för att återge bilderna.
+Den här övningen demonstrerar [bearbetning av delningsbegäran](/help/sites-developing/the-basics.md#sling-request-processing). Skriptet topnav.jsp ändras för att anropa ett skript som dynamiskt genererar bilder som ska användas för sidnavigeringslänkarna. I den här övningen tolkar Sling URL:en för bildkällfiler för att avgöra vilket skript som ska användas för att återge bilderna.
 
 Till exempel kan bildlänken till sidan Produkter vara https://localhost:4502/content/mywebsite/en/products.navimage.png. Sling tolkar denna URL för att fastställa resurstypen och skriptet som ska användas för att återge resursen:
 
-1. Sling avgör sökvägen till resursen som ska `/content/mwebysite/en/products.png.`
-1. Sling matchar den här sökvägen med `/content/mywebsite/en/products` nod.
-1. Sling avgör `sling:resourceType` för noden som ska `mywebsite/components/contentpage`.
+1. Sling avgör sökvägen till resursen som ska vara `/content/mwebysite/en/products.png.`
+1. Sling matchar den här sökvägen med noden `/content/mywebsite/en/products`.
+1. Sling avgör att `sling:resourceType` för den här noden är `mywebsite/components/contentpage`.
 
-1. Sling hittar det skript i den här komponenten som bäst matchar URL-väljaren ( `navimage`) och filnamnstillägg ( `png`).
+1. Sling hittar det skript i den här komponenten som bäst matchar URL-väljaren ( `navimage`) och filnamnstillägget ( `png`).
 
 I den här övningen matchar Sling dessa URL:er med det /apps/mywebsite/components/contentpage/navimage.png.java-skript som du skapar.
 
-1. Öppna CRXDE Lite i `topnav.jsp` under `/apps/mywebsite/components/topnav.`Leta reda på innehållet i ankarelementet (rad 14):
+1. Öppna `topnav.jsp` under `/apps/mywebsite/components/topnav.`Leta reda på innehållet i ankarelementet (rad 14) i CRXDE Lite:
 
    ```xml
    <%=child.getTitle() %>
@@ -516,14 +516,14 @@ I den här övningen matchar Sling dessa URL:er med det /apps/mywebsite/componen
    ```
 
 1. Spara ändringarna.
-1. Högerklicka på `/apps/mywebsite/components/contentpage` och klicka på **Skapa** > **Skapa fil**.
-1. I **Skapa fil** fönster, som **Namn**, typ `navimage.png.java`.
+1. Högerklicka på noden `/apps/mywebsite/components/contentpage` och klicka på **Skapa** > **Skapa fil**.
+1. I fönstret **Skapa fil** skriver du **Namn**, `navimage.png.java`.
 
    Filnamnstillägget .java anger för Sling att stödet för Apache Sling Scripting Java™ ska användas för att kompilera skriptet och skapa en serverlet.
 
 1. Kopiera följande kod till `navimage.png.java.`Koden utökar klassen AbstractImageServlet:
 
-   * [AbstraktImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) skapar ett ImageContext-objekt som lagrar den aktuella resursens egenskaper.
+   * [AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) skapar ett ImageContext-objekt som lagrar den aktuella resursens egenskaper.
    * Resursens överordnade sida extraheras från ImageContext-objektet. Därefter hämtas sidans titel och underrubrik.
    * [ImageHelper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/ImageHelper.html) används för att generera bilden från filen navimage_bg.jpg för webbplatsdesignen, sidrubriken och sidans underrubrik.
 
@@ -672,15 +672,15 @@ Skapa två sidor under sidan Produkter. För varje sida som beskriver två speci
 
 1. I CRXDE Lite anger du en beskrivning och ett datum för sidan Product 1:
 
-   1. Välj `/content/mywebsite/en/products/product1/jcr:content` nod.
-   1. I **Egenskaper** anger du följande värden:
+   1. Markera noden `/content/mywebsite/en/products/product1/jcr:content`.
+   1. Ange följande värden på fliken **Egenskaper**:
 
       * Namn: `jcr:description`
       * Typ: `String`
       * Värde: `This is a description of the Product 1!.`
 
-   1. Klicka **Lägg till**.
-   1. I **Egenskaper** skapar du en annan egenskap med följande värden:
+   1. Klicka på **Lägg till**.
+   1. Skapa en annan egenskap med följande värden på fliken **Egenskaper**:
 
       * Namn: datum
       * Typ: String
@@ -692,13 +692,13 @@ Skapa två sidor under sidan Produkter. För varje sida som beskriver två speci
 1. I CRXDE Lite anger du en beskrivning och ett datum för sidan Product 2:
 
    1. Välj noden /content/mywebsite/en/products/product2/jcr:content.
-   1. I **Egenskaper** anger du följande värden:
+   1. Ange följande värden på fliken **Egenskaper**:
 
       * Namn: jcr:description
       * Typ: String
       * Värde: Detta är en beskrivning av produkt 2!.
 
-   1. Klicka **Lägg till**.
+   1. Klicka på **Lägg till**.
    1. Ersätt de tidigare värdena i samma textrutor med följande värden:
 
       * Namn: datum
@@ -712,7 +712,7 @@ Skapa två sidor under sidan Produkter. För varje sida som beskriver två speci
 
 Så här skapar du komponenten listchildren:
 
-1. Högerklicka i CRXDE Lite `/apps/mywebsite/components`, markera **Skapa** sedan **Skapa komponent**.
+1. I CRXDE Lite högerklickar du på `/apps/mywebsite/components`, väljer **Skapa** och sedan **Skapa komponent**.
 1. Ange följande egenskapsvärden i dialogrutan och klicka sedan på Nästa:
 
    * Etikett: listchildren.
@@ -725,7 +725,7 @@ Så här skapar du komponenten listchildren:
 
 Utveckla skriptet för listchild-komponenten.
 
-1. Öppna filen i CRXDE Lite `listchildren.jsp` under `/apps/mywebsite/components/listchildren`.
+1. Öppna filen `listchildren.jsp` under `/apps/mywebsite/components/listchildren` i CRXDE Lite.
 1. Ersätt standardkoden med följande kod:
 
    ```xml
@@ -760,13 +760,13 @@ Skapa den dialogruta som används för att konfigurera komponentegenskaperna lis
 
 1. Skapa dialognoden under komponenten listchildren:
 
-   1. I CRXDE Lite högerklickar du på `/apps/mywebsite/components/listchildren`och klicka på **Skapa** > **Dialogrutan Skapa**.
+   1. Högerklicka på noden `/apps/mywebsite/components/listchildren`i CRXDE Lite och klicka på **Skapa** > **Skapa dialogruta**.
 
    1. Ange följande egenskapsvärden i dialogrutan och klicka på OK
 
       * **Etikett**: `dialog`
 
-      * **Titel**: `Edit Component` och klicka **OK**.
+      * **Titel**: `Edit Component` och klicka på **OK**.
 
    ![screen_shot_2012-03-07at45818pm](assets/screen_shot_2012-03-07at45818pm.png)
 
@@ -774,8 +774,8 @@ Skapa den dialogruta som används för att konfigurera komponentegenskaperna lis
 
    ![screen_shot_2012-03-07at50415pm](assets/screen_shot_2012-03-07at50415pm.png)
 
-1. Välj `/apps/mywebsite/components/listchildren/dialog/items/items/tab1` nod.
-1. Ändra värdet för **title** egenskap till `List Children`
+1. Markera noden `/apps/mywebsite/components/listchildren/dialog/items/items/tab1`.
+1. Ändra värdet för egenskapen **title** till `List Children` på fliken Egenskaper
 
    ![chlimage_1-42](assets/chlimage_1-42.png)
 
@@ -807,7 +807,7 @@ Skapa den dialogruta som används för att konfigurera komponentegenskaperna lis
 
 Så här tar du med komponenten listchild i innehållsideskomponenten:
 
-1. Öppna filen i CRXDE Lite `left.jsp` under `/apps/mywebsite/components/contentpage` och hitta följande kod (rad 4):
+1. Öppna filen `left.jsp` under `/apps/mywebsite/components/contentpage` i CRXDE Lite och leta upp följande kod (rad 4):
 
    ```xml
    <div>newslist</div>
@@ -834,7 +834,7 @@ Om du vill se den här komponentens fullständiga funktion kan du visa sidan Pro
 
 1. ![chlimage_1-44](assets/chlimage_1-44.png)
 
-1. Som sökväg till listroten anger du: `/content/mywebsite/en`. Klicka på OK. Komponenten listchildren på sidan ser nu ut så här:
+1. Ange `/content/mywebsite/en` som sökväg till listroten. Klicka på OK. Komponenten listchildren på sidan ser nu ut så här:
 
    ![chlimage_1-45](assets/chlimage_1-45.png)
 
@@ -853,13 +853,13 @@ När du är klar ska den se ut så här:
 
 >[!NOTE]
 >
->Adobe Experience Manager har en komplett logotypkomponent ( `/libs/foundation/components/logo`).
+>Adobe Experience Manager tillhandahåller en mer komplett logotypkomponent ( `/libs/foundation/components/logo`).
 
 #### Skapa logokomponentnoden {#creating-the-logo-component-node}
 
 Så här skapar du logotypkomponenten:
 
-1. I CRXDE Lite högerklickar du på /apps/mywebsite/components och väljer **Skapa** sedan **Skapa komponent**.
+1. I CRXDE Lite högerklickar du på /apps/mywebsite/components, väljer **Create** och sedan **Create Component**.
 1. I dialogrutan Skapa komponent anger du följande egenskapsvärden och klickar sedan på Nästa:
 
    * Etikett: `logo`.
@@ -872,7 +872,7 @@ Så här skapar du logotypkomponenten:
 
 I det här avsnittet beskrivs hur du skapar skriptet för att visa logotypbilden med en länk till hemsidan.
 
-1. Öppna filen i CRXDE Lite `logo.jsp` under `/apps/mywebsite/components/logo`.
+1. Öppna filen `logo.jsp` under `/apps/mywebsite/components/logo` i CRXDE Lite.
 1. Följande kod skapar länken till webbplatsens hemsida och lägger till en referens till logotypbilden. Kopiera koden till `logo.jsp`:
 
    ```xml
@@ -909,11 +909,11 @@ I det här avsnittet beskrivs hur du skapar skriptet för att visa logotypbilden
 
 #### Skapa dialogrutan Logotypdesign {#creating-the-logo-design-dialog}
 
-Skapa en dialogruta där du kan konfigurera logotypkomponenten i designläge. Dialogrutans noder i designläge måste namnges `design_dialog`.
+Skapa en dialogruta där du kan konfigurera logotypkomponenten i designläge. Dialogrutans noder i designläge måste ha namnet `design_dialog`.
 
 1. Skapa dialognoden under logokomponenten:
 
-   1. Högerklicka på `/apps/mywebsite/components/logo` och klicka på **Skapa** > **Dialogrutan Skapa**.
+   1. Högerklicka på noden `/apps/mywebsite/components/logo` och klicka på **Skapa** > **Skapa dialogruta**.
 
    1. Ange följande egenskapsvärden och klicka sedan på OK:
 
@@ -922,7 +922,7 @@ Skapa en dialogruta där du kan konfigurera logotypkomponenten i designläge. Di
       * **Titel:** `Logo (Design)`
 
 1. Högerklicka på noden tab1 i grenen design_dialog och klicka på Ta bort. Klicka på Spara alla.
-1. Under `design_dialog/items/items`nod, skapa en nod med namnet `img` av typen `cq:Widget`. Lägg till följande egenskaper och klicka sedan på Spara alla:
+1. Skapa en nod med namnet `img` av typen `cq:Widget` under `design_dialog/items/items`noden. Lägg till följande egenskaper och klicka sedan på Spara alla:
 
    | Namn | Typ | Värde |
    |---|---|---|
@@ -1009,7 +1009,7 @@ public class img_GET extends AbstractImageServlet {
 
 #### Lägga till Logo-komponenten i ContentPage-komponenten {#adding-the-logo-component-to-the-contentpage-component}
 
-1. Öppna CRXDE Lite i `left.jsp` under `/apps/mywebsite/components/contentpage file` och hitta följande kodrad:
+1. Öppna `left.jsp` under `/apps/mywebsite/components/contentpage file` i CRXDE Lite och leta upp följande kodrad:
 
    ```xml
    <div>logo</div>
@@ -1051,7 +1051,7 @@ I det här avsnittet beskrivs hur du anger en bild som logotyp i dialogrutan fö
 
 I det här avsnittet inkluderar du komponenten breadcrumb (trail), som är en av grundkomponenterna.
 
-1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `center.jsp`och ersätt:
+1. Bläddra till `/apps/mywebsite/components/contentpage` i CRXDE Lite, öppna filen `center.jsp` och ersätt:
 
    ```java
    <div>trail</div>
@@ -1064,7 +1064,7 @@ I det här avsnittet inkluderar du komponenten breadcrumb (trail), som är en av
    ```
 
 1. Spara ändringarna.
-1. Läs in **Produkter 1** sida. Spåra komponenten ser ut så här:
+1. Läs in sidan **Produkter** igen i webbläsaren. Spåra komponenten ser ut så här:
 
    ![chlimage_1-50](assets/chlimage_1-50.png)
 
@@ -1072,7 +1072,7 @@ I det här avsnittet inkluderar du komponenten breadcrumb (trail), som är en av
 
 I det här avsnittet inkluderar du titelkomponenten, som är en av grundkomponenterna.
 
-1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `center.jsp`och ersätt:
+1. Bläddra till `/apps/mywebsite/components/contentpage` i CRXDE Lite, öppna filen `center.jsp` och ersätt:
 
    ```xml
    <div>title</div>
@@ -1089,7 +1089,7 @@ I det här avsnittet inkluderar du titelkomponenten, som är en av grundkomponen
 
    ![chlimage_1-51](assets/chlimage_1-51.png)
 
-   **Anteckning**: Du kan ange en annan rubrik och text/storlek i redigeringsläge.
+   **Obs!**: Du kan ange en annan rubrik och typ/storlek i redigeringsläge.
 
 ### Inkludera styckesystemkomponenten {#including-the-paragraph-system-component}
 
@@ -1097,7 +1097,7 @@ Styckesystemet (parsys) är en viktig del av en webbplats när det hanterar en l
 
 Lägg till den överordnade komponenten (en av grundkomponenterna) i innehållsideskomponenten.
 
-1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `center.jsp`och leta upp följande kodrad:
+1. I CRXDE Lite bläddrar du till `/apps/mywebsite/components/contentpage`, öppnar filen `center.jsp` och letar upp följande kodrad:
 
    ```xml
    <div>parsys</div>
@@ -1119,28 +1119,28 @@ Skapa en komponent som visar en bild i styckesystemet. För att spara tid skapas
 
 >[!NOTE]
 >
->Adobe Experience Manager har en mer komplett bildkomponent ( `/libs/foundation/components/image`).
+>Adobe Experience Manager tillhandahåller en mer komplett bildkomponent ( `/libs/foundation/components/image`).
 
 #### Skapa bildkomponenten {#creating-the-image-component-1}
 
-1. Högerklicka på `/apps/mywebsite/components/logo` och klicka på Kopiera.
-1. Högerklicka på `/apps/mywebsite/components` och klicka på Klistra in.
-1. Högerklicka på `Copy of logo` nod, klicka på Byt namn, ta bort befintlig text och typ `image`.
+1. Högerklicka på noden `/apps/mywebsite/components/logo` och klicka på Kopiera.
+1. Högerklicka på noden `/apps/mywebsite/components` och klicka på Klistra in.
+1. Högerklicka på noden `Copy of logo`, klicka på Byt namn, ta bort den befintliga texten och skriv `image`.
 
-1. Välj `image` och ändra följande egenskapsvärden:
+1. Markera komponentnoden `image` och ändra följande egenskapsvärden:
 
    * `jcr:title:` Min bildkomponent.
-   * `jcr:description`: Detta är min bildkomponent.
+   * `jcr:description`: Det här är min bildkomponent.
 
-1. Lägg till en egenskap i `image` nod med följande egenskapsvärden:
+1. Lägg till en egenskap i noden `image` med följande egenskapsvärden:
 
    * Namn: componentGroup
    * Typ: String
    * Värde: Min webbplats
 
-1. Under `image` nod, ändra namn på `design_dialog` nod till `dialog`.
+1. Under noden `image` byter du namn på noden `design_dialog` till `dialog`.
 
-1. Byt namn `logo.jsp` till `image.jsp.`
+1. Byt namn på `logo.jsp` till `image.jsp.`
 
 1. Öppna img.GET.java och ändra paketet till `apps.mywebsite.components.image`.
 
@@ -1174,7 +1174,7 @@ I det här avsnittet beskrivs hur du skapar bildskriptet.
 
 #### Skapa Image cq:editConfig-noden {#creating-the-image-cq-editconfig-node}
 
-The `cq:editConfig` Med nodtypen kan du konfigurera vissa beteenden för komponenter när du redigerar deras egenskaper.
+Med nodtypen `cq:editConfig` kan du konfigurera vissa beteenden för komponenter när du redigerar deras egenskaper.
 
 I det här avsnittet använder du en cq:editConfig-nod för att dra resurser från Content Finder till bildkomponenten.
 
@@ -1207,19 +1207,19 @@ I det här avsnittet använder du en cq:editConfig-nod för att dra resurser fr�
 
 I det här avsnittet lägger du till ikonen som ska visas bredvid bildkomponenten när den visas i Sidekick:
 
-1. Högerklicka på filen i CRXDE Lite `/libs/foundation/components/image/icon.png` och markera **Kopiera.**
-1. Högerklicka på noden `/apps/mywebsite/components/image` och klicka **Klistra in** och sedan klicka **Spara alla**.
+1. Högerklicka på filen `/libs/foundation/components/image/icon.png` i CRXDE Lite och välj **Kopiera.**
+1. Högerklicka på noden `/apps/mywebsite/components/image` och klicka på **Klistra in**. Klicka sedan på **Spara alla**.
 
 #### Använda bildkomponenten {#using-the-image-component}
 
-I det här avsnittet visas **Produkter** och lägg till bildkomponenten i styckesystemet.
+I det här avsnittet visar du sidan **Produkter** och lägger till bildkomponenten i styckesystemet.
 
-1. Läs in **Produkter** sida.
-1. Klicka på Sidekick **designläge** -ikon.
+1. Läs in sidan **Produkter** igen i webbläsaren.
+1. Klicka på ikonen **designläge** i Sidekick.
 1. Klicka på knappen Redigera om du vill redigera dekordialogrutan.
-1. I dialogrutan visas en lista med **Tillåtna komponenter** visas; navigera till **MinWebbplats** väljer du **Min bildkomponent** och klicka **Okej.**
-1. Återgå till **redigeringsläge.**
-1. Dubbelklicka på den parsys-bildrutan (på **Dra komponenter eller resurser hit**). The **Infoga ny komponent** och **Sidekick** väljarna ser ut så här:
+1. En lista med **Tillåtna komponenter** visas i dialogrutan. Navigera till **Min webbplats**, markera **Min bildkomponent** och klicka på **OK.**
+1. Återgå till redigeringsläget **.**
+1. Dubbelklicka på den parsys-bildrutan (på **Dra komponenter eller resurser hit**). Väljarna **Infoga ny komponent** och **Sidekick** ser ut så här:
 
    ![chlimage_1-4](assets/chlimage_1-4.jpeg)
 
@@ -1229,7 +1229,7 @@ I det här avsnittet inkluderar du verktygsfältskomponenten, som är en av grun
 
 Det finns flera alternativ i redigeringsläge och designläge.
 
-1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du `body.jsp` och leta reda på följande kod:
+1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`, öppnar filen `body.jsp` och letar upp följande kod:
 
    ```java
    <div class="toolbar">toolbar</div>
@@ -1265,13 +1265,13 @@ Det finns flera alternativ i redigeringsläge och designläge.
 
 I det här avsnittet skapar du komponenten som du vill söka efter innehåll på webbplatsen. Den här sökkomponenten kan placeras i styckesystemet på en sida (till exempel på en specialiserad sökresultatsida).
 
-När du är klar bör sökrutan se ut så här på **Engelska** sida:
+När du är klar bör sökrutan se ut så här på sidan **Engelska**:
 
 ![chlimage_1-56](assets/chlimage_1-56.png)
 
 #### Skapa sökkomponenten {#creating-the-search-component-1}
 
-1. Högerklicka i CRXDE Lite `/apps/mywebsite/components`, markera **Skapa** sedan **Skapa komponent**.
+1. I CRXDE Lite högerklickar du på `/apps/mywebsite/components`, väljer **Skapa** och sedan **Skapa komponent**.
 1. Använd dialogrutan för att konfigurera komponenten:
 
    1. Ange följande egenskapsvärden på den första panelen:
@@ -1289,7 +1289,7 @@ När du är klar bör sökrutan se ut så här på **Engelska** sida:
 1. Kopiera följande noder och klistra in dem i noden apps/mywebsite/components/search:
 
    * `/libs/foundation/components/search/dialog`
-   * &quot; `/libs/foundation/components/search/i18n`
+   * &quot;`/libs/foundation/components/search/i18n`
 
    * `/libs/foundation/components/search/icon.png`
 
@@ -1299,7 +1299,7 @@ När du är klar bör sökrutan se ut så här på **Engelska** sida:
 
 I det här avsnittet beskrivs hur du skapar sökskriptet:
 
-1. Öppna `/apps/mywebsite/components/search/search.jsp` -fil.
+1. Öppna filen `/apps/mywebsite/components/search/search.jsp`.
 1. Kopiera följande kod till `search.jsp`:
 
    ```java
@@ -1457,13 +1457,13 @@ I det här avsnittet beskrivs hur du skapar sökskriptet:
 
 Om du vill ta med en sökruta i det vänstra avsnittet av innehållssidan gör du så här:
 
-1. Öppna filen i CRXDE Lite `left.jsp` under `/apps/mywebsite/components/contentpage` och hitta följande kod (rad 2):
+1. Öppna filen `left.jsp` under `/apps/mywebsite/components/contentpage` i CRXDE Lite och leta upp följande kod (rad 2):
 
    ```xml
    %><div class="left">
    ```
 
-1. Infoga följande kod **före** den raden:
+1. Infoga följande kod **före** på raden:
 
    ```java
    %><%@ page import="com.day.text.Text"%><%
@@ -1501,7 +1501,7 @@ I det här avsnittet lägger du till sökkomponenten i styckesystemet.
 1. Öppna söksidan i webbläsaren.
 1. Klicka på ikonen för designläge i Sidekick.
 1. Klicka på Redigera i designen av paragrafblocket (under sökrubriken).
-1. Bläddra nedåt till dialogrutan  **Mina webbplatser** grupp, markera **Min sökkomponent** och klicka **OK**.
+1. Bläddra nedåt till gruppen **Mina webbplatser** i dialogrutan, markera **Min sökkomponent** och klicka på **OK**.
 1. Klicka på triangeln på Sidekick för att återgå till redigeringsläget.
 1. Dra Min sökkomponent från Sidekick till den parsys-bildrutan. Den ser ut så här:
 
@@ -1517,7 +1517,7 @@ I det här avsnittet inkluderar du komponenten Inheritance Paragraph System (ipa
 
 För den här komponenten kan du ange flera parametrar i både redigeringsläge och designläge.
 
-1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`öppnar du filen `right.jsp`och ersätt:
+1. I CRXDE Lite går du till `/apps/mywebsite/components/contentpage`, öppnar filen `right.jsp` och ersätter:
 
    ```java
    <div>iparsys</div>

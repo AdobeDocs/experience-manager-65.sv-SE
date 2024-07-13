@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Du kan överföra, förhandsgranska och skicka bilagor med HTML5-formulär. Som standard är stöd för bifogade filer inaktiverat. Så här aktiverar du stöd för bifogade filer:
 
-1. Skapa en [egen profil](/help/forms/using/custom-profile.md) med `mfAttachmentOptions` flervälj strängsegenskap. Varje sträng i `mfAttachmentOptions` egenskapen måste ha en `property=value` format för att konfigurera alternativ för widgeten för bifogade filer. The `property` och `value` kan ha något av följande värden:
+1. Skapa en [anpassad profil](/help/forms/using/custom-profile.md) med en `mfAttachmentOptions` flervalssträngsegenskap. Varje sträng i egenskapen `mfAttachmentOptions` måste ha ett `property=value`-format för att kunna konfigurera alternativ för widgeten för bifogade filer. `property` och `value` kan ha något av följande värden:
 
    | Egenskap | Värde |
    |--- |---|
@@ -33,18 +33,18 @@ Du kan överföra, förhandsgranska och skicka bilagor med HTML5-formulär. Som 
 
    ![konfigurera alternativ](assets/mfAttachmentOptions.png)
 
-   Om det behövs kan du även ange fler anpassade alternativ för `mfAttachmentOptions` -egenskap.
+   Om det behövs kan du även ange fler anpassade alternativ för egenskapen `mfAttachmentOptions`.
 
    >[!NOTE]
    >
    >I Microsoft Internet Explorer 9 kan användare bifoga filer som är större än den angivna gränsen. Det är ett känt problem.
 
-1. Använd [metadataredigerare](/help/forms/using/manage-form-metadata.md) för att välja den anpassade profil som du har skapat ovan för formulär i HTML 5.
+1. Använd [metadataredigeraren](/help/forms/using/manage-form-metadata.md) för att välja den anpassade profil som du har skapat ovan för HTML 5-formulär.
 1. Rendera formulärmallen med en anpassad profil och ikonen för bilagor visas i formulärverktygsfältet.
 
    >[!NOTE]
    >
-   >Formulärportalen har en anpassad profil med funktioner för utkast och bilagor aktiverade. Mer information om **Spara som utkast** profil, se [Spara HTML5-formulär som ett utkast](/help/forms/using/saving-html5-form-draft.md).
+   >Formulärportalen har en anpassad profil med funktioner för utkast och bilagor aktiverade. Mer information om profilen **Spara som utkast** finns i [Spara HTML5-formulär som ett utkast](/help/forms/using/saving-html5-form-draft.md).
 
 1. Klicka på ikonen för bifogade filer, så visas en dialogruta för val av bifogade filer. Bläddra och markera den bifogade filen och klicka på **Bifoga**.
 
@@ -58,10 +58,10 @@ Du kan överföra, förhandsgranska och skicka bilagor med HTML5-formulär. Som 
 
 ## Bifogad filinlämningsformat {#attachment-submission-format}
 
-När bilagor är aktiverade skickar HTML5-formuläret multipart-data. Flerdelsdata har två delar **dataXml** och **bilagor**.
+När bilagor är aktiverade skickar HTML5-formuläret multipart-data. Flerdelsdata har två delar, **dataXml** och **attachments**.
 
 >[!NOTE]
 >
->För bakåtkompatibilitet, om `mfAllowAttachments` om alternativet är inaktiverat, skickar inte HTML5-formulären data som består av flera delar. Det skickar enkel data xml i **application/xml** format.
+>För bakåtkompatibilitet gäller att om alternativet `mfAllowAttachments` är inaktiverat så skickar inte HTML5-formulären multipart-data. Den skickar enkel data-xml i formatet **application/xml**.
 
-Om flaggan mfAllowAttachments är aktiverad visas [skicka tjänstproxytjänst](/help/forms/using/service-proxy.md) skickar också multipart-data med dataXml och bilagor.
+Om mfAllowAttachments-flaggan är aktiverad skickar [tjänstproxytjänsten](/help/forms/using/service-proxy.md) även multipart-data med dataXml och bilagor.

@@ -22,17 +22,17 @@ ht-degree: 1%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-The **`Manage App`** På panelen App Dashboard kan du redigera information om programmet. Om du vill öppna informationssidan klickar du på **`Manage App`** panelens informationslänk. Från **`Manage App`** kan du redigera inställningarna för PhoneGap Application Configuration (config.xml) och förbereda programmet för att skickas till olika programarkiv.
+På panelen **`Manage App`** på appkontrollpanelen kan du redigera information om programmet. Om du vill öppna informationssidan klickar du på informationslänken för **`Manage App`**. På sidan **`Manage App`** kan du redigera inställningarna för PhoneGap Application Configuration (config.xml) och förbereda programmet för att skickas till de olika programbutikerna.
 
 ![chlimage_1-116](assets/chlimage_1-116.png)
 
-## Förstå `Manage App` panel {#understanding-the-manage-app-tile}
+## Om `Manage App`-panelen {#understanding-the-manage-app-tile}
 
-Du kan gå på djupet i varje platta i **`Manage App`** för att visa eller redigera detaljer genom att klicka på ... i det nedre högra hörnet.
+Du kan detaljgranska varje ruta i **`Manage App`**-rutan om du vill visa eller redigera detaljer genom att klicka på ... i det nedre högra hörnet.
 
 ### Fliken Grundläggande {#the-basic-tab}
 
-Du kan redigera **Namn**, **Upphovsman**, **Kort beskrivning** och **Beskrivning** för din app från den här fliken.
+Du kan redigera **Namn**, **Författare**, **Kort beskrivning** och **Beskrivning** för programmet på den här fliken.
 
 ![chlimage_1-117](assets/chlimage_1-117.png)
 
@@ -55,7 +55,7 @@ Alla leverantörsapplikationsbutiker - till exempel Apple App Store eller Google
 >
 >Med appen AEM Verifiera kan du skicka skärmbilder direkt till din appinformation i AEM.
 >
->Se [Mobile Quickstart för AEM verifiera](/help/mobile/phonegap-mobile-quickstart.md) för mer information.
+>Mer information finns i [Mobile Quickstart för AEM Verify](/help/mobile/phonegap-mobile-quickstart.md).
 
 ![chlimage_1-118](assets/chlimage_1-118.png)
 
@@ -63,7 +63,7 @@ Alla leverantörsapplikationsbutiker - till exempel Apple App Store eller Google
 
 >[!NOTE]
 >
->När du känner till **`Manage App`** sida vid sida, se [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md) för att visa och redigera metadata.
+>När du är bekant med **`Manage App`**-panelen läser du [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md) för att visa och redigera metadata.
 
 #### Vanliga metadata {#common-metadata}
 
@@ -73,11 +73,11 @@ Det finns en gemensam konfiguration och metadata för alla plattformar.
 
 I det här avsnittet definierar du URL:en för innehållsuppdateringsservern, landningssidan för mobilprogrammet, PhoneGap-versionen för kompilering, programversion, namn, beskrivning med mera.
 
-**App-version** är programmets arbetsversion. Ett vanligt tillvägagångssätt är att använda en 3-decimalkomma och börja under 1.0.0 före den första versionen.
+**Programversion** är den fungerande versionen av ditt program. Ett vanligt tillvägagångssätt är att använda en 3-decimalkomma och börja under 1.0.0 före den första versionen.
 
-**PhoneGap-version** är den version i vilken du vill kompilera programmet med PhoneGap. Det bästa sättet är att hålla jämna steg med den aktuella versionen för att säkerställa att du får de senaste och bästa funktionerna och felkorrigeringarna.
+**PhoneGap version** är den version i vilken du vill kompilera programmet med PhoneGap. Det bästa sättet är att hålla jämna steg med den aktuella versionen för att säkerställa att du får de senaste och bästa funktionerna och felkorrigeringarna.
 
-**URL för Content Update Server** är den URL som programmet använder för att anropa ContentSync-uppdateringar. Den måste anges till din Dispatcher-URL eller, om inte en Dispatcher används, till en av dina publiceringsinstanser som används för ContentSync-uppdateringar av programmet.
+**URL:en för innehållsuppdateringsservern** är den URL som programmet använder för att anropa ContentSync-uppdateringar. Den måste anges till din Dispatcher URL eller, om inte en Dispatcher används, till någon av dina publiceringsinstanser som används för ContentSync-uppdateringar av programmet.
 
 ![chlimage_1-119](assets/chlimage_1-119.png)
 
@@ -91,7 +91,7 @@ I det här avsnittet definierar du URL:en för innehållsuppdateringsservern, la
 
 Alla plattformar som definieras i PhoneGap config.xml kan innehålla anpassade plattformsegenskaper. En AEM måste bidra med innehållsstrukturen för att kunna hämta dessa egenskaper. Ett exempel på plattformsspecifika egenskaper finns för iOS.
 
-Metadata för alla konfigurerade plattformar visas nu samtidigt på fliken Avancerat på fliken `Manage App` platta.
+Metadata för alla konfigurerade plattformar visas nu samtidigt på fliken Avancerat i rutan `Manage App`.
 
 >[!NOTE]
 >
@@ -113,7 +113,7 @@ Exportfunktionen används för att underlätta insamling av skärmbilder och met
 
 #### Android™-metadata {#android-metadata}
 
-När du väljer Android™-plattformen finns det inga anpassade metadata som kan ställas in. När du klickar på nedladdningsknappen skapas en ZIP-fil med en egenskapsfil som innehåller alla metadata och associerade skärmbilder.
+När du väljer Android™-plattform finns det inga anpassade metadata som kan ställas in. När du klickar på nedladdningsknappen skapas en ZIP-fil med en egenskapsfil som innehåller alla metadata och associerade skärmbilder.
 
 Exportfunktionen används för att underlätta insamling av skärmbilder och metadata som kan skickas till programutgivaren för indata i den leverantörsspecifika programbutiken.
 
@@ -133,23 +133,23 @@ Egenskapen URL för innehållsuppdateringsservern är den URL som måste peka p�
 
 ### Fliken Plugins {#the-plugins-tab}
 
-The **Plugins** beskriver de plugin-program som är associerade med din app. Den här informationen används för att hämta lämpligt plugin-program under en programutveckling.
+Fliken **Plugins** beskriver de plugin-program som är associerade med din app. Den här informationen används för att hämta lämpligt plugin-program under en programutveckling.
 
 ![chlimage_1-122](assets/chlimage_1-122.png)
 
 ### Fliken Skärmbilder {#the-screenshots-tab}
 
-The **Skärmbilder** På -fliken visas de skärmbildupplösningar som stöds på olika plattformar.
+På fliken **Skärmbilder** visas skärmbildupplösningar som stöds på olika plattformar.
 
 ![chlimage_1-123](assets/chlimage_1-123.png)
 
 >[!NOTE]
 >
->Information om hur du lägger till och tar bort skärmbilder finns i [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md).
+>Mer information om hur du lägger till och tar bort skärmbilder finns i [Redigera appmetadata](/help/mobile/phonegap-editmetadata.md).
 
 ### Fliken Autentisering {#the-authentication-tab}
 
-The **Autentisering** kan du välja en OAuth-klient att koppla till programmet och göra det möjligt för en utvecklare att använda Adobe Experience Manager OAuth-autentisering.
+På fliken **Autentisering** kan du välja en OAuth-klient att associera med ditt program och aktivera en utvecklare att använda Adobe Experience Manager OAuth-autentisering.
 
 ![chlimage_1-124](assets/chlimage_1-124.png)
 

@@ -22,9 +22,9 @@ I den här artikeln beskrivs hur du felsöker arbetsytan i AEM Forms genom att a
 
 ## Det går inte att installera AEM Forms-arbetsytans paket {#unable-to-install-aem-forms-workspace-package}
 
-Öppna arbetsytan i AEM Forms när du har installerat korrigeringen. Om felet Ingen resurs hittades öppnar du CRX Package Manager och installerar om `adobe-lc-workspace-pkg-<version>.zip` paket.
+Öppna arbetsytan i AEM Forms när du har installerat korrigeringen. Om felet Ingen resurs hittades öppnar du CRX Package Manager och installerar om paketet `adobe-lc-workspace-pkg-<version>.zip`.
 
-Om ett fel uppstår när paketet installeras `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed`utför du följande steg:
+Utför följande steg om ett fel `javax.jcr.nodetype.ConstraintViolationException: OakConstraint0025: Authorizable property rep:authorizableId may not be removed` uppstår när paketet installeras:
 
 1. Logga in på CRXDE Lite. Standardwebbadressen är `https://[localhost]:'port'/lc/crx/de/index.jsp`
 1. Ta bort följande nod:
@@ -32,7 +32,7 @@ Om ett fel uppstår när paketet installeras `javax.jcr.nodetype.ConstraintViola
    `/home/groups/P/PERM_WORKSPACE_USER`
 
 1. Gå till Package Manager. Standardwebbadressen är `https://[localhost]:'port'/lc/crx/packmgr/index.jsp.`
-1. Sök efter och installera `adobe-lc-workspace-pkg-[version].zip` paket.
+1. Sök efter och installera paketet `adobe-lc-workspace-pkg-[version].zip`.
 1. Starta om programservern.
 
 >[!NOTE]
@@ -45,9 +45,9 @@ Du kan generera loggar på olika nivåer för att optimera felsökningen. I ett 
 
 I AEM Forms:
 
-* Om du vill hämta loggningsinformation om en viss komponentfil lägger du till `/log/<ComponentFile>/<LogLevel>` i webbadressen och tryck på `Enter`. All loggningsinformation för komponentfilen på den angivna loggnivån skrivs ut på konsolen.
+* Om du vill få loggningsinformation om en viss komponentfil lägger du till `/log/<ComponentFile>/<LogLevel>` i URL:en och trycker på `Enter`. All loggningsinformation för komponentfilen på den angivna loggnivån skrivs ut på konsolen.
 
-* Om du vill hämta loggningsinformation för alla komponentfiler lägger du till `/log/all/trace` i webbadressen och tryck på `Enter`.
+* Om du vill hämta loggningsinformation för alla komponentfiler lägger du till `/log/all/trace` i URL:en och trycker på `Enter`.
 
 * Loggformat: `<Component file> <Date>:<Time>: <Log Level> : <Log Message>`
 
@@ -158,23 +158,23 @@ I AEM Forms:
 
 Skript och format kan felsökas i olika webbläsare.
 
-* **Felsökning i IE**: Information om hur du felsöker AEM Forms arbetsyta i IE finns i: [https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie).
+* **Felsökning i IE**: Om du vill felsöka AEM Forms-arbetsytan i IE går du till [https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie](https://learn.microsoft.com/en-us/office/dev/add-ins/testing/debug-add-ins-using-f12-tools-ie).
 
-* **Felsökning i Chrome**: Om du vill öppna felsökningsprogrammet i Chrome använder du kortkommandot: Ctrl+Skift+I. Mer information finns i: [https://developer.chrome.com/docs/extensions/mv3/tut_debugging/](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/).
+* **Felsökning i Chrome**: Använd kortkommandot Ctrl+Skift+I om du vill öppna felsökaren i Chrome. Mer information finns i: [https://developer.chrome.com/docs/extensions/mv3/tut_debugging/](https://developer.chrome.com/docs/extensions/mv3/tut_debugging/).
 
-* **Felsöka i Firefox**: Flera tillägg finns tillgängliga för felsökning av skript och format i Firefox. Firebug är till exempel ett sådant felsökningsverktyg ([https://getfirebug.com](https://getfirebug.com)).
+* **Felsökning i Firefox**: Det finns flera tillägg för felsökning av skript och format i Firefox. Firebug är till exempel ett sådant felsökningsverktyg ([https://getfirebug.com](https://getfirebug.com)).
 
 ## Vanliga frågor {#faqs}
 
-1. Formuläret PDF återges inte eller skickas i Google Chrome.
+1. Formuläret PDF återges inte och skickas inte i Google Chrome.
 
    1. Installera plugin-programmet Adobe® Reader®.
-   1. Öppna chrome://plugins i Chrome om du vill visa tillgängliga plugin-program.
-   1. Inaktivera Chrome PDF Viewer-plugin och aktivera Adobe Reader-plugin.
+   1. Öppna chrome://plugins i Chrome för att visa tillgängliga plugin-program.
+   1. Inaktivera plugin-programmet Chrome PDF Viewer och aktivera plugin-programmet Adobe Reader.
 
-1. Formuläret eller stödlinjen SWF återges inte i Google Chrome.
+1. Formuläret eller handboken SWF återges inte i Google Chrome.
 
-   1. Öppna chrome://plugins i Chrome om du vill visa tillgängliga plugin-program.
+   1. Öppna chrome://plugins i Chrome för att visa tillgängliga plugin-program.
    1. Mer information finns i Adobe Flash® Player.
    1. Inaktivera PepperFlash under plugin-programmet för Adobe Flash Player.
 

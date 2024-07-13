@@ -21,22 +21,22 @@ ht-degree: 0%
 
 Med AEM Forms kan användare spara ett anpassat formulär som ett utkast. Utkastfunktionen ger användarna möjlighet att behålla ett pågående formulär. Användaren kan sedan fylla i och skicka formuläret när som helst från vilken enhet som helst.
 
-Som standard lagrar AEM Forms användardata som är kopplade till utkastet och överföringen på Publish-instansen i `/content/forms/fp` nod.
+Som standard lagrar AEM Forms användardata som är kopplade till utkastet och överföringen på Publish-instansen i noden `/content/forms/fp`.
 
 AEM Forms Portal-komponenterna tillhandahåller dock datatjänster som gör att du kan anpassa implementeringen av lagring av användardata för utkast och inskickningar. Du kan till exempel lagra data i ett datalager som är implementerat i din organisation.
 
-För att anpassa lagring av användardata måste du implementera [Utkastdata](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p) och [Inlämningsdata](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p) tjänster.
+Om du vill anpassa lagringen av användardata måste du implementera tjänsterna [Utkastdata](/help/forms/using/custom-draft-submission-data-services.md#p-draft-data-service-p) och [Skicka data](/help/forms/using/custom-draft-submission-data-services.md#p-submission-data-service-p).
 
 ## Förutsättningar {#prerequisites}
 
 * Aktivera [Forms Portal-komponenter](/help/forms/using/enabling-forms-portal-components.md)
-* Skapa en [Forms Portal page](/help/forms/using/creating-form-portal-page.md)
-* Aktivera [anpassningsbara formulär för Forms Portal](/help/forms/using/draft-submission-component.md)
-* Läs [implementeringsinformation för anpassad lagring](/help/forms/using/draft-submission-component.md#customizing-the-storage)
+* Skapa en [Forms Portal-sida](/help/forms/using/creating-form-portal-page.md)
+* Aktivera [adaptiva formulär för Forms Portal](/help/forms/using/draft-submission-component.md)
+* Lär dig [implementeringsinformation för anpassad lagring](/help/forms/using/draft-submission-component.md#customizing-the-storage)
 
 ## Utkastdatatjänst {#draft-data-service}
 
-Om du vill anpassa lagringen av användarens utkastdata måste du tillhandahålla implementering för alla metoder i `DraftAFDataService` gränssnitt.
+Om du vill anpassa lagringen av användarutkastdata måste du tillhandahålla implementering för alla metoder i gränssnittet `DraftAFDataService`.
 
 En beskrivning av metoderna och deras argument finns i följande kodexempel i gränssnittet:
 
@@ -83,7 +83,7 @@ public interface DraftAFDataService {
 
 ## Datatjänst för överföring {#submission-data-service}
 
-Om du vill anpassa lagringen av inskickade data från användare måste du tillhandahålla implementering för alla metoder i `SubmittedAFDataService` gränssnitt.
+Om du vill anpassa lagringen av användarinskickade data måste du tillhandahålla implementering för alla metoder i gränssnittet `SubmittedAFDataService`.
 
 En beskrivning av metoderna och deras argument finns i följande kodexempel i gränssnittet:
 

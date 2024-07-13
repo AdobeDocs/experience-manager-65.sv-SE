@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Använda Assembler Service{#using-assembler-service}
 
-Med Assembler-tjänsten kan du kombinera, ordna om och förstärka PDF- och XDP-dokument och få information om PDF-dokument. Varje jobb som skickas till Assembler-tjänsten innehåller ett DX-dokument (Document Description XML), källdokument och externa resurser (strängar och grafik). Mer information om sammansättningstjänsten finns i [Översikt över Assembler Service](../../forms/using/overview-aem-document-services.md#p-assembler-service-p).
+Med Assembler-tjänsten kan du kombinera, ordna om och förstärka PDF- och XDP-dokument och få information om PDF-dokument. Varje jobb som skickas till Assembler-tjänsten innehåller ett DX-dokument (Document Description XML), källdokument och externa resurser (strängar och grafik). Mer information om sammansättningstjänsten finns i [Översikt över Assembler-tjänsten](../../forms/using/overview-aem-document-services.md#p-assembler-service-p).
 
 Du kan använda sammansättningstjänsten för följande åtgärder:
 
@@ -87,7 +87,7 @@ När du sammanställer ett dokument kan du använda Bates-numrering för att til
 
 Följande bild visar ett PDF-dokument som innehåller en unik identifierare i dokumentets sidhuvud.
 
-![Ett PDF-dokument som innehåller en unik identifierare i dokumentets rubrik](do-not-localize/as_batesnumber.png)
+![Ett PDF-dokument som innehåller en unik identifierare i dokumentets sidhuvud](do-not-localize/as_batesnumber.png)
 
 Ett PDF-dokument som innehåller en unik identifierare i dokumentets rubrik
 
@@ -149,11 +149,11 @@ Du kan ange hur Assembler-tjänsten ska hantera de bilder som refereras i XDP-k�
   </tr> 
   <tr> 
    <td>relativ</td> 
-   <td>Bäddar in alla bilder som refereras via relativa referenser i käll-XDP<br /> -dokument.</td> 
+   <td>Bäddar in alla bilder som refereras via relativa referenser i XDP<br />-källdokumentet.</td> 
   </tr> 
   <tr> 
    <td>absolut</td> 
-   <td>Bäddar in alla bilder som refereras via absoluta referenser i käll-XDP<br /> -dokument.</td> 
+   <td>Bäddar in alla bilder som refereras via absoluta referenser i XDP<br />-källdokumentet.</td> 
   </tr> 
  </tbody> 
 </table>
@@ -267,7 +267,7 @@ Du kan använda Assembler-tjänsten för att demontera ett PDF-dokument. Tjänst
 
 På följande bild extraheras sidorna 1-3 från källdokumentet och placeras i ett nytt resulterande dokument.
 
-![Extrahera specifika sidor från ett källdokument](assets/as_intro_page_extraction.png)
+![Extraherar specifika sidor från ett källdokument](assets/as_intro_page_extraction.png)
 
 Extrahera specifika sidor från ett källdokument
 
@@ -326,9 +326,9 @@ Du kan använda Assembler-tjänsten för att avgöra om ett DDX-dokument är gil
 
 Du kan använda DDX-dokument som gör att Assembler-tjänsten anropar följande LiveC-cykeltjänster. Assembler-tjänsten kan bara anropa de tjänster som installeras med LiveCyclet.
 
-**Tjänsten Reader Extensions**: Gör det möjligt för Adobe Reader-användare att digitalt signera det resulterande PDF-dokumentet.
+**Reader Extensions-tjänsten**: Gör det möjligt för Adobe Reader-användare att signera det resulterande PDF-dokumentet digitalt.
 
-**Forms**: Sammanfogar en XDP-fil och en XML-datafil för att skapa ett PDF-dokument som innehåller det ifyllda interaktiva formuläret.
+**Forms-tjänst**: Sammanfogar en XDP-fil och en XML-datafil för att skapa ett PDF-dokument som innehåller det ifyllda interaktiva formuläret.
 
 **Utdatatjänst**: Konverterar ett dynamiskt XML-formulär till ett PDF-dokument som innehåller ett icke-interaktivt formulär (förenklar formuläret). Assembler-tjänsten förenklar statiska XML-formulär och Acrobat-formulär utan att du behöver anropa Output-tjänsten.
 

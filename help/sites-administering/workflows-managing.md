@@ -24,7 +24,7 @@ Konfigurera åtkomstkontrollistor enligt användarkonton för att tillåta (elle
 
 Åtgärder för arbetsflöden kan vidtas om
 
-* du arbetar med `admin` konto
+* du arbetar med `admin`-kontot
 * kontot har tilldelats standardgruppen `workflow-users`:
 
    * den här gruppen innehåller alla behörigheter som krävs för att dina användare ska kunna utföra arbetsflödesåtgärder.
@@ -48,39 +48,39 @@ Arbetsflödesmodeller ärver en standardåtkomstkontrollista (ACL) som styr hur 
 
 >[!NOTE]
 >
->Mer information om hur du konfigurerar åtkomstkontrollistor i CRXDE Lite finns i [Behörighetshantering](/help/sites-administering/user-group-ac-admin.md#access-right-management).
+>Mer information om hur du använder CRXDE Lite för att konfigurera åtkomstkontrollistor finns i [Åtkomsträttighetshantering](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
 ### Använd en ACL för den specifika arbetsflödesmodellen på /var/workflow/models {#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models}
 
-Om arbetsflödesmodellen lagras i `/var/workflow/models`kan du tilldela en specifik åtkomstkontrollista som är relevant endast för det arbetsflödet till mappen:
+Om arbetsflödesmodellen lagras i `/var/workflow/models` kan du tilldela en specifik åtkomstkontrollista, som bara är relevant för det arbetsflödet, till mappen:
 
 1. Öppna CRXDE Lite i webbläsaren (till exempel [http://localhost:4502/crx/de](http://localhost:4502/crx/de)).
 1. I nodträdet väljer du noden för mappen för arbetsflödesmodeller:
 
    `/var/workflow/models`
 
-1. Klicka på **Åtkomstkontroll** -fliken.
-1. I **Principer för lokal åtkomstkontroll** (**Åtkomstkontrollista**) klickar du på plusikonen för att **Lägg till post**.
-1. I **Lägg till nytt inlägg** lägger du till en ACE med följande egenskaper:
+1. Klicka på fliken **Åtkomstkontroll**.
+1. I tabellen **Local Access Control Policies** (**Access Control List**) klickar du på plusikonen för att **lägga till post**.
+1. Lägg till en ACE med följande egenskaper i dialogrutan **Lägg till nytt inlägg**:
 
-   * **kapitalbelopp**: `content-authors`
+   * **Principal**: `content-authors`
    * **Typ**: `Deny`
-   * **Behörighet**: `jcr:read`
+   * **Behörigheter**: `jcr:read`
    * **rep:glob**: referens till arbetsflödet
 
    ![wf-108](assets/wf-108.png)
 
-   The **Åtkomstkontrollista** tabellen innehåller nu en begränsning för `content-authors` på `prototype-wfm-01` arbetsflödesmodell.
+   Tabellen **Åtkomstkontrollista** innehåller nu begränsningen för `content-authors` i arbetsflödesmodellen `prototype-wfm-01`.
 
    ![wf-109](assets/wf-109.png)
 
-1. Klicka **Spara alla**.
+1. Klicka på **Spara alla**.
 
-   The `prototype-wfm-01` arbetsflödet är inte längre tillgängligt för medlemmar i `content-authors` grupp.
+   Arbetsflödet `prototype-wfm-01` är inte längre tillgängligt för medlemmar i gruppen `content-authors`.
 
 ### Skapa en undermapp i /var/workflow/models och tillämpa ACL på den {#create-a-subfolder-in-var-workflow-models-and-apply-the-acl-to-that}
 
-Dina [utvecklarteamet kan skapa arbetsflöden i en undermapp](/help/sites-developing/workflows-models.md#creating-a-new-workflow) av
+Utvecklingsteamet i [kan skapa arbetsflödena i en undermapp](/help/sites-developing/workflows-models.md#creating-a-new-workflow) i
 
 `/var/workflow/models`
 
@@ -95,25 +95,25 @@ Du kan sedan lägga till en ACL i själva mappen.
 
    `/var/workflow/models/prototypes`
 
-1. Klicka på **Åtkomstkontroll** -fliken.
-1. I **Tillämplig åtkomstkontrollprincip** tabell klickar du på plusikonen för att **Lägg till** ett bidrag.
-1. I **Principer för lokal åtkomstkontroll** (**Åtkomstkontrollista**) klickar du på plusikonen för att **Lägg till post**.
-1. I **Lägg till nytt inlägg** lägger du till en ACE med följande egenskaper:
+1. Klicka på fliken **Åtkomstkontroll**.
+1. I tabellen **Tillämplig åtkomstkontrollprincip** klickar du på plusikonen för att **lägga till** en post.
+1. I tabellen **Local Access Control Policies** (**Access Control List**) klickar du på plusikonen för att **lägga till post**.
+1. Lägg till en ACE med följande egenskaper i dialogrutan **Lägg till nytt inlägg**:
 
-   * **kapitalbelopp**: `content-authors`
+   * **Principal**: `content-authors`
    * **Typ**: `Deny`
-   * **Behörighet**: `jcr:read`
+   * **Behörigheter**: `jcr:read`
 
    >[!NOTE]
    >
-   >Som med [Använd en ACL för den specifika arbetsflödesmodellen på /var/workflow/models](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models) du kan ta med en rep:glob för att begränsa åtkomsten till ett visst arbetsflöde.
+   >Precis som med [Använd en åtkomstkontrollista för den specifika arbetsflödesmodellen i /var/workflow/models](/help/sites-administering/workflows-managing.md#apply-an-acl-for-the-specific-workflow-model-to-var-workflow-models) kan du inkludera en rep:glob för att begränsa åtkomsten till ett specifikt arbetsflöde.
 
    ![wf-110](assets/wf-110.png)
 
-   The **Åtkomstkontrollista** tabellen innehåller nu en begränsning för `content-authors` på `prototypes` mapp.
+   Tabellen **Åtkomstkontrollista** innehåller nu begränsningen för `content-authors` i mappen `prototypes`.
 
    ![wf-111](assets/wf-111.png)
 
-1. Klicka **Spara alla**.
+1. Klicka på **Spara alla**.
 
-   Modellerna i `prototypes` mappen inte längre är tillgänglig för medlemmar i `content-authors` grupp.
+   Modellerna i mappen `prototypes` är inte längre tillgängliga för medlemmar i gruppen `content-authors`.

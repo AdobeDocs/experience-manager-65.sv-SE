@@ -24,8 +24,8 @@ Artikeln beskriver rekommendationer och bästa praxis för att skydda servrar so
 Artikeln beskriver härdningstekniker som ska användas under följande faser under installations- och konfigurationscykeln:
 
 * **Förinstallation:** Använd dessa tekniker innan du installerar AEM Forms på JEE.
-* **Installation:** Använd dessa tekniker under installationen av AEM Forms on JEE.
-* **Efter installation:** Använd dessa tekniker efter installation och regelbundet därefter.
+* **Installation:** Använd de här teknikerna under installationen av AEM Forms i JEE.
+* **Post-installation:** Använd dessa tekniker efter installationen och regelbundet därefter.
 
 AEM Forms på JEE är mycket anpassningsbart och kan fungera i många olika miljöer. Vissa av rekommendationerna kanske inte passar organisationens behov.
 
@@ -67,14 +67,14 @@ I följande tabell beskrivs vanliga processer som minskar säkerhetsluckorna i n
    <td><p>Brandväggar</p> </td> 
    <td><p>Använd följande kriterier för att välja en brandväggslösning:</p> 
     <ul> 
-     <li><p>Implementera brandväggar som stöder proxyservrar och/eller <em>tillståndskänslig</em> istället för enkla paketfilterlösningar.</p> </li> 
-     <li><p>Använda en brandvägg som stöder <em>neka alla tjänster utom de som uttryckligen tillåts</em> säkerhetsparadigmer.</p> </li> 
+     <li><p>Implementera brandväggar som stöder proxyservrar och/eller <em>tillståndskänslig inspektion</em> i stället för enkla paketfilterlösningar.</p> </li> 
+     <li><p>Använd en brandvägg som har stöd för <em>Neka alla tjänster förutom de som uttryckligen tillåts</em> säkerhetsparadigmer.</p> </li> 
      <li><p>Implementera en brandväggslösning som är dubbel-homed eller multihomed. Arkitekturen ger den högsta säkerhetsnivån och hjälper till att förhindra att obehöriga kringgår brandväggens säkerhet.</p> </li> 
     </ul> </td> 
   </tr> 
   <tr> 
    <td><p>Databasportar</p> </td> 
-   <td><p>Använd inte standardlyssningsportar för databaser (MySQL - 3306, Oracle - 1521, MS SQL - 1433). Mer information om hur du ändrar databasportar finns i dokumentationen för databasen.</p> <p>Om du använder en annan databasport påverkas den övergripande AEM Forms för JEE-konfigurationen. Om du ändrar standardportar måste du göra motsvarande ändringar i andra konfigurationsområden, till exempel datakällorna för AEM Forms på JEE.</p> <p>Information om hur du konfigurerar datakällor i AEM Forms på JEE finns i Installera och uppgradera AEM Forms på JEE eller Uppgradera till AEM Forms på JEE för programservern på <a href="/help/forms/using/introduction-aem-forms.md" target="_blank">Användarhandbok för AEM Forms</a>.</p> </td> 
+   <td><p>Använd inte standardlyssningsportar för databaser (MySQL - 3306, Oracle - 1521, MS SQL - 1433). Mer information om hur du ändrar databasportar finns i dokumentationen för databasen.</p> <p>Om du använder en annan databasport påverkas den övergripande AEM Forms för JEE-konfigurationen. Om du ändrar standardportar måste du göra motsvarande ändringar i andra konfigurationsområden, till exempel datakällorna för AEM Forms på JEE.</p> <p>Information om hur du konfigurerar datakällor i AEM Forms på JEE finns i Installera och uppgradera AEM Forms på JEE eller Uppgradera till AEM Forms på JEE för programservern i <a href="/help/forms/using/introduction-aem-forms.md" target="_blank">AEM Forms användarhandbok</a>.</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -106,7 +106,7 @@ I följande tabell beskrivs några möjliga strategier för att minimera säkerh
  </tbody> 
 </table>
 
-Mer säkerhetsinformation om ditt operativsystem finns i [&quot;Säkerhetsinformation för operativsystem&quot;](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information).
+Mer säkerhetsinformation för ditt operativsystem finns i [&quot;Säkerhetsinformation för operativsystem&quot;](https://helpx.adobe.com/aem-forms/6-1/hardening-security/general-security-considerations.html#operating_system_security_information).
 
 ## Installation {#installation}
 
@@ -122,7 +122,7 @@ I det här avsnittet beskrivs tekniker som du kan använda under AEM Forms-insta
  <tbody>
   <tr> 
    <td><p>Behörighet</p> </td> 
-   <td><p>Använd det minsta antalet privilegier som krävs för att installera programvaran. Logga in på datorn med ett konto som inte finns i gruppen Administratörer. I Windows kan du använda kommandot Kör som för att köra AEM Forms på JEE-installationsprogrammet som en administrativ användare. I UNIX- och Linux-system använder du ett kommando som <code>sudo</code> för att installera programvaran.</p> </td> 
+   <td><p>Använd det minsta antalet privilegier som krävs för att installera programvaran. Logga in på datorn med ett konto som inte finns i gruppen Administratörer. I Windows kan du använda kommandot Kör som för att köra AEM Forms på JEE-installationsprogrammet som en administrativ användare. På UNIX- och Linux-system använder du ett kommando som <code>sudo</code> för att installera programvaran.</p> </td> 
   </tr> 
   <tr> 
    <td><p>Programvara</p> </td> 
@@ -138,7 +138,7 @@ I det här avsnittet beskrivs tekniker som du kan använda under AEM Forms-insta
   </tr> 
   <tr> 
    <td><p>Domänöverskridande principfil</p> </td> 
-   <td><p>Förekomst av en <code>crossdomain.xml</code> filen på servern kan omedelbart försvaga den servern. Vi rekommenderar att du gör listan över domäner så restriktiv som möjligt. Placera inte <code>crossdomain.xml</code> fil som användes under utvecklingen till produktion när stödlinjer användes <em>(borttagen)</em>. För en guide som använder webbtjänster, om tjänsten finns på samma server som användes i guiden, finns en <code>crossdomain.xml</code> filen behövs inte alls. Men om tjänsten finns på en annan server, eller om kluster ingår, finns det en <code>crossdomain.xml</code> filen behövs. Se <a href="https://kb2.adobe.com/cps/142/tn_14213.html">https://kb2.adobe.com/cps/142/tn_14213.html</a>, för mer information om filen crossdomain.xml.</p> </td> 
+   <td><p>Förekomsten av en <code>crossdomain.xml</code>-fil på servern kan omedelbart försvaga den servern. Vi rekommenderar att du gör listan över domäner så restriktiv som möjligt. Placera inte filen <code>crossdomain.xml</code> som användes under utvecklingen i produktion när du använder stödlinjerna <em>(borttagen) </em>. För en guide som använder webbtjänster behövs ingen <code>crossdomain.xml</code>-fil alls om tjänsten finns på samma server som guiden finns på. Men om tjänsten finns på en annan server, eller om kluster ingår, behövs en <code>crossdomain.xml</code>-fil. Mer information om filen crossdomain.xml finns i <a href="https://kb2.adobe.com/cps/142/tn_14213.html">https://kb2.adobe.com/cps/142/tn_14213.html</a>.</p> </td> 
   </tr> 
   <tr> 
    <td><p>Säkerhetsinställningar för operativsystem</p> </td> 
@@ -147,7 +147,7 @@ I det här avsnittet beskrivs tekniker som du kan använda under AEM Forms-insta
  </tbody> 
 </table>
 
-## Steg efter installation {#post-installation-steps}
+## Installationssteg för Post {#post-installation-steps}
 
 När du har installerat AEM Forms på JEE är det viktigt att regelbundet upprätthålla miljön ur ett säkerhetsperspektiv.
 
@@ -170,16 +170,16 @@ Följ dessa anvisningar för att köra den programserver där AEM Forms on JEE d
 1. I Microsoft Management Console (MMC) skapar du en lokal användare som Forms Server-tjänsten kan logga in som:
 
    * Välj **Användaren kan inte ändra lösenordet**.
-   * På **medlem i** -fliken kontrollerar du att **Användare** finns i listan.
+   * På fliken **Medlem i** kontrollerar du att gruppen **Användare** visas.
 
    >[!NOTE]
    >
    >Du kan inte ändra den här inställningen för PDF Generator.
 
-1. Välj **Starta** > **Inställningar** > **Administrativa verktyg** > **Tjänster**.
+1. Välj **Start** > **Inställningar** > **Administrationsverktyg** > **Tjänster**.
 1. Dubbelklicka på JBoss för AEM Forms på JEE och stoppa tjänsten.
-1. På **Logga in** flik, välja **Det här kontot**, bläddra efter det användarkonto du har skapat och ange lösenordet för kontot.
-1. Öppna i MMC **Lokala säkerhetsinställningar** och markera **Lokala principer** > **Tilldelning av användarrättigheter**.
+1. På fliken **Logga in** väljer du **Det här kontot**, bläddrar efter det användarkonto du har skapat och anger lösenordet för kontot.
+1. Öppna **Lokala säkerhetsinställningar** i MMC och välj **Lokala principer** > **Tilldelning av användarrättigheter**.
 1. Tilldela följande behörigheter till användarkontot som Forms Server körs under:
 
    * Neka inloggning via Terminal Services
@@ -187,18 +187,19 @@ Följ dessa anvisningar för att köra den programserver där AEM Forms on JEE d
    * Logga in som tjänst (bör vara inställd)
 
 1. Ge det nya användarkontot behörighet att ändra i följande kataloger:
-   * **GDS-katalog (Global Document Storage)**: Platsen för GDS-katalogen konfigureras manuellt under AEM Forms-installationen. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen på `[JBoss root]/server/[type]/svcnative/DocumentStorage`
-   * **CRX-Repository-katalog**: Standardplatsen är `[AEM-Forms-installation-location]\crx-repository`
-   * **AEM Forms tillfälliga kataloger**:
+   * **GDS-katalog (Global Document Storage)**: Platsen för GDS-katalogen konfigureras manuellt under AEM Forms-installationsprocessen. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen på `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **CRX-Databaskatalog**: Standardplatsen är `[AEM-Forms-installation-location]\crx-repository`
+   * **AEM Forms temporära kataloger**:
       * (Windows) TMP- eller TEMP-sökväg som angetts i miljövariablerna
-      * (AIX, Linux eller Solaris) Inloggad användares hemkatalog På UNIX-baserade system kan en icke-rotanvändare använda följande katalog som tillfällig katalog:
+      * (AIX, Linux eller Solaris) Inloggad användares arbetskatalog
+På UNIX-baserade system kan en icke-rotanvändare använda följande katalog som tillfällig katalog:
       * (Linux) /var/tmp eller /usr/tmp
       * (AIX) /tmp eller /usr/tmp
       * (Solaris) /var/tmp eller /usr/tmp
 1. Ge det nya användarkontot skrivbehörighet i följande kataloger:
-   * [JBoss-katalog]\standalone\deployment
+   * [JBoss-katalog]\fristående\distribution
    * [JBoss-katalog]\fristående\
-   * [JBoss-katalog]\bin\
+   * [JBoss-directory]\bin\
 
    >[!NOTE]
    >
@@ -209,11 +210,11 @@ Följ dessa anvisningar för att köra den programserver där AEM Forms on JEE d
 
 1. Starta programservern.
 
-**Inaktivera starttjänsten för Configuration Manager**
+**Inaktiverar Configuration Manager-startservern**
 
 Configuration Manager använde en serverlet som distribuerats på programservern för att starta AEM Forms på JEE-databasen. Eftersom Configuration Manager har åtkomst till den här servern innan konfigurationen är klar, har åtkomst till den inte skyddats för behöriga användare, och den bör inaktiveras efter att du har använt Configuration Manager för att konfigurera AEM Forms på JEE.
 
-1. Zippa upp Adobe-livecycle-[appserver].ear-fil.
+1. Zippa upp filen adobe-livecycle-[appserver].ear.
 1. Öppna filen META-INF/application.xml.
 1. Sök efter avsnittet adobe-bootstrapper.war:
 
@@ -261,7 +262,7 @@ Configuration Manager använde en serverlet som distribuerats på programservern
 1. Starta AEM Forms-servern.
 1. Skriv URL:en nedan i en webbläsare för att testa ändringen och se till att den inte längre fungerar.
 
-   https://&lt;localhost>:&lt;port>/adobe-bootstrapper/bootstrap
+   https://&lt;localhost>:/adobe-bootstrapper/bootstrap
 
 **Låsa fjärråtkomst till Trust Store**
 
@@ -271,11 +272,11 @@ Du kan inaktivera fjärråtkomst till alla Trust Store-tjänster genom att följ
 
 **Inaktivera all icke nödvändig anonym åtkomst**
 
-Vissa Forms Server-tjänster har åtgärder som kan anropas av en anonym anropare. Om anonym åtkomst till dessa tjänster inte krävs inaktiverar du den genom att följa stegen i [Inaktiverar onödvändig anonym åtkomst till tjänster](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services).
+Vissa Forms Server-tjänster har åtgärder som kan anropas av en anonym anropare. Om anonym åtkomst till de här tjänsterna inte krävs inaktiverar du den genom att följa stegen i [Inaktiverar onödvändig anonym åtkomst till tjänster](https://helpx.adobe.com/aem-forms/6-1/hardening-security/configuring-secure-administration-settings-aem.html#disabling_non_essential_anonymous_access_to_services).
 
 #### Ändra standardadministratörslösenordet {#change-the-default-administrator-password}
 
-När AEM Forms on JEE är installerat konfigureras ett standardanvändarkonto för superadministratör/ inloggnings-id-administratör med standardlösenordet *lösenord*. Du bör omedelbart ändra det här lösenordet med Configuration Manager.
+När AEM Forms on JEE är installerat konfigureras ett standardanvändarkonto för superadministratör/inloggnings-id-administratör med standardlösenordet *password*. Du bör omedelbart ändra det här lösenordet med Configuration Manager.
 
 1. Skriv följande URL i en webbläsare:
 
@@ -291,19 +292,19 @@ När AEM Forms on JEE är installerat konfigureras ett standardanvändarkonto f�
 
    **WebSphere:** 9080.
 
-1. I **Användarnamn** fält, typ `administrator` och **Lösenord** fält, typ `password`.
-1. Klicka **Inställningar** > **Användarhantering** > **Användare och grupper**.
-1. Typ `administrator` i **Sök** och klicka **Sök**.
-1. Klicka **Superadministratör** i listan över användare.
-1. Klicka **Ändra lösenord** på sidan Redigera användare.
+1. Skriv `administrator` i fältet **Användarnamn** och `password` i fältet **Lösenord**.
+1. Klicka på **Inställningar** > **Användarhantering** > **Användare och grupper**.
+1. Skriv `administrator` i fältet **Sök** och klicka på **Sök**.
+1. Klicka på **Superadministratör** i listan över användare.
+1. Klicka på **Ändra lösenord** på sidan Redigera användare.
 1. Ange det nya lösenordet och klicka på **Spara**.
 
 Du bör dessutom ändra standardlösenordet för CRX Administrator genom att utföra följande steg:
 
-1. Logga in `https://[server]:[port]/lc/libs/granite/security/content/useradmin.html` med standardanvändarnamnet/standardlösenordet.
+1. Logga in på `https://[server]:[port]/lc/libs/granite/security/content/useradmin.html` med standardanvändarnamnet/standardlösenordet.
 1. Skriv Administratör i sökfältet och klicka på **Gå**.
-1. Välj **Administratör** från sökresultatet och klicka på **Redigera** ikonen längst ned till höger i användargränssnittet.
-1. Ange det nya lösenordet i dialogrutan **Nytt lösenord** fältet och det gamla lösenordet i **Ditt lösenord** fält.
+1. Välj **Administratör** i sökresultatet och klicka på ikonen **Redigera** längst ned till höger i användargränssnittet.
+1. Ange det nya lösenordet i fältet **Nytt lösenord** och det gamla lösenordet i fältet **Ditt lösenord**.
 1. Klicka på ikonen Spara längst ned till höger i användargränssnittet.
 
 #### Inaktivera WSDL-generering {#disable-wsdl-generation}
@@ -317,7 +318,7 @@ WSDL-generering (Web Service Definition Language) ska endast aktiveras för utve
    ```
 
 1. Välj **Inställningar > Systeminställningar > Konfigurationer**.
-1. Avmarkera **Aktivera WSDL** väljer **OK**.
+1. Avmarkera **Aktivera WSDL** och välj sedan **OK**.
 
 ### Programserversäkerhet {#application-server-security}
 
@@ -337,11 +338,11 @@ I följande tabell beskrivs några tekniker för att skydda programservern efter
   </tr> 
   <tr> 
    <td><p>Inställningar för programserverns cookie</p> </td> 
-   <td><p>Programcookies styrs av programservern. När du distribuerar programmet kan programserveradministratören ange cookie-inställningar på en server- eller programspecifik basis. Som standard prioriteras serverinställningarna.</p> <p>Alla sessionscookies som genereras av programservern bör innehålla <code>HttpOnly</code> -attribut. Om du till exempel använder JBoss-programservern kan du ändra SessionCookie-elementet till <code>httpOnly="true"</code> i <code>WEB-INF/web.xml</code> -fil.</p> <p>Du kan begränsa vilka cookies som ska skickas med enbart HTTPS. Därför skickas de inte okrypterade via HTTP. Programserveradministratörer bör aktivera säkra cookies för servern globalt. Om du till exempel använder JBoss-programservern kan du ändra kopplingselementet till <code>secure=true</code> i <code>server.xml</code> -fil.</p> <p>Mer information om inställningar för cookies finns i dokumentationen för programservern.</p> </td> 
+   <td><p>Programcookies styrs av programservern. När du distribuerar programmet kan programserveradministratören ange cookie-inställningar på en server- eller programspecifik basis. Som standard prioriteras serverinställningarna.</p> <p>Alla sessionscookies som genereras av programservern ska innehålla attributet <code>HttpOnly</code>. Om du till exempel använder JBoss-programservern kan du ändra SessionCookie-elementet till <code>httpOnly="true"</code> i <code>WEB-INF/web.xml</code>-filen.</p> <p>Du kan begränsa vilka cookies som ska skickas med enbart HTTPS. Därför skickas de inte okrypterade via HTTP. Programserveradministratörer bör aktivera säkra cookies för servern globalt. Om du till exempel använder JBoss-programservern kan du ändra anslutningselementet till <code>secure=true</code> i <code>server.xml</code>-filen.</p> <p>Mer information om inställningar för cookies finns i dokumentationen för programservern.</p> </td> 
   </tr> 
   <tr> 
    <td><p>Katalogbläddring</p> </td> 
-   <td><p>När någon begär en sida som inte finns eller begär namnet på en direktör (begärandesträngen avslutas med ett snedstreck (/)), ska programservern inte returnera innehållet i den katalogen. Du kan förhindra detta genom att inaktivera katalogbläddring på programservern. Du bör göra detta för administrationskonsolprogrammet och för andra program som körs på servern.</p> <p>För JBoss anger du värdet för listings initieringsparametern för <code>DefaultServlet</code> egenskap till <code>false</code> i filen web.xml, vilket visas i följande exempel:</p> <p>&lt;servlet&gt;</p> <p>&lt;servlet-name&gt;standard&lt;/servlet-name&gt;</p> <p>&lt;servlet-class&gt;</p> <p>org.apache.catalina.servlets.DefaultServlet</p> <p>&lt;/servlet-class&gt;</p> <p>&lt;init-param&gt;</p> <p>&lt;param-name&gt;listor&lt;/param-name&gt;</p> <p>&lt;param-value&gt;false&lt;/param-value&gt;</p> <p>&lt;/init-param&gt;</p> <p>&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</p> <p>&lt;/servlet&gt;</p> <p>För WebSphere anger du <code>directoryBrowsingEnabled</code> i filen ibm-web-ext.xmi till <code>false</code>.</p> <p>För WebLogic anger du egenskaperna för indexkataloger i filen weblogic.xml till <code>false</code>, vilket visas i det här exemplet:</p> <p>&lt;container-descriptor&gt;</p> <p>&lt;index-directory-enabled&gt;false</p> <p>&lt;/index-directory-enabled&gt;</p> <p>&lt;/container-descriptor&gt;</p> </td> 
+   <td><p>När någon begär en sida som inte finns eller begär namnet på en direktör (begärandesträngen avslutas med ett snedstreck (/)), ska programservern inte returnera innehållet i den katalogen. Du kan förhindra detta genom att inaktivera katalogbläddring på programservern. Du bör göra detta för administrationskonsolprogrammet och för andra program som körs på servern.</p> <p>För JBoss anger du värdet för listings-initieringsparametern för egenskapen <code>DefaultServlet</code> till <code>false</code> i filen web.xml, vilket visas i följande exempel:</p> <p>&lt;servlet&gt;</p> <p>&lt;servlet-name&gt;standard&lt;/servlet-name&gt;</p> <p>&lt;servlet-class&gt;</p> <p>org.apache.catalina.servlets.DefaultServlet</p> <p>&lt;/servlet-class&gt;</p> <p>&lt;init-param&gt;</p> <p>&lt;param-name&gt;listor&lt;/param-name&gt;</p> <p>&lt;param-value&gt;false&lt;/param-value&gt;</p> <p>&lt;/init-param&gt;</p> <p>&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</p> <p>&lt;/servlet&gt;</p> <p>För WebSphere anger du egenskapen <code>directoryBrowsingEnabled</code> i filen ibm-web-ext.xmi till <code>false</code>.</p> <p>För WebLogic anger du egenskaperna för indexkataloger i filen weblogic.xml till <code>false</code>, vilket visas i det här exemplet:</p> <p>&lt;container-descriptor&gt;</p> <p>&lt;index-directory-enabled&gt;false</p> <p>&lt;/index-directory-enabled&gt;</p> <p>&lt;/container-descriptor&gt;</p> </td> 
   </tr> 
  </tbody> 
 </table>
@@ -350,11 +351,11 @@ I följande tabell beskrivs några tekniker för att skydda programservern efter
 
 När du skyddar din databas bör du implementera de åtgärder som beskrivs av din databasleverantör. Du bör tilldela en databasanvändare med de lägsta databasbehörigheter som krävs och som AEM Forms tillåter för JEE. Använd till exempel inte ett konto med databasadministratörsbehörighet.
 
-I Oracle behöver det databaskonto du använder bara behörigheterna CONNECT, RESOURCE och CREATE VIEW. Liknande krav för andra databaser finns i [Förbereder installation av AEM Forms på JEE (en server)](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64).
+I Oracle behöver det databaskonto du använder bara behörigheterna CONNECT, RESOURCE och CREATE VIEW. Liknande krav för andra databaser finns i [Förbereder installation av AEM Forms på JEE (Single Server)](https://www.adobe.com/go/learn_aemforms_prepareInstallsingle_64).
 
 #### Konfigurera integrerad säkerhet för SQL Server i Windows för JBoss {#configuring-integrated-security-for-sql-server-on-windows-for-jboss}
 
-1. Ändra [JBOSS_HOME]\\standalone\configuration\lc_{datasource.xml} att lägga till `integratedSecurity=true` till anslutnings-URL:en enligt följande exempel:
+1. Ändra [JBOSS_HOME]\\standalone\configuration\lc_{datasource.xml} för att lägga till `integratedSecurity=true` i anslutnings-URL:en, vilket visas i det här exemplet:
 
    ```java
     jdbc:sqlserver://<serverhost>:<port>;databaseName=<dbname>;integratedSecurity=true
@@ -362,7 +363,7 @@ I Oracle behöver det databaskonto du använder bara behörigheterna CONNECT, RE
 
 1. Lägg till filen sqljdbc_auth.dll i Windows-systemsökvägen på den dator som kör programservern. Filen sqljdbc_auth.dll finns med drivrutinsinstallationen för Microsoft SQL JDBC 6.2.1.0.
 1. Ändra egenskapen JBoss Windows-tjänst (JBoss för AEM Forms på JEE) för inloggning som från det lokala systemet till ett inloggningskonto som har AEM Forms-databas och en minimiuppsättning behörigheter. Om du kör JBoss från kommandoraden i stället för som en Windows-tjänst behöver du inte utföra det här steget.
-1. Ange säkerhet för SQL Server från **Blandad** läge till **Endast Windows-autentisering**.
+1. Ange säkerhet för SQL Server från läget **Blandad** till **Endast Windows-autentisering**.
 
 #### Konfigurera integrerad säkerhet för SQL Server i Windows för WebLogic {#configuring-integrated-security-for-sql-server-on-windows-for-weblogic}
 
@@ -372,30 +373,30 @@ I Oracle behöver det databaskonto du använder bara behörigheterna CONNECT, RE
    https://[host name]:7001/console
    ```
 
-1. Klicka på under Ändringscenter **Lås och redigera**.
-1. Klicka på under Domänstruktur *[base_domain]* > **Tjänster** > **JDBC** > **Datakällor** och klicka i den högra rutan **IDP_DS**.
-1. På nästa skärm på **Konfiguration** klickar du på **Anslutningspool** och, i **Egenskaper** ruta, typ `integratedSecurity=true`.
-1. Klicka på under Domänstruktur **[base_domain]** > **Tjänster** > **JDBC** > **Datakällor** och klicka i den högra rutan **RM_DS**.
-1. På nästa skärm på **Konfiguration** klickar du på **Anslutningspool** och, i **Egenskaper** ruta, typ `integratedSecurity=true`.
+1. Klicka på **Lås och redigera** under Ändringscenter.
+1. Under Domänstruktur klickar du på *[base_domain]* > **Tjänster** > **JDBC** > **Datakällor** och sedan på **IDP_DS** i den högra rutan.
+1. På nästa skärm klickar du på fliken **Konfiguration** på fliken **Anslutningspool** och skriver `integratedSecurity=true` i rutan **Egenskaper** .
+1. Under Domänstruktur klickar du på **[base_domain]** > **Tjänster** > **JDBC** > **Datakällor** och sedan på **RM_DS** i den högra rutan.
+1. På nästa skärm klickar du på fliken **Konfiguration** på fliken **Anslutningspool** och skriver `integratedSecurity=true` i rutan **Egenskaper** .
 1. Lägg till filen sqljdbc_auth.dll i Windows-systemsökvägen på den dator som kör programservern. Filen sqljdbc_auth.dll finns med drivrutinsinstallationen för Microsoft SQL JDBC 6.2.1.0.
-1. Ange säkerhet för SQL Server från **Blandad** läge till **Endast Windows-autentisering**.
+1. Ange säkerhet för SQL Server från läget **Blandad** till **Endast Windows-autentisering**.
 
 #### Konfigurera integrerad säkerhet för SQL Server i Windows för WebSphere {#configuring-integrated-security-for-sql-server-on-windows-for-websphere}
 
 På WebSphere kan du bara konfigurera integrerad säkerhet när du använder en extern JDBC-drivrutin för SQL Server, inte den JDBC-drivrutin för SQL Server som är inbäddad med WebSphere.
 
 1. Logga in på administrationskonsolen för WebSphere.
-1. Klicka i navigeringsträdet på **Resurs** > **JDBC** > **Datakällor** och klicka i den högra rutan **IDP_DS**.
-1. Klicka på under Ytterligare egenskaper i den högra rutan **Anpassade egenskaper** och klicka sedan på **Nytt**.
-1. I **Namn** ruta, typ `integratedSecurity` och **Värde** ruta, typ `true`.
-1. Klicka i navigeringsträdet på **Resurs** > **JDBC** > **Datakällor** och klicka i den högra rutan **RM_DS**.
-1. Klicka på under Ytterligare egenskaper i den högra rutan **Anpassade egenskaper** och klicka sedan på **Nytt**.
-1. I **Namn** ruta, typ `integratedSecurity` och **Värde** ruta, typ `true`.
+1. Klicka på **Resurser** > **JDBC** > **Datakällor** i navigeringsträdet och klicka på **IDP_DS** i den högra rutan.
+1. Klicka på **Anpassade egenskaper** under Ytterligare egenskaper i den högra rutan och klicka sedan på **Nytt**.
+1. I rutan **Namn** skriver du `integratedSecurity` och `true` i rutan **Värde**.
+1. Klicka på **Resurser** > **JDBC** > **Datakällor** i navigeringsträdet och klicka på **RM_DS** i den högra rutan.
+1. Klicka på **Anpassade egenskaper** under Ytterligare egenskaper i den högra rutan och klicka sedan på **Nytt**.
+1. I rutan **Namn** skriver du `integratedSecurity` och `true` i rutan **Värde**.
 1. På den dator där WebSphere är installerat lägger du till filen sqljdbc_auth.dll i Windows systemsökväg (C:\Windows). Filen sqljdbc_auth.dll finns på samma plats som drivrutinsinstallationen för Microsoft SQL JDBC 1.2 (standard är *[InstallDir]*/sqljdbc_1.2/enu/auth/x86).
-1. Välj **Starta** > **Kontrollpanelen** > **Tjänster** högerklicka på Windows-tjänsten för WebSphere (IBM WebSphere Application Server) &lt;version> - &lt;node>) och markera **Egenskaper**.
-1. I dialogrutan Egenskaper klickar du på **Logga in** -fliken.
-1. Välj **Det här kontot** och ange den information som krävs för att ställa in det inloggningskonto som du vill använda.
-1. Ange säkerhet för SQL Server från **Blandad** läge till **Endast Windows-autentisering**.
+1. Välj **Start** > **Kontrollpanelen** > **Tjänster**, högerklicka på Windows-tjänsten för WebSphere (IBM WebSphere Application Server &lt;version> - &lt;nod>) och välj **Egenskaper**.
+1. Klicka på fliken **Logga in** i dialogrutan Egenskaper.
+1. Välj **Det här kontot** och ange den information som krävs för att ange det inloggningskonto som du vill använda.
+1. Ange säkerhet på SQL Server från **Blandat** läge till **Endast Windows-autentisering**.
 
 ### Skydda åtkomst till känsligt innehåll i databasen {#protecting-access-to-sensitive-content-in-the-database}
 
@@ -422,9 +423,9 @@ Du kan ange antalet misslyckade försök och efterföljande låsningstid som AEM
 #### Ange automatisk låsning av konton {#set-automatic-account-locking}
 
 1. Logga in på administrationskonsolen.
-1. Klicka **Inställningar** > **Användarhantering** > **Domänhantering**.
-1. Under Inställningar för låsning av automatiskt konto anger du **Maximalt antal misslyckade sekventiella autentiseringar** till ett lågt tal, till exempel 3.
-1. Klicka **Spara**.
+1. Klicka på **Inställningar** > **Användarhantering** > **Domänhantering**.
+1. Under Inställningar för låsning av automatiskt konto anger du **maximalt antal misslyckade sekventiella autentiseringar** till ett lågt antal, till exempel 3.
+1. Klicka på **Spara**.
 
 ### Granskning och loggning {#auditing-and-logging}
 
@@ -477,7 +478,7 @@ När du har installerat AEM Forms på JEE är det viktigt att regelbundet upprä
 
 ### Konfigurera en omvänd proxy för webbåtkomst {#setting-up-a-reverse-proxy-for-web-access}
 
-A *omvänd proxy* kan användas för att säkerställa att en uppsättning URL:er för AEM Forms på JEE-webbprogram är tillgängliga för både externa och interna användare. Den här konfigurationen är säkrare än att tillåta användare att ansluta direkt till programservern som AEM Forms på JEE körs på. Den omvända proxyn utför alla HTTP-begäranden för den programserver som kör AEM Forms på JEE. Användare har bara nätverksåtkomst till den omvända proxyn och kan bara försöka ansluta till URL som stöds av den omvända proxyn.
+En *omvänd proxy* kan användas för att se till att en uppsättning URL:er för AEM Forms på JEE-webbprogram är tillgängliga för både externa och interna användare. Den här konfigurationen är säkrare än att tillåta användare att ansluta direkt till programservern som AEM Forms på JEE körs på. Den omvända proxyn utför alla HTTP-begäranden för den programserver som kör AEM Forms på JEE. Användare har bara nätverksåtkomst till den omvända proxyn och kan bara försöka ansluta till URL som stöds av den omvända proxyn.
 
 **AEM Forms på JEE-rot-URL:er för användning med omvänd proxyserver**
 
@@ -521,13 +522,13 @@ Vissa URL:er markeras som användarvänliga webbprogram. Du bör undvika att exp
   </tr> 
   <tr> 
    <td><p>/workspace/*</p> </td> 
-   <td><p>Slutanvändarens webbprogram för arbetsytan</p> </td> 
+   <td><p>Workspace webbprogram för slutanvändare</p> </td> 
    <td><p>Ja</p> </td> 
    <td><p>Ja</p> </td> 
   </tr> 
   <tr> 
    <td><p>/workspace-server/*</p> </td> 
-   <td><p>Workspace-servrar och datatjänster som krävs för Workspace-klientprogrammet</p> </td> 
+   <td><p>Workspace-servrar och datatjänster som Workspace klientprogram kräver</p> </td> 
    <td><p>Ja</p> </td> 
    <td><p>Ja</p> </td> 
   </tr> 
@@ -599,7 +600,7 @@ Vissa URL:er markeras som användarvänliga webbprogram. Du bör undvika att exp
   </tr> 
   <tr> 
    <td><p>/FormServer/GetImage</p> <p>Servlet</p> </td> 
-   <td><p>Används för att hämta JavaScript under HTML-omformning</p> </td> 
+   <td><p>Används för att hämta JavaScript under HTML-omvandling</p> </td> 
    <td><p>Nej</p> </td> 
    <td><p>Nej</p> </td> 
   </tr> 
@@ -623,7 +624,7 @@ Vissa URL:er markeras som användarvänliga webbprogram. Du bör undvika att exp
   </tr> 
   <tr> 
    <td><p>/WorkspaceAdmin/*</p> </td> 
-   <td><p>Administrationssidor för arbetsyta</p> </td> 
+   <td><p>Workspace administrationssidor</p> </td> 
    <td><p>Ja</p> </td> 
    <td><p>Nej</p> </td> 
   </tr> 
@@ -664,7 +665,7 @@ Vissa URL:er markeras som användarvänliga webbprogram. Du bör undvika att exp
 
 En CSRF-attack (Cross-Site Request Forgery) utnyttjar det förtroende som en webbplats har för användaren för att överföra kommandon som är otillåtna och oavsedda av användaren. Anfallet konfigureras genom att en länk, ett skript eller en URL-adress läggs till i ett e-postmeddelande för att komma åt en annan webbplats som användaren redan har autentiserats på.
 
-Du kan till exempel vara inloggad på administrationskonsolen samtidigt som du bläddrar på en annan webbplats. En av webbsidorna kan innehålla en HTML-bildtagg med en `src` attribut som riktar sig till ett skript på den drabbade webbplatsen. Genom att använda den cookie-baserade sessionsautentiseringsmekanismen som tillhandahålls av webbläsare kan angripande webbplats skicka skadliga förfrågningar till detta skript på servern, som masquerading är den legitima användaren. Fler exempel finns i [https://owasp.org/www-community/attacks/csrf#Examples](https://owasp.org/www-community/attacks/csrf#Examples).
+Du kan till exempel vara inloggad på administrationskonsolen samtidigt som du bläddrar på en annan webbplats. En av webbsidorna kan innehålla en HTML-bildtagg med ett `src`-attribut för ett serverskript på offrets webbplats. Genom att använda den cookie-baserade sessionsautentiseringsmekanismen som tillhandahålls av webbläsare kan angripande webbplats skicka skadliga förfrågningar till detta skript på servern, som masquerading är den legitima användaren. Mer exempel finns i [https://owasp.org/www-community/attacks/csrf#Examples](https://owasp.org/www-community/attacks/csrf#Examples).
 
 Följande egenskaper är gemensamma för CSRF:
 
@@ -676,9 +677,9 @@ Följande egenskaper är gemensamma för CSRF:
 AEM Forms på JEE använder funktionen Refererarfilter för att blockera CSRF-attacker. Följande termer används i det här avsnittet för att beskriva mekanismen för referensfiltrering:
 
 * **Tillåten referent:** En referent är adressen till källsidan som skickar en begäran till servern. För JSP-sidor eller -formulär är referensen vanligtvis föregående sida i webbläsarhistoriken. Referent för bilder är vanligtvis de sidor som bilderna visas på. Du kan identifiera den referent som har behörighet till serverresurserna genom att lägga till dem i listan över tillåtna referenter.
-* **Tillåtna referensundantag:** Du kanske vill begränsa åtkomsten för en viss referent i listan över tillåtna referenter. Om du vill tillämpa den här begränsningen kan du lägga till enskilda sökvägar för den referenten i listan med tillåtna undantag för referenten. Begäranden som kommer från sökvägar i listan över tillåtna referensundantag förhindras från att anropa någon resurs på Forms Server. Du kan definiera tillåtna referensundantag för ett visst program och även använda en global lista med undantag som gäller för alla program.
-* **Tillåtna URI:er:** Det här är en lista över resurser som ska skickas utan att refererarens huvud har markerats. Resurser, t.ex. hjälpsidor som inte leder till statusändringar på servern, kan läggas till i den här listan. Resurserna i listan Tillåtna URI:er blockeras aldrig av referensfiltret oavsett vem som refererar.
-* **Null-referens:** En serverbegäran som inte är associerad med eller inte kommer från en överordnad webbsida betraktas som en begäran från en null-referens. När du till exempel öppnar ett nytt webbläsarfönster, skriver en adress och trycker på Retur är den referent som skickas till servern null. Ett skrivbordsprogram (.NET eller SWING) som gör en HTTP-begäran till en webbserver skickar även en Null-referens till servern.
+* **Tillåtna referensundantag:** Du kanske vill begränsa åtkomstmöjligheterna för en viss referent i listan över tillåtna referenter. Om du vill tillämpa den här begränsningen kan du lägga till enskilda sökvägar för den referenten i listan med tillåtna undantag för referenten. Begäranden som kommer från sökvägar i listan över tillåtna referensundantag förhindras från att anropa någon resurs på Forms Server. Du kan definiera tillåtna referensundantag för ett visst program och även använda en global lista med undantag som gäller för alla program.
+* **Tillåtna URI:er:** Det här är en lista över resurser som ska hanteras utan att refererarhuvudet kontrolleras. Resurser, t.ex. hjälpsidor som inte leder till statusändringar på servern, kan läggas till i den här listan. Resurserna i listan Tillåtna URI:er blockeras aldrig av referensfiltret oavsett vem som refererar.
+* **Null-referens:** En serverbegäran som inte är associerad med eller inte kommer från en överordnad webbsida betraktas som en begäran från en Null-referens. När du till exempel öppnar ett nytt webbläsarfönster, skriver en adress och trycker på Retur är den referent som skickas till servern null. Ett skrivbordsprogram (.NET eller SWING) som gör en HTTP-begäran till en webbserver skickar även en Null-referens till servern.
 
 ### Referentfiltrering {#referer-filtering}
 
@@ -687,7 +688,7 @@ Refererarfiltreringsprocessen kan beskrivas så här:
 1. Forms Server kontrollerar HTTP-metoden som används för anrop:
 
    1. Om det är POST utför Forms Server rubrikkontrollen.
-   1. Om det är GET åsidosätter Forms Server referenskontrollen, såvida inte *CSRF_CHECK_GETS* är inställd på true, vilket innebär att rubrikkontrollen i Referer utförs. *CSRF_CHECK_GETS* anges i *web.xml* -fil för ditt program.
+   1. Om det är GET åsidosätter Forms Server referenskontrollen, såvida inte *CSRF_CHECK_GETS* är inställd på true. I så fall utför den referenthuvudkontrollen. *CSRF_CHECK_GETS* anges i filen *web.xml* för ditt program.
 
 1. Forms Server kontrollerar om den begärda URI:n finns i tillåtelselista:
 
@@ -706,15 +707,15 @@ Refererarfiltreringsprocessen kan beskrivas så här:
 
 ### Hantera referensfiltrering {#managing-referer-filtering}
 
-AEM Forms på JEE tillhandahåller ett referensfilter för att ange vilken referent som har behörighet till serverresurserna. Som standard filtrerar referensfiltret inte begäranden som använder en säker HTTP-metod, till exempel GET, såvida inte *CSRF_CHECK_GETS* är inställt på true. Om portnumret för en post med tillåten referens är 0, tillåter AEM Forms på JEE alla förfrågningar från den värden oavsett portnummer. Om inget portnummer anges tillåts endast begäranden från standardporten 80 (HTTP) eller port 443 (HTTPS). Referensfiltrering är inaktiverat om alla poster i listan över tillåtna referenter tas bort.
+AEM Forms på JEE tillhandahåller ett referensfilter för att ange vilken referent som har behörighet till serverresurserna. Som standard filtrerar inte referensfiltret begäranden som använder en säker HTTP-metod, till exempel GET, såvida inte *CSRF_CHECK_GETS* har värdet true. Om portnumret för en post med tillåten referens är 0, tillåter AEM Forms på JEE alla förfrågningar från den värden oavsett portnummer. Om inget portnummer anges tillåts endast begäranden från standardporten 80 (HTTP) eller port 443 (HTTPS). Referensfiltrering är inaktiverat om alla poster i listan över tillåtna referenter tas bort.
 
 När du först installerar Document Services uppdateras listan över tillåtna referenter med adressen till den server där Document Services är installerat. Posterna för servern omfattar servernamnet, IPv4-adressen, IPv6-adressen om IPv6 är aktiverat, loopback-adressen och en localhost-post. Namnen som läggs till i listan över tillåtna referenter returneras av värdoperativsystemet. En server med IP-adressen 10.40.54.187 kommer till exempel att innehålla följande poster: `https://server-name:0, https://10.40.54.187:0, https://127.0.0.1:0, http://localhost:0`. Tillåtelselista uppdateras inte för alla okvalificerade namn som returneras av värdoperativsystemet (namn som inte har IPv4-adress, IPv6-adress eller kvalificerat domännamn). Ändra listan över tillåtna referenter så att den passar din affärsmiljö. Distribuera inte Forms Server i produktionsmiljön med standardlistan Tillåten referent. När du har ändrat någon av de tillåtna referenserna, referensundantagen eller URI:erna måste du starta om servern för att ändringarna ska börja gälla.
 
-**Hantera listan Tillåten referent**
+**Hantera listan över tillåtna referenter**
 
-Du kan hantera listan Tillåten referent från användarhanteringsgränssnittet i administrationskonsolen. Med användarhanteringsgränssnittet kan du skapa, redigera och ta bort listan. Se * [Förhindra CSRF-attacker](/help/forms/using/admin-help/preventing-csrf-attacks.md)* i *administrationshjälp* om du vill ha mer information om hur du arbetar med listan Tillåtna referenter.
+Du kan hantera listan Tillåten referent från användarhanteringsgränssnittet i administrationskonsolen. Med användarhanteringsgränssnittet kan du skapa, redigera och ta bort listan. Se avsnittet * [Förhindra CSRF-attacker](/help/forms/using/admin-help/preventing-csrf-attacks.md)* i *administrationshjälpen* för mer information om hur du arbetar med listan över tillåtna referenter.
 
-**Hantera listor över tillåtna referensundantag och tillåtna URI**
+**Hantera listor över tillåtna referensundantag och tillåtna URI:er**
 
 AEM Forms på JEE innehåller API:er för att hantera listan över tillåtna referensundantag och listan över tillåtna URI:er. Du kan använda dessa API:er för att hämta, skapa, redigera eller ta bort listan. Nedan följer en lista över tillgängliga API:er:
 
@@ -729,25 +730,25 @@ AEM Forms på JEE innehåller API:er för att hantera listan över tillåtna ref
 
 Mer information om API:erna finns i* AEM Forms on JEE API Reference*.
 
-Använd ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** lista för tillåtna referensundantag på global nivå, det vill säga, för att definiera undantag som är tillämpliga på alla program. Den här listan innehåller bara URI:er med antingen en absolut sökväg (till exempel `/index.html`) eller en relativ sökväg (till exempel `/sample/`). Du kan också lägga till ett reguljärt uttryck i slutet av en relativ URI, till exempel `/sample/(.)*`.
+Använd listan ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** för tillåtna referensundantag på global nivå, d.v.s. för att definiera undantag som gäller för alla program. Den här listan innehåller bara URI:er med antingen en absolut sökväg (till exempel `/index.html`) eller en relativ sökväg (till exempel `/sample/`). Du kan också lägga till ett reguljärt uttryck i slutet av en relativ URI, till exempel `/sample/(.)*`.
 
-The ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** list-ID definieras som en konstant i `UMConstants` klassen för `com.adobe.idp.um.api` namnutrymme, finns i `adobe-usermanager-client.jar`. Du kan använda AEM Forms API:er för att skapa, ändra eller redigera den här listan. Om du till exempel vill skapa listan Global Allowed Referrer Exceptions använder du:
+List-ID:t ***LC_GLOBAL_ALLOWED_REFERER_EXCEPTION*** definieras som en konstant i klassen `UMConstants` i namnutrymmet `com.adobe.idp.um.api` som finns i `adobe-usermanager-client.jar`. Du kan använda AEM Forms API:er för att skapa, ändra eller redigera den här listan. Om du till exempel vill skapa listan Global Allowed Referrer Exceptions använder du:
 
 ```java
 addAllowedRefererExceptions(UMConstants.LC_GLOBAL_ALLOWED_REFERER_EXCEPTION, Arrays.asList("/index.html", "/sample/(.)*"))
 ```
 
-Använd ***CSRF_ALLOWED_REFERER_EXCEPTIONS*** lista för programspecifika undantag.
+Använd listan ***CSRF_ALLOWED_REFERER_EXCEPTIONS*** för programspecifika undantag.
 
-**Inaktivera referensfiltret**
+**Inaktiverar referensfiltret**
 
 Om referensfiltret helt blockerar åtkomsten till Forms Server och du inte kan redigera listan Tillåten referent, kan du uppdatera serverns startskript och inaktivera Referensfiltrering.
 
-Inkludera `-Dlc.um.csrffilter.disabled=true` JAVA-argument i startskriptet och starta om servern. Se till att du tar bort JAVA-argumentet efter att du har konfigurerat om listan över tillåtna referenter.
+Inkludera JAVA-argumentet `-Dlc.um.csrffilter.disabled=true` i startskriptet och starta om servern. Se till att du tar bort JAVA-argumentet efter att du har konfigurerat om listan över tillåtna referenter.
 
 **Referensfiltrering för anpassade WAR-filer**
 
-Du kan ha skapat anpassade WAR-filer för att arbeta med AEM Forms i JEE för att uppfylla dina affärskrav. Om du vill aktivera Referensfiltrering för dina anpassade WAR-filer inkluderar du ***adobe-usermanager-client.jar*** i klassökvägen för WAR och ta med en filterpost i filen* web.xml* med följande parametrar:
+Du kan ha skapat anpassade WAR-filer för att arbeta med AEM Forms i JEE för att uppfylla dina affärskrav. Om du vill aktivera Referensfiltrering för dina anpassade WAR-filer inkluderar du ***adobe-usermanager-client.jar*** i klassökvägen för WAR och inkluderar en filterpost i filen* web.xml* med följande parametrar:
 
 **CSRF_CHECK_GETS** styr referentkontrollen vid GET-begäranden. Om den här parametern inte är definierad ställs standardvärdet in på false. Inkludera bara den här parametern om du vill filtrera dina GETTER.
 
@@ -757,9 +758,9 @@ Du kan ha skapat anpassade WAR-filer för att arbeta med AEM Forms i JEE för at
 
 **CSRF_ALLOW_NULL_REFERER** styr beteendet för referensfiltret när referenten är null eller inte finns. Om den här parametern inte är definierad ställs standardvärdet in på false. Inkludera bara den här parametern om du vill tillåta Null-referenser. Om null-referenter tillåts kan vissa typer av attacker av typen Cross Site Request.
 
-**CSRF_NULL_REFERER_EXCEPTIONS** är en lista över de URI:er för vilka en referenskontroll inte utförs när referenten är null. Den här parametern är bara aktiverad när *CSRF_ALLOW_NULL_REFERER* är inställt på false. Avgränsa flera URI:er i listan med kommatecken.
+**CSRF_NULL_REFERER_EXCEPTIONS** är en lista över de URI:er för vilka ingen referenskontroll utförs när referenten är null. Den här parametern är bara aktiverad när *CSRF_ALLOW_NULL_REFERER* har värdet false. Avgränsa flera URI:er i listan med kommatecken.
 
-Följande är ett exempel på filterposten i *web.xml* fil för ***EXEMPEL*** WAR-fil:
+Här följer ett exempel på filterposten i filen *web.xml* för en ***SAMPLE*** WAR-fil:
 
 ```java
 <filter> 
@@ -955,11 +956,11 @@ Mer information om WebSphere-portar som krävs för AEM Forms på JEE finns i Po
 
 ### Konfigurerar SSL {#configuring-ssl}
 
-Referera till den fysiska arkitekturen som beskrivs i avsnittet [AEM Forms på JEE:s fysiska arkitektur](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture)bör du konfigurera SSL för alla anslutningar som du tänker använda. Alla SOAP anslutningar måste göras via SSL för att förhindra exponering av användaruppgifter i ett nätverk.
+Med referens till den fysiska arkitekturen som beskrivs i avsnittet [AEM Forms på den fysiska JEE-arkitekturen](hardening-aem-forms-jee-environment.md#aem-forms-on-jee-physical-architecture) bör du konfigurera SSL för alla anslutningar som du tänker använda. Alla SOAP anslutningar måste göras via SSL för att förhindra exponering av användaruppgifter i ett nätverk.
 
-Instruktioner om hur du konfigurerar SSL på JBoss, WebLogic och WebSphere finns i&quot;Configuring SSL&quot; i [administrationshjälp](https://www.adobe.com/go/learn_aemforms_admin_64).
+Instruktioner om hur du konfigurerar SSL på JBoss, WebLogic och WebSphere finns i&quot;Configuring SSL&quot; i [administrationshjälpen](https://www.adobe.com/go/learn_aemforms_admin_64).
 
-Instruktioner om hur du importerar certifikat till JVM (Java Virtual Machine) som konfigurerats för en AEM Forms-server finns i avsnittet om ömsesidig autentisering i [Hjälp om AEM Forms Workbench](https://www.adobe.com/go/learn_aemforms_workbench_65).
+Instruktioner om hur du importerar certifikat till JVM (Java Virtual Machine) som har konfigurerats för en AEM Forms-server finns i avsnittet om ömsesidig autentisering i [hjälpen för AEM Forms Workbench](https://www.adobe.com/go/learn_aemforms_workbench_65).
 
 ### Konfigurerar SSL-omdirigering {#configuring-ssl-redirect}
 
@@ -973,7 +974,7 @@ Information om hur du konfigurerar SSL-omdirigering för WebSphere eller WebLogi
 
 1. Öppna JBOSS_HOME/standalone/configuration/standalone.xml för redigering.
 
-   Efter &lt;subsystem xmlns=&quot;urn&lt;span id=&quot; translate=&quot;no&quot; />domän:web:1.1&quot; native=&quot;false&quot; default-virtual-server=&quot;default-host&quot;> -element, lägg till följande information::jboss:
+   Lägg till följande information efter &lt;subsystem xmlns=&quot;urn:jboss:domain:web:1.1&quot; native=&quot;false&quot; default-virtual-server=&quot;default-host&quot;>-elementet:
 
    &lt;connector name=&quot;https&quot; protocol=&quot;HTTP/1.1&quot; scheme=&quot;https&quot; socket-binding=&quot;https&quot; enabled=&quot;true&quot; secure=&quot;true&quot;/>
 
@@ -1000,11 +1001,11 @@ AEM Forms på JEE-körkortsinstallationen konfigurerar som standard ett tjänstk
 1. I Microsoft Management Console (MMC) skapar du en lokal användare som Forms Server-tjänsten kan logga in som:
 
    * Välj **Användaren kan inte ändra lösenordet**.
-   * På **medlem i** kontrollerar du att gruppen Användare visas.
+   * På fliken **Medlem i** ser du till att gruppen Användare visas.
 
-1. Välj **Inställningar** > **Administrativa verktyg** > **Tjänster**.
+1. Välj **Inställningar** > **Administrationsverktyg** > **Tjänster**.
 1. Dubbelklicka på programservertjänsten och stoppa tjänsten.
-1. På **Logga in** flik, välja **Det här kontot**, bläddra efter det användarkonto du har skapat och ange lösenordet för kontot.
+1. På fliken **Logga in** väljer du **Det här kontot**, bläddrar efter det användarkonto du har skapat och anger lösenordet för kontot.
 1. I fönstret Lokala säkerhetsinställningar, under Tilldelning av användarrättigheter, ger du följande rättigheter till användarkontot som Forms Server körs under:
 
    * Neka inloggning via Terminal Services
@@ -1012,18 +1013,19 @@ AEM Forms på JEE-körkortsinstallationen konfigurerar som standard ett tjänstk
    * Logga in som tjänst (bör vara inställd)
 
 1. Ge det nya användarkontot behörighet att ändra i följande kataloger:
-   * **GDS-katalog (Global Document Storage)**: Platsen för GDS-katalogen konfigureras manuellt under AEM Forms-installationen. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen på `[JBoss root]/server/[type]/svcnative/DocumentStorage`
-   * **CRX-Repository-katalog**: Standardplatsen är `[AEM-Forms-installation-location]\crx-repository`
-   * **AEM Forms tillfälliga kataloger**:
+   * **GDS-katalog (Global Document Storage)**: Platsen för GDS-katalogen konfigureras manuellt under AEM Forms-installationsprocessen. Om platsinställningen är tom under installationen blir platsen som standard en katalog under programserverinstallationen på `[JBoss root]/server/[type]/svcnative/DocumentStorage`
+   * **CRX-Databaskatalog**: Standardplatsen är `[AEM-Forms-installation-location]\crx-repository`
+   * **AEM Forms temporära kataloger**:
       * (Windows) TMP- eller TEMP-sökväg som angetts i miljövariablerna
-      * (AIX, Linux eller Solaris) Inloggad användares hemkatalog På UNIX-baserade system kan en icke-rotanvändare använda följande katalog som tillfällig katalog:
+      * (AIX, Linux eller Solaris) Inloggad användares arbetskatalog
+På UNIX-baserade system kan en icke-rotanvändare använda följande katalog som tillfällig katalog:
       * (Linux) /var/tmp eller /usr/tmp
       * (AIX) /tmp eller /usr/tmp
       * (Solaris) /var/tmp eller /usr/tmp
 1. Ge det nya användarkontot skrivbehörighet i följande kataloger:
-   * [JBoss-katalog]\standalone\deployment
+   * [JBoss-katalog]\fristående\distribution
    * [JBoss-katalog]\fristående\
-   * [JBoss-katalog]\bin\
+   * [JBoss-directory]\bin\
 
    >[!NOTE]
    >
@@ -1086,13 +1088,13 @@ Det här avsnittet innehåller rekommendationer för programserverkonfiguration 
 
 ### Inaktivera katalogbläddring {#disable_directory_browsing-2}
 
-Ange `directoryBrowsingEnabled` i filen ibm-web-ext.xml till `false`.
+Ange egenskapen `directoryBrowsingEnabled` i filen ibm-web-ext.xml till `false`.
 
 ### Aktivera administrationssäkerhet för WebSphere {#enable-websphere-administrative-security}
 
 1. Logga in på administrationskonsolen för WebSphere.
-1. Gå till navigeringsträdet **Säkerhet** > **Global säkerhet**
+1. Gå till **Säkerhet** > **Global säkerhet** i navigeringsträdet
 1. Välj **Aktivera administrativ säkerhet**.
-1. Avmarkera båda **Aktivera programsäkerhet** och **Använd Java 2-säkerhet**.
-1. Klicka **OK** eller **Använd**.
-1. I **Meddelanden** ruta, klicka **Spara direkt i huvudkonfigurationen**.
+1. Avmarkera både **Aktivera programsäkerhet** och **Använd Java 2-säkerhet**.
+1. Klicka på **OK** eller **Använd**.
+1. Klicka på **Spara direkt i huvudkonfigurationen** i rutan **Meddelanden**.

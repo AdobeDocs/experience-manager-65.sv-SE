@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Detta är några saker att tänka på när du kör administrationskonsolen:
 
-* Om du öppnar administrationskonsolen via URL:en `https://[hostname]:'port'/adminui`får det angivna värdnamnet inte innehålla understreck. I annat fall kanske länkar till vissa delar av administrationskonsolen inte fungerar som de ska.
+* Om du använder administrationskonsolen med URL:en `https://[hostname]:'port'/adminui` får det angivna värdnamnet inte innehålla understreck. I annat fall kanske länkar till vissa delar av administrationskonsolen inte fungerar som de ska.
 * Om du kör en administrationskonsol i Utforskaren i Windows på ett japanskt operativsystem kan du få följande problem:
 
    * När du klickar på en länk återgår du till inloggningssidan i stället för till den förväntade länken.

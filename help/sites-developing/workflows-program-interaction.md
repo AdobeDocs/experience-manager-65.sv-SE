@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Interagera med arbetsflöden programmatiskt{#interacting-with-workflows-programmatically}
 
-När [anpassa och utöka dina arbetsflöden](/help/sites-developing/workflows-customizing-extending.md) du kan komma åt arbetsflödesobjekt:
+När du [anpassar och utökar dina arbetsflöden](/help/sites-developing/workflows-customizing-extending.md) får du tillgång till arbetsflödesobjekt:
 
 * [Använda Java API för arbetsflöde](#using-the-workflow-java-api)
 * [Hämta arbetsflödesobjekt i ECMA-skript](#obtaining-workflow-objects-in-ecma-scripts)
@@ -26,7 +26,7 @@ När [anpassa och utöka dina arbetsflöden](/help/sites-developing/workflows-cu
 
 ## Använda Java API för arbetsflöde {#using-the-workflow-java-api}
 
-Arbetsflödets Java API består av [`com.adobe.granite.workflow`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/package-summary.html) och flera delpaket. Den viktigaste medlemmen i API:t är `com.adobe.granite.workflow.WorkflowSession` klassen. The `WorkflowSession` -klassen ger åtkomst till arbetsflödesobjekt för både designtid och körning:
+Arbetsflödets Java API består av paketet [`com.adobe.granite.workflow`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/package-summary.html) och flera underpaket. Den viktigaste medlemmen i API är klassen `com.adobe.granite.workflow.WorkflowSession`. Klassen `WorkflowSession` ger åtkomst till arbetsflödesobjekt för både designtid och körning:
 
 * arbetsflödesmodeller
 * arbetsposter
@@ -47,9 +47,9 @@ Följande tabell innehåller länkar till referensdokumentationen för flera vik
 
 ## Hämta arbetsflödesobjekt i ECMA-skript {#obtaining-workflow-objects-in-ecma-scripts}
 
-Enligt beskrivning i [Hitta skriptet](/help/sites-developing/the-basics.md#locating-the-script), AEM (via Apache Sling) tillhandahåller en ECMA-skriptmotor som kör ECMA-skript på serversidan. The [`org.apache.sling.scripting.core.ScriptHelper`](https://sling.apache.org/apidocs/sling5/org/apache/sling/scripting/core/ScriptHelper.html) klassen är omedelbart tillgänglig för dina skript som `sling` variabel.
+Så som beskrivs i [Hitta skriptet](/help/sites-developing/the-basics.md#locating-the-script), AEM (via Apache Sling) tillhandahåller en ECMA-skriptmotor som kör ECMA-skript på serversidan. Klassen [`org.apache.sling.scripting.core.ScriptHelper`](https://sling.apache.org/apidocs/sling5/org/apache/sling/scripting/core/ScriptHelper.html) är omedelbart tillgänglig för dina skript som variabeln `sling`.
 
-The `ScriptHelper` klassen ger åtkomst till `SlingHttpServletRequest` som du kan använda för att till slut få `WorkflowSession` object; till exempel:
+Klassen `ScriptHelper` ger åtkomst till `SlingHttpServletRequest` som du kan använda för att till slut få fram objektet `WorkflowSession`, till exempel:
 
 ```
 var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(Packages.com.adobe.granite.workflow.WorkflowSession);
@@ -72,11 +72,11 @@ Följande åtgärder stöds med REST API:
 
 >[!NOTE]
 >
->Genom att använda Firebug, ett Firefox-tillägg för webbutveckling, är det möjligt att följa HTTP-trafiken när konsolen används. Du kan till exempel kontrollera parametrarna och värdena som skickas till AEM med en `POST` begäran.
+>Genom att använda Firebug, ett Firefox-tillägg för webbutveckling, är det möjligt att följa HTTP-trafiken när konsolen används. Du kan till exempel kontrollera parametrarna och värdena som skickas till AEM med en `POST`-begäran.
 
-På den här sidan antas att AEM körs på localhost vid port `4502` och att installationssammanhanget är `/`&quot; (root). Om det inte är fallet med din installation måste de URI:er som HTTP-begäran gäller anpassas därefter.
+På den här sidan antas att AEM körs på localhost på port `4502` och att installationskontexten är `/` (rot). Om det inte är fallet med din installation måste de URI:er som HTTP-begäran gäller anpassas därefter.
 
-Återgivning stöds för `GET` begäranden är JSON-återgivningen. URL:er för `GET` bör ha `.json` tillägg, till exempel:
+Den återgivning som stöds för `GET`-begäranden är JSON-återgivningen. URL:erna för `GET` ska ha tillägget `.json`, till exempel:
 
 `http://localhost:4502/etc/workflow.json`
 
@@ -98,7 +98,7 @@ Följande metoder för HTTP-begäran gäller:
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td><p>Skapar en ny arbetsflödesinstans. Parametrarna är:<br /> - <code>model</code>: ID (URI) för respektive arbetsflödesmodell<br /> - <code>payloadType</code>: som innehåller typen av nyttolast (till exempel <code>JCR_PATH</code> eller URL).<br /> Nyttolasten skickas som parameter <code>payload</code>. A <code>201</code> (<code>CREATED</code>) skickas tillbaka med ett platshuvud som innehåller URL:en för den nya arbetsflödesinstansresursen.</p> </td>
+   <td><p>Skapar en ny arbetsflödesinstans. Parametrarna är: <br /> - <code>model</code>: ID (URI) för respektive arbetsflödesmodell <br /> - <code>payloadType</code>: som innehåller typen av nyttolast (till exempel <code>JCR_PATH</code> eller URL).<br /> Nyttolasten skickas som parameter <code>payload</code>. Ett <code>201</code> (<code>CREATED</code>)-svar skickas tillbaka med ett platshuvud som innehåller URL:en för den nya arbetsflödesinstansresursen.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -131,7 +131,7 @@ Följande metoder för HTTP-begäran gäller:
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>Ändrar instansens tillstånd. Det nya läget skickas som parameter <code>state</code> och måste ha något av följande värden: <code>RUNNING</code>, <code>SUSPENDED</code>, eller <code>ABORTED</code>.<br /> Om det inte går att nå det nya läget (t.ex. när du gör uppehåll i en avslutad instans) <code>409</code> (<code>CONFLICT</code>) skickas tillbaka till klienten.</td>
+   <td>Ändrar instansens tillstånd. Det nya läget skickas som parametern <code>state</code> och måste ha något av följande värden: <code>RUNNING</code>, <code>SUSPENDED</code> eller <code>ABORTED</code>.<br /> Om det inte går att nå det nya läget (t.ex. om du gör uppehåll i en avslutad instans) skickas ett <code>409</code> (<code>CONFLICT</code>)-svar tillbaka till klienten.</td>
   </tr>
  </tbody>
 </table>
@@ -154,12 +154,12 @@ Följande metoder för HTTP-begäran gäller:
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>Skapar en ny arbetsflödesmodell. Om parametern <code>title</code> skickas, en ny modell skapas med den angivna titeln. Koppla en JSON-modelldefinition som parameter <code>model</code> skapar en ny arbetsflödesmodell enligt den angivna definitionen.<br /> A <code>201</code> svar (<code>CREATED</code>) skickas tillbaka med ett platshuvud som innehåller URL:en för den nya arbetsflödesmodellresursen.<br /> Samma sak händer när en modelldefinition bifogas som en filparameter som kallas <code>modelfile</code>.<br /> I båda fallen gäller <code>model</code> och <code>modelfile</code> parametrar, en extra parameter som anropas <code>type</code> krävs för att definiera serialiseringsformatet. Nya serialiseringsformat kan integreras med OSGI API. En vanlig JSON-serialisering levereras med arbetsflödesmotorn. Dess typ är JSON. Nedan finns ett exempel på formatet.</td>
+   <td>Skapar en ny arbetsflödesmodell. Om parametern <code>title</code> skickas skapas en ny modell med den angivna titeln. När en JSON-modelldefinition bifogas som parameter <code>model</code> skapas en ny arbetsflödesmodell enligt den angivna definitionen.<br /> Ett <code>201</code>-svar (<code>CREATED</code>) skickas tillbaka med ett platshuvud som innehåller URL:en för den nya arbetsflödesmodellresursen.<br /> Samma sak händer när en modelldefinition bifogas som en filparameter med namnet <code>modelfile</code>.<br /> I båda fallen för parametrarna <code>model</code> och <code>modelfile</code> krävs ytterligare en parameter med namnet <code>type</code> för att definiera serialiseringsformatet. Nya serialiseringsformat kan integreras med OSGI API. En vanlig JSON-serialisering levereras med arbetsflödesmotorn. Dess typ är JSON. Nedan finns ett exempel på formatet.</td>
   </tr>
  </tbody>
 </table>
 
-Exempel: i webbläsaren skickar du en begäran till `http://localhost:4502/etc/workflow/models.json` genererar ett json-svar som liknar följande:
+Exempel: i webbläsaren genererar en begäran till `http://localhost:4502/etc/workflow/models.json` ett json-svar som liknar följande:
 
 ```
 [
@@ -225,7 +225,7 @@ Följande metoder för HTTP-begäran gäller:
 
 `http://localhost:4502*{uri}*`
 
-Plats `*{uri}*` är sökvägen till modellnoden i databasen.
+Där `*{uri}*` är sökvägen till modellnoden i databasen.
 
 <table>
  <tbody>
@@ -235,24 +235,24 @@ Plats `*{uri}*` är sökvägen till modellnoden i databasen.
   </tr>
   <tr>
    <td><code>GET</code></td>
-   <td>Hämtar <code>HEAD</code> version av modellen (definition och metadata).</td>
+   <td>Hämtar modellens <code>HEAD</code>-version (definition och metadata).</td>
   </tr>
   <tr>
    <td><code>PUT</code></td>
-   <td>Uppdaterar <code>HEAD</code> version av modellen (skapar en ny version).<br /> Den fullständiga modelldefinitionen för den nya versionen av modellen måste läggas till som en parameter som anropas <code>model</code>. Ytterligare en <code>type</code> -parametern behövs som när du skapar nya modeller och måste ha värdet <code>JSON</code>.<br /> </td>
+   <td>Uppdaterar modellversionen <code>HEAD</code> (skapar en ny version).<br /> Den fullständiga modelldefinitionen för den nya versionen av modellen måste läggas till som en parameter med namnet <code>model</code>. Dessutom krävs en <code>type</code>-parameter som när nya modeller skapas och värdet <code>JSON</code> måste anges.<br /> </td>
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>Samma beteende som med PUT. Behövs eftersom AEM inte stöder <code>PUT</code> åtgärder.</td>
+   <td>Samma beteende som med PUT. Behövs eftersom AEM inte stöder <code>PUT</code>-åtgärder.</td>
   </tr>
   <tr>
    <td><code>DELETE</code></td>
-   <td>Tar bort modellen. Så här löser du brandväggs-/proxyproblem <code>POST</code> som innehåller <code>X-HTTP-Method-Override</code> rubrikpost med värde <code>DELETE</code> kommer också att accepteras som <code>DELETE</code> begäran.</td>
+   <td>Tar bort modellen. För att lösa brandväggs-/proxyproblem accepteras även en <code>POST</code> som innehåller en <code>X-HTTP-Method-Override</code> rubrikpost med värdet <code>DELETE</code> som <code>DELETE</code>-begäran.</td>
   </tr>
  </tbody>
 </table>
 
-Exempel: i webbläsaren skickar du en begäran till `http://localhost:4502/var/workflow/models/publish_example.json` returnerar `json` ett svar som liknar följande kod:
+Exempel: i webbläsaren returnerar en begäran till `http://localhost:4502/var/workflow/models/publish_example.json` ett `json`-svar som liknar följande kod:
 
 ```shell
 {
@@ -358,7 +358,7 @@ Följande metoder för HTTP-begäran gäller:
   </tr>
   <tr>
    <td><code>POST</code></td>
-   <td>Slutför arbetsobjektet vars URI skickas som parameter <code>item</code> och flyttar enligt arbetsflödesinstansen till nästa noder, som definieras av parametern <code>route</code> eller <code>backroute</code> om du går tillbaka ett steg.<br /> Om parametern <code>delegatee</code> skickas, arbetsobjektet som identifieras av parametern <code>item</code> delegeras till den angivna deltagaren.</td>
+   <td>Slutför arbetsobjektet vars URI skickas som parametern <code>item</code> och flyttar enligt arbetsflödesinstansen till nästa noder, som definieras av parametern <code>route</code> eller <code>backroute</code> om ett steg går tillbaka.<br /> Om parametern <code>delegatee</code> skickas delegeras arbetsposten som identifieras av parametern <code>item</code> till den angivna deltagaren.</td>
   </tr>
  </tbody>
 </table>
@@ -371,7 +371,7 @@ Följande metoder för HTTP-begäran gäller:
 
 | HTTP-begärandemetod | Åtgärder |
 |---|---|
-| `GET` | Hämtar data (definition och metadata) för inkorgen `WorkItem` identifieras av dess ID. |
+| `GET` | Hämtar data (definition och metadata) för inkorgen `WorkItem` som identifieras av dess ID. |
 
 ## Exempel {#examples}
 
@@ -389,7 +389,7 @@ Exempel med vändning:
 curl -u admin:admin http://localhost:4502/etc/workflow/instances.RUNNING.json
 ```
 
-The `uri` som visas i resultaten kan användas som instans `id` i andra kommandon, till exempel:
+`uri` som visas i resultaten kan användas som instans `id` i andra kommandon, till exempel:
 
 ```shell
 [
@@ -399,17 +399,17 @@ The `uri` som visas i resultaten kan användas som instans `id` i andra kommando
 
 >[!NOTE]
 >
->Detta `curl` -kommandot kan användas med alla [arbetsflödesstatus](/help/sites-administering/workflows.md#workflow-status-and-actions) i stället för `RUNNING`.
+>Det här `curl`-kommandot kan användas med alla [arbetsflödesstatus](/help/sites-administering/workflows.md#workflow-status-and-actions) i stället för `RUNNING`.
 
 ### Ändra arbetsflödets titel {#how-to-change-the-workflow-title}
 
-Ändra **Titel för arbetsflöde** visas i **Instanser** fliken i arbetsflödeskonsolen skickar du en `POST` kommando:
+Om du vill ändra **arbetsflödets titel** som visas på fliken **Instanser** i arbetsflödeskonsolen skickar du ett `POST`-kommando:
 
 * till: `http://localhost:4502/etc/workflow/instances/{id}`
 
 * med följande parametrar:
 
-   * `action`: värdet måste vara: `UPDATE`
+   * `action`: dess värde måste vara: `UPDATE`
    * `workflowTitle`: arbetsflödets titel
 
 #### Ändra arbetsflödets titel - REST med vändning {#how-to-change-the-workflow-title-rest-using-curl}
@@ -443,11 +443,11 @@ curl -u admin:admin http://localhost:4502/etc/workflow/models.json
 
 ### Hämta ett WorkflowSession-objekt {#obtaining-a-workflowsession-object}
 
-The `com.adobe.granite.workflow.WorkflowSession` klassen kan anpassas från en `javax.jcr.Session` objekt eller `org.apache.sling.api.resource.ResourceResolver` -objekt.
+Klassen `com.adobe.granite.workflow.WorkflowSession` kan anpassas från ett `javax.jcr.Session`-objekt eller ett `org.apache.sling.api.resource.ResourceResolver`-objekt.
 
 #### Hämta ett WorkflowSession-objekt - Java {#obtaining-a-workflowsession-object-java}
 
-I ett JSP-skript (eller Java-kod för en serletklass) använder du objektet för HTTP-begäran för att få en `SlingHttpServletRequest` -objekt, som ger åtkomst till ett `ResourceResolver` -objekt. Anpassa `ResourceResolver` objekt till `WorkflowSession`.
+I ett JSP-skript (eller Java-kod för en serletklass) använder du objektet för HTTP-begäran för att hämta ett `SlingHttpServletRequest`-objekt, som ger åtkomst till ett `ResourceResolver`-objekt. Anpassa objektet `ResourceResolver` till `WorkflowSession`.
 
 ```java
 <%
@@ -463,7 +463,7 @@ WorkflowSession wfSession = slingReq.getResourceResolver().adaptTo(WorkflowSessi
 
 #### Hämta ett WorkflowSession-objekt - ECMA-skript {#obtaining-a-workflowsession-object-ecma-script}
 
-Använd `sling` variabel för att hämta `SlingHttpServletRequest` objekt som du använder för att hämta `ResourceResolver` -objekt. Anpassa `ResourceResolver` objekt till `WorkflowSession` -objekt.
+Använd variabeln `sling` för att hämta det `SlingHttpServletRequest`-objekt som du använder för att hämta ett `ResourceResolver`-objekt. Anpassa objektet `ResourceResolver` till objektet `WorkflowSession`.
 
 ```
 var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(Packages.com.adobe.granite.workflow.WorkflowSession);
@@ -473,7 +473,7 @@ var wfsession = sling.getRequest().getResource().getResourceResolver().adaptTo(P
 
 I följande exempel visas hur du får åtkomst till arbetsflödesmodeller:
 
-* Koden för Java- och ECMA-skript använder `WorkflowSession.createNewModel` -metod.
+* Koden för Java- och ECMA-skript använder metoden `WorkflowSession.createNewModel`.
 * Kommandot curl kommer åt modellen direkt med dess URL.
 
 De exempel som används:
@@ -483,26 +483,26 @@ De exempel som används:
 
 >[!NOTE]
 >
->Om du tar bort modellen anges `deleted` egenskap för modellens `metaData` underordnad nod till `true`.
+>Om du tar bort modellen anges egenskapen `deleted` för modellens underordnade `metaData`-nod som `true`.
 >
 >Modellnoden tas inte bort.
 
 När du skapar en modell:
 
-* Arbetsflödesmodellredigeraren kräver att modellerna använder en viss nodstruktur nedan `/var/workflow/models`. Modellens överordnade nod måste vara av typen `cq:Page` har `jcr:content` nod med följande egenskapsvärden:
+* Arbetsflödesmodellredigeraren kräver att modeller använder en specifik nodstruktur under `/var/workflow/models`. Modellens överordnade nod måste vara av typen `cq:Page` med en `jcr:content`-nod med följande egenskapsvärden:
 
    * `sling:resourceType`: `cq/workflow/components/pages/model`
    * `cq:template`: `/libs/cq/workflow/templates/model`
 
-  När du skapar en modell måste du först skapa den `cq:Page` nod och använd dess `jcr:content` noden som modellnodens överordnade nod.
+  När du skapar en modell måste du först skapa den här `cq:Page`-noden och använda dess `jcr:content`-nod som överordnad modellnod.
 
-* The `id` argument som vissa metoder kräver för att identifiera modellen är den absoluta sökvägen till modellnoden i databasen:
+* Argumentet `id` som vissa metoder kräver för att identifiera modellen är den absoluta sökvägen för modellnoden i databasen:
 
   `/var/workflow/models/<*model_name>*/jcr:content/model`
 
   >[!NOTE]
   >
-  >Se [Lista alla arbetsflödesmodeller](#how-to-list-all-workflow-models).
+  >Se [Så här listar du alla arbetsflödesmodeller](#how-to-list-all-workflow-models).
 
 #### Skapa, läsa eller ta bort arbetsflödesmodeller - Java {#creating-reading-or-deleting-workflow-models-java}
 
@@ -558,22 +558,22 @@ curl -u admin:admin -X DELETE http://localhost:4502/etc/workflow/models/{id}
 
 ### Filtrera ut systemarbetsflöden när arbetsflödesstatus kontrolleras {#filtering-out-system-workflows-when-checking-workflow-status}
 
-Du kan använda [WorkflowStatus API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) om du vill hämta information om arbetsflödesstatus för en nod.
+Du kan använda [WorkflowStatus API](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/status/WorkflowStatus.html) för att hämta information om arbetsflödesstatus för en nod.
 
 Olika metoder har parametern:
 
 `excludeSystemWorkflows`
 
-Den här parametern kan ställas in på `true` att ange att systemarbetsflöden ska uteslutas från relevanta resultat.
+Den här parametern kan ställas in på `true` för att ange att systemarbetsflöden ska uteslutas från relevanta resultat.
 
-Du [kan uppdatera OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md) **Adobe Granite Workflow PayloadMapCache** som anger arbetsflödet `Models` anses vara systemarbetsflöden. Standardarbetsflödesmodellerna (runtime) är:
+Du [kan uppdatera OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md) **Adobe Granite Workflow PayloadMapCache** som anger att arbetsflödet `Models` ska betraktas som systemarbetsflöden. Standardarbetsflödesmodellerna (runtime) är:
 
 * `/var/workflow/models/scheduled_activation/jcr:content/model`
 * `/var/workflow/models/scheduled_deactivation/jcr:content/model`
 
 ### Gå automatiskt vidare till deltagarsteget efter en timeout {#auto-advance-participant-step-after-a-timeout}
 
-Om du behöver gå vidare automatiskt **Deltagare** steg som inte har slutförts inom en fördefinierad tid kan du:
+Om du behöver gå vidare till ett **Deltagare**-steg automatiskt som inte har slutförts inom en fördefinierad tid kan du:
 
 1. Implementera en OSGI-händelseavlyssnare för att lyssna på när uppgifter skapas och ändras.
 1. Ange en tidsgräns (deadline) och skapa sedan ett schemalagt snedstreck som ska utlösas vid den tidpunkten.
@@ -651,7 +651,7 @@ wfSession.terminateWorkflow(workflow);
 
   >[!NOTE]
   >
-  >Se [Hämta en lista med alla arbetsflöden som körs](#how-to-get-a-list-of-all-running-workflows-with-their-ids) med sina ID:n för att lista instanser med en viss status.
+  >Se [Så här hämtar du en lista över alla pågående arbetsflöden](#how-to-get-a-list-of-all-running-workflows-with-their-ids) med deras ID:n för att visa instanser med en viss status.
 
 * **Pausa ett arbetsflöde**
 
@@ -673,7 +673,7 @@ wfSession.terminateWorkflow(workflow);
   curl -u admin:admin -d "state=RUNNING" http://localhost:4502/etc/workflow/instances/server0/2017-03-08/request_for_activation_1
   ```
 
-* **Avsluta en arbetsflödesinstans**
+* **Avslutar en arbetsflödesinstans**
 
   ```shell
   # terminating a workflow
@@ -780,7 +780,7 @@ wfSession.complete(workItem, routes.get(0));
     }
   ```
 
-* **Delegera arbetsobjekt**
+* **Delegerar arbetsobjekt**
 
   ```xml
   # delegating
@@ -792,9 +792,9 @@ wfSession.complete(workItem, routes.get(0));
 
   >[!NOTE]
   >
-  >The `delegatee` måste vara ett giltigt alternativ för arbetsflödessteget.
+  >`delegatee` måste vara ett giltigt alternativ för arbetsflödessteget.
 
-* **Slutför eller flytta fram arbetsuppgifter till nästa steg**
+* **Slutför eller flyttar arbetsobjekt till nästa steg**
 
   ```xml
   # retrieve the list of routes; the results will be similar to {"results":1,"routes":[{"rid":"233123169","label":"End","label_xss":"End"}]}
@@ -809,7 +809,7 @@ wfSession.complete(workItem, routes.get(0));
 
 ### Lyssna efter arbetsflödeshändelser {#listening-for-workflow-events}
 
-Använd OSGi-händelseramverket för att lyssna efter händelser som [`com.adobe.granite.workflow.event.WorkflowEvent`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/event/WorkflowEvent.html) -klassen definierar. Den här klassen innehåller också flera användbara metoder för att hämta information om föremålet för händelsen. Till exempel `getWorkItem` metoden returnerar `WorkItem` -objekt för det arbetsobjekt som är involverat i händelsen.
+Använd OSGi-händelseramverket för att lyssna efter händelser som definieras av klassen [`com.adobe.granite.workflow.event.WorkflowEvent`](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/event/WorkflowEvent.html). Den här klassen innehåller också flera användbara metoder för att hämta information om föremålet för händelsen. Metoden `getWorkItem` returnerar till exempel objektet `WorkItem` för det arbetsobjekt som är involverat i händelsen.
 
 I följande exempelkod definieras en tjänst som avlyssnar arbetsflödeshändelser och utför åtgärder utifrån händelsetypen.
 

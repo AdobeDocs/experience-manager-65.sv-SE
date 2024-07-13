@@ -27,7 +27,7 @@ I AEM Forms stöds nedladdningsåtgärden för följande resurstyper:
 
 AEM Forms stöder nedladdning av dessa formulärtyper individuellt eller i en mapp som innehåller ett eller flera formulär som stöds.
 
-Förutom dessa resurser kan du hämta `Resource` resurstypen om den finns i en mapp. Den här funktionaliteten gör att du kan hämta den resurs som refereras av ett XFA-formulär tillsammans med formuläret.
+Förutom dessa resurser kan du hämta resurstypen `Resource` om den finns i en mapp. Den här funktionaliteten gör att du kan hämta den resurs som refereras av ett XFA-formulär tillsammans med formuläret.
 
 ## Hämta ett eller flera formulär {#download-one-or-more-forms}
 
@@ -35,19 +35,19 @@ Förutom dessa resurser kan du hämta `Resource` resurstypen om den finns i en m
 
 1. Navigera till platsen för resursen som du vill hämta.
 
-1. Markera resursen. Klicka på **[!UICONTROL Download]** ![aem6forms_download](assets/aem6forms_download.png) i verktygsfältet.
+1. Markera resursen. Klicka på ikonen **[!UICONTROL Download]** ![aem6forms_download](assets/aem6forms_download.png) i verktygsfältet.
 
    >[!NOTE]
    >
    >Du kan bara välja ett formulär för nedladdning. Om du vill hämta flera formulär måste du hämta dem som en mapp.
 
-1. Klicka på **[!UICONTROL Download]**.
+1. Klicka på **[!UICONTROL Download]** i dialogrutan som visas.
 
    AEM Forms genererar en ZIP-fil som innehåller den valda filen eller den valda mappen.
 
    Om du hämtar en mapp hämtas de resurser i mappen som stöds i deras befintliga hierarki.
 
-   ZIP-filen sparas i `Downloads` på datorn.
+   ZIP-filen sparas i mappen `Downloads` på datorn.
 
 ## Relaterade överväganden för överföringsåtgärden {#related-considerations-for-the-upload-operation}
 

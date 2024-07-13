@@ -20,11 +20,11 @@ ht-degree: 0%
 
 Sökfunktionen fungerar med olika andra funktioner, till exempel forum, som gör det möjligt att söka efter innehåll.
 
-När du lägger till möjligheten att söka efter inlägg som lagts in av communitymedlemmar, så kallade användargenererat innehåll (UGC), finns det två komponenter: [Sök](#search) och [Sökresultat](#search-results).
+När du lägger till möjligheten att söka efter inlägg som angetts av communitymedlemmar, som kallas användargenererat innehåll (UGC), finns det två komponenter: [Sök](#search) och [Sökresultat](#search-results).
 
-Sidan som innehåller `Search Results` -komponenten har stöd för både sökning och visning av resultat.
+Sidan som innehåller komponenten `Search Results` har stöd för både sökning och visning av resultat.
 
-Sidan som innehåller `Search` -komponenten ger dig en plats att starta en sökning med resultat som visas på `Search Results` sida.
+På sidan som innehåller komponenten `Search` kan du starta en sökning med resultat som visas på sidan `Search Results`.
 
 Sökfunktionen kan användas med andra funktioner som gör att besökare och medlemmar kan visa innehåll.
 
@@ -32,21 +32,21 @@ Sökfunktionen kan användas med andra funktioner som gör att besökare och med
 
 ### Lägg till sökning på en sida {#add-search-to-a-page}
 
-Lägga till en `Search` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp `Communities / Search` och dra den till rätt plats på en sida. Användning av `Search` kräver en andra sida för `Search Results.`
+Om du vill lägga till en `Search`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / Search` och dra den till rätt plats på en sida. Användning av `Search` kräver en andra sida för `Search Results.`
 
-Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
-När det nödvändiga klientbiblioteket `cq.social.hbs.search`, ingår, så här är `Search` -komponenten visas.
+När det nödvändiga klientbiblioteket, `cq.social.hbs.search`, inkluderas, visas `Search` -komponenten så här.
 
 ![add-search](assets/add-search.png)
 
 ### Konfigurera den tillagda sökning {#configure-the-added-search}
 
-Markera den monterade `Search` -komponenten som ska få åtkomst till och markera `Configure` -ikonen som öppnar redigeringsdialogrutan.
+Markera den monterade `Search`-komponenten som du vill komma åt och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
-![giva](assets/configure-new.png)
+![konfiguration](assets/configure-new.png)
 
-Under **[!UICONTROL Search Settings]** anger du hur sökvägarna ska sökas igenom när en fråga anges av en besökare.
+Under fliken **[!UICONTROL Search Settings]** anger du hur sökvägarna ska genomsökas när en fråga anges av en besökare.
 
 ![sökinställningar](assets/search-settings.png)
 
@@ -56,33 +56,33 @@ Genom att lägga till sökvägar med knappen Lägg till objekt begränsas inneh�
    * `/content/community-components/en/forum/jcr:content/content/forum`
 
 * **[!UICONTROL Result Page]**
-Resultatet visas på en separat sida som du anger med webbläsaren för att välja en sida som innehåller `Search Results` -komponenten.
+Resultatet visas på en separat sida som du anger genom att använda webbläsaren för att välja en sida som innehåller komponenten `Search Results` .
 
 ## Sökresultat {#search-results}
 
 ### Lägg till sökresultat på en sida {#add-search-results-to-a-page}
 
-Lägga till en `Search Results` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp
+Om du vill lägga till en `Search Results`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att hitta
 
 * `Communities / Search Results`
 
 och dra den till rätt plats på en sida. Till skillnad från sökkomponenten behövs ingen andra sida eftersom resultaten visas på samma sida.
 
-Om du använder Sök någon annanstans på webbplatsen är den här sidan med `Search Results` kan konfigureras att vara `Result Page` för alla eller alla förekomster av `Search`.
+Om du använder Sök någon annanstans på webbplatsen kan den här sidan med `Search Results` konfigureras som `Result Page` för någon eller alla instanser av `Search`.
 
-Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
-När det nödvändiga klientbiblioteket `cq.social.hbs.search`, ingår, så här är `Search Result` visas:
+När det nödvändiga klientbiblioteket, `cq.social.hbs.search`, inkluderas, visas `Search Result`-komponenten så här:
 
-![sökresultat](assets/search-result1.png)
+![search-result](assets/search-result1.png)
 
 ### Konfigurera det tillagda sökresultatet {#configure-the-added-search-result}
 
-Markera den monterade `Search Results` -komponenten som ska få åtkomst till och markera `Configure` -ikonen som öppnar redigeringsdialogrutan.
+Markera den monterade `Search Results`-komponenten som du vill komma åt och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
-Under **[!UICONTROL Search Result Settings]** kan du ange vilka sökvägar som ska ingå i sökningen när en fråga anges av en besökare.
+På fliken **[!UICONTROL Search Result Settings]** kan du ange vilka sökvägar som ska ingå i sökningen när en fråga anges av en besökare.
 
 ![search-result-settings](assets/search-result-settings.png)
 
@@ -96,4 +96,4 @@ Under **[!UICONTROL Search Result Settings]** kan du ange vilka sökvägar som s
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på [Sök i Grundläggande](search-implementation.md) för utvecklare.
+Mer information finns på sidan [Sök efter viktiga](search-implementation.md) för utvecklare.

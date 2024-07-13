@@ -22,57 +22,57 @@ ht-degree: 0%
 
 AEM används för att lagra, formatera och återge innehåll som är tillgängligt på dina webbsidor.
 
-* När [skapa sidor](/help/sites-authoring/default-components.md)gör komponenterna att författarna kan redigera och konfigurera innehållet.
+* När du [redigerar sidor](/help/sites-authoring/default-components.md) kan författarna redigera och konfigurera innehållet med komponenterna.
 
-   * När en [Handel](/help/commerce/cif-classic/administering/ecommerce.md) -plats kan komponenterna till exempel samla in och återge information från katalogen.
-Se [Utveckla e-handeln](/help/commerce/cif-classic/developing/ecommerce.md) för mer information.
+   * När du skapar en [Commerce](/help/commerce/cif-classic/administering/ecommerce.md) -plats kan komponenterna t.ex. samla in och återge information från katalogen.
+Mer information finns i [Utveckla e-handel](/help/commerce/cif-classic/developing/ecommerce.md).
 
-   * När en [Communities](/help/communities/author-communities.md) sajten som komponenterna kan tillhandahålla information till och samla in information från era besökare.
-Se [Utveckla webbgrupper](/help/communities/communities.md) för mer information.
+   * När du skapar en [Communities](/help/communities/author-communities.md) -plats kan komponenterna tillhandahålla information till och samla in information från besökarna.
+Mer information finns i [Utveckla användargrupper](/help/communities/communities.md).
 
 * I publiceringsinstansen återger komponenterna ditt innehåll och presenterar det som du vill för webbplatsens besökare.
 
 >[!NOTE]
 >
->Den här sidan är en fortsättning på dokumentet [AEM - Grunderna](/help/sites-developing/components-basics.md).
+>Den här sidan är en fortsättning av dokumentet [AEM Components - Basics](/help/sites-developing/components-basics.md).
 
 >[!CAUTION]
 >
->Komponenter nedan `/libs/cq/gui/components/authoring/dialog` ska bara användas i redigeraren (komponentdialogrutor i redigeringsverktyget). Om de används någon annanstans (t.ex. i en guidedialogruta) kanske de inte fungerar som förväntat.
+>Komponenter under `/libs/cq/gui/components/authoring/dialog` ska bara användas i redigeraren (komponentdialogrutor i redigering). Om de används någon annanstans (t.ex. i en guidedialogruta) kanske de inte fungerar som förväntat.
 
 ## Kodexempel {#code-samples}
 
-Den här sidan innehåller referensdokumentation (eller länkar till referensdokumentation) som krävs för att utveckla nya komponenter för AEM. Se [Utveckla AEM - kodexempel](/help/sites-developing/developing-components-samples.md) för några praktiska exempel.
+Den här sidan innehåller referensdokumentation (eller länkar till referensdokumentation) som krävs för att utveckla nya komponenter för AEM. Se [Utveckla AEM - Kodexempel](/help/sites-developing/developing-components-samples.md) för några praktiska exempel.
 
 ## Struktur {#structure}
 
-En komponents grundläggande struktur beskrivs på sidan [AEM - Grunderna](/help/sites-developing/components-basics.md#structure). Dokumentet omfattar både pekaktiverade och klassiska användargränssnitt. Även om du inte behöver använda de klassiska inställningarna i den nya komponenten kan det vara bra att känna till dem när du ärver från befintliga komponenter.
+En komponents grundläggande struktur beskrivs på sidan [AEM Komponenter - Grunderna](/help/sites-developing/components-basics.md#structure). Dokumentet omfattar både pekaktiverade och klassiska användargränssnitt. Även om du inte behöver använda de klassiska inställningarna i den nya komponenten kan det vara bra att känna till dem när du ärver från befintliga komponenter.
 
 ## Utöka befintliga komponenter och dialogrutor {#extending-existing-components-and-dialogs}
 
-Beroende på vilken komponent du vill implementera kan det vara möjligt att utöka eller anpassa en befintlig instans i stället för att definiera och utveckla hela [struktur](#structure) från scratch.
+Beroende på vilken komponent du vill implementera kan det vara möjligt att utöka eller anpassa en befintlig instans i stället för att definiera och utveckla hela [strukturen](#structure) från början.
 
 När du utökar eller anpassar en befintlig komponent eller dialogruta kan du kopiera eller replikera antingen hela strukturen eller den struktur som krävs för dialogrutan innan du gör ändringarna.
 
 ### Utöka en befintlig komponent {#extending-an-existing-component}
 
-Du kan utöka en befintlig komponent med [Hierarki för resurstyp](/help/sites-developing/components-basics.md#component-hierarchy-and-inheritance) och tillhörande arvsmekanismer.
+Du kan utöka en befintlig komponent med [Resurstypshierarki](/help/sites-developing/components-basics.md#component-hierarchy-and-inheritance) och de relaterade arvsmekanismerna.
 
 >[!NOTE]
 >
->Komponenter kan också definieras om med en övertäckning som baseras på sökvägslogiken. I sådana fall gäller dock att [Samla resurser](/help/sites-developing/sling-resource-merger.md) aktiveras inte och `/apps` måste definiera hela övertäckningen.
+>Komponenter kan också definieras om med en övertäckning som baseras på sökvägslogiken. I så fall aktiveras emellertid inte [Delningsresurssammanfogningen](/help/sites-developing/sling-resource-merger.md) och `/apps` måste definiera hela övertäckningen.
 
 >[!NOTE]
 >
->The [komponent för innehållsfragment](/help/sites-developing/customizing-content-fragments.md) kan också anpassas och utökas, men hela strukturen och relationerna med Assets måste beaktas.
+>Innehållsfragmentkomponenten [](/help/sites-developing/customizing-content-fragments.md) kan också anpassas och utökas, men den fullständiga strukturen och relationerna med Assets måste beaktas.
 
 ### Anpassa en befintlig komponentdialogruta {#customizing-a-existing-component-dialog}
 
-Du kan även åsidosätta en *komponentdialogruta* med [Samla resurser](/help/sites-developing/sling-resource-merger.md) och definiera egenskapen `sling:resourceSuperType`.
+Det går också att åsidosätta en *komponentdialogruta* med [Dela resurssammanfogning](/help/sites-developing/sling-resource-merger.md) och definiera egenskapen `sling:resourceSuperType`.
 
-Det innebär att du bara behöver definiera om skillnaderna, i stället för att definiera om hela dialogrutan (med `sling:resourceSuperType`). Den här metoden rekommenderas nu för att utöka en komponentdialogruta
+Det innebär att du bara behöver definiera om de nödvändiga skillnaderna, i stället för att definiera om hela dialogrutan (med `sling:resourceSuperType`). Den här metoden rekommenderas nu för att utöka en komponentdialogruta
 
-Se [Samla resurser](/help/sites-developing/sling-resource-merger.md) för mer information.
+Mer information finns i [Samla resurser](/help/sites-developing/sling-resource-merger.md).
 
 ## Definiera markeringen {#defining-the-markup}
 
@@ -80,7 +80,7 @@ Komponenten återges med [HTML](https://www.w3schools.com/htmL/html_intro.asp). 
 
 ### Använda mallspråket HTML {#using-the-html-template-language}
 
-The [HTML (HTML Templating Language)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), som introducerades med AEM 6.0, ersätter JSP (JavaServer Pages) som det rekommenderade serversidesmallsystemet för HTML. För webbutvecklare som behöver bygga robusta företagswebbplatser kan HTML bidra till ökad säkerhet och effektivare utveckling.
+[HTML-mallspråket (HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), som introducerades med AEM 6.0, ersätter JSP (JavaServer Pages) som det rekommenderade serversidesmallsystemet för HTML. För webbutvecklare som behöver bygga robusta företagswebbplatser kan HTML bidra till ökad säkerhet och effektivare utveckling.
 
 >[!NOTE]
 >
@@ -94,45 +94,45 @@ Mekanismen för att skilja logik från utseende gör det lättare att klargöra 
 
 ### Använda Java {#using-java}
 
-[Använd-API:t för HTL Java gör att en HTML-fil kan få åtkomst till hjälpmetoder i en anpassad Java-klass](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html). Detta gör att du kan använda Java-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
+[Använd-API:t för HTL Java möjliggör för en HTML-fil att komma åt hjälpmetoder i en anpassad Java-klass](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html). Detta gör att du kan använda Java-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
 
 ### Använda JavaScript {#using-javascript}
 
-[Använd-API:t för HTML JavaScript gör att en HTML-fil kan komma åt hjälpkod som skrivits i JavaScript](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html). Detta gör att du kan använda JavaScript-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
+[Använd-API:t för HTML JavaScript gör att en HTML-fil kan komma åt hjälpkod som skrivits i JavaScript](https://experienceleague.adobe.com/docs/experience-manager-htl/content/java-use-api.html). På så sätt kan du använda JavaScript-kod för att implementera logiken för att välja och konfigurera komponentinnehållet.
 
 ### Använda HTML-bibliotek på klientsidan {#using-client-side-html-libraries}
 
 Moderna webbplatser är starkt beroende av bearbetning på klientsidan som styrs av komplex JavaScript- och CSS-kod. Det kan vara komplicerat att organisera och optimera serveringen av den här koden.
 
-AEM tillhandahåller **Biblioteksmappar på klientsidan**, som gör att du kan lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten. Klientsidans bibliotekssystem tar sedan hand om att skapa rätt länkar på den slutliga webbsidan för att läsa in rätt kod.
+AEM tillhandahåller **Biblioteksmappar på klientsidan** som du kan använda för att lagra din klientkod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten. Klientsidans bibliotekssystem tar sedan hand om att skapa rätt länkar på den slutliga webbsidan för att läsa in rätt kod.
 
-Läs [Använda HTML-bibliotek på klientsidan](/help/sites-developing/clientlibs.md) för mer information.
+Läs [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md) om du vill ha mer information.
 
 ## Konfigurera redigeringsbeteendet {#configuring-the-edit-behavior}
 
 Du kan konfigurera redigeringsbeteendet för en komponent, inklusive attribut som åtgärder som är tillgängliga för komponenten, egenskaper för redigeraren och avlyssnare som är relaterade till händelser för komponenten. Konfigurationen är gemensam för det beröringsaktiverade och klassiska användargränssnittet, men med vissa specifika skillnader.
 
-The [redigeringsbeteendet för en komponent är konfigurerat](/help/sites-developing/components-basics.md#edit-behavior) genom att lägga till en `cq:editConfig` nod av typen `cq:EditConfig` nedanför komponentnoden (av typen `cq:Component`) och genom att lägga till specifika egenskaper och underordnade noder.
+[redigeringsbeteendet för en komponent konfigureras](/help/sites-developing/components-basics.md#edit-behavior) genom att lägga till en `cq:editConfig`-nod av typen `cq:EditConfig` under komponentnoden (av typen `cq:Component`) och genom att lägga till specifika egenskaper och underordnade noder.
 
 ## Konfigurera förhandsvisningsbeteendet {#configuring-the-preview-behavior}
 
-The [WCM Mode](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) cookie är inställd vid växling till **Förhandsgranska** även när sidan inte uppdateras.
+Cookien [WCM-läge](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) anges när du växlar till läget **Förhandsgranska** även när sidan inte uppdateras.
 
 Komponenter med en återgivning som är känslig för WCM-läget måste definieras så att de uppdateras specifikt och sedan förlitar sig på värdet för cookien.
 
 >[!NOTE]
 >
->I det beröringskänsliga användargränssnittet är endast värdena `EDIT` och `PREVIEW` används för [WCM Mode](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html) cookie.
+>I det beröringsaktiverade gränssnittet används endast värdena `EDIT` och `PREVIEW` för cookien [WCM-läge](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/api/WCMMode.html).
 
 ## Skapa och konfigurera en dialogruta {#creating-and-configuring-a-dialog}
 
-I dialogrutor kan författaren interagera med komponenten. Med en dialogruta kan författare och/eller administratörer redigera innehåll, konfigurera komponenten eller definiera designparametrar (med en [Designdialogruta](#creating-and-configuring-a-design-dialog))
+I dialogrutor kan författaren interagera med komponenten. Med hjälp av en dialogruta kan författare och/eller administratörer redigera innehåll, konfigurera komponenten eller definiera designparametrar (med hjälp av en [designdialogruta](#creating-and-configuring-a-design-dialog))
 
 ### Gränssnittet för korall och GRENITE {#coral-ui-and-granite-ui}
 
-[Coral UI](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) och [Granite-gränssnitt](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) definiera det moderna utseendet och känslan hos AEM.
+[Korallgränssnitt](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) och [Beviljite-gränssnitt](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) definierar det moderna utseendet och AEM.
 
-[Gränssnittet i Granite innehåller ett stort urval av de grundläggande komponenterna (widgetar)](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) behövs för att skapa en dialogruta i redigeringsmiljön. Vid behov kan du utöka markeringen och [skapa en egen widget](#creatinganewwidget).
+[Ett visst användargränssnitt innehåller ett stort antal grundläggande komponenter (widgetar)](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) som behövs för att skapa en dialogruta i redigeringsmiljön. Vid behov kan du utöka den här markeringen och [skapa en egen widget](#creatinganewwidget).
 
 Mer information finns i:
 
@@ -140,7 +140,7 @@ Mer information finns i:
 
    * Ett enhetligt gränssnitt för alla molnlösningar
    * [Koncepten i det AEM användargränssnittet med pekskärmsfunktioner - Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui)
-   * [Användargränssnittshandbok för Coral](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
+   * [Coral UI Guide](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html)
 
 * Granite-gränssnitt
 
@@ -150,21 +150,21 @@ Mer information finns i:
 
 >[!NOTE]
 >
->På grund av karaktären hos GRE-komponenterna (och skillnaderna mellan ExtJS-widgetarna) finns det vissa skillnader mellan hur komponenterna interagerar med det beröringsaktiverade gränssnittet och [klassiskt användargränssnitt](/help/sites-developing/developing-components-classic.md).
+>På grund av typen av GRE-komponenter (och skillnader i ExtJS-widgetar) finns det vissa skillnader mellan hur komponenterna interagerar med det beröringsaktiverade gränssnittet och det [klassiska gränssnittet](/help/sites-developing/developing-components-classic.md).
 
 ### Skapa en ny dialogruta {#creating-a-new-dialog}
 
 Dialogrutor för användargränssnittet med pekskärm:
 
-* är namngivna `cq:dialog`.
-* definieras som en `nt:unstructured` noden med `sling:resourceType` egenskapsuppsättning.
+* har namnet `cq:dialog`.
+* definieras som en `nt:unstructured`-nod med egenskapen `sling:resourceType` angiven.
 
-* finns under deras `cq:Component` och bredvid deras komponentdefinition.
-* återges på serversidan (som Sling-komponenter), baserat på deras innehållsstruktur och `sling:resourceType` -egenskap.
+* finns under deras `cq:Component`-nod och bredvid deras komponentdefinition.
+* återges på serversidan (som Sling-komponenter), baserat på deras innehållsstruktur och egenskapen `sling:resourceType`.
 * använda GRI-ramverket för Granite.
 * innehåller en nodstruktur som beskriver fälten i dialogrutan.
 
-   * de här noderna är `nt:unstructured` med de `sling:resourceType` -egenskap.
+   * dessa noder är `nt:unstructured` med den obligatoriska egenskapen `sling:resourceType`.
 
 En exempelnodstruktur kan vara:
 
@@ -197,8 +197,8 @@ Se till exempel:
 >
 >Se:
 >
->* AEM Gems-sessionen den [Anpassa dialogrutefält](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
->* den exempelkod som omfattas av [Kodexempel - Anpassa dialogrutefält](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields).
+>* AEM Gems-sessionen på [Anpassa dialogrutefält](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
+>* den relaterade exempelkoden som beskrivs i [Kodexempel - Anpassa dialogrutefält ](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields).
 >
 
 #### Skapa ett nytt fält {#creating-a-new-field}
@@ -209,25 +209,25 @@ Om du vill skapa en widget som ska användas i en komponentdialogruta för det b
 
 >[!NOTE]
 >
->Mer information om GREND finns i [Granite UI-dokumentation](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
+>Mer information om GRE-gränssnittet finns i [dokumentationen för GRÄNSSNITTET ](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html).
 
-Om du ser dialogrutan som en enkel behållare för ett formulärelement kan du även se det primära innehållet i dialogrutan som formulärfält. När du skapar ett formulärfält måste du skapa en resurstyp. Det motsvarar att skapa en komponent. För att du ska få hjälp med den uppgiften erbjuder Granite UI en generisk fältkomponent att ärva från (med `sling:resourceSuperType`):
+Om du ser dialogrutan som en enkel behållare för ett formulärelement kan du även se det primära innehållet i dialogrutan som formulärfält. När du skapar ett formulärfält måste du skapa en resurstyp. Det motsvarar att skapa en komponent. För att du ska få hjälp med den uppgiften erbjuder GRA UI en generisk fältkomponent att ärva från (med `sling:resourceSuperType`):
 
 `/libs/granite/ui/components/coral/foundation/form/field`
 
-Mer specifikt ger GRE UI ett antal fältkomponenter som är lämpliga att använda i dialogrutor (eller mer allmänt i [formulär](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html)).
+Mer specifikt Granite-gränssnittet innehåller ett antal fältkomponenter som är lämpliga att använda i dialogrutor (eller, mer allmänt, i [formulär](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/form/index.html)).
 
 >[!NOTE]
 >
->Detta skiljer sig från det klassiska användargränssnittet, där widgetar representeras av `cq:Widgets` noder, var och en med en viss `xtype` för att fastställa relationen med deras motsvarande ExtJS-widget. Från en implementeringssynvinkel renderades dessa widgetar på klientsidan av ExtJS-ramverket.
+>Detta skiljer sig från det klassiska användargränssnittet, där widgetar representeras av `cq:Widgets` noder, där var och en har en viss `xtype` för att etablera relationen med sin motsvarande ExtJS-widget. Från en implementeringssynvinkel renderades dessa widgetar på klientsidan av ExtJS-ramverket.
 
-När du har skapat resurstypen kan du skapa en instans av fältet genom att lägga till en ny nod i dialogrutan med egenskapen `sling:resourceType` refererar till den resurstyp som du just har introducerat.
+När du har skapat resurstypen kan du instansiera fältet genom att lägga till en ny nod i dialogrutan, där egenskapen `sling:resourceType` refererar till den resurstyp som du just har introducerat.
 
 #### Skapa ett klientbibliotek för stil och beteende {#creating-a-client-library-for-style-and-behavior}
 
-Om du vill definiera format och beteende för komponenten kan du skapa en dedikerad [klientbibliotek](/help/sites-developing/clientlibs.md) som definierar din egen CSS/LESS och JS.
+Om du vill definiera format och beteende för komponenten kan du skapa ett dedikerat [klientbibliotek](/help/sites-developing/clientlibs.md) som definierar din anpassade CSS/LESS och JS.
 
-Om du vill att klientbiblioteket ska läsas in enbart för komponentdialogrutan (d.v.s. den inte ska läsas in för en annan komponent) måste du ange egenskapen `extraClientlibs` i dialogrutan till kategorinamnet för det klientbibliotek du har skapat. Detta rekommenderas om klientbiblioteket är mycket stort och/eller om fältet är specifikt för den dialogrutan och inte behövs i andra dialogrutor.
+Om du vill att klientbiblioteket endast ska läsas in för komponentdialogrutan (det vill säga inte läsas in för en annan komponent) måste du ange egenskapen `extraClientlibs` i dialogrutan till kategorinamnet för det klientbibliotek som du har skapat. Detta rekommenderas om klientbiblioteket är mycket stort och/eller om fältet är specifikt för den dialogrutan och inte behövs i andra dialogrutor.
 
 Om du vill att klientbiblioteket ska läsas in för alla dialogrutor anger du kategoriegenskapen för klientbiblioteket till `cq.authoring.dialog`. Det här är kategorinamnet för klientbiblioteket som inkluderas som standard när alla dialogrutor återges. Du vill göra det om klientbiblioteket är litet och/eller fältet är generiskt och kan återanvändas i andra dialogrutor.
 
@@ -235,7 +235,7 @@ Se följande exempel:
 
 * `cqgems/customizingfield/components/colorpicker/clientlibs`
 
-   * tillhandahålls av [Kodexempel](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
+   * från [kodexemplet](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
 
 #### Utöka (ärva från) ett fält {#extending-inheriting-from-a-field}
 
@@ -258,22 +258,22 @@ Du kan också använda återgivningsvillkor ( `rendercondition`) för att styra 
 
 ### Hantera fälthändelser {#handling-field-events}
 
-Metoden för att hantera händelser i dialogrutefält är nu klar med [avlyssnare i ett anpassat klientbibliotek](#listeners-in-a-custom-client-library). Detta är en förändring från den äldre metoden att [avlyssnare i innehållsstrukturen](#listenersinthecontentstructureclassicui).
+Metoden för att hantera händelser i dialogfält har nu utförts med [avlyssnare i ett anpassat klientbibliotek](#listeners-in-a-custom-client-library). Detta är en ändring från den äldre metoden att ha [avlyssnare i innehållsstrukturen](#listenersinthecontentstructureclassicui).
 
 #### Lyssnare i ett anpassat klientbibliotek {#listeners-in-a-custom-client-library}
 
 Om du vill mata in logik i fältet bör du:
 
-1. Har fältet markerat med en viss CSS-klass ( *krok*).
+1. Låt fältet vara markerat med en viss CSS-klass (*kroken*).
 1. I klientbiblioteket definierar du en JS-avlyssnare som är kopplad till det CSS-klassnamnet (detta garanterar att din anpassade logik endast omfattar fältet och inte påverkar andra fält av samma typ).
 
-För att uppnå detta måste du känna till det underliggande widgetbiblioteket som du vill interagera med. Se [Dokumentation för Coral UI](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) identifiera vilken händelse du vill reagera på. Detta liknar den process du tidigare har utfört med ExtJS: hitta dokumentationssidan för en viss widget och kontrollera informationen om dess händelse-API.
+För att uppnå detta måste du känna till det underliggande widgetbiblioteket som du vill interagera med. Se [dokumentationen för det skadade användargränssnittet](https://developer.adobe.com/experience-manager/reference-materials/6-5/coral-ui/coralui3/index.html) för att identifiera vilken händelse du vill reagera på. Detta liknar den process du tidigare har utfört med ExtJS: hitta dokumentationssidan för en viss widget och kontrollera informationen om dess händelse-API.
 
 Se följande exempel:
 
 * `cqgems/customizingfield/components/clientlibs/customizingfield`
 
-   * tillhandahålls av [Kodexempel](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
+   * från [kodexemplet](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
 
 #### Lyssnare i innehållsstrukturen {#listeners-in-the-content-structure}
 
@@ -283,7 +283,7 @@ Innehållsstrukturen beskriver den semantiska strukturen. Den ska (måste) inte 
 
 #### Dialogrutans tillgänglighet identifieras {#dialog-ready}
 
-Om du har ett anpassat JavaScript som bara behöver köras när dialogrutan är tillgänglig och klar bör du avlyssna `dialog-ready` -händelse.
+Om du har en anpassad JavaScript som endast behöver köras när dialogrutan är tillgänglig och klar bör du lyssna efter händelsen `dialog-ready`.
 
 Den här händelsen utlöses när dialogrutan läses in (eller läses in igen) och är klar att användas, vilket innebär när det finns en ändring (skapa/uppdatera) i DOM för dialogrutan.
 
@@ -306,21 +306,21 @@ Se följande exempel:
 
 #### Fältvalidering (GRÄNSSNITT) {#field-validation-granite-ui}
 
-Fältvalidering i GRA-gränssnitt och GRA-komponenter (motsvarande widgetar) görs med `foundation-validation` API. [Se `foundation-valdiation` Behåll dokumentation för mer information.](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
+Fältvalidering i GRA-gränssnittet och GRA-gränssnittskomponenter (som motsvarar widgetar) görs med API:t `foundation-validation`. [Mer information finns i dokumentationen för `foundation-valdiation` Granite.](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/clientlibs/foundation/js/validation/index.html)
 
 Se till exempel:
 
 * `cqgems/customizingfield/components/clientlibs/customizingfield/js/validations.js`
 
-   * tillhandahålls av [Kodexempel](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
+   * från [kodexemplet](/help/sites-developing/developing-components-samples.md#code-sample-how-to-customize-dialog-fields)
 
 * `/libs/cq/gui/components/authoring/dialog/clientlibs/dialog/js/validations.js`
 
 ## Skapa och konfigurera en designdialogruta {#creating-and-configuring-a-design-dialog}
 
-Dialogrutan Design visas när en komponent har designdetaljer som kan redigeras i [Designläge](/help/sites-authoring/default-components-designmode.md).
+Dialogrutan Design visas när en komponent har designdetaljer som kan redigeras i [designläge](/help/sites-authoring/default-components-designmode.md).
 
-Definitionen liknar den för en [dialogruta som används för att redigera innehåll](#creating-a-new-dialog), med skillnaden att det är definierat som en nod:
+Definitionen liknar den för en [dialogruta som används för att redigera innehåll](#creating-a-new-dialog), men skillnaden är att den är definierad som en nod:
 
 * Nodnamn: `cq:design_dialog`
 * Typ: `nt:unstructured`
@@ -331,19 +331,19 @@ Med en infogningsredigerare kan användaren redigera innehåll direkt i styckefl
 
 En infogningsredigerare är inte nödvändig/meningsfull för varje komponenttyp.
 
-Se [Utöka sidredigering - Lägg till ny infogningsredigerare](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor) för mer information.
+Mer information finns i [Utöka sidredigering - Lägg till ny infogningsredigerare](/help/sites-developing/customizing-page-authoring-touch.md#add-new-in-place-editor).
 
 ## Anpassa komponentverktygsfältet {#customizing-the-component-toolbar}
 
-The [Komponentverktygsfältet](/help/sites-developing/touch-ui-structure.md#component-toolbar) ger användaren tillgång till en rad åtgärder för komponenten, till exempel redigera, konfigurera, kopiera och ta bort.
+Verktygsfältet [Komponent](/help/sites-developing/touch-ui-structure.md#component-toolbar) ger användaren tillgång till en rad åtgärder för komponenten, som att redigera, konfigurera, kopiera och ta bort.
 
-Se [Utöka sidredigering - Lägg till ny åtgärd i ett komponentverktygsfält](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar) för mer information.
+Mer information finns i [Utöka sidredigering - Lägg till ny åtgärd i ett komponentverktygsfält](/help/sites-developing/customizing-page-authoring-touch.md#add-new-action-to-a-component-toolbar).
 
 ## Konfigurera en komponent för referenslinjen (lånad/lånad) {#configuring-a-component-for-the-references-rail-borrowed-lent}
 
-Om den nya komponenten refererar till innehåll från andra sidor kan du överväga om du vill att den ska påverka **Lånat innehåll** och **Utlånat innehåll** avsnitt i [**Referenser**](/help/sites-authoring/basic-handling.md#references) Rail.
+Om den nya komponenten refererar till innehåll från andra sidor kan du överväga om du vill att den ska påverka avsnitten **Lånat innehåll** och **Lånat innehåll** i [**Referenser**](/help/sites-authoring/basic-handling.md#references) -svällningen.
 
-AEM markerar bara komponenten Reference. Om du vill lägga till din komponent måste du konfigurera OSGi-paketet **Referenskonfiguration för WCM-redigeringsinnehåll**.
+AEM markerar bara komponenten Reference. Om du vill lägga till din komponent måste du konfigurera OSGi-paketet **WCM Authoring Content Reference**.
 
 Skapa en post i definitionen och ange komponenten tillsammans med den egenskap som ska kontrolleras. Till exempel:
 
@@ -351,7 +351,7 @@ Skapa en post i definitionen och ange komponenten tillsammans med den egenskap s
 
 >[!NOTE]
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) om du vill ha mer information och rekommenderade rutiner.
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md) för mer information och rekommenderade rutiner.
 
 ## Aktivera och lägga till komponenten i styckesystemet {#enabling-and-adding-your-component-to-the-paragraph-system}
 
@@ -359,8 +359,8 @@ När komponenten har utvecklats måste den aktiveras för användning i ett läm
 
 Detta kan göras antingen genom att:
 
-* använda [Designläge](/help/sites-authoring/default-components-designmode.md) när du redigerar en viss sida.
-* [definiera `components` egenskap i en malls styckesystem](/help/sites-developing/components-basics.md#adding-your-component-to-the-paragraph-system).
+* använder [designläget](/help/sites-authoring/default-components-designmode.md) när du redigerar en viss sida.
+* [definierar egenskapen `components` i styckesystemet för en mall](/help/sites-developing/components-basics.md#adding-your-component-to-the-paragraph-system).
 
 ## Konfigurera ett styckesystem så att en komponentinstans skapas när en resurs dras {#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance}
 
@@ -397,7 +397,7 @@ Detta beteende och den nödvändiga relationen mellan resurser och komponenter k
    * `assetMimetype`:
 
       * Typ: `String`
-      * Värde: den relaterade tillgångens mime-typ, till exempel `image/*`
+      * Värde: MIME-typen för den relaterade tillgången, till exempel `image/*`
 
    * `droptarget`:
 
@@ -429,16 +429,16 @@ Koden för den här sidan finns på GitHub
 
 >[!NOTE]
 >
->Det automatiska skapandet av komponentinstanser kan nu enkelt konfigureras i användargränssnittet när du använder [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och redigerbara mallar. Se [Skapa sidmallar](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) om du vill ha mer information om hur du definierar vilka komponenter som automatiskt associeras med de angivna medietyperna.
+>Det automatiska skapandet av komponentinstanser kan nu enkelt konfigureras i användargränssnittet när [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) och Editable Templates används. Mer information om hur du definierar vilka komponenter som automatiskt associeras med de angivna medietyperna finns i [Skapa sidmallar](/help/sites-authoring/templates.md#editing-a-template-structure-template-author).
 
 ## Använda AEM Brackets Extension {#using-the-aem-brackets-extension}
 
-The [AEM Brackets Extension](/help/sites-developing/aem-brackets.md) ger ett smidigt arbetsflöde för att redigera AEM komponenter och klientbibliotek. Den baseras på [Parenteser](https://brackets.io/) kodredigerare.
+Tillägget [AEM Brackets](/help/sites-developing/aem-brackets.md) ger ett smidigt arbetsflöde för att redigera AEM komponenter och klientbibliotek. Den baseras på kodredigeraren [Brackets](https://brackets.io/).
 
 Tillägg:
 
 * Förenklar synkronisering (ingen Maven eller filvalv krävs) för att öka utvecklarens effektivitet och även hjälpa gränssnittsutvecklare med begränsade AEM att delta i projekt.
-* Tillhandahåller vissa [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) stöd, det mallspråk som är utformat för att förenkla komponentutvecklingen och öka säkerheten.
+* Tillhandahåller lite [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)-stöd, mallspråket som är utformat för att förenkla komponentutveckling och öka säkerheten.
 
 >[!NOTE]
 >
@@ -450,26 +450,26 @@ När du migrerar en komponent som har utformats för användning med det klassis
 
 * HTL
 
-   * Användning av [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) är inte obligatoriskt, men om komponenten behöver uppdateras är det ett bra tillfälle att överväga [migrera från JSP till HTML](/help/sites-developing/components-basics.md#htl-vs-jsp).
+   * Det är inte obligatoriskt att använda [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), men om komponenten behöver uppdateras är det lämpligt att överväga att [migrera från JSP till HTML](/help/sites-developing/components-basics.md#htl-vs-jsp).
 
 * Komponenter
 
-   * Migrera [`cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code) kod som använder klassiska gränssnittsspecifika funktioner
+   * Migrera [`cq:listener`](/help/sites-developing/developing-components.md#migrating-cq-listener-code)-kod som använder klassiska gränssnittsspecifika funktioner
    * RTE-plugin, mer information finns i [Konfigurera RTF-redigeraren](/help/sites-administering/rich-text-editor.md).
-   * [Migrera `cq:listener` kod](#migrating-cq-listener-code) som använder funktioner som är specifika för det klassiska användargränssnittet
+   * [Migrera `cq:listener` kod ](#migrating-cq-listener-code) som använder funktioner som är specifika för det klassiska användargränssnittet
 
 * Dialogrutor
 
    * Skapa en dialogruta för användning i det beröringsaktiverade användargränssnittet. Av kompatibilitetsskäl kan emellertid det beröringsaktiverade användargränssnittet använda definitionen för en klassisk användargränssnittsdialogruta när ingen dialogruta har definierats för det beröringsaktiverade användargränssnittet.
-   * The [Verktyg för AEM](/help/sites-developing/modernization-tools.md) som hjälper dig att utöka befintliga komponenter.
-   * [Mappa ExtJS till GRE UI-komponenter](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components) ger dig en praktisk översikt över ExtJS-xtyper och nodtyper med motsvarande Granite-resurstyper.
-   * Anpassa fält, mer information finns i AEM Gems-sessionen på [Anpassa dialogrutefält](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
-   * Migrera från vyper till [Verifiering av GRI](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
-   * Mer information finns i Använda JS-avlyssnare [Hantera fälthändelser](#handling-field-events) och AEM Gems-sessionen [Anpassa dialogrutefält](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
+   * [AEM Moderniseringsverktygen](/help/sites-developing/modernization-tools.md) finns för att du ska kunna utöka befintliga komponenter.
+   * [Genom att mappa ExtJS till Granite-gränssnittskomponenter](/help/sites-developing/touch-ui-concepts.md#extjs-and-corresponding-granite-ui-components) får du en praktisk översikt över ExtJS-xtyper och nodtyper med motsvarande Granite-gränssnittsresurstyper.
+   * Anpassa fält, mer information finns i AEM Gems-sessionen om [Anpassa dialogrutefält](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
+   * Migrera från typer till [Bevilja gränssnittsvalidering](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/components/foundation/clientlibs/foundation/js/validation/index.html)
+   * Mer information om hur du använder JS-avlyssnare finns i [Hantera fälthändelser](#handling-field-events) och AEM Gems-sessionen om [Anpassa dialogrutefält](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
 
 ### Migrera cq:avlyssnarkod {#migrating-cq-listener-code}
 
-Om du migrerar ett projekt som har utformats för det klassiska användargränssnittet ska du `cq:listener` kod (och komponentrelaterade klienter) kan använda funktioner som är specifika för det klassiska användargränssnittet (till exempel `CQ.wcm.*`). För migreringen måste du uppdatera sådan kod med motsvarande objekt/funktioner i det beröringsaktiverade användargränssnittet.
+Om du migrerar ett projekt som är utformat för det klassiska användargränssnittet kan `cq:listener`-koden (och komponentrelaterade klienter) använda funktioner som är specifika för det klassiska användargränssnittet (till exempel `CQ.wcm.*`). För migreringen måste du uppdatera sådan kod med motsvarande objekt/funktioner i det beröringsaktiverade användargränssnittet.
 
 Om ditt projekt ska migreras helt till det beröringskänsliga användargränssnittet måste du ersätta den koden för att använda de objekt och funktioner som är relevanta för det beröringskänsliga användargränssnittet.
 
@@ -497,8 +497,8 @@ Som utvecklare vill du ha enkel åtkomst till komponentdokumentation så att du 
 
 Därför är det enkelt att göra befintliga dokumentationsmarkeringar tillgängliga i själva komponenten.
 
-Placera en `README.md` i komponentstrukturen. Den här markeringen visas i dialogrutan [komponentkonsol](/help/sites-authoring/default-components-console.md).
+Placera en `README.md`-fil i komponentstrukturen. Den här markeringen visas i [komponentkonsolen](/help/sites-authoring/default-components-console.md).
 
 ![chlimage_1-7](assets/chlimage_1-7.png)
 
-Den kod som stöds är densamma som den som [innehållsfragment](/help/assets/content-fragments/content-fragments-markdown.md).
+Den kod som stöds är densamma som för [innehållsfragment](/help/assets/content-fragments/content-fragments-markdown.md).

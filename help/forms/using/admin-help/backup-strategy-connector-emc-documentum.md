@@ -1,6 +1,6 @@
 ---
 title: Säkerhetskopieringsstrategi för Connector for EMC Documentum&reg; användare
-description: Kontrollera hur du skapar en säkerhetskopieringsstrategi för Connector för EMC Documentum&reg;-användare.
+description: Kontrollera hur du skapar en säkerhetskopieringsstrategi för Connector for EMC Documentum&reg;-användare.
 contentOwner: admin
 content-type: reference
 geptopics: SG_AEMFORMS/categories/aem_forms_backup_and_recovery
@@ -23,7 +23,7 @@ Om du har installerat Connector for EMC Documentum®, förutom instruktionerna i
 Säkerhetskopiera AEM genom att använda ECM-databasen och utföra följande uppgifter:
 
 * Säkerhetskopiera AEM genom att följa instruktionerna i det här dokumentet.
-* Säkerhetskopiera ECM Documentum®-systemet genom att följa instruktionerna i [Säkerhetskopiera EMC Documentum® Content Server](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md#back-up-the-emc-documentum-content-server).
+* Säkerhetskopiera ditt ECM Documentum®-system genom att följa instruktionerna i [Säkerhetskopiera EMC Documentum® Content Server](/help/forms/using/admin-help/backing-recovering-emc-documentum-repository.md#back-up-the-emc-documentum-content-server).
 
 Återställ AEM genom att använda ECM-databasen och utföra följande uppgifter:
 

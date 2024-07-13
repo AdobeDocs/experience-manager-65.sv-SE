@@ -41,7 +41,7 @@ Följande resurser hjälper dig att komma igång med AEM Mobile med Adobe PhoneG
 
 >[!NOTE]
 >
->Information om hur du kör AEM mobilprogram på alla iOS- och Android-mobilenheter finns i [Mobilsnabbstart med AEM verifiera app](/help/mobile/phonegap-mobile-quickstart.md).
+>Information om hur du kör AEM mobilprogram på alla iOS- eller Android-mobilenheter finns i [Mobile Quickstart med AEM Verifiera app](/help/mobile/phonegap-mobile-quickstart.md).
 
 ## Komma i förväg {#getting-ahead}
 

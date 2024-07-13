@@ -28,4 +28,4 @@ Sidanalysdata visas i webbplatskonsolen. N채r -platser visas i listformat 채r f�
 
 >[!NOTE]
 >
->Det g책r bara att visa platsanalysdata direkt i konsolen i det pekoptimerade anv채ndargr채nssnittet. Se [Visa sidanalysdata](/help/sites-authoring/page-analytics-using.md) i standarddokumentationen.
+>Det g책r bara att visa platsanalysdata direkt i konsolen i det pekoptimerade anv채ndargr채nssnittet. Mer information finns i [Visa sidanalysdata](/help/sites-authoring/page-analytics-using.md) i standardredigeringsdokumentationen.

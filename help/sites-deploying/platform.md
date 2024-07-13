@@ -22,13 +22,13 @@ ht-degree: 4%
 
 Den AEM plattformen i AEM 6 bygger på Apache Jackrabbit Oak.
 
-Apache Jackrabbit Oak satsar på att implementera en skalbar och prestandabaserad hierarkisk innehållsdatabas som kan användas som grund för moderna webbplatser i världsklass och andra krävande innehållsprogram.
+Apache Jackrabbit Oak är ett försök att implementera ett skalbart och prestandabaserat hierarkiskt innehållsarkiv som kan användas som grund för moderna webbplatser i världsklass och andra krävande innehållsprogram.
 
 Det är efterföljaren till Jackrabbit 2 och används av AEM 6 som standardbackend för sin innehållsdatabas, CRX.
 
 ## Utforma principer och mål {#design-principles-and-goals}
 
-Oak implementerar [JSR-283](https://jcp.org/en/jsr/detail?id=283) (JCR 2.0) spec. Dess främsta designmål är följande:
+Oak implementerar specifikationen [JSR-283](https://jcp.org/en/jsr/detail?id=283) (JCR 2.0). Dess främsta designmål är följande:
 
 * Bättre stöd för stora databaser
 * Flera distribuerade klusternoder för hög tillgänglighet
@@ -57,16 +57,16 @@ Oak Core lägger till flera lager i lagringslagret:
 
 ### Oak JCR {#oak-jcr}
 
-Det främsta målet för JCR-rapporterna är att omvandla JCR-semantik till trädverksamhet. Byrån ansvarar också för
+Huvudmålet för Oak JCR är att omvandla JCR-semantik till trädverksamhet. Byrån ansvarar också för
 
 * Implementera JCR-API
 * Innehåller implementeringskopplingar som implementerar JCR-begränsningar
 
-Dessutom är nu icke-Java-implementeringar möjliga och en del av JCR-konceptet för Oak.
+Dessutom går det nu att implementera andra program än Java och ingår i Oak JCR-konceptet.
 
 ## Lagringsöversikt {#storage-overview}
 
-Lagringslagret Oak innehåller ett abstraktionslager för den faktiska lagringen av innehållet.
+Lagringslagret i Oak innehåller ett abstraktionslager för den faktiska lagringen av innehållet.
 
 För närvarande finns det två lagringsimplementeringar i AEM6: **Tjärlagring** och **MongoDB-lagring**.
 
@@ -82,11 +82,11 @@ Innehållet lagras i segment som kan vara upp till 256 kB. De är oföränderlig
 
 Varje segment identifieras av en unik identifierare (UUID) och innehåller en kontinuerlig delmängd av innehållsträdet. Dessutom kan segment referera till annat innehåll. Varje segment innehåller en lista med UUID:n för andra refererade segment.
 
-* **Lokalitet**
+* **Språk**
 
 Relaterade poster som en nod och dess direkt underordnade poster lagras i samma segment. På så sätt blir sökningen i databasen snabb och de flesta cachemissar undviks för vanliga klienter som använder mer än en relaterad nod per session.
 
-* **Kompacitet**
+* **Kompatibilitet**
 
 Formateringen av posterna är optimerad för att minska IO-kostnaderna och för att passa så mycket innehåll som möjligt i cacheminnen.
 
@@ -125,7 +125,7 @@ En typisk konfiguration AEM kluster med MongoDB-lagring:
 Eftersom Oak är bakåtkompatibelt med JCR 1.0-standarden sker nästan inga förändringar på användarnivå. Det finns dock vissa märkbara skillnader som du måste ta hänsyn till när du konfigurerar en Oak-baserad AEM:
 
 * Oak skapar inte index automatiskt. Därför måste anpassade index skapas vid behov.
-* Till skillnad från Jackrabbit 2, där sessionerna alltid återspeglar databasens senaste status, visar Oak en session en stabil vy av databasen från den tidpunkt då sessionen skapades. Orsaken beror på MVCC-modellen som Oak baseras på.
+* Till skillnad från Jackrabbit 2, där sessionerna alltid återspeglar databasens senaste status, visar Oak en session en stabil vy av databasen från den tidpunkt då sessionen skapades. Orsaken är den MVCC-modell som Oak baseras på.
 * Samma namn på jämställda (SNS) stöds inte i Oak.
 
 ## Annan plattformsrelaterad dokumentation {#other-platform-related-documentation}
@@ -133,6 +133,6 @@ Eftersom Oak är bakåtkompatibelt med JCR 1.0-standarden sker nästan inga för
 Mer information om den AEM plattformen finns i följande artiklar:
 
 * [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md)
-* [Fråga och indexering](/help/sites-deploying/queries-and-indexing.md)
+* [Oak Queries and Indexing](/help/sites-deploying/queries-and-indexing.md)
 * [Lagringselement i AEM 6](/help/sites-deploying/storage-elements-in-aem-6.md)
 * [AEM med MongoDB](/help/sites-deploying/aem-with-mongodb.md)

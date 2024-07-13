@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Skapa en anpassad profil för HTML5-formulär {#creating-a-custom-profile-for-html-forms}
 
-En profil är en resursnod i [Apache Sling](https://sling.apache.org/). Den representerar en anpassad version av formuläråtergivningstjänsten HTML5. Du kan använda HTML5-formuläråtergivningstjänsten för att anpassa utseende, beteende och interaktioner för HTML5-formulären. Det finns en profilnod i `/content` i JCR-databasen. Du kan placera noden direkt under `/content` mapp eller undermapp till `/content` mapp.
+En profil är en resursnod i [Apache Sling](https://sling.apache.org/). Den representerar en anpassad version av formuläråtergivningstjänsten HTML5. Du kan använda HTML5-formuläråtergivningstjänsten för att anpassa utseende, beteende och interaktioner för HTML5-formulären. Det finns en profilnod i mappen `/content` i JCR-databasen. Du kan placera noden direkt under mappen `/content` eller en undermapp till mappen `/content`.
 
-Profilnoden har **sling:resourceSuperType** egenskapen och standardvärdet är **xfaforms/profile**. Återgivningsskriptet för noden finns på /libs/xfaforms/profile.
+Profilnoden har egenskapen **sling:resourceSuperType** och standardvärdet är **xfaforms/profile**. Återgivningsskriptet för noden finns på /libs/xfaforms/profile.
 
-Sling-skripten är JSP-skript. Dessa JSP-skript fungerar som behållare för att sätta ihop HTML för det begärda formuläret och nödvändiga JS-/CSS-artefakter. Dessa Sling-skript kallas också **Profilåtergivningsskript**. Profilåtergivaren anropar tjänsten Forms OSGi för att återge det begärda formuläret.
+Sling-skripten är JSP-skript. Dessa JSP-skript fungerar som behållare för att sätta ihop HTML för det begärda formuläret och nödvändiga JS-/CSS-artefakter. Dessa Sling-skript kallas även **profilåtergivningsskript**. Profilåtergivaren anropar tjänsten Forms OSGi för att återge det begärda formuläret.
 
 Profilskriptet finns i html.jsp och html.POST.jsp för begäranden om GET och POST. Du kan kopiera och ändra en eller flera filer för att åsidosätta och lägga till anpassningar. Gör inga ändringar på plats, så skriver uppdateringen över sådana ändringar.
 
@@ -58,13 +58,13 @@ Så här skapar du en anpassad profil:
 
 ### Skapa profilnod {#create-profile-node}
 
-1. Navigera till CRX DE-gränssnittet på URL:en: `https://'[server]:[port]'/crx/de` och logga in i gränssnittet med administratörsuppgifter.
+1. Navigera till CRX DE-gränssnittet på URL:en: `https://'[server]:[port]'/crx/de` och logga in i gränssnittet med administratörsautentiseringsuppgifter.
 
-1. Navigera till platsen i den vänstra rutan */content/xfaforms/profiles*.
+1. Navigera till platsen */content/xfaforms/profiles* i den vänstra rutan.
 
-1. Kopiera nodens standardvärde och klistra in noden i en annan mapp (*/content/profiles*) med namn *formulär*.
+1. Kopiera nodens standardvärde och klistra in noden i en annan mapp (*/content/profiles*) med namnet *hrform*.
 
-1. Välj den nya noden, *formulär* och lägga till en strängegenskap: *sling:resourceType* med värde: *Våga/demo*.
+1. Markera den nya noden, *hrform*, och lägg till en strängegenskap: *sling:resourceType* med värdet: *hrform/demo*.
 
 1. Klicka på Spara alla på verktygsfältmenyn för att spara ändringarna.
 
@@ -72,14 +72,14 @@ Så här skapar du en anpassad profil:
 
 När du har skapat en anpassad profil lägger du till återgivningsinformation i den här profilen. När CRX tar emot en begäran om den nya profilen verifierar det att mappen /apps finns för den JSP-sida som ska återges. Skapa JSP-sidan i mappen /apps.
 
-1. I den vänstra rutan navigerar du till `/apps` mapp.
-1. Högerklicka på `/apps` mapp och välj att skapa en mapp med namnet **formulär**.
-1. Insider **formulär** mapp skapa en mapp med namnet **demo**.
-1. Klicka på **Spara alla** -knappen.
+1. Navigera till mappen `/apps` i den vänstra rutan.
+1. Högerklicka på mappen `/apps` och välj att skapa en mapp med namnet **hrform**.
+1. I mappen **hrform** skapar du en mapp med namnet **demo**.
+1. Klicka på knappen **Spara alla** .
 1. Navigera till `/libs/xfaforms/profile/html.jsp` och kopiera noden **html.jsp**.
-1. Klistra in **html.jsp** noden i `/apps/hrform/demo` mapp skapad ovan med samma namn **html.jsp** och klicka **Spara**.
+1. Klistra in noden **html.jsp** i mappen `/apps/hrform/demo` som skapas ovan med samma namn **.html.jsp** och klicka på **Spara**.
 1. Om du har andra komponenter i profilskriptet följer du steg 1-6 för att kopiera komponenterna i /apps/hrform/demo-mappen.
 
-1. Kontrollera att profilen har skapats genom att öppna URL `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html`
+1. Öppna URL:en `https://'[server]:[port]'/content/xfaforms/profiles/hrform.html` för att verifiera att profilen har skapats
 
-För att verifiera formulären [Importera formulär](/help/forms/using/get-xdp-pdf-documents-aem.md) från det lokala filsystemet till AEM Forms och [förhandsgranska formuläret](/help/forms/using/previewing-forms.md) AEM serverförfattarinstans.
+[Importera formulär](/help/forms/using/get-xdp-pdf-documents-aem.md) från ditt lokala filsystem till AEM Forms och [förhandsgranska formuläret](/help/forms/using/previewing-forms.md) AEM serverförfattarinstansen för att verifiera dina formulär.

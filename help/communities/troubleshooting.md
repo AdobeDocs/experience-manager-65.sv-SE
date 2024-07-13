@@ -22,17 +22,18 @@ Det här avsnittet innehåller vanliga problem och kända problem vid felsöknin
 
 ## Kända fel {#known-issues}
 
-### Dispatcher - uppdatering misslyckades {#dispatcher-refetch-fails}
+### Dispatcher Refetch Fails {#dispatcher-refetch-fails}
 
 När du använder Dispatcher 4.1.5 med en nyare version av Jetty kan en uppdatering resultera i&quot;Det går inte att ta emot svar från fjärrservern&quot; efter att begäran har fått timeout.
 
 Problemet åtgärdas med Dispatcher 4.1.6 eller senare.
 
-### Det går inte att komma åt foruminlägg efter uppgradering från CQ 5.4 {#cannot-access-forum-post-after-upgrading-from-cq}
+### Det går inte att komma åt forum Post efter uppgradering från CQ 5.4 {#cannot-access-forum-post-after-upgrading-from-cq}
 
 Om ett forum skapades på CQ 5.4 och ämnen publicerades, och webbplatsen sedan uppgraderades till AEM 5.6.1 eller senare, kan ett försök att visa befintliga inlägg resultera i ett fel på sidan:
 
-Ogiltigt mönstertecken &#39;a&#39; Kan inte hantera begäran till `/content/demoforums/forum-test.html` på den här servern och loggarna innehåller följande:
+Ogiltigt mönstertecken a
+Det går inte att skicka begäran till `/content/demoforums/forum-test.html` på den här servern och loggarna innehåller följande:
 
 ```xml
 20.03.2014 22:49:35.805 ERROR [10.177.45.32 [1395380975744] GET /content/demoforums/forum-test.html HTTP/1.1] com.day.cq.wcm.tags.IncludeTag Error while executing script content.jsp
@@ -48,9 +49,9 @@ All kod som använder API:t RelativeTimeFormat() måste därför ändras:
 * Från: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r a", resourceBundle);`
 * Till: `final RelativeTimeFormat fmt = new RelativeTimeFormat("r", resourceBundle);`
 
-Felet skiljer sig mellan författare och publicering. På författaren misslyckas det utan att det märks och forumämnena visas helt enkelt inte. Vid publicering genereras ett fel på sidan.
+Felet skiljer sig åt på författare och Publish. På författaren misslyckas det utan att det märks och forumämnena visas helt enkelt inte. I Publish genereras ett fel på sidan.
 
-Se [com.day.cq.commons.date.RelativeTimeFormat](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) API för mer information.
+Mer information finns i API:t [com.day.cq.commons.date.RelativeTimeFormat](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/date/RelativeTimeFormat.html) .
 
 ## Vanliga problem {#common-concerns}
 
@@ -60,7 +61,7 @@ Under start (inte den första - men var och en efter det) kan följande varning 
 
 * `11.04.2014 08:38:07.223 WARN [FelixStartLevel]com.github.jknack.handlebars.Handlebars Helper 'i18n'` har ersatts med `com.adobe.cq.social.handlebars.I18nHelper@15bac645`
 
-Denna varning kan ignoreras som `jknack.handlebars.Handlebars`, används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Vid start ersätts den med en AEM [i18n - hjälp](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
+Den här varningen kan ignoreras eftersom `jknack.handlebars.Handlebars`, som används av [SCF](scf.md#handlebarsjavascripttemplatinglanguage), har ett eget i18n-hjälpverktyg. Vid start ersätts den med en AEM specifik [i18n-hjälp](handlebars-helpers.md#i-n). Den här varningen genereras av tredjepartsbiblioteket för att bekräfta åsidosättningen av en befintlig hjälpreda.
 
 ### Varning i loggar: OakResourceListener processOsgiEventQueue {#warning-in-logs-oakresourcelistener-processosgieventqueue}
 

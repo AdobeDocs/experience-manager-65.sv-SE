@@ -22,9 +22,9 @@ ht-degree: 0%
 
 När medlemmar interagerar med communityfunktioner skickas OSGi-händelser som kan utlösa asynkrona avlyssnare, som meddelanden eller spel (poängsättning och märkning).
 
-En komponents [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) -instansen registrerar händelserna som `actions` som inträffar för en `topic`. SocialEvent innehåller en metod för att returnera en `verb` som är associerad med åtgärden. Det finns en *n-1* relation mellan `actions` och `verbs`.
+En komponents [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html)-instans registrerar händelserna som `actions` som inträffar för en `topic`. SocialEvent innehåller en metod för att returnera en `verb` som är associerad med åtgärden. Det finns en *n-1*-relation mellan `actions` och `verbs`.
 
-Följande tabeller beskriver webbkomponenterna i den publicerade versionen `verbs` definierad för varje `topic` som kan användas.
+Följande tabeller beskriver `verbs` som definierats för varje `topic` som är tillgänglig för användning för webbkomponenterna som levereras i den här versionen.
 
 ## Ämnen och verb {#topics-and-verbs}
 
@@ -58,7 +58,7 @@ SocialEvent `topic`= com/adobe/cq/social/fileLibrary
 | UPPDATERA | Medlemmen uppdaterar en mapp eller fil |
 | DELETE | Medlemmen tar bort en mapp eller fil |
 
-[Forum-komponent](essentials-forum.md)
+[Forumkomponent](essentials-forum.md)
 SocialEvent `topic`= com/adobe/cq/social/forum
 
 | **Verb** | **Beskrivning** |
@@ -129,9 +129,9 @@ SocialEvent `topic`= com/adobe/cq/social/moderation
 
 ## Händelser för anpassade komponenter {#events-for-custom-components}
 
-För en anpassad komponent [Den abstrakta klassen SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) måste utökas d för att spela in komponentens händelser som `actions`som inträffar för en `topic`.
+För en anpassad komponent måste den abstrakta klassen [SocialEvent](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/cq/social/scf/core/SocialEvent.html) utökas till d för att spela in komponentens händelser som `actions` som inträffar för en `topic`.
 
-Den anpassade händelsen skulle åsidosätta metoden `getVerb()` så att `verb`returneras för varje `action`. The `verb` som returneras för en åtgärd kan vara en vanlig åtgärd (t.ex. `POST`) eller en som är specialiserad på komponenten (till exempel `ADD RATING`). Det finns en *n-1* relation mellan `actions`och `verbs`.
+Den anpassade händelsen åsidosätter metoden `getVerb()` så att ett lämpligt `verb` returneras för varje `action`. `verb` som returneras för en åtgärd kan vara en vanlig (t.ex. `POST`) eller en speciell för komponenten (t.ex. `ADD RATING`). Det finns en *n-1*-relation mellan `actions` och `verbs`.
 
 >[!NOTE]
 >
@@ -246,7 +246,7 @@ Följande pseudokodsexempel tar bort DELETE-händelser för komponenten Comments
 
 ### Pseudokod för EventListener {#pseudo-code-for-eventlistener}
 
-Kräver [senaste funktionspaketet](deploy-communities.md#latestfeaturepack).
+Kräver [det senaste funktionspaketet](deploy-communities.md#latestfeaturepack).
 
 ```java
 package my.company.comments;

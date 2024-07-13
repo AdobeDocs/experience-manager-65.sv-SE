@@ -7,14 +7,14 @@ role: User, Architect, Admin
 exl-id: d167cf97-6829-45a7-ba46-2239d530b060
 source-git-commit: 259f257964829b65bb71b5a46583997581a91a4e
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---
 
 # Konfigurera AEM Assets-integrering med Experience Cloud {#configure-aem-assets-integration-with-experience-cloud-and-creative-cloud}
 
-Om du är kund hos Adobe Experience Cloud kan du synkronisera dina mediefiler i Adobe Experience Manager Assets med Adobe Creative Cloud, och tvärtom. Du kan också synkronisera dina resurser med Experience Cloud och omvänt. Du kan konfigurera synkroniseringen via [!DNL Adobe I/O]. Det uppdaterade namnet på [!DNL Adobe Marketing Cloud] är [!DNL Adobe Experience Cloud].
+Om du är kund hos Adobe Experience Cloud kan du synkronisera dina mediefiler inom Adobe Experience Manager Assets med Adobe Creative Cloud, och tvärtom. Du kan också synkronisera dina resurser med Experience Cloud och omvänt. Du kan konfigurera synkroniseringen via [!DNL Adobe I/O]. Det uppdaterade namnet för [!DNL Adobe Marketing Cloud] är [!DNL Adobe Experience Cloud].
 
 Det arbetsflöde som ska användas för att konfigurera den här integreringen är:
 
@@ -26,7 +26,7 @@ I backend autentiserar AEM din profil med gatewayen och synkroniserar sedan data
 
 >[!NOTE]
 >
->Den här funktionen är föråldrad i [!DNL Assets]. Sök efter ersättningar i [Bästa praxis för integrering av AEM och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md). Om du har frågor [kontakta Adobe kundsupport](https://www.adobe.com/account/sign-in.supportportal.html).
+>Den här funktionen är inaktuell i [!DNL Assets]. Sök efter ersättningar i [AEM och Creative Cloud-integrering ](/help/assets/aem-cc-integration-best-practices.md). [Kontakta Adobe kundsupport](https://www.adobe.com/account/sign-in.supportportal.html) om du har frågor.
 
 <!-- Hiding this for now via cqdoc-16834.
 ![Flow of data when AEM Assets and Creative Cloud are integrated](assets/chlimage_1-48.png)
@@ -38,21 +38,21 @@ I backend autentiserar AEM din profil med gatewayen och synkroniserar sedan data
 
 ## Skapa ett program {#create-an-application}
 
-1. Logga in på Adobe Developer gatewaygränssnitt [https://legacy-oauth.cloud.adobe.io](https://legacy-oauth.cloud.adobe.io/).
+1. Logga in på [https://legacy-oauth.cloud.adobe.io](https://legacy-oauth.cloud.adobe.io/) för att få åtkomst till Adobe Developer gatewaygränssnitt.
 
    >[!NOTE]
    >
    >Du måste ha administratörsbehörighet för att skapa ett program-ID.
 
-1. Navigera från den vänstra rutan till **[!UICONTROL Developer Tools]** > **[!UICONTROL Applications]** om du vill visa en lista med program.
-1. Klicka **[!UICONTROL Add]** ![aem_assets_addcircle_icon](assets/aem_assets_addcircle_icon.png) för att skapa ett program.
-1. Från **[!UICONTROL Client Credentials]** lista, välj **[!UICONTROL Service Account (JWT Assertion)]**, som är en server-till-server-kommunikationstjänst för serverautentisering.
+1. I den vänstra rutan navigerar du till **[!UICONTROL Developer Tools]** > **[!UICONTROL Applications]** för att visa en lista med program.
+1. Klicka på **[!UICONTROL Add]** ![aem_assets_addcircle_icon](assets/aem_assets_addcircle_icon.png) för att skapa ett program.
+1. I listan **[!UICONTROL Client Credentials]** väljer du **[!UICONTROL Service Account (JWT Assertion)]**, som är en server-till-server-kommunikationstjänst för serverautentisering.
 
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
 1. Ange ett namn för programmet och en valfri beskrivning.
-1. Från **[!UICONTROL Organization]** väljer du den organisation som du vill synkronisera resurser för.
-1. Från **[!UICONTROL Scope]** lista, välj **[!UICONTROL dam-read]**, **[!UICONTROL dam-sync]**, **[!UICONTROL dam-write]** och **[!UICONTROL cc-share]**.
+1. I listan **[!UICONTROL Organization]** väljer du den organisation som du vill synkronisera resurser för.
+1. Välj **[!UICONTROL dam-read]**, **[!UICONTROL dam-sync]**, **[!UICONTROL dam-write]** och **[!UICONTROL cc-share]** i listan **[!UICONTROL Scope]**.
 1. Klicka på **[!UICONTROL Create]**. Ett meddelande meddelar att programmet har skapats.
 
    ![Meddelande om att programmet har skapats för att integrera AEM Assets med Creative Cloud](assets/chlimage_1-50.png)
@@ -67,35 +67,35 @@ I backend autentiserar AEM din profil med gatewayen och synkroniserar sedan data
 
 1. Klicka på AEM logotyp i användargränssnittet för den lokala AEM Assets-instansen och navigera till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Legacy Cloud Services]**.
 
-1. Leta reda på **[!UICONTROL Adobe Experience Cloud]** service. Om det inte finns några konfigurationer klickar du på **[!UICONTROL Configure Now]**. Om det finns konfigurationer klickar du på **[!UICONTROL Show Configurations]** och klicka `+` för att lägga till en ny konfiguration.
+1. Leta reda på tjänsten **[!UICONTROL Adobe Experience Cloud]**. Om det inte finns några konfigurationer klickar du på **[!UICONTROL Configure Now]**. Om det finns konfigurationer klickar du på **[!UICONTROL Show Configurations]** och sedan på `+` för att lägga till en ny konfiguration.
 
    >[!NOTE]
    >
    >Använd ett Adobe ID-konto som har administratörsbehörighet för organisationen.
 
-1. I **[!UICONTROL Create Configuration]** anger du en rubrik och ett namn för den nya konfigurationen och klickar på **[!UICONTROL Create]**.
+1. I dialogrutan **[!UICONTROL Create Configuration]** anger du en rubrik och ett namn för den nya konfigurationen och klickar på **[!UICONTROL Create]**.
 
    ![Namnge en ny konfiguration för integrering av AEM Assets och Creative Cloud](assets/aem-ec-integration-config1.png)
 
-1. I **[!UICONTROL Tenant URL]** anger du URL:en för AEM Assets. Tidigare, om URL:en definierades som `https://<tenant_id>.marketing.adobe.com`, ändra till `https://<tenant_id>.experiencecloud.adobe.com`.
+1. Ange URL:en för AEM Assets i fältet **[!UICONTROL Tenant URL]**. Tidigare, om URL-adressen har definierats som `https://<tenant_id>.marketing.adobe.com`, ändrar du den till `https://<tenant_id>.experiencecloud.adobe.com`.
 
-   1. Navigera till **Verktyg > Cloud Services > Äldre Cloud Services**. Under Adobe Experience Cloud klickar du på **Visa konfigurationer**.
+   1. Navigera till **Verktyg > Cloud Service > Äldre Cloud Service**. Klicka på **Visa konfigurationer** under Adobe Experience Cloud.
    1. Välj den befintliga konfiguration som ska redigeras. Redigera konfigurationen och ersätt `marketing.adobe.com` till `experiencecloud.adobe.com`.
    1. Spara konfigurationen. Testa replikeringsagenterna för MAC-synkronisering.
 
-1. I **[!UICONTROL Client ID]** klistra in det program-ID som du kopierade i slutet av proceduren [skapa ett program](#create-an-application).
+1. Klistra in det program-ID som du kopierade i slutet av proceduren [skapa ett program](#create-an-application) i fältet **[!UICONTROL Client ID]**.
 
    ![Ange de program-ID-värden som krävs för att integrera AEM Assets och Creative Cloud](assets/cloudservices_tenant_info.png)
 
-1. Under **[!UICONTROL Synchronization]** välj **[!UICONTROL Enabled]** för att aktivera synkronisering och klicka på **[!UICONTROL OK]**. Om du väljer **inaktiverad** fungerar synkroniseringen åt samma håll.
+1. Under **[!UICONTROL Synchronization]** markerar du **[!UICONTROL Enabled]** för att aktivera synkronisering och klickar på **[!UICONTROL OK]**. Om du väljer **inaktiverad** fungerar synkroniseringen i en riktning.
 
-1. På konfigurationssidan klickar du på **[!UICONTROL Display Public Key]** för att visa den offentliga nyckeln som genererats för instansen. Du kan även klicka på **[!UICONTROL Download Public Key for OAuth Gateway]** om du vill hämta filen som innehåller den offentliga nyckeln. Öppna sedan filen för att visa den offentliga nyckeln.
+1. Klicka på **[!UICONTROL Display Public Key]** på konfigurationssidan för att visa den offentliga nyckel som genererats för din instans. Du kan också klicka på **[!UICONTROL Download Public Key for OAuth Gateway]** om du vill hämta filen som innehåller den offentliga nyckeln. Öppna sedan filen för att visa den offentliga nyckeln.
 
 ## Aktivera synkronisering {#enable-synchronization}
 
-1. Visa den offentliga nyckeln med någon av följande metoder som anges i det sista steget i proceduren [lägg till en ny konfiguration i Experience Cloud](#add-a-new-configuration). Klicka på **[!UICONTROL Display Public Key]**.
+1. Visa den offentliga nyckeln med någon av följande metoder som nämns i det sista steget i proceduren [lägg till en ny konfiguration i Experience Cloud](#add-a-new-configuration). Klicka på **[!UICONTROL Display Public Key]**.
 
-1. Kopiera den offentliga nyckeln och klistra in den i **[!UICONTROL Public Key]** konfigurationsfältet för det program du skapade i [skapa ett program](#create-an-application).
+1. Kopiera den offentliga nyckeln och klistra in den i fältet **[!UICONTROL Public Key]** i konfigurationsgränssnittet för programmet som du skapade i [skapa ett program](#create-an-application).
 
    ![chlimage_1-53](assets/chlimage_1-53.png)
 
@@ -103,21 +103,21 @@ I backend autentiserar AEM din profil med gatewayen och synkroniserar sedan data
 
 ## Testa synkroniseringen {#test-the-synchronization}
 
-1. Klicka på AEM logotyp i användargränssnittet för den lokala AEM Assets-instansen och navigera till **[!UICONTROL Tools]**> **[!UICONTROL Deployment]**> **[!UICONTROL Replication]**för att hitta de replikeringsprofiler som har skapats för synkronisering.
-1. På sidan **[!UICONTROL Replication]** klickar du på **[!UICONTROL Agents on author]**.
+1. Klicka på den AEM logotypen i användargränssnittet för den lokala AEM Assets-instansen och navigera till **[!UICONTROL Tools]**> **[!UICONTROL Deployment]**> **[!UICONTROL Replication]**för att hitta de replikeringsprofiler som har skapats för synkronisering.
+1. Klicka på **[!UICONTROL Agents on author]** på sidan **[!UICONTROL Replication]**.
 1. I listan med profiler klickar du på standardreplikeringsprofilen för din organisation för att öppna den.
 1. Klicka på **[!UICONTROL Test Connection]** i dialogrutan.
 
-   ![Testa anslutningen och ange organisationens standardreplikeringsprofil](assets/chlimage_1-54.png)
+   ![Testa anslutningen och ange standardreplikeringsprofilen för organisationen](assets/chlimage_1-54.png)
 
 1. När replikeringen är klar kontrollerar du om det finns ett meddelande om att åtgärden lyckades i slutet av testresultaten.
 
 ## Lägg till användare i Experience Cloud {#add-users-to-experience-cloud}
 
 1. Logga in på Experience Cloud med administratörsautentiseringsuppgifter.
-1. Från skenorna, gå till **[!UICONTROL Administration]** och sedan klicka **[!UICONTROL Launch Enterprise Dashboard]**.
-1. Klicka på **[!UICONTROL Users]** för att öppna **[!UICONTROL User Management]** sida.
-1. I verktygsfältet klickar du på **Lägg till** ![aem_assets_add_icon](assets/aem_assets_add_icon.png).
+1. Gå till **[!UICONTROL Administration]** från skenorna och klicka sedan på **[!UICONTROL Launch Enterprise Dashboard]**.
+1. Öppna sidan **[!UICONTROL User Management]** genom att klicka på **[!UICONTROL Users]** i fältet.
+1. Klicka på **Lägg till** ![aem_assets_add_icon](assets/aem_assets_add_icon.png) i verktygsfältet.
 1. Lägg till en eller flera användare som du vill ska kunna dela resurser med Creative Cloud.
 
 <!-- TBD: Check.
@@ -130,15 +130,15 @@ I backend autentiserar AEM din profil med gatewayen och synkroniserar sedan data
 ## Utbyt resurser mellan AEM Assets och Experience Cloud {#exchange-assets-between-aem-and-experience-cloud}
 
 1. Logga in på AEM Assets.
-1. Skapa en mapp i resurskonsolen och överför några resurser till den. Skapa till exempel en mapp **mc-demo** och överföra en resurs till den.
+1. Skapa en mapp i Assets-konsolen och överför resurser till den. Skapa till exempel en mapp **mc-demo** och överför en resurs till den.
 1. Markera mappen och klicka på **Dela** ![assets_share](assets/do-not-localize/assets_share.png).
-1. Välj **[!UICONTROL Adobe Experience Cloud]** och klicka **[!UICONTROL Share]**. Ett meddelande meddelar att mappen delas med Experience Cloud.
+1. Välj **[!UICONTROL Adobe Experience Cloud]** på menyn och klicka på **[!UICONTROL Share]**. Ett meddelande meddelar att mappen delas med Experience Cloud.
 
    >[!NOTE]
    >
-   >Dela en resursmapp av typen `sling:OrderedFolder`, stöds inte i samband med delning i Adobe Experience Cloud. Om du vill dela en mapp ska du inte markera **[!UICONTROL Ordered]** alternativ.
+   >Delning av en Assets-mapp av typen `sling:OrderedFolder` stöds inte vid delning i Adobe Experience Cloud. Om du vill dela en mapp ska du inte markera alternativet **[!UICONTROL Ordered]** när du skapar den i AEM Assets.
 
-1. Uppdatera AEM Assets användargränssnitt. Mappen som du skapade i resurskonsolen för den lokala AEM Assets-instansen kopieras till användargränssnittet i Experience Cloud. Resursen som du överför till mappen i AEM Assets visas i kopian av mappen i Experience Cloud efter att den har bearbetats av AEM server.
+1. Uppdatera AEM Assets användargränssnitt. Mappen som du skapade i Assets-konsolen för den lokala AEM Assets-instansen kopieras till användargränssnittet i Experience Cloud. Resursen som du överför till mappen i AEM Assets visas i kopian av mappen i Experience Cloud efter att den har bearbetats av AEM server.
 1. Du kan också överföra en resurs i den replikerade kopian av mappen i Experience Cloud. När resursen har bearbetats visas den i den delade mappen i AEM Assets.
 
 <!-- Removing as per PM guidance via https://jira.corp.adobe.com/browse/CQDOC-16834?focusedCommentId=22881523&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-22881523.
@@ -170,4 +170,4 @@ For example, if an asset is uploaded from an AEM Assets (on premises) instance, 
 
 >[!MORELIKETHIS]
 >
->* [Bästa praxis för integrering av resurser och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md)
+>* [Bästa praxis för integrering mellan Assets och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md)

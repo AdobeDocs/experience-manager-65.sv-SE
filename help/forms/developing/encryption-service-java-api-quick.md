@@ -1,5 +1,5 @@
 ---
-title: Krypteringstjänstens Java&trade; API QuickStart(SOAP)
+title: Krypteringstjänstens Java&handel; API QuickStart(SOAP)
 description: Lär dig hur du krypterar, tar bort lösenord-/certifikatbaserad kryptering, låser upp och fastställer krypteringstyp för PDF-dokument med Java&trade; API i SOAP.
 contentOwner: admin
 content-type: reference
@@ -38,7 +38,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 ## Snabbstart (SOAP): Kryptera ett PDF-dokument med Java™ API {#quick-start-soap-mode-encrypting-a-pdf-document-using-the-java-api}
 
-I följande Java™-kodexempel krypteras ett PDF-dokument med namnet *Loan.pdf* med ett lösenordsvärde på `OpenPassword`. Det primära lösenordet är `PermissionPassword`. Det skyddade PDF-dokumentet sparas som en PDF-fil med namnet *EncryptLoan.pdf*. (Se [Kryptera PDF-dokument med ett lösenord](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password).)
+I följande Java™-kodexempel krypteras ett PDF-dokument med namnet *Loan.pdf* med lösenordsvärdet `OpenPassword`. Det primära lösenordet är `PermissionPassword`. Det skyddade PDF-dokumentet sparas som en PDF-fil med namnet *EncryptLoan.pdf*. (Se [Kryptera PDF-dokument med ett lösenord](/help/forms/developing/encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password).)
 
 ```java
  /*
@@ -158,7 +158,7 @@ I följande Java™-kodexempel krypteras ett PDF-dokument med namnet *Loan.pdf* 
 
 ## Snabbstart (SOAP): Lösenordsbaserad kryptering tas bort med Java™ API {#quick-start-soap-mode-removing-password-based-encryption-using-the-java-api}
 
-Följande Java™-kodexempel tar bort lösenordsbaserad kryptering från ett PDF-dokument med namnet *EncryptLoan.pdf*. Det primära lösenordsvärdet som används för att ta bort lösenordsbaserad kryptering är *PermissionPassword*. Det oskyddade PDF-dokumentet sparas som en PDF-fil med namnet *noEncryptionLoan.pdf*. (Se [Tar bort lösenordskryptering](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-password-encryption).)
+I följande Java™-kodexempel tas lösenordsbaserad kryptering bort från ett PDF-dokument med namnet *EncryptLoan.pdf*. Det primära lösenordsvärdet som används för att ta bort lösenordsbaserad kryptering är *PermissionPassword*. Det oskyddade PDF-dokumentet sparas som en PDF-fil med namnet *noEncryptionLoan.pdf*. (Se [Ta bort lösenordskryptering](/help/forms/developing/encrypting-decrypting-pdf-documents.md#removing-password-encryption).)
 
 ```java
  /*

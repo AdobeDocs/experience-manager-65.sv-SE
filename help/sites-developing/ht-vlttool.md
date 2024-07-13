@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # Så här använder du VLT-verktyget {#how-to-use-the-vlt-tool}
 
-Jackrabbit FileVault-verktyget (VLT) är ett verktyg som utvecklats av [Apache Foundation](https://www.apache.org/) som mappar innehållet i en Jackrabbit/AEM-instans till filsystemet. VLT-verktyget har liknande funktioner som en VLT-klient (till exempel en Subversion-klient), med normala in-, utchecknings- och hanteringsåtgärder samt konfigurationsalternativ för flexibel representation av projektinnehållet.
+Jackrabbit FileVault-verktyget (VLT) är ett verktyg som utvecklats av [Apache Foundation](https://www.apache.org/) och som mappar innehållet i en Jackrabbit/AEM-instans till filsystemet. VLT-verktyget har liknande funktioner som en VLT-klient (till exempel en Subversion-klient), med normala in-, utchecknings- och hanteringsåtgärder samt konfigurationsalternativ för flexibel representation av projektinnehållet.
 
-Du kör VLT-verktyget från kommandoraden. I det här dokumentet beskrivs hur du använder verktyget, inklusive hur du kommer igång och får hjälp, samt en lista med alla [kommandon](#vlt-commands) och tillgängliga [alternativ](#vlt-global-options).
+Du kör VLT-verktyget från kommandoraden. I det här dokumentet beskrivs hur du använder verktyget, inklusive hur du kommer igång och får hjälp, och en lista över alla [kommandon](#vlt-commands) och tillgängliga [alternativ](#vlt-global-options).
 
 ## Koncept och arkitektur {#concepts-and-architecture}
 
-Se [Översikt över felsökning](https://jackrabbit.apache.org/filevault/overview.html) och [Vault FS](https://jackrabbit.apache.org/filevault/vaultfs.html) sida från officiell sida [Dokumentation till Apache Jackrabbit Filevault](https://jackrabbit.apache.org/filevault/index.html) om du vill ha en detaljerad översikt över koncept och struktur i verktyget Filevault.
+Se sidan [Fillevaöversikt](https://jackrabbit.apache.org/filevault/overview.html) och [Vault FS](https://jackrabbit.apache.org/filevault/vaultfs.html) från den officiella [dokumentationen för Apache Jackrabbit Filevault](https://jackrabbit.apache.org/filevault/index.html) för en grundlig översikt över koncept och struktur för verktyget Filevault.
 
 ## Komma igång med VLT {#getting-started-with-vlt}
 
@@ -40,12 +40,12 @@ Om du vill börja använda VLT måste du göra följande:
 
 Om du vill använda VLT-verktyget måste du först installera det. Det installeras inte som standard eftersom det är ett extra verktyg. Dessutom måste du ange systemmiljövariabeln.
 
-1. Hämta arkivfilen för FileVault från [Maven artifact-arkiv.](https://repo1.maven.org/maven2/org/apache/jackrabbit/vault/vault-cli/)
+1. Hämta arkivfilen FileVault från arkivdatabasen [Maven-felaktigheter.](https://repo1.maven.org/maven2/org/apache/jackrabbit/vault/vault-cli/)
    >[!NOTE]
    >
-   >VLT-verktygets källa är [finns på GitHub.](https://github.com/apache/jackrabbit-filevault)
+   >VLT-verktygets källa är [tillgänglig på GitHub.](https://github.com/apache/jackrabbit-filevault)
 1. Hämta arkivet.
-1. Lägg till `<archive-dir>/vault-cli-<version>/bin` i din miljö `PATH` så att kommandofilerna `vlt` eller `vlt.bat` används på lämpligt sätt. Till exempel:
+1. Lägg till `<archive-dir>/vault-cli-<version>/bin` i miljön `PATH` så att kommandofilerna `vlt` eller `vlt.bat` nås efter behov. Till exempel:
 
    `<aem-installation-dir>/crx-quickstart/opt/helpers/vault-cli-3.1.16/bin>`
 
@@ -88,11 +88,11 @@ global-ignores = .vlt
 
 VLT hanterar automatiskt End Of Line (EOF) enligt följande regler:
 
-* rader med filer utcheckade i Windows slutar med en `CRLF`
+* rader med filer som checkats ut i Windows avslutas med en `CRLF`
 * rader med filer utcheckade på Linux/Unix slutar med en `LF`
 * rader med filer som har implementerats i databasen avslutas med en `LF`
 
-För att säkerställa att konfigurationen för VLT och SVN matchar bör du konfigurera `svn:eol-style` egenskap till `native` för filtillägget som lagras i databasen. Redigera SVN-inställningarna och lägg till följande:
+För att garantera att konfigurationen för VLT och SVN matchar bör du ställa in egenskapen `svn:eol-style` på `native` för filtillägget som lagras i databasen. Redigera SVN-inställningarna och lägg till följande:
 
 ```xml
 [auto-props]
@@ -121,8 +121,8 @@ svn co https://svn.server.com/repos/myproject
 
 Du måste synkronisera filnivå med databasen. Så här gör du:
 
-1. Gå till kommandoraden `content/jcr_root`.
-1. Checka ut databasen genom att skriva följande (ditt portnummer ersätts för **4502** och dina administratörslösenord):
+1. Navigera till `content/jcr_root` på kommandoraden.
+1. Checka ut databasen genom att skriva följande (ditt portnummer ersätts med **4502** och dina administratörslösenord):
 
    ```shell
    vlt --credentials admin:admin co --force http://localhost:4502/crx
@@ -134,14 +134,14 @@ Du måste synkronisera filnivå med databasen. Så här gör du:
 
 ### Testar om synkroniseringen fungerade {#testing-whether-the-synchronization-worked}
 
-När du har checkat ut databasen och synkroniserat den bör du testa att se till att allt fungerar som det ska. Ett enkelt sätt är att redigera **.jsp** och se om ändringarna återspeglas när ändringarna har verkställts.
+När du har checkat ut databasen och synkroniserat den bör du testa att se till att allt fungerar som det ska. Ett enkelt sätt att göra detta är att redigera en **.jsp**-fil och se om ändringarna återspeglas när ändringarna har verkställts.
 
 Så här testar du synkroniseringen:
 
 1. Navigera till `.../jcr_content/libs/foundation/components/text`.
 1. Redigera något i `text.jsp`.
-1. Se de ändrade filerna genom att skriva `vlt st`
-1. Se ändringarna genom att skriva `vlt diff text.jsp`
+1. Visa de ändrade filerna genom att skriva `vlt st`
+1. Visa ändringarna genom att skriva `vlt diff text.jsp`
 1. Genomför ändringarna: `vlt ci test.jsp`.
 1. Läs in en sida som innehåller en textkomponent igen och se om ändringarna finns där.
 
@@ -214,21 +214,21 @@ Options:
 
 ## Vanliga uppgifter utförda i VLT {#common-tasks-performed-in-vlt}
 
-Nedan följer några vanliga uppgifter som utförs i VLT. Detaljerad information om varje kommando finns i [kommandon](#vlt-commands).
+Nedan följer några vanliga uppgifter som utförs i VLT. Mer information om varje kommando finns i de enskilda [kommandona](#vlt-commands).
 
 ### Checka ut ett underträd {#checking-out-a-subtree}
 
-Om du t.ex. bara vill checka ut ett underträd i databasen `/apps/geometrixx`kan du göra det genom att skriva följande:
+Om du bara vill checka ut ett underträd i databasen, till exempel `/apps/geometrixx`, kan du göra det genom att skriva följande:
 
 ```shell
 vlt co http://localhost:4502/crx/-/jcr:root/apps/geometrixx geo
 ```
 
-Då skapas en ny exportrot `geo` med `META-INF` och `jcr_root` och placerar alla filer under `/apps/geometrixx` in `geo/jcr_root`.
+Om du gör det skapas en ny exportrot `geo` med katalogen `META-INF` och `jcr_root` och alla filer placeras under `/apps/geometrixx` i `geo/jcr_root`.
 
 ### Utföra en filtrerad utcheckning {#performing-a-filtered-checkout}
 
-Om du har ett befintligt arbetsytefilter och vill använda det för utcheckning, kan du antingen skapa `META-INF/vault` och placera filtret där, eller ange det på kommandoraden enligt följande:
+Om du har ett befintligt arbetsytefilter och vill använda det för utcheckning kan du antingen skapa katalogen `META-INF/vault` och placera filtret där, eller ange det på kommandoraden enligt följande:
 
 ```shell
 $ vlt co --filter filter.xml http://localhost:4502/crx/-/jcr:root geo
@@ -248,7 +248,7 @@ Ett exempelfilter:
 
 Du kan importera och exportera innehåll mellan en JCR-databas och det lokala filsystemet utan att använda kontrollfiler.
 
-Importera och exportera innehåll utan att använda `.vlt` kontroll:
+Så här importerar och exporterar du innehåll utan att använda kontrollen `.vlt`:
 
 1. Inledningsvis konfigurera databasen:
 
@@ -336,7 +336,7 @@ I följande tabell beskrivs alla tillgängliga VLT-kommandon. I de enskilda komm
 
 ### Exportera {#export}
 
-Exporterar Vaultfilsystemet som är monterat på &lt;uri> till det lokala filsystemet på &lt;local-path>. Ett valfritt &lt;jcr-path> kan anges för att exportera endast ett underträd.
+Exporterar Vaultfilsystemet som är monterat på &lt;uri> till det lokala filsystemet på &lt;local-path>. Du kan ange ett valfritt &lt;jcr-path> om du bara vill exportera ett underträd.
 
 #### Syntax {#syntax}
 
@@ -363,7 +363,7 @@ vlt export http://localhost:4502/crx /apps/geometrixx myproject
 
 ### Importera {#import}
 
-Importerar det lokala filsystemet (med början `<local-path>` till valvfilsystemet på `<uri>`. Du kan ange en `<jcr-path>` som importrot. If `--sync` anges placeras de importerade filerna automatiskt under vaultkontroll.
+Importerar det lokala filsystemet (med början vid `<local-path>` till valvfilsystemet vid `<uri>`. Du kan ange en `<jcr-path>` som importrot. Om `--sync` anges hamnar de importerade filerna automatiskt under vaultkontroll.
 
 #### Syntax {#syntax-1}
 
@@ -389,7 +389,7 @@ vlt import http://localhost:4502/crx . /
 
 ### Utcheckning (co) {#checkout-co}
 
-Utför en första utcheckning från en JCR-databas till det lokala filsystemet från &lt;uri> till det lokala filsystemet på &lt;local-path>. Du kan också lägga till en &lt;jcrpath> -argument för att checka ut en underkatalog till fjärrträdet. Du kan ange filter för arbetsytan som kopieras till META-INF-katalogen.
+Utför en första utcheckning från en JCR-databas till det lokala filsystemet från &lt;uri> till det lokala filsystemet på &lt;local-path>. Du kan också lägga till ett &lt;jcrPath>-argument för att checka ut en underkatalog till fjärrträdet. Workspace-filter kan anges som kopieras till META-INF-katalogen.
 
 #### Syntax {#syntax-2}
 
@@ -452,7 +452,7 @@ analyze -l <format>|-v|-q <localPaths1> [<localPaths2> ...]
 
 Skriver ut status för arbetskopia av filer och kataloger.
 
-If `--show-update` anges kontrolleras varje fil mot fjärrversionen. Den andra bokstaven anger sedan vilken åtgärd som ska utföras av en uppdateringsåtgärd.
+Om `--show-update` anges kontrolleras varje fil mot fjärrversionen. Den andra bokstaven anger sedan vilken åtgärd som ska utföras av en uppdateringsåtgärd.
 
 #### Syntax {#syntax-4}
 
@@ -549,7 +549,7 @@ revert -q|-R <file1> [<file2> ...]
 
 ### Löst {#resolved}
 
-Tar bort **motstridig** läge för arbetskopiera filer eller kataloger.
+Tar bort **konfliktläge** för arbetskopiefiler eller kataloger.
 
 >[!NOTE]
 >
@@ -709,7 +709,7 @@ console -F <file>
 
 ### Rcp {#rcp}
 
-Kopierar ett nodträd från en fjärrdatabas till en annan. `<src>` pekar på källnoden och `<dst>` anger målsökvägen där den överordnade noden måste finnas. Rcp bearbetar noderna genom att direktuppspela data.
+Kopierar ett nodträd från en fjärrdatabas till en annan. `<src>` pekar på källnoden och `<dst>` anger målsökvägen, där den överordnade noden måste finnas. Rcp bearbetar noderna genom att direktuppspela data.
 
 #### Syntax {#syntax-17}
 
@@ -739,7 +739,7 @@ vlt rcp http://localhost:4502/crx/-/jcr:root/content  https://admin:admin@localh
 
 >[!NOTE]
 >
->The `--exclude` måste följas av ett annat alternativ innan `<src>` och `<dst>` argument. Till exempel:
+>Alternativen `--exclude` måste följas av ett annat alternativ före argumenten `<src>` och `<dst>`. Till exempel:
 >
 >`vlt rcp -e ".*\.txt" -r`
 
@@ -788,11 +788,11 @@ Tjänsten vault sync används för att synkronisera databasinnehåll med en loka
 
 ### Installera tjänsten med VLT {#installing-the-service-using-vlt}
 
-The `vlt sync install` kan användas för att installera tjänstpaketet för vaultsynkronisering och konfigurationen automatiskt.
+Kommandot `vlt sync install` kan användas för att installera tjänstpaketet för vaultsynkronisering och konfigurationen automatiskt.
 
-Paketet installeras nedan `/libs/crx/vault/install` och config-noden skapas på `/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`. Tjänsten är till att börja med aktiverad, men inga synkroniseringsrötter har konfigurerats.
+Paketet installeras under `/libs/crx/vault/install` och konfigurationsnoden skapas på `/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`. Tjänsten är till att börja med aktiverad, men inga synkroniseringsrötter har konfigurerats.
 
-I följande exempel installeras synkroniseringstjänsten på CRX-instansen som är tillgänglig för den angivna uri.
+I följande exempel installeras synkroniseringstjänsten på den CRX-instans som är tillgänglig för den angivna uri.
 
 ```shell
 $ vlt --credentials admin:admin sync --uri http://localhost:4502/crx install
@@ -800,7 +800,7 @@ $ vlt --credentials admin:admin sync --uri http://localhost:4502/crx install
 
 ### Visa tjänstens status {#displaying-the-service-status}
 
-The `status` -kommandot kan användas för att visa information om den synkroniseringstjänst som körs. &quot;
+Kommandot `status` kan användas för att visa information om den synkroniseringstjänst som körs. &quot;
 
 ```shell
 $ vlt sync status --uri http://localhost:4502/crx
@@ -812,11 +812,11 @@ Listing sync status for http://localhost:4502/crx/server/-/jcr:root
 
 >[!NOTE]
 >
->The `status` -kommandot hämtar inga livedata från tjänsten, utan läser i stället konfigurationen på `/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`.
+>Kommandot `status` hämtar inga livedata från tjänsten utan läser konfigurationen på `/libs/crx/vault/com.day.jcr.sync.impl.VaultSyncServiceImpl`.
 
 ### Lägga till en synkroniseringsmapp {#adding-a-sync-folder}
 
-The `register` -kommandot används för att lägga till en mapp som ska synkroniseras med konfigurationen.
+Kommandot `register` används för att lägga till en mapp som ska synkroniseras med konfigurationen.
 
 ```shell
 $ vlt sync register
@@ -826,11 +826,11 @@ Added new sync directory: /tmp/workspace/vltsync/jcr_root
 
 >[!NOTE]
 >
->The `register` kommandot startar inte någon synkronisering förrän du konfigurerar `sync-once` konfiguration.
+>Kommandot `register` utlöser inte någon synkronisering förrän du konfigurerar `sync-once`-konfigurationen.
 
 ### Ta bort en synkroniseringsmapp {#removing-a-sync-folder}
 
-The `unregister` -kommandot används för att ta bort en mapp som ska synkroniseras från konfigurationen.
+Kommandot `unregister` används för att ta bort en mapp som ska synkroniseras från konfigurationen.
 
 ```shell
 $  vlt sync unregister
@@ -848,16 +848,16 @@ Removed sync directory: /tmp/workspace/vltsync/jcr_root
 
 När tjänsten körs kan den konfigureras med följande parametrar:
 
-* `vault.sync.syncroots`: En eller flera sökvägar till det lokala filsystemet som definierar synkroniseringsrötterna.
+* `vault.sync.syncroots`: En eller flera lokala filsystemsökvägar som definierar synkroniseringsrötterna.
 
 * `vault.sync.fscheckinterval`: Täthet (i sekunder) som filsystemet ska genomsökas efter ändringar. Standardvärdet är 5 sekunder.
 * `vault.sync.enabled`: Allmän flagga som aktiverar/inaktiverar tjänsten.
 
 >[!NOTE]
 >
->Tjänsten kan konfigureras med webbkonsolen eller en `sling:OsgiConfig` nod (med namnet `com.day.jcr.sync.impl.VaultSyncServiceImpl`) i databasen.
+>Tjänsten kan konfigureras med webbkonsolen eller en `sling:OsgiConfig`-nod (med namnet `com.day.jcr.sync.impl.VaultSyncServiceImpl`) i databasen.
 >
->När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Se [Konfigurerar OSGi](/help/sites-deploying/configuring-osgi.md) för fullständig information.
+>När du arbetar med AEM finns det flera metoder för att hantera konfigurationsinställningarna för sådana tjänster. Mer information finns i [Konfigurera OSGi](/help/sites-deploying/configuring-osgi.md).
 
 #### Synkronisera mappkonfiguration {#sync-folder-configuration}
 
@@ -866,18 +866,18 @@ I varje synkroniseringsmapp lagras konfiguration och status i tre filer:
 * `.vlt-sync-config.properties`: konfigurationsfil.
 
 * `.vlt-sync.log`: loggfil som innehåller information om de åtgärder som utfördes under synkroniseringen.
-* `.vlt-sync-filter.xml`: -filter som definierar vilka delar av databasen som ska synkroniseras. Filens format beskrivs i [Utföra en filtrerad utcheckning](#performing-a-filtered-checkout) -avsnitt.
+* `.vlt-sync-filter.xml`: filter som definierar vilka delar av databasen som synkroniseras. Filens format beskrivs i avsnittet [Utföra en filtrerad utcheckning](#performing-a-filtered-checkout).
 
-The `.vlt-sync-config.properties` kan du konfigurera följande egenskaper:
+Med filen `.vlt-sync-config.properties` kan du konfigurera följande egenskaper:
 
 **inaktiverad** Aktiverar eller inaktiverar synkroniseringen. Som standard är den här parametern inställd på false för att tillåta synkronisering.
 
-**sync-once** Om nästa sökning inte är tom synkroniseras mappen i den angivna riktningen, kommer parametern att tas bort. Två värden stöds:
+**sync-once** Om nästa sökning inte är tom kommer att synkronisera mappen i den angivna riktningen, kommer parametern att rensas. Två värden stöds:
 
-* `JCR2FS`: exporterar allt innehåll i JCR-databasen och skriver till den lokala hårddisken.
+* `JCR2FS`: exporterar allt innehåll i JCR-databasen och skriver till den lokala disken.
 * `FS2JCR`: importerar allt innehåll från disken till JCR-databasen.
 
-**sync-log** Definierar loggfilens namn. Som standard är värdet .vlt-sync.log
+**sync-log** definierar loggfilens namn. Som standard är värdet .vlt-sync.log
 
 ### Använda VLT-synkronisering för utveckling {#using-vlt-sync-for-development}
 
@@ -891,7 +891,7 @@ Så här konfigurerar du en utvecklingsmiljö baserad på en synkroniseringsmapp
 
    >[!NOTE]
    >
-   >Du kan bara använda filter för att checka ut lämpliga sökvägar. Se [Utföra en filtrerad utcheckning](#performing-a-filtered-checkout) för mer information.
+   >Du kan bara använda filter för att checka ut lämpliga sökvägar. Mer information finns i avsnittet [Utföra en filtrerad utcheckning](#performing-a-filtered-checkout).
 
 1. Gå till rotmappen för arbetskopian:
 
@@ -922,7 +922,7 @@ Så här konfigurerar du en utvecklingsmiljö baserad på en synkroniseringsmapp
    appropriate flag in the /Users/trushton/Applications/aem/vltsync/sandbox/dev/jcr_root/.vlt-sync-config.properties file.
    ```
 
-1. Redigera `.vlt-sync-config.properties` dold fil och konfigurera synkronisering för att synkronisera innehållet i din databas:
+1. Redigera den dolda filen `.vlt-sync-config.properties` och konfigurera synkronisering för att synkronisera innehållet i databasen:
 
    ```xml
    sync-once=JCR2FS

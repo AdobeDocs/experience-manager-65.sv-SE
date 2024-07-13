@@ -24,26 +24,26 @@ Den här metoden skiljer sig i grunden från hur den AEM plattformen hanterar we
 
 Den AEM plattformen använder ett nodarkiv som replikerar webbplatsinnehåll från författaren till publiceringen, medan AEM Communities använder en gemensam lagringsplats för UGC som aldrig replikeras.
 
-För den vanliga UGC-butiken måste du välja en [lagringsresursleverantör (SRP)](working-with-srp.md). Rekommenderade alternativ är:
+För det gemensamma UGC-arkivet måste du välja en [lagringsresursleverantör (SRP)](working-with-srp.md). Rekommenderade alternativ är:
 
 * [DSRP - Resursprovider för relativ databaslagring](dsrp.md)
 * [MSRP - lagringsresursprovider för MongoDB](msrp.md)
 * [ASRP - Adobe lagringsresursleverantör](asrp.md)
 
-Ett annat SRP-alternativ, [JSRP - JCR-lagringsresursprovider](jsrp.md), har inte stöd för en gemensam UGC-butik för författaren och publiceringsmiljöer med båda åtkomsten.
+Ett annat SRP-alternativ, [JSRP - JCR-lagringsresursprovidern](jsrp.md), stöder inte en gemensam UGC-butik för författaren och publiceringsmiljöer för båda åtkomsten.
 
 Kräver en gemensam lagringsplats i följande rekommenderade topologier.
 
 >[!NOTE]
 >
->För AEM Communities [UGC replikeras aldrig](working-with-srp.md#ugc-never-replicated).
+>För AEM Communities replikeras [UGC aldrig](working-with-srp.md#ugc-never-replicated).
 >
->När distributionen inte innehåller en [gemensam lagringsplats](working-with-srp.md), visas bara UGC i den AEM publicerings- eller författarinstansen som den angavs för.
+>När distributionen inte innehåller någon [gemensam lagringsplats](working-with-srp.md) visas bara UGC i den AEM publicerings- eller författarinstansen som den angavs för.
 >
 
 >[!NOTE]
 >
->Mer information om den AEM plattformen finns i [Rekommenderade distributioner](../../help/sites-deploying/recommended-deploys.md) och [Introduktion till AEM](../../help/sites-deploying/data-store-config.md).
+>Mer information om den AEM plattformen finns i [Rekommenderade distributioner](../../help/sites-deploying/recommended-deploys.md) och [Introduktion till den AEM plattformen](../../help/sites-deploying/data-store-config.md).
 
 ## För produktion {#for-production}
 
@@ -51,17 +51,17 @@ Det är viktigt att upprätta en gemensam butik för UGC, och därför är den u
 
 Två exempel:
 
-1. Om den förväntade volymen av UGC är hög och en lokal MongoDB-instans är möjlig, skulle valet vara [MSRP](msrp.md).
+1. Om den förväntade volymen av UGC är hög och en lokal MongoDB-instans är möjlig är alternativet [MSRP](msrp.md).
 
-1. För optimala prestanda för sidinnehåll väljer du [publicera servergrupp](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) och [ASRP](asrp.md) ger optimal skalning av UGC med relativt enkla operationer.
+1. För optimala prestanda för sidinnehåll ger valet av en [publiceringsgrupp](../../help/sites-deploying/recommended-deploys.md#tarmk-farm) och [ASRP](asrp.md) optimal skalning av UGC med relativt enkla åtgärder.
 
 För båda kan distributionen baseras på valfri OAK-mikrokärna.
 
-Om du vill välja en lämplig gemensam lagringsplats bör du tänka på den unika [egenskaper](working-with-srp.md#characteristics-of-srp-options) av var och en.
+Om du vill välja en lämplig gemensam lagringsplats bör du tänka på de unika [egenskaperna](working-with-srp.md#characteristics-of-srp-options) för varje.
 
-Mer information om ekorrar finns på [Rekommenderade distributioner](../../help/sites-deploying/recommended-deploys.md).
+Mer information om Oak mikrokernaler finns på [Rekommenderade distributioner](../../help/sites-deploying/recommended-deploys.md).
 
-### TjärMK-publiceringsgrupp {#tarmk-publish-farm}
+### TaMK Publish Farm {#tarmk-publish-farm}
 
 När topologin är en publiceringsanläggning är viktiga ämnen:
 
@@ -86,9 +86,9 @@ När topologin är en publiceringsanläggning är viktiga ämnen:
 
 ## För utveckling {#for-development}
 
-För icke-produktionsmiljöer [JSRP](jsrp.md) är enkelt att konfigurera en utvecklingsmiljö med en författarinstans och en publiceringsinstans.
+I icke-produktionsmiljöer är det enkelt att konfigurera en utvecklingsmiljö med en författarinstans och en publiceringsinstans i [JSRP](jsrp.md) .
 
-Om du väljer [ASRP](asrp.md), [DSRP](dsrp.md) eller [MSRP](msrp.md) för produktion är det också möjligt att konfigurera en liknande utvecklingsmiljö med hjälp av Adobe on demand-lagring eller MongoDB. Ett exempel finns i [Så här konfigurerar du MongoDB för demo](demo-mongo.md).
+Om du väljer [ASRP](asrp.md), [DSRP](dsrp.md) eller [MSRP](msrp.md) för produktion, går det också att konfigurera en liknande utvecklingsmiljö med hjälp av Adobe on-demand-lagring eller MongoDB. Se till exempel [HowTo Setup MongoDB for Demo](demo-mongo.md).
 
 ## Referenser {#references}
 
@@ -100,13 +100,13 @@ Om du väljer [ASRP](asrp.md), [DSRP](dsrp.md) eller [MSRP](msrp.md) för produk
 
   Diskuterar roller för användare och användargrupper i författar- och publiceringsmiljöer.
 
-* UGC [gemensam lagringsplats](working-with-srp.md)
+* UGC [gemensam butik](working-with-srp.md)
 
   Beskriver lagring av communityinnehåll separat från webbplatsinnehåll.
 
 * [Node Stores and Data Stores](../../help/sites-deploying/data-store-config.md)
 
-  I princip lagras webbplatsinnehållet i en nodbutik. För Assets kan ett datalager konfigureras att lagra binära data. För Communities måste en gemensam butik konfigureras för att välja SRP.
+  I princip lagras webbplatsinnehållet i en nodbutik. För Assets kan ett datalager konfigureras för att lagra binära data. För Communities måste en gemensam butik konfigureras för att välja SRP.
 
 * [Lagringselement](../../help/sites-deploying/storage-elements-in-aem-6.md)
 

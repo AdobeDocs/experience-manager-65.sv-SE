@@ -15,7 +15,7 @@ ht-degree: 3%
 
 # Relaterade tillgångar {#related-assets}
 
-[!DNL Adobe Experience Manager Assets] I kan du manuellt relatera resurser baserat på organisationens behov med hjälp av funktionen för relaterade resurser. Du kan till exempel relatera en licensfil till en resurs eller en bild/video på ett liknande ämne. Du kan relatera resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser. Om du till exempel har en PDF-fil som genereras från en INDD-fil kan du koppla PDF-filen till dess INDD-källfil.
+Med [!DNL Adobe Experience Manager Assets] kan du manuellt relatera resurser baserat på organisationens behov med hjälp av funktionen för relaterade resurser. Du kan till exempel relatera en licensfil till en resurs eller en bild/video på ett liknande ämne. Du kan relatera resurser som delar vissa gemensamma attribut. Du kan också använda funktionen för att skapa käll-/härledda relationer mellan resurser. Om du till exempel har en PDF-fil som genereras från en INDD-fil kan du koppla PDF-filen till dess INDD-källfil.
 
 Med den här funktionen kan du dela en lågupplöst PDF-fil eller JPG-fil med leverantörer eller byråer och göra den högupplösta INDD-filen tillgänglig endast på begäran.
 
@@ -25,11 +25,11 @@ Med den här funktionen kan du dela en lågupplöst PDF-fil eller JPG-fil med le
 
 ## Relatera resurser {#relating-assets}
 
-1. Från [!DNL Experience Manager] -gränssnittet, öppna **[!UICONTROL Properties]** sidan för en resurs som du vill relatera.
+1. Öppna sidan **[!UICONTROL Properties]** i gränssnittet [!DNL Experience Manager] för en resurs som du vill relatera.
 
-   ![öppna en tillgångs egenskapssida för att relatera resursen](assets/asset-properties-relate-assets.png)
+   ![öppnar sidan Egenskaper för en resurs för att relatera resursen](assets/asset-properties-relate-assets.png)
 
-   *Bild: [!DNL Assets] [!UICONTROL Properties] sida för att relatera tillgångar.*
+   *Figur: [!DNL Assets] [!UICONTROL Properties] sida för att relatera resurser.*
 
    Du kan också välja resursen i listvyn.
 
@@ -39,45 +39,45 @@ Med den här funktionen kan du dela en lågupplöst PDF-fil eller JPG-fil med le
 
    ![chlimage_1-274](assets/chlimage_1-274.png)
 
-1. Om du vill koppla en annan resurs till den valda resursen klickar du på **[!UICONTROL Relate]** ![relatera tillgångar](assets/do-not-localize/link-relate.png) i verktygsfältet.
+1. Om du vill koppla en annan resurs till den valda resursen klickar du på **[!UICONTROL Relate]** ![Relatera resurser](assets/do-not-localize/link-relate.png) i verktygsfältet.
 1. Gör något av följande:
 
-   * Om du vill relatera resursens källfil väljer du **[!UICONTROL Source]** från listan.
-   * Om du vill koppla en härledd fil väljer du **[!UICONTROL Derived]** från listan.
-   * Om du vill skapa en dubbelriktad relation mellan resurserna väljer du **[!UICONTROL Others]** från listan.
+   * Om du vill relatera källfilen för resursen väljer du **[!UICONTROL Source]** i listan.
+   * Om du vill relatera en härledd fil väljer du **[!UICONTROL Derived]** i listan.
+   * Om du vill skapa en dubbelriktad relation mellan resurserna väljer du **[!UICONTROL Others]** i listan.
 
-1. Från **[!UICONTROL Select Asset]** navigera till platsen för resursen som du vill relatera och markera den.
+1. På skärmen **[!UICONTROL Select Asset]** navigerar du till platsen för resursen som du vill relatera och markerar den.
 
    ![chlimage_1-277](assets/chlimage_1-277.png)
 
 1. Klicka på **[!UICONTROL Confirm]**.
-1. Klicka **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade tillgången under en lämplig kategori i **[!UICONTROL Related]** -avsnitt. Om den resurs du har relaterat är källfilen för den aktuella resursen visas den under **[!UICONTROL Source]**.
+1. Klicka på **[!UICONTROL OK]** för att stänga dialogrutan. Beroende på ditt val av relation i steg 3 listas den relaterade resursen under en lämplig kategori i avsnittet **[!UICONTROL Related]**. Om resursen du relaterade till till till exempel är källfilen för den aktuella resursen visas den under **[!UICONTROL Source]**.
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
-1. Om du vill ta bort kopplingen för en resurs klickar du **[!UICONTROL Unrelate]** ![ej hänförliga tillgångar](assets/do-not-localize/link-unrelate-icon.png) i verktygsfältet.
+1. Om du vill ta bort kopplingen för en resurs klickar du på **[!UICONTROL Unrelate]** ![Ta bort koppling för resurser](assets/do-not-localize/link-unrelate-icon.png) i verktygsfältet.
 
-1. Välj de resurser som du vill ta bort kopplingen för i **[!UICONTROL Remove Relations]** och klickar **[!UICONTROL Unrelate]**.
+1. Markera de resurser som du vill ta bort kopplingen för i dialogrutan **[!UICONTROL Remove Relations]** och klicka på **[!UICONTROL Unrelate]**.
 
    ![chlimage_1-280](assets/chlimage_1-280.png)
 
-1. Klicka **[!UICONTROL OK]** för att stänga dialogrutan. Resurserna som du har tagit bort relationer för tas bort från listan över relaterade resurser under **[!UICONTROL Related]** -avsnitt.
+1. Klicka på **[!UICONTROL OK]** för att stänga dialogrutan. Resurserna som du har tagit bort relationer för tas bort från listan över relaterade resurser under avsnittet **[!UICONTROL Related]**.
 
 ## Översätta relaterade resurser {#translating-related-assets}
 
-Det är också praktiskt att skapa käll-/härledda relationer mellan resurser med hjälp av funktionen för relaterade resurser i översättningsarbetsflöden. När du kör ett översättningsarbetsflöde på en härledd resurs, [!DNL Experience Manager Assets] hämtar automatiskt alla resurser som källfilen refererar till och inkluderar dem för översättning. På så sätt översätts den resurs som källresursen refererar till tillsammans med källresursen och de härledda resurserna. Tänk dig till exempel ett scenario där den engelska språkkopian innehåller en härledd resurs och dess källfil som visas.
+Det är också praktiskt att skapa käll-/härledda relationer mellan resurser med hjälp av funktionen för relaterade resurser i översättningsarbetsflöden. När du kör ett översättningsarbetsflöde på en härledd resurs hämtar [!DNL Experience Manager Assets] automatiskt alla resurser som källfilen refererar till och inkluderar dem för översättning. På så sätt översätts den resurs som källresursen refererar till tillsammans med källresursen och de härledda resurserna. Tänk dig till exempel ett scenario där den engelska språkkopian innehåller en härledd resurs och dess källfil som visas.
 
 ![chlimage_1-281](assets/chlimage_1-281.png)
 
-Om källfilen är relaterad till en annan resurs [!DNL Experience Manager Assets] hämtar den refererade resursen och inkluderar den för översättning.
+Om källfilen är relaterad till en annan resurs hämtar [!DNL Experience Manager Assets] den refererade resursen och inkluderar den för översättning.
 
-![sidan med resursegenskaper visar den relaterade resursens källfil som ska inkluderas för översättning](assets/asset-properties-source-asset.png)
+![På sidan för resursegenskaper visas källfilen för den relaterade resursen som ska inkluderas för översättning](assets/asset-properties-source-asset.png)
 
-*Figur: Källtillgång för relaterade tillgångar som ska inkluderas för översättning.*
+*Figur: Source-resurs för relaterade resurser som ska inkluderas för översättning.*
 
 1. Översätt resurserna i källmappen till ett målspråk genom att följa stegen i [Skapa ett översättningsprojekt](translation-projects.md#create-a-new-translation-project). I det här fallet kan du till exempel översätta dina resurser till franska.
 
-1. Från [!UICONTROL Projects] öppnar du översättningsmappen.
+1. Öppna översättningsmappen på sidan [!UICONTROL Projects].
 
 1. Klicka på projektpanelen för att öppna informationssidan.
 

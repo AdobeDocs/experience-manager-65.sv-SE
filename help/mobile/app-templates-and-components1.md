@@ -26,7 +26,7 @@ En mall används för att skapa en sida och definierar vilka komponenter som kan
 
 Varje mall innehåller ett urval av komponenter som är tillgängliga för användning.
 
-* Mallar är inbyggda i [Komponenter](/help/sites-developing/components.md);
+* Mallar består av [komponenter](/help/sites-developing/components.md);
 * Komponenterna använder, och tillåter åtkomst till, widgetar och dessa används för att återge innehållet.
 
 >[!NOTE]
@@ -35,7 +35,7 @@ Varje mall innehåller ett urval av komponenter som är tillgängliga för anvä
 
 En mall är grunden för en sida.
 
-Om du vill skapa en sida måste mallen kopieras (nodträd) **/apps/&lt;myapp>/templates/&lt;mytemplate>**) till motsvarande position i platsträdet: detta händer om en sida skapas med **Webbplatser** -fliken.
+Om du vill skapa en sida måste mallen kopieras (node-tree **/apps/&lt;myapp>/templates/&lt;mytemplate>**) till motsvarande position i webbplatsträdet: det här händer om en sida skapas med fliken **Webbplatser** .
 
 Den här kopieringsåtgärden ger även sidan dess ursprungliga innehåll (vanligtvis innehåll på översta nivån) och egenskapen sling:resourceType, sökvägen till sidkomponenten som används för att återge sidan (allt i den underordnade noden jcr:content).
 
@@ -50,10 +50,10 @@ En mall skapas under en nod av typen **cq:Template**.
 
 Du kan ange olika egenskaper, särskilt:
 
-* **jcr:title** - mallens rubrik; visas i dialogrutan när du skapar en sida.
+* **jcr:title** - mallens rubrik visas i dialogrutan när du skapar en sida.
 * **jcr:description** - beskrivning av mallen; visas i dialogrutan när du skapar en sida.
 
-Den här noden innehåller *a jcr:content (cq:PageContent)* nod som används som bas för innehållsnoden för resulterande sidor. Den här referensen, använda *sling:resourceType*, den komponent som ska användas för att återge det faktiska innehållet på en ny sida.
+Den här noden innehåller *en jcr:content (cq:PageContent)*-nod som används som bas för innehållsnoden för de resulterande sidorna. Det här refererar, med *sling:resourceType*, till komponenten som ska användas för att återge det faktiska innehållet på en ny sida.
 
 >[!NOTE]
 >

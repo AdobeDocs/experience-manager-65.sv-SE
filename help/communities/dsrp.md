@@ -31,7 +31,7 @@ Se även [Egenskaper för SRP-alternativ](working-with-srp.md#characteristics-of
 
 >[!NOTE]
 >
->Standardlagringskonfigurationen lagras nu i conf path(`/conf/global/settings/community/srpc/defaultconfiguration`) istället för `etc` bana (`/etc/socialconfig/srpc/defaultconfiguration`). Du rekommenderas att följa [migreringssteg](#zerodt-migration-steps) så att standardinställningarna fungerar som förväntat.
+>Standardlagringskonfigurationen lagras nu i conf-sökvägen (`/conf/global/settings/community/srpc/defaultconfiguration`) i stället för `etc`-sökvägen (`/etc/socialconfig/srpc/defaultconfiguration`). Du rekommenderas att följa [migreringsstegen](#zerodt-migration-steps) för att få standardinställningarna att fungera som förväntat.
 
 ## Konfiguration av relationsdatabas {#relational-database-configuration}
 
@@ -45,20 +45,20 @@ Installations- och konfigurationsinformation finns i [MySQL-konfiguration för D
 
 En Solr-installation kan delas mellan nodbutiken (Oak) och den gemensamma lagringsplatsen (SRP) med olika samlingar.
 
-Om både Oak- och SRP-samlingarna används intensivt kan en andra Solr installeras av prestandaskäl.
+Om både Oak- och SRP-samlingar används intensivt kan en andra Solr installeras av prestandaskäl.
 
 För produktionsmiljöer ger SolrCloud-läget bättre prestanda jämfört med fristående läge (en enda lokal Solr-inställning).
 
-Installations- och konfigurationsinformation finns i [Solr-konfiguration för SRP](solr.md).
+Installations- och konfigurationsinformation finns i [Solr Configuration for SRP](solr.md).
 
 ### Välj DSRP {#select-dsrp}
 
-The [Konsol för lagringskonfiguration](srp-config.md) gör det möjligt att välja standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
+Konsolen [Lagringskonfiguration](srp-config.md) tillåter val av standardlagringskonfiguration, som identifierar vilken implementering av SRP som ska användas.
 
 På författaren, för att komma åt lagringskonsolen
 
 * Logga in med administratörsbehörighet
-* Från **huvudmeny**
+* Från **huvudmenyn**
 
    * Välj **[!UICONTROL Tools]** (från den vänstra rutan)
    * Välj **[!UICONTROL Communities]**
@@ -68,7 +68,7 @@ På författaren, för att komma åt lagringskonsolen
 
      >[!NOTE]
      >
-     >Standardlagringskonfigurationen lagras nu i conf path(`/conf/global/settings/community/srpc/defaultconfiguration`) istället för `etc` bana (`/etc/socialconfig/srpc/defaultconfiguration`). Du rekommenderas att följa [migreringssteg](#zerodt-migration-steps) så att standardinställningarna fungerar som förväntat.
+     >Standardlagringskonfigurationen lagras nu i conf-sökvägen (`/conf/global/settings/community/srpc/defaultconfiguration`)      i stället för `etc` path (`/etc/socialconfig/srpc/defaultconfiguration`). Du rekommenderas att följa [migreringsstegen](#zerodt-migration-steps) för att få standardinställningarna att fungera som förväntat.
 
   ![dsrp-config](assets/dsrp-config.png)
 
@@ -77,21 +77,21 @@ På författaren, för att komma åt lagringskonsolen
 
    * **[!UICONTROL JDBC datasource name]**
 
-     Namnet som ges till MySQL-anslutningen måste vara detsamma som anges i [JDBC OSGi-konfiguration](dsrp-mysql.md#configurejdbcconnections)
+     Namnet som ges till MySQL-anslutningen måste vara samma som det som anges i [JDBC OSGi-konfigurationen](dsrp-mysql.md#configurejdbcconnections)
 
      *standard*: communities
 
    * **[!UICONTROL Database name]**
 
-     Namnet ges till schemat i [init_schema.sql](dsrp-mysql.md#obtain-the-sql-script) script
+     Namn som ges till schemat i skriptet [init_schema.sql](dsrp-mysql.md#obtain-the-sql-script)
 
      *standard*: communities
 
 * **SolrConfiguration**
 
-   * **[Zookeeper](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html) Värd**
+   * **[Zookeeper](https://solr.apache.org/guide/6_6/using-zookeeper-to-manage-configuration-files.html) Host**
 
-     Lämna det här värdet tomt om du kör Solr med den interna ZooKeeper. Annars, när du kör i [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till URI:n för ZooKeeper, till exempel *my.server.com:80*
+     Lämna det här värdet tomt om du kör Solr med den interna ZooKeeper. Om du kör i [SolrCloud-läge](solr.md#solrcloud-mode) med en extern ZooKeeper anger du det här värdet till URI:n för ZooKeeper, till exempel *my.server.com:80*
 
      *standard*: *&lt;blank>*
 
@@ -101,19 +101,19 @@ På författaren, för att komma åt lagringskonsolen
 
    * **[!UICONTROL Solr Collection]**
 
-     *standard*: collection1
+     *standard*: samling1
 
 * Välj **[!UICONTROL Submit]**.
 
 ### Migreringssteg utan driftstopp för standardstart {#zerodt-migration-steps}
 
-Kontrollera att standardsidan [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp) fungerar som förväntat, gör så här:
+Följ de här stegen för att kontrollera att standardstartsidan [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp) fungerar som förväntat:
 
-1. Byta namn på banan vid `/etc/socialconfig` till `/etc/socialconfig_old`så att systemkonfigurationen återgår till jsrp (standard).
-1. Gå till standardsidan [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp), där jsrp är konfigurerat. Klicka på **[!UICONTROL submit]** så att en ny standardkonfigurationsnod skapas på `/conf/global/settings/community/srpc`.
+1. Byt namn på sökvägen vid `/etc/socialconfig` till `/etc/socialconfig_old` så att systemkonfigurationen återgår till jsrp (standard).
+1. Gå till standardsidan [http://localhost:4502/communities/admin/defaultsrp](http://localhost:4502/communities/admin/defaultsrp), där jsrp är konfigurerat. Klicka på knappen **[!UICONTROL submit]** så att en ny standardkonfigurationsnod skapas i `/conf/global/settings/community/srpc`.
 1. Ta bort den skapade standardkonfigurationen `/conf/global/settings/community/srpc/defaultconfiguration`.
 1. Kopiera den gamla konfigurationen `/etc/socialconfig_old/srpc/defaultconfiguration` i stället för den borttagna noden (`/conf/global/settings/community/srpc/defaultconfiguration`) i föregående steg.
-1. Ta bort gamla `etc` nod `/etc/socialconfig_old`.
+1. Ta bort den gamla `etc`-noden `/etc/socialconfig_old`.
 
 ## Publicera konfigurationen {#publishing-the-configuration}
 
@@ -124,24 +124,24 @@ Så här gör du den identiska konfigurationen tillgänglig i publiceringsmiljö
 * On author:
 
    * Navigera från huvudmenyn till **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL Replication]**
-   * Dubbelklicka **[!UICONTROL Activate Tree]**
-   * **Startbana**:
+   * Dubbelklicka på **[!UICONTROL Activate Tree]**
+   * **Startsökväg**:
 
       * Bläddra till `/etc/socialconfig/srpc/`
 
-   * Säkerställ `Only Modified` är inte markerat.
+   * Kontrollera att `Only Modified` inte är markerat.
    * Välj **[!UICONTROL Activate]**.
 
 ## Hantera användardata {#managing-user-data}
 
-För information om *användare*, *användarprofiler* och *användargrupper*, som ofta används i publiceringsmiljön, går till:
+Mer information om *användare*, *användarprofiler* och *användargrupper* som ofta anges i publiceringsmiljön finns på:
 
 * [Användarsynkronisering](sync.md)
 * [Hantera användare och användargrupper](users.md)
 
 ## Indexerar om Solr för DSRP {#reindexing-solr-for-dsrp}
 
-Om du vill indexera om DSRP Solr följer du dokumentationen för [omindexering av MSRP](msrp.md#msrp-reindex-tool)Använd i stället den här URL:en när du indexerar om för DSRP: **/services/social/datastore/rdb/reindex**
+Om du vill indexera om DSRP Solr följer du dokumentationen för [omindexering av MSRP](msrp.md#msrp-reindex-tool), men när du omindexerar för DSRP använder du den här URL:en i stället: **/services/social/datastore/rdb/reindex**
 
 Ett CTRL-kommando för att indexera om DSRP ser ut så här:
 

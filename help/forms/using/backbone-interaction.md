@@ -22,13 +22,13 @@ Backbone är ett bibliotek som hjälper till att skapa och följa MVC-arkitektur
 
 Några viktiga begrepp är följande:
 
-**Backbone-modell** Innehåller data och de flesta logikrelaterade data.
+**Backbone-modellen** innehåller data och de flesta logik som är relaterade till dessa data.
 
-**Backbone view** Används för att representera läget för motsvarande modell. En ryggradsvy fungerar som en kontrollenhet, lyssnar på användargränssnittshändelser som användarklickningar eller modellhändelser (som ändrade data) och ändrar användargränssnittet efter behov.
+**Backbone-vy** Används för att representera läget för motsvarande modell. En ryggradsvy fungerar som en kontrollenhet, lyssnar på användargränssnittshändelser som användarklickningar eller modellhändelser (som ändrade data) och ändrar användargränssnittet efter behov.
 
-**HTML-mall** En wrapper-mall med platshållare ifyllda av modellen.
+**HTML-mall** En omslutningsmall med platshållare ifyllda av modellen.
 
-**AEM Forms arbetsyta** Innehåller flera enskilda komponenter. Varje komponent:
+**AEM Forms-arbetsytan** innehåller flera enskilda komponenter. Varje komponent:
 
 * Representerar ett enskilt element i det logiska användargränssnittet.
 * Kan vara en samling med liknande komponenter.
@@ -46,7 +46,7 @@ I Backbone-vyn finns det en händelsekarta som mappar de olika händelser som ka
 
 När en vy initieras anropar vyn sin motsvarande modell för att hämta data från servern. När alla data som krävs för en vy är tillgängliga återges data i det format som anges av mallen HTML. Flera vyer kan ha samma kommunikationsmodell.
 
-![AEM formulärens stamvy](do-not-localize/aem_forms_workflow.png)
+![AEM formulärstamsvy](do-not-localize/aem_forms_workflow.png)
 
 Ett exempel:
 

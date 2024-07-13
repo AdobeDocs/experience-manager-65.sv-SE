@@ -46,8 +46,8 @@ Resurserna i de villkor som återges baserat på de regler som tillämpas och de
    * **[!UICONTROL Title]**: (Valfritt) Ange villkorets titel. Titlar behöver inte vara unika och kan innehålla specialtecken och tecken som inte är engelska. Villkoren refereras till av deras titlar (om de är tillgängliga), t.ex. i miniatyrbilder och egenskaper.
    * **[!UICONTROL Name]**: Villkorets unika namn i en mapp. Det får inte finnas två dokumentfragment (text, villkor eller lista) i något läge med samma namn i en mapp. I fältet Namn kan du bara ange engelska tecken, siffror och bindestreck. Fältet Namn fylls i automatiskt baserat på fältet Titel. De specialtecken, blanksteg, siffror och icke-engelska tecken som anges i fältet Titel ersätts med bindestreck i fältet Namn. Även om värdet i fältet Titel automatiskt kopieras till namnet kan du redigera värdet.
 
-   * **[!UICONTROL Description]**: Skriv en beskrivning av dokumentfragmentet.
-   * **[!UICONTROL Form Data Model]**: Om du vill kan du välja alternativknappen Formulärdatamodell för att skapa villkoret baserat på en formulärdatamodell. När du väljer alternativknappen Formulärdatamodell **[!UICONTROL Form Data Model]** visas. Bläddra och välj en formulärdatamodell. När du skapar villkor för en interaktiv kommunikation måste du se till att du använder samma datamodell som du tänker använda i den interaktiva kommunikationen. Mer information om formulärdatamodell finns i [Dataintegrering](../../forms/using/data-integration.md).
+   * **[!UICONTROL Description]**: Ange en beskrivning av dokumentfragmentet.
+   * **[!UICONTROL Form Data Model]**: Om du vill kan du välja alternativknappen Formulärdatamodell för att skapa villkoret baserat på en formulärdatamodell. När du väljer alternativknappen Formulärdatamodell visas fältet **[!UICONTROL Form Data Model]**. Bläddra och välj en formulärdatamodell. När du skapar villkor för en interaktiv kommunikation måste du se till att du använder samma datamodell som du tänker använda i den interaktiva kommunikationen. Mer information om formulärdatamodell finns i [Dataintegrering](../../forms/using/data-integration.md).
 
    * **[!UICONTROL Tags]**: Om du vill skapa en egen tagg anger du ett värde i textfältet och väljer Retur. När du sparar det här villkoret skapas de nya taggarna.
 
@@ -55,27 +55,27 @@ Resurserna i de villkor som återges baserat på de regler som tillämpas och de
 
    Sidan Skapa villkor visas.
 
-   ![createcondition](assets/createcondition.png)
+   ![skapandevillkor](assets/createcondition.png)
 
 1. Välj **[!UICONTROL Add Assets]**.
 
-   Sidan Välj resurser visas och visar tillgängliga texter, listor, villkor och bilder som kan läggas till i villkoret.
+   En Assets-sida visas och visar tillgängliga texter, listor, villkor och bilder som kan läggas till i villkoret.
 
    >[!NOTE]
    >
-   >Endast icke-baserade, nyskapade resurser och FDM-baserade resurser (som skapats med samma FDM som det villkor som skapas) visas på sidan Välj resurser.
+   >Endast icke-baserade, nyskapade resurser och FDM-baserade resurser (som skapats med samma FDM som det villkor som skapas) visas på sidan Välj Assets.
 
 1. Välj de resurser som ska inkluderas i villkoret och välj sedan **[!UICONTROL Done]**.
 
    Sidan Skapa villkor visas och de tillagda resurserna visas.
 
-   ![createconderresurserLägg till](assets/createconditionassetsadd.png)
+   ![createcondersAssetsAdd](assets/createconditionassetsadd.png)
 
    Du kan använda följande alternativ för att hantera resurser i ett villkor:
 
    ![createconditionscreenassetsaddedannotated](assets/createconditionscreenassetsaddedannotated.png)
 
-   **[A] Ignorera ändring.** Välj den här ikonen om du vill ignorera ändringarna som du kan ha gjort i resursen och regeln i villkoret.
+   **[A] Ignorera ändring.** Välj den här ikonen om du vill ignorera de ändringar du kan ha gjort i resursen och regeln i villkoret.
    **[B] Acceptera ändring.** Välj den här ikonen om du vill acceptera ändringarna som du har gjort i resursen och regeln i villkoret.
    **[C] Duplicera resurs.** Välj den här ikonen om du vill skapa en kopia av resursen tillsammans med den tillämpade regeln, om någon, i villkoret. Sedan kan du fortsätta redigera regeln och resursen för duplicerad resurs. Att duplicera en resurs är användbart när du vill skapa liknande regler för att visa alternativa resurser baserat på en viss kontext.
    **[D] Visa förhandsgranskning.** Välj den här ikonen om du vill visa en förhandsvisning av resursen på sidan Skapa\Redigera villkor.
@@ -83,11 +83,11 @@ Resurserna i de villkor som återges baserat på de regler som tillämpas och de
 
    Du kan välja följande alternativ för att ange hur villkoret fungerar under körning:
 
-   * **Utvärdering av flera resultat har inaktiverats\Utvärdering av flera resultat har aktiverats**: När det här alternativet är aktiverat (visas som&quot;Flera resultatutvärderingar aktiverade&quot;) utvärderas alla regler och resultatet är summan av alla true-regler. Om det här alternativet är inaktiverat (visas som&quot;Flera resultatutvärderingar är inaktiverade&quot;) utvärderas endast den första regeln som är true och blir villkorets utdata.
+   * **Utvärdering av flera resultat har inaktiverats\Utvärdering av flera resultat har aktiverats**: När det här alternativet är aktiverat (visas som &quot;Utvärdering av flera resultat har aktiverats&quot;) utvärderas alla regler och resultatet är summan av alla sanna regler. Om det här alternativet är inaktiverat (visas som&quot;Flera resultatutvärderingar är inaktiverade&quot;) utvärderas endast den första regeln som är true och blir villkorets utdata.
 
-   * **Sidbrytning**: Välj det här alternativet ( ![break](assets/break.png)) för att lägga till en sidbrytning mellan villkorens resurser. När det här alternativet inte är markerat ( ![nobreak](assets/nobreak.png)), om ett villkor flödar över till nästa sida i utskriften, flyttas hela villkoret till nästa sida i stället för att brytas i sidan mellan resurserna i villkoret.
+   * **Sidbrytning**: Välj det här alternativet ( ![brytning](assets/break.png)) om du vill lägga till en sidbrytning mellan villkorens resurser. Om det här alternativet inte är markerat ( ![ingen brytning](assets/nobreak.png)) och ett villkor flödar över till nästa sida i utskriftsresultatet, flyttas hela villkoret till nästa sida i stället för att brytas i sidan mellan resurserna i villkoret.
 
-1. Välj **[!UICONTROL Create Rule]** om du vill lägga till regler för att visa eller dölja resurserna, efter behov. Information om hur du använder variabler i reglerna finns i [skapa variabler](#variables). Mer information finns i [Lägga till regler i villkoret](#ruleeditor).
+1. Välj **[!UICONTROL Create Rule]** om du vill lägga till regler för att visa eller dölja resurserna efter behov. Mer information om hur du använder variabler i reglerna finns i [skapa variabler](#variables). Mer information finns i [Lägga till regler i villkoret](#ruleeditor).
 
    De regler som skapas visas i kolumnen RULE på skärmen Skapa villkor.
 
@@ -128,7 +128,7 @@ Med regelredigeraren i ett villkor kan du skapa regler för att visa eller dölj
 
 ### Skapa regel i villkor {#create-rule-in-condition}
 
-1. När du skapar eller redigerar ett villkor väljer du ![ruleeditoricon](assets/ruleeditoricon.png) (Regelredigerare) ikon för den aktuella resursen.
+1. När du skapar eller redigerar ett villkor väljer du ikonen ![regelredigeraren](assets/ruleeditoricon.png) (regelredigeraren) för den aktuella resursen.
 
    Dialogrutan Skapa regel visas. Förutom sträng, tal, matematiskt uttryck och datum finns följande även i regelredigeraren för att skapa satser för reglerna:
 
@@ -146,11 +146,11 @@ Med regelredigeraren i ett villkor kan du skapa regler för att visa eller dölj
 1. Välj lämplig operator för att utvärdera regeln, till exempel Är lika med, Innehåller och Börjar med.
 1. Infoga det utvärderande uttrycket, strängen, datamodellens egenskap, variabel eller datum.
 
-   ![Regel som visar en resurs när policytypen är standard](assets/ruleincondition.png)
+   ![Regel som visar en resurs när principtypen är standard](assets/ruleincondition.png)
 
    Regel som visar en resurs när policytypen är standard
 
-   * När du skapar eller redigerar en regel kan du även välja ![icon_resize](assets/icon_resize.png) (Ändra storlek) för att utöka dialogrutan Skapa regel/Redigera regel. I den utökade fullfönsterdialogen kan du skapa [variabler](#variables) för att skapa regler. Välj Ändra storlek igen om du vill gå tillbaka till den vanliga dialogrutan Skapa regel.
+   * När du skapar eller redigerar en regel kan du även välja ![icon_resize](assets/icon_resize.png) (Ändra storlek) för att utöka dialogrutan Skapa regel/Redigera regel. I den utökade dialogrutan i helskärmsläge kan du skapa [variabler](#variables) för att skapa regler. Välj Ändra storlek igen om du vill gå tillbaka till den vanliga dialogrutan Skapa regel.
 
    * Du kan också skapa flera villkor i en regel.
 
@@ -175,7 +175,7 @@ Välj Ändra storlek igen om du vill gå tillbaka till dialogrutan Skapa regel\R
 
    ![expandededitruledialog](assets/expandededitruledialog.png)
 
-1. I den vänstra rutan väljer du **[!UICONTROL Variables]**.
+1. Välj **[!UICONTROL Variables]** i den vänstra rutan.
 
    Rutan Variabler visas.
 
@@ -190,7 +190,7 @@ Välj Ändra storlek igen om du vill gå tillbaka till dialogrutan Skapa regel\R
    * **[!UICONTROL Name]**: Variabelns namn.
    * **[!UICONTROL Description]**: Om du vill kan du ange en beskrivning av variabeln.
    * **[!UICONTROL Type]**: Välj en typ av variabel: String, Number, Boolean eller Date.
-   * **[!UICONTROL Allow Specific Values Only]**: För String- och Number-variabler kan du se till att agenten väljer från en viss uppsättning värden för en platshållare i agentens användargränssnitt. Om du vill ange värdeuppsättningen markerar du det här alternativet och anger sedan kommaavgränsade värden som är tillåtna i dialogrutan **[!UICONTROL Values]** fält.
+   * **[!UICONTROL Allow Specific Values Only]**: För String- och Number-variabler kan du se till att agenten väljer från en viss uppsättning värden för en platshållare i agentens användargränssnitt. Om du vill ange värdeuppsättningen väljer du det här alternativet och anger sedan kommaavgränsade värden som tillåts i fältet **[!UICONTROL Values]**.
 
 1. Välj **[!UICONTROL Create]**.
 

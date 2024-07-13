@@ -18,19 +18,19 @@ ht-degree: 0%
 
 # Konfigurerar OSGi{#configuring-osgi}
 
-[OSGi](https://www.osgi.org/) är en grundläggande del i Adobe Experience Manager (AEM) teknikstack. Det används för att styra de sammansatta AEM och deras konfiguration.
+[OSGi](https://www.osgi.org/) är ett grundläggande element i Adobe Experience Manager (AEM) teknikstack. Det används för att styra de sammansatta AEM och deras konfiguration.
 
-OSGi &quot;*innehåller standardmallar som gör det möjligt att konstruera program utifrån små, återanvändbara och samverkansbaserade komponenter. Dessa komponenter kan sammanställas i ett program och distribueras*&quot;.
+OSGi *innehåller standardmallar som gör att program kan skapas från små, återanvändbara och samarbetskomponenter. Dessa komponenter kan sättas samman till ett program och distribueras*.
 
-På så sätt blir det enkelt att hantera paket när de kan stoppas, installeras och startas individuellt. De inbördes beroendena hanteras automatiskt. Varje OSGi-komponent (se [OSGi-specifikation](https://docs.osgi.org/specification/)) finns i ett av de olika paketen.
+På så sätt blir det enkelt att hantera paket när de kan stoppas, installeras och startas individuellt. De inbördes beroendena hanteras automatiskt. Varje OSGi-komponent (se [OSGi-specifikationen](https://docs.osgi.org/specification/)) finns i ett av de olika paketen.
 
 Du kan hantera konfigurationsinställningarna för sådana paket genom att antingen:
 
 * med [Adobe CQ webbkonsol](#osgi-configuration-with-the-web-console)
-* använda [konfigurationsfiler](#osgi-configuration-with-configuration-files)
-* konfigurera [content-nodes ( `sling:OsgiConfig`) i databasen](#osgi-configuration-in-the-repository)
+* använder [konfigurationsfiler](#osgi-configuration-with-configuration-files)
+* konfigurerar [content-nodes ( `sling:OsgiConfig`) i databasen](#osgi-configuration-in-the-repository)
 
-Båda metoderna kan användas trots att det finns små skillnader, främst i relation till [Körningslägen](/help/sites-deploying/configure-runmodes.md):
+Båda metoderna kan användas trots att det finns små skillnader, främst i förhållande till [körningslägena](/help/sites-deploying/configure-runmodes.md):
 
 * [Adobe CQ webbkonsol](#osgi-configuration-with-the-web-console)
 
@@ -48,7 +48,7 @@ Båda metoderna kan användas trots att det finns små skillnader, främst i rel
 * [content-nodes (sling:osgiConfig) i databasen](#osgi-configuration-in-the-repository)
 
    * Kräver manuell konfiguration med CRXDE Lite.
-   * På grund av namngivningskonventionerna för `sling:OsgiConfig` -noder kan du koppla konfigurationen till en viss [körningsläge](/help/sites-deploying/configure-runmodes.md). Du kan även spara konfigurationer för mer än ett körningsläge i samma databas.
+   * På grund av namngivningskonventionerna för noderna `sling:OsgiConfig` kan du koppla konfigurationen till ett specifikt [körläge](/help/sites-deploying/configure-runmodes.md). Du kan även spara konfigurationer för mer än ett körningsläge i samma databas.
    * Alla lämpliga konfigurationer används omedelbart (beroende på körningsläget).
 
 Alla dessa konfigurationsmetoder, oavsett vilken metod du använder:
@@ -60,11 +60,11 @@ Alla dessa konfigurationsmetoder, oavsett vilken metod du använder:
 
 >[!NOTE]
 >
->Information om vissa viktiga inställningar finns i listan under [Konfigurationsinställningar för OSGi.](/help/sites-deploying/osgi-configuration-settings.md)
+>Information om vissa viktiga inställningar visas under [OSGi-konfigurationsinställningar.](/help/sites-deploying/osgi-configuration-settings.md)
 
 ## OSGi-konfiguration med webbkonsolen {#osgi-configuration-with-the-web-console}
 
-The [Webbkonsol](/help/sites-deploying/web-console.md) i AEM tillhandahåller ett standardiserat gränssnitt för att konfigurera paketen. The **Konfiguration** -fliken används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
+[Webbkonsolen](/help/sites-deploying/web-console.md) i AEM tillhandahåller ett standardiserat gränssnitt för att konfigurera paketen. Fliken **Konfiguration** används för att konfigurera OSGi-paket och är därför den underliggande mekanismen för att konfigurera AEM systemparametrar.
 
 Alla ändringar som görs tillämpas omedelbart på den aktuella OSGi-konfigurationen, ingen omstart krävs.
 
@@ -80,9 +80,9 @@ Alla ändringar som görs tillämpas omedelbart på den aktuella OSGi-konfigurat
 
 Så här uppdaterar du en konfiguration med webbkonsolen:
 
-1. Öppna **Konfiguration** fliken Web Console av antingen:
+1. Gå till fliken **Konfiguration** i webbkonsolen genom att antingen:
 
-   * Öppna webbkonsolen från länken på panelen **Verktyg > Åtgärder** -menyn. När du har loggat in på konsolen kan du använda den nedrullningsbara menyn i:
+   * Öppnar webbkonsolen från länken på menyn **Verktyg > Åtgärder** . När du har loggat in på konsolen kan du använda den nedrullningsbara menyn i:
 
      **OSGi >**
 
@@ -94,8 +94,8 @@ Så här uppdaterar du en konfiguration med webbkonsolen:
 
 1. Välj det paket som du vill konfigurera av:
 
-   * klicka på **Redigera** ikon för paketet
-   * klicka på **Namn** i paketet
+   * klicka på ikonen **Redigera** för det paketet
+   * klicka på paketets **namn**
 
 1. En dialogruta öppnas. Här kan du redigera efter behov. Ange till exempel **Loggnivå** till `INFO`:
 
@@ -103,15 +103,15 @@ Så här uppdaterar du en konfiguration med webbkonsolen:
 
    >[!NOTE]
    >
-   >Uppdateringar sparas i databasen som [konfigurationsfiler](#osgi-configuration-with-configuration-files). Om du vill söka efter de här filerna efteråt och inkludera dem i ett innehållspaket för användning i en annan instans, till exempel, ska du göra en anteckning om den beständiga identiteten ( `PID`).
+   >Uppdateringar sparas i databasen som [konfigurationsfiler](#osgi-configuration-with-configuration-files). Om du vill hitta de här filerna efteråt och inkludera dem i ett innehållspaket för användning på en annan instans, till exempel, bör du anteckna den beständiga identiteten ( `PID`).
 
-1. Klicka **Spara**.
+1. Klicka på **Spara**.
 
    Ändringarna tillämpas omedelbart på den aktuella OSGi-konfigurationen för det system som körs, ingen omstart krävs.
 
    >[!NOTE]
    >
-   >Du kan nu hitta den relaterade [konfigurationsfiler](#osgi-configuration-with-configuration-files). Om du till exempel vill inkludera innehåll i ett innehållspaket som ska användas på en annan instans.
+   >Du kan nu hitta de relaterade [konfigurationsfilerna](#osgi-configuration-with-configuration-files). Om du till exempel vill inkludera innehåll i ett innehållspaket som ska användas på en annan instans.
 
 ## OSGi-konfiguration med konfigurationsfiler {#osgi-configuration-with-configuration-files}
 
@@ -125,7 +125,7 @@ Dessa filer kan inkluderas i innehållspaket och återanvändas i andra instanse
 >
 >Konfigurationsfilernas format är specifikt - se Sling Apache-dokumentationen för:
 >* fullständig information om [Apache Sling Provisioning Model och Apache SlingStart](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format).
->* självstudiekurser och exempel [Hämta resurser och egenskaper i Sling](https://sling.apache.org/documentation/tutorials-how-tos/getting-resources-and-properties-in-sling.html).
+>* självstudier och exempel på [Hämta resurser och egenskaper i Sling](https://sling.apache.org/documentation/tutorials-how-tos/getting-resources-and-properties-in-sling.html).
 >
 >Därför rekommenderar vi att du skapar och underhåller konfigurationsfilen genom att göra faktiska ändringar i webbkonsolen.
 
@@ -133,10 +133,10 @@ Webbkonsolen visar ingen indikation på var i databasen dina ändringar har spar
 
 1. Skapa konfigurationsfilen genom att [göra en första ändring i webbkonsolen](#osgi-configuration-with-the-web-console).
 1. Öppna CRXDE Lite.
-1. I **verktyg** meny, välja **Fråga ...** .
-1. Om du vill söka efter PID för konfigurationen som du har uppdaterat skickar du en fråga till **Typ** `SQL`.
+1. Välj **Fråga ...** på menyn **Verktyg** .
+1. Om du vill söka efter PID för konfigurationen som du har uppdaterat skickar du en fråga av typen **Type** `SQL`.
 
-   Till exempel: **Apache Felix OSGi Management Console** har den beständiga identiteten (PID) för:
+   **Apache Felix OSGi Management Console** har till exempel den beständiga identiteten (PID):
 
    `org.apache.felix.webconsole.internal.servlet.OsgiManager`
 
@@ -162,7 +162,7 @@ Webbkonsolen visar ingen indikation på var i databasen dina ändringar har spar
 
 Förutom att använda webbkonsolen kan du även definiera konfigurationsinformation i databasen. På så sätt kan du enkelt konfigurera olika körningslägen.
 
-Dessa konfigurationer skapas genom att skapa `sling:OsgiConfig` noder i databasen som systemet ska referera till. De här noderna speglar OSGi-konfigurationerna och ett användargränssnitt har skapats för dem. Om du vill uppdatera konfigurationsdata uppdaterar du nodegenskaperna.
+Dessa konfigurationer görs genom att `sling:OsgiConfig` noder skapas i databasen som systemet refererar till. De här noderna speglar OSGi-konfigurationerna och ett användargränssnitt har skapats för dem. Om du vill uppdatera konfigurationsdata uppdaterar du nodegenskaperna.
 
 Om du ändrar konfigurationsdata i databasen tillämpas ändringarna omedelbart på den aktuella OSGi-konfigurationen. Det är som om ändringarna gjorts med webbkonsolen, med lämplig validering och konsekvenskontroll. Det här arbetsflödet gäller även kopiering av en konfiguration från `/libs/` till `/apps/`.
 
@@ -174,7 +174,7 @@ Eftersom samma konfigurationsparameter finns på flera ställen:
 
 >[!NOTE]
 >
->Läs även [definiera en databasbaserad konfiguration för en specifik instans](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html).
+>Läs även [hur du definierar en databasbaserad konfiguration för en specifik instans endast](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html).
 
 ### Lägga till en ny konfiguration i databasen {#adding-a-new-configuration-to-the-repository}
 
@@ -182,36 +182,36 @@ Eftersom samma konfigurationsparameter finns på flera ställen:
 
 Om du vill lägga till en konfiguration i databasen måste du känna till följande:
 
-1. The **Beständig identitet** (PID) för tjänsten.
+1. Tjänstens **PID (Persistent Identity**).
 
-   Referera till **Konfigurationer** i webbkonsolen. Namnet visas inom parentes efter paketnamnet (eller i **Konfigurationsinformation** längst ned på sidan).
+   Referera till fältet **Konfigurationer** i webbkonsolen. Namnet visas inom hakparenteser efter paketnamnet (eller i **konfigurationsinformationen** längst ned på sidan).
 
-   Skapa till exempel en nod `com.day.cq.wcm.core.impl.VersionManagerImpl.` konfigurera **AEM WCM Version Manager**.
+   Skapa till exempel en nod `com.day.cq.wcm.core.impl.VersionManagerImpl.` som konfigurerar **AEM WCM-versionshanteraren**.
 
    ![chlimage_1-141](assets/chlimage_1-141.png)
 
-1. Är en specifik [körningsläge](/help/sites-deploying/configure-runmodes.md) krävs? Skapa mappen:
+1. Krävs ett specifikt [körningsläge](/help/sites-deploying/configure-runmodes.md)? Skapa mappen:
 
    * `config` - för alla körningslägen
-   * `config.author` - för redigeringsmiljön
+   * `config.author` - för författarmiljön
    * `config.publish` - för publiceringsmiljön
-   * `config.<run-mode>` - i förekommande fall
+   * `config.<run-mode>` - efter behov
 
-1. Är en **Konfiguration** eller **Fabrikskonfiguration** är nödvändigt?
+1. Krävs en **konfiguration** eller **fabrikskonfiguration**?
 1. De enskilda parametrar som ska konfigureras, inklusive befintliga parameterdefinitioner som måste återskapas.
 
    Referera till det enskilda parameterfältet i webbkonsolen. Namnet visas inom hakparenteser för varje parameter.
 
    Skapa till exempel en egenskap
-   `versionmanager.createVersionOnActivation` konfigurera **Skapa version vid aktivering**.
+   `versionmanager.createVersionOnActivation` om du vill konfigurera **Skapa version vid aktivering**.
 
    ![chlimage_1-142](assets/chlimage_1-142.png)
 
-1. Finns det en konfiguration i `/libs`? Använd kommandot **Fråga** i CRXDE Lite för att skicka följande SQL-fråga:
+1. Finns det en konfiguration i `/libs`? Om du vill visa alla konfigurationer i din instans använder du **frågeverktyget** i CRXDE Lite för att skicka följande SQL-fråga:
 
    `select * from sling:OsgiConfig`
 
-   I så fall kan konfigurationen kopieras till ` /apps/<yourProject>/`och sedan anpassats på den nya platsen.
+   I så fall kan konfigurationen kopieras till ` /apps/<yourProject>/` och sedan anpassas på den nya platsen.
 
 #### Skapa konfigurationen i databasen {#creating-the-configuration-in-the-repository}
 
@@ -221,9 +221,9 @@ Så här lägger du till den nya konfigurationen i databasen:
 
    ` /apps/<yourProject>`
 
-1. Om den inte finns skapar du `config` mapp ( `sling:Folder`):
+1. Om den inte finns skapar du mappen `config` ( `sling:Folder`):
 
-   * `config` - gäller för alla körlägen
+   * `config` - gäller för alla körningslägen
    * `config.<run-mode>` - specifikt för ett visst körläge
 
 1. Skapa en nod under den här mappen:
@@ -235,17 +235,17 @@ Så här lägger du till den nya konfigurationen i databasen:
 
    >[!NOTE]
    >
-   >När du skapar ett fabrikskonfiguration `-<identifier>` till namnet.
+   >När du gör en fabrikskonfiguration lägger du till `-<identifier>` till namnet.
    >
    >Som i: `org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
    >
-   >Plats `<identifier>` ersätts med fri text som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen), till exempel:
+   >Där `<identifier>` ersätts med fritext som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen), till exempel:
    >
    >`org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
 1. Skapa en egenskap på den här noden för varje parameter som du vill konfigurera:
 
-   * Namn: parameternamnet som visas i webbkonsolen. Namnet visas inom hakparenteser i slutet av fältbeskrivningen. Till exempel `Create Version on Activation` use `versionmanager.createVersionOnActivation`
+   * Namn: parameternamnet som visas i webbkonsolen. Namnet visas inom hakparenteser i slutet av fältbeskrivningen. Använd till exempel `Create Version on Activation` för `versionmanager.createVersionOnActivation`
    * Typ: efter behov.
    * Värde: efter behov.
 
@@ -257,7 +257,7 @@ Så här lägger du till den nya konfigurationen i databasen:
 
 >[!CAUTION]
 >
->Ändra ingenting i dialogrutan `/libs` bana.
+>Ändra ingenting i sökvägen `/libs`.
 
 >[!CAUTION]
 >
@@ -269,11 +269,11 @@ Så här lägger du till den nya konfigurationen i databasen:
 
 Följande prioritetsordning används:
 
-1. Databasnoder under `/apps/*/config...`antingen med text `sling:OsgiConfig` eller egenskapsfiler.
+1. Databasnoder under `/apps/*/config...`.antingen med typen `sling:OsgiConfig` eller egenskapsfiler.
 
-1. Databasnoder med typ `sling:OsgiConfig` under `/libs/*/config...`. (färdiga definitioner).
+1. Databasnoder med typen `sling:OsgiConfig` under `/libs/*/config...`. (färdiga definitioner).
 
-1. Alla `.config` filer från `<*cq-installation-dir*>/crx-quickstart/launchpad/config/...`. i det lokala filsystemet.
+1. Alla `.config`-filer från `<*cq-installation-dir*>/crx-quickstart/launchpad/config/...`. i det lokala filsystemet.
 
 En allmän konfiguration i `/libs` kan maskeras av en projektspecifik konfiguration i `/apps`.
 
@@ -284,8 +284,8 @@ Konfigurationsändringar som görs medan systemet körs utlöser en omladdning m
 Sedan gäller följande prioritetsordning:
 
 1. När du ändrar en konfiguration i webbkonsolen börjar det gälla direkt när det gäller körning.
-1. Ändra en konfiguration i `/apps` börjar gälla omedelbart.
-1. Ändra en konfiguration i `/libs` börjar gälla omedelbart, såvida det inte maskeras av en konfiguration i `/apps`.
+1. Ändring av en konfiguration i `/apps` börjar gälla omedelbart.
+1. Ändring av en konfiguration i `/libs` börjar gälla omedelbart, såvida den inte maskeras av en konfiguration i `/apps`.
 
 ### Upplösning för flera körningslägen {#resolution-of-multiple-run-modes}
 
@@ -295,15 +295,15 @@ För körningslägesspecifika konfigurationer kan flera körningslägen kombiner
 
 Konfigurationer i sådana mappar används om alla körningslägen matchar ett körningsläge som har definierats vid start.
 
-Om en instans till exempel startades med körningslägena `author,dev,emea`, konfigurationsnoder i `/apps/*/config.emea`, `/apps/*/config.author.dev/`och `/apps/*/config.author.emea.dev/` används, medan konfigurationsnoder i `/apps/*/config.author.asean/` och `/config/author.dev.emea.noldap/` används inte.
+Om en instans till exempel startades med körningslägena `author,dev,emea` tillämpas konfigurationsnoderna i `/apps/*/config.emea`, `/apps/*/config.author.dev/` och `/apps/*/config.author.emea.dev/`, medan konfigurationsnoderna i `/apps/*/config.author.asean/` och `/config/author.dev.emea.noldap/` inte tillämpas.
 
 Om flera konfigurationer för samma PID kan användas, används konfigurationen med det högsta antalet matchande körningslägen.
 
-Om en instans till exempel startades med körningslägena `author,dev,emea`och både `/apps/*/config.author/` och `/apps/*/config.emea.author/` definiera en konfiguration för
-`com.day.cq.wcm.core.impl.VersionManagerImpl`, konfigurationen i `/apps/*/config.emea.author/` används.
+Om en instans till exempel startades med körningslägena `author,dev,emea`, definierar både `/apps/*/config.author/` och `/apps/*/config.emea.author/` en konfiguration för
+`com.day.cq.wcm.core.impl.VersionManagerImpl` används konfigurationen i `/apps/*/config.emea.author/` .
 
 Regelns granularitet är på PID-nivå.
-Du kan inte definiera vissa egenskaper för samma PID i `/apps/*/config.author/` och mer specifika `/apps/*/config.emea.author/` för samma PID.
+Du kan inte definiera vissa egenskaper för samma PID i `/apps/*/config.author/` och mer specifika i `/apps/*/config.emea.author/` för samma PID.
 Konfigurationen med det högsta antalet matchande körningslägen gäller för hela PID.
 
 ### Standardkonfigurationer {#standard-configurations}
@@ -314,19 +314,19 @@ I följande lista visas ett litet urval av de konfigurationer som är tillgängl
 
   `libs/wcm/core/config.author/com.day.cq.wcm.core.WCMRequestFilter`
 
-* Publicera - AEM WCM-filter:
+* Publish - AEM WCM-filter:
 
   `libs/wcm/core/config.publish/com.day.cq.wcm.core.WCMRequestFilter`
 
-* Publicera - AEM WCM-sidstatistik:
+* Publish - AEM WCM-sidstatistik:
 
   `libs/wcm/core/config.publish/com.day.cq.wcm.core.stats.PageViewStatistics`
 
 >[!NOTE]
 >
->När dessa konfigurationer finns i `/libs` de får inte redigeras direkt, utan kopieras till programområdet ( `/apps`) före anpassning.
+>Eftersom dessa konfigurationer finns i `/libs` får de inte redigeras direkt, utan kopieras till programområdet ( `/apps`) före anpassning.
 
-Använd knappen **Fråga** i CRXDE Lite för att skicka följande SQL-fråga:
+Om du vill visa alla konfigurationsnoder i din instans använder du funktionen **Fråga** i CRXDE Lite för att skicka följande SQL-fråga:
 
 `select * from sling:OsgiConfig`
 
@@ -336,7 +336,7 @@ Använd knappen **Fråga** i CRXDE Lite för att skicka följande SQL-fråga:
 
   `/apps/{somewhere}`
 
-   * Som standard `{somewhere}` är `system/config` så att konfigurationen skrivs till
+   * Som standard är `{somewhere}` `system/config` så konfigurationen skrivs till
 
      `/apps/system/config`
 
@@ -348,13 +348,13 @@ Använd knappen **Fråga** i CRXDE Lite för att skicka följande SQL-fråga:
 
      `/apps/foo/config/someconfig`
 
-* Inställningar som ändrats av `admin` sparas i `*.config` filer under:
+* Inställningar som ändras av `admin` sparas i `*.config` filer under:
 
   ```
      /crx-quickstart/launchpad/config
   ```
 
-   * Det här området är privata data för OSGi-konfigurationsadministratören och innehåller all konfigurationsinformation som anges av `admin`, oavsett hur de gick in i systemet.
+   * Det här området är de privata data som tillhör OSGi-konfigurationsadministratören och innehåller alla konfigurationsdetaljer som anges av `admin`, oavsett hur de angavs i systemet.
    * Det här området är en implementeringsdetalj och du får aldrig redigera den här katalogen direkt.
    * Det är emellertid användbart att veta var dessa konfigurationsfiler finns så att kopior kan tas för säkerhetskopiering, eller för flera installationer, eller både och:
 

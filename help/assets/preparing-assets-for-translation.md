@@ -17,9 +17,9 @@ ht-degree: 0%
 
 Flerspråkiga resurser innebär resurser med binärfiler, metadata och taggar på flera språk. I allmänhet finns binära filer, metadata och taggar för resurser på ett språk, som sedan översätts till andra språk för användning i flerspråkiga projekt.
 
-I [!DNL Adobe Experience Manager Assets], inkluderas flerspråkiga resurser i mappar där varje mapp innehåller resurserna på ett annat språk.
+I [!DNL Adobe Experience Manager Assets] inkluderas flerspråkiga resurser i mappar, där varje mapp innehåller resurserna på ett annat språk.
 
-Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. Till exempel: */content/dam/it* är den italienska språkroten för den italienska språkversionen. Språkkopior måste använda en [korrekt konfigurerad språkrot](preparing-assets-for-translation.md#creating-a-language-root) så att rätt språk anges som mål när översättningar av källresurser utförs.
+Varje språkmapp kallas för en språkkopia. Rotmappen för en språkkopia, som kallas språkrot, identifierar språket för innehållet i språkkopian. */content/dam/it* är till exempel den italienska språkroten för den italienska språkkopian. Språkkopior måste använda en [korrekt konfigurerad språkrot](preparing-assets-for-translation.md#creating-a-language-root) så att rätt språk används när översättningar av källresurser utförs.
 
 Språkkopian som du ursprungligen lade till resurser för är det primära språket. Det primära språket är källan som översätts till andra språk. En exempelmapphierarki innehåller flera språkrötter:
 
@@ -46,27 +46,27 @@ Utför följande steg för att förbereda dina resurser för översättning:
 
 Om du vill skapa språkroten skapar du en mapp och använder en ISO-språkkod som värde för egenskapen Namn. När du har skapat språkroten kan du skapa en språkkopia på valfri nivå i språkroten.
 
-Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `it` som egenskapen Name. Egenskapen Namn används som namn på objektnoden i databasen och avgör därför sökvägen till resurserna. (`https://[aem_server]:[port]/assets.html/content/dam/it/`).
+Rotsidan för den italienska språkkopian av exempelhierarkin har till exempel `it` som namnegenskap. Egenskapen Namn används som namn på objektnoden i databasen och avgör därför sökvägen till resurserna. (`https://[aem_server]:[port]/assets.html/content/dam/it/`).
 
-1. Från [!DNL Assets] konsol, klicka **[!UICONTROL Create]** och välja **[!UICONTROL Folder]** på menyn.
+1. Klicka på **[!UICONTROL Create]** i [!DNL Assets]-konsolen och välj **[!UICONTROL Folder]** på menyn.
 
    ![Skapa mapp](assets/Create-folder.png)
 
-1. I **[!UICONTROL Name]** fälttyp landskoden i formatet `<language-code>`.
+1. I fältet **[!UICONTROL Name]** skriver du landskoden i formatet `<language-code>`.
 
    ![Lägg till språkkod i mappen](assets/Add-language-code-in-folder.png)
 
-1. Klicka på **[!UICONTROL Create]**. Språkroten skapas i [!DNL Assets] konsol.
+1. Klicka på **[!UICONTROL Create]**. Språkroten skapas i konsolen [!DNL Assets].
 
 ## Visa språkrötter {#viewing-language-roots}
 
-[!DNL Experience Manager] -gränssnittet har en **[!UICONTROL References]** som visar en lista med språkrötter som har skapats i [!DNL Assets].
+Gränssnittet [!DNL Experience Manager] innehåller en **[!UICONTROL References]**-panel som visar en lista med språkrötter som har skapats i [!DNL Assets].
 
-1. I [!DNL Assets] väljer du det primära språk som du vill skapa språkkopior för.
-1. Välj **[!UICONTROL References]** för att öppna [!UICONTROL Reference] fönster.
+1. I konsolen [!DNL Assets] väljer du det primära språk som du vill skapa språkkopior för.
+1. Välj alternativet **[!UICONTROL References]** i den vänstra listen för att öppna rutan [!UICONTROL Reference].
 
    ![chlimage_1-122](assets/chlimage_1-122.png)
 
-1. Klicka på i rutan Referenser **[!UICONTROL Language Copies]**. The [!UICONTROL Language Copies] På panelen visas språkkopiorna för resurserna.
+1. Klicka på **[!UICONTROL Language Copies]** i rutan Referenser. På panelen [!UICONTROL Language Copies] visas språkkopior av resurserna.
 
-   ![språkversioner](assets/lang-copy2.png)
+   ![språkkopior](assets/lang-copy2.png)

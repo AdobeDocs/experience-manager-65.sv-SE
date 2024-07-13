@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Tilldela användningsrättigheter {#assigning-usage-rights}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 ## Om Acrobat Reader DC-tilläggstjänsten {#about-the-acrobat-reader-dc-extensions-service}
 
@@ -26,13 +26,13 @@ Med Acrobat Reader DC Extensions kan man enkelt utbyta interaktiva PDF-dokument 
 
 Du kan utföra följande uppgifter med hjälp av Acrobat Reader DC-tilläggstjänsten:
 
-* Använd användarrättigheter för PDF-dokument. Mer information finns i [Använda användningsbehörighet för PDF-dokument](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
+* Använd användarrättigheter för PDF-dokument. Mer information finns i [Använda användningsrättigheter i PDF-dokument](assigning-usage-rights.md#applying-usage-rights-to-pdf-documents).
 * Ta bort användningsrättigheter från PDF-dokument. Mer information finns i [Ta bort användningsrättigheter från PDF-dokument](assigning-usage-rights.md#removing-usage-rights-from-pdf-documents).
 * Hämta information om autentiseringsuppgifter. Mer information finns i [Hämtar information om autentiseringsuppgifter](assigning-usage-rights.md#retrieving-credential-information).
 
 >[!NOTE]
 >
->Mer information om tjänsten Acrobat Reader DC Extensions finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om Acrobat Reader DC-tilläggstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ## Använda användningsbehörighet för PDF-dokument {#applying-usage-rights-to-pdf-documents}
 
@@ -40,11 +40,11 @@ Du kan lägga till användarrättigheter i PDF-dokument med Acrobat Reader DC-ti
 
 >[!NOTE]
 >
->När användarrättigheter tillämpas på PDF-dokument med `applyUsageRights` -metoden, som är en del av Java API:t, kan du ange `isModeFinal` parametern för `ReaderExtensionsOptionSpec` objekt till `false`. Detta resulterar i att de bearbetade formulärräknarna inte uppdateras och att prestandan förbättras. Om du inte är orolig för att uppdatera räknaren för bearbetade formulär bör du ställa in `isModeFinal` parameter till `false`.
+>När du tillämpar användningsrättigheter på PDF-dokument med metoden `applyUsageRights`, som är en del av Java API:t, kan du ange parametern `isModeFinal` för objektet `ReaderExtensionsOptionSpec` till `false`. Detta resulterar i att de bearbetade formulärräknarna inte uppdateras och att prestandan förbättras. Om du inte är orolig för att uppdatera räknaren för bearbetade formulär rekommenderar vi att du ställer in parametern `isModeFinal` på `false`.
 
 >[!NOTE]
 >
->Mer information om tjänsten Acrobat Reader DC Extensions finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om Acrobat Reader DC-tilläggstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary-of-steps}
 
@@ -63,7 +63,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett klientobjekt för Acrobat Reader DC-tillägg**
 
-Om du vill utföra en programstyrd Acrobat Reader DC extensions service-åtgärd måste du skapa ett klientobjekt för Acrobat Reader DC extensions-tjänsten. Om du använder Java API för Acrobat Reader DC-tillägg skapar du en `ReaderExtensionsServiceClient` -objekt. Om du använder webbtjänstens API för Acrobat Reader DC-tillägg skapar du en `ReaderExtensionsServiceService` -objekt.
+Om du vill utföra en programstyrd Acrobat Reader DC extensions service-åtgärd måste du skapa ett klientobjekt för Acrobat Reader DC extensions-tjänsten. Om du använder Java API:t för Acrobat Reader DC-tillägg skapar du ett `ReaderExtensionsServiceClient`-objekt. Om du använder webbtjänstens API för Acrobat Reader DC-tillägg skapar du ett `ReaderExtensionsServiceService`-objekt.
 
 **Hämta ett PDF-dokument**
 
@@ -81,7 +81,7 @@ Vilka användarrättigheter du kan ange avgörs av en inloggningsinformation som
 
 Om du vill tillämpa användarrättigheter på ett PDF-dokument refererar du till aliaset för de autentiseringsuppgifter som du använder för att tillämpa användarrättigheter (en autentiseringsuppgift installeras vanligtvis under installationen av AEM Forms). Du måste också ange det PDF-dokument som användarrättigheterna gäller för. Mer information om hur du konfigurerar en autentiseringsuppgift finns i installations- och distributionsguiden för programservern.
 
-**Spara det rättighetsaktiverade PDF-dokumentet**
+**Spara dokumentet för PDF som aktiverats för rättigheter**
 
 När Acrobat Reader DC Extensions-tjänsten har tillämpat användarrättigheter på ett PDF-dokument kan du spara det rättighetsaktiverade PDF-dokumentet som en PDF-fil.
 
@@ -107,40 +107,40 @@ Använd användarrättigheter för ett PDF-dokument med hjälp av Acrobat Reader
 
 1. Skapa ett klientobjekt för Acrobat Reader DC-tillägg.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `ReaderExtensionsServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `ReaderExtensionsServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta ett PDF-dokument.
 
-   * Skapa en `java.io.FileInputStream` objekt som representerar PDF-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för PDF-dokumentet.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar PDF-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för PDF-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ange användningsrättigheter att använda.
 
-   * Skapa en `UsageRights` objekt som representerar användarrättigheter med hjälp av konstruktorn.
-   * Anropa en motsvarande metod som tillhör `UsageRights` -objekt. Om du till exempel vill lägga till `enableFormFillIn` användningsbehörighet, anropa `UsageRights` objektets `enableFormFillIn` metod och skicka `true`. (Upprepa det här steget för varje användningsbehörighet).
+   * Skapa ett `UsageRights`-objekt som representerar användningsrättigheter med hjälp av konstruktorn.
+   * Anropa en motsvarande metod som tillhör objektet `UsageRights` för varje användningsbehörighet som ska användas. Om du till exempel vill lägga till användningsrättigheten `enableFormFillIn` anropar du `UsageRights`-objektets `enableFormFillIn`-metod och skickar `true`. (Upprepa det här steget för varje användningsbehörighet).
 
 1. Använd användningsbehörighet för PDF-dokumentet.
 
-   * Skapa en `ReaderExtensionsOptionSpec` genom att använda dess konstruktor. Det här objektet innehåller körningsalternativ som krävs av Acrobat Reader DC-tilläggstjänsten. När du anropar den här konstruktorn måste du ange följande värden:
+   * Skapa ett `ReaderExtensionsOptionSpec`-objekt med hjälp av dess konstruktor. Det här objektet innehåller körningsalternativ som krävs av Acrobat Reader DC-tilläggstjänsten. När du anropar den här konstruktorn måste du ange följande värden:
 
-      * The `UsageRights` objekt som innehåller användningsrättigheterna som ska tillämpas på dokumentet.
+      * Objektet `UsageRights` som innehåller användningsrättigheterna som ska tillämpas på dokumentet.
       * Ett strängvärde som anger ett meddelande som en användare ser när det rättighetsaktiverade PDF-dokumentet öppnas i Adobe Reader 7.x. Meddelandet visas inte i Adobe Reader 8.0.
 
-   * Använd användningsbehörighet för PDF-dokumentet genom att anropa `ReaderExtensionsServiceClient` objektets `applyUsageRights` och skicka följande värden:
+   * Använd användningsbehörighet för PDF-dokumentet genom att anropa `ReaderExtensionsServiceClient`-objektets `applyUsageRights`-metod och skicka följande värden:
 
-      * The `com.adobe.idp.Document` -objekt som innehåller det PDF-dokument som användningsrättigheterna tillämpas på.
+      * Det `com.adobe.idp.Document`-objekt som innehåller det PDF-dokument som användningsrättigheterna tillämpas på.
       * Ett strängvärde som anger det alias för autentiseringsuppgiften som gör att du kan tillämpa användningsbehörighet.
       * Ett strängvärde som anger motsvarande lösenordsvärde. (Den här parametern ignoreras för närvarande. Du kan skicka `null`.)
 
-   * The `ReaderExtensionsOptionSpec` objekt som innehåller körningsalternativ.
+   * Objektet `ReaderExtensionsOptionSpec` som innehåller körningsalternativ.
 
-   The `applyUsageRights` returnerar en `com.adobe.idp.Document` -objekt som innehåller det rättighetsaktiverade PDF-dokumentet.
+   Metoden `applyUsageRights` returnerar ett `com.adobe.idp.Document`-objekt som innehåller det rättighetsaktiverade PDF-dokumentet.
 
 1. Spara det rättighetsaktiverade PDF-dokumentet.
 
-   * Skapa en `java.io.File` och se till att filtillägget är .pdf.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` till filen (se till att du använder `com.adobe.idp.Document` objekt som returneras av `applyUsageRights` metod).
+   * Skapa ett `java.io.File`-objekt och kontrollera att filtillägget är .pdf.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `com.adobe.idp.Document`-objektet till filen (se till att du använder det `com.adobe.idp.Document`-objekt som returnerades av metoden `applyUsageRights`).
 
 **Se även**
 
@@ -162,55 +162,55 @@ Använd användarrättigheter för ett PDF-dokument med hjälp av Acrobat Reader
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett klientobjekt för Acrobat Reader DC-tillägg.
 
-   * Skapa en `ReaderExtensionsServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `ReaderExtensionsServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`. Se till att du anger `?blob=mtom`.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `ReaderExtensionsServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `ReaderExtensionsServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `ReaderExtensionsServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`). Se till att du anger `?blob=mtom`.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `ReaderExtensionsServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta ett PDF-dokument.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra ett PDF-dokument som har användarbehörighet.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` -metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett PDF-dokument som en användningsbehörighet används för.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll objektet `BLOB` genom att tilldela dess `MTOM`-egenskap med innehållet i bytearrayen.
 
 1. Ange användningsrättigheter att använda.
 
-   * Skapa en `UsageRights` objekt som representerar användarrättigheter med hjälp av konstruktorn.
-   * Tilldela värdet för varje användningsbehörighet `true` till motsvarande datamedlem som tillhör `UsageRights` -objekt. Om du till exempel vill lägga till `enableFormFillIn` användarbehörighet, tilldela `true` till `UsageRights` objektets `enableFormFillIn` datamedlem. (Upprepa det här steget för varje användningsbehörighet).
+   * Skapa ett `UsageRights`-objekt som representerar användningsrättigheter med hjälp av konstruktorn.
+   * För varje användningsbehörighet som ska användas tilldelar du värdet `true` till motsvarande datamedlem som tillhör objektet `UsageRights`. Om du till exempel vill lägga till användningsrättigheten `enableFormFillIn` tilldelar du `true` till `UsageRights`-objektets `enableFormFillIn`-datamedlem. (Upprepa det här steget för varje användningsbehörighet).
 
 1. Använd användningsbehörighet för PDF-dokumentet.
 
-   * Skapa en `ReaderExtensionsOptionSpec` genom att använda dess konstruktor. Det här objektet innehåller körningsalternativ som krävs av Acrobat Reader DC-tilläggstjänsten.
-   * Tilldela `UsageRights` objekt till `ReaderExtensionsOptionSpec` objektets `usageRights` datamedlem.
-   * Tilldela ett strängvärde som anger det meddelande som en användare ser när det rättighetsaktiverade PDF-dokumentet öppnas i Adobe Reader till `ReaderExtensionsOptionSpec` objektets `message` datamedlem.
-   * Använd användningsbehörighet för PDF-dokumentet genom att anropa `ReaderExtensionsServiceClient` objektets `applyUsageRights` och skicka följande värden:
+   * Skapa ett `ReaderExtensionsOptionSpec`-objekt med hjälp av dess konstruktor. Det här objektet innehåller körningsalternativ som krävs av Acrobat Reader DC-tilläggstjänsten.
+   * Tilldela objektet `UsageRights` till `ReaderExtensionsOptionSpec`-objektets `usageRights`-datamedlem.
+   * Tilldela ett strängvärde som anger meddelandet som en användare ser när det rättighetsaktiverade PDF-dokumentet öppnas i Adobe Reader till `message`-objektets `ReaderExtensionsOptionSpec`-datamedlem.
+   * Använd användningsbehörighet för PDF-dokumentet genom att anropa `ReaderExtensionsServiceClient`-objektets `applyUsageRights`-metod och skicka följande värden:
 
-      * The `BLOB` -objekt som innehåller det PDF-dokument som användningsrättigheterna tillämpas på.
+      * Det `BLOB`-objekt som innehåller det PDF-dokument som användningsrättigheterna tillämpas på.
       * Ett strängvärde som anger det alias för autentiseringsuppgiften som gör att du kan tillämpa användningsbehörighet.
       * Ett strängvärde som anger motsvarande lösenordsvärde. (Den här parametern ignoreras för närvarande. Du kan skicka `null`.)
 
-   * The `ReaderExtensionsOptionSpec` objekt som innehåller körningsalternativ.
+   * Objektet `ReaderExtensionsOptionSpec` som innehåller körningsalternativ.
 
-   The `applyUsageRights` returnerar en `BLOB` -objekt som innehåller det rättighetsaktiverade PDF-dokumentet.
+   Metoden `applyUsageRights` returnerar ett `BLOB`-objekt som innehåller det rättighetsaktiverade PDF-dokumentet.
 
 1. Spara det rättighetsaktiverade PDF-dokumentet.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för det rättighetsaktiverade PDF-dokumentet.
-   * Skapa en bytearray som lagrar datainnehållet i `BLOB` objekt som returneras av `applyUsageRights` -metod. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för det rättighetsaktiverade PDF-dokumentet.
+   * Skapa en bytearray som lagrar datainnehållet för objektet `BLOB` som returnerades av metoden `applyUsageRights`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -226,7 +226,7 @@ Du kan ta bort användarrättigheter från ett rättighetsaktiverat dokument. De
 
 >[!NOTE]
 >
->Mer information om tjänsten Acrobat Reader DC Extensions finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om Acrobat Reader DC-tilläggstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
@@ -244,7 +244,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett klientobjekt för Acrobat Reader DC-tillägg**
 
-Innan du programmässigt kan utföra en Acrobat Reader DC-tilläggstjänståtgärd måste du skapa ett klientobjekt för Acrobat Reader DC-tilläggstjänsten. Om du använder Java API skapar du en `ReaderExtensionsServiceClient` -objekt. Om du använder webbtjänstens API för Acrobat Reader DC-tillägg skapar du en `ReaderExtensionsServiceService` -objekt.
+Innan du programmässigt kan utföra en Acrobat Reader DC-tilläggstjänståtgärd måste du skapa ett klientobjekt för Acrobat Reader DC-tilläggstjänsten. Om du använder Java API skapar du ett `ReaderExtensionsServiceClient`-objekt. Om du använder webbtjänstens API för Acrobat Reader DC-tillägg skapar du ett `ReaderExtensionsServiceService`-objekt.
 
 **Hämta ett rättighetsaktiverat PDF-dokument**
 
@@ -282,21 +282,21 @@ Ta bort användarrättigheter från ett rättighetsaktiverat PDF-dokument med hj
 
 1. Skapa ett klientobjekt för Acrobat Reader DC-tillägg.
 
-   Skapa en `ReaderExtensionsServiceClient` genom att använda konstruktorn och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `ReaderExtensionsServiceClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Hämta ett PDF-dokument.
 
-   * Skapa en `java.io.FileInputStream` objekt som representerar det rättighetsaktiverade PDF-dokumentet genom att använda konstruktorn och skicka ett strängvärde som anger platsen för PDF-dokumentet.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det rättighetsaktiverade PDF-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för PDF-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ta bort användningsrättigheter från PDF-dokumentet.
 
-   Ta bort användningsrättigheter från PDF genom att anropa `ReaderExtensionsServiceClient` objektets `removeUsageRights` metoden och skicka `com.adobe.idp.Document` -objekt som innehåller det rättighetsaktiverade PDF-dokumentet. Den här metoden returnerar en `com.adobe.idp.Document` objekt som innehåller ett PDF-dokument som inte har användningsbehörighet.
+   Ta bort användningsrättigheter från PDF-dokumentet genom att anropa `ReaderExtensionsServiceClient`-objektets `removeUsageRights`-metod och skicka `com.adobe.idp.Document`-objektet som innehåller det rättighetsaktiverade PDF-dokumentet. Den här metoden returnerar ett `com.adobe.idp.Document`-objekt som innehåller ett PDF-dokument som inte har användningsbehörighet.
 
 1. Använd användningsbehörighet för PDF-dokumentet.
 
-   * Skapa en `java.io.File` och se till att filtillägget är .PDF.
-   * Anropa `Document` objektets `copyToFile` metod för att kopiera innehållet i `Document` till filen (se till att du använder `Document` objekt som returneras av `removeUsageRights` metod).
+   * Skapa ett `java.io.File`-objekt och kontrollera att filtillägget är .PDF.
+   * Anropa `Document`-objektets `copyToFile`-metod för att kopiera innehållet i `Document`-objektet till filen (se till att du använder det `Document`-objekt som returnerades av metoden `removeUsageRights`).
 
 **Se även**
 
@@ -318,38 +318,38 @@ Ta bort användningsrättigheter från ett rättighetsaktiverat PDF-dokument med
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett klientobjekt för Acrobat Reader DC-tillägg.
 
-   * Skapa en `ReaderExtensionsServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `ReaderExtensionsServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`. Se till att du anger `?blob=mtom`.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `ReaderExtensionsServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `ReaderExtensionsServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `ReaderExtensionsServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`). Se till att du anger `?blob=mtom`.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `ReaderExtensionsServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta ett PDF-dokument.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` används för att lagra det rättighetsaktiverade PDF-dokumentet från vilket användarrättigheter tas bort.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra det rättighetsaktiverade PDF-dokumentet från vilket användningsrättigheterna tas bort.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll objektet `BLOB` genom att tilldela dess `MTOM`-egenskap med innehållet i bytearrayen.
 
 1. Ta bort användningsrättigheter från PDF-dokumentet.
 
-   Ta bort användningsrättigheter från PDF genom att anropa `ReaderExtensionsServiceClient` objektets `removeUsageRights` metoden och skicka `BLOB` -objekt som innehåller det rättighetsaktiverade PDF-dokumentet. Den här metoden returnerar en `BLOB` objekt som innehåller ett PDF-dokument som inte har användningsbehörighet.
+   Ta bort användningsrättigheter från PDF-dokumentet genom att anropa `ReaderExtensionsServiceClient`-objektets `removeUsageRights`-metod och skicka `BLOB`-objektet som innehåller det rättighetsaktiverade PDF-dokumentet. Den här metoden returnerar ett `BLOB`-objekt som innehåller ett PDF-dokument som inte har användningsbehörighet.
 
 1. Använd användningsbehörighet för PDF-dokumentet.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen PDF.
-   * Skapa en bytearray som lagrar datainnehållet i `BLOB` objekt som returneras av `removeUsageRights` -metod. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen PDF.
+   * Skapa en bytearray som lagrar datainnehållet för objektet `BLOB` som returnerades av metoden `removeUsageRights`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
 
 **Se även**
 
@@ -365,7 +365,7 @@ Du kan hämta information om de autentiseringsuppgifter som användes för att t
 
 >[!NOTE]
 >
->Mer information om tjänsten Acrobat Reader DC Extensions finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
+>Mer information om Acrobat Reader DC-tilläggstjänsten finns i [Tjänstreferens för AEM Forms](https://www.adobe.com/go/learn_aemforms_services_63).
 
 ### Sammanfattning av steg {#summary_of_steps-2}
 
@@ -382,7 +382,7 @@ Inkludera nödvändiga filer i utvecklingsprojektet. Om du skapar ett klientprog
 
 **Skapa ett klientobjekt för Acrobat Reader DC-tillägg**
 
-Innan du programmässigt kan utföra en Acrobat Reader DC-tilläggstjänståtgärd måste du skapa ett klientobjekt för Acrobat Reader DC-tilläggstjänsten. Om du använder Java API skapar du en `ReaderExtensionsServiceClient` -objekt. Om du använder webbtjänstens API för Acrobat Reader DC-tillägg skapar du en `ReaderExtensionsServiceService` -objekt.
+Innan du programmässigt kan utföra en Acrobat Reader DC-tilläggstjänståtgärd måste du skapa ett klientobjekt för Acrobat Reader DC-tilläggstjänsten. Om du använder Java API skapar du ett `ReaderExtensionsServiceClient`-objekt. Om du använder webbtjänstens API för Acrobat Reader DC-tillägg skapar du ett `ReaderExtensionsServiceService`-objekt.
 
 **Hämta ett rättighetsaktiverat PDF-dokument**
 
@@ -420,18 +420,18 @@ Hämta autentiseringsuppgifter med Acrobat Reader DC Extensions API (Java):
 
 1. Skapa ett klientobjekt för Acrobat Reader DC-tillägg.
 
-   Skapa en `ReaderExtensionsServiceClient` genom att använda konstruktorn och skicka ett `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
+   Skapa ett `ReaderExtensionsServiceClient`-objekt med hjälp av dess konstruktor och skicka ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
 
 1. Hämta ett PDF-dokument.
 
-   * Skapa en `java.io.FileInputStream` objekt som representerar det rättighetsaktiverade PDF-dokumentet genom att använda konstruktorn och skicka ett strängvärde som anger platsen för det rättighetsaktiverade PDF-dokumentet.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det rättighetsaktiverade PDF-dokumentet genom att använda konstruktorn och skicka ett strängvärde som anger platsen för det rättighetsaktiverade PDF-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ta bort användningsrättigheter från PDF-dokumentet.
 
-   * Hämta information om de autentiseringsuppgifter som används för att tillämpa användningsrättigheter på PDF-dokumentet genom att anropa `ReaderExtensionsServiceClient` objektets `getDocumentUsageRights` metoden och skicka `com.adobe.idp.Document` -objekt som innehåller det rättighetsaktiverade PDF-dokumentet. Den här metoden returnerar en `GetUsageRightsResult` objekt som innehåller autentiseringsuppgifter.
-   * Hämta det datum efter vilket autentiseringsuppgifterna inte längre är giltiga genom att anropa `GetUsageRightsResult` objektets `getNotAfter` -metod. Den här metoden returnerar en `java.util.Date` objekt som representerar det datum efter vilket autentiseringsuppgifterna inte längre är giltiga.
-   * Hämta meddelandet som visas i Adobe Reader när dokumentet för aktiverade rättigheter öppnas via PDF genom att anropa `GetUsageRightsResult` objektets `getMessage` -metod. Den här metoden returnerar ett strängvärde som representerar meddelandet.
+   * Hämta information om de autentiseringsuppgifter som används för att tillämpa användningsrättigheter på PDF-dokumentet genom att anropa `ReaderExtensionsServiceClient`-objektets `getDocumentUsageRights`-metod och skicka `com.adobe.idp.Document`-objektet som innehåller det rättighetsaktiverade PDF-dokumentet. Den här metoden returnerar ett `GetUsageRightsResult`-objekt som innehåller autentiseringsuppgifter.
+   * Hämta det datum efter vilket autentiseringsuppgifterna inte längre är giltiga genom att anropa `GetUsageRightsResult`-objektets `getNotAfter`-metod. Den här metoden returnerar ett `java.util.Date`-objekt som representerar det datum efter vilket autentiseringsuppgifterna inte längre är giltiga.
+   * Hämta det meddelande som visas i Adobe Reader när dokumentet med aktiverade rättigheter öppnas i PDF genom att anropa `GetUsageRightsResult`-objektets `getMessage`-metod. Den här metoden returnerar ett strängvärde som representerar meddelandet.
 
 **Se även**
 
@@ -453,35 +453,35 @@ Hämta autentiseringsinformation med Acrobat Reader DC Extensions API (webbtjän
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett klientobjekt för Acrobat Reader DC-tillägg.
 
-   * Skapa en `ReaderExtensionsServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `ReaderExtensionsServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`. Se till att du anger `?blob=mtom`.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `ReaderExtensionsServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `ReaderExtensionsServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `ReaderExtensionsServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/ReaderExtensionsService?blob=mtom`). Se till att du anger `?blob=mtom`.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `ReaderExtensionsServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `ReaderExtensionsServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta ett PDF-dokument.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra ett PDF-dokument som har aktiverats för behörighet.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det rättighetsaktiverade PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett rättighetsaktiverat PDF-dokument.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det rättighetsaktiverade PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll objektet `BLOB` genom att tilldela dess `MTOM`-egenskap med innehållet i bytearrayen.
 
 1. Ta bort användningsrättigheter från PDF-dokumentet.
 
-   * Hämta information om de autentiseringsuppgifter som används för att tillämpa användningsrättigheter på PDF-dokumentet genom att anropa `ReaderExtensionsServiceClient` objektets `getDocumentUsageRights` metoden och skicka `com.adobe.idp.Document` -objekt som innehåller det rättighetsaktiverade PDF-dokumentet. Den här metoden returnerar en `GetUsageRightsResult` objekt som innehåller autentiseringsuppgifter.
-   * Hämta datumet efter vilket autentiseringsuppgifterna inte längre är giltiga genom att hämta värdet för `GetUsageRightsResult` objektets `notAfter` datamedlem. Datatypen för den här datamedlemmen är `System.DateTime`.
-   * Hämta meddelandet som visas när det rättighetsaktiverade PDF-dokumentet öppnas i Adobe Reader genom att hämta värdet för `GetUsageRightsResult` objektets `message` datamedlem. Datatypen för den här datamedlemmen är en sträng.
-   * Hämta antalet gånger som autentiseringsuppgiften används genom att hämta värdet för `GetUsageRightsResult` objektets `useCount` datamedlem. Datatypen för den här datamedlemmen är ett heltal.
+   * Hämta information om de autentiseringsuppgifter som används för att tillämpa användningsrättigheter på PDF-dokumentet genom att anropa `ReaderExtensionsServiceClient`-objektets `getDocumentUsageRights`-metod och skicka `com.adobe.idp.Document`-objektet som innehåller det rättighetsaktiverade PDF-dokumentet. Den här metoden returnerar ett `GetUsageRightsResult`-objekt som innehåller autentiseringsuppgifter.
+   * Hämta datumet efter vilket autentiseringsuppgifterna inte längre är giltiga genom att hämta värdet för `GetUsageRightsResult`-objektets `notAfter`-datamedlem. Datatypen för denna datamedlem är `System.DateTime`.
+   * Hämta meddelandet som visas när dokumentet för PDF som aktiverats för rättigheter öppnas i Adobe Reader genom att hämta värdet för `GetUsageRightsResult`-objektets `message`-datamedlem. Datatypen för den här datamedlemmen är en sträng.
+   * Hämta antalet gånger som autentiseringsuppgiften används genom att hämta värdet för `GetUsageRightsResult`-objektets `useCount`-datamedlem. Datatypen för den här datamedlemmen är ett heltal.
 
 **Se även**
 

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Översätter användargenererat innehåll {#translating-user-generated-content}
 
-Översättningsfunktionen för Adobe Experience Manager (AEM) Communities utökar begreppet [översätta sidinnehåll](../../help/sites-administering/translation.md) till det användargenererade innehåll (UGC) som publicerats på communitysajter med [komponenter i ramverket för sociala komponenter (SCF)](scf.md).
+Översättningsfunktionen för Adobe Experience Manager (AEM) Communities utökar begreppet [översättning av sidinnehåll](../../help/sites-administering/translation.md) till det användargenererade innehåll (UGC) som publiceras på communitysajter med hjälp av [komponenter i det sociala ramverket (SCF)](scf.md).
 
 Översättningen av UGC gör att besökare och medlemmar kan uppleva en global community genom att ta bort språkhinder.
 
@@ -32,27 +32,27 @@ Anta till exempel:
 
 ## Ökning {#overview}
 
-I det här avsnittet beskrivs hur översättningstjänsten fungerar med UGC. Det förutsätter också att du har en förståelse för hur du ansluter AEM till en [översättningstjänst](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider) och integrera tjänsten i en webbplats genom att konfigurera en [översättningsintegreringsramverk](../../help/sites-administering/tc-tic.md).
+I det här avsnittet beskrivs hur översättningstjänsten fungerar med UGC. Det förutsätter också att du har en förståelse för hur du ansluter AEM till en [översättningstjänstleverantör](../../help/sites-administering/translation.md#connectingtoatranslationserviceprovider) och integrerar den tjänsten på en webbplats genom att konfigurera ett [översättningsintegreringsramverk](../../help/sites-administering/tc-tic.md).
 
 När en översättningstjänstleverantör är associerad med webbplatsen behåller varje språkkopia av webbplatsen sina egna UGC-trådar som publicerats via SCF-komponenter, till exempel kommentarer.
 
-När en översättningsintegrering har konfigurerats utöver översättningstjänstleverantören, är det möjligt för varje språkkopia av webbplatsen att dela en enda tråd av UGC, vilket ger global kommunikation över språkkopiorna. I stället för en diskussionstråd som är uppdelad efter språk konfigureras den [globalt delat arkiv](#global-translation-of-ugc) gör att hela tråden visas oavsett vilket språk den visas på. Dessutom kan flera översättningsintegrationskonfigurationer konfigureras med olika globala delade arkiv för en logisk gruppering av globala deltagare, t.ex. efter regioner.
+När en översättningsintegrering har konfigurerats utöver översättningstjänstleverantören, är det möjligt för varje språkkopia av webbplatsen att dela en enda tråd av UGC, vilket ger global kommunikation över språkkopiorna. I stället för en diskussionstråd som är uppdelad efter språk gör det konfigurerade [globala delade arkivet](#global-translation-of-ugc) att hela tråden kan visas oavsett vilket språk den visas på. Dessutom kan flera översättningsintegrationskonfigurationer konfigureras med olika globala delade arkiv för en logisk gruppering av globala deltagare, t.ex. efter regioner.
 
 ## Standardöversättningstjänsten {#the-default-translation-service}
 
-AEM Communities innehåller [testlicens](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) för [standardöversättningstjänst](../../help/sites-administering/tc-msconf.md) aktiveras för flera språk.
+AEM Communities innehåller en [utvärderingslicens](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license) för en [standardöversättningstjänst](../../help/sites-administering/tc-msconf.md) som är aktiverad för flera språk.
 
-När [skapa en communitywebbplats](sites-console.md)är standardöversättningstjänsten aktiverad när `Allow Machine Translation` är markerad från [ÖVERSÄTTNING](sites-console.md#translation) underpanel.
+När [skapar en community-webbplats](sites-console.md) aktiveras standardöversättningstjänsten när `Allow Machine Translation` kontrolleras från underpanelen [TRANSLATION](sites-console.md#translation).
 
 >[!CAUTION]
 >
 >Standardöversättningstjänsten är endast till för demonstration.
 >
->För ett produktionssystem krävs en licensierad översättningstjänst. Om den inte är licensierad bör standardöversättningstjänsten [inaktiverad](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors).
+>För ett produktionssystem krävs en licensierad översättningstjänst. Om den inte är licensierad bör standardöversättningstjänsten vara [inaktiverad](../../help/sites-administering/tc-msconf.md#microsoft-translator-trial-license-geometrixx-outdoors).
 
 ## Global översättning av användargenererat innehåll {#global-translation-of-ugc}
 
-När en webbplats har flera [språkversioner](../../help/sites-administering/tc-prep.md), känner inte standardöversättningstjänsten igen att den UGC som anges på en plats kan vara relaterad till den UGC som anges på en annan plats. Detta gäller när UGC genereras av samma komponent (språkkopian av sidan som innehåller komponenten).
+När en webbplats har flera [språkkopior](../../help/sites-administering/tc-prep.md) känner inte standardöversättningstjänsten igen att den UGC som anges på en webbplats kan vara relaterad till den UGC som anges på en annan plats. Detta gäller när UGC genereras av samma komponent (språkkopian av sidan som innehåller komponenten).
 
 Det liknar grupper av människor som diskuterar ett ämne. De är inte medvetna om kommentarer som görs i andra grupper än de egna, jämfört med alla som deltar i en konversation i en stor grupp.
 
@@ -64,7 +64,7 @@ Om ett forum till exempel har skapats på baswebbplatsen, språkkopior som har s
 >
 >Eventuell UGC som fanns före global översättning är inte längre synlig.
 >
->Medan användargenerationen fortfarande finns i [gemensam lagringsplats](working-with-srp.md), finns den under den språkspecifika UGC-platsen, medan nytt innehåll, som läggs till efter att global översättning har konfigurerats, hämtas från den globala delade lagringsplatsen.
+>UGC:n finns fortfarande i det [gemensamma arkivet](working-with-srp.md), men den finns under den språkspecifika UGC-platsen, medan nytt innehåll, som lagts till efter att global översättning konfigurerats, hämtas från den globala delade lagringsplatsen.
 >
 >Det finns inget migreringsverktyg för att flytta eller sammanfoga språkspecifikt innehåll i det globala delade arkivet.
 
@@ -73,7 +73,7 @@ Om ett forum till exempel har skapats på baswebbplatsen, språkkopior som har s
 Så här skapar du en översättningsintegrering, som integrerar en översättningstjänstkoppling med webbplatsen på författarinstansen:
 
 * Logga in som administratör
-* Från [huvudmeny](http://localhost:4502/)
+* Från [huvudmenyn](http://localhost:4502/)
 * Välj **[!UICONTROL Tools]**
 * Välj **[!UICONTROL Operations]**
 * Välj **[!UICONTROL Cloud]**
@@ -86,7 +86,7 @@ Så här skapar du en översättningsintegrering, som integrerar en översättni
 
   ![show-configuration](assets/translation-integration1.png)
 
-* Välj `[+]` ikon bredvid **[!UICONTROL Available Configurations]** så att du kan skapa en konfiguration.
+* Välj ikonen `[+]` bredvid **[!UICONTROL Available Configurations]** så att du kan skapa en konfiguration.
 
 #### Dialogrutan Skapa konfiguration {#create-configuration-dialog}
 
@@ -94,7 +94,7 @@ Så här skapar du en översättningsintegrering, som integrerar en översättni
 
 * **[!UICONTROL Parent Configuration]**
 
-  (Obligatoriskt) Lämna normalt som standard. Standard är `/etc/cloudservices/translation`.
+  (Obligatoriskt) Lämna normalt som standard. Standardvärdet är `/etc/cloudservices/translation`.
 
 * **[!UICONTROL Title]**
 
@@ -110,32 +110,32 @@ Så här skapar du en översättningsintegrering, som integrerar en översättni
 
 ![configuration-dialog](assets/translation-integration3.png)
 
-Detaljerade anvisningar finns i [Skapa en konfiguration för översättningsintegrering](../../help/sites-administering/tc-tic.md#creating-a-translation-integration-configuration).
+Mer information finns i [Skapa en konfiguration för översättningsintegrering](../../help/sites-administering/tc-tic.md#creating-a-translation-integration-configuration).
 
-* **[!UICONTROL Sites]** tab: can leave as default.
+* Fliken **[!UICONTROL Sites]**: kan lämna som standard.
 
-* **[!UICONTROL Communities]** tab:
+* Fliken **[!UICONTROL Communities]**:
    * **[!UICONTROL Translation Provider]**
-Välj översättningsleverantör i listrutan. Standard är `microsoft`, testversionen.
+Välj översättningsleverantör i listrutan. Standardvärdet är `microsoft`, utvärderingstjänsten.
 
    * **[!UICONTROL Content Category]**
-Välj en kategori som beskriver innehållet som översätts. Standard är `General.`
+Välj en kategori som beskriver innehållet som översätts. Standardvärdet är `General.`
 
    * **[!UICONTROL Choose A Locale...]**
-(Valfritt) Genom att välja en språkinställning för lagring av UGC, visas inlägg från alla språkkopior i en global konversation. Välj språkområde för [basspråk](sites-console.md#translation) för webbplatsen. Välja `No Common Store` inaktiverar global översättning. Som standard är global översättning inaktiverat.
+(Valfritt) Genom att välja en språkinställning för lagring av UGC, visas inlägg från alla språkkopior i en global konversation. Välj språkinställning för [basspråket](sites-console.md#translation) för webbplatsen som standard. Om du väljer `No Common Store` inaktiveras global översättning. Som standard är global översättning inaktiverat.
 
-* **[!UICONTROL Assets]** tab: can leave as default.
+* Fliken **[!UICONTROL Assets]**: kan lämna som standard.
 * Välj **[!UICONTROL OK]**
 
 #### Aktivering {#activation}
 
-Den nya översättningsintegreringens molntjänst måste aktiveras i publiceringsmiljön. Om aktiveringsarbetsflödet är kopplat till en webbplats och ännu inte är aktiverat, uppmanas det att publicera molntjänstkonfigurationen när sidan som den är kopplad till publiceras.
+Den nya översättningsintegreringens molntjänst måste aktiveras i Publish-miljön. Om aktiveringsarbetsflödet är kopplat till en webbplats och ännu inte är aktiverat, uppmanas det att publicera molntjänstkonfigurationen när sidan som den är kopplad till publiceras.
 
 ## Hantera översättningsinställningar {#managing-translation-settings}
 
 >[!NOTE]
 >
->**Önskat språk**
+>**Standardspråk**
 >
 >När man upptäcker om posten är på ett annat språk än det önskade språket måste besökarens föredragna språk fastställas.
 >

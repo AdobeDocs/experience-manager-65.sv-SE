@@ -56,11 +56,11 @@ Du kan konfigurera begränsning för Work Manager så att arbetsobjekt schemalä
   </tr>
   <tr>
    <td><code> adobe.workmanager.debug-mode-enabled</code></td>
-   <td><p>Ställ in det här alternativet på <code>true</code> om du vill aktivera felsökningsläget eller till false om du vill inaktivera det. </p><p>I felsökningsläget loggas meddelanden om brott mot policyn i Work Manager och om att pausa/återuppta åtgärder i Work Manager. Ange att det här alternativet endast ska vara true vid felsökning.</p></td>
+   <td><p>Ange det här alternativet till <code>true</code> om du vill aktivera felsökningsläget eller till false om du vill inaktivera det. </p><p>I felsökningsläget loggas meddelanden om brott mot policyn i Work Manager och om att pausa/återuppta åtgärder i Work Manager. Ange att det här alternativet endast ska vara true vid felsökning.</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.memory-control.enabled</code></td>
-   <td><p>Ställ in det här alternativet på <code>true</code> för att aktivera begränsning baserat på de inställningar för minneskontroll som beskrivs nedan, eller till <code>false</code> för att inaktivera strypning.</p></td>
+   <td><p>Ange det här alternativet till <code>true</code> om du vill aktivera begränsning baserat på inställningarna för minneskontroll som beskrivs nedan, eller till <code>false</code> om du vill inaktivera begränsning.</p></td>
   </tr>
   <tr>
    <td><code> adobe.workmanager.memory-control.high-limit</code></td>

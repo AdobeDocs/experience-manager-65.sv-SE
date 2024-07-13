@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Den här sidan innehåller viktig information om hur du arbetar med funktionen Ledpanel.
 
-Innan du tar med komponenten för rankningslistan på en sida måste du konfigurera [Communities Scoring and Badges](implementing-scoring.md).
+Innan du inkluderar huvudpanelskomponenten på en sida måste du konfigurera [Webbgruppsbedömning och badges](implementing-scoring.md).
 
 Se [Grundläggande om poäng och emblem](configure-scoring.md).
 
@@ -33,11 +33,11 @@ Se [Grundläggande om poäng och emblem](configure-scoring.md).
    <td>social/gamification/components/hbs/leaderboard</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>oklanderlig</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>inkluderbar</strong></a></td>
    <td>Nej</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
    <td>cq.social.gamification.hbs.leaderboard</td>
   </tr>
   <tr>
@@ -50,7 +50,7 @@ Se [Grundläggande om poäng och emblem](configure-scoring.md).
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td>
-   <td>Se <a href="enabling-leaderboard.md">Funktion för resultatavla</a></td>
+   <td>Se <a href="enabling-leaderboard.md">Ledarbordsfunktion</a></td>
   </tr>
  </tbody>
 </table>
@@ -59,4 +59,4 @@ Se [Grundläggande om poäng och emblem](configure-scoring.md).
 
 ### Filbiblioteksfunktion {#file-library-function}
 
-En community-webbplatsstruktur som innehåller [Ledningsfunktion](functions.md#leaderboard-function), innehåller en konfigurerad `leaderboard` -komponenten.
+En community-webbplatsstruktur som innehåller [Ledarpanelsfunktionen](functions.md#leaderboard-function), innehåller en konfigurerad `leaderboard`-komponent.

@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Integrera med Adobe Experience Cloud{#integrating-with-the-adobe-marketing-cloud}
 
-The [Adobe Experience Cloud](https://business.adobe.com/products/marketing-cloud/main.html), innehåller kraftfulla produkter för webbanalys och webbplatsoptimering som levererar användbara data och insikter i realtid för att driva framgångsrika onlineinitiativ. Det erbjuder en integrerad och öppen plattform för optimering av onlineverksamhet. Molnet består av integrerade program som samlar in och släpper loss kraften i kundinsikterna för att optimera kundvärvning, konvertering och lojalitet samt skapar och distribuerar innehåll.
+[Adobe Experience Cloud](https://business.adobe.com/products/marketing-cloud/main.html) innehåller kraftfulla webbanalyser och webboptimeringsprodukter som levererar användbara realtidsdata och insikter för att driva framgångsrika onlineinitiativ. Det erbjuder en integrerad och öppen plattform för optimering av onlineverksamhet. Molnet består av integrerade program som samlar in och släpper loss kraften i kundinsikterna för att optimera kundvärvning, konvertering och lojalitet samt skapar och distribuerar innehåll.
 
 Med Adobe Experience Manager (AEM) kan du smidigt integrera med följande Adobe Experience Cloud-produkter:
 
@@ -48,17 +48,17 @@ Genom att integrera med Adobe Analytics kan du göra följande:
 
 Mer information om hur du integrerar AEM med Analytics finns i [Integrera med Adobe Analytics](/help/sites-administering/adobeanalytics.md).
 
-Du kan också använda [Guiden Anmäl dig](/help/sites-administering/opt-in.md) för att enkelt kunna genomföra integreringen.
+Du kan också använda guiden [Anmäl dig](/help/sites-administering/opt-in.md) för att enkelt utföra integreringen.
 
 ## Integrera med Adobe Target {#integrating-with-adobe-target}
 
-[Adobe Target](https://business.adobe.com/products/target/adobe-target.html) används av marknadsförare för att utforma och genomföra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen för innehåll och onlineupplevelser.
+[Adobe Target](https://business.adobe.com/products/target/adobe-target.html) används av marknadsförare för att utforma och köra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen för innehåll och onlineupplevelser.
 
 Dagens onlinekonsumenter har ständigt nya behov och förväntar sig relevant, till och med personaliserat innehåll från en mängd olika webbplatser och innehållskällor som de kan välja bland. För att engagera en webbpublik är det viktigt att marknadsförarna snabbt kan identifiera vilka erbjudanden och vilket innehåll som är relevanta och övertygande för deras målgrupper. Med denna kunskap i ryggen behöver marknadsförarna möjlighet att kontinuerligt utveckla sina webbplatser och rikta lämpligt innehåll till olika målgrupper.
 
-[Integrera med Adobe Target](/help/sites-administering/target.md) förklarar hur du kan integrera din webbplats med Target.
+[Integreringen med Adobe Target](/help/sites-administering/target.md) förklarar hur du integrerar din webbplats med Target.
 
-Du kan också använda [Guiden Anmäl dig](/help/sites-administering/opt-in.md) för att enkelt kunna genomföra integreringen.
+Du kan också använda guiden [Anmäl dig](/help/sites-administering/opt-in.md) för att enkelt utföra integreringen.
 
 ## Anmäl dig till Analytics och Target {#opting-in-to-analytics-and-target}
 
@@ -68,7 +68,7 @@ AEM erbjuder en enkel anmälningsprocedur för integrering med Adobe Analytics o
 
 Anmäl dig till integreringen med Analytics och/eller Target för att göra det möjligt att använda deras funktioner för sidspårning och sidanalys samt personaliseringsfunktioner. När du väljer att logga in anger du din användarkontoinformation och de sidor som spåras.
 
-Mer information finns i [Till Adobe Analytics och Adobe Target.](/help/sites-administering/opt-in.md)
+Mer information finns i [Öppna Adobe Analytics och Adobe Target.](/help/sites-administering/opt-in.md)
 
 ## Integrera med Adobe Dynamic Media Classic {#integrating-with-scene}
 
@@ -78,7 +78,7 @@ I Adobe Experience Manager kan du publicera digitala resurser direkt från Adobe
 
 Dessutom kan du visa Adobe Experience Manager-resurser som publicerats i Dynamic Media Classic i olika visningsprogram, till exempel Grundläggande zoom och Video.
 
-Mer information om hur Adobe Experience Manager integreras med Dynamic Media Classic finns i [Integrera med Dynamic Media Classic](/help/sites-administering/scene7.md) dokumentation.
+Mer information om hur Adobe Experience Manager kan integreras med Dynamic Media Classic finns i [Integrera med Dynamic Media Classic](/help/sites-administering/scene7.md) -dokumentationen.
 
 ## Integrera med Adobe Dynamic Tag Management {#integrating-with-adobe-dynamic-tag-management}
 
@@ -100,6 +100,6 @@ Integreringen av Audience Manager har tagits bort i AEM 6.3.
 
 ## Integrera med Adobe Campaign {#integrating-with-adobe-campaign}
 
-[Adobe Campaign](https://business.adobe.com/products/campaign/adobe-campaign.html) Med kan du hantera e-postinnehåll direkt i Adobe Experience Manager.
+Med [Adobe Campaign](https://business.adobe.com/products/campaign/adobe-campaign.html) kan du hantera e-postleveransinnehåll direkt i Adobe Experience Manager.
 
 Mer information om hur AEM integreras med Adobe Campaign finns i [Integrera med Adobe Campaign](/help/sites-administering/campaignstandard.md).

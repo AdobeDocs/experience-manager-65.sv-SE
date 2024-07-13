@@ -23,17 +23,17 @@ En inloggad community-medlems aktiviteter, till exempel publicering på ett foru
 
 Möjligheten att följa efter lägger till ytterligare en uppsättning aktiviteter när communitymedlemmar följer inlägg av intresse eller andra communitymedlemmar.
 
-Alla [communitysajter](/help/communities/overview.md#communitiessites) innehåller en användarprofilsida för den inloggade medlemmen som visar medlemsaktiviteter på samma sätt.
+Alla [communitywebbplatser](/help/communities/overview.md#communitiessites) innehåller en användarprofilsida för den inloggade medlemmen som visar medlemsaktiviteter på samma sätt.
 
 ## Concepts {#concepts}
 
-An *aktivitetsström* är en lista över de senaste aktiviteterna som utförts av en medlem eller en lista över de senaste aktiviteterna för en enskild innehållstråd, t.ex. ett forumämne eller en blogg.
+En *aktivitetsström* är en lista över de senaste aktiviteterna som utförts av en medlem eller en lista över de senaste aktiviteterna för en enskild tråd med innehåll, till exempel ett forumämne eller en blogg.
 
 En medlem kan följa en aktivitetsström antingen efter en annan person eller ett annat innehåll.
 
-A *nyhetsfeed* är en sammanslagning av de aktivitetsströmmar som följs av en medlem till en enda ström.
+En *nyhetsfeed* är en sammanslagning av aktivitetsströmmar som följs av en medlem till en enda ström.
 
-A *[socialt diagram](/help/communities/essentials-socialgraph.md)* hämtar följande relationer mellan en medlem och en annan medlem.
+Ett *[socialt diagram](/help/communities/essentials-socialgraph.md)* fångar följande relationer mellan en medlem och en annan.
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -44,11 +44,11 @@ A *[socialt diagram](/help/communities/essentials-socialgraph.md)* hämtar följ
    <td>sociala/aktiva strömmar/komponenter/hbs/aktivitetsströmmar</td>
   </tr>
   <tr>
-   <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>oklanderlig</strong></a></td>
+   <td> <a href="/help/communities/scf.md#add-or-include-a-communities-component"><strong>inkluderbar</strong></a></td>
    <td>Nej</td>
   </tr>
   <tr>
-   <td> <a href="/help/communities/clientlibs.md"><strong>klientlibs</strong></a></td>
+   <td> <a href="/help/communities/clientlibs.md"><strong>clientlibs</strong></a></td>
    <td>cq.social.hbs.activitystreams</td>
   </tr>
   <tr>
@@ -61,7 +61,7 @@ A *[socialt diagram](/help/communities/essentials-socialgraph.md)* hämtar följ
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td>
-   <td>Se <a href="/help/communities/activities.md">Funktionen Aktivitetsströmmar</a></td>
+   <td>Se funktionen <a href="/help/communities/activities.md">Aktivitetsströmmar</a></td>
   </tr>
  </tbody>
 </table>
@@ -78,4 +78,4 @@ A *[socialt diagram](/help/communities/essentials-socialgraph.md)* hämtar följ
 
 ### Funktion för aktivitetsström {#activity-stream-function}
 
-En community-webbplatsstruktur som innehåller [Funktionen Aktivitetsström](/help/communities/functions.md#activity-stream-function), innehåller en konfigurerad `activity streams` -komponenten.
+En community-webbplatsstruktur som innehåller funktionen [Aktivitetsström](/help/communities/functions.md#activity-stream-function) innehåller en konfigurerad `activity streams` -komponent.

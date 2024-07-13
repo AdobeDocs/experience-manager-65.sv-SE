@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Konfigurera Connector for EMC Documentum {#configuring-connector-for-emc-documentum}
 
-Koppling för EMC Documentum möjliggör kommunikation mellan AEM och EMC Documentum. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_63).
+Koppling för EMC Documentum möjliggör kommunikation mellan AEM och EMC Documentum. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
 
 När du konfigurerar Connector för EMC Documentum måste du konfigurera serveranslutningen och databasautentiseringsuppgifterna.
 
@@ -62,7 +62,7 @@ Du kan konfigurera vilken databastjänstleverantör som ska användas med Docume
 
 **Aktuellt namn på databastjänstleverantör:** Namnet på den aktuella databastjänstprovidern
 
-**ECM Documentum-databasleverantör:** Gör Documentum-databasprovidern till databasprovidern. Det här alternativet har tagits bort
+**ECM Documentum-databasprovider:** gör Documentum-databasprovidern till databasprovidern. Det här alternativet har tagits bort
 
 **databasprovider:** Gör den inbyggda databasprovidern till databasprovidern
 
@@ -102,9 +102,9 @@ Om Content Repository Connector för EMC Documentum-tjänsten och/eller Reposito
 
 Om Content Repository Connector för EMC Documentum-tjänsten och/eller Repository Service för EMC Documentum körs kontrolleras inloggningsinformationen mot den angivna databasen innan den lagras i databasen. Om autentiseringsuppgifterna är ogiltiga eller finns visas ett felmeddelande.
 
-## Aktivera begäran om delning av arbetsyteuppgiftsköer {#enable-the-request-for-sharing-of-workspace-task-queues}
+## Aktivera begäran om delning av Workspace-uppgiftsköer {#enable-the-request-for-sharing-of-workspace-task-queues}
 
-Vissa manuella steg krävs för att se till att funktionen för begäran om delning av aktivitetskön i Workspace fungerar korrekt med Connector for EMC Documentum.
+Vissa manuella steg krävs för att se till att funktionen för begäran om delning av uppgiftskön i Workspace fungerar korrekt med Connector for EMC Documentum.
 
 1. När AEM har distribuerats och Workbench har installerats loggar du in på Workbench och öppnar resursvyn. I den här vyn avgör du var filen QueueSharing.swf finns.
 1. Dra filen QueueSharing.swf från resursvyn till skrivbordet i Windows eller en motsvarande plats, beroende på operativsystem.

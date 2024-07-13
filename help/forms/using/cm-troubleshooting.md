@@ -48,7 +48,7 @@ När du förhandsgranskar en bokstav visas felet&quot;Fel vid inläsning av boks
 Återställ bokstavscachen för publiceringsinstansen genom att följa följande steg och försök sedan visa brevet igen:
 
 1. Gå till **`https://'[server]:[port]'/[contextPath]/system/console/configMgr`** och logga in som administratör.
-1. Välj **Konfigurationer för korrespondenshantering**.
-1. I **Konfigurationer för korrespondenshantering**, inaktivera **Aktivera bokstavscache** och sedan klicka **Spara.**
-1. Kontrollera **Aktivera bokstavscache** och sedan klicka **Spara**.
+1. Välj **Correspondence Management Configurations**.
+1. I **Correspondence Management Configurations** inaktiverar du **Aktivera bokstavscache** och klickar sedan på **Spara.**
+1. Markera **Aktivera bokstavscache** och klicka sedan på **Spara**.
 1. Försök att visa brevet igen.

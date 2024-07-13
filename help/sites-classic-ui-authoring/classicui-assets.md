@@ -1,5 +1,5 @@
 ---
-title: Arbeta med resurser
+title: Arbeta med Assets
 description: Avsnittet Författarmiljö och Verktyg innehåller information om hur du använder Content Finder för att hitta och använda resurser när du redigerar sidor. AEM Assets innehåller andra metoder för att arbeta med resurser.
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/ASSETS
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 ---
 
-# Arbeta med resurser{#working-with-assets}
+# Arbeta med Assets{#working-with-assets}
 
-The [Författarmiljö och verktyg](/help/sites-authoring/author-environment-tools.md) innehåller information om hur du använder [!UICONTROL Content Finder] för att hitta och använda resurser när du redigerar sidor. AEM Assets innehåller andra metoder för att arbeta med resurser:
+Avsnittet [Författarmiljö och verktyg](/help/sites-authoring/author-environment-tools.md) innehåller information om hur du använder [!UICONTROL Content Finder] för att hitta och använda resurser när du redigerar sidor. AEM Assets innehåller andra metoder för att arbeta med resurser:
 
 * [Lägga till Dynamic Media Classic-funktioner på sidan](/help/sites-classic-ui-authoring/manage-assets-classic-s7.md)
 * [Arbeta med Dynamic Media](/help/sites-classic-ui-authoring/dynamic-media-assets.md)

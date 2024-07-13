@@ -496,7 +496,7 @@ Följande kodexempel ställer in sparningsläget för snabb webbvisning och skic
 
 ## Snabbstart (SOAP): Konvertera ett dokument till ett PDF/A-2b-dokument med Java API {#quick-start-soap-mode-converting-a-document-to-a-pdf-a-2b-document-using-the-java-api}
 
-I följande Java-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett PDF/A-2b-dokument som har sparats som en PDF-fil med namnet *LoanArchive.pdf*. (Se [Konvertera dokument till PDF/A-dokument](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents).)
+I följande Java-kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett PDF/A-2b-dokument som sparas som en PDF-fil med namnet *LoanArchive.pdf*. (Se [Konverterar dokument till PDF/A-dokument](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdf-a-documents).)
 
 ```java
 /*

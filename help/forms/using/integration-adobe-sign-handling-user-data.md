@@ -16,20 +16,20 @@ ht-degree: 0%
 
 # Integrering med Adobe Sign | Hantera användardata {#integration-with-adobe-sign-handling-user-data}
 
-[!DNL AEM Forms] integrerar med[!DNL  Adobe Sign] för att möjliggöra arbetsflöden för e-signaturer i anpassningsbara formulär för att bearbeta formulär eller avtal för arbetsflöden för juridik, försäljning, lön och personalhantering. Det möjliggör signering för en eller flera användare, sekventiella och samtidiga signeringsarbetsflöden, signering av formulär som anonyma eller inloggade användare samt flera sätt att autentisera användare.
+[!DNL AEM Forms] integreras med [!DNL  Adobe Sign] för att aktivera e-signaturarbetsflöden i adaptiva formulär för att bearbeta formulär eller avtal för arbetsflöden för juridik, försäljning, lön och personalhantering. Det möjliggör signering för en eller flera användare, sekventiella och samtidiga signeringsarbetsflöden, signering av formulär som anonyma eller inloggade användare samt flera sätt att autentisera användare.
 
-När en signerare eller flera signerare signerar och skickar ett adaptivt formulär [!DNL Adobe Sign] avtal skapas som innehåller information om signerare.
+När en eller flera signerare signerar och skickar ett anpassat formulär skapas ett [!DNL Adobe Sign]-avtal som innehåller information om signerarna.
 
-Mer information om [!DNL AEM Forms] integrering med [!DNL Adobe Sign], se [Använda Adobe Sign i en adaptiv form](/help/forms/using/working-with-adobe-sign.md).
+Mer information om [!DNL AEM Forms]-integrering med [!DNL Adobe Sign] finns i [Använda Adobe Sign i en adaptiv form](/help/forms/using/working-with-adobe-sign.md).
 
 ## Användardata och datalager {#data}
 
-[!DNL Adobe Sign] anpassningsbara formulär innehåller information om signerare och kan innehålla andra användardata som samlats in med det anpassningsbara formuläret. The [!DNL Adobe Sign] sparar användardata med signaturen i avtalet. Avtalet sparas på en [!DNL Adobe Sign] server konfigurerad i [!DNL AEM Forms] molntjänster. Om det adaptiva formuläret dessutom är konfigurerat att använda Forms Portal-åtgärden, sparas avtalsdata i Forms Portals datalager tillsammans med formulärdata.
+Det adaptiva formuläret [!DNL Adobe Sign] som har aktiverats innehåller information om signerare och kan innehålla andra användardata som samlats in av det adaptiva formuläret. Tjänsten [!DNL Adobe Sign] sparar användardata med signaturen i avtalet. Avtalet sparas på en [!DNL Adobe Sign]-server som är konfigurerad i [!DNL AEM Forms] molntjänster. Om det adaptiva formuläret dessutom är konfigurerat att använda Forms Portal-åtgärden, sparas avtalsdata i Forms Portals datalager tillsammans med formulärdata.
 
 ## Få åtkomst till och ta bort användardata {#access-and-delete-user-data}
 
-Användardata samlas in i avtalet men sparas inte i någon av tjänsttabellerna. [!DNL Adobe Sign] gör att administratörer kan göra egna val för att hantera de data som de styr i tjänsten. Sekretessadministratörer på [!DNL Adobe Sign] kan visa eller ta bort avtal baserat på e-postadressen till en begärande.
+Användardata samlas in i avtalet men sparas inte i någon av tjänsttabellerna. Med [!DNL Adobe Sign] kan administratörer göra egna val för att hantera de data som de har kontroll över i tjänsten. Sekretessadministratörer för tjänsten [!DNL Adobe Sign] kan visa eller ta bort avtal baserat på e-postadressen till en begärande.
 
-[!DNL Adobe Sign] erbjuder ett webbprogram som gör det möjligt att söka efter avtal av deltagare och vid behov ta bort dem. Mer information finns i [Adobe Sign - funktion: Ta bort användarinformation](https://helpx.adobe.com/sign/help/adobesign_gdpr_user_deletion.html).
+I [!DNL Adobe Sign] finns ett webbprogram som gör att deltagare kan söka efter avtal och vid behov ta bort dem. Mer information finns i [Adobe Sign - Funktion: Ta bort användarinformation](https://helpx.adobe.com/sign/help/adobesign_gdpr_user_deletion.html).
 
-Avtalsdata för adaptiva formulär som har konfigurerats att använda Forms Portal-åtgärden för att skicka sparas också i Forms Portal-datalagret. Information om hur du får åtkomst till och tar bort data från Forms Portal-datalagret finns i [Forms Portal | Hantera användardata](/help/forms/using/forms-portal-handling-user-data.md).
+Avtalsdata för adaptiva formulär som har konfigurerats att använda Forms Portal-åtgärden för att skicka sparas också i Forms Portal-datalagret. Information om hur du får åtkomst till och tar bort data från Forms Portal-datalagret finns i [Forms Portal | Hantera användardata ](/help/forms/using/forms-portal-handling-user-data.md).

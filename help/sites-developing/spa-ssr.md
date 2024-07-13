@@ -29,7 +29,7 @@ ht-degree: 0%
 
 ## Ökning {#overview}
 
-Single page-applikationer (SPA) kan ge användaren en rik, dynamisk upplevelse som reagerar och beter sig på välbekanta sätt, ofta precis som ett systemspecifikt program. [Detta uppnås genom att klienten förlitar sig på att läsa in innehållet framtill och sedan göra den tunga hanteringen av användarinteraktionen](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) och på så sätt minimera mängden kommunikation som krävs mellan klienten och servern, vilket gör appen mer reaktiv.
+Single page-applikationer (SPA) kan ge användaren en rik, dynamisk upplevelse som reagerar och beter sig på välbekanta sätt, ofta precis som ett systemspecifikt program. [Detta uppnås genom att klienten förlitar sig på att läsa in innehållet i förväg och sedan göra en grov förbättring av användarinteraktionen](/help/sites-developing/spa-walkthrough.md#how-does-a-spa-work) och på så sätt minimera mängden kommunikation som krävs mellan klienten och servern, vilket gör appen mer reaktiv.
 
 Detta kan dock leda till längre inledande inläsningstider, särskilt om SPA är stor och har mycket innehåll. För att optimera inläsningstiden kan en del av innehållet återges på serversidan. Med SSR-återgivning (server-side rendering) går sidans initiala belastning snabbare och skickar sedan vidare återgivning till klienten.
 
@@ -42,17 +42,17 @@ När du beslutar dig för att implementera SSR måste du först uppskatta vilken
 SSR ger vanligtvis ett visst värde när det finns ett tydligt&quot;ja&quot; till någon av följande frågor:
 
 * **SEO:** Krävs det fortfarande SSR för att din webbplats ska kunna indexeras korrekt av sökmotorer som genererar trafik? Kom ihåg att de viktigaste sökmotorcrawlarna nu utvärderar JS.
-* **Sidhastighet:** Ger SSR en mätbar hastighetsförbättring i realtidsmiljöer och ökar den övergripande användarupplevelsen?
+* **Sidhastighet:** Ger SSR en mätbar hastighetsförbättring i realtidsmiljöer och förbättrar den övergripande användarupplevelsen?
 
 Endast när minst en av dessa två frågor besvaras med ett tydligt&quot;ja&quot; för ditt projekt rekommenderar Adobe att SSR implementeras. I följande avsnitt beskrivs hur du gör detta med Adobe I/O Runtime.
 
 ## Adobe I/O Runtime {#adobe-i-o-runtime}
 
-Om du [är säkra på att ditt projekt kräver SSR](/help/sites-developing/spa-ssr.md#when-to-use-ssr), rekommenderas Adobe att använda Adobe I/O Runtime.
+Om du [ är säker på att ditt projekt kräver implementering av SSR](/help/sites-developing/spa-ssr.md#when-to-use-ssr) rekommenderar Adobe att du använder Adobe I/O Runtime.
 
 Mer information om Adobe I/O Runtime finns i:
 
-* [https://developer.adobe.com/runtime/](https://developer.adobe.com/runtime/) - för en översikt över tjänsten
+* [https://developer.adobe.com/runtime/](https://developer.adobe.com/runtime/) - en översikt över tjänsten
 * [https://developer.adobe.com/runtime/docs/](https://developer.adobe.com/runtime/docs/) - för detaljerad dokumentation om plattformen
 
 I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implementera SSR för dina SPA i två olika modeller:
@@ -62,40 +62,40 @@ I följande avsnitt beskrivs hur Adobe I/O Runtime kan användas för att implem
 
 >[!NOTE]
 >
->Adobe rekommenderar en separat Adobe I/O Runtime-arbetsyta per miljö (stage, prod, testing osv.). Detta möjliggör typiska mönster för systemutvecklingscykler (SDLC) med olika versioner av ett enda program som distribueras till olika miljöer. Se dokumentet [CI/CD för Project App Builder-program](https://developer.adobe.com/app-builder/docs/guides/deployment/ci_cd_for_firefly_apps/) för mer information.
+>Adobe rekommenderar en separat Adobe I/O Runtime-arbetsyta per miljö (stage, prod, testing osv.). Detta möjliggör typiska mönster för systemutvecklingscykler (SDLC) med olika versioner av ett enda program som distribueras till olika miljöer. Mer information finns i dokumentet [CI/CD for Project App Builder Applications](https://developer.adobe.com/app-builder/docs/guides/deployment/ci_cd_for_firefly_apps/).
 >
 >En separat arbetsyta behövs inte per instans (författare, publicering) såvida det inte finns skillnader i körtidsimplementeringen per instanstyp.
 
 ## Fjärrrenderarkonfiguration {#remote-renderer-configuration}
 
-AEM måste veta var det fjärråtergivna innehållet kan hämtas. Oavsett [vilken modell du väljer att implementera för SSR,](#adobe-i-o-runtime)måste du ange AEM hur du får åtkomst till den här fjärråtergivningstjänsten.
+AEM måste veta var det fjärråtergivna innehållet kan hämtas. Oavsett [vilken modell du väljer att implementera för SSR,](#adobe-i-o-runtime), måste du ange hur du ska AEM åtkomst till den här fjärråtergivningstjänsten.
 
-Detta görs via **RemoteContentRenderer - Configuration Factory OSGi-tjänst**. Sök efter strängen RemoteContentRenderer i webbkonsolens konfigurationskonsol på `http://<host>:<port>/system/console/configMgr`.
+Detta görs via **RemoteContentRenderer - Configuration Factory OSGi-tjänsten**. Sök efter strängen RemoteContentRenderer i webbkonsolens konsol på `http://<host>:<port>/system/console/configMgr`.
 
-![Renderingskonfiguration](assets/rendererconfig.png)
+![Återgivningskonfiguration](assets/rendererconfig.png)
 
 Följande fält är tillgängliga för konfigurationen:
 
-* **Mönster för innehållsbana** - Reguljärt uttryck som matchar en del av innehållet, om det behövs
+* **Mönster för innehållssökväg** - Reguljärt uttryck som matchar en del av innehållet, om det behövs
 * **URL för fjärrslutpunkt** - URL för slutpunkten som ansvarar för att generera innehållet
    * Använd det säkra HTTPS-protokollet om det inte finns i det lokala nätverket.
-* **Ytterligare begäranderubriker** - Ytterligare rubriker som ska läggas till i begäran som skickas till fjärrslutpunkten
+* **Ytterligare begärandehuvuden** - Ytterligare huvuden som ska läggas till i begäran som skickas till fjärrslutpunkten
    * Mönster: `key=value`
 * **Timeout för begäran** - Timeout för fjärrvärdbegäran i millisekunder
 
 >[!NOTE]
 >
->Oavsett om du väljer att implementera [AEM kommunikationsflöde](#aem-driven-communication-flow) eller [Adobe I/O Runtime-styrt flöde,](#adobe-i-o-runtime-driven-communication-flow) du måste definiera en fjärrkonfiguration för innehållsåtergivning.
+>Oavsett om du väljer att implementera det [AEM kommunikationsflödet](#aem-driven-communication-flow) eller det [Adobe I/O Runtime-drivna flödet](#adobe-i-o-runtime-driven-communication-flow) måste du definiera en fjärrkonfiguration för innehållsåtergivning.
 >
->Den här konfigurationen måste också definieras om du väljer att [använder en anpassad Node.js-server.](#using-node-js)
+>Den här konfigurationen måste också definieras om du väljer att [använda en anpassad Node.js-server.](#using-node-js)
 
 >[!NOTE]
 >
->Den här konfigurationen använder [Remote Content Renderer,](#remote-content-renderer) som har ytterligare alternativ för tillägg och anpassning.
+>Den här konfigurationen använder [Renderer för fjärrinnehåll](#remote-content-renderer), som har ytterligare tillgängliga tillägg och anpassningsalternativ.
 
 ## AEM kommunikationsflöde {#aem-driven-communication-flow}
 
-När SSR används [arbetsflöde för komponentinteraktion](/help/sites-developing/spa-overview.md#workflow) SPA i AEM innehåller en fas där det inledande innehållet i appen genereras på Adobe I/O Runtime.
+När du använder SSR innehåller [komponentens interaktionsarbetsflöde](/help/sites-developing/spa-overview.md#workflow) för SPA i AEM en fas i vilken det inledande innehållet i appen genereras på Adobe I/O Runtime.
 
 1. Webbläsaren begär SSR-innehåll från AEM.
 
@@ -105,7 +105,7 @@ När SSR används [arbetsflöde för komponentinteraktion](/help/sites-developin
 
 1. AEM visar HTML som returneras av Adobe I/O Runtime via HTML-mallen för backend-sidkomponenten.
 
-![serverside-rendering-cms-drivenaemnode-adobeio](assets/server-side-rendering-cms-drivenaemnode-adobeio.png)
+![serversidesåtergivning-cms-drivenaemnode-adobeio](assets/server-side-rendering-cms-drivenaemnode-adobeio.png)
 
 ## Adobe I/O Runtime-drivet kommunikationsflöde {#adobe-i-o-runtime-driven-communication-flow}
 
@@ -123,15 +123,15 @@ Båda modellerna är giltiga och stöds av AEM. Man bör dock beakta fördelarna
    <th><strong>Nackdelar</strong></th>
   </tr>
   <tr>
-   <th><strong>genom AEM</strong><br /> </th>
+   <th><strong>via AEM</strong><br /> </th>
    <td>
     <ul>
      <li>AEM hanterar inmatning av bibliotek där det behövs</li>
-     <li>Underhåll resurser endast på AEM<br /> </li>
+     <li>Underhåll endast resurser på AEM<br /> </li>
     </ul> </td>
    <td>
     <ul>
-     <li>SPA utvecklare kanske inte känner till<br /> </li>
+     <li>SPA utvecklaren<br /> kanske inte känner till </li>
     </ul> </td>
   </tr>
   <tr>
@@ -142,7 +142,7 @@ Båda modellerna är giltiga och stöds av AEM. Man bör dock beakta fördelarna
     </ul> </td>
    <td>
     <ul>
-     <li>Clientlib-resurser som krävs av programmet, t.ex. CSS och JavaScript, måste göras tillgängliga av AEM utvecklare via <code><a href="/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet">allowProxy</a></code> property<br /> </li>
+     <li>Klientlib-resurser som krävs av programmet, t.ex. CSS och JavaScript, måste göras tillgängliga av den AEM utvecklaren via egenskapen <code><a href="/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet">allowProxy</a></code> <br /> </li>
      <li>Resurserna måste synkroniseras mellan AEM och Adobe I/O Runtime<br /> </li>
      <li>Om du vill aktivera redigering av SPA kan det behövas en proxyserver för Adobe I/O Runtime</li>
     </ul> </td>
@@ -171,15 +171,15 @@ Precis som AEM stöder ramverken Angular och React SPA direkt, stöds även serv
 * Reagera: [https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/react-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
 * Angular: [https://github.com/adobe/aem-sample-we-retail-journal/blob/master/angular-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component](https://github.com/adobe/aem-sample-we-retail-journal/blob/master/angular-app/DEVELOPMENT.md#enabling-the-server-side-rendering-using-the-aem-page-component)
 
-Ett enkelt exempel finns på [App för återförsäljningsjournal](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal). Det återger hela programserversidan. Även om detta inte är ett verkligt exempel visar det vad som behövs för att implementera SSR.
+Ett enkelt exempel finns i [We.Retail Journal-appen](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal). Det återger hela programserversidan. Även om detta inte är ett verkligt exempel visar det vad som behövs för att implementera SSR.
 
 >[!CAUTION]
 >
->The [App för återförsäljningsjournal](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) är endast till för demonstrationsbruk och använder därför Node.js som ett enkelt exempel i stället för den rekommenderade Adobe I/O Runtime. Använd inte det här exemplet för något projektarbete.
+>Appen [We.Retail Journal](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail-journal) är endast avsedd som exempel och använder därför Node.js som ett enkelt exempel i stället för den rekommenderade Adobe I/O Runtime. Använd inte det här exemplet för något projektarbete.
 
 >[!NOTE]
 >
->Alla AEM ska använda [AEM Project Archettype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som stöder SPA projekt med React eller Angular och använder SPA SDK.
+>Alla AEM ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som har stöd för SPA projekt med React eller Angular och som använder SPA SDK.
 
 ## Använda Node.js {#using-node-js}
 
@@ -197,21 +197,21 @@ För premesis AEM-instanser är det också möjligt att implementera SSR med en 
 
 ## Renderare för fjärrinnehåll {#remote-content-renderer}
 
-The [Konfiguration av fjärrinnehållsrenderare](#remote-content-renderer-configuration) som krävs för att använda SSR tillsammans med SPA i AEM går in i en mer generaliserad renderingstjänst som kan byggas ut och anpassas efter dina behov.
+Den [Remote Content Renderer Configuration](#remote-content-renderer-configuration) som krävs för att använda SSR med SPA i AEM finns i en mer generaliserad renderingstjänst som kan utökas och anpassas efter dina behov.
 
 ### RemoteContentRenderingService {#remotecontentrenderingservice}
 
 `RemoteContentRenderingService` är en OSGi-tjänst som hämtar innehåll som återges på en fjärrserver, till exempel från Adobe I/O. Innehållet som skickas till fjärrservern baseras på den begärandeparameter som skickas.
 
-`RemoteContentRenderingService` kan injiceras genom beroendeinvertering till antingen en anpassad Sling-modell eller servlet när ytterligare innehållsmanipulering krävs.
+`RemoteContentRenderingService` kan injiceras genom beroendeinvertering till antingen en anpassad Sling-modell eller en servlet när ytterligare innehållsmanipulering krävs.
 
-Tjänsten används internt av [RemoteContentRendererRequestHandlerServlet](#remotecontentrendererrequesthandlerservlet).
+Den här tjänsten används internt av [RemoteContentRendererRequestHandlerServlet](#remotecontentrendererrequesthandlerservlet).
 
 ### RemoteContentRendererRequestHandlerServlet {#remotecontentrendererrequesthandlerservlet}
 
-The `RemoteContentRendererRequestHandlerServlet` kan användas för att ställa in konfigurationen för begäran programmatiskt. `DefaultRemoteContentRendererRequestHandlerImpl`, den medföljande standardimplementeringen av begäranhanteraren, gör att du kan skapa flera OSGi-konfigurationer för att mappa en plats i innehållsstrukturen till en fjärrslutpunkt.
+`RemoteContentRendererRequestHandlerServlet` kan användas för att ställa in konfigurationen för begäran programmatiskt. `DefaultRemoteContentRendererRequestHandlerImpl`, den angivna standardimplementeringen av begäranhanteraren, gör att du kan skapa flera OSGi-konfigurationer för att mappa en plats i innehållsstrukturen till en fjärrslutpunkt.
 
-Implementera `RemoteContentRendererRequestHandler` gränssnitt. Var noga med att ställa in `Constants.SERVICE_RANKING` egenskapen component till ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
+Implementera gränssnittet `RemoteContentRendererRequestHandler` om du vill lägga till en anpassad begärandehanterare. Se till att du ställer in `Constants.SERVICE_RANKING`-komponentegenskapen på ett heltal som är högre än 100, vilket är rankningen för `DefaultRemoteContentRendererRequestHandlerImpl`.
 
 ```
 @Component(immediate = true,
@@ -243,4 +243,4 @@ Vanligtvis är HTML-mallen för en sidkomponent huvudmottagaren för en sådan f
 
 ### Krav {#requirements}
 
-Servlets använder Sling Model Exporter för att serialisera komponentdata. Som standard är båda `com.adobe.cq.export.json.ContainerExporter` och `com.adobe.cq.export.json.ComponentExporter` stöds som Sling Model-kort. Om det behövs kan du lägga till klasser som begäran ska anpassas till med `RemoteContentRendererServlet` och implementera `RemoteContentRendererRequestHandler#getSlingModelAdapterClasses`. Ytterligare klasser måste utöka `ComponentExporter`.
+Servlets använder Sling Model Exporter för att serialisera komponentdata. Som standard stöds både `com.adobe.cq.export.json.ContainerExporter` och `com.adobe.cq.export.json.ComponentExporter` som Sling Model-kort. Om det behövs kan du lägga till klasser som begäran ska anpassas till med `RemoteContentRendererServlet` och implementera `RemoteContentRendererRequestHandler#getSlingModelAdapterClasses`. De ytterligare klasserna måste utöka `ComponentExporter`.

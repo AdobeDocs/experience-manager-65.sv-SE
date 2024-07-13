@@ -1,6 +1,6 @@
 ---
-title: Document Security Service JavaAPI Quick Start (SOAP)
-description: Document Security Service JavaAPI Quick Start (SOAP)
+title: Document Security Service JavaAPI Quick Start(SOAP)
+description: Document Security Service JavaAPI Quick Start(SOAP)
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -52,7 +52,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 ## Snabbstart (SOAP): Skapa en profil med Java API {#quick-start-soap-mode-creating-a-policy-using-the-java-api}
 
-I följande Java-kodexempel skapas en ny princip med namnet *Tillåt kopiering*. Principuppsättningen som principen läggs till i namnges *Global principuppsättning*. Den här principuppsättningen finns som standard. (Se [Skapa profiler](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
+I följande Java-kodexempel skapas en ny princip med namnet *Tillåt kopia*. Principuppsättningen som principen läggs till i har namnet *Global principuppsättning*. Den här principuppsättningen finns som standard. (Se [Skapa profiler](/help/forms/developing/protecting-documents-policies.md#creating-policies).)
 
 ```java
  /*
@@ -181,7 +181,7 @@ I följande Java-kodexempel skapas en ny princip med namnet *Tillåt kopiering*.
 
 ## Snabbstart (SOAP): Ändra en princip med Java API {#quick-start-soap-mode-modifying-a-policy-using-the-java-api}
 
-I följande Java-kodexempel ändras en princip med namnet *Tillåt kopiering* genom att ställa in offlineleasingperioden på 40 dagar. (Se [Ändra principer](/help/forms/developing/protecting-documents-policies.md#modifying-policies).)
+I följande Java-kodexempel ändras en princip med namnet *Tillåt kopia* genom att offlinelåneperioden ställs in på 40 dagar. (Se [Ändra profiler](/help/forms/developing/protecting-documents-policies.md#modifying-policies).)
 
 ```java
  /*
@@ -282,7 +282,7 @@ I följande Java-kodexempel ändras en princip med namnet *Tillåt kopiering* ge
 
 ## Snabbstart (SOAP): Ta bort en princip med Java API {#quick-start-soap-mode-deleting-a-policy-using-the-java-api}
 
-I följande Java-kodexempel tas en princip med namnet bort *Tillåt kopiering*. (Se [Ta bort profiler](/help/forms/developing/protecting-documents-policies.md#deleting-policies).)
+I följande Java-kodexempel tas en princip bort med namnet *Tillåt kopia*. (Se [Ta bort profiler](/help/forms/developing/protecting-documents-policies.md#deleting-policies).)
 
 ```java
  /*
@@ -374,7 +374,7 @@ I följande Java-kodexempel tas en princip med namnet bort *Tillåt kopiering*. 
 
 ## Snabbstart (SOAP läge): Tillämpa en princip på ett PDF-dokument med Java API {#quick-start-soap-mode-applying-a-policy-to-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel tillämpas en princip med namnet *Tillåt kopiering* till ett PDF-dokument med namnet *Loan.pdf*. Principuppsättningen som principen läggs till i namnges *Global principuppsättning*. Det principskyddade dokumentet sparas som en PDF-fil med namnet *PolicyProtectedLoanDoc.pdf. *(Se [Tillämpa principer på PDF-dokument](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
+I följande Java-kodexempel tillämpas en princip med namnet *Allow Copy* i ett PDF-dokument med namnet *Loan.pdf*. Principuppsättningen som principen läggs till i har namnet *Global principuppsättning*. Det principskyddade dokumentet sparas som en PDF-fil med namnet *PolicyProtectedLoanDoc.pdf. *(Se [Tillämpa profiler på PDF-dokument](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
 
 ```java
  /*
@@ -587,7 +587,7 @@ I följande kodexempel tas en princip bort från ett PDF-dokument med namnet *Po
 
 ## Snabbstart (SOAP): Återkalla ett dokument med Java API {#quick-start-soap-mode-revoking-a-document-using-the-java-api}
 
-I följande Java-kodexempel återkallas ett principskyddat dokument med namnet *PolicyProtectedLoanDoc.pdf*. Ett ändrat dokument i PDF finns på följande URL-plats `https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf`. (Se [Återkalla åtkomst till dokument](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents).)
+I följande Java-kodexempel återkallas ett principskyddat dokument med namnet *PolicyProtectedLoanDoc.pdf*. Ett reviderat PDF-dokument finns på följande URL-plats `https://'[server]:[port]'/RightsManagement/UpdatedLoan.pdf`. (Se [Återkallar åtkomst till dokument](/help/forms/developing/protecting-documents-policies.md#revoking-access-to-documents).)
 
 ```java
  /*
@@ -701,7 +701,7 @@ I följande Java-kodexempel återkallas ett principskyddat dokument med namnet *
 
 ## Snabbstart (SOAP läge): Inspektera principskyddade PDF-dokument med Java API {#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api}
 
-I följande Java-kodexempel undersöks ett principskyddat PDF-dokument med namnet *PolicyProtectedLoanDoc.pd* f. (Se [Inspektera skyddat PDF-dokument](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).)
+Följande Java-kodexempel undersöker ett principskyddat PDF-dokument med namnet *PolicyProtectedLoanDoc.pd* f. (Se [Inspektera skyddat PDF-dokument ](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).)
 
 ```java
  /*
@@ -1058,7 +1058,7 @@ public class PDFWatermarksSOAPMode {
 
 ## Snabbstart (SOAP): Skapa en textvattenstämpel med Java API {#quick-start-soap-mode-creating-a-text-watermark-using-the-java-api}
 
-I följande Java-kodexempel skapas en ny textvattenstämpel med namnet *Exempel på vattenstämpel för text*. Den här vattenstämpeln innehåller ett enda element.
+I följande Java-kodexempel skapas en ny textvattenstämpel med namnet *Exempel på textvattenstämpel*. Den här vattenstämpeln innehåller ett enda element.
 
 ```java
 /*
@@ -1319,7 +1319,7 @@ public class ModifyWatermarks {
 
 ## Snabbstart (SOAP): Ändra en vattenstämpel med Java API {#quick-start-soap-mode-modifying-a-watermark-using-the-java-api}
 
-I följande Java-kodexempel ändras vattenstämpeln *Konfidentiellt* genom att ändra värdet på `opacity` till 80.
+I följande Java-kodexempel ändras vattenstämpeln *Konfidentiellt* genom att värdet för attributet `opacity` ändras till 80.
 
 ```java
  /*
@@ -1530,7 +1530,7 @@ I följande Java-kodexempel söks det efter händelsen create policy.
 
 ## Snabbstart (SOAP): Använda en profil i ett Word-dokument med Java API {#quick-start-soap-applying-a-policy-to-a-word-document-using-the-java-api}
 
-I följande Java-kodexempel tillämpas en princip med namnet *Tillåt kopiering* till ett Word-dokument med namnet *Loan.doc*. Principuppsättningen som principen läggs till i namnges *Global principuppsättning*. Det principskyddade dokumentet sparas som en DOC-fil med namnet *PolicyProtectedLoanDoc.doc. *(Se [Tillämpa principer på PDF-dokument](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
+I följande Java-kodexempel tillämpas en princip med namnet *Tillåt kopia* i ett Word-dokument med namnet *Loan.doc*. Principuppsättningen som principen läggs till i har namnet *Global principuppsättning*. Det principskyddade dokumentet sparas som en DOC-fil med namnet *PolicyProtectedLoanDoc.doc. *(Se [Tillämpa profiler på PDF-dokument](/help/forms/developing/protecting-documents-policies.md#applying-policies-to-pdf-documents).)
 
 ```java
  /*

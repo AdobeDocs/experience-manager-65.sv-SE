@@ -29,12 +29,12 @@ Den här sidan innehåller grundläggande information om hur du arbetar med filb
    <td>social/filbibliotek/komponenter/hbs/filbibliotek</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>oklanderlig</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>inkluderbar</strong></a></td>
    <td>Nej</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td>
-   <td>cq.ckeditor<br /> cq.social.hbs.röstning<br /> cq.social.hbs.filelibrary</td>
+   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
+   <td>cq.ckeditor<br /> cq.social.hbs.voice<br /> cq.social.hbs.filelibrary</td>
   </tr>
   <tr>
    <td> <strong>mallar</strong></td>
@@ -63,20 +63,20 @@ Den här sidan innehåller grundläggande information om hur du arbetar med filb
 
 ### Filbiblioteksfunktion {#file-library-function}
 
-En community-webbplatsstruktur som innehåller [Funktionen Filbibliotek](functions.md#file-library-function), innehåller en konfigurerad `file library` -komponenten.
+En community-webbplatsstruktur som innehåller [filbiblioteksfunktionen](functions.md#file-library-function), innehåller en konfigurerad `file library` -komponent.
 
 ### Komma åt kommentarer som har bokförts för filbibliotek (UGC) {#accessing-comments-posted-for-file-libraries-ugc}
 
 UGC bör modereras med någon av standardmetoderna för moderering.
 Se [Modererar användargenererat innehåll](moderate-ugc.md).
 
-Från och med AEM 6.1 Communities används [gemensam lagringsplats](working-with-srp.md) för UGC omfattar programmatisk åtkomst till UGC oavsett vilket lagringsalternativ som valts (till exempel ASRP, MSRP eller JSRP).
+Från och med AEM 6.1 Communities omfattar användningen av en [gemensam butik](working-with-srp.md) för UGC programmatisk åtkomst till UGC oavsett valt lagringsalternativ (som ASRP, MSRP eller JSRP).
 
-**Platsen och formatet för användargenererat innehåll i databasen kan ändras utan förvarning**.
+**Platsen och formatet för användargenererat innehåll i databasen kan ändras utan varning**.
 
 Se:
 
-* [Översikt över lagringsresursprovider](srp.md) - introduktion och översikt över databasanvändningen.
-* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och -exempel.
+* [Lagringsresursprovideröversikt](srp.md) - introduktion och översikt över databasanvändningen.
+* [SRP och UGC Essentials](srp-and-ugc.md) - SRP-verktygsmetoder och exempel.
 * [Åtkomst till UGC med SRP](accessing-ugc-with-srp.md) - riktlinjer för kodning.
-* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av borttagna verktygsmetoder till aktuella SRP-verktygsmetoder.
+* [Omfaktorisering för SocialUtils](socialutils.md) - mappning av utfasade verktygsmetoder till aktuella SRP-verktygsmetoder.

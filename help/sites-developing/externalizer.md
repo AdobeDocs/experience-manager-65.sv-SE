@@ -19,23 +19,23 @@ ht-degree: 0%
 
 # Extern URL{#externalizing-urls}
 
-I Adobe Experience Manager (AEM) **Externalizer** är en OSGI-tjänst som gör att du programmässigt kan omvandla en resurssökväg (till exempel `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att ange sökvägen som prefix med en förkonfigurerad DNS.
+I Adobe Experience Manager (AEM) är **Externalizer** en OSGI-tjänst som gör att du programmässigt kan omvandla en resurssökväg (till exempel `/path/to/my/page`) till en extern och absolut URL (till exempel `https://www.mycompany.com/path/to/my/page`) genom att prefixera sökvägen med en förkonfigurerad DNS.
 
 Eftersom en instans inte känner till sin externt synliga URL-adress om den körs bakom ett webblager, och eftersom en länk ibland måste skapas utanför det begärda omfånget, utgör den här tjänsten en central plats för att konfigurera de externa URL-adresserna och skapa dem.
 
-På den här sidan beskrivs hur du konfigurerar **Externalizer** och hur du använder den. Mer information finns i [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html).
+På den här sidan beskrivs hur du konfigurerar tjänsten **Externalizer** och hur du använder den. Mer information finns i [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html).
 
 ## Konfigurera tjänsten Externalizer {#configuring-the-externalizer-service}
 
-The **Externalizer** kan du centralt definiera flera domäner som kan användas för att programmässigt prefix för resurssökvägar. Varje domän identifieras med ett unikt namn som används för att programmässigt referera till domänen.
+Med tjänsten **Externalizer** kan du centralt definiera flera domäner som kan användas för att programmässigt prefix för resurssökvägar. Varje domän identifieras med ett unikt namn som används för att programmässigt referera till domänen.
 
-Definiera en domänmappning för **Externalizer** tjänst:
+Så här definierar du en domänmappning för tjänsten **Externalizer**:
 
-1. Navigera till konfigurationshanteraren via **verktyg** sedan **Webbkonsol** eller ange:
+1. Navigera till konfigurationshanteraren via **Verktyg** och sedan **Webbkonsol** eller ange:
 
    `https://<host>:<port>/system/console/configMgr`
 
-1. Klicka **Day CQ Link Externalizer** för att öppna konfigurationsdialogrutan.
+1. Klicka på **Day CQ Link Externalizer** för att öppna konfigurationsdialogrutan.
 
    >[!NOTE]
    >
@@ -43,20 +43,20 @@ Definiera en domänmappning för **Externalizer** tjänst:
 
    ![aem-externalizer-01](assets/aem-externalizer-01.png)
 
-1. Definiera en **Domäner** mappning: en mappning består av ett unikt namn som kan användas i koden för att referera till domänen, ett blanksteg och domänen:
+1. Definiera en **Domäner**-mappning: en mappning består av ett unikt namn som kan användas i koden för att referera till domänen, ett blanksteg och domänen:
 
    `<unique-name> [scheme://]server[:port][/contextpath]`
 
    Var:
 
-   * **system** är http eller https, men kan även vara ftp och så vidare.
+   * **scheme** är http eller https, men kan också vara ftp och så vidare.
 
       * använd https för att framtvinga https-länkar, om det behövs
       * den används om klientkoden inte åsidosätter schemat när den frågar efter en URL-adress.
 
    * **server** är värdnamnet (kan vara ett domännamn eller en IP-adress).
    * **port** (valfritt) är portnumret.
-   * **kontextbana** (valfritt) anges bara om AEM har installerats som ett webbprogram under en annan kontextsökväg.
+   * **kontextsökväg** (valfritt) anges bara om AEM har installerats som en webbapp under en annan kontextsökväg.
 
    Till exempel: `production https://my.production.instance`
 
@@ -68,17 +68,17 @@ Definiera en domänmappning för **Externalizer** tjänst:
 
    >[!NOTE]
    >
-   >Med en anpassad konfiguration kan du lägga till en kategori, till exempel `production`, `staging`eller till och med externa icke-AEM system som `my-internal-webservice`. Det är praktiskt att undvika hårdkodning av sådana URL:er på olika platser i ett projekts kodbas.
+   >Med en anpassad konfiguration kan du lägga till en kategori, till exempel `production`, `staging` eller till och med externa icke-AEM system som `my-internal-webservice`. Det är praktiskt att undvika hårdkodning av sådana URL:er på olika platser i ett projekts kodbas.
 
-1. Klicka **Spara** för att spara ändringarna.
+1. Klicka på **Spara** för att spara ändringarna.
 
 >[!NOTE]
 >
->Adobe rekommenderar att du [lägg till konfigurationen i databasen](/help/sites-deploying/configuring.md#addinganewconfigurationtotherepository).
+>Adobe rekommenderar att du [lägger till konfigurationen i databasen](/help/sites-deploying/configuring.md#addinganewconfigurationtotherepository).
 
 ### Använda tjänsten Externalizer {#using-the-externalizer-service}
 
-I det här avsnittet visas några exempel på hur **Externalizer** kan användas:
+I det här avsnittet visas några exempel på hur tjänsten **Externalizer** kan användas:
 
 1. **Så här hämtar du tjänsten Externalizer i en JSP:**
 
@@ -114,7 +114,7 @@ I det här avsnittet visas några exempel på hur **Externalizer** kan användas
 
    * `https://author.website.com/contextpath/my/page.html`
 
-1. **Så här externaliserar du en sökväg med domänen&quot;local&quot;:**
+1. **Så här gör du en extern sökväg med domänen local:**
 
    ```java
    String myExternalizedUrl = externalizer.externalLink(resolver, Externalizer.LOCAL, "/my/page") + ".html";
@@ -128,4 +128,4 @@ I det här avsnittet visas några exempel på hur **Externalizer** kan användas
 
    * `https://publish-3.internal/contextpath/my/page.html`
 
-1. Du hittar fler exempel i [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html).
+1. Fler exempel finns i [Javadocs](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/Externalizer.html).

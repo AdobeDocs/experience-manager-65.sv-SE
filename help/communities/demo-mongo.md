@@ -20,13 +20,13 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-I den här självstudiekursen beskrivs hur du konfigurerar [MSRP](msrp.md) for *en författare* instans och *en publicering* -instans.
+I den här självstudien beskrivs hur du konfigurerar [MSRP](msrp.md) för *en*-författarinstans och *en publiceringsinstans*.
 
 Med den här konfigurationen är communityinnehållet tillgängligt både från författare- och publiceringsmiljöer utan att du behöver vidarebefordra eller omvända replikera användargenererat innehåll (UGC).
 
-Den här konfigurationen är lämplig för *icke-produktion* miljöer som utveckling och/eller demonstration.
+Den här konfigurationen är lämplig för *icke-produktionsmiljöer*, till exempel för utveckling och/eller demonstration.
 
-**A *produktion* miljön bör:**
+**En *produktionsmiljö* bör:**
 
 * Kör MongoDB med en replikuppsättning
 * Använd SolrCloud
@@ -55,8 +55,8 @@ Den här konfigurationen är lämplig för *icke-produktion* miljöer som utveck
 
       * Du behöver inte konfigurera mongor eller delningar.
 
-   * Den installerade MongoDB-mappen anropas &lt;mongo-install>.
-   * Den definierade datakatalogsökvägen anropas &lt;mongo-dbpath>.
+   * Den installerade MongoDB-mappen kallas &lt;mongo-install>.
+   * Den definierade datakatalogsökvägen kallas &lt;mongo-dbpath>.
 
 * MongoDB kan köras på samma värd som AEM eller fjärrköras.
 
@@ -70,7 +70,7 @@ Detta startar en MongoDB-server med standardport 27017.
 
 >[!NOTE]
 >
->Om MongoDB startas *efter* AEM, **starta** alla **AEM** -instanser så att de kan ansluta till MongoDB.
+>Om MongoDB startas *efter* AEM **startar du om** alla **AEM** -instanser så att de ansluter till MongoDB korrekt.
 
 ### Demo Production Option: Konfigurera MongoDB-replikuppsättning {#demo-production-option-setup-mongodb-replica-set}
 
@@ -104,18 +104,18 @@ Följande kommandon är ett exempel på hur du konfigurerar en replikuppsättnin
 
    * Följ exemplet Solr-konfigurationen.
    * Ingen tjänst behövs.
-   * Den installerade Solr-mappen anropas &lt;solr-install>.
+   * Den installerade Solr-mappen heter &lt;solr-install>.
 
 ### Konfigurera Solr för AEM Communities {#configure-solr-for-aem-communities}
 
 Om du vill konfigurera en Solr-samling för MSRP för demo måste du fatta två beslut (markera länkarna till huvuddokumentationen för mer information):
 
-1. Kör Solr i fristående eller [SolrCloud-läge](msrp.md#solrcloudmode).
-1. Installera [standard](msrp.md#installingstandardmls) eller [avancerat](msrp.md#installingadvancedmls) flerspråkig sökning (MLS).
+1. Kör Solr i fristående läge eller [SolrCloud-läge](msrp.md#solrcloudmode).
+1. Installera [standard](msrp.md#installingstandardmls) eller [avancerad](msrp.md#installingadvancedmls) flerspråkig sökning (MLS).
 
 ### Fristående solr {#standalone-solr}
 
-Metoden för att köra Solr kan variera beroende på version och installationssätt. The [Referenshandbok för solenergi](https://archive.apache.org/dist/lucene/solr/ref-guide/) är den officiella dokumentationen.
+Metoden för att köra Solr kan variera beroende på version och installationssätt. [Solr-referenshandboken](https://archive.apache.org/dist/lucene/solr/ref-guide/) är den officiella dokumentationen.
 
 För enkelhetens skull kan du använda version 4.10 som exempel genom att starta Solr i fristående läge:
 
@@ -130,7 +130,7 @@ Den här processen startar en Solr HTTP-server med standardport 8983. Du kan bl�
 >
 >Om Solr Console inte är tillgänglig kontrollerar du loggarna under &lt;solrinstall>/example/logs. Kontrollera om SOLR försöker binda till ett specifikt värdnamn som inte kan matchas (till exempel &quot;user-macbook-pro&quot;).
 >
-Uppdatera i så fall `etc/hosts` fil med en ny post för det här värdnamnet (till exempel 127.0.0.1 user-macbook-pro) för att stjärngradera Solr korrekt.
+Om så är fallet bör du uppdatera filen `etc/hosts` med en ny post för det här värdnamnet (till exempel 127.0.0.1 user-macbook-pro) så att Solr startas korrekt.
 
 ### SolrCloud {#solrcloud}
 
@@ -150,26 +150,26 @@ Följ instruktionerna på huvuddokumentationssidan: [MSRP - MongoDB Common Store
 
 Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skickar du en kommentar på publiceringsinstansen och visar den på författarinstansen, och visar UGC:n i MongoDB och Solr:
 
-1. I publiceringsinstansen bläddrar du till [Guide för communitykomponenter](http://localhost:4503/content/community-components/en/comments.html) och väljer kommentarkomponenten.
+1. På publiceringsinstansen bläddrar du till sidan [Community Components Guide](http://localhost:4503/content/community-components/en/comments.html) och väljer komponenten Comments.
 1. Logga in för att publicera en kommentar:
 1. Ange text i kommentartextrutan och klicka på **[!UICONTROL Post]**
 
-   ![efter kommentar](assets/post-comment.png)
+   ![efterkommentar](assets/post-comment.png)
 
-1. Visa bara kommentaren i [författarinstans](http://localhost:4502/content/community-components/en/comments.html) (troligen fortfarande inloggad som administratör/administratör).
+1. Visa bara kommentaren i [författarinstansen](http://localhost:4502/content/community-components/en/comments.html) (troligen fortfarande inloggad som administratör/administratör).
 
    ![view-comment](assets/view-comment.png)
 
-   Obs! Det finns JCR-noder under *asipath* När du har skrivit är de här noderna för SCF-ramverket. Den faktiska UGC:n finns inte i JCR, utan i MongoDB.
+   Obs! Även om det finns JCR-noder under *asipath* på författaren gäller dessa noder för SCF-ramverket. Den faktiska UGC:n finns inte i JCR, utan i MongoDB.
 
-1. Se användargenerationen i mongudb **[!UICONTROL Communities]** > **[!UICONTROL Collections]** > **[!UICONTROL Content]**
+1. Visa UGC i mongudb **[!UICONTROL Communities]** > **[!UICONTROL Collections]** > **[!UICONTROL Content]**
 
    ![ugc-content](assets/ugc-content.png)
 
 1. Visa användargenererat innehåll i Solr:
 
-   * Bläddra till Solr-instrumentpanelen: [http://localhost:8983/solr/](http://localhost:8983/solr/).
-   * Användare `core selector` för att markera `collection1`.
+   * Gå till Solr-instrumentpanelen: [http://localhost:8983/solr/](http://localhost:8983/solr/).
+   * Användare `core selector` att välja `collection1`.
    * Välj `Query`.
    * Välj `Execute Query`.
 
@@ -183,9 +183,9 @@ Om du vill testa och verifiera den gemensamma lagringsplatsen för MongoDB skick
 
 1. Kontrollera att MSRP har konfigurerats som standardprovider:
 
-   * Om du skriver och publicerar AEM kan du gå till [Konsol för lagringskonfiguration](srp-config.md)eller kontrollera AEM:
+   * Gå till [Konsolen för lagringskonfiguration](srp-config.md) på alla författare- och publiceringsinstanser, eller kontrollera AEM:
 
-   * I JCR, om [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) innehåller inte [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc) -nod betyder det att lagringsprovidern är JSRP.
-   * Om srpc-noden finns och innehåller nod [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration)ska standardkonfigurationens egenskaper definiera MSRP som standardprovider.
+   * Om [/etc/socialconfig](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/) inte innehåller en [srpc](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc)-nod i JCR betyder det att lagringsprovidern är JSRP.
+   * Om srpc-noden finns och innehåller noden [defaultconfiguration](http://localhost:4502/crx/de/index.jsp#/etc/socialconfig/srpc/defaultconfiguration), ska standardkonfigurationens egenskaper definiera MSRP som standardprovider.
 
 1. Se till att AEM startades om när MSRP har valts.

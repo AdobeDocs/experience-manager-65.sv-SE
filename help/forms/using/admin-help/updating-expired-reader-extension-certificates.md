@@ -17,65 +17,65 @@ ht-degree: 0%
 
 Adobe Experience Manager Forms (AEM Forms)-kunder med Adobe Managed Services eller lokala Enterprise Base-licenser har rätt att använda tjänsten Acrobat Reader DC Extensions. Med tjänsten kan man enkelt utbyta interaktiva PDF-dokument genom att utöka Acrobat Reader funktionalitet med ytterligare användarrättigheter. Tjänsten lägger till användarrättigheter i ett PDF-dokument och aktiverar funktioner som inte är tillgängliga när ett PDF-dokument öppnas med Adobe Acrobat Reader, till exempel för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet. Tredjepartsanvändare behöver inte ytterligare programvara eller plugin-program för att kunna arbeta med upphovsrättsaktiverade dokument. PDF-dokument som har användarrättigheter tillagda kallas för rättighetsaktiverade dokument. En användare som öppnar ett rättighetsaktiverat PDF-dokument i Acrobat Reader kan utföra de åtgärder som är aktiverade för det dokumentet.
 
-Adobe använder en infrastruktur för publika nycklar (PKI) för att utfärda digitala certifikat för användning vid licensiering och aktivering av funktioner. Adobe har utfärdat certifikat under certifikatutfärdaren **Adobe-rotcertifikatutfärdare**, som upphör den 7 januari 2023. Certifikatets giltighetstid påverkar inte PDF-dokument som har utökats med hjälp av tillverkningscertifikat som utfärdats från **Adobe-rotcertifikatutfärdare** baserade certifikat (gamla certifikat). Alla PDF-dokument som har utökats med hjälp av de gamla certifikaten före den 7 januari 2023, inklusive de som hämtats av dina kunder, fortsätter att arbeta med alla användningsrättigheter som gäller för dem och behöver inte uppdateras.
+Adobe använder en infrastruktur för publika nycklar (PKI) för att utfärda digitala certifikat för användning vid licensiering och aktivering av funktioner. Adobe har utfärdat certifikat under certifikatutfärdaren **Adobe Root CA**, som upphör att gälla den 7 januari 2023. Certifikatets förfallodatum påverkar inte PDF-dokument som har utökats med produktionscertifikat som har utfärdats från de **Adobe Root CA**-baserade certifikaten (gamla certifikat). Alla PDF-dokument som har utökats med hjälp av de gamla certifikaten före den 7 januari 2023, inklusive de som hämtats av dina kunder, fortsätter att arbeta med alla användningsrättigheter som gäller för dem och behöver inte uppdateras.
 
-En ny certifikatutfärdare, **Adobe Root CA G2** och certifikat som baseras på den nya certifikatutfärdaren är nu tillgängliga. Från och med den 7 januari 2023 börjar man använda de nya certifikaten - de som bygger på **Adobe Root CA G2** - för att Reader ska kunna lägga ut dina nya PDF-dokument.  Du kan [skaffa nya certifikat från Adobe licenswebbplats](https://licensing.adobe.com/) eller Adobe Support.
+En ny certifikatutfärdare, **Adobe Root CA G2**, och certifikat som baseras på den nya certifikatutfärdaren är nu tillgängliga. Från och med den 7 januari 2023 kan du börja använda de nya certifikaten - de som baseras på **Adobe Root CA G2** - för att utöka dina nya PDF-dokument.  Du kan [hämta nya certifikat från Adobe licenswebbplats](https://licensing.adobe.com/) eller Adobe Support.
 
 ## Vanliga frågor
 
-**F. Vad är skillnaden mellan ett Adobe-rotcertifikat och ett Acrobat Reader Extensions-certifikat? Är rotcertifikatet för Adobe beroende av ett Acrobat Reader Extensions-certifikat? Upphör båda dessa certifikat att gälla i januari 2023?**
+**Q. Vad är skillnaden mellan ett Adobe-rotcertifikat och ett Acrobat Reader Extensions-certifikat? Är rotcertifikatet för Adobe beroende av ett Acrobat Reader Extensions-certifikat? Går båda dessa certifikat ut i januari 2023?**
 
 S. Adobe Root CA är den certifikatutfärdare från vilken ett Acrobat Reader Extensions-certifikat utfärdas. Den 7 januari 2023 upphör&quot;Adobe Root CA&quot; och alla certifikat som utfärdas från den att gälla.
 
-**Fråga: Adobe har tidigare meddelat att certifikaten har upphört att gälla och att de påverkar användningen av/öppnandet av dokument i PDF. Ska den kommunikationen ignoreras?**
+**Q. Det fanns ett tidigare meddelande från Adobe om att certifikaten skulle upphöra att gälla och om hur de påverkat användningen/öppnandet av dokument i PDF. Ska den kommunikationen ignoreras?**
 
 Svar: På grundval av den nya bedömningen av situationen fortsätter alla dokument från PDF att fungera utan ändringar efter den 7 januari 2023 med hjälp av tillverkningsintyg som utfärdats från det gamla&quot;Adobe Root CA&quot; före den 7 januari 2023. Om du redan har uppdaterat dina PDF-dokument förändras inte upplevelsen.
 
-**Fråga: Vem ska jag kontakta om jag har ytterligare frågor?**
+**Q. Vem ska jag kontakta om jag har ytterligare frågor?**
 
-S. Du kan kontakta [Stöd för Adobe](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support) eller skaffa en supportanmälan.
+S. Du kan kontakta [Adobe Support](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support) eller skaffa ett supportärende.
 
-**F. Vad händer om jag inte uppdaterar mitt certifikat före 7 januari 2023?**
+**Q. Vad händer om jag inte uppdaterar mitt certifikat före 7 januari 2023?**
 
 Svar: Alla dokument från PDF som byggts ut med hjälp av produktionscertifikat som utfärdats av den gamla Adobe Root CA före den 7 januari 2023 fortsätter att fungera utan ändringar efter den 7 januari 2023. PDF som utökats med utvärderingscertifikat fungerar inte efter förfallodatumet.
 
-**Fråga: Skiljer sig beskrivningen av nya certifikat från gamla?**
+**Q. Skiljer sig beskrivningen av nya certifikat från gamla?**
 
-A. Beskrivningen av de nya Acrobat Reader Extensions-certifikaten **G3-P24** som programnamn. I beskrivningen av äldre certifikat (certifikat baserade på &quot;Adobe Root CA&quot;) **P24** anges som programnamn.
+S. Beskrivningen av de nya Acrobat Reader Extensions-certifikaten anger **G3-P24** som programnamn. I beskrivningen av äldre certifikat (certifikat som baseras på &quot;Adobe Root CA&quot;) anges **P24** som programnamn.
 
-**F. Hur får jag tag i de senaste certifikaten?**
+**Q. Hur får jag tag i de senaste certifikaten?**
 
-Svar: Alla berättigade Forms-kunder (med aktiv licens) kan hämta de nya certifikaten (certifikat som baseras på&quot;Adobe Root CA G2&quot;) från [Adobe licenswebbplats](https://licensing.adobe.com/). Om du inte kan hitta certifikatet på Adobe licenswebbplats kontaktar du [Stöd för Adobe](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=en#support) eller skaffa en supportanmälan.
+S. Alla berättigade Forms-kunder (med aktiv licens) kan hämta de nya certifikaten (certifikat som baseras på&quot;Adobe Root CA G2&quot;) från [Adobe licenswebbplats](https://licensing.adobe.com/). Om du inte kan hitta certifikatet på Adobe licenswebbplats kontaktar du [Adobe Support](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;lang=en#support) eller ber om en supportanmälan.
 
-**F. Fortsätter mina PDF-dokument som utökats med certifikat som utfärdats av&quot;Adobe Root CA&quot; (den gamla certifikatutfärdaren) att fungera efter den 7 januari 2023?**
+**Q. Fortsätter mina PDF-dokument som har utökats med certifikat som har utfärdats från&quot;Adobe Root CA&quot; (den gamla certifikatutfärdaren) att fungera efter den 7 januari 2023?**
 
 Svar: Ja. Alla dokument i PDF som har byggts ut med hjälp av produktionscertifikat som utfärdats av&quot;Adobe Root CA&quot; (den gamla certifikatutfärdaren) före den 7 januari 2023 fortsätter att fungera utan ändringar efter den 7 januari 2023. PDF-dokument som har förlängts med utvärderingscertifikat slutar att fungera efter förfallodatumet.
 
-**F. Vilken version av Adobe Acrobat Reader krävs för att fortsätta använda PDF-dokument som har utökats med certifikat som har utfärdats från &quot;Adobe Root CA&quot; (den gamla certifikatutfärdaren)?**
+**Q. Vilken version av Adobe Acrobat Reader krävs för att fortsätta använda PDF-dokument som har utökats med certifikat som har utfärdats från Adobe Root CA (den gamla certifikatutfärdaren)?**
 
-S. Adobe Acrobat Reader 2020 eller senare krävs för att använda PDF-dokument som har utökats med Adobe Root CA (den gamla certifikatutfärdaren). Det är den version av Acrobat Reader som stöds när det här dokumentet publiceras. Om du använder en [version av Adobe Acrobat som inte stöds](https://helpx.adobe.com/support/programs/eol-matrix.html), Adobe rekommenderar att du [ladda ned och installera den senaste versionen av Adobe Acrobat Reader](https://get.adobe.com/reader/).
+S. Adobe Acrobat Reader 2020 eller senare krävs för att använda PDF-dokument som har utökats med Adobe Root CA (den gamla certifikatutfärdaren). Det är den version av Acrobat Reader som stöds när det här dokumentet publiceras. Om du använder en [version av Adobe Acrobat](https://helpx.adobe.com/support/programs/eol-matrix.html) som inte stöds rekommenderar Adobe att du [hämtar och installerar den senaste versionen av Adobe Acrobat Reader](https://get.adobe.com/reader/).
 
-**F. Vilken version av Adobe Acrobat Reader krävs för att fortsätta använda PDF-dokument som har utökats med certifikat som har utfärdats från&quot;Adobe Root CA 2&quot; (den nya certifikatutfärdaren)?**
+**Q. Vilken version av Adobe Acrobat Reader krävs för att fortsätta använda PDF-dokument som har utökats med certifikat som har utfärdats från&quot;Adobe Root CA 2&quot; (den nya certifikatutfärdaren)?**
 
-S. Adobe Acrobat Reader 2020 eller senare krävs för att använda PDF-dokument som har utökats med Adobe Root CA 2 (den nya certifikatutfärdaren). Om du använder en [version av Adobe Acrobat Reader som inte stöds](https://helpx.adobe.com/support/programs/eol-matrix.html), Adobe rekommenderar att du [ladda ned och installera den senaste versionen av Adobe Acrobat Reader](https://get.adobe.com/reader/).
+S. Adobe Acrobat Reader 2020 eller senare krävs för att använda PDF-dokument som har utökats med Adobe Root CA 2 (den nya certifikatutfärdaren). Om du använder en [version av Adobe Acrobat Reader](https://helpx.adobe.com/support/programs/eol-matrix.html) som inte stöds rekommenderar Adobe att du [hämtar och installerar den senaste versionen av Adobe Acrobat Reader](https://get.adobe.com/reader/).
 
-**F. Kan jag ta bort ett gammalt Acrobat Reader Extensions-certifikat och lägga till ett nytt på en Adobe Experience Manager Forms Server samtidigt som jag fortsätter att använda det befintliga aliaset?**
+**Q. Kan jag ta bort ett gammalt Acrobat Reader Extensions-certifikat och lägga till ett nytt på en Adobe Experience Manager Forms-server samtidigt som jag fortsätter att använda det befintliga aliaset?**
 
 S. Ja, du kan ta bort ett gammalt Acrobat Reader Extensions-certifikat och lägga till ett nytt med det befintliga aliaset i en Adobe Experience Manager Forms Server.
 
-**F. Kan jag behålla både nya och gamla Acrobat Reader Extensions-certifikat på en Adobe Experience Manager Forms-server?**
+**Q. Kan jag behålla både nya och gamla Acrobat Reader Extensions-certifikat på en Adobe Experience Manager Forms-server?**
 
-S. Ja, du kan behålla båda certifikaten men med olika alias på en Adobe Experience Manager Forms Server. Efter 7 januari 2023 kan du bara använda det nya certifikatet för att Reader utöka ett PDF-dokument.
+S. Ja, du kan behålla båda certifikaten men med olika alias på en Adobe Experience Manager Forms Server. Post 7 januari 2023 kan du bara använda det nya certifikatet för att Reader utöka ett PDF-dokument.
 
-**F. Kan jag importera samma Acrobat Reader Extensions-certifikat till alla Adobe Experience Manager Forms-miljöer?**
+**Q. Kan jag importera samma Acrobat Reader Extensions-certifikat till alla Adobe Experience Manager Forms-miljöer?**
 
 S. Ja, samma Acrobat Reader Extensions-certifikat kan användas i flera miljöer.
 
-**F. Hur kontrollerar jag användningsrättigheterna för ett PDF-dokument?**
+**Q. Hur kontrollerar jag användningsrättigheterna för ett PDF-dokument?**
 
-S. Du kan använda [getDocumentUsageRights](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=en#quick-start-soap-mode-retrieving-credential-information-using-the-java-api) API för att hämta information om användningsrättigheterna för ett PDF-dokument.
+S. Du kan använda API:t [getDocumentUsageRights](https://experienceleague.adobe.com/docs/experience-manager-65/forms/developer-reference/programming-aem-forms-jee/java-api-quick-start-code-examples/acrobat-reader-dc-extensions-service.html?lang=en#quick-start-soap-mode-retrieving-credential-information-using-the-java-api) för att hämta information om användningsrättigheterna för ett PDF-dokument.
 
-**F. Hur ändrar jag lösenordet för en Acrobat Reader Extensions-certifikatfil?**
+**Q. Hur ändrar jag lösenordet för en Acrobat Reader Extensions-certifikatfil?**
 
 S. Om du vill ändra certifikatlösenordet i Microsoft Windows installerar du certifikatet med hjälp av Microsoft Management Console (MMC) och väljer **Markera nyckeln som exporterbar**. När du har installerat det exporterar du certifikatet med en privat nyckel och använder ett annat lösenord för PFX-filen.
 

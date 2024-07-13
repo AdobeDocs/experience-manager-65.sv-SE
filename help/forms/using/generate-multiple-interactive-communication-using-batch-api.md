@@ -28,7 +28,7 @@ Du kan använda batch-API:t med bevakade mappar eller som ett fristående Rest-A
 
 Du kombinerar en post med en interaktiv kommunikationsmall för att skapa en interaktiv kommunikation. Batch-API:er kan läsa poster (data för interaktiva kommunikationsmallar) direkt från en JSON-fil eller från en extern datakälla som nås via formulärdatamodellen. Du kan behålla varje post i en separat JSON-fil eller skapa en JSON-array för att behålla alla poster i en enda fil.
 
-**En enda post i en JSON-fil**
+**En enskild post i en JSON-fil**
 
 ```json
 {
@@ -81,20 +81,20 @@ Du kombinerar en post med en interaktiv kommunikationsmall för att skapa en int
 
 Så här skapar du interaktiv kommunikation från poster som sparats i en JSON-fil:
 
-1. Skapa en [Bevakad mapp](/help/forms/using/creating-configure-watched-folder.md) och konfigurera den så att den använder batch-API:t:
+1. Skapa en [bevakad mapp](/help/forms/using/creating-configure-watched-folder.md) och konfigurera den så att den använder batch-API:t:
    1. Logga in på AEM Forms författarinstans.
    1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. Välj **[!UICONTROL New]**.
-   1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** i mappen. Till exempel: `c:\batchprocessing`.
-   1. Välj **[!UICONTROL Service]** i **[!UICONTROL Process File Using]** fält.
-   1. Välj **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** i **[!UICONTROL Service Name]** fält.
-   1. Ange en **[!UICONTROL Output File Pattern]**. Exempel: %F/ [mönster](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=en#about-file-patterns) anger att den bevakade mappen kan hitta indatafiler i en undermapp till mappen Bevakade mappar\indatamapp.
+   1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** för mappen. Exempel: `c:\batchprocessing`.
+   1. Välj alternativet **[!UICONTROL Service]** i fältet **[!UICONTROL Process File Using]**.
+   1. Välj tjänsten **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** i fältet **[!UICONTROL Service Name]**.
+   1. Ange en **[!UICONTROL Output File Pattern]**. Till exempel anger %F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=en#about-file-patterns) att den bevakade mappen kan hitta indatafiler i en undermapp till mappen Bevakade mappar\indata.
 1. Konfigurera avancerade parametrar:
-   1. Öppna **[!UICONTROL Advanced]** och lägga till följande anpassade egenskaper:
+   1. Öppna fliken **[!UICONTROL Advanced]** och lägg till följande anpassade egenskaper:
 
       | Egenskap | Typ | Beskrivning |
       |--- |--- |--- |
-      | templatePath | Sträng | Ange sökvägen till den interaktiva kommunikationsmall som ska användas. Till exempel: `/content/dam/formsanddocuments/testsample/mediumic`. Det är en obligatorisk egenskap. |
-      | recordPath | Sträng | Värdet i fältet recordPath hjälper till att ange namnet på en interaktiv kommunikation. Du kan ange sökvägen till ett fält i en post som värde för fältet recordPath. Om du till exempel anger /employee/Id blir värdet på id-fältet namn för motsvarande interaktiva kommunikation. Standardvärdet är [slumpmässigt UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()). |
+      | templatePath | Sträng | Ange sökvägen till den interaktiva kommunikationsmall som ska användas. Exempel: `/content/dam/formsanddocuments/testsample/mediumic`. Det är en obligatorisk egenskap. |
+      | recordPath | Sträng | Värdet i fältet recordPath hjälper till att ange namnet på en interaktiv kommunikation. Du kan ange sökvägen till ett fält i en post som värde för fältet recordPath. Om du till exempel anger /employee/Id blir värdet på id-fältet namn för motsvarande interaktiva kommunikation. Standardvärdet är ett [slumpmässigt UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()). |
       | usePrefillService | Boolean | Ställ in värdet på Falskt. Du kan använda parametern usePrefillService för att förifylla interaktiv kommunikation med data som hämtats från förifyllningstjänsten som konfigurerats för motsvarande interaktiv kommunikation. När usePrefillService är inställt på true behandlas indata-JSON-data (för varje post) som FDM-argument. Standardvärdet är false. |
       | batchType | Sträng | Ange värdet PRINT, WEB eller WEB_AND_PRINT. Standardvärdet är WEB_AND_PRINT. |
       | locale | Sträng | Ange språkinställningen för interaktiv kommunikation vid utdata. Körklara tjänster använder inte språkområdesalternativet, men du kan skapa en anpassad tjänst för att generera lokaliserad interaktiv kommunikation. Standardvärdet är en_US |
@@ -111,7 +111,7 @@ Så här skapar du interaktiv kommunikation från poster som sparats i en JSON-f
 
 #### Använd indata som sparats i en extern datakälla och som nås via formulärdatamodell för att skapa en interaktiv kommunikation {#use-fdm-as-data-source}
 
-Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv kommunikationsmall för att skapa en interaktiv kommunikation. När du skapar en interaktiv kommunikation ansluter du den till en extern datakälla via en FDM (Form Data Model) för att komma åt data. Du kan konfigurera batchbearbetningstjänsten för bevakade mappar så att data hämtas med samma formulärdatamodell från en extern datakälla. Till [skapa en interaktiv kommunikation från poster som sparats i en extern datakälla](/help/forms/using/work-with-form-data-model.md):
+Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv kommunikationsmall för att skapa en interaktiv kommunikation. När du skapar en interaktiv kommunikation ansluter du den till en extern datakälla via en FDM (Form Data Model) för att komma åt data. Du kan konfigurera batchbearbetningstjänsten för bevakade mappar så att data hämtas med samma formulärdatamodell från en extern datakälla. Så här [skapar du en interaktiv kommunikation från poster som har sparats i en extern datakälla](/help/forms/using/work-with-form-data-model.md):
 
 1. Konfigurera mallens formulärdatamodell:
    1. Öppna formulärdatamodellen som är kopplad till en interaktiv kommunikationsmall.
@@ -141,20 +141,20 @@ Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv
 
    1. Spara och stäng filen.
 
-1. Skapa en [Bevakad mapp](/help/forms/using/creating-configure-watched-folder.md) och konfigurera den så att den använder tjänsten Batch API:
+1. Skapa en [bevakad mapp](/help/forms/using/creating-configure-watched-folder.md) och konfigurera den så att den använder API-tjänsten för grupp:
    1. Logga in på AEM Forms författarinstans.
    1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Forms]** > **[!UICONTROL Configure Watched Folder]**. Välj **[!UICONTROL New]**.
-   1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** i mappen. Till exempel: `c:\batchprocessing`.
-   1. Välj **[!UICONTROL Service]** i **[!UICONTROL Process File Using]** fält.
-   1. Välj **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** i **[!UICONTROL Service Name]** fält.
-   1. Ange en **[!UICONTROL Output File Pattern]**. Exempel: %F/ [mönster](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=en#about-file-patterns) anger att den bevakade mappen kan hitta indatafiler i en undermapp till mappen Bevakade mappar\indatamapp.
+   1. Ange **[!UICONTROL Name]** och fysisk **[!UICONTROL Path]** för mappen. Exempel: `c:\batchprocessing`.
+   1. Välj alternativet **[!UICONTROL Service]** i fältet **[!UICONTROL Process File Using]**.
+   1. Välj tjänsten **[!UICONTROL com.adobe.fd.ccm.multichannel.batch.impl.service.InteractiveCommunicationBatchServiceImpl]** i fältet **[!UICONTROL Service Name]**.
+   1. Ange en **[!UICONTROL Output File Pattern]**. Till exempel anger %F/ [pattern](https://experienceleague.adobe.com/docs/experience-manager-65/content/forms/administrator-help/configuring-watched-folder-endpoints.html?lang=en#about-file-patterns) att den bevakade mappen kan hitta indatafiler i en undermapp till mappen Bevakade mappar\indata.
 1. Konfigurera avancerade parametrar:
-   1. Öppna **[!UICONTROL Advanced]** och lägga till följande anpassade egenskaper:
+   1. Öppna fliken **[!UICONTROL Advanced]** och lägg till följande anpassade egenskaper:
 
       | Egenskap | Typ | Beskrivning |
       |--- |--- |--- |
       | templatePath | Sträng | Ange sökvägen till den interaktiva kommunikationsmall som ska användas. Exempel: /content/dam/formsanddocuments/testsample/mediumic. Det är en obligatorisk egenskap. |
-      | recordPath | Sträng | Värdet i fältet recordPath hjälper till att ange namnet på en interaktiv kommunikation. Du kan ange sökvägen till ett fält i en post som värde för fältet recordPath. Om du till exempel anger /employee/Id blir värdet på id-fältet namn för motsvarande interaktiva kommunikation. Standardvärdet är [slumpmässigt UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()). |  |
+      | recordPath | Sträng | Värdet i fältet recordPath hjälper till att ange namnet på en interaktiv kommunikation. Du kan ange sökvägen till ett fält i en post som värde för fältet recordPath. Om du till exempel anger /employee/Id blir värdet på id-fältet namn för motsvarande interaktiva kommunikation. Standardvärdet är ett [slumpmässigt UUID](https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()). |  |
       | usePrefillService | Boolean | Ange värdet som Sant. Standardvärdet är false. När värdet är true läser batch-API:t data från den konfigurerade formulärdatamodellen och fyller i dem till den interaktiva kommunikationen. När usePrefillService är inställt på true behandlas indata-JSON-data (för varje post) som FDM-argument. |
       | batchType | Sträng | Ange värdet PRINT, WEB eller WEB_AND_PRINT. Standardvärdet är WEB_AND_PRINT. |
       | locale | Sträng | Ange språkinställningen för interaktiv kommunikation vid utdata. Körklara tjänster använder inte språkområdesalternativet, men du kan skapa en anpassad tjänst för att generera lokaliserad interaktiv kommunikation. Standardvärdet är en_US. |
@@ -171,13 +171,13 @@ Du kombinerar data (poster) som sparats i en extern datakälla med en interaktiv
 
 ## Anropa batch-API:t med REST-begäranden
 
-Du kan anropa [API:t för grupp](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html) genom förfrågningar från representationsstatens överföring (REST). Med den kan du ge andra användare en REST-slutpunkt för åtkomst till API:t och konfigurera egna metoder för bearbetning, lagring och anpassning av interaktiv kommunikation. Du kan utveckla en egen anpassad Java™-server för att distribuera API:t på din AEM.
+Du kan anropa [batch-API:t](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html) via REST-begäranden (Representational State Transfer). Med den kan du ge andra användare en REST-slutpunkt för åtkomst till API:t och konfigurera egna metoder för bearbetning, lagring och anpassning av interaktiv kommunikation. Du kan utveckla en egen anpassad Java™-server för att distribuera API:t på din AEM.
 
 Innan du distribuerar Java™-servern måste du se till att du har en interaktiv kommunikation och att motsvarande datafiler är klara. Så här skapar och distribuerar du Java™-servleten:
 
-1. Logga in i AEM och skapa en interaktiv kommunikation. För att använda den interaktiva kommunikation som anges i exempelkoden nedan [klicka här](assets/SimpleMediumIC.zip).
-1. [Bygg och driftsätt ett AEM med Apache Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html) på din AEM.
-1. Lägg till [AEM Forms Client SDK version 6.0.12 eller senare](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) i listan över beroenden för POM-filen för ditt AEM. Exempel:
+1. Logga in i AEM och skapa en interaktiv kommunikation. [Klicka här](assets/SimpleMediumIC.zip) om du vill använda den interaktiva kommunikation som anges i exempelkoden nedan.
+1. [Skapa och distribuera ett AEM projekt med Apache Maven](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/aem-project-archetype.html) på din AEM.
+1. Lägg till [AEM Forms Client SDK version 6.0.12 eller senare](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) i listan över beroenden för POM-filen i AEM. Exempel:
 
    ```xml
        <dependency>
@@ -343,7 +343,7 @@ Om JSON-filen finns på `C:\batch\mergedJsonPath.json` och du använder den inte
 Sedan visas webbkanalen för den interaktiva kommunikationen i följande URL på noden publish
 `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=file:///C:/batch/mergedJsonData.json`
 
-Förutom att spara data i filsystemet kan du lagra JSON-filer i CRX-databas, filsystem, webbserver eller få åtkomst till data via OSGI-förifyllningstjänsten. Syntax för att sammanfoga data med olika protokoll är:
+Förutom att spara data i filsystemet kan du lagra JSON-filer i CRX-databasen, filsystemet, webbservern eller få åtkomst till data via OSGI-förifyllningstjänsten. Syntax för att sammanfoga data med olika protokoll är:
 
 * **CRX-protokoll**
   `http://host:port/<path-to-ic>/jcr:content?channel=web&mode=preview&guideMergedJsonPath=crx:///tmp/fd/af/mergedJsonData.json`

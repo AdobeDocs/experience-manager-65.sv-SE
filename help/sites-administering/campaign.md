@@ -27,7 +27,7 @@ Adobe Campaign är en uppsättning lösningar som gör att ni kan personalisera 
 >
 >I det här dokumentet beskrivs hur du integrerar Adobe Campaign med AEM 6.5, den lokala AEM eller AMS-.
 >
->Mer information om hur du integrerar Adobe Campaign med AEM as a Cloud Service, den AEM molnbaserade lösningen, [se det här dokumentet.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/campaign.html)
+>Mer information om hur du integrerar Adobe Campaign med AEM as a Cloud Service, molnbaserad AEM, [finns i det här dokumentet.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/campaign.html)
 
 ## Integrera med Adobe Campaign Classic {#acc}
 
@@ -40,16 +40,16 @@ Det finns flera Adobe Campaign Classic-versioner (ACC). Stödet för integrering
 
 I följande dokumentation beskrivs hur du integrerar AEM med Adobe Campaign Classic.
 
-* [Integrera med Adobe Campaign Classic](/help/sites-administering/campaignonpremise.md) - Lär dig steg för steg hur du konfigurerar integreringen.
+* [Integrera med Adobe Campaign Classic](/help/sites-administering/campaignonpremise.md) - Lär dig mer om hur du konfigurerar integreringen steg för steg.
 
 I följande ytterligare dokumentation beskrivs hur du använder integreringen.
 
-* [E-postkärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html) - Lär dig mer om de e-postkomponenter som du kan använda för att skapa Campaign-innehåll i AEM.
-* [Felsökning av Adobe Campaign Classic-integrering](/help/sites-administering/troubleshooting-campaignintegration.md) - Lär dig hur du åtgärdar de vanligaste problemen med AEM-ACC-integrering.
+* [Kärnkomponenter för e-post](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html) - Lär dig mer om de standardkomponenter för e-post som du kan använda för att skapa Campaign-innehåll i AEM.
+* [Felsökning av din Adobe Campaign Classic-integrering](/help/sites-administering/troubleshooting-campaignintegration.md) - Lär dig hur du åtgärdar de vanligaste problemen med AEM-ACC-integrering.
 
 ## Integrera med Adobe Campaign Standard {#acs}
 
-Integrering av [Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard.html) (ACS) med AEM beror på om AEM har installerats lokalt på Adobe Manage Services (AMS).
+Integrationen av [Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard.html) (ACS) med AEM beror på om AEM har installerats lokalt på Adobe Manage Services (AMS).
 
 | Integrering med AEM 6.5 <br>On Premises | Integrering med AEM 6.5<br>AMS |
 |---|---|

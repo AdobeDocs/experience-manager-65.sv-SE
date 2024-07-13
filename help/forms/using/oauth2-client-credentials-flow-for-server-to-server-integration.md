@@ -12,7 +12,7 @@ ht-degree: 1%
 
 ---
 
-# Integrering av Salesforce med OAuth 2.0-klientautentiseringsflöde  {#configure-salesforce-with-ouath-2.0-client-credential}
+# Integrering av Salesforce med OAuth 2.0-klientens autentiseringsflöde {#configure-salesforce-with-ouath-2.0-client-credential}
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -34,9 +34,9 @@ Det finns många fördelar med att använda OAuth 2.0-klientautentiseringsuppgif
 
 Innan du ställer in kommunikation mellan ett Salesforce-program och en AEM-miljö:
 
-* Skapa en [Salesforce-ansluten app med OAuth 2.0-klientautentiseringsflöde](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5) och en användare som bara har API för din organisation och som får tillgång till konsumentnyckeln och konsumenthemligheten för appen.
+* Skapa en [Salesforce-ansluten app med OAuth 2.0-klientautentiseringsflöde](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&amp;type=5) och en API-användare för din organisation och hämta konsumentnyckeln och konsumenthemligheten för appen.
 
-* Kontrollera att Swagger-filen är rätt konfigurerad för att matcha organisationens API:er. Du kan också välja att [skapa en Swagger-fil](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html) från scratch, skräddarsytt för användning i AEM.
+* Kontrollera att Swagger-filen är rätt konfigurerad för att matcha organisationens API:er. Du kan också välja att [skapa en Swagger-fil](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/integrate-with-salesforce/describe-rest-api.html) från början, som är anpassad för användning i AEM.
 >[!NOTE]
 >
 > AEM 6.5 stöder bara filspecifikationer i Swagger 2.0.
@@ -48,17 +48,17 @@ Innan du ställer in kommunikation mellan ett Salesforce-program och en AEM-milj
 1. Logga in på din Author-instans.
 1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Data Sources]**.
 1. Välj konfigurationsmappen.
-1. Klicka **[!UICONTROL Create]** och **[!UICONTROL Create Data Source Configuration]** visas.
-1. Ange **[!UICONTROL Title]** och väljer **[!UICONTROL Service Type]** as **[!UICONTROL RESTful Service]**.
+1. Klicka på **[!UICONTROL Create]** så visas **[!UICONTROL Create Data Source Configuration]**.
+1. Ange **[!UICONTROL Title]** och välj **[!UICONTROL Service Type]** som **[!UICONTROL RESTful Service]**.
 1. Klicka på **[!UICONTROL Next]**.
-1. Välj **[!UICONTROL Swagger Source]** as **[!UICONTROL File].**
+1. Välj **[!UICONTROL Swagger Source]** som **[!UICONTROL File].**
    >[!NOTE]
    >
    > När swagger-filen har valts fylls schemat, värdnamnet och bassökvägen i automatiskt.
 
 1. Överför den skapade swagger-filen från den lokala datorn genom att klicka på **[!UICONTROL Browse]**.
-1. Välj **[!UICONTROL Authentication Type]** as **[!UICONTROL OAuth 2.0]** och **[!UICONTROL Authentication Settings]** visas.
-1. Välj **[!UICONTROL Grant Type]** as **[!UICONTROL Client Credentials]**.
+1. Markera **[!UICONTROL Authentication Type]** som **[!UICONTROL OAuth 2.0]** så visas panelen **[!UICONTROL Authentication Settings]**.
+1. Välj **[!UICONTROL Grant Type]** som **[!UICONTROL Client Credentials]**.
 1. Ange **[!UICONTROL Client Id]** och **[!UICONTROL Client Secret]** som hämtats från Salesforce-appen som är ansluten.
 1. Ange **[!UICONTROL Access Token URL]** i format
    `https://[MyDomainName].my.salesforce.com/services/oauth2/token`.
@@ -68,6 +68,6 @@ Innan du ställer in kommunikation mellan ett Salesforce-program och en AEM-milj
    > Varje organisation har ett eget specifikt domännamn.
 
 1. Klicka på **[!UICONTROL Test Connection]**.
-1. Om anslutningen lyckas klickar du på **[!UICONTROL Create]** -knappen.
+1. Om anslutningen lyckas klickar du på knappen **[!UICONTROL Create]**.
 
 Nu kan du [skapa formulärdatamodellen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=en) för att integrera den konfigurerade datakällan med din adaptiva Forms.

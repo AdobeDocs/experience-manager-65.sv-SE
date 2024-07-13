@@ -31,12 +31,12 @@ ht-degree: 0%
   <tr>
    <td><p>Egenskap: cq:cugEnabled</p> <p>Deklarerar nodtyp: N/A, rest-egenskap</p> </td>
    <td><p>Behörighet:</p> <p>Nod: rep:cugPolicy of node type rep:CugPolicy</p> <p>Deklarera nodtyp: rep:CugMixin</p> <p> </p> <p> </p> <p> </p> Autentisering:</p> <p>Blandningstyp: granit:AuthenticationRequired</p> </td>
-   <td><p>För att begränsa läsåtkomst tillämpas en dedikerad CUG-princip på målnoden.</p> <p>Obs! Profiler kan bara tillämpas på de sökvägar som stöds.</p> <p>Noder med namnet rep:cugPolicy och typen rep:CugPolicy är skyddade och kan inte skrivas med vanliga JCR API-anrop. Använd i stället JCR-åtkomststyrningshantering.</p> <p>Se <a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">den här sidan</a> för mer information.</p> <p>För att framtvinga autentiseringskrav på en nod räcker det att lägga till blandningstypen granite:AuthenticationRequired.</p> <p>OBS! Endast under de sökvägar som stöds.</p> </td>
+   <td><p>För att begränsa läsåtkomst tillämpas en dedikerad CUG-princip på målnoden.</p> <p>Obs! Profiler kan bara tillämpas på de sökvägar som stöds.</p> <p>Noder med namnet rep:cugPolicy och typen rep:CugPolicy är skyddade och kan inte skrivas med vanliga JCR API-anrop. Använd i stället JCR-åtkomststyrningshantering.</p> <p>Mer information finns på <a href="https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html">den här sidan</a>.</p> <p>För att framtvinga autentiseringskrav på en nod räcker det att lägga till blandningstypen granite:AuthenticationRequired.</p> <p>OBS! Endast under de sökvägar som stöds.</p> </td>
   </tr>
   <tr>
    <td><p>Egenskap: cq:cugPrincipals</p> <p>Deklarerar nodtyp: NA, resterande egenskap</p> </td>
    <td><p>Egenskap: rep:mainNames</p> <p>Deklarera nodtyp: rep:CugPolicy</p> </td>
-   <td><p>Egenskapen som innehåller namnen på de objekt som har tillåtelse att läsa innehållet under den begränsade CUG-filen är skyddad och kan inte skrivas med vanliga JCR API-anrop. Använd i stället JCR-åtkomstkontrollhantering.</p> <p>Se <a href="https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.html">den här sidan</a> om du vill ha mer information om implementeringen.</p> </td>
+   <td><p>Egenskapen som innehåller namnen på de objekt som har tillåtelse att läsa innehållet under den begränsade CUG-filen är skyddad och kan inte skrivas med vanliga JCR API-anrop. Använd i stället JCR-åtkomstkontrollhantering.</p> <p>Mer information om implementeringen finns på <a href="https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/authorization/PrincipalSetPolicy.html">den här sidan</a>.</p> </td>
   </tr>
   <tr>
    <td><p>Egenskap: cq:cugLoginPage</p> <p>Deklarerar nodtyp: NA, resterande egenskap</p> </td>
@@ -80,14 +80,14 @@ Namn: com.day.cq.auth.impl.CugSupportImpl
 
   ConfigurationPolicy = REQUIRED
 
-**Kommentar**
+**Kommentarer**
 
 * Konfiguration av CUG-auktoriseringen och aktivera/inaktivera utvärderingen.
 Tjänst för att konfigurera exkluderingslista för huvudobjekt som inte ska påverkas av CUG-auktoriseringen.
 
   >[!NOTE]
   > 
-  >Om `CugExcludeImpl` är inte konfigurerad, `CugConfiguration` återgår till standardinställningen.
+  >Om `CugExcludeImpl` inte har konfigurerats återgår `CugConfiguration` till standardvärdet.
 
   Det går att koppla en anpassad CugExclude-implementering om det finns särskilda behov.
 

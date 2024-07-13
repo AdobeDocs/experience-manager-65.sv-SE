@@ -17,13 +17,13 @@ ht-degree: 0%
 
 # AEM Forms-kortkommandon {#aem-forms-keyboard-shortcuts}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs ett äldre sätt att skapa adaptiva Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs ett äldre sätt att skapa adaptiva Forms med baskomponenter. </span>
 
 I den här artikeln listas de kortkommandon som kan användas med Adaptiv formulärredigerare, Theme Editor, Content Browser och Correspondence Management för Windows och Macintosh.
 
 ## Adaptiv formulärredigerare {#adaptiveformeditor}
 
-| **Åtgärd** | **Kortkommando i Windows** | **Genväg till macOS** |
+| **Åtgärd** | **Kortkommando i Windows** | **Kortkommando på macOS** |
 |---|---|---|
 | Öppna egenskapsgranskaren för den valda adaptiva formulärkomponenten | Alt+Enter | Alt+Retur |
 | Stäng egenskapsgranskaren för den markerade adaptiva formulärkomponenten | Ctrl+Alt+W | Kommando+Alt+W |
@@ -33,18 +33,18 @@ I den här artikeln listas de kortkommandon som kan användas med Adaptiv formul
 | Ångra senaste ändring | Ctrl+Z | Ctrl+Z&amp;ast; |
 | Gör om senaste ändring | Ctrl+Y | Ctrl+Y&amp;ast; |
 | Markera flera komponenter | Skift+klicka | Skift+klicka |
-| Kopiera markerad komponent | Ctrl-C | Ctrl&amp;ast; |
+| Kopiera markerad komponent | Ctrl-C | Ctrl-C&amp;ast; |
 | Klipp ut markerade komponenter. Klippkomponenten försvinner inte förrän den klistras in på den nya platsen. | Ctrl-X | Ctrl-X&amp;ast; |
 | Klistra in komponenter | Ctrl+V | Ctrl+V |
 | Ta bort markerade komponenter | Ctrl+Del | Ctrl+Del&amp;ast; |
 | Ta bort markerade komponenter | Ctrl+Backsteg | Ctrl+Backsteg&amp;ast; |
 | Gör text fet när du använder komponenten RTF-redigerare i förhandsgranskningsläget | Ctrl+B | Ctrl+B&amp;ast; |
-| Kursivera text när du använder komponenten RTF-redigerare i förhandsgranskningsläget | Ctrl+I | Ctrl+I&amp;ast; |
-| Gör text fet när du använder komponenten RTF-redigerare i förhandsgranskningsläget | Ctrl+U | Ctrl+U&amp;ast; |
+| Kursivera text när du använder komponenten RTF-redigerare i förhandsgranskningsläget | Ctrl+I | Ctrl+I&amp;ämpel;ast; |
+| Gör text fet när du använder komponenten RTF-redigerare i förhandsgranskningsläget | Ctrl+U | Ctrl+U&amp;ppna;ast; |
 
 >[!NOTE]
 >
->Kortkommandon som är markerade med &#39;&amp;ast;&#39; fungerar både med Ctrl- och Kommando-tangenterna i macOS.
+>Kortkommandon markerade med &#39;&amp;ast;&#39; fungerar både med Ctrl- och Kommando-tangenterna i macOS.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ Flera val på en stationär enhet:
 
 ## Theme Editor  {#themeeditor}
 
-| **Åtgärd** | **Kortkommando i Windows** | **Genväg till macOS** |
+| **Åtgärd** | **Kortkommando i Windows** | **Kortkommando på macOS** |
 |---|---|---|
 | Öppna egenskapsgranskaren för den valda komponenten i ett tema | Alt+Enter | Alt+Retur |
 | Stäng egenskapsgranskaren för den markerade komponenten i ett tema | Ctrl+Alt+W | Kommando+Alt+W |
@@ -66,11 +66,11 @@ Flera val på en stationär enhet:
 
 >[!NOTE]
 >
-Kortkommandon som är markerade med &#39;&amp;ast;&#39; fungerar både med Ctrl- och Kommando-tangenterna i macOS.
+Kortkommandon markerade med &#39;&amp;ast;&#39; fungerar både med Ctrl- och Kommando-tangenterna i macOS.
 
 ## Content Browser  {#contentbrowser}
 
-| **Åtgärd** | **Kortkommando i Windows** | **Genväg till macOS** |
+| **Åtgärd** | **Kortkommando i Windows** | **Kortkommando på macOS** |
 |---|---|---|
 | Expandera alla dragspelspaneler i trädet Formulärobjekt i innehållsläsaren när det är i fokus | Ctrl+A för att markera alla dragspelspaneler följt av högerpilen för att expandera | Kommando+A för att markera alla dragspelspaneler följt av högerpilen för att expandera |
 | Komprimera alla dragspelspaneler i formulärobjektsträdet i innehållsläsaren när de är i fokus | Ctrl+A för att markera alla dragspelspaneler som följs av vänsterpilen för att komprimera | Kommando+A för att markera alla dragspelspaneler som följs av vänsterpilen för att komprimera |
@@ -79,15 +79,15 @@ Kortkommandon som är markerade med &#39;&amp;ast;&#39; fungerar både med Ctrl-
 | Markera nästa objekt i Forms Objects-trädet | Nedåtpil | Nedåtpil |
 | Markera föregående objekt i Forms Objects-trädet | Uppåtpil | Uppåtpil |
 
-[1] Ersätter Ctrl + högerpil för Windows och Cmd + högerpil för macOS.\
-[2] Ersätter Ctrl + vänsterpil för Windows och Cmd + vänsterpil för macOS.
+[1] ersätter Ctrl + högerpil för Windows och Cmd + högerpil för macOS.\
+[2] ersätter Ctrl + vänsterpil för Windows och Cmd + vänsterpil för macOS.
 
 ## Korrespondenshantering {#correspondence-management}
 
 I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel som du kan använda i textredigeraren för Korrespondenshantering. Du kan använda följande kortkommandon medan du är:
 
-* Skapa eller redigera en [Text](texts-interactive-communications.md) resurs
-* Redigera en textmodul när användaren har tryckt på ikonen Redigera ( ![edittextmodule](assets/edittextmodule.png)) när [skapa korrespondens](/help/forms/using/create-correspondence.md).
+* Skapa eller redigera en [Text](texts-interactive-communications.md)-resurs
+* Redigera en textmodul efter att ha tryckt på den relevanta redigeringsikonen ( ![edittextmodule](assets/edittextmodule.png)) när du [skapar en korrespondens](/help/forms/using/create-correspondence.md).
 
 ### Textmarkering och flytta runt markören {#text-selection-and-moving-the-cursor-around}
 
@@ -96,7 +96,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   <tr>
    <th><strong>Åtgärd</strong></th> 
    <th><strong>Kortkommando i Windows</strong></th> 
-   <th><strong>Genväg till macOS</strong><br /> </th> 
+   <th><strong>Kortkommando på macOS</strong><br /> </th> 
   </tr>
   <tr>
    <td><p>Markera det aktuella ordet</p> </td> 
@@ -186,7 +186,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   <tr>
    <td><p>Markera text från aktuell position till slutet (i modulen)</p> </td> 
    <td><p>Skift+Ctrl+End</p> </td> 
-   <td>Kommando+Skift+Nedpil<br /> </td> 
+   <td>Kommando+Skift+Nedåtpil<br /> </td> 
   </tr>
   <tr>
    <td><p>Markera text från aktuell position till början (i modulen)</p> </td> 
@@ -246,7 +246,7 @@ I det här avsnittet visas olika tangentbord och kortkommandon för hjälpmedel 
   <tr>
    <th><strong>Åtgärd</strong></th> 
    <th><strong>Kortkommando i Windows </strong></th> 
-   <th><strong>Genväg till macOS</strong><br /> </th> 
+   <th><strong>Kortkommando på macOS</strong><br /> </th> 
   </tr>
   <tr>
    <td><p>Ångra </p> </td> 

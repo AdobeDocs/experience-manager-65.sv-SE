@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Som standard har möjligheten att växla till det klassiska användargränssnittet från redigeraren inaktiverats.
 
-Aktivera alternativet igen **Öppna i Classic UI** i **Sidinformation** gör du så här.
+Följ de här stegen om du vill aktivera alternativet **Öppna i klassiskt gränssnitt** på menyn **Sidinformation** igen.
 
 1. Använd CRXDE Lite för att hitta följande nod:
 
@@ -32,16 +32,16 @@ Aktivera alternativet igen **Öppna i Classic UI** i **Sidinformation** gör du 
 
    ` [https://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui](https://localhost:4502/crx/de/index.jsp#/libs/wcm/core/content/editor/jcr%3Acontent/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui)`
 
-1. Skapa en övertäckning med **Överläggsnod** option; till exempel:
+1. Skapa en övertäckning med alternativet **Överläggsnod**, till exempel:
 
-   * **Bana**: `/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
-   * **Överläggsplats**: `/apps/`
-   * **Matcha nodtyper**: active (markera kryssrutan)
+   * **Sökväg**: `/apps/wcm/core/content/editor/jcr:content/content/items/content/header/items/headerbar/items/pageinfopopover/items/list/items/classicui`
+   * **Plats för övertäckning**: `/apps/`
+   * **Matcha nodtyper**: aktiv (markera kryssrutan)
 
 1. Lägg till följande text-egenskap med flera värden i den åsidosatta noden:
 
    `sling:hideProperties = ["granite:hidden"]`
 
-1. The **Öppna i Classic UI** finns igen i **Sidinformation** när du redigerar sidor.
+1. Alternativet **Öppna i klassiskt gränssnitt** är igen tillgängligt på menyn **Sidinformation** när du redigerar sidor.
 
-   ![öppna i klassiskt användargränssnitt från sidinformation](assets/syui-03-2019-02-27-15-19-48.png)
+   ![öppnad i klassiskt användargränssnitt från sidinformation](assets/syui-03-2019-02-27-15-19-48.png)

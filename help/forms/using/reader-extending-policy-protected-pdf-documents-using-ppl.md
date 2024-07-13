@@ -22,7 +22,7 @@ Lär dig mer om dokumentsäkerhet, lästillägg och Java Programming Language f�
 
 Du kan använda dokumentskydd för att begränsa åtkomsten till specifika PDF-dokument till endast behöriga användare. Du kan också bestämma hur en mottagare ska kunna använda ett skyddat dokument. Du kan till exempel ange om mottagarna ska kunna skriva ut, kopiera eller redigera text i ett dokument som skyddas av dokumentsäkerhetsregler. Mer information om dokumentsäkerhet finns i [om dokumentsäkerhet](/help/forms/using/admin-help/document-security.md).
 
-Du kan använda läsartillägg för att aktivera interaktiva funktioner i Adobe PDF-dokument via Acrobat Reader. Dessa interaktiva funktioner som normalt bara är tillgängliga via Adobe Acrobat Professional och Standard. Om du vill veta mer om de interaktiva funktioner som läsartillägget kan aktivera kan du läsa [Adobe Experience Manager Forms DocAssurance-tjänst ](/help/forms/using/overview-aem-document-services.md)**.**
+Du kan använda läsartillägg för att aktivera interaktiva funktioner i Adobe PDF-dokument via Acrobat Reader. Dessa interaktiva funktioner som normalt bara är tillgängliga via Adobe Acrobat Professional och Standard. Mer information om de interaktiva funktioner som läsartillägg kan aktivera finns i [Adobe Experience Manager Forms DocAssurance-tjänsten ](/help/forms/using/overview-aem-document-services.md)**.**
 
 Du kan använda det portabla skyddsbiblioteket för att tillämpa skyddsprofiler på dokumentet utan att behöva skicka dokumentet via nätverket. Det är bara säkerhetsreferenser och skyddsprofiler som rör sig över nätverket. Det faktiska dokumentet lämnar aldrig klienten och skyddsprofiler tillämpas lokalt på klienten.
 
@@ -44,7 +44,7 @@ Du kan utföra följande uppgifter med tjänsten Reader Extensions:
 
 ### Använda användarrättigheter i ett dokument som skyddas av dokumentsäkerhetsregler i PDF {#apply-usage-rights-to-a-document-security-policy-protected-pdf-document}
 
-Du kan använda `applyUsageRights`Java API för att lägga in användarrättigheter i policyskyddade PDF-dokument. Användningsrättigheterna gäller funktioner som är tillgängliga som standard i Acrobat men inte i Adobe Reader, t.ex. möjligheten att lägga till kommentarer i ett formulär eller att fylla i formulärfält och spara formuläret. PDF-dokument som har användarrättigheter är aktiverade. En användare som öppnar ett rättighetsaktiverat dokument i Adobe Reader kan utföra åtgärder som är aktiverade för det specifika dokumentet.
+Du kan använda Java-API:t `applyUsageRights`för att tillämpa användningsrättigheter på principskyddade PDF-dokument. Användningsrättigheterna gäller funktioner som är tillgängliga som standard i Acrobat men inte i Adobe Reader, t.ex. möjligheten att lägga till kommentarer i ett formulär eller att fylla i formulärfält och spara formuläret. PDF-dokument som har användarrättigheter är aktiverade. En användare som öppnar ett rättighetsaktiverat dokument i Adobe Reader kan utföra åtgärder som är aktiverade för det specifika dokumentet.
 
 **Syntax:** `InputStream applyUsageRights(InputStream inputFile, File certFile, String credentialPassword, UsageRights usageRights)`
 
@@ -68,14 +68,14 @@ Du kan använda `applyUsageRights`Java API för att lägga in användarrättighe
   </tr>
   <tr>
    <td><p>usageRights</p> </td>
-   <td><p>Anger ett objekt av typen <a href="https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/javadoc/com/adobe/livecycle/readerextensions/client/UsageRights.html" target="_blank">Användningsrättigheter</a>. Objektet usageRights representerar individuella rättigheter som kan tillämpas på ett policyskyddat PDF-dokument.</p> </td>
+   <td><p>Anger ett objekt av typen <a href="https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/javadoc/com/adobe/livecycle/readerextensions/client/UsageRights.html" target="_blank">UsageRights</a>. Objektet usageRights representerar individuella rättigheter som kan tillämpas på ett policyskyddat PDF-dokument.</p> </td>
   </tr>
  </tbody>
 </table>
 
 ### Hämta användningsrättigheter som gäller ett policyskyddat PDF-dokument.   {#retrieve-usage-rights-applied-to-a-policy-protected-pdf-document-nbsp}
 
-Du kan använda `getDocumentUsageRights`Java API för att hämta läsartilläggets användningsrättigheter som tillämpas på ett policyskyddat PDF-dokument. Genom att hämta information om användningsrättigheter kan du lära dig mer om de funktioner som läsartillägget har aktiverat för det principskyddade PDF-dokumentet.
+Du kan använda Java-API:t `getDocumentUsageRights`för att hämta läsartilläggets användningsbehörighet som tillämpas på ett principskyddat PDF-dokument. Genom att hämta information om användningsrättigheter kan du lära dig mer om de funktioner som läsartillägget har aktiverat för det principskyddade PDF-dokumentet.
 
 **Syntax:** `public GetUsageRightsResult getDocumentUsageRights(InputStream inDoc)`
 
@@ -140,7 +140,7 @@ System.out.println("RE rights for the file are :\n"+right1);
 
 ### Ta bort användningsbehörighet för ett profilskyddat PDF-dokument {#remove-usage-rights-of-a-policy-protected-pdf-document}
 
-Du kan använda `removeUsageRights`Java API för att ta bort användarrättigheter från ett policyskyddat dokument. Du måste ta bort användningsrättigheter från ett policyskyddat PDF-dokument för att kunna utföra andra AEM Forms-åtgärder i dokumentet. Du måste till exempel signera (eller certifiera) ett PDF-dokument digitalt innan du anger användningsbehörighet. Om du vill utföra åtgärder på ett policyskyddat dokument måste du därför ta bort användningsbehörighet från PDF-dokumentet, utföra andra åtgärder, t.ex. signera dokumentet digitalt och sedan återanvända användningsbehörighet för dokumentet.
+Du kan använda Java-API:t `removeUsageRights` för att ta bort användningsrättigheter från ett principskyddat dokument. Du måste ta bort användningsrättigheter från ett policyskyddat PDF-dokument för att kunna utföra andra AEM Forms-åtgärder i dokumentet. Du måste till exempel signera (eller certifiera) ett PDF-dokument digitalt innan du anger användningsbehörighet. Om du vill utföra åtgärder på ett policyskyddat dokument måste du därför ta bort användningsbehörighet från PDF-dokumentet, utföra andra åtgärder, t.ex. signera dokumentet digitalt och sedan återanvända användningsbehörighet för dokumentet.
 
 **Syntax:** `InputStream removeUsageRights(InputStream inputFile)`
 
@@ -152,7 +152,7 @@ Du kan använda `removeUsageRights`Java API för att ta bort användarrättighet
   </tr>
   <tr>
    <td><p> </p> <p>inputFile</p> </td>
-   <td>Ange InputStream som representerar det PDF-dokument som används för<br /> rättigheter skall tas bort. Du kan använda LiveCycle Rights Management eller AEM Forms dokumentskyddsskyddade dokument.</td>
+   <td>Ange InputStream som representerar det PDF-dokument från vilket användningsrättigheterna <br /> ska tas bort. Du kan använda LiveCycle Rights Management eller AEM Forms dokumentskyddsskyddade dokument.</td>
   </tr>
  </tbody>
 </table>

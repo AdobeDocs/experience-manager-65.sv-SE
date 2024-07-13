@@ -26,7 +26,7 @@ Skapa tillgängliga webbplatser och innehåll med AEM påverkan:
 
 * Mallutvecklare bör också vara medvetna om sådana frågor när de implementerar webbplatsdesignen.
 
-Adobe Experience Manager arbetar med [riktlinjer](#wcag-accessibility-guidelines) tillhandahålls av [World Wide Web Consortium](#world-wide-web-consortium).
+Adobe Experience Manager fungerar med [riktlinjerna](#wcag-accessibility-guidelines) från [World Wide Web Consortium](#world-wide-web-consortium).
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ Med Adobe Experience Manager kan författare och/eller webbplatsägare skapa web
 * [Konfigurera RTF-redigeraren för produktion av tillgängliga platser](/help/sites-administering/rte-accessible-content.md)
 Riktlinjer för hur administratörer kan konfigurera AEM för att skapa tillgängligt innehåll.
 
-* [Creating Accessible Adaptive Forms](/help/forms/using/creating-accessible-adaptive-forms.md)
+* [Skapar tillgänglig adaptiv Forms](/help/forms/using/creating-accessible-adaptive-forms.md)
 Adobe Experience Manager (AEM) innehåller flera funktioner som gör det enklare att använda adaptiva formulär för användare med olika funktioner. Lösningen hjälper också formulärförfattare att skapa tillgängliga adaptiva formulär.
 
 >[!NOTE]

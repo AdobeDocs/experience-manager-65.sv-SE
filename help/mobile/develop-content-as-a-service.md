@@ -27,11 +27,11 @@ Detta inkluderar användning av resurser, webbplatsinnehåll, CAAS-innehåll (ov
 
 >[!NOTE]
 >
->**Innehåll som är över hela klippet** kan komma från något av ovanstående via ContentSync-hanterare. Den kan användas för att batchpaketera och leverera i form av zips och underhålla uppdateringar för dessa paket.
+>**Innehåll som ligger över AIR** kan komma från något av ovanstående via ContentSync-hanterare. Den kan användas för att batchpaketera och leverera i form av zips och underhålla uppdateringar för dessa paket.
 
 Det finns tre huvudtyper av material som Content Services levererar:
 
-1. **Resurser**
+1. **Assets**
 1. **Paketerat HTML-innehåll (HTML/CSS/JS)**
 1. **Kanaloberoende innehåll**
 
@@ -41,7 +41,7 @@ Det finns tre huvudtyper av material som Content Services levererar:
 
 Resurssamlingar är AEM som innehåller referenser till andra samlingar.
 
-En resurssamling kan visas via innehållstjänster. När en resurssamling anropas i en begäran returneras ett objekt som är en lista över resurserna, inklusive deras URL:er. Resurser nås via en URL. URL:en anges i ett objekt. Till exempel:
+En resurssamling kan visas via innehållstjänster. När en resurssamling anropas i en begäran returneras ett objekt som är en lista över resurserna, inklusive deras URL:er. Assets nås via en URL. URL:en anges i ett objekt. Till exempel:
 
 * En sidenhet returnerar JSON (sidobjekt) som innehåller en bildreferens. Bildreferensen är en URL som används för att hämta resursens binärfil för bilden.
 * En begäran om en lista med resurser i en mapp returnerar JSON med information om alla enheter i den mappen. Listan är ett objekt. JSON har URL-referenser som används för att hämta resursens binärfil för varje resurs i den mappen.
@@ -52,7 +52,7 @@ Ett viktigt värde för Content Services är möjligheten att returnera resurser
 
 Resursoptimering är en funktion på serversidan som baseras på information som anges i API-begäran. Där det är möjligt bör resursåtergivningarna cachelagras så att liknande förfrågningar inte kräver omgenerering av resursåtergivningen.
 
-### Arbetsflöde för resurser {#assets-workflow}
+### Assets Workflow {#assets-workflow}
 
 Resursarbetsflödet är följande:
 
@@ -63,19 +63,19 @@ Resursarbetsflödet är följande:
    1. Välj en tillgång eller en tillgångssamling
    1. Anpassa JSON-återgivning
 
-I följande diagram visas **Referensarbetsflöde för resurser**:
+I följande diagram visas **Assets Reference Workflow**:
 
 ![chlimage_1-155](assets/chlimage_1-155.png)
 
-### Hantera resurser {#managing-assets}
+### Hantera Assets {#managing-assets}
 
 Content Services ger åtkomst till AEM resurser som inte kan refereras via annat AEM.
 
-#### Befintliga hanterade tillgångar {#existing-managed-assets}
+#### Befintliga hanterade Assets {#existing-managed-assets}
 
 En användare av AEM Sites och Assets använder AEM Assets för att hantera allt digitalt material för alla kanaler. De utvecklar en intern mobilapp och måste använda flera resurser som hanteras av AEM Assets. Till exempel logotyper, bakgrundsbilder och knappikoner.
 
-För närvarande är dessa spridda runt resurskatalogen. De filer som programmet måste referera till finns i följande:
+Dessa är för närvarande spridda runt Assets-databasen. De filer som programmet måste referera till finns i följande:
 
 * /content/dam/geometrixx-outdoors/brand/logo_light.png
 * /content/dam/geometrixx-outdoors/brand/logo_dark.png
@@ -115,7 +115,7 @@ AEM Content Services förser mobilappen med HTML via API:t. Kunder som vill visa
 
 Följande alternativ beaktas:
 
-* **Zip-fil:** För att få bästa möjliga visning på enheten inkluderas sidans refererade material-css, JavaScript, resurser och så vidare i en enda komprimerad fil med svaret. Referenserna på HTML-sidan kan justeras så att en relativ sökväg till dessa filer används.
+* **Zip-fil:** Om du vill ha den bästa möjligheten att visas korrekt på enheten, inkluderas sidans refererade material-css, JavaScript, resurser och så vidare i en enda komprimerad fil med svaret. Referenserna på HTML-sidan kan justeras så att en relativ sökväg till dessa filer används.
 * **Direktuppspelning:** Hämtar ett manifest med nödvändiga filer från AEM. Använd sedan det manifestet för att begära alla filer (HTML, CSS, JS o.s.v.) med efterföljande begäranden.
 
 ![chlimage_1-157](assets/chlimage_1-157.png)

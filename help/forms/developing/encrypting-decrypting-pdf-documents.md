@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Kryptera och dekryptera PDF-dokument {#encrypting-and-decrypting-pdf-documents}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 **Om krypteringstjänsten**
 
@@ -28,7 +28,7 @@ Du kan utföra följande uppgifter med krypteringstjänsten:
 
 * Kryptera ett PDF-dokument med ett lösenord. (Se [Kryptera PDF-dokument med ett lösenord](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-a-password).)
 * Kryptera ett PDF-dokument med ett certifikat. (Se [Kryptera PDF-dokument med certifikat](encrypting-decrypting-pdf-documents.md#encrypting-pdf-documents-with-certificates).)
-* Ta bort lösenordsbaserad kryptering från ett PDF-dokument. (Se [Tar bort lösenordskryptering](encrypting-decrypting-pdf-documents.md#removing-password-encryption).)
+* Ta bort lösenordsbaserad kryptering från ett PDF-dokument. (Se [Ta bort lösenordskryptering](encrypting-decrypting-pdf-documents.md#removing-password-encryption).)
 * Ta bort certifikatbaserad kryptering från ett PDF-dokument. (Se [Tar bort certifikatbaserad kryptering](encrypting-decrypting-pdf-documents.md#removing-certificate-based-encryption).)
 * Lås upp PDF-dokumentet så att andra serviceåtgärder kan utföras. När ett lösenordskrypterat PDF-dokument är olåst kan du till exempel använda en digital signatur på det. (Se [Låsa upp krypterade PDF-dokument](encrypting-decrypting-pdf-documents.md#unlocking-encrypted-pdf-documents).)
 * Bestäm krypteringstypen för ett skyddat PDF-dokument. (Se [Bestämmer krypteringstyp](encrypting-decrypting-pdf-documents.md#determining-encryption-type).)
@@ -76,7 +76,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient.
 
-**Få ett PDF-dokument att kryptera**
+**Hämta ett PDF-dokument som ska krypteras**
 
 Hämta ett okrypterat PDF-dokument för att kryptera dokumentet med ett lösenord. Om du försöker skydda ett PDF-dokument som redan är krypterat orsakar du ett undantag.
 
@@ -127,37 +127,37 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API (Java)
 
 1. Skapa ett API för krypteringsklient.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `EncryptionServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `EncryptionServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Få ett PDF-dokument att kryptera.
 
-   * Skapa en `java.io.FileInputStream` objekt som representerar PDF-dokumentet som ska krypteras med hjälp av konstruktorn och som skickar ett strängvärde som anger platsen för PDF-dokumentet.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det PDF-dokument som ska krypteras med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för PDF-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ange alternativ för kryptering vid körning.
 
-   * Skapa en `PasswordEncryptionOptionSpec` genom att anropa dess konstruktor.
-   * Ange vilka PDF-dokumentresurser som ska krypteras genom att anropa `PasswordEncryptionOptionSpec` objektets `setEncryptOption` metod och skicka en `PasswordEncryptionOption` uppräkningsvärde som anger vilka dokumentresurser som ska krypteras. Om du till exempel vill kryptera hela PDF-dokumentet, inklusive dess metadata och bilagor, anger du `PasswordEncryptionOption.ALL`.
-   * Skapa en `java.util.List` som lagrar krypteringsbehörigheterna med `ArrayList` konstruktor.
-   * Ange en behörighet genom att anropa `java.util.List` objekt&quot;s `add` och skickar ett uppräkningsvärde som motsvarar den behörighet som du vill ange. Om du till exempel vill ange den behörighet som gör att en användare kan kopiera data i PDF-dokumentet, anger du `PasswordEncryptionPermission.PASSWORD_EDIT_COPY`. (Upprepa det här steget för varje behörighet att ange).
-   * Ange kompatibilitetsalternativet för Acrobat genom att anropa `PasswordEncryptionOptionSpec` objektets `setCompatability` och skickar ett uppräkningsvärde som anger kompatibilitetsnivån för Acrobat. Du kan till exempel ange `PasswordEncryptionCompatability.ACRO_7`.
-   * Ange det lösenordsvärde som gör att en användare kan öppna det krypterade PDF-dokumentet genom att anropa `PasswordEncryptionOptionSpec` objektets `setDocumentOpenPassword` och skickar ett strängvärde som representerar det öppna lösenordet.
-   * Ange det huvudlösenordsvärde som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att anropa `PasswordEncryptionOptionSpec` objektets `setPermissionPassword` och skickar ett strängvärde som representerar huvudlösenordet.
+   * Skapa ett `PasswordEncryptionOptionSpec`-objekt genom att anropa dess konstruktor.
+   * Ange de dokumentresurser i PDF som ska krypteras genom att anropa `PasswordEncryptionOptionSpec`-objektets `setEncryptOption`-metod och skicka ett `PasswordEncryptionOption`-uppräkningsvärde som anger vilka dokumentresurser som ska krypteras. Om du till exempel vill kryptera hela PDF-dokumentet, inklusive dess metadata och bilagor, anger du `PasswordEncryptionOption.ALL`.
+   * Skapa ett `java.util.List`-objekt som lagrar krypteringsbehörigheterna med konstruktorn `ArrayList`.
+   * Ange en behörighet genom att anropa metoden `add` för objektet `java.util.List` och skicka ett uppräkningsvärde som motsvarar den behörighet som du vill ange. Om du till exempel vill ange behörigheten som tillåter en användare att kopiera data i PDF-dokumentet anger du `PasswordEncryptionPermission.PASSWORD_EDIT_COPY`. (Upprepa det här steget för varje behörighet att ange).
+   * Ange kompatibilitetsalternativet för Acrobat genom att anropa `PasswordEncryptionOptionSpec`-objektets `setCompatability`-metod och skicka ett uppräkningsvärde som anger Acrobat-kompatibilitetsnivå. Du kan till exempel ange `PasswordEncryptionCompatability.ACRO_7`.
+   * Ange det lösenordsvärde som gör att en användare kan öppna det krypterade PDF-dokumentet genom att anropa `PasswordEncryptionOptionSpec`-objektets `setDocumentOpenPassword`-metod och skicka ett strängvärde som representerar det öppna lösenordet.
+   * Ange det huvudlösenordsvärde som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att anropa `PasswordEncryptionOptionSpec`-objektets `setPermissionPassword`-metod och skicka ett strängvärde som representerar huvudlösenordet.
 
 1. Lägg till lösenordet.
 
-   Kryptera PDF genom att anropa `EncryptionServiceClient` objektets `encryptPDFUsingPassword` och skicka följande värden:
+   Kryptera PDF-dokumentet genom att anropa `EncryptionServiceClient`-objektets `encryptPDFUsingPassword`-metod och skicka följande värden:
 
-   * The `com.adobe.idp.Document` som innehåller det PDF-dokument som ska krypteras med lösenordet.
-   * The `PasswordEncryptionOptionSpec` objekt som innehåller alternativ för kryptering vid körning.
+   * Objektet `com.adobe.idp.Document` som innehåller det PDF-dokument som ska krypteras med lösenordet.
+   * Objektet `PasswordEncryptionOptionSpec` som innehåller alternativ för kryptering vid körning.
 
-   The `encryptPDFUsingPassword` returnerar en `com.adobe.idp.Document` objekt som innehåller ett lösenordskrypterat PDF-dokument.
+   Metoden `encryptPDFUsingPassword` returnerar ett `com.adobe.idp.Document`-objekt som innehåller ett lösenordskrypterat PDF-dokument.
 
 1. Spara det krypterade PDF-dokumentet som en PDF-fil.
 
-   * Skapa en `java.io.File` och se till att filtillägget är .pdf.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` till filen. Se till att du använder `com.adobe.idp.Document` objekt som returneras av `encryptPDFUsingPassword` -metod.
+   * Skapa ett `java.io.File`-objekt och kontrollera att filtillägget är .pdf.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `com.adobe.idp.Document`-objektet till filen. Kontrollera att du använder objektet `com.adobe.idp.Document` som returnerades av metoden `encryptPDFUsingPassword`.
 
 **Se även**
 
@@ -180,52 +180,52 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API:t (web
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett API-objekt för krypteringsklient.
 
-   * Skapa en `EncryptionServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `EncryptionServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `EncryptionServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`). Du behöver inte använda attributet `lc_version`. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `EncryptionServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `EncryptionServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Få ett PDF-dokument att kryptera.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` används för att lagra ett PDF-dokument som är krypterat med ett lösenord.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det PDF-dokument som ska krypteras och läget i vilket filen ska öppnas.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela innehållet i bytearrayen till `BLOB` objektets `MTOM` datamedlem.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett PDF-dokument som är krypterat med ett lösenord.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det PDF-dokument som ska krypteras och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela innehållet i bytearrayen till `BLOB`-objektets `MTOM`-datamedlem.
 
 1. Ange alternativ för kryptering vid körning.
 
-   * Skapa en `PasswordEncryptionOptionSpec` genom att använda dess konstruktor.
-   * Ange vilka PDF-dokumentresurser som ska krypteras genom att tilldela en `PasswordEncryptionOption` uppräkningsvärde till `PasswordEncryptionOptionSpec` objektets `encryptOption` datamedlem. Om du vill kryptera hela PDF, inklusive dess metadata och bilagor, tilldelar du `PasswordEncryptionOption.ALL` till denna datamedlem.
-   * Ange kompatibilitetsalternativet för Acrobat genom att tilldela en `PasswordEncryptionCompatability` uppräkningsvärde till `PasswordEncryptionOptionSpec` objektets `compatability` datamedlem. Tilldela till exempel `PasswordEncryptionCompatability.ACRO_7` till denna datamedlem.
-   * Ange det lösenordsvärde som gör att en användare kan öppna det krypterade PDF-dokumentet genom att tilldela ett strängvärde som representerar det öppna lösenordet till `PasswordEncryptionOptionSpec` objektets `documentOpenPassword` datamedlem.
-   * Ange det lösenordsvärde som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att tilldela ett strängvärde som representerar huvudlösenordet till `PasswordEncryptionOptionSpec` objektets `permissionPassword` datamedlem.
+   * Skapa ett `PasswordEncryptionOptionSpec`-objekt med hjälp av dess konstruktor.
+   * Ange de dokumentresurser i PDF som ska krypteras genom att tilldela ett `PasswordEncryptionOption`-uppräkningsvärde till `PasswordEncryptionOptionSpec`-objektets `encryptOption`-datamedlem. Om du vill kryptera hela PDF, inklusive dess metadata och bilagor, tilldelar du `PasswordEncryptionOption.ALL` till den här datamedlemmen.
+   * Ange kompatibilitetsalternativet för Acrobat genom att tilldela ett `PasswordEncryptionCompatability`-uppräkningsvärde till `PasswordEncryptionOptionSpec`-objektets `compatability`-datamedlem. Tilldela till exempel `PasswordEncryptionCompatability.ACRO_7` till den här datamedlemmen.
+   * Ange det lösenordsvärde som gör att en användare kan öppna det krypterade PDF-dokumentet genom att tilldela ett strängvärde som representerar det öppna lösenordet till `documentOpenPassword`-objektets `PasswordEncryptionOptionSpec`-datamedlem.
+   * Ange det lösenordsvärde som gör att en användare kan ta bort kryptering från PDF-dokumentet genom att tilldela ett strängvärde som representerar huvudlösenordet till `permissionPassword`-objektets `PasswordEncryptionOptionSpec`-datamedlem.
 
 1. Lägg till lösenordet.
 
-   Kryptera PDF genom att anropa `EncryptionServiceClient` objektets `encryptPDFUsingPassword` och skicka följande värden:
+   Kryptera PDF-dokumentet genom att anropa `EncryptionServiceClient`-objektets `encryptPDFUsingPassword`-metod och skicka följande värden:
 
-   * The `BLOB` som innehåller det PDF-dokument som ska krypteras med lösenordet.
-   * The `PasswordEncryptionOptionSpec` objekt som innehåller alternativ för kryptering vid körning.
+   * Objektet `BLOB` som innehåller det PDF-dokument som ska krypteras med lösenordet.
+   * Objektet `PasswordEncryptionOptionSpec` som innehåller alternativ för kryptering vid körning.
 
-   The `encryptPDFUsingPassword` returnerar en `BLOB` objekt som innehåller ett lösenordskrypterat PDF-dokument.
+   Metoden `encryptPDFUsingPassword` returnerar ett `BLOB`-objekt som innehåller ett lösenordskrypterat PDF-dokument.
 
 1. Spara det krypterade PDF-dokumentet som en PDF-fil.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det skyddade PDF-dokumentet.
-   * Skapa en bytearray som lagrar datainnehållet i `BLOB` objekt som returneras av `encryptPDFUsingPassword` -metod. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det skyddade PDF-dokumentet.
+   * Skapa en bytearray som lagrar datainnehållet för objektet `BLOB` som returnerades av metoden `encryptPDFUsingPassword`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -237,7 +237,7 @@ Kryptera ett PDF-dokument med ett lösenord med hjälp av krypterings-API:t (web
 
 ## Kryptera PDF-dokument med certifikat {#encrypting-pdf-documents-with-certificates}
 
-Med certifikatbaserad kryptering kan du kryptera ett dokument för specifika mottagare med hjälp av teknik för offentlig nyckel. Olika mottagare kan få olika behörigheter för dokumentet. Många krypteringsaspekter blir möjliga med hjälp av teknik med publika nycklar. En algoritm används för att generera två stora tal, så kallade *tangenter*, som har följande egenskaper:
+Med certifikatbaserad kryptering kan du kryptera ett dokument för specifika mottagare med hjälp av teknik för offentlig nyckel. Olika mottagare kan få olika behörigheter för dokumentet. Många krypteringsaspekter blir möjliga med hjälp av teknik med publika nycklar. En algoritm används för att generera två stora tal, så kallade *keys*, som har följande egenskaper:
 
 * En nyckel används för att kryptera en datauppsättning. Därefter kan bara den andra nyckeln användas för att dekryptera data.
 * Det är omöjligt att skilja på den ena nyckeln och den andra.
@@ -284,9 +284,9 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 **Skapa ett API-objekt för krypteringsklient**
 
-Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Om du använder webbtjänstens API för krypteringstjänst skapar du en `EncryptionServiceService` -objekt.
+Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du ett `EncrytionServiceClient`-objekt. Skapa ett `EncryptionServiceService`-objekt om du använder API:t för webbtjänstens krypteringstjänst.
 
-**Få ett PDF-dokument att kryptera**
+**Hämta ett PDF-dokument som ska krypteras**
 
 Hämta ett okrypterat PDF-dokument som ska krypteras. Om du försöker skydda ett PDF-dokument som redan är krypterat genereras ett undantag.
 
@@ -332,48 +332,48 @@ Kryptera ett PDF-dokument med ett certifikat med hjälp av krypterings-API (Java
 
 1. Skapa ett API-objekt för krypteringsklient.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `EncryptionServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `EncryptionServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Få ett PDF-dokument att kryptera.
 
-   * Skapa en `java.io.FileInputStream` objekt som representerar PDF-dokumentet som ska krypteras med hjälp av konstruktorn och som skickar ett strängvärde som anger platsen för PDF-dokumentet.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det PDF-dokument som ska krypteras med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för PDF-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Referera till certifikatet.
 
-   * Skapa en `java.util.List` objekt som lagrar behörighetsinformation med hjälp av dess konstruktor.
-   * Ange behörigheten för det krypterade dokumentet genom att anropa `java.util.List` objektets `add` metod och skicka en `CertificateEncryptionPermissions` uppräkningsvärde som representerar behörigheter som beviljas den användare som öppnar det skyddade PDF-dokumentet. Om du till exempel vill ange alla behörigheter skickar du `CertificateEncryptionPermissions.PKI_ALL_PERM`.
-   * Skapa en `Recipient` genom att använda dess konstruktor.
-   * Skapa en `java.io.FileInputStream` objekt som representerar certifikatet som används för att kryptera PDF-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för certifikatet.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` objekt som representerar certifikatet.
-   * Anropa `Recipient` objektets `setX509Cert` och skicka `com.adobe.idp.Document` som innehåller certifikatet. (Dessutom har `Recipient`-objektet kan ha ett förvaltarcertifikatalias eller en LDAP-URL som certifikatkälla.)
-   * Skapa en `CertificateEncryptionIdentity` objekt som lagrar behörighet och certifikatinformation med hjälp av dess konstruktor.
-   * Anropa `CertificateEncryptionIdentity` objektets `setPerms` och skicka `java.util.List` objekt som lagrar behörighetsinformation.
-   * Anropa `CertificateEncryptionIdentity` objektets `setRecipient` och skicka `Recipient` objekt som lagrar certifikatinformation.
-   * Skapa en `java.util.List` objekt som lagrar certifikatinformation med hjälp av dess konstruktor.
-   * Anropa `java.util.List` objektets add-metod och skicka `CertificateEncryptionIdentity` -objekt. (Den `java.util.List` objektet skickas som en parameter till `encryptPDFUsingCertificates` metod.)
+   * Skapa ett `java.util.List`-objekt som lagrar behörighetsinformation med hjälp av dess konstruktor.
+   * Ange behörigheten som är associerad med det krypterade dokumentet genom att anropa `java.util.List`-objektets `add`-metod och skicka ett `CertificateEncryptionPermissions`-uppräkningsvärde som representerar behörigheten som beviljas den användare som öppnar det skyddade PDF-dokumentet. Om du till exempel vill ange alla behörigheter skickar du `CertificateEncryptionPermissions.PKI_ALL_PERM`.
+   * Skapa ett `Recipient`-objekt med hjälp av dess konstruktor.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar certifikatet som används för att kryptera PDF-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för certifikatet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka det `java.io.FileInputStream`-objekt som representerar certifikatet.
+   * Anropa `Recipient`-objektets `setX509Cert`-metod och skicka `com.adobe.idp.Document`-objektet som innehåller certifikatet. (Objektet `Recipient`kan dessutom ha ett certifikatalias eller en LDAP-URL som certifikatkälla.)
+   * Skapa ett `CertificateEncryptionIdentity`-objekt som lagrar behörighet och certifikatinformation med hjälp av dess konstruktor.
+   * Anropa `CertificateEncryptionIdentity`-objektets `setPerms`-metod och skicka `java.util.List`-objektet som lagrar behörighetsinformation.
+   * Anropa `CertificateEncryptionIdentity`-objektets `setRecipient`-metod och skicka `Recipient`-objektet som lagrar certifikatinformation.
+   * Skapa ett `java.util.List`-objekt som lagrar certifikatinformation med hjälp av dess konstruktor.
+   * Anropa metoden add för objektet `java.util.List` och skicka objektet `CertificateEncryptionIdentity`. (Det här `java.util.List`-objektet skickas som en parameter till metoden `encryptPDFUsingCertificates`.)
 
 1. Ange alternativ för kryptering vid körning.
 
-   * Skapa en `CertificateEncryptionOptionSpec` genom att anropa dess konstruktor.
-   * Ange vilka PDF-dokumentresurser som ska krypteras genom att anropa `CertificateEncryptionOptionSpec` objektets `setOption` metod och skicka en `CertificateEncryptionOption` uppräkningsvärde som anger vilka dokumentresurser som ska krypteras. Om du till exempel vill kryptera hela PDF-dokumentet, inklusive dess metadata och bilagor, anger du `CertificateEncryptionOption.ALL`.
-   * Ange kompatibilitetsalternativet för Acrobat genom att anropa `CertificateEncryptionOptionSpec` objektets `setCompat` metod och skicka en `CertificateEncryptionCompatibility` uppräkningsvärde som anger kompatibilitetsnivån för Acrobat. Du kan till exempel ange `CertificateEncryptionCompatibility.ACRO_7`.
+   * Skapa ett `CertificateEncryptionOptionSpec`-objekt genom att anropa dess konstruktor.
+   * Ange de dokumentresurser i PDF som ska krypteras genom att anropa `CertificateEncryptionOptionSpec`-objektets `setOption`-metod och skicka ett `CertificateEncryptionOption`-uppräkningsvärde som anger vilka dokumentresurser som ska krypteras. Om du till exempel vill kryptera hela PDF-dokumentet, inklusive dess metadata och bilagor, anger du `CertificateEncryptionOption.ALL`.
+   * Ange kompatibilitetsalternativet för Acrobat genom att anropa `CertificateEncryptionOptionSpec`-objektets `setCompat`-metod och skicka ett `CertificateEncryptionCompatibility`-uppräkningsvärde som anger Acrobat-kompatibilitetsnivå. Du kan till exempel ange `CertificateEncryptionCompatibility.ACRO_7`.
 
 1. Skapa ett certifikatkrypterat PDF-dokument.
 
-   Kryptera PDF-dokumentet med ett certifikat genom att anropa `EncryptionServiceClient` objektets `encryptPDFUsingCertificates` och skicka följande värden:
+   Kryptera PDF-dokumentet med ett certifikat genom att anropa `EncryptionServiceClient`-objektets `encryptPDFUsingCertificates`-metod och skicka följande värden:
 
-   * The `com.adobe.idp.Document` som innehåller det PDF-dokument som ska krypteras.
-   * The `java.util.List` objekt som lagrar certifikatinformation.
-   * The `CertificateEncryptionOptionSpec` objekt som innehåller alternativ för kryptering vid körning.
+   * Objektet `com.adobe.idp.Document` som innehåller det PDF-dokument som ska krypteras.
+   * Objektet `java.util.List` som lagrar certifikatinformation.
+   * Objektet `CertificateEncryptionOptionSpec` som innehåller alternativ för kryptering vid körning.
 
-   The `encryptPDFUsingCertificates` returnerar en `com.adobe.idp.Document` objekt som innehåller ett certifikatkrypterat PDF-dokument.
+   Metoden `encryptPDFUsingCertificates` returnerar ett `com.adobe.idp.Document`-objekt som innehåller ett certifikatkrypterat PDF-dokument.
 
 1. Spara det krypterade PDF-dokumentet som en PDF-fil.
 
-   * Skapa en `java.io.File` och se till att filnamnstillägget är .pdf.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `com.adobe.idp.Document` till filen. Se till att du använder `com.adobe.idp.Document` objekt som returneras av `encryptPDFUsingCertificates` -metod.
+   * Skapa ett `java.io.File`-objekt och kontrollera att filnamnstillägget är .pdf.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `com.adobe.idp.Document`-objektet till filen. Kontrollera att du använder objektet `com.adobe.idp.Document` som returnerades av metoden `encryptPDFUsingCertificates`.
 
 **Se även**
 
@@ -395,64 +395,64 @@ Kryptera ett PDF-dokument med ett certifikat med hjälp av krypterings-API:t (we
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa ett API-objekt för krypteringsklient.
 
-   * Skapa en `EncryptionServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `EncryptionServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `EncryptionServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`). Du behöver inte använda attributet `lc_version`. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `EncryptionServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `EncryptionServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Få ett PDF-dokument att kryptera.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` används för att lagra ett PDF-dokument som är krypterat med ett certifikat.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det PDF-dokument som ska krypteras och läget i vilket filen ska öppnas.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett PDF-dokument som är krypterat med ett certifikat.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det PDF-dokument som ska krypteras och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll objektet `BLOB` genom att tilldela dess `MTOM`-egenskap med innehållet i bytearrayen.
 
 1. Referera till certifikatet.
 
-   * Skapa en `Recipient` genom att använda dess konstruktor. Det här objektet lagrar certifikatinformation.
-   * Skapa en `BLOB` genom att använda dess konstruktor. Detta `BLOB` -objektet kommer att lagra certifikatet som krypterar PDF-dokumentet.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar certifikatets filplats och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela innehållet i bytearrayen till `BLOB` objektets `MTOM` datamedlem.
-   * Tilldela `BLOB` det objekt som lagrar certifikatet till `Recipient` objektets `x509Cert` datamedlem.
-   * Skapa en `CertificateEncryptionIdentity` objekt som lagrar certifikatinformation med hjälp av dess konstruktor.
-   * Tilldela `Recipient` det objekt som lagrar certifikatet till `CertificateEncryptionIdentity`objektets mottagande datamedlem.
-   * Skapa en `Object` arrayen och tilldela `CertificateEncryptionIdentity` -objektet till det första elementet i `Object` array. Detta `Object` arrayen skickas som en parameter till `encryptPDFUsingCertificates` -metod.
+   * Skapa ett `Recipient`-objekt med hjälp av dess konstruktor. Det här objektet lagrar certifikatinformation.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Det här `BLOB`-objektet lagrar certifikatet som krypterar PDF-dokumentet.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar certifikatets filplats och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela innehållet i bytearrayen till `BLOB`-objektets `MTOM`-datamedlem.
+   * Tilldela det `BLOB`-objekt som lagrar certifikatet till `Recipient`-objektets `x509Cert`-datamedlem.
+   * Skapa ett `CertificateEncryptionIdentity`-objekt som lagrar certifikatinformation med hjälp av dess konstruktor.
+   * Tilldela objektet `Recipient` som lagrar certifikatet till `CertificateEncryptionIdentity`objektets mottagande datamedlem.
+   * Skapa en `Object`-array och tilldela `CertificateEncryptionIdentity`-objektet till det första elementet i `Object`-arrayen. Den här `Object`-arrayen skickas som en parameter till metoden `encryptPDFUsingCertificates`.
 
 1. Ange alternativ för kryptering vid körning.
 
-   * Skapa en `CertificateEncryptionOptionSpec` genom att använda dess konstruktor.
-   * Ange vilka PDF-dokumentresurser som ska krypteras genom att tilldela en `CertificateEncryptionOption` uppräkningsvärde till `CertificateEncryptionOptionSpec` objektets `option` datamedlem. Om du vill kryptera hela PDF-dokumentet, inklusive dess metadata och bilagor, tilldelar du `CertificateEncryptionOption.ALL` till denna datamedlem.
-   * Ange kompatibilitetsalternativet för Acrobat genom att tilldela en `CertificateEncryptionCompatibility` uppräkningsvärde till `CertificateEncryptionOptionSpec` objektets `compat` datamedlem. Tilldela till exempel `CertificateEncryptionCompatibility.ACRO_7` till denna datamedlem.
+   * Skapa ett `CertificateEncryptionOptionSpec`-objekt med hjälp av dess konstruktor.
+   * Ange de dokumentresurser i PDF som ska krypteras genom att tilldela ett `CertificateEncryptionOption`-uppräkningsvärde till `CertificateEncryptionOptionSpec`-objektets `option`-datamedlem. Om du vill kryptera hela PDF-dokumentet, inklusive dess metadata och bilagor, tilldelar du `CertificateEncryptionOption.ALL` till den här datamedlemmen.
+   * Ange kompatibilitetsalternativet för Acrobat genom att tilldela ett `CertificateEncryptionCompatibility`-uppräkningsvärde till `CertificateEncryptionOptionSpec`-objektets `compat`-datamedlem. Tilldela till exempel `CertificateEncryptionCompatibility.ACRO_7` till den här datamedlemmen.
 
 1. Skapa ett certifikatkrypterat PDF-dokument.
 
-   Kryptera PDF-dokumentet med ett certifikat genom att anropa `EncryptionServiceService` objektets `encryptPDFUsingCertificates` och skicka följande värden:
+   Kryptera PDF-dokumentet med ett certifikat genom att anropa `EncryptionServiceService`-objektets `encryptPDFUsingCertificates`-metod och skicka följande värden:
 
-   * The `BLOB` som innehåller det PDF-dokument som ska krypteras.
-   * The `Object` array som lagrar certifikatinformation.
-   * The `CertificateEncryptionOptionSpec` objekt som innehåller alternativ för kryptering vid körning.
+   * Objektet `BLOB` som innehåller det PDF-dokument som ska krypteras.
+   * Arrayen `Object` som lagrar certifikatinformation.
+   * Objektet `CertificateEncryptionOptionSpec` som innehåller alternativ för kryptering vid körning.
 
-   The `encryptPDFUsingCertificates` returnerar en `BLOB` objekt som innehåller ett certifikatkrypterat PDF-dokument.
+   Metoden `encryptPDFUsingCertificates` returnerar ett `BLOB`-objekt som innehåller ett certifikatkrypterat PDF-dokument.
 
 1. Spara det krypterade PDF-dokumentet som en PDF-fil.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det skyddade PDF-dokumentet.
-   * Skapa en bytearray som lagrar datainnehållet i `BLOB` objekt som returneras av `encryptPDFUsingCertificates` -metod. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `binaryData` datamedlem.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det skyddade PDF-dokumentet.
+   * Skapa en bytearray som lagrar datainnehållet för objektet `BLOB` som returnerades av metoden `encryptPDFUsingCertificates`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `binaryData`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -494,7 +494,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 **Skapa en krypteringstjänstklient**
 
-Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Om du använder webbtjänstens API för krypteringstjänst skapar du en `EncryptionServiceService` -objekt.
+Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du ett `EncrytionServiceClient`-objekt. Skapa ett `EncryptionServiceService`-objekt om du använder API:t för webbtjänstens krypteringstjänst.
 
 **Hämta det krypterade PDF-dokumentet**
 
@@ -534,27 +534,27 @@ Ta bort certifikatbaserad kryptering från ett PDF-dokument med krypterings-API 
 
 1. Skapa en krypteringstjänstklient.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `EncryptionServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `EncryptionServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta det krypterade PDF-dokumentet.
 
-   * Skapa en `java.io.FileInputStream` som representerar det krypterade PDF-dokumentet med hjälp av dess konstruktor och skickar ett strängvärde som anger platsen för det krypterade PDF-dokumentet.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det krypterade PDF-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för det krypterade PDF-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ta bort kryptering.
 
-   Ta bort certifikatbaserad kryptering från PDF genom att anropa `EncryptionServiceClient` objektets `removePDFCertificateSecurity` och skicka följande värden:
+   Ta bort certifikatbaserad kryptering från PDF-dokumentet genom att anropa `EncryptionServiceClient`-objektets `removePDFCertificateSecurity`-metod och skicka följande värden:
 
-   * The `com.adobe.idp.Document` som innehåller det krypterade PDF-dokumentet.
+   * Objektet `com.adobe.idp.Document` som innehåller det krypterade PDF-dokumentet.
    * Ett strängvärde som anger aliasnamnet för den privata nyckel som motsvarar nyckeln som används för att kryptera PDFf-dokumentet.
 
-   The `removePDFCertificateSecurity` returnerar en `com.adobe.idp.Document` objekt som innehåller ett oskyddat PDF-dokument.
+   Metoden `removePDFCertificateSecurity` returnerar ett `com.adobe.idp.Document`-objekt som innehåller ett oskyddat PDF-dokument.
 
 1. Spara dokumentet PDF.
 
-   * Skapa en `java.io.File` och se till att filtillägget är .pdf.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `Document` till filen. Se till att du använder `com.adobe.idp.Document` objekt som returneras av `removePDFCredentialSecurity` -metod.
+   * Skapa ett `java.io.File`-objekt och kontrollera att filtillägget är .pdf.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `Document`-objektet till filen. Kontrollera att du använder objektet `com.adobe.idp.Document` som returnerades av metoden `removePDFCredentialSecurity`.
 
 **Se även**
 
@@ -576,44 +576,44 @@ Ta bort certifikatbaserad kryptering med hjälp av krypterings-API:t (webbtjäns
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa en krypteringstjänstklient.
 
-   * Skapa en `EncryptionServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `EncryptionServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `EncryptionServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`). Du behöver inte använda attributet `lc_version`. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `EncryptionServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `EncryptionServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta det krypterade PDF-dokumentet.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra det krypterade PDF-dokumentet.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det krypterade PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela innehållet i bytearrayen till `BLOB` objektets `MTOM` datamedlem.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra det krypterade PDF-dokumentet.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det krypterade PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela innehållet i bytearrayen till `BLOB`-objektets `MTOM`-datamedlem.
 
 1. Ta bort kryptering.
 
-   Anropa `EncryptionServiceClient` objektets `removePDFCertificateSecurity` och skicka följande värden:
+   Anropa `EncryptionServiceClient`-objektets `removePDFCertificateSecurity`-metod och skicka följande värden:
 
-   * The `BLOB` -objekt som innehåller filströmsdata som representerar ett krypterat PDF-dokument.
+   * Objektet `BLOB` som innehåller filströmsdata som representerar ett krypterat PDF-dokument.
    * Ett strängvärde som anger aliasnamnet för den offentliga nyckeln som motsvarar den privata nyckel som används för att kryptera PDFf-dokumentet.
 
-   The `removePDFCredentialSecurity` returnerar en `BLOB` objekt som innehåller ett oskyddat PDF-dokument.
+   Metoden `removePDFCredentialSecurity` returnerar ett `BLOB`-objekt som innehåller ett oskyddat PDF-dokument.
 
 1. Spara dokumentet PDF.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det oskyddade PDF-dokumentet.
-   * Skapa en bytearray som lagrar innehållet i `BLOB` objekt som returneras av `removePDFPasswordSecurity` -metod. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det oskyddade PDF-dokumentet.
+   * Skapa en bytearray som lagrar innehållet i objektet `BLOB` som returnerades av metoden `removePDFPasswordSecurity`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -655,7 +655,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 **Skapa en krypteringstjänstklient**
 
-Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Om du använder webbtjänstens API för krypteringstjänst skapar du en `EncryptionServiceService` -objekt.
+Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du ett `EncrytionServiceClient`-objekt. Skapa ett `EncryptionServiceService`-objekt om du använder API:t för webbtjänstens krypteringstjänst.
 
 **Hämta det krypterade PDF-dokumentet**
 
@@ -689,27 +689,27 @@ Ta bort lösenordsbaserad kryptering från ett PDF-dokument med krypterings-API 
 
 1. Skapa en krypteringstjänstklient.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `EncryptionServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `EncryptionServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta det krypterade PDF-dokumentet.
 
-   * Skapa en `java.io.FileInputStream` objekt som representerar det krypterade PDF-dokumentet med hjälp av dess konstruktor och som skickar ett strängvärde som anger platsen för PDF-dokumentet.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det krypterade PDF-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för PDF-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Ta bort lösenordet.
 
-   Ta bort lösenordsbaserad kryptering från PDF-dokumentet genom att anropa `EncryptionServiceClient` objektets `removePDFPasswordSecurity` och skicka följande värden:
+   Ta bort lösenordsbaserad kryptering från PDF-dokumentet genom att anropa `EncryptionServiceClient`-objektets `removePDFPasswordSecurity`-metod och skicka följande värden:
 
-   * A `com.adobe.idp.Document` som innehåller det krypterade PDF-dokumentet.
+   * Ett `com.adobe.idp.Document`-objekt som innehåller det krypterade PDF-dokumentet.
    * Ett strängvärde som anger det huvudlösenordsvärde som används för att ta bort kryptering från PDF-dokumentet.
 
-   The `removePDFPasswordSecurity` returnerar en `com.adobe.idp.Document` objekt som innehåller ett oskyddat PDF-dokument.
+   Metoden `removePDFPasswordSecurity` returnerar ett `com.adobe.idp.Document`-objekt som innehåller ett oskyddat PDF-dokument.
 
 1. Spara dokumentet PDF.
 
-   * Skapa en `java.io.File` och se till att filnamnstillägget är .pdf.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att kopiera innehållet i `Document` till filen. Se till att du använder `Document` objekt som returneras av `removePDFPasswordSecurity` -metod.
+   * Skapa ett `java.io.File`-objekt och kontrollera att filnamnstillägget är .pdf.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att kopiera innehållet i `Document`-objektet till filen. Kontrollera att du använder objektet `Document` som returnerades av metoden `removePDFPasswordSecurity`.
 
 **Se även**
 
@@ -725,44 +725,44 @@ Ta bort lösenordsbaserad kryptering med hjälp av krypterings-API:t (webbtjäns
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa en krypteringstjänstklient.
 
-   * Skapa en `EncryptionServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `EncryptionServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `EncryptionServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`). Du behöver inte använda attributet `lc_version`. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `EncryptionServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `EncryptionServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta det krypterade PDF-dokumentet.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` används för att lagra ett lösenordskrypterat PDF-dokument.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det krypterade PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela innehållet i bytearrayen till `BLOB` objektets `MTOM` datamedlem.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra ett lösenordskrypterat PDF-dokument.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det krypterade PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela innehållet i bytearrayen till `BLOB`-objektets `MTOM`-datamedlem.
 
 1. Ta bort lösenordet.
 
-   Anropa `EncryptionServiceService` objektets `removePDFPasswordSecurity` och skicka följande värden:
+   Anropa `EncryptionServiceService`-objektets `removePDFPasswordSecurity`-metod och skicka följande värden:
 
-   * The `BLOB` -objekt som innehåller filströmsdata som representerar ett krypterat PDF-dokument.
+   * Objektet `BLOB` som innehåller filströmsdata som representerar ett krypterat PDF-dokument.
    * Ett strängvärde som anger det lösenordsvärde som används för att ta bort kryptering från PDF-dokumentet. Det här värdet anges när du krypterar PDF-dokumentet med ett lösenord.
 
-   The `removePDFPasswordSecurity` returnerar en `BLOB` objekt som innehåller ett oskyddat PDF-dokument.
+   Metoden `removePDFPasswordSecurity` returnerar ett `BLOB`-objekt som innehåller ett oskyddat PDF-dokument.
 
 1. Spara dokumentet PDF.
 
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det oskyddade PDF-dokumentet.
-   * Skapa en bytearray som lagrar innehållet i `BLOB` objekt som returneras av `removePDFPasswordSecurity` -metod. Fylla i bytearrayen genom att hämta värdet för `BLOB` objektets `MTOM` datamedlem.
-   * Skapa en `System.IO.BinaryWriter` genom att anropa dess konstruktor och skicka `System.IO.FileStream` -objekt.
-   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter` objektets `Write` och skicka bytearrayen.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det oskyddade PDF-dokumentet.
+   * Skapa en bytearray som lagrar innehållet i objektet `BLOB` som returnerades av metoden `removePDFPasswordSecurity`. Fyll i bytearrayen genom att hämta värdet för `BLOB`-objektets `MTOM`-datamedlem.
+   * Skapa ett `System.IO.BinaryWriter`-objekt genom att anropa dess konstruktor och skicka `System.IO.FileStream`-objektet.
+   * Skriv bytearrayens innehåll till en PDF-fil genom att anropa `System.IO.BinaryWriter`-objektets `Write`-metod och skicka bytearrayen.
 
 **Se även**
 
@@ -802,7 +802,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 **Skapa en krypteringstjänstklient**
 
-Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Om du använder webbtjänstens API för krypteringstjänst skapar du en `EncryptionServiceService` -objekt.
+Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du ett `EncrytionServiceClient`-objekt. Skapa ett `EncryptionServiceService`-objekt om du använder API:t för webbtjänstens krypteringstjänst.
 
 **Hämta det krypterade PDF-dokumentet**
 
@@ -840,39 +840,39 @@ Lås upp ett krypterat PDF-dokument med hjälp av krypterings-API (Java):
 
 1. Skapa en krypteringstjänstklient.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `EncryptionServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `EncryptionServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta det krypterade PDF-dokumentet.
 
-   * Skapa en `java.io.FileInputStream` som representerar det krypterade PDF-dokumentet med hjälp av dess konstruktor och skickar ett strängvärde som anger platsen för det krypterade PDF-dokumentet.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar det krypterade PDF-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för det krypterade PDF-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Lås upp dokumentet.
 
-   Lås upp ett krypterat PDF-dokument genom att anropa `EncryptionServiceClient` objektets `unlockPDFUsingPassword` eller `unlockPDFUsingCredential` -metod.
+   Lås upp ett krypterat PDF-dokument genom att anropa `EncryptionServiceClient`-objektets `unlockPDFUsingPassword`- eller `unlockPDFUsingCredential`-metod.
 
-   Om du vill låsa upp ett PDF-dokument som är krypterat med ett lösenord anropar du `unlockPDFUsingPassword` och skicka följande värden:
+   Om du vill låsa upp ett PDF-dokument som är krypterat med ett lösenord anropar du metoden `unlockPDFUsingPassword` och skickar följande värden:
 
-   * A `com.adobe.idp.Document` som innehåller det lösenordskrypterade PDF-dokumentet.
+   * Ett `com.adobe.idp.Document`-objekt som innehåller det lösenordskrypterade PDF-dokumentet.
    * Ett strängvärde som anger det lösenordsvärde som används för att öppna ett lösenordskrypterat PDF-dokument. Det här värdet anges när du krypterar PDF-dokumentet med ett lösenord.
 
-   Om du vill låsa upp ett PDF-dokument som är krypterat med ett certifikat anropar du `unlockPDFUsingCredential` och skicka följande värden:
+   Om du vill låsa upp ett PDF-dokument som är krypterat med ett certifikat anropar du metoden `unlockPDFUsingCredential` och skickar följande värden:
 
-   * A `com.adobe.idp.Document` som innehåller det certifikatkrypterade PDF-dokumentet.
+   * Ett `com.adobe.idp.Document`-objekt som innehåller det certifikatkrypterade PDF-dokumentet.
    * Ett strängvärde som anger aliasnamnet för den offentliga nyckeln som motsvarar den privata nyckel som används för att kryptera PDF-dokumentet.
 
-   The `unlockPDFUsingPassword` och `unlockPDFUsingCredential` metoderna returnerar båda `com.adobe.idp.Document` objekt som du skickar till en annan AEM Forms Java-metod för att utföra en åtgärd.
+   Metoderna `unlockPDFUsingPassword` och `unlockPDFUsingCredential` returnerar båda ett `com.adobe.idp.Document`-objekt som du skickar till en annan AEM Forms Java-metod för att utföra en åtgärd.
 
 1. Utför en AEM Forms-åtgärd.
 
-   Utför en AEM Forms-åtgärd på det olåsta PDF-dokumentet för att uppfylla dina affärskrav. Om du t.ex. vill använda användarrättigheter för ett olåst PDF-dokument skickar du `com.adobe.idp.Document` objekt som returneras av antingen `unlockPDFUsingPassword` eller `unlockPDFUsingCredential` metoder till `ReaderExtensionsServiceClient` objektets `applyUsageRights` -metod.
+   Utför en AEM Forms-åtgärd på det olåsta PDF-dokumentet för att uppfylla dina affärskrav. Om du t.ex. vill tillämpa användarrättigheter på ett olåst PDF-dokument skickar du det `com.adobe.idp.Document`-objekt som returnerades av metoderna `unlockPDFUsingPassword` eller `unlockPDFUsingCredential` till `ReaderExtensionsServiceClient`-objektets `applyUsageRights`-metod.
 
 **Se även**
 
 [Sammanfattning av steg](encrypting-decrypting-pdf-documents.md#summary-of-steps)
 
-[Snabbstart (SOAP läge): Låsa upp ett krypterat PDF-dokument med Java API](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api) (SOAP)
+[Snabbstart (SOAP läge): Låsa upp ett krypterat PDF-dokument med Java API ](/help/forms/developing/encryption-service-java-api-quick.md#quick-start-soap-mode-unlocking-an-encrypted-pdf-document-using-the-java-api) (SOAP)
 
 [Använda användningsbehörighet för PDF-dokument](/help/forms/developing/assigning-usage-rights.md#applying-usage-rights-to-pdf-documents)
 
@@ -890,48 +890,48 @@ Lås upp ett krypterat PDF-dokument med hjälp av krypterings-API:t (webbtjänst
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa en krypteringstjänstklient.
 
-   * Skapa en `EncryptionServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `EncryptionServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `EncryptionServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`). Du behöver inte använda attributet `lc_version`. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `EncryptionServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `EncryptionServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Få ett krypterat PDF-dokument.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det krypterade PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela innehållet i bytearrayen till `BLOB` objektets `MTOM` datamedlem.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det krypterade PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela innehållet i bytearrayen till `BLOB`-objektets `MTOM`-datamedlem.
 
 1. Lås upp dokumentet.
 
-   Lås upp ett krypterat PDF-dokument genom att anropa `EncryptionServiceClient` objektets `unlockPDFUsingPassword` eller `unlockPDFUsingCredential` -metod.
+   Lås upp ett krypterat PDF-dokument genom att anropa `EncryptionServiceClient`-objektets `unlockPDFUsingPassword`- eller `unlockPDFUsingCredential`-metod.
 
-   Om du vill låsa upp ett PDF-dokument som är krypterat med ett lösenord anropar du `unlockPDFUsingPassword` och skicka följande värden:
+   Om du vill låsa upp ett PDF-dokument som är krypterat med ett lösenord anropar du metoden `unlockPDFUsingPassword` och skickar följande värden:
 
-   * A `BLOB` som innehåller det lösenordskrypterade PDF-dokumentet.
+   * Ett `BLOB`-objekt som innehåller det lösenordskrypterade PDF-dokumentet.
    * Ett strängvärde som anger det lösenordsvärde som används för att öppna ett lösenordskrypterat PDF-dokument. Det här värdet anges när du krypterar PDF-dokumentet med ett lösenord.
 
-   Om du vill låsa upp ett PDF-dokument som är krypterat med ett certifikat anropar du `unlockPDFUsingCredential` och skicka följande värden:
+   Om du vill låsa upp ett PDF-dokument som är krypterat med ett certifikat anropar du metoden `unlockPDFUsingCredential` och skickar följande värden:
 
-   * A `BLOB` som innehåller det certifikatkrypterade PDF-dokumentet.
+   * Ett `BLOB`-objekt som innehåller det certifikatkrypterade PDF-dokumentet.
    * Ett strängvärde som anger aliasnamnet för den offentliga nyckeln som motsvarar den privata nyckel som används för att kryptera PDFf-dokumentet.
 
-   The `unlockPDFUsingPassword` och `unlockPDFUsingCredential` metoderna returnerar båda `com.adobe.idp.Document` objekt som du skickar till en annan AEM Forms-metod för att utföra en åtgärd.
+   Metoderna `unlockPDFUsingPassword` och `unlockPDFUsingCredential` returnerar båda ett `com.adobe.idp.Document`-objekt som du skickar till en annan AEM Forms-metod för att utföra en åtgärd.
 
 1. Utför en AEM Forms-åtgärd.
 
-   Utför en AEM Forms-åtgärd på det olåsta PDF-dokumentet för att uppfylla dina affärskrav. Om du t.ex. vill lägga till användarrättigheter i det olåsta PDF-dokumentet skickar du `BLOB` objekt som returneras av antingen `unlockPDFUsingPassword` eller `unlockPDFUsingCredential` metoder till `ReaderExtensionsServiceClient` objektets `applyUsageRights` -metod.
+   Utför en AEM Forms-åtgärd på det olåsta PDF-dokumentet för att uppfylla dina affärskrav. Om du t.ex. vill tillämpa användningsbehörighet för det olåsta PDF-dokumentet skickar du det `BLOB`-objekt som returnerades av metoderna `unlockPDFUsingPassword` eller `unlockPDFUsingCredential` till `ReaderExtensionsServiceClient`-objektets `applyUsageRights`-metod.
 
 **Se även**
 
@@ -979,13 +979,13 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 
 **Skapa en tjänstklient**
 
-Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du en `EncrytionServiceClient` -objekt. Om du använder webbtjänstens API för krypteringstjänst skapar du en `EncryptionServiceService` -objekt.
+Om du vill utföra en krypteringstjänståtgärd programmatiskt måste du skapa en krypteringstjänstklient. Om du använder Java-krypteringstjänstens API skapar du ett `EncrytionServiceClient`-objekt. Skapa ett `EncryptionServiceService`-objekt om du använder API:t för webbtjänstens krypteringstjänst.
 
 **Hämta det krypterade PDF-dokumentet**
 
 Hämta ett PDF-dokument för att avgöra vilken typ av kryptering som skyddar det.
 
-**Bestämma krypteringstypen**
+**Kontrollera krypteringstypen**
 
 Du kan ange vilken typ av kryptering som skyddar ett PDF-dokument. Om dokumentet från PDF inte är skyddat visas ett meddelande om att dokumentet från PDF inte är skyddat av krypteringstjänsten.
 
@@ -1013,18 +1013,18 @@ Bestäm vilken typ av kryptering som skyddar ett PDF-dokument med hjälp av kryp
 
 1. Skapa en tjänstklient.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `EncryptionServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `EncryptionServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Hämta det krypterade PDF-dokumentet.
 
-   * Skapa en `java.io.FileInputStream` objekt som representerar PDF-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för PDF-dokumentet.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar PDF-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för PDF-dokumentet.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Bestäm krypteringstypen.
 
-   * Kontrollera krypteringstypen genom att anropa `EncryptionServiceClient` objektets `getPDFEncryption` metoden och skicka `com.adobe.idp.Document` -objekt som innehåller dokumentet PDF. Den här metoden returnerar en `EncryptionTypeResult` -objekt.
-   * Anropa `EncryptionTypeResult` objektets `getEncryptionType` -metod. Den här metoden returnerar en `EncryptionType` enum-värde som anger krypteringstypen. Om PDF-dokumentet till exempel skyddas med lösenordsbaserad kryptering returnerar den här metoden `EncryptionType.PASSWORD`.
+   * Bestäm krypteringstypen genom att anropa `EncryptionServiceClient`-objektets `getPDFEncryption`-metod och skicka `com.adobe.idp.Document`-objektet som innehåller PDF-dokumentet. Den här metoden returnerar ett `EncryptionTypeResult`-objekt.
+   * Anropa metoden `getEncryptionType` för objektet `EncryptionTypeResult`. Den här metoden returnerar ett enum-värde på `EncryptionType` som anger krypteringstypen. Om PDF-dokumentet till exempel skyddas med lösenordsbaserad kryptering returnerar metoden `EncryptionType.PASSWORD`.
 
 **Se även**
 
@@ -1046,33 +1046,33 @@ Bestäm vilken typ av kryptering som skyddar ett PDF-dokument med hjälp av kryp
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa en tjänstklient.
 
-   * Skapa en `EncryptionServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `EncryptionServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`.) Du behöver inte använda `lc_version` -attribut. Detta attribut används när du skapar en tjänstreferens.)
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `EncryptionServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `EncryptionServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `EncryptionServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/EncryptionService?WSDL`). Du behöver inte använda attributet `lc_version`. Detta attribut används när du skapar en tjänstreferens.)
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `EncryptionServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `EncryptionServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `EncryptionServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Hämta det krypterade PDF-dokumentet.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det krypterade PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` och skickar bytearrayen, startpositionen och den flödeslängd som ska läsas.
-   * Fyll i `BLOB` genom att tilldela innehållet i bytearrayen till `BLOB` objektets `MTOM` datamedlem.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för det krypterade PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod och skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll i `BLOB`-objektet genom att tilldela innehållet i bytearrayen till `BLOB`-objektets `MTOM`-datamedlem.
 
 1. Bestäm krypteringstypen.
 
-   * Anropa `EncryptionServiceClient` objektets `getPDFEncryption` och skicka `BLOB` -objekt som innehåller dokumentet PDF. Den här metoden returnerar en `EncryptionTypeResult` -objekt.
-   * Hämta värdet för `EncryptionTypeResult` objektets `encryptionType` datametod. Om PDF-dokumentet till exempel skyddas med lösenordsbaserad kryptering är värdet för den här datamedlemmen `EncryptionType.PASSWORD`.
+   * Anropa `EncryptionServiceClient`-objektets `getPDFEncryption`-metod och skicka `BLOB`-objektet som innehåller PDF-dokumentet. Den här metoden returnerar ett `EncryptionTypeResult`-objekt.
+   * Hämta värdet för `EncryptionTypeResult`-objektets `encryptionType`-datametod. Om PDF-dokumentet till exempel skyddas med lösenordsbaserad kryptering är värdet för den här datamedlemmen `EncryptionType.PASSWORD`.
 
 **Se även**
 

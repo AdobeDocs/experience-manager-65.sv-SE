@@ -28,17 +28,17 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 
 1. Öppna projektet.
 
-   * För iOS, öppna `Capture.xcodeproj` i Xcode
+   * Öppna `Capture.xcodeproj` i Xcode för iOS
    * För Android öppnar du Android-projektet i Eclipse.
-   * För Windows: öppna `MWSWindows.sln` i Visual Studio.
+   * För Windows öppnar du `MWSWindows.sln` i Visual Studio.
 
 1. Navigera till mappen Mallar.
 
-   * I Xcode navigerar du till **Capture > www > wsmoble > js > runtime > templates** mapp.
-   * I Eclipse navigerar du till **assets > www > wsmoble > js > runtime > templates** mapp.
-   * I Visual Studio går du till **MWSWindows > www > wsmoble > js > runtime > templates** mapp.
+   * Navigera till mappen **Capture > www > wsmoble > js > runtime > templates** i Xcode.
+   * I Eclipse navigerar du till mappen **assets > www > wsmoble > js > runtime > templates** .
+   * I Visual Studio går du till mappen **MWSWindows > www > wsmoble > js > runtime > templates** .
 
-1. Öppna `template.html` fil för redigering.
+1. Öppna filen `template.html` för redigering.
 1. Leta reda på följande sträng:
 
    ```jsp
@@ -51,7 +51,7 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 
    Ersätt den med `<%`.
 
-1. Leta reda på följande kod i `template.html` fil:
+1. Leta reda på följande kod i filen `template.html`:
 
    ```jsp
    <ul id="task_menu_list">
@@ -73,13 +73,13 @@ Du kan anpassa HTML-koden och CSS-filen för att ge AEM Forms-appen ett distinkt
 
 1. Navigera till css-mappen.
 
-   * I Xcode navigerar du till **Capture > www > wsmoble > css**.
-   * I Eclipse navigerar du till **assets > www > wsmoble > css**.
+   * I Xcode går du till **Capture > www > wsmoble > css**.
+   * I Eclipse går du till **assets > www > wsmoble > css**.
    * I Visual Studio går du till **MWSWindows > www > wsmoble > css**.
 
-1. Öppna `_style.css` fil för redigering.
-1. För bakgrundsbild ändrar du `#323232` till `#fff`.
-1. Spara ändringarna och stäng `_style.css` -fil.
+1. Öppna filen `_style.css` för redigering.
+1. Ändra `#323232` till `#fff` för bakgrundsbilden.
+1. Spara ändringarna och stäng filen `_style.css`.
 1. Öppna appen AEM Forms.
 
    Nu visas instruktioner i stället för beskrivningar i AEM Forms-appen.

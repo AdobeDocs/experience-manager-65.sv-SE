@@ -62,7 +62,7 @@ I en dynamisk grupp väljer du inte de användare som tillhör gruppen separat. 
 
 Använd något av följande två sätt för att skapa dynamiska grupper:
 
-* Gör det möjligt att automatiskt skapa dynamiska grupper baserat på e-postdomäner, som @adobe.com. När du aktiverar den här funktionen skapar Hantering av användare en dynamisk grupp för varje unik e-postdomän i AEM formulärdatabas. Använd ett cron-uttryck för att ange hur ofta användarhantering söker i AEM formulärdatabas efter nya e-postdomäner. Dessa dynamiska grupper läggs till i den lokala domänen DefaultDom och får namnet&quot;Alla användare med en *`[email domain]`* post-ID.&quot;
+* Gör det möjligt att automatiskt skapa dynamiska grupper baserat på e-postdomäner, som @adobe.com. När du aktiverar den här funktionen skapar Hantering av användare en dynamisk grupp för varje unik e-postdomän i AEM formulärdatabas. Använd ett cron-uttryck för att ange hur ofta användarhantering söker i AEM formulärdatabas efter nya e-postdomäner. Dessa dynamiska grupper läggs till i den lokala domänen DefaultDom och får namnet&quot;Alla användare med ett *`[email domain]`* post-ID&quot;.
 * Skapa en dynamisk grupp baserat på angivna villkor, inklusive användarens e-postdomän, beskrivning, kanoniskt namn och domännamn. För att kunna tillhöra den dynamiska gruppen måste användaren uppfylla alla angivna villkor. Om du vill ställa in ett &quot;eller&quot;-villkor skapar du två separata dynamiska grupper och lägger till båda i en lokal grupp. Använd till exempel den metoden för att skapa en grupp användare som tillhör e-postdomänen @adobe.com eller vars kanoniska namn innehåller ou=adobe.com. Användarna behöver dock inte nödvändigtvis uppfylla båda villkoren.
 
 En dynamisk grupp innehåller bara användare. Den får inte innehålla andra grupper. En dynamisk grupp kan dock tillhöra en överordnad grupp.
@@ -74,7 +74,7 @@ En dynamisk grupp innehåller bara användare. Den får inte innehålla andra gr
 1. Ange när användarhanteraren ska söka efter nya e-postdomäner. Den här tiden bör vara efter domänsynkroniseringstiden eftersom skapandet av dynamiska grupper bara är logiskt om domänsynkroniseringen är slutförd.
 
    * Om du vill aktivera automatisk synkronisering dagligen anger du tiden i 24-timmarsformat i rutan Inträffar varje dag. När du sparar inställningarna konverteras det här värdet till ett cron-uttryck, som visas i rutan nedan.
-   * Om du vill schemalägga synkronisering på en viss dag i veckan eller månaden, eller under en viss månad, väljer du lämpligt cron-uttryck i rutan. Standardvärdet är `0 00 4 ? * *`(vilket innebär kontroll klockan 4.00 varje dag).
+   * Om du vill schemalägga synkronisering på en viss dag i veckan eller månaden, eller under en viss månad, väljer du lämpligt cron-uttryck i rutan. Standardvärdet är `0 00 4 ? * *` (vilket betyder check klockan 4.00 varje dag).
 
      Användningen av cron-uttryck baseras på Quartz-systemet för jobbplanering med öppen källkod, version 1.4.0.
 
@@ -91,13 +91,13 @@ En dynamisk grupp innehåller bara användare. Den får inte innehålla andra gr
    >
    >Attributen för e-post, beskrivning och kanoniskt namn är skiftlägeskänsliga när operatorn Lika används. De är inte skiftlägeskänsliga med operatorerna Börjar med, Slutar med eller Innehåller.
 
-   **E-post:** Användarens e-postdomän, som `@adobe.com`.
+   **E-post:** Användarens e-postdomän, till exempel `@adobe.com`.
 
-   **Beskrivning:** Användarens beskrivning, t.ex.&quot;Computer Scientist&quot;
+   **Beskrivning:** Användarbeskrivning, t.ex. &quot;Computer Scientist&quot;
 
    **Kanoniskt namn:** Användarens kanoniska namn, till exempel `ou=adobe.com`
 
-   **Domännamn:** Namnet på domänen som användaren tillhör, till exempel `DefaultDom`. Attributet Domännamn är skiftlägeskänsligt när du använder operatorn Innehåller. Den är inte skiftlägeskänslig med operatorerna Börjar med, Slutar med eller Likhetstecken.
+   **Domännamn:** Namnet på den domän som användaren tillhör, till exempel `DefaultDom`. Attributet Domännamn är skiftlägeskänsligt när du använder operatorn Innehåller. Den är inte skiftlägeskänslig med operatorerna Börjar med, Slutar med eller Likhetstecken.
 
 1. Klicka på Testa. På en testsida visas de första 200 användarna som uppfyller de definierade villkoren. Klicka på Stäng.
 1. Om testet returnerade det förväntade resultatet klickar du på Nästa. I annat fall redigerar du de dynamiska gruppvillkoren och testar igen.

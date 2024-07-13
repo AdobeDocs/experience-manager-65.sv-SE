@@ -26,7 +26,7 @@ ht-degree: 0%
 >
 >**Förutsättning**:
 >
->Innan du lär dig mer om att skapa och ändra delade resurser, se [Innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md) för att förstå de grundläggande begreppen.
+>Innan du lär dig att skapa och ändra delade resurser bör du läsa [Innehållssynkronisering](/help/mobile/mobile-ondemand-contentsync.md) för att få information om grundläggande begrepp.
 
 Adobe Experience Manager (AEM) Mobile-användare använder Content Sync för att exportera live-innehåll till statiskt innehåll för användning i mobilappar, och den här exporten sker när innehåll överförs till Mobile On Demand Services från AEM Mobile.
 
@@ -34,9 +34,9 @@ Egenskapen ***dps-exportTemplate*** som nämns i tabellen ovan definierar sökv�
 
 Följande resurser beskriver hur du exporterar delade resurser från AEM för överföring till AEM Mobile.
 
-Med delade HTML-resurser kan artiklar dela HTML-resurser som annars skulle dupliceras för alla artiklar, och de kan innehålla ikoner, teckensnitt, JavaScript och css.
+Med delade HTML-resurser kan artiklar dela HTML-resurser som annars skulle dupliceras för alla artiklar, och de kan innehålla ikoner, teckensnitt, JavaScript och CSS.
 
-Innehållssynkroniseringskonfigurationen finns på **&lt;dps-exporttemplate>/dps-HTMLResources>** bör vara konfigurerad för att exportera allt innehåll som en artikel kräver för statisk återgivning av egenskaper på enheten.
+Innehållssynkroniseringskonfigurationen som hittades på **&lt;dps-exportTemplate>/dps-HTMLResources>** bör konfigureras att exportera allt innehåll som en artikel kräver för statisk återgivning av egenskaper på enheten.
 
 >[!CAUTION]
 >
@@ -50,7 +50,7 @@ Innehållssynkroniseringskonfigurationen finns på **&lt;dps-exporttemplate>/dps
 Om du vill visa exempel på delad resurs, se stegen nedan:
 
 1. Öppna CRXDE Lite på AEM.
-1. Bläddra till den här sökvägen *[/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources)*, för att visa de delade exempelresurserna.
+1. Bläddra till den här sökvägen *[/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources](http://localhost:4502/crx/de/index.jsp#/etc/contentsync/templates/dps-we-unlimited-app/dps-HTMLResources)* om du vill visa delade exempelresurser.
 
    Du kan visa alla egenskaper som krävs för att skapa dina delade resurser enligt bilden nedan:
 

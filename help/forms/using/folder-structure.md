@@ -24,16 +24,16 @@ AEM Forms arbetsytekomponenter är utformade för MVC-arkitektur med Backbone. V
 * Template, that is an HTML file containing interface controls.
 * Visa, som fungerar som en kontrollenhetsklass för Template.
 
-Resurserna för alla komponenter placeras i mappstrukturen som beskrivs nedan. Om du vill komma åt resurserna loggar du in på CRXDE Lite och bläddrar till `/libs/ws/js/runtime/`.
+Resurserna för alla komponenter placeras i mappstrukturen som beskrivs nedan. Logga in på CRXDE Lite och bläddra till `/libs/ws/js/runtime/` om du vill komma åt resurserna.
 
-**modeller** Innehåller ryggradsmodeller.
+**modeller** innehåller ryggrad-modeller.
 
-**vyer** Innehåller vyer för ryggraden.
+**vyer** innehåller vyer med ryggrad.
 
-**mallar** Innehåller bara komponenternas HTML-mallar.
+**mallar** innehåller endast HTML-mallarna för komponenterna.
 
-**rutter** Innehåller universella vägar. Mappen Mallar inuti vägar innehåller HTML-koden och referenserna till komponenterna.
+**vägar** innehåller universella vägar. Mappen Mallar inuti vägar innehåller HTML-koden och referenserna till komponenterna.
 
-**tjänster** Innehåller tjänstgränssnitt för att anropa Adobe Experience Manager server-API:er på REST-slutpunkten.
+**services** Innehåller tjänstgränssnittet för att anropa Adobe Experience Manager server-API:er på REST-slutpunkten.
 
 **util** Innehåller allmänna verktyg som kan användas av flera komponenter.

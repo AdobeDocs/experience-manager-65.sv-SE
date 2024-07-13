@@ -30,6 +30,6 @@ Du kan ange vilken språkinställning som ska användas vid återgivning av ett 
 
 1. Välj en teckenuppsättning i listan Teckenuppsättning under Internationalisering. Den här inställningen beror på vilken API som används, antingen renderHTMLForm eller renderPDFForm. Om du vill ange en annan teckenuppsättning än de som visas väljer du Anpassad och anger ett kodningsvärde i rutan som visas.
 
-   För HTML-omformningar har AEM stöd för teckenkodningsvärden som definieras av `java.nio.charset` paket. Om sFormPreference är PDFForm stöds endast specifika teckenuppsättningar. Teckenuppsättningen måste vara ett giltigt kanoniskt namn. Standardvärdet är ISO-8859-1.
+   För HTML-omformningar har AEM stöd för teckenkodningsvärden som definieras av paketet `java.nio.charset`. Om sFormPreference är PDFForm stöds endast specifika teckenuppsättningar. Teckenuppsättningen måste vara ett giltigt kanoniskt namn. Standardvärdet är ISO-8859-1.
 
 1. Klicka på Spara.

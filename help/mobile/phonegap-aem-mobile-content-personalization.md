@@ -24,31 +24,31 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Det här dokumentet ingår i [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, en rekommenderad startpunkt för AEM Mobile.
+>Det här dokumentet ingår i [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, en rekommenderad startpunkt för AEM Mobile referens.
 
-AEM Mobile innehållspersonaliseringsfunktion tillåter [AEM](#author) för att personalisera mobilappsinnehåll med [Adobe Target](https://business.adobe.com/products/target/adobe-target.html). Detta gör att man kan leverera riktade erbjudanden till användare av mobilappar. Adobe Experience Manager Mobile ger möjlighet att skapa, målinrikta och leverera innehåll som ger användaren innehåll som är specifikt för den egna smaken.
+Med funktionen för innehållspersonalisering i AEM Mobile kan [AEM författare](#author) anpassa mobilappsinnehåll med [Adobe Target](https://business.adobe.com/products/target/adobe-target.html). Detta gör att man kan leverera riktade erbjudanden till användare av mobilappar. Adobe Experience Manager Mobile ger möjlighet att skapa, målinrikta och leverera innehåll som ger användaren innehåll som är specifikt för den egna smaken.
 
 I AEM måste administratörer och utvecklare först förbereda miljön för att kunna börja skapa det här innehållet.
 
 [AEM administratörer](#administrator) krävs för att upprätta en anslutning mellan AEM Mobile och Adobe Target Cloud Service.
 
-AEM Mobile [utvecklare](#developer) måste redigera sina befintliga skript för att underlätta framtagning av riktat innehåll.
+Under tiden måste AEM Mobile [utvecklare](#developer) redigera sina befintliga skript för att underlätta framtagning av riktat innehåll.
 
 ## För administratörer {#for-administrators}
 
 Det finns flera steg som måste utföras innan innehållsförfattare kan börja generera riktat innehåll för mobilappar: rätt uppsättning behörigheter för användare och grupper hämtas, molntjänster skapas, programmet konfigureras för aktiviteten konfigureras och innehållet slutligen genereras.
 
-I den här artikeln får du hjälp med att konfigurera [AEM Mobile Hybrid Reference Application](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) för målinriktning.
+I den här artikeln får du hjälp med hur du konfigurerar [AEM Mobile Hybrid Reference Application](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) för målinriktning.
 
 Det förutsätts att AEM Mobile Hybrid Reference Application har distribuerats och är tillgängligt via AEM Mobile Dashboard.
 
-Innan författare kan generera riktat innehåll i ett program måste AEM vara [konfigureras med Adobe Target-Cloud Servicen.](/help/mobile/aem-mobile-configuring-cloud-service.md)
+Innan författare kan generera riktat innehåll i ett program måste din AEM vara [konfigurerad med Adobe Target-Cloud Servicen.](/help/mobile/aem-mobile-configuring-cloud-service.md)
 
 ### Behörigheter {#permissions}
 
-Användare som behöver åtkomst till personaliseringskonsolen måste ingå i `target-activity-authors` grupp.
+Användare som behöver åtkomst till personaliseringskonsolen måste ingå i gruppen `target-activity-authors`.
 
-Som en del av användar- och gruppinställningarna bör målaktivitetsgruppen läggas till i gruppen som administrerar program. Genom att lägga till gruppen target-activity-authors kan användarna se menyposten för personalisering.
+Som en del av användar- och gruppinställningarna bör målaktivitetsgruppen läggas till i gruppen som administrerar program. Genom att lägga till gruppen target-activity-authors kan användarna se menyposten i Personalization.
 
 >[!NOTE]
 >
@@ -82,7 +82,7 @@ Det är också nödvändigt att länka ett AMS-konto (Adobe Mobile Services) til
 
 ### Klientkod {#client-code}
 
-Logga in på AMS-tjänsterna på [https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/)markerar du mobilprogrammet och klickar på inställningarna. Leta reda på fältet SDK-målalternativ, placera klientkoden i fältet och klicka på Spara.
+Om du vill logga in på AMS-tjänsterna går du till [https://mobilemarketing.adobe.com](https://mobilemarketing.adobe.com/), markerar mobilprogrammet och klickar på inställningarna. Leta reda på fältet SDK-målalternativ, placera klientkoden i fältet och klicka på Spara.
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
@@ -98,7 +98,7 @@ Markera Adobe Mobile Services-kortet och klicka på Next.
 
 ![chlimage_1-43](assets/chlimage_1-43.png)
 
-Välj listrutan Mobiltjänst i steget Skapa eller Välj guide och välj posten Skapa konfiguration. Ange titel, företag, användarnamn, lösenord och välj lämpligt datacenter. Om du inte känner till de här värdena kontaktar du Adobe-administratören för mobiltjänsten för att få dem. När alla fält är ifyllda klickar du på **Verifiera**. Verifieringsprocessen går till AMS och verifierar kontots inloggningsuppgifter. När verifieringen är klar fylls en lista över mobilprogram i där du väljer det associerade mobilprogrammet i listrutan. Klicka **Skicka** för att slutföra guiden. Det kan ta en stund att hämta konfigurationsdata och associerade analyser till programmet. När processen är klar klickar du **Klar** för att gå tillbaka till Adobe Mobile Dashboard.
+Välj listrutan Mobiltjänst i steget Skapa eller Välj guide och välj posten Skapa konfiguration. Ange titel, företag, användarnamn, lösenord och välj lämpligt datacenter. Om du inte känner till de här värdena kontaktar du Adobe-administratören för mobiltjänsten för att få dem. När alla fält har fyllts i klickar du på **Verifiera**. Verifieringsprocessen går till AMS och verifierar kontots inloggningsuppgifter. När verifieringen är klar fylls en lista över mobilprogram i där du väljer det associerade mobilprogrammet i listrutan. Klicka på **Skicka** för att slutföra guiden. Det kan ta en stund att hämta konfigurationsdata och associerade analyser till programmet. När processen är klar klickar du på **Klar** för att gå tillbaka till instrumentpanelen för Adobe Mobile.
 
 Återgår till Mobile Dashboard och rutan Hantera Cloud Service innehåller AMS-molntjänsten. Dessutom innehåller rutan Analyze Metrics (Analysera mätvärden) livscykelrapporter.
 
@@ -112,7 +112,7 @@ När administratören har konfigurerat de två molntjänsterna och utvecklaren h
 
 När du redigerar riktat innehåll i en AEM Mobile-app följer du en liknande procedur som när du skapar AEM Sites:
 
-Här finns en fullständig översikt över [Skapa riktat innehåll i AEM](/help/sites-authoring/personalization.md)
+Här finns en fullständig översikt över [Redigering av riktat innehåll i AEM](/help/sites-authoring/personalization.md)
 
 ## För utvecklare {#for-developers}
 
@@ -120,9 +120,9 @@ AEM utvecklare som skapar mobilapplikationer bör fortsätta att följa de möns
 
 ### Adobe Target ContentSync-hanterare {#adobe-target-contentsync-handlers}
 
-För att leverera innehåll till användarens enhet genereras innehållet genom att de erbjudanden som skapas av AEM återges. För att hantera återgivningen av målerbjudanden finns det en ny hanterare för innehållssynkronisering som bearbetar erbjudandena. Med Hybrid Reference Application som exempel innehåller det engelska (engelska) innehållspaketet ContentSyncConfig med en [mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml) hanterare. Nästa steg är avgörande för att återge erbjudanden till enheten. Hanteraren för mobileappoffers har en path-egenskap som identifierar sökvägen till den personaliseringsaktivitet som ska användas för programmet.
+För att leverera innehåll till användarens enhet genereras innehållet genom att de erbjudanden som skapas av AEM återges. För att hantera återgivningen av målerbjudanden finns det en ny hanterare för innehållssynkronisering som bearbetar erbjudandena. Med Hybrid Reference Application som exempel innehåller det engelska (engelska) innehållspaketet ContentSyncConfig med en [mobileappoffers](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference/blob/master/aem-package/content-author/src/main/content/jcr_root/content/mobileapps/hybrid-reference-app/en/_jcr_content/pge-app/app-config-dev/targetOffers/.content.xml) -hanterare. Nästa steg är avgörande för att återge erbjudanden till enheten. Hanteraren för mobileappoffers har en path-egenskap som identifierar sökvägen till den personaliseringsaktivitet som ska användas för programmet.
 
-Om det till exempel finns en aktivitet på */content/campaign/hybridref*, kopiera den här sökvägen och klistra in den som ett värde på *bana* egenskapen för hanteraren mobileappoffers.
+Om det till exempel finns en aktivitet på */content/campaign/hybridref* kopierar du den här sökvägen och klistrar in den som värdet för egenskapen *path* i hanteraren för mobileappoffers.
 
 >[!NOTE]
 >
@@ -132,21 +132,21 @@ När aktivitetssökvägen har angetts i mobileappoffers-hanterarens path-egenska
 
 ### Återgivningsläge {#render-mode}
 
-Hanteraren för mobileappoffers är annorlunda konfigurerad för publicerings- och utvecklingsinställningar. För publiceringsinställningar finns det en egenskap som heter *renderMode* med värdet *publicera* anges på cq:ContentSyncConfig-noden. Hanteraren mobileappoffers refererar till renderMode och redigerar, om den är inställd på publicering, det mbox-id som skapas. Som standard har rutor som skapas av AEM ett —author-värde tillagt till mbox-ID:t. Detta identifierar att aktiviteten inte har publicerats och bör använda den opublicerade kampanjen för erbjudandelösningar.
+Hanteraren för mobileappoffers är annorlunda konfigurerad för publicerings- och utvecklingsinställningar. För publiceringsinställningar finns egenskapen *renderMode* med värdet *publish* inställt på cq:ContentSyncConfig-noden. Hanteraren mobileappoffers refererar till renderMode och redigerar, om den är inställd på publicering, det mbox-id som skapas. Som standard har rutor som skapas av AEM ett —author-värde tillagt till mbox-ID:t. Detta identifierar att aktiviteten inte har publicerats och bör använda den opublicerade kampanjen för erbjudandelösningar.
 
 När innehåll mellanlagras via Adobe Mobile Dashboard betraktas mellanlagrat innehåll som produktionsklart innehåll och återges via den icke-dev-konfiguration för innehållssynkronisering. Om du återger på det här sättet tas —author bort från alla mbox-ID:n och en publicerad aktivitet förväntas bli tillgänglig på målservern. Innan du testar mellanlagrat innehåll måste du kontrollera att aktiviteten redan är publicerad.
 
-### Apputveckling för personalisering {#personalization-app-development}
+### Personalization App Development {#personalization-app-development}
 
 #### Komponenter {#components}
 
-Grunden för allt innehåll är vanligtvis en sidkomponent som utökar någon av de grundläggande AEM sidkomponenterna wcm/foundation/components/page eller foundation/components/page beroende på om du använder HTML eller JSP. Längden på de här stegen fokuserar på att använda komponenten wcm/foundation/components/page. Den grundläggande strukturen för sidkomponenten bryts ned i flera skript, där varje skript har det specifika syftet att låta utvecklaren ordna och åsidosätta koden om det behövs. De två skript som är intressanta för personalisering är head.html och body.html. De här två skripten utgör ett område där kod kan injiceras för att ge stöd åt kontextnavet, Cloud Servicen och mobilutveckling.
+Grunden för allt innehåll är vanligtvis en sidkomponent som utökar någon av de grundläggande AEM sidkomponenterna wcm/foundation/components/page eller foundation/components/page beroende på om du använder HTML eller JSP. Längden på de här stegen fokuserar på att använda komponenten wcm/foundation/components/page. Den grundläggande strukturen för sidkomponenten bryts ned i flera skript, där varje skript har det specifika syftet att låta utvecklaren ordna och åsidosätta koden om det behövs. De två skripten som är intressanta för Personalization är head.html och body.html. De här två skripten utgör ett område där kod kan injiceras för att ge stöd åt kontextnavet, Cloud Servicen och mobilutveckling.
 
 Här är en översikt över de två primära skripten som används för att aktivera målinriktning av innehåll.
 
 #### head.html {#head-html}
 
-För att författaren ska kunna ange sitt innehåll som mål måste målmenyn läggas till på sidan så att författaren kan ändra sammanhanget från redigeringsläge till målinriktningsläge. Om du vill aktivera den här funktionen bör utvecklaren ändra skriptet head.html så att det innehåller följande kodfragment nära den övre delen av head.html eller så nära den &lt;title>&lt;/title> -element som möjligt.
+För att författaren ska kunna ange sitt innehåll som mål måste målmenyn läggas till på sidan så att författaren kan ändra sammanhanget från redigeringsläge till målinriktningsläge. Om du vill aktivera den här funktionen bör utvecklaren ändra head.html-skriptet så att det innehåller följande kodfragment i närheten av head.html eller så nära &lt;title>&lt;/title>-elementet som möjligt.
 
 ```xml
 <meta data-sly-test="${!wcmmode.disabled}">
@@ -162,9 +162,9 @@ För att författaren ska kunna ange sitt innehåll som mål måste målmenyn l�
 
 För att författarna ska kunna förhandsgranska målinnehållet måste redigeraren kunna hitta konfigurationen för Adobe Target molntjänst. Kodblocket nedan lägger till två viktiga skript. Först lägger du till möjligheten för sidan att hitta den associerade molntjänsten Target och ringa samtal till Adobe Target. Den andra är tillägget för kategorin cq.apps.targeting.
 
-The **cq.apps.targeting** -kategorin åsidosätter standardkomponenten cq/personalization/component/target och använder mobilapparna/komponenterna/målkomponenten som renderar erbjudanden specifikt för användning i mobilappar. Mer information om detta finns under Målkomponent.
+Kategorin **cq.apps.targeting** åsidosätter standardkomponenten cq/personalization/component/target och använder den mobileapps/components/target-komponent som renderar erbjudanden specifikt för användning i mobilprogram. Mer information om detta finns under Målkomponent.
 
-Koden ska läggas till i head.html och placeras precis före slutet av &lt;/head> -element.
+Koden ska läggas till i head.html och placeras precis före slutet av &lt;/head>-elementet.
 
 ```xml
 <div data-sly-test="${!wcmmode.disabled}">
@@ -197,11 +197,11 @@ Den sista biten av koden som krävs finns längst ned i body.html. Den här kodb
 
 ### Referensprogram {#reference-application}
 
-Exempel på head.html och body.html finns i [AEM Mobile Hybrid Reference Application](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) som visar var skriptblocken ska placeras i de två skripten.
+Exempel på head.html och body.html finns i [AEM Mobile Hybrid Reference Application](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) som visar var utvecklaren ska placera skriptblocken i de två skripten.
 
 ### Hanterare för innehållssynkronisering {#content-sync-handlers}
 
-När innehållsförfattaren är klar med att skapa innehåll för mobilprogrammet är nästa steg att hämta källan och skapa programmet, eller att mellanlagra innehållet som ska publiceras. Det finns flera steg som utvecklaren är involverad i för att detta ska hända. AEM Mobile använder Content sync-hanterare för att återge och paketera innehållet, vilket underlättar återgivningen av innehållet. En ny hanterare för innehållssynkronisering har introducerats för att återge anpassat innehåll. Hanteraren mobileappoffers vet hur man återger associerade målerbjudanden som har skapats av innehållsförfattaren. Hanteraren för mobileappoffers utökar uppdateringshanteraren för abstrakta sidor, därför liknar många av egenskaperna. Information om hanteraren för mobileappoffers har följande egenskaper.
+När innehållsförfattaren är klar med att skapa innehåll för mobilprogrammet är nästa steg att hämta källan och skapa programmet, eller att mellanlagra innehållet som ska publiceras. Det finns flera steg som utvecklaren är involverad i för att detta ska hända. AEM Mobile använder Content sync-hanterare för att återge och paketera innehållet, vilket underlättar återgivningen av innehållet. En ny hanterare för innehållssynkronisering har introducerats för att återge riktat innehåll i Personalization-användningsexemplet. Hanteraren mobileappoffers vet hur man återger associerade målerbjudanden som har skapats av innehållsförfattaren. Hanteraren för mobileappoffers utökar uppdateringshanteraren för abstrakta sidor, därför liknar många av egenskaperna. Information om hanteraren för mobileappoffers har följande egenskaper.
 
 <table>
  <tbody>
@@ -222,7 +222,7 @@ När innehållsförfattaren är klar med att skapa innehåll för mobilprogramme
   </tr>
   <tr>
    <td>locationRoot</td>
-   <td>/content/mobileapps/&lt;app&gt;</td>
+   <td>/content/mobileapps/</td>
    <td>Appens plats.</td>
   </tr>
   <tr>
@@ -252,7 +252,7 @@ När innehållsförfattaren är klar med att skapa innehåll för mobilprogramme
   </tr>
   <tr>
    <td>bana</td>
-   <td>/content/campaign/&lt;brand&gt;</td>
+   <td>/content/campaign/&lt;märke&gt;</td>
    <td>pekar på kampanjens varumärke som erbjudandena deltar i. För närvarande måste alla erbjudanden komma från samma kampanj.</td>
   </tr>
   <tr>
@@ -270,13 +270,13 @@ När innehållsförfattaren är klar med att skapa innehåll för mobilprogramme
 
 >[!NOTE]
 >
->The [AEM Mobile Hybrid Reference App](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) har standardkonfigurationen för hanteraren för mobileappoffer. Egenskapen path i exemplet är tom eftersom den beror på kampanjplatsen. När en Campaign-författare har skapat en Campaign bör programadministratören associera Campaign med hanteraren genom att ange egenskapen path så att den pekar på Campaign.
+>[AEM Mobile Hybrid Reference App](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) har standardkonfigurationen för hanteraren för mobilappen. Egenskapen path i exemplet är tom eftersom den beror på kampanjplatsen. När en Campaign-författare har skapat en Campaign bör programadministratören associera Campaign med hanteraren genom att ange egenskapen path så att den pekar på Campaign.
 
 ### Målkomponent {#target-component}
 
 För att hjälpa till att återge innehåll specifikt för mobilprogram använder AEM Mobile mobilapparna/komponenterna/målkomponenten. Den mobila målkomponenten utökar cq/personalization/components/target-komponenten och åsidosätter skriptet engine_tnt.jsp. Genom att åsidosätta engine_tnt.jsp kan AEM Mobile styra det genererade HTML för mobilapparnas användningsfall. För varje komponent som har en innehållsförfattare som mål skapas en associerad mbox av engine_tnt.jsp.
 
-För varje mbox är attributet **cq-targeting** har lagts till så att programutvecklare kan skriva egen kod som konsumerar och använder hur de vill. The [AEM Mobile Hybrid Reference App](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) har ett exempel på ett Angular-direktiv som använder attributet cq-targeting. Det är upp till utvecklaren av mobilapplikationer som bestämmer när och hur innehållet ska ersättas. Det finns en mobil-SDK som levereras via AEM /etc/clientlibs/mobileapps/js/mobileapps.js som tillhandahåller ett API för att anropa tjänsten Adobe Targeting. Det är programutvecklaren som bestämmer när anropet ska göras enligt utformningen av programmet.
+För varje mbox läggs attributet **cq-targeting** till, vilket gör att programutvecklare kan skriva egen kod som ska användas hur de vill. [AEM Mobile Hybrid Reference App](https://github.com/Adobe-Marketing-Cloud-Apps/aem-mobile-hybrid-reference) har ett exempel på ett Angular-direktiv som använder attributet cq-targeting. Det är upp till utvecklaren av mobilapplikationer som bestämmer när och hur innehållet ska ersättas. Det finns en mobil-SDK som levereras via AEM /etc/clientlibs/mobileapps/js/mobileapps.js som tillhandahåller ett API för att anropa tjänsten Adobe Targeting. Det är programutvecklaren som bestämmer när anropet ska göras enligt utformningen av programmet.
 
 ## Vad händer nu? {#what-s-next}
 

@@ -24,15 +24,15 @@ ht-degree: 0%
 
 AEM integreras med PhoneGap så att du enkelt kan skapa appar med AEM sidor. Med PhoneGap kan användaren skapa verktygsappar som gör att användarna kan arbeta med innehållet. Med Innehållssynkronisering kan du skapa versionshanterade arkiv med sidor som kan paketeras med appar.
 
-Vanligtvis en ***AEM*** ansvarar för att lägga till ett nytt program i AEM Mobile-katalogen, antingen genom att skapa ett program med hjälp av guiden Skapa eller genom att importera ett befintligt program.
+Vanligtvis ansvarar en ***AEM-administratör*** för att lägga till ett nytt program i AEM Mobile-katalogen, antingen genom att skapa ett program med hjälp av guiden Skapa eller genom att importera ett befintligt program.
 
-Härifrån kan ***AEM*** (eller *Marknadsförare*) kan nu använda färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment).
+Härifrån kan en ***AEM författare*** (eller *Marketer*) nu använda färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment).
 
-AEM Mobile styrka är att *ohyfsad* ***AEM Developer*** kan utöka och skapa anpassade webbmallar och komponenter för att aktivera *AEM* för att skapa vackra och engagerande mobilupplevelser. Dessa mallar och komponenter är inte bara optimerade för mobilappsvärlden utan kommunicerar både med enheten och med AEM server (valfri fjärrserver) till slutpunkter för flerkanalstjänster.
+Den verkliga kraften i AEM Mobile är att en *kunnig* ***AEM utvecklare*** kan utöka och skapa anpassade webbmallar och komponenter för att *AEM författaren* ska kunna skapa snygga och engagerande mobilupplevelser. Dessa mallar och komponenter är inte bara optimerade för mobilappsvärlden utan kommunicerar både med enheten och med AEM server (valfri fjärrserver) till slutpunkter för flerkanalstjänster.
 
 >[!NOTE]
 >
->När *AEM* tror att appen är klar, kan deras intressenter först hämta appen med **[Adobe Verifiera](/help/mobile/phonegap-mobile-quickstart.md)** (finns i både AppStore och PlayStore) för granskning och godkännande. När de har fått grönt ljus kan de släppa det nya eller uppdaterade innehållet direkt till sina användare via kontrollpanelen för innehållshantering i AEM Mobile ContentSync. En person kan ta på sig ett valfritt antal roller, det är upp till er och era styrningspolicyer.
+>När *AEM Author* tror att appen är klar kan deras intressenter först hämta appen med **[Adobe Verify](/help/mobile/phonegap-mobile-quickstart.md)** (som finns i både AppStore och PlayStore) för granskning och godkännande. När de har fått grönt ljus kan de släppa det nya eller uppdaterade innehållet direkt till sina användare via kontrollpanelen för innehållshantering i AEM Mobile ContentSync. En person kan ta på sig ett valfritt antal roller, det är upp till er och era styrningspolicyer.
 
 ## Förutsättningar {#prerequisites}
 
@@ -46,7 +46,7 @@ Innan du börjar arbeta med AEM Mobile och följer stegen i den här guiden bör
 
 ## QuickLinks for Authors {#quicklinks-for-authors}
 
-Se [Skapa för Adobe PhoneGap Enterprise i AEM](/help/mobile/phonegap.md) om du vill veta mer om en författares roller och ansvarsområden.
+Läs [Om du skriver för Adobe PhoneGap Enterprise i AEM](/help/mobile/phonegap.md) om du vill veta mer om en författares roller och ansvarsområden.
 
 ## QuickLinks for Developers {#quicklinks-for-developers}
 
@@ -60,4 +60,4 @@ Se [Administrera innehåll för Adobe PhoneGap Enterprise med AEM](/help/mobile/
 
 >[!NOTE]
 >
->Med hybridmobilteknologier kan ni skapa multimediala mobilapplikationer som *köra offline och online* med AEM Mobile väljer många kunder faktiskt att skapa appar som letar efter online eller offline och beter sig därefter.
+>Med hybridmobilteknologier kan du skapa avancerade mobilappar som *körs offline och online* med AEM Mobile, faktiskt, så många kunder väljer att skapa appar som letar efter när de är online eller offline och beter sig därefter.

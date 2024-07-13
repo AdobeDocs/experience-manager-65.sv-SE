@@ -26,22 +26,22 @@ DM-kodade återgivningar lagras på proxyservern och hanteras vid körning.
 
 Experience Manager Assets har uppspelningsstöd för dessa återgivningar på klientsidan.
 
-Om du vill visa återgivningarna för en viss videoresurs öppnar du resurssidan och väljer ikonen Global navigering. Välj sedan **[!UICONTROL Renditions]** från listan.
+Om du vill visa återgivningarna för en viss videoresurs öppnar du resurssidan och väljer ikonen Global navigering. Välj sedan **[!UICONTROL Renditions]** i listan.
 
 ![chlimage_1-478](assets/chlimage_1-478.png)
 
-Listan med videoåtergivningar visas i **[!UICONTROL Renditions]** -panelen.
+Listan med videoåtergivningar visas på panelen **[!UICONTROL Renditions]**.
 
 ![chlimage_1-479](assets/chlimage_1-479.png)
 
-Om du vill konfigurera proxyservern för DM-kodade återgivningar [konfigurera Dynamic Media Cloud-tjänster](config-dynamic.md).
+[Konfigurera Dynamic Media Cloud-tjänster](config-dynamic.md) om du vill konfigurera proxyservern för DM-kodade återgivningar.
 
-Om du vill generera videoåtergivningar med önskade parametrar [skapa en motsvarande videoprofil](video-profiles.md).
+Om du vill generera videoåtergivningar med önskade parametrar [skapar du en motsvarande videoprofil](video-profiles.md).
 
 När du har konfigurerat proxyservern och skapat videoprofiler kan du ta med den här videoförinställningen i en bearbetningsprofil och använda bearbetningsprofilen i en mapp.
 
 >[!NOTE]
 >
->Ljuduppspelning fungerar inte för OGG- och WAV-filer i Microsoft® Internet Explorer 11. Ett fel `Invalid Source` visas på sidan med tillgångsinformation för resurser med filnamnstillägget OGG eller WAV.
+>Ljuduppspelning fungerar inte för OGG- och WAV-filer i Microsoft® Internet Explorer 11. Ett fel `Invalid Source` visas på sidan med tillgångsinformation för resurser med tillägget OGG eller WAV.
 >
->I MS® Edge och iPad spelas inte OGG-filer upp och ett formatfel som inte stöds genereras.
+>I MS® Edge och iPad spelas inte OGG-filer upp och ett formatfel som inte stöds uppstår.

@@ -34,21 +34,21 @@ Forumfunktionen QnA (frågor och svar) ger ett område där communitymedlemmar k
 Dokumentationen beskriver:
 
 * Lägga till QnA-forumfunktionen till en AEM webbplats.
-* Konfigurationsinställningar för `QnA`-komponenten.
+* Konfigurationsinställningar för komponenten `QnA`.
 
 ## Lägga till ett forum med frågor och svar på en sida {#adding-a-q-a-forum-to-a-page}
 
-Lägga till en `QnA` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp `Communities / QnA` och dra den till rätt plats på en sida där QnA-forumet ska visas.
+Om du vill lägga till en `QnA`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att leta reda på `Communities / QnA` och dra den till en plats på en sida där QnA-forumet ska visas.
 
-Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När [nödvändiga bibliotek på klientsidan](/help/communities/qna-essentials.md#essentials-for-client-side) ingår så här `QnA` visas:
+När de [nödvändiga klientbiblioteken](/help/communities/qna-essentials.md#essentials-for-client-side) inkluderas visas `QnA`-komponenten så här:
 
 ![qna-component](assets/qna-component.png)
 
 ### Konfigurera QnA {#configuring-qna}
 
-Markera den monterade `QnA` så att du kan komma åt och välja `Configure` -ikonen som öppnar redigeringsdialogrutan.
+Markera den monterade `QnA`-komponenten så att du kan komma åt och markera ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera](assets/configure-new.png)
 
@@ -56,13 +56,13 @@ Markera den monterade `QnA` så att du kan komma åt och välja `Configure` -iko
 
 #### Fliken Inställningar {#settings-tab}
 
-Under **Inställningar** -fliken, ange inställningar för ämnen (frågor) och svar (svar):
+Under fliken **Inställningar** anger du inställningar för ämnen (frågor) och svar (svar):
 
 * **Tillåt miniatyrbild för bifogad fil**
 
   Om du markerar det här alternativet skapas en miniatyrbild av den bifogade bilden.
 
-* **Maximal storlek på miniatyrbild**
+* **Maximal storlek för miniatyrbildsanslutning**
 
   Maximal storlek (i pixlar) för miniatyrbilden för den bifogade filen. Standardvärdet är 800 x 800.
 
@@ -78,7 +78,7 @@ Under **Inställningar** -fliken, ange inställningar för ämnen (frågor) och 
 
   Definierar antalet frågor/inlägg som visas per sida. Standardvärdet är 10.
 
-* **Kontrollerad**
+* **Modererad**
 
   Om det här alternativet är markerat måste publicering av ämnen och kommentarer godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
@@ -92,7 +92,7 @@ Under **Inställningar** -fliken, ange inställningar för ämnen (frågor) och 
 
 * **Tillåt taggning**
 
-  Tillåt medlemmar att lägga till taggetiketter i sina inlägg (se **Taggfält** -fliken). Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmar lägga till taggetiketter i sina inlägg (se fliken **Taggfält**). Standard är avmarkerat.
 
 * **Tillåt filöverföringar**
 
@@ -100,7 +100,7 @@ Under **Inställningar** -fliken, ange inställningar för ämnen (frågor) och 
 
 * **Tillåt följande**
 
-  Om du markerar det här alternativet inkluderas följande funktion för foruminlägg, som gör att medlemmar kan [meddelad](/help/communities/notifications.md) av nya tjänster. Standard är avmarkerat.
+  Om du markerar det här alternativet inkluderas följande funktion för foruminlägg, som gör att medlemmar kan [meddelas](/help/communities/notifications.md) om nya inlägg. Standard är avmarkerat.
 
 * **Tillåt fästa**
 
@@ -108,15 +108,15 @@ Under **Inställningar** -fliken, ange inställningar för ämnen (frågor) och 
 
 * **Tillåt e-postprenumerationer**
 
-  Om det här alternativet är markerat, tillåt medlemmar att meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver att Tillåt följande kontrolleras och [e-post konfigurerad](/help/communities/email.md). Standard är avmarkerat.
+  Om det här alternativet är markerat kan medlemmar meddelas om nya inlägg via e-post ([prenumeration](/help/communities/subscriptions.md)). Kräver att Tillåt följande kontrolleras och att [e-post konfigureras](/help/communities/email.md). Standard är avmarkerat.
 
 * **Maximal filstorlek**
 
-  Endast relevant om `Allow File Uploads` är markerad. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
+  Endast relevant om `Allow File Uploads` är markerat. Det här fältet begränsar storleken (i byte) på en överförd fil. Standardvärdet är 104857600 (10 MB).
 
 * **Tillåtna filtyper**
 
-  Endast relevant om `Allow File Uploads` är markerad. En kommaavgränsad lista med filtillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de inte överföras. Standard är inte angivet så att **alla** filtyper är tillåtna.
+  Endast relevant om `Allow File Uploads` är markerat. En kommaavgränsad lista med filtillägg med punktavgränsaren. Exempel: .jpg, .jpeg, .png, .doc, .docx, .pdf. Om någon filtyp har angetts kan de inte överföras. Ingen standard har angetts så att **alla** filtyper tillåts.
 
 * **Maximal filstorlek för bifogad bild**
 
@@ -138,36 +138,36 @@ Under **Inställningar** -fliken, ange inställningar för ämnen (frågor) och 
 
   Om det här alternativet är markerat kan endast behöriga medlemmar skapa innehåll.
 
-* **Blockera användargenererat innehåll i redigeringsläge för författare**
+* **Blockera användargenererat innehåll i redigeringsläget för författare**
 
   Om det här alternativet är aktiverat blockeras användargenererat innehåll när redigering i redigeringsläge.
 
-* **Flytta det markerade svaret överst**
+* **Flytta markerat svar till överkanten**
 
   Om det här alternativet är markerat är det första svar som visas ett valt svar. Standard är avmarkerat.
 * **Visa emblem**
 
-  Om det här alternativet är markerat visas intjänad och tilldelad [emblem](/help/communities/implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
+  Om det här alternativet är markerat visas intjänade och tilldelade [emblem](/help/communities/implementing-scoring.md) med en medlems blogginlägg. Standard är avmarkerat.
 
-* **Tillåt innehåll**
+* **Tillåt aktuellt innehåll**
 
-  Idén kan identifieras som om den är markerad [presenterat innehåll](/help/communities/featured.md). Standard är avmarkerat.
+  Om det här alternativet är markerat går det att identifiera idén som [aktuellt innehåll](/help/communities/featured.md). Standard är avmarkerat.
 
-* **Aktivera omnämns**
+* **Aktivera omnämnande**
 
   Om det här alternativet är aktiverat kan registrerade communityanvändare identifiera andra registrerade medlemmar (med förnamn, efternamn, användarnamn) och tagga dem med den vanliga @användarnamnssyntaxen. De taggade användarna får meddelanden om sina omnämnanden.
 
-* **Max. omnämnanden**
+* **Max antal omnämnanden**
 
   Begränsa det maximala antalet omnämnanden som tillåts i ett inlägg. Standardvärdet är 10.
 
-* **Mönster för användargränssnittets omnämnande**
+* **Mönster för gränssnittets omnämnande**
 
-  Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Till exempel: `~{{familyName}}{{givenName}}`.
+  Ange den tillåtna mönstersträngen för att tagga (@mention) den registrerade användaren i ett inlägg. Exempel: `~{{familyName}}{{givenName}}`.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Under **Användarmoderering** anger du hur publicerade ämnen (frågor) och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
+Under fliken **Användarmoderering** anger du hur bokförda ämnen (frågor) och svar (användargenererat innehåll) ska hanteras. Mer information finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
 
 * **Neka svar**
 
@@ -202,11 +202,11 @@ Om det här alternativet är markerat kan du tillåta moderatorer på publicerin
 
 #### Fliken Taggfält {#tag-field-tab}
 
-Under **Taggfält** -fliken, de taggar som kan användas, om de tillåts under **Inställningar** är begränsade enligt de namnutrymmen som har valts.
+Under fliken **Taggfält** är de taggar som kan användas, om de tillåts under fliken **Inställningar** , begränsade enligt de valda namnutrymmena.
 
 * **Tillåtna namnutrymmen**
 
-  Relevant om `Allow Tagging` kontrolleras under **Inställningar** -fliken. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som är markerade. Listan med namnutrymmen innehåller&quot;Standardtaggar&quot; (standardnamnutrymmet) och&quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
+  Relevant om `Allow Tagging` är markerat under fliken **Inställningar**. De taggar som kan användas är begränsade till de inom de namnutrymmeskategorier som är markerade. Listan med namnutrymmen innehåller&quot;Standardtaggar&quot; (standardnamnutrymmet) och&quot;Inkludera alla taggar&quot;. Standardvärdet är inget markerat, vilket betyder att alla namnutrymmen är tillåtna.
 
 * **Förslagsgräns**
 
@@ -214,29 +214,29 @@ Under **Taggfält** -fliken, de taggar som kan användas, om de tillåts under *
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-Under **Sorteringsinställningar** anger du hur de bokförda kommentarerna ska sorteras när de visas.
+Under fliken **Sorteringsinställningar** anger du hur de bokförda kommentarerna ska sorteras när de visas.
 
 * **Sortera efter**
 
-  Markera alla tillåtna sorteringsval: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standard är `Newest, Oldest, Last Updated`.
+  Kontrollera alla tillåtna sorteringsval: `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed and Most Liked`. Standardvärdet är `Newest, Oldest, Last Updated`.
 
 * **Ange som standard**
 
-  Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standard är `Newest`.
+  Dra nedåt om du vill välja något av de markerade sorteringsalternativen som ska visas som standard. Standardvärdet är `Newest`.
 
-* **Välj tidsalternativ för Analytics-sortering**
+* **Välj tidsalternativ för sortering av analyser**
 
-  Välj en av `All, Last 24 Hours, Last 7 Days, Last 30 Days`. Standard är `All`.
+  Välj en av `All, Last 24 Hours, Last 7 Days, Last 30 Days` i listrutan. Standardvärdet är `All`.
 
 ## Site Visitor Experience {#site-visitor-experience}
 
 ### Identifiera svar {#identifying-answers}
 
-Ett svar kan markeras som ett korrekt eller användbart svar med `Select Answer` -knappen. När en fråga har markerats som besvarad kan du inte välja ett annat svar förrän den första har avmarkerats med `Unmark Chosen Answer` -knappen.
+Ett svar kan markeras som ett korrekt eller användbart svar med knappen `Select Answer`. När en fråga har markerats som besvarad kan du inte välja ett annat svar förrän det första har avmarkerats med knappen `Unmark Chosen Answer`.
 
-När det har valts som ett användbart svar kan det avmarkeras med `Unmark Chosen Answer` -knappen.
+När det har valts som ett möjligt svar kan det avmarkeras med knappen `Unmark Chosen Answer`.
 
-När ett svar har valts som ett möjligt svar, en indikation på att frågan har `Answered` visas bredvid frågeämnet på QnA-huvudsidan.
+När ett svar har valts som ett möjligt svar visas en indikation på att frågan har `Answered` bredvid frågeämnet på QnA-huvudsidan.
 
 #### Styrelsemedlemmar och administratörer {#moderators-and-administrators}
 
@@ -248,7 +248,7 @@ De kan också identifiera svaren.
 
 När webbplatsbesökarna är inloggade, beroende på konfigurationen, kan de:
 
-* Lägg upp en ny fråga.
+* Post - en ny fråga.
 * Redigera eller ta bort frågor de skapat.
 * Flagga frågor eller svar från andra medlemmar.
 * Identifiera svar på frågor de skapat.
@@ -259,8 +259,8 @@ Besökare som inte är inloggade kan bara läsa publicerade frågor och svar, ö
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på [QnA Essentials](/help/communities/qna-essentials.md) för utvecklare.
+Mer information finns på sidan [QnA Essentials](/help/communities/qna-essentials.md) för utvecklare.
 
-moderering av inlägg och kommentarer finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
+moderering av publicerade ämnen och kommentarer finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md) (Moderating User Generated Content).
 
 Information om hur du taggar publicerade ämnen och kommentarer finns i [Tagga användargenererat innehåll](/help/communities/tag-ugc.md).

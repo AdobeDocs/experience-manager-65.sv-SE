@@ -24,4 +24,4 @@ Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält so
 
 >[!NOTE]
 >
->Även om det finns en skolledning [läge](/help/sites-authoring/author-environment-tools.md#page-modes) som finns i det klassiska användargränssnittet är att underhålla och skapa ställningar och nya sidor från ställningar. Se [Ställning](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md) i den klassiska användargränssnittsdokumentationen om du vill ha mer information.
+>Även om det finns en tillgänglig scofolding [mode](/help/sites-authoring/author-environment-tools.md#page-modes) så görs underhåll och skapande av ställningar och nya sidor från ställningar i det klassiska användargränssnittet. Mer information finns i [Skolning](/help/sites-classic-ui-authoring/classic-feature-scaffolding.md) i den klassiska dokumentationen för användargränssnittet.

@@ -26,11 +26,11 @@ När du synkroniserar din app med AEM Forms-servern hämtas alla formulär och d
 
 Den färdiga AEM Forms-applösningen hämtar inte de bilagor som är kopplade till varje formulär när appen synkroniseras.
 
-Ändra inställningar för hämtning, offlineläge, landningsskärm, automatiskt sparande och synkronisering på fliken Allmänt. Du kan ändra [Hemskärm](../../forms/using/home-screen.md) av appen.
+Ändra inställningar för hämtning, offlineläge, landningsskärm, automatiskt sparande och synkronisering på fliken Allmänt. Du kan ändra [startskärmen](../../forms/using/home-screen.md) för din app.
 
 **Navigera till fliken Allmänt på inställningsskärmen**
 
-1. Om du vill gå till inställningsskärmen väljer du menyknappen i det övre vänstra hörnet av hemskärmen och sedan väljer du **Inställningar**.
+1. Om du vill gå till inställningsskärmen väljer du menyknappen i det övre vänstra hörnet av startskärmen och sedan **Inställningar**.
 1. Välj fliken Allmänt på skärmen Inställningar.
 
    ![Allmänna inställningar i AEM Forms-appen](assets/gen-settings-1.png)
@@ -45,9 +45,9 @@ Den färdiga AEM Forms-applösningen hämtar inte de bilagor som är kopplade ti
 
 Du kan göra följande ändringar i inställningarna för ditt program.
 
-* **Hämta uppgiftsbilagor**: Anger om de associerade bilagorna ska hämtas eller inte när varje uppgift hämtas till din app.
-* **Offlineläge**: Så här aktiverar eller inaktiverar du offlinetjänsten för AEM Forms-programmet. Se [Arbeta i offline-läge](/help/forms/using/work-offline-mode.md) för mer information.
-* **Landing screen**: Ange startplats ([Hemskärm](../../forms/using/home-screen.md)) för appen.
+* **Hämta uppgiftsbilagor**: Om du vill ange om de associerade bilagorna ska hämtas eller inte när varje uppgift hämtas till din app.
+* **Offlineläge**: Om du vill aktivera eller inaktivera offlinetjänsten för AEM Forms-programmet. Mer information finns i [Arbeta i offlineläge](/help/forms/using/work-offline-mode.md).
+* **Startskärm**: Anger startplats ([Startskärm](../../forms/using/home-screen.md)) för programmet.
 Tillgängliga alternativ
 
    * Forms
@@ -56,8 +56,8 @@ Tillgängliga alternativ
 
 * **Standardkategori**: Här kan du välja vilken formulärkategori som ska visas på hemskärmen. När du väljer Alla kan du se alla formulär på hemskärmen. Kategorierna fylls i baserat på de formulär som läses in i appen. Forms är tillgängligt i appen baserat på de formulärinställningar som har angetts på AEM Forms-servern.
 
-* **Spara automatiskt, frekvens**: Så här anger du frekvensen för [mobilapp sparar formulärdata](../../forms/using/autosave-data-app.md) lokalt.
-* **Synkroniseringsfrekvens**: Så här anger du frekvensen för [mobilappen är synkroniserad](../../forms/using/sync-app.md) med AEM Forms-servern i online-läge.
+* **Spara automatiskt**: Anger hur ofta [mobilappen sparar formulärdata lokalt](../../forms/using/autosave-data-app.md).
+* **Synkroniseringsfrekvens**: Anger hur ofta din [mobilapp synkroniseras](../../forms/using/sync-app.md) med AEM Forms-servern i onlineläge.
   **Rensa lokala data**: Rensa databasen, inklusive inställningar och lokala data för alla användare och fillagring från enheten.
 
 >[!NOTE]

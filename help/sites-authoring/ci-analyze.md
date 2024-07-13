@@ -19,18 +19,18 @@ ht-degree: 1%
 
 # Analyserar sidprestanda{#analyzing-page-performance}
 
-Öppna [Content Insight](/help/sites-authoring/content-insights.md) för att analysera hur sidan du redigerar fungerar. Konfigurera rapporteringsperioden så att analysen fokuseras.
+Öppna sidan [Content Insight](/help/sites-authoring/content-insights.md) om du vill analysera prestandan för sidan som du redigerar. Konfigurera rapporteringsperioden så att analysen fokuseras.
 
 ## Öppna Analytics och Recommendations för en sida {#opening-analytics-and-recommendations-for-a-page}
 
 Använd följande procedur för att visa Analytics och Recommendations för en sida:
 
 1. Navigera till sidan som du vill analysera.
-1. Klicka på i verktygsfältet **Analyser och Recommendations**.
+1. Klicka på **Analytics (Analyser) och Recommendations** i verktygsfältet.
 
    >[!NOTE]
    >
-   >Analyser och Recommendations för en sida visas bara om du har konfigurerat AEM till [integrera med Adobe Analytics](/help/sites-administering/adobeanalytics-connect.md).
+   >Analyser och Recommendations för en sida visas bara om du har konfigurerat AEM för att [integrera med Adobe Analytics](/help/sites-administering/adobeanalytics-connect.md).
 
    ![screen-shot_2019-03-05at115319](assets/screen-shot_2019-03-05at115319.png)
 
@@ -106,6 +106,6 @@ Använd följande procedur för att skapa en uppgift för en SEO-rekommendation.
    * Aktivitetsprioritet: Uppgiftens prioritet.
    * Förfallodatum: Det datum då uppgiften ska vara slutförd.
 
-   **Obs!** Uppgiften som skapas innehåller även sökvägen till sidan som SEO-rekommendationen gäller för.
+   **Obs!** Den uppgift som skapas innehåller även sökvägen till sidan som SEO-rekommendationen gäller för.
 
 1. Klicka på Klar för att stänga meddelandet Aktiviteten har skapats.

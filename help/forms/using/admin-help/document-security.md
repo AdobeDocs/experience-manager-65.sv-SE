@@ -24,19 +24,19 @@ Dokumentsäkerheten säkerställer att bara behöriga användare kan använda di
 * Adobe PDF-filer
 * Microsoft® Word, Excel och PowerPoint
 
-Mer information om hur du skyddar filtyper som stöds finns i [mer dokumentsäkerhetsinformation](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-security/document-security-offerings.html?lang=en).
+Mer information om hur profiler skyddar filtyper som stöds finns i [mer dokumentsäkerhetsinformation](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-security/document-security-offerings.html?lang=en).
 
 Med dokumentsäkerhet kan du enkelt skapa, lagra och använda fördefinierade sekretessinställningar i dina dokument. För att förhindra att information sprids utanför räckhåll kan du också övervaka och styra hur mottagarna använder dokumenten när du har distribuerat dem.
 
-Du kan skydda dokument med hjälp av profiler. A *policy* är en samling information som innehåller sekretessinställningar och en lista över behöriga användare. De sekretessinställningar som du anger i en profil avgör hur en mottagare kan använda ett dokument som du tillämpar profilen på. Du kan till exempel ange om mottagarna ska kunna skriva ut eller kopiera text, redigera text eller lägga till signaturer och kommentarer i skyddade dokument.
+Du kan skydda dokument med hjälp av profiler. En *princip* är en samling information som innehåller sekretessinställningar och en lista över behöriga användare. De sekretessinställningar som du anger i en profil avgör hur en mottagare kan använda ett dokument som du tillämpar profilen på. Du kan till exempel ange om mottagarna ska kunna skriva ut eller kopiera text, redigera text eller lägga till signaturer och kommentarer i skyddade dokument.
 
 Dokumentsäkerhetsanvändare skapar profiler via slutanvändarens webbsidor. Administratörer använder webbsidorna för dokumentsäkerhet för att skapa profiluppsättningar som innehåller delade profiler som är tillgängliga för alla behöriga användare.
 
-Även om profiler lagras i dokumentsäkerhet kan du tillämpa dem på dokument via ditt klientprogram. Hur man tillämpar regler på PDF-dokument beskrivs i detalj i *Hjälp om Acrobat*. Tillämpa policyer med andra program, som Microsoft® Office, beskrivs i *Hjälp om Acrobat Reader DC Extensions* för programmet.
+Även om profiler lagras i dokumentsäkerhet kan du tillämpa dem på dokument via ditt klientprogram. Hur du tillämpar profiler på PDF-dokument beskrivs i detalj i *Acrobat-hjälpen*. Tillämpning av principer med andra program, som Microsoft® Office, beskrivs i *hjälpen för Acrobat Reader DC-tillägg* för programmet.
 
 När du tillämpar en profil på ett dokument skyddar sekretessinställningarna som anges i profilen den information som dokumentet innehåller. Sekretessinställningarna skyddar även alla filer (text, ljud eller video) i ett PDF-dokument. Du kan distribuera det profilskyddade dokumentet till mottagare som har behörighet enligt profilen.
 
-**Åtkomstkontroll och -granskning av dokument**
+**Åtkomstkontroll och granskning av dokument**
 
 Genom att använda en skyddsprofil får du full kontroll över dokumentet, även sedan du distribuerat det. Du kan övervaka dokumentet, ändra profilen, hindra användare från att fortsätta få åtkomst till dokumentet och växla den profil som tillämpas på dokumentet.
 
@@ -46,9 +46,9 @@ Med dokumentsäkerhet kan du övervaka skyddsskyddade dokument och spåra hände
 
 Dokumentsäkerhet består av en server och ett användargränssnitt:
 
-**Server:** Den centrala komponent genom vilken dokumentsäkerhet utför transaktioner som användarautentisering, hantering av profiler i realtid och tillämpning av sekretess. Servern har också ett centralt arkiv för policyer, granskningsposter och annan relaterad information.
+**Server:** Den centrala komponent genom vilken dokumentsäkerhet utför transaktioner som användarautentisering, hantering av principer i realtid och tillämpning av sekretess. Servern har också ett centralt arkiv för policyer, granskningsposter och annan relaterad information.
 
-**Webbsidor:** Gränssnittet där du skapar profiler, hanterar profilskyddade dokument och övervakar händelser som är kopplade till profilskyddade dokument. Administratörer kan också konfigurera globala alternativ som användarautentisering, granskning och meddelanden för inbjudna användare samt hantera inbjudna användarkonton.
+**Webbsidor:** Gränssnittet där du skapar principer, hanterar dina profilskyddade dokument och övervakar händelser som är kopplade till principskyddade dokument. Administratörer kan också konfigurera globala alternativ som användarautentisering, granskning och meddelanden för inbjudna användare samt hantera inbjudna användarkonton.
 
 ![rm_psworkflow](assets/rm_psworkflow.png)
 
@@ -93,7 +93,7 @@ Olika typer av användare arbetar med dokumentsäkerhet för att utföra olika u
   >
   >Användare med den här rollen måste också ha administratörskonsolens användarroll för att kunna logga in på administrationskonsolen och redigera alla konfigurationsrelaterade inställningar.
 
-  **Administratör för dokumentsäkerhetsprincip**
+  **Ställ in administratör för dokumentsäkerhetsprincip**
 
   Användare med den här rollen kan använda dokumentsäkerhetsdelen i administrationskonsolen för att redigera andra användares profiler och för att skapa, redigera och ta bort principuppsättningar. När en administratör för en principuppsättning skapar en principuppsättning kan de tilldela en principuppsättningskoordinator till den uppsättningen. Dessa behörigheter är associerade med rollen:
 
@@ -120,7 +120,7 @@ Olika typer av användare arbetar med dokumentsäkerhet för att utföra olika u
   >
   >Användare med den här rollen måste också ha administratörskonsolens användarroll för att kunna logga in på administrationskonsolen och redigera alla konfigurationsrelaterade inställningar.
 
-  **Inbjudan till dokumentsäkerhet**
+  **Inbjudan till dokumentsäkerhet - användare**
 
   Användare med den här rollen kan bjuda in användare. Dessa behörigheter är associerade med rollen:
 
@@ -147,7 +147,7 @@ Administratörer för dokumentsäkerhet kan skapa anpassade roller med följande
 
 ## Profiler och policyskyddade dokument {#policies-and-policy-protected-documents}
 
-A *policy* definierar en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som profilen tillämpas på. En profil gör det även möjligt att ändra behörigheter för ett dokument dynamiskt. Den person som skyddar dokumentet får behörighet att ändra sekretessinställningarna för att återkalla åtkomst till dokumentet eller för att ändra profilen.
+En *princip* definierar en uppsättning sekretessinställningar och användare som kan komma åt ett dokument som principen tillämpas på. En profil gör det även möjligt att ändra behörigheter för ett dokument dynamiskt. Den person som skyddar dokumentet får behörighet att ändra sekretessinställningarna för att återkalla åtkomst till dokumentet eller för att ändra profilen.
 
 Du kan tillämpa skyddsprofiler på PDF-dokument med Adobe Acrobat® Pro och Acrobat Standard. Du kan skydda andra filtyper, t.ex. Microsoft® Word-, Excel- och PowerPoint-filer, genom att använda klientprogrammet med rätt Acrobat Reader DC-tillägg installerat.
 
@@ -201,15 +201,15 @@ Du kan fortsätta använda ett dokument under följande förhållanden:
 
 Du kan också använda principskyddade dokument offline (utan Internet- eller nätverksanslutning) om profilen tillåter åtkomst offline. Logga först in på dokumentsäkerhet för att synkronisera dokumentet. Du kan sedan använda dokumentet under den offlinelåneperiod som anges i profilen.
 
-När offlinelåneperioden är slut synkroniserar du dokumentet igen med dokumentsäkerhet, antingen genom att gå online och öppna ett policyskyddat dokument eller genom att använda ett kommando i klientprogrammet. Se *Hjälp om Acrobat* eller *Hjälp om Acrobat Reader DC Extensions* för mer information.
+När offlinelåneperioden är slut synkroniserar du dokumentet igen med dokumentsäkerhet, antingen genom att gå online och öppna ett policyskyddat dokument eller genom att använda ett kommando i klientprogrammet. Mer information finns i *hjälpen för Acrobat* eller i *hjälpen för Acrobat Reader DC-tillägg*.
 
 Om du sparar en kopia av ett principskyddat dokument med menykommandot Spara eller Spara som, används profilen automatiskt för det nya dokumentet. Händelser som försök att öppna det nya dokumentet granskas också och registreras för det ursprungliga dokumentet.
 
 ## Principuppsättningar {#policy-sets}
 
-*Principuppsättningar* används för att gruppera en uppsättning policyer som har ett gemensamt affärssyfte. Dessa principuppsättningar görs sedan tillgängliga för en delmängd av användarna i systemet.
+*Principuppsättningar* används för att gruppera en uppsättning principer som har ett gemensamt affärssyfte. Dessa principuppsättningar görs sedan tillgängliga för en delmängd av användarna i systemet.
 
-Varje principuppsättning kan ha en eller flera associerade principuppsättningskoordinatorer. Principuppsättningens koordinator är en administratör eller en användare som har fler behörigheter. The *principuppsättningskoordinator* är vanligtvis en specialist i organisationen som bäst kan skapa policyer i en viss uppsättning.
+Varje principuppsättning kan ha en eller flera associerade principuppsättningskoordinatorer. Principuppsättningens koordinator är en administratör eller en användare som har fler behörigheter. *Principuppsättningskoordinatorn* är vanligtvis en specialist i organisationen som bäst kan skapa policyer i en viss principuppsättning.
 
 Koordinatorer för principuppsättningar kan utföra följande uppgifter:
 
@@ -223,19 +223,19 @@ Koordinatorer för principuppsättningar kan utföra följande uppgifter:
 
 >[!NOTE]
 >
->Du kan hämta högst 1 000 principuppsättningsnamn från databasen med `getAllPolicysetnames()` API.
+>Du kan hämta högst 1 000 principuppsättningsnamn från databasen med API:t `getAllPolicysetnames()`.
 
 Policyuppsättningar skapas och tas bort på webbsidorna för dokumentsäkerhetsadministration av administratörer och koordinatorer för principuppsättningar som har behörighet att göra det.
 
 Policyuppsättningar är tillgängliga för ett begränsat antal användare genom att ange vilka användare eller grupper inom en domän som kan använda profilerna från den principuppsättningen för att skydda dokument.
 
-När dokumentsäkerhet är installerat skapas en standardprincipuppsättning som kallas *Global principuppsättning*. Administratören som installerade programvaran hanterar den här principinställningen.
+När dokumentsäkerhet är installerat skapas en standardprincipuppsättning med namnet *Global principuppsättning*. Administratören som installerade programvaran hanterar den här principinställningen.
 
 ## God praxis {#best-practices}
 
 Profiler är återanvändbara behörighetsgrupper och användargrupper som kan användas i olika dokument. För de skyddade dokumenten. Dessa profiler säkerställer att endast behöriga användare kan använda tillåtna funktioner. Antalet policyer och uppsättningar förväntas öka med olika användarroller och dokument på en avdelning. Här följer några överväganden och bästa metoder för att skapa och hantera principer:
 
-* **Skapa återanvändbara profiler:** Adobe rekommenderar att du återanvänder profiler i olika dokument. Det hjälper till att hålla antalet profiler så få som möjligt, ger optimala prestanda och gör det enklare att hantera profilerna. Så här skapar du en återanvändbar profil:
+* **Skapa återanvändbara profiler:** Adobe rekommenderar återanvändning av profiler i olika dokument. Det hjälper till att hålla antalet profiler så få som möjligt, ger optimala prestanda och gör det enklare att hantera profilerna. Så här skapar du en återanvändbar profil:
 
 1. Identifiera och definiera krav på åtkomstkontroll på avdelnings- och organisationsnivå.
 
@@ -251,7 +251,7 @@ Lägg till användargrupper i profiler i stället för enskilda användare. Det 
 
   Med hjälp av principuppsättningar blir det enklare att tilldela och hantera relaterade profiler till specifika användare i en organisation eller avdelning. Exempelvis kan olika uppsättningar av policyer för ekonomi och personaladministration underlätta hanteringen och tillämpningen av relaterade policyer på dokument avsedda för motsvarande avdelningar.
 
-* **Använd en extern auktoriserare för att tillämpa behörigheter dynamiskt:** Du kan använda [extern auktoriserare](https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-6f26.2.html) att utvärdera och dynamiskt tillämpa behörigheter baserat på externt tillstånd. När behörigheterna utvärderas dynamiskt utifrån ett externt villkor kan du:
+* **Använd en extern auktoriserare för att tillämpa behörigheter dynamiskt:** Du kan använda [extern auktoriserare](https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-6f26.2.html) för att utvärdera och dynamiskt tillämpa behörigheter baserat på externt villkor. När behörigheterna utvärderas dynamiskt utifrån ett externt villkor kan du:
 
    * centralt åtkomsthantering för dokument i er organisation.
 
@@ -261,7 +261,7 @@ Lägg till användargrupper i profiler i stället för enskilda användare. Det 
 
   Även om det är möjligt att helt ersätta dokumentsäkerhetsprincipens utvärderingsprocess med en extern behörighetshanterare, rekommenderar vi att du använder en extern behörighetshanterare tillsammans med principutvärderingsprocessen. Detta innebär att dokumentåtkomsten kan styras av samma kontrollmekanism som används i innehållshanteringssystemet. När dokumentskyddstjänsten till exempel avgör om en användare kan skriva ut ett policyskyddat dokument, används standardprocessen för utvärdering av skyddsprofiler. Den använder också åtkomstkontrollsmekanismen som används i innehållshanteringssystemet. Mer information finns i [Skapa externa auktoriseringshanterare](https://help.adobe.com/en_US/livecycle/11.0/ProgramLC/WS624e3cba99b79e12e69a9941333732bac8-6f26.2.html).
 
-* **Behåll principuppsättningarna till ett begränsat antal:** Flera faktorer leder till en konstant tillväxt av politiken och politiska uppsättningar. Några vanliga faktorer är:
+* **Behåll principuppsättningarna till ett begränsat antal:** Flera faktorer leder till en konstant ökning av principer och principuppsättningar. Några vanliga faktorer är:
 
    * Öka antalet användarroller, avdelningar och dokument inom en organisation under en period.
    * En organisations avdelningar arbetar isolerat och har noggrann kontroll över de avdelningsspecifika reglerna. Det leder till identiska policyer inom en organisation.
@@ -275,4 +275,4 @@ Lägg till användargrupper i profiler i stället för enskilda användare. Det 
 
   >[!NOTE]
   >
-  >Du kan använda [getAllPolicySetName()](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) API för att hämta högst 1 000 principuppsättningsnamn. Internt hämtar API:t upp till 1 000 principer som API-anroparen har dokumentutgivarbehörighet för och skapar och returnerar sedan en lista med unika principuppsättningsnamn som är associerade med hämtade profiler till dig. Om API:t till exempel hämtar 1 000 principer och de hämtade profilerna är kopplade till totalt 200 principuppsättningar, returnerar API bara 200 principuppsättningsnamn.
+  >Du kan använda API:t [getAllPolicyListennames()](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/programlc/javadoc/com/adobe/livecycle/rightsmanagement/client/PolicyManager.html) för att hämta maximalt 1 000 principuppsättningsnamn. Internt hämtar API:t upp till 1 000 principer som API-anroparen har dokumentutgivarbehörighet för och skapar och returnerar sedan en lista med unika principuppsättningsnamn som är associerade med hämtade profiler till dig. Om API:t till exempel hämtar 1 000 principer och de hämtade profilerna är kopplade till totalt 200 principuppsättningar, returnerar API bara 200 principuppsättningsnamn.

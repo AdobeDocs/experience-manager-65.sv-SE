@@ -28,7 +28,7 @@ cURL är ett kommandoradsverktyg med öppen källkod som används för att utfö
 
 cURL är ett väletablerat och allmänt använt verktyg för att hämta och skicka data med URL-syntaxen och släpptes ursprungligen 1997. Namnet cURL betydde ursprungligen &quot;se URL&quot;.
 
-På grund av Sling-ramverkets RESTful-karaktär, som AEM bygger på, kan de flesta åtgärder minskas till ett URL-anrop, som kan köras med cURL. [Åtgärder för innehållsmanipulering](/help/sites-administering/curl.md#common-content-manipulation-aem-curl-commands) som att aktivera sidor och starta arbetsflöden och [operativa uppgifter](/help/sites-administering/curl.md#common-operational-aem-curl-commands) som pakethantering och hantering av användare kan automatiseras med cURL. Dessutom kan du [skapa en egen cURL](/help/sites-administering/curl.md#building-a-curl-ready-aem-command) -kommandon för de flesta åtgärder i AEM.
+På grund av Sling-ramverkets RESTful-karaktär, som AEM bygger på, kan de flesta åtgärder minskas till ett URL-anrop, som kan köras med cURL. [Åtgärder för innehållsredigering](/help/sites-administering/curl.md#common-content-manipulation-aem-curl-commands), t.ex. aktivering av sidor och start av arbetsflöden samt [operativa uppgifter](/help/sites-administering/curl.md#common-operational-aem-curl-commands), t.ex. pakethantering och hantering av användare, kan automatiseras med cURL. Dessutom kan du [skapa egna cURL](/help/sites-administering/curl.md#building-a-curl-ready-aem-command)-kommandon för de flesta åtgärder i AEM.
 
 >[!NOTE]
 >
@@ -46,22 +46,22 @@ cURL-kommandon kan byggas för de flesta åtgärder i AEM, som att utlösa arbet
 
 Om du vill hitta exakt det kommando som du behöver för en viss åtgärd måste du använda utvecklarverktygen i webbläsaren för att fånga upp anropet till POSTEN när du kör AEM.
 
-I följande steg beskrivs hur du gör detta genom att skapa en ny sida i webbläsaren Chrome.
+I följande steg beskrivs hur du gör detta genom att skapa en ny sida i webbläsaren i Chrome.
 
-1. Förbered den åtgärd som du vill anropa inom AEM. I det här fallet har vi gått till slutet av **Skapa sida** guide, men ännu inte klickat **Skapa**.
+1. Förbered den åtgärd som du vill anropa inom AEM. I det här fallet har vi gått till slutet av guiden **Skapa sida**, men ännu inte klickat på **Skapa**.
 
    ![chlimage_1-66](assets/chlimage_1-66a.png)
 
-1. Starta utvecklarverktygen och välj **Nätverk** -fliken. Klicka på **Bevara logg** innan du rensar konsolen.
+1. Starta utvecklarverktygen och välj fliken **Nätverk**. Klicka på alternativet **Bevara logg** innan du rensar konsolen.
 
    ![chlimage_1-67](assets/chlimage_1-67a.png)
 
-1. Klicka **Skapa** i **Skapa sida** guide för att skapa arbetsflödet.
-1. Högerklicka på den slutliga POSTEN och markera **Kopiera** > **Kopiera som cURL**.
+1. Klicka på **Skapa** i guiden **Skapa sida** för att skapa arbetsflödet.
+1. Högerklicka på den resulterande POSTEN och välj **Kopiera** > **Kopiera som cURL**.
 
    ![chlimage_1-68](assets/chlimage_1-68a.png)
 
-1. Kopiera kommandot cURL till en textredigerare och ta bort alla rubriker från kommandot som börjar med `-H` (markerat med blått i bilden nedan) och lägg till rätt autentiseringsparameter, som `-u <user>:<password>`.
+1. Kopiera cURL-kommandot till en textredigerare och ta bort alla rubriker från kommandot, som börjar med `-H` (markerat med blått i bilden nedan) och lägger till rätt autentiseringsparameter, till exempel `-u <user>:<password>`.
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -75,7 +75,7 @@ Här är en lista AEM cURL-kommandon för vanliga administrativa och operativa u
 
 >[!NOTE]
 >
->I följande exempel antas att AEM körs på `localhost` på port `4502` och använder användaren `admin` med lösenord `admin`. Ytterligare kommandoplatshållare anges inom vinkelparenteser.
+>I följande exempel antas att AEM körs på `localhost` på port `4502` och använder användaren `admin` med lösenordet `admin`. Ytterligare kommandoplatshållare anges inom vinkelparenteser.
 
 ### Pakethantering {#package-management}
 
@@ -221,7 +221,7 @@ curl -u <user>:<password> -FdeleteAuthorizable= http://localhost:4502/home/group
 
 ### Säkerhetskopiering {#backup}
 
-Se [Säkerhetskopiering och återställning](/help/sites-administering/backup-and-restore.md#automating-aem-online-backup) för mer information.
+Mer information finns i [Säkerhetskopiera och återställ](/help/sites-administering/backup-and-restore.md#automating-aem-online-backup).
 
 ### OSGi {#osgi}
 
@@ -288,33 +288,33 @@ curl -u <user>:<password> -F "cmd=clear" -F "name=publish"  http://localhost:450
 
 #### Tilldela och återkalla märken {#assign-and-revoke-badges}
 
-Se [Communities Scoring and Badges](/help/communities/implementing-scoring.md#assign-and-revoke-badges) för mer information.
+Mer information finns i [Webbgruppsbedömning och emblem](/help/communities/implementing-scoring.md#assign-and-revoke-badges).
 
-Se [Grundläggande om poäng och emblem](/help/communities/configure-scoring.md#example-setup) för mer information.
+Mer information finns i [Grundläggande om poäng och emblem](/help/communities/configure-scoring.md#example-setup).
 
 #### MSRP-omindexering {#msrp-reindexing}
 
-Se [MSRP - lagringsresursprovider för MongoDB](/help/communities/msrp.md#running-msrp-reindex-tool-using-curl-command) för mer information.
+Mer information finns i [MSRP - MongoDB-lagringsresursprovidern](/help/communities/msrp.md#running-msrp-reindex-tool-using-curl-command).
 
 ### Dokumentskydd {#security}
 
 #### Aktivera och inaktivera CRX DE Lite {#enabling-and-disabling-crx-de-lite}
 
-Se [Aktivera CRXDE Lite i AEM](/help/sites-administering/enabling-crxde-lite.md) för mer information.
+Mer information finns i [Aktivera CRXDE Lite i AEM](/help/sites-administering/enabling-crxde-lite.md).
 
 ### Skräpinsamling för datalager {#data-store-garbage-collection}
 
-Se [Skräpinsamling för datalager](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection) för mer information.
+Mer information finns i [skräpinsamlingen för datalagret](/help/sites-administering/data-store-garbage-collection.md#automating-data-store-garbage-collection).
 
 ### Analys och målintegrering {#analytics-and-target-integration}
 
-Se [Ingå i Adobe Analytics och Adobe Target](/help/sites-administering/opt-in.md#configuring-the-setup-and-provisioning-via-script) för mer information.
+Mer information finns i [Gå till Adobe Analytics och Adobe Target](/help/sites-administering/opt-in.md#configuring-the-setup-and-provisioning-via-script).
 
 ### Enkel inloggning {#single-sign-on}
 
 #### Skicka testhuvud {#send-test-header}
 
-Se [Enkel inloggning](/help/sites-deploying/single-sign-on.md) för mer information.
+Mer information finns i [Enkel inloggning](/help/sites-deploying/single-sign-on.md).
 
 ## Vanlig innehållshantering AEM cURL-kommandon {#common-content-manipulation-aem-curl-commands}
 
@@ -322,7 +322,7 @@ Här är en lista AEM cURL-kommandon för innehållsändring.
 
 >[!NOTE]
 >
->I följande exempel antas att AEM körs på `localhost` på port `4502` och använder användaren `admin` med lösenord `admin`. Ytterligare kommandoplatshållare anges inom vinkelparenteser.
+>I följande exempel antas att AEM körs på `localhost` på port `4502` och använder användaren `admin` med lösenordet `admin`. Ytterligare kommandoplatshållare anges inom vinkelparenteser.
 
 ### Sidhantering {#page-management}
 
@@ -364,7 +364,7 @@ curl -u <user>:<password> -F cmd=copyPage -F destParentPath=/path/to/destination
 
 ### Arbetsflöden {#workflows}
 
-Se [Interagera med arbetsflöden programmatiskt](/help/sites-developing/workflows-program-interaction.md) för mer information.
+Mer information finns i [Interagera med arbetsflöden programmatiskt](/help/sites-developing/workflows-program-interaction.md).
 
 ### Sling Content {#sling-content}
 
@@ -412,4 +412,4 @@ curl -u <user>:<password> -F "*=@test.properties;type=text/plain" http://localho
 
 ### Tillgångshantering {#asset-manipulation}
 
-Se [Resurser för HTTP API](/help/assets/mac-api-assets.md) för mer information.
+Mer information finns i [Assets HTTP API](/help/assets/mac-api-assets.md).

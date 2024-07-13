@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Ordlista{#glossary}
 
-I den här ordlistan visas (i bokstavsordning) information om alla dokument i slutprodukten som finns i [Projektchecklista](/help/managing/best-practices-checklist.md).
+I den här ordlistan visas (i bokstavsordning) information om alla slutdokument från [Projektchecklistan](/help/managing/best-practices-checklist.md).
 
 ## Godkännande från affärsintressenter {#acceptance-from-business-stakeholders}
 
@@ -46,7 +46,7 @@ Kontrollera att de nödvändiga nivåerna av systemåtkomst har beviljats för a
 
 ### Adobe Security Checklist {#adobe-security-checklist}
 
-The [Adobe Security Checklist](/help/sites-administering/security-checklist.md) är den officiella checklista som tillhandahålls för att säkerställa att Adobe Experience Manager (AEM) är säkert vid installationen. Den innehåller de säkerhetsåtgärder och verifieringssteg som du måste utföra för att säkerställa instansens integritet.
+[Säkerhetschecklistan för Adobe](/help/sites-administering/security-checklist.md) är den officiella checklistan som tillhandahålls för att säkerställa att Adobe Experience Manager (AEM) är säkert vid installationen. Den innehåller de säkerhetsåtgärder och verifieringssteg som du måste utföra för att säkerställa instansens integritet.
 
 ### Projektinställningar för Adobe supportportal {#adobe-support-portal-project-set-up}
 
@@ -56,19 +56,19 @@ Information kan registreras, t.ex. om de tekniker och versioner som implementera
 
 ### Utbildning av AEM {#aem-administrator-training}
 
-Utbildning för administrativ personal i lösningen. Se [Adobe Training Services](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) för mer information.
+Utbildning för administrativ personal i lösningen. Mer information finns i [Adobe Training Services](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager).
 
 ### Utbildning av AEM {#aem-author-training}
 
-Utbildning för personal som ska producera (skriva) innehåll för lösningen. Se [Adobe Training Services](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager) för mer information.
+Utbildning för personal som ska producera (skriva) innehåll för lösningen. Mer information finns i [Adobe Training Services](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager).
 
 ### AEM certifieringsprov {#aem-certification-exam}
 
-Se till att rätt personer registreras för att ta relevanta uppgifter [certifieringsprov](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
+Se till att rätt personer är registrerade för att genomföra relevanta [certifieringsprov](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
 
 ### AEM Certifierad {#aem-certified}
 
-Se till att rätt person har passerat den relevanta [certifieringsprov](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
+Kontrollera att rätt person har klarat de relevanta [certifieringsproven](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
 
 ### AEM teknisk utbildning {#aem-technical-training}
 
@@ -92,7 +92,7 @@ Kundens färdplan består av milstolpar på hög nivå och affärsmål. Projekte
 
 ### Programarkitekturdefinition {#application-architecture-definition}
 
-The [applikationsarkitektur](/help/managing/best-practices.md#development-preparation) bör tydligt definiera beteendet hos de föreslagna tillämpningarna.
+[Programarkitekturen](/help/managing/best-practices.md#development-preparation) bör tydligt definiera beteendet för de föreslagna programmen.
 
 Den fokuserar på:
 
@@ -109,7 +109,8 @@ Se till att ditt team består av personal med lämplig utbildning. För projektt
 
 * minst en AEM certifierad Lead Developer
 * minst en AEM certifierad arkitekt
-* minst 75 % av dina utvecklare AEM certifierade; detta gör att certifierade utvecklare kan styra viktiga utvecklare och säkerställa kunskapsdelning och transparens
+* minst 75 % av utvecklarna AEM certifierade;
+detta gör att certifierade utvecklare kan mentera ledande utvecklare och säkerställa kunskapsutbyte och öppenhet
 
 ### Arkitekturdiagram {#architecture-diagram}
 
@@ -206,7 +207,8 @@ Affärs-KPI:er definierar mätbara värden som visar hur effektivt ett företag 
 
 Ett dokument med affärskrav (BRD, business requirements document) innehåller en detaljerad beskrivning av affärslösningen för ett projekt och en tydlig specifikation av kundens behov och förväntningar. BRD skiljer också mellan affärslösningen och den tekniska lösningen.
 
-När BRD undersöker affärslösningen bör det svara på frågan:&quot;Vad vill företaget göra?&quot;
+Vid granskningen av affärslösningen bör företagsledningen svara på frågan:
+&quot;Vad vill företaget göra?&quot;
 
 ### Business Sign Off on any required adjustments to the Solution or Architecture Identified and Alignment Against ROI and KPI Expectations {#business-sign-off-on-any-required-adjustments-to-the-solution-or-architecture-identified-and-aligned-against-roi-and-kpi-expectations}
 
@@ -502,7 +504,7 @@ Resultat av en genomförbarhetsstudie för både AEM och konstruktion av högniv
 
 ### Slutet kontrakt {#finalized-contract}
 
-Ett slutfört och signerat kontrakt krävs innan du fortsätter med projektet. Detta baseras på [Kontraktsutkast](#contract-draft).
+Ett slutfört och signerat kontrakt krävs innan du fortsätter med projektet. Detta baseras på [kontraktsutkastet](#contract-draft).
 
 ### Funktionaliteten i lösningen som accepteras av intressenter {#functionality-of-the-solution-accepted-by-stakeholders}
 
@@ -871,7 +873,7 @@ Detta används ofta i UAT (User Acceptance Testing).
 
 Konceptbeviset (POC) mäts mot kraven för att säkerställa att båda är justerade.
 
-### Checklista efter distribution {#post-deployment-checklist}
+### Checklista för Post-distribution {#post-deployment-checklist}
 
 En checklista som definierar antalet kontroller och uppgifter som ska utföras efter varje distribution.
 
@@ -901,7 +903,7 @@ Definiera kommunikationsplanen för både affärsintressenter och projektteamet.
 
 ### Projektansträngningar - slutliga uppskattningar {#project-efforts-final-estimates}
 
-The [ursprungliga uppskattningar](#project-efforts-initial-estimates) var höga och gjordes i enlighet med de höga kraven för genomförandet.
+De [ursprungliga uppskattningarna](#project-efforts-initial-estimates) var höga och gjordes enligt de höga kraven för implementeringen.
 
 Dessa granskas, förfinas och utökas för att ge den slutliga uppskattningen. Beräkningar ska levereras av varje lämplig projektledare, inklusive projektledning, konsulttjänster, arkitektur, testning och utveckling.
 
@@ -1285,7 +1287,7 @@ Testkonceptet är en översikt på hög nivå över testningen av projektet, ink
 
 ### Testningsplaner {#testing-plans}
 
-I dessa planer beskrivs utförligare testerna för varje utvecklingsfas och de bygger på [Testningsstrategi](#testing-strategy).
+I dessa planer beskrivs utförligare testkörningen för varje utvecklingsfas och de baseras på [testningsstrategin](#testing-strategy).
 
 ### Testomfång {#testing-scope}
 

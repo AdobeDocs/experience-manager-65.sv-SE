@@ -24,7 +24,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
 >
 >Den här steg-för-steg-guiden för att skapa en Cloud Service är ett exempel på hur du använder Google Analytics. Allt kanske inte gäller ditt användningsfall.
 
-1. Skapa en nod under CRXDE Lite `/apps`:
+1. Skapa en nod under `/apps` i CRXDE Lite:
 
    * **Namn**: `acs`
    * **Typ**: `nt:folder`
@@ -44,7 +44,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
    * **Namn**: mallar
    * **Typ**: `sling:Folder`
 
-1. Högerklicka `/apps/acs/analytics/components`. Välj **Skapa...** följt av **Skapa komponent...** I den dialogruta som öppnas kan du ange:
+1. Högerklicka på `/apps/acs/analytics/components`. Välj **Skapa..** följt av **Skapa komponent..** I dialogrutan som öppnas kan du ange:
 
    * **Etikett**: `googleanalyticspage`
    * **Titel**: `Google Analytics Page`
@@ -55,7 +55,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
 
    * **Tillåtna överordnade:** `acs/analytics/templates/googleanalytics`
 
-   Klicka **Nästa** två gånger och klicka **OK**.
+   Klicka på **Nästa** två gånger och klicka på **OK**.
 
 1. Lägg till en egenskap i `googleanalyticspage`:
 
@@ -122,7 +122,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
    * **Egenskaper**:
 
       * **Namn**: `fieldLabel`
-      * **Typ**: String
+      * **Typ**: Sträng
       * **Värde**: Konto-ID
 
       * **Namn**: `fieldDescription`
@@ -139,16 +139,16 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
       * **Typ**: `String`
       * **Värde**: `textfield`
 
-1. Kopiera `/libs/cq/cloudserviceconfigs/components/configpage/body.jsp` till `/apps/acs/analytics/components/googleanalyticspage/body.jsp` och ändra `libs` till `apps` på rad 34 och göra skriptreferensen på rad 79 till en fullständigt kvalificerad sökväg.
+1. Kopiera `/libs/cq/cloudserviceconfigs/components/configpage/body.jsp` till `/apps/acs/analytics/components/googleanalyticspage/body.jsp` och ändra `libs` till `apps` på rad 34 och gör skriptreferensen på rad 79 till en fullständig kvalificerad sökväg.
 1. Skapa en mall under `/apps/acs/analytics/templates/`:
 
    * med **Resurstyp** = `acs/analytics/components/googleanalyticspage`
    * med **Etikett** = `googleanalytics`
-   * med **Titel**= `Google Analytics Configuration`
+   * med **Title**= `Google Analytics Configuration`
    * med **allowedPath** = `/etc/cloudservices/googleanalytics(/.*)?`
    * med **allowedChildren** = `/apps/acs/analytics/templates/googleanalytics`
    * med **sling:resourceSuperType** = `cq/cloudserviceconfigs/templates/configpage` (på mallnod, inte jcr:content-noden)
-   * med **cq:designPath** = `/etc/designs/cloudservices/googleanalytics` (on jcr:content)
+   * med **cq:designPath** = `/etc/designs/cloudservices/googleanalytics` (på jcr:content)
 
 1. Skapa en komponent: `/apps/acs/analytics/components/googleanalytics`.
 
@@ -198,7 +198,7 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
    * **Titel**: `Google Analytics`
    * **Namn**: `googleanalytics`
 
-   Gå tillbaka i CRXDE Lite och under `/etc/cloudservices/googleanalytics`lägger du till följande egenskap i `jcr:content`:
+   Gå tillbaka i CRXDE Lite och under `/etc/cloudservices/googleanalytics`, lägg till följande egenskap i `jcr:content`:
 
    * **Namn**: `componentReference`
    * **Typ**: `String`
@@ -207,10 +207,10 @@ Standarduppsättningen med Cloud Services kan utökas med anpassade Cloud Servic
 1. Navigera till den nyligen skapade tjänstsidan ( `http://localhost:4502/etc/cloudservices/googleanalytics.html`) och klicka på **+** för att skapa en konfiguration:
 
    * **Överordnad konfiguration**: `/etc/cloudservices/googleanalytics`
-   * **Titel:**  `My First GA Config`
+   * **Titel:** `My First GA Config`
 
-   Välj **Konfiguration av Google Analytics** och klicka **Skapa**.
+   Välj **Konfiguration av Google Analytics** och klicka på **Skapa**.
 
-1. Ange en **Konto-ID**, till exempel `AA-11111111-1`. Klicka **OK**.
-1. Navigera till en sida och lägg till den nya konfigurationen i sidegenskaperna, under **Cloud Service** -fliken.
+1. Ange ett **konto-ID**, till exempel `AA-11111111-1`. Klicka på **OK**.
+1. Navigera till en sida och lägg till den nya konfigurationen i sidegenskaperna, under fliken **Cloud Service**.
 1. Den anpassade koden läggs till på sidan.

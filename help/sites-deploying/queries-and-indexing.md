@@ -1,5 +1,5 @@
 ---
-title: Fråga och indexering
+title: Oak Queries and Indexing
 description: Lär dig konfigurera index i Adobe Experience Manager (AEM) 6.5.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,17 +17,17 @@ ht-degree: 0%
 
 ---
 
-# Fråga och indexering{#oak-queries-and-indexing}
+# Oak Queries and Indexing{#oak-queries-and-indexing}
 
 >[!NOTE]
 >
->Den här artikeln handlar om att konfigurera index i AEM 6. De bästa sätten att optimera fråga- och indexeringsprestanda finns i [Metodtips för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
+>Den här artikeln handlar om att konfigurera index i AEM 6. Mer information om hur du optimerar fråga- och indexeringsprestanda finns i [Bästa metoder för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
 ## Introduktion {#introduction}
 
-Till skillnad från Jackrabbit 2 indexerar inte Oak innehållet som standard. Anpassade index måste skapas när det behövs, ungefär som med traditionella relationsdatabaser. Om det inte finns något index för en viss fråga kan många noder gå igenom. Frågan kanske fortfarande fungerar, men den är förmodligen långsam.
+Till skillnad från Jackrabbit 2 indexerar Oak inte innehåll som standard. Anpassade index måste skapas när det behövs, ungefär som med traditionella relationsdatabaser. Om det inte finns något index för en viss fråga kan många noder gå igenom. Frågan kanske fortfarande fungerar, men den är förmodligen långsam.
 
-Om Oak stöter på en fråga utan index skrivs ett loggmeddelande på WARN-nivå ut:
+Om Oak påträffar en fråga utan index skrivs ett loggmeddelande på WARN-nivå ut:
 
 ```xml
 *WARN* Traversed 1000 nodes with filter Filter(query=select ...) consider creating an index or changing the query
@@ -35,7 +35,7 @@ Om Oak stöter på en fråga utan index skrivs ett loggmeddelande på WARN-nivå
 
 ## Frågespråk som stöds {#supported-query-languages}
 
-Oak-frågemotorn stöder följande språk:
+Oak frågemotor har stöd för följande språk:
 
 * XPath (rekommenderas)
 * SQL-2
@@ -46,13 +46,13 @@ Oak-frågemotorn stöder följande språk:
 
 Med Apache Oak-baserad backend kan olika indexerare kopplas in i databasen.
 
-En indexerare är **Egenskapsindex** som indexdefinitionen lagras i själva databasen.
+En indexerare är **egenskapsindexet**, som indexdefinitionen lagras i själva databasen.
 
-Implementeringar för **Apache Lucene** och **Solr** är också tillgängliga som standard, som båda stöder fulltextindexering.
+Implementeringar för **Apache Lucene** och **Solr** är också tillgängliga som standard, vilket båda stöder fulltextindexering.
 
-The **Traversal Index** används om ingen annan indexerare är tillgänglig. Det innebär att innehållet inte är indexerat och att innehållsnoderna gås igenom för att hitta matchningar med frågan.
+**Traversal Index** används om ingen annan indexerare är tillgänglig. Det innebär att innehållet inte är indexerat och att innehållsnoderna gås igenom för att hitta matchningar med frågan.
 
-Om det finns flera tillgängliga indexerare för en fråga beräknar varje tillgänglig indexerare kostnaden för att köra frågan. Därefter väljer Oak indexeraren med den lägsta uppskattade kostnaden.
+Om det finns flera tillgängliga indexerare för en fråga beräknar varje tillgänglig indexerare kostnaden för att köra frågan. Oak väljer sedan indexeraren med den lägsta uppskattade kostnaden.
 
 ![chlimage_1-148](assets/chlimage_1-148.png)
 
@@ -66,11 +66,11 @@ Därefter används varje index för att beräkna kostnaden för frågan. När de
 
 >[!NOTE]
 >
->För en stor databas är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen ändrats). Se även [Felsökning av aktivitetsindex](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
+>För en stor databas är det tidskrävande att skapa ett index. Detta gäller både när ett index skapas första gången och när ett index indexeras om (när definitionen ändrats). Se även [Felsöka Oak-index](/help/sites-deploying/troubleshooting-oak-indexes.md) och [Förhindra långsam omindexering](/help/sites-deploying/troubleshooting-oak-indexes.md#preventing-slow-re-indexing).
 
 Om omindexering behövs i stora databaser, särskilt när du använder MongoDB och fulltextindex, bör du överväga att extrahera text och använda eko-run för att skapa det ursprungliga indexet och indexera om.
 
-Index konfigureras som noder i databasen under **Oak:index** nod.
+Index konfigureras som noder i databasen under noden **Oak:index** .
 
 Indexnodens typ måste vara **oak:QueryIndexDefinition.** Det finns flera konfigurationsalternativ tillgängliga för varje indexerare som nodegenskaper. Mer information finns i konfigurationsinformationen för varje indexerartyp nedan.
 
@@ -78,28 +78,28 @@ Indexnodens typ måste vara **oak:QueryIndexDefinition.** Det finns flera konfig
 
 Egenskapsindexet är användbart för frågor som har egenskapsbegränsningar men inte är fulltextfrågor. Den kan konfigureras genom att följa proceduren nedan:
 
-1. Öppna CRXDE genom att `http://localhost:4502/crx/de/index.jsp`
+1. Öppna CRXDE genom att gå till `http://localhost:4502/crx/de/index.jsp`
 1. Skapa en nod under **oak:index**
 1. Namnge noden **PropertyIndex** och ange nodtypen till **oak:QueryIndexDefinition**
 1. Ange följande egenskaper för den nya noden:
 
-   * **typ:**  `property` (av typen String)
-   * **propertyNames:**  `jcr:uuid` (av typen Namn)
+   * **type:** `property` (av typen String)
+   * **propertyNames:** `jcr:uuid` (av typen Name)
 
-   Det här exemplet indexerar `jcr:uuid` egenskapen, vars jobb är att visa den universellt unika identifieraren (UUID) för noden som den är kopplad till.
+   I det här exemplet indexeras egenskapen `jcr:uuid`, vars jobb är att visa den universellt unika identifieraren (UUID) för noden som den är kopplad till.
 
 1. Spara ändringarna.
 
 Egenskapsindexet har följande konfigurationsalternativ:
 
-* The **type** egenskapen anger typen av index, och i det här fallet måste den anges till **property**
+* Egenskapen **type** anger typen av index, och i det här fallet måste den anges till **property**
 
-* The **propertyNames** anger listan med egenskaper som lagras i indexet. Om det saknas används nodnamnet som referensvärde för egenskapsnamnet. I det här exemplet **jcr:uuid** egenskapen vars jobb är att visa den unika identifieraren (UUID) för noden läggs till i indexet.
+* Egenskapen **propertyNames** anger listan med egenskaper som lagras i indexet. Om det saknas används nodnamnet som referensvärde för egenskapsnamnet. I det här exemplet läggs egenskapen **jcr:uid**, vars jobb är att visa den unika identifieraren (UUID) för noden, till i indexet.
 
-* The **unik** flagga som, om den är inställd på **true** lägger till en unikhetsbegränsning i egenskapsindexet.
+* Flaggan **unique** som, om den är inställd på **true**, lägger till en unik begränsning i egenskapsindexet.
 
-* The **declareNodeTypes** kan du ange en viss nodtyp som indexet bara gäller för.
-* The **reindex** flagga som **true**, utlöser en omindexering av fullständigt innehåll.
+* Med egenskapen **DeclaringNodeTypes** kan du ange en viss nodtyp som indexet bara gäller för.
+* Flaggan **reindex** som, om den är inställd på **true**, utlöser en omindexering av fullständigt innehåll.
 
 ### Orderat index {#the-ordered-index}
 
@@ -121,18 +121,18 @@ Du kan konfigurera ett fulltextindex för Lucene enligt följande procedur:
 1. Namnge noden **LuceneIndex** och ange nodtypen till **oak:QueryIndexDefinition**
 1. Lägg till följande egenskaper i noden:
 
-   * **typ:**  `lucene` (av typen String)
-   * **asynk:**  `async` (av typen String)
+   * **type:** `lucene` (av typen String)
+   * **async:** `async` (av typen String)
 
 1. Spara ändringarna.
 
 Lucene-indexet har följande konfigurationsalternativ:
 
-* The **type** egenskap som anger typen av index måste anges till **lucen**
-* The **async** egenskap som måste anges till **async**. Detta skickar indexuppdateringsprocessen till en bakgrundstråd.
-* The **includePropertyTypes** som definierar vilken deluppsättning av egenskapstyper som ingår i indexet.
-* The **excludePropertyNames** som definierar en lista med egenskapsnamn - egenskaper som ska uteslutas från indexet.
-* The **reindex** flagga som **true**, utlöser en omindexering av fullständigt innehåll.
+* Egenskapen **type** som anger typen av index måste anges till **lucene**
+* Egenskapen **async** som måste anges till **async**. Detta skickar indexuppdateringsprocessen till en bakgrundstråd.
+* Egenskapen **includePropertyTypes** som definierar vilken delmängd av egenskapstyper som ingår i indexet.
+* Egenskapen **excludePropertyNames** som definierar en lista med egenskapsnamn - egenskaper som ska uteslutas från indexet.
+* Flaggan **reindex** som utlöser en omindexering av fullständigt innehåll när den anges till **true**.
 
 ### Förstå fulltextsökning {#understanding-fulltext-search}
 
@@ -142,7 +142,7 @@ Dokumentationen i det här avsnittet gäller till exempel Apache Lucene, Elastic
 
 Startpunkten är de data som måste indexeras. Ta följande dokument som exempel:
 
-| <b>Dokument-ID</b> | <b>Bana</b> | <b>Fulltext</b> |
+| <b>Dokument-ID</b> | <b>Sökväg</b> | <b>Fulltext</b> |
 | --- | --- | --- |
 | 100 | /content/rubik | &quot;Rubik är ett finskt varumärke.&quot; |
 | 200 | /content/rubiksCube | &quot;Rubiks kub uppfanns 1974.&quot; |
@@ -155,7 +155,7 @@ Indexeringsfunktionen delar upp fulltexten i ord som kallas &quot;tokens&quot; o
 
 Korta, vanliga ord (kallas även&quot;stopwords&quot;) indexeras inte. Alla variabler konverteras till gemener och ordstam används.
 
-Specialtecken som *&quot;-&quot;* är inte indexerade.
+Specialtecken som *-* är inte indexerade.
 
 | <b>Token</b> | <b>Dokument-ID</b> |
 | --- | --- |
@@ -193,16 +193,16 @@ Indexet läser listan med dokument för dessa ord. Om det finns många dokument 
 | kub | 30, 200, 300, 2000 |
 
 
-Lucene vänds fram och tillbaka mellan de två listorna (eller rund-robin) `n` listor, vid sökning efter `n` ord):
+Lucene bläddrar fram och tillbaka mellan de två listorna (eller rundrobat `n`-listor, när du söker efter `n` ord):
 
 * Läs in&quot;rubik&quot; hämtar den första posten: hittar 10
-* Läs i &quot;cube&quot; hämtar den första posten `>` = 10. 10 hittas inte och nästa är 30.
-* Läs in &quot;rubik&quot; som hämtar den första posten `>` = 30: 100 hittas.
-* Läs i &quot;cube&quot; hämtar den första posten `>` = 100: 200 hittas.
-* Läs in &quot;rubik&quot; som hämtar den första posten `>` = 200. 200 hittades. Så dokument 200 är en matchning för båda villkoren. Det här kommer ihåg.
+* Läsning i kuben hämtar den första posten `>` = 10. 10 hittas inte och nästa är 30.
+* Läs i rubik-filen hämtar den första posten `>` = 30: 100 hittas.
+* Läsning i kuben hämtar den första posten `>` = 100: 200 hittas.
+* Läs i rubik-filen hämtar den första posten `>` = 200. 200 hittades. Så dokument 200 är en matchning för båda villkoren. Det här kommer ihåg.
 * Läs in &quot;rubik&quot; hämtar nästa post: 1000.
-* Läs i &quot;cube&quot; hämtar den första posten `>` = 1000: 2000 hittas.
-* Läs in &quot;rubik&quot; som hämtar den första posten `>` = 2000: slut på listan.
+* Läsning i kuben hämtar den första posten `>` = 1000: 2000 hittas.
+* Läs i rubik-filen hämtar den första posten `>` = 2000: slutet av listan.
 * Slutligen kan du sluta söka.
 
 Det enda dokument som innehåller båda villkoren är 200, som i exemplet nedan:
@@ -214,9 +214,9 @@ När flera poster hittas sorteras de sedan efter poäng.
 
 ### Egenskapsindexet Lucene {#the-lucene-property-index}
 
-Sedan **ek 1.0.8**, kan Lucene användas för att skapa index som innehåller egenskapsbegränsningar som inte är fulltext.
+Sedan **Oak 1.0.8** kan Lucene användas för att skapa index som innehåller egenskapsbegränsningar som inte är fulltext.
 
-För att uppnå ett Lucene-egenskapsindex **fulltextEnabled** -egenskapen måste alltid anges till false.
+För att uppnå ett Lucene-egenskapsindex måste egenskapen **fulltextEnabled** alltid anges till false.
 
 Ta följande exempelfråga:
 
@@ -237,7 +237,7 @@ När noden har skapats lägger du till följande egenskaper:
   lucene (of type String)
   ```
 
-* **asynk:**
+* **asynkron:**
 
   ```xml
   async (of type String)
@@ -257,7 +257,7 @@ När noden har skapats lägger du till följande egenskaper:
 
 >[!NOTE]
 >
->Mer information om egenskapsindexet Lucene finns i [Dokumentationssida för Apache Jackrabbit Oak Lucene](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
+>Mer information om Lucene-egenskapsindexet finns på [dokumentationssidan för Apache Jackrabbit Oak Lucene](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 
 ### Lucene Analyzers {#lucene-analyzers}
 
@@ -265,9 +265,9 @@ Sedan version 1.2.0 stöder Oak Lucene-analysatorer.
 
 Analysatorer används både när ett dokument indexeras och vid frågetillfället. En analyserare undersöker texten i fälten och genererar en tokenström. Lucene-analysatorerna består av en serie tokeniserings- och filterklasser.
 
-Analysatorerna kan konfigureras med `analyzers` nod (av typ `nt:unstructured`) i `oak:index` definition.
+Analysatorerna kan konfigureras med noden `analyzers` (av typen `nt:unstructured`) inuti definitionen `oak:index`.
 
-Standardanalysatorn för ett index är konfigurerad i `default` underordnad till analysatornoden.
+Standardanalysatorn för ett index är konfigurerad i den underordnade `default`-noden för analysatornoden.
 
 ![chlimage_1-149](assets/chlimage_1-149.png)
 
@@ -279,9 +279,9 @@ Standardanalysatorn för ett index är konfigurerad i `default` underordnad till
 
 Om du vill använda någon av de färdiga analysverktygen kan du konfigurera den enligt följande procedur:
 
-1. Leta reda på indexet som du vill använda analysverktyget med under `oak:index` nod.
+1. Leta reda på det index som du vill använda analyseraren med under noden `oak:index`.
 
-1. Skapa en underordnad nod under indexet med namnet `default` av typen `nt:unstructured`.
+1. Skapa en underordnad nod med namnet `default` av typen `nt:unstructured` under indexet.
 
 1. Lägg till en egenskap i standardnoden med följande egenskaper:
 
@@ -291,22 +291,22 @@ Om du vill använda någon av de färdiga analysverktygen kan du konfigurera den
 
    Värdet är namnet på den analysklass som du vill använda.
 
-   Du kan också ange att analysatorn ska användas med en specifik lucene-version genom att använda det valfria `luceneMatchVersion` string-egenskap. En giltig syntax för användning med Lucene 4.7 är:
+   Du kan också ange att analyseraren ska användas med en specifik lucene-version genom att använda den valfria strängegenskapen `luceneMatchVersion`. En giltig syntax för användning med Lucene 4.7 är:
 
    * **Namn:** `luceneMatchVersion`
    * **Typ:** `String`
    * **Värde:** `LUCENE_47`
 
-   If `luceneMatchVersion` inte tillhandahålls, använder Oak den version av Lucene som det levereras med.
+   Om `luceneMatchVersion` inte anges används den version av Lucene som levereras med Oak.
 
-1. Om du vill lägga till en stoppordsfil i analyskonfigurationerna kan du skapa en nod under `default` en med följande egenskaper:
+1. Om du vill lägga till en stoppordsfil i analyskonfigurationerna kan du skapa en nod under `default` med följande egenskaper:
 
    * **Namn:** `stopwords`
    * **Typ:** `nt:file`
 
 #### Skapa analysatorer med hjälp av komposition {#creating-analyzers-via-composition}
 
-Analysprogram kan också sammanställas baserat på `Tokenizers`, `TokenFilters`och `CharFilters`. Du kan göra detta genom att ange en analysator och skapa underordnade noder till dess tillvalstokeniserare och filter som tillämpas i listordning. Se även [https://cwiki.apache.org/confluence/display/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://cwiki.apache.org/confluence/display/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
+Analysatorer kan också sättas samman baserat på `Tokenizers`, `TokenFilters` och `CharFilters`. Du kan göra detta genom att ange en analysator och skapa underordnade noder till dess tillvalstokeniserare och filter som tillämpas i listordning. Se även [https://cwiki.apache.org/confluence/display/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema](https://cwiki.apache.org/confluence/display/solr/AnalyzersTokenizersTokenFilters#Specifying_an_Analyzer_in_the_schema)
 
 Se den här nodstrukturen som ett exempel:
 
@@ -356,13 +356,13 @@ Namnet på filtren, charFilters och tokenizers formas genom att fabrikssuffixen 
 
 Alla konfigurationsparametrar som krävs för fabriken anges som egenskapen för noden i fråga.
 
-I fall där t.ex. inläsning av stoppord där innehåll från externa filer måste läsas in, kan innehållet tillhandahållas genom att skapa en underordnad nod till `nt:file` filtyp.
+För exempelvis inläsning av stoppord där innehåll från externa filer måste läsas in, kan innehållet anges genom att en underordnad nod av typen `nt:file` skapas för filen i fråga.
 
 ### Solr-index {#the-solr-index}
 
 Syftet med Solr-indexet är fulltextsökning, men det kan också användas för indexsökning efter sökväg, egenskapsbegränsningar och primära typbegränsningar. Det innebär att Solr-indexet i Oak kan användas för alla typer av JCR-frågor.
 
-Integrationen i AEM sker på databasnivå så att Solr är ett av de möjliga index som kan användas i Oak, den nya databasimplementeringen som levererades med AEM.
+Integreringen i AEM sker på databasnivå så att Solr är ett av de möjliga index som kan användas i Oak, den nya databasimplementeringen som levererades med AEM.
 
 Den kan konfigureras för att fungera som en fjärrserver med AEM.
 
@@ -370,7 +370,7 @@ Den kan konfigureras för att fungera som en fjärrserver med AEM.
 
 AEM kan även konfigureras för att fungera med en fjärrserver för Solr:
 
-1. Hämta och extrahera den senaste versionen av Solr. Mer information om hur du gör detta finns i [Installationsdokumentation för Apache Solr](https://solr.apache.org/guide/6_6/installing-solr.html).
+1. Hämta och extrahera den senaste versionen av Solr. Mer information om hur du gör detta finns i [dokumentationen för installation av Apache Solr](https://solr.apache.org/guide/6_6/installing-solr.html).
 1. Skapa nu två Solr-kort. Du kan göra detta genom att skapa mappar för varje delning i mappen där Solr har packats upp:
 
    * Skapa mappen för det första delfönstret:
@@ -381,7 +381,7 @@ AEM kan även konfigureras för att fungera med en fjärrserver för Solr:
 
    `<solrunpackdirectory>\aemsolr2\node2`
 
-1. Leta reda på exempelinstansen i Solr-paketet. Den finns i en mapp som heter `example`&quot; i paketets rot.
+1. Leta reda på exempelinstansen i Solr-paketet. Den finns i en mapp med namnet `example` i paketets rot.
 1. Kopiera följande mappar från exempelinstansen till de två delade mapparna ( `aemsolr1\node1` och `aemsolr2\node2`):
 
    * `contexts`
@@ -393,12 +393,12 @@ AEM kan även konfigureras för att fungera med en fjärrserver för Solr:
    * `webapps`
    * `start.jar`
 
-1. Skapa en mapp med namnet &quot; `cfg`&quot; i var och en av de två delade mapparna.
-1. Placera Solr- och Zookeeper-konfigurationsfilerna i den nya `cfg` mappar.
+1. Skapa en mapp med namnet `cfg` i var och en av de två delade mapparna.
+1. Placera dina Solr- och Zookeeper-konfigurationsfiler i de `cfg` nyligen skapade mapparna.
 
    >[!NOTE]
    >
-   >Mer information om Solr- och ZooKeeper-konfigurationen finns i [Dokumentation för SolrConfiguration](https://cwiki.apache.org/confluence/display/solr/ConfiguringSolr) och [Starthandbok för ZooKeeper](https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html).
+   >Mer information om Solr- och ZooKeeper-konfigurationen finns i [dokumentationen för Solr-konfiguration](https://cwiki.apache.org/confluence/display/solr/ConfiguringSolr) och i [Starthandboken för ZooKeeper](https://zookeeper.apache.org/doc/r3.1.2/zookeeperStarted.html).
 
 1. Starta den första delningen med stöd för ZooKeeper genom att gå till `aemsolr1\node1` och köra följande kommando:
 
@@ -414,18 +414,18 @@ AEM kan även konfigureras för att fungera med en fjärrserver för Solr:
 
 1. När båda delarna har startats testar du att allt är igång genom att ansluta till Solr-gränssnittet på `http://localhost:8983/solr/#/`
 1. Starta AEM och gå till webbkonsolen på `http://localhost:4502/system/console/configMgr`
-1. Ange följande konfiguration under **Konfiguration av Oak Solr-fjärrserver**:
+1. Ange följande konfiguration under **Fjärrserverkonfigurationen för Oak Solr**:
 
    * HTTP-URL för Solr: `http://localhost:8983/solr/`
 
-1. Välj **Fjärrverktyg** i listrutan under **Oak Solr** serverprovider.
+1. Välj **Fjärrserver** i listrutan under **Oak Solr**-serverprovidern.
 
 1. Gå till CRXDE och logga in som administratör.
 1. Skapa en nod med namnet **solrIndex** under **oak:index** och ange följande egenskaper:
 
-   * **typ:** solr (av typen String)
-   * **asynk:** async (av typen String)
-   * **omindexera:** true (av typen Boolean)
+   * **type:** solr (av typen String)
+   * **async:** async (av typen String)
+   * **reindex:** true (av typen Boolean)
 
 1. Spara ändringarna.
 
@@ -441,20 +441,20 @@ Rekommenderade Solr-konfigurationsfiler
 
 ### AEM {#aem-indexing-tools}
 
-AEM 6.1 integrerar även två indexeringsverktyg som finns i AEM 6.0 som en del av verktygsuppsättningen Adobe Consulting Services Commons:
+AEM 6.1 integrerar även två indexeringsverktyg som finns i AEM 6.0 som en del av Adobe Consulting Services Commons-verktygen:
 
-1. **Förklara fråga**, ett verktyg som hjälper administratörer att förstå hur frågor utförs.
+1. **Förklara fråga**, ett verktyg som är utformat för att hjälpa administratörer att förstå hur frågor utförs;
 1. **Oak Index Manager**, ett webbanvändargränssnitt för att underhålla befintliga index.
 
-Nu kan du nå dem genom att **Verktyg - Åtgärder - Kontrollpanel - Diagnostik** på AEM välkomstskärm.
+Nu kan du nå dem genom att gå till **Verktyg - Åtgärder - Kontrollpanel - Diagnos** från AEM välkomstskärm.
 
-Mer information om hur du använder dem finns i [Dokumentation för instrumentpanelen för åtgärder](/help/sites-administering/operations-dashboard.md).
+Mer information om hur du använder dem finns i [dokumentationen för kontrollpanelen för åtgärder](/help/sites-administering/operations-dashboard.md).
 
 #### Skapa egenskapsindex med OSGi {#creating-property-indexes-via-osgi}
 
 ACS Commons-paketet visar även OSGi-konfigurationer som kan användas för att skapa egenskapsindex.
 
-Du kommer åt den från webbkonsolen genom att söka efter **Se till att egenskapsindex för Oak**&quot;.
+Du kan komma åt den från webbkonsolen genom att söka efter **Kontrollera Oak-egenskapsindex**.
 
 ![chlimage_1-150](assets/chlimage_1-150.png)
 
@@ -466,19 +466,19 @@ I det här avsnittet ges rekommendationer om vad som måste göras för att spå
 
 #### Förbereder felsökningsinformation för analys {#preparing-debugging-info-for-analysis}
 
-Det enklaste sättet att få den information som krävs för frågan som körs är via [Förklara fråga, verktyg](/help/sites-administering/operations-dashboard.md#explain-query). På så sätt kan du samla in exakt den information som behövs för att felsöka en långsam fråga utan att behöva läsa loggnivåinformationen. Detta är önskvärt om du känner till frågan som felsöks.
+Det enklaste sättet att få den information som krävs för frågan som körs är via verktyget [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query). På så sätt kan du samla in exakt den information som behövs för att felsöka en långsam fråga utan att behöva läsa loggnivåinformationen. Detta är önskvärt om du känner till frågan som felsöks.
 
 Om detta inte är möjligt av någon anledning, kan du samla indexeringsloggarna i en enda fil och använda den för att felsöka just det problemet.
 
 #### Aktivera loggning {#enable-logging}
 
-Om du vill aktivera loggning måste du aktivera **FELSÖKNING** nivåloggar för de kategorier som gäller för ekindexering och frågor. Dessa kategorier är:
+Om du vill aktivera loggning måste du aktivera **DEBUG**-nivåloggar för de kategorier som gäller Oak-indexering och frågor. Dessa kategorier är:
 
 * org.apache.jackrabbit.oak.plugins.index
 * org.apache.jackrabbit.oak.query
 * com.day.cq.search
 
-The **com.day.cq.search** -kategorin kan bara användas om du använder det AEM tillhandahållna QueryBuilder-verktyget.
+Kategorin **com.day.cq.search** kan bara användas om du använder det AEM tillhandahållna QueryBuilder-verktyget.
 
 >[!NOTE]
 >
@@ -486,19 +486,19 @@ The **com.day.cq.search** -kategorin kan bara användas om du använder det AEM 
 
 Du kan aktivera loggning genom att följa den här proceduren:
 
-1. Peka webbläsaren till `https://serveraddress:port/system/console/slinglog`
-1. Klicka på **Lägg till ny loggare** i den nedre delen av konsolen.
-1. Lägg till de kategorier som nämns ovan på den nyligen skapade raden. Du kan använda **+** signera för att lägga till mer än en kategori i en enskild loggare.
-1. Välj **FELSÖKNING** från **Loggnivå** listruta.
+1. Peka webbläsaren på `https://serveraddress:port/system/console/slinglog`
+1. Klicka på knappen **Lägg till ny loggare** i den nedre delen av konsolen.
+1. Lägg till de kategorier som nämns ovan på den nyligen skapade raden. Du kan använda **+**-tecknet för att lägga till mer än en kategori i en enskild loggare.
+1. Välj **DEBUG** i listrutan **Loggnivå**.
 1. Ställ in utdatafilen på `logs/queryDebug.log`. Detta korrelerar alla DEBUG-händelser till en enda loggfil.
 1. Kör frågan eller återge sidan som använder frågan som du vill felsöka.
-1. När du har kört frågan går du tillbaka till loggningskonsolen och ändrar loggnivån för den nyligen skapade loggboken till **INFORMATION**.
+1. När du har kört frågan går du tillbaka till loggningskonsolen och ändrar loggnivån för den nyligen skapade loggningsfunktionen till **INFO**.
 
 #### Indexkonfiguration {#index-configuration}
 
 Hur frågan utvärderas påverkas i hög grad av indexkonfigurationen. Det är viktigt att få indexkonfigurationen analyserad eller skickad till support. Du kan antingen hämta konfigurationen som ett innehållspaket eller hämta en JSON-återgivning.
 
-Vanligtvis lagras indexkonfigurationen under `/oak:index` i CRXDE kan du hämta JSON-versionen på:
+Oftast lagras indexkonfigurationen under noden `/oak:index` i CRXDE. Du kan hämta JSON-versionen på:
 
 `https://serveraddress:port/oak:index.tidy.-1.json`
 
@@ -533,5 +533,5 @@ Du kan också tillhandahålla konsoliderade JMX-utdata via `https://serveraddres
 
 Du kan samla in ytterligare information som kan hjälpa dig att felsöka problemet, till exempel:
 
-1. Den Oak-version som instansen körs på. Du kan se detta genom att öppna CRXDE och titta på versionen i det nedre högra hörnet av välkomstsidan, eller genom att kontrollera versionen av `org.apache.jackrabbit.oak-core` paket.
-1. Felsökningsutdata för QueryBuilder-felsökningsfrågan. Felsökaren finns på: `https://serveraddress:port/libs/cq/search/content/querydebug.html`
+1. Den Oak-version som instansen körs på. Du kan se detta genom att öppna CRXDE och titta på versionen i det nedre högra hörnet av välkomstsidan, eller genom att kontrollera versionen av `org.apache.jackrabbit.oak-core`-paketet.
+1. Felsökningsutdata för QueryBuilder-felsökningsfrågan. Felsökaren kan nås på: `https://serveraddress:port/libs/cq/search/content/querydebug.html`

@@ -23,15 +23,15 @@ ht-degree: 0%
 >
 >GDPR används som exempel i avsnitten nedan, men de ingående detaljerna gäller alla dataskydds- och sekretessbestämmelser, som GDPR, CCPA och så vidare.
 
-AEM Communities visar användningsklara API:er för hantering av användarprofiler och grupphantering av användargenererat innehåll (UGC). När den är aktiverad visas **UserUgcManagement** Med kan behöriga användare (community-administratörer och moderatorer) inaktivera användarprofiler och massta bort eller massexportera UGC för specifika användare. Dessa API:er gör det även möjligt för personuppgiftsansvariga och personuppgiftsbiträden att följa EU:s allmänna dataskyddsförordningar (GDPR) och andra GDPR-inspirerade sekretessbestämmelser.
+AEM Communities visar användningsklara API:er för hantering av användarprofiler och grupphantering av användargenererat innehåll (UGC). När tjänsten **UserUgcManagement** har aktiverats kan behöriga användare (community-administratörer och moderatorer) inaktivera användarprofiler och massborttagning eller massexport av UGC för specifika användare. Dessa API:er gör det även möjligt för personuppgiftsansvariga och personuppgiftsbiträden att följa EU:s allmänna dataskyddsförordningar (GDPR) och andra GDPR-inspirerade sekretessbestämmelser.
 
-Mer information finns i [GDPR-sidan på Adobe Privacy Center](https://www.adobe.com/privacy/general-data-protection-regulation.html).
+Mer information finns på sidan [GDPR på Adobe Privacy Center](https://www.adobe.com/privacy/general-data-protection-regulation.html).
 
 >[!NOTE]
 >
->Om du konfigurerade [ADOBE ANALYTICS i AEM COMMUNITIES](/help/communities/analytics.md) -platsen skickas inhämtade användardata till Adobe Analytics-servern. Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata och följa GDPR. Mer information finns i [Skicka in begäran om åtkomst och borttagning](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html).
+>Om du har konfigurerat [Adobe Analytics på AEM Communities](/help/communities/analytics.md)-platsen skickas den hämtade användarinformationen till Adobe Analytics-servern. Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata och följa GDPR. Mer information finns i [Skicka in begäran om åtkomst och borttagning](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html).
 
-Om du vill använda dessa API:er måste du aktivera `/services/social/ugcmanagement` slutpunkten genom att aktivera tjänsten UserUgcManagement. Om du vill aktivera tjänsten installerar du [samplingsservlet](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) tillgänglig den [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). Tryck sedan på slutpunkten på publiceringsinstansen av communitywebbplatsen med lämpliga parametrar med en http-begäran, som:
+Om du vill använda dessa API:er måste du aktivera slutpunkten `/services/social/ugcmanagement` genom att aktivera tjänsten UserUgcManagement. Om du vill aktivera den här tjänsten installerar du [exempelservern](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) som finns på [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). Tryck sedan på slutpunkten på publiceringsinstansen av communitywebbplatsen med lämpliga parametrar med en http-begäran, som:
 
 `https://localhost:port/services/social/ugcmanagement?user=<authorizable ID>&operation=<getUgc>`. Du kan även skapa ett användargränssnitt (användargränssnitt) för att hantera användarprofiler och användargenererat innehåll i systemet.
 
@@ -39,9 +39,9 @@ Dessa API:er gör det möjligt att utföra följande funktioner.
 
 ## Hämta användargenererat innehåll för en användare {#retrieve-the-ugc-of-a-user}
 
-**getUserUgc(ResourceResolver resourceResolver, String user, OutputStream outputStream)** hjälper till att exportera all användargenererat innehåll från systemet.
+**getUserUgc(ResourceResolver resourceResolver, String user, OutputStream outputStream)** hjälper till att exportera all UGC för en användare från systemet.
 
-* **användare**: Auktoriserbart ID för en användare.
+* **användare**: En användares autentiserbara ID.
 * **outputStream**: Resultatet returneras som utdataström, vilket är en zip-fil som innehåller det användargenererade innehållet (som json-fil) och bilagor (som innehåller bilder eller videor som överförts av användaren).
 
 Om du till exempel vill exportera användargenererat innehåll för en användare med namnet Weston McCall, som använder weston.mccall@dodgit.com som auktoriseringsbart ID för att logga in på communitysajten, kan du skicka en http GET-begäran som ser ut så här:
@@ -50,7 +50,7 @@ Om du till exempel vill exportera användargenererat innehåll för en användar
 
 ## Ta bort användargränssnittets innehållsförteckning {#delete-the-ugc-of-a-user}
 
-**deleteUserUgc(ResourceResolver resourceResolver, String user)** används för att ta bort all UGC för en användare från systemet.
+**deleteUserUgc(ResourceResolver resourceResolver, String user)** hjälper till att ta bort all UGC för en användare från systemet.
 
 * **användare**: Användarens autentiserbara ID.
 
@@ -61,7 +61,7 @@ Om du till exempel vill ta bort användargränssnittskontrollen för en använda
 
 ### Ta bort användargenererat innehåll från Adobe Analytics {#delete-ugc-from-adobe-analytics}
 
-Ta bort användardata från Adobe Analytics genom att följa [Arbetsflöde för GDPR-analys](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html); eftersom API:t inte tar bort användardata från Adobe Analytics.
+Om du vill ta bort användardata från Adobe Analytics följer du [GDPR Analytics-arbetsflödet](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html) eftersom API:t inte tar bort användardata från Adobe Analytics.
 
 Information om Adobe Analytics-variabelmappningar som används av AEM Communities finns i följande bild:
 
@@ -69,7 +69,7 @@ Information om Adobe Analytics-variabelmappningar som används av AEM Communitie
 
 ## Inaktivera ett användarkonto {#disable-a-user-account}
 
-**deleteUserAccount(ResourceResolver resourceResolver, String user)** används för att inaktivera ett användarkonto.
+**deleteUserAccount(ResourceResolver resourceResolver, String user)** hjälper till att inaktivera ett användarkonto.
 
 * **användare**: Användarens autentiserbara ID.
 
@@ -77,7 +77,7 @@ Information om Adobe Analytics-variabelmappningar som används av AEM Communitie
 >
 >Om du inaktiverar en användare tas allt användargenererat innehåll som användaren har på servern bort.
 
-Om du till exempel vill ta bort profilen för en användare med ett autentiserbart ID `weston.mccall@dodgit.com` Använd följande parametrar via http-POST-begäran:
+Om du till exempel vill ta bort profilen för en användare som har ett autentiserbart ID `weston.mccall@dodgit.com` via http-POST-begäran använder du följande parametrar:
 
 * användare = `weston.mccall@dodgit.com`
 * operation = `deleteUser`

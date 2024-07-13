@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Mappdelningsfunktionen AEM till Creative Cloud är föråldrad. Kunderna rekommenderas att använda nyare funktioner, som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [AEM](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html). Läs mer i [Bästa praxis för integrering av AEM och Creative Cloud](/help/assets/aem-cc-integration-best-practices.md).
+>Mappdelningsfunktionen AEM till Creative Cloud är föråldrad. Kunder rekommenderas att använda nyare funktioner, som [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html) eller [AEM datorprogrammet](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html). Mer information finns i [AEM och Creative Cloud-integreringsmetodtips](/help/assets/aem-cc-integration-best-practices.md).
 
 <!-- TBD: This article is removed from TOC and is not published. The functionality does not exist.
 

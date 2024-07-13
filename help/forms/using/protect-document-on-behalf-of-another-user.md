@@ -17,11 +17,11 @@ ht-degree: 0%
 
 AEM Forms Document Security Java™ SDK innehåller API:er som gör det möjligt för ett användarkonto att skydda ett dokument åt en annan användare utan att ge behörighet att redigera dokumentet. Du kan använda API:erna i en arbetsflödesprocess eller programmatiskt som en dokumenttjänst. De nya API:erna är:
 
-* **protectDocumentUse** Skydda dokumentets API så att du kan tillämpa en profil på ett dokument för
+* **protectDocumentUse** Skydda dokument-API:t så att du kan tillämpa en profil på ett dokument för
 
   ett annat användarkonto. Behörigheterna för det användarkonto som används för att tillämpa profilen förblir begränsade till att skydda dokumentet. Det ger inte rätt att öppna och visa dokumentet. RMSecureDocumentResult protectDocument(Document inDoc, String documentName, String policySetName, String policyName, RMLocale locale, boolean bExactMatchForNames)
 
-* **createLicenseUse** CreateLicense API så att du kan skapa en licens för en profil för ett annat användarkonto. PublishLicenseDTO createLicense(String policyId, String documentName, booleskt logSecureDocEvent)
+* **createLicenseUse** API:t CreateLicense så att du kan skapa en licens för en profil för ett annat användarkonto. PublishLicenseDTO createLicense(String policyId, String documentName, booleskt logSecureDocEvent)
 * **protectDocumentWithCoverPageUse** API:t ProtectDocumentWithCoverPage så att du kan tillämpa en profil och lägga till en försättssida i ett dokument för en annan användares räkning. Behörigheterna för det användarkonto som används för att tillämpa profilen förblir begränsade till att skydda dokumentet. Det ger inte rätt att öppna och visa dokumentet. RMSecureDocumentResult protectDocumentWithCoverPage(Document inDoc, String documentName, String policySetName, String policyName, Document coverDoc, boolean bExactMatchForNames)
 
 ## Skydda ett dokument för en annan användares räkning med API:er {#using-the-apis-to-protect-a-document-on-behalf-of-another-user}

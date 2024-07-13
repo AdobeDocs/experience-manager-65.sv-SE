@@ -17,7 +17,7 @@ ht-degree: 1%
 
 # Konfigurerar omdirigeringssida{#configuring-redirect-page}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
@@ -26,23 +26,23 @@ ht-degree: 1%
 
 Formulärförfattare kan konfigurera en sida för varje formulär som formuläranvändarna omdirigeras till efter att de har skickat in formuläret.
 
-1. Markera en komponent i redigeringsläget och klicka sedan på ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och klicka sedan på ![cmppr](assets/cmppr.png).
+1. Markera en komponent i redigeringsläget, klicka på ![fältnivå](assets/field-level.png) > **Adaptiv formulärbehållare** och klicka sedan på ![cmpr](assets/cmppr.png).
 
-1. Klicka på **Inlämning**.
+1. Klicka på **Skicka** i sidlisten.
 
 1. Ange URL-adressen till omdirigeringssidan under Tack-sidan i avsnittet Skicka.
 1. Under Skicka-åtgärd kan du som alternativ konfigurera parametern som ska skickas till omdirigeringssidan för slutpunktsåtgärden Skicka till REST.
 
-![Omdirigeringssidkonfiguration](assets/thank-you-setting-1.png)
+![Konfiguration av omdirigeringssida](assets/thank-you-setting-1.png)
 
 Omdirigeringssidkonfiguration
 
-Formulärförfattare kan använda följande parametrar som skickas till sidan Tack. För alla tillgängliga inskickningsåtgärder `status` och `owner` parametrar skickas. Förutom dessa två parametrar skickas ytterligare några parametrar för följande skicka-åtgärder:
+Formulärförfattare kan använda följande parametrar som skickas till sidan Tack. För alla tillgängliga skicka-åtgärder skickas `status`- och `owner`-parametrar. Förutom dessa två parametrar skickas ytterligare några parametrar för följande skicka-åtgärder:
 
-* **Åtgärden Lagra innehåll** (utgått): `contentPath`- sökvägen till noden i databasen där skickade data lagras skickas.
+* **Åtgärden Lagra innehåll** (utgått): `contentPath` - sökvägen till noden i databasen där skickade data lagras - skickas.
 
-* **Åtgärden Lagra PDF** (utgått): `contentPath`- av skickade data och sökvägen till noden som lagrar PDF-filen i databasen - skickas.
+* **Store PDF action** (utgått): `contentPath` - av skickade data och sökvägen till noden som lagrar PDF-filen i databasen - skickas.
 
-* **Skicka till Forms**: Utdataparametrar som returneras från formulärarbetsflöden skickas.
+* **Skicka till Forms-arbetsflöde**: Utdataparametrar som returneras från formulärarbetsflöden skickas.
 
-* **Skicka till REST-slutpunkt**: Parametrar som lagts till för mappning mellan fältparametrar skickas. `status` och `owner` parametrar skickas inte i den här skicka-åtgärden. Mer information finns i [Konfigurera åtgärden Skicka till REST-slutpunkt](../../forms/using/configuring-submit-actions.md).
+* **Skicka till REST-slutpunkt**: Parametrar som lagts till för mappning mellan fältparametrar skickas. Parametrarna `status` och `owner` skickas inte i den här sändningsåtgärden. Mer information finns i [Konfigurera åtgärden Skicka till REST-slutpunkt ](../../forms/using/configuring-submit-actions.md).

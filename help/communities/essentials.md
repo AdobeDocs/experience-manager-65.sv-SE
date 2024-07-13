@@ -18,9 +18,9 @@ ht-degree: 1%
 
 # Grundläggande om komponenter, funktioner och funktioner  {#component-function-and-feature-essentials}
 
-Funktionerna i Adobe Experience Manager (AEM) Communities kräver att besökarna blir medlemmar och loggar in på [communitywebbplats](overview.md#communitiessites) innan du kan publicera innehåll. Således [mallar för communitywebbplatser](sites.md)som en communitywebbplats [skapad](sites-console.md), är utformade för att innehålla en inloggningsfunktion och användarprofiler, meddelanden, sökning, moderering och översättning.
+Adobe Experience Manager (AEM) Communities-funktioner kräver att webbplatsbesökare blir medlemmar och loggar in på [communitywebbplatsen](overview.md#communitiessites) innan de kan publicera innehåll. Därför är [communitymallar](sites.md), från vilka en communitywebbplats [skapas](sites-console.md), utformade för att innehålla en inloggningsfunktion och användarprofiler, meddelanden, sökning, moderering och översättning.
 
-En community-webbplats har stöd för medlemmar som skapar communitygrupper när [communitygruppsfunktion](functions.md#groups-function) ingår i den valda communitywebbplatsmallen.
+En community-webbplats har stöd för medlemmar som skapar communitygrupper när [communitygruppsfunktionen](functions.md#groups-function) ingår i den valda communitywebbplatsmallen.
 
 Nedan finns länkar till viktig information för Communities-komponenter, -funktioner och -funktioner.
 
@@ -33,12 +33,12 @@ Nedan finns länkar till viktig information för Communities-komponenter, -funkt
    * [Länka](essentials-liking.md)
    * [Klassificering](rating-basics.md)
    * [Omröstning](essentials-voting.md)
-   * *Omröstning (ej längre tillgänglig)*
+   * *Avsökning (inte längre tillgängligt)*
 
 ## Komponenter med funktioner {#components-with-functions}
 
 * [Aktivitetsströmmar](essentials-activities.md)
-* [Blogg](blog-developer-basics.md) ( `Journal`)
+* [Blog](blog-developer-basics.md) ( `Journal`)
 
 * [Kalender](calendar-basics-for-developers.md)
 * [Innehåll](essentials-featured.md)
@@ -66,10 +66,10 @@ Nedan finns länkar till viktig information för Communities-komponenter, -funkt
 
 ## Javadocs {#javadocs}
 
-The [online javadocs](../../help/sites-developing/reference-materials.md) speglar de API:er som finns i AEM 6.3.
-Communities-API:er finns i `com.adobe.cq.social.*` paket.
+[onlinejavadocs](../../help/sites-developing/reference-materials.md) återspeglar de API:er som finns i AEM 6.3-utgåvan.
+Communities-API:er finns i `com.adobe.cq.social.*`-paket.
 
-För varje [funktionspaket](deploy-communities.md#latestfeaturepack), finns en javadoc burk tillgänglig. Mer information finns på [Använda Maven for Communities](maven.md#javadocs).
+För varje [funktionspaket](deploy-communities.md#latestfeaturepack) finns en javadoc-burk tillgänglig. Mer information finns på [Använda Maven för Communities](maven.md#javadocs).
 
 ## Ytterligare information {#additional-information}
 

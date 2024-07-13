@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Snabbstart för tjänst-API för säkerhetskopiering och återställning {#backup-and-restore-service-apiquick-starts}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
 Java™ API Quick Start(SOAP) finns för API:t för tjänsten Backup and Restore.
 
@@ -34,7 +34,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 ## Snabbstart (SOAP): Startar säkerhetskopieringsläge med Java™ API {#quick-start-soap-mode-entering-backup-mode-using-the-java-api}
 
-Följande Java™-kodexempel försätts i säkerhetskopieringsläge med en unik etikett i två timmar. När säkerhetskopieringstiden har gått ut eller om säkerhetskopieringsläget uttryckligen har avslutats, återgår Forms Server till att rensa filer från den globala dokumentlagringen. (Se [Läget för säkerhetskopiering på Forms Server aktiveras](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server).)
+Följande Java™-kodexempel försätts i säkerhetskopieringsläge med en unik etikett i två timmar. När säkerhetskopieringstiden har gått ut eller om säkerhetskopieringsläget uttryckligen har avslutats, återgår Forms Server till att rensa filer från den globala dokumentlagringen. (Se [Läge för säkerhetskopiering på Forms-servern ](/help/forms/developing/preparing-aem-forms-backup.md#entering-backup-mode-on-the-forms-server) aktiveras.)
 
 ```java
  /*
@@ -149,7 +149,7 @@ Följande Java™-kodexempel försätts i säkerhetskopieringsläge med en unik 
 
 ## Snabbstart (SOAP): Lämna säkerhetskopieringsläge med Java™ API {#quick-start-soap-mode-leaving-backup-mode-using-the-java-api}
 
-Följande Java™-kodexempel gör att en Forms-server lämnar säkerhetskopieringsläget och återgår till att rensa filer från den globala dokumentlagringen. (Se [Avslutar säkerhetskopieringsläge på Forms Server](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server).)
+Följande Java™-kodexempel gör att en Forms-server lämnar säkerhetskopieringsläget och återgår till att rensa filer från den globala dokumentlagringen. (Se [Läget för att lämna säkerhetskopian på Forms Server](/help/forms/developing/preparing-aem-forms-backup.md#leaving-backup-mode-on-the-forms-server).)
 
 ```java
  /*

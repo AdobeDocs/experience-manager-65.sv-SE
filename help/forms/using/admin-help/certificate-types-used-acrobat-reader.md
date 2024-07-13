@@ -33,11 +33,11 @@ Det &quot;egna&quot; namnet för ett Acrobat Reader DC-tilläggscertifikat är e
 
 Strängen innehåller följande element:
 
-**Certifikattyp:** Beskriver de AEM formulärmoduler som certifikatet aktiverar och aktiveringsnivån, till exempel ARE 2D-streckkod Full. En lista över tillgängliga certifikattyper finns i kolumnen Typ i tabellen i avsnittet Certifikatprofiler.
+**Certifikattyp:** Beskriver de AEM formulärmodulerna som certifikatet aktiverar och aktiveringsnivån, till exempel ARE 2D-streckkoden Full. En lista över tillgängliga certifikattyper finns i kolumnen Typ i tabellen i avsnittet Certifikatprofiler.
 
-**Distributionstyp:** Anger certifikatets avsedda användning, t.ex. produktion. Värdet kan vara Evaluation eller Production. En lista över distributionstyper som är associerade med varje certifikattyp finns i kolumnen Distributionstyp i tabellen i avsnittet Certifikatprofiler.
+**Distributionstyp:** Anger certifikatets avsedda användning, till exempel produktion. Värdet kan vara Evaluation eller Production. En lista över distributionstyper som är associerade med varje certifikattyp finns i kolumnen Distributionstyp i tabellen i avsnittet Certifikatprofiler.
 
-**Användarrättigheter:** Beskriver vilken version av användarrättighetsalgoritmen som certifikatet kan användas för, till exempel V6.1. Den här versionen betecknar inte Acrobat- eller Acrobat Reader DC-tilläggen.
+**Användarrättighetsversion:** Beskriver vilken version av användarrättighetsalgoritmen som certifikatet kan användas för, till exempel V6.1. Den här versionen betecknar inte Acrobat- eller Acrobat Reader DC-tilläggen.
 
 **Profilkod:** Profilkoden är en kortfattad beskrivning av fullständiga certifikategenskaper, till exempel P8. En lista över profilkoder som är associerade med varje filtyp finns i kolumnen Profilkod i tabellen i avsnittet Certifikatprofiler.
 
@@ -152,7 +152,7 @@ Certifikat för partnerintegrering utfärdas till Adobe affärspartners för att
 
 Adobe certifikat för intern användning används i Adobe för att stödja programutveckling, integrering, prototyper och demonstration. Dessa intyg är giltiga i två år från och med utfärdandedagen.
 
-Produktionscertifikat utfärdas till kunder som köpt Acrobat Reader DC-tillägg. Dessa certifikat gäller under den maximala period som tillåts av certifikatutfärdaren (CA), vilket visas som *Max* i tabellen Certifikatprofiler.
+Produktionscertifikat utfärdas till kunder som köpt Acrobat Reader DC-tillägg. Dessa certifikat är giltiga för den maximala period som tillåts av certifikatutfärdaren (CA), som visas som *Max* i tabellen Certifikatprofiler.
 
 ## Användarrättigheter för Acrobat Reader DC-tillägg {#acrobat-reader-dc-extensions-usage-rights}
 

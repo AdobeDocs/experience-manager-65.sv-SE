@@ -27,25 +27,25 @@ Du måste ha följande installerat:
 * Adobe Experience Manager
 * Adobe Campaign 6.1
 
-Se [Integrera AEM med Adobe Campaign 6.1](/help/sites-administering/campaignonpremise.md) för mer information.
+Mer information finns i [Integrera AEM med Adobe Campaign 6.1](/help/sites-administering/campaignonpremise.md).
 
 ## Exempel 1: AEM till Adobe Campaign {#example-aem-to-adobe-campaign}
 
-Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScript Server Page). Dessa JSSP-filer finns i Campaign-konsolen och börjar med **aec** (Adobe Experience Cloud)
+Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScript Server Page). Dessa JSSP-filer finns i Campaign-konsolen och alla börjar med **aec** (Adobe Experience Cloud).
 
 ![chlimage_1-15](assets/chlimage_1-15a.png)
 
 >[!NOTE]
 >
->[I det här exemplet finns mer information i Geometrixx](/help/sites-developing/we-retail.md), som är tillgängligt från Paketresurs.
+>[I det här exemplet finns Geometrixx](/help/sites-developing/we-retail.md), som är tillgänglig från Paketresurs.
 
 I det här exemplet skapades en ny anpassad JSSP-fil som anropar den från AEM sida för att hämta resultatet. Den kan till exempel användas för att hämta data från Adobe Campaign eller spara data i Adobe Campaign.
 
-1. Om du vill skapa en JSSP-fil i Adobe Campaign klickar du på **Nytt** -ikon.
+1. Om du vill skapa en JSSP-fil i Adobe Campaign klickar du på ikonen **Nytt** .
 
-   ![Ikonen Nytt visas med en stjärna i det övre vänstra hörnet.](do-not-localize/chlimage_1-4a.png)
+   ![Ikonen Ny visas på en sida med en stjärna i det övre vänstra hörnet.](do-not-localize/chlimage_1-4a.png)
 
-1. Ange namnet på JSSP-filen. I detta exempel **cus:custom.jssp** används (vilket betyder att det finns i **kus** namnutrymme).
+1. Ange namnet på JSSP-filen. I det här exemplet används **cus:custom.jssp** (vilket betyder att det finns i namnutrymmet **cus**).
 
    ![chlimage_1-16](assets/chlimage_1-16a.png)
 
@@ -64,7 +64,7 @@ I det här exemplet skapades en ny anpassad JSSP-fil som anropar den från AEM s
    * Kopplingen fungerar mellan AEM och Campaign
    * Kampanjmolntjänsten är konfigurerad för **/content/geometrixx-outdoor**
 
-   Det viktigaste objektet i detta exempel är **GenericCampaignConnector** som gör att du kan ringa (hämta och posta) jssp-filer på Adobe Campaign-sidan.
+   Det viktigaste objektet i det här exemplet är **GenericCampaignConnector** som gör att du kan anropa (hämta och posta) jssp-filer på Adobe Campaign-sidan.
 
    Här är ett litet kodfragment:
 
@@ -169,7 +169,7 @@ AEM erbjuder API:er som kan hämta objekt var som helst i platadminutforskarvyn.
 
 >[!NOTE]
 >
->[I det här exemplet finns mer information i Geometrixx](/help/sites-developing/we-retail.md), som är tillgängligt från Paketresurs.
+>[I det här exemplet finns Geometrixx](/help/sites-developing/we-retail.md), som är tillgänglig från Paketresurs.
 
 För varje nod i Utforskaren finns det ett API som är länkat till det. För noden:
 
@@ -179,13 +179,13 @@ API:t är:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, beroende på hur många delnivåer du är intresserad av att få. Om du vill att alla ska få nyckelordet **oändlighet** kan användas:
+Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, enligt antalet undernivåer som du är intresserad av att få. Om du vill få alla nyckelord kan du använda **infinity**:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.infinity.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
 För att förbruka API:t använder AEM som standard grundläggande autentisering.
 
-Ett JS-bibliotek med namnet **amcIntegration.js** finns i 6.1.1 (build 8624 och senare) som implementerar den logiken bland flera andra.
+Ett JS-bibliotek med namnet **amcIntegration.js** är tillgängligt i 6.1.1 (build 8624 och senare) som implementerar den logiken bland flera andra.
 
 ### AEM API-anrop {#aem-api-call}
 

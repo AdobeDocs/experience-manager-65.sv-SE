@@ -21,17 +21,17 @@ ht-degree: 1%
 
 Adobe Experience Manager (AEM) ger dig möjlighet att konfigurera ditt konto och vissa aspekter av författarmiljön.
 
-Använda [kontoinställningar](#account-settings) och [användarinställningar](#user-preferences) följande alternativ och inställningar kan definieras:
+Med hjälp av [kontoinställningarna](#account-settings) och [användarinställningarna](#user-preferences) kan du definiera följande alternativ och inställningar:
 
 * **Redigeringsverktygsfältet**
-Välj om du vill ha det globala verktygsfältet för redigering. Det här verktygsfältet, som visas högst upp i webbläsarfönstret, ger dig **Kopiera**, **Klipp ut**, **Klistra in**, **Ta bort** knappar för att använda med styckekomponenterna på den sidan:
+Välj om du vill ha det globala verktygsfältet för redigering. Det här verktygsfältet, som visas högst upp i webbläsarfönstret, ger dig knapparna **Kopiera**, **Klipp ut**, **Klistra in** och **Ta bort** som du kan använda med styckekomponenterna på den sidan:
 
    * Visa vid behov (standard)
    * Visa alltid
    * Behåll dolda
 
 * **Personifiera som**
-Funktionen hos [Personifiera som](/help/sites-administering/security.md#impersonating-another-user) gör att en användare kan arbeta för en annan användares räkning.
+Med funktionen [Personifiera som ](/help/sites-administering/security.md#impersonating-another-user) kan en användare arbeta för en annan användares räkning.
 
 * **Språk**
 Språket som ska användas för redigeringsmiljöns användargränssnitt. Välj önskat språk i listan.
@@ -39,8 +39,10 @@ Språket som ska användas för redigeringsmiljöns användargränssnitt. Välj 
 * **Fönsterhantering**
 Välj antingen:
 
-   * Flera Windows-sidor (standard) öppnas i ett nytt fönster.
-   * Sidor med ett fönster öppnas i det aktuella fönstret.
+   * Flera fönster (standard)
+Sidorna öppnas i ett nytt fönster.
+   * Ett fönster
+Sidorna öppnas i det aktuella fönstret.
 
 ## Kontoinställningar {#account-settings}
 
@@ -55,7 +57,7 @@ Med användarikonen får du tillgång till följande alternativ:
 
 ### Användarinställningar {#user-preferences}
 
-Varje användare kan ange vissa egenskaper för sig själv. Det här är tillgängligt från **Inställningar** i det övre högra hörnet av konsolerna.
+Varje användare kan ange vissa egenskaper för sig själv. Det här är tillgängligt i dialogrutan **Inställningar** i det övre högra hörnet av konsolerna.
 
 ![screen_shot_2012-02-08at105033am](assets/screen_shot_2012-02-08at105033am.png)
 

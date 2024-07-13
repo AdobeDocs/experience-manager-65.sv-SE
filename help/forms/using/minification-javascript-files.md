@@ -22,13 +22,13 @@ Med miniatyr tas de redundanta tecknen bort från källkoden, till exempel blank
 
 Följ de här stegen för att generera miniatyrkod för semantiska ändringar.
 
-1. Kopiera `client-html/src/main/webapp/js` från src-package i filsystemet.
+1. Kopiera `client-html/src/main/webapp/js` från src-paket i filsystemet.
 
    >[!NOTE]
    >
-   >Se [Introduktion till anpassning av arbetsytan i AEM Forms](/help/forms/using/introduction-customizing-html-workspace.md) för mer information om paketen.
+   >Mer information om paketen finns i [Introduktion till anpassning av AEM Forms-arbetsytan](/help/forms/using/introduction-customizing-html-workspace.md).
 
-1. Uppdatera banor i `main.js` finns under client-html/src/main/webapp/js, för tillagda/uppdaterade modeller/vyer.
+1. Uppdatera sökvägar i `main.js` som finns under client-html/src/main/webapp/js, för tillagda/uppdaterade modeller/vyer.
 
    Om du till exempel lägger till en ny Sharequeue-modell, till exempel mySharequeue, ändras följande:
 

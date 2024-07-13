@@ -32,11 +32,11 @@ I motsats till att fästa ett inlägg överst i ett forum kan den här funktione
    <td>social/gemensam/komponent/hbs/featuredcontent</td>
   </tr>
   <tr>
-   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>oklanderlig</strong></a></td>
+   <td> <a href="scf.md#add-or-include-a-communities-component"><strong>inkluderbar</strong></a></td>
    <td>Nej</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
    <td> <i>standard</i></td>
   </tr>
   <tr>
@@ -49,7 +49,7 @@ I motsats till att fästa ett inlägg överst i ett forum kan den här funktione
   </tr>
   <tr>
    <td><strong> egenskaper</strong></td>
-   <td>Se <a href="featured.md">Innehåll</a></td>
+   <td>Se <a href="featured.md">Aktuellt innehåll</a></td>
   </tr>
  </tbody>
 </table>
@@ -58,4 +58,4 @@ I motsats till att fästa ett inlägg överst i ett forum kan den här funktione
 
 ### Filbiblioteksfunktion {#file-library-function}
 
-En community-webbplatsstruktur som innehåller [Funktionen Innehåll](functions.md#featured-content-function), innehåller en konfigurerad `featured content` -komponenten.
+En community-webbplatsstruktur som innehåller funktionen [Aktuellt innehåll](functions.md#featured-content-function) innehåller en konfigurerad `featured content` -komponent.

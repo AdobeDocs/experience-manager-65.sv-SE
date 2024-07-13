@@ -19,11 +19,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[Kontakta supporten](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) för mer information eller för att få plåstret.
+>[Kontakta support](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) om du vill ha mer information eller vill hämta korrigeringen.
 
 ## Om patch-installationsprogrammet {#about-the-patch-installer}
 
-Installationsprogrammet för AEM 6.5 Forms JEE patch innehåller alla åtgärdade fel för alla komponenter i AEM 6.5 Forms JEE som är tillgängliga till dess att den här korrigeringen släppts. Se de senaste  [Versionsinformation för Service Pack](release-notes.md) för en fullständig lista över åtgärdade problem.
+Installationsprogrammet för AEM 6.5 Forms JEE patch innehåller alla åtgärdade fel för alla komponenter i AEM 6.5 Forms JEE som är tillgängliga till dess att den här korrigeringen släppts. I den senaste [Service Pack-versionsinformationen](release-notes.md) finns en fullständig lista över åtgärdade problem.
 
 ## Krav för att installera korrigeringen {#prerequisites-to-installing-the-patch}
 
@@ -31,7 +31,7 @@ Installationsprogrammet för AEM 6.5 Forms JEE patch innehåller alla åtgärdad
 
 ## Installera och konfigurera korrigeringen {#installing-and-configuring-the-patch}
 
-1. Säkerhetskopiera &lt;*AEM_forms_root*>/distribuera mapp. Det krävs om du bestämmer dig för att avinstallera snabbkorrigeringen.
+1. Säkerhetskopiera mappen &lt;*AEM_forms_root*>/deploy. Det krävs om du bestämmer dig för att avinstallera snabbkorrigeringen.
 1. Stoppa programservern.
 1. Extrahera arkivfilen för patch-installationsprogrammet till hårddisken.
 1. I katalogen som namnges enligt det operativsystem som du använder:
@@ -43,40 +43,40 @@ Navigera till rätt katalog på installationsmediet eller mappen på hårddisken
       * (64-bitars Windows) `Windows_64Bit`\ `Disk1\InstData\VM`
 
    * **Linux®**
-Navigera till rätt katalog och skriv i en kommandotolk `./aem65_cfp_install.bin`.
+Navigera till rätt katalog och skriv `./aem65_cfp_install.bin` från en kommandotolk.
 
       * (Linux®) `Linux/Disk1/InstData/NoVM`
 
    Då startas en installationsguide som vägleder dig genom installationen.
 
-1. Klicka på panelen Introduktion **[!UICONTROL Next]**.
-1. På **Välj installationsmapp** kontrollerar du att den standardplats som visas är korrekt för din befintliga installation eller klickar på **[!UICONTROL Browse]** för att välja en alternativ mapp där AEM är installerad och klicka på **[!UICONTROL Next]**.
-1. Läs Quick Fix Patch Summary och klicka på **[!UICONTROL Next]**.
-1. Läs mer i Förinstallationssammanfattning och klicka på **[!UICONTROL Install]**.
-1. När installationen är klar klickar du **[!UICONTROL Next]** för att använda snabbkorrigeringsuppdateringar på dina installerade filer.
+1. Klicka på **[!UICONTROL Next]** på introduktionspanelen.
+1. På skärmen **Välj installationsmapp** kontrollerar du att den standardplats som visas är korrekt för den befintliga installationen. Du kan också klicka på **[!UICONTROL Browse]** och välja en alternativ mapp där AEM har installerats. Klicka sedan på **[!UICONTROL Next]**.
+1. Läs Quick Fix Patch Summary-informationen och klicka på **[!UICONTROL Next]**.
+1. Läs informationen om sammanfattning av förinstallation och klicka på **[!UICONTROL Install]**.
+1. När installationen är klar klickar du på **[!UICONTROL Next]** för att tillämpa snabbkorrigeringsuppdateringarna på de installerade filerna.
 
-1. **[Endast för Windows]:** Gör följande:
-   * Avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Kör **Konfigurationshanteraren** genom att använda **ConfigurationManager.bat** fil i `[aem-forms root]\configurationManager\bin`.
+1. **[För endast Windows]:** Gör följande:
+   * Avmarkera alternativet **Starta Configuration Manager** innan du klickar på **[!UICONTROL Done]**. Kör **Configuration Manager** med filen **ConfigurationManager.bat** i `[aem-forms root]\configurationManager\bin`.
 
-   * Eller avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Före körning **Konfigurationshanteraren** använda **ConfigurationManager.exe** eller **ConfigurationManager_IPv6.exe**, navigera till *`<AEMForms_Install_Dir>\configurationManager\bin`* och ersätta **ConfigurationManager.lax** och **ConfigurationManager_IPV6.lax** med de senaste [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) och [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) filer, söka efter och ersätta **axis-1.4.1.1.jar** med **axis-1.4.1.2.jar** i dessa två filer.
+   * Du kan också avmarkera alternativet **Starta Configuration Manager** innan du klickar på **[!UICONTROL Done]**. Innan du kör **Configuration Manager** med **ConfigurationManager.exe** eller **ConfigurationManager_IPv6.exe** navigerar du till katalogen *`<AEMForms_Install_Dir>\configurationManager\bin`* och ersätter katalogen **ConfigurationManager.lax** och **ConfigurationManager_IPV6.lax** med den senaste [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) och [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) -filer söker du efter och ersätter **axis-1.4.1.1.jar** med **axis-1.4.1.2.jar** i dessa två filer.
 
    >[!NOTE]
    >
-   >Använda **ConfigurationManager.bat** Med hjälp av filen kan du undvika att uppdatera namnet på .lax-filer manuellt.
+   >Om du använder filen **ConfigurationManager.bat** kan du undvika att uppdatera namnet på .lax-filer manuellt.
    >
 
 1. **[Endast för Unix-baserade]:**
 
-   * The **Starta Configuration Manager** är markerad som standard. Klicka **[!UICONTROL Done]** för att köra Configuration Manager direkt eller köra **Konfigurationshanteraren** avmarkera **Starta Configuration Manager** innan du klickar **[!UICONTROL Done]**. Du kan börja **Konfigurationshanteraren** senare använda lämpligt skript i `[AEM_forms_root]/configurationManager/bin` katalog.
+   * Kryssrutan **Starta Configuration Manager** är markerad som standard. Klicka på **[!UICONTROL Done]** om du vill köra Configuration Manager direkt eller **Configuration Manager** senare, avmarkera alternativet **Starta Configuration Manager** innan du klickar på **[!UICONTROL Done]**. Du kan starta **Configuration Manager** senare med lämpligt skript i katalogen `[AEM_forms_root]/configurationManager/bin`.
 
-1. Beroende på programservern väljer du ett av följande dokument och följer instruktionerna i *Konfigurera och distribuera AEM* -avsnitt.
+1. Beroende på vilken programserver du använder väljer du något av följande dokument och följer instruktionerna i avsnittet *Konfigurera och distribuera AEM formulär*.
 
    * [Installera och distribuera AEM formulär för JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
-   * [Installera och distribuera AEM för WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
+   * [Installera och distribuera AEM formulär för WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
 
 1. (Endast JBoss®) När du har installerat korrigeringen och konfigurerat servern tar du bort tmp och arbetskataloger för JBoss®-programservern.
 
-## Konfigurationer efter distributionen {#post-deployment-configurations}
+## Konfigurationer för Post-driftsättning {#post-deployment-configurations}
 
 ### SAML-konfigurationer {#saml-configurations}
 
@@ -97,4 +97,4 @@ Om du har konfigurerat SAML-autentisering och har problem med stora IDP-metadata
 * Dokumentsäkerhet
 * Foundation JEE
 
-[Kontakta supporten](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)
+[Kontakta support](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)

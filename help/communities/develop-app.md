@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Utveckla sandlådeprogram  {#develop-sandbox-application}
 
-I det här avsnittet, nu när mallen är konfigurerad i [ursprungligt program](initial-app.md) och startsidorna i [ursprungligt innehåll](initial-content.md) kan du utveckla programmet. Det gör du genom att använda grundläggande skript som inkluderar möjligheten att aktivera redigering med komponenter i Communities. I slutet av det här avsnittet har du en webbplats som är helt funktionell.
+I det här avsnittet kan du utveckla programmet, nu när mallen har konfigurerats i det [inledande programavsnittet](initial-app.md) och de startsidor som har skapats i det [inledande innehållet](initial-content.md) . Det gör du genom att använda grundläggande skript som inkluderar möjligheten att aktivera redigering med komponenter i Communities. I slutet av det här avsnittet har du en webbplats som är helt funktionell.
 
 ## Använda skript för Foundation Page {#using-foundation-page-scripts}
 
@@ -26,7 +26,7 @@ Standardskriptet, som skapades när komponenten som återger uppspelningssidmall
 
 ### Superresurstyp {#super-resource-type}
 
-Det första steget är att lägga till en supertypsegenskap för resursen i `/apps/an-scf-sandbox/components/playpage` så att den ärver skripten och egenskaperna för supertypen.
+Det första steget är att lägga till en supertypsegenskap för resursen i noden `/apps/an-scf-sandbox/components/playpage` så att den ärver skripten och egenskaperna för den överordnade typen.
 
 Använda CRXDE Lite:
 
@@ -39,14 +39,14 @@ Använda CRXDE Lite:
 
    Värde: `foundation/components/page`
 
-1. Klicka på den gröna **[!UICONTROL +Add]** -knappen.
+1. Klicka på den gröna **[!UICONTROL +Add]**-knappen.
 1. Klicka på **[!UICONTROL Save All]**.
 
    ![page-script](assets/page-script.png)
 
 ### Head- och body-skript {#head-and-body-scripts}
 
-1. I **CRXDE Lite** utforskarfönster, navigera till `/apps/an-scf-sandbox/components/playpage` och dubbelklicka på filen `playpage.jsp` för att öppna den i redigeringsrutan.
+1. I **CRXDE Lite**-utforskarpanelen går du till `/apps/an-scf-sandbox/components/playpage` och dubbelklickar på filen `playpage.jsp` för att öppna den i redigeringsrutan.
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -65,9 +65,9 @@ Använda CRXDE Lite:
    %>
    ```
 
-1. Ersätt &quot; // TODO ...&quot; med `includes` skript för huvud- och kroppsdelar i &lt;html>.
+1. Med vetskap om öppna/stängda skripttaggar kan du ersätta &quot; // TODO ...&quot; med `includes` skript för huvud- och kroppsdelarna i &lt;html>.
 
-   Med en överordnad typ av `foundation/components/page`, tolkas alla skript som inte är definierade i samma mapp som ett skript i `/apps/foundation/components/page` mapp (om den finns), eller till ett skript i `/libs/foundation/components/page` mapp.
+   Med den överordnade typen `foundation/components/page` tolkas alla skript som inte är definierade i samma mapp som ett skript i mappen `/apps/foundation/components/page` (om det finns) eller som ett skript i mappen `/libs/foundation/components/page`.
 
    `/apps/an-scf-sandbox/components/playpage/playpage.jsp`
 
@@ -87,12 +87,12 @@ Använda CRXDE Lite:
    </html>
    ```
 
-1. Täcka över basskriptet `head.jsp` är inte nödvändigt, men det grundläggande skriptet `body.jsp` är tom.
+1. Det är inte nödvändigt att ersätta basskriptet `head.jsp`, men basskriptet `body.jsp` är tomt.
 
-   Om du vill konfigurera för redigering, övertäckning `body.jsp` med ett lokalt skript och innehåller ett styckesystem (parsys) i brödtexten:
+   Om du vill konfigurera för redigering ska du överlagra `body.jsp` med ett lokalt skript och inkludera ett styckesystem (parsys) i brödtexten:
 
    1. Navigera till `/apps/an-scf-sandbox/components`.
-   1. Välj `playpage` nod.
+   1. Markera noden `playpage`.
    1. Högerklicka och välj `Create > Create File...`
 
       * Namn: **body.jsp**
@@ -123,9 +123,9 @@ Använda CRXDE Lite:
 
 * Standardgränssnitt: `http://localhost:4502/editor.html/content/an-scf-sandbox/en/play.html`
 
-Du bör inte bara se rubriken **Community Play**, men även gränssnittet för redigering av sidinnehåll.
+Du bör inte bara se rubriken **Community Play**, utan även gränssnittet för redigering av sidinnehåll.
 
-Panelen Resurser/Komponenter visas när både sidopanelen är öppen och fönstret är tillräckligt brett för att både sidinnehållet och sidinnehållet ska kunna visas.
+Sidpanelen Assets/Komponent visas när både sidpanelen är öppen och fönstret är tillräckligt brett för att både sidinnehållet och sidinnehållet ska kunna visas.
 
 ![view-page](assets/view-page.png)
 
@@ -141,7 +141,7 @@ Om du vill aktivera communitykomponenter för redigering börjar du med att föl
 
 * [Åtkomst till webbgruppskomponenter](basics.md#accessing-communities-components)
 
-I den här sandlådan börjar du med dessa **Communities** komponenter (aktivera genom att markera rutan):
+I den här sandlådan börjar du med följande **Communities**-komponenter (aktivera genom att markera kryssrutan):
 
 * Kommentar
 * Forum
@@ -150,7 +150,7 @@ I den här sandlådan börjar du med dessa **Communities** komponenter (aktivera
 * Sammanfattning av granskningar (visning)
 * Omröstning
 
-Välj dessutom **[!UICONTROL General]** komponenter, som
+Välj dessutom **[!UICONTROL General]** komponenter, till exempel
 
 * Bild
 * Tabell
@@ -159,7 +159,7 @@ Välj dessutom **[!UICONTROL General]** komponenter, som
 
 >[!NOTE]
 >
->Komponenterna som är aktiverade för sidans del lagras i databasen som värdet för `components` egenskapen för
+>Komponenterna som är aktiverade för sidans partikel lagras i databasen som värdet för egenskapen `components` för
 >
 >Nod `/etc/designs/an-scf-sandbox/jcr:content/playpage/par`.
 
@@ -175,10 +175,10 @@ I det här exemplet ställs rotsidan in statiskt för att dirigera om till den e
 * Välj **[!UICONTROL Open Properties]**
 * På fliken AVANCERAT
 
-   * Bläddra till posten Omdirigering: **[!UICONTROL Websites]** > **[!UICONTROL SCF Sandbox Site]** > **[!UICONTROL SCF Sandbox]**
-   * Klicka **[!UICONTROL OK]**
+   * Bläddra till **[!UICONTROL Websites]** > **[!UICONTROL SCF Sandbox Site]** > **[!UICONTROL SCF Sandbox]** för posten Omdirigering.
+   * Klicka på **[!UICONTROL OK]**
 
-* Klicka **[!UICONTROL OK]**
+* Klicka på **[!UICONTROL OK]**
 
 När webbplatsen har publicerats dirigeras surfning till den engelska sidan om när du bläddrar till rotsidan för en publiceringsinstans.
 

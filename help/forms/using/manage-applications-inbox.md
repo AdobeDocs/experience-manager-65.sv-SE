@@ -22,7 +22,7 @@ Ett av många sätt att starta eller utlösa ett Forms-centrerat arbetsflöde ä
 
 Dessutom konsoliderar AEM Inkorg meddelanden och uppgifter från olika AEM komponenter, inklusive Forms-arbetsflöden. När ett formulärarbetsflöde som innehåller ett tilldelningssteg aktiveras, visas det associerade programmet som en uppgift i den tilldelades inkorg. Om den som tilldelats är en grupp visas uppgiften i Inkorgen för alla gruppmedlemmar tills en enskild person gör anspråk på eller delegerar uppgiften.
 
-Användargränssnittet i Inkorgen innehåller lista- och kalendervyer för att visa uppgifter. Du kan också konfigurera visningsinställningarna. Du kan filtrera uppgifter baserat på olika parametrar. Mer information om visning och filter finns i [Din inkorg](/help/sites-authoring/inbox.md).
+Användargränssnittet i Inkorgen innehåller lista- och kalendervyer för att visa uppgifter. Du kan också konfigurera visningsinställningarna. Du kan filtrera uppgifter baserat på olika parametrar. Mer information om visning och filter finns i [Inkorgen](/help/sites-authoring/inbox.md).
 
 Sammanfattningsvis kan du i Inkorgen skapa ett program och hantera tilldelade uppgifter.
 
@@ -32,9 +32,9 @@ Sammanfattningsvis kan du i Inkorgen skapa ett program och hantera tilldelade up
 
 ## Skapa program {#create-application}
 
-1. Gå till AEM Inkorg på https://&#39;[server]:[port]/aem/inbox.
-1. I Inkorgen väljer du **[!UICONTROL Create > Application]**. Sidan Välj program visas.
-1. Välj ett program och klicka på **[!UICONTROL Create]**. Det adaptiva formulär som är associerat med programmet öppnas. Fyll i informationen i det adaptiva formuläret och markera **[!UICONTROL Submit]**. Det startar det associerade arbetsflödet och skapar en uppgift i den tilldelades inkorg.
+1. Gå till AEM Inkorg på https://&#39;[server]:[port]&#39;/aem/inbox.
+1. Välj **[!UICONTROL Create > Application]** i Inkorgsgränssnittet. Sidan Välj program visas.
+1. Välj ett program och klicka på **[!UICONTROL Create]**. Det adaptiva formulär som är associerat med programmet öppnas. Fyll i informationen i det adaptiva formuläret och välj **[!UICONTROL Submit]**. Det startar det associerade arbetsflödet och skapar en uppgift i den tilldelades inkorg.
 
 ## Hantera uppgifter {#manage-tasks}
 
@@ -46,17 +46,17 @@ Uppgifter som tilldelas en grupp visas i Inkorgen för alla gruppmedlemmar. Alla
 
 1. Välj det här alternativet om du vill välja en miniatyrbild av uppgiften. Alternativ för att öppna eller delegera uppgiften visas högst upp.
 
-   ![välj uppgift](assets/select-task.png)
+   ![select-task](assets/select-task.png)
 
 1. Gör något av följande:
 
-   * Om du vill delegera uppgiften väljer du **[!UICONTROL Delegate]**. Dialogrutan Delegera objekt öppnas. Välj en användare, lägg till en kommentar om du vill och markera **[!UICONTROL OK]**.
+   * Välj **[!UICONTROL Delegate]** om du vill delegera uppgiften. Dialogrutan Delegera objekt öppnas. Välj en användare, lägg till en kommentar om du vill och välj **[!UICONTROL OK]**.
 
-   ![delegera](assets/delegate.png)
+   ![delegat](assets/delegate.png)
 
-   * Välj **[!UICONTROL Open]**. Dialogrutan Tilldela till mig själv öppnas. Välj **[!UICONTROL Proceed]** för att göra anspråk på uppgiften. Uppgiften visas med dig som tilldelad i din inkorg.
+   * Välj **[!UICONTROL Open]** om du vill göra anspråk på uppgiften. Dialogrutan Tilldela till mig själv öppnas. Välj **[!UICONTROL Proceed]** om du vill göra anspråk på uppgiften. Uppgiften visas med dig som tilldelad i din inkorg.
 
-   ![krav](assets/claim.png)
+   ![anspråk](assets/claim.png)
 
 ### Visa information och utför åtgärder på uppgifter {#view-details-and-perform-actions-on-tasks}
 
@@ -88,9 +88,9 @@ Fliken Formulär i området för huvudinnehållet visar eventuella bifogade form
 
 #### Information om arbetsflöde {#workflow-details}
 
-Fliken Arbetsflödesinformation överst visar förloppet för uppgiften genom olika steg i arbetsflödet. Här visas slutförda, aktuella och väntande faser för uppgiften. Stegen för ett arbetsflöde definieras i [Tilldela aktivitetssteg](/help/sites-developing/workflows-step-ref.md) för det associerade arbetsflödet.
+Fliken Arbetsflödesinformation överst visar förloppet för uppgiften genom olika steg i arbetsflödet. Här visas slutförda, aktuella och väntande faser för uppgiften. Stegen för ett arbetsflöde definieras i [Tilldela uppgiftssteg](/help/sites-developing/workflows-step-ref.md) i det associerade arbetsflödet.
 
-Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Du kan välja **[!UICONTROL View Details]** för att få information om det stadiet. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare, om uppgiften.
+Fliken visar också aktivitetshistorik för varje slutförd fas i arbetsflödet. Du kan välja **[!UICONTROL View Details]** för en slutförd fas om du vill veta mer om den scenen. Här visas kommentarer, formulär och uppgiftsbilagor, status, start- och slutdatum och så vidare, om uppgiften.
 
 ![arbetsflödesinformation](assets/workflow-details.png)
 
@@ -104,22 +104,22 @@ När du arbetar med uppgiften fortsätter den i arbetsflödet.
 
 AEM Inkorg visar bara aktiva uppgifter. Slutförda uppgifter visas inte i listan. Du kan emellertid använda inkorgsfilter för att filtrera uppgifter baserat på flera parametrar, som uppgiftstyp, status samt start- och slutdatum. Så här visar du slutförda uppgifter:
 
-1. I AEM ![toggle-side-panel1](assets/toggle-side-panel1.png) för att öppna filterväljaren.
-1. Välj **[!UICONTROL Task Status]** dragspelspanel och markera **[!UICONTROL Complete]**. Alla slutförda uppgifter visas.
+1. I AEM Inkorg väljer du ![växlingspanel1](assets/toggle-side-panel1.png) för att öppna filterväljaren.
+1. Välj dragspelet **[!UICONTROL Task Status]** och välj **[!UICONTROL Complete]**. Alla slutförda uppgifter visas.
 
    ![filter](assets/filter.png)
 
-1. Markera en uppgift och klicka på **[!UICONTROL Open]**.
+1. Välj om du vill välja en uppgift och klicka på **[!UICONTROL Open]**.
 
-Uppgiften öppnas och visar dokumentet eller det adaptiva formulär som är kopplat till uppgiften. För anpassningsbara formulär visar uppgiften det skrivskyddade adaptiva formuläret eller dess PDF-postdokument som konfigurerats på fliken Formulär/Dokument i [Tilldela arbetsflödessteg för uppgift](/help/sites-developing/workflows-step-ref.md).
+Uppgiften öppnas och visar dokumentet eller det adaptiva formulär som är kopplat till uppgiften. För anpassningsbara formulär visar aktiviteten det skrivskyddade adaptiva formuläret eller dess postdokument i PDF som konfigurerats på fliken Formulär/Dokument i [arbetsflödessteget Tilldela uppgift](/help/sites-developing/workflows-step-ref.md).
 
 I avsnittet med aktivitetsinformation visas information om till exempel åtgärd, aktivitetsstatus, startdatum och slutdatum.
 
-![slutförd uppgift](assets/completed-task.png)
+![slutförd-aktivitet](assets/completed-task.png)
 
-The **[!UICONTROL Workflow Details]** -fliken visar varje steg i arbetsflödet. Välj **[!UICONTROL View details]** om du vill få detaljerad information.
+Fliken **[!UICONTROL Workflow Details]** visar varje steg i arbetsflödet. Välj **[!UICONTROL View details]** om du vill få mer detaljerad information.
 
-![complete-task-workflow](assets/completed-task-workflow.png)
+![completed-task-workflow](assets/completed-task-workflow.png)
 
 ## Felsökning {#troubleshooting-workflows}
 
@@ -140,7 +140,7 @@ En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM i 
      | allowExplicitSharing | allowExplicitSharing | BOOLEAN |
 
 
-   * Distribuera indexen via ett AEM. Du kan använda en [AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en) för att skapa ett AEM som kan distribueras. Använd följande exempelkod för att lägga till index i ett AEM Archetype-projekt:
+   * Distribuera indexen via ett AEM. Du kan använda ett [AEM Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en) -projekt för att skapa ett distribuerbart AEM. Använd följande exempelkod för att lägga till index i ett AEM Archetype-projekt:
 
    ```Java
       .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()
@@ -150,8 +150,8 @@ En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM i 
       .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
    ```
 
-1. [Skapa ett egenskapsindex och ange det som true](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index).
+1. [Skapa ett egenskapsindex och ange det till true](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index).
 
-1. När index i CRX DE har konfigurerats eller distribuerats via ett paket [indexera om databasen](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex).
+1. När du har konfigurerat index i CRX DE eller distribuerat via ett paket indexerar [om databasen](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex).
 
 https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html

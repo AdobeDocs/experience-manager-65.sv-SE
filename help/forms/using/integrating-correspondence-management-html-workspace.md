@@ -29,22 +29,22 @@ Börja med att skapa en Correspondence Management-exempelmall som renderas i AEM
 
 Gå till Correspondence Management-mallen på dess URL för att kontrollera om Correspondence Management-mallen kan återges korrekt. URL:en har ett mönster som liknar `https://'[server]:[port]'/lc/content/cm/createcorrespondence.html?cmLetterId=encodedLetterId&cmUseTestData=1&cmPreview=0;`
 
-Plats `encodedLetterId` är URL-kodat brev-ID. Ange samma bokstav-ID när du definierar återgivningsprocessen för arbetsyteaktiviteten i Workbench.
+Där `encodedLetterId` är det URL-kodade brev-ID:t. Ange samma bokstav-ID när du definierar återgivningsprocessen för arbetsyteaktiviteten i Workbench.
 
-## Skapa en uppgift för att återge och skicka ett brev AEM arbetsytan {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
+## Skapa en uppgift att återge och skicka ett brev i AEM Workspace {#create-a-task-to-render-and-submit-a-letter-in-aem-workspace}
 
 Innan du utför dessa steg måste du kontrollera att du är medlem i följande grupper:
 
 * cm-agent-users
-* Arbetsyteanvändare
+* Workspace-användare
 
 Mer information finns i [Lägga till och konfigurera användare](/help/forms/using/admin-help/adding-configuring-users.md).
 
-Följ de här stegen för att skapa en uppgift som återger och skickar ett brev AEM arbetsytan:
+Följ de här stegen för att skapa en uppgift som återger och skickar ett brev i AEM Workspace:
 
 1. Starta Workbench. Logga in på localhost som administratör.
-1. Klicka på Arkiv > Nytt > Program. I fältet Programnamn anger du `CMDemoSample` och klicka sedan på Slutför.
-1. Välj `CMDemoSample/1.0` och högerklicka `NewProcess`. I namnfältet anger du `CMRenderer` och klicka sedan på Slutför.
+1. Klicka på Arkiv > Nytt > Program. Ange `CMDemoSample` i fältet Programnamn och klicka sedan på Slutför.
+1. Välj `CMDemoSample/1.0` och högerklicka på `NewProcess`. Ange `CMRenderer` i namnfältet och klicka sedan på Slutför.
 1. Dra aktivitetsväljaren för startpunkten och konfigurera den:
 
    1. I Presentationsdata väljer du Använd en CRX-resurs.
@@ -109,7 +109,7 @@ Hämta DSC: Ett exempel på DSC finns i filen DSCSample.zip som bifogas ovan. H�
 1. Logga in på arbetsytan för AEM formulär på https://&#39;[server]:[port]/lc/content/ws.
 1. Öppna den uppgift du lagt till, CMRenderer. Correspondence Management-brevet visas.
 
-   ![cminarbetsyta](assets/cminworkspace.png)
+   ![cminworkspace](assets/cminworkspace.png)
 
 1. Fyll i de uppgifter som krävs och skicka brevet. Fönstret stängs. I den här processen tilldelas uppgiften den användare som anges i arbetsflödet i steg 9.
 

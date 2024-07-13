@@ -22,7 +22,7 @@ ht-degree: 1%
 >
 >Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
 
-Hantering av appinnehåll kräver en kollektiv insats från [utvecklare](#developer), innehåll [författare](#author)och [administratörer](#administrator). Författarna hanterar sidor, som bygger på mallar och komponenter som genereras av apputvecklare.
+Hantering av appinnehåll kräver en gemensam åtgärd från [utvecklare](#developer), innehållsförfattare[författare](#author) och [administratörer](#administrator). Författarna hanterar sidor, som bygger på mallar och komponenter som genereras av apputvecklare.
 
 Slutligen publicerar administratörer det uppdaterade programinnehållet strategiskt.
 
@@ -30,7 +30,7 @@ Slutligen publicerar administratörer det uppdaterade programinnehållet strateg
 >
 >**Förutsättning**:
 >
->I [Driftsättning och underhåll](/help/sites-deploying/deploy.md), blev utvecklarna bekanta med systemkomponenter och mallar i Adobe Experience Manager (AEM).
+>I [Distribuera och underhålla](/help/sites-deploying/deploy.md) kände utvecklarna till systemkomponenter och mallar i Adobe Experience Manager (AEM).
 
 ## Panelen Hantera sidinnehåll {#the-manage-page-content-tile}
 
@@ -38,43 +38,43 @@ Slutligen publicerar administratörer det uppdaterade programinnehållet strateg
 >
 >Om du inte använder en färdig programmall måste du konfigurera en Content Sync-hanterare för att kunna publicera nytt appinnehåll på OTA.
 >
->Se [Mobil med innehållssynkronisering](/help/mobile/phonegap-contentsync.md) i Developer&#39;s section for more details.
+>Mer information finns i avsnittet [Mobil med innehållssynkronisering](/help/mobile/phonegap-contentsync.md) i utvecklarens avsnitt.
 
 Här kan du skapa, redigera och ta bort innehåll i AEM Mobile på ungefär samma sätt som i AEM Sites.
 
-The **Hantera sidinnehållspanel** visar antalet sidor med hanterat innehåll och senast ändrat för en viss nyttolast. Du kan fördjupa innehållet för att skapa, kopiera, flytta, ta bort och uppdatera sidor genom att klicka på varje post i rutan.
+På **panelen Hantera sidinnehåll** visas antalet sidor med hanterat innehåll och senast ändrade sidor för en viss nyttolast. Du kan fördjupa innehållet för att skapa, kopiera, flytta, ta bort och uppdatera sidor genom att klicka på varje post i rutan.
 
-När innehållet har uppdaterats kan administratörer publicera en nyttolast för innehållsuppdatering Over-the-Air (OTA) till kunder via **Panelen Hantera innehållspaket.**
+När innehållet har uppdaterats kan administratörer publicera en nyttolast för innehållsuppdatering via AIR (OTA) till kunder via panelen **Hantera innehållspaket.**
 
 ![chlimage_1-161](assets/chlimage_1-161.png)
 
 Välj något av innehållspaketen i listan om du vill skapa eller redigera innehåll, till exempel skapa, redigera eller ta bort sidor, ändra navigerings- och sidordning, skapa eller uppdatera innehåll som text och media.
 
-Anteckning *allt är innehåll*, vilket innebär att programformat, text, media, sidor, navigering och målgruppsanpassning för innehåll kan redigeras och uppdateras i OTA, utan att du behöver besöka en appbutik.
+Obs! *Allt är innehåll*, vilket innebär att programformat, kopia (text), media, sidor, navigering och målanpassning av innehåll kan redigeras och uppdateras i OTA, utan att du behöver besöka en appbutik.
 
-För att redigera AEM Mobile-innehåll behöver *AEM författare *en god förståelse för redigeringsgränssnittet AEM innehåll: [Redigerar sidor i AEM.](/help/sites-authoring/qg-page-authoring.md)
+För att redigera AEM Mobile-innehåll behöver *AEM författare *en god förståelse för AEM gränssnitt för redigering av innehåll: [Redigeringssidor i AEM.](/help/sites-authoring/qg-page-authoring.md)
 
 ## Panelen Hantera innehållspaket {#the-manage-content-packages-tile}
 
-Här, *AEM administratörer* kan snabbt och enkelt uppdatera sina appar för att leverera engagerande upplevelser och uppdaterat innehåll för att öka varumärkesengagemanget och uppfylla affärsmålen utan att behöva skicka in något nytt till utvecklare eller appbutiker.
+Här kan *AEM administratörer* snabbt och enkelt uppdatera sina appar för att leverera engagerande upplevelser och aktuellt innehåll som ökar varumärkesengagemanget och uppfyller affärsmålen utan att behöva skicka in något nytt till utvecklare eller appbutiker.
 
 ![chlimage_1-162](assets/chlimage_1-162.png)
 
-En gång *AEM* har lagt till eller ändrat innehåll via panelen Hantera innehåll, *AEM administratörer* kan skicka ut dessa ändringar till kunder med en innehållspaketuppdatering.
+När *AEM författare* har lagt till eller ändrat innehåll via panelen Hantera innehåll kan *AEM Administratörer* skicka ut ändringarna till kunder med en innehållspaketuppdatering.
 
-Åtgärden Innehållspaket tillåter *AEM* för att skapa och redigera sidinnehåll medan utvecklingsteamet gör ändringar i utformningen och implementeringen av värdapplikationer, inklusive navigering, stil, logik, mallar och komponenter på serversidan och sedan skickar ut ändringarna till kunderna utan att behöva skicka in dem till de olika butikerna för distribution igen.
+Med åtgärden Innehållspaket kan *AEM författare* skapa och redigera sidinnehåll medan utvecklingsteamet gör ändringar i en värdprogramdesign och implementering, inklusive navigering, format, logik på serversidan, mallar och komponenter, och sedan skickar ut ändringarna till kunder utan att behöva skicka in dem till olika butiker för distribution igen.
 
-**Publicera nytt eller uppdaterat innehåll**
+**Så här publicerar du nytt eller uppdaterat innehåll**
 
-Välj ett innehållspaket i rutan, i det här exemplet det engelska paketet. Observera att en dialogruta för innehållsuppdatering visar de relevanta *Innehållssynkronisering* konfiguration. Om appinnehåll har ändrats sedan en tidigare uppdatering visas statusen *Väntande*, vilket visas nedan.
+Välj ett innehållspaket i rutan, i det här exemplet det engelska paketet. Observera att en dialogruta för innehållsuppdatering visar den relevanta konfigurationen för *Innehållssynkronisering*. Om appinnehåll har ändrats sedan en tidigare uppdatering visas statusen *Väntande* enligt nedan.
 
 ![chlimage_1-163](assets/chlimage_1-163.png)
 
-Nästa steg är att välja **Scen** åtgärd längst upp till höger för att skapa innehållsuppdateringen. Lägg till rätt uppdateringsinformation och tryck på Klar.
+Välj sedan åtgärden **Stage** längst upp till höger för att skapa innehållsuppdateringen. Lägg till rätt uppdateringsinformation och tryck på Klar.
 
 ![chlimage_1-164](assets/chlimage_1-164.png)
 
-The *Innehållssynkronisering* skapar sedan de nödvändiga paketen genom att bilda en delta (ett paket med *endast* vad som har ändrats). När det är klart har uppdateringsinnehållspaketet mellanlagrats enligt nedan.
+Hanteraren *Innehållssynkronisering* skapar sedan de nödvändiga paketen genom att skapa en delta (ett paket med *endast* som har ändrats). När det är klart har uppdateringsinnehållspaketet mellanlagrats enligt nedan.
 
 Genom att mellanlagra en uppdatering av innehållet kan flera uppdateringar göras innan de publiceras till OTA för mobila enheter.
 
@@ -82,11 +82,11 @@ Genom att mellanlagra en uppdatering av innehållet kan flera uppdateringar gör
 >
 >Det mellanlagrade innehållet kan verifieras med AEM Verifiera-appen före publicering.
 >
->Se [Mobile Quickstart för AEM verifiera](/help/mobile/phonegap-mobile-quickstart.md) om du vill ha mer information om AEM Verifiera app.
+>Se [Mobile Quickstart för AEM Verify](/help/mobile/phonegap-mobile-quickstart.md) för mer information om AEM Verifiera app.
 
 ![chlimage_1-165](assets/chlimage_1-165.png)
 
-När du är redo att leverera nytt innehåll till appanvändarna med Content Sync OTA väljer du **Publicera** enligt nedan.
+När du är redo att leverera nytt innehåll till appanvändarna med OTA för innehållssynkronisering väljer du **Publish** enligt nedan.
 
 ![chlimage_1-166](assets/chlimage_1-166.png)
 

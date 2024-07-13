@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Integrera med Adobe Target{#integrating-with-adobe-target}
 
-Som en del av Adobe Marketing Cloud [Adobe Target](https://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) gör att ni kan öka innehållets relevans genom målinriktning och mätning över alla kanaler. Adobe Target används av marknadsförare för att utforma och genomföra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen av innehåll och onlineupplevelser. AEM har antagit målarbetsflödet som används i Adobe Target Standard. Om du använder Target kommer du att känna till målredigeringsmiljön i AEM.
+Som en del av Adobe Marketing Cloud kan du med [Adobe Target](https://www.adobe.com/ro/solutions/testing-targeting/testandtarget.html) öka innehållets relevans genom att målinrikta och mäta i alla kanaler. Adobe Target används av marknadsförare för att utforma och genomföra onlinetester, skapa direktsända målgruppssegment (baserat på beteende) och automatisera målgruppsanpassningen av innehåll och onlineupplevelser. AEM har antagit målarbetsflödet som används i Adobe Target Standard. Om du använder Target kommer du att känna till målredigeringsmiljön i AEM.
 
 Integrera era AEM med Adobe Target för att personalisera innehåll på era sidor:
 
@@ -33,7 +33,7 @@ Utför följande uppgifter för att integrera med Target:
 
 1. Antingen:
 
-   1. [Anmäl dig till Adobe Target](/help/sites-administering/opt-in.md): Guiden för deltagande tar emot din målkontoinformation och skapar en molnkonfiguration för Adobe Target och ett Target Framework. Guiden kopplar även dina webbplatser till Target Framework. Om guiden inte kan ansluta till målet kan du läsa [anslutningsfelsökning](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems) -avsnitt. Då kan du [Ändra standardkonfigurationerna för molnet](/help/sites-administering/target-configuring.md#modifying-the-opt-in-wizard-configurations): Ändra vid behov molnkonfigurationen och ramverket som avanmälningsguiden skapade. Ändra till exempel ramverket för att skicka ytterligare kontextdata till Target. Om du vill använda Adobe Analytics som rapportkälla för Adobe Target måste du ändra molnkonfigurationen så att den pekar på A4T-konfigurationen.
+   1. [Anmäl dig till Adobe Target](/help/sites-administering/opt-in.md): Guiden för deltagande tar emot din målkontoinformation och skapar en molnkonfiguration för Adobe Target och ett Target Framework. Guiden kopplar även dina webbplatser till Target Framework. Om guiden inte kan ansluta till målet kan du läsa avsnittet [anslutningsfel vid tagning](/help/sites-administering/target-configuring.md#troubleshooting-target-connection-problems). Du kan sedan [ändra standardmolnkonfigurationerna](/help/sites-administering/target-configuring.md#modifying-the-opt-in-wizard-configurations): Ändra molnkonfigurationen och ramverket som avanmälningsguiden skapade om det behövs. Ändra till exempel ramverket för att skicka ytterligare kontextdata till Target. Om du vill använda Adobe Analytics som rapportkälla för Adobe Target måste du ändra molnkonfigurationen så att den pekar på A4T-konfigurationen.
    1. [Integrera manuellt med Adobe Target](/help/sites-administering/target-configuring.md#manually-integrating-with-adobe-target).
 
 1. [Konfigurera aktiviteter](/help/sites-authoring/activitylib.md): Associera dina aktiviteter med målmolnkonfigurationen.
@@ -52,9 +52,9 @@ Utför följande uppgifter för att integrera med Target:
 
 >[!CAUTION]
 >
->Skydda noden för aktivitetsinställningar **cq:ActivitySettings** på publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
+>Skydda aktivitetsinställningsnoden **cq:ActivitySettings** på publiceringsinstansen så att den inte är tillgänglig för vanliga användare. Noden för aktivitetsinställningar ska bara vara tillgänglig för tjänsten som hanterar aktivitetssynkroniseringen till Adobe Target.
 >
->Se [Krav för integrering med Adobe Target](/help/sites-administering/target-requirements.md#securing-the-activity-settings-node) för detaljerad information.
+>Mer information finns i [Förutsättningar för integrering med Adobe Target](/help/sites-administering/target-requirements.md#securing-the-activity-settings-node).
 
 När integreringen är klar kan du [skapa riktat innehåll](/help/sites-authoring/content-targeting-touch.md) som skickar besöksdata till Adobe Target. Observera att sidkomponenter kräver specifik kod för att aktivera målinriktning av innehåll. (Se [Utveckla för riktat innehåll](/help/sites-developing/target.md).)
 
@@ -66,7 +66,7 @@ När integreringen är klar kan du [skapa riktat innehåll](/help/sites-authorin
 
 Att integrera AEM med Adobe Target kräver kunskap om Adobe Target, AEM och AEM. Du bör känna till följande information:
 
-* Adobe Target (se [Adobe Target-dokumentation](https://experienceleague.adobe.com/docs/target/using/target-home.html)).
+* Adobe Target (se [Adobe Target-dokumentationen](https://experienceleague.adobe.com/docs/target/using/target-home.html)).
 * Konsolen AEM aktiviteter (se [Hantera aktiviteter](/help/sites-authoring/activitylib.md)).
 * AEM målgrupper (se [Hantera målgrupper](/help/sites-authoring/managing-audiences.md)).
 

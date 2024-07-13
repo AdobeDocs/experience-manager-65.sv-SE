@@ -24,18 +24,18 @@ I användargränssnittet Skapa korrespondens förhandsgranskar agentanvändare k
 
 För att förhindra obehörig användning av dessa data kan man lägga in en vattenstämpel på förhandsgranskningen PDF. Standardvattenstämpeln är&quot;PREVIEW&quot;, som visas över PDF.
 
-Om du vill aktivera vattenstämpeln i förhandsvisningsfönstret PDF väljer du **[!UICONTROL Apply Watermark]** Alternativet Under förhandsgranskning i **[!UICONTROL Correspondence Management Configurations]** på https://&#39;[server]:[port]&#39;/system/console/configMgr.
+Om du vill aktivera vattenstämpeln i förhandsgranskningen av PDF väljer du alternativet **[!UICONTROL Apply Watermark]** under förhandsgranskning i **[!UICONTROL Correspondence Management Configurations]** på https://&#39;[server]:[port]/system/console/configMgr.
 
-![default-watermark](assets/default-watermark.png)
+![standardvattenstämpel](assets/default-watermark.png)
 
 Följ de här stegen för att anpassa texten och utseendet på vattenstämpeln:
 
 ## Anpassa vattenstämpeln i förhandsvisningen av PDF i användargränssnittet för Skapa korrespondens {#customizewatermark-}
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
-1. Skapa en mapp med namnet i appmappen **[!UICONTROL previewwatermark]** med en sökväg/struktur som liknar mappen med förhandsvattenstämpeln i mappen libs:
+1. I appmappen skapar du en mapp med namnet **[!UICONTROL previewwatermark]** med en sökväg/struktur som påminner om mappen med förhandsvattenstämpeln i mappen libs:
 
-   1. Högerklicka på **förhandsgranskningsvattenstämpel** mapp på följande sökväg och välj **Överläggsnod**:
+   1. Högerklicka på mappen **previewwatermark** på följande sökväg och välj **Overlay Node**:
 
       `/libs/fd/cm/configFiles/previewwatermark`
 
@@ -45,7 +45,7 @@ Följ de här stegen för att anpassa texten och utseendet på vattenstämpeln:
 
       **Plats för övertäckning:** /apps/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** Markerade
 
       >[!NOTE]
       >
@@ -59,7 +59,7 @@ Följ de här stegen för att anpassa texten och utseendet på vattenstämpeln:
       >    
       >
 
-   1. Klicka **OK** och sedan klicka **Spara alla**. The **[!UICONTROL previewwatermark]** mappen skapas i den angivna sökvägen.
+   1. Klicka på **OK** och sedan på **Spara alla**. Mappen **[!UICONTROL previewwatermark]** skapas i den angivna sökvägen.
 
 1. Kopiera och klistra in ddx-filen från mappen &quot;/libs/fd/cm/configFiles/previewwatermark&quot; till mappen &quot;/apps/fd/cm/configFiles/previewwatermark&quot; och klicka på **[!UICONTROL Save All]**.
 1. Gör önskade ändringar i ddx-filen under /apps/fd/cm/configFiles/previewwatermark/.
@@ -79,10 +79,10 @@ Följ de här stegen för att anpassa texten och utseendet på vattenstämpeln:
    </DDX>
    ```
 
-   Mer information om hur du anpassar vattenstämpelns utseende, text och justering finns i Lägga till och ta bort vattenstämplar och bakgrunder i dialogrutan [Assembler Service och DDX Reference](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf) -dokument.
+   Information om hur du anpassar vattenstämpelns utseende, text och justering finns i Lägga till och ta bort vattenstämplar och bakgrunder i dokumentet [Assembler Service och DDX Reference](https://help.adobe.com/en_US/livecycle/11.0/ddxRef.pdf) .
 
    >[!NOTE]
    >
    >I ddx-filen ska referenserna till result och source inte ändras till output.pdf och input.pdf. Namnet på filen ddx ska inte heller ändras.
 
-1. Klicka **Spara alla**.
+1. Klicka på **Spara alla**.

@@ -18,14 +18,14 @@ ht-degree: 0%
 
 # Konfigurera en PDFG-nätverksskrivare (endast Windows) {#setting-up-a-pdfg-network-printer-windows-only}
 
-Med PDFG Network Printer kan användare generera ett PDF-dokument från alla program som stöder utskrift. När en användare har installerat PDFG Network Printer får en ny skrivare namnet *PDF generator* visas i avsnittet Skrivare på Kontrollpanelen i Windows. Om det redan finns en skrivare med samma namn uppmanas användaren att ange ett annat namn.
+Med PDFG Network Printer kan användare generera ett PDF-dokument från alla program som stöder utskrift. När en användare har installerat PDFG Network Printer visas en ny skrivare med namnet *PDF generator* i skrivaravsnittet på Kontrollpanelen i Windows. Om det redan finns en skrivare med samma namn uppmanas användaren att ange ett annat namn.
 
 Om du skriver ut på den här skrivaren från ett program skickas dokumentet (i PostScript-format) till PDF Generator, som konverterar PostScript-filen till PDF. Beroende på hur du har konfigurerat PDF Generator skickas PDF-dokumentet till användaren som en bifogad fil i ett e-postmeddelande, PDF-dokumentet vidarebefordras till en angiven AEM eller process, eller båda åtgärderna utförs.
 
 Följande steg krävs för att konfigurera en PDFG-nätverksskrivare:
 
 1. Konfigurera e-postinställningar. (Se [Konfigurera e-postinställningar för PDFG-nätverksskrivare](setting-pdfg-network-printer-windows.md#configure-email-settings-for-pdfg-network-printer).)
-1. Konfigurera inställningarna för PDFG Network Printer i administrationskonsolen. (Se [Konfigurera inställningar för PDFG-nätverksskrivare](setting-pdfg-network-printer-windows.md#configure-the-pdfg-network-printer-settings).)
+1. Konfigurera inställningarna för PDFG Network Printer i administrationskonsolen. (Se [Konfigurera inställningarna för PDFG-nätverksskrivaren](setting-pdfg-network-printer-windows.md#configure-the-pdfg-network-printer-settings).)
 1. Se till att dina användare är konfigurerade med en giltig e-postadress i AEM formulärdatabas och tilldela PDFGUserPermission till varje användare. <!-- Fix broken link See Setting up and organizing users -->
 1. Kontrollera att 32-bitars JRE6 är installerat på användarnas datorer.
 1. Installera skrivaren på användarnas datorer. (Se [Installera PDFG-nätverksskrivare på en användares dator](setting-pdfg-network-printer-windows.md#install-pdfg-network-printer-on-a-user-s-computer).)
@@ -43,7 +43,7 @@ Följande steg krävs för att konfigurera en PDFG-nätverksskrivare:
 
    * E-postadressen som ska användas för att skicka PDF till användarna
    * Ämnet för e-postmeddelandet
-   * E-postmeddelandets sidhuvud, brödtext och sidfot. I mejlet &lt;receivername> ersätts med det fullständiga namnet på den användare som skrev ut dokumentet.
+   * E-postmeddelandets sidhuvud, brödtext och sidfot. I e-postmeddelandet ersätts &lt;receiverName> med det fullständiga namnet på den användare som skrev ut dokumentet.
 
 1. Om du vill skicka det konverterade PDF till en AEM formulärtjänst eller -process markerar du alternativet Vidarebefordra det konverterade PDF till den angivna AEM formulärtjänsten eller -processen och anger följande information:
 
@@ -61,10 +61,10 @@ Användare som har rollen PDFG-administratör eller PDFG-användare kan installe
 
 1. (PDFG-administratörer) I administrationskonsolen klickar du på Tjänster > PDF Generator > PDFG-nätverksskrivare.
 
-   (PDFG-användare) Gå till `http(s)://[host]:'port'/pdfgui` och klicka på länken under PDFG Network Printer Installation.
+   (PDFG-användare) Gå till `http(s)://[host]:'port'/pdfgui` och klicka på länken under Installation av PDFG-nätverksskrivare.
 
 1. Klicka på länken under Installation av PDFG-nätverksskrivare. När du uppmanas att ange användarkontouppgifter anger du användarnamnet och lösenordet som du använde i steg 1 för att logga in. Ett meddelande om att skrivaren har installerats visas.
 
-   ***anteckning **: Om användarens lösenord ändras måste användarna installera om PDFG-nätverksskrivaren på sina datorer. Du kan inte uppdatera lösenordet från administrationskonsolen.*
+   ***Obs!**Om användarens lösenord ändras måste användarna installera om PDFG-nätverksskrivaren på sina datorer. Du kan inte uppdatera lösenordet från administrationskonsolen.*
 
 1. Klicka på OK.

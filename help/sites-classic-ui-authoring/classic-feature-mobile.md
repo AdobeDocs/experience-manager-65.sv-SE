@@ -26,20 +26,20 @@ Enheterna grupperas i kategorierna, funktion, smart och touchfunktion enligt enh
 >
 >Om du vill skapa en mobilwebbplats baserad på en befintlig standardwebbplats skapar du en live-kopia av standardwebbplatsen. (Se [Skapa en Live-kopia för olika kanaler](/help/sites-administering/msm-livecopy.md).)
 >
->AEM kan skapa nya enhetsgrupper. (Se [Skapar enhetsgruppsfilter.](/help/sites-developing/groupfilters.md))
+>AEM kan skapa nya enhetsgrupper. (Se [Skapa enhetsgruppsfilter.](/help/sites-developing/groupfilters.md))
 
 Använd följande procedur för att skapa en mobilsida:
 
-1. Gå till **Webbadministratör** konsol.
-1. Öppna **Produkter** sida nedanför **Webbplatser** >> **Geometrixx Mobile Demo Site** >> **Engelska**.
+1. Gå till konsolen **SiteAdmin** i webbläsaren.
+1. Öppna sidan **Produkter** nedan **Webbplatser** >> **Geometrixx Mobile Demo Site** >> **English**.
 
 1. Växla till en annan emulator. Om du vill göra det kan du antingen:
 
    * Klicka på enhetsikonen högst upp på sidan.
-   * Klicka på **Redigera** knappen i **Sidekick** och välj enheten i listrutan.
+   * Klicka på knappen **Redigera** i **Sidekick** och markera enheten i listrutan.
 
-1. Dra och släpp **Text och bild** från fliken Mobile i Sidekick till sidan.
-1. Redigera komponenten och lägg till text. Klicka **OK** för att spara ändringarna.
+1. Dra och släpp komponenten **Text och bild** från fliken Mobil i Sidekick till sidan.
+1. Redigera komponenten och lägg till text. Klicka på **OK** för att spara ändringarna.
 
 Sidan ser ut på samma sätt som följande:
 

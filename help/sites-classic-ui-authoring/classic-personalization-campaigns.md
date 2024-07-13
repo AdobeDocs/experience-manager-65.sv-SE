@@ -36,16 +36,16 @@ I det här dokumentet beskrivs de olika element som utgör kampanjer. Mer detalj
 Kampanjhanteringen består av olika delar:
 
 * **Varumärken**
-I Adobe Experience Manager (AEM) är varumärken den viktigaste enheten och utgör en samling av **Kampanjer**.
+I Adobe Experience Manager (AEM) är varumärken den främsta enheten och utgör en samling av **kampanjer** .
 
 * **Kampanjer**
-En kampanj är en samling individuella **Erfarenheter**.
+En kampanj är en samling individuella **upplevelser** .
 
 * **Erfarenheter**
-Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för besökaren på **Pekpunkter**. Det finns flera olika typer av upplevelser:
+Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för besökaren vid **Touchpoints** . Det finns flera olika typer av upplevelser:
 
    * **Lärare**
-     [Teaser Pages / Paragrapes](#teasers) används för att styra specifika besökare **Segment** till innehåll som fokuseras på deras intressen.
+     [Teaser Pages/Paragraphs](#teasers) används för att styra specifika besökare **Segments** till innehåll som är inriktat på deras intressen.
 
      Teaser pages can:
 
@@ -56,13 +56,13 @@ Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för b
 
    * **Nyhetsbrev**
 
-     [E-postkommunikation](#emailmarketing) används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa kan oftast fås som ett nyhetsbrev som skickas till **Leads** (som grupperas i **Listor**). **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet. Rekommendationen är [använda Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+     [E-postkommunikation](#emailmarketing) används för att engagera användare och uppmuntra dem att besöka din webbplats. Dessa består vanligtvis av ett nyhetsbrev som skickas till dina **leads** (som grupperas i **listor**). **Obs!** Adobe planerar inte att förbättra den här funktionen ytterligare. Rekommendationen är att [använda Adobe Campaign och integreringen till AEM](/help/sites-administering/campaign.md).
 
    * **Adobe Target**
 
      Detta möjliggör integrering med Adobe Target (tidigare Test&amp;Target), som ger marknadsförarna ett optimeringsverktyg för konverteringswebbplatser med de nödvändiga funktionerna för att kontinuerligt göra sitt onlineinnehåll mer relevant för sina kunder, vilket ger större konverteringsgrad. Adobe Target har ett intuitivt gränssnitt för att utforma och köra tester, skapa målgruppssegment och målinrikta innehåll från ett och samma program.
 
-* **Pekpunkter**
+* **Touchpoints**
 
   Det här är kontaktpunkterna mellan besökaren och kampanjen. Kontaktpunkterna är kopplade till de upplevelser ni har skapat.
 
@@ -70,15 +70,15 @@ Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för b
 
 * **Leads**
 
-  Den information som ni har samlat in om era besökare och hur ni kontaktar dem utgör grunden för era leads. **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
+  Den information som ni har samlat in om era besökare och hur ni kontaktar dem utgör grunden för era leads. **Obs!** Adobe planerar inte att förbättra den här funktionen ytterligare.
 
-  Rekommendationen är [använda Adobe Campaign och integrationen för att AEM](/help/sites-administering/campaign.md).
+  Rekommendationen är att [använda Adobe Campaign och integreringen till AEM](/help/sites-administering/campaign.md).
 
 * **Listor**
 
-  Leads grupperas i listor så att du kan vidta kollektiva åtgärder för dem. Obs! **Obs!** Adobe planerar inte att ytterligare förbättra denna kapacitet.
+  Leads grupperas i listor så att du kan vidta kollektiva åtgärder för dem. Obs! **Obs!** Adobe planerar inte att förbättra den här funktionen ytterligare.
 
-  Rekommendationen är [använder Adobe Campaign och integreringen för att AEM.](/help/sites-administering/campaign.md)
+  Rekommendationen är att [använda Adobe Campaign och integreringen till AEM.](/help/sites-administering/campaign.md)
 
 * **Segment**
 
@@ -88,6 +88,6 @@ Det fokuserade innehållet utgör de olika upplevelserna, som presenteras för b
 
   Marketing Campaign Manager (MCM) är en konsol som ger er tillgång till alla funktioner ni behöver för att skapa och kontrollera kampanjer, varumärken, upplevelser, kontaktytor, leads, listor, segment och rapporter.
 
-  Den kan nås från olika platser (märkta som **Kampanjer**), eller med till exempel URL-adressen:
+  Den kan nås från olika platser (märkta som **Kampanjer**) eller med till exempel URL:en:
 
   `http://localhost:4502/libs/mcm/content/admin.html`

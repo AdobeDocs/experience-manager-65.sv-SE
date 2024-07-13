@@ -26,7 +26,7 @@ Mer information finns i:
 
 >[!NOTE]
 >
->Eftersom e-handelsramverket kan användas med alla e-handelslösningar finns mer information i [Utveckla (allmän)](/help/commerce/cif-classic/developing/generic.md) om du vill ha mer information om hur du utvecklar möjligheter.
+>Eftersom e-handelsramverket kan användas med alla e-handelslösningar finns mer information om hur du utvecklar möjligheter i [Utveckla (allmänt)](/help/commerce/cif-classic/developing/generic.md).
 
 >[!NOTE]
 >
@@ -40,4 +40,4 @@ eCommerce API tillhandahålls av paketen:
 
 `com.adobe.cq.commerce.*`
 
-Se [API-dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html) för ytterligare information.
+Mer information finns i [API-dokumentationen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html).

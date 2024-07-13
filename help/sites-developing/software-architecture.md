@@ -34,11 +34,11 @@ Genom att definiera vilka komponenter som kan inkluderas i varje parsys på sida
 
 SOLID är en förkortning som beskriver fem arkitektoniska principer som bör följas:
 
-* **S** En enda ansvarsprincip - varje modul, klass, metod och så vidare, bör endast ha ett ansvar.
-* **O** pen/Closed Principle - Modulerna ska vara öppna för utökning och stängda för ändring.
-* **L** iskov Substitution Principle - Typerna ska kunna ersättas av sina undertyper.
-* **I** Gränssnittssegmenteringsprincip - ingen klient ska tvingas att vara beroende av metoder som den inte använder.
-* **D** Inverteringsprincip för beroende - moduler på hög nivå bör inte vara beroende av moduler på låg nivå. Båda bör vara beroende av abstraktioner. Abstraktioner bör inte vara beroende av detaljer. Detaljer bör vara beroende av abstraktioner.
+* **S** En enda ansvarsprincip - varje modul, klass, metod och så vidare, ska bara ha ett ansvar.
+* **O** pen/Closed Principle - modulerna ska vara öppna för tillägg och stängda för ändring.
+* **L** iskov-ersättningsprincip - typer ska kunna ersättas av sina undertyper.
+* **I** Interface Segregation Principle - ingen klient ska tvingas att vara beroende av metoder som den inte använder.
+* **D** Princip för beroendekonvertering - moduler på hög nivå bör inte vara beroende av moduler på låg nivå. Båda bör vara beroende av abstraktioner. Abstraktioner bör inte vara beroende av detaljer. Detaljer bör vara beroende av abstraktioner.
 
 Att sträva efter att följa dessa fem principer bör leda till ett system som är strikt åtskilt från oron.
 

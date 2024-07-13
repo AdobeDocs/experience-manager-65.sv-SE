@@ -18,27 +18,27 @@ ht-degree: 0%
 
 # Använda klassificeringar {#using-ratings}
 
-The `Rating` används fristående eller tillsammans med andra webbgruppsfunktioner. Med den här komponenten kan inloggade communitymedlemmar uttrycka sina åsikter genom att gradera innehåll.
+Komponenten `Rating` används fristående eller tillsammans med andra webbgruppsfunktioner. Med den här komponenten kan inloggade communitymedlemmar uttrycka sina åsikter genom att gradera innehåll.
 
 ## Lägga till en klassificering på en sida {#adding-a-rating-to-a-page}
 
-Lägga till en `Rating` till en sida i redigeringsläge, leta reda på komponenten `Communities / Rating` och dra den till plats på en sida, till exempel en position i förhållande till funktionen som medlemmarna kan betygsätta.
+Om du vill lägga till en `Rating`-komponent på en sida i redigeringsläge, letar du reda på komponenten `Communities / Rating` och drar den till rätt plats på en sida, till exempel i förhållande till funktionen som medlemmarna ska betygsätta.
 
-Nödvändig information finns på [Grunderna för communitykomponenter](basics.md).
+Mer information finns på [Grunderna för communitykomponenter](basics.md).
 
-När [nödvändiga bibliotek på klientsidan](rating-basics.md#essentials-for-client-side) ingår så här `Rating` visas.
+När de [nödvändiga klientbiblioteken](rating-basics.md#essentials-for-client-side) inkluderas visas `Rating`-komponenten på det här sättet.
 
-![värdering](assets/rating.png)
+![klassificering](assets/rating.png)
 
 ## Konfigurerar klassificering {#configuring-rating}
 
-Markera den monterade `Rating` så att du kan komma åt och välja `Configure` -ikonen som öppnar redigeringsdialogrutan.
+Markera den monterade `Rating`-komponenten så att du kan komma åt och markera ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![configure-new](assets/configure-new.png)
 
-Under **[!UICONTROL Texts & Labels]** anger du den interna identifieraren för klassificeringen.
+Under fliken **[!UICONTROL Texts & Labels]** anger du den interna identifieraren för klassificeringen.
 
-![tallyname](assets/tallyname.png)
+![talyname](assets/tallyname.png)
 
 **[!UICONTROL Tally Name]**
 (*Obligatoriskt*) Ett enkelt namn för `Rating` som unikt identifierar den här instansen. Måste vara ett giltigt nodnamn för databasen.
@@ -55,4 +55,4 @@ Anonym publicering av en klassificering stöds inte. Besökarna måste registrer
 
 ## Ytterligare information {#additional-information}
 
-Mer information finns på [Grundläggande omdömen](rating-basics.md) för utvecklare.
+Mer information finns på sidan [Värderingsgrunder](rating-basics.md) för utvecklare.

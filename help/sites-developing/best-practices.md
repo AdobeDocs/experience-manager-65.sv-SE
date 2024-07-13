@@ -31,7 +31,7 @@ Innan du börjar AEM utvecklingsprojektet bör du först granska följande metod
 * [Code Pitfalls](/help/sites-developing/code-pitfalls.md)
 * [JCR-samverkan](/help/sites-developing/jcr-integration.md)
 * [OSGi Bundles](/help/sites-developing/osgi-bundles.md)
-* [Java API Best Practices](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
+* [Bästa praxis för Java API](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
 
 ### Ytterligare metodinformation {#additional-best-practices-information}
 
@@ -80,14 +80,14 @@ Hantering och redigering av webbplatsinnehåll har några beprövade metoder:
 
 ## Communities {#communities}
 
-[AEM Communities](/help/communities/overview.md) förenklar framtagning och hantering av lokala communityn.
+[AEM Communities](/help/communities/overview.md) gör det enklare att skapa och hantera lokala communities.
 
 Här beskrivs några tips för Communities:
 
 |  |  |  |
 |---|---|---|
-| Bästa tillvägagångssätt för att arbeta med användargenererat innehåll (UGC) | [Riktlinjer för kodning](/help/communities/code-guide.md) | Riktlinjer för utveckling av flexibel, portabel kod för [ramverk för sociala komponenter](/help/communities/scf.md) (SCF). |
-| Exempel på användning av webbgruppskomponenter | [Guide för communitykomponenter](/help/communities/components-guide.md) | Ett interaktivt utvecklingsverktyg. |
+| Bästa tillvägagångssätt för att arbeta med användargenererat innehåll (UGC) | [Riktlinjer för kodning](/help/communities/code-guide.md) | Riktlinjer för utveckling av flexibel, portabel kod för det [sociala ramverket](/help/communities/scf.md) (SCF). |
+| Exempel på användning av webbgruppskomponenter | [Användarhandbok för communitykomponenter](/help/communities/components-guide.md) | Ett interaktivt utvecklingsverktyg. |
 
 ## Verktyg/HTML {#tooling-htl}
 
@@ -95,10 +95,10 @@ HTML Template Language (HTL) är ett nytt mallsystem för HTML, som introducerad
 
 |  |  |  |
 |---|---|---|
-| HTML - översikt | [HTML-översikt och -syntax](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | Det här dokumentet beskriver vad HTML är, hur du går till HTML, ett exempelprojekt, syntax, uttryck och programsatser |
+| HTML - översikt | [Översikt och syntax för HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | Det här dokumentet beskriver vad HTML är, hur du går till HTML, ett exempelprojekt, syntax, uttryck och programsatser |
 | Använda API i java | [HTL Java Use-API](https://helpx.adobe.com/experience-manager/htl/using/use-api.html) | Med HTL Java Use-API:t kan en HTML-fil få åtkomst till hjälpmetoder i en anpassad Java-klass. |
 
 >[!NOTE]
 >
 >Följande självstudiekurs i flera delar kan vara av intresse för den bästa metoden för att skapa ett nytt AEM, med information om kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling:
->[Komma igång med AEM Sites - WKND självstudiekurs](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)
+>[Komma igång med AEM Sites - WKND-självstudiekurs](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-wknd-tutorial-develop.html)

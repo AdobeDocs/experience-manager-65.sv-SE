@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # ContextHub Diagnostics {#contexthub-diagnostics}
 
-ContextHub tillhandahåller en diagnostiksida där du kan se en översikt över ContextHub-ramverket. Öppna sidan genom att gå till `contexthub.diagnostics.html` sidan med AEM författarinstans, till exempel:
+ContextHub tillhandahåller en diagnostiksida där du kan se en översikt över ContextHub-ramverket. Öppna sidan genom att gå till sidan `contexthub.diagnostics.html` i AEM författarinstans, till exempel:
 
 `http://<host>:<port>/conf/<tenant>/settings/cloudsettings/default/contexthub.diagnostics.html`
 
@@ -26,29 +26,29 @@ På sidan ContextHub Diagnostics (ContextHub-diagnostik) finns information om de
 
 >[!NOTE]
 >
->Felsökningsläget måste vara aktiverat för att diagnostikinformation ska kunna returneras, annars är diagnostiksidan tom. Se [det här dokumentet](ch-configuring.md#debugging-contexthub) om du vill ha mer information om hur du aktiverar felsökningsläget.
+>Felsökningsläget måste vara aktiverat för att diagnostikinformation ska kunna returneras, annars är diagnostiksidan tom. Mer information om hur du aktiverar felsökningsläget finns i [det här dokumentet](ch-configuring.md#debugging-contexthub).
 
 >[!NOTE]
 >
->För ContextHub-konfigurationer som fortfarande finns under sina tidigare sökvägar är platsen för diagnostiksidan `http://<host>:<port>/libs/settings/cloudsettings/legacy/contexthub.diagnostics.html`.
+>För ContextHub-konfigurationer som fortfarande finns under de tidigare sökvägarna är platsen för diagnostiksidan `http://<host>:<port>/libs/settings/cloudsettings/legacy/contexthub.diagnostics.html`.
 
 ## Lager {#stores}
 
 I avsnittet Lager visas alla ContextHub-butiker som har konfigurerats. Varje post i listan består av följande information:
 
-* **Titel:** The [butikstyp](/help/sites-developing/ch-samplestores.md) som butiken baseras på.
+* **Titel:** [Butikstypen](/help/sites-developing/ch-samplestores.md) som butiken baseras på.
 * **sökväg:** Sökvägen till databasnoden som innehåller konfigurationen.
-* **resourceType:** Sökvägen till databasnoden där lagringstypen har definierats.
-* **clientlibs:** Kategorierna för de klientbibliotek som läses in och som implementerar lagringstypen.
+* **resourceType:** Sökvägen till databasnoden där lagringstypen definieras.
+* **clientlibs:** De kategorier i klientbiblioteken som är inlästa och som implementerar lagringstypen.
 
 ## Moduler {#modules}
 
 I avsnittet Moduler visas alla ContextHub-gränssnittsmoduler som har konfigurerats. Varje post i listan består av följande information:
 
-* **Titel:** The [Modultyp för användargränssnitt](/help/sites-developing/ch-samplemodules.md) som användargränssnittsmodulen baseras på.
+* **Titel:** Den [UI-modultyp](/help/sites-developing/ch-samplemodules.md) som UI-modulen baseras på.
 * **sökväg:** Sökvägen till databasnoden som innehåller konfigurationen.
 * **resourceType:** Sökvägen till databasnoden där gränssnittsmodultypen definieras.
-* **clientlibs:** De kategorier av klientbiblioteken som är inlästa och som implementerar UI-modultypen.
+* **clientlibs:** Kategorierna för klientbiblioteken som är inlästa och som implementerar UI-modultypen.
 
 ## Clientlibs {#clientlibs}
 
@@ -62,10 +62,10 @@ I Clientlibs-avsnittet visas alla klientbiblioteksmappar som ContextHub har läs
 
 Avsnittet URL:er innehåller länkar till ContextHub-funktioner:
 
-* **Konfigurationsredigerare:** Öppnar [Konfigurationssida för ContextHub](ch-configuring.md) där du kan konfigurera butiker, gränssnittslägen och gränssnittsmoduler.
+* **Konfigurationsredigeraren:** Öppnar [konfigurationssidan för ContextHub](ch-configuring.md) där du kan konfigurera arkiv, gränssnittslägen och gränssnittsmoduler.
 
 * **Konfiguration av ContextHub-moduler:** Öppnar filen /etc/cloudsettings/default/contexthub.config.kernel.js, som innehåller JavaScript-objektrepresentationen av ContextHub-lagringskonfigurationerna.
 * **Konfiguration av ContextHub-gränssnitt:** Öppnar filen /etc/cloudsettings/default/contexthub.config.ui.js, som innehåller JavaScript-objektrepresentationen av ContextHub-gränssnittskonfigurationerna.
-* **kernel.js:** Öppnar filen /etc/cloudsettings/default/contexthub.kernel.js, som innehåller källkoden för klientbiblioteken som implementerar ContextHub-ramverket, segmentmotorn och lagringstyperna.
-* **ui.js:** Öppnar filen /etc/cloudsettings/default/contexthub.ui.js, som innehåller källkoden för de klientbibliotek som implementerar gränssnittstyperna för ContextHub och UI.
-* **style.css:** Öppnar filen /etc/cloudsettings/default/contexthub.styles.css, som innehåller CSS-formaten för ContextHub-gränssnittsmodulerna och UI.
+* **kernel.js:** Öppnar filen /etc/cloudsettings/default/contexthub.kernel.js, som innehåller källkoden för klientbiblioteken som implementerar ContextHub-ramverket, segmentmotorn och lagertyperna.
+* **ui.js:** Öppnar filen /etc/cloudsettings/default/contexthub.ui.js, som innehåller källkoden för de klientbibliotek som implementerar gränssnittstyperna ContextHub och UI.
+* **style.css:** Öppnar filen /etc/cloudsettings/default/contexthub.styles.css, som innehåller CSS-formaten för ContextHub-gränssnittsmodulerna.

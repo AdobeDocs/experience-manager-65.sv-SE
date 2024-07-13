@@ -82,8 +82,8 @@ public Boolean assign(User user);
 
 ### Att tänka på när du skapar en domän som bara är aktiverad vid en viss tidpunkt {#considerations-while-creating-a-just-in-time-enabled-domain}
 
-* När du skapar en anpassad `IdentityCreator` för en hybriddomän, se till att ett dummy-lösenord anges för den lokala användaren. Lämna inte det här lösenordsfältet tomt.
-* Rekommendation: Använd `DomainSpecificAuthentication` för att validera inloggningsuppgifter mot en specifik domän.
+* När du skapar en anpassad `IdentityCreator` för en hybriddomän måste du se till att ett dummy-lösenord anges för den lokala användaren. Lämna inte det här lösenordsfältet tomt.
+* Rekommendation: Använd `DomainSpecificAuthentication` för att validera användarautentiseringsuppgifter mot en specifik domän.
 
 ### Skapa en domän som är aktiverad just-in-time {#create-a-just-in-time-enabled-domain}
 
@@ -101,12 +101,12 @@ public Boolean assign(User user);
 
 Anta att en användare försöker logga in AEM formulär och att en autentiseringsleverantör accepterar sina användaruppgifter. Om användaren inte finns i databasen för användarhantering än misslyckas identitetskontrollen för användaren. AEM utför nu följande åtgärder:
 
-1. Skapa en `UserProvisioningBO` objektet med autentiseringsdata och placera det i en autentiseringsuppgiftskarta.
-1. Baserat på domäninformation som returneras av `UserProvisioningBO`, hämta och anropa den registrerade `IdentityCreator` och `AssignmentProvider` för domänen.
-1. Anropa `IdentityCreator`. Om det returnerar en lyckad `AuthResponse`, extrahera `UserInfo` från referenskartan. Skicka det till `AssignmentProvider` för grupp-/rolltilldelning och annan efterbearbetning efter att användaren har skapats.
+1. Skapa ett `UserProvisioningBO`-objekt med autentiseringsdata och placera det i en autentiseringsuppgiftskarta.
+1. Baserat på domäninformation som returnerats av `UserProvisioningBO` hämtar och anropar du den registrerade `IdentityCreator` och `AssignmentProvider` för domänen.
+1. Anropa `IdentityCreator`. Extrahera `UserInfo` från autentiseringsuppgiftskartan om det returnerar en `AuthResponse` som lyckades. Skicka det till `AssignmentProvider` för grupp-/rolltilldelning och annan efterbearbetning när användaren har skapats.
 1. Om användaren har skapats utan fel returnerar du användarens inloggningsförsök.
 1. För hybriddomäner hämtar du användarinformation från autentiseringsdata som tillhandahålls till autentiseringsprovidern. Om den här informationen har hämtats kan du skapa användaren direkt.
 
 >[!NOTE]
 >
->Etableringsfunktionen i precis tid levereras med en standardimplementering av `IdentityCreator` som du kan använda för att dynamiskt skapa användare. Användare skapas med den information som är associerad med katalogerna i domänen.
+>Etableringsfunktionen för just-in-time levereras med en standardimplementering av `IdentityCreator` som du kan använda för att dynamiskt skapa användare. Användare skapas med den information som är associerad med katalogerna i domänen.

@@ -25,7 +25,7 @@ Undvik att anropa processer när servern är i underhållsläge. Detta är vad s
 * Om processen är långvarig läggs den till i jobbdatabasen, men startas inte. När du avslutar underhållsläget bearbetar AEM de långvariga jobben i kön, även om servern startades om i underhållsläge.
 * Om processen är kort, behandlas den direkt.
 
-**Skicka AEM formulär i underhållsläge**
+**Placera AEM formulär i underhållsläge**
 
 1. I en webbläsare anger du:
 
@@ -37,7 +37,7 @@ Undvik att anropa processer när servern är i underhållsläge. Detta är vad s
    >
    >Om du stänger av servern medan den är i underhållsläge är den fortfarande i underhållsläge när den startas om. Stäng av underhållsläget när du är klar med underhållsåtgärderna.
 
-**Kontrollera om AEM körs i underhållsläge**
+**Kontrollera om AEM formulär körs i underhållsläge**
 
 1. I en webbläsare anger du:
 

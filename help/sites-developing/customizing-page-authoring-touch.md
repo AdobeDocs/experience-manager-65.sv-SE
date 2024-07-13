@@ -22,22 +22,22 @@ ht-degree: 0%
 >
 >I det här dokumentet beskrivs hur du anpassar sidredigering i det moderna, pekaktiverade användargränssnittet och det gäller inte det klassiska användargränssnittet.
 
-I Adobe Experience Manager (AEM) finns olika sätt att anpassa sidredigeringsfunktionerna (och [konsoler](/help/sites-developing/customizing-consoles-touch.md)) i din redigeringsinstans.
+I Adobe Experience Manager (AEM) finns olika mekanismer som du kan använda för att anpassa sidredigeringsfunktionen (och [konsolerna](/help/sites-developing/customizing-consoles-touch.md)) för redigeringsinstansen.
 
 * Clientlibs
 
-  Med Clientlibs kan du utöka standardimplementeringen för att få nya funktioner, samtidigt som du återanvänder standardfunktioner, objekt och standardmetoder. När du anpassar kan du skapa en egen klientlib under `/apps.` Den nya klientlib måste:
+  Med Clientlibs kan du utöka standardimplementeringen för att få nya funktioner, samtidigt som du återanvänder standardfunktioner, objekt och standardmetoder. När du anpassar kan du skapa en egen klientlib under `/apps.` Den nya klienten måste:
 
    * är beroende av redigeringsklientlib `cq.authoring.editor.sites.page`
-   * ingå i lämplig `cq.authoring.editor.sites.page.hook` kategori
+   * vara en del av rätt `cq.authoring.editor.sites.page.hook`-kategori
 
 * Övertäckningar
 
-  Övertäckningar baseras på noddefinitioner och gör att du kan täcka över standardfunktionerna (i `/libs`) med din egen anpassade funktionalitet (i `/apps`). När du skapar en övertäckning krävs ingen 1:1-kopia av originalet, eftersom [sammanslagning av säljresurser](/help/sites-developing/sling-resource-merger.md) tillåter arv.
+  Övertäckningar baseras på noddefinitioner och gör att du kan täcka över standardfunktionerna (i `/libs`) med din egen anpassade funktion (i `/apps`). När du skapar en övertäckning krävs ingen 1:1-kopia av originalet, eftersom [sling-resurskonfusion](/help/sites-developing/sling-resource-merger.md) tillåter arv.
 
 >[!NOTE]
 >
->Mer information finns i [JS-dokumentationsuppsättning](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html).
+>Mer information finns i [JS-dokumentationsuppsättningen](https://developer.adobe.com/experience-manager/reference-materials/6-5/jsdoc/ui-touch/editor-core/index.html).
 
 De kan användas på många sätt för att utöka sidredigeringsfunktionen i AEM. En markering beskrivs nedan (på en hög nivå).
 
@@ -45,22 +45,22 @@ De kan användas på många sätt för att utöka sidredigeringsfunktionen i AEM
 >
 >Mer information finns i följande:
 >
->* Använda och skapa [klientlibs](/help/sites-developing/clientlibs.md).
+>* Använder och skapar [clientlibs](/help/sites-developing/clientlibs.md).
 >* Använda och skapa [övertäckningar](/help/sites-developing/overlays.md).
->* [Granit](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
->* [Struktur för det AEM användargränssnittet med pekskärm](/help/sites-developing/touch-ui-structure.md) om du vill ha information om de strukturella områden som används för sidredigering.
+>* [Bevilja](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html)
+>* [Struktur för det AEM Touch-aktiverade gränssnittet](/help/sites-developing/touch-ui-structure.md) innehåller information om de strukturella områden som används för sidredigering.
 >
 
 
 >[!CAUTION]
 >
->***Gör inte*** ändra något i `/libs` bana.
+>***Ändra inte*** något i sökvägen `/libs`.
 >
->Orsaken är att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du installerar en snabbkorrigering eller ett funktionspaket).
+>Orsaken är att innehållet i `/libs` skrivs över nästa gång du uppgraderar din instans (och kan mycket väl skrivas över när du använder en snabbkorrigering eller ett funktionspaket).
 >
 >Den rekommenderade metoden för konfiguration och andra ändringar är:
 >
->1. Återskapa önskat objekt (d.v.s. som det finns i `/libs`) under `/apps`
+>1. Återskapa det obligatoriska objektet (det vill säga som det finns i `/libs`) under `/apps`
 >1. Gör ändringar i `/apps`
 
 ## Lägg till nytt lager (läge) {#add-new-layer-mode}
@@ -69,9 +69,9 @@ När du redigerar en sida finns det olika [lägen](/help/sites-authoring/author-
 
 ### Exempel på lager: Live Copy-status {#layer-example-live-copy-status}
 
-En AEM standardinstans innehåller MSM-lagret. Detta ger åtkomst till data relaterade till [hantering av flera webbplatser](/help/sites-administering/msm.md) och markerar det i lagret.
+En AEM standardinstans innehåller MSM-lagret. Detta ger åtkomst till data relaterade till [hantering av flera webbplatser](/help/sites-administering/msm.md) och markerar dem i lagret.
 
-Om du vill se hur det fungerar kan du redigera [We.Retail Language copy](/help/sites-developing/we-retail-globalized-site-structure.md) sida (eller någon annan live-kopia-sida) och markera **Live Copy-status** läge.
+Om du vill se hur det fungerar kan du redigera en [webbsida.Kopia](/help/sites-developing/we-retail-globalized-site-structure.md) (eller någon annan live-sida) och välja **Live Copy-status** .
 
 MSM-lagerdefinitionen (som referens) finns i:
 
@@ -85,7 +85,7 @@ KOD PÅ GITHUB
 
 Koden för den här sidan finns på GitHub
 
-* [Öppna aem-authoring-new-layer-mode-projekt i GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
+* [Öppna aem-authoring-new-layer-mode-projekt på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode)
 * Hämta projektet som [en ZIP-fil](https://github.com/Adobe-Marketing-Cloud/aem-authoring-new-layer-mode/archive/master.zip)
 
 ## Lägg till ny markeringskategori i resursläsaren {#add-new-selection-category-to-asset-browser}
@@ -94,7 +94,7 @@ Resursläsaren visar resurser av olika typer/kategorier (till exempel bilder och
 
 ### Kodexempel {#code-sample-1}
 
-`aem-authoring-extension-assetfinder-flickr` är ett exempelpaket som visar hur du lägger till en grupp i tillgångssökaren. Det här exemplet ansluter till [Flickr](https://www.flickr.com)Det offentliga flödet och visar dem på sidopanelen.
+`aem-authoring-extension-assetfinder-flickr` är ett exempelpaket som visar hur du lägger till en grupp i tillgångssökaren. Det här exemplet ansluter till [Flickr](https://www.flickr.com)s allmänna ström och visar dem på sidopanelen.
 
 KOD PÅ GITHUB
 
@@ -107,18 +107,18 @@ Koden för den här sidan finns på GitHub
 
 När användaren redigerar sidor måste han/hon ofta välja bland resurser (till exempel sidor, komponenter och resurser). Detta kan vara en lista där författaren måste välja ett objekt.
 
-För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Om [`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granit](/help/sites-developing/touch-ui-concepts.md#granite-ui) -komponenten används för att användaren ska kunna välja sökvägen till en viss resurs. Sökvägarna kan filtreras på följande sätt:
+För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Om till exempel komponenten [`pathbrowser`](https://developer.adobe.com/experience-manager/reference-materials/6-5/granite-ui/api/jcr_root/libs/granite/ui/index.html) [Granite](/help/sites-developing/touch-ui-concepts.md#granite-ui) används för att låta användaren välja sökvägen till en viss resurs, kan sökvägarna som visas filtreras på följande sätt:
 
-* Implementera det anpassade predikatet genom att implementera [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html) gränssnitt.
+* Implementera det anpassade predikatet genom att implementera gränssnittet [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html).
 * Ange ett namn för predikatet och referera det namnet när du använder `pathbrowser`.
 
 Mer information om hur du skapar ett anpassat predikat finns i [den här artikeln](/help/sites-developing/implementing-custom-predicate-evaluator.md).
 
 >[!NOTE]
 >
->Implementera ett anpassat predikat genom att implementera `com.day.cq.commons.predicate.AbstractNodePredicate` -gränssnittet fungerar även i det klassiska användargränssnittet.
+>Implementering av ett anpassat predikat genom implementering av `com.day.cq.commons.predicate.AbstractNodePredicate`-gränssnittet fungerar även i det klassiska användargränssnittet.
 >
->Se [den här kunskapsbasartikeln](https://helpx.adobe.com/experience-manager/using/creating-custom-cq-tree.html) som ett exempel på implementering av ett anpassat predikat i det klassiska användargränssnittet.
+>I [den här kunskapsbasartikeln](https://helpx.adobe.com/experience-manager/using/creating-custom-cq-tree.html) finns ett exempel på hur du implementerar ett anpassat predikat i det klassiska användargränssnittet.
 
 ## Lägg till ny åtgärd i ett komponentverktygsfält {#add-new-action-to-a-component-toolbar}
 
@@ -132,7 +132,7 @@ KOD PÅ GITHUB
 
 Koden för den här sidan finns på GitHub
 
-* [Öppna aem-authoring-extension-toolbar-screenshot project på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
+* [Öppna aem-authoring-extension-toolbar-screenshot-projekt på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot)
 * Hämta projektet som [en ZIP-fil](https://github.com/Adobe-Marketing-Cloud/aem-authoring-extension-toolbar-screenshot/archive/master.zip)
 
 ## Lägg till ny lokal redigerare {#add-new-in-place-editor}
@@ -156,9 +156,9 @@ I en vanlig AEM-installation:
 
          * egenskap: `editorType`
 
-           Definierar den typ av infogad redigerare som används när redigeringen på plats aktiveras för den komponenten, till exempel `text`, `textimage`, `image`, `title`.
+           Definierar den typ av infogad redigerare som används när redigering på plats aktiveras för den komponenten, till exempel `text`, `textimage`, `image`, `title`.
 
-1. Ytterligare konfigurationsinformation om redigeraren kan konfigureras med en `config` nod som innehåller konfigurationer och en `plugin` nod som innehåller nödvändig konfigurationsinformation för plugin-programmet.
+1. Ytterligare konfigurationsinformation om redigeraren kan konfigureras med en `config`-nod som innehåller konfigurationer och en `plugin`-nod som innehåller nödvändig konfigurationsinformation för plugin-programmet.
 
    Följande är ett exempel på hur du definierar bildproportioner för bildbeskärningsplugin-programmet för bildkomponenten. På grund av den begränsade skärmstorleken har beskärningsproportionerna flyttats till helskärmsredigeraren och kan bara ses där.
 
@@ -184,7 +184,7 @@ I en vanlig AEM-installation:
 
    >[!CAUTION]
    >
-   >AEM beskärningsproportioner, enligt inställningen i `ratio` egenskap, definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av bakåtkompatibilitetsskäl. Redigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar `name` egenskapen tydligt eftersom detta är vad som visas i användargränssnittet.
+   >AEM beskärningsproportioner, som anges av egenskapen `ratio`, definieras som **height/width**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av bakåtkompatibilitetsskäl. Redigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar egenskapen `name` tydligt eftersom det är det som visas i gränssnittet.
 
 #### Skapa en ny lokal redigerare {#creating-a-new-in-place-editor}
 
@@ -219,15 +219,15 @@ Koden för den här sidan finns på GitHub
 
 #### Konfigurera flera redigerare på plats {#configuring-multiple-in-place-editors}
 
-Det går att konfigurera en komponent så att den har flera redigerare på plats. När flera redigerare på plats har konfigurerats kan du välja rätt innehåll och öppna rätt redigerare. Se [Konfigurera flera redigerare på plats](/help/sites-developing/multiple-inplace-editors.md) mer information.
+Det går att konfigurera en komponent så att den har flera redigerare på plats. När flera redigerare på plats har konfigurerats kan du välja rätt innehåll och öppna rätt redigerare. Mer information finns i dokumentationen för [Konfigurera flera redigerare på plats](/help/sites-developing/multiple-inplace-editors.md).
 
 ## Lägg till en ny sidåtgärd {#add-a-new-page-action}
 
-Lägga till en ny sidåtgärd i verktygsfältet, till exempel en **Tillbaka till platser** (konsol).
+Om du vill lägga till en ny sidåtgärd i sidverktygsfältet, till exempel en **Tillbaka till platser** (konsol)-åtgärd.
 
 ### Kodexempel {#code-sample-3}
 
-`aem-authoring-extension-header-backtosites` är ett exempelpaket som visar hur du skapar en anpassad åtgärd i sidhuvudsfältet för att hoppa tillbaka till webbplatskonsolen.
+`aem-authoring-extension-header-backtosites` är ett exempelpaket som visar hur du skapar en anpassad huvudfältåtgärd för att hoppa tillbaka till webbplatskonsolen.
 
 KOD PÅ GITHUB
 
@@ -238,15 +238,15 @@ Koden för den här sidan finns på GitHub
 
 ## Anpassa arbetsflödet för begäran om aktivering {#customizing-the-request-for-activation-workflow}
 
-färdiga arbetsflöden, **Ansökan om aktivering**:
+Det färdiga arbetsflödet, **Begär aktivering**:
 
-* Visas automatiskt på rätt meny när en innehållsförfattare **har inte** rätt replikeringsrättigheter, men **har** medlemskap för DAM-användare och författare.
+* Visas automatiskt på rätt meny när innehållsförfattaren **inte har** rätt replikeringsbehörighet, men **inte har** medlemskap i DAM-användare och författare.
 
 * I annat fall visas ingenting eftersom replikeringsrättigheter har tagits bort.
 
-Om du vill ha ett anpassat beteende för en sådan aktivering kan du täcka över **Ansökan om aktivering** arbetsflöde:
+Om du vill ha ett anpassat beteende för en sådan aktivering kan du täcka över arbetsflödet **Begär aktivering**:
 
-1. I `/apps` överlägg **Webbplatser** guide:
+1. I `/apps`-övertäckningen **Platser**-guiden:
 
    `/libs/wcm/core/content/common/managepublicationwizard`
 
@@ -256,5 +256,5 @@ Om du vill ha ett anpassat beteende för en sådan aktivering kan du täcka öve
    >
    >`/libs/cq/gui/content/common/managepublicationwizard`
 
-1. Uppdatera [arbetsflödesmodell](/help/sites-developing/workflows-models.md) och relaterade konfigurationer/skript efter behov.
-1. Ta bort höger till [`replicate` åtgärd](/help/sites-administering/security.md#actions) från alla lämpliga användare för alla relevanta sidor, om arbetsflödet ska aktiveras som standardåtgärd när någon av användarna försöker publicera (eller replikera) en sida.
+1. Uppdatera [arbetsflödesmodellen](/help/sites-developing/workflows-models.md) och relaterade konfigurationer/skript efter behov.
+1. Ta bort rättigheten till [`replicate`-åtgärden ](/help/sites-administering/security.md#actions) från alla lämpliga användare för alla relevanta sidor. Om du vill att det här arbetsflödet ska aktiveras som en standardåtgärd när någon av användarna försöker publicera (eller replikera) en sida.

@@ -31,7 +31,7 @@ En översikt och självstudiekurser för att komma igång finns på:
 
 ### Skapande och hantering av communitysajter {#communities-site-creation-and-management}
 
-* Communities [konsoler](consoles.md)
+* Communities [consoles](consoles.md)
 
    * [Sites](sites-console.md)
 
@@ -41,7 +41,7 @@ En översikt och självstudiekurser för att komma igång finns på:
    * [Hantering av medlemmar och grupper](members.md)
    * [Rapporter](reports.md)
 
-* Communities [*verktyg*](tools.md):
+* Webbgrupper [*verktyg*](tools.md):
 
    * [Webbplatsmallar](sites.md)
    * [Gruppmallar](tools-groups.md)
@@ -55,24 +55,24 @@ En översikt och självstudiekurser för att komma igång finns på:
 
 En viktig egenskap hos AEM Communities är att skapa användargenererat innehåll (UGC) av besökare som är inloggade på webbplatsen (medlemmar). Mer information om hur du arbetar med UGC finns på:
 
-* [Gemensamt UGC-arkiv](working-with-srp.md): val av SRP för delad lagring av UGC
-* [Kontrollerar UGC](moderate-ugc.md): betrodda medlemmar kan moderera UGC-innehåll i bulk eller kontext
+* [Allmänt UGC-arkiv](working-with-srp.md): val av SRP för delad lagring av UGC
+* [Modererar UGC](moderate-ugc.md): pålitliga medlemmar kan moderera UGC i bulk eller kontext
 * [Taggning UGC](tag-ugc.md): funktioner kan konfigureras så att medlemmar kan tagga innehåll
-* [Översätter UGC](translate-ugc.md): funktioner kan konfigureras för att översätta alla användargenererat innehåll eller tillåta medlemmar att översätta valda inlägg
-* [Analyskonfiguration](analytics.md): gör det möjligt för Adobe Analytics att rapportera olika mätvärden för medlemsaktivitet
+* [Översätter UGC](translate-ugc.md): funktioner kan konfigureras för att översätta alla UGC eller tillåta medlemmar att översätta valda inlägg
+* [Analyskonfiguration](analytics.md): aktiverar Adobe Analytics för att rapportera olika mått för medlemsaktivitet
 
 ### Community-medlemmar {#community-members}
 
 * [Hantera användare och användargrupper](users.md): information om communitymedlemmar och medlemsgrupper, inklusive behöriga medlemmar.
-* [Bidragsgränser](limits.md): möjlighet att begränsa bokföring av nya medlemmar.
-* [Tunneltjänst](deploy-communities.md#tunnel-service-on-author): tillåter att medlemmar och medlemsgrupper på publiceringssidan kan nås från författarmiljön.
-* [Konsoler för medlemmar och grupper](members.md): tillåter att medlemmar och medlemsgrupper på publiceringssidan skapas och hanteras från författarmiljön.
-* [Användarsynkronisering](sync.md): för synkronisering av medlemmar och medlemsgrupper i flera publiceringsinstanser.
-* [Social Logga in med Facebook och Twitter](social-login.md): möjlighet för besökare att bli community-medlem med hjälp av sina Facebook- eller Twitter-behörigheter.
-* [Betygsättning och emblem](implementing-scoring.md): möjlighet att tilldelas emblem för att identifiera roller för en medlem och för medlemmar att få brickor genom sitt deltagande i communityn.
-* [Meddelanden](notifications.md): möjlighet för medlemmar att bli informerade om den aktivitet de följer.
-* [Prenumerationer](subscriptions.md): möjlighet för medlemmarna att interagera med communityn via extern e-post.
-* [Meddelanden](messaging.md): möjlighet för medlemmarna att interagera med communityn med hjälp av interna meddelanden.
+* [Bidragsgränser](limits.md): möjlighet att begränsa publicering av nya medlemmar.
+* [Tunneltjänsten](deploy-communities.md#tunnel-service-on-author): tillåter åtkomst till medlemmar och medlemsgrupper på publiceringssidan från författarmiljön.
+* [Medlemmar och grupper-konsoler](members.md): tillåter att medlemmar och medlemsgrupper på publiceringssidan skapas och hanteras från författarmiljön.
+* [Användarsynkronisering](sync.md): För synkronisering av medlemmar och medlemsgrupper över flera publiceringsinstanser.
+* [Social Logga in med Facebook och Twitter](social-login.md): möjlighet för webbplatsbesökare att bli community-medlemmar med sina inloggningsuppgifter för Facebook eller Twitter.
+* [Betygsättning och emblem](implementing-scoring.md): möjlighet att tilldela emblem till att identifiera roller för en medlem och för medlemmar att få brickor genom sitt deltagande i communityn.
+* [Meddelanden](notifications.md): Medlemmar kan meddelas om aktivitet som de följer.
+* [Prenumerationer](subscriptions.md): Medlemmar kan interagera med communityn via extern e-post.
+* [Meddelanden](messaging.md): Medlemmar kan interagera med communityn med hjälp av interna meddelanden.
 
 ### Distribution {#deployment}
 
@@ -86,12 +86,12 @@ Det är viktigt att du installerar den senaste versionen av Communities på den 
 
 * [Senaste webbgruppsfunktionspaket](deploy-communities.md#latestfeaturepack)
 
-På distributionssidan finns annan information om communities, t.ex. för [Uppgraderar](upgrade.md), [Dispatcher](dispatcher.md)och [Replikering](deploy-communities.md#replication-agents-on-author).
+På distributionssidan finns annan communityspecifik information, t.ex. för [Uppgradering](upgrade.md), [Dispatcher](dispatcher.md) och [replikering](deploy-communities.md#replication-agents-on-author).
 
 ## Dokumentation för relaterade communities {#related-communities-documentation}
 
-* Besök [Distribuera webbgrupper](deploy-communities.md) där du kan lära dig mer om rekommenderade distributioner.
+* Besök [Distribuera communityn](deploy-communities.md) där du kan läsa mer om rekommenderade distributioner.
 
-* Besök [Utveckla webbgrupper](communities.md) där du kan lära dig mer om det sociala ramverket (SCF) och hur du anpassar communitykomponenter och -funktioner.
+* Gå till [Utveckla communityn](communities.md) där du kan lära dig mer om det sociala komponentramverket (SCF) och anpassa webbcommunitykomponenter och -funktioner.
 
-* Besök [Komponenter i redigeringsgrupper](author-communities.md) där du kan lära dig hur du skapar med och konfigurerar webbgruppskomponenter.
+* Gå till [Komponenter för redigeringsgrupper](author-communities.md) där du kan lära dig hur du skapar med och konfigurerar webbgruppskomponenter.

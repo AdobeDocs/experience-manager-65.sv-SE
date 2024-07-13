@@ -24,57 +24,57 @@ I Korrespondenshantering kan du använda en bild för att återge agentsignature
 
 AgentSignatureImage DDE är en beräknad DDE som representerar agentens signaturbild. Uttrycket för denna beräknade DDE använder en ny anpassad funktion som exponeras av byggblocket Expression Manager. Den här anpassade funktionen tar agentID och agentFolder som indataparametrar och hämtar bildinnehållet baserat på dessa parametrar. Systemets dataordlista SystemContext ger bokstäver i Correspondence Management tillgång till information i den aktuella systemkontexten. Systemkontexten innehåller information om den inloggade användaren och aktiva konfigurationsparametrar.
 
-Du kan lägga till bilder under mappen cmouseRoot. I [Egenskaper för konfiguration av korrespondenshantering](/help/forms/using/cm-configuration-properties.md)Med egenskapen CM-användarrot kan du ändra mappen från vilken agentsignaturbilden hämtas.
+Du kan lägga till bilder under mappen cmouseRoot. I [Konfiguration av korrespondenshantering](/help/forms/using/cm-configuration-properties.md) kan du med CM-egenskapen Användarrot ändra mappen som agentsignaturbilden hämtas från.
 
-Värdet för agentFolder DDE hämtas från CMUserRoot-konfigurationsparametern för konfigurationsegenskaperna för Correspondence Management. Som standard pekar den här konfigurationsparametern på /content/cmUserRoot i CRX-databasen. Du kan ändra värdet på CMUserRoot-konfigurationen i Configuration Properties.
+Värdet för agentFolder DDE hämtas från CMUserRoot-konfigurationsparametern för konfigurationsegenskaperna för Correspondence Management. Den här konfigurationsparametern pekar som standard på /content/cmUserRoot i CRX-databasen. Du kan ändra värdet på CMUserRoot-konfigurationen i Configuration Properties.
 Du kan också åsidosätta standardfunktionen för anpassade funktioner för att definiera din egen logik för att hämta användarsignaturbilden.
 
 ## Lägger till agentsignaturbild {#adding-agent-signature-image}
 
 1. Kontrollera att agentsignaturbilden har samma namn som användarens AEM användarnamn. (Tillägg krävs inte för bildens filnamn.)
-1. Skapa en mapp med namnet CRX `cmUserRoot` i mappen content.
+1. Skapa en mapp med namnet `cmUserRoot` i innehållsmappen i CRX.
 
    1. Gå till `https://'[server]:[port]'/crx/de`. Logga in som administratör om det behövs.
 
-   1. Högerklicka på **innehåll** mapp och markera **Skapa** > **Skapa mapp**.
+   1. Högerklicka på mappen **content** och välj **Skapa** > **Skapa mapp**.
 
       ![Skapa mapp](assets/1_createnode_cmuserroot.png)
 
-   1. I dialogrutan Skapa mapp anger du namnet på mappen som `cmUserRoot`. Klicka **Spara alla**.
+   1. Ange mappens namn som `cmUserRoot` i dialogrutan Skapa mapp. Klicka på **Spara alla**.
 
       >[!NOTE]
       >
-      >cmUserRoot är standardplatsen där AEM söker efter agentsignaturbilden. Du kan dock ändra den genom att redigera egenskapen CM-användarrot i dialogrutan [Konfigurationsegenskaper för korrespondenshantering](/help/forms/using/cm-configuration-properties.md).
+      >cmUserRoot är standardplatsen där AEM söker efter agentsignaturbilden. Du kan dock ändra den genom att redigera egenskapen CM-användarrot i konfigurationsegenskaperna [för korrespondenshantering](/help/forms/using/cm-configuration-properties.md).
 
 1. I Innehållsutforskaren navigerar du till mappen cmUserRoot och lägger till agentsignaturbilden i den.
 
    1. Gå till `https://'[server]:[port]'/crx/explorer/index.jsp`. Logga in som administratör om det behövs.
-   1. Klicka **Content Explorer**. Utforskaren öppnas i ett nytt fönster.
-   1. Navigera till mappen cmUserRoot i Innehållsutforskaren och markera den. Högerklicka på **cmUserRoot** mapp och markera **Ny nod**.
+   1. Klicka på **Content Explorer**. Utforskaren öppnas i ett nytt fönster.
+   1. Navigera till mappen cmUserRoot i Innehållsutforskaren och markera den. Högerklicka på mappen **cmUserRoot** och välj **Ny nod**.
 
       ![Ny nod i cmUserRoot](assets/2_cmuserroot_newnode.png)
 
       Gör följande poster i raden för ny nod och klicka sedan på den gröna bockmarkeringen.
 
-      **Namn:** JohnDoe (eller namnet på din agentsignaturfil)
+      **Namn:** JohnDoe (eller namnet på agentens signaturfil)
 
-      **Typ:** nt:fil
+      **Typ:** nt:file
 
-      Under `cmUserRoot` mapp, en ny mapp med namnet `JohnDoe` (eller namnet som du angav i föregående steg) skapas.
+      Under mappen `cmUserRoot` skapas en ny mapp med namnet `JohnDoe` (eller namnet som du angav i föregående steg).
 
-   1. Klicka på den nya mappen som du har skapat (här) `JohnDoe`). Innehållsutforskaren visar mappens innehåll som nedtonat.
+   1. Klicka på den nya mappen som du har skapat (här `JohnDoe`). Innehållsutforskaren visar mappens innehåll som nedtonat.
 
-   1. Dubbelklicka på **jcr:innehåll** egenskap, ange dess typ som **nt:resurs** och klicka sedan på den gröna bockmarkeringen för att spara posten.
+   1. Dubbelklicka på egenskapen **jcr:content**, ange dess typ som **nt:resource** och klicka sedan på den gröna bockmarkeringen för att spara posten.
 
       Om egenskapen inte finns skapar du först en egenskap med namnet jcr:content.
 
       ![jcr:egenskapen content](assets/3_jcrcontentntresource.png)
 
-      Bland de underordnade egenskaperna för jcr:content finns jcr:data, som är nedtonat. Dubbelklicka på jcr:data. Egenskapen kan redigeras och knappen Välj fil visas i posten. Klicka **Välj fil** och välj den bildfil som du vill använda som logotyp. Bildfilen behöver inte ha något tillägg.
+      Bland de underordnade egenskaperna för jcr:content finns jcr:data, som är nedtonat. Dubbelklicka på jcr:data. Egenskapen kan redigeras och knappen Välj fil visas i posten. Klicka på **Välj Arkiv** och välj den bildfil som du vill använda som logotyp. Bildfilen behöver inte ha något tillägg.
 
       ![JCR-data](assets/5_jcrdata.png)
 
-   Klicka **Spara alla**.
+   Klicka på **Spara alla**.
 
 1. Kontrollera att den XDP\layout som du använder i bokstaven har ett bildfält längst ned till vänster (eller någon annan lämplig plats i layouten där du vill återge signaturen) för att återge signaturbilden.
 1. När du skapar korrespondensen väljer du ett bildfält för signaturbilden på fliken Data enligt följande:
@@ -87,4 +87,4 @@ Du kan också åsidosätta standardfunktionen för anpassade funktioner för att
 
 1. När brevet återges kan du se din signatur i förhandsvisningen av bokstaven i bildfältet enligt layouten.
 
-   ![Agentsignaturbild i brevet](assets/letterwithsignature.png)
+   ![Agentsignaturbild i bokstaven](assets/letterwithsignature.png)

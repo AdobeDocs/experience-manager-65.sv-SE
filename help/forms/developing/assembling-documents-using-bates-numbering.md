@@ -19,9 +19,9 @@ ht-degree: 0%
 
 # Sammanställa dokument med Bates-numrering {#assembling-documents-using-bates-numbering}
 
-**Exempel och exempel i det här dokumentet är bara för AEM Forms i JEE-miljö.**
+**Exempel och exempel i det här dokumentet gäller endast för AEM Forms i JEE-miljö.**
 
-Du kan sätta ihop PDF-dokument som innehåller unika sididentifierare genom att använda Bates-numrering. *Bates-numrering* är en metod för att tillämpa unika identifieringsmetoder på en grupp av relaterade dokument. Varje sida i dokumentet (eller dokumentuppsättningen) tilldelas ett Bates-nummer som unikt identifierar sidan. Till exempel kan tillverkningsdokument som innehåller produktstruktur och som är kopplade till produktionen av en sammansättning innehålla en identifierare. Ett Bates-nummer innehåller ett numeriskt värde i följd samt ett valfritt prefix och suffix. Prefixet + numeriskt + suffix kallas *bates-mönster*.
+Du kan sätta ihop PDF-dokument som innehåller unika sididentifierare genom att använda Bates-numrering. *Bates-numrering* är en metod för att tillämpa unika identifierare på en grupp med relaterade dokument. Varje sida i dokumentet (eller dokumentuppsättningen) tilldelas ett Bates-nummer som unikt identifierar sidan. Till exempel kan tillverkningsdokument som innehåller produktstruktur och som är kopplade till produktionen av en sammansättning innehålla en identifierare. Ett Bates-nummer innehåller ett numeriskt värde i följd samt ett valfritt prefix och suffix. Prefixet + det numeriska + suffixet kallas *bates-mönster*.
 
 Följande bild visar ett PDF-dokument som innehåller en unik identifierare i dokumentets sidhuvud.
 
@@ -46,11 +46,11 @@ I det här avsnittet placeras den unika sididentifieraren i ett dokuments sidhuv
  </DDX>
 ```
 
-Det här DDX-dokumentet sammanfogar två PDF-dokument med namnet *map.pdf* och *vägbeskrivning.pdf* till ett enda dokument i PDF. Det resulterande PDF-dokumentet innehåller ett sidhuvud som består av en unik sididentifierare. Dokumentet i ovanstående bild visar till exempel 000016.
+Det här DDX-dokumentet sammanfogar två PDF-dokument med namnen *map.pdf* och *directs.pdf* till ett enda PDF-dokument. Det resulterande PDF-dokumentet innehåller ett sidhuvud som består av en unik sididentifierare. Dokumentet i ovanstående bild visar till exempel 000016.
 
 >[!NOTE]
 >
->Innan du läser det här avsnittet bör du känna till hur du sammanställer PDF-dokument med hjälp av tjänsten Assembler. I det här avsnittet beskrivs inte begreppen, till exempel att skapa ett samlingsobjekt som innehåller indatadokument eller att extrahera resultaten från det returnerade samlingsobjektet. (Se [Programmisk sammanställning av PDF-dokument](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
+>Innan du läser det här avsnittet bör du känna till hur du sammanställer PDF-dokument med hjälp av tjänsten Assembler. I det här avsnittet beskrivs inte begreppen, till exempel att skapa ett samlingsobjekt som innehåller indatadokument eller att extrahera resultaten från det returnerade samlingsobjektet. (Se [Programmisk sammansättning av PDF-dokument](/help/forms/developing/programmatically-assembling-pdf-documents.md).)
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Det här DDX-dokumentet sammanfogar två PDF-dokument med namnet *map.pdf* och *
 
 >[!NOTE]
 >
->Mer information om ett DX-dokument finns i [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).
+>Mer information om ett DDX-dokument finns i [Assembler Service och DDX Reference](https://www.adobe.com/go/learn_aemforms_ddx_63).
 
 ## Sammanfattning av steg {#summary-of-steps}
 
@@ -84,7 +84,7 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms används i JBoss)
 * jbossall-client.jar (krävs om AEM Forms används i JBoss)
 
-Om AEM Forms körs på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms är driftsatt. Information om platsen för alla AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Om AEM Forms körs på en annan J2EE-programserver än JBoss måste du ersätta filerna adobe-utilities.jar och jbossall-client.jar med JAR-filer som är specifika för J2EE-programservern där AEM Forms är driftsatt. Mer information om platsen för alla AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa en PDF Assembler-klient**
 
@@ -92,19 +92,19 @@ Innan du programmässigt kan utföra en Assembler-åtgärd måste du skapa en As
 
 **Referera till ett befintligt DDX-dokument**
 
-Ett DDX-dokument måste refereras till för att du ska kunna montera ett PDF-dokument. Ta till exempel det DX-dokument som introducerades i det här avsnittet. Om du vill montera ett PDF-dokument som innehåller unika sididentifierare måste DDX-dokumentet innehålla `BatesNumber` -element.
+Ett DDX-dokument måste refereras till för att du ska kunna montera ett PDF-dokument. Ta till exempel det DX-dokument som introducerades i det här avsnittet. Om du vill montera ett PDF-dokument som innehåller unika sididentifierare måste DDX-dokumentet innehålla elementet `BatesNumber`.
 
-**PDF-dokument för referensindata**
+**Referensindata för PDF-dokument**
 
 Det måste finnas referenser till indata-PDF-dokument för att du ska kunna samla ihop ett PDF-dokument. Exempelvis måste dokumenten map.pdf och direction.pdf refereras till för att samla ihop dessa PDF-dokument till ett enda PDF-dokument.
 
-**Ange det inledande Bates-nummervärdet**
+**Ange startvärde för Bates-nummer**
 
 Du kan ställa in det inledande Bates-numret så att det uppfyller dina affärskrav. Anta till exempel att det är ett krav att ställa in startvärdet på 000100. Om du inte anger startvärdet är värdet för den första sidan 00000.
 
-**Sammanställa PDF-indatadokument**
+**Sammanställ PDF-indatadokumenten**
 
-När du har skapat Assembler-tjänstklienten ska du referera till det DDX-dokument som innehåller `BatesNumber` elementinformation, referera till ett inmatningsdokument i PDF och ange körningsalternativ, kan du anropa `invokeDDX` som resulterar i att Assembler-tjänsten samlar ihop ett PDF-dokument som innehåller unika sididentifierare.
+När du har skapat Assembler-tjänstklienten, refererar till DDX-dokumentet som innehåller `BatesNumber`-elementinformation, refererar till ett indatadokument och anger körningsalternativ, kan du anropa `invokeDDX` -åtgärden som resulterar i att Assembler-tjänsten samlar ihop ett PDF-dokument som innehåller unika sididentifierare.
 
 **Extrahera resultaten**
 
@@ -112,7 +112,7 @@ Assembler-tjänsten returnerar ett samlingsobjekt som innehåller jobbresultaten
 
 >[!NOTE]
 >
->Ett samlingsobjekt returneras om du anropar `invokeDDX` operation. Den här åtgärden används när två eller flera indatadokument skickas till PDF till Assembler-tjänsten. Om du bara skickar ett indatadokument i PDF till Assembler-tjänsten bör du anropa `invokeOneDocument` operation. Mer information om hur du använder den här åtgärden finns i [Sammanställa krypterade PDF-dokument](/help/forms/developing/assembling-encrypted-pdf-documents.md).
+>Ett samlingsobjekt returneras om du anropar åtgärden `invokeDDX`. Den här åtgärden används när två eller flera indatadokument skickas till PDF till Assembler-tjänsten. Om du bara skickar ett indatadokument i PDF till Assembler-tjänsten bör du anropa åtgärden `invokeOneDocument`. Mer information om hur du använder den här åtgärden finns i [Sammanställa krypterade PDF-dokument](/help/forms/developing/assembling-encrypted-pdf-documents.md).
 
 **Se även**
 
@@ -132,46 +132,46 @@ Sammanställa ett PDF-dokument som använder unika sididentifierare (Bates-numre
 
 1. Skapa en PDF Assembler-klient.
 
-   * Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper.
-   * Skapa en `AssemblerServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt.
+   * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
+   * Skapa ett `AssemblerServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa en `java.io.FileInputStream` -objekt som representerar DDX-dokumentet genom att använda dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
-   * Skapa en `com.adobe.idp.Document` genom att använda konstruktorn och skicka `java.io.FileInputStream` -objekt.
+   * Skapa ett `java.io.FileInputStream`-objekt som representerar DDX-dokumentet med hjälp av dess konstruktor och skicka ett strängvärde som anger platsen för DDX-filen.
+   * Skapa ett `com.adobe.idp.Document`-objekt med hjälp av dess konstruktor och skicka `java.io.FileInputStream`-objektet.
 
 1. Referera PDF-dokument för indata.
 
-   * Skapa en `java.util.Map` objekt som används för att lagra indatadokument i PDF genom att använda en `HashMap` konstruktor.
-   * För varje indatadokument i PDF skapar du en `java.io.FileInputStream` genom att använda dess konstruktor och skicka indatadokumentets plats i PDF. I så fall ska du skicka platsen för ett oskyddat PDF-dokument.
-   * För varje indatadokument i PDF skapar du en `com.adobe.idp.Document` -objektet och skicka `java.io.FileInputStream` -objekt som innehåller dokumentet PDF.
-   * Lägg till en post i `java.util.Map` genom att anropa dess `put` och skicka följande argument:
+   * Skapa ett `java.util.Map`-objekt som används för att lagra PDF-indatadokument med hjälp av en `HashMap`-konstruktor.
+   * För varje indatadokument i PDF skapar du ett `java.io.FileInputStream`-objekt med hjälp av dess konstruktor och skickar indatadokumentets plats i PDF. I så fall ska du skicka platsen för ett oskyddat PDF-dokument.
+   * Skapa ett `com.adobe.idp.Document`-objekt för varje indatadokument och skicka `java.io.FileInputStream`-objektet som innehåller PDF-dokumentet.
+   * Lägg till en post i objektet `java.util.Map` genom att anropa dess `put`-metod och skicka följande argument:
 
       * Ett strängvärde som representerar nyckelnamnet. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet. Namnet på källfilen i PDF som anges i DDX-dokumentet som introduceras i det här avsnittet är Loan.pdf.
-      * A `com.adobe.idp.Document` objekt som innehåller det oskyddade PDF-dokumentet.
+      * Ett `com.adobe.idp.Document`-objekt som innehåller det oskyddade PDF-dokumentet.
 
 1. Ange det inledande Bates-nummervärdet.
 
-   * Skapa en `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
-   * Ange det inledande Bates-numret genom att anropa `AssemblerOptionSpec` objektets `setFirstBatesNumber` och skickar ett numeriskt värde som anger det inledande värdet.
+   * Skapa ett `AssemblerOptionSpec`-objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
+   * Ange det inledande Bates-numret genom att anropa `setFirstBatesNumber` för objektet `AssemblerOptionSpec` och skicka ett numeriskt värde som anger det inledande värdet.
 
 1. Sammanställ PDF-indatadokumenten.
 
-   Anropa `AssemblerServiceClient` objektets `invokeDDX` och skicka följande obligatoriska värden:
+   Anropa `AssemblerServiceClient`-objektets `invokeDDX`-metod och skicka följande obligatoriska värden:
 
-   * A `com.adobe.idp.Document` -objekt som representerar DDX-dokumentet.
-   * A `java.util.Map` objekt som innehåller indata för oskyddad PDF-fil.
-   * A `com.adobe.livecycle.assembler.client.AssemblerOptionSpec` -objekt som anger körningsalternativ, inklusive standardteckensnitt och jobbloggsnivå.
+   * Ett `com.adobe.idp.Document`-objekt som representerar DDX-dokumentet.
+   * Ett `java.util.Map`-objekt som innehåller den oskyddade indatafilen för PDF.
+   * Ett `com.adobe.livecycle.assembler.client.AssemblerOptionSpec`-objekt som anger körningsalternativen, inklusive standardteckensnitt och jobbloggsnivå.
 
-   The `invokeDDX` returnerar en `com.adobe.livecycle.assembler.client.AssemblerResult` objekt som innehåller ett lösenordskrypterat PDF-dokument.
+   Metoden `invokeDDX` returnerar ett `com.adobe.livecycle.assembler.client.AssemblerResult`-objekt som innehåller ett lösenordskrypterat PDF-dokument.
 
 1. Extrahera resultaten.
 
    Utför följande åtgärder för att hämta det nya PDF-dokumentet:
 
-   * Anropa `AssemblerResult` objektets `getDocuments` -metod. Den här åtgärden returnerar en `java.util.Map` -objekt.
-   * Iterera genom `java.util.Map` tills du hittar `com.adobe.idp.Document` -objekt.
-   * Anropa `com.adobe.idp.Document` objektets `copyToFile` metod för att extrahera PDF-dokumentet.
+   * Anropa metoden `getDocuments` för objektet `AssemblerResult`. Den här åtgärden returnerar ett `java.util.Map`-objekt.
+   * Upprepa genom objektet `java.util.Map` tills du hittar objektet `com.adobe.idp.Document`.
+   * Anropa `com.adobe.idp.Document`-objektets `copyToFile`-metod för att extrahera PDF-dokumentet.
 
 **Se även**
 
@@ -191,64 +191,64 @@ Sammanställa ett PDF-dokument som använder unika sididentifierare (Bates-numre
 
    >[!NOTE]
    >
-   >Ersätt `localhost` med IP-adressen till den server där AEM Forms finns.
+   >Ersätt `localhost` med IP-adressen för servern som är värd för AEM Forms.
 
 1. Skapa en PDF Assembler-klient.
 
-   * Skapa en `AssemblerServiceClient` genom att använda dess standardkonstruktor.
-   * Skapa en `AssemblerServiceClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens.
-   * Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `AssemblerServiceClient.Endpoint.Binding` fält. Skicka returvärdet till `BasicHttpBinding`.
-   * Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+   * Skapa ett `AssemblerServiceClient`-objekt med hjälp av dess standardkonstruktor.
+   * Skapa ett `AssemblerServiceClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten (till exempel `http://localhost:8080/soap/services/AssemblerService?blob=mtom`). Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens.
+   * Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för fältet `AssemblerServiceClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+   * Ställ in `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-fält till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
    * Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
-      * Tilldela AEM formuläranvändarnamn till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
+      * Tilldela användarnamnet för AEM formulär till fältet `AssemblerServiceClient.ClientCredentials.UserName.UserName`.
       * Tilldela motsvarande lösenordsvärde till fältet `AssemblerServiceClient.ClientCredentials.UserName.Password`.
       * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till fältet `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
       * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till fältet `BasicHttpBindingSecurity.Security.Mode`.
 
 1. Referera till ett befintligt DDX-dokument.
 
-   * Skapa en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra DDX-dokumentet.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för DDX-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` -metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` fält med bytearrayens innehåll.
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor. Objektet `BLOB` används för att lagra DDX-dokumentet.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor och skicka ett strängvärde som representerar filplatsen för DDX-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll `BLOB`-objektet genom att tilldela dess `MTOM`-fält med innehållet i bytearrayen.
 
 1. Referera PDF-dokument för indata.
 
-   * För varje indatadokument i PDF skapar du en `BLOB` genom att använda dess konstruktor. The `BLOB` -objektet används för att lagra indatadokumentet i PDF.
-   * Skapa en `System.IO.FileStream` genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för indata-PDF-dokumentet och läget som filen ska öppnas i.
-   * Skapa en bytearray som lagrar innehållet i `System.IO.FileStream` -objekt. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream` objektets `Length` -egenskap.
-   * Fylla i bytearrayen med strömdata genom att anropa `System.IO.FileStream` objektets `Read` -metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
-   * Fyll i `BLOB` genom att tilldela `MTOM` med bytearrayens innehåll.
-   * Skapa en `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Det här samlingsobjektet används för att lagra PDF-indatadokument.
-   * För varje indatadokument i PDF skapar du en `MyMapOf_xsd_string_To_xsd_anyType_Item` -objekt. Om du t.ex. använder två indata-PDF-dokument skapar du två `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt.
-   * Tilldela ett strängvärde som representerar nyckelnamnet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `key` fält. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet. (Utför den här åtgärden för varje dokument i PDF.)
-   * Tilldela `BLOB` det objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item` objektets `value` fält. (Utför den här åtgärden för varje dokument i PDF.)
-   * Lägg till `MyMapOf_xsd_string_To_xsd_anyType_Item` objekt till `MyMapOf_xsd_string_To_xsd_anyType` -objekt. Anropa `MyMapOf_xsd_string_To_xsd_anyType` objektets `Add` och skicka `MyMapOf_xsd_string_To_xsd_anyType` -objekt. (Utför den här åtgärden för varje dokument i PDF.)
+   * Skapa ett `BLOB`-objekt med hjälp av dess konstruktor för varje indatadokument i PDF. Objektet `BLOB` används för att lagra indatadokumentet i PDF.
+   * Skapa ett `System.IO.FileStream`-objekt genom att anropa dess konstruktor. Skicka ett strängvärde som representerar filplatsen för indata-PDF-dokumentet och läget som filen ska öppnas i.
+   * Skapa en bytearray som lagrar innehållet i objektet `System.IO.FileStream`. Du kan bestämma storleken på bytearrayen genom att hämta `System.IO.FileStream`-objektets `Length`-egenskap.
+   * Fyll i bytearrayen med strömdata genom att anropa `System.IO.FileStream`-objektets `Read`-metod. Skicka bytearrayen, startpositionen och strömlängden som ska läsas.
+   * Fyll objektet `BLOB` genom att tilldela dess `MTOM`-egenskap med innehållet i bytearrayen.
+   * Skapa ett `MyMapOf_xsd_string_To_xsd_anyType`-objekt. Det här samlingsobjektet används för att lagra PDF-indatadokument.
+   * Skapa ett `MyMapOf_xsd_string_To_xsd_anyType_Item`-objekt för varje indatadokument i PDF. Om du till exempel använder två indatadokument i PDF skapar du två `MyMapOf_xsd_string_To_xsd_anyType_Item`-objekt.
+   * Tilldela ett strängvärde som representerar nyckelnamnet till `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektets `key`-fält. Detta värde måste matcha värdet för källelementet PDF som anges i DDX-dokumentet. (Utför den här åtgärden för varje dokument i PDF.)
+   * Tilldela det `BLOB`-objekt som lagrar PDF-dokumentet till `MyMapOf_xsd_string_To_xsd_anyType_Item`-objektets `value`-fält. (Utför den här åtgärden för varje dokument i PDF.)
+   * Lägg till objektet `MyMapOf_xsd_string_To_xsd_anyType_Item` i objektet `MyMapOf_xsd_string_To_xsd_anyType`. Anropa `MyMapOf_xsd_string_To_xsd_anyType`-objektets `Add`-metod och skicka `MyMapOf_xsd_string_To_xsd_anyType`-objektet. (Utför den här åtgärden för varje dokument i PDF.)
 
 1. Ange det inledande Bates-nummervärdet.
 
-   * Skapa en `AssemblerOptionSpec` objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
-   * Ange det inledande Bates-numret genom att tilldela ett numeriskt värde till `firstBatesNumber` datamedlem som tillhör `AssemblerOptionSpec` -objekt.
+   * Skapa ett `AssemblerOptionSpec`-objekt som lagrar körningsalternativ med hjälp av dess konstruktor.
+   * Ange det inledande Bates-numret genom att tilldela datamedlemmen `firstBatesNumber` som tillhör objektet `AssemblerOptionSpec` ett numeriskt värde.
 
 1. Sammanställ PDF-indatadokumenten.
 
-   Anropa `AssemblerServiceClient` objektets `invoke` och skicka följande värden:
+   Anropa `AssemblerServiceClient`-objektets `invoke`-metod och skicka följande värden:
 
-   * A `BLOB` -objekt som representerar DDX-dokumentet.
-   * The `MyMapOf_xsd_string_To_xsd_anyType` objekt som innehåller indatadokumenten i PDF. Dess nycklar måste matcha PDF källfilernas namn och dess värden måste vara `BLOB` objekt som motsvarar dessa filer.
-   * An `AssemblerOptionSpec` objekt som anger körningsalternativ.
+   * Ett `BLOB`-objekt som representerar DDX-dokumentet.
+   * Objektet `MyMapOf_xsd_string_To_xsd_anyType` som innehåller indatadokumenten i PDF. Dess nycklar måste matcha namnen på källfilerna i PDF och dess värden måste vara de `BLOB`-objekt som motsvarar dessa filer.
+   * Ett `AssemblerOptionSpec`-objekt som anger körningsalternativ.
 
-   The `invoke` returnerar en `AssemblerResult` som innehåller resultatet av jobbet och eventuella undantag som inträffade.
+   Metoden `invoke` returnerar ett `AssemblerResult`-objekt som innehåller resultatet av jobbet och eventuella undantag som inträffade.
 
 1. Extrahera resultaten.
 
    Utför följande åtgärder för att hämta det nya PDF-dokumentet:
 
-   * Öppna `AssemblerResult` objektets `documents` fält, vilket är ett `Map` -objekt som innehåller de resulterande PDF-dokumenten.
-   * Iterera genom `Map` tills du hittar nyckeln som matchar namnet på det resulterande dokumentet. Byt sedan ut arraymedlemmens `value` till `BLOB`.
-   * Extrahera de binära data som representerar PDF-dokumentet genom att öppna dess `BLOB` objektets `MTOM` -egenskap. Detta returnerar en array med byte som du kan skriva ut till en PDF-fil.
+   * Åtkomst till `AssemblerResult`-objektets `documents`-fält, som är ett `Map`-objekt som innehåller de resulterande PDF-dokumenten.
+   * Upprepa genom objektet `Map` tills du hittar nyckeln som matchar namnet på det resulterande dokumentet. Byt sedan `value` för den arraymedlemmen till en `BLOB`.
+   * Extrahera de binära data som representerar PDF-dokumentet genom att komma åt objektets `MTOM`-egenskap för `BLOB`. Detta returnerar en array med byte som du kan skriva ut till en PDF-fil.
 
 **Se även**
 

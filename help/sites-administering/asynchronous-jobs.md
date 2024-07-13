@@ -24,7 +24,7 @@ Dessa åtgärder omfattar:
 * Att hämta resurser som ligger över det angivna gränsvärdet från en fjärrdistribution av Experience Manager.
 * Att öppna Live-kopior.
 
-Du kan visa status för asynkrona jobb från **[!UICONTROL Async Job Status]** instrumentpanel på **Global navigering** > **verktyg** > **Operationer** > **Jobb**.
+Du kan visa status för asynkrona jobb från kontrollpanelen **[!UICONTROL Async Job Status]** på **Global navigering** > **Verktyg** > **Åtgärder** > **Jobs**.
 
 >[!NOTE]
 >
@@ -132,8 +132,8 @@ Om antalet resurser/mappar eller referenser som ska flyttas överstiger gränsv�
 >[!MORELIKETHIS]
 >
 >* [Skapa och ordna sidor](/help/sites-authoring/managing-pages.md)
->* [Skapa och synkronisera Live-kopior](/help/sites-administering/msm-livecopy.md)
+>* [Skapar och synkroniserar live-kopior](/help/sites-administering/msm-livecopy.md)
 >* [Konfigurera e-post i Experience Manager](/help/sites-administering/notification.md).
->* [Importera metadata för resurser](/help/assets/metadata.md#import-metadata).
->* [Exportera metadata för resurser](/help/assets/metadata.md#export-metadata).
+>* [Importera metadata för resurs](/help/assets/metadata.md#import-metadata).
+>* [Exportera metadata för resurs](/help/assets/metadata.md#export-metadata).
 >* [Använd länkade resurser för att dela DAM-resurser från fjärrdistributioner](/help/assets/use-assets-across-connected-assets-instances.md).

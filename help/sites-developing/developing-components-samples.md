@@ -33,7 +33,7 @@ Mer information om det klassiska användargränssnittet finns i [AEM komponenter
 >För att hjälpa dig att analysera, testa och felsöka dina komponenter AEM:
 >
 >* [Utvecklarläge](/help/sites-developing/developer-mode.md)
->* a [för automatisering av tester, baserat på biblioteket Hobbes.js](/help/sites-developing/hobbes.md)
+>* ett [ramverk för automatisering av tester, baserat på biblioteket Hobbes.js](/help/sites-developing/hobbes.md)
 >
 
 ## Kodexempel - Anpassa dialogrutefält {#code-sample-how-to-customize-dialog-fields}
@@ -42,12 +42,12 @@ KOD PÅ GITHUB
 
 Koden för den här sidan finns på GitHub
 
-* [Öppna aem-authoring-dialog-fields-customization project på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization)
+* [Öppna aem-authoring-dialog-fields-customization-projekt i GitHub](https://github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization)
 * Hämta projektet som [en ZIP-fil](https://codeload.github.com/Adobe-Marketing-Cloud/aem-authoring-dialog-fields-customization/zip/refs/heads/master)
 
 >[!NOTE]
 >
->Det här kodexemplet är relaterat till AEM Gems-sessionen på [Anpassa dialogrutefält](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
+>Det här kodexemplet är relaterat till AEM Gems-sessionen i [Anpassa dialogrutefält](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2015/aem-customizing-dialog-fields-in-touch-ui.html).
 
 ## Relaterade resurser {#related-resources}
 
@@ -61,4 +61,4 @@ Information, tillsammans med länkar till kodexemplet, finns under [Lägg till n
 
 Du kanske vill utöka standardkomponenten för innehållsfragment för att lägga till funktioner.
 
-Information finns under [Anpassa och utöka innehållsfragment](/help/sites-developing/customizing-content-fragments.md).
+Mer information finns under [Anpassa och utöka innehållsfragment](/help/sites-developing/customizing-content-fragments.md).

@@ -37,14 +37,14 @@ Du kan ange vilka kolumner som ska visas i sökresultaten.
 
 ### Söka efter en uppgift med en sökmall {#search-for-a-task-using-a-search-template}
 
-1. På sidan Spärra/knip i listan till vänster väljer du **Sökmallar** och välj en sökmall.
+1. Välj **Sökmallar** i listan till vänster på spårningssidan och välj en sökmall.
 1. Om mallen stöder sökparametrar kan du begränsa sökparametrarna genom att fylla i mallfälten och sedan klicka på **Sök**. Visar en lista med alla aktiviteter som du har deltagit i, som matchar sökvillkoren.
 
 ## Visa processinformation {#view-process-details}
 
 På spårningssidan kan du välja en process och visa information om den. Du kan söka i processerna baserat på olika parametrar för att visa uppgiftsinformationen. Du kan även visa fliken Status för processer där flera användare tar emot uppgifter parallellt där verktygen för granskning av dokument är aktiverade.
 
-**Status:** Statusen för uppgifter i en process visas i kolumnen Markerad åtgärd när du klickar på en uppgift. Processens status är dock inte tillgänglig.
+**Status:** Statusen för uppgifter i en process visas i kolumnen Markerad åtgärd när du klickar på en aktivitet. Processens status är dock inte tillgänglig.
 
 1. Välj processinstansen i sökresultatlistan om du vill visa information om de uppgifter som är en del av processinstansen.
 1. Om du vill visa mer information om en uppgift utför du en eller flera av dessa åtgärder:

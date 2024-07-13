@@ -24,37 +24,37 @@ Definiera nya typer av ContextHub-butiker och moduler när de angivna inte uppfy
 
 ContextHub-butiker skapas från registrerade butikskandidater. Om du vill skapa en anpassad butik skapar och registrerar du en butikskandidater.
 
-JavaScript-filen som innehåller koden som skapar och registrerar lagringskandidaten måste inkluderas i en [klientbiblioteksmapp](/help/sites-developing/clientlibs.md#creating-client-library-folders). Mappens kategori måste matcha följande mönster:
+JavaScript-filen som innehåller koden som skapar och registrerar arkivkandidaten måste inkluderas i en [klientbiblioteksmapp](/help/sites-developing/clientlibs.md#creating-client-library-folders). Mappens kategori måste matcha följande mönster:
 
 ```xml
 contexthub.store.[storeType]
 ```
 
-The `[storeType]` ingår i kategorin `storeType` som butikskandidaten registreras med. (Se [Registrerar en ContextHub Store-kandidat](/help/sites-developing/ch-extend.md#registering-a-contexthub-store-candidate)). Till exempel för storeType för `contexthub.mystore`måste kategorin för klientbiblioteksmappen vara `contexthub.store.contexthub.mystore`.
+Delen `[storeType]` i kategorin är den `storeType` som butikskandidaten är registrerad med. (Se [Registrera ett ContextHub Store-förslag](/help/sites-developing/ch-extend.md#registering-a-contexthub-store-candidate)). För till exempel storeType för `contexthub.mystore` måste kategorin för klientbiblioteksmappen vara `contexthub.store.contexthub.mystore`.
 
 ### Skapa en ContextHub Store-kandidat {#creating-a-contexthub-store-candidate}
 
-Om du vill skapa en butikskandidat använder du [`ContextHub.Utils.inheritance.inherit`](/help/sites-developing/contexthub-api.md#inherit-child-parent) för att utöka en av basbutikerna:
+Om du vill skapa en butikskandidat använder du funktionen [`ContextHub.Utils.inheritance.inherit`](/help/sites-developing/contexthub-api.md#inherit-child-parent) för att utöka en av basbutikerna:
 
 * [`ContextHub.Store.PersistedStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedstore)
 * [`ContextHub.Store.SessionStore`](/help/sites-developing/contexthub-api.md#contexthub-store-sessionstore)
 * [`ContextHub.Store.JSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-jsonpstore)
 * [`ContextHub.Store.PersistedJSONPStore`](/help/sites-developing/contexthub-api.md#contexthub-store-persistedjsonpstore)
 
-Varje basbutik utökar [`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core) butik.
+Varje basbutik utökar butiken [`ContextHub.Store.Core`](/help/sites-developing/contexthub-api.md#contexthub-store-core).
 
-I följande exempel skapas det enklaste tillägget för `ContextHub.Store.PersistedStore` butikskandidat:
+I följande exempel skapas det enklaste tillägget för arkivkandidaten `ContextHub.Store.PersistedStore`:
 
 ```
 myStoreCandidate = function(){};
 ContextHub.Utils.inheritance.inherit(myStoreCandidate,ContextHub.Store.PersistedStore);
 ```
 
-I realiteten definierar dina anpassade butikskandidater ytterligare funktioner eller åsidosätter butikens ursprungliga konfiguration. Flera [exempel på arkivkandidater](/help/sites-developing/ch-samplestores.md) installeras i databasen nedan `/libs/granite/contexthub/components/stores`. Använd CRXDE Lite för att öppna JavaScript-filerna om du vill lära dig av dessa exempel.
+I realiteten definierar dina anpassade butikskandidater ytterligare funktioner eller åsidosätter butikens ursprungliga konfiguration. Flera [exempel på arkivkandidater](/help/sites-developing/ch-samplestores.md) har installerats i databasen nedan `/libs/granite/contexthub/components/stores`. Använd CRXDE Lite för att öppna JavaScript-filerna.
 
 ### Registrerar en ContextHub Store-kandidat {#registering-a-contexthub-store-candidate}
 
-Registrera en butikskandidat för att integrera den med ContextHub-ramverket så att butiker kan skapas utifrån det. Använd [`registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) funktionen i `ContextHub.Utils.storeCandidates` klassen.
+Registrera en butikskandidat för att integrera den med ContextHub-ramverket så att butiker kan skapas utifrån det. Om du vill registrera en butikskandidater använder du funktionen [`registerStoreCandidate`](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) i klassen `ContextHub.Utils.storeCandidates`.
 
 När du registrerar en butikskandidat anger du ett namn för butikstypen. När du skapar en butik från kandidaten använder du butikstypen för att identifiera den kandidat som den baseras på.
 
@@ -65,21 +65,21 @@ ContextHub.Utils.storeCandidates.registerStoreCandidate(myStoreCandidate,
                                 'contexthub.mystorecandidate', 0);
 ```
 
-Normalt behövs bara en kandidat och prioriteten kan anges till `0`. Men om du är intresserad kan du lära dig mer om [mer avancerade registreringar,](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) vilket gör att en av få butiksimplementationer kan väljas baserat på JavaScript-villkor (`applies`) och kandidatprioritet.
+Vanligtvis behövs bara en kandidat och prioriteten kan anges till `0`. Men om du är intresserad kan du lära dig mer om [mer avancerade registreringar,](/help/sites-developing/contexthub-api.md#registerstorecandidate-store-storetype-priority-applies) som gör att en av få butiksimplementeringar kan väljas baserat på JavaScript-villkor (`applies`) och kandidatprioritet.
 
 ## Skapar gränssnittsmodultyper för ContextHub {#creating-contexthub-ui-module-types}
 
-Skapa anpassade gränssnittsmodultyper när de [installerat med ContextHub](/help/sites-developing/ch-samplemodules.md) uppfyller inte dina krav. Om du vill skapa en gränssnittsmodultyp skapar du en gränssnittsmodulrenderare genom att utöka `ContextHub.UI.BaseModuleRenderer` och sedan registrera den med `ContextHub.UI`.
+Skapa anpassade gränssnittsmodultyper när de som är [installerade med ContextHub](/help/sites-developing/ch-samplemodules.md) inte uppfyller dina krav. Om du vill skapa en gränssnittsmodultyp skapar du en gränssnittsmodulrenderare genom att utöka klassen `ContextHub.UI.BaseModuleRenderer` och sedan registrera den med `ContextHub.UI`.
 
-Om du vill skapa en gränssnittsmodulrenderare skapar du en `Class` -objekt som innehåller den logik som återger UI-modulen. Klassen måste minst utföra följande åtgärder:
+Skapa ett `Class`-objekt som innehåller den logik som återger gränssnittsmodulen om du vill skapa en renderare i användargränssnittsmodulen. Klassen måste minst utföra följande åtgärder:
 
-* Utöka `ContextHub.UI.BaseModuleRenderer` klassen. Den här klassen är den grundläggande implementeringen för alla UI-modulrenderare. The `Class` objektet definierar en egenskap med namnet `extend` som du använder för att namnge den här klassen som den som utökas.
+* Utöka klassen `ContextHub.UI.BaseModuleRenderer`. Den här klassen är den grundläggande implementeringen för alla UI-modulrenderare. Objektet `Class` definierar egenskapen `extend` som du använder för att namnge den här klassen som den som utökas.
 
-* Ange en standardkonfiguration. Skapa en `defaultConfig` -egenskap. Den här egenskapen är ett objekt som innehåller de egenskaper som har definierats för [`contexthub.base`](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) UI-modulen och andra egenskaper som du behöver.
+* Ange en standardkonfiguration. Skapa en `defaultConfig`-egenskap. Den här egenskapen är ett objekt som innehåller de egenskaper som har definierats för användargränssnittsmodulen [`contexthub.base`](/help/sites-developing/ch-samplemodules.md#contexthub-base-ui-module-type) och alla andra egenskaper som du behöver.
 
-Källan för `ContextHub.UI.BaseModuleRenderer` finns på /libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js. Om du vill registrera renderaren använder du [`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) metod för `ContextHub.UI` klassen. Ange ett namn för modultypen. När administratörer skapar en gränssnittsmodul som baseras på den här renderaren anger de det här namnet.
+Källan för `ContextHub.UI.BaseModuleRenderer` finns på /libs/granite/contexthub/code/ui/container/js/ContextHub.UI.BaseModuleRenderer.js. Om du vill registrera återgivaren använder du metoden [`registerRenderer`](/help/sites-developing/contexthub-api.md#registerrenderer-moduletype-renderer-dontrender) i klassen `ContextHub.UI`. Ange ett namn för modultypen. När administratörer skapar en gränssnittsmodul som baseras på den här renderaren anger de det här namnet.
 
-Skapa och registrera återgivningsklassen i en anonym funktion som körs automatiskt. Följande exempel baseras på källkoden för gränssnittsmodulen contexthub.browserinfo. Den här gränssnittsmodulen är ett enkelt tillägg till `ContextHub.UI.BaseModuleRenderer` klassen.
+Skapa och registrera återgivningsklassen i en anonym funktion som körs automatiskt. Följande exempel baseras på källkoden för gränssnittsmodulen contexthub.browserinfo. Den här gränssnittsmodulen är ett enkelt tillägg till klassen `ContextHub.UI.BaseModuleRenderer`.
 
 ```xml
 ;(function() {
@@ -112,4 +112,4 @@ JavaScript-filen som innehåller koden som skapar och registrerar återgivaren m
 contexthub.module.[moduleType]
 ```
 
-The `[moduleType]` ingår i kategorin `moduleType` som modulåtergivaren registreras med. För `moduleType` av `contexthub.browserinfo`måste kategorin för klientbiblioteksmappen vara `contexthub.module.contexthub.browserinfo`.
+Delen `[moduleType]` i kategorin är den `moduleType` som modulåtergivaren är registrerad med. För `moduleType` av `contexthub.browserinfo` måste till exempel kategorin för klientbiblioteksmappen vara `contexthub.module.contexthub.browserinfo`.

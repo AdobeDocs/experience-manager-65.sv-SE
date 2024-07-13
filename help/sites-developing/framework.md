@@ -22,8 +22,8 @@ ht-degree: 0%
 
 Taggning gör att innehållet kan kategoriseras och struktureras. Taggar kan klassificeras med ett namnutrymme och en taxonomi. Mer information om hur du använder taggar:
 
-* Se dokumentet [Använda taggar](/help/sites-authoring/tags.md) om du vill ha information om hur du taggar innehåll som innehållsförfattare.
-* Se dokumentet [Administrera taggar](/help/sites-administering/tags.md) för administratörens perspektiv på att skapa och hantera taggar och på vilka innehållstaggar har tillämpats.
+* Mer information om hur du taggar innehåll som innehållsförfattare finns i dokumentet [Använda taggar](/help/sites-authoring/tags.md).
+* I dokumentet [Administrera taggar](/help/sites-administering/tags.md) finns information om en administratörs perspektiv för att skapa och hantera taggar och för vilka innehållstaggar har tillämpats.
 
 Den här artikeln fokuserar på det underliggande ramverket som stöder taggning i AEM och hur det används som utvecklare.
 
@@ -31,16 +31,16 @@ Den här artikeln fokuserar på det underliggande ramverket som stöder taggning
 
 Så här taggar du innehåll och använder infrastrukturen för AEM taggar:
 
-* Taggen måste finnas som en nod av typen `[cq:Tag](#tags-cq-tag-node-type)` under [taxonomirotnod.](#taxonomy-root-node)
+* Taggen måste finnas som en nod av typen `[cq:Tag](#tags-cq-tag-node-type)` under rotnoden [taxonomy.](#taxonomy-root-node)
 
-* Taggad innehåll-nodens `NodeType` måste innehålla [`cq:Taggable`](#taggable-content-cq-taggable-mixin) blanda.
-* The [`TagID`](#tagid) läggs till i innehållsnodens [`cq:tags`](#tagged-content-cq-tags-property) -egenskap och löses till en nod av typen ` [cq:Tag](#tags-cq-tag-node-type)`.
+* Den taggade innehållsnodens `NodeType` måste innehålla [`cq:Taggable`](#taggable-content-cq-taggable-mixin)-blandningen.
+* [`TagID`](#tagid) läggs till i innehållsnodens [`cq:tags`](#tagged-content-cq-tags-property)-egenskap och löses till en nod av typen ` [cq:Tag](#tags-cq-tag-node-type)`.
 
 ## Taggar : cq:Tag Node Type  {#tags-cq-tag-node-type}
 
 Deklarationen för en tagg hämtas i databasen i en nod av typen `cq:Tag`.
 
-En tagg kan vara ett enkelt ord (till exempel `sky`) eller representerar en hierarkisk taxonomi (till exempel `fruit/apple`, vilket betyder både det generiska `fruit` och mer specifikt `apple`).
+En tagg kan vara ett enkelt ord (till exempel `sky`) eller representera en hierarkisk taxonomi (till exempel `fruit/apple`, vilket betyder både den generiska `fruit` och den mer specifika `apple`).
 
 Taggar identifieras av ett unikt TagID.
 
@@ -51,24 +51,24 @@ Med taggningsramverket kan du även begränsa möjligheten för författare och 
 ### Märkordsegenskaper {#tag-characteristics}
 
 * Nodtypen är `cq:Tag`n
-* Nodnamnet är en komponent i [TaggID](#tagid).
-* The [TaggID](#tagid) innehåller alltid [namnutrymme.](#tag-namespace)
-* The `jcr:title` -egenskapen (titeln som ska visas i användargränssnittet) är valfri.
-* The `jcr:description` -egenskapen är valfri.
-* När taggen innehåller underordnade noder kallas den för [behållartagg.](#container-tags)
+* Nodnamnet är en komponent i [TagID](#tagid).
+* [TagID](#tagid) innehåller alltid ett [namnutrymme.](#tag-namespace)
+* Egenskapen `jcr:title` (titeln som ska visas i användargränssnittet) är valfri.
+* Egenskapen `jcr:description` är valfri.
+* När taggen innehåller underordnade noder kallas den för en [behållartagg.](#container-tags)
 * Taggen lagras i databasen under en bassökväg som kallas [taxonomirotnod.](#taxonomy-root-node)
 
-Eftersom taggar bara är JCR-noder måste nodnamnen följa [JCR-namnkonvention.](naming-conventions.md)
+Eftersom taggar bara är JCR-noder måste nodnamnen följa namnkonventionen [JCR.](naming-conventions.md)
 
 ### TaggID {#tagid}
 
 Ett TagID identifierar en sökväg som löses till en taggnod i databasen.
 
-TagID är vanligtvis ett kort TagID som börjar med namnutrymmet eller så kan det vara ett absolut TagID från [taxonomirotnod.](#taxonomy-root-node)
+TagID är vanligtvis ett kort TagID som börjar med namnutrymmet eller så kan det vara ett absolut TagID med början från [taxonomirotnoden.](#taxonomy-root-node)
 
-Om innehållet är taggat och inte finns än, `[cq:tags](#tagged-content-cq-tags-property)` -egenskapen läggs till i innehållsnoden och taggID läggs till i egenskapens `String` arrayvärde.
+Om innehållet är taggat och inte finns ännu, läggs egenskapen `[cq:tags](#tagged-content-cq-tags-property)` till i innehållsnoden och TagID läggs till i egenskapens `String`-arrayvärde.
 
-TagID består av en [namespace](#tag-namespace) följt av det lokala TagID:t. [Behållartaggar](#container-tags) har undertaggar som representerar en hierarkisk ordning i taxonomin. Undertaggar kan användas för att referera till taggar som är samma som alla lokala TagID. Du kan till exempel tagga innehåll med `fruit` tillåts, även om det är en behållartagg med undertaggar, som `fruit/apple` och `fruit/banana`.
+TagID består av ett [namnområde](#tag-namespace) följt av det lokala TagID:t. [Behållartaggar](#container-tags) har undertaggar som representerar en hierarkisk ordning i taxonomin. Undertaggar kan användas för att referera till taggar som är samma som alla lokala TagID. Du kan till exempel tagga innehåll med `fruit`, även om det är en behållartagg med undertaggar, till exempel `fruit/apple` och `fruit/banana`.
 
 ### Taxonomirotnod {#taxonomy-root-node}
 
@@ -78,25 +78,25 @@ I AEM är bassökvägen `/content/cq:tags` och rotnoden är av typen `cq:Folder`
 
 ### Namnutrymme för tagg {#tag-namespace}
 
-Med namnutrymmen kan du gruppera saker. Det vanligaste användningsexemplet är ett namnutrymme per webbplats (till exempel public, internal och portal) eller per större program (till exempel WCM, Assets, Communities). Men namnutrymmen kan användas för olika behov. Namnutrymmen används i användargränssnittet för att endast visa deluppsättningen med taggar (d.v.s. taggar för ett visst namnutrymme) som kan användas för det aktuella innehållet.
+Med namnutrymmen kan du gruppera saker. Det vanligaste användningsfallet är ett namnutrymme per webbplats (till exempel public, internal och portal) eller per större program (till exempel WCM, Assets, Communities). Men namnutrymmen kan användas för olika behov. Namnutrymmen används i användargränssnittet för att endast visa deluppsättningen med taggar (d.v.s. taggar för ett visst namnutrymme) som kan användas för det aktuella innehållet.
 
-Taggens namnutrymme är den första nivån i taxonomiunderträdet, som är noden direkt under [taxonomirotnod](#taxonomy-root-node). Ett namnutrymme är en nod av typen `cq:Tag` vars överordnade inte är en `cq:Tag` nodtyp.
+Taggens namnområde är den första nivån i taxonomiunderträdet, som är noden direkt under [taxonomirotnoden](#taxonomy-root-node). Ett namnområde är en nod av typen `cq:Tag` vars överordnade nod inte är en `cq:Tag`-nodtyp.
 
-Alla taggar har ett namnutrymme. Om inget namnutrymme anges tilldelas taggen standardnamnutrymmet, som är TagID `default` med rubriken `Standard Tags`, det vill säga `/content/cq:tags/default`.
+Alla taggar har ett namnutrymme. Om inget namnutrymme anges tilldelas taggen standardnamnutrymmet, som är TagID `default` med titeln `Standard Tags`, d.v.s. `/content/cq:tags/default`.
 
 ### Behållartaggar {#container-tags}
 
 En behållartagg är en nod av typen `cq:Tag` som innehåller valfritt antal och valfri typ av underordnade noder, vilket gör det möjligt att förbättra taggmodellen med anpassade metadata.
 
-Dessutom fungerar behållartaggar (eller supertaggar) i en taxonomi som undertaggar till alla undertaggar. Innehåll som du t.ex. taggat med `fruit/apple` anses vara taggad med `fruit` också. Det vill säga, söka efter innehåll taggat med `fruit` söker även efter innehåll som taggats med `fruit/apple`.
+Dessutom fungerar behållartaggar (eller supertaggar) i en taxonomi som undertaggar till alla undertaggar. Innehåll som är taggat med `fruit/apple` anses till exempel även vara taggat med `fruit`. Det innebär att om du söker efter innehåll som är taggat med `fruit` så hittas även innehållet som är taggat med `fruit/apple`.
 
 ### Lösa tagg-ID:n {#resolving-tagids}
 
-Om tagg-ID:t innehåller ett kolon (`:`) separerar kolon namnutrymmet från taggen eller undertaxonomin, som separeras ytterligare med snedstreck (`/`). Om TagID inte har ett kolon används standardnamnutrymmet.
+Om TagID innehåller ett kolon (`:`) separerar kolon namnutrymmet från taggen eller subtaxonomin, som avgränsas ytterligare med snedstreck (`/`). Om TagID inte har ett kolon används standardnamnutrymmet.
 
 Standardplatsen och den enda platsen för taggar är under `/content/cq:tags`.
 
-Tagg som refererar till icke-befintliga banor eller banor som inte pekar på en `cq:Tag` noden betraktas som ogiltig och ignoreras.
+Tagg som refererar till icke-befintliga sökvägar eller sökvägar som inte pekar på en `cq:Tag`-nod betraktas som ogiltiga och ignoreras.
 
 I följande tabell visas några exempel på tagg-ID:n, deras element och hur tagg-ID:t tolkas till en absolut sökväg i databasen:
 
@@ -110,42 +110,42 @@ I följande tabell visas några exempel på tagg-ID:n, deras element och hur tag
 
 ### Lokalisering av taggtitel {#localization-of-tag-title}
 
-När -taggen innehåller den valfria titelsträngen ( `jcr:title`) går det att lokalisera titeln för visning genom att lägga till egenskapen `jcr:title.<locale>`.
+När taggen innehåller den valfria titelsträngen ( `jcr:title`) går det att lokalisera titeln för visning genom att lägga till egenskapen `jcr:title.<locale>`.
 
 Mer information finns i följande dokument:
 
-* [Taggar på olika språk](/help/sites-developing/building.md#tags-in-different-languages)som beskriver hur API:erna används
-* [Hantera taggar på olika språk](/help/sites-administering/tags.md#managing-tags-in-different-languages)som beskriver hur taggningskonsolen används
+* [Taggar på olika språk](/help/sites-developing/building.md#tags-in-different-languages) som beskriver användningen av API:erna
+* [Hantera taggar på olika språk](/help/sites-administering/tags.md#managing-tags-in-different-languages), som beskriver hur taggningskonsolen används
 
 ### Åtkomstkontroll {#access-control}
 
-Taggar finns som noder i databasen under [taxonomirotnod](#taxonomy-root-node). Du kan skapa taggar i ett givet namnutrymme genom att ange lämpliga åtkomstkontrollistor i databasen, så att författare och besökare kan neka eller neka åtkomst.
+Taggar finns som noder i databasen under [taxonomirotnoden](#taxonomy-root-node). Du kan skapa taggar i ett givet namnutrymme genom att ange lämpliga åtkomstkontrollistor i databasen, så att författare och besökare kan neka eller neka åtkomst.
 
 Om du dessutom nekar läsbehörighet för vissa taggar eller namnutrymmen kan du använda taggar för visst innehåll.
 
 Ett typiskt exempel är:
 
-* Tillåta `tag-administrators` skrivåtkomst för grupp/roll till alla namnutrymmen (lägg till/ändra under `/content/cq:tags`). Den här gruppen levereras med AEM.
+* Tillåter skrivåtkomst för gruppen/rollen `tag-administrators` till alla namnutrymmen (lägg till/ändra under `/content/cq:tags`). Den här gruppen levereras med AEM.
 * Ge användare/författare läsåtkomst till alla namnutrymmen som ska vara läsbara för dem (oftast alla).
 * Ger användare/författare skrivåtkomst till de namnutrymmen där taggar ska kunna definieras fritt av användare/författare (lägg till en nod under `/content/cq:tags/some_namespace`)
 
 ## Taggbart innehåll : cq:Taggable Mixin {#taggable-content-cq-taggable-mixin}
 
-För programutvecklare som vill bifoga taggning till en innehållstyp, nodens registrering ([CND](https://jackrabbit.apache.org/jcr/node-type-notation.html)) måste innehålla `cq:Taggable` blanda eller `cq:OwnerTaggable` blanda.
+För att programutvecklare ska kunna bifoga taggning till en innehållstyp måste nodens registrering ([CND](https://jackrabbit.apache.org/jcr/node-type-notation.html)) innehålla `cq:Taggable` mixin eller `cq:OwnerTaggable` mixin.
 
-The `cq:OwnerTaggable` mixin, som ärver från `cq:Taggable`, är avsedd att indikera att innehållet kan klassificeras av ägaren/författaren. I AEM är det bara ett attribut för `cq:PageContent` nod. The `cq:OwnerTaggable` mixin krävs inte av taggningsramverket.
+`cq:OwnerTaggable`-blandningen, som ärver från `cq:Taggable`, är avsedd att indikera att innehållet kan klassificeras av ägaren/författaren. I AEM är det bara ett attribut för noden `cq:PageContent`. `cq:OwnerTaggable`-blandningen krävs inte av taggningsramverket.
 
 >[!NOTE]
 >
->Du bör bara aktivera taggar på den översta noden i ett aggregerat innehållsobjekt (eller på dess `jcr:content` nod). Exempel:
+>Du bör bara aktivera taggar på den översta noden i ett aggregerat innehållsobjekt (eller på dess `jcr:content`-nod). Exempel:
 >
->* Sidor (`cq:Page`) där `jcr:content`noden är av typen `cq:PageContent` som innehåller `cq:Taggable` blanda
->* Resurser ( `cq:Asset`) där `jcr:content/metadata` noden har alltid `cq:Taggable` blanda
+>* Sidor (`cq:Page`) där `jcr:content`noden är av typen `cq:PageContent` som innehåller `cq:Taggable` mixin
+>* Assets ( `cq:Asset`) där `jcr:content/metadata`-noden alltid har `cq:Taggable`-mixin
 >
 
 ### Nodtypsnotation (CND) {#node-type-notation-cnd}
 
-Det finns nodtypsdefinitioner i databasen som CND-filer. CND-notation definieras som en del av JCR-dokumentationen [här](https://jackrabbit.apache.org/jcr/node-type-notation.html).
+Det finns nodtypsdefinitioner i databasen som CND-filer. CND-notationen definieras som en del av JCR-dokumentationen [här](https://jackrabbit.apache.org/jcr/node-type-notation.html).
 
 De viktigaste definitionerna för nodtyperna i AEM är följande:
 
@@ -166,7 +166,7 @@ De viktigaste definitionerna för nodtyperna i AEM är följande:
 
 ## Taggat innehåll: egenskapen cq:tags {#tagged-content-cq-tags-property}
 
-The `cq:tags` egenskapen är en `String` -matris som används för att lagra ett eller flera tagg-ID när de tillämpas på innehåll av författare eller webbplatsbesökare. Egenskapen har bara betydelse när den läggs till i en nod som definieras med `[cq:Taggable](#taggable-content-cq-taggable-mixin)` blanda.
+Egenskapen `cq:tags` är en `String`-matris som används för att lagra ett eller flera TagID:n när de tillämpas på innehåll av författare eller webbplatsbesökare. Egenskapen har bara betydelse när den läggs till i en nod som har definierats med `[cq:Taggable](#taggable-content-cq-taggable-mixin)`-mixinen.
 
 >[!NOTE]
 >
@@ -174,48 +174,48 @@ The `cq:tags` egenskapen är en `String` -matris som används för att lagra ett
 
 ## Flytta och sammanfoga taggar {#moving-and-merging-tags}
 
-Nedan följer en beskrivning av effekterna i databasen när du flyttar eller sammanfogar taggar med [taggningskonsol](/help/sites-administering/tags.md):
+Nedan följer en beskrivning av effekterna i databasen när du flyttar eller sammanfogar taggar med [taggningskonsolen](/help/sites-administering/tags.md):
 
 * När en tagg A flyttas eller sammanfogas till tagg B under `/content/cq:tags`:
 
-   * Tagg A tas inte bort och en `cq:movedTo` -egenskap.
-   * Tagg B skapas (om det finns en flytt) och får en `cq:backlinks` -egenskap.
+   * Tagg A tas inte bort och hämtar en `cq:movedTo`-egenskap.
+   * Tagg B skapas (om det finns en flytt) och hämtar en `cq:backlinks`-egenskap.
 
 * `cq:movedTo` pekar på tagg B.
 
    * Den här egenskapen innebär att tagg A har flyttats eller sammanfogats till tagg B. Om du flyttar tagg B uppdateras den här egenskapen i enlighet med detta. Tagg A är alltså dold och sparas bara i databasen för att matcha tagg-ID:n i innehållsnoder som pekar på tagg A. Taggskräpinsamlaren tar bort taggar som tagg A en gång och inga fler innehållsnoder pekar på dem.
 
-   * Ett specialvärde för `cq:movedTo` egenskapen är `nirvana`. Den används när taggen tas bort men inte kan tas bort från databasen eftersom det finns undertaggar med en `cq:movedTo` som måste behållas.
+   * Ett specialvärde för egenskapen `cq:movedTo` är `nirvana`. Den används när taggen tas bort men inte kan tas bort från databasen eftersom det finns undertaggar med en `cq:movedTo` som måste behållas.
 
   >[!NOTE]
   >
-  >The `cq:movedTo` egenskapen läggs bara till i den flyttade eller sammanfogade taggen om något av dessa villkor uppfylls:
+  >Egenskapen `cq:movedTo` läggs bara till i den flyttade eller sammanslagna taggen om något av dessa villkor uppfylls:
   >
   >1. Taggen används i innehåll (vilket innebär att den har en referens) eller
   >1. Taggen har underordnade objekt som redan har flyttats.
 
-* `cq:backlinks` behåller referenserna i den andra riktningen. Det innebär att det finns en lista med alla taggar som har flyttats till eller sammanfogats med tagg B. Detta krävs oftast för att behålla `cq:movedTo` egenskaperna är uppdaterade även när tagg B flyttas/sammanfogas/tas bort eller när tagg B aktiveras, och då måste även alla dess bakåttaggar aktiveras.
+* `cq:backlinks` behåller referenserna i den andra riktningen. Det innebär att det finns en lista med alla taggar som har flyttats till eller sammanfogats med tagg B. Detta krävs oftast för att hålla `cq:movedTo`-egenskaperna uppdaterade även när tagg B flyttas/sammanfogas/tas bort eller när tagg B aktiveras, och då måste även alla dess bakåttaggar aktiveras.
 
   >[!NOTE]
   >
-  >The `cq:backlinks` egenskapen läggs bara till i den flyttade eller sammanfogade taggen om något av dessa villkor uppfylls:
+  >Egenskapen `cq:backlinks` läggs bara till i den flyttade eller sammanslagna taggen om något av dessa villkor uppfylls:
   >
   >1. Taggen används i innehåll (vilket innebär att den har en referens) ELLER
   >1. Taggen har underordnade objekt som redan har flyttats.
 
-* Läsa en `cq:tags` -egenskapen för en innehållsnod omfattar följande upplösning:
+* Följande upplösning krävs när du läser en `cq:tags`-egenskap för en innehållsnod:
 
-   1. Om det inte finns någon matchning under `/content/cq:tags`, returneras ingen tagg.
+   1. Om det inte finns någon matchning under `/content/cq:tags` returneras ingen tagg.
 
-   1. Om taggen har en `cq:movedTo` egenskapsuppsättningen följs det refererade tagg-ID:t.
+   1. Om taggen har en `cq:movedTo`-egenskap, följs det tagg-ID som refereras.
 
-      * Det här steget upprepas så länge som den efterföljande taggen har en `cq:movedTo` -egenskap.
+      * Det här steget upprepas så länge den efterföljande taggen har en `cq:movedTo`-egenskap.
 
-   1. Om den följande taggen inte har en `cq:movedTo` -egenskapen läses taggen.
+   1. Om den följande taggen inte har någon `cq:movedTo`-egenskap läses taggen.
 
-* Om du vill publicera ändringen när en tagg har flyttats eller sammanfogats väljer du `cq:Tag` noden och alla dess bakgrunder måste replikeras. Detta görs automatiskt när taggen aktiveras i tagghanteringskonsolen.
+* Om du vill publicera ändringen när en tagg har flyttats eller sammanfogats måste noden `cq:Tag` och alla dess bakgrunder replikeras. Detta görs automatiskt när taggen aktiveras i tagghanteringskonsolen.
 
-* Senare uppdateringar av sidans `cq:tags` egenskapen rensar automatiskt gamla referenser. Detta utlöses eftersom en flyttad tagg som löses via API returnerar måltaggen och därmed anger måltaggens ID.
+* Senare uppdateringar av sidans `cq:tags`-egenskap rensar automatiskt de gamla referenserna. Detta utlöses eftersom en flyttad tagg som löses via API returnerar måltaggen och därmed anger måltaggens ID.
 
 >[!NOTE]
 >
@@ -223,6 +223,6 @@ Nedan följer en beskrivning av effekterna i databasen när du flyttar eller sam
 
 ## Taggmigrering {#tags-migration}
 
-Sedan Adobe Experience Manager 6.4 lagras taggar i `/content/cq:tags` Tidigare versioner lagrade taggar under `/etc/tags`.
+Sedan Adobe Experience Manager 6.4 lagras taggar under `/content/cq:tags` medan tidigare versioner lagrar taggar under `/etc/tags`.
 
-När du uppgraderar ett AEM från en version som är tidigare än 6.4 måste taggar migreras till `/content/cq:tags`. Se [Omstrukturering av de gemensamma tillgångarna i AEM 6.5](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tags) för mer information.
+När du uppgraderar ett AEM från en version som är tidigare än 6.4 måste taggar migreras till `/content/cq:tags`. Mer information finns i [Omstrukturering av gemensamma databaser i AEM 6.5](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#tags).

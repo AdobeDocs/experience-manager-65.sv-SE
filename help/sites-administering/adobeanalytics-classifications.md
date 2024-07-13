@@ -18,25 +18,25 @@ ht-degree: 0%
 
 # Adobe-klassificeringar{#adobe-classifications}
 
-Klassificeringar i Adobe exporterar klassificeringsdata till [Adobe Analytics](/help/sites-administering/adobeanalytics.md) på ett schemalagt sätt. Exportören är en tillämpning av **com.adobe.cq.scheduled.exporting.Exporter**.
+Adobe-klassificeringar exporterar klassificeringsdata till [Adobe Analytics](/help/sites-administering/adobeanalytics.md) på ett schemalagt sätt. Exportören är en implementering av **com.adobe.cq.scheduled.exporting.Exporter**.
 
 Så här konfigurerar du:
 
-1. Använda **Navigering**, markera **verktyg**, **Cloud Service** sedan **Äldre Cloud Service**.
-1. Bläddra till **Adobe Analytics** och markera **Visa konfigurationer**.
-1. Klicka på **[+]** -länk bredvid din Adobe Analytics-konfiguration.
+1. Använd **Navigering**, välj **Verktyg**, **Cloud Service** och sedan **Äldre Cloud Service**.
+1. Bläddra till **Adobe Analytics** och välj **Visa konfigurationer**.
+1. Klicka på länken **[+]** bredvid din Adobe Analytics-konfiguration.
 
-1. I **Skapa ramverk** dialog:
+1. I dialogrutan **Skapa ramverk**:
 
-   * Ange en **Titel**.
-   * Du kan också ange **Namn**, för noden som lagrar ramverksinformationen i databasen.
-   * Välj **Adobe Analytics Classifications**
+   * Ange en **titel**.
+   * Du kan också ange **Namn** för noden som lagrar ramverksinformationen i databasen.
+   * Välj **Adobe Analytics-klassificeringar**
 
-   Och klicka **Skapa**.
+   Klicka sedan på **Skapa**.
 
    ![Dialogrutan Skapa ramverk](assets/aa-25.png)
 
-1. The **Klassificeringsinställningar** öppnas för redigering.
+1. Dialogrutan **Klassificeringsinställningar** öppnas för redigering.
 
    ![Dialogrutan Klassificeringsinställningar](assets/aa-classifications-settings.png)
 
@@ -44,18 +44,18 @@ Så här konfigurerar du:
 
    | **Fält** | **Beskrivning** |
    |---|---|
-   | Aktiverad | Välj **Ja** om du vill aktivera inställningarna för klassificering i Adobe. |
-   | Skriv över vid konflikt | Välj **Ja** för att skriva över datakollisioner. Som standard är detta inställt på **Nej**. |
-   | Ta bort bearbetade | Om inställt på **Ja**, tar bort bearbetade noder när de har exporterats. Standardvärdet är **Falskt**. |
+   | Aktiverad | Markera **Ja** om du vill aktivera inställningarna för klassificering i Adobe. |
+   | Skriv över vid konflikt | Välj **Ja** om du vill skriva över datakollisioner. Som standard är detta inställt på **Nej**. |
+   | Ta bort bearbetade | Om värdet är **Ja** tas bearbetade noder bort när de har exporterats. Standardvärdet är **Falskt**. |
    | Exportera jobbbeskrivning | Ange en beskrivning för jobbet Adobe Classifications. |
    | E-postmeddelande | Ange en e-postadress för Adobe Classifications-meddelanden. |
    | Report Suite | Ange den rapportsvit som du vill köra importjobbet för. |
    | Datauppsättning | Ange det datauppsättningsrelations-ID som importjobbet ska köras för. |
    | Transformator | Välj en transformatorimplementering i listrutan. |
-   | Datakälla | Navigera till sökvägen för databehållaren. |
+   | Data Source | Navigera till sökvägen för databehållaren. |
    | Exportera schema | Välj schema för exporten. Standardvärdet är var 30:e minut. |
 
-1. Klicka **OK** för att spara inställningarna.
+1. Klicka på **OK** om du vill spara inställningarna.
 
 ## Ändra sidstorlek {#modifying-page-size}
 
@@ -65,11 +65,11 @@ En sida kan vara högst 25000, per definition i Adobe Classifications och kan ä
 
 Så här ändrar du sidstorlek:
 
-1. Gå till OSGI-konsolen på **https://&lt;host>:&lt;port>/system/console/configMgr** och markera **Export av Adobe-AEM**.
+1. Gå till OSGI-konsolen på **https://&lt;värd>:&lt;port>/system/console/configMgr** och välj **Adobe AEM Classifications Exporter**.
 
    ![aa-26](assets/aa-26.png)
 
-1. Uppdatera **Exportera sidstorlek** efter behov, klicka sedan på **Spara**.
+1. Uppdatera **Exportera sidstorlek** efter behov och klicka sedan på **Spara**.
 
 ## SAINTDefaultTransformer {#saintdefaulttransformer}
 
@@ -77,9 +77,9 @@ Så här ändrar du sidstorlek:
 >
 >Adobe-klassificeringar kallades tidigare för SAINT Exporter.
 
-En exportör kan använda en transformator för att omforma exportdata till ett visst format. Ett undergränssnitt för Adobe-klassificeringar `SAINTTransformer<String[]>` implementering av Transformer-gränssnittet har angetts. Det här gränssnittet används för att begränsa datatypen till `String[]` som används av API:t för SAINT och har ett markörgränssnitt för att hitta sådana tjänster för markering.
+En exportör kan använda en transformator för att omforma exportdata till ett visst format. För Adobe-klassificeringar har ett undergränssnitt `SAINTTransformer<String[]>` som implementerar Transformerargränssnittet angetts. Det här gränssnittet används för att begränsa datatypen till `String[]`, som används av API:t för SAINT och som har ett markörgränssnitt för att hitta sådana tjänster för markering.
 
-I standardimplementeringen SAINTDefaultTransformer behandlas de underordnade resurserna för exportörkällan som poster med egenskapsnamn som nycklar och egenskapsvärden som värden. The **Nyckel** kolumnen läggs automatiskt till som första kolumn - dess värde blir nodnamnet. Namngivna egenskaper (innehåller `:`) ignoreras.
+I standardimplementeringen SAINTDefaultTransformer behandlas de underordnade resurserna för exportörkällan som poster med egenskapsnamn som nycklar och egenskapsvärden som värden. Kolumnen **Nyckel** läggs automatiskt till som första kolumn - dess värde blir nodnamnet. Namngivna egenskaper (som innehåller `:`) ignoreras.
 
 *Nodstruktur:*
 
@@ -129,19 +129,19 @@ Egenskaperna är följande:
   </tr>
   <tr>
    <td>skriv över</td>
-   <td>Flagga för att skriva över datakollisioner. Standard är <strong>false</strong>.</td>
+   <td>Flagga för att skriva över datakollisioner. Standardvärdet är <strong>false</strong>.</td>
   </tr>
   <tr>
    <td>indelningar</td>
-   <td>Flagga för att kontrollera om rapportsviterna är kompatibla. Standard är <strong>true</strong>.</td>
+   <td>Flagga för att kontrollera om rapportsviterna är kompatibla. Standardvärdet är <strong>true</strong>.</td>
   </tr>
   <tr>
    <td>borttagen</td>
-   <td>Flagga för att ta bort de bearbetade noderna efter exporten. Standard är <strong>false</strong>.</td>
+   <td>Flagga för att ta bort de bearbetade noderna efter exporten. Standardvärdet är <strong>false</strong>.</td>
   </tr>
  </tbody>
 </table>
 
 ## Automatisera export av Adobe-klassificeringar {#automating-adobe-classifications-export}
 
-Du kan skapa ett eget arbetsflöde, så att alla nya importer startar arbetsflödet för att skapa rätt, och korrekt strukturerade, data i **/var/export/** så att den kan exporteras till Adobe-klassificeringar.
+Du kan skapa ett eget arbetsflöde, så att alla nya importer startar arbetsflödet för att skapa lämpliga, och korrekt strukturerade data i **/var/export/** så att de kan exporteras till Adobe-klassificeringar.

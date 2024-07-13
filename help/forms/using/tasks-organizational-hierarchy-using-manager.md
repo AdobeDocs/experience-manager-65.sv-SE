@@ -21,17 +21,17 @@ ht-degree: 0%
 
 På AEM Forms arbetsyta kan chefer nu komma åt uppgifter som tilldelats alla i deras hierarki - direkta eller indirekta rapporter - och utföra olika åtgärder på dem. Uppgifterna är tillgängliga på fliken Att göra på arbetsytan i AEM Forms. De åtgärder som stöds för de direkta rapporterna är:
 
-**Framåt** - Vidarebefordra en uppgift från en direkt rapport till valfri användare.
+**Vidarebefordra** - Vidarebefordra en aktivitet från direkt rapport till valfri användare.
 
-**Anspråk** - Gör anspråk på en uppgift som en direkt rapport.
+**Anspråk** - Gör anspråk på en aktivitet i en direkt rapport.
 
-**Gör anspråk på &amp; öppna** - Gör anspråk på en uppgift i en direkt rapport och öppna den automatiskt i Att göra-listan för hanteraren.
+**Anspråk och öppna** - Gör anspråk på en aktivitet i en direkt rapport och öppna den automatiskt i listan Att göra i hanteraren.
 
-**Avvisa** - Avvisa en uppgift som har vidarebefordrats till en direkt rapport av en annan användare. Det här alternativet är tillgängligt för uppgifter som vidarebefordras av andra användare till en direkt rapport.
+**Avvisa** - Avvisa en aktivitet som vidarebefordrats till en direkt rapport av en annan användare. Det här alternativet är tillgängligt för uppgifter som vidarebefordras av andra användare till en direkt rapport.
 
 AEM Forms begränsar en användares åtkomst till endast de uppgifter som användaren har åtkomstkontroll för. En sådan kontroll ser till att en användare bara kan hämta de uppgifter som användaren har åtkomstbehörighet för. Med hjälp av webbtjänster och implementeringar från tredje part för att definiera hierarkin kan en organisation anpassa definitionen av chef och dirigera rapporter efter deras behov.
 
-1. Skapa en DSC. Mer information finns i avsnittet&quot;Utveckla komponenter för AEM Forms&quot; i [Programmera med AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63) guide.
+1. Skapa en DSC. Mer information finns i avsnittet&quot;Utveckla komponenter för AEM Forms&quot; i guiden [Programmering med AEM Forms](https://www.adobe.com/go/learn_aemforms_programming_63).
 1. I DSC definierar du en ny SPI för hierarkihantering för att definiera direkta rapporter och hierarkier inom AEM Forms-användarna. Här följer ett exempel på Java™-kodfragment.
 
    ```java
@@ -111,7 +111,7 @@ AEM Forms begränsar en användares åtkomst till endast de uppgifter som använ
    </component>
    ```
 
-1. Distribuera DSC via Workbench. Starta om `ProcessManagementTeamTasksService` service.
+1. Distribuera DSC via Workbench. Starta om tjänsten `ProcessManagementTeamTasksService`.
 1. Du kan behöva uppdatera webbläsaren eller logga ut/logga in med användaren igen.
 
 Följande skärm visar hur du får åtkomst till uppgifter i direkta rapporter och tillgängliga åtgärder.

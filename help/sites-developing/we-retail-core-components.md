@@ -22,42 +22,42 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
 ## Prova {#trying-it-out}
 
-1. Starta Adobe Experience Manager (AEM) med exempelinnehållet We.Retail och öppna [Komponentkonsol](/help/sites-authoring/default-components-console.md).
+1. Starta Adobe Experience Manager (AEM) med exempelinnehållet We.Retail och öppna [Components Console](/help/sites-authoring/default-components-console.md).
 
-   **Global Navigation > Tools > Components**
+   **Global navigering > Verktyg > Komponenter**
 
 1. När du öppnar rälen i komponentkonsolen kan du filtrera efter en viss komponentgrupp. Kärnkomponenterna finns i
 
    * `.core-wcm`: Standardkärnkomponenterna
-   * `.core-wcm-form`: Kärnkomponenterna för att skicka in formulär
+   * `.core-wcm-form`: Kärnkomponenter för att skicka formulär
 
    Välj `.core-wcm`.
 
    ![chlimage_1-162](assets/chlimage_1-162.png)
 
-1. Alla kärnkomponenter namnges **v1**, som återspeglar att detta är den första versionen av denna kärnkomponent. Regelbundna versioner kommer att släppas på marknaden i framtiden, vilket blir versionskompatibelt med AEM och gör det enkelt att uppgradera så att du kan utnyttja de senaste funktionerna.
-1. Klicka **Text (v1)**.
+1. Alla kärnkomponenter har namnet **v1**, vilket visar att detta är den första versionen av kärnkomponenten. Regelbundna versioner kommer att släppas på marknaden i framtiden, vilket blir versionskompatibelt med AEM och gör det enkelt att uppgradera så att du kan utnyttja de senaste funktionerna.
+1. Klicka på **Text (v1)**.
 
-   Se **Resurstyp** för komponenten är `/apps/core/wcm/components/text/v1/text`. Kärnkomponenter finns under `/apps/core/wcm/components` och versionshanteras per komponent.
+   Se till att komponentens **resurstyp** är `/apps/core/wcm/components/text/v1/text`. Kärnkomponenter finns under `/apps/core/wcm/components` och versionsindelas per komponent.
 
    ![chlimage_1-163](assets/chlimage_1-163.png)
 
-1. Klicka på **Dokumentation** om du vill visa utvecklardokumentationen för komponenten.
+1. Klicka på fliken **Dokumentation** för att se utvecklardokumentationen för komponenten.
 
    ![chlimage_1-164](assets/chlimage_1-164.png)
 
-1. Återgå till komponentkonsolen. Filter för gruppen **Vi.butik** och väljer **Text** -komponenten.
-1. Se **Resurstyp** pekar på en komponent som förväntats under `/apps/weretail` men **Resurssupertyp** återgår till kärnkomponenten `/apps/core/wcm/components/text/v1/text`.
+1. Återgå till komponentkonsolen. Filtrera för gruppen **We.Retail** och välj komponenten **Text**.
+1. Se till att **Resurstypen** pekar på en komponent som förväntat under `/apps/weretail`, men **Resurssupertypen** pekar tillbaka på kärnkomponenten `/apps/core/wcm/components/text/v1/text`.
 
    ![chlimage_1-165](assets/chlimage_1-165.png)
 
-1. Klicka på **Live-användning** för att se vilka sidor den här komponenten används på. Klicka på den första **Tack** sida för att redigera sidan.
+1. Klicka på fliken **Live-användning** för att se vilka sidor den här komponenten används på. Klicka på den första **Tack**-sidan för att redigera sidan.
 
    ![chlimage_1-166](assets/chlimage_1-166.png)
 
 1. På sidan Tack markerar du textkomponenten och klickar på ikonen Avbryt arv på komponentens Redigera-meny.
 
-   [Vi.Retail har en global webbplatsstruktur](/help/sites-developing/we-retail-globalized-site-structure.md) där innehåll överförs från språkmallsidor till [live-kopior via en mekanism som kallas arv](/help/sites-administering/msm.md). Arvet måste därför avbrytas för att användaren ska kunna redigera text manuellt.
+   [Vi.Retail har en global webbplatsstruktur](/help/sites-developing/we-retail-globalized-site-structure.md) där innehåll överförs från språkmallar till [live-kopior via en mekanism som kallas arv](/help/sites-administering/msm.md). Arvet måste därför avbrytas för att användaren ska kunna redigera text manuellt.
 
    ![chlimage_1-167](assets/chlimage_1-167.png)
 
@@ -65,7 +65,7 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
    ![chlimage_1-168](assets/chlimage_1-168.png)
 
-1. När arvet har avbrutits och du väljer textkomponenterna finns det många fler alternativ. Klicka **Redigera**.
+1. När arvet har avbrutits och du väljer textkomponenterna finns det många fler alternativ. Klicka på **Redigera**.
 
    ![chlimage_1-169](assets/chlimage_1-169.png)
 
@@ -73,8 +73,8 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
    ![chlimage_1-170](assets/chlimage_1-170.png)
 
-1. Från **Sidinformation** meny, välja **Redigera mall**.
-1. Klicka på knappen **Policy** ikonen för textkomponenten i **Layoutbehållare** på sidan.
+1. Välj **Redigera mall** på menyn **Sidinformation**.
+1. Klicka på ikonen **Policy** för textkomponenten i **Layoutbehållaren** på sidan i mallredigeraren på sidan.
 
    ![chlimage_1-171](assets/chlimage_1-171.png)
 
@@ -86,6 +86,6 @@ De centrala komponenterna är moderna, flexibla komponenter som är enkla att ut
 
 ## Ytterligare information {#further-information}
 
-Mer information om kärnkomponenterna finns i redigeringsdokumentet [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) för en översikt över de viktigaste komponenternas och utvecklardokumentets funktioner [Utveckla kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html) för en teknisk översikt.
+Mer information om kärnkomponenterna finns i redigeringsdokumentet [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) för en översikt över kärnkomponenternas funktioner och i utvecklardokumentet [Developing Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/overview.html) för en teknisk översikt.
 
-Du kanske också vill undersöka ytterligare [redigerbara mallar](/help/sites-developing/we-retail-editable-templates.md). Se redigeringsdokumentet [Skapa sidmallar](/help/sites-authoring/templates.md) eller utvecklardokumentsidan [Mallar - redigerbara](/help/sites-developing/page-templates-editable.md) om du vill ha fullständig information om redigerbara mallar.
+Du kanske också vill undersöka [redigerbara mallar](/help/sites-developing/we-retail-editable-templates.md) ytterligare. Mer information om redigerbara mallar finns i redigeringsdokumentet [Creating Page Templates](/help/sites-authoring/templates.md) eller i utvecklardokumentet Page [Templates - Editable](/help/sites-developing/page-templates-editable.md).

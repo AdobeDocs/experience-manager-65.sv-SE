@@ -20,7 +20,7 @@ ht-degree: 5%
 
 I Formens Workflow steg finns detaljerade loggar som du kan använda för att felsöka arbetsflödesrelaterade problem. Aktivera felsökningsloggning för AEM Forms-arbetsflöden för att visa loggarna.
 
-Som standard är all loggningsinformation tillgänglig i **error.log** filen på */crx-database/logs/* katalog.
+Som standard är all loggningsinformation tillgänglig i filen **error.log** i katalogen */crx-database/logs/* .
 
 Felsökningsloggarna för formulärarbetsflöden innehåller:
 
@@ -81,15 +81,15 @@ Gör så här för att aktivera felsökningsloggning för AEM Forms-arbetsflöde
 
 1. Gå till konfigurationshanteraren AEM webbkonsolen på:
 
-   https://&#39;[server]:[port]&#39;/system/console/configMgr
+   https://&#39;[server]:[port]/system/console/configMgr
 
 1. Välj **[!UICONTROL Sling]** > **[!UICONTROL Log Support]**.
 1. Välj **[!UICONTROL Add new Logger.]**
 1. Välj **[!UICONTROL Debug]** som **[!UICONTROL Log Level]**.
-1. Ange platsen för loggfilen. Standardplatsen för loggfilen är: *loggar\error.log*
-1. Ange paketets namn som **com.adobe.granite.workflow.core** i **[!UICONTROL Logger]** kolumn.
+1. Ange platsen för loggfilen. Standardplatsen för loggfilen är: *logs\error.log*
+1. Ange paketets namn som **com.adobe.granite.workflow.core** i kolumnen **[!UICONTROL Logger]**.
 
-   Om du utför dessa steg kan du lagra felsökningsloggarna för **com.adobe.granite.workflow.core** paket. Välj **[!UICONTROL +]** och lägg till följande paketnamn i listan:
+   Om du utför dessa steg kan du lagra felsökningsloggarna för paketet **com.adobe.granite.workflow.core**. Välj **[!UICONTROL +]** och lägg till följande paketnamn i listan:
 
    * com.adobe.fd.workflow
    * com.adobe.fd.workspace

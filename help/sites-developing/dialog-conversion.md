@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Verktyget för konvertering av dialogrutor används för att utöka befintliga komponenter som bara har en dialogruta definierad för det klassiska användargränssnittet (baserat på ExtJS) eller som baseras på GRE och Koral 2. Verktyget använder den ursprungliga dialogrutan för att skapa en dubblettdialogruta som är utformad för standardgränssnittet, baserat på GRE och Koral 3.
 
-Verktyget för dialogkonvertering är en del av [Adobe Modernization Tool Suite](modernization-tools.md).
+Verktyget för dialogkonvertering ingår i verktygsuppsättningen [Adobe Modernization Tool](modernization-tools.md).

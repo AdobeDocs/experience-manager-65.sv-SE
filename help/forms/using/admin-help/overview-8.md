@@ -22,15 +22,15 @@ Med Output kan du sammanfoga XML-formulärdata med en formulärdesign som skapat
 
 Du kan använda utdatasidan i administrationskonsolen för att administrera utdatatjänsten. De inställningar du konfigurerar används vid körning när motsvarande inställningar inte har angetts via AEM-API:t för formulär. Konfigurationen som görs via AEM formulär SDK åsidosätter inställningarna som konfigurerats med administrationskonsolen.
 
-Mer information om Output-tjänsten finns i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_61).
+Mer information om utdatatjänsten finns i [Tjänstreferens](https://www.adobe.com/go/learn_aemforms_services_61).
 
 På utdatasidorna i administrationskonsolen kan du utföra flera åtgärder:
 
 * Ange teckenuppsättningar för internationalisering. (Se [Ändra teckenuppsättningen](/help/forms/using/admin-help/change-character-set.md#change-the-character-set).)
 * Ange absoluta och relativa sökvägar för URL:er, URI:er, XCI:er och filplatser. (Se [Ange filplatser för utdata](/help/forms/using/admin-help/specify-file-locations-output.md#specify-file-locations-for-output).)
-* Konfigurera cachestorlekar och principer. (Se [Ange cacheläge](/help/forms/using/admin-help/configuring-caching-output.md#specifying-the-cache-mode) och [Konfigurerar cacheinställningar](/help/forms/using/admin-help/configuring-caching-output.md#configuring-cache-settings).)
+* Konfigurera cachestorlekar och principer. (Se [Ange cacheläge](/help/forms/using/admin-help/configuring-caching-output.md#specifying-the-cache-mode) och [Konfigurera cacheinställningar](/help/forms/using/admin-help/configuring-caching-output.md#configuring-cache-settings).)
 * Gör teckensnitt tillgängliga på programservern. (Se [Göra teckensnitt tillgängliga](/help/forms/using/admin-help/make-fonts-available.md#make-fonts-available).)
-* Ange teckensnitt som ska bäddas in. (Se [Ange teckensnitt som ska bäddas in](/help/forms/using/admin-help/specify-fonts-embed.md#specify-fonts-to-embed).)
+* Ange teckensnitt som ska bäddas in. (Se [Ange teckensnitt att bädda in](/help/forms/using/admin-help/specify-fonts-embed.md#specify-fonts-to-embed).)
 * Ange XCI-konfigurationsalternativ. (Se [Ange XCI-konfigurationsalternativ](/help/forms/using/admin-help/specify-xci-configuration-options.md#specify-xci-configuration-options).)
 * Ange säkerhetsinställningar. (Se [Ange säkerhetsinställningar](/help/forms/using/admin-help/specify-security-settings.md#specify-security-settings).)
 

@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Förhandsgranska ett formulär {#previewing-a-form}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 ## Ökning {#overview}
 
@@ -30,7 +30,7 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
 <table>
  <tbody>
   <tr>
-   <td><strong>Tillgångstyp</strong><br /> </td>
+   <td><strong>Resurstyp</strong><br /> </td>
    <td><strong>Tillgängliga alternativ för förhandsgranskning</strong><br /> </td>
   </tr>
   <tr>
@@ -47,7 +47,7 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
   </tr>
   <tr>
    <td>Formulärmall</td>
-   <td>förhandsgranskning av PDF, förhandsvisning av PDF med data, förhandsgranskning av HTML, förhandsvisning av HTML med data<br /> </td>
+   <td>PDF-förhandsgranskning, PDF-förhandsgranskning med data, HTML-förhandsvisning, HTML-förhandsvisning med data<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -58,7 +58,7 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
 
    >[!NOTE]
    >
-   >Om du vill välja en resurs växlar du till listvyn från standardkortvyn. Klicka ![aem6forms_viewlist](assets/aem6forms_viewlist.png) eller ![aem6forms_viewcard](assets/aem6forms_viewcard.png) för att växla vy.
+   >Om du vill välja en resurs växlar du till listvyn från standardkortvyn. Klicka på ![aem6forms_viewlist](assets/aem6forms_viewlist.png) eller ![aem6forms_viewcard](assets/aem6forms_viewcard.png) för att växla vy.
 
 1. Om du klickar på Förhandsvisa visas en lista med möjliga förhandsvisningsalternativ för den valda resurstypen. Klicka på önskat alternativ för att återge den markerade resursen på en ny flik.
 
@@ -72,5 +72,5 @@ I följande tabell visas de förhandsvisningsalternativ som är tillgängliga f�
 
 När du väljer **Förhandsgranska med data** kan du se hur formuläret ser ut med verkliga data som anges i det. Med alternativet Förhandsgranska med data kan du överföra en XML-fil som innehåller exempelanvändardata. Exempelinformationen används för att fylla i förhandsgranskningsformuläret i det format du väljer.
 
-1. Välj en resurs och klicka på Förhandsvisa ![aem6forms_preview](assets/aem6forms_preview.png)och markera **Förhandsgranska med data**.
+1. Välj en resurs, klicka på Förhandsgranska ![aem6forms_preview](assets/aem6forms_preview.png) och välj **Förhandsgranska med data**.
 1. Ange FormData som en XML-fil i dialogrutan Förhandsgranska formulär. Klicka på Förhandsgranska om du vill återge formuläret med sammanfogade data från XML.

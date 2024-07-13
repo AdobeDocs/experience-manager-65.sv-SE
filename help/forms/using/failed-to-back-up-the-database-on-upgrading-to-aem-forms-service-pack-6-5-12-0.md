@@ -25,4 +25,4 @@ När en användare uppgraderar till Experience Manager 6.5.12.0 och klickar på 
 
 ## Lösning {#solution}
 
-Lös problemet genom att öka databasens max_packet_size till 100 M eller så som krävs i filen my.ini som finns på {AEM_HOME}/mysql.
+Lös problemet genom att öka databasens max_packet_size till 100 M eller så som krävs i my.ini-filen som finns på {AEM_HOME}/mysql.

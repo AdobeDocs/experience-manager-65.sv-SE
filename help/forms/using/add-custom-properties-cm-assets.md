@@ -40,7 +40,7 @@ I det här scenariot visas hur du kan lägga till en anpassad egenskap för alla
 >
 >Om du redan har lagt till en anpassad egenskap börjar egenskapen visas på sidan där resursen skapas. Om du vill dölja en sådan egenskap läser du Visa/dölj sidor för anpassade egenskaper när resurser skapas och egenskaper.
 
-![Anpassad egenskap som lagts till i alla resurstyper](assets/lcoationofrecipientsui.png)
+![Anpassad egenskap har lagts till i alla resurstyper](assets/lcoationofrecipientsui.png)
 
 Följ de här stegen för att lägga till en anpassad egenskap för alla resurstyper och bokstäver:
 
@@ -55,17 +55,17 @@ Följ de här stegen för att lägga till en anpassad egenskap för alla resurst
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **Sökväg:** /libs/fd/cm/ma/gui/content/cmmetadataproperties/commonproperties/col1/items
+      **Sökväg:** /libs/fd/cm/ma/gui/content/cmmetadataproperties/commonProperties/col1/items
 
       **Plats:** /apps/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** valda
 
       ![Överläggsnod](assets/cmmetapropertiesoverlaynode.png)
 
-   1. Klicka **OK**. Mappstrukturen skapas i programmappen.
+   1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
 1. Lägg till en nod för den anpassade egenskapen i alla resurser (Exempel: GeoLocation) under den nyligen skapade objektmappen enligt följande steg:
 
@@ -73,11 +73,11 @@ Följ de här stegen för att lägga till en anpassad egenskap för alla resurst
 
       ![Skapa nod i CRX](assets/itemscreatenode.png)
 
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
       **Namn:** GeoLocation (eller det namn du vill ge till den här egenskapen)
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
       ![Skapa nod: GeoLocation](assets/geographicallocationcreatenode.png)
 
@@ -87,19 +87,19 @@ Följ de här stegen för att lägga till en anpassad egenskap för alla resurst
       | **Namn** | **Typ** | **Värde** |
       |---|---|---|
       | fieldLabel | Sträng | Namnet som du vill ge fältet/egenskapen. (Här: mottagarnas plats) |
-      | name | Sträng | `./extendedproperties/GeoLocation` (Behåll värdet som det fältnamn du skapade under noden Objekt) |
+      | name | Sträng | `./extendedproperties/GeoLocation` (Behåll värdet som det fältnamn du skapade under objektnoden) |
       | renderReadOnly | Boolean | true |
       | sling:resourceType | Sträng | `granite/ui/components/coral/foundation/form/textfield` |
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
-1. Om du vill visa din anpassning håller du pekaren över en resurs (text, lista, villkor eller layoutfragment) eller bokstav klickar du på **Visa egenskaper** och klicka **Redigera**. Det nya fältet (mottagarplats) visas på fliken Grundläggande i egenskaperna för resursen/bokstaven.
+1. Om du vill visa din anpassning håller du pekaren över en resurs (text, lista, villkor eller layoutfragment) eller bokstav, klickar på **Visa egenskaper** och klickar på **Redigera**. Det nya fältet (mottagarplats) visas på fliken Grundläggande i egenskaperna för resursen/bokstaven.
 
    >[!NOTE]
    >
    >Du kan behöva rensa webbläsarens cache innan din anpassning visas i användargränssnittet.
 
-   ![Anpassad egenskap som lagts till i alla resurser](assets/lcoationofrecipientsui-1.png)
+   ![Anpassad egenskap har lagts till i alla resurser](assets/lcoationofrecipientsui-1.png)
 
    >[!NOTE]
    >
@@ -113,8 +113,9 @@ I det här scenariot visas hur du kan lägga till en anpassad egenskap för alla
 
    `/libs/fd/cm/ma/gui/content/cmmetadataproperties/commonproperties/col1/items`
 
-1. Under den nyligen skapade övertäckningsnoden (/apps/fd/cm/ma/gui/content/cmmetadataproperties/common_properties/col1/items) Skapa en nod för varje egenskap (fält) som du behöver skapa en nedrullningsbar lista för (här) `geographicallocation`) av typen not:unStructed.
-1. Lägg till följande egenskaper i noden (här geografisk placering) och klicka på **Spara alla**:
+1. Under den nyligen skapade övertäckningsnoden (/apps/fd/cm/ma/gui/content/cmmetadataproperties/commonproperties/col1/items)
+Skapa en nod för var och en av de egenskaper (fält) för vilka du måste skapa en nedrullningsbar lista (här `geographicallocation`) av typen nt:undefined.
+1. Lägg till följande egenskaper i noden (här geografisk plats) och klicka på **Spara alla**:
 
    <table>
    <tbody>
@@ -146,11 +147,11 @@ I det här scenariot visas hur du kan lägga till en anpassad egenskap för alla
    </tbody>
    </table>
 
-1. Lägg till en ny nod med namnet under egenskapsnoden (här geografisk placering) `items`. Under noden items lägger du till en nod för varje värde i listrutan. Som en god vana lägger du till den första noden så tom att den fungerar som standardvärde för listrutan och ett alternativ för användaren att inte ange något värde för fältet. Om du vill lägga till flera alternativ/nedrullningsbara värden upprepar du följande steg:
+1. Lägg till en ny nod med namnet `items` under egenskapsnoden (här geografisk placering). Under noden items lägger du till en nod för varje värde i listrutan. Som en god vana lägger du till den första noden så tom att den fungerar som standardvärde för listrutan och ett alternativ för användaren att inte ange något värde för fältet. Om du vill lägga till flera alternativ/nedrullningsbara värden upprepar du följande steg:
 
-   1. Högerklicka på egenskapsnoden (här geografisk placering) och välj **Skapa** > **Skapa nod**.
-   1. Ange fältets namn som `item1,` behålla text som ej strukturerad och klicka på **OK**.
-   1. Lägg till följande egenskaper i den nya noden (här post1) och klicka sedan på **Spara alla**:
+   1. Högerklicka på egenskapsnoden (här geografisk plats) och välj **Skapa** > **Skapa nod**.
+   1. Ange namnet på fältet som `item1,` behåller typen som inte:ostrukturerad och klicka på **OK**.
+   1. Lägg till följande egenskaper i den nyligen skapade noden (här objekt1) och klicka sedan på **Spara alla**:
 
       <table>
          <tbody>
@@ -182,14 +183,14 @@ Den anpassade listrutan visas enligt följande i resursegenskaper:
 
 I det här scenariot visas hur du kan lägga till en anpassad flik, Mottagare, i alla resurstyper (text, lista, villkor och layoutfragment) och bokstäverna. På fliken Mottagare kan du planera för att alla anpassade egenskaper ska vara relevanta för mottagarna.
 
-![Anpassad flik som lagts till för alla resurstyper](assets/recipientstab.png)
+![En anpassad flik har lagts till för alla resurstyper](assets/recipientstab.png)
 
 Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
 1. I mappen apps skapar du en mapp med namnet cmmetadataProperties med en sökväg/struktur som liknar mappen för metadataegenskaper (i innehållsmappen) enligt följande:
 
-   1. Högerklicka på mappen för metadataegenskaper i följande sökväg och välj **Överläggsnod**:
+   1. Högerklicka på mappen för metadataegenskaper på följande sökväg och välj **Overlay Node**:
 
       `/libs/fd/cm/ma/gui/content/cmmetadataproperties`
 
@@ -197,17 +198,17 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
 
    1. Kontrollera att dialogrutan Overlay Node har följande värden:
 
-      **Sökväg:** /libs/fd/cm/ma/gui/content/cmmetadataproperties
+      **Sökväg:** /libs/fd/cm/ma/gui/content/cmmetadataegenskaper
 
       **Plats:** /apps/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** valda
 
-   1. Klicka **OK**. Mappstrukturen skapas i programmappen.
+   1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
 
-      ![Mappstruktur för övertäckning skapad i CRX](assets/cmmetadatapropertiesappsfolder.png)
+      ![Mappstruktur för övertäckning har skapats i CRX](assets/cmmetadatapropertiesappsfolder.png)
 
-      Klicka **Spara alla**.
+      Klicka på **Spara alla**.
 
 1. Under mappen för cmmetadata-properties lägger du till en nod för att skapa en anpassad flik för alla resurser (Exempel: commontab) med följande steg:
 
@@ -215,11 +216,11 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
 
       ![Skapa nod](assets/cmmetadatapropertiescreatenode.png)
 
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **Namn:** commontab (eller det namn du vill ge den här egenskapen)
+      **Namn:**, vanlig flik (eller namnet som du vill ge den här egenskapen)
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här vanlig flik). CRX visar nodens egenskaper.
    1. Lägg till följande egenskaper i noden (här vanlig flik):
@@ -244,27 +245,27 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
          </tbody>
        </table>
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
 1. För den tabbnod som skapades i det senaste steget (här på vanlig flik) skapar du en nod med namnet item med följande steg:
 
    1. Högerklicka på den relevanta noden (här vanlig flik) och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
       **Namn:** objekt
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
-   1. Klicka **Spara alla:**
+   1. Klicka på **Spara alla:**
 
 1. I noden items som du skapade i föregående steg (under fliken Common) lägger du till en nod för att skapa en kolumn (här Column1) på den anpassade fliken (vanlig flik) med följande steg (om du vill lägga till fler kolumner upprepar du det här steget):
 
    1. Högerklicka på objektnoden och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
       **Namn:** Kolumn1 (eller namnet som du vill ge noden - det här namnet visas inte i användargränssnittet.)
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
    1. Lägg till följande egenskap i noden (här Kolumn1) och klicka sedan på **Spara alla**:
 
@@ -286,22 +287,22 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
 1. I noden som du skapade i föregående steg (här Column1) lägger du till en nod som kallas för objekt enligt följande:
 
    1. Högerklicka på noden (här Kolumn1) och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
       **Namn:** objekt
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
 1. Om du vill skapa ett fält på den anpassade fliken (här Mottagare) lägger du till en nod (här GeographicalLocation). Den här egenskapen motsvarar kolumnen som du skapade. Följ de här stegen för att skapa fältet (om du vill skapa fler fält/noder upprepar du de här stegen).:
 
    1. Högerklicka på objektnoden och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
       **Namn:** GeographicalLocation (eller ett annat namn för fältegenskapen)
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
    1. Lägg till följande egenskaper i fältnoden (här GeographicalLocation) och klicka på **Spara alla**.
 
@@ -316,7 +317,7 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
 
    `/libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/letter/items/tabs/items`
 
-   Om du vill skapa en övertäckning för en bokstav eller en annan resurs använder du följande sökväg genom att ersätta [assettype] med text, villkor, lista, dataordlista eller fragment:
+   Om du vill skapa övertäckning för en bokstav eller en annan resurs använder du följande sökväg genom att ersätta [assettype] med text, villkor, lista, dataordlista eller fragment:
 
    `/libs/fd/cm/ma/gui/content/cmmetadataproperties/properties/[assettype]/items/tabs/items`
 
@@ -330,18 +331,18 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
 
       **Plats:** /apps/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** valda
 
-   1. Klicka **OK**. Mappen skapas. Klicka **Spara alla**.
+   1. Klicka på **OK**. Mappen skapas. Klicka på **Spara alla**.
 
 1. I den nyligen skapade objektmappen lägger du till en nod för den anpassade fliken i resursen (här kan du klicka på fliken - det här namnet visas inte i användargränssnittet) enligt följande steg:
 
    1. Högerklicka på objektmappen och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **Namn:** mytab (eller det namn du vill ge den här egenskapen)
+      **Namn:** minflik (eller namnet som du vill ge den här egenskapen)
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här minfliken). CRX visar nodens egenskaper.
    1. Lägg till följande två egenskaper i noden (här fliken Custom):
@@ -354,19 +355,19 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
            <td><strong>Värde</strong></td>
          </tr>
          <tr>
-           <td>bana<br /> </td>
+           <td>sökväg<br /> </td>
            <td>Sträng</td>
            <td>fd/cm/ma/gui/content/cmmetadataproperties/commontab<br /> </td>
          </tr>
          <tr>
            <td>sling:resourceType</td>
            <td>Sträng</td>
-           <td>granite/ui/components/coral/Foundation/include<br /> </td>
+           <td>granite/ui/components/coral/foundation/include<br /> </td>
          </tr>
          </tbody>
        </table>
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
 1. Om du vill visa din anpassning för du muspekaren över den aktuella resursen (här en bokstav), klickar på Visa egenskaper och klickar på **Redigera**. Den nya fliken (Mottagare) och det nya fältet (Mottagarens plats) visas i användargränssnittet.
 
@@ -374,7 +375,7 @@ Med följande procedur kan du lägga till en flik med ett fält i alla resurser:
    >
    >Du kan behöva rensa webbläsarens cache innan din anpassning visas i användargränssnittet.
 
-   ![Anpassad flik som lagts till i bokstäver](assets/recipientstab-1.png)
+   ![Anpassad flik har lagts till i bokstäver](assets/recipientstab-1.png)
 
 ### Scenario: Lägga till anpassade egenskaper för specifika resurstyper {#scenario-adding-custom-properties-for-specific-asset-types}
 
@@ -387,7 +388,7 @@ I det här scenariot visas hur du kan lägga till en egenskap för en viss resur
 * Dataordlista
 * Bokstaven
 
-Om du till exempel bara vill lägga till en egenskap, Plats för mottagare, för att identifiera vilket geografiskt område en resurs är relevant för.  ![Egen egenskap som lagts till i en resurs](assets/newtabui.png)
+Om du till exempel bara vill lägga till en egenskap, Plats för mottagare, för att identifiera vilket geografiskt område en resurs är relevant för.  ![Anpassad egenskap har lagts till i en resurs](assets/newtabui.png)
 
 Så här lägger du till en egenskap till en resurstyp:
 
@@ -416,20 +417,20 @@ Så här lägger du till en egenskap till en resurstyp:
 
       **Plats:** /apps/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** valda
 
-   1. Klicka **OK**. Mappstrukturen skapas i programmappen.
+   1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
 
-      Klicka **Spara alla**.
+      Klicka på **Spara alla**.
 
 1. Lägg till en nod för den anpassade fliken i resursen (Exempel: anpassad flik) i den nya objektmappen enligt följande steg:
 
    1. Högerklicka på objektmappen och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **Namn:** egen flik (eller namnet som du vill ge den här egenskapen)
+      **Namn:** anpassad flik (eller namnet som du vill ge den här egenskapen)
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här fliken Egen). CRX visar nodens egenskaper.
    1. Lägg till följande två egenskaper i noden (här fliken Custom):
@@ -439,27 +440,27 @@ Så här lägger du till en egenskap till en resurstyp:
       | sling:resourceType | Sträng | granite/ui/components/coral/foundation/container |
       | jcr:title | Sträng | Fältets namn i användargränssnittet (här fliken Min) |
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
 1. I noden som du skapade i föregående steg (här på den egna fliken) lägger du till en nod med namnet items med följande steg:
 
    1. Högerklicka på noden (här anpassad flik) och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
       **Namn:** objekt
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
 1. I noden items som du skapade i föregående steg (under fliken Custom) lägger du till en nod för att skapa en kolumn (här Column1) på den anpassade fliken med följande steg (om du vill lägga till fler kolumner upprepar du det här steget):
 
    1. Högerklicka på objektnoden och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **Namn:** Column1 (eller det namn du vill ge noden)
+      **Namn:** Kolumn1 (eller namnet som du vill ge till noden)
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
    1. Lägg till följande egenskap i noden (här Kolumn1) och klicka sedan på **Spara alla**.
 
@@ -481,22 +482,22 @@ Så här lägger du till en egenskap till en resurstyp:
 1. För varje kolumn som du skapar (enligt föregående steg - här Kolumn1) skapar du en nod med namnet item med följande steg:
 
    1. Högerklicka på den relevanta kolumnnoden (här Kolumn1) och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
       **Namn:** objekt
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
-   1. Klicka **Spara alla:**
+   1. Klicka på **Spara alla:**
 
 1. För var och en av de kolumner som skapas skapar du en nod under noden items som du kan använda för att skapa ett fält på den nya fliken i användargränssnittet. Upprepa det här steget om du vill skapa fler fält i kolumnen:
 
    1. Högerklicka på den relevanta noden (här objekten under Kolumn1) och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **Namn:** Välj ett namn (här GeoLocation)
+      **Namn:** Ett valfritt namn (här GeoLocation)
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
    1. Lägg till följande egenskaper i noden och klicka sedan på **Spara alla**.
 
@@ -513,7 +514,7 @@ Så här lägger du till en egenskap till en resurstyp:
    >
    >Du kan behöva rensa webbläsarens cache innan din anpassning visas i användargränssnittet.
 
-   ![Anpassad egenskap som lagts till i en specifik resurs](assets/newtabui-1.png)
+   ![Anpassad egenskap har lagts till i en specifik resurs](assets/newtabui-1.png)
 
 ### Visa anpassade egenskaper på sidan Skapa resurs {#display-custom-properties-on-the-asset-creation-page}
 
@@ -529,11 +530,11 @@ Som standard visas anpassade egenskaper som lagts till på nya flikar bara på e
 
    **Plats:** /apps/
 
-   **Matcha nodtyper:** Markerad
+   **Matcha nodtyper:** valda
 
    Beroende på resurstypen måste följande vara sökvägen:
 
-   | **Tillgång/dokumenttyp** | **Sökväg som ska läggas till** |
+   | **Resurs-/dokumenttyp** | **Sökväg som ska läggas till** |
    |---|---|
    | Text | /libs/fd/cm/ma/gui/content/create/asset/createtext/jcr:content/body/items/form/items/textwizard/items/editproperties/items/properties/items/tabs/items/tab1/items |
    | Lista | /libs/fd/cm/ma/gui/content/create/asset/create/list/jcr:content/body/items/form/items/list/wizard/items/editproperties/items/items/items/tabs/items/tab1/items |
@@ -541,7 +542,7 @@ Som standard visas anpassade egenskaper som lagts till på nya flikar bara på e
    | Fragment | /libs/fd/cm/ma/gui/content/create/asset/createfragment/jcr:content/body/items/form/items/splittwizard/items/properties/items/items/items/items/tabs2/items/tab1/items |
    | Bokstaven | /libs/fd/cm/ma/gui/content/create/asset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/items/items/letterproperties/items |
 
-1. Klicka **OK**. Mappstrukturen skapas i programmappen.
+1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
 
 1. Skapa en nod med namnet col4 (eller något annat namn) under noden för överläggsobjekt som du skapade och klicka på **Spara alla**.
 
@@ -549,7 +550,7 @@ Som standard visas anpassade egenskaper som lagts till på nya flikar bara på e
 
    `/apps/fd/cm/ma/gui/content/createasset/createletter/jcr:content/body/items/form/items/letterWizard/items/properties/items/properties/items/letterproperties/items`
 
-1. Lägg till följande egenskaper i den nyskapade noden (här col4) och klicka på **Spara alla**:
+1. Lägg till följande egenskaper i den nyligen skapade noden (här kolumn 4) och klicka på **Spara alla**:
 
 <table>
  <tbody>
@@ -570,12 +571,12 @@ Som standard visas anpassade egenskaper som lagts till på nya flikar bara på e
   <tr>
    <td>sling:resourceType</td>
    <td>Sträng</td>
-   <td> granite/ui/components/coral/Foundation/include<br /> </td>
+   <td> granite/ui/components/coral/foundation/include<br /> </td>
   </tr>
  </tbody>
 </table>
 
-![anpassade fältutseendeinstangenskaper](assets/customfieldappearinginmainproperties.png)
+![anpassningsbara fältutseendeinmainproperties](assets/customfieldappearinginmainproperties.png)
 
 Anpassad egenskap, Språk, som visas i användargränssnittet för att skapa ett brev
 
@@ -592,7 +593,7 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
    Så här skapar du den här mappstrukturen:
 
-   1. Högerklicka på kolumnmappen vid följande sökväg och välj **Överläggsnod**:
+   1. Högerklicka på kolumnmappen i följande sökväg och välj **Överläggsnod**:
 
       `/libs/fd/cm/ma/gui/content/cmassets/jcr:content/views/lists/columns`
 
@@ -602,20 +603,20 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
       **Plats:** /apps/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** valda
 
-   1. Klicka **OK**. Mappstrukturen skapas i programmappen.
+   1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
 
-      Klicka **Spara alla**.
+      Klicka på **Spara alla**.
 
 1. Skapa en nod under kolumnnoden för att skapa en kolumn i användargränssnittet för varje egenskap som skapas. Upprepa det här steget om du vill skapa fler kolumner i användargränssnittet:
 
    1. Högerklicka på den relevanta noden (kolumnerna) och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
-      **Namn:** Ett namn som du väljer (här GeographicalLocation)
+      **Namn:** Ett valfritt namn (här GeographicalLocation)
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
    1. Lägg till följande egenskaper i noden och klicka sedan på **Spara alla**.
 
@@ -650,7 +651,7 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
    Så här skapar du den här mappstrukturen:
 
-   1. Högerklicka på kolumnmappen vid följande sökväg och välj **Överläggsnod**:
+   1. Högerklicka på kolumnmappen i följande sökväg och välj **Överläggsnod**:
 
       `/libs/fd/cm/ma/gui/components/admin/childpagerenderer/childlistpage`
 
@@ -660,11 +661,11 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
       **Plats:** /apps/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** valda
 
-   1. Klicka **OK**. Mappstrukturen skapas i programmappen.
+   1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
 
-      Klicka **Spara alla**.
+      Klicka på **Spara alla**.
 
 1. Kopiera filen childlistpage.jsp från följande plats:
 
@@ -698,7 +699,7 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
       %>
       ```
 
-   1. Lägg till följande före början av &lt;tr> tagg (&lt;tr attrs.build=&quot;&quot;>>):
+   1. Lägg till följande innan &lt;tr>-taggen börjar (&lt;tr &lt;%= attributes.build() %>>):
 
       ```jsp
       <%
@@ -714,7 +715,7 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
       I koden är GeoLocation det värde som du anger i namnegenskapen när du skapar den anpassade noden/fältet. När du skapade en anpassad nod/fält angav du namnet på egenskapen med ./extendedproperties/ prefix: ./extendedproperties/GeoLocation. I koden är prefixet inte obligatoriskt.
 
-   1. Om du vill visa den nya egenskapen i användargränssnittet lägger du till en TD-tagg enligt följande före den avslutande tr (&lt;/tr>)-tagg:
+   1. Om du vill visa den nya egenskapen i gränssnittet lägger du till en TD-tagg enligt följande före den avslutande tr-taggen (&lt;/tr>):
 
       ```jsp
       <td is="coral-td" value="<%= xssAPI.encodeForHTMLAttr(geographicalLocation) %>"><%= xssAPI.encodeForHTML(geographicalLocation) %></td>
@@ -722,7 +723,7 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
       Om du vill lägga till fler kolumner upprepar du steg 6.3 och 6.4.
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
 1. Om du vill visa din anpassning öppnar du en listvy över dokumentfragment eller bokstäver som du har lagt till den anpassade egenskapen i.
 
@@ -730,7 +731,7 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
 
    Om du till exempel använder Scenario: Lägga till anpassade egenskaper för specifika resurstyper kan du lägga till en anpassad egenskap i textresurser. Du kan bara ange anpassade egenskaper för textresurser. Om du däremot visar den anpassade egenskapen i användargränssnittet visas kolumnen för alla resurstyper.
 
-   ![anpassad egenskap:listvy](assets/custompropertyinlistview.png)
+   ![anpassad egenskapinlistview](assets/custompropertyinlistview.png)
 
 1. (Valfritt) Som standard visas den nya kolumnen som den sista kolumnen i användargränssnittet. Om du vill att kolumnen ska visas på en viss plats lägger du till följande egenskap i kolumnnoden:
 
@@ -749,7 +750,7 @@ Följ de här stegen för att visa den anpassade egenskapen i resurslistan för 
  </tbody>
 </table>
 
-När du lägger till egenskapen sling:orderBefore för att ange kolumnplatsen måste du också uppdatera ordningen för motsvarande &lt;td> som anges i steg 6.4 i den här proceduren. I det här fallet måste du se till att &lt;td> taggen för geografisk plats placeras före &lt;td> -tagg för versionskolumnen:
+När du lägger till egenskapen sling:orderBefore för att ange kolumnplatsen måste du också uppdatera ordningen för motsvarande &lt;td>-tagg som anges i steg 6.4 i den här proceduren. I det här fallet måste du till exempel se till att taggen &lt;td> för Geografisk plats placeras före taggen &lt;td> för kolumnen Version:
 
 ```xml
 <td is="coral-td" value="<%= xssAPI.encodeForHTMLAttr(geographicalLocation) %>"><%= xssAPI.encodeForHTML(geographicalLocation) %></td>
@@ -758,37 +759,37 @@ När du lägger till egenskapen sling:orderBefore för att ange kolumnplatsen m�
 
 ## Aktivera sökning efter anpassade egenskaper {#enable-search-for-custom-properties}
 
-Som standard innehåller fulltextsökning inte anpassade egenskaper som du lägger till i användargränssnittet med CRX/DE.
+Som standard innehåller inte fulltextsökning anpassade egenskaper som du lägger till i användargränssnittet med CRX/DE.
 
 Om du vill inkludera anpassade egenskaper i sökningen måste du tillåta indexering av anpassade egenskaper.
 
 Så här tillåter du indexering av anpassade egenskaper:
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
-1. Gå till `/oak:index/cmLucene`och lägga till en nod med namnet **aggregat** under den.
+1. Gå till `/oak:index/cmLucene` och lägg till en nod med namnet **aggregates** under den.
 
    1. Högerklicka på mappen cmLucene och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
       **Namn:** aggregat
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
 1. Lägg till noden cm:resource under den nyligen skapade aggregatmappen. Under cm:resource lägger du till en nod med namnet include0.
 
-   1. Högerklicka på aggregatmappen och välj **Skapa** > **Skapa nod**. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Högerklicka på aggregatmappen och välj **Skapa** > **Skapa nod**. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
       **Namn:** cm:resource
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
-   1. Högerklicka på mappen cm:resource och välj **Skapa** > **Skapa nod**. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Högerklicka på mappen cm:resource och välj **Skapa** > **Skapa nod**. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
       **Namn:** include0
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här är include0). CRX visar nodens egenskaper.
    1. Lägg till följande egenskap i noden (här include0):
@@ -808,18 +809,18 @@ Så här tillåter du indexering av anpassade egenskaper:
          </tbody>
        </table>
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
-1. Gå till egenskaperna på följande plats och lägg till en nodplats under den: `/oak:index/cmLucene/indexRules/cm:resource/properties`
+1. Gå till egenskaper på följande plats och lägg till en nodplats under den: `/oak:index/cmLucene/indexRules/cm:resource/properties`
 
    Upprepa det här steget för alla anpassade egenskaper som du vill lägga till i sökningen.
 
    1. Högerklicka på egenskapsmappen och välj **Skapa** > **Skapa nod**.
-   1. Kontrollera att dialogrutan Skapa nod har följande värden och klicka på **OK**:
+   1. Se till att dialogrutan Skapa nod har följande värden och klicka på **OK**:
 
       **Namn:** plats (eller namnet på den anpassade egenskap som du vill lägga till i sökningen)
 
-      **Typ:** nt:ostrukturerad
+      **Typ:** inte:ostrukturerad
 
    1. Klicka på den nya noden som du har skapat (här). CRX visar nodens egenskaper.
    1. Lägg till följande egenskaper i noden (här):
@@ -831,7 +832,7 @@ Så här tillåter du indexering av anpassade egenskaper:
       | propertyIndex | Boolean | true |
       | useInSuggest | Boolean | true |
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
 1. Nu kan du använda anpassade egenskapsvärden i fulltextsökning för att hitta relevanta resurser.
 
@@ -856,13 +857,13 @@ Så här tillåter du indexering av anpassade egenskaper:
 
       **Plats:** /apps/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** valda
 
-   1. Klicka **OK**. Mappstrukturen skapas i programmappen.
+   1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
-1. Lägg till följande egenskap i listan över nyligen skapade noder och klicka på **Spara alla**:
+1. Lägg till följande egenskap i den nyligen skapade noden och klicka på **Spara alla**:
 
    <table>
    <tbody>
@@ -879,13 +880,13 @@ Så här tillåter du indexering av anpassade egenskaper:
    </tbody>
    </table>
 
-1. Anpassningen visar sökresultaten i listvyn för alla konsoler, inklusive Forms och Dokument, Resurser och Webbplatser.
+1. Anpassningen visar sökresultaten i listvyn för alla konsoler, inklusive Forms och Dokument, Assets och Webbplatser.
 
 ## Ändra standardvy för resurssidan {#change-default-view-of-the-assets-page}
 
 >[!NOTE]
 >
->De här stegen ändrar standardvyn för alla konsoler som Forms och Dokument, Resurser och Platser.
+>De här stegen ändrar standardvyn för alla konsoler som Forms och Dokument, Assets och Webbplatser.
 
 1. Gå till `https://'[server]:[port]'/[ContextPath]/crx/de` och logga in som administratör.
 1. I mappen apps skapar du en mapp med namnet list med sökväg/struktur som liknar listmappen i:
@@ -902,13 +903,13 @@ Så här tillåter du indexering av anpassade egenskaper:
 
       **Plats:** /apps/
 
-      **Matcha nodtyper:** Markerad
+      **Matcha nodtyper:** valda
 
-   1. Klicka **OK**. Mappstrukturen skapas i programmappen.
+   1. Klicka på **OK**. Mappstrukturen skapas i programmappen.
 
-   1. Klicka **Spara alla**.
+   1. Klicka på **Spara alla**.
 
-1. Lägg till följande egenskap i listan över nyligen skapade noder och klicka på **Spara alla**:
+1. Lägg till följande egenskap i den nyligen skapade noden och klicka på **Spara alla**:
 
    <table>
    <tbody>
@@ -944,12 +945,12 @@ Om du vill visa eller dölja de anpassade egenskaperna utför du följande steg:
    <tr>
       <td>sling:resourceType<br /> </td>
       <td>Sträng</td>
-      <td>fd/cm/ma/gui/components/admin/assetsproperties/custom propertyconfig<br /> </td>
+      <td>fd/cm/ma/gui/components/admin/assetsproperties/custom propertyConfig<br /> </td>
    </tr>
    </tbody>
    </table>
 
-1. Om du vill dölja den här egenskapen på sidan för att skapa en resurs lägger du till följande egenskap i den och klickar på **Spara alla**:
+1. Om du vill dölja den här egenskapen på sidan där resursen skapas lägger du till följande egenskap och klickar på **Spara alla**:
 
    <table>
    <tbody>
@@ -966,7 +967,7 @@ Om du vill visa eller dölja de anpassade egenskaperna utför du följande steg:
    </tbody>
    </table>
 
-1. Om du vill dölja den anpassade egenskapen på egenskapssidan för resurserna lägger du till följande egenskap i den och klickar på **Spara alla**:
+1. Om du vill dölja den anpassade egenskapen på egenskapssidan för resurserna lägger du till följande egenskap och klickar på **Spara alla**:
 
    <table>
    <tbody>

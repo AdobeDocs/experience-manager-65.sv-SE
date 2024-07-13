@@ -25,11 +25,11 @@ ht-degree: 0%
 
 <!--**Applies to:** ✅ Adaptive Form Core Components ❎ [Adaptive Form Foundation Components](/help/forms/using/create-adaptive-form.md).-->
 
-Genom att aktivera adaptiva Forms Core-komponenter kan du börja skapa, publicera och leverera [Core Components based Adaptive Forms](create-an-adaptive-form-core-components.md) och [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) från din AEM 6.5 Forms-miljö.
+Om du aktiverar adaptiva Forms Core-komponenter kan du börja skapa, publicera och leverera [Core-baserade adaptiva Forms](create-an-adaptive-form-core-components.md) och [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) från din AEM 6.5 Forms-miljö.
 
-Om du vill aktivera adaptiva Forms Core-komponenter i din Forms-miljö med AEM 6.5 installerar och driftsätter du en [AEM Archetype 41 eller senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) baserat projekt (med formuläralternativ aktiverade) på alla instanser av författaren och Publish.
+Om du vill aktivera adaptiva Forms Core-komponenter i din Forms-miljö med AEM 6.5 installerar och distribuerar du ett [AEM Archetype 41 eller senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)-baserat projekt (med formuläralternativ aktiverade) på alla dina författare- och Publish-instanser.
 
-I den här artikeln finns detaljerade anvisningar om hur du konfigurerar och distribuerar AEM Archetype 41 eller senare baserat på ditt projekt i Forms-miljön AEM 6.5 för att aktivera adaptiva Forms Core-komponenter. Du kan läsa listan nedan för **AEM 6.5** kompatibla versioner för aktivering av Forms Core Components:
+I den här artikeln finns detaljerade anvisningar om hur du konfigurerar och distribuerar AEM Archetype 41 eller senare baserat på ditt projekt i Forms-miljön AEM 6.5 för att aktivera adaptiva Forms Core-komponenter. Du kan läsa listan nedan för **AEM 6.5**-kompatibla versioner för att aktivera Forms Core-komponenter:
 
 ## Förutsättningar {#prerequisites}
 
@@ -43,7 +43,7 @@ Innan du aktiverar adaptiva Forms Core-komponenter i en AEM 6.5 Forms-miljö:
 
 ## Skapa och distribuera det senaste AEM Archetype-baserade projektet
 
-Så här skapar du en AEM Archetype 41 eller [senare](https://github.com/adobe/aem-project-archetype) -baserat projekt och distribuera det till alla dina författare- och Publish-instanser:
+Så här skapar du ett AEM Archetype 41- eller [senare](https://github.com/adobe/aem-project-archetype)-baserat projekt och distribuerar det till alla dina Author- och Publish-instanser:
 
 1. Logga in på datorn som värd och kör AEM 6.5 Forms-instansen som administratör.
 1. Öppna kommandotolken eller avsluta och kör följande kommando för att skapa AEM Archetype-projekt (med formuläralternativ aktiverade):
@@ -78,16 +78,16 @@ Så här skapar du en AEM Archetype 41 eller [senare](https://github.com/adobe/a
 
    Tänk på följande när du kör kommandot ovan:
 
-   * Ändra inte värdet för `aemVersion` egenskap från `6.5.15.0` till något annat.
+   * Ändra inte värdet för egenskapen `aemVersion` från `6.5.15.0` till något annat.
 
-   * Ange `archetypeVersion` egenskap till `41` eller senare. Den senaste versionen finns i avsnittet om systemkrav i [AEM Project Archettype](https://github.com/adobe/aem-project-archetype) dokumentation.
+   * Ange egenskapen `archetypeVersion` till `41` eller senare. Den senaste versionen finns i avsnittet om systemkrav i dokumentationen för [AEM Project Archetype](https://github.com/adobe/aem-project-archetype).
 
-   * Uppdatera kommandot så att det återspeglar de specifika värdena för miljön, inklusive `appTitle`, `appId`och `groupId`. Ange även värdet för  `includeFormsenrollment` egenskap till `y`. Om du använder Forms Portal anger du `includeExamples=y` om du vill inkludera Forms Portal Core Components i ditt projekt.
+   * Uppdatera kommandot så att det återspeglar de specifika värdena för miljön, inklusive `appTitle`, `appId` och `groupId`. Ange också värdet `includeFormsenrollment` för egenskapen `y`. Om du använder Forms Portal ska du ställa in alternativet `includeExamples=y` så att Forms Portal Core Components inkluderas i ditt projekt.
 
 
 1. (Endast för Arketype version 41-baserade projekt) När AEM Archetype-projektet har skapats kan du aktivera teman för Core Components-baserade Adaptive Forms. Så här aktiverar du teman:
 
-   1. Öppna [AEM Archetype-projektmapp]/ui.apps/src/main/content/jcr_root/apps/__appId__/components/adaptiveForm/page/customheaderlibs.html för redigering:
+   1. Öppna projektmappen [AEM Archetype]/ui.apps/src/main/content/jcr_root/apps/__appId__/components/adaptiveForm/page/customheaderlibs.html för redigering:
 
    1. Lägg till följande kod på rad 21:
 
@@ -105,16 +105,16 @@ Så här skapar du en AEM Archetype 41 eller [senare](https://github.com/adobe/a
 
 1. Uppdatera projektet så att det innehåller den senaste versionen av Forms Core Components:
 
-   1. Öppna [AEM Archetype-projektmapp]/pom.xml för redigering.
-   1. Ange version av `core.forms.components.version` och `core.forms.components.af.version` till [senaste Forms Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history) och se till att båda har samma version som **Forms Core Components** som anges i tabellen och ange version av `core.wcm.components.version` som anges i [WCM-kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html).
+   1. Öppna projektmappen [AEM Archetype]/pom.xml för redigering.
+   1. Ange version av `core.forms.components.version` och `core.forms.components.af.version` till den [senaste Forms Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history)-versionen och se till att båda har samma version som **Forms Core Components** som nämns i tabellen, och ange version av `core.wcm.components.version` enligt [WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html) .
 
       >[!WARNING]
       >
-      >* När du skapar ett Arketype-projekt med version 45 är `[AEM Archetype Project Folder]/pom.xml` ställer först in versionen för formulärets kärnkomponenter till 1.1.28. Innan du bygger eller driftsätter Archetype-projektet ska du uppdatera formulärkärnkomponentens version till 1.1.26. Den senaste versionen finns i [AEM 6.5 Forms - versionshistorik](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history).
+      >* När du skapar ett Arketype-projekt med version 45 ställer `[AEM Archetype Project Folder]/pom.xml` först in versionen för formulärets kärnkomponenter till 1.1.28. Innan du bygger eller driftsätter Archetype-projektet ska du uppdatera formulärkärnkomponentens version till 1.1.26. Den senaste versionen finns i [AEM 6.5 Forms-versionshistorik ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history) .
 
       >[!NOTE]
       >
-      >* Om du konfigurerar någon annan topologi måste du lägga till överförings-, förifyllnings- och andra URL-adresser till tillåtelselista i Dispatcher-lagret.
+      >* Om du konfigurerar någon annan topologi måste du lägga till webbadresserna för Skicka, Förifyll och andra till tillåtelselista i Dispatcher-lagret.
 
    1. Spara och stäng filen.
 
@@ -129,27 +129,27 @@ Så här skapar du en AEM Archetype 41 eller [senare](https://github.com/adobe/a
       mvn clean install
       ```
 
-      ![arkietypebuild-success](/help/forms/using/assets/corecomponent-build-successful.png)
+      ![archietypebuild-success](/help/forms/using/assets/corecomponent-build-successful.png)
 
 
-   När det AEM Archetype-projektet har skapats skapas ett AEM. Paketet finns på [AEM Archetype-projektmapp]\all\target\[appid].all-[version].zip
+   När det AEM Archetype-projektet har skapats skapas ett AEM. Paketet finns på [AEM Archetype Project Folder]\all\target\[appid].all-[version].zip
 
-1. Använd [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en) för att distribuera [AEM Archetype-projektmapp]\all\target\[appid].all-[version]ZIP-paket för alla författare och Publish-instanser.
+1. Använd [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en) för att distribuera [AEM Archetype Project Folder]\all\target\[appid].all-[version].zip-paketet på alla Author- och Publish-instanser.
 
 >[!NOTE]
 >
 >
 >
-> * Om du får problem med att komma åt inloggningsdialogrutan på en publiceringsinstans kan du försöka med att använda URL-adressen för att installera paketet via pakethanteraren: `http://[Publish Server URL]:[PORT]/system/console` för inloggning. På så sätt kan du komma åt inloggningssidan på en Publish-instans och fortsätta med installationsprocessen.
+> * Om du får problem med att komma åt inloggningsdialogrutan på en publiceringsinstans kan du försöka att logga in med URL:en `http://[Publish Server URL]:[PORT]/system/console` för att installera paketet via pakethanteraren. På så sätt kan du komma åt inloggningssidan på en Publish-instans och fortsätta med installationsprocessen.
 > * Ta inte bort eller ignorera Arketype-projektet efter att du distribuerat det till din miljö. Arketype-projektet krävs för att du ska kunna lägga till anpassade och nya adaptiva Forms Core Components-teman i din miljö.
 
-Kärnkomponenterna är aktiverade för din miljö. En tom Core Components-baserad Adaptive Form-mall och Canvas 3.0-temat distribueras till din miljö, vilket gör att du kan [skapa baskomponentbaserade adaptiva Forms](create-an-adaptive-form-core-components.md).
+Kärnkomponenterna är aktiverade för din miljö. En tom Core Components-baserad Adaptive Form-mall och Canvas 3.0-tema distribueras till din miljö, vilket gör att du kan [skapa Core Components-baserade Adaptive Forms](create-an-adaptive-form-core-components.md).
 
 ## Vanliga frågor
 
 ### Vad är kärnkomponenter?
 
-The [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
+[Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
 
 ### Vad finns det för funktioner för att aktivera kärnkomponenter?
 

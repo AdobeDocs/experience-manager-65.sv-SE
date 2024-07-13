@@ -32,7 +32,7 @@ För att maximera avkastningen måste organisationer övervaka hur kunderna inte
 
 ## Lösningen {#the-solution}
 
-AEM Forms kan integreras med [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html) lösningar - [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) och [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html) - som kan hjälpa er att övervaka och analysera hur era formulär fungerar och göra det möjligt att experimentera och identifiera upplevelsen som leder till bättre konverteringsgrad.
+AEM Forms kan integreras med [Adobe Marketing Cloud](https://www.adobe.com/marketing-cloud.html) -lösningar - [Adobe Analytics](https://www.adobe.com/marketing-cloud/web-analytics.html) och [Adobe Target](https://www.adobe.com/marketing-cloud/testing-targeting.html) - som hjälper dig att övervaka och analysera hur dina formulär fungerar och gör det möjligt att experimentera och identifiera upplevelsen som leder till bättre konverteringsgrad.
 
 ## Arbetsflödet {#the-workflow}
 
@@ -68,7 +68,7 @@ För att få djupgående insikter om hur kunderna interagerar med era formulär 
 1. Konfigurera konfigurationstjänsten för AEM Forms Analytics i AEM
 1. Aktivera analys i formuläret i AEM
 
-Detaljerade anvisningar finns i [Konfigurera analyser och rapporter för adaptiva formulär](../../forms/using/configure-analytics-forms-documents.md).
+Detaljerade steg finns i [Konfigurera analyser och rapporter för adaptiva formulär](../../forms/using/configure-analytics-forms-documents.md).
 
 **Konfigurera mål**
 
@@ -96,9 +96,9 @@ Analysrapporten för adaptiva formulär innehåller följande KPI:er (Key Perfor
 * **Återgivningar**: Antal gånger som formuläret har återgetts eller öppnats
 * **Utkast**: Antal gånger som formuläret har sparats som utkast
 
-* **Inlämningar**: Antal gånger som formuläret har skickats in
-* **Avbryt**: Antal gånger som användaren inte fyllt i formuläret
-* **Besök/överföringar**: Antal besök per inlämning
+* **Skicka in**: Antal gånger som formuläret har skickats in
+* **Avbryt**: Antal gånger som användare återstår utan att fylla i formuläret
+* **Besök/överföringar**: Antal besök per sändning
 
 Dessutom får du följande information om varje panel i formuläret:
 
@@ -110,7 +110,7 @@ Dessutom får du följande information om varje panel i formuläret:
 
 ![En exempelanalysrapport för ett adaptivt formulär](assets/summary-report.png)
 
-Mer information om rapporter från formuläranalyser finns i [Visa och förstå AEM Forms analysrapporter](../../forms/using/view-understand-aem-forms-analytics-reports.md).
+Mer information om rapporter för formuläranalys finns i [Visa och förstå AEM Forms analysrapporter](../../forms/using/view-understand-aem-forms-analytics-reports.md).
 
 >[!NOTE]
 >
@@ -136,7 +136,7 @@ Integrering av AEM Forms med Target gör att man kan skapa A/B-tester för adapt
 
 Mer information om hur du skapar ett A/B-test för ett adaptivt formulär finns i [A/B-testning av adaptiva formulär](../../forms/using/ab-testing-adaptive-forms.md).
 
-![Ett exempel på en sammanfattningsrapport av A/B-test för ett adaptivt formulär](assets/ab-test-report-4.png)
+![En exempelsammanfattningsrapport av A/B-test för ett adaptivt formulär](assets/ab-test-report-4.png)
 
 ## God praxis {#best-practices}
 

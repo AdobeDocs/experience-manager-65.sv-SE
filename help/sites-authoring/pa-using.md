@@ -24,7 +24,7 @@ Använd data från sidanalys för att mäta hur effektivt sidinnehållet är.
 
 ![aa-10](assets/aa-10.png)
 
-Sidanalysdata visas i [Listvy](/help/sites-authoring/basic-handling.md#list-view) i webbplatskonsolen. När sidorna visas i listformat är följande kolumner tillgängliga som standard:
+Sidanalysdata visas i [listvyn](/help/sites-authoring/basic-handling.md#list-view) i webbplatskonsolen. När sidorna visas i listformat är följande kolumner tillgängliga som standard:
 
 * Sidvyer
 * Unika besökare
@@ -34,12 +34,12 @@ Varje kolumn visar ett värde för den aktuella rapporteringsperioden och anger 
 
 >[!NOTE]
 >
->Om du vill ändra uppdateringsperioden [konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
+>[Konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) om du vill ändra uppdateringsperioden.
 
-1. Öppna **Webbplatser** konsol, till exempel [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)
-1. Klicka på ikonen längst till höger i verktygsfältet (övre högra hörnet) för att markera den **Listvy** (ikonen som visas beror på [aktuell vy](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)).
+1. Öppna konsolen **Platser**, till exempel [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content)
+1. Klicka på ikonen längst till höger i verktygsfältet (det övre högra hörnet) för att välja **Listvy** (ikonen som visas beror på den [aktuella vyn](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)).
 
-1. Klicka på ikonen längst till höger i verktygsfältet (övre högra hörnet) och välj sedan **Visa inställningar**. The **Konfigurera kolumner** öppnas. Gör de ändringar som behövs och bekräfta med **Uppdatera**.
+1. Klicka på ikonen längst till höger i verktygsfältet (övre högra hörnet) och välj sedan **Visa inställningar**. Dialogrutan **Konfigurera kolumner** öppnas. Gör nödvändiga ändringar och bekräfta med **Uppdatera**.
 
    ![aa-04](assets/aa-04.png)
 
@@ -62,7 +62,7 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 >
 >När ett sidträd innehåller underordnade sidor som är kopplade till olika Adobe Analytics molnkonfigurationer, kan du inte konfigurera tillgängliga datakolumner för sidorna.
 
-1. I listvyn använder du vyväljarna (höger i verktygsfältet) och väljer **Visa inställningar** och sedan **Lägg till anpassade analysdata**.
+1. I listvyn använder du vyväljarna (höger om verktygsfältet), väljer **Visa inställningar** och sedan **Lägg till anpassade analysdata**.
 
    ![aa-15](assets/aa-15.png)
 
@@ -74,34 +74,34 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 
 ### Öppna innehållsinsikter från webbplatser {#opening-content-insights-from-sites}
 
-Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites Console för att ytterligare undersöka hur sidan fungerar.
+Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites-konsolen för att ytterligare undersöka hur effektiva sidorna är.
 
 1. I webbplatskonsolen väljer du den sida som du vill se innehållsinsikter för.
 1. Klicka på ikonen Analytics (Analyser) och Recommendations () i verktygsfältet.
 
-   ![Analytics and Recommendations: ikon](do-not-localize/chlimage_1-16a.png)
+   ![Analyser och Recommendations-ikon](do-not-localize/chlimage_1-16a.png)
 
 ## Synliga analyser från sidredigeraren (Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
 
 >[!NOTE]
 >
->Detta visas om [Activity Map har konfigurerats](/help/sites-administering/adobeanalytics-connect.md#configuring-for-the-activity-map) för er webbplats.
+>Detta visas om [Activity Map har konfigurerats](/help/sites-administering/adobeanalytics-connect.md#configuring-for-the-activity-map) för din webbplats.
 
 >[!NOTE]
 >
 >Data för Activity Map hämtas från Adobe Analytics.
 
-När webbplatsen har [konfigurerad för Adobe Analytics](/help/sites-administering/adobeanalytics-connect.md)kan du använda [läge Activity Map](/help/sites-authoring/author-environment-tools.md#page-modes) för att se relevanta data. Till exempel:
+När din webbplats har [konfigurerats för Adobe Analytics](/help/sites-administering/adobeanalytics-connect.md) kan du använda [mode Activity Map](/help/sites-authoring/author-environment-tools.md#page-modes) för att visa relevanta data. Till exempel:
 
 ![aa-07](assets/aa-07.png)
 
 ### Åtkomst till Activity Map {#accessing-the-activity-map}
 
-När du har valt [Activity Map](/help/sites-authoring/author-environment-tools.md#page-modes) I uppmanas du att ange dina Adobe Analytics-uppgifter.
+När du har valt läget [Activity Map](/help/sites-authoring/author-environment-tools.md#page-modes) ombeds du ange dina Adobe Analytics-autentiseringsuppgifter.
 
 ![aa-03](assets/aa-03.png)
 
-The **Analyser** flytande verktygsfält visas. Här kan du:
+Det flytande verktygsfältet **Analytics** visas. Här kan du:
 
 * ändra verktygsfältets format med hjälp av dubbelpilarna (**>>**)
 * Växla sidinformation (ögonikon)
@@ -119,7 +119,7 @@ Du kan välja vilka analysdata som ska visas och hur de ska visas med hjälp av 
 
 * händelsetyp
 * användargrupp
-* **Bubblor**/**Övertoning**/**Gainer &amp; Losers**/**Av**
+* **Bubblor**/**Övertoning**/**Tona &amp; losers**/**Av**
 
 * period som ska visas
 
@@ -127,11 +127,11 @@ Du kan välja vilka analysdata som ska visas och hur de ska visas med hjälp av 
 
 ### Konfigurera Activity Map {#configuring-the-activity-map}
 
-Använd **Visa inställningar** -ikonen för att öppna **Inställningar för Activity Map** -dialogrutan.
+Använd ikonen **Visa inställningar** för att öppna dialogrutan **Activity Map-inställningar** .
 
 ![aa-04-1](assets/aa-04-1.png)
 
-The **Inställningar för Activity Map** finns det en rad alternativ på tre flikar:
+Dialogrutan **Activity Map-inställningar** innehåller ett antal alternativ på tre flikar:
 
 ![aa-06](assets/aa-06.png)
 

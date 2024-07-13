@@ -18,14 +18,14 @@ ht-degree: 0%
 
 # Förhandsgranska sidor med ContextHub-data{#previewing-pages-using-contexthub-data}
 
-The [ContextHub](/help/sites-developing/contexthub.md) I verktygsfältet visas data från ContextHub-arkiv och du kan ändra lagringsdata. Verktygsfältet ContextHub är användbart när du vill förhandsgranska innehåll som bestäms av data i ett ContextHub-lager.
+Verktygsfältet [ContextHub](/help/sites-developing/contexthub.md) visar data från ContextHub-arkiv och gör att du kan ändra lagringsdata. Verktygsfältet ContextHub är användbart när du vill förhandsgranska innehåll som bestäms av data i ett ContextHub-lager.
 
 Verktygsfältet består av en serie gränssnittslägen som innehåller en eller flera gränssnittsmoduler.
 
 * Gränssnittslägen är ikoner som visas till vänster i verktygsfältet. När du klickar på en ikon visas de gränssnittsmoduler som den innehåller i verktygsfältet.
 * Gränssnittsmoduler visar data från en eller flera ContextHub-butiker. Vissa gränssnittsmoduler gör det även möjligt för dig att ändra lagrade data.
 
-ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Administratören kan ha [konfigurerad ContextHub](/help/sites-developing/ch-configuring.md) för att visa olika.
+ContextHub installerar flera gränssnittslägen och gränssnittsmoduler. Din administratör kan ha [konfigurerat ContextHub](/help/sites-developing/ch-configuring.md) för att visa olika.
 
 ![screen_shot_2018-03-23at093446](assets/screen_shot_2018-03-23at093446.png)
 

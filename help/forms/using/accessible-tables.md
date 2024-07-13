@@ -25,7 +25,7 @@ För att undvika tillgänglighetsproblem med skärmläsare som inte har fullt st
 * Radrubriker
 * Radomfång
 
-Om du vill använda det nya formatet i HTML5 Forms markerar du tabellen som komplex. Lägg till `extras` -taggen i XML-källan för tabelldelformuläret enligt följande:
+Om du vill använda det nya formatet i HTML5 Forms markerar du tabellen som komplex. Om du vill markera tabellen som komplex lägger du till taggen `extras` i XML-källan för tabelldelformuläret enligt följande:
 
 ```xml
 </extras>
@@ -33,17 +33,17 @@ Om du vill använda det nya formatet i HTML5 Forms markerar du tabellen som komp
  </extras>
 ```
 
-Tabellerna som är markerade som *complexTable* följer den inbyggda HTML-renderingen och ger bättre hjälpmedelsstöd för vissa skärmläsare.  Om du vill skapa ett radintervall markerar du celler i följd i en tabell i samma kolumn, högerklickar på markeringen och klickar sedan på **[!UICONTROL Merge Cells]**.
+Tabellerna som markeras som *complexTable* följer den inbyggda HTML-renderingen och ger bättre hjälpmedelsstöd för vissa skärmläsare.  Om du vill skapa ett radintervall markerar du celler i följd i en tabell i samma kolumn, högerklickar på markeringen och klickar sedan på **[!UICONTROL Merge Cells]**.
 
 >[!NOTE]
 >
 >Det går bara att skapa ett radintervall för celler längst till vänster.
 
-Om du vill markera en rad som en radrubrik markerar du alla celler i raden, högerklickar på markeringen och klickar sedan på **[!UICONTROL Mark Header]**.
+Om du vill markera en rad som radhuvud markerar du alla celler i raden, högerklickar på markeringen och klickar sedan på **[!UICONTROL Mark Header]**.
 
-Markera en cell som kolumnrubrik genom att markera en cell i kolumnen, högerklicka på markeringen och sedan klicka **[!UICONTROL Mark Header]**.
+Om du vill markera en cell som kolumnrubrik markerar du en cell i kolumnen, högerklickar på markeringen och klickar sedan på **[!UICONTROL Mark Header]**.
 
-Begränsningar i nya *AccessibleTable* format:
+Begränsningar i det nya formatet *AccessibleTable*:
 
 * Brist på stöd för utökningsbara fält om rowspan används i tabellen
 * Inget stöd för kapslade tabeller (tabeller i tabellceller)

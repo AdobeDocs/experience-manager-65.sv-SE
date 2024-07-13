@@ -1,5 +1,5 @@
 ---
-title: Java API-snabbstart för användarhanteraren (SOAP)
+title: Snabbstart för Java API för användarhanteraren (SOAP)
 description: Använd API:t för användarhanteraren för att lägga till användare, ta bort användare, skapa grupper, hantera användare och grupper, hantera roller och behörigheter, synkronisera användare programmatiskt och hantera inställningsnoderna programmatiskt.
 contentOwner: admin
 content-type: reference
@@ -523,7 +523,7 @@ I följande kodexempel tilldelas användarrollen Tjänster till ett huvudkonto, 
 
 ## Snabbstart (SOAP): Programmatisk synkronisering av användare med Java API {#quick-start-soap-mode-programmatically-synchronizing-users-using-the-java-api}
 
-I följande Java-kodexempel synkroniseras användare med hjälp av API:er för användarhantering. (Se [Synkronisera användare programmatiskt](/help/forms/developing/users.md#programmatically-synchronizing-users).)
+I följande Java-kodexempel synkroniseras användare med hjälp av API:er för användarhantering. (Se [Programmatisk synkronisering av användare](/help/forms/developing/users.md#programmatically-synchronizing-users).)
 
 ```java
  /*
@@ -902,7 +902,7 @@ I följande kodexempel skapas en grupp med namnet AdobeGroup till AEM Forms. (Se
 
 ## Snabbstart (SOAP) Hantera inställningsnoder {#quick-start-soap-mode-managing-preferences-nodes}
 
-Följande Java-kodsmodeller hanterar Preferences Nodes med API:erna för användarhantering. ( Se [Hantera inställningsnoderna programmatiskt](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
+Följande Java-kodsmodeller hanterar Preferences Nodes med API:erna för användarhantering. (Se [Programmatisk hantering av inställningsnoder](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
 ```java
 /*
@@ -1005,7 +1005,7 @@ public class ManagePreferences {
 
 ## Snabbstart (SOAP läge): Programmatiskt hantera inställningsnoderna med Java API {#quick-start-soap-mode-programmatically-managing-the-preferences-nodes-using-the-java-api}
 
-Följande Java-kodmodeller hanterar Preferences Nodes med API:er för användarhantering ( Se [Hantera inställningsnoderna programmatiskt](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
+Följande Java-kodmodeller hanterar inställningsnoder med API:er för användarhantering ( Se [Programmatisk hantering av inställningsnoder](/help/forms/developing/programmatically-preferences-nodes.md#programmatically-managing-the-preferences-nodes))
 
 ```java
 /*

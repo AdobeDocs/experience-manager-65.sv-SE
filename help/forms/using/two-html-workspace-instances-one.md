@@ -23,12 +23,12 @@ AEM Forms-administratörer anpassar arbetsytan för att skapa två olika URL:er 
 
 Följ de här stegen för att konfigurera arbetsytan i AEM Forms.
 
-1. Installera Dev-paketet för AEM Forms-arbetsytan på servern. Se [dev-paket](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p), för instruktioner om hur du skapar den.
+1. Installera Dev-paketet för AEM Forms-arbetsytan på servern. Se [dev-paket](/help/forms/using/introduction-customizing-html-workspace.md#p-crx-package-p) för instruktioner om hur du skapar det.
 1. Logga in på CRXDE Lite som administratör via `https://'[server]:[port]'/lc/crx/de/index.jsp`.
-1. Kopiera nod på /content och klistra in på /content. Byt namn på noden till ws2. Klicka på **[!UICONTROL Save all]**. Ändra värdet för `sling:resourceType` till ws2. Klicka på **[!UICONTROL Save all]**.
+1. Kopiera nod på /content och klistra in på /content. Byt namn på noden till ws2. Klicka på **[!UICONTROL Save all]**. Ändra värdet `sling:resourceType` till ws2 i egenskaperna för den här noden. Klicka på **[!UICONTROL Save all]**.
 
 1. Kopiera mapp från /libs och klistra in på /apps. Byt namn på mappen till ws2. Klicka på **[!UICONTROL Save all]**.
-1. I `GET.jsp` på `/apps/ws2`gör du följande kodändringar. Ersätt följande
+1. Gör följande kodändringar i `GET.jsp` kl. `/apps/ws2`. Ersätt följande
 
    ```html
    <html lang="en">
@@ -52,7 +52,7 @@ Följ de här stegen för att konfigurera arbetsytan i AEM Forms.
        <meta http-equiv="refresh" content="0;URL='/lc/apps/ws2/index.html'" />
    ```
 
-1. I `registry.js` på `/apps/ws2/js`, ändra sökvägen till mallar för att hänvisa till mallar på `/apps/ws2/js/runtime/templates`. Ersätt följande kod
+1. I `registry.js` kl. `/apps/ws2/js` ändrar du sökvägen för mallar så att den refererar till mallar på `/apps/ws2/js/runtime/templates`. Ersätt följande kod
 
    ```css
    "tasklist" : {
@@ -80,16 +80,16 @@ Följ de här stegen för att konfigurera arbetsytan i AEM Forms.
    }
    ```
 
-1. I `userinfo.js` på `/apps/ws2/js/runtime/models` och `/apps/ws2/js/runtime/views`, ändringssträng `/lc/content/ws` till `lc/content/ws2`.
+1. I `userinfo.js` vid `/apps/ws2/js/runtime/models` och `/apps/ws2/js/runtime/views` ändrar du strängen `/lc/content/ws` till `lc/content/ws2`.
 
-1. I `/apps/ws2/js/runtime/services/service.js`, ändra banan i `getLocalizationData` function to point to `/lc/apps/ws2/Locale.html`.
+1. I `/apps/ws2/js/runtime/services/service.js` ändrar du sökvägen i funktionen `getLocalizationData` till `/lc/apps/ws2/Locale.html`.
 
-1. Att referera till `pdf.html` för den nya arbetsytan, ändra sökvägen för `pdf.html` in `/apps/ws2/js/runtime/views/forms/pdftaskform.js`.
+1. Om du vill referera till `pdf.html` för nya Workspace ändrar du sökvägen för `pdf.html` i `/apps/ws2/js/runtime/views/forms/pdftaskform.js`.
 
-1. Att referera till `pdf.html` för den nya arbetsytan, ändra sökvägar för `pdf.html` och `WsNextAdapter.swf` in `startprocess.html`, `taskdetails.html`och `processinstancehistory.html` på `/apps/ws2/js/runtime/templates`.
+1. Om du vill referera till `pdf.html` av nya Workspace ändrar du sökvägarna för `pdf.html` och `WsNextAdapter.swf` i `startprocess.html`, `taskdetails.html` och `processinstancehistory.html` på `/apps/ws2/js/runtime/templates`.
 
-1. Kopiera `/etc/map/ws` mapp och klistra in på `/etc/map`. Byt namn på den nya mappen till ws2. Klicka på Spara alla.
+1. Kopiera mappen `/etc/map/ws` och klistra in på `/etc/map`. Byt namn på den nya mappen till ws2. Klicka på Spara alla.
 
-1. I egenskaper för `ws2`, ändra värdet för `sling:redirect` till `content/ws2`.
+1. Ändra värdet `sling:redirect` till `content/ws2` i egenskaperna för `ws2`.
 
 1. Ändra värdet för `sling:match` till `^[^/\||]/[^/\||]/ws2$`.

@@ -20,15 +20,15 @@ ht-degree: 0%
 
 Du kan programmatiskt anropa humancentrerade långvariga processer som skapats i Workbench med följande klientprogram:
 
-* Ett webbaserat Java-klientprogram som använder anrops-API. (Se [Anropa AEM Forms med Java API](/help/forms/developing/invoking-aem-forms-using-java.md)(/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api).
+* Ett webbaserat Java-klientprogram som använder anrops-API. (Se [Anropa AEM Forms med Java API](/help/forms/developing/invoking-aem-forms-using-java.md)(/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api).)
 * Ett ASP.NET som använder webbtjänster. (Se [Anropa AEM Forms med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
-* Ett klientprogram som skapats med Flex och som använder Remoting. (Se [Anropa AEM Forms med (borttaget för AEM) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
+* Ett klientprogram som skapats med Flex och som använder Remoting. (Se [Anropa AEM Forms med (borttaget för AEM formulär) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
 
-Den långvariga process som anropas får namnet *FirstAppSolution/PreLoanProcess*. Du kan skapa den här processen genom att följa självstudiekursen som anges i [Skapa ditt första AEM Forms-program](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63).
+Den långvariga processen som anropas heter *FirstAppSolution/PreLoanProcess*. Du kan skapa den här processen genom att följa den självstudiekurs som anges i [Skapa ditt första AEM Forms-program](https://www.adobe.com/go/learn_aemforms_firstapp_ds_63).
 
-En mänsklig process inbegriper en uppgift som en användare kan svara på med hjälp av arbetsytan. Med Workbench kan du till exempel skapa en process där en bankansvarig kan godkänna eller avvisa en låneansökan. Följande bild visar processen *FirstAppSolution/PreLoanProcess*.
+En mänsklig process inbegriper en uppgift som en användare kan svara på med hjälp av Workspace. Med Workbench kan du till exempel skapa en process där en bankansvarig kan godkänna eller avvisa en låneansökan. Följande bild visar processen *FirstAppSolution/PreLoanProcess*.
 
-The *FirstAppSolution/PreLoanProcess* process accepterar en indataparameter med namnet *formData* vars datatyp är XML. XML-data sammanfogas med en formulärdesign med namnet *PreLoanForm.xdp*. Följande bild visar ett formulär som representerar en uppgift som tilldelats en användare att godkänna eller neka en låneansökan. Användaren godkänner eller nekar programmet med Workspace. Arbetsytans användare kan godkänna lånebegäran genom att klicka på knappen Godkänn som visas på följande bild. Användaren kan också neka lånebegäran genom att klicka på Neka.
+Processen *FirstAppSolution/PreLoanProcess* accepterar en indataparameter med namnet *formData* vars datatyp är XML. XML-data sammanfogas med en formulärdesign med namnet *PreLoanForm.xdp*. Följande bild visar ett formulär som representerar en uppgift som tilldelats en användare att godkänna eller neka en låneansökan. Användaren godkänner eller nekar programmet med Workspace. Workspace-användaren kan godkänna låneansökan genom att klicka på knappen Godkänn som visas på följande bild. Användaren kan också neka lånebegäran genom att klicka på Neka.
 
 En långvarig process anropas asynkront och kan inte anropas synkront på grund av följande faktorer:
 
@@ -42,7 +42,7 @@ När en långvarig process anropas skapar AEM Forms ett anrops-ID-värde som en 
 >
 >AEM Forms skapar inte ett värde för en anropsidentifierare eller en post när en kort process anropas.
 
-The `FirstAppSolution/PreLoanProcess` processen anropas när en sökande skickar in en ansökan, som representeras av XML-data. Namnet på indataprocessvariabeln är `formData` och dess datatyp är XML. Anta att följande XML-data används som indata till `FirstAppSolution/PreLoanProcess` -processen.
+Processen `FirstAppSolution/PreLoanProcess` anropas när en sökande skickar ett program, som representeras av XML-data. Namnet på indataprocessvariabeln är `formData` och dess datatyp är XML. Anta att följande XML-data används som indata till `FirstAppSolution/PreLoanProcess`-processen för den här diskussionen.
 
 ```xml
  <?xml version="1.0" encoding="UTF-8"?>
@@ -54,9 +54,9 @@ The `FirstAppSolution/PreLoanProcess` processen anropas när en sökande skickar
  </LoanApp>
 ```
 
-XML-data som skickas till en process måste matcha fälten i det formulär som används i processen. I annat fall visas inte data i formuläret. Alla program som anropar `FirstAppSolution/PreLoanProcess` måste skicka XML-datakällan. De program som skapas i *Anropa personalcentrerade, långlivade processer* Skapa XML-datakällan dynamiskt utifrån värden som en användare angett i en webbklient.
+XML-data som skickas till en process måste matcha fälten i det formulär som används i processen. I annat fall visas inte data i formuläret. Alla program som anropar `FirstAppSolution/PreLoanProcess`-processen måste skicka den här XML-datakällan. De program som skapades i *Anropar personalcentrerade, långlivade processer* skapar dynamiskt XML-datakällan utifrån värden som en användare angett i en webbklient.
 
-Med ett klientprogram kan du skicka *FirstAppSolution/PreLoanProcess* bearbeta de XML-data som behövs. En långvarig process returnerar ett anropsidentifierarvärde som returvärde. Följande bild visar klientprogram som anropar den långa processen*FirstAppSolution/PreLoanProcess. Klientprogrammen skickar XML-data och hämtar tillbaka ett strängvärde som representerar anropsidentifierarvärdet.
+Med ett klientprogram kan du skicka *FirstAppSolution/PreLoanProcess* för att bearbeta de XML-data som krävs. En långvarig process returnerar ett anropsidentifierarvärde som returvärde. Följande bild visar klientprogram som anropar den långa processen*FirstAppSolution/PreLoanProcess. Klientprogrammen skickar XML-data och hämtar tillbaka ett strängvärde som representerar anropsidentifierarvärdet.
 
 **Se även**
 
@@ -68,27 +68,27 @@ Med ett klientprogram kan du skicka *FirstAppSolution/PreLoanProcess* bearbeta d
 
 ## Skapa ett Java-webbprogram som anropar en mänsklig, lång process {#creating-a-java-web-application-that-invokes-a-human-centric-long-lived-process}
 
-Du kan skapa ett webbaserat program som använder en Java-server för att anropa `FirstAppSolution/PreLoanProcess` -processen. Om du vill anropa den här processen från en Java-server använder du anrops-API:t i Java-serverleten. (Se [Anropa AEM Forms med Java API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api).)
+Du kan skapa ett webbaserat program som använder en Java-servlet för att anropa `FirstAppSolution/PreLoanProcess`-processen. Om du vill anropa den här processen från en Java-server använder du anrops-API:t i Java-serverleten. (Se [Anropa AEM Forms med Java API](/help/forms/developing/invoking-aem-forms-using-java.md#invoking-aem-forms-using-the-java-api).)
 
 Följande bild visar ett webbaserat klientprogram som skickar värden för namn, telefon (eller e-post) och belopp. Dessa värden skickas till Java-servern när användaren klickar på knappen Skicka program.
 
 Java-servern utför följande uppgifter:
 
 * Hämtar de värden som har bokförts från HTML-sidan till Java-servleten.
-* Skapar dynamiskt en XML-datakälla som kan skickas till *FirstAppSolution/PreLoanProcess* -processen. Värdena för namn, telefon (eller e-post) och belopp anges i XML-datakällan.
-* Anropar *FirstAppSolution/PreLoanProcess* bearbeta med AEM Forms anrops-API:t.
+* Skapar dynamiskt en XML-datakälla som ska skickas till processen *FirstAppSolution/PreLoanProcess*. Värdena för namn, telefon (eller e-post) och belopp anges i XML-datakällan.
+* Anropar processen *FirstAppSolution/PreLoanProcess* med AEM Forms Invocation API.
 * Returnerar anropsidentifierarvärdet till klientens webbläsare.
 
 ### Sammanfattning av steg {#summary-of-steps}
 
-Skapa ett webbaserat Java-program som anropar `FirstAppSolution/PreLoanProcess` utför du följande steg:
+Så här skapar du ett Java-webbaserat program som anropar processen `FirstAppSolution/PreLoanProcess`:
 
 1. [Skapa ett webbprojekt](invoking-human-centric-long-lived.md#create-a-web-project).
 1. [Skapa Java-programlogik för servern](invoking-human-centric-long-lived.md#create-java-application-logic-for-the-servlet).
 1. [Skapa webbsidan för webbprogrammet](invoking-human-centric-long-lived.md#create-the-web-page-for-the-web-application)
 1. [Paketera webbprogrammet i en WAR-fil](invoking-human-centric-long-lived.md#package-the-web-application-to-a-war-file).
-1. [Distribuera WAR-filen till J2EE-programservern där AEM Forms finns](invoking-human-centric-long-lived.md#deploy-the-war-file-to-the-j2ee-application-server-hosting-aem-forms).
-1. [Testa ditt webbprogram](invoking-human-centric-long-lived.md#test-your-web-application).
+1. [Distribuera WAR-filen till J2EE-programservern som är värd för AEM Forms](invoking-human-centric-long-lived.md#deploy-the-war-file-to-the-j2ee-application-server-hosting-aem-forms).
+1. [Testa webbprogrammet](invoking-human-centric-long-lived.md#test-your-web-application).
 
 >[!NOTE]
 >
@@ -96,7 +96,7 @@ Skapa ett webbaserat Java-program som anropar `FirstAppSolution/PreLoanProcess` 
 
 ### Skapa ett webbprojekt {#create-a-web-project}
 
-Det första steget för att skapa ett webbprogram är att skapa ett webbprojekt. Den Java-IDE som det här dokumentet är baserat på är Eclipse 3.3. Med Eclipse IDE skapar du ett webbprojekt och lägger till de JAR-filer som behövs i projektet. Lägga till en HTML-sida med namnet *index.html*  och en Java-servlet till ditt projekt.
+Det första steget för att skapa ett webbprogram är att skapa ett webbprojekt. Den Java-IDE som det här dokumentet är baserat på är Eclipse 3.3. Med Eclipse IDE skapar du ett webbprojekt och lägger till de JAR-filer som behövs i projektet. Lägg till en HTML-sida med namnet *index.html* och en Java-servlet i ditt projekt.
 
 I följande lista anges de JAR-filer som ska inkluderas i ditt webbprojekt:
 
@@ -112,27 +112,27 @@ Information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksf
 
 **Skapa ett webbprojekt**
 
-1. Starta Eclipse och klicka på **Fil** >  **Nytt projekt**.
-1. I **Nytt projekt** väljer **Webb** > **Dynamiskt webbprojekt**.
-1. Typ `InvokePreLoanProcess` för namnet på projektet och klicka sedan på **Slutför**.
+1. Starta Eclipse och klicka på **Arkiv** > **Nytt projekt**.
+1. I dialogrutan **Nytt projekt** väljer du **Webb** > **Dynamiskt webbprojekt**.
+1. Skriv `InvokePreLoanProcess` som namn på ditt projekt och klicka sedan på **Slutför**.
 
-**Lägg till nödvändiga JAR-filer i projektet**
+**Lägg till nödvändiga JAR-filer i ditt projekt**
 
-1. I fönstret Projektutforskaren högerklickar du på `InvokePreLoanProcess` projekt och välj **Egenskaper**.
-1. Klicka **Java build path** och klicka sedan på **Bibliotek** -fliken.
-1. Klicka på **Lägg till externa JAR** och bläddra till de JAR-filer som ska inkluderas.
+1. Högerklicka på `InvokePreLoanProcess`-projektet i projektutforskarfönstret och välj **Egenskaper**.
+1. Klicka på **Java build path** och sedan på fliken **Libraries** .
+1. Klicka på knappen **Lägg till externa JAR** och bläddra till de JAR-filer som ska inkluderas.
 
-**Lägg till en Java-servlet i ditt projekt**
+**Lägg till en Java-server i ditt projekt**
 
-1. I fönstret Projektutforskaren högerklickar du på `InvokePreLoanProcess` projekt och välj **Nytt** >  **Övriga**.
-1. Expandera **Webb** mapp, markera **Servlet** och klicka sedan på **Nästa**.
-1. I dialogrutan Skapa server skriver du `SubmitXML` för serverletens namn och klicka sedan på **Slutför**.
+1. Högerklicka på `InvokePreLoanProcess`-projektet i projektutforskarfönstret och välj **Nytt** > **Annat**.
+1. Expandera mappen **Webb**, markera **Servlet** och klicka sedan på **Nästa**.
+1. Skriv `SubmitXML` som namn på servern i dialogrutan Skapa server och klicka sedan på **Slutför**.
 
 **Lägg till en HTML-sida i ditt projekt**
 
-1. I fönstret Projektutforskaren högerklickar du på `InvokePreLoanProcess` projekt och välj **Nytt** > **Övriga**.
-1. Expandera **Webb** mapp, markera **HTML** och klicka **Nästa**.
-1. Skriv i dialogrutan Nytt HTML `index.html` för filnamnet och klicka sedan på **Slutför**.
+1. Högerklicka på `InvokePreLoanProcess`-projektet i projektutforskarfönstret och välj **Nytt** > **Annat**.
+1. Utöka mappen **Webb**, markera **HTML** och klicka på **Nästa**.
+1. Skriv `index.html` som filnamn i dialogrutan Nytt HTML och klicka sedan på **Slutför**.
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ Information om var dessa JAR-filer finns i [Inkludera AEM Forms Java-biblioteksf
 
 ### Skapa Java-programlogik för servern {#create-java-application-logic-for-the-servlet}
 
-Skapa Java-programlogik som anropar `FirstAppSolution/PreLoanProcess` från Java-servern. Följande kod visar syntaxen för `SubmitXML` Java Servlet:
+Skapa Java-programlogik som anropar processen `FirstAppSolution/PreLoanProcess` inifrån Java-serverpaketet. I följande kod visas syntaxen för Java-servern `SubmitXML`:
 
 ```java
      public class SubmitXML extends HttpServlet implements Servlet {
@@ -155,16 +155,16 @@ Skapa Java-programlogik som anropar `FirstAppSolution/PreLoanProcess` från Java
              }
 ```
 
-Normalt placerar du inte klientkod i en Java-servers `doGet` eller `doPost` -metod. En bättre programmeringspraxis är att placera den här koden i en separat klass. Instansiera sedan klassen inifrån `doPost` metod (eller `doGet` och anropa lämpliga metoder. För kodreaktionen begränsas dock kodexemplen till ett minimum och placeras i `doPost` -metod.
+Normalt placerar du inte klientkod i en Java-serverds `doGet`- eller `doPost`-metod. En bättre programmeringspraxis är att placera den här koden i en separat klass. Instansiera sedan klassen inifrån metoden `doPost` (eller metoden `doGet`) och anropa lämpliga metoder. För kodraperation begränsas dock kodexempel till ett minimum och placeras i metoden `doPost`.
 
-Anropa `FirstAppSolution/PreLoanProcess` utför följande uppgifter med anrops-API:t:
+Så här anropar du processen `FirstAppSolution/PreLoanProcess` med hjälp av API:t för anrop:
 
-1. Inkludera JAR-klientfiler, t.ex. adobe-livecycle-client.jar, i Java-projektets klassökväg. Information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
-1. Hämta värden för namn, telefon och belopp som skickas från HTML-sidan. Använd dessa värden för att dynamiskt skapa en XML-datakälla som skickas till `FirstAppSolution/PreLoanProcess` -processen. Du kan använda `org.w3c.dom` klasser för att skapa XML-datakällan (den här programlogiken visas i följande kodexempel).
-1. Skapa en `ServiceClientFactory` objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
-1. Skapa en `ServiceClient` genom att använda konstruktorn och skicka `ServiceClientFactory` -objekt. A `ServiceClient` kan du anropa en tjänståtgärd. Det hanterar uppgifter som att hitta, skicka och dirigera anropsbegäranden.
-1. Skapa en `java.util.HashMap` genom att använda dess konstruktor.
-1. Anropa `java.util.HashMap` objektets `put` metod för varje indataparameter som ska skickas till den långvariga processen. Kontrollera att du anger namnet på processens indataparametrar. På grund av `FirstAppSolution/PreLoanProcess` processen kräver en indataparameter av typen `XML` (namngiven `formData`) behöver du bara anropa `put` en gång.
+1. Inkludera JAR-klientfiler, t.ex. adobe-livecycle-client.jar, i Java-projektets klassökväg. Mer information om platsen för dessa filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+1. Hämta värden för namn, telefon och belopp som skickas från HTML-sidan. Använd dessa värden om du dynamiskt vill skapa en XML-datakälla som skickas till `FirstAppSolution/PreLoanProcess`-processen. Du kan använda `org.w3c.dom`-klasser för att skapa XML-datakällan (den här programlogiken visas i följande kodexempel).
+1. Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper. (Se [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties).)
+1. Skapa ett `ServiceClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet. Med ett `ServiceClient`-objekt kan du anropa en tjänståtgärd. Det hanterar uppgifter som att hitta, skicka och dirigera anropsbegäranden.
+1. Skapa ett `java.util.HashMap`-objekt med hjälp av dess konstruktor.
+1. Anropa `java.util.HashMap`-objektets `put`-metod för varje indataparameter för att skicka till den långvariga processen. Kontrollera att du anger namnet på processens indataparametrar. Eftersom processen `FirstAppSolution/PreLoanProcess` kräver en indataparameter av typen `XML` (med namnet `formData`) behöver du bara anropa metoden `put` en gång.
 
    ```java
     //Get the XML to pass to the FirstAppSolution/PreLoanProcess process
@@ -175,19 +175,19 @@ Anropa `FirstAppSolution/PreLoanProcess` utför följande uppgifter med anrops-A
     params.put("formData", inXML);
    ```
 
-1. Skapa en `InvocationRequest` genom att anropa `ServiceClientFactory` objektets `createInvocationRequest` och skicka följande värden:
+1. Skapa ett `InvocationRequest`-objekt genom att anropa `ServiceClientFactory`-objektets `createInvocationRequest`-metod och skicka följande värden:
 
-   * Ett strängvärde som anger namnet på den långvariga process som ska anropas. Anropa `FirstAppSolution/PreLoanProcess` process, ange `FirstAppSolution/PreLoanProcess`.
+   * Ett strängvärde som anger namnet på den långvariga process som ska anropas. Om du vill anropa `FirstAppSolution/PreLoanProcess`-processen anger du `FirstAppSolution/PreLoanProcess`.
    * Ett strängvärde som representerar processåtgärdens namn. Namnet på den långvariga processåtgärden är `invoke`.
-   * The `java.util.HashMap` objekt som innehåller de parametervärden som tjänståtgärden kräver.
-   * Ett booleskt värde som anger `false`, som skapar en asynkron begäran (det här värdet kan användas för att anropa en långvarig process).
+   * Objektet `java.util.HashMap` som innehåller de parametervärden som tjänståtgärden kräver.
+   * Ett booleskt värde som anger `false`, vilket skapar en asynkron begäran (det här värdet kan användas för att anropa en långvarig process).
 
    >[!NOTE]
    >
    >*En kort process kan anropas genom att värdet true skickas som den fjärde parametern i metoden createInvocationRequest. Om värdet true skickas skapas en synkron begäran.*
 
-1. Skicka anropsbegäran till AEM Forms genom att anropa `ServiceClient` objektets `invoke` metoden och skicka `InvocationRequest` -objekt. The `invoke` returnerar en `InvocationReponse` -objekt.
-1. En långvarig process returnerar ett strängvärde som representerar ett anropsidentifieringsvärde. Hämta värdet genom att anropa `InvocationReponse` objektets `getInvocationId` -metod.
+1. Skicka anropsbegäran till AEM Forms genom att anropa `ServiceClient`-objektets `invoke`-metod och skicka `InvocationRequest`-objektet. Metoden `invoke` returnerar ett `InvocationReponse`-objekt.
+1. En långvarig process returnerar ett strängvärde som representerar ett anropsidentifieringsvärde. Hämta det här värdet genom att anropa metoden `getInvocationId` för objektet `InvocationReponse`.
 
    ```java
     //Send the invocation request to the long-lived process and
@@ -196,11 +196,11 @@ Anropa `FirstAppSolution/PreLoanProcess` utför följande uppgifter med anrops-A
     String invocationId = lcResponse.getInvocationId();
    ```
 
-1. Skriv anropsidentifieringsvärdet till klientens webbläsare. Du kan använda en `java.io.PrintWriter` -instans för att skriva det här värdet till webbläsaren.
+1. Skriv anropsidentifieringsvärdet till klientens webbläsare. Du kan använda en `java.io.PrintWriter`-instans för att skriva det här värdet till klientens webbläsare.
 
 ### Snabbstart: Anropa en långvarig process med anrops-API {#quick-start-invoking-a-long-lived-process-using-the-invocation-api}
 
-Följande Java-kodexempel representerar den Java-server som anropar `FirstAppSolution/PreLoanProcess` -processen.
+Följande Java-kodexempel representerar den Java-server som anropar `FirstAppSolution/PreLoanProcess`-processen.
 
 ```java
  /*
@@ -357,7 +357,7 @@ Följande Java-kodexempel representerar den Java-server som anropar `FirstAppSol
 
 ### Skapa webbsidan för webbprogrammet {#create-the-web-page-for-the-web-application}
 
-The *index.html* webbsidan innehåller en startpunkt till Java-servern som anropar `FirstAppSolution/PreLoanProcess` -processen. Den här webbsidan är ett grundläggande formulär i HTML som innehåller ett HTML-formulär och en skicka-knapp. När användaren klickar på skicka-knappen skickas formulärdata till `SubmitXML` Java servlet.
+Webbsidan *index.html* ger en startpunkt till Java-servern som anropar processen `FirstAppSolution/PreLoanProcess`. Den här webbsidan är ett grundläggande formulär i HTML som innehåller ett HTML-formulär och en skicka-knapp. När användaren klickar på skicka-knappen skickas formulärdata till Java-servern `SubmitXML`.
 
 Java-servleten hämtar data som har skickats från HTML-sidan med följande Java-kod:
 
@@ -417,7 +417,7 @@ Följande HTML-kod representerar filen index.html som skapades under installatio
 
 ### Paketera webbprogrammet i en WAR-fil {#package-the-web-application-to-a-war-file}
 
-Så här distribuerar du Java-servern som anropar `FirstAppSolution/PreLoanProcess` paketerar du webbprogrammet i en WAR-fil. Kontrollera att externa JAR-filer som komponentens affärslogik är beroende av, t.ex. adobe-livecycle-client.jar och adobe-usermanager-client.jar, också ingår i WAR-filen.
+Om du vill distribuera den Java-server som anropar `FirstAppSolution/PreLoanProcess`-processen paketerar du webbprogrammet i en WAR-fil. Kontrollera att externa JAR-filer som komponentens affärslogik är beroende av, t.ex. adobe-livecycle-client.jar och adobe-usermanager-client.jar, också ingår i WAR-filen.
 
 Följande bild visar Eclipse-projektets innehåll, som paketeras i en WAR-fil.
 
@@ -427,9 +427,9 @@ Följande bild visar Eclipse-projektets innehåll, som paketeras i en WAR-fil.
 
 **Paketera ett webbprogram till en WAR-fil:**
 
-1. Från **Project Explorer** fönster, högerklicka på `InvokePreLoanProcess` projekt och välj **Exportera** > **WAR-fil**.
-1. I **Webbmodul** textruta, skriva `InvokePreLoanProcess` för Java-projektets namn.
-1. I **Mål** textruta, skriva `PreLoanProcess.war`**för** filnamn, ange platsen för WAR-filen och klicka sedan på Slutför.
+1. I fönstret **Projektutforskaren** högerklickar du på projektet `InvokePreLoanProcess` och väljer **Exportera** > **WAR-fil**.
+1. Skriv `InvokePreLoanProcess` som namn på Java-projektet i textrutan **Webbmodul**.
+1. I textrutan **Mål** skriver du `PreLoanProcess.war`**som** filnamn, anger platsen för WAR-filen och klickar sedan på Slutför.
 
 ### Distribuera WAR-filen till J2EE-programservern där AEM Forms finns {#deploy-the-war-file-to-the-j2ee-application-server-hosting-aem-forms}
 
@@ -449,13 +449,13 @@ När du har distribuerat webbprogrammet kan du testa det med en webbläsare. Om 
 
 >[!NOTE]
 >
->Bekräfta att Java-programmet anropade processen genom att starta Workspace och godkänna lånet.
+>Bekräfta att Java-programmet har anropat processen genom att starta Workspace och godkänna lånet.
 
 ## Skapa ett ASP.NET webbprogram som anropar en människocentrerad, lång process {#creating-an-asp-net-web-application-that-invokes-a-human-centric-long-lived-process}
 
-Du kan skapa ett ASP.NET där `FirstAppSolution/PreLoanProcess` -processen. Använd webbtjänster om du vill anropa den här processen från ett ASP.NET. (Se [Anropa AEM Forms med Web Services](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
+Du kan skapa ett ASP.NET som anropar `FirstAppSolution/PreLoanProcess`-processen. Använd webbtjänster om du vill anropa den här processen från ett ASP.NET. (Se [Anropa AEM Forms med webbtjänster](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-web-services).)
 
-Följande bild visar ett ASP.NET-klientprogram som hämtar data från en slutanvändare. Data placeras i en XML-datakälla och skickas till `FirstAppSolution/PreLoanProcess` bearbetas när användaren klickar på knappen Skicka program.
+Följande bild visar ett ASP.NET-klientprogram som hämtar data från en slutanvändare. Data placeras i en XML-datakälla och skickas till `FirstAppSolution/PreLoanProcess`-processen när användaren klickar på knappen Skicka program.
 
 När processen har anropats visas ett värde för anropsidentifierare. Ett anropsidentifierarvärde skapas som en del av en post som spårar statusen för den långvariga processen.
 
@@ -483,40 +483,40 @@ Meddelande under Tjänstreferenser, det finns två objekt. Det första objektet 
 **Skapa ett ASP.NET:**
 
 1. Starta Microsoft Visual Studio 2008.
-1. Från **Fil** meny, välja **Nytt**, **Webbplats**.
-1. I **Mallar** lista, välj **ASP.NET webbplats**.
-1. I **Plats** väljer du en plats för projektet. Namnge projektet *InvokePreLoanProcess*.
-1. I **Språk** väljer du Visual C#
+1. Välj **Ny**, **Webbplats** på menyn **Arkiv**.
+1. Välj **ASP.NET** i listan **Mallar**.
+1. Välj en plats för projektet i rutan **Plats**. Ge projektet namnet *InvokePreLoanProcess*.
+1. I rutan **Språk** väljer du Visual C#
 1. Klicka på OK.
 
 **Lägg till tjänstreferenser:**
 
-1. Välj **Lägg till tjänstreferens**.
-1. I **Adress** anger du WSDL för tjänsten Job Manager.
+1. Välj **Lägg till tjänstreferens** på Projekt-menyn.
+1. I dialogrutan **Adress** anger du WSDL till tjänsten Jobbhanteraren.
 
    ```java
     https://hiro-xp:8080/soap/services/JobManager?WSDL&lc_version=9.0.1
    ```
 
-1. I fältet Namespace skriver du `JobManager`.
-1. Klicka **Gå** och sedan klicka **OK**.
-1. I **Projekt** meny, välja **Lägg till tjänstreferens**.
-1. I **Adress** anger du WSDL för processen FirstAppSolution/PreLoanProcess.
+1. Skriv `JobManager` i fältet Namespace.
+1. Klicka på **Gå** och sedan på **OK**.
+1. Välj **Lägg till tjänstreferens** på menyn **Projekt**.
+1. I dialogrutan **Adress** anger du WSDL till processen FirstAppSolution/PreLoanProcess.
 
    ```java
     https://hiro-xp:8080/soap/services/FirstAppSolution/PreLoanProcess?WSDL&lc_version=9.0.1
    ```
 
-1. I fältet Namespace skriver du `PreLoanProcess`.
-1. Klicka **Gå** och sedan klicka **OK**.
+1. Skriv `PreLoanProcess` i fältet Namespace.
+1. Klicka på **Gå** och sedan på **OK**.
 
 >[!NOTE]
 >
->Ersätt `hiro-xp` med IP-adressen till J2EE-programservern som är värd för AEM Forms. The `lc_version` säkerställer att AEM Forms-funktioner, som t.ex. MTOM, är tillgängliga. Utan att ange `lc_version`kan du inte anropa AEM Forms med MTOM. (Se [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).)
+>Ersätt `hiro-xp` med IP-adressen för J2EE-programservern som är värd för AEM Forms. Alternativet `lc_version` ser till att AEM Forms-funktioner, som MTOM, är tillgängliga. Om du inte anger alternativet `lc_version`kan du inte anropa AEM Forms med MTOM. (Se [Anropa AEM Forms med MTOM](/help/forms/developing/invoking-aem-forms-using-web.md#invoking-aem-forms-using-mtom).)
 
 ### Skapa en ASP-sida som anropar FirstAppSolution/PreLoanProcess {#create-an-asp-page-that-invokes-firstappsolution-preloanprocess}
 
-I ASP.NET lägger du till ett webbformulär (en ASPX-fil) som ansvarar för att visa en HTML-sida för den som ansöker om lånet. Webbformuläret är baserat på en klass som härleds från `System.Web.UI.Page`. C#-programlogiken som anropar `FirstAppSolution/PreLoanProcess` finns i `Button1_Click` -metod (den här knappen representerar knappen Skicka program).
+I ASP.NET lägger du till ett webbformulär (en ASPX-fil) som ansvarar för att visa en HTML-sida för den som ansöker om lånet. Webbformuläret är baserat på en klass som härleds från `System.Web.UI.Page`. C#-programlogiken som anropar `FirstAppSolution/PreLoanProcess` finns i metoden `Button1_Click` (den här knappen representerar knappen Skicka program).
 
 Följande bild visar ASP.NET
 
@@ -557,9 +557,9 @@ I följande tabell visas de kontroller som är en del av det här ASP.NET.
  </tbody>
 </table>
 
-Den programlogik som är en del av ASP.NET måste dynamiskt skapa en XML-datakälla som ska skickas till `FirstAppSolution/PreLoanProcess` -processen. De värden som sökanden angav på HTML-sidan måste anges i XML-datakällan. Dessa datavärden sammanfogas i formuläret när formuläret visas i Workspace. Klasserna i `System.Xml` namnutrymme används för att skapa XML-datakällan.
+Programlogiken som är en del av ASP.NET måste dynamiskt skapa en XML-datakälla för att skicka till `FirstAppSolution/PreLoanProcess`-processen. De värden som sökanden angav på HTML-sidan måste anges i XML-datakällan. Dessa datavärden sammanfogas i formuläret när formuläret visas i Workspace. Klasserna i namnutrymmet `System.Xml` används för att skapa XML-datakällan.
 
-När du anropar en process som kräver XML-data från ett ASP.NET är en XML-datatyp tillgänglig som du kan använda. Man kan alltså inte skicka en `System.Xml.XmlDocument` -instans till processen. Det fullständiga kvalificerade namnet på den här XML-instansen som ska skickas till processen är `InvokePreLoanProcess.PreLoanProcess.XML`. Konvertera `System.Xml.XmlDocument` instans till `InvokePreLoanProcess.PreLoanProcess.XML`. Du kan utföra den här uppgiften med följande kod.
+När du anropar en process som kräver XML-data från ett ASP.NET är en XML-datatyp tillgänglig som du kan använda. Du kan alltså inte skicka en `System.Xml.XmlDocument`-instans till processen. Det fullständiga kvalificerade namnet för den här XML-instansen som ska skickas till processen är `InvokePreLoanProcess.PreLoanProcess.XML`. Konvertera instansen `System.Xml.XmlDocument` till `InvokePreLoanProcess.PreLoanProcess.XML`. Du kan utföra den här uppgiften med följande kod.
 
 ```java
  //Create the XML to pass to the FirstAppSolution/PreLoanProcess process
@@ -574,27 +574,27 @@ När du anropar en process som kräver XML-data från ett ASP.NET är en XML-dat
  inXML.document = sw.ToString();
 ```
 
-Skapa en ASP-sida som anropar `FirstAppSolution/PreLoanProcess` utför du följande uppgifter i `Button1_Click` metod:
+Om du vill skapa en ASP-sida som anropar processen `FirstAppSolution/PreLoanProcess` utför du följande uppgifter i metoden `Button1_Click`:
 
-1. Skapa en `FirstAppSolution_PreLoanProcessClient` genom att använda dess standardkonstruktor.
-1. Skapa en `FirstAppSolution_PreLoanProcessClient.Endpoint.Address` genom att använda `System.ServiceModel.EndpointAddress` konstruktor. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten och kodningstypen:
+1. Skapa ett `FirstAppSolution_PreLoanProcessClient`-objekt med hjälp av dess standardkonstruktor.
+1. Skapa ett `FirstAppSolution_PreLoanProcessClient.Endpoint.Address`-objekt med konstruktorn `System.ServiceModel.EndpointAddress`. Skicka ett strängvärde som anger WSDL till AEM Forms-tjänsten och kodningstypen:
 
    ```java
     https://hiro-xp:8080/soap/services/FirstAppSolution/PreLoanProcess?blob=mtom
    ```
 
-   Du behöver inte använda `lc_version` -attribut. Det här attributet används när du skapar en tjänstreferens. Se dock till att du anger `?blob=mtom`.
+   Du behöver inte använda attributet `lc_version`. Det här attributet används när du skapar en tjänstreferens. Du måste dock ange `?blob=mtom`.
 
    >[!NOTE]
    >
-   >Ersätt `hiro-xp`* med IP-adressen till J2EE-programservern som är värd för AEM Forms. *
+   >Ersätt `hiro-xp`* med IP-adressen för J2EE-programservern som är värd för AEM Forms. *
 
-1. Skapa en `System.ServiceModel.BasicHttpBinding` genom att hämta värdet för `FirstAppSolution_PreLoanProcessClient.Endpoint.Binding` datamedlem. Skicka returvärdet till `BasicHttpBinding`.
-1. Ange `System.ServiceModel.BasicHttpBinding` objektets `MessageEncoding` datamedlem till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
+1. Skapa ett `System.ServiceModel.BasicHttpBinding`-objekt genom att hämta värdet för datamedlemmen `FirstAppSolution_PreLoanProcessClient.Endpoint.Binding`. Skicka returvärdet till `BasicHttpBinding`.
+1. Ange `System.ServiceModel.BasicHttpBinding`-objektets `MessageEncoding`-datamedlem till `WSMessageEncoding.Mtom`. Detta värde garanterar att MTOM används.
 1. Aktivera grundläggande HTTP-autentisering genom att utföra följande åtgärder:
 
    * Tilldela användarnamnet för AEM formulär till datamedlemmen `FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.UserName`.
-   * Tilldela datamedlemmen motsvarande lösenordsvärde `FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.Password`.
+   * Tilldela motsvarande lösenordsvärde till datamedlemmen `FirstAppSolution_PreLoanProcessClient.ClientCredentials.UserName.Password`.
    * Tilldela konstantvärdet `HttpClientCredentialType.Basic` till datamedlemmen `BasicHttpBindingSecurity.Transport.ClientCredentialType`.
    * Tilldela konstantvärdet `BasicHttpSecurityMode.TransportCredentialOnly` till datamedlemmen `BasicHttpBindingSecurity.Security.Mode`.
 
@@ -613,22 +613,22 @@ Skapa en ASP-sida som anropar `FirstAppSolution/PreLoanProcess` utför du följa
     b.ReaderQuotas.MaxArrayLength = 2000000;
    ```
 
-1. Hämta värden för namn, telefon och belopp som användaren angett på webbsidan. Använd dessa värden för att dynamiskt skapa en XML-datakälla som skickas till `FirstAppSolution/PreLoanProcess` -processen. Skapa en `System.Xml.XmlDocument` som representerar XML-datakällan som ska skickas till processen (den här programlogiken visas i följande kodexempel).
-1. Konvertera `System.Xml.XmlDocument` instans till `InvokePreLoanProcess.PreLoanProcess.XML` (den här programlogiken visas i följande kodexempel).
-1. Anropa `FirstAppSolution/PreLoanProcess` genom att anropa `FirstAppSolution_PreLoanProcessClient` objektets `invoke_Async` -metod. Den här metoden returnerar ett strängvärde som representerar anropsidentifierarvärdet för den långvariga processen.
-1. Skapa en `JobManagerClient` genom att använda är konstruktor. (Kontrollera att du har angett en tjänstreferens för tjänsten Job Manager.)
+1. Hämta värden för namn, telefon och belopp som användaren angett på webbsidan. Använd dessa värden om du dynamiskt vill skapa en XML-datakälla som skickas till `FirstAppSolution/PreLoanProcess`-processen. Skapa en `System.Xml.XmlDocument` som representerar XML-datakällan som ska skickas till processen (den här programlogiken visas i följande kodexempel).
+1. Konvertera instansen `System.Xml.XmlDocument` till `InvokePreLoanProcess.PreLoanProcess.XML` (den här programlogiken visas i följande kodexempel).
+1. Anropa `FirstAppSolution/PreLoanProcess`-processen genom att anropa `FirstAppSolution_PreLoanProcessClient`-objektets `invoke_Async`-metod. Den här metoden returnerar ett strängvärde som representerar anropsidentifierarvärdet för den långvariga processen.
+1. Skapa en `JobManagerClient` med hjälp av konstruktorn is. (Kontrollera att du har angett en tjänstreferens för tjänsten Job Manager.)
 1. Upprepa steg 1-5. Ange följande URL för steg 2: `https://hiro-xp:8080/soap/services/JobManager?blob=mtom`.
-1. Skapa en `JobId` genom att använda dess konstruktor.
-1. Ange `JobId` objektets `id` datamedlem med returvärdet för `FirstAppSolution_PreLoanProcessClient` objektets `invoke_Async` -metod.
-1. Tilldela `value` true till `JobId` objektets `persistent` datamedlem.
-1. Skapa en `JobStatus` genom att anropa `JobManagerService` objekt `getStatus` metoden och skicka `JobId` -objekt.
-1. Hämta statusvärdet genom att hämta värdet för `JobStatus` objektets `statusCode` datamedlem.
-1. Tilldela anropsidentifierarvärdet till `LabelJobID.Text` fält.
-1. Tilldela statusvärdet till `LabelStatus.Text` fält.
+1. Skapa ett `JobId`-objekt med hjälp av dess konstruktor.
+1. Ange `JobId`-objektets `id`-datamedlem med returvärdet för `FirstAppSolution_PreLoanProcessClient`-objektets `invoke_Async`-metod.
+1. Tilldela `value` true till `JobId`-objektets `persistent`-datamedlem.
+1. Skapa ett `JobStatus`-objekt genom att anropa `JobManagerService`-objektets `getStatus`-metod och skicka `JobId`-objektet.
+1. Hämta statusvärdet genom att hämta värdet för `statusCode`-objektets `JobStatus`-datamedlem.
+1. Tilldela anropsidentifierarvärdet till fältet `LabelJobID.Text`.
+1. Tilldela statusvärdet till fältet `LabelStatus.Text`.
 
 ### Snabbstart: Anropa en långvarig process med webbtjänstens API {#quick-start-invoking-a-long-lived-process-using-the-web-service-api}
 
-Följande exempel på C#-kod anropar `FirstAppSolution/PreLoanProcess`-processen.
+Följande exempel på C#-kod anropar `FirstAppSolution/PreLoanProcess`processen.
 
 ```csharp
  ???/**
@@ -817,7 +817,7 @@ Följande exempel på C#-kod anropar `FirstAppSolution/PreLoanProcess`-processen
 
 ### Kör ASP.NET {#run-the-asp-net-application}
 
-När du har kompilerat och distribuerat ASP.NET kan du köra det i en webbläsare. Anta att namnet på ASP.NET är *InvokePreLoanProcess* anger du följande URL i en webbläsare:
+När du har kompilerat och distribuerat ASP.NET kan du köra det i en webbläsare. Om namnet på ASP.NET är *InvokePreLoanProcess* anger du följande URL i en webbläsare:
 
 *http://localhost:1629/InvokePreLoanProcess/*Default.aspx
 
@@ -829,7 +829,7 @@ där localhost är namnet på den webbserver som är värd för ASP.NET och 1629
 
 ## Skapa en klientapplikation som byggts med Flex och som anropar en mänsklig centrerad, långvarig process {#creating-a-client-application-built-with-flex-that-invokes-a-human-centric-long-lived-process}
 
-Du kan skapa ett klientprogram som skapats med Flex för att anropa *FirstAppSolution/PreLoanProcess* -processen. Programmet använder Remoting för att anropa *FirstAppSolution/PreLoanProcess* -processen. (Se [Anropa AEM Forms med (borttaget för AEM) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
+Du kan skapa ett klientprogram som skapats med Flex för att anropa processen *FirstAppSolution/PreLoanProcess*. Det här programmet använder Remoting för att anropa processen *FirstAppSolution/PreLoanProcess*. (Se [Anropa AEM Forms med (borttaget för AEM formulär) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
 
 Följande bild visar ett klientprogram som byggts med Flex och som samlar in data från en slutanvändare. Data placeras i en XML-datakälla och skickas till processen.
 
@@ -838,8 +838,8 @@ När processen har anropats visas ett värde för anropsidentifierare. Ett anrop
 Klientprogrammet som skapats med Flex utför följande uppgifter:
 
 * Hämtar värdena som användaren angett på webbsidan.
-* Skapar dynamiskt en XML-datakälla som skickas till *FirstAppSolution/PreLoanProcess* -processen. De tre värdena anges i XML-datakällan.
-* Anropar *FirstAppSolution/PreLoanProcess* bearbeta med Remoting.
+* Skapar dynamiskt en XML-datakälla som skickas till processen *FirstAppSolution/PreLoanProcess*. De tre värdena anges i XML-datakällan.
+* Anropar processen *FirstAppSolution/PreLoanProcess* med Remoting.
 * Returnerar det ID-anropsvärde som används för den långvariga processen.
 
 ### Sammanfattning av steg {#summary_of_steps-2}
@@ -847,11 +847,11 @@ Klientprogrammet som skapats med Flex utför följande uppgifter:
 Så här skapar du ett klientprogram som skapats med Flex och som kan anropa processen FirstAppSolution/PreLoanProcess:
 
 1. Starta ett nytt Flex-projekt.
-1. Inkludera filen adobe-remoting-provider.swc i projektets klassökväg. (Se [Inkludera AEM Forms Flex biblioteksfil](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file).)
-1. Skapa en `mx:RemoteObject` via antingen ActionScript eller MXML. (Se [Skapa en mx:RemoteObject-instans](/help/forms/developing/invoking-aem-forms-using-remoting.md))
-1. Konfigurera en `ChannelSet` -instans för att kommunicera med AEM Forms och koppla den till `mx:RemoteObject` -instans. (Se [Skapa en kanal till AEM Forms](/help/forms/developing/invoking-aem-forms-using-remoting.md).)
-1. Anropa ChannelSet `login` eller tjänstens `setCredentials` metod för att ange användaridentifierarvärde och lösenord. (Se [Använda enkel inloggning](/help/forms/developing/invoking-aem-forms-using-remoting.md#using-single-sign-on).)
-1. Skapa XML-datakällan som ska skickas till `FirstAppSolution/PreLoanProcess` genom att skapa en XML-instans. (Den här programlogiken visas i följande kodexempel.)
+1. Inkludera filen adobe-remoting-provider.swc i projektets klassökväg. (Se [Inkludera AEM Forms Flex-biblioteksfilen](/help/forms/developing/invoking-aem-forms-using-remoting.md#including-the-aem-forms-flex-library-file).)
+1. Skapa en `mx:RemoteObject`-instans via antingen ActionScriptet eller MXML. (Se [Skapa en mx:RemoteObject-instans](/help/forms/developing/invoking-aem-forms-using-remoting.md))
+1. Konfigurera en `ChannelSet`-instans för kommunikation med AEM Forms och koppla den till `mx:RemoteObject`-instansen. (Se [Skapa en kanal till AEM Forms](/help/forms/developing/invoking-aem-forms-using-remoting.md).)
+1. Anropa ChannelSet-metoden `login` eller tjänstens `setCredentials`-metod för att ange användaridentifierarvärdet och lösenordet. (Se [Använda enkel inloggning](/help/forms/developing/invoking-aem-forms-using-remoting.md#using-single-sign-on).)
+1. Skapa XML-datakällan som ska skickas till `FirstAppSolution/PreLoanProcess`-processen genom att skapa en XML-instans. (Den här programlogiken visas i följande kodexempel.)
 1. Skapa ett objekt av typen Object med hjälp av dess konstruktor. Tilldela XML till objektet genom att ange namnet på processens indataparameter, vilket visas i följande kod:
 
    ```csharp
@@ -861,7 +861,7 @@ Så här skapar du ett klientprogram som skapats med Flex och som kan anropa pro
     params["formData"]=xml;
    ```
 
-1. Anropa `FirstAppSolution/PreLoanProcess` genom att anropa `mx:RemoteObject` instans `invoke_Async` -metod. Skicka `Object` som innehåller indataparametern. (Se [Skicka indatavärden](/help/forms/developing/invoking-aem-forms-using-remoting.md).)
+1. Anropa `FirstAppSolution/PreLoanProcess`-processen genom att anropa `mx:RemoteObject`-instansens `invoke_Async`-metod. Skicka `Object` som innehåller indataparametern. (Se [Skicka indatavärden](/help/forms/developing/invoking-aem-forms-using-remoting.md).)
 1. Hämta det anropsidentifieringsvärde som returneras från en långvarig process, vilket visas i följande kod:
 
    ```csharp
@@ -875,7 +875,7 @@ Så här skapar du ett klientprogram som skapats med Flex och som kan anropa pro
 
 ### Anropa en långvarig process med Remoting {#invoking-a-long-lived-process-using-remoting}
 
-Följande Flex-kodexempel anropar `FirstAppSolution/PreLoanProcess` -processen.
+Följande Flex-kodexempel anropar processen `FirstAppSolution/PreLoanProcess`.
 
 ```java
  <?xml version="1.0" encoding="utf-8"?>

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Processdata som genereras när en långvarig process anropas kan bli för stora, vilket kan ge sämre prestanda för AEM och kräver onödigt diskutrymme. Det är god praxis att rensa processdata när det inte längre behövs några poster.
 
-Du kan använda administrationskonsolen för att rensa bort inaktuella poster en gång eller för att schemalägga regelbundna automatiska rensningar. Andra metoder för att rensa inaktuella poster beskrivs i [Rensningsprocessdata](/help/forms/using/admin-help/purging-process-data.md#purging-process-data).
+Du kan använda administrationskonsolen för att rensa bort inaktuella poster en gång eller för att schemalägga regelbundna automatiska rensningar. Andra metoder för att rensa inaktuella poster beskrivs i [Tömma processdata](/help/forms/using/admin-help/purging-process-data.md#purging-process-data).
 
 **Gå till sidan Schemaläggaren för jobbrensning**
 
@@ -33,7 +33,7 @@ Information om eventuella schemalagda rensningar visas i rutan Information om sc
 >
 >Om du klickar på Stoppa schemaläggare avbryts alla rensningar som är schemalagda i framtiden, men det går inte att stoppa ett rensningsjobb som redan pågår.
 
-**Schemalägg en engångsrensning**
+**Schemalägg en engångsavskärning**
 
 1. Välj Endast en gång.
 1. I området Töm slutförda poster anger du antalet dagar eller veckor efter vilka en post anses föråldrad och klar för rensning.

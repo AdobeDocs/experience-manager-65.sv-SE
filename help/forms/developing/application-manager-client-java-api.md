@@ -1,6 +1,6 @@
 ---
-title: JavaAPI-snabbstart för Application Manager-klient (SOAP)
-description: JavaAPI-snabbstart för Application Manager-klient (SOAP)
+title: JavaAPI-snabbstart (SOAP) för Application Manager-klienten
+description: JavaAPI-snabbstart (SOAP) för Application Manager-klienten
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -442,7 +442,7 @@ public class GetApplication_SOAP {
 
 I följande Java™-kodexempel hämtas programmen med Java™-API:t.
 
-**Anteckning**: Hämtning av AEM Forms program-API, getApplications(), returnerar endast distribuerade program.
+**Obs!**: När AEM Forms Application API hämtas, getApplications(), returneras endast distribuerade program.
 
 ```java
 /*

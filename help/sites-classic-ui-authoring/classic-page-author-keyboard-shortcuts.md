@@ -22,7 +22,7 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
 
 >[!NOTE]
 >
->I följande tabeller, för tangentkombinationerna i **Genväg** fungerar både Ctrl- och Kommando-tangenterna i macOS.
+>I följande tabeller fungerar både Ctrl- och Kommando-tangenterna i macOS för tangentkombinationerna i kolumnen **Kortkommando** .
 
 >[!NOTE]
 >
@@ -99,7 +99,7 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
   <tr>
    <td> </td>
    <td><strong><code>Ctrl-Alt-c</code></strong></td>
-   <td>Visar <a href="/help/sites-administering/client-context.md">klientkontext</a>.</td>
+   <td>Visar <a href="/help/sites-administering/client-context.md">klientkontexten</a>.</td>
   </tr>
   <tr>
    <td>RTF-redigerare<br /> </td>
@@ -142,14 +142,14 @@ Olika kortkommandon finns i hela AEM. Vissa gäller när du redigerar sidor, and
    <td>Stäng förslagslagret.</td>
   </tr>
   <tr>
-   <td>Content Finder<br /> </td>
+   <td>Innehållssökning<br /> </td>
    <td><strong><code>Alt+drag</code></strong></td>
    <td><p>Dra resurser, släpp på målet.</p> <p>När du släpper skapas ett nytt stycke, i stället för att resursen ersätts i målet.</p> </td>
   </tr>
  </tbody>
 </table>
 
-Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [konsoler](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
+Olika kortkommandon är också tillgängliga för skrivbordsanvändare när de använder [konsolerna](/help/sites-classic-ui-authoring/author-env-keyboard-shortcuts.md).
 
 ## Kortkommandon för utveckling {#keyboard-shortcuts-for-development}
 

@@ -24,13 +24,13 @@ ht-degree: 1%
 
 ## Skapa Adobe Experience Manager-komponenter (AEM) som har åtkomst till enhetsfunktioner {#building-aem-components-that-access-device-features}
 
-The [AEM PhoneGap Kitchen Sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) GitHub-databasen ger utvecklare en funktionell AEM som visar hur flera Cordova API:er används. När appen körs på iOS eller Android™ via PhoneGap CLI öppnas den på följande sida, som innehåller en länk till varje enhets-API som visas:
+[AEM PhoneGap Kitchen Sink](https://github.com/blefebvre/aem-phonegap-kitchen-sink) GitHub-databasen ger utvecklare en funktionell AEM som visar hur flera Cordova API:er används. När appen körs på iOS eller Android™ via PhoneGap CLI öppnas den på följande sida, som innehåller en länk till varje enhets-API som visas:
 
 ![chlimage_1-107](assets/chlimage_1-107.png)
 
-Källkoden för dessa enhets-API-komponenter är [finns på GitHub](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/apps/brucelefebvre/kitchen-sink/components).
+Källkoden för var och en av dessa enhets-API-komponenter är [tillgänglig på GitHub](https://github.com/blefebvre/aem-phonegap-kitchen-sink/tree/master/content/src/main/content/jcr_root/apps/brucelefebvre/kitchen-sink/components).
 
-Mer information om hur respektive API används finns i dokumentationen för Cordova-pluginprogrammet (`https://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html`).
+Mer information om hur respektive API används finns i dokumentationen för Cordova-plugin-programmet (`https://docs.phonegap.com/en/4.0.0/cordova_plugins_pluginapis.md.html`).
 
 ## Nästa steg {#the-next-steps}
 

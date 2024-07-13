@@ -25,64 +25,64 @@ Interactive Communications centraliserar och hanterar framtagning, sammanställn
 
 Nedan följer några förutsättningar för att skapa en interaktiv kommunikation:
 
-* Konfigurera en [Formulärdatamodell](/help/forms/using/data-integration.md) som innehåller testdata eller med en faktisk datakälla, till exempel en instans av Microsoft® Dynamics.
-* Se till att du har [Dokumentfragment](/help/forms/using/document-fragments.md).
-* Se till att du har [Mallar för tryck och webbkanal](/help/forms/using/web-channel-print-channel.md).
-* Kontrollera att du har rätt [tema](/help/forms/using/themes.md) för webbkanalen.
+* Konfigurera en [formulärdatamodell](/help/forms/using/data-integration.md) som innehåller testdata eller med en faktisk datakälla, till exempel en instans av Microsoft® Dynamics.
+* Kontrollera att du har [dokumentfragmenten](/help/forms/using/document-fragments.md).
+* Kontrollera att du har [Mallar för utskrift och webbkanal](/help/forms/using/web-channel-print-channel.md).
+* Kontrollera att du har det [tema](/help/forms/using/themes.md) som krävs för webbkanalen.
 
 ## Skapa interaktiv kommunikation {#createic}
 
 1. Logga in på AEM författarinstans och navigera till **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**.
-1. Välj **[!UICONTROL Create]** och markera **[!UICONTROL Interactive Communication]**. Sidan Skapa interaktiv kommunikation visas.
+1. Välj **[!UICONTROL Create]** och välj **[!UICONTROL Interactive Communication]**. Sidan Skapa interaktiv kommunikation visas.
 
    ![create-interactive-communication](assets/create-interactive-communication.png)
 
 1. Ange följande information. :
 
-   * **[!UICONTROL Title]**: Ange titeln på interaktiv kommunikation.
+   * **[!UICONTROL Title]**: Ange titeln för den interaktiva kommunikationen.
    * **[!UICONTROL Name]**: Namnet på den interaktiva kommunikationen hämtas från den titel du anger. Redigera den om det behövs.
    * **[!UICONTROL Description]**: Ange en beskrivning av interaktiv kommunikation.
-   * **[!UICONTROL Form Data Model]**: Bläddra och välj formulärdatamodellen. Mer information om formulärdatamodell finns i [AEM Forms dataintegrering](/help/forms/using/data-integration.md).
+   * **[!UICONTROL Form Data Model]**: Bläddra och välj formulärdatamodellen. Mer information om formulärdatamodell finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
 
    * **[!UICONTROL Prefill Service]**: Välj förifyllningstjänsten för att hämta data och fylla i interaktiv kommunikation i förväg.
    * **[!UICONTROL Post Process Type]**: Du kan välja AEM eller Forms-arbetsflöde som ska utlösas när den interaktiva kommunikationen skickas. Välj vilken typ av arbetsflöde som ska utlösas.
 
    * **[!UICONTROL Post Process]**: Välj namnet på arbetsflödet som ska utlösas. När du väljer AEM arbetsflöde ska du ange bilagesökväg, layoutsökväg, PDF-sökväg, sökväg till utskriftsdata och webbdatasökväg.
-   * **[!UICONTROL Tags]**: Markera de taggar som ska användas i den interaktiva kommunikationen. Du kan också skriva in ett nytt/anpassat taggnamn och trycka på Retur för att skapa det.
+   * **[!UICONTROL Tags]**: Välj de taggar som ska användas i den interaktiva kommunikationen. Du kan också skriva in ett nytt/anpassat taggnamn och trycka på Retur för att skapa det.
    * **[!UICONTROL Author]**:Författarnamnet hämtas automatiskt från den inloggade användarens användarnamn.
    * **[!UICONTROL Publish Date:]** Ange det datum då den interaktiva kommunikationen ska publiceras.
-   * **[!UICONTROL Unpublish Date]**: Ange det datum då interaktiv kommunikation ska avpubliceras.
+   * **[!UICONTROL Unpublish Date]**: Ange det datum då den interaktiva kommunikationen ska avpubliceras.
 
 1. Välj **[!UICONTROL Next]**. Skärmen där du anger utskrifts- och webbkanalsinformation visas.
 1. Ange följande:
 
-   * **[!UICONTROL Print]**: Välj det här alternativet om du vill generera tryckkanalen för interaktiv kommunikation.
+   * **[!UICONTROL Print]**: Välj det här alternativet om du vill generera tryckkanalen för den interaktiva kommunikationen.
    * **[!UICONTROL Print Template]**: Bläddra och välj en XDP-fil som utskriftsmall.
    * **[!UICONTROL Web]**: Välj det här alternativet om du vill generera webbkanalen eller responsiva utdata för interaktiv kommunikation.
    * **[!UICONTROL Interactive Communication Web Template]**: Bläddra och välj webbmallen.
-   * **[!UICONTROL Theme]** och **[!UICONTROL Select Theme]**: Bläddra och välj temat för att utforma webbkanalen i den interaktiva kommunikationen. Mer information finns i [Teman i AEM Forms](/help/forms/using/themes.md).
+   * **[!UICONTROL Theme]** och **[!UICONTROL Select Theme]**: Bläddra och välj det tema som ska användas för att utforma webbkanalen i den interaktiva kommunikationen. Mer information finns i [Teman i AEM Forms](/help/forms/using/themes.md).
 
-   * **[!UICONTROL Use Print As Master for Web Channel]**: Välj det här alternativet om du vill skapa webbkanalen synkroniserad med utskriftskanalen. Om du använder utskriftskanalen som huvudkanal för webbkanalen kan du kontrollera att innehållet och databindningen i webbkanalen hämtas från utskriftskanalen och att ändringarna som görs i utskriftskanalen återspeglas i webbkanalen när du väljer Synkronisera. Författarna kan dock bryta arvet för specifika komponenter i webbkanalen efter behov. Mer information finns i [Synkronisera webbkanal med utskriftskanal](../../forms/using/create-interactive-communication.md#synchronize).
-Om du väljer **[!UICONTROL Use Print As Master for Web Channel]** kan du välja något av följande lägen för att generera webbkanal:
+   * **[!UICONTROL Use Print As Master for Web Channel]**: Välj det här alternativet om du vill skapa webbkanalen synkroniserat med utskriftskanalen. Om du använder utskriftskanalen som huvudkanal för webbkanalen kan du kontrollera att innehållet och databindningen i webbkanalen hämtas från utskriftskanalen och att ändringarna som görs i utskriftskanalen återspeglas i webbkanalen när du väljer Synkronisera. Författarna kan dock bryta arvet för specifika komponenter i webbkanalen efter behov. Mer information finns i [Synkronisera webbkanal med skrivarkanal](../../forms/using/create-interactive-communication.md#synchronize).
+Om du väljer alternativet **[!UICONTROL Use Print As Master for Web Channel]** kan du välja något av följande lägen för att generera webbkanalen:
 
-      * **[!UICONTROL Auto layout]**: Välj det här läget om du automatiskt vill generera platshållare, innehåll och databindning för webbkanalen från utskriftskanalen.
-      * **[!UICONTROL Manually organize]**: Välj det här läget om du manuellt vill markera och lägga till Print channel-element i webbkanalen med hjälp av huvudinnehållet som finns i **[!UICONTROL Data Sources]** -fliken. Mer information finns i [Välj Skriv ut kanalelement för att skapa webbkanalsinnehåll](#selectprintchannelelements).
+      * **[!UICONTROL Auto layout]**: Välj det här läget om du automatiskt vill generera platshållare, innehåll och databindning för webbkanalen från Utskriftskanalen.
+      * **[!UICONTROL Manually organize]**: Välj det här läget om du vill markera och lägga till Print channel-element manuellt i webbkanalen med huvudinnehållet som är tillgängligt på fliken **[!UICONTROL Data Sources]**. Mer information finns i [Markera Skriv ut kanalelement för att skapa webbkanalsinnehåll](#selectprintchannelelements).
 
    Mer information om utskriftskanaler och webbkanaler finns i [Skriva ut kanal och webbkanal](/help/forms/using/web-channel-print-channel.md).
 
-1. Välj **[!UICONTROL Create]**. Interaktiv kommunikation skapas och en varningsruta visas. Välj **[!UICONTROL Edit]** för att börja bygga innehållet i det interaktiva meddelandet enligt [Lägga till innehåll med hjälp av gränssnittet för utveckling av interaktiv kommunikation](#step2). Du kan också välja **[!UICONTROL Done]** och väljer att redigera interaktiv kommunikation senare.
+1. Välj **[!UICONTROL Create]**. Interaktiv kommunikation skapas och en varningsruta visas. Välj **[!UICONTROL Edit]** om du vill börja skapa innehållet i den interaktiva kommunikationen enligt beskrivningen i [Lägg till innehåll med hjälp av gränssnittet för redigering av interaktiv kommunikation](#step2). Du kan också markera **[!UICONTROL Done]** och välja att redigera den interaktiva kommunikationen senare.
 
 ## Lägga till innehåll i interaktiv kommunikation {#step2}
 
 När du har skapat en interaktiv kommunikation kan du använda redigeringsgränssnittet för interaktiv kommunikation för att skapa dess innehåll.
 
-Mer information om gränssnittet för utveckling av interaktiv kommunikation finns i [Introduktion till utveckling av interaktiv kommunikation](/help/forms/using/introduction-interactive-communication-authoring.md).
+Mer information om gränssnittet för utveckling av interaktiv kommunikation finns i [Introduktion till redigering av interaktiv kommunikation](/help/forms/using/introduction-interactive-communication-authoring.md).
 
-1. Utvecklingsgränssnittet för interaktiv kommunikation startas när du väljer Redigera enligt [Skapa interaktiv kommunikation](#createic). Du kan också navigera till en befintlig interaktiv kommunikationsresurs AEM, markera den och välja **[!UICONTROL Edit]** för att öppna utvecklingsgränssnittet för interaktiv kommunikation.
+1. Utvecklingsgränssnittet för interaktiv kommunikation startas när du väljer Redigera enligt [Skapa interaktiv kommunikation](#createic). Du kan också navigera till en befintlig Interactive Communication-resurs på AEM, markera den och välja **[!UICONTROL Edit]** för att starta redigeringsgränssnittet för interaktiv kommunikation.
 
    Som standard visas den tryckta kanalen i den interaktiva kommunikationen, om inte den interaktiva kommunikationen bara är för webbkanaler. I utskriftskanalen i den interaktiva kommunikationen visas målområdena, som de är tillgängliga i den valda XDP/utskriftskanalmallen. I dessa målområden och fält kan du lägga till komponenter eller resurser.
 
-1. Markera utskriftskanalen och välj **[!UICONTROL Components]** -fliken. Följande komponenter är tillgängliga i utskriftskanalen:
+1. Markera utskriftskanalen och välj fliken **[!UICONTROL Components]**. Följande komponenter är tillgängliga i utskriftskanalen:
 
    | **Komponent** | **Funktionalitet** |
    |---|---|
@@ -96,15 +96,15 @@ Mer information om gränssnittet för utveckling av interaktiv kommunikation fin
 
    Använd ångra-åtgärden för att ta bort den senast utförda åtgärden och gör om-åtgärden för att ta med den borttagna åtgärden igen. Om du t.ex. har infogat en bild eller skapat en databindning i ett interaktivt meddelande och behöver ta bort den ska du använda åtgärden ångra.
 
-   ![Ångra Gör om-åtgärder](assets/undo_redo_actions_new.png)
+   ![Ångra Gör om åtgärder](assets/undo_redo_actions_new.png)
 
    Alternativen Ångra och Gör om visas i verktygsfältet för redigeringsgränssnittets sida. Alternativet Ångra visas bara efter att en åtgärd har utförts. Alternativet gör om visas bara i verktygsfältet på sidan när du har utfört en ångra-åtgärd. Dessa åtgärder återställs när sidan uppdateras.
 
-1. Med utskriftskanalen markerad går du till **[!UICONTROL Assets]** och använda filtret för att visa endast de resurser du vill se.
+1. När utskriftskanalen är markerad går du till fliken **[!UICONTROL Assets]** och använder filtret för att bara visa de resurser som du vill se.
 
-   Med hjälp av Assets-webbläsaren kan du även dra och släppa resurser direkt till målområdena för interaktiv kommunikation.
+   Med Assets webbläsare kan du också dra och släppa resurser direkt till målområdena för interaktiv kommunikation.
 
-   ![assets-documents](assets/assets-docfragments.png)
+   ![assets-docfragments](assets/assets-docfragments.png)
 
 1. Dra och släpp dokumentfragmenten i interaktiv kommunikation. Här följer de typer av dokumentfragment som du kan använda i tryckkanalen i den interaktiva kommunikationen.
 
@@ -129,7 +129,7 @@ Mer information om gränssnittet för utveckling av interaktiv kommunikation fin
  </tbody>
 </table>
 
-Du kan också ersätta bindningen mellan ett målområde och ett dokumentfragment genom att släppa det nya fragmentet på målområdet med hjälp av **[!UICONTROL Assets]** -fliken. Målområdets blå färgskuggning när fragmentet dras anger att dokumentfragmentet kan släppas till målområdet.
+Du kan också ersätta bindningen mellan ett målområde och ett dokumentfragment genom att släppa det nya fragmentet på målområdet med fliken **[!UICONTROL Assets]**. Målområdets blå färgskuggning när fragmentet dras anger att dokumentfragmentet kan släppas till målområdet.
 
 Mer information om dokumentfragment finns i [Dokumentfragment](/help/forms/using/document-fragments.md).
 
@@ -143,27 +143,27 @@ En obunden variabel som används i ett dokumentfragment kanske inte visas i redi
 
 ![Obunden variabel](assets/df_unbound_variable_new.png)
 
-Markera dokumentfragmentet och välj ![configure_icon](assets/configure_icon.png) (Konfigurera), och välj sedan **[!UICONTROL Properties]** från sidan med den interaktiva kommunikationslösningen. The **[!UICONTROL Variables and Data Model Objects]** I listas variablerna, inklusive de dolda variablerna, och datamodellsobjekten som används i dokumentfragmenten. Använd ![redigera](assets/edit.svg) (Redigera) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna.
+Markera dokumentfragmentet, välj ![configure_icon](assets/configure_icon.png) (Configure) och välj sedan **[!UICONTROL Properties]** i sidoknappen i den interaktiva kommunikationen. I avsnittet **[!UICONTROL Variables and Data Model Objects]** visas variablerna, inklusive de dolda variablerna och datamodellsobjekten som används i dokumentfragmenten. Använd ikonen ![edit](assets/edit.svg) (Edit) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna.
 
-1. Om du vill ställa in bindning för variabler väljer du en variabel och väljer ![configure_icon](assets/configure_icon.png) (Konfigurera) och ange sedan bindningsegenskaperna i panelen Egenskaper i sidofältet.
+1. Om du vill ställa in bindning för variabler markerar du en variabel och väljer ![configure_icon](assets/configure_icon.png) (Configure). Sedan ställer du in bindningsegenskaperna på egenskapspanelen i sidlisten.
 
-   * **Ingen**: Agenten fyller i variabelns värde.
+   * **Ingen**: Agenten fyller i värdet för variabeln.
    * **Textfragment**: Om du väljer det här alternativet kan du bläddra och markera ett textdokumentfragment vars innehåll återges i fältet. Endast textdokumentfragment kan bindas till variabler som inte har några variabler inuti.
-   * **Datamodellsobjekt**: Välj en formulärdatamodellsegenskap vars värde är ifyllt i fältet.
-   * **Standardvärde:** I det här fältet kan du definiera ett standardvärde för variabeln. Värdet visas när du förhandsgranskar den interaktiva kommunikationen eller i agentgränssnittet.
-   * **Visningsmönster:** Du kan också definiera ett visningsformat för en variabel. Välj något av de fördefinierade alternativen i dialogrutan **Typ** nedrullningsbar lista för att använda ett visningsformat på en variabel. Välj **Egen** för att definiera ett visningsmönster som inte är tillgängligt i listan. Mer information finns i [Visningsmönster](../../forms/using/create-interactive-communication.md#datadisplaypatterns).
+   * **Datamodellobjekt**: Välj en formulärdatamodellegenskap vars värde fylls i i fältet.
+   * **Standardvärde:** Du kan definiera ett standardvärde för variabeln med det här fältet. Värdet visas när du förhandsgranskar den interaktiva kommunikationen eller i agentgränssnittet.
+   * **Visningsmönster:** Du kan också definiera ett visningsformat för en variabel. Välj något av de fördefinierade alternativen i listrutan **Typ** om du vill använda ett visningsformat för en variabel. Välj **Egen** om du vill definiera ett visningsmönster som inte är tillgängligt i listan. Mer information finns i [Mönster för datavisning](../../forms/using/create-interactive-communication.md#datadisplaypatterns).
 
-   Navigera till [Variabler och datamodellsobjekt](../../forms/using/create-interactive-communication.md#hiddenvariables) för att ställa in bindning av dolda variabler i dokumentfragmentet.
+   Navigera till [Variabler och datamodellobjekt](../../forms/using/create-interactive-communication.md#hiddenvariables) för att ställa in bindning för dolda variabler i dokumentfragmentet.
 
-   Du kan också dra och släppa datakällelement eller textdokumentfragment för att ställa in bindning av variabler.  Om du vill skapa en bindning med något av datakällelementen väljer du **Datakällor** och dra och släpp elementet till variabelnamnet. Datakällelementet och variabeln måste vara av samma typ för att bindningen ska kunna konfigureras korrekt. Om du drar och släpper ett datakällelement till en redan bunden variabel, ersätter det nya elementet det föregående och skapar en bindning med variabeln. På samma sätt väljer du **Resurser** och dra och släpp textdokumentfragmentet till variabelnamnet för att ange bindningen mellan dem. Textdokumentfragmentet får inte innehålla några variabler.
+   Du kan också dra och släppa datakällelement eller textdokumentfragment för att ställa in bindning av variabler.  Om du vill skapa en bindning med något av datakällelementen väljer du fliken **Datakällor** och drar och släpper elementet till variabelnamnet. Datakällelementet och variabeln måste vara av samma typ för att bindningen ska kunna konfigureras korrekt. Om du drar och släpper ett datakällelement till en redan bunden variabel, ersätter det nya elementet det föregående och skapar en bindning med variabeln. På samma sätt väljer du fliken **Assets** och drar och släpper textdokumentfragmentet till variabelnamnet för att ange bindningen mellan dem. Textdokumentfragmentet får inte innehålla några variabler.
 
-1. Om du vill lägga till en tabell med utskriftskanalen markerad går du till **[!UICONTROL Assets]** använder du filtret för att bara visa Layoutfragment. Dra och släpp önskat layoutfragment till Interactive Communication. Ett layoutfragment är baserat på en XDP och kan användas för att skapa grafiska layouter eller statiska och dynamiska tabeller i interaktiv kommunikation som fylls i med dynamiska data.
+1. Om du vill lägga till en tabell med utskriftskanalen markerad använder du filtret på fliken **[!UICONTROL Assets]** för att bara visa Layoutfragment. Dra och släpp önskat layoutfragment till Interactive Communication. Ett layoutfragment är baserat på en XDP och kan användas för att skapa grafiska layouter eller statiska och dynamiska tabeller i interaktiv kommunikation som fylls i med dynamiska data.
 
    Exempel: En layouttabell som visar bruttopremie, förmånsersättning % och tillgänglighet för assistans vid nödsituationer för gamla och nya policyer.
 
    Mer information om layoutfragment finns i [Dokumentfragment](/help/forms/using/document-fragments.md).
 
-1. Med utskriftskanalen markerad i **[!UICONTROL Assets]** använder du filtret för att visa bilder. Dra-och-släpp de bilder som behövs till Interactive Communication, t.ex. företagslogotyp.
+1. När utskriftskanalen är markerad använder du filtret på fliken **[!UICONTROL Assets]** för att visa bilder. Dra-och-släpp de bilder som behövs till Interactive Communication, t.ex. företagslogotyp.
 
    Hantera dessutom följande i den interaktiva kommunikationen:
 
@@ -181,33 +181,33 @@ Markera dokumentfragmentet och välj ![configure_icon](assets/configure_icon.png
 
 1. Växla till **[!UICONTROL Web Channel]**. Webbkanalen visas i redigeraren för interaktiv kommunikation. När du byter från Print-kanalen till Web channel för första gången sker den automatiska synkroniseringen. Mer information finns i [Synkronisera webbkanal från utskriftskanalen](../../forms/using/create-interactive-communication.md#synchronize).
 
-   Eftersom vi använder Skriv ut som master för webben i det här exemplet synkroniseras platshållarna för utskriftskanalen, innehållet och databindningen till webbkanalen. Du kan dock ändra och anpassa det specifika innehållet i webbkanalen. [Avbryt arv](#cancelinheritance) för målområden och variabler som har genererats med tryckkanalen för att kunna anpassa innehållet.
+   Eftersom vi använder Skriv ut som master för webben i det här exemplet synkroniseras platshållarna för utskriftskanalen, innehållet och databindningen till webbkanalen. Du kan dock ändra och anpassa det specifika innehållet i webbkanalen. [Avbryt arv](#cancelinheritance) för målområdena och variablerna som har genererats med utskriftskanalen för att kunna anpassa innehållet.
 
-   ![webbkanalresurser](assets/webchannelassets.png)
+   ![webchannelAssets](assets/webchannelassets.png)
 
-   Markera dokumentfragmentet och välj ![configure_icon](assets/configure_icon.png) (Konfigurera), och välj sedan **[!UICONTROL Properties]** från sidan med den interaktiva kommunikationslösningen. The **[!UICONTROL Variables and Data Model Objects]** I listas variablerna, inklusive de dolda variablerna, och datamodellsobjekten som används i dokumentfragmenten. Använd ![redigera](assets/edit.svg) (Redigera) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna. Dessutom för dokumentfragment som har [autogenererad](#synchronize) i webbkanalen med Print channel använder du ![avbrytarv](assets/cancelinheritance.png) (Avbryt arv), ikon bredvid varje datamodellsobjekt och variabel till [avbryt arv](#cancelinheritance) och kunna redigera dem.
+   Markera dokumentfragmentet, välj ![configure_icon](assets/configure_icon.png) (Configure) och välj sedan **[!UICONTROL Properties]** i sidoknappen i den interaktiva kommunikationen. I avsnittet **[!UICONTROL Variables and Data Model Objects]** visas variablerna, inklusive de dolda variablerna och datamodellsobjekten som används i dokumentfragmenten. Använd ikonen ![edit](assets/edit.svg) (Edit) bredvid varje datamodellsobjekt eller variabel för att redigera egenskaperna. Dessutom, för dokumentfragment som har [genererats automatiskt](#synchronize) i webbkanalen med hjälp av skrivarkanalen, använder du ikonen ![cancellarv](assets/cancelinheritance.png) (avbryt arv) bredvid varje datamodellsobjekt och variabel för att [avbryta arv](#cancelinheritance) och för att kunna redigera dem.
 
-1. Om du vill lägga till ytterligare komponenter i webbkanalen markerar du webbkanalen **[!UICONTROL Components]**. Dra och släpp komponenter i webbkanalen i din interaktiva kommunikation efter behov och fortsätt att konfigurera dem.
+1. Om du vill lägga till ytterligare komponenter i webbkanalen markerar du **[!UICONTROL Components]** med webbkanalen markerad. Dra och släpp komponenter i webbkanalen i din interaktiva kommunikation efter behov och fortsätt att konfigurera dem.
 
    | Komponenter | Funktionalitet |
    |---|---|
    | Diagram | Lägger till ett diagram som du kan använda i interaktiv kommunikation för visuell representation av tvådimensionella data som hämtats från en formulärdatamodellsamling. Mer information finns i [Använda diagramkomponent](../../forms/using/chart-component-interactive-communications.md). |
    | Dokumentfragment | Gör att du kan lägga till en återanvändbar komponent, text, lista eller villkor i en interaktiv kommunikation. Den återanvändbara komponenten som du lägger till i en interaktiv kommunikation kan antingen vara modellbaserad i form av formulärdata eller utan någon formulärdatamodell. |
    | Bild | Infoga en bild. |
-   | Panel | Gör att du kan lägga till en [Panel](../../forms/using/create-interactive-communication.md#add-panel-component-to-the-web-channel) till interaktiv kommunikation. |
+   | Panel | Gör att du kan lägga till en [panel](../../forms/using/create-interactive-communication.md#add-panel-component-to-the-web-channel) i den interaktiva kommunikationen. |
    | Tabell | Lägger till en tabell där du kan ordna data i rader och kolumner. |
    | Målområde | Infogar ett målområde i en webbkanal för att ordna de webbkanalsspecifika komponenterna. Målområdet är en ren behållare som gör att du kan gruppera webbkanalsspecifika komponenter. |
    | Text | Lägger till RTF i webbkanalen i en interaktiv kommunikation. Text kan också använda formulärdatamodellsobjekt för att göra innehållet dynamiskt. |
-   | Knapp | Gör att du kan lägga till en [Knapp](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) till interaktiv kommunikation. Du kan använda komponenten Button för att navigera till annan interaktiv kommunikation, adaptiva formulär, andra resurser som bilder eller dokumentfragment eller en extern URL. |
+   | Knapp | Gör att du kan lägga till en [knapp](../../forms/using/create-interactive-communication.md#add-button-component-to-the-web-channel) i den interaktiva kommunikationen. Du kan använda komponenten Button för att navigera till annan interaktiv kommunikation, adaptiva formulär, andra resurser som bilder eller dokumentfragment eller en extern URL. |
    | Avgränsare | Gör att du kan infoga en vågrät linje i en interaktiv kommunikation. Använd den här komponenten för att skilja mellan avsnitt i en korrespondens. Du kan till exempel använda avgränsningskomponenten för att skilja mellan kundinformation och kreditkortsinformation i en kreditkortsutdrag. |
 
 1. Infoga resurser i webbkanalen efter behov.
 
-   Du kan [förhandsgranska interaktiv kommunikation](#previewic) för att se hur tryck- och webbutdata för den interaktiva kommunikationen ser ut och fortsätta att göra ändringar efter behov.
+   Du kan [förhandsgranska din interaktiva kommunikation](#previewic) om du vill se hur utskrifts- och webbutdata för den interaktiva kommunikationen ser ut och fortsätta att göra ändringar efter behov.
 
 ## Förhandsgranska interaktiv kommunikation {#previewic}
 
-Du kan använda **Förhandsvisningsalternativ** för att utvärdera hur den interaktiva kommunikationen ser ut. Webbkanalen i Interactive Communication erbjuder också ett alternativ för att emulera upplevelsen av en interaktiv kommunikation för olika enheter. Exempel: iPhone, iPad och Desktop. Du kan använda båda **Förhandsgranska** och **Emulator** ![linjal](assets/ruler.png) tillsammans med varandra för att förhandsgranska webbutdata för enheter med olika skärmstorlekar. Exempeldata i förhandsgranskningen fylls i från den angivna formulärdatamodellen.
+Du kan använda alternativet **Förhandsgranska** för att utvärdera utseendet på den interaktiva kommunikationen. Webbkanalen i Interactive Communication erbjuder också ett alternativ för att emulera upplevelsen av en interaktiv kommunikation för olika enheter. Exempel: iPhone, iPad och Desktop. Du kan använda både alternativen **Förhandsgranska** och **Emulator** ![linjal](assets/ruler.png) tillsammans för att förhandsgranska webbutdata för enheter med olika skärmstorlekar. Exempeldata i förhandsgranskningen fylls i från den angivna formulärdatamodellen.
 
 1. Markera kanalen (tryck eller webb) för att förhandsgranska och välja förhandsvisning. Interaktiv kommunikation visas.
 
@@ -215,11 +215,11 @@ Du kan använda **Förhandsvisningsalternativ** för att utvärdera hur den inte
    >
    >Förhandsgranskningen fylls i med den angivna formulärdatamodellens exempeldata. Mer information om hur du förhandsgranskar interaktiv kommunikation med vissa andra data eller använder förifyllningstjänsten finns i [Använd formulärdatamodell](/help/forms/using/using-form-data-model.md) och [Arbeta med formulärdatamodell](/help/forms/using/work-with-form-data-model.md).
 
-1. Använd ![linjal](assets/ruler.png) för att se hur den interaktiva kommunikationen ser ut på olika enheter.
+1. För webbkanalen använder du ![linjal](assets/ruler.png) för att visa hur den interaktiva kommunikationen ser ut på olika enheter.
 
    ![webchannelPreview](assets/webchannelpreview.png)
 
-Dessutom kan du [Förbereda och skicka interaktiv kommunikation med agentgränssnittet](/help/forms/using/prepare-send-interactive-communication.md).
+Dessutom kan du [Förbered och skicka interaktiv kommunikation med agentgränssnittet](/help/forms/using/prepare-send-interactive-communication.md).
 
 ## Konfigurera egenskaper i interaktiv kommunikation  {#configure-properties-in-interactive-communication}
 
@@ -229,7 +229,7 @@ I utskriftskanalen kan du konfigurera bilagor och biblioteksåtkomst så att age
 
 1. Markera dokumentbehållaren i utskriftskanalen och välj **Egenskaper**.
 
-   ![dokumentbehållareegenskaper](assets/documentcontainerproperties.png)
+   ![documentsContainerProperties](assets/documentcontainerproperties.png)
 
    Panelen Egenskaper visas i sidofältet.
 
@@ -238,12 +238,12 @@ I utskriftskanalen kan du konfigurera bilagor och biblioteksåtkomst så att age
 1. Expandera **Bifogade filer** och ange följande egenskaper:
 
    * **[!UICONTROL Allow Library Access]**: Välj det här alternativet om du vill aktivera biblioteksåtkomst för agenten i agentgränssnittet. Om det här alternativet är aktiverat kan agenten lägga till filer från biblioteket när den interaktiva kommunikationen förbereds.
-   * **[!UICONTROL Allow Re-Ordering Of Attachments]**: Välj det här alternativet om du vill att agenten ska kunna ändra ordning på de bifogade filerna med interaktiv kommunikation.
-   * **[!UICONTROL Max Number Of Attachments Allowed]**: Ange maximalt antal bilagor som tillåts med interaktiv kommunikation.
+   * **[!UICONTROL Allow Re-Ordering Of Attachments]**: Välj det här alternativet om du vill att agenten ska kunna ordna om de bifogade filerna med den interaktiva kommunikationen.
+   * **[!UICONTROL Max Number Of Attachments Allowed]**: Ange det maximala antalet bilagor som tillåts med den interaktiva kommunikationen.
    * **[!UICONTROL Files To Be Attached]**: Välj **[!UICONTROL Add]** och bläddra till de filer som ska bifogas och ange följande:
 
       * **[!UICONTROL Attach This File To Document By Default]**: Du kan ändra det här alternativet om bara bilagan inte är obligatorisk.
-      * **[!UICONTROL Mandatory:]** Agenten kan inte ta bort den bifogade filen i agentens användargränssnitt.
+      * Agenten **[!UICONTROL Mandatory:]** kan inte ta bort den bifogade filen i agentens användargränssnitt.
 
    ![bifogade filer](assets/attachfiles.png)
 
@@ -260,37 +260,37 @@ I utskriftskanalen kan du konfigurera bilagor och biblioteksåtkomst så att age
 1. Ange följande:
 
    * **[!UICONTROL Name]**: JCR-nodnamn.
-   * **[!UICONTROL Title]**: Ange en titel som ska visas för agenten i agentgränssnittet och i dokumentbehållarträdet.
+   * **[!UICONTROL Title]**: Ange en titel som ska vara synlig för agenten i agentgränssnittet och i dokumentbehållarträdet.
    * **[!UICONTROL Binding Type]**: Välj en av följande bindningstyper för fältet.
 
       * Ingen: Agenten fyller i egenskapens värde.
       * Textfragment: Om du väljer det här alternativet kan du bläddra och markera ett textdokumentfragment vars innehåll återges i fältet. Du kan också dra och släppa textdokumentfragmentet till fältnamnet för att ange bindningen mellan dem. Textdokumentfragmentet får inte innehålla några variabler.
-      * Datamodellobjekt: Välj en formulärdatamodellegenskap vars värde fylls i i fältet. Du kan även välja **Datakällor** och dra och släpp egenskapen till fältet.
+      * Datamodellobjekt: Välj en formulärdatamodellegenskap vars värde fylls i i fältet. Du kan också välja fliken **Datakällor** och dra och släppa egenskapen i fältet.
 
-   * **[!UICONTROL Default Values]**: Standardvärdet ser till att fältet inte är tomt när det inte finns något värde från det angivna datamodellsobjektet eller textfragmentet. Om databindningstypen inte är någon fylls standardvärdet i i förväg i fältet.
-   * **[!UICONTROL Display Pattern]**: Du kan också definiera ett visningsformat för ett fält. Välj något av de fördefinierade alternativen i dialogrutan **Typ** nedrullningsbar lista för att använda ett visningsformat för ett fält. Välj **Egen** för att definiera ett visningsmönster som inte är tillgängligt i listan. Mer information finns i [Visningsmönster](../../forms/using/create-interactive-communication.md#datadisplaypatterns)
+   * **[!UICONTROL Default Values]**: Med standardvärdet säkerställs att fältet inte är tomt när det inte finns något värde från det angivna datamodellsobjektet eller textfragmentet. Om databindningstypen inte är någon fylls standardvärdet i i förväg i fältet.
+   * **[!UICONTROL Display Pattern]**: Du kan också definiera ett visningsformat för ett fält. Välj något av de fördefinierade alternativen i listrutan **Typ** om du vill använda ett visningsformat för ett fält. Välj **Egen** om du vill definiera ett visningsmönster som inte är tillgängligt i listan. Mer information finns i [Datavisningsmönster](../../forms/using/create-interactive-communication.md#datadisplaypatterns)
 
-   * **[!UICONTROL Editable By Agent]**: Välj det här alternativet om agenten ska kunna redigera värdet i fältet i agentens användargränssnitt. Den här inställningen gäller inte om bindningstypen är Textfragment.
+   * **[!UICONTROL Editable By Agent]**: Välj att tillåta agenten att redigera värdet i fältet i agentens användargränssnitt. Den här inställningen gäller inte om bindningstypen är Textfragment.
    * **[!UICONTROL Label]**: Ange en textsträng som visas med fältet till agenten i agentgränssnittet. Den här inställningen gäller inte om bindningstypen är Textfragment.
-   * **[!UICONTROL Tooltip]**: Ange en textsträng som ska visas när muspekaren förs till agenten i agentgränssnittet. Den här inställningen gäller inte om bindningstypen är Textfragment.
+   * **[!UICONTROL Tooltip]**: Ange en textsträng som ska visas när muspekaren förs över agenten i agentgränssnittet. Den här inställningen gäller inte om bindningstypen är Textfragment.
    * **[!UICONTROL Required]**: Välj att göra fältet obligatoriskt för agenten. Den här inställningen gäller inte om bindningstypen är Textfragment.
    * **[!UICONTROL Allow multiple lines]**: Markera det här fältet om du vill tillåta flera textrader som inmatning i fältet. Den här inställningen gäller inte om bindningstypen är Textfragment.
 
-1. Välj ![ready_icon](assets/done_icon.png).
+1. Välj ![made_icon](assets/done_icon.png).
 
 ### Visningsmönster {#datadisplaypatterns}
 
 Med hjälp av redigeringsgränssnittet kan du definiera datavisningsmönster för fält, variabler och formulärdatamodellelement som är tillgängliga när du skapar en interaktiv kommunikation för tryck- och webbkanaler.
 
-Om du vill konfigurera datavisningsmönstret markerar du elementet och väljer ![configure_icon](assets/configure_icon.png) (Konfigurera) och konfigurera visningsmönstret i dialogrutan **[!UICONTROL Properties]** panelen i sidlisten. Välj ett fördefinierat alternativ i dialogrutan **[!UICONTROL Type]** om du vill visa mönstret som är associerat med den valda typen. Välj **[!UICONTROL Custom]** från **[!UICONTROL Type]** i listrutan för att definiera ett mönster som inte är tillgängligt i listan. Redigera värden i **[!UICONTROL Pattern]** fältet ändrar automatiskt typen till **[!UICONTROL Custom]**.
+Om du vill konfigurera datavisningsmönstret markerar du elementet, väljer ![configure_icon](assets/configure_icon.png) (Configure) och anger visningsmönstret på panelen **[!UICONTROL Properties]** i sidlisten. Välj ett fördefinierat alternativ i listrutan **[!UICONTROL Type]** för att visa mönstret som är associerat med den valda typen. Välj **[!UICONTROL Custom]** i listrutan **[!UICONTROL Type]** för att definiera ett mönster som inte är tillgängligt i listan. När du redigerar värden i fältet **[!UICONTROL Pattern]** ändras typen automatiskt till **[!UICONTROL Custom]**.
 
 Om du vill använda visningsmönstret måste antalet tecken eller siffror som definieras i fältet Mönster matcha eller överskrida de tecken eller siffror som definieras i värdet för fält, variabler och formulärdatamodellelement. Mer information finns i [exempel](../../forms/using/create-interactive-communication.md#greaternumberofdigits).
 
 ![data_display_pattern_example](assets/data_display_patterns_ssn_new.png)
 
-Du kan omdefiniera visningsmönstret för ett fält, en variabel eller ett element i en formulärdatamodell när du har genererat webbinnehåll från utskriftskanalen. Därför kan ett element ha olika visningsmönster definierade för utskrifts- och webbkanaler. Om du inte definierar ett visningsmönster för ett element i en utskriftskanal och automatiskt genererar webbinnehåll med hjälp av en utskriftskanal, definierar databindningen som är definierad för elementet i utskriftskanalen de visningsmönsteralternativ som finns i **[!UICONTROL Type]** listruta. Om ingen bindning har definierats för elementet definierar elementets datatyp de tillgängliga alternativen för visningsmönster. Om du till exempel skapar en databindning av typen Number för ett element i en utskriftskanal, är alternativen för visningsmönster tillgängliga i **[!UICONTROL Type]** nedrullningsbar lista är av typen Number i olika format.
+Du kan omdefiniera visningsmönstret för ett fält, en variabel eller ett element i en formulärdatamodell när du har genererat webbinnehåll från utskriftskanalen. Därför kan ett element ha olika visningsmönster definierade för utskrifts- och webbkanaler. Om du inte definierar ett visningsmönster för ett element i en utskriftskanal och automatiskt genererar webbinnehåll med hjälp av en utskriftskanal, definierar databindningen som är definierad för elementet i utskriftskanalen de visningsmönsteralternativ som finns i listrutan **[!UICONTROL Type]**. Om ingen bindning har definierats för elementet definierar elementets datatyp de tillgängliga alternativen för visningsmönster. Om du till exempel skapar en databindning av typen Number för ett element i en utskriftskanal, har visningsmönsteralternativen i den nedrullningsbara listan **[!UICONTROL Type]** olika format typen Number.
 
-Växla till **Förhandsgranska** eller öppna agentens användargränssnitt för att visa det visningsmönster som används för dessa element.
+Växla till **förhandsgranskningsläget** eller öppna agentens användargränssnitt för att visa det visningsmönster som används för dessa element.
 
 I följande tabell visas ett exempel på de värden som visas som ett resultat av inställningen av datavisningsmönstret för en variabel:
 
@@ -300,7 +300,7 @@ I följande tabell visas ett exempel på de värden som visas som ett resultat a
 | SocialSecurityNumber | 1234567 | text{999-99-9999} | 1-23-4567 | Antalet siffror i standardvärdefältet är mindre än antalet siffror i mönsterfältet. Mönstret används på de 7 tillgängliga siffrorna. |
 | SocialSecurityNumber | 1234567890 | text{999-99-9999} | 1234567890 | Antalet siffror i standardvärdefältet är större än antalet siffror i mönsterfältet. Därför ändras inte visningsvärdet. |
 
-Om inget visningsmönster anges för en variabel eller ett element i formulärdatamodellen, [konfiguration av globalt dokumentfragment](https://helpx.adobe.com//experience-manager/6-5/forms/using/interactive-communication-configuration-properties.html) används som standard.
+Om inget visningsmönster anges för en variabel eller ett formulärdatamodellselement används [det globala dokumentfragmentets konfiguration](https://helpx.adobe.com//experience-manager/6-5/forms/using/interactive-communication-configuration-properties.html) som standard.
 
 Om du inte använder ett visningsmönster för en variabel med taldatatyp, visas mönstret i förhandsvisningen enligt den globala dokumentfragmentkonfigurationen. Om du tillämpar ändringar i standardkonfigurationen för globala dokumentfragment, visar agentgränssnittet fortfarande mönstret enligt standardavgränsarna som är definierade för språkområdet.
 
@@ -310,7 +310,7 @@ Om det angivna visningsmönstret är felaktigt eller inte kan användas, använd
 
 ## Tillämpa regler på komponenter för interaktiv kommunikation {#rules}
 
-Om du vill göra komponenter eller innehåll i den interaktiva kommunikationen villkorsstyrda markerar du komponenten/delen av innehållet och väljer ![createruleicon](assets/createruleicon.png) (Skapa regel) för att starta regelredigeraren.
+Om du vill villkoralisera komponenter eller innehåll i den interaktiva kommunikationen markerar du komponenten/delen av innehållet och väljer ![createruleicon](assets/createruleicon.png) (Skapa regel) för att starta regelredigeraren.
 
 Mer information finns i:
 
@@ -334,7 +334,7 @@ Du kan lägga till dynamiska tabeller i interaktiv kommunikation med hjälp av l
 
 1. Ange databindning för alla celler i tabellen. Om du vill skapa en repeterbar rad infogar du egenskaper för formulärdatamodell i raden som tillhör en gemensam samlingsegenskap.
 
-   1. Markera en cell i tabellen och markera ![configure_icon](assets/configure_icon.png) (Konfigurera).
+   1. Markera en cell i tabellen och välj ![configure_icon](assets/configure_icon.png) (Konfigurera).
 
       Dialogrutan Egenskaper visas i sidlisten.
 
@@ -343,18 +343,18 @@ Du kan lägga till dynamiska tabeller i interaktiv kommunikation med hjälp av l
    1. Konfigurera egenskaperna:
 
       * **[!UICONTROL Name]**: JCR-nodnamn.
-      * **[!UICONTROL Title]**: Ange en titel som ska visas i Interactive Communication Editor.
+      * **[!UICONTROL Title]**: Ange en titel som ska visas i redigeraren för interaktiv kommunikation.
       * **[!UICONTROL Binding Type]**: Välj en av följande bindningstyper för fältet.
 
          * **[!UICONTROL None]**
-         * **[!UICONTROL Data model object]**: Värdet för en formulärdatamodellegenskap fylls i i fältet. Du kan även välja **Datakällor** och dra och släpp egenskapen till fältet.
+         * **[!UICONTROL Data model object]**: En formulärdatamodellegenskaps värde fylls i i fältet. Du kan också välja fliken **Datakällor** och dra och släppa egenskapen i fältet.
 
       * **[!UICONTROL Data Model Object]**: Den formulärdatamodellsegenskap vars värde är ifyllt i fältet.
-      * **[!UICONTROL Default Value]**: Standardvärdet ser till att fältet inte är tomt när det inte finns något värde från det angivna datamodellobjektet. Standardvärdet är förifyllt i fältet.
+      * **[!UICONTROL Default Value]**: Med standardvärdet säkerställs att fältet inte är tomt när det inte finns något värde från det angivna datamodellsobjektet. Standardvärdet är förifyllt i fältet.
 
-      * **[!UICONTROL Editable By Agent]**: Välj det här alternativet om agenten ska kunna redigera värdet i fältet i agentens användargränssnitt.
+      * **[!UICONTROL Editable By Agent]**: Välj att tillåta agenten att redigera värdet i fältet i agentens användargränssnitt.
 
-   1. Välj ![ready_icon](assets/done_icon.png).
+   1. Välj ![made_icon](assets/done_icon.png).
 
 1. Förhandsgranska den interaktiva kommunikationen för att se tabellen renderas med data.
 
@@ -362,7 +362,7 @@ Du kan lägga till dynamiska tabeller i interaktiv kommunikation med hjälp av l
 
 ### Enbart tabeller för webbkanaler {#webchanneltables}
 
-Markera rotpanelen i webbmallen och välj **+** för att lägga till **Tabell** till Interactive Communication. En tabell med två rader infogas i interaktiv kommunikation. Tabellens första rad representerar tabellrubriken.
+Markera rotpanelen i webbmallen och välj **+** för att lägga till en **tabellkomponent** i den interaktiva kommunikationen. En tabell med två rader infogas i interaktiv kommunikation. Tabellens första rad representerar tabellrubriken.
 
 #### Lägga till rader och kolumner i tabellen {#addrowscolumnstable}
 
@@ -376,20 +376,20 @@ Markera rotpanelen i webbmallen och välj **+** för att lägga till **Tabell** 
 **Så här lägger du till eller tar bort rader:**
 
 1. Markera någon av tabellraderna för att visa komponentens verktygsfält. Du kan också markera en tabellrad med hjälp av innehållsläsaren i sidokickaren i den interaktiva kommunikationen.
-1. Välj **Lägg till rad** eller **Ta bort rad** om du vill lägga till eller ta bort tabellrader. Använd **Flytta uppåt** och **Flytta nedåt** i verktygsfältet för att ordna om rader i tabellen.
+1. Välj **Lägg till rad** eller **Ta bort rad** om du vill lägga till eller ta bort tabellrader. Använd alternativen **Flytta uppåt** och **Flytta nedåt** i verktygsfältet för att ordna om rader i tabellen.
 
 ![Komponentverktygsfältet](assets/component_toolbar_table_row_new.png)
 
-**S.** Lägg till rad **B.** Radera en rad **C.** Flytta uppåt **D.** Flytta nedåt
+**A.** Lägg till rad **B.** Ta bort rad **C.** Flytta upp **D.** Flytta ned
 
 #### Lägga till eller redigera text i tabellceller {#addedittexttable}
 
-1. Markera standardtextrutan i tabellcellen och markera ![redigera](assets/edit.png) (Redigera).
-1. Skriv texten i tabellcellen och markera ![ready_icon](assets/done_icon.png) för att spara den.
+1. Markera standardtextrutan i tabellcellen och välj ![redigera](assets/edit.png) (redigera).
+1. Skriv texten i tabellcellen och välj ![made_icon](assets/done_icon.png) för att spara den.
 
 #### Skapa bindning mellan tabellceller och datamodellobjektselement {#createbindingtablecells}
 
-1. Markera standardtextrutan i tabellraden och markera ![redigera](assets/edit.png) (Redigera).
+1. Markera standardtextrutan i tabellraden och välj ![redigera](assets/edit.png) (redigera).
 1. Markera listrutan Datamodellsobjekt och välj egenskapen.
 1. Välj att spara och skapa en bindning mellan tabellcellen och datamodellens objektegenskap.
 
@@ -397,10 +397,10 @@ Markera rotpanelen i webbmallen och välj **+** för att lägga till **Tabell** 
 
 #### Skapa en hyperlänk för text i tabellcellen {#createhyperlinktable}
 
-1. Markera standardtextrutan i tabellcellen och markera ![redigera](assets/edit.svg) (Redigera).
+1. Markera standardtextrutan i tabellcellen och välj ![redigera](assets/edit.svg) (redigera).
 1. Markera texten i tabellcellen och välj ikonen Hyperlänk.
-1. Ange URL-adressen i **Bana** fält.
-1. Välj ![ready_icon](assets/done_icon.png) för att spara hyperlänksegenskaperna.
+1. Ange URL-adressen i fältet **Sökväg**.
+1. Välj ![done_icon](assets/done_icon.png) om du vill spara hyperlänksegenskaperna.
 
 ![Skapa hyperlänk](assets/create_hyperlink_table_new.png)
 
@@ -424,13 +424,13 @@ Sortering kan användas för tabellkolumner som innehåller:
 
 Så här aktiverar du sortering:
 
-1. Markera tabellen och välj ![configure_icon](assets/configure_icon.png) (Konfigurera). Du kan också markera tabellen med **Innehåll** webbläsaren i sidospåret av Interactive Communication.
+1. Markera tabellen och välj ![configure_icon](assets/configure_icon.png) (Konfigurera). Du kan också markera tabellen med hjälp av webbläsaren **Innehåll** i sidoknappen i den interaktiva kommunikationen.
 1. Välj **Aktivera sortering.**
-1. Välj ![ready_icon](assets/done_icon.png) om du vill spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
+1. Välj ![done_icon](assets/done_icon.png) om du vill spara tabellegenskaperna. Sorteringsikonerna, uppåt- och nedåtpilarna, i kolumnrubriker representerar att sorteringen har aktiverats.
 
    ![Aktivera sortering](assets/enable_sorting_new-1.png)
 
-1. Växla till **Förhandsgranska** för att visa utdata. Tabellen sorteras automatiskt baserat på tabellens första kolumn.
+1. Växla till **förhandsgranskningsläget** om du vill visa utdata. Tabellen sorteras automatiskt baserat på tabellens första kolumn.
 1. Klicka på kolumnrubriken om du vill sortera värdena baserat på kolumnen.
 
    En kolumnrubrik med en uppåtpil representerar:
@@ -438,7 +438,7 @@ Så här aktiverar du sortering:
    * tabellen sorteras utifrån den kolumnen.
    * värden i kolumnen visas i stigande ordning.
 
-   ![Sortering stigande](assets/sorting_ascending_new-1.png)
+   ![Sorterar stigande](assets/sorting_ascending_new-1.png)
 
    På samma sätt visas en kolumnrubrik med en nedpil som värden i kolumnen i fallande ordning.
 
@@ -446,48 +446,48 @@ Så här aktiverar du sortering:
 
 När du har skapat en interaktiv kommunikation kan du redigera dess egenskaper i ett senare skede.
 
-Använd **Egenskaper** sida till:
+Använd sidan **Egenskaper** för att:
 
 * Redigera värden för de fält som anges när du skapar den interaktiva kommunikationen, till exempel Rubrik och Beskrivning.
 * Lägg till eller ta bort webbkanal för en befintlig interaktiv kommunikation.
 * Förhandsgranska, ladda ned eller ta bort interaktiv kommunikation
-* Öppna [Agentgränssnitt](/help/forms/using/prepare-send-interactive-communication.md).
+* Öppna [agentgränssnittet](/help/forms/using/prepare-send-interactive-communication.md).
 
-Så här öppnar du **Egenskaper** sida:
+Så här kommer du åt sidan **Egenskaper**:
 
-1. Logga in på AEM författarinstans och navigera till **Adobe Experience Manager** > **Forms** > **Forms och dokument**.
+1. Logga in på AEM författarinstans och gå till **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents**.
 1. Välj Interaktiv kommunikation och välj **Egenskaper**.
-1. Välj **Allmänt** för att redigera **Titel** och **Beskrivning** fält.
+1. Klicka på fliken **Allmänt** för att redigera fälten **Titel** och **Beskrivning**.
 
 ### Lägga till eller ta bort webbkanalen {#add-or-delete-the-web-channel}
 
 Utför följande steg för att lägga till webbkanalen för en befintlig interaktiv kommunikation:
 
-1. På **Egenskaper** väljer du **Kanaler** -fliken.
-1. Välj **Webb** och välj en mall för webbkanalen.
-1. Välj **Använd Skriv ut som mallsida för webbkanal** för att aktivera synkronisering mellan webbkanalen och utskriftskanalen.
-1. Välj **Spara och stäng** för att spara ändringarna.
+1. Välj fliken **Kanaler** på sidan **Egenskaper**.
+1. Markera kryssrutan **Webb** och välj en mall för webbkanalen.
+1. Välj **Använd Skriv ut som mallsida för webbkanal** om du vill aktivera synkronisering mellan webbkanalen och skrivarkanalen.
+1. Välj **Spara och stäng** om du vill spara ändringarna.
 
-   På samma sätt kan du markera **Webb** kryssrutan på **Kanaler** för att ta bort webbkanalen från Interactive Communication.
+   På samma sätt kan du markera kryssrutan **Webb** på fliken **Kanaler** för att ta bort webbkanalen från den interaktiva kommunikationen.
 
 ## Lägg till Button-komponent i webbkanalen {#add-button-component-to-the-web-channel}
 
-Du kan lägga till en knapp som en komponent i webbkanalen i den interaktiva kommunikationen. Definiera regler med [regelredigerare](../../forms/using/rule-editor.md) för att kunna navigera till annan interaktiv kommunikation, adaptiva formulär, andra resurser som bilder eller dokumentfragment, eller en extern URL när knappen väljs.
+Du kan lägga till en knapp som en komponent i webbkanalen i den interaktiva kommunikationen. Definiera regler med [regelredigeraren](../../forms/using/rule-editor.md) för att kunna navigera till annan interaktiv kommunikation, adaptiva formulär, andra resurser som bilder eller dokumentfragment, eller en extern URL när du väljer knappen.
 
 Så här lägger du till en knapp och definierar regler för den:
 
-1. Markera rotpanelen i webbmallen och välj **+** för att lägga till **Knapp** till Interactive Communication.
-1. Markera knappkomponenten och markera ![edit-rules](assets/edit-rules.png) om du vill definiera regler för knappens val.
-1. I **När** avsnitt, markera **klickad** från knappens nedrullningsbara lista.
-1. I **Sedan** avsnitt:
+1. Markera rotpanelen i webbmallen och välj **+** för att lägga till komponenten **Button** i den interaktiva kommunikationen.
+1. Markera knappkomponenten och välj ![redigeringsregler](assets/edit-rules.png) för att definiera regler för markeringen av knappen.
+1. I avsnittet **När** väljer du **klickat** i läget för den nedrullningsbara listan med knappar.
+1. I avsnittet **Sedan**:
 
    1. Välj en åtgärd i listrutan. Välj till exempel **Navigera till** som åtgärdstyp.
 
-   1. Ange URL:en för den interaktiva kommunikationen, adaptiva formulär, en resurs eller en webbsida. Ange till exempel URL:en i följande format för att navigera till en annan interaktiv kommunikation: https://&lt;server-name>:&lt;port>/editor.html/&lt;interactive communication=&quot;&quot; name=&quot;&quot;>/kanaler/&lt;channel name=&quot;&quot; print=&quot;&quot; or=&quot;&quot; web=&quot;&quot;>.html
+   1. Ange URL:en för den interaktiva kommunikationen, adaptiva formulär, en resurs eller en webbsida. Ange till exempel URL:en i följande format för att navigera till en annan interaktiv kommunikation: https://&lt;server-name>:&lt;port>/editor.html/content/forms/af/&lt;namn på interaktiv kommunikation>/channel/&lt;kanalnamn - skriv ut eller webb>.html
    1. Ange alternativet för att öppna resursen på samma flik, på en ny flik eller i ett nytt fönster.
-   1. Välj **Klar** och sedan **Stäng** för att spara regeln.
+   1. Välj **Klar** och välj sedan **Stäng** för att spara regeln.
 
-   På samma sätt kan du välja andra tillgängliga alternativ i listrutan för åtgärdstyp, som Anropa tjänst och Skicka formulär. Mer information finns i [regelredigerare](../../forms/using/rule-editor.md).
+   På samma sätt kan du välja andra tillgängliga alternativ i listrutan för åtgärdstyp, som Anropa tjänst och Skicka formulär. Mer information finns i [Regelredigeraren](../../forms/using/rule-editor.md).
 
 1. Förhandsgranska den interaktiva kommunikationen och välj knappen för att visa interaktiv kommunikation, adaptiv form, en resurs eller en webbsida som anges i steg 4(b).
 
@@ -497,17 +497,17 @@ Panelkomponenten är en platshållare för att gruppera andra komponenter och st
 
 Utför följande steg för att lägga till en panelkomponent i webbkanalen:
 
-1. Infoga **Panel** i webbkanalen med något av följande alternativ:
+1. Infoga **Panel**-komponenten i webbkanalen med något av följande alternativ:
 
-   * Markera en komponent, markera **+** och väljer **Panel** -komponenten.
+   * Markera en komponent, markera **+** och välj **Panel** -komponenten.
 
-   * Från **Komponent** webbläsarpanelen, dra och släppa **Panel** i Interactive Communication.
+   * Dra och släpp **Panel**-komponenten i den interaktiva kommunikationen från webbläsarpanelen **Komponent** .
 
-   * Välj **Panel** i **Innehåll** webbläsarpanelen och väljer **Lägg till underordnad panel**. Markera **Lägg till underordnad panel** alternativet visar **Lägg till underordnad panel** -dialogrutan. Ange panelkomponentens titel och en valfri beskrivning och namn.
+   * Markera **panelen** i webbläsarpanelen **Innehåll** och välj **Lägg till underordnad panel**. Om du väljer alternativet **Lägg till underordnad panel** visas dialogrutan **Lägg till underordnad panel** . Ange panelkomponentens titel och en valfri beskrivning och namn.
 
-1. Välj panelen på menyn **Innehåll** webbläsare för att utföra ytterligare åtgärder på panelen, till exempel konfigurera, redigera regler, kopiera, ta bort och infoga komponent.
+1. Välj panelen i **Innehåll** -webbläsaren om du vill utföra ytterligare åtgärder på panelen, till exempel konfigurera, redigera regler, kopiera, ta bort och infoga komponent.
 
-   Du kan också dra och släppa en panel i **Innehåll** webbläsaren för att återspegla ändringen i strukturen för den interaktiva kommunikationen i den högra rutan.
+   Du kan också dra och släppa en panel i webbläsaren **Innehåll** för att återspegla ändringen i strukturen för den interaktiva kommunikationen i den högra rutan.
 
 ## Synkronisera webbkanal med utskriftskanal {#synchronize}
 
@@ -515,14 +515,14 @@ När du väljer Skriv ut som mallsida för webbkanal när du skapar en interakti
 
 Författarna kan dock bryta arvet för komponenter i webbkanalen efter behov.
 
-![Skapa utskriftsmall](assets/create_ic_print_master_new-1.png) ![Print Master Web](assets/create_ic_print_master_web_new-1.png)
+![Skapa skrivarmallsida](assets/create_ic_print_master_new-1.png) ![Skriv ut mallwebbsida](assets/create_ic_print_master_web_new-1.png)
 
 ### Automatisk synkronisering {#autosync}
 
-Om du väljer **[!UICONTROL Use Print As Master for Web Channel]** kan du välja något av följande lägen för att generera webbkanal:
+Om du väljer alternativet **[!UICONTROL Use Print As Master for Web Channel]** kan du välja något av följande lägen för att generera webbkanalen:
 
-* **[!UICONTROL Auto layout]**: Välj det här läget om du automatiskt vill generera platshållare, innehåll och databindning för webbkanalen från utskriftskanalen.
-* **[!UICONTROL Manually organize]**: Välj det här läget om du manuellt vill markera och lägga till Print channel-element i webbkanalen med huvudinnehållet som finns på fliken Datakällor. Mer information finns i [Välj Skriv ut kanalelement för att skapa webbkanalsinnehåll](#selectprintchannelelements).
+* **[!UICONTROL Auto layout]**: Välj det här läget om du automatiskt vill generera platshållare, innehåll och databindning för webbkanalen från Utskriftskanalen.
+* **[!UICONTROL Manually organize]**: Välj det här läget om du vill markera och lägga till Print channel-element manuellt i webbkanalen med huvudinnehållet som är tillgängligt på fliken Datakällor. Mer information finns i [Markera Skriv ut kanalelement för att skapa webbkanalsinnehåll](#selectprintchannelelements).
 
 ![Skapa IC-alternativ](assets/create_ic_options_updated_new.png)
 
@@ -534,7 +534,7 @@ Om du väljer **[!UICONTROL Use Print As Master for Web Channel]** kan du välja
 
 Om du väljer Skriv ut som master när du skapar den interaktiva kommunikationen och inte väljer alternativet för automatisk synkronisering, kan du även dra och släppa Print channel-element till webbkanalens redigeringsgränssnitt.
 
-Navigera till **Datakällor** > **Huvudinnehåll** för att visa kanalelementen för utskrift. Dra och släpp målområdena, fälten eller tabellerna i webbkanalens redigeringsgränssnitt. En blå cirkel bredvid elementnamnet anger att elementet för utskriftskanalen redan finns i webbkanalen.
+Navigera till **Datakällor** > **Huvudinnehåll** för att visa elementen i utskriftskanalen. Dra och släpp målområdena, fälten eller tabellerna i webbkanalens redigeringsgränssnitt. En blå cirkel bredvid elementnamnet anger att elementet för utskriftskanalen redan finns i webbkanalen.
 
 ![Huvudinnehåll](assets/master_content.png)
 
@@ -542,7 +542,7 @@ Navigera till **Datakällor** > **Huvudinnehåll** för att visa kanalelementen 
 
 I webbkanalen är komponenterna inbäddade i målområdena.
 
-Hovra över det relevanta målområdet eller variabeln i webbkanalen och välj ![avbrytarv](assets/cancelinheritance.png) (Avbryt arv) och välj sedan Avbryt arv i dialogrutan Avbryt arv **[!UICONTROL Yes]**.
+Hovra över det relevanta målområdet eller variabeln i webbkanalen och välj ![cancelarance](assets/cancelinheritance.png) (Cancel Inheritance) och sedan **[!UICONTROL Yes]** i dialogrutan Cancel Inheritance (Avbryt arv).
 
 Arvet av komponenterna i målområdet avbryts och nu kan du redigera dem efter behov.
 
@@ -554,7 +554,7 @@ Dialogrutan Återställ arv visas.
 
 ![återarv](assets/revertinheritance.png)
 
-Välj vid behov **[!UICONTROL Synchronize The Page After Reverting Inheritance]**. Välj det här alternativet om du vill synkronisera hela den interaktiva kommunikationen. Om du inte markerar det här alternativet synkroniseras bara det relevanta målområdet när arvet återställs.
+Välj **[!UICONTROL Synchronize The Page After Reverting Inheritance]** om det behövs. Välj det här alternativet om du vill synkronisera hela den interaktiva kommunikationen. Om du inte markerar det här alternativet synkroniseras bara det relevanta målområdet när arvet återställs.
 
 Välj **[!UICONTROL Yes]**.
 
@@ -569,7 +569,7 @@ Om du använder Skriv ut som mallsida för webbkanal och ändrar utskriftskanale
 1. Välj något av följande:
 
    * **[!UICONTROL Sync with Print]**: Synkroniserar endast innehåll för de målområden där arv inte avbryts.
-   * **[!UICONTROL Reset]**: Synkroniserar webbkanalsinnehållet med utskriftskanalen och ignorerar alla ändringar som gjorts i webbkanalen.
+   * **[!UICONTROL Reset]**: Synkroniserar webbkanalsinnehållet med skrivarkanalen och ignorerar alla ändringar som gjorts i webbkanalen.
 
 ### Använda komponentens verktygsfält för att utföra åtgärder på ärvda komponenter {#componenttoolbar}
 
@@ -579,30 +579,30 @@ När du har autogenererat innehåll i webbkanalen med alternativet Synkronisera 
 
 Markera komponenten för att visa följande alternativ:
 
-* **Copy:** Kopiera en komponent och klistra in den på andra platser i den interaktiva kommunikationen.
-* **Klipp ut:** Flytta en komponent från en plats till en annan i interaktiv kommunikation.
+* **Kopiera:** Kopiera en komponent och klistra in den på andra platser i den interaktiva kommunikationen.
+* **Klipp ut:** Flytta en komponent från en plats till en annan i den interaktiva kommunikationen.
 * **Infoga komponent:** Infoga en komponent ovanför den markerade komponenten.
-* **Klistra in:** Klistra in komponenten som du klipper ut eller kopierar med alternativen som beskrivs ovan.
+* **Klistra in:** Klistra in komponenten som du klippt ut eller kopierat med alternativen som beskrivs ovan.
 * **Grupp:** Markera flera komponenter om du vill klippa ut, kopiera eller klistra in mer än en komponent tillsammans.
 * **Överordnad:** Markera den överordnade komponenten för en komponent.
 * **Visa SOM-uttryck:** Visa [SOM-uttryck](../../forms/using/using-som-expressions-adaptive-forms.md) för komponenten.
 
-* **Gruppera objekt i panelen:** Gruppera komponenterna på en panel för att kunna utföra åtgärder på dessa komponenter samtidigt. Mer information finns i [Gruppera objekt i panelen](#groupobjectspanel).
+* **Gruppera objekt på panelen:** Gruppera komponenterna på en panel för att kunna utföra åtgärder på dessa komponenter samtidigt. Mer information finns i [Gruppera objekt på panelen](#groupobjectspanel).
 
 * **Avbryt arv:** [Avbryt arvet](#cancelinheritance) av komponenterna i målområdet för att redigera dem.
 
 ### Gruppera objekt i panelen {#groupobjectspanel}
 
-Med webbkanalens redigeringsgränssnitt är det lättare att gruppera komponenterna på en panel för att kunna utföra åtgärder på dessa komponenter samtidigt. The **Innehåll** På -fliken visas de grupperade komponenterna som underordnade element för panelen i innehållsträdet.
+Med webbkanalens redigeringsgränssnitt är det lättare att gruppera komponenterna på en panel för att kunna utföra åtgärder på dessa komponenter samtidigt. Fliken **Innehåll** visar de grupperade komponenterna som underordnade element för panelen i innehållsträdet.
 
-1. Markera en komponent och markera gruppen ( ![grupp](assets/group.jpg)).
-1. Markera flera komponenter och markera **Gruppera objekt i panelen**.
+1. Markera en komponent och välj gruppåtgärden ( ![grupp](assets/group.jpg)).
+1. Markera flera komponenter och välj **Gruppera objekt i panelen**.
 
    ![Gruppera objekt](assets/component_toolbar_group_objects_new.png)
 
-1. I **Gruppera objekt i panelen** anger du ett namn för panelen.
+1. Ange ett namn för panelen i dialogrutan **Gruppera objekt på panelen**.
 1. Ange en valfri titel och beskrivning för panelen.
-1. Klicka ![bullet_checkmark](assets/bullet_checkmark.png).
+1. Klicka på ![bullet_checkmark](assets/bullet_checkmark.png).
 
    De grupperade komponenterna visas som underordnade element till panelen i innehållsträdet.
 
@@ -618,7 +618,7 @@ PrintChannelRenderOptions renderOptions = new PrintChannelRenderOptions();
 PrintDocument printDocument = printChannel.render(renderOptions);
 ```
 
-Om du vill generera utdata i något annat format anger du typ av utdataformat. Se [PrintChannel API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/PrintConfig.html) om du vill se en lista över de utdataformat som stöds.
+Om du vill generera utdata i något annat format anger du typ av utdataformat. I [PrintChannel API](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/output/api/PrintConfig.html) finns en lista över de utdataformat som stöds.
 
 Du kan till exempel använda följande exempel för att definiera PCL som utdataformat för en interaktiv kommunikation:
 

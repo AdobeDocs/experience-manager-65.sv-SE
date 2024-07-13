@@ -27,14 +27,14 @@ For more information on what is considered a transaction, see [Billable APIs](..
 Som standard är transaktionsregistrering inaktiverad. Så här aktiverar du transaktionsrapportering:
 
 1. Navigera till `/adminui` på din AEM Forms på JEE, till exempel `http://10.14.18.10:8080/adminui`.
-1. Logga in som **Administratör**.
+1. Logga in som **administratör**.
 1. Gå till **Inställningar** > **Systeminställningar** > **Konfigurationer**.
-1. Klicka på kryssrutan för att **Aktivera transaktionsrapportering** och **Spara** inställningarna.
+1. Klicka i kryssrutan för att **aktivera transaktionsrapportering** och **spara** inställningarna.
 
    ![sample-transaction-report-jee](assets/enable-transaction-jee.png)
 
 1. Starta om servern.
-1. Förutom ändringarna på servern måste du på klientsidan uppdatera `adobe-livecycle-client.jar` i projektet, om du använder samma fil.
+1. Förutom ändringarna på servern måste du på klientsidan uppdatera filen `adobe-livecycle-client.jar` i ditt projekt, om du använder samma.
 
 <!--
 * You can [enable transaction recording](../../forms/using/viewing-and-understanding-transaction-reports.md#setting-up-transaction-reports) from AEM Web Console. view transaction reports on author, processing, or publish instances. View transaction reports on author or processing instances for an aggregated sum of all transactions. View transaction reports on the publish instances for a count of all transactions that take place only on that publish instance from where the report is run.
@@ -44,23 +44,23 @@ Som standard är transaktionsregistrering inaktiverad. Så här aktiverar du tra
 
 ## Visa transaktionsrapport {#view-transaction-report}
 
-När du aktiverar transaktionsrapportering blir informationen om antalet transaktioner tillgänglig via [transaktionsrapport via kontrollpanelen](#transaction-report-dashboard) och en [transaktionsrapport via loggfil](#transaction-report-logfile). Båda förklaras nedan:
+När du aktiverar transaktionsrapportering blir informationen om antalet transaktioner tillgänglig via [transaktionsrapporten via kontrollpanelen](#transaction-report-dashboard) och en detaljerad [transaktionsrapport via loggfilen](#transaction-report-logfile). Båda förklaras nedan:
 
 ### Transaktionsrapport via kontrollpanelen {#transaction-report-dashboard}
 
 Transaktionsrapport via kontrollpanelen ger totalt antal transaktioner för varje typ av transaktion. Du kan t.ex. få information om det totala antalet formulär som återges, konverteras och skickas enligt bilden. Så här hämtar du transaktionsrapporten:
 
 1. Navigera till `/adminui` på din AEM Forms på JEE, till exempel: `http://10.13.15.08:8080/adminui`.
-1. Logga in som **Administratör**.
+1. Logga in som **administratör**.
 1. Klicka på Hälsoövervakning.
-1. Navigera till **Transaktionsrapportör** flik, klicka **Beräkna totala transaktioner** ser du nu att ett cirkeldiagram representerar antalet PDF forms - inskickade, återgivna eller konverterade.
+1. Navigera till fliken **Transaktionsrapportör**, klicka på **Beräkna totala transaktioner**, nu ser du att ett cirkeldiagram representerar antalet PDF forms som har skickats, återgetts eller konverterats.
 
 ![sample-transaction-report-jee](assets/transaction-piechart.png)
 
 
 ### Transaktionsrapport via loggfil {#transaction-report-logfile}
 
-Transaktionsrapport via loggfil innehåller detaljerad information om varje transaktion. Om du vill få åtkomst till transaktionsloggar följer du kontextsökvägen i förhållande till serverns start. Transaktioner registreras i en separat loggfil `transaction_log.log` som standard. The **filsökväg** är relativt serverns startkontext. Standardsökvägen för olika servrar anges nedan:
+Transaktionsrapport via loggfil innehåller detaljerad information om varje transaktion. Om du vill få åtkomst till transaktionsloggar följer du kontextsökvägen i förhållande till serverns start. Transaktioner hämtas som standard i en separat loggfil `transaction_log.log`. **filsökvägen** är relativ till serverns startkontext. Standardsökvägen för olika servrar anges nedan:
 
 ```
 For Jboss Turnkey:
@@ -100,11 +100,11 @@ TransactionRecord
 * **service**: Tjänstens namn.
 * **operation**: Åtgärdsnamn.
 * **internalService**: Anroparens namn om det finns ett internt anrop, annars samma som tjänstens namn.
-* **internalOperation**: Namnet på anropet i det finns ett internt anrop, i annat fall samma som åtgärdsnamnet.
-* **transactionOperationType**: Typ av transaktion (Skicka, Återge, Konvertera).
+* **internalOperation**: Namnet på anroparen i det finns ett internt anrop, i annat fall samma som åtgärdsnamnet.
+* **transactionOperationType**: Typ av transaktion (Submit, Render, Convert).
 * **transactionCount**: Totalt antal transaktioner.
-* **förfluten tid**: Tid mellan det att samtalet initierades och det svar som togs emot.
-* **transactionDate**: Tidsstämpel som anger när tjänsten anropades.
+* **förfluten tid**: Tid mellan anropsinitieringen och mottaget svar.
+* **transactionDate**: Tidsstämpeln anger när tjänsten anropades.
 
 **Exempel på transaktionslogg**:
 
@@ -128,7 +128,7 @@ TransactionRecord
 
 Frekvensen för registrering av transaktioner bestäms av uppdateringsåtgärderna på servern för varje formulär som har skickats, återgetts eller konverterats.
 
-* I **kontrollpanel**, uppdateras antalet transaktioner regelbundet, standardvärdet är 1 minut. Du kan uppdatera frekvensen genom att ställa in systemegenskapen på `"com.adobe.idp.dsc.transaction.recordFrequency"`. I AEM Forms för JEE på JBoss® lägger du till `-Dcom.adobe.idp.dsc.transaction.recordFrequency=5` in `JAVA_OPTS` för att ställa in uppdateringsfrekvensen på 5 minuter.
+* I **dashboard** uppdateras antalet transaktioner regelbundet, standardvärdet är 1 minut. Du kan uppdatera frekvensen genom att ställa in systemegenskapen på `"com.adobe.idp.dsc.transaction.recordFrequency"`. I AEM Forms för JEE på JBoss® lägger du till `-Dcom.adobe.idp.dsc.transaction.recordFrequency=5` i `JAVA_OPTS` för att ange uppdateringsfrekvensen till 5 minuter.
 
 * I **transaktionsloggar** uppdateras varje transaktion omedelbart när ett formulär har skickats, återgetts eller konverterats.
 

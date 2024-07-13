@@ -24,27 +24,27 @@ Adaptiva formulär har stöd för att skicka data till AEM Forms om JEE-processe
 
 Så här gör du för att AEM Forms Server ska kunna skicka data till en AEM Forms på en JEE-server:
 
-1. Gå till AEM webbkonfigurationskonsol på https://[*värd*]:[*port*]/system/console/configMgr.
+1. Gå till AEM webbkonfigurationskonsol på https://[*host*]:[*port*]/system/console/configMgr.
 
-1. Leta reda på och klicka på **SDK-konfiguration för Adobe-klient** -komponenten.
+1. Leta reda på och klicka på **Adobe LiveCycle Client SDK Configuration** -komponenten.
 1. Klicka för att redigera konfigurationsserverns URL, användarnamn och lösenord för AEM Forms på JEE-servern.
 1. Granska inställningarna och klicka på **Spara**.
 
-![SDK-konfiguration för LiveCyclet Adobe](assets/clientsdkconfiguration.jpg)
+![SDK-konfiguration för LiveCyclet Client](assets/clientsdkconfiguration.jpg)
 
 ## Mappa data med processfält {#map-data-with-process-fields}
 
 När du har konfigurerat AEM Forms mappar du XML-data och bilagor från det skickade formuläret till fälten i AEM Forms om JEE-processen. Gör följande:
 
-1. I den AEM webbkonfigurationskonsolen klickar du för att redigera **Guide LiveCycle Process Locator och Invoker** konfiguration.
+1. Klicka på i webbkonfigurationskonsolen för att redigera **Guide LiveCycle Process Locator och Invoker** -konfigurationen.
 1. Ange följande parametrar:
 
-   * **Namn på xml-parametern data** (obligatoriskt): Ange den XML-egenskapsfil för AEM Forms on JEE-processen som måste bearbeta skickade data. Standardvärdet är **dataxml**.
+   * **Namn på XML-parametern** (obligatoriskt): Ange XML-egenskapsfilen för den AEM Forms on JEE-process som måste bearbeta skickade data. Standardvärdet är **dataxml**.
 
-   * **Namn på parametern för bifogade filer** (valfritt): Ange listan med dokumentobjekt som AEM Forms on JEE-processen måste behandla. Standardvärdet är **fileAttachmentsList**.
+   * **Namnet på parametern för bifogade filer** (valfritt): Ange listan med dokumentobjekt som AEM Forms on JEE-processen måste behandla. Standardvärdet är **fileAttachmentsList**.
 
 1. Granska inställningarna och klicka på **Spara**.
 
-![Guide LiveCycle Process Locator och Invoker](assets/test3.jpg)
+![Guide LiveCycle Process Locator and Invoker](assets/test3.jpg)
 
 När åtgärden Skicka till Forms Workflow har konfigurerats listas de AEM Forms på JEE-serverprocesser som innehåller den angivna XML-parametern.

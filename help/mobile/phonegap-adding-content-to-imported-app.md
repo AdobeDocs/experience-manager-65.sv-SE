@@ -41,7 +41,7 @@ Det är viktigt att hybridappen och det AEM innehållet använder samma sökväg
 
 ![chlimage_1-78](assets/chlimage_1-78.png)
 
-När du &#39;laddar ned källa&#39; från appkontrollpanelen körs dessa ContentSync-skript för att samla ihop ett arkiv av din Hybrid-app.
+När du laddar ned Source från appkontrollpanelen körs dessa ContentSync-skript för att samla ihop ett arkiv av din Hybrid-app.
 
 ![chlimage_1-79](assets/chlimage_1-79.png)
 

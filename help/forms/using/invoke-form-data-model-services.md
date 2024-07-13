@@ -17,23 +17,23 @@ ht-degree: 0%
 
 # API för att anropa formulärdatamodelltjänst från anpassningsbara formulär {#api-to-invoke-form-data-model-service-from-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 ## Ökning {#overview}
 
-Med AEM Forms kan formulärförfattare ytterligare förenkla och förbättra ifyllandet av formulär genom att anropa tjänster som konfigurerats i en formulärdatamodell inifrån ett adaptivt formulärfält. Om du vill anropa en datamodelltjänst kan du antingen skapa en regel i den visuella redigeraren eller ange ett JavaScript med `guidelib.dataIntegrationUtils.executeOperation` API i kodredigeraren för [regelredigerare](/help/forms/using/rule-editor.md).
+Med AEM Forms kan formulärförfattare ytterligare förenkla och förbättra ifyllandet av formulär genom att anropa tjänster som konfigurerats i en formulärdatamodell inifrån ett adaptivt formulärfält. Om du vill anropa en datamodelltjänst kan du antingen skapa en regel i den visuella redigeraren eller ange en JavaScript med `guidelib.dataIntegrationUtils.executeOperation`-API:t i kodredigeraren för [regelredigeraren](/help/forms/using/rule-editor.md).
 
-Det här dokumentet fokuserar på att skriva ett JavaScript med `guidelib.dataIntegrationUtils.executeOperation` API för att anropa en tjänst.
+Det här dokumentet fokuserar på att skriva en JavaScript med API:t `guidelib.dataIntegrationUtils.executeOperation` för att anropa en tjänst.
 
 ## Använda API {#using-the-api}
 
-The `guidelib.dataIntegrationUtils.executeOperation` API anropar en tjänst inifrån ett adaptivt formulärfält. API-syntaxen är följande:
+API:t `guidelib.dataIntegrationUtils.executeOperation` anropar en tjänst från ett adaptivt formulärfält. API-syntaxen är följande:
 
 ```javascript
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs)
 ```
 
-Strukturen för `guidelib.dataIntegrationUtils.executeOperation` API anger information om tjänståtgärden. Strukturen har följande syntax.
+Strukturen för `guidelib.dataIntegrationUtils.executeOperation`-API:t anger information om tjänståtgärden. Strukturen har följande syntax.
 
 ```javascript
 var operationInfo = {
@@ -77,24 +77,24 @@ API-strukturen anger följande information om tjänståtgärden.
   </tr>
   <tr>
    <td><code>Outputs</code></td>
-   <td>Kopplar ett eller flera formulärobjekt till utdatavärden från tjänståtgärden för att fylla i formulärfält<br /> </td>
+   <td>Mappar ett eller flera formulärobjekt till utdatavärden från tjänståtgärden för att fylla i formulärfält <br /> </td>
   </tr>
   <tr>
    <td><code>success</code></td>
-   <td>Returnerar värden baserat på indataargumenten för serviceåtgärden. Det är en valfri parameter som används som en callback-funktion.<br /> </td>
+   <td>Returnerar värden baserat på indataargumenten för serviceåtgärden. Det är en valfri parameter som används som en återanropsfunktion.<br /> </td>
   </tr>
   <tr>
    <td><code>failure</code></td>
-   <td>Visar ett felmeddelande om återanropsfunktionen lyckas inte visa utdatavärden baserat på indataargumenten. Det är en valfri parameter som används som en callback-funktion.<br /> </td>
+   <td>Visar ett felmeddelande om återanropsfunktionen lyckas inte visa utdatavärden baserat på indataargumenten. Det är en valfri parameter som används som en återanropsfunktion.<br /> </td>
   </tr>
  </tbody>
 </table>
 
 ## Exempelskript för att anropa en tjänst {#sample-script-to-invoke-a-service}
 
-Följande exempelskript använder `guidelib.dataIntegrationUtils.executeOperation` API för att anropa `getAccountById` tjänståtgärd konfigurerad i `employeeAccount` formulärdatamodell.
+I följande exempelskript används API:t `guidelib.dataIntegrationUtils.executeOperation` för att anropa den `getAccountById`-tjänståtgärd som konfigurerats i formulärdatamodellen `employeeAccount`.
 
-The `getAccountById` operationen tar värdet i `employeeID` formulärfält som indata för `empId` argument och returnerar medarbetarens namn, kontonummer och kontosaldo för motsvarande medarbetare. Utdatavärdena fylls i i de angivna formulärfälten. Värdet i `name` argumentet har fyllts i i `fullName` formulärelement och värde för `accountNumber` argument i `account` formulärelement.
+Åtgärden `getAccountById` tar värdet i formulärfältet `employeeID` som indata för argumentet `empId` och returnerar medarbetarens namn, kontonummer och kontosaldo för motsvarande medarbetare. Utdatavärdena fylls i i de angivna formulärfälten. Värdet i argumentet `name` fylls till exempel i i formulärelementet `fullName` och värdet för argumentet `accountNumber` i formulärelementet `account`.
 
 ```javascript
 var operationInfo = {
@@ -114,23 +114,23 @@ guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs);
 
 ## Använda API:t med återanropsfunktionen {#using-the-api-callback}
 
-Du kan också anropa datamodelltjänsten för formulär med `guidelib.dataIntegrationUtils.executeOperation` API med en återanropsfunktion. API-syntaxen är följande:
+Du kan också anropa datamodelltjänsten för formulär med API:t `guidelib.dataIntegrationUtils.executeOperation` med en callback-funktion. API-syntaxen är följande:
 
 ```javascript
 guidelib.dataIntegrationUtils.executeOperation(operationInfo, inputs, outputs, callbackFunction)
 ```
 
-Återanropsfunktionen kan ha `success` och `failure` callback-funktioner.
+Återanropsfunktionen kan ha callback-funktionerna `success` och `failure`.
 
 ### Exempelskript med återanropsfunktioner för lyckade och misslyckade åtgärder {#callback-function-success-failure}
 
-Följande exempelskript använder `guidelib.dataIntegrationUtils.executeOperation` API för att anropa `GETOrder` tjänståtgärd konfigurerad i `employeeOrder` formulärdatamodell.
+I följande exempelskript används API:t `guidelib.dataIntegrationUtils.executeOperation` för att anropa den `GETOrder`-tjänståtgärd som konfigurerats i formulärdatamodellen `employeeOrder`.
 
-The `GETOrder` operationen tar värdet i `Order ID` formulärfält som indata för `orderId` argument och returnerar orderkvantitetsvärdet i `success` callback-funktion.  Om `success` callback-funktionen returnerar inte orderkvantiteten, `failure` callback-funktionen visar `Error occured` meddelande.
+Åtgärden `GETOrder` tar värdet i formulärfältet `Order ID` som indata för argumentet `orderId` och returnerar orderkvantitetsvärdet i callback-funktionen `success`.  Om återanropsfunktionen `success` inte returnerar ordningsantalet visar återanropsfunktionen `failure` meddelandet `Error occured`.
 
 >[!NOTE]
 >
->Om du använder `success` callback-funktionen, utdatavärdena fylls inte i i de angivna formulärfälten.
+>Om du använder callback-funktionen `success` fylls inte utdatavärdena i de angivna formulärfälten.
 
 ```javascript
 var operationInfo = {

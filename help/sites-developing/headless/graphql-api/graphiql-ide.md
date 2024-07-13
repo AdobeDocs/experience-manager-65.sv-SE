@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Använda GraphiQL IDE {#graphiql-ide}
 
-En implementering av standarden [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) IDE kan användas med GraphQL API för Adobe Experience Manager (AEM).
+En implementering av standardmiljön [GraphiQL](https://graphql.org/learn/serving-over-http/#graphiql) finns tillgänglig för användning med GraphQL API för Adobe Experience Manager (AEM).
 
 >[!NOTE]
 >
@@ -23,32 +23,32 @@ En implementering av standarden [GraphiQL](https://graphql.org/learn/serving-ove
 >I tidigare versioner behövdes ett paket för att installera GraphiQL IDE. Om du har installerat den kan den nu tas bort.
 
 >[!NOTE]
->Du måste ha [konfigurerade dina slutpunkter](/help/sites-developing/headless/graphql-api/graphql-endpoint.md) i [konfigurationsläsare](/help/assets/content-fragments/content-fragments-configuration-browser.md) innan du använder GraphiQL IDE.
+>Du måste ha [konfigurerat dina slutpunkter](/help/sites-developing/headless/graphql-api/graphql-endpoint.md) i [konfigurationsläsaren](/help/assets/content-fragments/content-fragments-configuration-browser.md) innan du kan använda GraphiQL IDE.
 
-The **GraphiQL** kan du testa och felsöka dina GraphQL-frågor genom att aktivera:
+Med verktyget **GraphiQL** kan du testa och felsöka dina GraphQL-frågor genom att aktivera:
 
-* välj **Slutpunkt** lämplig för platskonfigurationen som du vill använda för dina frågor
+* välj den **slutpunkt** som passar den platskonfiguration som du vill använda för dina frågor
 * direkt mata in nya frågor
-* skapa och få tillgång till **[Beständiga frågor](/help/sites-developing/headless/graphql-api/persisted-queries.md)**
+* skapa och få åtkomst till **[beständiga frågor](/help/sites-developing/headless/graphql-api/persisted-queries.md)**
 * köra dina frågor för att omedelbart se resultatet
-* hantera **Frågevariabler**
-* spara och hantera **Beständiga frågor**
-* publicera eller avpublicera, **Beständiga frågor** (till exempel till/från `dev-publish`)
-* se **Historik** av dina tidigare frågor
-* använder **Dokumentationsutforskaren** om du vill få tillgång till dokumentationen, så att du kan lära dig mer och förstå vilka metoder som finns.
+* hantera **frågevariabler**
+* spara och hantera **beständiga frågor**
+* publicera, eller avpublicera, **beständiga frågor** (till exempel till/från `dev-publish`)
+* visa **historiken** för dina tidigare frågor
+* använd **Dokumentationsutforskaren** för att få tillgång till dokumentationen och för att lära dig mer och förstå vilka metoder som är tillgängliga.
 
 Du kan öppna frågeredigeraren från:
 
-* **verktyg** > **Allmänt** > **GraphQL Query Editor**
+* **Verktyg** > **Allmänt** > **GraphQL Query Editor**
 * direkt, till exempel `http://localhost:4502/aem/graphiql.html`
 
-![GraphiQL-gränssnitt](assets/cfm-graphiql-interface.png "GraphiQL-gränssnitt")
+![Gränssnittet GraphiQL](assets/cfm-graphiql-interface.png "Gränssnittet GraphiQL")
 
-Du kan använda GraphiQL på datorn så att frågor kan begäras av klientprogrammet med hjälp av GET-förfrågningar och för publiceringsfrågor. För produktionsanvändning kan man sedan [flytta frågor till produktionsmiljön](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production). Till att börja med måste produktionsförfattaren validera nyskrivet innehåll med frågorna och till sist publicera produktionen för direktkonsumtion.
+Du kan använda GraphiQL på datorn så att frågor kan begäras av klientprogrammet med hjälp av GET-förfrågningar och för publiceringsfrågor. För produktionsanvändning kan du sedan [flytta dina frågor till din produktionsmiljö](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production). Till att börja med måste produktionsförfattaren validera nyskrivet innehåll med frågorna och till sist publicera produktionen för direktkonsumtion.
 
 ## Markera slutpunkten {#selecting-endpoint}
 
-Som ett första steg måste du välja **[Slutpunkt](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)** som du vill använda för frågorna. Slutpunkten passar den platskonfiguration som du vill använda för dina frågor.
+Som ett första steg måste du välja den **[slutpunkt](/help/sites-developing/headless/graphql-api/graphql-endpoint.md)** som du vill använda för frågorna. Slutpunkten passar den platskonfiguration som du vill använda för dina frågor.
 
 Det här är tillgängligt i listrutan högst upp till höger.
 
@@ -58,7 +58,7 @@ Du kan ange den nya frågan i redigeraren, som finns i den vänstra panelen, dir
 
 >[!NOTE]
 >
->Om du redan har markerat en beständig fråga och vill visa den på redigeringspanelen väljer du `+` (bredvid **Beständiga frågor**) för att tömma redigeraren som är klar för den nya frågan.
+>Om du redan har markerat en beständig fråga och visar den i redigeringspanelen väljer du `+` (bredvid **Beständiga frågor**) för att tömma redigeraren som är klar för den nya frågan.
 
 Börja skriva - redigeraren:
 
@@ -67,17 +67,17 @@ Börja skriva - redigeraren:
 
 >[!NOTE]
 >
->GraphQL-frågor börjar oftast med en `{` tecken.
+>GraphQL-frågor inleds vanligtvis med ett `{`-tecken.
 >
->Rader som börjar med en `#` ignoreras.
+>Rader som börjar med `#` ignoreras.
 
-Använd **Spara som** för att behålla den nya frågan.
+Använd **Spara som** om du vill behålla den nya frågan.
 
 ## Uppdaterar din beständiga fråga {#updating-persisted-query}
 
-Välj frågan som du vill uppdatera i listan i dialogrutan **[Beständiga frågor](/help/sites-developing/headless/graphql-api/persisted-queries.md)** panel (längst till vänster).
+Markera frågan som du vill uppdatera i listan på panelen **[Beständiga frågor](/help/sites-developing/headless/graphql-api/persisted-queries.md)** (längst till vänster).
 
-Frågan visas på redigeringspanelen. Gör de ändringar du behöver och använd sedan **Spara** för att implementera uppdateringar av den beständiga frågan.
+Frågan visas på redigeringspanelen. Gör de ändringar du behöver och använd sedan **Spara** för att genomföra uppdateringarna i den beständiga frågan.
 
 ## Köra frågor {#running-queries}
 
@@ -85,18 +85,18 @@ Du kan köra en ny fråga direkt eller läsa in och köra en beständig fråga. 
 
 I båda fallen är frågan som visas på redigeringspanelen den fråga som kommer att köras när du antingen:
 
-* klicka på **Kör fråga** icon
-* använda tangentbordskombinationen `Control-Enter`
+* klicka på ikonen **Kör fråga**
+* använd tangentbordskombinationen `Control-Enter`
 
 ## Frågevariabler {#query-variables}
 
 <!-- more details needed here? -->
 
-Med GraphiQL IDE kan du också hantera [Frågevariabler](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables).
+Med GraphiQL IDE kan du också hantera dina [frågevariabler](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md#graphql-variables).
 
 Till exempel:
 
-![GraphQL Variables](assets/cfm-graphqlapi-03.png "GraphQL Variables")
+![GraphQL-variabler](assets/cfm-graphqlapi-03.png "GraphQL-variabler")
 
 <!--
 ## Managing cache for your persisted queries {#managing-cache}
@@ -135,7 +135,7 @@ Using GraphQL you can configure the HTTP Cache Headers  to control these paramet
 
 ## Publicera beständiga frågor {#publishing-persisted-queries}
 
-När du har valt [beständig fråga](/help/sites-developing/headless/graphql-api/persisted-queries.md) i listan (vänster panel) kan du använda **Publicera** och **Avpublicera** åtgärder. Detta aktiverar dem till din publiceringsmiljö (till exempel `dev-publish`) för enkel åtkomst av dina program vid testning.
+När du har valt din [beständiga fråga](/help/sites-developing/headless/graphql-api/persisted-queries.md) i listan (den vänstra panelen) kan du använda åtgärderna **Publish** och **Avpublicera**. Detta aktiverar dem i din publiceringsmiljö (till exempel `dev-publish`) så att de blir lätta att komma åt när du testar program.
 
 >[!NOTE]
 >
@@ -143,7 +143,7 @@ När du har valt [beständig fråga](/help/sites-developing/headless/graphql-api
 
 ## Kopiera URL för direktåtkomst till frågan {#copy-url}
 
-The **Kopiera URL** kan du simulera en fråga genom att kopiera den URL som används för att få direkt åtkomst till den beständiga frågan och se resultatet. Detta kan sedan användas för testning, t.ex. genom att gå till i en webbläsare:
+Med alternativet **Kopiera URL** kan du simulera en fråga genom att kopiera den URL som används för att få direkt åtkomst till den beständiga frågan och se resultatet. Detta kan sedan användas för testning, t.ex. genom att gå till i en webbläsare:
 
 <!--
   >[!NOTE]
@@ -161,30 +161,30 @@ Genom att använda den här URL:en i en webbläsare kan du bekräfta resultatet:
 
 ![GraphiQL - kopiera URL](assets/cfm-graphiql-copy-url.png "GraphiQL - kopiera URL")
 
-The **Kopiera URL** är tillgängligt via de tre lodräta prickarna till höger om det beständiga frågenamnet (längst till vänster):
+Alternativet **Kopiera URL** är tillgängligt via de tre lodräta prickarna till höger om det beständiga frågenamnet (längst till vänster):
 
 ![GraphiQL - kopiera URL](assets/cfm-graphiql-persisted-query-options.png "GraphiQL - kopiera URL")
 
 ## Tar bort beständiga frågor {#deleting-persisted-queries}
 
-The **Ta bort** Du kan även använda det här alternativet via de tre lodräta prickarna till höger om det beständiga frågenamnet (längst till vänster).
+Alternativet **Ta bort** är även tillgängligt via de tre lodräta prickarna till höger om det beständiga frågenamnet (längst till vänster).
 
 <!-- what happens if you try to delete something that is still published? -->
 
 
 ## Installera den beständiga frågan i produktionen {#installing-persisted-query-production}
 
-När du har utvecklat och testat din beständiga fråga med GraphiQL är det sista målet att [överför den till produktionsmiljön](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production) som kan användas i dina program.
+När du har utvecklat och testat din beständiga fråga med GraphiQL är det slutliga målet att [överföra den till din produktionsmiljö](/help/sites-developing/headless/graphql-api/persisted-queries.md#transfer-persisted-query-production) för användning i dina program.
 
 ## Kortkommandon {#keyboard-shortcuts}
 
 Det finns ett urval av kortkommandon som ger direktåtkomst till åtgärdsikoner i den integrerade utvecklingsmiljön:
 
-* Pretify Query:  `Shift-Control-P`
-* Kopplingsfråga:  `Shift-Control-M`
-* Kör fråga:  `Control-Enter`
-* Komplettera automatiskt:  `Control-Space`
+* Pretify-fråga: `Shift-Control-P`
+* Kopplingsfråga: `Shift-Control-M`
+* Kör fråga: `Control-Enter`
+* Komplettera automatiskt: `Control-Space`
 
 >[!NOTE]
 >
->På vissa tangentbord på `Control` tangenten är märkt som `Ctrl`.
+>På vissa tangentbord är tangenten `Control` märkt som `Ctrl`.

@@ -14,11 +14,11 @@ ht-degree: 0%
 
 # Så här Live med ditt headless-program {#go-live}
 
-I den här delen av [AEM Headless Developer Journey](overview.md), lär dig hur du driftsätter ett headless-program live.
+I den här delen av [AEM Headless Developer Journey](overview.md) får du lära dig hur du distribuerar ett headless-program live.
 
 ## Story hittills {#story-so-far}
 
-I det föregående dokumentet om den AEM resan utan headless [Så här uppdaterar du innehåll via AEM Assets API:er](update-your-content.md) har du lärt dig hur du uppdaterar det befintliga headless-innehållet i AEM via API, och du bör nu:
+I det föregående dokumentet om den AEM resan [Så här uppdaterar du ditt innehåll via AEM Assets-API:er](update-your-content.md) lärde du dig att uppdatera ditt befintliga innehåll utan rubrik i AEM via API, och du bör nu:
 
 * Förstå AEM Assets HTTP API.
 
@@ -39,7 +39,7 @@ Det här dokumentet hjälper dig att förstå den AEM rubrikfria publiceringspro
 AEM SDK används för att skapa och distribuera anpassad kod. Det är huvudverktyget som du måste utveckla och testa din headless-applikation innan du kan börja använda den. Den innehåller följande artefakter:
 
 * Quickstart jar - en körbar jar-fil som kan användas för att ställa in både författare och publiceringsinstans
-* Dispatcher-verktyg - Dispatcher-modulen och dess beroenden för Windows- och UNIX-baserade system
+* Dispatcher-verktyg - Dispatcher-modulen och dess beroenden för Windows och UNIX-baserade system
 * Java™ API Jar - Java™ Jar/Maven Dependency som visar alla Java™-API:er som kan användas för att utveckla mot AEM
 * Javadoc jar - javadocs for the Java™ API jar
 
@@ -55,23 +55,23 @@ Förutom AEM SDK behöver du ytterligare verktyg som gör det lättare att utvec
 
 Eftersom AEM är ett Java™-program måste du installera Java™ och Java™ SDK för att stödja utvecklingen av AEM as a Cloud Service.
 
-Git är det ni använder för att hantera källkontrollen och för att checka in ändringarna i Cloud Manager och sedan distribuera dem till en produktionsinstans.
+Git är det ni använder för att hantera källkontroll och för att checka in ändringarna i Cloud Manager och sedan distribuera dem till en produktionsinstans.
 
 AEM använder Apache Maven för att bygga projekt som genererats från AEM Maven Project-arkitypen. Alla större utvecklingsmiljöer har stöd för integrering av Maven.
 
-Node.js är en JavaScript-körningsmiljö som används för att arbeta med de viktigaste resurserna i ett AEM projekt `ui.frontend` delprojekt. Node.js distribueras med npm, som är de facto-pakethanteraren Node.js, som används för att hantera JavaScript-beroenden.
+Node.js är en JavaScript-körningsmiljö som används för att arbeta med de främsta resurserna i ett AEM `ui.frontend`-underprojekt. Node.js distribueras med npm, som är de facto-pakethanteraren Node.js, som används för att hantera JavaScript-beroenden.
 
 ## Lathund för komponenterna i ett AEM system {#components-of-an-aem-system-at-a-glance}
 
 Nu tittar vi på komponenterna i en AEM.
 
-En komplett AEM består av en författare, en publiceringsversion och en utskicksare. Samma komponenter är tillgängliga i den lokala utvecklingsmiljön för att göra det enklare för dig att förhandsgranska kod och innehåll innan du publicerar.
+En komplett AEM består av en författare, Publish och Dispatcher. Samma komponenter är tillgängliga i den lokala utvecklingsmiljön för att göra det enklare för dig att förhandsgranska kod och innehåll innan du publicerar.
 
 * **Författartjänsten** är den plats där interna användare skapar, hanterar och förhandsgranskar innehåll.
 
-* **Publiceringstjänsten** är&quot;Live&quot;-miljön och det är vanligtvis den slutanvändaren interagerar med. När innehållet har redigerats och godkänts av författartjänsten distribueras det (replikeras) till publiceringstjänsten. Det vanligaste distributionsmönstret med AEM headless-program är att få produktionsversionen av programmet att ansluta till en AEM Publish-tjänst.
+* **Publish-tjänsten** betraktas som Live-miljön och är vanligtvis den slutanvändare som interagerar med. Innehåll som har redigerats och godkänts av Författartjänsten distribueras (replikeras) till Publish-tjänsten. Det vanligaste distributionsmönstret med AEM headless-program är att ha produktionsversionen av programmet ansluten till en AEM Publish-tjänst.
 
-* **Dispatcher** är en statisk webbserver som utökas med modulen AEM. Den cachelagrar webbsidor som skapats av publiceringsinstansen för att förbättra prestandan.
+* **Dispatcher** är en statisk webbserver som utökas med modulen AEM Dispatcher. Den cachelagrar webbsidor som skapats av publiceringsinstansen för att förbättra prestandan.
 
 ## Arbetsflödet för lokal utveckling {#the-local-development-workflow}
 
@@ -81,7 +81,7 @@ Om du vill testa kod- eller innehållsuppdateringar som har importerats av ditt 
 
 Observera skillnaden mellan de olika komponenterna i den lokala AEM, eftersom det är viktigt att testa uppdateringarna där de är som viktigast. Testa till exempel innehållsuppdateringar på författaren eller testa ny kod på publiceringsinstansen.
 
-I ett produktionssystem placeras Dispatcher och en http Apache-server alltid framför en AEM publiceringsinstans. De tillhandahåller cache-lagring och säkerhetstjänster för AEM, så det är viktigt att testa kod- och innehållsuppdateringar mot Dispatcher också.
+I ett produktionssystem placeras en Dispatcher- och en http Apache-server alltid framför en AEM publiceringsinstans. De tillhandahåller cache-lagring och säkerhetstjänster för AEM system, så det är oerhört viktigt att testa kod- och innehållsuppdateringar mot Dispatcher också.
 
 ## Förhandsgranska kod och innehåll lokalt med den lokala utvecklingsmiljön {#previewing-your-code-and-content-locally-with-the-local-development-environment}
 
@@ -93,11 +93,11 @@ Den lokala utvecklingsmiljön består av tre huvudområden:
 
 1. Det AEM projektet - innehåller all kod, konfiguration och innehåll som AEM utvecklare kommer att arbeta med
 1. Local AEM Runtime - lokala versioner av AEM författare och publiceringstjänster som används för att distribuera kod från det AEM projektet
-1. Local Dispatcher Runtime - en lokal version av Apache htttpd-webbservern som innehåller Dispatcher-modulen
+1. Den lokala Dispatcher-miljön - en lokal version av Apache htttpd-webbservern som innehåller Dispatcher-modulen
 
 När den lokala utvecklingsmiljön har konfigurerats kan du simulera innehåll som skickas till React-appen genom att distribuera en statisk nodserver lokalt.
 
-Mer information om hur du konfigurerar en lokal utvecklingsmiljö och alla beroenden som behövs för förhandsgranskning av innehåll finns i [Produktionsdistributionsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html).
+Mer information om hur du konfigurerar en lokal utvecklingsmiljö och alla beroenden som behövs för innehållsförhandsgranskning finns i [Dokumentation för produktionsdistribution](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/overview.html).
 
 ## Förbered AEM Headless Application for GoLive {#prepare-your-aem-headless-application-for-golive}
 
@@ -107,7 +107,7 @@ Nu är det dags att göra ditt AEM headless-program redo för lansering genom at
 
 ### Skydda ditt Headless-program innan du startar {#secure-and-scale-before-launch}
 
-1. Förbered [Autentisering](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md) för dina GraphQL-förfrågningar
+1. Förbered [autentiseringen](/help/sites-developing/headless/graphql-api/graphql-authentication-content-fragments.md) för dina GraphQL-begäranden
 
 ### Modellstruktur jämfört med GraphQL Output {#structure-vs-output}
 
@@ -126,7 +126,7 @@ Nu är det dags att göra ditt AEM headless-program redo för lansering genom at
 
 >[!NOTE]
 >
->Se [Ytterligare resurser](#additional-resources) för mer information om CDN och cachning.
+>Mer information om CDN och cachelagring finns i [Ytterligare resurser](#additional-resources).
 
 ### Förkorta nedladdningstiden för headless Content {#improve-download-time}
 
@@ -134,23 +134,23 @@ Nu är det dags att göra ditt AEM headless-program redo för lansering genom at
 * Kontrollera att HTTP-klienter accepterar rubrikbegäran för gzip.
 * Minimera antalet domäner som används som värd för JSON och refererade artefakter.
 * Använd `Last-modified-since` för att uppdatera resurser.
-* Använd `_reference` i JSON-fil för att börja ladda ned resurser utan att behöva tolka fullständiga JSON-filer.
+* Använd `_reference`-utdata i JSON-filen för att börja hämta resurser utan att behöva tolka fullständiga JSON-filer.
 
 <!-- End of CDN Review -->
 
 ## Distribuera till produktion {#deploy-to-production}
 
-Distribuering till produktion kan vara beroende av om du har en *traditionell* AEM som distribuerar med Maven, eller finns i Adobe Managed Services (AMS) och därför använder Cloud Manager.
+Distributionen till Production kan vara beroende av om du har en *traditionell*-AEM som distribuerar med Maven, eller om du använder Adobe Managed Services (AMS) och därför använder Cloud Manager.
 
 ## Distribuera till produktion med Maven {#deploy-to-production-maven}
 
-För *traditionell* distribution (ej AMS) med Maven, se [WKND - självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html#build) för en översikt.
+En *traditionell*-distribution (ej AMS) med Maven finns i [WKND-självstudiekursen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html#build) för en översikt.
 
 ## Distribuera till produktion med Cloud Manager {#deploy-to-production-cloud-manager}
 
-Om du är AMS-kund och använder Cloud Manager kan du, efter att ha kontrollerat att allt fungerar som det ska, överföra koduppdateringarna till en [centraliserad Git-databas i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/git-integration.html).
+Om du är AMS-kund och använder Cloud Manager kan du, efter att du har kontrollerat att allt fungerar som det ska, överföra dina koduppdateringar till en [centraliserad Git-databas i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/managing-code/git-integration.html).
 
-När uppdateringarna har överförts till Cloud Manager distribuerar du dem till AEM med [Cloud Managers pipeline för CI/CD](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html).
+När uppdateringarna har överförts till Cloud Manager distribuerar du dem till AEM med [Cloud Manager CI/CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html).
 
 <!-- Cannot find a parallel link -->
 <!--
@@ -211,15 +211,15 @@ Antingen har du redan startat ditt första AEM Headless-projekt eller så har du
 
 ### Utforska Single Page-program {#explore-spa}
 
-Men ni behöver inte stoppa de halslösa butikerna i AEM. I [Komma igång med en del av resan](getting-started.md#integration-levels)visade det hur AEM inte bara stöder headless-leverans och traditionella fullstacksmodeller, utan också stöder hybridmodeller som kombinerar fördelarna med båda.
+Men ni behöver inte stoppa de halslösa butikerna i AEM. I delen [Getting Started på resan](getting-started.md#integration-levels) diskuterades hur AEM inte bara stöder headless-leverans och traditionella fullstacksmodeller, utan även hybridmodeller som kombinerar fördelarna med båda.
 
 Om den här typen av flexibilitet är något du behöver för ditt projekt kan du fortsätta med den valfria, extra delen av resan, [Skapa enkelsidiga program (SPA) med AEM.](create-spa.md)
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Utvecklingshandbok för AEM](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/the-basics.html)
+* [AEM Utvecklingshandbok](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/the-basics.html)
 
-* [WKND - självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+* [WKND, självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
 * [Cloud Manager för AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
 
@@ -227,7 +227,7 @@ Om den här typen av flexibilitet är något du behöver för ditt projekt kan d
 
    * [Kontrollera en CDN-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#controlling-a-cdn-cache)
 
-   * Konfigurera [CDN Rewriter](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) (*sök efter CDN Rewriter*)
+   * Konfigurerar [CDN Rewriter](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) (*sök efter CDN Rewriter*)
 
 * [Introduktion till AEM som headless CMS](/help/sites-developing/headless/introduction.md)
 * [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)

@@ -55,7 +55,7 @@ Uttryck som stöds för satsen Date Picture:
   </tr>
   <tr>
    <td>DD</td>
-   <td>Dag i månaden med två siffror (01-31), utfyllda med noll.<br /> </td>
+   <td>Dag i månaden med två siffror (01-31), utfyllt med noll.<br /> </td>
   </tr>
   <tr>
    <td>M</td>
@@ -63,23 +63,23 @@ Uttryck som stöds för satsen Date Picture:
   </tr>
   <tr>
    <td>MM</td>
-   <td>Månad med två siffror (01-12) med inledande nolla vid behov.<br /> </td>
+   <td>Månad med två siffror (01-12) med inledande nolla.<br /> </td>
   </tr>
   <tr>
    <td>MMM</td>
-   <td>Förkortat månadsnamn för det aktuella språkområdet<br /> </td>
+   <td>Förkortat månadsnamn för det aktuella språkområdet <br /> </td>
   </tr>
   <tr>
    <td>MMMM</td>
-   <td>Fullständigt månadsnamn för det aktuella språkområdet<br /> </td>
+   <td>Fullständigt månadsnamn för det aktuella språket <br /> </td>
   </tr>
   <tr>
    <td>EEE</td>
-   <td>Förkortat veckodagsnamn för aktuell språkinställning<br /> </td>
+   <td>Förkortat veckodagsnamn för den aktuella språkinställningen <br /> </td>
   </tr>
   <tr>
    <td>EEEE</td>
-   <td>Fullständigt veckodagsnamn för det aktuella språkområdet<br /> </td>
+   <td>Fullständigt veckodagsnamn för det aktuella språket <br /> </td>
   </tr>
   <tr>
    <td>YY</td>
@@ -87,30 +87,30 @@ Uttryck som stöds för satsen Date Picture:
   </tr>
   <tr>
    <td>YYYY</td>
-   <td>Fyrsiffrigt årtal<br /> </td>
+   <td>Fyrsiffrigt år <br /> </td>
   </tr>
  </tbody>
 </table>
 
 >[!NOTE]
 >
-> Datumfältet i HTML5 Forms stöder inte `MM-YYYY` mönster i redigeringsformat. Mönstret stöds dock i visningsformatet.
+> Datumfältet i HTML5 Forms stöder inte mönstret `MM-YYYY` i redigeringsformat. Mönstret stöds dock i visningsformatet.
 
 ## Numerisk bildsats {#numeric-picture-clause}
 
 HTML5-formulär har stöd för numeriska bildsymboler. Det finns dock en skillnad i stödet mellan PDF forms och HTML Forms.
 
-I **PDF forms**, formateras ett tal oberoende av antalet symboler i Picture-satsen som har
+I **PDF forms** formateras ett tal oavsett antalet symboler i Picture-satsen har
 
-I **HTML Forms**, formateras ett tal bara om talet har siffror som är mindre än antalet symboler i Picture-satsen.
+I **HTML Forms** formateras ett tal bara om talet har siffror som är mindre än antalet symboler i Picture-satsen.
 
 **Exempel**: Överväg en Picture-sats: num{zzz,zzz,zz9}.
 
-Talet **10000** är formaterad som **10 000** i både HTML och PDF forms.
+Talet **10000** formateras som **10,000** i både HTML och PDF forms.
 
 Talet 1000000 formateras som 1 000 000 i PDF forms. I HTML Forms förblir dock talet oformaterat som 1000000.
 
-Uttryck som stöds för Numeric Picture-satsen i **HTML Forms** är:
+Uttrycken som stöds för Numeric Picture-satsen i **HTML Forms** är:
 
 * num.integer{}
 * num.decimal{}
@@ -142,7 +142,7 @@ Uttryck som stöds för Numeric Picture-satsen i **HTML Forms** är:
   </tr>
   <tr>
    <td>E</td>
-   <td><strong>Utdataformatering</strong>: exponentdelen av ett flyttal bestående av exponentialsymbolen (E). Följd av ett valfritt plustecken eller minustecken. Följs av exponentvärdet.<br /> </td>
+   <td><strong>Utdataformatering</strong>: exponentdelen av ett flyttal som består av exponentialsymbolen (E). Följd av ett valfritt plustecken eller minustecken. Följs av exponentvärdet.<br /> </td>
    <td>Samma som för utdataformatering</td>
   </tr>
   <tr>

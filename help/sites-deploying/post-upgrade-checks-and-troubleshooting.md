@@ -1,5 +1,5 @@
 ---
-title: Kontrollera och felsök efter uppgradering
+title: Post Upgrade Checks and Troubleshooting
 description: Lär dig hur du felsöker problem som kan uppstå efter en uppgradering.
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -17,11 +17,11 @@ ht-degree: 0%
 
 ---
 
-# Kontrollera och felsök efter uppgradering{#post-upgrade-checks-and-troubleshooting}
+# Post Upgrade Checks and Troubleshooting{#post-upgrade-checks-and-troubleshooting}
 
-## Bokför uppgraderingskontroller {#post-upgrade-checks}
+## Post Upgrade Checks {#post-upgrade-checks}
 
-Efter [Lokal uppgradering](/help/sites-deploying/in-place-upgrade.md) följande aktiviteter ska utföras för att slutföra uppgraderingen. Det antas att AEM har startats med 6.5-behållaren och att den uppgraderade kodbasen har distribuerats.
+Efter [lokal uppgradering](/help/sites-deploying/in-place-upgrade.md) ska följande aktiviteter utföras för att slutföra uppgraderingen. Det antas att AEM har startats med 6.5-behållaren och att den uppgraderade kodbasen har distribuerats.
 
 * [Verifiera loggar för uppgraderingen](#main-pars-header-290365562)
 
@@ -57,7 +57,7 @@ Mer specifikt säkerställer det att
 * Uppgraderingsfel som upptäcks av uppgraderingsramverket centraliseras i en enda uppgraderingsrapport.
 * Uppgraderingsrapporten innehåller indikatorer om nödvändigt manuellt ingripande.
 
-För att tillgodose detta har ändringar gjorts i hur loggarna genereras i `upgrade.log` -fil.
+För att tillgodose detta har ändringar gjorts i hur loggarna genereras i filen `upgrade.log`.
 
 Här följer ett exempel på en rapport som inte visar några fel under uppgraderingen:
 
@@ -73,23 +73,23 @@ error.log bör granskas noggrant under och efter det att AEM startats med målve
 
 ### Verifiera OSGi Bundles {#verify-osgi-bundles}
 
-Navigera till OSGi-konsolen `/system/console/bundles` och kontrollera om några paket inte har startats. Om något paket är installerat läser du `error.log` för att fastställa grundproblemet.
+Navigera till OSGi-konsolen `/system/console/bundles` och kontrollera om några paket inte har startats. Om något paket är installerat kan du ta reda på vad som är rotproblemet i `error.log`.
 
 ### Verifiera Oak-version {#verify-oak-version}
 
-Efter uppgraderingen bör du se att Oak-versionen har uppdaterats till **1.10.2**. Verifiera Oak-versionen genom att navigera till OSGi-konsolen och titta på den version som är associerad med Oak bundles: Oak Core, Oak Commons, Oak Segment tar.
+Efter uppgraderingen bör du kontrollera att Oak-versionen har uppdaterats till **1.10.2**. Kontrollera Oak-versionen genom att navigera till OSGi-konsolen och titta på den version som är kopplad till Oak-paket: Oak Core, Oak Commons, Oak Segment tar.
 
 ### Inspect PreUpgradeBackup, mapp {#inspect-preupgradebackup-folder}
 
-Under uppgraderingen försöker AEM säkerhetskopiera anpassningar och lagra dem under `/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`. Om du vill visa den här mappen i CRXDE Lite kan du behöva [temporärt aktivera CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md).
+Under uppgraderingen försöker AEM säkerhetskopiera anpassningar och lagra dem under `/var/upgrade/PreUpgradeBackup/<time-stamp-of-upgrade>`. Om du vill visa den här mappen i CRXDE Lite kan du behöva [aktivera CRXDE Lite](/help/sites-administering/enabling-crxde-lite.md) tillfälligt.
 
-Mappen med tidsstämpeln ska ha en egenskap med namnet `mergeStatus` med värdet `COMPLETED`. The **att bearbeta** mappen ska vara tom och **överskriven** noden anger vilka noder som skrevs över under uppgraderingen. Innehåll under den vänstra noden visar innehåll som inte kan sammanfogas på ett säkert sätt under uppgraderingen. Om implementeringen är beroende av någon av de underordnade noderna (och inte redan har installerats av det uppgraderade kodpaketet) måste de sammanfogas manuellt.
+Mappen med tidsstämpeln ska ha en egenskap med namnet `mergeStatus` med värdet `COMPLETED`. Mappen **att bearbeta** måste vara tom och noden **overwritten** anger vilka noder som skrevs över under uppgraderingen. Innehåll under den vänstra noden visar innehåll som inte kan sammanfogas på ett säkert sätt under uppgraderingen. Om implementeringen är beroende av någon av de underordnade noderna (och inte redan har installerats av det uppgraderade kodpaketet) måste de sammanfogas manuellt.
 
 Inaktivera CRXDE Lite efter den här övningen om det finns på en scen- eller produktionsmiljö.
 
 ### Inledande validering av sidor {#initial-validation-of-pages}
 
-Utför en inledande validering mot flera sidor i AEM. Om du uppgraderar en redigeringsmiljö öppnar du Start-sidan och välkomstsidan ( `/aem/start.html`, `/libs/cq/core/content/welcome.html`). I både redigerings- och publiceringsmiljöer öppnar du några programsidor och röktestar som de återges korrekt. Om det uppstår problem kan du läsa `error.log` för att felsöka.
+Utför en inledande validering mot flera sidor i AEM. Om du uppgraderar en redigeringsmiljö öppnar du Start-sidan och välkomstsidan ( `/aem/start.html`, `/libs/cq/core/content/welcome.html`). I både författarmiljön och Publish-miljön öppnar du några programsidor och röktestar som de återges korrekt. Om det uppstår några problem kan du läsa `error.log` för att felsöka.
 
 ### Använd AEM {#apply-aem-service-packs}
 
@@ -97,7 +97,7 @@ Använd eventuella relevanta AEM 6.5 Service Pack om de har släppts.
 
 ### AEM {#migrate-aem-features}
 
-Flera funktioner i AEM kräver ytterligare steg efter uppgraderingen. En fullständig lista över dessa funktioner och steg för att migrera dem i AEM 6.5 finns på [Uppgradera kod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md) sida.
+Flera funktioner i AEM kräver ytterligare steg efter uppgraderingen. En fullständig lista över de här funktionerna och stegen för att migrera dem i AEM 6.5 finns på sidan [Uppgradera kod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md).
 
 ### Verifiera planerade underhållskonfigurationer {#verify-scheduled-maintenance-configurations}
 
@@ -111,15 +111,15 @@ Om du använder ett fildatalager måste du se till att aktiviteten Skräpinsamli
 
 #### Aktivera rensning av onlineändringar {#enable-online-revision-cleanup}
 
-Om du använder MongoMK eller det nya StjärmMK-segmentformatet kontrollerar du att aktiviteten Revision Clean Up (Revision Clean Up) är aktiverad och läggs till i listan Daily Maintenance (Dagligt underhåll). Instruktioner [här](/help/sites-deploying/revision-cleanup.md).
+Om du använder MongoMK eller det nya StjärmMK-segmentformatet kontrollerar du att aktiviteten Revision Clean Up (Revision Clean Up) är aktiverad och läggs till i listan Daily Maintenance (Dagligt underhåll). Instruktioner som anges [här](/help/sites-deploying/revision-cleanup.md).
 
 ### Kör testplan {#execute-test-plan}
 
-Kör detaljerad testplan mot definierad [Uppgradera kod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md) under **Provningsförfarande** -avsnitt.
+Kör detaljerad testplan mot [uppgraderingskod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md) enligt avsnittet **Testprocedur**.
 
 ### Aktivera replikeringsagenter {#enable-replication-agents}
 
-När publiceringsmiljön har uppgraderats och validerats aktiverar du replikeringsagenter i redigeringsmiljön. Kontrollera att agenter kan ansluta till respektive publiceringsinstanser. Se U [uppgraderingsprocedur](/help/sites-deploying/upgrade-procedure.md) om du vill ha mer information om ordningen för händelser.
+När publiceringsmiljön har uppgraderats och validerats aktiverar du replikeringsagenter i redigeringsmiljön. Kontrollera att agenterna kan ansluta till respektive Publish-instans. Se [uppgraderingsproceduren](/help/sites-deploying/upgrade-procedure.md) om du vill ha mer information om ordningen för händelser.
 
 ### Aktivera anpassade schemalagda jobb {#enable-custom-scheduled-jobs}
 
@@ -133,23 +133,23 @@ Dessa scenarier bör hjälpa till att hitta orsaken till uppgraderingsrelaterade
 
 ### Databasmigreringen misslyckades  {#repository-migration-failing-}
 
-Datamigrering från CRX2 till Oak bör vara möjlig för alla scenarier som börjar med källinstanser baserade på CQ 5.4. Se till att du följer uppgraderingsinstruktionerna i det här dokumentet som innehåller förberedelsen av `repository.xml`kontrollerar du att ingen anpassad autentiserare har startats via JAAS och att instansen har kontrollerats för inkonsekvenser innan migreringen påbörjas.
+Datamigreringen från CRX2 till Oak bör vara möjlig för alla scenarier som börjar med Source Instances baserade på CQ 5.4. Se till att du följer uppgraderingsinstruktionerna i det här dokumentet, som innehåller förberedelsen av `repository.xml`, och kontrollera att ingen anpassad autentiserare har startats via JAAS, och att instansen har kontrollerats för inkonsekvenser innan migreringen startar.
 
-Om migreringen fortfarande misslyckas kan du ta reda på vad som är grundorsaken genom att granska `upgrade.log`. Om problemet inte är känt ännu rapporterar du det till kundsupport.
+Om migreringen fortfarande misslyckas kan du ta reda på vad som är rotorsaken genom att undersöka `upgrade.log`. Om problemet inte är känt ännu rapporterar du det till kundsupport.
 
 ### Uppgraderingen kördes inte {#the-upgrade-did-not-run}
 
-Innan du startar förberedelsestegen måste du köra **källa** först genom att köra den med kommandot Java™ -jar aem-quickstart.jar. Detta krävs för att säkerställa att filen quickstart.properties genereras korrekt. Om den saknas fungerar inte uppgraderingen. Du kan också kontrollera om filen finns genom att titta under `crx-quickstart/conf` i källinstansens installationsmapp. När du börjar AEM att uppgradera måste den också köras med kommandot Java™ -jar aem-quickstart.jar. Att starta från ett startskript startar inte AEM i uppgraderingsläge.
+Innan du startar förberedelsestegen måste du först köra instansen **source** genom att köra den med kommandot Java™ -jar aem-quickstart.jar. Detta krävs för att säkerställa att filen quickstart.properties genereras korrekt. Om den saknas fungerar inte uppgraderingen. Du kan också kontrollera om filen finns genom att titta under `crx-quickstart/conf` i källinstansens installationsmapp. När du börjar AEM att uppgradera måste den också köras med kommandot Java™ -jar aem-quickstart.jar. Att starta från ett startskript startar inte AEM i uppgraderingsläge.
 
 ### Paket och paket kunde inte uppdateras  {#packages-and-bundles-fail-to-update-}
 
-Om paketen inte installeras under uppgraderingen kommer de paket de innehåller inte heller att uppdateras. Den här kategorin av problem orsakas av felkonfigurering av datalagret. De ser också ut som **FEL** och **VARNING** meddelanden i error.log. Eftersom standardinloggningen i de flesta fall kan misslyckas kan du använda CRXDE direkt för att undersöka och hitta konfigurationsproblemen.
+Om paketen inte installeras under uppgraderingen kommer de paket de innehåller inte heller att uppdateras. Den här kategorin av problem orsakas av felkonfigurering av datalagret. De visas också som **ERROR**- och **WARN**-meddelanden i error.log. Eftersom standardinloggningen i de flesta fall kan misslyckas kan du använda CRXDE direkt för att undersöka och hitta konfigurationsproblemen.
 
 ### Vissa AEM byter inte till aktivt läge {#some-aem-bundles-are-not-switching-to-the-active-state}
 
 Om det inte finns några paket som kan startas kontrollerar du om det finns några beroenden som inte är nöjda.
 
-Om det här problemet uppstår men baseras på en misslyckad paketinstallation som ledde till att paket inte uppgraderas, kommer de att anses vara inkompatibla för den nya versionen. Mer information om hur du felsöker detta finns i **Paket och paket kunde inte uppdateras** ovan.
+Om det här problemet uppstår men baseras på en misslyckad paketinstallation som ledde till att paket inte uppgraderas, kommer de att anses vara inkompatibla för den nya versionen. Mer information om hur du felsöker detta finns i **Paket och paket som inte kan uppdateras** ovan.
 
 Vi rekommenderar också att du jämför paketlistan för en ny AEM 6.5-instans med den uppgraderade instansen för att identifiera de paket som inte uppgraderats. Detta ger en närmare beskrivning av vad du ska söka efter i `error.log`.
 
@@ -165,19 +165,19 @@ Det är också bäst att kontrollera om den ändring som orsakade problemet var 
 
 Om det finns vissa gränssnittsfunktioner som inte fungerar som de ska efter uppgraderingen bör du först kontrollera om gränssnittet har anpassats. Vissa strukturer kan ha ändrats och övertäckningen kan behöva uppdateras eller vara föråldrad.
 
-Kontrollera sedan om det finns JavaScript-fel som kan spåras till anpassade tillägg som är kopplade till klientbibliotek. Samma sak kan gälla för anpassad CSS som kan orsaka problem med den AEM layouten.
+Kontrollera sedan om det finns några JavaScript-fel som kan spåras till anpassade tillägg som är kopplade till klientbibliotek. Samma sak kan gälla för anpassad CSS som kan orsaka problem med den AEM layouten.
 
-Slutligen kontrollerar du om JavaScript inte kan hantera en felkonfiguration. Detta är vanligtvis fallet med felaktigt inaktiverade tillägg.
+Slutligen kontrollerar du om JavaScript inte kan hantera några felkonfigurationer. Detta är vanligtvis fallet med felaktigt inaktiverade tillägg.
 
 ### Felfungerande anpassade komponenter, mallar eller gränssnittstillägg {#malfunctioning-custom-components-templates-or-ui-extensions}
 
 Vanligtvis är orsaken till de här problemen densamma som för paket som inte har startats eller paket som inte installeras med den enda skillnaden att problemen börjar när komponenterna används.
 
-Ett sätt att hantera felaktig egen kod är att först utföra röktester för att identifiera orsaken. När du har hittat det kan du titta på rekommendationerna i det här [link] i artikeln om hur du åtgärdar dem.
+Ett sätt att hantera felaktig egen kod är att först utföra röktester för att identifiera orsaken. När du har hittat den kan du titta i rekommendationerna i det här [link]-avsnittet i artikeln för att se hur du kan åtgärda dem.
 
 ### Anpassningar saknas under /etc {#missing-customizations-under-etc}
 
-`/apps` och `/libs` hanteras väl av uppgraderingen, men ändringar i `/etc` kan behöva återställas manuellt från `/var/upgrade/PreUpgradeBackup` efter uppgradering. Kontrollera den här platsen för allt innehåll som behöver sammanfogas manuellt.
+`/apps` och `/libs` hanteras bra av uppgraderingen, men ändringar under `/etc` kan behöva återställas manuellt från `/var/upgrade/PreUpgradeBackup` efter uppgraderingen. Kontrollera den här platsen för allt innehåll som behöver sammanfogas manuellt.
 
 ### Analyserar error.log och upgrade.log {#analyzing-the-error.log-and-upgrade.log}
 
@@ -191,7 +191,7 @@ grep -v UnrelatedErrorString
 
 Vissa felmeddelanden kanske inte är omedelbart förklarande. I det här fallet kan det vara lättare att förstå var felet uppstod om man tittar i sammanhanget. Du kan avgränsa felet med:
 
-* `grep -B` för att lägga till rader före felet,
+* `grep -B` för att lägga till rader före felet;
 
 eller
 

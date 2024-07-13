@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Vad är Tom Dag 2? {#what-is-tough-day}
 
-&quot;Tough Day 2&quot; är ett program som gör att du kan stresstesta gränserna för din AEM. Den kan köras direkt med testsviten eller konfigureras för att passa dina testbehov. Du kan titta [den här inspelningen](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) för en presentation av ansökan.
+&quot;Tough Day 2&quot; är ett program som gör att du kan stresstesta gränserna för din AEM. Den kan köras direkt med testsviten eller konfigureras för att passa dina testbehov. Du kan titta på [den här inspelningen](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2017/aem-toughday2-stress-testing-benchmarking-tool.html) om du vill se en presentation av programmet.
 
 >[!CAUTION]
 >
@@ -26,13 +26,13 @@ ht-degree: 0%
 
 ## Köra tuff dag 2 {#how-to-run-tough-day}
 
-Ladda ned den senaste versionen av Tough Day 2 från [Adobe Repository](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/). När du har laddat ned programmet kan du köra det direkt genom att ange `host` parameter. I följande exempel körs den AEM instansen lokalt så att `localhost` värde används:
+Hämta den senaste versionen av Tough Day 2 från [Adobe-databasen](https://repo1.maven.org/maven2/com/adobe/qe/toughday2/). När du har hämtat programmet kan du köra det direkt genom att ange parametern `host`. I följande exempel körs den AEM instansen lokalt så att värdet `localhost` används:
 
 ```xml
 java -jar toughday2.jar --host=localhost
 ```
 
-Standardsviten som körs när du lägger till parametrar får namnet `toughday`. Det innehåller följande användningsfall:
+Standardsviten som körs när parametrarna har lagts till heter `toughday`. Det innehåller följande användningsfall:
 
 * Skapa sidor och live-kopior för dem (inklusive rollouts)
 * Hämta hemsida
@@ -42,7 +42,7 @@ Standardsviten som körs när du lägger till parametrar får namnet `toughday`.
 
 Paketet innehåller 15 % skrivåtgärder och 85 % läsåtgärder.
 
-För att köra testerna av sviten installerar Tough Day 2 standardinnehållspaketet. Detta kan undvikas genom att ställa in `installsamplecontent`parameter till `false`men kom ihåg att du också bör ändra standardsökvägarna för de tester som du tänker köra. Om burken körs utan parametrar visar Tough Day 2 [hjälpinformation](/help/sites-developing/tough-day.md#getting-help).
+För att köra testerna av sviten installerar Tough Day 2 standardinnehållspaketet. Detta kan undvikas genom att ställa in parametern `installsamplecontent` på `false`, men kom ihåg att du också bör ändra standardsökvägarna för de tester som du tänker köra. Om burken körs utan parametrar visas [hjälpinformationen](/help/sites-developing/tough-day.md#getting-help) för Tough Day 2.
 
 Du kan använda programmet enligt följande mönster:
 
@@ -93,22 +93,22 @@ I tabellen nedan hittar du relevanta hjälpparametrar.
    <td> </td>
   </tr>
   <tr>
-   <td> —help —runmode/publishmode type=&lt;mode&gt;</td>
+   <td> —help —runmode/publishmode type=&lt;Mode&gt;</td>
    <td>Visar information om det angivna körnings- eller publiceringsläget.</td>
    <td><p>Java™ -jar toughday2.jar —help —runmode type=konstantload</p> <p>Java™ -jar toughday2.jar —help —publishmode type=interval</p> </td>
   </tr>
   <tr>
-   <td>—help —suite=&lt;suitename&gt;</td>
+   <td>—help —suite=&lt;SuiteName&gt;</td>
    <td>Listar alla tester av en given svit och deras respektive konfigurerbara egenskaper.</td>
    <td><br /> Java™ -jar toughday2.jar —help —suite=get_tests</td>
   </tr>
   <tr>
-   <td> —help —tag=&lt;tag&gt;</td>
+   <td> —help —tag=&lt;Tag&gt;</td>
    <td><br /> Visar alla objekt som har den angivna taggen.</td>
    <td>Java™ -jar toughday2.jar —help —tag=publish</td>
   </tr>
   <tr>
-   <td>—help &lt;testclass publisherclass=""&gt;</td>
+   <td>—help &lt;TestClass/PublisherClass&gt;</td>
    <td><br /> Visar alla konfigurerbara egenskaper för det angivna testet eller utgivaren.</td>
    <td><p>Java™ -jar toughday2.jar —help UploadPDFTest</p> <p>Java™ -jar toughday2.jar —help CSVPublisher</p> </td>
   </tr>
@@ -133,7 +133,7 @@ Du hittar de relevanta parametrarna i listan nedan:
 | `--port=<Val>` | Värdens port. | 4502 |  |
 | `--user=<Val>` | Användarnamnet för instansen. | admin |  |
 | `--password=<Val>` | Lösenord för den angivna användaren. | admin |  |
-| `--duration=<Val>` | Provningens varaktighet. Kan uttryckas i **s** sekunder, **m** minuter, **h** vår, och **d** säger. | 1d |  |
+| `--duration=<Val>` | Provningens varaktighet. Kan uttryckas i **s** sekunder, **m** minuter, **h** timmar och **d** dagar. | 1d |  |
 | `--timeout=<Val>` | Hur länge ett test ska köras innan det avbryts och markeras som misslyckat. Uttryckt i sekunder. | 180 |  |
 | `--suite=<Val>` | Värdet kan vara en eller en lista (avgränsad med kommatecken) med fördefinierade testsviter. | tughday |  |
 | `--configfile=<Val>` | Den målformade dynamiska konfigurationsfilen. |  |  |
@@ -149,7 +149,7 @@ Det enda sättet att spara en testkonfiguration är att kopiera den i yaml-forma
 
 ### Lägga till ett nytt test {#adding-a-new-test}
 
-Om du inte vill använda standardinställningen `toughday` du kan lägga till ett test med `add` parameter. Exemplen nedan visar hur du lägger till `CreateAssetTreeTest` testa antingen med kommandoradsparametrar eller en gul konfigurationsfil.
+Om du inte vill använda standardsviten `toughday` kan du lägga till ett test som du väljer med parametern `add`. I exemplen nedan visas hur du lägger till `CreateAssetTreeTest`-testet antingen med kommandoradsparametrar eller en gul konfigurationsfil.
 
 Genom att använda kommandoradsparametrar:
 
@@ -192,7 +192,7 @@ tests:
 
 ### Ändra testegenskaper {#changing-the-test-properties}
 
-Om du behöver ändra en eller flera av testegenskaperna kan du lägga till den egenskapen på kommandoraden eller i yaml-konfigurationsfilen. Om du vill visa alla tillgängliga testegenskaper lägger du till `--help <TestClass/PublisherClass>` parameter till kommandoraden, till exempel:
+Om du behöver ändra en eller flera av testegenskaperna kan du lägga till den egenskapen på kommandoraden eller i yaml-konfigurationsfilen. Om du vill visa alla tillgängliga testegenskaper lägger du till parametern `--help <TestClass/PublisherClass>` på kommandoraden, till exempel:
 
 ```xml
 java -jar toughday2.jar --help CreatePageTreeTest
@@ -200,7 +200,7 @@ java -jar toughday2.jar --help CreatePageTreeTest
 
 Kom ihåg att standardparametrarna Tough Day 2 skrivs över av standardkonfigurationsfilerna och kommandoradsparametrarna åsidosätter både konfigurationsfilerna och standardvärdena.
 
-Exemplen nedan visar hur du ändrar `template` -egenskapen för `CreatePageTreeTest` testa antingen med kommandoradsparametrar eller en gul konfigurationsfil.
+I exemplen nedan visas hur du ändrar egenskapen `template` för testet `CreatePageTreeTest` antingen med kommandoradsparametrar eller en gul konfigurationsfil.
 
 Genom att använda kommandoradsparametrar:
 
@@ -223,7 +223,7 @@ tests:
 
 I exemplen nedan visas hur du lägger till ett test i en fördefinierad svit och hur du konfigurerar om och exkluderar ett befintligt test från en fördefinierad svit.
 
-Du kan lägga till ett nytt test i en fördefinierad svit med `add` och ange målsviten.
+Du kan lägga till ett nytt test i en fördefinierad svit med parametern `add` och ange den fördefinierade målsviten.
 
 Genom att använda kommandoradsparametrar:
 
@@ -241,9 +241,9 @@ tests:
   - add : CreatePageTreeTest
 ```
 
-Befintliga tester i en viss programsvit kan även konfigureras om med `config`* *parameter. Ange också Suite-namnet och testets faktiska namn (inte testklassens namn). Testnamnet finns i `name` egenskapen för klassen Test. Mer information om hur du söker efter testegenskaper finns i [Ändra testegenskaper](/help/sites-developing/tough-day.md#changing-the-test-properties) -avsnitt.
+Befintliga tester i en given programsvit kan även konfigureras om med parametern `config`* *. Ange också Suite-namnet och testets faktiska namn (inte testklassens namn). Du hittar testnamnet i egenskapen `name` i testklassen. Mer information om hur du söker efter testegenskaper finns i avsnittet [Ändra testegenskaper](/help/sites-developing/tough-day.md#changing-the-test-properties).
 
-I exemplet nedan visas standardresursens namn för `CreatePageTreeTest` (namngiven `UploadAsset`) ändras till&quot;NewAsset&quot;.
+I exemplet nedan ändras standardresurstiteln för `CreatePageTreeTest` (med namnet `UploadAsset`) till NewAsset.
 
 Genom att använda kommandoradsparametrar:
 
@@ -263,7 +263,7 @@ tests:
       title : NewAsset
 ```
 
-Du kan också ta bort tester från fördefinierade sviter eller utgivare från standardkonfigurationen med hjälp av `exclude` parameter. Ange också Suite-namnet och testets faktiska namn (inte Test C) `lass` namn). Testnamnet finns i `name` egenskapen för klassen test. I exemplet nedan är `CreatePageTreeTest` (namngiven `UploadAsset`)-testet tas bort från den tuffa sviten.
+Du kan också ta bort test från fördefinierade sviter eller utgivare från standardkonfigurationen med hjälp av parametern `exclude`. Ange också namnet på sviten och det faktiska namnet på testet (inte namnet på Test C `lass`). Du kan hitta testnamnet i egenskapen `name` i testklassen. I exemplet nedan tas testet `CreatePageTreeTest` (med namnet `UploadAsset`) bort från toughday-sviten.
 
 Genom att använda kommandoradsparametrar:
 
@@ -285,7 +285,7 @@ tests:
 
 Dag 2 kan köras i något av följande lägen: **normal** och **konstant belastning**.
 
-The **normal** körningsläget har två parametrar:
+Körningsläget **normal** har två parametrar:
 
 * `concurrency` - samtidighet representerar antalet trådar som Tough Day 2 skapar för testkörning. På dessa trådar kommer tester att utföras tills antingen varaktigheten är slut eller tills det inte finns fler tester att köra.
 
@@ -306,13 +306,13 @@ runmode:
   concurrency : 200
 ```
 
-The **konstant belastning** körningsläget skiljer sig från det normala körningsläget genom att generera ett konstant antal startade testkörningar i stället för ett konstant antal trådar. Du kan ställa in inläsningen med parametern för körningsläge med samma namn.
+Det **konstanta load**-körningsläget skiljer sig från det normala körningsläget genom att generera ett konstant antal startade testkörningar i stället för ett konstant antal trådar. Du kan ställa in inläsningen med parametern för körningsläge med samma namn.
 
 ### Testa val {#test-selection}
 
-Testmarkeringsprocessen är densamma för båda körningslägena och följande: alla tester har en `weight` som avgör sannolikheten för körning i en tråd. Om du till exempel har två tester, ett med en vikt på 5 och det andra med en vikt på 10, är det två gånger mer troligt att det senare utförs än det första.
+Testmarkeringsprocessen är densamma för båda körningslägena och den ser ut så här: alla tester har en `weight`-egenskap som avgör sannolikheten för körning i en tråd. Om du till exempel har två tester, ett med en vikt på 5 och det andra med en vikt på 10, är det två gånger mer troligt att det senare utförs än det första.
 
-Dessutom kan tester ha en `count` -egenskap, som begränsar antalet körningar till ett givet tal. När detta antal har passerats kommer inga fler testkörningar att utföras. Alla testinstanser som redan körs kommer att slutföra körningen enligt konfigurationen. I följande exempel visas hur du lägger till de här parametrarna antingen på kommandoraden eller med hjälp av en dynamisk konfigurationsfil.
+Dessutom kan tester ha en `count`-egenskap, vilket begränsar antalet körningar till ett visst antal. När detta antal har passerats kommer inga fler testkörningar att utföras. Alla testinstanser som redan körs kommer att slutföra körningen enligt konfigurationen. I följande exempel visas hur du lägger till de här parametrarna antingen på kommandoraden eller med hjälp av en dynamisk konfigurationsfil.
 
 ```xml
 java -jar toughday2.jar --host=localhost --add CreateAssetTreeTest weight=5 --add CreatePageTreeTest weight=10 count=100 --runmode=normal concurrency=20
@@ -333,7 +333,7 @@ eller
 
 >[!NOTE]
 >
->På grund av parallella körningar kommer det faktiska antalet testkörningar inte att vara exakt den mängd som konfigurerats i `count` parameter. Förväntade en avvikelse som är proportionerlig till antalet pågående trådar (styrs av `concurrency parameter`).
+>På grund av parallella körningar kommer det faktiska antalet testkörningar inte att vara exakt den mängd som konfigurerats i parametern `count`. Förväntade en avvikelse i proportion till antalet pågående trådar (styrs av `concurrency parameter`).
 
 ### Torr körning {#dry-run}
 
@@ -349,7 +349,7 @@ Tough Day 2 outputs both test metrics and logs. Mer information finns i följand
 
 ### Testmått {#test-metrics}
 
-Tuff dag 2 rapporterar för närvarande nio testvärden som du kan utvärdera. Mätvärden med **&#42;** symbolen rapporteras endast efter lyckade körningar:
+Tuff dag 2 rapporterar för närvarande nio testvärden som du kan utvärdera. Mätvärden med symbolen **&#42;** rapporteras endast efter lyckade körningar:
 
 | **Namn** | **Beskrivning** |
 |---|---|
@@ -359,14 +359,14 @@ Tuff dag 2 rapporterar för närvarande nio testvärden som du kan utvärdera. M
 | Min&#42; | Testkörningens kortaste varaktighet. |
 | Max&#42; | Testkörningens längsta varaktighet. |
 | Median&#42; | Beräknad medianduration för alla testkörningar. |
-| Genomsnittlig&#42; | Beräknad genomsnittlig varaktighet för alla testkörningar. |
+| Genomsnitt &#42; | Beräknad genomsnittlig varaktighet för alla testkörningar. |
 | StdDev&#42; | Standardavvikelsen. |
 | 90p&#42; | 90-percentil. |
 | 99p&#42; | 99-percentil. |
 | 99.9p&#42; | 99,9 percentil. |
-| Reellt dataflöde&#42; | Antal körningar delat med förfluten körningstid. |
+| Reellt dataflöde &#42; | Antal körningar delat med förfluten körningstid. |
 
-Dessa mätvärden skrivs med hjälp av utgivare som kan läggas till med `add` parameter (på samma sätt som när du lägger till tester). Det finns för närvarande två alternativ:
+Dessa mått skrivs med hjälp av utgivare som kan läggas till med parametern `add` (på samma sätt som när du lägger till tester). Det finns för närvarande två alternativ:
 
 * **CSVPublisher** - utdata är en CSV-fil.
 * **ConsolePublisher** - utdata visas i konsolen.
@@ -375,10 +375,10 @@ Som standard är båda utgivare aktiverade.
 
 Det finns också två lägen där mätvärdena rapporteras:
 
-* The **enkel** publiceringsläge - Rapporterar resultaten från körningens början till publiceringspunkten.
-* The **intervall** publiceringsläge - Rapporterar resultaten i en given tidsram. Du kan ställa in tidsramen med **intervall** parameter för publiceringsläge.
+* Publiceringsläget **simple** - rapporterar resultatet från körningens början till publiceringspunkten.
+* Publiceringsläget **interval** - rapporterar resultatet i en given tidsram. Du kan ställa in tidsbildrutan med parametern **interval** för publiceringsläge.
 
-I följande exempel visas hur du konfigurerar `intervals` parametern antingen på kommandoraden eller med hjälp av en dynamisk konfigurationsfil.
+I följande exempel visas hur du konfigurerar parametern `intervals` antingen på kommandoraden eller genom att använda en dynamisk konfigurationsfil.
 
 Genom att använda kommandoradsparametrar:
 
@@ -401,9 +401,9 @@ publishmode:
 Tough Day 2 skapar en loggmapp i samma katalog som du körde Tough Day 2. Den här mappen innehåller två typer av loggar:
 
 * **toughday.log**: innehåller meddelanden som rör programtillståndet, felsökningsinformation och globala meddelanden.
-* **toughday_&lt;testname>.log**: meddelanden relaterade till det angivna testet.
+* **toughday_&lt;testname>.log**: meddelanden som är relaterade till det angivna testet.
 
-Loggarna skrivs inte över, efterföljande körningar lägger till meddelanden i de befintliga loggarna. Loggarna har flera nivåer. Mer information finns i [loglevel-parameter.](#global-parameters).
+Loggarna skrivs inte över, efterföljande körningar lägger till meddelanden i de befintliga loggarna. Loggarna har flera nivåer. Mer information finns i parametern [loglevel.](#global-parameters).
 
 <!--
 #### Example Usage {#example-usage}

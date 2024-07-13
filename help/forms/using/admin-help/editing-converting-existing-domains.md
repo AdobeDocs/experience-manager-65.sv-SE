@@ -26,7 +26,7 @@ Du kan ändra inställningarna för befintliga domäner på sidan Domänhanterin
 1. Klicka på namnet på den domän som ska redigeras.
 1. Om du vill ändra domännamnet ändrar du texten i rutan Namn.
 1. Om du vill ändra autentiseringsinformationen för ett företag eller en hybriddomän klickar du på motsvarande autentiseringsnamn längst ned på sidan. Ändra inställningarna på sidan Redigera autentisering. (Se [Autentiseringsinställningar](/help/forms/using/admin-help/configuring-authentication-providers.md#authentication-settings).)
-1. Om du vill ändra kataloginformationen för en företagsdomän klickar du på lämpligt katalognamn längst ned på sidan. Ändra inställningarna på sidan Redigera katalog efter behov. (Se [Lägga till kataloger eller anpassade SPI-filer](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
+1. Om du vill ändra kataloginformationen för en företagsdomän klickar du på lämpligt katalognamn längst ned på sidan. Ändra inställningarna på sidan Redigera katalog efter behov. (Se [Lägga till kataloger eller anpassade SPI:er](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
 1. Klicka på OK när du är klar med ändringarna.
 
 ## Konvertera en företagsdomän till en hybriddomän {#convert-an-enterprise-domain-to-a-hybrid-domain}
@@ -47,4 +47,4 @@ Du kan ändra inställningarna för befintliga domäner på sidan Domänhanterin
 1. Klicka på namnet på den hybriddomän som ska konverteras.
 1. Klicka på Konvertera till företagsdomän.
 1. Granska informationen om användar- och gruppdata och autentisering av användare och klicka på OK.
-1. Klicka på Lägg till katalog och konfigurera nödvändig kataloginformation. (Se [Lägga till kataloger eller anpassade SPI-filer](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)
+1. Klicka på Lägg till katalog och konfigurera nödvändig kataloginformation. (Se [Lägga till kataloger eller anpassade SPI:er](/help/forms/using/admin-help/configuring-directories.md#adding-directories-or-custom-spis).)

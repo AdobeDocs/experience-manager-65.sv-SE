@@ -1,5 +1,5 @@
 ---
-title: Skapa Java API QuickStart (SOAP) för tjänsten PDF
+title: Generera Java API QuickStart(SOAP) för PDF-tjänsten
 description: Använd tjänsten Generate PDF för att konvertera ett Microsoft Word-dokument till ett PDF-dokument, konvertera HTML-innehåll till ett PDF-dokument, konvertera ett PDF-dokument till en RTF-fil med Java API.
 contentOwner: admin
 content-type: reference
@@ -34,7 +34,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 ## Snabbstart (SOAP): Konvertera ett Microsoft Word-dokument till ett PDF-dokument med Java API {#quick-start-soap-mode-converting-a-microsoft-word-document-to-a-pdf-document-using-the-java-api}
 
-I följande kodexempel konverteras en Word-fil med namnet *Loan.doc* till ett PDF-dokument med namnet *Loan.pdf*. (Se [Konvertera Word-dokument till PDF-dokument](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents).)
+I följande kodexempel konverteras en Word-fil med namnet *Loan.doc* till ett PDF-dokument med namnet *Loan.pdf*. (Se [Konverterar Word-dokument till PDF-dokument](/help/forms/developing/converting-file-formats-pdf.md#converting-word-documents-to-pdf-documents).)
 
 ```java
  /*
@@ -148,7 +148,7 @@ I följande kodexempel konverteras en Word-fil med namnet *Loan.doc* till ett PD
 
 ## Snabbstart (SOAP): Konvertera HTML-innehåll till ett PDF-dokument med Java API {#quick-start-soap-mode-converting-html-content-to-a-pdf-document-using-the-java-api}
 
-I följande Java-kodexempel konverteras HTML-innehåll som finns på https://www.adobe.com till ett PDF-dokument med namnet *AdobeHTML.pdf*. (Se [Konvertera HTML-dokument till PDF-dokument](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents).)
+I följande Java-kodexempel konverteras HTML-innehåll som finns på https://www.adobe.com till ett PDF-dokument med namnet *AdobeHTML.pdf*. (Se [Konverterar HTML-dokument till PDF-dokument](/help/forms/developing/converting-file-formats-pdf.md#converting-html-documents-to-pdf-documents).)
 
 ```java
  /*
@@ -254,7 +254,7 @@ I följande Java-kodexempel konverteras HTML-innehåll som finns på https://www
 
 ## Snabbstart (SOAP): Konvertera ett PDF-dokument till en RTF-fil med Java API (SOAP) {#quick-start-soap-mode-converting-a-pdf-document-to-an-rtf-file-using-the-java-api-soap-mode}
 
-I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett RTF-dokument med namnet *Lån.rtf*. (Se [Konvertera PDF-dokument till andra format än bildformat](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats).)
+I följande kodexempel konverteras ett PDF-dokument med namnet *Loan.pdf* till ett RTF-dokument med namnet *Loan.rtf*. (Se [Konverterar PDF-dokument till format som inte är bildformat](/help/forms/developing/converting-file-formats-pdf.md#converting-pdf-documents-to-non-image-formats).)
 
 ```java
  /*

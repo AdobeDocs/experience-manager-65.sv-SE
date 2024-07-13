@@ -25,8 +25,8 @@ Kommentarsfunktionen används för att låta besökare (medlemmar) på den inlog
 
 Dokumentet beskriver:
 
-* Lägger till `Comments` till en sida.
-* Konfigurationsinställningar för `Comments` -komponenten.
+* Lägger till `Comments` på en sida.
+* Konfigurationsinställningar för komponenten `Comments`.
 
 >[!NOTE]
 >
@@ -34,33 +34,33 @@ Dokumentet beskriver:
 
 ### Lägga till kommentarer på en sida {#adding-comments-to-a-page}
 
-Lägga till en `Comments` -komponent till en sida i redigeringsläge använder du komponentwebbläsaren för att leta upp
+Om du vill lägga till en `Comments`-komponent på en sida i redigeringsläge använder du komponentwebbläsaren för att hitta
 
 * `Communities / Comments`
 
 och dra den till rätt plats på en sida, t.ex. en position i förhållande till funktionen som användarna kan kommentera på, eller helt enkelt längst ned på sidan.
 
-Nödvändig information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
+Mer information finns på [Grunderna för communitykomponenter](/help/communities/basics.md).
 
-När [nödvändiga bibliotek på klientsidan](/help/communities/essentials-comments.md#essentials-for-client-side) ingår så här `Comments` visas.
+När de [nödvändiga klientbiblioteken](/help/communities/essentials-comments.md#essentials-for-client-side) inkluderas visas `Comments`-komponenten på det här sättet.
 
 ![comments-component](assets/comments-component.png)
 
 >[!NOTE]
 >
->Bara en `Comments` -komponenten kan finnas på en sida. Observera att flera communityfunktioner redan innehåller kommentarer, t.ex. en blogg, kalender, forum, QnA och recensioner.
+>Det får bara finnas en `Comments`-komponent på en sida. Observera att flera communityfunktioner redan innehåller kommentarer, t.ex. en blogg, kalender, forum, QnA och recensioner.
 
 ### Konfigurera kommentarer {#configuring-comments}
 
-Markera den monterade `Comments` -komponenten som ska få åtkomst till och markera `Configure` -ikonen som öppnar redigeringsdialogrutan.
+Markera den monterade `Comments`-komponenten som du vill komma åt och välj ikonen `Configure` som öppnar redigeringsdialogrutan.
 
 ![konfigurera ikon](assets/configure.png)
 
-![kommentarinställningar](assets/commentssettings.png)
+![kommentarsinställningar](assets/commentssettings.png)
 
 #### Fliken Kommentarer {#comments-tab}
 
-Under **Kommentar** anger du hur besökarna ska skriva sina kommentarer.
+Under fliken **Kommentarer** anger du hur besökare ska ange kommentarer.
 
 * **Tillåt svar**
 
@@ -104,9 +104,9 @@ Under **Kommentar** anger du hur besökarna ska skriva sina kommentarer.
 
 #### Fliken Användarmoderering {#user-moderation-tab}
 
-Under **Användarmoderering** anger du hur de bokförda kommentarerna ska hanteras. Mer information finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
+Under fliken **Användarmoderering** anger du hur de publicerade kommentarerna ska hanteras. Mer information finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md).
 
-* **Före moderering**
+* **Före-moderering**
 
   Om det här alternativet är markerat måste kommentarerna godkännas innan de visas på en publiceringsplats. Standard är avmarkerat.
 
@@ -140,45 +140,45 @@ Under **Användarmoderering** anger du hur de bokförda kommentarerna ska hanter
 
 * **Flaggningsgräns**
 
-  Ange hur många gånger en kommentar måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **Modereringströskel**. Standardvärdet är 5.
+  Ange hur många gånger en kommentar måste flaggas innan den döljs för den offentliga vyn. Talet måste vara större än eller lika med **modereringströskeln**. Standardvärdet är 5.
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 
-Under **Sorteringsinställningar** anger du hur de bokförda kommentarerna ska sorteras när de visas.
+Under fliken **Sorteringsinställningar** anger du hur de bokförda kommentarerna ska sorteras när de visas.
 
 * **Sorteringsfält**
 
-  Dra ned för att välja något av `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed`, eller `Most Liked`.
+  Dra ned för att välja en av `Newest, Oldest, Last Updated, Most Viewed, Most Active, Most Followed` eller `Most Liked`.
 
 * **Sorteringsordning**
 
-  Dra ned för att välja något av `Ascending` eller `Descending`.
+  Dra ned för att välja en av `Ascending` eller `Descending`.
 
 ### Ändra till en anpassad kommentarstyp {#changing-to-a-custom-comment-type}
 
 Genom att ändra kommentarsresurstypen genererar inte längre kommentarsystemet en instans av en kommentar med standardinställningen, utan en som har anpassats (utökats) av utvecklarna.
 
-När de anpassade resurstyperna är kända anger du [Designläge](/help/sites-authoring/default-components-designmode.md) och dubbelklicka på den monterade `Comments` om du vill öppna en dialogruta med en extra flik.
+När de anpassade resurstyperna är kända anger du [designläge](/help/sites-authoring/default-components-designmode.md) och dubbelklickar på den monterade `Comments` -komponenten för att öppna en dialogruta med en extra flik.
 
-Under **Resurstyper** anger du anpassad resourceType för nya instanser av `Comments or Voting` komponenter:
+Under fliken **Resurstyper** anger du anpassad resourceType för nya instanser av komponenterna `Comments or Voting`:
 
 ![resurstyp](assets/resource-type.png)
 
-* **Resurstyp för kommentar**
+* **Resurstyp för kommentarer**
 
-  Navigera till resourceType för en utökad `comment` -komponent (en kommentar) i /apps. Exempel: `/apps/social/commons/components/hbs/comments/comment`
+  Navigera till resourceType för en utökad `comment`-komponent (en kommentar) i /apps. Exempel: `/apps/social/commons/components/hbs/comments/comment`
 
   Den här resursen identifierar den resourceType för den UGC som skapas när en besökare publicerar en kommentar.
 
 * **Resurstyp för röstning**
 
-  Navigera till resourceType för en utökad `voting` i /apps. Exempel: `/apps/social/components/hbs/voting`
+  Navigera till resourceType för en utökad `voting`-komponent i /apps. Exempel: `/apps/social/components/hbs/voting`
 
   Den här resursen identifierar resurstypen för användargenererat innehåll som skapas när en besökare publicerar en röst.
 
 * **Resurstyp för kommentarsystem**
 
-  Navigera till resourceType för en utökad `comments`-komponent (kommentarsystem) i /apps. Lämna tomt om inte sidmallen [dynamiskt inkluderar](/help/communities/scf.md#add-or-include-a-communities-component) kommentarsystemet i det underliggande skriptet i stället för att läggas till på sidan som en resurs (kommentarsnod). Läs mer om [`{{include}}` hjälpare](/help/communities/handlebars-helpers.md#include).
+  Navigera till resourceType för en utökad `comments`-komponent (kommentarsystemet) i /apps. Lämna tomt om inte sidmallen [dynamiskt inkluderar](/help/communities/scf.md#add-or-include-a-communities-component) kommentarsystemet i det underliggande skriptet, i stället för att läggas till på sidan som en resurs (kommentarsnod). Läs mer om [`{{include}}`-hjälpen](/help/communities/handlebars-helpers.md#include).
 
 ### Site Visitor Experience {#site-visitor-experience}
 
@@ -190,7 +190,7 @@ När den inloggade användaren har moderator- eller administratörsbehörighet k
 
 När besökaren är inloggad, beroende på konfigurationen, kan de
 
-* Publicera en ny kommentar
+* Post - en ny kommentar
 * Redigera en egen kommentar
 * Ta bort en egen kommentar
 * Flagga andras kommentarer
@@ -201,8 +201,8 @@ Besökare som inte är inloggade kan endast läsa publicerade kommentarer, över
 
 ### Ytterligare information {#additional-information}
 
-Mer information finns på [Grundläggande kommentarer](/help/communities/essentials-comments.md) för utvecklare.
+Mer information finns på sidan [Comments Essentials](/help/communities/essentials-comments.md) för utvecklare.
 
-Mer information om moderering av kommentarer finns i [Modererar användargenererat innehåll](/help/communities/moderate-ugc.md).
+Mer information om moderering av publicerade kommentarer finns i [Moderating User Generated Content](/help/communities/moderate-ugc.md) (Moderating User Generated Content).
 
-För översättning av bokförda kommentarer, se [Översätter användargenererat innehåll](/help/communities/translate-ugc.md).
+Mer information om översättning av bokförda kommentarer finns i [Översätta användargenererat innehåll](/help/communities/translate-ugc.md).

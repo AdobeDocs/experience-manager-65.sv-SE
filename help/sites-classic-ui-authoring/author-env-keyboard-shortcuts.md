@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Kortkommandon för konsoler{#keyboard-shortcuts-for-consoles}
 
-Olika kortkommandon finns i hela AEM. Vissa gäller användning av konsoler, andra för [sidredigering](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
+Olika kortkommandon finns i hela AEM. Vissa gäller för användning av konsoler, andra för [sidredigering](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
@@ -41,9 +41,9 @@ Olika kortkommandon finns i hela AEM. Vissa gäller användning av konsoler, and
   <tr>
    <td>Konsol</td>
    <td><strong><code>Shift-Double-Click</code></strong><br /> (på obligatorisk sida)</td>
-   <td>Öppna sidan i nytt fönster.<br /> <strong>Obs!</strong> detta är i drift om <a href="/help/sites-classic-ui-authoring/author-env-user-props.md">Användaregenskaper</a> är inställda på Enstaka fönster. Om Flera fönster är det här standardbeteendet.</td>
+   <td>Öppna sidan i nytt fönster.<br /> <strong>Obs!</strong> Det här fungerar om <a href="/help/sites-classic-ui-authoring/author-env-user-props.md">Användaregenskaperna</a> är inställda på Enstaka fönster. Om flera fönster är det här standardbeteendet.</td>
   </tr>
  </tbody>
 </table>
 
-Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [sidredigerare](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) för att skapa sidor.
+Du kan även använda olika kortkommandon för skrivbordsanvändare när du använder [sidredigeraren](/help/sites-classic-ui-authoring/classic-page-author-keyboard-shortcuts.md) för att skapa sidor.

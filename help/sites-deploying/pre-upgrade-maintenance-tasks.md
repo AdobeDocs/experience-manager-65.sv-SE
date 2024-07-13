@@ -44,21 +44,21 @@ När du utför uppgraderingen måste du utföra en databasmigrering, utöver con
 
 ## Helt AEM {#fully-back-up-aem}
 
-AEM bör säkerhetskopieras fullständigt innan uppgraderingen påbörjas. Säkerhetskopiera databasen, programinstallationen, datalagret och Mongo-instanserna om tillämpligt. Mer information om säkerhetskopiering och återställning av en AEM finns i [Säkerhetskopiering och återställning](/help/sites-administering/backup-and-restore.md).
+AEM bör säkerhetskopieras fullständigt innan uppgraderingen påbörjas. Säkerhetskopiera databasen, programinstallationen, datalagret och Mongo-instanserna om tillämpligt. Mer information om säkerhetskopiering och återställning av en AEM finns i [Säkerhetskopiera och återställ](/help/sites-administering/backup-and-restore.md).
 
 ## Säkerhetskopiera ändringar i /etc {#backup-changes-etc}
 
-Uppgraderingsprocessen gör det möjligt att underhålla och sammanfoga befintligt innehåll och befintliga konfigurationer från `/apps` och `/libs` sökvägar i databasen. För ändringar som gjorts i `/etc` sökväg, inklusive Context Hub-konfigurationer, är det ofta nödvändigt att återanvända dessa ändringar efter uppgraderingen. När uppgraderingen gör en säkerhetskopia av alla ändringar som den inte kan sammanfogas under `/var`rekommenderar Adobe att du säkerhetskopierar dessa ändringar manuellt innan du påbörjar uppgraderingen.
+Uppgraderingsprocessen gör det bra att underhålla och sammanfoga befintligt innehåll och befintliga konfigurationer från sökvägarna `/apps` och `/libs` i databasen. För ändringar som gjorts i sökvägen `/etc`, inklusive konfigurationer för kontextnav, är det ofta nödvändigt att tillämpa ändringarna igen efter uppgraderingen. När uppgraderingen gör en säkerhetskopia av alla ändringar som inte kan sammanfogas under `/var` rekommenderar Adobe att du säkerhetskopierar dessa ändringar manuellt innan du påbörjar uppgraderingen.
 
 ## Generera filen quickstart.properties {#generate-quickstart-properties}
 
-När du börjar AEM från filen jar `quickstart.properties` filen genereras under `crx-quickstart/conf`. Om AEM bara har startats med det tidigare startskriptet finns inte den här filen och uppgraderingen misslyckas. Kontrollera om filen finns och starta om AEM från filen jar om den inte finns.
+När du startar AEM från jar-filen genereras en `quickstart.properties`-fil under `crx-quickstart/conf`. Om AEM bara har startats med det tidigare startskriptet finns inte den här filen och uppgraderingen misslyckas. Kontrollera om filen finns och starta om AEM från filen jar om den inte finns.
 
 ## Konfigurera rensning av arbetsflöde och granskningslogg {#configure-wf-audit-purging}
 
-The `WorkflowPurgeTask` och `com.day.cq.audit.impl.AuditLogMaintenanceTask` uppgifter kräver separata OSGi-konfigurationer och kan inte fungera utan dem. Om de inte fungerar när en uppgift körs före uppgraderingen är det mest troligt att konfigurationer saknas. Se därför till att du lägger till OSGi-konfigurationer för dessa uppgifter eller tar bort dem helt och hållet från listan över uppgifter som ska optimeras före uppgraderingen om du inte vill köra dem. Dokumentation om hur du konfigurerar rensningsåtgärder för arbetsflöden finns på [Administrera arbetsflödesinstanser](/help/sites-administering/workflows-administering.md) och konfigurationen av underhållsaktiviteten för granskningsloggen finns på [Granskningslogghantering i AEM 6](/help/sites-administering/operations-audit-log.md).
+Aktiviteterna `WorkflowPurgeTask` och `com.day.cq.audit.impl.AuditLogMaintenanceTask` kräver separata OSGi-konfigurationer och kan inte fungera utan dem. Om de inte fungerar när en uppgift körs före uppgraderingen är det mest troligt att konfigurationer saknas. Se därför till att du lägger till OSGi-konfigurationer för dessa uppgifter eller tar bort dem helt och hållet från listan över uppgifter som ska optimeras före uppgraderingen om du inte vill köra dem. Dokumentation om hur du konfigurerar rensningsaktiviteter för arbetsflöden finns på [Administrera arbetsflödesinstanser](/help/sites-administering/workflows-administering.md) och konfigurationen av underhållsaktiviteter för granskningsloggar finns på [Underhåll för granskningslogg i AEM 6](/help/sites-administering/operations-audit-log.md).
 
-Mer information om rensning av arbetsflödes- och granskningslogg i CQ 5.6 och rensning av granskningslogg i AEM 6.0 finns i [Rensa arbetsflödes- och granskningsnoder](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html).
+Mer information om rensning av arbetsflödes- och granskningslogg på CQ 5.6 och rensning av granskningslogg på AEM 6.0 finns i [Rensa arbetsflödes- och granskningsnoder](https://helpx.adobe.com/experience-manager/kb/howtopurgewf.html).
 
 ## Installera, konfigurera och köra uppgifter före uppgradering {#install-configure-run-pre-upgrade-tasks}
 
@@ -90,11 +90,11 @@ You can find the packages at these locations:
 
 ### Så här använder du den {#how-to-use-it}
 
-The `PreUpgradeTasksMBean` OSGI-komponenten levereras förkonfigurerad med en lista över föruppgraderade underhållsåtgärder som kan köras alla samtidigt. Du kan konfigurera uppgifterna genom att följa proceduren nedan:
+OSGI-komponenten `PreUpgradeTasksMBean` levereras förkonfigurerad med en lista över underhållsuppgifter som kan köras alla på en gång. Du kan konfigurera uppgifterna genom att följa proceduren nedan:
 
 1. Gå till webbkonsolen genom att gå till *https://serveraddress:serverport/system/console/configMgr*
 
-1. Sök efter &quot;**föruppgraderingsuppgifter**&quot; och klicka sedan på den första matchande komponenten. Komponentens fullständiga namn är `com.adobe.aem.upgrade.prechecks.mbean.impl.PreUpgradeTasksMBeanImpl`
+1. Sök efter **föruppgraderingsuppgifter** och klicka sedan på den första matchande komponenten. Komponentens fullständiga namn är `com.adobe.aem.upgrade.prechecks.mbean.impl.PreUpgradeTasksMBeanImpl`
 
 1. Ändra listan över underhållsaktiviteter som måste köras enligt nedan:
 
@@ -117,7 +117,7 @@ Uppgiftslistan varierar beroende på vilket körningsläge som används för att
   <tr>
    <td><code>DataStoreGarbageCollectionTask</code></td>
    <td>crx2</td>
-   <td>Kör mark och svepning. Ta bort det här steget och kör för delade datalager<br /> förbered instanser manuellt eller korrekt före körning.</td>
+   <td>Kör mark och svepning. För delade datalager tar du bort det här steget och kör <br /> manuellt eller korrekt och förbereder instanser innan du kör.</td>
   </tr>
   <tr>
    <td><code>ConsistencyCheckTask</code></td>
@@ -149,30 +149,30 @@ Uppgiftslistan varierar beroende på vilket körningsläge som används för att
 
 >[!CAUTION]
 >
->The `DataStoreGarbageCollectionTask` anropar en DataStore-skräpinsamlingsåtgärd med markerings- och svepfasen om en sådan används. För distributioner som använder ett delat datalager måste du antingen konfigurera om det korrekt eller förbereda instansen för att undvika att objekt som refereras av en annan instans tas bort. Den här processen kan kräva att markeringsfasen körs manuellt på alla instanser innan den här föruppgraderingsaktiviteten aktiveras.
+>`DataStoreGarbageCollectionTask` anropar en skräpinsamlingsåtgärd för datastore med markerings- och svepfasen om den används. För distributioner som använder ett delat datalager måste du antingen konfigurera om det korrekt eller förbereda instansen för att undvika att objekt som refereras av en annan instans tas bort. Den här processen kan kräva att markeringsfasen körs manuellt på alla instanser innan den här föruppgraderingsaktiviteten aktiveras.
 
 ### Standardkonfiguration för hälsokontroller före uppgradering {#default-configuration-of-the-pre-upgrade-health-checks}
 
-The `PreUpgradeTasksMBeanImpl` OSGI-komponenten levereras förkonfigurerad med en lista med föruppgraderingstaggar för hälsokontroll som ska köras när `runAllPreUpgradeHealthChecks` metoden anropas:
+OSGI-komponenten `PreUpgradeTasksMBeanImpl` levereras förkonfigurerad med en lista över hälsokontrollstaggar som ska köras före uppgraderingen när `runAllPreUpgradeHealthChecks` -metoden anropas:
 
-* **system** - den tagg som används av hälsokontrollerna för granitunderhåll
+* **system** - taggen som används av hälsokontrollerna för granitunderhåll
 
 * **föruppgradering** - en anpassad tagg som kan läggas till i alla hälsokontroller som du kan ställa in att köra före en uppgradering
 
-Listan kan redigeras. Du kan använda plustecknet **(+)** och minus **(-)** förutom taggarna för att lägga till fler anpassade taggar eller ta bort standardtaggar.
+Listan kan redigeras. Du kan använda plus- **(+)** och minusknapparna **(-)** förutom taggarna för att lägga till fler anpassade taggar eller ta bort standardtaggar.
 
 **MBean-metoder**
 
-Den hanterade böldfunktionen är tillgänglig med [JMX Console](/help/sites-administering/jmx-console.md).
+Du kan komma åt funktionen för hanterade bönor med hjälp av [JMX-konsolen](/help/sites-administering/jmx-console.md).
 
 Du kan komma åt MBeans genom att:
 
 1. Gå till JMX-konsolen på *https://serveraddress:serverport/system/console/jmx*
 1. Sök efter **PreUpgradeTasks** och klicka på resultatet
 
-1. Välj en metod i **Operationer** avsnitt och markera **Anropa** i följande fönster.
+1. Välj en metod i avsnittet **Åtgärder** och välj **Anropa** i följande fönster.
 
-Nedan visas en lista med alla tillgängliga metoder som `PreUpgradeTasksMBeanImpl` exponeras:
+Nedan visas en lista med alla tillgängliga metoder som `PreUpgradeTasksMBeanImpl` visar:
 
 <table>
  <tbody>
@@ -204,12 +204,12 @@ Nedan visas en lista med alla tillgängliga metoder som `PreUpgradeTasksMBeanImp
   <tr>
    <td><code>isRunAllPreUpgradeTaskRunning()</code></td>
    <td>ACTION_INFO</td>
-   <td>Kontrollerar om <code>runAllPreUpgradeTasksmaintenance</code> aktiviteten körs.</td>
+   <td>Kontrollerar om aktiviteten <code>runAllPreUpgradeTasksmaintenance</code> körs.</td>
   </tr>
   <tr>
    <td><code>getAnyPreUpgradeTaskRunning()</code></td>
    <td>ACTION_INFO</td>
-   <td>Kontrollerar om någon underhållsuppgift som har slutförts före uppgraderingen körs och<br /> returnerar en array som innehåller namnen på de uppgifter som körs.</td>
+   <td>Kontrollerar om någon underhållsuppgift som körs före uppgraderingen körs och <br /> returnerar en matris som innehåller namnen på de aktiviteter som körs för tillfället.</td>
   </tr>
   <tr>
    <td><code>getPreUpgradeTaskLastRunTime(preUpgradeTaskName)</code></td>
@@ -224,12 +224,12 @@ Nedan visas en lista med alla tillgängliga metoder som `PreUpgradeTasksMBeanImp
   <tr>
    <td><code>runAllPreUpgradeHealthChecks(shutDownOnSuccess)</code></td>
    <td>ÅTGÄRD</td>
-   <td><p>Kör alla föruppgraderingskontroller och sparar statusen i en fil med namnet <code>preUpgradeHCStatus.properties</code> som är i den slingrande hemvägen. Om <code>shutDownOnSuccess</code> parametern är inställd på <code>true</code>AEM stängs av, men bara om alla hälsokontroller före uppgraderingen har statusen OK.</p> <p>Egenskapsfilen används som en förutsättning för framtida uppgraderingar<br /> och uppgraderingsprocessen avbryts om hälsokontrollen före uppgraderingen görs<br /> körningen misslyckades. Om du vill ignorera resultatet av föruppgraderingen<br /> hälsokontroller och starta uppgraderingen ändå kan du ta bort filen.</p> </td>
+   <td><p>Kör alla hälsokontroller som är före uppgraderingen och sparar deras status i en fil med namnet <code>preUpgradeHCStatus.properties</code> som finns i startsökvägen för sling. Om parametern <code>shutDownOnSuccess</code> är inställd på <code>true</code> stängs AEM av, men bara om alla hälsokontroller före uppgraderingen har statusen OK.</p> <p>Egenskapsfilen används som ett villkor för framtida uppgradering <br /> och uppgraderingsprocessen stoppas om hälsokontrollen <br /> som utförts före uppgraderingen misslyckades. Om du vill ignorera resultatet av föruppgraderingskontrollerna <br /> och starta uppgraderingen ändå, kan du ta bort filen.</p> </td>
   </tr>
   <tr>
    <td><code>detectUsageOfUnavailableAPI(aemVersion)</code></td>
    <td>ÅTGÄRD</td>
-   <td>Visar alla importerade paket som inte längre är uppfyllda när<br /> uppgradera till den angivna AEM. AEM måste vara<br /> anges som parameter.</td>
+   <td>Visar alla importerade paket som inte längre är uppfyllda när <br /> uppgraderar till den angivna AEM. AEM måste anges som parameter <br />.</td>
   </tr>
  </tbody>
 </table>
@@ -249,13 +249,13 @@ Nedan visas en lista med alla tillgängliga metoder som `PreUpgradeTasksMBeanImp
 >
 >Det här steget krävs bara om du uppgraderar från en version av AEM 5. Den kan hoppas över helt och hållet för uppgraderingar från äldre AEM 6-versioner.
 
-Skräddarsytt sätt `LoginModules` har konfigurerats för autentisering på databasnivå och har ändrats i Apache Oak.
+Det sätt som anpassade `LoginModules` konfigureras för autentisering på databasnivå har ändrats i Apache Oak på ett fundamentalt sätt.
 
-I AEM versioner som använde CRX2-konfiguration placerades i `repository.xml` filen, medan den från och med AEM 6 görs i Apache Felix JAAS Configuration Factory-tjänsten via webbkonsolen.
+I AEM som använde CRX2-konfiguration placerades den i filen `repository.xml`, medan den från och med AEM 6 görs i tjänsten Apache Felix JAAS Configuration Factory via webbkonsolen.
 
 Alla befintliga konfigurationer måste därför inaktiveras och återskapas för Apache Oak efter uppgraderingen.
 
-Inaktivera anpassade moduler som definierats i JAAS-konfigurationen för `repository.xml`måste du redigera konfigurationen för att kunna använda standardinställningen `LoginModule`, som i följande exempel:
+Om du vill inaktivera de anpassade moduler som definierats i JAAS-konfigurationen för `repository.xml` måste du redigera konfigurationen så att standardvärdet `LoginModule` används, som i följande exempel:
 
 ```xml
 <Security >
@@ -278,7 +278,7 @@ Inaktivera anpassade moduler som definierats i JAAS-konfigurationen för `reposi
 >
 >Mer information finns i [Autentisering med modulen för extern inloggning](https://jackrabbit.apache.org/oak/docs/security/authentication/externalloginmodule.html).
 >
->Ett exempel på `LoginModule` konfiguration i AEM 6, se [Konfigurera LDAP med AEM 6](/help/sites-administering/ldap-config.md).
+>Ett exempel på `LoginModule`-konfiguration i AEM 6 finns i [Konfigurera LDAP med AEM 6](/help/sites-administering/ldap-config.md).
 
 ## Ta bort uppdateringar från katalogen /install {#remove-updates-install-directory}
 
@@ -286,7 +286,7 @@ Inaktivera anpassade moduler som definierats i JAAS-konfigurationen för `reposi
 >
 >Ta endast bort paket från katalogen crx-quickstart/install när AEM stängts. Det här steget är ett av de sista innan du startar uppgraderingsproceduren på plats.
 
-Ta bort alla servicepaket, funktionspaket eller snabbkorrigeringar som distribuerats via `crx-quickstart/install` på det lokala filsystemet. På så sätt förhindras oavsiktlig installation av gamla snabbkorrigeringar och servicepaket ovanpå den nya AEM-versionen när uppdateringen har slutförts.
+Ta bort alla Service Pack, funktionspaket eller snabbkorrigeringar som har distribuerats via katalogen `crx-quickstart/install` i det lokala filsystemet. På så sätt förhindras oavsiktlig installation av gamla snabbkorrigeringar och servicepaket ovanpå den nya AEM-versionen när uppdateringen har slutförts.
 
 ## Stoppa alla väntelägesförekomster i kallt läge {#stop-tarmk-coldstandby-instance}
 
@@ -302,7 +302,7 @@ Inaktivera alla schemalagda OSGi-jobb som ingår i programkoden.
 >
 >Detta steg är endast nödvändigt för bensinanläggningar
 
-Om du använder tarMK bör du köra Revision Cleanup offline innan du uppgraderar. Detta gör att databasmigreringssteget och efterföljande uppgraderingsuppgifter körs mycket snabbare och hjälper till att säkerställa att rensning av onlineändringar kan utföras korrekt när uppgraderingen har slutförts. Mer information om hur du kör funktionen för borttagning av offlinerevision finns i [Utför rensning av offlineredigering](/help/sites-deploying/storage-elements-in-aem-6.md#performing-offline-revision-cleanup).
+Om du använder tarMK bör du köra Revision Cleanup offline innan du uppgraderar. Detta gör att databasmigreringssteget och efterföljande uppgraderingsuppgifter körs mycket snabbare och hjälper till att säkerställa att rensning av onlineändringar kan utföras korrekt när uppgraderingen har slutförts. Information om hur du kör rensning av offlineredigering finns i [Utför rensning av offlineredigering](/help/sites-deploying/storage-elements-in-aem-6.md#performing-offline-revision-cleanup).
 
 ## Kör skräpinsamling för datastore {#execute-datastore-garbage-collection}
 
@@ -310,7 +310,7 @@ Om du använder tarMK bör du köra Revision Cleanup offline innan du uppgradera
 >
 >Det här steget är bara nödvändigt för instanser som kör crx3
 
-När du har kört revisionsrensning på CRX3-instanser bör du köra Datastore Garbage Collection för att ta bort alla blobbar som inte refereras i datalagret. Instruktioner finns i dokumentationen om [Skräpinsamling för datalager](/help/sites-administering/data-store-garbage-collection.md).
+När du har kört revisionsrensning på CRX3-instanser bör du köra Datastore Garbage Collection för att ta bort alla blobbar som inte refereras i datalagret. Instruktioner finns i dokumentationen om [skräpinsamlingen för datalagret](/help/sites-administering/data-store-garbage-collection.md).
 
 ## Uppgradera databasschemat om det behövs {#upgrade-the-database-schema-if-needed}
 
@@ -323,7 +323,7 @@ Om du vill förhindra att ett sådant scenario inträffar uppgraderar du schemat
 1. Stäng den AEM som måste uppgraderas.
 1. Uppgradera databasschemat. Läs dokumentationen för din databastyp för att se vilka verktyg som krävs för att uppnå resultatet.
 
-   Mer information om hur Oak hanterar schemauppgraderingar finns i [den här sidan på Apache-webbplatsen](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade).
+   Mer information om hur Oak hanterar schemauppgraderingar finns på [den här sidan på Apache-webbplatsen](https://jackrabbit.apache.org/oak/docs/nodestore/document/rdb-document-store.html#upgrade).
 
 1. Fortsätt med AEM.
 

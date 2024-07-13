@@ -35,31 +35,31 @@ Varje steg förklaras mer ingående i resten av detta avsnitt.
 
 ### Installera IntelliJ IDEA {#install-intellij-idea}
 
-Hämta IntelliJ IDEA från [nedladdningssidan på JetBrains](https://www.jetbrains.com/idea/download/).
+Hämta IntelliJ IDEA från [hämtningssidan på JetBrains](https://www.jetbrains.com/idea/download/).
 
 Följ sedan installationsanvisningarna på den sidan.
 
 ### Konfigurera ditt AEM baserat på Maven {#set-up-your-aem-project-based-on-maven}
 
-Konfigurera sedan projektet med Maven enligt beskrivningen i [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+Konfigurera sedan projektet med Maven enligt beskrivningen i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
-För att börja arbeta med AEM projekt i IntelliJ IDEA är grundinställningarna i [Komma igång om 5 minuter](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) är tillräckligt.
+Om du vill börja arbeta med AEM projekt i IntelliJ IDEA räcker grundinställningen i [Komma igång om 5 minuter](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
 
 ### Förbered JSP-stöd för IntelliJ IDEA {#prepare-jsp-support-for-intellij-idea}
 
 IntelliJ IDEA kan även ge stöd vid arbete med JSP, till exempel:
 
 * automatisk komplettering av taggbibliotek
-* medvetenhet om objekt som definieras av `<cq:defineObjects />` och `<sling:defineObjects />`
+* medvetenhet om objekt som definierats av `<cq:defineObjects />` och `<sling:defineObjects />`
 
-För att det ska fungera, följ instruktionerna på [Så här arbetar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) in [Skapa AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
+För att det ska fungera följer du anvisningarna i [Så här fungerar du med JSP:er](/help/sites-developing/ht-projects-maven.md#how-to-work-with-jsps) i [Så här skapar du AEM projekt med Apache Maven](/help/sites-developing/ht-projects-maven.md).
 
 ### Importera projektet Maven {#import-the-maven-project}
 
-1. Öppna **Importera** i IntelliJ IDEA genom att
+1. Öppna dialogrutan **Importera** i IntelliJ IDEA av
 
    * markera **Importera projekt** på välkomstskärmen om du inte har något projekt öppet än
-   * markera **Arkiv > Importera projekt** på huvudmenyn
+   * välja **Arkiv > Importera projekt** på huvudmenyn
 
 1. Välj POM-filen för projektet i dialogrutan Importera.
 
@@ -85,20 +85,20 @@ Följande steg är nödvändiga för att felsöka JSP:er med IntelliJ IDEA
 
 #### Konfigurera en webbaspekt i projektet {#set-up-a-web-facet-in-the-project}
 
-IntelliJ IDEA måste förstå var JSP:er för felsökning ska hittas. Eftersom IDEA inte kan tolka `content-package-maven-plugin` -inställningar måste den konfigureras manuellt.
+IntelliJ IDEA måste förstå var JSP:er för felsökning ska hittas. Eftersom IDEA inte kan tolka inställningarna för `content-package-maven-plugin` måste de konfigureras manuellt.
 
 1. Gå till **Arkiv > Projektstruktur**
-1. Välj **Innehåll** modul
-1. Klicka **+** ovanför listan med moduler och välj **Webb**
-1. Som webbresurskatalog väljer du `content/src/main/content/jcr_root subdirectory` av ditt projekt enligt skärmbilden nedan.
+1. Markera modulen **Innehåll**
+1. Klicka på **+** ovanför listan med moduler och välj **Webb**
+1. Som webbresurskatalog väljer du `content/src/main/content/jcr_root subdirectory` för ditt projekt enligt skärmbilden nedan.
 
 ![chlimage_1-48](assets/chlimage_1-48a.png)
 
 #### Installera JSR45 support-plugin {#install-the-jsr-support-plugin}
 
-1. Gå till **Plugins** i IntelliJ IDEA-inställningarna
-1. Navigera till **JSR45-integrering** Plugin-program och markera kryssrutan bredvid det
-1. Klicka **Använd**
+1. Gå till rutan **Plugins** i IntelliJ IDEA-inställningarna
+1. Navigera till plugin-programmet **JSR45-integrering** och markera kryssrutan bredvid det
+1. Klicka på **Använd**
 1. Starta om IntelliJ IDEA när du ombeds att
 
 ![chlimage_1-49](assets/chlimage_1-49a.png)
@@ -106,11 +106,11 @@ IntelliJ IDEA måste förstå var JSP:er för felsökning ska hittas. Eftersom I
 #### Konfigurera en felsökningsprofil {#configure-a-debug-profile}
 
 1. Gå till **Kör > Redigera konfigurationer**
-1. Träffa **+** och markera **JSR45-fjärr**
-1. Välj **Konfigurera** nästa **Programserver** och konfigurera en allmän server
+1. Tryck på **+** och välj **JSR45 Remote**
+1. I konfigurationsdialogrutan väljer du **Konfigurera** bredvid **Programserver** och konfigurerar en allmän server
 1. Ange en lämplig URL för startsidan om du vill öppna en webbläsare när du startar felsökningen
-1. Ta bort alla **Före start** uppgifter om du använder automatisk synkronisering eller konfigurerar lämpliga Maven-uppgifter om du inte gör det
-1. På **Start/anslutning** ruta, justera porten om det behövs
+1. Ta bort alla **Före start**-uppgifter om du använder VLT-autosynkronisering, eller konfigurera lämpliga Maven-uppgifter om du inte gör det
+1. Justera porten om det behövs i rutan **Start/Anslutning**
 1. Kopiera de kommandoradsargument som IntelliJ IDEA föreslår
 
 ![chlimage_1-50](assets/chlimage_1-50a.png) ![chlimage_1-51](assets/chlimage_1-51a.png)
@@ -142,7 +142,7 @@ CQ_JVM_OPTS="$CQ_JVM_OPTS -Xdebug -Xrunjdwp:transport=dt_socket,address=58242,su
 
 Du är nu redo att felsöka JSP:er i AEM.
 
-1. Välj **Kör > Felsök > Din felsökningsprofil**
+1. Välj **Kör > Felsök > Felsökningsprofil**
 1. Ange brytpunkter i komponentkoden
 1. Öppna en sida i webbläsaren
 
@@ -150,4 +150,4 @@ Du är nu redo att felsöka JSP:er i AEM.
 
 ### Felsökningspaket med IntelliJ IDEA {#debugging-bundles-with-intellij-idea}
 
-Kod i paket kan felsökas med en allmän fjärrfelsökningsanslutning som standard. Du kan följa [Jetbrain-dokumentation om fjärrfelsökning](https://www.jetbrains.com/help/idea/remote-debugging-with-product.html#remote-interpreter).
+Kod i paket kan felsökas med en allmän fjärrfelsökningsanslutning som standard. Du kan följa [Jetbrain-dokumentationen för fjärrfelsökning](https://www.jetbrains.com/help/idea/remote-debugging-with-product.html#remote-interpreter).

@@ -34,7 +34,7 @@ Följ de här stegen för att konfigurera AEM Mobile och på så sätt låta anv
 
 För att komma igång med AEM Mobile måste du:
 
-* **Begär en API-nyckel**: För att få åtkomst till On Demand Services API måste du begära en API-nyckel. Om du vill begära API-nyckeln fyller du i [PDF form](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html). Skicka det ifyllda formuläret till Adobe Developer Support: [wwds@adobe.com](mailto:wwds@adobe.com)
+* **Begär en API-nyckel**: Om du vill komma åt API:t för behovsstyrda tjänster måste du begära en API-nyckel. Om du vill begära API-nyckeln fyller du i formuläret [PDF](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html). Skicka det ifyllda formuläret till Adobe Developer Support: [wwds@adobe.com](mailto:wwds@adobe.com)
 
 * **Generera enhets-ID och enhetstoken**: När du har fått din API-nyckel kan du generera enhets-ID och enhetstoken. Gå till `https://aex.aemmobile.adobe.com` och gör följande:
 
@@ -42,7 +42,7 @@ För att komma igång med AEM Mobile måste du:
    * Logga in med en Adobe ID som du har lagt till i ett AEM Mobile-projekt med följande behörigheter (se stegen nedan för att skapa ett projekt)
 
       * Administration > Hantera projekt och användare
-      * Innehåll > Lägg till och redigera innehåll, ta bort innehåll, visa innehåll, publicera innehåll
+      * Innehåll > Lägg till och redigera innehåll, ta bort innehåll, visa innehåll, Publish-innehåll
 
 Om alla villkor uppfylls genereras ett enhets-ID och en enhetstoken.
 
@@ -54,17 +54,17 @@ Om alla villkor uppfylls genereras ett enhets-ID och en enhetstoken.
 
 När du skapar ett projekt anger du inställningar för de plattformar du har som mål: iOS, Android™, Windows och Desktop Web Viewer. Många av de projektinställningar du anger påverkar programmets beteende.
 
-Om du vill skapa ett projekt måste du logga in på On-Demand Services-portalen med en Adobe ID som har rollen Master Admin. Redigering av ett projekt kräver antingen en huvudadministratörsroll eller en användarroll med en **Hantera projekt och användare** behörighet.
+Om du vill skapa ett projekt måste du logga in på On-Demand Services-portalen med en Adobe ID som har rollen Master Admin. Redigering av ett projekt kräver antingen en huvudadministratörsroll eller en användarroll med behörigheten **Hantera projekt och användare**.
 
 >[!NOTE]
 >
->Om du vill veta mer om hur du skapar projekt i AEM Mobile klickar du på [här](https://helpx.adobe.com/digital-publishing-solution/help/creating-projects.html).
+>Klicka [här](https://helpx.adobe.com/digital-publishing-solution/help/creating-projects.html) om du vill veta mer om hur du skapar projekt i AEM Mobile.
 
 ## Konfigurera en AEM Mobile Connector {#configuring-an-aem-mobile-connector}
 
 AEM konfigurering omfattar följande steg för kopplingskonfigurationen. När AEM Mobile Connector-konfigurationen är klar kan användaren konfigurera användargrupper och behörigheter.
 
-AEM Mobile On-Demand-kontakten används för att binda AEM Mobile-hanterat innehåll med Adobe Experience Manager Mobile On-Demand-tjänster. Detta gör att innehållsförfattare kan skapa och hantera material för mobilapplikationer med AEM verktyg samtidigt som de använder AEM Mobile On-Demand-tjänster för enkel distribution av mobilmaterial.
+AEM Mobile On-Demand-kontakten används för att binda AEM Mobile-hanterat innehåll med Adobe Experience Manager Mobile On-Demand-tjänster. Detta gör att innehållsförfattare kan skapa och hantera material för mobilapplikationer med hjälp av AEM verktyg och AEM Mobile On-Demand-tjänster för enkel distribution av mobilmaterial.
 
 >[!NOTE]
 >
@@ -77,9 +77,9 @@ Slutför konfigurationsstegen för att AEM Mobile-integreringarna ska fungera ko
 1. Gå till konfiguration av OSGI-tjänster
 
    1. AEM > Verktyg > Åtgärder > Webbkonsol
-   1. Bläddra eller sök efter ***Experience Manager Mobile On-demand Services Client (tidigare Adobe Digital Publishing Solution Client)***
+   1. Bläddra eller sök efter ***Experience Manager Mobile On Demand Services Client (var Adobe Digital Publishing Solution Client)***
 
-1. Redigera ***Klient för Experience Manager Mobile On-demand-tjänster***
+1. Redigera klienten för ***Experience Manager Mobile On-demand-tjänster***
 
    1. **(Obligatoriskt)** Ange obligatoriska fält:
 
@@ -97,7 +97,7 @@ Slutför konfigurationsstegen för att AEM Mobile-integreringarna ska fungera ko
 
 1. Gå till Cloud Service.
 
-   1. AEM > Verktyg > Distribution> [CloudServices](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html). Bläddra eller sök efter ***Adobe Experience Manager Mobile On-demand-tjänster***
+   1. AEM > Verktyg > Distribution > [CloudServices](http://localhost:4502/libs/cq/core/content/tools/cloudservices.html). Bläddra eller sök efter ***Adobe Experience Manager Mobile On-demand-tjänster***
 
 1. Välj ***Konfigurera nu*** eller ***Visa konfigurationer*** och välj ikonen Lägg till konfiguration.
 
@@ -106,7 +106,7 @@ Slutför konfigurationsstegen för att AEM Mobile-integreringarna ska fungera ko
    1. Ange en titel och ett namn
    1. Ange enhets-ID
    1. Ange enhetstoken
-   1. Välj ***Testa enhetskonfiguration*** så att du kan validera de angivna värdena
+   1. Välj ***Testa enhetskonfiguration*** så att du kan validera angivna värden
    1. Välj OK
 
 ## Lägga till AEM Mobile användarroller och tilldela behörigheter {#adding-aem-mobile-user-roles-and-assigning-permissions}
@@ -119,7 +119,7 @@ I AEM Mobile apputveckling finns det tre olika roller:
 * Developer
 * Författare
 
-Mer information om hur du skapar roller med olika behörigheter, t.ex. för att skapa och publicera innehåll, finns i [Skapa användarroller och bevilja åtkomst](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) i AEM Mobile Help.
+Mer information om hur du skapar roller med olika behörigheter, t.ex. för att skapa och publicera innehåll, får du om du klickar på [Skapa användarroller och bevilja åtkomst](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) i AEM Mobile-hjälpen.
 
 >[!NOTE]
 >
@@ -127,7 +127,7 @@ Mer information om hur du skapar roller med olika behörigheter, t.ex. för att 
 >
 >Se [AEM Mobile Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
-När du är klar med att skapa roller med olika behörigheter, t.ex. för att skapa och publicera innehåll, se [**Konfigurera användar- och användargrupper**](/help/mobile/aem-mobile-configure-users.md). Om du gör det kan det hjälpa dig att konfigurera användare och grupper så att de kan hantera redigering och hantering av dina mobilappar.
+När du är klar med att skapa roller med olika behörigheter, t.ex. för att bygga appar eller för att skapa och publicera innehåll, se [**Konfigurera användar- och användargrupper**](/help/mobile/aem-mobile-configure-users.md). Om du gör det kan det hjälpa dig att konfigurera användare och grupper så att de kan hantera redigering och hantering av dina mobilappar.
 
 ### Ytterligare resurser {#additional-resources}
 
@@ -138,4 +138,4 @@ Mer information om de två andra rollerna och ansvarsområdena för att skapa en
 
 >[!NOTE]
 >
->Information om hur du förhandsgranskar appinnehållet, inklusive bläddringssidor och artiklar, finns i [Förhandsgranska med Preflight](/help/mobile/aem-mobile-manage-ondemand-services.md).
+>Mer information om hur du förhandsgranskar appinnehållet, inklusive bläddringssidor och artiklar, finns i [Förhandsgranska med preflight](/help/mobile/aem-mobile-manage-ondemand-services.md).

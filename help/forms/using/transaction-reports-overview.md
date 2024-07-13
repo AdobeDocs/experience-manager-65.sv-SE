@@ -39,7 +39,7 @@ En transaktion finns kvar i bufferten under en angiven period (Tömningstid för
 
 ## Topologi som stöds {#supported-topology}
 
-Transaktionsrapporter finns endast för AEM Forms i OSGi-miljö. Det stöder författarpublicering, författarbearbetning-publicering och endast bearbetningstopologier. Till exempel finns topologier i [Arkitektur och driftsättningstopologier för AEM Forms](../../forms/using/transaction-reports-overview.md).
+Transaktionsrapporter finns endast för AEM Forms i OSGi-miljö. Det stöder författarpublicering, författarbearbetning-publicering och endast bearbetningstopologier. Exempel: topologier, se [Arkitektur och distributionstopologier för AEM Forms](../../forms/using/transaction-reports-overview.md).
 
 Transaktionsantalet replikeras baklänges från publiceringsinstanser till författare eller bearbetningsinstanser. En indikativ topologi för författarpublicering visas nedan:
 
@@ -52,7 +52,7 @@ Transaktionsantalet replikeras baklänges från publiceringsinstanser till förf
 ### Riktlinjer för att använda transaktionsrapporter {#guidelines-for-using-transaction-reports}
 
 * Inaktivera transaktionsrapporter för alla författarinstanser som rapporter om författarinstanser inkluderar transaktioner som registrerats under redigeringsaktiviteter.
-* Aktivera **Visa endast transaktioner från publicering** på författarinstansen för att visa kumulativa transaktioner från alla publiceringsinstanser. Du kan också visa transaktionsrapporter för varje publiceringsinstans för faktiska transaktioner endast för den aktuella publiceringsinstansen.
+* Aktivera alternativet **Visa transaktioner från endast publicering** på författarinstansen om du vill visa kumulativa transaktioner från alla publiceringsinstanser. Du kan också visa transaktionsrapporter för varje publiceringsinstans för faktiska transaktioner endast för den aktuella publiceringsinstansen.
 * Använd inte författarinstanser för att köra arbetsflöden och bearbeta dokument.
 * Innan du använder transaktionsrapportering måste du se till att omvänd replikering är aktiverat för alla publiceringsinstanser om du har en tologi med publiceringsservrar.
 * Transaktionsdata återreplikeras från en publiceringsinstans till endast motsvarande författare eller bearbetningsinstans. Författaren eller bearbetningsinstansen kan inte replikera data till en annan instans. Om du till exempel har en topologi för redigeringsbearbetning/publicering, replikeras aggregerade transaktionsdata bara till bearbetningsinstansen.

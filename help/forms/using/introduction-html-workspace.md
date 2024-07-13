@@ -25,7 +25,7 @@ AEM Forms arbetsyta är kompatibel med fler enheter och formfaktorer. Den möjli
 
 ![html-ws](assets/html-ws.png)
 
-**Viktiga funktioner**:
+**Nyckelfunktioner**:
 
 * Engagera processdeltagare överallt med dynamiskt PDF forms, mobilgränssnitt och webbapplikationer.
 * Integrera enkelt arbetsytekomponenterna med dina webbprogram. Eftersom AEM Forms arbetsyta är ett komponentbaserat program kan det enkelt anpassas och återanvändas.

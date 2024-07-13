@@ -28,15 +28,15 @@ På den här sidan beskrivs följande:
 * Arbeta med landningssidor i AEM
 * konfigurera mobila landningssidor
 
-Att förbereda designpaketet för import beskrivs i [Utöka och konfigurera designimporteraren](/help/sites-administering/extending-the-design-importer-for-landingpages.md). Integrering med Adobe Analytics ingår i [Integrera landningssidor med Adobe Analytics.](/help/sites-administering/integrating-landing-pages-with-adobe-analytics.md)
+Förberedelsen av designpaketet för import beskrivs i [Utöka och konfigurera designimporteraren](/help/sites-administering/extending-the-design-importer-for-landingpages.md). Integrering med Adobe Analytics beskrivs i [Integrera landningssidor med Adobe Analytics.](/help/sites-administering/integrating-landing-pages-with-adobe-analytics.md)
 
 >[!CAUTION]
 >
->Designimporteraren som används för att importera landningssidor. [har ersatts med AEM 6.5](/help/release-notes/deprecated-removed-features.md#deprecated-features).
+>Designimporteraren, som används för att importera landningssidor, [ har ersatts med AEM 6.5](/help/release-notes/deprecated-removed-features.md#deprecated-features).
 
 >[!CAUTION]
 >
->Eftersom designimporteraren kräver åtkomst till `/apps`fungerar det inte i inneslutna molnmiljöer där `/apps` är oföränderlig.
+>Eftersom designimporteraren kräver åtkomst till `/apps` fungerar den inte i inneslutna molnmiljöer där `/apps` inte kan ändras.
 
 ## Vad är landningssidor? {#what-are-landing-pages}
 
@@ -46,7 +46,7 @@ Med funktionen för landningssidor i AEM kan marknadsförare arbeta med webbdesi
 
 I AEM skapar du landningssidor genom att utföra följande steg:
 
-1. Skapa en sida i AEM som innehåller startsidornas arbetsyta. AEM levereras med ett prov som kallas **Importsida**.
+1. Skapa en sida i AEM som innehåller startsidornas arbetsyta. AEM levereras med ett exempel med namnet **Importörssida**.
 
 1. [Förbered HTML och resurser.](/help/sites-administering/extending-the-design-importer-for-landingpages.md)
 1. Paketera resurserna i en ZIP-fil som här kallas designpaket.
@@ -63,7 +63,7 @@ En exempellandningssida i AEM ser ut så här:
 
 En landningssida kan också ha en mobilversion av sidan. Om du vill ha en separat mobilversion av landningssidan måste importdesignen ha två html-filer: *index.htm(l)* och *mobile.index.htm(l)*.
 
-Importproceduren för landningssidan är densamma som för en normal landningssida. Designen för landningssidan har en extra HTML-fil som motsvarar den mobila landningssidan. HTML-filen måste också ha en arbetsyta `div` med `id=cqcanvas` precis som landningssidan för stationära datorer html och stöder alla redigerbara komponenter som beskrivs för startsidan för stationära datorer.
+Importproceduren för landningssidan är densamma som för en normal landningssida. Designen för landningssidan har en extra HTML-fil som motsvarar den mobila landningssidan. Även den här HTML-filen måste ha en arbetsyta `div` med `id=cqcanvas` precis som startsidan för skrivbordslayouten HTML och den stöder alla redigerbara komponenter som beskrivs för startsidan för skrivbordslayouten.
 
 Startsidan för mobilen skapas som en underordnad sida till startsidan för skrivbordslandningen. Du öppnar den genom att navigera till landningssidan på webbplatser och öppna den underordnade sidan.
 
@@ -92,7 +92,7 @@ Dessutom kan du utöka detta och ge stöd för anpassade komponenter. I det här
 
 ### Text {#text}
 
-Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare. Se [Textkomponent](/help/sites-authoring/default-components.md#text) för mer information.
+Med komponenten Text kan du ange ett textblock med en WYSIWYG-redigerare. Mer information finns i [Textkomponent](/help/sites-authoring/default-components.md#text).
 
 ![chlimage_1-23](assets/chlimage_1-23.png)
 
@@ -102,7 +102,7 @@ Följande är ett exempel på en textkomponent på en landningssida:
 
 #### Titel {#title}
 
-Med titelkomponenten kan du visa en titel och konfigurera storleken (h1-6). Se [Titelkomponent](/help/sites-authoring/default-components.md#title) för mer information.
+Med titelkomponenten kan du visa en titel och konfigurera storleken (h1-6). Mer information finns i [Titelkomponent](/help/sites-authoring/default-components.md#title).
 
 ![chlimage_1-25](assets/chlimage_1-25.png)
 
@@ -112,7 +112,7 @@ Följande är ett exempel på en titelkomponent på en landningssida:
 
 #### Bild {#image}
 
-I bildkomponenten visas en bild som du antingen kan dra och släppa från Innehållssökning eller klicka för att överföra. Se [bildkomponent](/help/sites-authoring/default-components.md) för mer information.
+I bildkomponenten visas en bild som du antingen kan dra och släppa från Innehållssökning eller klicka för att överföra. Mer information finns i [bildkomponenten](/help/sites-authoring/default-components.md).
 
 ![chlimage_1-27](assets/chlimage_1-27.png)
 
@@ -141,16 +141,16 @@ Denna CTA-komponent kan användas för att lägga till en textlänk på landning
 
 **Mål-URL** Ange den URI som du vill att användarna ska besöka om de klickar på texten.
 
-**Återgivningsalternativ** Beskriver återgivningsalternativen. Du kan välja bland följande:
+**Återgivningsalternativ** Beskriver återgivningsalternativ. Du kan välja bland följande:
 
 * Läsa in sida i ett nytt webbläsarfönster
 * Läs in sida i aktuellt fönster
 * Läs in sida i den överordnade ramen
 * Avbryt alla ramar och läs in sidan i hela webbläsarfönstret
 
-**CSS** På fliken Format anger du en sökväg till din CSS-formatmall.
+**CSS** Ange en sökväg till din CSS-formatmall på fliken Format.
 
-**ID** På fliken Format anger du ett ID för komponenten som ska identifiera den unikt.
+**ID** På fliken Format anger du ett ID för komponenten så att den identifieras unikt.
 
 Följande är ett exempel på en klickning genom länken:
 
@@ -158,24 +158,24 @@ Följande är ett exempel på en klickning genom länken:
 
 #### Grafisk länk {#graphical-link}
 
-CTA-komponenten kan användas för att lägga till grafik med länk på landningssidan. Bilden kan vara en enkel knapp eller en grafisk bild som bakgrund. När användaren klickar på bilden dirigeras användaren till den mål-URL som anges i komponentegenskaperna. Det är en del av **Utlysning** grupp.
+CTA-komponenten kan användas för att lägga till grafik med länk på landningssidan. Bilden kan vara en enkel knapp eller en grafisk bild som bakgrund. När användaren klickar på bilden dirigeras användaren till den mål-URL som anges i komponentegenskaperna. Det ingår i gruppen **Call to Action**.
 
 ![chlimage_1-31](assets/chlimage_1-31.png)
 
-**Etikett** Den text som visas i bilden. Du kan ändra formateringen med textredigeraren.
+**Etikett** Den text som användarna ser i bilden. Du kan ändra formateringen med textredigeraren.
 
 **Mål-URL** Ange den URI som du vill att användarna ska besöka om de klickar på bilden.
 
-**Återgivningsalternativ** Beskriver återgivningsalternativen. Du kan välja bland följande:
+**Återgivningsalternativ** Beskriver återgivningsalternativ. Du kan välja bland följande:
 
 * Läsa in sida i ett nytt webbläsarfönster
 * Läs in sida i aktuellt fönster
 * Läs in sida i den överordnade ramen
 * Avbryt alla ramar och läs in sidan i hela webbläsarfönstret
 
-**CSS** På fliken Format anger du en sökväg till din CSS-formatmall.
+**CSS** Ange en sökväg till din CSS-formatmall på fliken Format.
 
-**ID** På fliken Format anger du ett ID för komponenten som ska identifiera den unikt.
+**ID** På fliken Format anger du ett ID för komponenten så att den identifieras unikt.
 
 Här följer ett exempel på en grafisk länk:
 
@@ -183,7 +183,7 @@ Här följer ett exempel på en grafisk länk:
 
 ### Handläggningsblankett {#call-to-action-cta-lead-form}
 
-Ett lead-formulär är ett formulär som används för att samla in profilinformation för en besökare/lead. Denna information kan lagras och användas senare för att skapa en effektiv marknadsföring utifrån informationen. Informationen innehåller vanligtvis titel, namn, e-postadress, födelsedatum, adress, ränta osv. Det är en del av **CTA Lead-formulär** grupp.
+Ett lead-formulär är ett formulär som används för att samla in profilinformation för en besökare/lead. Denna information kan lagras och användas senare för att skapa en effektiv marknadsföring utifrån informationen. Informationen innehåller vanligtvis titel, namn, e-postadress, födelsedatum, adress, ränta osv. Det ingår i gruppen **CTA-lead**.
 
 Ett exempel på ett CTA-formulär ser ut så här:
 
@@ -194,13 +194,13 @@ CTA-formulär bygger på flera olika komponenter:
 * **Leadformulär**
 Formulärexponenten för lead definierar början och slutet av ett nytt lead-formulär på en sida. Andra komponenter kan sedan placeras mellan dessa element, som e-post-ID, förnamn och så vidare.
 
-* **Formulärfält och -element**
+* **Formulärfält och element**
 Formulärfält och -element kan innehålla textrutor, alternativknappar, bilder och så vidare. Användaren slutför ofta en åtgärd i ett formulärfält, till exempel att skriva text. Mer information finns i enskilda formulärelement.
 
 * **Profilkomponenter**
 Profilkomponenter relaterar till besökarprofiler som används för socialt samarbete och andra områden där besökaranpassning krävs.
 
-I föregående exempel visas ett exempelformulär. Det består av **Leadformulär** -komponent (start och slut), med **Förnamn** och **E-post-ID** fält som används för indata och **Skicka** fält
+I föregående exempel visas ett exempelformulär. Det består av komponenten **Leadformulär** (start och slut), med fälten **Förnamn** och **E-post-ID** som används för indata och ett **Skicka** -fält
 
 Följande komponenter finns tillgängliga för CTA Lead-formuläret:
 
@@ -215,26 +215,26 @@ När du konfigurerar någon av formulärkomponenterna är följande flikar tillg
 * **Titel och text**
 Här måste du ange grundläggande information, t.ex. komponentens namn och eventuell tillhörande text. Där det är lämpligt kan du även definiera annan nyckelinformation, t.ex. om fältet är flervalsbart och om det finns objekt tillgängliga för markering.
 
-* **Startvärden**
+* **Inledande värden**
 Här kan du ange ett standardvärde.
 
 * **Begränsningar**
 Här kan du ange om ett fält är obligatoriskt och om det finns platsbegränsningar i fältet (måste till exempel vara numeriska).
 
-* **Stilar**
+* **Formatering**
 Anger fältets storlek och format.
 
 >[!NOTE]
 >
 >Fälten som visas varierar beroende på den enskilda komponenten.
 >
->Alla alternativ är inte tillgängliga för alla komponenter för lead-formulär. Mer information finns i Forms [vanliga inställningar](/help/sites-authoring/default-components.md#formsgroup).
+>Alla alternativ är inte tillgängliga för alla komponenter för lead-formulär. Mer information om de här [gemensamma inställningarna](/help/sites-authoring/default-components.md#formsgroup) finns i Forms.
 
 #### Formulärexponenter för lead {#lead-form-components}
 
 I följande avsnitt beskrivs de komponenter som är tillgängliga för formulär för lead-anrop-till-åtgärd.
 
-**Om** Låter användarna lägga till Om-information.
+**Om** Tillåter användare att lägga till Om-information.
 
 ![chlimage_1-35](assets/chlimage_1-35.png)
 
@@ -246,15 +246,15 @@ I följande avsnitt beskrivs de komponenter som är tillgängliga för formulär
 
 ![chlimage_1-37](assets/chlimage_1-37.png)
 
-**E-post-ID** Låter användarna ange en e-postadress (identifiering).
+**E-post-ID** Tillåter användare att ange en e-postadress (identifiering).
 
 ![chlimage_1-38](assets/chlimage_1-38.png)
 
-**Förnamn** Anger ett fält där användare kan ange sitt förnamn.
+**Förnamn** Tillhandahåller ett fält där användare kan ange sitt förnamn.
 
 ![chlimage_1-39](assets/chlimage_1-39.png)
 
-**Kön** Användarna kan välja sitt kön i en listruta.
+**Genus**-användare kan välja sitt kön i en listruta.
 
 ![chlimage_1-40](assets/chlimage_1-40.png)
 
@@ -262,27 +262,27 @@ I följande avsnitt beskrivs de komponenter som är tillgängliga för formulär
 
 ![chlimage_1-41](assets/chlimage_1-41.png)
 
-**Leadformulär** Lägg till den här komponenten för att lägga till ett lead-formulär på landningssidan. Ett lead-formulär innehåller automatiskt fälten Början av lead-formulär och Slut på lead-formulär. däremellan lägger du till leadformulärskomponenterna som beskrivs i det här avsnittet.
+**Leadformulär** Lägg till den här komponenten för att lägga till ett leadformulär på landningssidan. Ett lead-formulär innehåller automatiskt fälten Början av lead-formulär och Slut på lead-formulär. däremellan lägger du till leadformulärskomponenterna som beskrivs i det här avsnittet.
 
 ![chlimage_1-42](assets/chlimage_1-42.png)
 
-Formulärexponenten för lead definierar både början och slutet av ett formulär med **Formulärstart** och **Formulärslut** -element. Dessa är alltid kopplade för att säkerställa att formuläret är korrekt definierat.
+Komponenten Lead-formulär definierar både början och slutet av ett formulär med elementen **Formulärstart** och **Formulärslut** . Dessa är alltid kopplade för att säkerställa att formuläret är korrekt definierat.
 
-När du har lagt till leadformuläret kan du konfigurera början eller slutet av formuläret genom att klicka på **Redigera** i motsvarande fält.
+När du har lagt till lead-formuläret kan du konfigurera början eller slutet av formuläret genom att klicka på **Redigera** i motsvarande fält.
 
-**Början av leadformulär**
+**Början av lead-formulär**
 
-Det finns två flikar tillgängliga för konfiguration **Formulär** och **Avancerat**:
+Det finns två flikar tillgängliga för konfigurationen **Form** och **Advanced**:
 
 ![chlimage_1-43](assets/chlimage_1-43.png)
 
-**Tack** Sidan som ska refereras till för att tacka besökarna för att de har lämnat sina synpunkter. Om formuläret lämnas tomt visas det igen när det har skickats.
+**Tack!** Sidan som ska refereras till av besökarna för att de har angett sina indata. Om formuläret lämnas tomt visas det igen när det har skickats.
 
-**Starta arbetsflöde** Bestämmer vilket arbetsflöde som ska aktiveras när ett lead-formulär skickas.
+**Starta arbetsflöde** Avgör vilket arbetsflöde som ska aktiveras när ett lead-formulär skickas.
 
 ![chlimage_1-44](assets/chlimage_1-44.png)
 
-**Alternativ för inlägg** Följande alternativ är tillgängliga:
+**Post-alternativ** Följande alternativ är tillgängliga:
 
 * Skapa lead
 * E-posttjänst: Skapa prenumerant och lägg till i listan - Använd om du använder en e-postleverantör som ExactTarget.
@@ -292,13 +292,13 @@ Det finns två flikar tillgängliga för konfiguration **Formulär** och **Avanc
 
 **Formuläridentifierare** Formuläridentifieraren identifierar lead-formuläret unikt. Använd formuläridentifieraren om du har flera formulär på en sida. Kontrollera att de har olika identifierare.
 
-**Läs in bana** Är sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i lead-formulärfälten.
+**Läs in sökväg** är sökvägen till nodegenskaper som används för att läsa in fördefinierade värden i lead-formulärfälten.
 
 Detta är ett valfritt fält som anger sökvägen till en nod i databasen. När den här noden har egenskaper som matchar fältnamnen förinläses motsvarande fält i formuläret med egenskapsvärdet. Om det inte finns någon matchning innehåller fältet standardvärdet.
 
 **Klientvalidering** Anger om klientvalidering krävs för det här formuläret (servervalidering sker alltid). Detta kan du göra med komponenten Forms Captcha.
 
-**Typ av verifieringsresurs** Definierar resurstypen för formulärvalidering om du vill validera hela lead-formuläret (i stället för enskilda fält).
+**Valideringsresurstyp** Definierar resurstypen för formulärvalidering om du vill validera hela lead-formuläret (i stället för enskilda fält).
 
 Om du validerar det fullständiga formuläret ska du även inkludera något av följande:
 
@@ -308,17 +308,17 @@ Om du validerar det fullständiga formuläret ska du även inkludera något av f
 * Ett skript för validering på serversidan:
   ` /apps/<myApp>/form/<myValidation>/formservervalidation.jsp`
 
-**Åtgärdskonfiguration** Beroende på vad du har valt i Alternativ för inlägg ändras åtgärdskonfigurationen. Om du till exempel väljer Skapa lead kan du konfigurera vilken lista leadet ska läggas till i.
+**Åtgärdskonfiguration** Beroende på vad du har valt i Post-alternativ ändras åtgärdskonfigurationen. Om du till exempel väljer Skapa lead kan du konfigurera vilken lista leadet ska läggas till i.
 
 ![chlimage_1-45](assets/chlimage_1-45.png)
 
-* **Visa knappen Skicka**
+* **Visa Skicka-knapp**
 Anger om en Skicka-knapp ska visas eller inte.
 
 * **Skicka namn**
 En identifierare om du använder flera skicka-knappar i ett formulär.
 
-* **Skicka titel**
+* **Skicka in titel**
 Namnet som visas på knappen, till exempel Skicka eller Skicka.
 
 * **Visa knappen Återställ**
@@ -340,11 +340,11 @@ När du skapar en landningssida måste du utföra tre steg:
 
 ### Användning av designimporteraren {#use-of-the-design-importer}
 
-Eftersom import av sidor innefattar förberedelse av HTML, verifiering och testning av sidorna är importen av landningssidor avsedd som en administrationsuppgift. Som administratör behöver de användare som utför importen behörighet att läsa, skriva, skapa och ta bort `/apps`. Om användaren inte har dessa behörigheter misslyckas importen.
+Eftersom import av sidor innefattar förberedelse av HTML, verifiering och testning av sidorna är importen av landningssidor avsedd som en administrationsuppgift. Som administratör behöver de användare som utför importen behörighet att läsa, skriva, skapa och ta bort på `/apps`. Om användaren inte har dessa behörigheter misslyckas importen.
 
 >[!NOTE]
 >
->Eftersom designimporteraren är avsedd som ett administrationsverktyg som kräver läs-, skriv-, skapa- och borttagningsbehörigheter för `/apps`rekommenderar Adobe inte att man använder designimportverktyget i produktionen.
+>Eftersom designimporteraren är avsedd som ett administrationsverktyg som kräver läs-, skriv-, skapa- och borttagningsbehörigheter på `/apps`, rekommenderar inte Adobe att du använder designimporteraren i produktionen.
 
 Adobe rekommenderar att du använder designimporteraren i en mellanlagringsinstans. I en mellanlagringsinstans kan importen testas och valideras av en utvecklare som sedan ansvarar för att distribuera koden till produktionsinstansen.
 
@@ -358,10 +358,10 @@ Innan du kan importera designen för landningssidan måste du skapa en importsid
 
 Så här skapar du en landningssida:
 
-1. Gå till **Webbplatser** konsol.
+1. Gå till konsolen **Webbplatser**.
 1. Välj kampanj i den vänstra rutan.
-1. Klicka **Nytt** för att öppna **Skapa sida** -fönstret.
-1. Välj **Importsida** och lägga till en titel och eventuellt ett namn och klicka på **Skapa**.
+1. Klicka på **Ny** för att öppna fönstret **Skapa sida**.
+1. Välj mallen **Importörssida** och lägg till en titel och eventuellt ett namn. Klicka sedan på **Skapa**.
 
    ![chlimage_1-1-1](assets/chlimage_1-1-1.png)
 
@@ -369,7 +369,7 @@ Så här skapar du en landningssida:
 
 ### Förbereda HTML för import {#preparing-the-html-for-import}
 
-Innan du importerar designpaketet måste HTML förberedas. Se [Utöka och konfigurera designimporten](/help/sites-administering/extending-the-design-importer-for-landingpages.md) för mer information.
+Innan du importerar designpaketet måste HTML förberedas. Mer information finns i [Utöka och konfigurera designimporten](/help/sites-administering/extending-the-design-importer-for-landingpages.md).
 
 ### Importera designpaketet {#importing-the-design-package}
 
@@ -377,7 +377,7 @@ När en importsida har skapats kan du importera ett designpaket till den. Inform
 
 Om du har designpaketet klart beskrivs i följande steg hur du importerar designpaketet till en importsida.
 
-1. Öppna importsidan som du [skapades tidigare](#creatingablankcanvaspage).
+1. Öppna importsidan som du [skapade tidigare](#creatingablankcanvaspage).
 
    ![chlimage_1-46](assets/chlimage_1-46.png)
 
@@ -392,7 +392,7 @@ Om du har designpaketet klart beskrivs i följande steg hur du importerar design
 
 >[!NOTE]
 >
->Om du inte kan importera designpaketet läser du [Felsökning](/help/sites-administering/extending-the-design-importer-for-landingpages.md#troubleshooting).
+>Om du har problem med att importera designpaketet läser du [Felsökning](/help/sites-administering/extending-the-design-importer-for-landingpages.md#troubleshooting).
 
 ## Arbeta med landningssidor {#working-with-landing-pages}
 
@@ -410,7 +410,7 @@ I det här avsnittet beskrivs hur du gör följande:
 * Förhandsgranska landningssidan
 * Aktivera/publicera en landningssida
 
-När du importerar designpaketet **Rensa design** och **Hämta importerad ZIP** finns på inställningsmenyn för sidan:
+När du importerar designpaketet är **Clear Design** och **Download Imported Zip** tillgängliga på sidans inställningsmeny:
 
 ![chlimage_1-3-1](assets/chlimage_1-3-1.png)
 
@@ -418,7 +418,7 @@ När du importerar designpaketet **Rensa design** och **Hämta importerad ZIP** 
 
 När du laddar ned zip-filen kan du registrera vilken zip som importerades med en viss landningssida. Ändringar som görs på en sida läggs inte till i zippen.
 
-Om du vill hämta det importerade designpaketet klickar du på **Ladda ned zip** i verktygsfältet Landningssida.
+Om du vill hämta det importerade designpaketet klickar du på **Hämta zip** i verktygsfältet Landningssida.
 
 ### Visa importinformation {#viewing-import-information}
 
@@ -426,15 +426,15 @@ Du kan när som helst visa information om den senaste importen genom att klicka 
 
 ![chlimage_1-47](assets/chlimage_1-47.png)
 
-Om det importerade designpaketet innehåller vissa problem, till exempel om det refererar till bilder/skript som inte finns i paketet och så vidare, visas sådana problem i form av en lista av designimporteraren. Om du vill visa en lista med problem i det klassiska användargränssnittet klickar du på problemlänken i verktygsfältet Landningssida. I följande bild klickar du på **Problem** öppnar fönstret Importera problem.
+Om det importerade designpaketet innehåller vissa problem, till exempel om det refererar till bilder/skript som inte finns i paketet och så vidare, visas sådana problem i form av en lista av designimporteraren. Om du vill visa en lista med problem i det klassiska användargränssnittet klickar du på problemlänken i verktygsfältet Landningssida. I följande bild öppnas fönstret Importera problem när du klickar på länken **Problem** .
 
 ![chlimage_1-3](assets/chlimage_1-3.jpeg)
 
 ### Återställa en landningssida {#resetting-a-landing-page}
 
-Om du vill importera om designpaketet för landningssidan efter att ha gjort några ändringar i det kan du rensa landningssidan genom att klicka på **Rensa** längst upp på landningssidan i det klassiska användargränssnittet eller klicka på Rensa på inställningsmenyn i det pekoptimerade användargränssnittet. Om du gör det tas den importerade landningssidan bort och en tom importsida skapas.
+Om du vill importera om designpaketet för landningssidan efter att ha gjort några ändringar kan du rensa landningssidan genom att klicka på **Rensa** högst upp på landningssidan i det klassiska användargränssnittet eller klicka på Rensa på inställningsmenyn i det pekoptimerade användargränssnittet. Om du gör det tas den importerade landningssidan bort och en tom importsida skapas.
 
-När du rensar landningssidan kan du ta bort innehållsändringarna. Klicka **Nej**, bevaras innehållsändringarna, det vill säga strukturen under `jcr:content/importer`bevaras och endast importsidans komponent och resurserna i `etc/design` tas bort. Om du klickar **Ja**, `jcr:content/importer` tas också bort.
+När du rensar landningssidan kan du ta bort innehållsändringarna. Om du klickar på **Nej** behålls innehållsändringarna, det vill säga strukturen under `jcr:content/importer` bevaras och endast komponenten för importsidan och resurserna i `etc/design` tas bort. Om du klickar på **Ja** tas även `jcr:content/importer` bort.
 
 >[!NOTE]
 >
@@ -448,7 +448,7 @@ Om du vill lägga till komponenter på landningssidan drar och släpper du kompo
 
 >[!NOTE]
 >
->Om en komponent på landningssidan inte kan redigeras måste du importera zip-filen igen efter [ändra filen HTML.](/help/sites-administering/extending-the-design-importer-for-landingpages.md) Det innebär att de icke-redigerbara delarna inte konverterades till AEM under importen.
+>Om en komponent på landningssidan inte kan redigeras måste du importera zip-filen igen efter [att du har ändrat HTML-filen.](/help/sites-administering/extending-the-design-importer-for-landingpages.md) Det innebär att de icke-redigerbara delarna inte konverterades till AEM komponenter under importen.
 
 ### Ta bort en landningssida {#deleting-a-landing-page}
 

@@ -27,11 +27,11 @@ För att starta en ny AEM Mobile-appupplevelse krävs det att rollerna är enhet
 
 * **Administratör**
 * **Utvecklare**
-* **Upphovsman**
+* **Författare**
 
 ## Om du redigerar PhoneGap-program {#authoring-phonegap-applications}
 
-An ***AEM* (eller *Marknadsförare*)**kan använda färdiga mallar och komponenter för att lägga till och redigera sidor. Du kan dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment).
+En ***AEM författare* (eller *Marketer*)**kan använda färdiga mallar och komponenter för att lägga till och redigera sidor. Du kan dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment).
 
 Se följande resurser:
 
@@ -43,7 +43,7 @@ Se följande resurser:
 * [Skapa en AEM Mobile-app med guiden Skapa](/help/mobile/phonegap-create-new-app.md)
 * [Importera en befintlig hybridapp](/help/mobile/phonegap-adding-content-to-imported-app.md)
 
-Om du vill veta mer om **Innehållstjänster**, se [Content Services - översikt](/help/mobile/develop-content-as-a-service.md) för att komma igång.
+Mer information om **innehållstjänster** finns i [Innehållstjänster - översikt](/help/mobile/develop-content-as-a-service.md) för att komma igång.
 
 ## Ytterligare resurser {#additional-resources}
 

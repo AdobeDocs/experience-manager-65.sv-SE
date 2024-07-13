@@ -42,31 +42,31 @@ I den vänstra rutan på fliken System visas följande information om servern el
 
 **Version för virtuell dator:** JVM-versionsnummer
 
-**Datornamn:** Värdnamn för den server där AEM har installerats.
+**Datornamn:** Värdnamn för servern där AEM har installerats.
 
-**Starttid:** Den tid, i timmar och minuter, som servern har körts.
+**Starttid:** Tiden, i timmar och minuter, som servern har körts.
 
-**Just-in-time-kompilator:** Namnet på den kompilator som används.
+**Just-In-Time-kompilator:** Namnet på den kompilator som används.
 
 **Kompileringstid:** Den tid som har ägnats åt kompileringen.
 
-**Antal aktiva Threads:** Det totala antalet trådar som för närvarande finns i AEM.
+**Antal Live Threads:** Det totala antalet trådar som för närvarande finns i AEM formulärsystem.
 
-**Antal Threads Peak:** Det största antalet livetrådar som någonsin spelats in i systemet.
+**Antal Threads-toppar:** Största antal livetrådar som någonsin spelats in i systemet.
 
 **Antal inlästa klasser:** Antal klasser som har lästs in i JVM.
 
 **Antal ej inlästa klasser:** Antal klasser som inte har lästs in från JVM.
 
-**Minsta heap:** Den minsta stackmängden som användes.
+**Minimiheap:** Den minsta heap som användes.
 
-**Maximal heap:** Den maximala stackmängden som användes.
+**Maximal heap:** Den maximala heap som användes.
 
-**Operativsystemets namn:** Namnet på operativsystemet som körs på AEM Forms Server.
+**Operativsystemnamn:** Namnet på det operativsystem som körs på AEM Forms-servern.
 
-**Operativsystemsversion:** Versionsnummer för det operativsystem som körs på AEM Forms Server.
+**Operativsystemversion:** Versionsnummer för det operativsystem som körs på AEM Forms Server.
 
-**Operativsystem:** Den operativsystemsarkitektur som JVM körs på.
+**Operativsystemsmatris:** Operativsystemsarkitekturen som JVM körs på.
 
 **Antal processorer:** Antalet processorer i systemet.
 
@@ -76,26 +76,26 @@ I den vänstra rutan på fliken System visas följande information om servern el
 
 **Bibliotekssökväg:** Bibliotekssökvägen som används av JVM.
 
-**Startklasssökväg:** Den sökväg till startklassen som används av JVM.
+**Sökväg till startklass:** Sökvägen till startklassen som används av JVM.
 
-**Programservertyp:** Typ av programserver som används för att köra AEM formulär.
+**Programservertyp:** Den typ av programserver som används för att köra AEM formulär.
 
-**Programserverversion:** Versionsnummer för den programserver som används för att köra AEM formulär.
+**Programserverversion:** Programserverns versionsnummer som används för att köra AEM formulär.
 
 **Programserverleverantör:** Tillverkare av programservern som används för att köra AEM formulär.
 
-**Installationsdatum:** Datum (i formatet åååå-mm-dd) när AEM har installerats.
+**Installationsdatum:** Datum (i formatet åååå-mm-dd) AEM formulär installerades.
 
-**AEM:** Version av AEM som är installerad.
+**AEM formulär Version:** Version av AEM formulär som är installerade.
 
-**Lappningsversion:** AEM formulärkorrigeringsnummer.
+**Patchversion:** AEM formulärkorrigeringsnummer.
 
 **Databasnamn:** Typ av databas som används av AEM formulär.
 
-**Databasversion:** Versionsnummer för den databas som används av AEM formulär.
+**Databasversion:** Versionsnummer för databasen som används av AEM formulär.
 
-**Namn på databasenhet:** Namnet på den drivrutin som JVM använder för att ansluta till databasen.
+**Namn på databasenhet:** Namnet på drivrutinen som JVM använder för att ansluta till databasen.
 
 **Databasdrivrutinsversion:** Den version av drivrutinen som JVM använder för att ansluta till databasen.
 
-The **Spara** kan du spara den här systeminformationen i en egenskapsfil.
+Med knappen **Spara** kan du spara den här systeminformationen i en egenskapsfil.

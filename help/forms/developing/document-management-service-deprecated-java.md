@@ -1,6 +1,6 @@
 ---
-title: Document Management Service (utgått) Java API Quick Start (SOAP)
-description: Document Management Service (utgått) Java API Quick Start (SOAP)
+title: Document Management Service (utgått)Java API Quick Start(SOAP)
+description: Document Management Service (utgått)Java API Quick Start(SOAP)
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -22,7 +22,7 @@ Följande snabbstarter är tillgängliga för dokumenthanteringstjänsten (bortt
 
 >[!NOTE]
 >
->Från och med den 5 augusti 2011 migrerar Adobe Content Services ES-kunder till Adobe Digital Enterprise Platform Experience Services. Produktens färdplan för kunder som använder Content Services är att gå över till den nya ADEP Experience Services - Core, som innehåller en inbyggd Content Repository som bygger på den moderna, modulära CRX-arkitekturen, som förvärvades under Adobe-förvärvet av Day Software.
+>Från och med den 5 augusti 2011 migrerar Adobe Content Services ES-kunder till Adobe Digital Enterprise Platform Experience Services. Produktens färdplan för kunder som använder Content Services är att gå över till den nya ADEP Experience Services - Core, som innehåller en inbyggd Content Repository som bygger på den moderna, modulära CRX-arkitekturen, som förvärvades under Adobe av Day Software.
 
 [Snabbstart (SOAP): Skapa Content Services-utrymmen med Java API](document-management-service-deprecated-java.md#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated)
 
@@ -48,7 +48,7 @@ AEM Forms-åtgärder kan utföras med AEM Forms starkt typbestämda API och ansl
 
 ## Snabbstart (SOAP): Skapa innehållstjänstutrymmen med Java API (inaktuellt) {#quick-start-soap-mode-create-content-services-spaces-using-the-java-api-deprecated}
 
-I följande Java-kodexempel skapas ett nytt blanksteg med namnet *Testkatalog* i företagshem. ID-värdet för det nya utrymmet skrivs till konsolen.
+I följande Java-kodexempel skapas ett nytt space med namnet *Test Directory* i företagshem. ID-värdet för det nya utrymmet skrivs till konsolen.
 
 ```java
  /*
@@ -244,7 +244,7 @@ I följande Java-kodexempel tas ett blanksteg med namnet /Company Home/Test Dire
 
 ## Snabbstart (SOAP): Lägg till innehåll i innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-add-content-to-content-services-using-the-java-api-deprecated}
 
-I följande Java-kodexempel läggs en PDF-fil till med namnet *MortgageForm.pdf* till en mapp med namnet /Company Home/Test Directory. Attributen creator och description har angetts. Identifieringsvärdet för det nya innehållet skrivs till konsolen.
+I följande Java-kodexempel läggs en PDF-fil med namnet *MortgageForm.pdf* till i en mapp med namnet /Company Home/Test Directory. Attributen creator och description har angetts. Identifieringsvärdet för det nya innehållet skrivs till konsolen.
 
 ```java
  /*
@@ -367,7 +367,7 @@ I följande Java-kodexempel läggs en PDF-fil till med namnet *MortgageForm.pdf*
 
 ## Snabbstart (SOAP): Hämta innehåll från innehållstjänster med Java API (borttaget) {#quick-start-soap-mode-retrieve-content-from-content-services-using-the-java-api-deprecated}
 
-I följande Java-kodexempel hämtas en PDF-fil med namnet *MortgageForm.pdf* från /Company Home. PDF-filen sparas i det lokala filsystemet och får ett namn *UpdatedMortgageForm.pdf*.
+I följande Java-kodexempel hämtas en PDF-fil med namnet *MortgageForm.pdf* från /Company Home. PDF-filen sparas i det lokala filsystemet och har namnet *UpdatedMortgageForm.pdf*.
 
 ```java
  /*
@@ -797,7 +797,7 @@ Följande Java-kod söker efter ett dokument som innehåller texten MortgageForm
 
 ## Snabbstart (SOAP läge): Ange behörigheter för innehållstjänster med Java API (inaktuellt) {#quick-start-soap-mode-setting-content-services-permissions-using-the-java-api-deprecated}
 
-I följande Java-kodexempel anges en behörighet för en användare med namnet tony blue. Den angivna domänen är standarddomän. Användarbehörighet anges och noden är `/Company Home/Test Directory`.
+I följande Java-kodexempel anges en behörighet för en användare med namnet tony blue. Den angivna domänen är standarddomän. Konsumentbehörigheten har angetts och noden är `/Company Home/Test Directory`.
 
 ```java
  /*

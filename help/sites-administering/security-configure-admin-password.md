@@ -28,7 +28,7 @@ Den här funktionen lägger till möjligheten att ange ett nytt administratörsl
 
 >[!CAUTION]
 >
->Funktionen täcker inte Felix Console, för vilken lösenordet måste ändras manuellt. Mer information finns i relevanta [Avsnittet Säkerhetschecklista](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts).
+>Funktionen täcker inte Felix Console, för vilken lösenordet måste ändras manuellt. Mer information finns i avsnittet [Säkerhetschecklista](/help/sites-administering/security-checklist.md#change-default-passwords-for-the-aem-and-osgi-console-admin-accounts).
 
 ## Hur använder jag den? {#how-do-i-use-it}
 
@@ -50,7 +50,7 @@ När du har kört instansen från kommandoraden får du alternativet att ändra 
 
 ## Använda flaggan -nointeractive {#using-the-nointeractive-flag}
 
-Du kan också välja att ange lösenordet från en egenskapsfil. Detta görs genom att använda `-nointeractive` flagga kombinerat med `-Dadmin.password.file` system, egenskap.
+Du kan också välja att ange lösenordet från en egenskapsfil. Detta görs genom att använda flaggan `-nointeractive` i kombination med systemegenskapen `-Dadmin.password.file`.
 
 Nedan visas ett exempel:
 
@@ -58,7 +58,7 @@ Nedan visas ett exempel:
 java -Dadmin.password.file =/path/to/passwordfile.properties -jar aem6.3.jar -nointeractive
 ```
 
-Lösenordet i `passwordfile.properties` filen måste ha följande format:
+Lösenordet i filen `passwordfile.properties` måste ha följande format:
 
 ```xml
 admin.password = 12345678
@@ -66,4 +66,4 @@ admin.password = 12345678
 
 >[!NOTE]
 >
->Om du bara använder `-nointeractive` parametern utan `-Dadmin.password.file` system property, AEM använder administratörslösenordet som standard utan att be dig ändra det, vilket i stort sett replikerar beteendet från tidigare versioner. Det här icke-interaktiva läget kan användas för automatiska installationer med kommandoraden i ett installationsskript.
+>Om du bara använder parametern `-nointeractive` utan systemegenskapen `-Dadmin.password.file` används standardadministratörslösenordet AEM utan att du ombeds ändra det, vilket i huvudsak replikerar beteendet från tidigare versioner. Det här icke-interaktiva läget kan användas för automatiska installationer med kommandoraden i ett installationsskript.

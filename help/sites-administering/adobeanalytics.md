@@ -45,26 +45,26 @@ Följande sidor hjälper dig att konfigurera integreringen:
 * [Konfigurera videospårning för Adobe Analytics](/help/sites-administering/adobeanalytics-video.md)
 * [Adobe-klassificeringar](/help/sites-administering/adobeanalytics-classifications.md)
 
-Du kan också använda [Guiden Anmäl dig](/help/sites-administering/opt-in.md) för att enkelt kunna genomföra integreringen.
+Du kan också använda guiden [Anmäl dig](/help/sites-administering/opt-in.md) för att enkelt utföra integreringen.
 
 >[!NOTE]
 >
->Se även artikeln med instruktioner: [Integrera AEM med Adobe Target och Adobe Analytics med DTM](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html).
+>Se även artikeln [Integrera AEM med Adobe Target och Adobe Analytics med DTM](https://helpx.adobe.com/experience-manager/using/integrate-digital-marketing-solutions.html).
 
 ## Ytterligare information {#further-information}
 
 Se:
 
-* [Utöka Adobe Analytics-integreringen](/help/sites-developing/extending-analytics.md) för information om utveckling av komponenter som samlar in användardata och anpassar Adobe Analytics-ramverket.
-* Kunskapsbasartikeln, [Adobe Analytics-integrering - felsökningsproblem](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html), för information om felsökning av Adobe Analytics-integrering.
+* [Utöka Adobe Analytics-integrationen](/help/sites-developing/extending-analytics.md) om du vill ha information om hur du utvecklar komponenter som samlar in användardata och anpassar Adobe Analytics-ramverket.
+* Kunskapsbasartikeln [Integrering med Adobe Analytics - felsökning](https://helpx.adobe.com/experience-manager/kb/sitecatalystintegrationtroubleshooting.html), innehåller information om hur du felsöker integreringen med Adobe Analytics.
 
 >[!NOTE]
 >
 >Om du använder Adobe Analytics med en anpassad proxykonfiguration måste du [konfigurera två OSGi-paket](/help/sites-deploying/configuring-osgi.md) (till exempel med webbkonsolen) som krävs för proxykonfigurationerna i **Apaches HTTP-klient**. Båda är obligatoriska eftersom vissa funktioner i AEM använder 3.x-API:erna, medan andra använder 4.x-API:erna. Konfigurera:
 >
->* **Day Commons HTTP Client 3.1** konfigurera 3.x-API:t,
+>* **Day Commons HTTP Client 3.1** för att konfigurera 3.x API;
 >  till exempel [https://localhost:4502/system/console/configMgr/com.day.commons.httpclient](https://localhost:4502/system/console/configMgr/com.day.commons.httpclient)
 >
->* **Proxykonfiguration för Apache HTTP-komponenter** konfigurera 4.x-API:t,
+>* **Proxykonfiguration för Apache HTTP Components** för att konfigurera 4.x API;
 >  till exempel [https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator](https://localhost:4502/system/console/configMgr/org.apache.http.proxyconfigurator)
 >

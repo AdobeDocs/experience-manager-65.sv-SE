@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Ändra organisationslogotyp för varumärken {#changing-the-organization-logo-for-branding}
 
-Organisationslogotypen visas i det övre vänstra hörnet på arbetsytan i AEM Forms. Uppdatera logotypen genom att följa [Allmänna steg för anpassning av AEM Forms arbetsyta](/help/forms/using/generic-steps-html-workspace-customization.md#generic-steps-for-html-workspace-customization) och därefter följande steg.
+Organisationslogotypen visas i det övre vänstra hörnet på arbetsytan i AEM Forms. Om du vill uppdatera logotypen följer du de [allmänna stegen för anpassning av arbetsytan i AEM Forms](/help/forms/using/generic-steps-html-workspace-customization.md#generic-steps-for-html-workspace-customization) och följande steg.
 
 1. Skapa en logotyp och ge filen namnet `NewWorkspace.png`. Placera bildfilen i mappen /apps/ws/images med en WebDAV-klient.
 

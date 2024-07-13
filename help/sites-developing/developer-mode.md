@@ -19,11 +19,11 @@ ht-degree: 2%
 
 # Utvecklarläge{#developer-mode}
 
-När du redigerar sidor i Adobe Experience Manager (AEM), flera [lägen](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) är tillgängliga, inklusive läget Utvecklare. Då öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan. De tre flikarna är:
+När du redigerar sidor i Adobe Experience Manager (AEM) finns flera [lägen](/help/sites-authoring/author-environment-tools.md#modestouchoptimizedui) tillgängliga, bland annat i utvecklarläget. Då öppnas en sidopanel med flera flikar som ger utvecklaren information om den aktuella sidan. De tre flikarna är:
 
 * **[Komponenter](#components)** för att visa struktur- och prestandainformation.
-* **[Test](#tests)** för att köra tester och analysera resultaten.
-* **[Fel](#errors)** för att se eventuella problem som uppstår.
+* **[Testar](#tests)** för att köra tester och analysera resultaten.
+* **[Fel](#errors)** om du vill se eventuella problem.
 
 Detta hjälper en utvecklare att:
 
@@ -39,7 +39,7 @@ Detta hjälper en utvecklare att:
 >* Är inte tillgängligt på mobila enheter eller små fönster på skrivbordet (på grund av utrymmesbegränsningar).
 >
 >   * Detta inträffar när bredden är mindre än 1024px.
->* Är endast tillgänglig för användare som är medlemmar i `administrators` grupp.
+>* Är bara tillgänglig för användare som är medlemmar i gruppen `administrators`.
 
 >[!CAUTION]
 >
@@ -56,19 +56,19 @@ Detta hjälper en utvecklare att:
 >
 >Se
 >
->* Kunskapsbasartikel, [Felsökning AEM TouchUI-problem](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html)för fler tips och verktyg.
+>* Kunskapsbasartikeln [Felsökning AEM TouchUI-problem](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html) innehåller ytterligare tips och verktyg.
 >* AEM Gems-session om [AEM 6.0 Developer Mode](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html).
 >
 
 ## Öppnar utvecklarläge {#opening-developer-mode}
 
-Utvecklarläget implementeras som en sidopanel i sidredigeraren. Om du vill öppna panelen väljer du **Utvecklare** från lägesväljaren i verktygsfältet i sidredigeraren:
+Utvecklarläget implementeras som en sidopanel i sidredigeraren. Om du vill öppna panelen väljer du **Utvecklare** i lägesväljaren i verktygsfältet i sidredigeraren:
 
 ![chlimage_1-11](assets/chlimage_1-11.png)
 
 Panelen är uppdelad i två flikar:
 
-* **[Komponenter](/help/sites-developing/developer-mode.md#components)** - Detta visar ett komponentträd, som liknar [innehållsträd](/help/sites-authoring/author-environment-tools.md#content-tree) för författare
+* **[Komponenter](/help/sites-developing/developer-mode.md#components)** - Detta visar ett komponentträd, som liknar [innehållsträdet](/help/sites-authoring/author-environment-tools.md#content-tree) för författare
 
 * **[Fel](/help/sites-developing/developer-mode.md#errors)** - När problem uppstår visas information för varje komponent.
 
@@ -117,18 +117,18 @@ Varje komponentpost kan visa (till exempel:
 
 >[!CAUTION]
 >
->Vissa länkar pekar på skript under `/libs`. De här är dock bara till för referens **får inte** redigera allt under `/libs`, eftersom alla ändringar du gör kan gå förlorade. Det beror på att den här grenen kan ändras när du uppgraderar eller installerar en snabbkorrigering eller ett funktionspaket. Gör de ändringar du behöver under `/apps`. Se [Övertäckningar och åsidosättningar](/help/sites-developing/overlays.md).
+>Vissa länkar pekar på skript under `/libs`. De här är bara för referens, men du **får inte** redigera något under `/libs` eftersom ändringar du gör kan gå förlorade. Det beror på att den här grenen kan ändras när du uppgraderar eller installerar en snabbkorrigering eller ett funktionspaket. Gör de ändringar du behöver under `/apps`. Se [Övertäckningar och åsidosättningar](/help/sites-developing/overlays.md).
 
 ### Fel {#errors}
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
-Förhoppningsvis **Fel** tabben kommer alltid att vara tom (som ovan), men när problem uppstår visas följande information för varje komponent:
+Förhoppningsvis kommer fliken **Fel** alltid att vara tom (som ovan), men när problem uppstår visas följande information för varje komponent:
 
 * En varning om komponenten skriver en post i felloggen, tillsammans med information om felet och direktlänkar till rätt kod i CRXDE Lite.
 * En varning om komponenten öppnar en administratörssession.
 
-I en situation där en odefinierad metod anropas visas det resulterande felet i **Fel** tab:
+I en situation där en odefinierad metod anropas visas det resulterande felet på fliken **Fel**:
 
 ![chlimage_1-17](assets/chlimage_1-17.png)
 

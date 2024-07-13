@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Omstrukturering av anläggningar Repository i AEM 6.5 {#sites-repository-restructuring-in-aem}
 
-Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/sites-deploying/repository-restructuring.md) på denna sida bör kunder som uppgraderar till AEM 6.5 använda denna sida för att bedöma arbetsinsatsen i samband med databasändringar som påverkar AEM Sites-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
+Så som beskrivs på den överordnade sidan [Databasomstrukturering på sidan AEM 6.5](/help/sites-deploying/repository-restructuring.md) bör kunder som uppgraderar till AEM 6.5 använda den här sidan för att utvärdera arbetsinsatsen som är kopplad till databasändringar som påverkar AEM Sites-lösningen. Vissa ändringar kräver arbete under uppgraderingsprocessen för AEM 6.5, medan andra kan skjutas upp till en framtida uppgradering.
 
 **Med 6.5-uppgradering**
 
@@ -56,16 +56,16 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
    <td><strong>Omstruktureringsvägledning</strong></td>
    <td><p>Om nya eller ändrade ContextHub-segment redigeras i källkontrollen i stället för att redigeras i AEM, måste de migreras till den nya platsen:</p>
     <ol>
-     <li>Kopiera nya eller ändrade ContextHub-segment från föregående plats till rätt nya plats (/<code>apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>)</li>
-     <li>Uppdatera referenser till ContextHub-segment på föregående plats till migrerade ContextHub-segment på de nya platserna (<code>/apps</code>, <code>/conf/global</code>, <code>/conf/&lt;tenant&gt;</code>).</li>
+     <li>Kopiera nya eller ändrade ContextHub-segment från föregående plats till lämplig ny plats (/<code>apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>)</li>
+     <li>Uppdatera referenser till ContextHub-segment på föregående plats till de migrerade ContextHub-segmenten på de nya platserna (<code>/apps</code>, <code>/conf/global</code>, <code>/conf/&lt;tenant&gt;</code>).</li>
     </ol> <p>Följande QueryBuilder-fråga hittar alla referenser till ContextHub-segment i de föregående platserna.<br /> <br /> <code class="code">path=/content
        property=cq:segments
        property.operation=like
-       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> Detta kan utföras via <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEM QueryBuilder-felsökningsgränssnitt</a>. Observera att detta är en genomgående fråga, så kör den inte mot produktionen och se till att genomströmningsgränserna justeras efter behov.</p> </td>
+       property.value=/etc/segmentation/contexthub/%</code><br /> <br /> Detta kan utföras via <a href="/help/sites-developing/querybuilder-api.md" target="_blank">AEM felsökningsgränssnittet för QueryBuilder </a>. Observera att detta är en genomgående fråga, så kör den inte mot produktionen och se till att genomströmningsgränserna justeras efter behov.</p> </td>
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
-   <td><p>ContextHub-segment beständiga till föregående platsvisning som skrivskyddade i <strong>AEM &gt; Personalisering &gt; Målgrupper</strong>.</p> <p>Om ContextHub-segment ska kunna redigeras i AEM måste de migreras till den nya platsen (<code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>). Alla nya segment i ContentHub som skapas i AEM bevaras på den nya platsen (<code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>).</p> <p>AEM Sites Sidegenskaper tillåter endast platsen Föregående (<code>/etc</code>) eller en ny plats (<code>/apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>) som ska markeras, vilket innebär att ContextHub-segment måste migreras i enlighet med detta.</p> <p>Alla oanvända ContextHub-segment från AEM referensplatser kan tas bort och inte migreras till den nya platsen:</p>
+   <td><p>ContextHub-segment beständiga till föregående plats visas som skrivskyddade i <strong>AEM &gt; Personalization &gt; Publiker</strong>.</p> <p>Om ContextHub-segment ska kunna redigeras i AEM måste de migreras till den nya platsen (<code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>). Alla nya ContentHub-segmentsegment som skapas i AEM bevaras på den nya platsen (<code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>).</p> <p>AEM Sites Sidegenskaper tillåter bara att antingen Föregående plats (<code>/etc</code>) eller en enda ny plats (<code>/apps</code>, <code>/conf/global</code> eller <code>/conf/&lt;tenant&gt;</code>) markeras, vilket innebär att ContextHub-segment måste migreras i enlighet med detta.</p> <p>Alla oanvända ContextHub-segment från AEM referensplatser kan tas bort och inte migreras till den nya platsen:</p>
     <ul>
      <li>/etc/segmentation/geometrixx/</li>
      <li>/etc/segmentation/geometrixx-outdoor</li>
@@ -92,8 +92,8 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
    <td><strong>Omstruktureringsvägledning</strong></td>
    <td><p>All anpassad användning av dessa klientbibliotek ska referera till klientbiblioteket efter kategori och inte efter sökväg:</p>
     <ol>
-     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående ska uppdateras för att använda <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">Referensramverk för AEM klientbibliotek</a>.</li>
-     <li>Om referensramverket AEM klientbiblioteket inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM klientbibliotekets proxyserver.
+     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående ska uppdateras så att <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM referensramverket för klientbiblioteket </a> används.</li>
+     <li>Om AEM referensramverk för klientbibliotek inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM klientbibliotekets proxyserver.
       <ul>
        <li><code>/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/appmeasurement.js</code></li>
        <li><code>/etc.clientlibs/cq/analytics/clientlibs/sitecatalyst/plugins.js</code></li>
@@ -105,7 +105,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
-   <td><p>Redigering av dessa klientbibliotek stöds aldrig.</p> <p>Om du vill hämta kategorierna i klientbiblioteket går du till varje <code>cq:ClientLIbraryFolder</code> nod via CRXDELite och inspektera egenskapen categories.</p>
+   <td><p>Redigering av dessa klientbibliotek stöds aldrig.</p> <p>Om du vill hämta kategorierna för klientbiblioteket går du till varje <code>cq:ClientLIbraryFolder</code>-nod via CRXDELite och kontrollerar egenskapen categories.</p>
     <ul>
      <li><code>/libs/cq/analytics/clientlibs/sitecatalyst/appmeasurement</code></li>
      <li><code>/libs/cq/analytics/clientlibs/sitecatalyst/plugins</code></li>
@@ -134,13 +134,13 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
    <td><p>För alla designer som hanteras i SCM och som inte skrivs till vid körning via designdialogrutor.</p>
     <ol>
      <li>Kopiera designen från föregående plats till den nya platsen (<code>/apps</code>).</li>
-     <li>Konvertera CSS-, JavaScript- och statiska resurser i designen till en <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">Klientbibliotek</a> med <code>allowProxy = true</code>.</li>
+     <li>Konvertera alla CSS-, JavaScript- och statiska resurser i designen till ett <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">klientbibliotek</a> med <code>allowProxy = true</code>.</li>
      <li>Uppdatera referenser till föregående plats i egenskapen cq:designPath.</li>
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li>
-     <li>Uppdatera AEM Dispatcher-regler så att klientbibliotek kan hanteras via <code>/etc.clientlibs/</code> proxyserver.</li>
+     <li>Uppdatera AEM Dispatcher-regler så att klientbibliotek kan hanteras via proxyservern <code>/etc.clientlibs/</code>.</li>
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor:</p>
     <ul>
-     <li>Flytta inte redigerbara designer från <code>/etc</code>.</li>
+     <li>Flytta inte designerbara designer från <code>/etc</code>.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -167,13 +167,13 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
    <td>Alla nya konfigurationer för emulatorn för mobila enheter måste migreras till den nya platsen.
     <ol>
      <li>Kopiera alla nya konfigurationer för emulatorn för mobila enheter från den tidigare platsen till den nya platsen (<code>/apps</code>, <code>/conf/global</code>, <code>/conf/&lt;tenant&gt;</code>).</li>
-     <li>För alla AEM Sites-sidor som är beroende av dessa konfigurationer för emulatorn för mobila enheter ska du uppdatera sidans <span class="code">
+     <li>Uppdatera sidans <span class="code"> för alla AEM Sites-sidor som är beroende av dessa konfigurationer för emulatorn för mobila enheter
        <code>
         jcr
        </code>
        <code>
         :content
-       </code></span> nod: <br /> <span class="code">[cq:Page]/jcr:content@cq:
+       </code></span> node: <br /> <span class="code">[cq:Page]/jcr:content@cq:
        <code>
         deviceGroups
        </code> = String[ mobile/groups/responsive ]</span></li>
@@ -210,11 +210,11 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
   </tr>
   <tr>
    <td><strong>Ny plats(er)</strong></td>
-   <td><p><code>/apps/msm</code> (Kunddesignkonfigurationer)</p> <p><code>/libs/msm</code> (Utanför box-designkonfigurationer för skärmar, Commerce)</p> </td>
+   <td><p><code>/apps/msm</code> (Kunddesignkonfigurationer)</p> <p><code>/libs/msm</code> (Utanför Box Blueprint-konfigurationer för Screens, Commerce)</p> </td>
   </tr>
   <tr>
    <td><strong>Omstruktureringsvägledning</strong></td>
-   <td><p>Alla nya eller ändrade utkastkonfigurationer för flerplatshanteraren måste migreras till den nya platsen (<code>/apps</code>).</p>
+   <td><p>Alla nya eller ändrade utkastkonfigurationer för Multi-site Manager måste migreras till den nya platsen (<code>/apps</code>).</p>
     <ol>
      <li>Kopiera alla nya eller ändrade Multi-site Manager-utkastkonfigurationer från föregående plats till den nya platsen (<code>/apps</code>).</li>
      <li>Ta bort alla migrerade layoutkonfigurationer för flerplatshanteraren från föregående plats.</li>
@@ -222,7 +222,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
-   <td><p>Alla AEM som tillhandahålls av utkastkonfigurationer för hantering av flera webbplatser finns på den nya platsen i <code>/libs</code>.</p> <p>Innehållet refererar inte till blå konfigurationer för Multi-site Manager och det finns därför inga innehållsreferenser att justera.</p> </td>
+   <td><p>Alla AEM som tillhandahölls Multi-site Manager-utkastkonfigurationer finns på den nya platsen i <code>/libs</code>.</p> <p>Innehållet refererar inte till blå konfigurationer för Multi-site Manager och det finns därför inga innehållsreferenser att justera.</p> </td>
   </tr>
  </tbody>
 </table>
@@ -243,8 +243,8 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
    <td><strong>Omstruktureringsvägledning</strong></td>
    <td><p>Alla nya eller ändrade implementeringar av Multi-site Manager-hanteraren måste migreras till den nya platsen.</p>
     <ol>
-     <li>Kopiera alla nya eller ändrade konfigurationer för lansering av flerplatshanterare från föregående plats till den nya platsen (<code>/apps</code>).</li>
-     <li>Uppdatera alla referenser på AEM Pages till Multi-site Manager Rollout Configurations i mappen Previous så att de pekar på sina motsvarigheter i New Locations (<code>/libs</code> eller <code>/apps</code>).</li>
+     <li>Kopiera alla nya eller ändrade Multi-site Manager Rollout-konfigurationer från den tidigare platsen till den nya platsen (<code>/apps</code>).</li>
+     <li>Uppdatera alla referenser på AEM sidor till Multi-site Manager Rollout Configurations på den tidigare platsen så att de pekar på motsvarande sidor på de nya platserna (<code>/libs</code> eller <code>/apps</code>).</li>
     </ol> <p>Ta bort migrerade utrullningskonfigurationer för hantering av flera platser från föregående plats.</p> </td>
   </tr>
   <tr>
@@ -336,7 +336,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
-   <td>Referera till en ej befintlig <code>grid_base.less</code> filen resulterar i att layoutläget för sidredigeraren och mallredigeraren inte fungerar och att sidlayouten avbryts.</td>
+   <td>Om du refererar till en <code>grid_base.less</code>-fil som inte finns kommer layoutläget för sidredigeraren och mallredigeraren inte att fungera och sidlayouten avbryts.</td>
   </tr>
  </tbody>
 </table>
@@ -358,13 +358,13 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
    <td><p>För alla designer som hanteras i SCM och som inte skrivs till vid körning via designdialogrutor.</p>
     <ol>
      <li>Kopiera designen från föregående plats till den nya platsen (<code>/apps</code>).</li>
-     <li>Konvertera CSS-, JavaScript- och statiska resurser i designen till en <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">Klientbibliotek</a> med <code>allowProxy = true</code>.</li>
-     <li>Uppdatera referenser till föregående plats i dialogrutan <code>cq:designPath</code> egenskap via <strong>AEM &gt; Platser &gt; Anpassade webbplatssidor &gt; Sidegenskaper &gt; fliken Avancerat &gt; Designfält</strong>.</li>
+     <li>Konvertera alla CSS-, JavaScript- och statiska resurser i designen till ett <a href="/help/sites-developing/clientlibs.md#creating-client-library-folders" target="_blank">klientbibliotek</a> med <code>allowProxy = true</code>.</li>
+     <li>Uppdatera referenser till föregående plats i egenskapen <code>cq:designPath</code> via <strong>AEM &gt; Platser &gt; Anpassade webbplatssidor &gt; Sidegenskaper &gt; fliken Avancerat &gt; Designfält</strong>.</li>
      <li>Uppdatera alla sidor som refererar till föregående plats så att den nya kategorin Klientbibliotek används (detta kräver uppdatering av koden för sidimplementering).</li>
-     <li>Uppdatera AEM Dispatcher-regler så att klientbibliotek kan visas via <code>/etc.clientlibs/</code> proxyserver.</li>
+     <li>Uppdatera AEM Dispatcher-regler så att klientbibliotek kan visas via proxyservern <code>/etc.clientlibs/</code>.</li>
     </ol> <p>För alla designer som INTE hanterats i SCM och som ändrats under körning via designdialogrutor:</p>
     <ul>
-     <li>Flytta inte redigerbara designer från <code>/etc</code>.</li>
+     <li>Flytta inte designerbara designer från <code>/etc</code>.</li>
     </ul> </td>
   </tr>
   <tr>
@@ -423,8 +423,8 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
    <td><strong>Omstruktureringsvägledning</strong></td>
    <td><p>All anpassad användning av dessa klientbibliotek bör referera till klientbiblioteket efter kategori och inte efter sökväg.</p>
     <ol>
-     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående ska uppdateras för att använda <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">Referensramverk för AEM klientbibliotek</a>.</li>
-     <li>Om referensramverket AEM klientbiblioteket inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM klientbibliotekets proxyserver:</li>
+     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående ska uppdateras så att <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM referensramverket för klientbiblioteket </a> används.</li>
+     <li>Om AEM referensramverk för klientbibliotek inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM klientbibliotekets proxyserver:</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/cq/testandtarget/clientlibs/testandtarget/testandtarget.js</code></li>
@@ -468,8 +468,8 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
    <td><strong>Omstruktureringsvägledning</strong></td>
    <td><p>All anpassad användning av dessa klientbibliotek bör referera till klientbiblioteket efter kategori och inte efter sökväg.</p>
     <ol>
-     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående ska uppdateras för att använda <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">Referensramverk för AEM klientbibliotek</a>.</li>
-     <li>Om referensramverket AEM klientbiblioteket inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM klientbibliotekets proxyserver.</li>
+     <li>Alla referenser till klientbiblioteket per sökväg på platsen Föregående ska uppdateras så att <a href="/help/sites-developing/clientlibs.md#referencing-client-side-libraries" target="_blank">AEM referensramverket för klientbiblioteket </a> används.</li>
+     <li>Om AEM referensramverk för klientbibliotek inte kan användas kan den absoluta sökvägen för klientbiblioteken refereras via AEM klientbibliotekets proxyserver.</li>
     </ol>
     <ul>
      <li><code>/etc.clientlibs/wcm/foundation/clientlibs/accessibility.css</code></li>
@@ -479,7 +479,7 @@ Enligt beskrivning på överordnad [Omstrukturering av lager i AEM 6.5](/help/si
   </tr>
   <tr>
    <td><strong>Anteckningar</strong></td>
-   <td><p>Redigering av dessa klientbibliotek stöds aldrig.</p> <p>Om du vill hämta kategorierna i klientbiblioteket går du till varje <code>cq:ClientLIbraryFolder</code> nod via CRXDELite och inspektera egenskapen categories:</p>
+   <td><p>Redigering av dessa klientbibliotek stöds aldrig.</p> <p>Om du vill hämta kategorierna i klientbiblioteket går du till varje <code>cq:ClientLIbraryFolder</code>-nod via CRXDELite och kontrollerar egenskapen categories:</p>
     <ul>
      <li><code>/libs/wcm/foundation/clientlibs/accessibility</code></li>
      <li><code>/libs/wcm/foundation/clientlibs/main</code></li>

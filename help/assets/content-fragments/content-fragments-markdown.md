@@ -14,9 +14,9 @@ ht-degree: 3%
 
 # Markering {#markdown}
 
-När du är [redigering](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content)använder innehållsfragmentredigeraren *markering* så att du enkelt kan skriva headless-innehåll:
+När du [redigerar](/help/assets/content-fragments/content-fragments-variations.md#authoring-your-content) använder innehållsfragmentredigeraren syntaxen *markdown* så att du enkelt kan skriva headless-innehåll:
 
-![markeringsredigerare](/help/assets/content-fragments/assets/cfm-markdown-01.png)
+![markdown editor](/help/assets/content-fragments/assets/cfm-markdown-01.png)
 
 Du kan definiera:
 
@@ -130,7 +130,7 @@ Du kan ha kapslade blockcitattecken. Till exempel:
 
 Du kan skapa både sorterade och osorterade listor.
 
-Om du vill skapa en osorterad lista använder du symbolen ast; före objekten i listan. Till exempel:
+Om du vill skapa en osorterad lista använder du symbolen &amp;ast; före objekten i listan. Till exempel:
 
     `* item in list`
 
@@ -166,7 +166,7 @@ Du kan fet text enligt följande:
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-Om du vill ange ett kodomfång omsluter du det med citattecken (&grave;). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
+Om du vill ange ett intervall med kod omsluter du det med citattecken (&grave;). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
 
 Till exempel:
 
@@ -182,7 +182,7 @@ Kodblock används vanligtvis för att illustrera källkod. Du kan skapa kodblock
 
 ## Omvända snedstreck {#backslash-escapes}
 
-Du kan använda omvänt snedstreck för att generera litterala tecken som har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omge ett ord med literala asterisker (i stället för en HTML-tagg) kan du använda omvända snedstreck före asteriskerna, enligt följande:
+Du kan använda omvänt snedstreck för att generera litterala tecken som har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omsluta ett ord med literala asterisker (i stället för en HTML-tagg med &lt;em>) kan du använda omvända snedstreck före asteriskerna, enligt följande:
 
     `\\*literal asterisks\\*`
 

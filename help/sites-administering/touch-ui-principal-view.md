@@ -30,7 +30,7 @@ I AEM 6.5 introduceras behörighetshantering för användare och grupper. Huvudf
 
 Den nya UI-baserade behörighetshanteringen nås via behörighetskortet under Säkerhet enligt nedan:
 
-![Användargränssnitt för behörighetshantering](assets/screen_shot_2019-03-17at63333pm.png)
+![Gränssnitt för behörighetshantering](assets/screen_shot_2019-03-17at63333pm.png)
 
 Den nya vyn gör det enklare att se på hela uppsättningen behörigheter och begränsningar för ett givet huvudobjekt på alla sökvägar där behörigheter uttryckligen har beviljats. Detta eliminerar behovet av att gå till
 
@@ -38,7 +38,7 @@ CRXDE för att hantera avancerade behörigheter och begränsningar. Den har kons
 
 ![Vy över gruppen&quot;alla&quot;](assets/unu-1.png)
 
-Det finns ett filter som gör att användaren kan välja vilken typ av huvudobjekt som ska undersökas **Användare**, **Grupper**, eller **Alla** och söka efter huvudnamn **.**
+Det finns ett filter som gör att användaren kan välja vilken typ av huvudobjekt som ska användas för att kontrollera **Användare**, **Grupper** eller **Alla** och söka efter ett huvudkonto **.**
 
 ![Sök efter typer av huvudkonton](assets/image2019-3-20_23-52-51.png)
 
@@ -64,17 +64,17 @@ Då öppnas fönstret som visas nedan. Nästa steg är att välja en sökväg d�
 
 Här har en sökväg valts där du kan konfigurera behörighet för **dam-users**:
 
-![Exempelkonfiguration för dammanvändare](assets/sase-1.png)
+![Exempelkonfiguration för dam-users](assets/sase-1.png)
 
-När sökvägen har valts går arbetsflödet tillbaka till den här skärmen där användaren kan välja en eller flera av de tillgängliga namnutrymmena (som `jcr`, `rep` eller `crx`) enligt nedan.
+När sökvägen har valts går arbetsflödet tillbaka till den här skärmen, där användaren kan välja en eller flera av de tillgängliga namnutrymmena (som `jcr`, `rep` eller `crx`) enligt nedan.
 
 Du kan lägga till behörigheter genom att söka i textfältet och sedan välja från listan.
 
 >[!NOTE]
 >
->En fullständig lista över behörigheter och beskrivningar finns i [den här sidan](/help/sites-administering/user-group-ac-admin.md#access-right-management).
+>En fullständig lista över behörigheter och beskrivningar finns på [den här sidan](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
-![Sökbehörighet för en angiven sökväg.](assets/image2019-3-21_0-5-47.png) ![Lägg till ny post för &#39;dam-users&#39; enligt en bana som är markerad i lodräta kolumner.](assets/image2019-3-21_0-6-53.png)
+![Sökbehörighet för en angiven sökväg.](assets/image2019-3-21_0-5-47.png) ![Lägg till ny post för &quot;dam-users&quot;, vilket visas av en sökväg som är markerad i lodräta kolumner.](assets/image2019-3-21_0-6-53.png)
 
 När listan över behörigheter har valts kan användaren välja behörighetstyp: Neka eller Tillåt, enligt nedan.
 
@@ -88,13 +88,13 @@ Förutom listan över behörigheter och behörighetstypen för en viss sökväg 
 
 >[!NOTE]
 >
->Mer information om vad varje begränsning betyder finns i [The Jackrabbit Oak Documentation](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
+>Mer information om vad varje begränsning innebär finns i [Jackrabbit Oak-dokumentationen](https://jackrabbit.apache.org/oak/docs/security/authorization/restriction.html).
 
-Du kan lägga till begränsningar enligt nedan genom att välja begränsningstyp, ange värdet och trycka på **+** -ikon.
+Du kan lägga till begränsningar enligt nedan genom att välja begränsningstyp, ange värdet och klicka på ikonen **+** .
 
 ![Lägg till begränsningstypen](assets/sapte-1.png) ![Lägg till begränsningstypen](assets/opt-1.png)
 
-Den nya åtkomstkontrollistan visas i åtkomstkontrollistan enligt nedan. Observera att `jcr:write` är ett aggregerat privilegium som inkluderar `jcr:removeNode` som lades till ovan, men inte visas nedan som det omfattas av `jcr:write`.
+Den nya åtkomstkontrollistan visas i åtkomstkontrollistan enligt nedan. Observera att `jcr:write` är ett aggregeringsprivilegium som inkluderar `jcr:removeNode` som lades till ovan, men som inte visas nedan som det beskrivs under `jcr:write`.
 
 ### Redigera ACE {#editing-aces}
 
@@ -108,11 +108,11 @@ Redigeringsskärmen visas med konfigurerade ACE-adresser förmarkerade. Du kan t
 
 ![Redigera post](assets/noua-1.png)
 
-Här är `addChildNodes` privilegium har lagts till för **dam-users** på den angivna sökvägen.
+Här läggs privilegiet `addChildNodes` till för **dam-users** på den angivna sökvägen.
 
 ![Lägg till privilegium](assets/image2019-3-21_0-45-35.png)
 
-Du kan spara ändringarna genom att klicka på **Spara** överst till höger så återspeglas ändringarna i de nya behörigheterna för **dam-users** enligt nedan:
+Du kan spara ändringarna genom att klicka på knappen **Spara** överst till höger och ändringarna återspeglas i de nya behörigheterna för **dam-users** enligt nedan:
 
 ![Spara ändringar](assets/zece-1.png)
 
@@ -120,7 +120,7 @@ Du kan spara ändringarna genom att klicka på **Spara** överst till höger så
 
 Åtkomstkontrollposter kan tas bort om du vill ta bort alla behörigheter som tilldelats ett huvudkonto på en viss sökväg. X-ikonen bredvid ACE kan användas för att ta bort den så som visas nedan:
 
-![Ta bort ACE](assets/image2019-3-21_0-53-19.png) ![Ta bort ACE](assets/unspe.png)
+![Ta bort ACE:n](assets/image2019-3-21_0-53-19.png) ![Ta bort ACE:n](assets/unspe.png)
 
 ### Klassiska kombinationer av användargränssnittsbehörigheter {#classic-ui-privilege-combinations}
 

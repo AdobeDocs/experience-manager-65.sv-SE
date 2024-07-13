@@ -26,7 +26,7 @@ Använd data från sidanalys för att mäta hur effektivt sidinnehållet är.
 
 ![spad-01](assets/spad-01.png)
 
-Sidanalysdata visas i [Listvy](/help/sites-authoring/basic-handling.md#list-view) i webbplatskonsolen. När sidorna visas i listformat är följande kolumner tillgängliga som standard:
+Sidanalysdata visas i [listvyn](/help/sites-authoring/basic-handling.md#list-view) i webbplatskonsolen. När sidorna visas i listformat är följande kolumner tillgängliga som standard:
 
 * Sidvyer
 * Unika besökare
@@ -36,12 +36,12 @@ Varje kolumn visar ett värde för den aktuella rapporteringsperioden och anger 
 
 >[!NOTE]
 >
->Om du vill ändra uppdateringsperioden [konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval).
+>[Konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) om du vill ändra uppdateringsperioden.
 
-1. Öppna **Webbplatser** konsol, till exempel [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
-1. Klicka på ikonen längst till höger i verktygsfältet (övre högra hörnet) för att markera den **Listvy** (ikonen som visas beror på [aktuell vy](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)).
+1. Öppna konsolen **Platser**, till exempel [https://localhost:4502/sites.html/content](https://localhost:4502/sites.html/content)
+1. Klicka på ikonen längst till höger i verktygsfältet (det övre högra hörnet) för att välja **Listvy** (ikonen som visas beror på den [aktuella vyn](/help/sites-authoring/basic-handling.md#viewing-and-selecting-resources)).
 
-1. Klicka på ikonen längst till höger i verktygsfältet (övre högra hörnet) och välj sedan **Visa inställningar**. The **Konfigurera kolumner** öppnas. Gör de ändringar som behövs och bekräfta med **Uppdatera**.
+1. Klicka på ikonen längst till höger i verktygsfältet (övre högra hörnet) och välj sedan **Visa inställningar**. Dialogrutan **Konfigurera kolumner** öppnas. Gör nödvändiga ändringar och bekräfta med **Uppdatera**.
 
    ![spad-02](assets/spad-02.png)
 
@@ -65,7 +65,7 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 >
 >När ett sidträd innehåller underordnade sidor som är kopplade till olika Adobe Analytics molnkonfigurationer, kan du inte konfigurera tillgängliga datakolumner för sidorna.
 
-1. I listvyn använder du vyväljarna (höger i verktygsfältet) och väljer **Visa inställningar** och sedan **Lägg till anpassade analysdata**.
+1. I listvyn använder du vyväljarna (höger om verktygsfältet), väljer **Visa inställningar** och sedan **Lägg till anpassade analysdata**.
 
    ![spad-03](assets/spad-03.png)
 
@@ -77,12 +77,12 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 
 ### Öppna innehållsinsikter från webbplatser {#opening-content-insights-from-sites}
 
-Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites Console för att ytterligare undersöka hur sidan fungerar.
+Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites-konsolen för att ytterligare undersöka hur effektiva sidorna är.
 
 1. I webbplatskonsolen väljer du den sida som du vill se innehållsinsikter för.
 1. Klicka på ikonen Analytics (Analyser) och Recommendations () i verktygsfältet.
 
-   ![Analytics and Recommendations: ikon](do-not-localize/chlimage_1-14.png)
+   ![Analyser och Recommendations-ikon](do-not-localize/chlimage_1-14.png)
 
 ## Synliga analyser från sidredigeraren (Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
 
@@ -90,4 +90,4 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 >
 >På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM.
 >
->The [ActivityMap-plugin från Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas.
+>Plugin-programmet [ActivityMap som tillhandahålls av Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas.

@@ -31,15 +31,15 @@ Grundläggande information finns i följande:
 
 ## Varför Clientlibs krävs {#why-clientlibs-are-required}
 
-Clientlibs krävs för att en komponent ska fungera korrekt (JavaScript) och formatera (CSS).
+Clientlibs krävs för att en komponent ska fungera korrekt (JavaScript) och ha rätt format (CSS).
 
-När det finns en [communityfunktion](/help/communities/functions.md) för en funktion finns alla nödvändiga komponenter och konfigurationer, inklusive de nödvändiga klientlibs, på communitywebbplatsen. Bara om ytterligare komponenter ska vara tillgängliga för författare måste ytterligare klientlib läggas till.
+När det finns en [community-funktion](/help/communities/functions.md) för en funktion finns alla nödvändiga komponenter och konfigurationer, inklusive de nödvändiga klientlibs, på communitywebbplatsen. Bara om ytterligare komponenter ska vara tillgängliga för författare måste ytterligare klientlib läggas till.
 
-När de nödvändiga klientlibs saknas, [lägga till en webbgruppskomponent på en sida](/help/communities/author-communities.md) kan resultera i JavaScript-fel och ett oväntat utseende.
+När de nödvändiga klientlibs saknas kan [tillägg av en webbgruppskomponent till en sida](/help/communities/author-communities.md) resultera i JavaScript-fel och ett oväntat utseende.
 
 ### Exempel: Monterade granskningar utan Clientlibs {#example-placed-reviews-without-clientlibs}
 
-![monterade granskningar](assets/placed-reviews.png)
+![placerade-recensioner](assets/placed-reviews.png)
 
 ### Exempel: Monterade granskningar med Clientlibs {#example-placed-reviews-with-clientlibs}
 
@@ -49,9 +49,9 @@ När de nödvändiga klientlibs saknas, [lägga till en webbgruppskomponent på 
 
 Den viktigaste funktionsinformationen för utvecklare identifierar de nödvändiga klientlibs.
 
-Från en AEM förekomst bläddrar du dessutom till [Guide för communitykomponenter](/help/communities/components-guide.md) ger åtkomst till en lista över de klientlibkategorier som krävs för en komponent.
+Om du dessutom bläddrar till [Community Components Guide](/help/communities/components-guide.md) från en AEM får du tillgång till en lista med de clientlib-kategorier som krävs för en komponent.
 
-Till exempel längst upp på [Granskningssida](https://localhost:4502/content/community-components/en/reviews.html) de nödvändiga listorna är
+Överst på sidan [Recensioner](https://localhost:4502/content/community-components/en/reviews.html) finns till exempel de nödvändiga libs som visas
 
 * cq.ckeditor
 * cq.social.hbs.reviews
@@ -62,19 +62,19 @@ Till exempel längst upp på [Granskningssida](https://localhost:4502/content/co
 
 När du vill lägga till en webbgruppskomponent på en sida måste du lägga till de nödvändiga klientlibs för komponenten om det inte redan finns.
 
-Använd [CRXDE|Lite](#using-crxde-lite) om du vill ändra en befintlig klientlistorlista för en communitywebbplats.
+Använd [CRXDE|Lite](#using-crxde-lite) om du vill ändra en befintlig klientlistorlista för en communitywebbplatssida.
 
 Så här lägger du till en klientlib för en community-webbplats med [CRXDE Lite](/help/sites-developing/developing-with-crxde-lite.md):
 
-* Bläddra till [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de).
-* Leta reda på `clientlibslist` nod för den sida där du vill lägga till komponenten:
+* Gå till [https://&lt;server>:&lt;port>/crx/de](https://localhost:4502/crx/de).
+* Leta reda på noden `clientlibslist` för sidan där du vill lägga till komponenten:
 
    * `/content/sites/sample/en/page/jcr:content/clientlibslist`
 
-* Med `clientlibslist` markerad nod:
+* Med noden `clientlibslist` markerad:
 
-   * Leta reda på strängen[] property `scg:requiredClientLibs`.
-   * Välj `Value` så att du kan komma åt dialogrutan String-array.
+   * Leta reda på egenskapen [] för String. `scg:requiredClientLibs`.
+   * Välj dess `Value` så att du kan komma åt dialogrutan String-matris.
 
       * Bläddra nedåt om det behövs.
       * Välj + för att ange ett nytt klientbibliotek.
@@ -89,6 +89,6 @@ Så här lägger du till en klientlib för en community-webbplats med [CRXDE Lit
 >
 >Om webbplatsen inte är en communitywebbplats måste förekomsten eller platsen för klientbiblioteken som används för webbplatsen upptäckas.
 
-Använda [Komma igång med AEM Communities](/help/communities/getting-started.md) exempel, där `site-name` är *engagera*, är det så här klienten visas om du lägger till granskningskomponenten:
+Om du använder exemplet [Komma igång med AEM Communities](/help/communities/getting-started.md), där `site-name` är *engage*, visas klienten så här om du lägger till granskningskomponenten:
 
 ![review-component](assets/review-component.png)

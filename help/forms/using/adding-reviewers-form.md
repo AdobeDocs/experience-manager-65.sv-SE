@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Koppla granskare som skickar in svar till ett formulär {#associating-submission-reviewers-with-a-form}
 
-<span class="preview"> Adobe rekommenderar att man använder modern och utbyggbar datainhämtning [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) for [skapa ny Adaptive Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [lägga till adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 När du skapar ett formulär kan du ange vilka användare som ska granska inskickade formulär via formulärportalen och ge feedback. Din organisation kan samla in feedback och omarbeta de inskickade formulären.
 
@@ -33,8 +33,8 @@ Om du vill associera en granskargrupp med ett formulär redigerar du metadataram
 
 Så här redigerar du metadataschema:
 
-1. Klicka på under Experience Manager i författarläget **verktyg** > **Resurser** > **Metadata-scheman**.
-1. Gå till Forms-sidan Schema **Forms** > **Forms i AEM.**
+1. I redigeringsläget, under Experience Manager, klickar du på **Verktyg** > **Assets** > **Metadata Schemas**.
+1. Gå till **Forms** > **Forms redigerat i AEM.** på Forms-sidan Schema.
 
    Sidans URL är:
 
@@ -43,9 +43,9 @@ Så här redigerar du metadataschema:
     schemalist.html/forms/aem-authored
    ```
 
-1. Välj **Adaptiv form** och klicka **Redigera**.
-1. På sidan Redigera formulär klickar du på **Avancerat**.
-1. Dra och släpp **Enkelradstext** som finns under Build Form.
+1. Välj **Adaptivt formulär** och klicka på **Redigera**.
+1. Klicka på **Avancerat** på sidan Redigera formulär.
+1. Dra och släpp komponenten **Enkelradig text** som finns under Skapa formulär på fliken Avancerat.
 1. Markera den tillagda textkomponenten för att se dess inställningar.
 
    Under Inställningar anger du `./jcr:content/metadata/form-submission-reviewer-group` i fältet Mappa till egenskap.
@@ -57,17 +57,17 @@ Så här redigerar du metadataschema:
 Om du vill associera granskare med ett anpassat formulär skapar du en granskargrupp och lägger till användare i den. Lägg till den skapade granskargruppen under fältet för att skicka in formulär i formulärets avancerade egenskaper.
 Med användargrupper kan du associera olika uppsättningar av granskare med olika anpassningsbara formulär. Den här funktionen förhindrar att obehöriga skickar in granskningar.
 
-Innan du utför följande steg finns mer information i [Förutsättning](../../forms/using/adding-reviewers-form.md#prerequisite).
+Innan du utför följande steg ska du läsa [Förutsättning](../../forms/using/adding-reviewers-form.md#prerequisite).
 
-Om du vill skapa en grupp och lägga till medlemmar i den går du till **verktyg** > **Operationer** > **Säkerhet** > **Grupper**.
+Om du vill skapa en grupp och lägga till medlemmar i den går du till **Verktyg** > **Åtgärder** > **Säkerhet** > **Grupper**.
 Mer information finns i [Användaradministration och -tjänster](/help/sites-administering/security.md).
-Se till att du lägger till gruppen som du skapar som medlem i den körklara användargruppen: **formulär-inskickning-granskare**. Den här användargruppen levereras med AEM Forms och ser till att användare läggs till som granskare.
+Se till att du lägger till gruppen som du skapar som medlem i den körklara användargruppen: **forms-submission-reviewers**. Den här användargruppen levereras med AEM Forms och ser till att användare läggs till som granskare.
 
 Så här associerar du användargrupper med ett anpassat formulär:
 
-1. I redigeringsläget går du till **Forms** > **Forms och dokument**.
+1. Gå till **Forms** > **Forms &amp; Documents** i redigeringsläget.
 1. Använd alternativet **Välj **för att välja ett anpassat formulär och klicka på **Visa egenskaper**.
-1. I fönstret Egenskaper i formuläret klickar du på **Redigera** och klicka sedan på **AVANCERAD**.
+1. Klicka på **Redigera** i fönstret Egenskaper för formuläret och klicka sedan på **AVANCERAT**.
 1. Ange gruppen i gruppfältet för granskare som ska skicka in och klicka på **Klar**.
 
    Fältet för granskningsgruppen som ska skickas visas med det namn som du angav i det redigerade metadataschemat för anpassade formulär.

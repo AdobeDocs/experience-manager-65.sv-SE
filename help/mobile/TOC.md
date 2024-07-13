@@ -26,17 +26,17 @@ ht-degree: 5%
    + [AEM Adobe PhoneGap](getting-started-aem-mobile-phonegap.md)
    + [AEM Mobile - GDPR-beredskap](aem-mobile-gdpr-compliance.md)
    + [Utveckla mobilappar](develop-mobile-apps.md)
-+ App för redigering av On Demand Services {#authoring}
++ Redigerar On-Demand Services-app {#authoring}
    + [Mobile On-Demand](mobile-apps-ondemand.md)
    + [Hantera innehåll](mobile-apps-ondemand-manage-content-ondemand.md)
-   + [Publicera inte publicera innehåll](mobile-on-demand-publishing-unpublishing.md)
+   + [Publish UnPublish Content](mobile-on-demand-publishing-unpublishing.md)
    + [AEM Mobile Application Dashboard](mobile-apps-ondemand-application-dashboard.md)
    + [Skapa och konfigurera program](mobile-apps-ondemand-application-create-configure-action.md)
    + [Hantera artiklar](mobile-on-demand-managing-articles.md)
    + [Överför delade resurser](mobile-on-demand-shared-resources.md)
    + [Molnkonfiguration](mobile-on-demand-associating-an-on-demand-app-to-cloud-configuration.md)
    + [Hantera banners](mobile-on-demand-managing-banners.md)
-+ Developing On Demand Services App {#developing}
++ Utvecklar On-Demand Services-app {#developing}
    + [AEM Mobile On-Demand](aem-mobile-on-demand.md)
    + [Appmallar och komponenter](app-templates-and-components1.md)
    + [Innehållsegenskaper och noder](content-properties.md)
@@ -50,7 +50,7 @@ ht-degree: 5%
    + [Återgivning och leverans](rendering-and-delivery.md)
    + [Innehållstjänster](developing-content-services.md)
    + [Innehållsleverans](develop-content-as-a-service.md)
-+ Administrera On Demand Services-app {#administering}
++ Administrerar On-Demand Services-app {#administering}
    + [AEM Mobile On-Demand](aem-mobile.md)
    + [AEM Mobile SetUp](aem-mobile-setup.md)
    + [Konfigurera dina användare och användargrupper](aem-mobile-configure-users.md)
@@ -59,7 +59,7 @@ ht-degree: 5%
    + [Modeller - översikt](model-management.md)
    + [Blanksteg och entiteter](spaces-and-entities.md)
    + [Hantera samlingar](mobile-on-demand-managing-collections.md)
-+ Skapa Adobe PhoneGap Enterprise {#author-phonegap}
++ Skapar Adobe PhoneGap Enterprise {#author-phonegap}
    + [PhoneGap](phonegap.md)
    + [Redigera appmetadata](phonegap-editmetadata.md)
    + [Programdefinitioner](phonegap-app-definitions.md)
@@ -68,7 +68,7 @@ ht-degree: 5%
    + [Skapa mobilprogram](phonegap-authoring-apps.md)
    + [Hantera apppanel](phonegap-app-details-tile.md)
    + [AEM Mobile innehållspersonalisering](phonegap-aem-mobile-content-personalization.md)
-+ Utveckla Adobe PhoneGap Enterprise {#developphonegap}
++ Utvecklar Adobe PhoneGap Enterprise {#developphonegap}
    + [PhoneGap](developing-in-phonegap.md)
    + [Bygger mobilprogram](building-app-mobile-phonegap.md)
    + [Push-meddelanden](phonegap-push-notifications.md)
@@ -88,7 +88,7 @@ ht-degree: 5%
    + [Testar mobilappar](develop-mobile-apps-testing.md)
    + [Strukturera ett program](phonegap-structure-an-app.md)
    + [Spåra appprestanda med Adobe Mobile Analytics](phonegap-intro-to-app-analytics.md)
-+ Administrera Adobe PhoneGap Enterprise {#administering-phonegap}
++ Administrerar Adobe PhoneGap Enterprise {#administering-phonegap}
    + [Mobile Quickstart](phonegap-mobile-quickstart.md)
    + [Administrera innehåll för Adobe PhoneGap Enterprise med AEM](administer-phonegap.md)
    + [Konfigurera din Adobe PhoneGap Build-Cloud Service](configure-phonegap-build-cloud.md)

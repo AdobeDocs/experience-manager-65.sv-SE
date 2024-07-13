@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Funktionen för communitygrupper är möjligheten för en undercommunity att skapas dynamiskt på en community-webbplats av behöriga användare från publicerings- och författarmiljöerna.
 
-Från och med Communities [funktionspaket 1](deploy-communities.md#latestfeaturepack)kan grupper kapslas i andra grupper.
+Från och med [funktionspaketet ](deploy-communities.md#latestfeaturepack) för Communities är det möjligt att kapsla grupper inom andra grupper.
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 
@@ -33,7 +33,7 @@ Från och med Communities [funktionspaket 1](deploy-communities.md#latestfeature
    <td>social/group/components/hbs/communitygroupmedlemslist</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
    <td>cq.social.hbs.communitygroups</td>
   </tr>
   <tr>
@@ -46,7 +46,7 @@ Från och med Communities [funktionspaket 1](deploy-communities.md#latestfeature
   </tr>
   <tr>
    <td><strong>egenskaper</strong></td>
-   <td>Se <a href="creating-groups.md">Community Group</a></td>
+   <td>Se <a href="creating-groups.md">Community-grupp</a></td>
   </tr>
  </tbody>
 </table>
@@ -60,7 +60,7 @@ Från och med Communities [funktionspaket 1](deploy-communities.md#latestfeature
    <td>social/grupp/komponenter/hbs/communityggrupper</td>
   </tr>
   <tr>
-   <td> <a href="clientlibs.md"><strong>klientlibs</strong></a></td>
+   <td> <a href="clientlibs.md"><strong>clientlibs</strong></a></td>
    <td>cq.social.hbs.communitygroups</td>
   </tr>
   <tr>
@@ -78,7 +78,7 @@ Från och med Communities [funktionspaket 1](deploy-communities.md#latestfeature
 
 ## Grundläggande för serversidan {#essentials-for-server-side}
 
-* [API för användargrupper](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
+* [API för communitygrupp](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/api/package-summary.html)
 
 * [Slutpunkter för communitygrupp](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/group/client/endpoints/package-summary.html)
 
@@ -86,15 +86,15 @@ Från och med Communities [funktionspaket 1](deploy-communities.md#latestfeature
 
 ### Funktionen Grupper {#groups-function}
 
-En community-webbplatsstruktur som innehåller [Funktionen Grupper](functions.md#groups-function) stöder skapandet av nya `community groups` från publicerings- och författarmiljöerna. Den skapade communitygruppen innehåller en `community groups member list` -komponent som listar medlemmarna i gruppen.
+En community-webbplatsstruktur som innehåller en [gruppfunktion](functions.md#groups-function) har stöd för att skapa nya `community groups` från publicerings- och författarmiljöerna. Den skapade communitygruppen innehåller en `community groups member list`-komponent som listar medlemmarna i gruppen.
 
-En eller flera [community-gruppmallar](tools-groups.md), som tillhandahåller designen för communitygruppssidorna, kan konfigureras för funktionen Grupper. Detta gäller när funktionen läggs till i en [mall för communitywebbplats](sites.md) eller kapslad i en community-gruppmall.
+En eller flera [communitygruppsmallar](tools-groups.md), som tillhandahåller designen för communitygruppssidorna, kan konfigureras för funktionen Grupper. Detta gäller när funktionen läggs till i en [community-webbplatsmall](sites.md) eller kapslas i en community-gruppmall.
 
-Om du använder flera mallar för communitygrupper blir det ett val. Det innebär att designvalet presenteras för den behöriga användaren när en community-grupp skapas för communitywebbplatsen. Se avsnittet om [communitygrupper](creating-groups.md) för författare.
+Om du använder flera mallar för communitygrupper blir det ett val. Det innebär att designvalet presenteras för den behöriga användaren när en community-grupp skapas för communitywebbplatsen. Se avsnittet [communitygrupper](creating-groups.md) för författare.
 
 ### Kapslade grupper {#nested-groups}
 
-Från och med Communities [FP1](deploy-communities.md#latestfeaturepack)kan en gruppfunktion inkluderas i en gruppmall, vilket gör att kapslade grupper (undergrupper) kan användas.
+Från och med Communities [FP1](deploy-communities.md#latestfeaturepack) är det möjligt att en gruppfunktion inkluderas i en gruppmall, vilket möjliggör kapslade grupper (undergrupper).
 
 När en communitywebbplats eller gruppmall innehåller funktionen Grupper kan du:
 

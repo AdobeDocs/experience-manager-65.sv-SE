@@ -38,7 +38,7 @@ CRX registrerar detaljerade loggar. När du har packat upp och startat Quickstar
 
 Standardloggnivån är INFO, d.v.s. DEBUG-meddelanden loggas inte.
 
-Om du vill aktivera DEBUG-loggnivån använder du CRX-utforskaren för att ange
+Om du vill aktivera DEBUG-loggnivån använder du CRX Explorer och anger
 
 ```xml
 /libs/sling/config/org.apache.sling.commons.log.LogManager/org.apache.sling.commons.log.level
@@ -57,7 +57,7 @@ Loggnivåerna är följande:
 | 0 | Allvarligt fel | Åtgärden misslyckades och installationsprogrammet kan inte fortsätta. |
 |---|---|---|
 | 1 | Fel | Åtgärden misslyckades. Installationen fortsätter, men en del av CRX installerades inte korrekt och kommer inte att fungera. |
-| 2 | Varning | Åtgärden har slutförts men problem uppstod. CRX fungerar eventuellt inte korrekt. |
+| 2 | Varning | Åtgärden har slutförts men problem uppstod. CRX kanske inte fungerar som det ska. |
 | 3 | Information | Åtgärden har slutförts. |
 
 ## Detaljerat alternativ som används för felsökning {#verbose-option-used-for-troubleshooting}

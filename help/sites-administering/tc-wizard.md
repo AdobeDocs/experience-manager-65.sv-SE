@@ -30,11 +30,11 @@ Så här öppnar du guiden:
 
    ![chlimage_1-10](assets/chlimage_1-10.jpeg)
 
-1. The **Välj källa** kan du lägga till/ta bort sidor. Du kan också välja att ta med eller utesluta undersidor.
+1. Med steget **Välj Source** i guiden kan du lägga till/ta bort sidor. Du kan också välja att ta med eller utesluta undersidor.
 
    ![chlimage_1-11](assets/chlimage_1-11.jpeg)
 
-1. The **Nästa** för dig till **Konfigurera** steg i guiden. Här kan du lägga till/ta bort språk och välja översättningsmetod.
+1. Knappen **Nästa** visar guidens steg **Konfigurera**. Här kan du lägga till/ta bort språk och välja översättningsmetod.
 
    ![chlimage_1-12](assets/chlimage_1-12.jpeg)
 
@@ -42,7 +42,7 @@ Så här öppnar du guiden:
    >
    >Som standard finns det bara en översättningsinställning. Om du vill kunna välja andra inställningar måste du först konfigurera molnkonfigurationer. Se [Konfigurera översättningsintegreringsramverket](/help/sites-administering/tc-tic.md).
 
-1. The **Nästa** för dig till **Översätt** steg i guiden. Här kan du välja mellan att skapa enbart strukturen, skapa ett översättningsprojekt eller lägga till i ett befintligt översättningsprojekt.
+1. Med knappen **Nästa** kommer du till guidens **Översätt**-steg. Här kan du välja mellan att skapa enbart strukturen, skapa ett översättningsprojekt eller lägga till i ett befintligt översättningsprojekt.
 
    >[!NOTE]
    >
@@ -50,6 +50,6 @@ Så här öppnar du guiden:
 
    ![chlimage_1-13](assets/chlimage_1-13.jpeg)
 
-1. The **Skapa** avslutar guiden.
+1. Knappen **Skapa** avslutar guiden.
 
    ![chlimage_1-14](assets/chlimage_1-14.jpeg)

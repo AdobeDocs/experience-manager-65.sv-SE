@@ -30,7 +30,7 @@ HTTP/2 förbättrar sättet som webbläsare och servrar kommunicerar på, vilket
 
 På följande webbplats beskrivs HTTP/2 och dess fördelar på ett kort och enkelt sätt:
 
-[Vad du måste känna till om HTTP/2](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)
+[Vad du måste veta om HTTP/2](https://www.engadget.com/2015-02-24-what-you-need-to-know-about-http-2.html)
 
 ## Vilka är de viktigaste fördelarna med att gå över till HTTP/2 för innehållsleverans? {#what-are-the-key-benefits-of-moving-to-http-for-content-delivery}
 
@@ -97,4 +97,4 @@ Det icke-cachelagrade innehållet träffar direkt på Adobe-servrar tills cachen
 
 Eftersom webbläsaren inte anger detta är det nödvändigt att hämta ett tillägg.
 
-För Firefox och Chrome finns det ett tillägg som heter HTTP/2 och SPDY Indicator. Webbläsarna stöder bara http/2 på ett säkert sätt, så det är nödvändigt att anropa en URL med https för att verifiera. Om http/2 stöds anges det av tillägget i form av en blå Flash och en rubrik `X-Firefox-Spdy` : `h2`.
+För Firefox och Chrome finns det ett tillägg som heter HTTP/2 och SPDY Indicator. Webbläsarna stöder bara http/2 på ett säkert sätt, så det är nödvändigt att anropa en URL med https för att verifiera. Om http/2 stöds anges det av tillägget i form av en blå Flash-symbol och ett huvud `X-Firefox-Spdy` : `h2`.

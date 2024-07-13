@@ -16,11 +16,11 @@ ht-degree: 0%
 
 ## 1. Används CIF GraphQL endast för e-handel eller är det tillgängligt för att fråga innehåll som har skapats AEM JCR?
 
-Adobe har antagit Adobe Commerce GraphQL API:er som sin officiella e-handels-API för alla e-handelsrelaterade data. AEM använder därför GraphQL för att utbyta affärsdata med Adobe Commerce och med valfri e-handelsmotor via I/O Runtime. Det här GraphQL-API:t är oberoende av AEM GraphQL-API:t för att komma åt innehållsfragment.
+Adobe har antagit Adobe Commerce GraphQL API:er som sin officiella e-handels-API för alla e-handelsrelaterade data. AEM använder därför GraphQL för att utbyta affärsdata med Adobe Commerce och med valfri e-handelsmotor via I/O Runtime. Det här GraphQL-API:t är oberoende av hur GraphQL-API AEM åtkomst till innehållsfragment.
 
 ## 2. Kan produktresurser (bilder) lagras och refereras från AEM via Adobe Commerce Admin? Hur kan resurser från Dynamic Media förbrukas?
 
-Det finns ingen officiell integrering med AEM Assets - Adobe Commerce. Det finns en partnerkoppling på [marknadsplats](https://marketplace.magento.com/partner/bounteous_ecomm).
+Det finns ingen officiell integrering med AEM Assets - Adobe Commerce. Det finns en partnerkoppling tillgänglig på [Marketplace](https://marketplace.magento.com/partner/bounteous_ecomm).
 
 Du kan också som tillfällig lösning lagra produktresurser (bilder) i AEM Assets, men du måste lagra resursens URL-adresser manuellt i Adobe Commerce. Dynamic Media är en del av AEM Assets och fungerar på samma sätt.
 
@@ -44,13 +44,13 @@ Stöd för katalogstorlek beror på några ytterligare aspekter som du måste t�
 
 PIM-data exponeras för AEM och kunder via GraphQL-förfrågningar. Adobe rekommendation är att integrera PIM med e-handelsmotorn (Adobe Commerce eller andra) så att PIM-data sedan kan hämtas från e-handelsmotorn.
 
-## 8. Cachelagrar du även priser och andra data via Dispatcher. Blir det ofta en cachedomål?
+## 8. Cachelagra även priser och andra data via Dispatcher. Blir det ofta en cachedomål?
 
-Dynamiska data som pris eller lager cachelagras inte i Dispatcher. Dynamiska data hämtas på klientsidan med webbkomponenter direkt via GraphQL API:er. Endast statiska data (som produkt- eller kategoridata) cachelagras i Dispatcher. Om produktdata ändras behövs cacheogiltigförklaring.
+Dynamiska data som pris eller lager cachelagras inte på Dispatcher. Dynamiska data hämtas på klientsidan med webbkomponenter direkt via GraphQL API:er. Endast statiska data (som produkt- eller kategoridata) cachelagras på Dispatcher. Om produktdata ändras behövs cacheogiltigförklaring.
 
 ## 9. Hur fungerar cacheminnet för AEM Dispatcher med AEM och e-handel?
 
-Adobe rekommenderar att du ställer in TTL-baserad cacheogiltigförklaring för sidor som cachelagrats på Dispatcher. För dynamisk information som pris eller aktie rekommenderar Adobe att du återger datumet på klientsidan. Mer information om TTL-baserad cacheogiltigförklaring finns i [AEM](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html)
+Adobe rekommenderar att du ställer in TTL-baserad cacheogiltigförklaring för sidor som cachelagrats på Dispatcher. För dynamisk information som pris eller aktie rekommenderar Adobe att du återger datumet på klientsidan. Mer information om ogiltigförklaring av TTL-baserad cache finns i [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html)
 
 ## 10. Finns det någon rekommendation om enhetlig sökning AEM innehåll med Commerce?
 
@@ -78,4 +78,4 @@ Ja, självutvärderingsformulär D och försäkran om överensstämmelse finns t
 
 ## 16. Hur begär jag en I/O Runtime-licens?
 
-Du kan begära en testlicens för att använda I/O Runtime [här](https://adobeio.typeform.com/to/obqgRm).
+Du kan begära en utvärderingslicens för att använda I/O-miljön [här](https://adobeio.typeform.com/to/obqgRm).

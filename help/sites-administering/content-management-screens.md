@@ -1,6 +1,6 @@
 ---
-title: Innehållshantering för skärmar
-description: Läs om grunderna i Content Management for Screens.
+title: Innehållshantering för Screens
+description: Läs om grunderna i Content Management för Screens.
 contentOwner: Jyotika Syal
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: content
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 ---
 
-# Innehållshantering för skärmar{#content-management-for-screens}
+# Innehållshantering för Screens{#content-management-for-screens}
 
-A ***Content Manager*** för AEM Screens är en kreatör som arbetar nära med marknadsföring och känner till kampanjen, målgruppen och det önskade fokus. Innehållshanteraren ansvarar för att skapa och samordna slutanvändarupplevelser genom att utveckla olika kanaler och tilldela sekvenser till en tidsinställd kanalupplevelse.
+En ***Content Manager*** för AEM Screens är en kreatör som arbetar nära med marknadsföring och känner till kampanjen, målgruppen och det önskade fokus. Innehållshanteraren ansvarar för att skapa och samordna slutanvändarupplevelser genom att utveckla olika kanaler och tilldela sekvenser till en tidsinställd kanalupplevelse.
 
-Content Manager for Screens designplatser och scheman, bibehåll kanalintegriteten, utföra analyser och rapporter samt underhålla videoprofiler.
+Content Manager for Screens designplatser och -scheman, bibehåll kanalintegriteten, analysera och rapportera samt underhålla videoprofiler.
 
 En AEM Screens Content Manager ansvarar för följande:
 

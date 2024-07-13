@@ -17,9 +17,9 @@ ht-degree: 12%
 
 Resursredigeraren är den sida som öppnas när användaren klickar på en resurs som hittas via Resursresurs, så att användaren kan redigera sådana aspekter av resursen som metadata, miniatyrbilder, rubrik och taggar.
 
-Konfiguration av redigeraren med de fördefinierade redigeringskomponenterna beskrivs i [Skapa och konfigurera en resursredigeringssida](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page).
+Konfigurationen av redigeraren med de fördefinierade redigeringskomponenterna beskrivs i [Skapa och konfigurera en resursredigeringssida](assets-finder-editor.md#creating-and-configuring-an-asset-editor-page).
 
-Förutom att använda befintliga redigeringskomponenter [!DNL Adobe Experience Manager] utvecklare kan också skapa egna komponenter.
+Förutom att använda befintliga redigeringskomponenter kan [!DNL Adobe Experience Manager]-utvecklare även skapa egna komponenter.
 
 ## Skapa en resursredigeringsmall {#creating-an-asset-editor-template}
 
@@ -27,23 +27,23 @@ Följande exempelsidor finns i Geometrixx:
 
 * Exempelsida för Geometrixx: `/content/geometrixx/en/press/asseteditor.html`
 * Exempelmall: `/apps/geometrixx/templates/asseteditor`
-* Exempel på sidkomponent: `/apps/geometrixx/components/asseteditor`
+* Exempelsidkomponent: `/apps/geometrixx/components/asseteditor`
 
 ### Konfigurera Clientlib {#configuring-clientlib}
 
-[!DNL Assets] -komponenter använder ett tillägg till WCM-klienten för redigering. Klientlibs läses vanligtvis in i `init.jsp`.
+[!DNL Assets]-komponenter använder ett tillägg för WCM-klienten för redigering. Klientlibs läses vanligtvis in i `init.jsp`.
 
-Jämfört med standardinläsning av klientlib (i kärnan) `init.jsp`), [!DNL Assets] -mallen måste ha följande:
+Jämfört med standardinläsningen av klientlib (i kärnans `init.jsp`) måste en [!DNL Assets]-mall ha följande:
 
-* Mallen måste innehålla `cq.dam.edit` clientlib (i stället för `cq.wcm.edit`).
+* Mallen måste innehålla klientlib `cq.dam.edit` (i stället för `cq.wcm.edit`).
 
 * Clientlib måste också inkluderas i inaktiverat WCM-läge (t.ex. läsas in vid **publicering**) för att kunna återge predikat, åtgärder och linser.
 
-I de flesta fall kopieras det befintliga exemplet `init.jsp` (`/apps/geometrixx/components/asseteditor/init.jsp`) ska tillgodose dessa behov.
+I de flesta fall bör kopieringen av det befintliga exemplet `init.jsp` (`/apps/geometrixx/components/asseteditor/init.jsp`) uppfylla dessa behov.
 
 ### Konfigurera JS-åtgärder {#configuring-js-actions}
 
-Vissa av [!DNL Assets] komponenter kräver JS-funktioner definierade i `component.js`. Kopiera den här filen till komponentkatalogen och länka den.
+Vissa [!DNL Assets]-komponenter kräver JS-funktioner som definierats i `component.js`. Kopiera den här filen till komponentkatalogen och länka den.
 
 ```javascript
 <script type="text/javascript" src="<%= component.getPath() %>/component.js"></script>
@@ -53,7 +53,7 @@ Exemplet läser in den här JavaScript-källan i `head.jsp`(`/apps/geometrixx/co
 
 ### Ytterligare formatmallar {#additional-style-sheets}
 
-Vissa av [!DNL Assets] -komponenter använder widgetbiblioteket. För att kunna återges korrekt i innehållskontexten måste ytterligare en formatmall läsas in. Kodåtgärdskomponenten kräver en till.
+Vissa [!DNL Assets]-komponenter använder widgetbiblioteket. För att kunna återges korrekt i innehållskontexten måste ytterligare en formatmall läsas in. Kodåtgärdskomponenten kräver en till.
 
 ```css
 <link href="/etc/designs/geometrixx/ui.widgets.css" rel="stylesheet" type="text/css">
@@ -61,7 +61,7 @@ Vissa av [!DNL Assets] -komponenter använder widgetbiblioteket. För att kunna 
 
 ### Geometrixx formatmall {#geometrixx-style-sheet}
 
-Komponenterna för exempelsidorna kräver att alla väljare börjar med `.asseteditor` av `static.css` (`/etc/designs/geometrixx/static.css`). God praxis: Kopiera alla `.asseteditor` väljare till formatmallen och justera reglerna efter behov.
+Komponenterna för exempelsidan kräver att alla väljare börjar med `.asseteditor` av `static.css` (`/etc/designs/geometrixx/static.css`). Bästa praxis: Kopiera alla `.asseteditor`-väljare till formatmallen och justera reglerna efter behov.
 
 ### FormChooser: Justeringar för resurser som eventuellt lästs in {#formchooser-adjustments-for-eventually-loaded-resources}
 
@@ -127,7 +127,7 @@ Använd den föregående titeluppsättningen (antingen resurs eller sidrubrik) i
 I det här exemplet beskrivs hur du skapar en komponent som visar och visar metadata för en inläst resurs.
 
 1. Skapa en komponentmapp i projektkatalogen, till exempel `/apps/geometrixx/components/samplemeta`.
-1. Lägg till `content.xml` med följande kodutdrag:
+1. Lägg till `content.xml` med följande fragment:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -139,7 +139,7 @@ I det här exemplet beskrivs hur du skapar en komponent som visar och visar meta
        componentGroup="Asset Editor"/>
    ```
 
-1. Lägg till `samplemeta.jsp` med följande kodutdrag:
+1. Lägg till `samplemeta.jsp` med följande fragment:
 
    ```javascript
    <%--
@@ -197,15 +197,15 @@ I det här exemplet beskrivs hur du skapar en komponent som visar och visar meta
    </div>
    ```
 
-1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Gör en komponent redigerbar genom att lägga till en nod i CRXDE Lite `cq:editConfig` av primär typ `cq:EditConfig`. Du kan ta bort stycken genom att lägga till en egenskap med flera värden `cq:actions` med ett enda värde på `DELETE`.
+1. Om du vill göra komponenten tillgänglig måste du kunna redigera den. Om du vill göra en komponent redigerbar lägger du till en nod `cq:editConfig` av den primära typen `cq:EditConfig` i CRXDE Lite. Du kan ta bort stycken genom att lägga till en flervärdesegenskap `cq:actions` med ett enda värde på `DELETE`.
 
-1. Navigera till webbläsaren och till exempelsidan (till exempel `asseteditor.html`) växla till designläge och aktivera den nya komponenten för styckesystemet.
+1. Navigera till webbläsaren och på exempelsidan (till exempel `asseteditor.html`) växla till designläge och aktivera den nya komponenten för styckesystemet.
 
 1. I **redigeringsläget** är den nya komponenten (till exempel **Exempelmetadata**) nu tillgänglig i assistenten (finns i gruppen **Resursredigeraren**). Infoga komponenten. För att metadata ska kunna lagras måste de läggas till i metadataformuläret.
 
 ## Ändra metadataalternativ {#modifying-metadata-options}
 
-Du kan ändra de namnutrymmen som finns i dialogrutan [metadata-formulär](assets-finder-editor.md#metadata-form-and-text-field-configuring-the-view-metadata-component).
+Du kan ändra de namnutrymmen som finns i [metadataformuläret](assets-finder-editor.md#metadata-form-and-text-field-configuring-the-view-metadata-component).
 
 Tillgängliga metadata definieras i `/libs/dam/options/metadata`:
 

@@ -18,7 +18,7 @@ ht-degree: 3%
 
 # Provar Responsiv layout i We.Retail{#trying-out-responsive-layout-in-we-retail}
 
-Alla webbsidor använder komponenten Layoutbehållare för att implementera responsiv design. Layoutbehållaren har ett styckesystem där du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med **Layout** i sidredigeraren, där du kan skapa och redigera din responsiva layout beroende på enhet.
+Alla webbsidor använder komponenten Layoutbehållare för att implementera responsiv design. Layoutbehållaren har ett styckesystem där du kan placera komponenter i ett responsivt rutnät. Rutnätet kan ändra layouten beroende på enhetens/fönstrets storlek och format. Komponenten används tillsammans med läget **Layout** i sidredigeraren, där du kan skapa och redigera den responsiva layouten beroende på enhet.
 
 ## Prova {#trying-it-out}
 
@@ -26,7 +26,7 @@ Alla webbsidor använder komponenten Layoutbehållare för att implementera resp
 
    http://localhost:4502/editor.html/content/we-retail/language-masters/en/experience/arctic-surfing-in-lofoten.html
 
-1. Växla till **Förhandsgranska** för att se sidan som den skulle återges för en besökare på webbplatsen. Bläddra nedåt till artikelns innehåll *Aloha-sprit i Norge*.
+1. Växla till **Förhandsgranska** om du vill se sidan som den skulle återges för en besökare på webbplatsen. Bläddra nedåt till innehållet i artikeln *Aloha-sprit i Norge*.
 
    ![chlimage_1-178](assets/chlimage_1-178.png)
 
@@ -46,4 +46,4 @@ Alla webbsidor använder komponenten Layoutbehållare för att implementera resp
 
 ## Ytterligare information {#further-information}
 
-Mer information finns i redigeringsdokumentet [Responsiv layout](/help/sites-authoring/responsive-layout.md) eller administratörsdokumentet [Konfigurera layoutbehållare och layoutläge](/help/sites-administering/configuring-responsive-layout.md) för fullständig teknisk information.
+Mer information finns i redigeringsdokumentet [Responsiv layout](/help/sites-authoring/responsive-layout.md) eller administratörsdokumentet [Configuring Layout Container and Layout Mode](/help/sites-administering/configuring-responsive-layout.md) för fullständig teknisk information.

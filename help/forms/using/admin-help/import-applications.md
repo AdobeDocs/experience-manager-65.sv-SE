@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Importera och hantera program{#import-and-manage-applications}
 
-I AEM formulär *program* är en behållare för lagring av resurser som krävs för att implementera en lösning för AEM formulär. Exempel på resurser är formulärdesigner, formulärfragment, bilder, processer, DDX-filer, formulärguider, HTML-sidor och SWF-filer. Under ett projekts utvecklingsfas kan Workbench-användare distribuera program direkt från programvyn i Workbench. När programmen har distribuerats visas de i administrationskonsolen på fliken Program på sidan Programhantering.
+I AEM är ett *program* en behållare för att lagra resurser som krävs för att implementera en AEM formulärslösning. Exempel på resurser är formulärdesigner, formulärfragment, bilder, processer, DDX-filer, formulärguider, HTML-sidor och SWF-filer. Under ett projekts utvecklingsfas kan Workbench-användare distribuera program direkt från programvyn i Workbench. När programmen har distribuerats visas de i administrationskonsolen på fliken Program på sidan Programhantering.
 
 När ett program är klart för distribution till en produktionsserver paketerar Workbench-användaren programmet i en *AEM formulärprogramfil* (.lca). Därefter använder en administratör administrationskonsolen för att importera och distribuera programfilen på fliken Program på sidan Programhantering.
 
@@ -40,8 +40,8 @@ Använd fliken Program för att importera och hantera program som har skapats i 
 1. I administrationskonsolen klickar du på Tjänster > Program och tjänster > Programhantering.
 1. Klicka på Importera.
 1. Klicka på Bläddra, markera den .lca-fil som ska importeras och klicka på Förhandsgranska. På sidan Förhandsgranska program visas information om programmet.
-1. (Valfritt) Om du vill visa en lista över resurserna i programmet klickar du på Visa resurser.
-1. (Valfritt) Om du vill distribuera resurserna till körningen väljer du Distribuera resurser till körning när importen är klar. Om du inte väljer det här alternativet kan du distribuera resurserna senare.
+1. (Valfritt) Om du vill visa en lista över resurserna i programmet klickar du på Visa Assets.
+1. (Valfritt) Om du vill distribuera resurserna till körningsmiljön väljer du Distribuera Assets till körningsmiljö när importen är klar. Om du inte väljer det här alternativet kan du distribuera resurserna senare.
 1. Klicka på Importera. Programmet visas på fliken Program.
 1. Logga in i CRX-databasen med administratörsuppgifter.
 1. Navigera till content/dam/lcapplications
@@ -54,7 +54,7 @@ Använd fliken Program för att importera och hantera program som har skapats i 
 
    Egenskaperna för den valda CRX-noden visas på fliken Egenskaper till höger.
 
-   The **syncState** anger status för synkronisering av data mellan AEM Forms Server och CRX-databasen. Så snart importprocessen börjar är det här läget inställt på 0 (noll). Det här läget anger att data inte är synkroniserade just nu. När data synkroniseras ställs läget in på 1.
+   Egenskapen **syncState** anger status för synkronisering av data mellan AEM Forms-servern och CRX-databasen. Så snart importprocessen börjar är det här läget inställt på 0 (noll). Det här läget anger att data inte är synkroniserade just nu. När data synkroniseras ställs läget in på 1.
 
 ## Distribuera ett program {#deploy-an-application}
 

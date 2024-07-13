@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Beroende på de olika platsernas topologi och funktioner kan följande åtgärder vara nödvändiga när du uppgraderar till AEM Communities 6.5 eller installerar det senaste funktionspaketet.
 
-Detta avsnitt är specifikt för Communities och kompletterar informationen i [Uppgradera till AEM 6.5](/help/sites-deploying/upgrade.md) (plattform).
+Det här avsnittet är specifikt för Communities och kompletterar informationen i [Uppgradera till AEM 6.5](/help/sites-deploying/upgrade.md) (plattform).
 
 ## Uppgradera från AEM 6.1 eller senare {#upgrading-from-aem-or-later}
 
@@ -29,19 +29,20 @@ Detta avsnitt är specifikt för Communities och kompletterar informationen i [U
 
 När du installerar ett nytt funktionspaket för Communities på en distribution som konfigurerats med MSRP måste du:
 
-1. Installera [senaste funktionspaketet](/help/communities/deploy-communities.md#latestfeaturepack).
-1. Installera [senaste Solr-konfigurationsfiler](/help/communities/msrp.md#upgrading).
-1. Indexera om avsnittet MSRP [MSRP Reindex Tool](/help/communities/msrp.md#msrp-reindex-tool).
+1. Installera det [senaste funktionspaketet](/help/communities/deploy-communities.md#latestfeaturepack).
+1. Installera de [senaste Solr-konfigurationsfilerna](/help/communities/msrp.md#upgrading).
+1. Indexera om MSRP
+se avsnittet [MSRP Reindex Tool](/help/communities/msrp.md#msrp-reindex-tool).
 
 ## Uppgradera från AEM 6.0 {#upgrading-from-aem}
 
-Om befintlig UGC måste behållas beror metoden för att göra det på om den lagrade UGC-distributionen är lagrad [lokal](#on-premise-storage) eller i [Adobe cloud](#adobe-cloud-storage).
+Om befintlig UGC måste behållas beror det på om distributionen lagrade UGC [lokalt](#on-premise-storage) eller i molnet [Adobe](#adobe-cloud-storage).
 
 ### Adobe Cloud-lagring {#adobe-cloud-storage}
 
 Om den uppgraderade webbplatsen har konfigurerats för att använda molnlagring i Adobe kan den visas (felaktigt) som om all UGC har förlorats eftersom SRP-metoderna inte kan hitta den befintliga UGC:n på den gamla platsen.
 
-Därför finns det möjlighet att instruera ASRP att använda `AEM 6.0 compatability-mode` för att få tillgång till UGC.
+Det går alltså att instruera ASRP att använda `AEM 6.0 compatability-mode` för att få åtkomst till UGC.
 
 För alla AEM 6.3-instanser:
 
@@ -51,16 +52,16 @@ För alla AEM 6.3-instanser:
 
    * Bläddra till webbkonsolen:
 
-      * Till exempel: [https://&lt;host>:&lt;port>/system/console/configMgr](https://localhost:4502/system/console/configMgr)
+      * Till exempel [https://&lt;värd>:&lt;port>/system/console/configMgr](https://localhost:4502/system/console/configMgr)
 
-      * Sök **AEM Communities Utilities** konfiguration.
+      * Leta reda på konfigurationen för **AEM Communities Utilities**.
       * Markera för att expandera konfigurationspanelen:
 
          * *Avmarkera* `Cloud Storage`
 
          * Välj **Spara**
 
-     ![utilities](assets/utilities.png)
+     ![verktyg](assets/utilities.png)
 
 ### Lokal lagring {#on-premise-storage}
 
@@ -73,13 +74,13 @@ Ett migreringsverktyg med öppen källkod är tillgängligt på GitHub:
 
 Vid uppgradering från AEM 6.0 sociala communityn till AEM 6.3 Communities har många API:er omorganiserats till olika paket. De flesta bör vara lätta att lösa när man använder en integrerad utvecklingsmiljö för anpassning av communityfunktioner.
 
-Mer information om paketet SocialUtils finns på [Omfaktorisering för SocialUtils](/help/communities/socialutils.md).
+Mer information om det borttagna paketet SocialUtils finns på [SocialUtils Refactoring](/help/communities/socialutils.md).
 
-Se även [Använda Maven for Communities](/help/communities/maven.md).
+Se även [Använda Maven för Communities](/help/communities/maven.md).
 
 ### Inga JSP-komponentmallar {#no-jsp-component-templates}
 
-The [ramverk för sociala komponenter](/help/communities/scf.md) (SCF) använder [HandtagBarJS](https://handlebarsjs.com/) (HBS) mallspråk i stället för Java Server Pages (JSP) som användes före AEM 6.0.
+I det [sociala komponentramverket](/help/communities/scf.md) (SCF) används mallspråket [HandlebarsJS](https://handlebarsjs.com/) (HBS) i stället för Java Server Pages (JSP) som användes före AEM 6.0.
 
 I AEM 6.0 låg JSP-komponenterna kvar tillsammans med de nya HBS-ramverkskomponenterna på samma plats, och HBS-komponenterna fanns vanligtvis i undermappar med namnet&quot;hbs&quot;.
 
@@ -87,16 +88,16 @@ Från och med AEM 6.1 togs JSP-komponenterna bort helt. För Communities rekomme
 
 ## AEM Communities UGC-migreringsverktyg {#aem-communities-ugc-migration-tool}
 
-The [AEM Communities UGC-migreringsverktyg](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration) är ett migreringsverktyg med öppen källkod, som finns på GitHub, som kan anpassas för att exportera UGC från tidigare versioner av AEM sociala communities och importera till AEM Communities 6.1 eller senare.
+[AEM Communities UGC-migreringsverktyg](https://github.com/Adobe-Marketing-Cloud/communities-ugc-migration) är ett migreringsverktyg med öppen källkod, som finns på GitHub, som kan anpassas för att exportera UGC från tidigare versioner AEM sociala communities och importera till AEM Communities 6.1 eller senare.
 
-Förutom att flytta användargenererat innehåll från tidigare versioner går det även att använda verktyget för att flytta användargenererat innehåll från en [SRP](/help/communities/working-with-srp.md) till en annan, till exempel från MSRP till DSRP.
+Förutom att flytta UGC från tidigare versioner går det också att använda verktyget för att flytta UGC från en [SRP](/help/communities/working-with-srp.md) till en annan, till exempel från MSRP till DSRP.
 
 ## Uppgradera från AEM 5.6.1 eller tidigare {#upgrading-from-aem-or-earlier}
 
 Det finns tre generationer av communitykomponenter:
 
-**Gen 1**: CQ 5.4 till AEM 5.6.0 är de **kollab** -komponenter som lagrade UGC i den lokala databasen med replikering som ett sätt att synkronisera UGC över olika plattformar. Andra skillnader är implementeringen med Java Server Pages (JSP) och bloggfunktionen som bara består av redigering i författarmiljön.
+**Gen 1**: CQ 5.4 till AEM 5.6.0 är de här **collab** -komponenterna som lagrade UGC i den lokala databasen med replikering som ett sätt att synkronisera UGC mellan plattformar. Andra skillnader är implementeringen med Java Server Pages (JSP) och bloggfunktionen som bara består av redigering i författarmiljön.
 
-**Gen 2**: Från AEM 5.6.1 till och med AEM 6.1 är detta en blandning av **kollab** och **social** -komponenter. AEM 6.0 introducerade [ramverk för sociala komponenter](/help/communities/scf.md) (SCF) och AEM 6.2 införde ett [gemensam UGC-butik](/help/communities/working-with-srp.md) där UGC används med en [lagringsresursprovider](/help/communities/srp.md) (SRP).
+**Gen 2**: Från AEM 5.6.1 till AEM 6.1 är detta en blandning av komponenterna **collab** och **social**. AEM 6.0 introducerade det nya ramverket [för sociala komponenter](/help/communities/scf.md) (SCF) och AEM 6.2 introducerade ett [vanligt UGC-arkiv](/help/communities/working-with-srp.md) där UGC används med en [lagringsresursleverantör](/help/communities/srp.md) (SRP).
 
-**Gen 3**: Från AEM 6.2 och framåt finns det bara **social** -komponenter, implementerade i SCF som HBS-komponenter (Handlebars) som kräver val av SRP för UGC.
+**Gen 3**: Från och med AEM 6.2 finns det bara **sociala** komponenter som implementerats i SCF som HBS-komponenter som kräver att du väljer SRP för UGC.

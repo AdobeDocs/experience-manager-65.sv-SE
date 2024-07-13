@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # Skapa en anpassad AEM med Adobe Campaign Form Components{#creating-custom-aem-page-template-with-adobe-campaign-form-components}
 
-På den här sidan beskrivs hur du skapar en anpassad sidmall som använder [Adobe Campaign Form](/help/sites-authoring/adobe-campaign-components.md) genom att undersöka hur mallen för Geometrixx utomhus (`/apps/geometrixx-outdoors/components/page_campaign_profile`) är implementerat och pekar på viktig information som du kan behöva när du skapar en egen anpassad mall.
+På den här sidan beskrivs hur du skapar en anpassad sidmall som använder [Adobe Campaign Form](/help/sites-authoring/adobe-campaign-components.md) -komponenter genom att undersöka hur mallen för utomhusaktiviteter (`/apps/geometrixx-outdoors/components/page_campaign_profile`) implementeras, och den pekar dig på viktig information som du kan behöva när du skapar en egen anpassad mall.
 
 >[!NOTE]
 >
@@ -46,16 +46,16 @@ Om du vill skapa en anpassad AEM sidmall med hjälp av Adobe Campaign Form-kompo
 
 1. **Inställningar för ClientContext**
 
-   När du tittar på klientkontextinställningarna ( `/etc/designs/geometrixx-outdoors/jcr:content/page_campaign_profile`) visas följande inställningar:
+   När du tittar på klientkontextinställningarna ( `/etc/designs/geometrixx-outdoors/jcr:content/page_campaign_profile`) ser du följande inställningar:
 
    * ClientContexten pekar på `/etc/clientcontext/campaign`
-   * Det finns även en extra *config* nod.
+   * Det finns även en extra *config*-nod.
 
    ![chlimage_1-202](assets/chlimage_1-202.png)
 
 1. **head.jsp (/apps/geometrixx-outdoors/components/page_campaign_profile/head.jsp)**
 
-   I **head.jsp** visas följande rader som använder **clientcontext-config** och **molntjänstkrok**:
+   I **head.jsp** ser du följande rader som använder **clientcontext-config** och **cloudservice-kroken**:
 
    ```
    <cq:include path="config" resourceType="cq/personalization/components/clientcontext_optimized/config"/>
@@ -65,7 +65,7 @@ Om du vill skapa en anpassad AEM sidmall med hjälp av Adobe Campaign Form-kompo
 
 1. **body.jsp (/apps/geometrixx-outdoors/components/page_campaign_profile/body.jsp)**
 
-   I **body.jsp**, läses molntjänsterna in längst ned på sidan:
+   I **body.jsp** läses molntjänsterna in längst ned på sidan:
 
    ```
    <cq:include path="cloudservices" resourceType="cq/cloudserviceconfigs/components/servicecomponents"/>
@@ -73,7 +73,7 @@ Om du vill skapa en anpassad AEM sidmall med hjälp av Adobe Campaign Form-kompo
 
 1. **Egenskaper för kampanjsida**
 
-   För att kunna välja en Adobe Campaign-mall utökas sidegenskaperna med **Campaign** tab:
+   Om du vill kunna välja en Adobe Campaign-mall utökas sidegenskaperna med fliken **Campaign** :
 
    `/apps/geometrixx-outdoors/components/page_campaign_profile/dialog/items/tabs/items/campaign`
 

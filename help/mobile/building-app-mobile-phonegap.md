@@ -24,9 +24,9 @@ ht-degree: 0%
 
 Bygg applikationen för installation på en enhet eller simulator för testning eller publicering i appbutiker. Du kan skapa program lokalt med PhoneGap Command Line Interface eller i molnet med PhoneGap Build.
 
-Det finns en komplett, stegvis artikel om hur du bygger ett mobilprogram med hjälp av kod från GitHub [här](https://helpx.adobe.com/experience-manager/using/aem62_mobile.html).
+En komplett, stegvis artikel om hur du skapar ett mobilprogram med kod som är tillgänglig från GitHub finns [här](https://helpx.adobe.com/experience-manager/using/aem62_mobile.html).
 
-## Flytta programmet till publiceringsinstansen {#moving-the-application-to-the-publish-instance}
+## Flytta programmet till Publish-instansen {#moving-the-application-to-the-publish-instance}
 
 Flytta programfiler till publiceringsinstansen så att du kan tillhandahålla innehållsuppdateringar till de installerade instanserna av mobilprogrammet och skapa programmet med det publicerade innehållet. Programmen består av två nodgrenar i databasen:
 
@@ -37,16 +37,16 @@ Flytta programfiler till publiceringsinstansen så att du kan tillhandahålla in
 >
 >Om du inte flyttar programfilerna till publiceringsinstansen kan innehållsförfattarna inte uppdatera cachen för innehållssynkronisering.
 
-Du behöver bara flytta filerna i `/content/phonegap/content/<application name>` till publiceringsinstansen. Filerna i `/content/phonegap/apps/<application name>` grenen flyttas när författaren aktiverar sidorna.
+Du behöver bara flytta filerna i grenen `/content/phonegap/content/<application name>` till publiceringsinstansen. Filerna i grenen `/content/phonegap/apps/<application name>` flyttas när författaren aktiverar sidorna.
 
 I AEM finns två metoder för att flytta massinnehåll till publiceringsinstansen:
 
-* [Använda kommandot Aktivera träd](/help/sites-authoring/publishing-pages.md) på replikeringskonsolen.
+* [Använd kommandot Aktivera träd](/help/sites-authoring/publishing-pages.md) på replikeringskonsolen.
 * [Skapa ett paket](/help/sites-administering/package-manager.md) som innehåller innehållet och replikera paketet.
 
 Ett mobilprogram med namnet phonegapapp skapas till exempel. Följande nod måste flyttas till publiceringsinstansen: /content/phonegap/content/phonegapapp.
 
-**Tips:** Om du vill flytta ett paket från författarinstansen till publiceringsinstansen använder du kommandot Replikera i paketet.
+**Tips!** Om du vill flytta ett paket från författarinstansen till publiceringsinstansen använder du kommandot Replikera i paketet.
 
 ![chlimage_1-16](assets/chlimage_1-16.png)
 
@@ -65,7 +65,7 @@ Om du vill bygga med PhoneGap CLI måste du installera Node.js och PhoneGap-klie
    npm install -g phonegap
    ```
 
-   I ett UNIX®- eller Linux®-system kan du behöva prefix till kommandot med `sudo`.
+   På ett UNIX®- eller Linux®-system kan du behöva prefix till kommandot med `sudo`.
 
    Terminalen visar resultatet av en serie HTTP GET-kommandon. När installationen är klar visar terminalen var biblioteken är installerade, som i följande exempel:
 
@@ -86,8 +86,8 @@ Om du vill bygga med PhoneGap CLI måste du installera Node.js och PhoneGap-klie
 
 1. (Valfritt) Skaffa SDK för den mobila plattform som ni riktar er mot:
 
-   * Installera den senaste versionen av iOS för att skapa appar för [Xcode](https://developer.apple.com/xcode/).
-   * Installera [Android™ SDK](https://developer.android.com/).
+   * Installera den senaste versionen av [Xcode](https://developer.apple.com/xcode/) om du vill skapa appar för iOS-plattformen.
+   * Installera [Android™ SDK](https://developer.android.com/) om du vill skapa Android™-appar.
 
 ### Laddar ned innehålls-ZIP-filen {#downloading-the-content-zip-file}
 
@@ -96,22 +96,22 @@ Flytta innehållet i mobilprogrammet till filsystemet.
 1. Välj ditt program på sidan Mobilprogram.
 1. (Valfritt) Klicka på ikonen Rensa cache i verktygsfältet för att skapa programmet för fullständiga installationer.
 
-   ![Ikonen Rensa cache indikeras av en bruten länksymbol.](do-not-localize/chlimage_1.png)
+   ![Ikonen för att rensa cache indikeras av en bruten länksymbol.](do-not-localize/chlimage_1.png)
 
    >[!NOTE]
    >
    >Cachen innehåller innehållsuppdateringar för installerade program. Om du rensar cachen försvinner alla cachelagrade uppdateringar.
 
-1. Klicka på ikonen Hämta CLI-resurser i verktygsfältet.
+1. Klicka på ikonen Hämta CLI Assets i verktygsfältet.
 
-   ![Ikonen Hämta CLI-resurser indikeras av en överlappande tablet-symbol.](do-not-localize/chlimage_1-1.png)
+   ![Ladda ned ikonen CLI Assets som indikeras av en överlappande surfplattesymbol.](do-not-localize/chlimage_1-1.png)
 
 1. När du har sparat ZIP-filen klickar du på Stäng i dialogrutan Slutfört.
 1. Extrahera innehållet i ZIP-filen.
 
 ### Använda PhoneGap CLI för att bygga {#using-the-phonegap-cli-to-build}
 
-Använd PhoneGap CLI för att kompilera och installera programmet. Mer information om hur du använder PhoneGap CLI finns i PhoneGap-kommandoradsgränssnittet (`https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html`).
+Använd PhoneGap CLI för att kompilera och installera programmet. Mer information om hur du använder PhoneGap CLI finns i dokumentationen för PhoneGap-kommandoradsgränssnittet (`https://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html`).
 
 1. Öppna en terminal eller kommandotolk och ändra den aktuella katalogen till den hämtade ZIP-programfilen. Följande ändrar till exempel katalogen till filen ng-app-cli.1392137825303.zip:
 
@@ -149,7 +149,7 @@ Skicka programresurserna till PhoneGap Build för kompilering för olika mobilpl
 1. Öppna ditt mobilprogram på sidan Mobilprogram. ([http://localhost:4502/mobile.html/content/phonegap](http://localhost:4502/mobile.html/content/phonegap))
 1. (Valfritt) Om du vill skapa programmet för fullständiga installationer markerar du programmet och klickar på ikonen Rensa cache.
 
-   ![Ikonen Rensa cache indikeras av en bruten länksymbol.](do-not-localize/chlimage_1-2.png)
+   ![Ikonen för att rensa cache indikeras av en bruten länksymbol.](do-not-localize/chlimage_1-2.png)
 
    >[!NOTE]
    >
@@ -157,11 +157,11 @@ Skicka programresurserna till PhoneGap Build för kompilering för olika mobilpl
 
 1. Markera välkomstsidan och klicka sedan på ikonen Skapa fjärrmapp.
 
-   ![Ikonen för att skapa en fjärrkontroll visas med två runda växlar.](do-not-localize/chlimage_1-3.png)
+   ![Ikonen för att skapa fjärr indikeras av två runda växlar.](do-not-localize/chlimage_1-3.png)
 
-   **Obs!** Betaversionen av AEM Beta skapar inte något inkorgsmeddelande när bygget är klart.
+   **Obs!** Beta-versionen av AEM Beta skapar inte ett inkorgsmeddelande när bygget har slutförts.
 
-1. I dialogrutan Slutfört klickar du på PhoneGap Build för att öppna Adobe PhoneGap Build-sidan på `https://build.phonegap.com/apps`. Om du väntar på att appen ska visas kan du kontrollera PhoneGapet Build-statusen på `https://status.build.phonegap.com/`.
+1. Öppna Adobe PhoneGap Build-sidan på `https://build.phonegap.com/apps` genom att klicka på PhoneGap Build i dialogrutan Slutfört. Om du väntar på att din app ska visas kan du kontrollera PhoneGapet Build-status på `https://status.build.phonegap.com/`.
 
    Mer information om hur du installerar bygget finns i [PhoneGap Build Documentation](https://github.com/phonegap/phonegap-docs/tree/master/docs/4-phonegap-build).
 
@@ -171,4 +171,4 @@ Skicka programresurserna till PhoneGap Build för kompilering för olika mobilpl
 
 ### Nästa steg {#the-next-steps}
 
-Nästa steg efter byggprocessen är att lära sig om [Struktur för ett program](/help/mobile/phonegap-structure-an-app.md).
+Nästa steg efter byggprocessen är att lära sig om [strukturen för ett program](/help/mobile/phonegap-structure-an-app.md).

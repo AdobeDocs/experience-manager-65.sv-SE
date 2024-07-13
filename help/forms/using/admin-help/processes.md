@@ -22,7 +22,7 @@ På sidan Processlista visas de processer som en användare har initierat eller 
 
 1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Forms-arbetsflöde. I processlistan visas följande information:
 
-   **Processnamn - version:** Processens namn, enligt definition i Workbench.
+   **Processnamn - Version:** Processens namn, enligt definition i Workbench.
 
    **Program:** Programmet som processen tillhör, enligt definition i Workbench.
 
@@ -38,13 +38,13 @@ Om du öppnar sidan Processinstans från sidan Processlista visas alla processin
 
 För varje processinstans visas följande information i listan:
 
-**Process-ID:** Den identifierare som formulärarbetsflödet tilldelar när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar en process). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
+**Process-ID:** Den identifierare som tilldelas i formulärarbetsflödet när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar en process). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
 
-**Processnamn - version:** Processens namn, enligt definition i Workbench.
+**Processnamn - Version:** Processens namn, enligt definition i Workbench.
 
 **Status:** Anger om processinstansen körs normalt, om tillståndet ändras eller om den har stoppats. (Se Om processinstansstatus.)
 
-**Skapad:** Det datum och den tidpunkt då processinstansen skapades.
+**Skapad:** Datum och tid då processinstansen skapades.
 
 **Uppdateringsdatum:** Datum och tid då processinstansens status senast ändrades.
 
@@ -58,23 +58,23 @@ Du kan göra följande på sidan Processinstans:
 
 En processinstans, inklusive underprocesser, kan ha följande status:
 
-**SLUTFÖRT:** Alla förgreningar och åtgärder i processinstansen har slutförts. COMPLETE är den slutliga statusen för en processinstans.
+**COMPLETE:** Alla förgreningar och åtgärder i processinstansen har slutförts. COMPLETE är den slutliga statusen för en processinstans.
 
-**SLUTFÖRANDE:** Processinstansens status ändras till COMPLETE.
+**SLUTFÖRD:** Processinstansens status ändras till COMPLETE.
 
 **INITIERAD:** Processinstansen har skapats men körs inte än. INITIATED är den första statusen för en processinstans.
 
 **KÖRS:** Processinstansen körs normalt. Ett automatiskt steg kan vara på gång, eller så kan processinstansen ta emot användarindata eller vänta på användarinteraktion.
 
-**UPPSKJUTEN:** Processinstansen har inaktiverats av en administratör eller av ett steg i processen. Inga fler åtgärder utförs förrän statusen har ändrats.
+**UPPHÄVD:** Processinstansen har inaktiverats av en administratör eller av ett steg i processen. Inga fler åtgärder utförs förrän statusen har ändrats.
 
-**AVBRYT:** Statusen ändras nu till SUSPENDED. Om en åtgärd har utformats för att ignorera pausbegäranden och ännu inte har slutförts, måste den åtgärden slutföras innan processinstansen pausas.
+**UPPHÄVANDE:** Statusen ändras nu till UPPHÄVD. Om en åtgärd har utformats för att ignorera pausbegäranden och ännu inte har slutförts, måste den åtgärden slutföras innan processinstansen pausas.
 
 **AVSLUTAD:** Processinstansen har avslutats av en administratör.
 
-**AVSLUTNING:** Statusen ändras nu till AVSLUTAD. Om en åtgärd har utformats för att ignorera avslutningsbegäranden och ännu inte har slutförts, måste åtgärden slutföras innan processinstansen avslutas.
+**AVSLUTAR:** Statusen ändras till AVSLUTAD. Om en åtgärd har utformats för att ignorera avslutningsbegäranden och ännu inte har slutförts, måste åtgärden slutföras innan processinstansen avslutas.
 
-**AVBRYT:** Statusen ändras till KÖRNING efter att ha SUSPENDED.
+**UPPHÄVANDE:** Status ändras till KÖRNING efter att ha AVBRUTITS.
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ Under Sammanfattning visas grundläggande information om processinstansen.
 
 På fliken Åtgärder visas varje åtgärd för processinstansen i den ordning som de slutförs från första till sista med följande information:
 
-**Åtgärdsnamn:** Namnet på åtgärden, enligt definition i Workbench.
+**Åtgärdsnamn:** Åtgärdens namn, enligt definition i Workbench.
 
 **Status:** Anger om åtgärden körs normalt eller har stoppats. (Se Om processinstansstatus.)
 
@@ -124,15 +124,15 @@ På fliken Åtgärder visas varje åtgärd för processinstansen i den ordning s
 
 **Startdatum:** Datum och tid då åtgärden startade.
 
-**Slutförd den:** Datum och tid då åtgärden slutfördes.
+**Slutförd:** Datum och tid då åtgärden slutfördes.
 
 En underprocess är en processinstans som startas av en annan process och som körs oberoende av den andra processen. Underprocesser visas bara om de har designats som en del av processen i Workbench. På fliken Underprocesser visas varje underprocess med följande information:
 
 **Process-ID:** Detta positiva heltal som formulärarbetsflödet tilldelar när processen initieras (det vill säga när en användare eller ett automatiskt steg initierar processen). Du kan använda den här identifieraren för att spåra processinstansen genom dess livscykel.
 
-**Processnamn - version:** Processens namn, enligt definition i Designer.
+**Processnamn - Version:** Processens namn, enligt definition i Designer.
 
-**Status:** Anger om processinstansen körs normalt, om tillståndet ändras eller om den stoppas. (Se Om processinstansstatus.)
+**Status:** Anger om processinstansen körs normalt, om tillståndet ändras eller om den har stoppats. (Se Om processinstansstatus.)
 
 **Skapad:** Datum och tid då underprocessen skapades.
 
@@ -148,11 +148,11 @@ Du kan göra följande på sidan Processinstansinformation:
 
 En åtgärd (ett steg i en process) kan ha följande status:
 
-**SLUTFÖRT:** Åtgärden har slutförts.
+**SLUTFÖRD:** Åtgärden har slutförts.
 
 **KÖRS:** Åtgärden körs normalt. Den kan ta emot användarindata eller vänta på användarinteraktion, eller så kan ett automatiskt steg vara på gång.
 
-**STALLERAD:** Ett problem uppstod när åtgärden bearbetades. Leta efter felet eller undantaget på sidan Installerade åtgärder.
+**STALLED:** Ett problem uppstod när åtgärden bearbetades. Leta efter felet eller undantaget på sidan Installerade åtgärder.
 
 **AVSLUTAD:** Åtgärden avbröts av en administratör.
 
@@ -191,7 +191,7 @@ På sidan Åtgärdsinformation visas en sammanfattning av en åtgärd i en proce
 
    För varje uppgift visas följande information i listan:
 
-   **Processnamn - version:** Processens namn, enligt definition i Workbench.
+   **Processnamn - Version:** Processens namn, enligt definition i Workbench.
 
    **Program:** Programmet som processen tillhör, enligt definition i Workbench.
 

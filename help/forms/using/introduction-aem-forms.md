@@ -33,13 +33,13 @@ AEM Forms kombinerar framtagning, hantering och publicering av blanketter med fu
 
 I stora företag skapas formulär ofta en gång och återanvänds genom att man kopierar till ett innehållshanteringssystem. Det kan vara en stor utmaning att hålla en stor databas med blanketter uppdaterad och kunna upptäckas. AEM har en anpassningsbar Forms Portal som ser till att kunderna hittar och har tillgång till formulär de behöver via både webben och mobila kanaler.
 
-AEM Forms har verktyg för blanketthantering som inte bara gör det möjligt att hantera adaptiva formulär, utan även XFA-formulär, PDF forms och relaterade resurser. Mer information finns i [Introduktion till hantering av formulär](../../forms/using/introduction-managing-forms.md).
+AEM Forms har verktyg för blanketthantering som inte bara gör det möjligt att hantera adaptiva formulär, utan även XFA-formulär, PDF forms och relaterade resurser. Mer information finns i [Introduktion till formulärhantering](../../forms/using/introduction-managing-forms.md).
 
 >[!NOTE]
 >
->Funktionen Adaptive Forms, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html), är endast avsedd för prospektering och utvärdering. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
+>Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
 
-![AEM](do-not-localize/4th-draft-updated.gif)
+![AEM formulärfunktioner](do-not-localize/4th-draft-updated.gif)
 
 ### Viktiga funktioner {#key-capabilities}
 
@@ -89,7 +89,7 @@ Alla formulärtyper stöder följande funktioner:
 
 När blankettdata har skickats kopplar Adobe Experience Manager blankettdata till befintliga system, affärsregler och personer.
 
-AEM Forms erbjuder Forms Workspace, en mobilapplikation som utvidgar era digitala affärsprocesser till mobila enheter. Med Forms Workspace kan du samla in och registrera data även offline. Forms Workspace använder funktionerna i din mobila enhet och gör att du kan ta foton, videoklipp och samla in data som tidsstämplar och annan information. Nästa gång du ansluter till ett nätverk kan du synkronisera insamlade data.
+AEM Forms erbjuder Forms Workspace, en mobilapplikation som utvidgar era digitala affärsprocesser till mobila enheter. Med Forms Workspace kan ni samla in och registrera data även offline. Forms Workspace använder funktionerna i din mobila enhet och gör att du kan ta foton, videor och samla in data som tidsstämplar och annan information. Nästa gång du ansluter till ett nätverk kan du synkronisera insamlade data.
 
 Att samla in data offline och synkronisera dem nästa gång du returnerar online är särskilt användbart för personer på fältet. Det förbättrar produktiviteten och minskar antalet fel.
 

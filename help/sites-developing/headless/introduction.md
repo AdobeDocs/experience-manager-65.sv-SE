@@ -30,7 +30,7 @@ Det här dokumentet fokuserar på den fullständiga headless-implementeringsmode
 
 >[!TIP]
 >
->Se dokumentet [Headless and Headless in AEM](/help/sites-developing/headful-headless.md) för mer information.
+>Mer information finns i dokumentet [Headful and Headless in AEM](/help/sites-developing/headful-headless.md).
 
 ## AEM 6.5 och Headless {#aem-headless}
 
@@ -43,11 +43,11 @@ AEM 6.5 är ett flexibelt verktyg för den headless-implementeringsmodellen med 
 1. Innehållsfragment
    * Innehållsfragment är instansieringar av innehållsmodeller.
    * Dessa skapas av innehållsförfattare med AEM Content Fragment Editor.
-   * De lagras i AEM Assets och hanteras i gränssnittet Resurser Admin.
+   * De lagras i AEM Assets och hanteras i användargränssnittet för Assets Admin.
 1. Innehålls-API för leverans
    * AEM GraphQL API stöder leverans av innehållsfragment.
    * AEM Assets REST API stöder CRUD-åtgärder för innehållsfragment.
-   * Direktleverans av innehåll är också möjligt med [Content Fragment Core Component&#39;s JSON export.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
+   * Direktinnehållsleverans är också möjligt med [Content Fragment Core Component&#39;s JSON export.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 ## Dina första steg med AEM headless {#first-steps}
 
@@ -55,7 +55,7 @@ Det finns flera resurser som du kan använda för att komma igång med AEM headl
 
 | Resurs | Beskrivning | Typ | Målgrupp | Beräkna. Tid |
 |---|---|---|---|---|
-| [Headless Developer Journey](/help/journey-headless/developer/overview.md) | **För användare som inte är AEM och utan headless** börjar du här för att få en omfattande introduktion till AEM och dess headless-funktioner från teorin om headless genom att publicera ditt första headless-projekt. | Guide | Utvecklare **nya i AEM och utan huvud** | 1 timme |
-| [Starthandbok för Headless](/help/sites-developing/headless/getting-started/introduction.md) | **För erfarna AEM** som behöver en kort sammanfattning av de viktigaste AEM rubrikfria funktionerna, se den här snabbstartsöversikten. | Snabbstart | Utvecklare, administratörer **med AEM** | 20 minuter |
-| [Komma igång med AEM självstudiekurs utan hörn](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | **Om du föredrar en praktisk lösning och är bekant med AEM** går den här självstudiekursen direkt in i ett enkelt headless-projekt. | Självstudiekurs | Utvecklare | 2 timmar |
-| [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html) | Den här resursen finns för båda **new** och **erfaren** utvecklare. | Resurser | Utvecklare | |
+| [Headless Developer Journey](/help/journey-headless/developer/overview.md) | **För användare som inte har AEM eller använder headless** kan du börja här för att få en omfattande introduktion till AEM och dess headless-funktioner, från teorin om headless till att börja med ditt första headless-projekt. | Guide | Utvecklare **nya för AEM och utan huvud** | 1 timme |
+| [Starthandbok för Headless](/help/sites-developing/headless/getting-started/introduction.md) | **För erfarna AEM**-användare som behöver en kort sammanfattning av AEM headless-funktioner kan du ta en titt på den här snabbstartsöversikten. | Snabbstart | Utvecklare, administratörer **med AEM** | 20 minuter |
+| [Komma igång med självstudiekurs AEM Headless Handless ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) | **Om du föredrar en praktisk metod och är bekant med AEM**, kommer den här självstudiekursen att dyka direkt i ett enkelt headless-projekt. | Självstudiekurs | Utvecklare | 2 timmar |
+| [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html) | Den här resurssamlingen tillhandahålls för både **nya**- och **erfarna**-utvecklare. | Resurser | Utvecklare | |

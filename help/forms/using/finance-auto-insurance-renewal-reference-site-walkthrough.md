@@ -24,7 +24,7 @@ Webbplatsen We.Finance är en sajt för finansiella tjänster som hjälper dig a
 
 Läs en detaljerad genomgång av ett användningsexempel om automatisk försäkring för webb.Finance som visar hur AEM formulär och dess integrering med Microsoft® Dynamics hjälper till att personalisera kundupplevelsen i ett finansföretag. Den interaktiva genomgången är utformad för att underlätta implementering av komplexa digitala transaktioner och kundkommunikation i ett finansföretag.
 
-**Resan börjar med följande exempel:**
+**Resan börjar med användningsexemplet:**
 
 Sarah Rose är en befintlig We.Finance-kund och har köpt en bilförsäkring. Det är årets tid för Sarah att förnya sin försäkring. Gloria Rios är sin försäkringsagent. Vi.Finance skickar en påminnelse till Sarah om att förnya sin policy. Sarah följer instruktionerna i e-postmeddelandet och slutför processen.
 
@@ -37,7 +37,7 @@ Scenariot för automatisk försäkring för Web.Finance är en visuell berättar
 
 ### Gloria skickar ett meddelande om förnyelse av försäkringsavtal från We.Finance {#gloria-sends-an-insurance-policy-renewal-communication-from-we-finance}
 
-Gloria loggar in AEM instansen, klickningar **Förnyelse av autoförsäkring** och sedan klicka **Open Agent-gränssnitt**. Klicket fyller i försäkringsdokumentet med information om Sarah Rose. Gloria klickade **Skicka** och ett meddelande visas på skärmen&quot;Inskickning initierad&quot; och sedan på några sekunder&quot;Inskickad klar&quot;.
+Gloria loggar in AEM instansen, klickar på **Förnyelse automatiskt** och klickar sedan på **Användargränssnittet för Open Agent**. Klicket fyller i försäkringsdokumentet med information om Sarah Rose. Gloria klickar på **Skicka** och ett meddelande visas på skärmen&quot;Inskickning initierad&quot; och sedan om några sekunder&quot;Inskickad klar&quot;.
 
 Sarah får ett mejl med rubriken&quot;Din förnyelse av autoförsäkring&quot;.
 
@@ -45,15 +45,15 @@ Sarah får ett mejl med rubriken&quot;Din förnyelse av autoförsäkring&quot;.
 
 #### Se det själv {#see-it-yourself}
 
-Gå till **Adobe Experience Manager** > **Forms** > **Forms och dokument** > **We.Finance** > **Autoförsäkring**. Välj Förnyelse av autoförsäkring **interaktiv kommunikation** och klicka **Open Agent-gränssnitt**. Den interaktiva kommunikationen öppnas i agentens användargränssnitt. Ange en giltig e-postadress så att de kan ta emot e-postmeddelandet med det bifogade principdokumentet och klicka på Skicka.
+Gå till **Adobe Experience Manager** > **Forms** > **Forms &amp; Documents** > **We.Finance** > **Autoförsäkring**. Välj den automatiska försäkringsförnyelsen **interaktiv kommunikation** och klicka på **Öppna agentgränssnittet**. Den interaktiva kommunikationen öppnas i agentens användargränssnitt. Ange en giltig e-postadress så att de kan ta emot e-postmeddelandet med det bifogade principdokumentet och klicka på Skicka.
 
-Du kan öppna och granska den interaktiva kommunikationen om förnyelse av autoförsäkring direkt från `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal.`
+Du kan komma åt och granska den interaktiva kommunikationen om förnyelse av autoförsäkring direkt från `https://[authorHost]: authorPort]/aem/formdetails.html/content/dam/formsanddocuments/we-finance/autoinsurance/auto-insurance-renewal.`
 
 ### Sarah får ett meddelande om förnyelse av försäkringsavtal från We.Finance och bestämmer sig för att förnya {#sarah-receives-an-insurance-policy-renewal-communication-from-we-finance-and-decides-to-renew}
 
 Sarah får ett mejl med en bilaga från We.Finance som påminner Sarah om att hennes policy för autoförsäkring håller på att löpa ut. Den bifogade filen är en tryckt version av Sarah&#39;s Auto Insurance Brev.
 
-Sarah klickade **Förnya nu** och hänvisas till webbversionen av hennes autofondsbrev. Utöver det här brevet hittar Sarah hur lång tid som återstår för sin policy innan den går ut. Sidan ger Sarah en grundläggande översikt över sin försäkringsinformation, t.ex. försäkringsnummer, förfallobelopp och annan information som rabatterbjudanden och förmånsersättningar. Sarah klickar igen **Förnya nu** längst ned i policyn.
+Sarah klickar på **Förnya nu** och är dirigerad till webbversionen av sitt Autofyringsbrev. Utöver det här brevet hittar Sarah hur lång tid som återstår för sin policy innan den går ut. Sidan ger Sarah en grundläggande översikt över sin försäkringsinformation, t.ex. försäkringsnummer, förfallobelopp och annan information som rabatterbjudanden och förmånsersättningar. Sarah klickar igen på **Förnya nu** längst ned i principen.
 
 ![ref1](assets/ref1.png)
 
@@ -65,9 +65,9 @@ Knappen Förnya nu i e-postmeddelandet är länkad till programmet Förnya autom
 
 #### Se det själv {#see-it-yourself-1}
 
-Du måste ha fått ett e-postmeddelande med en bifogad PDF. PDF är en tryckt version av ditt autofyrningsbrev. Klicka **Förnya nu** för att nå webbversionen av policyn. Kontrollera din personliga information och policyinformation och klicka på **Förnya nu** som tar dig till en annan interaktiv kommunikation.
+Du måste ha fått ett e-postmeddelande med en bifogad PDF. PDF är en tryckt version av ditt autofyrningsbrev. Klicka på **Förnya nu** för att nå webbversionen av profilen. Kontrollera din personliga information och principinformation och klicka på **Förnya nu** som tar dig till en annan interaktiv kommunikation.
 
-The **Förnya nu** i e-postmeddelandet dirigerar Sarah till policyn på webben. Du kan gå till följande URL:
+Knappen **Förnya nu** i e-postmeddelandet dirigerar Sarah till principen på webben. Du kan gå till följande URL:
 
 `https://[authorServer]:[authorPort]/content/document.html?schema=fdm&documentId=/content/forms/af/we-finance/autoinsurance/auto-insurance-renewal/channels/web.html&customerId=1`
 
@@ -83,7 +83,7 @@ Knappen Förnya nu dirigerar Sarah till betalningssidan. Betalningssidan är ett
 
 #### Se det själv {#see-it-yourself-2}
 
-Klicka **Förnya nu** för att nå betalningssidan. Fyll i kreditkortsinformationen och klicka på **Gör betalning**.
+Klicka på **Förnya nu** för att nå betalningssidan. Fyll i kreditkortsinformationen och klicka på **Gör betalning**.
 
 Du kan nå betalningssidan i utvecklingsinstansen på
 
@@ -91,7 +91,7 @@ Du kan nå betalningssidan i utvecklingsinstansen på
 
 ### Sarah gör betalningen och slutför processen {#sarah-makes-the-payment-and-completes-the-process}
 
-Sarah fyller i sin kreditkortsinformation och klickar **Gör betalning**.
+Sarah fyller i sin kreditkortsinformation och klickar på **Gör betalning**.
 
 #### Så här fungerar det {#how-it-works-2}
 

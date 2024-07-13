@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## Problem med att skapa filter i Internet Explorer 9 i Microsoft Windows 7 {#issues-faced-in-creating-filters-on-internet-explorer-on-microsoft-windows}
 
-Om du skapar filter för fördefinierade rapporter uppstår ibland följande problem i **Internet Explorer 9** for **Microsoft Windows 7** miljö:
+Om du skapar filter för fördefinierade rapporter inträffar följande problem ibland i **Internet Explorer 9** för **Microsoft Windows 7** -miljön:
 
 * Listrutan i fältet Värde visar unika identifierare i stället för värden.
 * Kontrollen Kalender i fältet Värde visar japanska tecken.

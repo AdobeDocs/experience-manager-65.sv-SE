@@ -98,7 +98,7 @@ I följande avsnitt mappas riktlinjerna för avsnitt 508 och WCAG till de bästa
 | [7.3](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-avoid-movement) | Undvik rörelse på sidor tills användaragenterna tillåter användarna att frysa rörligt innehåll. | 2.1 Förenkla formulären | |
 | [7.4](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-no-periodic-refresh) | Tills användaragenter ger möjlighet att stoppa uppdateringen ska du inte skapa sidor som uppdateras automatiskt regelbundet. | Ej tillämpligt | |
 | [7.5](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-no-auto-forward) | Använd inte kod för att omdirigera sidor automatiskt förrän användaragenterna ger möjlighet att stoppa automatisk omdirigering. Konfigurera i stället servern att utföra omdirigeringar. | Ej tillämpligt | |
-| [8.1](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-directly-accessible) | Gör programmatiska element som skript och miniprogram tillgängliga direkt eller kompatibla med hjälpmedelstekniker [Prioritet 1 om funktionaliteten är viktig och inte presenteras någon annanstans, annars Prioritet 2.] | 2.11 Undvik störande skriptning | |
+| [8.1](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-directly-accessible) | Gör programmatiska element som skript och miniprogram direkt tillgängliga eller kompatibla med hjälpmedelstekniker [Prioritet 1 om funktionaliteten är viktig och inte presenteras någon annanstans, annars Prioritet 2.] | 2.11 Undvik störande skriptning | |
 | [9.2](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-keyboard-operable) | Se till att alla element som har ett eget gränssnitt kan hanteras på ett enhetsoberoende sätt. | 2.7 Kontrollera att det går att använda tangentbordskontroller | |
 | [9.3](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-device-independent-events) | För skript anger du logiska händelsehanterare i stället för enhetsberoende händelsehanterare. | 2.7 Kontrollera att det går att använda tangentbordskontroller | |
 | [10.1](https://www.w3.org/TR/WCAG10/wai-pageauth.html#tech-avoid-pop-ups) | Tills användaragenter tillåter användare att inaktivera fönster som skapats för visning ska du inte göra så att popup-fönster eller andra fönster visas och inte ändra det aktuella fönstret utan att informera användaren. | 2.11 Undvik störande skriptning | |
@@ -120,14 +120,14 @@ I följande avsnitt mappas riktlinjerna för avsnitt 508 och WCAG till de bästa
 | 1.1 [Textalternativ](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv.html) | | |
 | 1.1.1 [Innehåll som inte är text](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html) | 2.4 Ange textmotsvarigheter för bilder | |
 | | 2.5 Ange korrekta etiketter för formulärkontroller | |
-| 1.2 [Tidsbaserat media](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv.html) | | |
+| 1.2 [Tidsbaserade media](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv.html) | | |
 | 1.2.1 [Endast ljud och endast video (inspelat i förväg)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html) | 2.12 Se till att allt ljud- och videoinnehåll är tillgängligt | |
 | 1.2.2 [Bildtexter (inspelade i förväg)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html) | 2.12 Se till att allt ljud- och videoinnehåll är tillgängligt | |
 | 1.2.3 [Ljudbeskrivning eller mediealternativ (inspelat i förväg)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc.html) | 2.12 Se till att allt ljud- och videoinnehåll är tillgängligt | |
 | 1.2.4 [Bildtexter (Live)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-real-time-captions.html) | 2.12 Se till att allt ljud- och videoinnehåll är tillgängligt | |
 | 1.2.5 [Ljudbeskrivning (inspelad i förväg)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html) | 2.12 Se till att allt ljud- och videoinnehåll är tillgängligt | |
 | 1.2.6 [Signeringsspråk (inspelat i förväg)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-sign.html) | 2.12 Se till att allt ljud- och videoinnehåll är tillgängligt | |
-| 1.2.7 [Utökad ljudbeskrivning (inspelad i förväg)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-extended-ad.html) | 2.12 Se till att allt ljud- och videoinnehåll är tillgängligt | |
+| 1.2.7 [Beskrivning av utökat ljud (inspelat i förväg)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-extended-ad.html) | 2.12 Se till att allt ljud- och videoinnehåll är tillgängligt | |
 | 1.2.8 [Mediealternativ (inspelat i förväg)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-text-doc.html) | 2.12 Se till att allt ljud- och videoinnehåll är tillgängligt | |
 | 1.2.9 [Endast ljud (live)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-live-audio-only.html) | 2.12 Se till att allt ljud- och videoinnehåll är tillgängligt | |
 | 1.3 [Adaptiv](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation.html) | | |
@@ -135,24 +135,24 @@ I följande avsnitt mappas riktlinjerna för avsnitt 508 och WCAG till de bästa
 | 1.3.2 [Betydelsefull sekvens](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html) | 2.6 Kontrollera att läs- och tabbordningen är korrekt | |
 | | 2.10 Tillhandahålla en navigeringsbar formulärstruktur | |
 | 1.3.3 [Sensoriska egenskaper](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-understanding.html) | 2.8 Använda färger på ett ansvarsfullt sätt | |
-| 1.4 [Skiljbar](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast.html) | | |
+| 1.4 [Distinguishable](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast.html) | | |
 | 1.4.1 [Användning av färg](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html) | 2.8 Använda färger på ett ansvarsfullt sätt | |
 | 1.4.2 [Ljudkontroll](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-dis-audio.html) | Inga särskilda tekniker för LiveCycle | |
 | 1.4.3 [Kontrast (minimal)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) | 2.8 Använda färger på ett ansvarsfullt sätt | |
 | 1.4.4 [Ändra storlek på text](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html) | Inga särskilda tekniker för LiveCycle | |
 | 1.4.5 [Bilder av text](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-text-presentation.html) | Inga särskilda tekniker för LiveCycle | |
-| 1.4.6 [Kontrast (förbättrat)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html) | 2.8 Använda färger på ett ansvarsfullt sätt | |
+| 1.4.6 [Kontrast (Förbättrat)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html) | 2.8 Använda färger på ett ansvarsfullt sätt | |
 | 1.4.7 [Lågt eller inget bakgrundsljud](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-noaudio.html) | Inga särskilda tekniker för LiveCycle | |
 | 1.4.9 [Bilder av text (inga undantag)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-text-images.html) | Inga särskilda tekniker för LiveCycle | |
 | 2.1 [Tangentbord tillgängligt](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation.html) | | |
 | 2.1.1 [Tangentbord](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html) | 2.6 Kontrollera att läs- och tabbordningen är korrekt | |
 | | 2.7 Kontrollera att det går att använda tangentbordskontroller | |
 | 2.1.2 [Ingen tangentbordssvällning](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-trapping.html) | 2.7 Kontrollera att det går att använda tangentbordskontroller | |
-| 2.1.3 [Tangentbord (inga undantag)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-all-funcs.html) | 2.6 Kontrollera att läs- och tabbordningen är korrekt | |
+| 2.1.3 [Tangentbord (inget undantag)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-all-funcs.html) | 2.6 Kontrollera att läs- och tabbordningen är korrekt | |
 | | 2.7 Kontrollera att det går att använda tangentbordskontroller | |
 | 2.2 [Tillräcklig tid](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits.html) | | |
 | 2.2.1 [Tidsjustering](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html) | Inga särskilda tekniker för LiveCycle | |
-| 2.2.2 [Pausa, Stoppa, Dölj](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html) | 2.1 Förenkla formulären | |
+| 2.2.2 [Pausa, stoppa, dölj](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html) | 2.1 Förenkla formulären | |
 | 2.2.3 [Ingen timing](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-no-exceptions.html) | Inga särskilda tekniker för LiveCycle | |
 | 2.2.4 [Avbrott](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html) | Inga särskilda tekniker för LiveCycle | |
 | 2.2.5 [Återautentiserar](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-server-timeout.html) | Inga särskilda tekniker för LiveCycle | |
@@ -161,37 +161,37 @@ I följande avsnitt mappas riktlinjerna för avsnitt 508 och WCAG till de bästa
 | 2.3.2 [Tre Flashar](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-three-times.html) | 2.1 Förenkla formulären | |
 | 2.4 [Navigeringsbar](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms.html) | | |
 | 2.4.1 [Kringgå block](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html) | 2.10 Tillhandahålla en navigeringsbar formulärstruktur | |
-| 2.4.2 [Sidans namn](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html) | Inga särskilda tekniker för LiveCycle | |
+| 2.4.2 [Sida med rubriker](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-title.html) | Inga särskilda tekniker för LiveCycle | |
 | 2.4.3 [Fokusordning](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html) | 2.6 Kontrollera att läs- och tabbordningen är korrekt | |
-| 2.4.4 [Länksyfte (i sammanhang)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html) | Inga särskilda tekniker för LiveCycle | Länksyftet är beroende av att författaren väljer meningsfull text för länkade element. |
+| 2.4.4 [Länksyfte (i kontext)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html) | Inga särskilda tekniker för LiveCycle | Länksyftet är beroende av att författaren väljer meningsfull text för länkade element. |
 | 2.4.5 [Flera sätt](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-mult-loc.html) | 2.10 Tillhandahålla en navigeringsbar formulärstruktur | |
 | 2.4.6 [Rubriker och etiketter](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html) | <ul><li>2.5 Ange korrekta etiketter för formulärkontroller</li><li>2.10 Tillhandahålla en navigeringsbar formulärstruktur</li> | |
-| 2.4.7 [Synlig fokusering](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html) | Inga särskilda tekniker för LiveCycle | Standardfokus i LiveCyclena är synligt. |
+| 2.4.7 [Synligt fokus](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-visible.html) | Inga särskilda tekniker för LiveCycle | Standardfokus i LiveCyclena är synligt. |
 | 2.4.8 [Plats](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-location.html) | Inga särskilda tekniker för LiveCycle | Ej tillämpligt: LiveCyclena kräver inga navigeringssystem. |
 | 2.4.9 [Länksyfte (endast länk)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-link.html) | Inga särskilda tekniker för LiveCycle | Länksyftet är beroende av att författaren väljer meningsfull text för länkade element. |
 | 2.4.10 [Avsnittsrubriker](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-headings.html) | 2.10 Tillhandahålla en navigeringsbar formulärstruktur | |
-| 3.1 [Läsbar](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning.html) | | |
+| 3.1 [Kan läsas](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning.html) | | |
 | 3.1.1 [Sidans språk](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-doc-lang-id.html) | 2.13 Identifiera naturligt språk och eventuella språkförändringar | |
-| 3.1.2 [Delarnas språk](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html) | 2.13 Identifiera naturligt språk och eventuella språkförändringar | |
+| 3.1.2 [Språk för delar](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-other-lang-id.html) | 2.13 Identifiera naturligt språk och eventuella språkförändringar | |
 | 3.1.3 [Ovanliga ord](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-idioms.html) | Inga särskilda tekniker för LiveCycle | |
 | 3.1.4 [Förkortningar](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-located.html) | Inga särskilda tekniker för LiveCycle | |
 | 3.1.5 [Läsnivå](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-supplements.html) | Inga särskilda tekniker för LiveCycle | |
 | 3.1.6 [Uttal](https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-pronunciation.html) | Inga särskilda tekniker för LiveCycle | |
 | 3.2 [Förutsägbar](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior.html) | | |
 | 3.2.1 [Vid fokus](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-receive-focus.html) | 2.11 Undvik störande skriptning | |
-| 3.2.2 [Vid inmatning](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-change.html) | 2.11 Undvik störande skriptning | |
-| 3.2.3 [Enhetlig navigering](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-locations.html) | 2.10 Tillhandahålla en navigeringsbar formulärstruktur | |
-| 3.2.4 [Enhetlig identifiering](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-functionality.html) | <ul><li>2.3 Välj rätt kontroller</li><li>2.5 Ange korrekta etiketter för formulärkontroller</li> | |
+| 3.2.2 [Vid indata](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-change.html) | 2.11 Undvik störande skriptning | |
+| 3.2.3 [Konsekvent navigering](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-locations.html) | 2.10 Tillhandahålla en navigeringsbar formulärstruktur | |
+| 3.2.4 [Konsekvent identifiering](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-functionality.html) | <ul><li>2.3 Välj rätt kontroller</li><li>2.5 Ange korrekta etiketter för formulärkontroller</li> | |
 | 3.2.5 [Ändra på begäran](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html) | 2.11 Undvik störande skriptning | |
-| 3.3 [Indatahjälp](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error.html) | | |
+| 3.3 [Hjälp med indata](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error.html) | | |
 | 3.3.1 [Felidentifiering](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html) |  | LiveCycle Designer innehåller verktyg för att markera formulärfält efter behov och för att utföra validering av formulärindata. |
 | 3.3.2 [Etiketter eller instruktioner](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html) | 2.5 Ange korrekta etiketter för formulärkontroller | |
 | 3.3.3 [Felförslag](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-suggestions.html) |  | LiveCycle Designer innehåller verktyg för att markera formulärfält efter behov och för att utföra validering av formulärindata. |
-| 3.3.4 [Felförebyggande (juridisk, ekonomisk, datarelaterad)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible.html) | Inga särskilda tekniker för LiveCycle | |
+| 3.3.4 [Felförebyggande (Juridik, Ekonomi, Data)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible.html) | Inga särskilda tekniker för LiveCycle | |
 | 3.3.5 [Hjälp](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-context-help.html) | Inga särskilda tekniker för LiveCycle | |
 | 3.3.6 [Felförebyggande (alla)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-reversible-all.html) | Inga särskilda tekniker för LiveCycle | |
 | 4.1 [Kompatibel](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat.html) | | |
-| 4.1.1 [Tolkning](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-parses.html) | Inga särskilda tekniker för LiveCycle | |
+| 4.1.1 [Analys](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-parses.html) | Inga särskilda tekniker för LiveCycle | |
 | 4.1.2 [Namn, roll, värde](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html) | <ul><li>2.3 Välj rätt kontroller</li> <li>2.5 Ange korrekta etiketter för formulärkontroller</li> | |
 
 

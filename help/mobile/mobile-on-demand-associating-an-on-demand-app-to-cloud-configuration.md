@@ -34,9 +34,9 @@ Därifrån blir det möjligt att publicera, förhandsgranska och hantera innehå
 >
 >Mer information finns i [Konfigurera AEM Mobile On-demand Services](/help/mobile/aem-mobile-setup.md) i avsnittet Administrera.
 
-Om du vill konfigurera Cloud Service för mobil on demand klickar du på den översta kugghjulet i det högra hörnet av **Hantera anslutning** från appkontrollpanelen.
+Om du vill konfigurera Cloud Service för mobil på begäran klickar du på den övre kugghjulet i det högra hörnet av rutan **Hantera anslutning** på appinstrumentpanelen.
 
-Du bör känna till appkontrollpanelen och tillgängliga paneler. Se [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md) för mer information.
+Du bör känna till appkontrollpanelen och tillgängliga paneler. Mer information finns i [AEM Mobile Application Dashboard](/help/mobile/mobile-apps-ondemand-application-dashboard.md).
 
 ### Konfigurera länk till molnkonfiguration {#setting-up-link-to-cloud-configuration}
 
@@ -48,22 +48,22 @@ Du bör känna till appkontrollpanelen och tillgängliga paneler. Se [AEM Mobile
 
 I följande steg beskrivs hur du konfigurerar länken till molnkonfigurationen:
 
-1. Från **Mobil**, välja **Appar** och sedan mobilappen On-Demand från katalogen.
-1. Klicka på kugghjulsikonen på **Hantera anslutning** platta.
+1. Från **Mobile** väljer du **Appar** och sedan din app för mobil on demand i katalogen.
+1. Klicka på kugghjulsikonen i rutan **Hantera anslutning**.
 
    ![chlimage_1-65](assets/chlimage_1-65.png)
 
-1. Ange den befintliga konfigurationen eller skapa en genom att ange **Konfigurationstitel**, **Enhets-ID** och **Enhetstoken**.
+1. Ange den befintliga konfigurationen eller skapa en genom att ange **konfigurationstiteln**, **enhets-ID** och **enhetstoken**.
 
    ![chlimage_1-66](assets/chlimage_1-66.png)
 
-1. När du **Enhets-ID** och **Enhetstoken** Om du har verifierat det väljer du ett On-Demand-projekt i listan.
+1. När ditt **enhets-ID** och **enhetstoken** har verifierats väljer du ditt On-Demand-projekt i listan.
 
-   Klicka **Skicka**.
+   Klicka på **Skicka**.
 
    ![chlimage_1-67](assets/chlimage_1-67.png)
 
-   The **Hantera anslutning** visas din molnkonfiguration.
+   Under **Hantera anslutning** visas din molnkonfiguration.
 
    ![chlimage_1-68](assets/chlimage_1-68.png)
 
