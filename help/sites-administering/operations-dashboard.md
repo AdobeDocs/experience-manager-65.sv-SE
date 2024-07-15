@@ -10,9 +10,9 @@ exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: e4c8901ab9484d91a1f5ced285efe60613984aeb
 workflow-type: tm+mt
-source-wordcount: '5868'
+source-wordcount: '5686'
 ht-degree: 0%
 
 ---
@@ -331,74 +331,9 @@ Som standard körs hälsokontrollerna var 60:e sekund för en AEM.
 
 Du kan konfigurera **Period** med [OSGi-konfigurationen](/help/sites-deploying/configuring-osgi.md) **Query Health Check Configuration** (com.adobe.granite.queries.impl.hc.QueryHealthCheckMetrics).
 
-## Övervakning med Nagios {#monitoring-with-nagios}
+## Övervakning med externa tjänster {#monitoring-with-external-services}
 
-Kontrollpanelen för hälsokontroll kan integreras med Nagios via Granite JMX Mbeans. I följande exempel visas hur du lägger till en kontroll som visar hur mycket minne som används på AEM.
-
-1. Konfigurera och installera Nagios på övervakningsservern.
-1. Installera sedan Nagios Remote Plugin Executor (NRPE).
-
-   >[!NOTE]
-   >
-   >Mer information om hur du installerar Nagios och NRPE på datorn finns i [Nagios-dokumentationen](https://library.nagios.com/library/products/nagios-core/manuals//).
-
-1. Lägg till en värddefinition för AEM. Du kan utföra den här uppgiften med webbgränssnittet Nagios XI genom att använda Configuration Manager:
-
-   1. Öppna en webbläsare och peka på Nagios-servern.
-   1. Tryck på knappen **Konfigurera** på den översta menyn.
-   1. Tryck på **Core Config Manager** under **Avancerad konfiguration** i den vänstra rutan.
-   1. Tryck på länken **Värdar** under avsnittet **Övervakning**.
-   1. Lägg till värddefinitionen:
-
-   ![chlimage_1-118](assets/chlimage_1-118.png)
-
-   Nedan visas ett exempel på en värdkonfigurationsfil, om du använder Nagios Core:
-
-   ```xml
-   define host {
-      address 192.168.0.5
-      max_check_attempts 3
-      check_period 24x7
-      check-command check-host-alive
-      contacts admin
-      notification_interval 60
-      notification_period 24x7
-   }
-   ```
-
-1. Installera Nagios och NRPE på AEM.
-1. Installera plugin-programmet [check_http_json](https://github.com/phrawzty/check_http_json) på båda servrarna.
-1. Definiera ett generiskt JSON-kontrollkommando på båda servrarna:
-
-   ```xml
-   define command{
-   
-       command_name    check_http_json-int
-   
-       command_line    /usr/lib/nagios/plugins/check_http_json --user "$ARG1$" --pass "$ARG2$" -u 'https://$HOSTNAME$:$ARG3$/$ARG4$' -e '$ARG5$' -w '$ARG6$' -c '$ARG7$'
-   
-   }
-   ```
-
-1. Lägg till en tjänst för använt minne på AEM:
-
-   ```xml
-   define service {
-   
-       use generic-service
-   
-       host_name my.remote.host
-   
-       service_description AEM Author Used Memory
-   
-       check_command  check_http_json-int!<cq-user>!<cq-password>!<cq-port>!system/sling/monitoring/mbeans/java/lang/Memory.infinity.json!{noname}.mbean:attributes.HeapMemoryUsage.mbean:attributes.used.mbean:value!<warn-threshold-in-bytes>!<critical-threshold-in-bytes>
-   
-       }
-   ```
-
-1. Kontrollera din Nagios-instrumentpanel för den nya tjänsten:
-
-   ![chlimage_1-119](assets/chlimage_1-119.png)
+Integrering är möjligt med externa tekniker eller leverantörer. Mer information finns i dokumentationen till dem.
 
 ## Diagnosverktyg {#diagnosis-tools}
 
