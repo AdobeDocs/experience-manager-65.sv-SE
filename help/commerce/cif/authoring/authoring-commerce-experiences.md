@@ -5,9 +5,9 @@ exl-id: 2db51bd7-8fc7-4ae8-8d6f-e5035fbe954d
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: a02724597338ee2451448c6c4188fc349dd47d01
 workflow-type: tm+mt
-source-wordcount: '713'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
@@ -72,9 +72,9 @@ CIF produktkatalogsidor är virtuella sidor som återges direkt. Därför går d
 
 ![RTE](/help/commerce/cif/assets/authoring/RTE.png)
 
-    >[!OBS!]
-    >
-    >Om både kategori och produkt väljs kommer produkten att tas.
+>[!NOTE]
+>
+>Om du väljer både kategori och produkt används produkten.
 
 Då skapas en platshållarlänk som ersätts med en riktig länk när sidan återges.
 
@@ -102,6 +102,6 @@ Att använda Omnisearch är ett enkelt sätt för användarna att hitta AEM inne
 
 Resultatet grupperas efter typ.
 
-    >[!NOTE]
-    >
-    >Fulltextsökning i Omnissearch stöder inte associerade innehållsfragment. Använd SKU eller UID för att hitta associerade innehållsfragment.
+>[!NOTE]
+>
+>Fulltextsökning i Omnissearch stöder inte associerade innehållsfragment. Använd SKU eller UID för att hitta associerade innehållsfragment.
