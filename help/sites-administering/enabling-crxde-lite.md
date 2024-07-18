@@ -9,9 +9,9 @@ exl-id: bf51def2-1dd4-4bd3-b989-685058f0ead8
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: a3587d248569982a8f9b137602ba95dd40c47012
 workflow-type: tm+mt
-source-wordcount: '256'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -60,11 +60,19 @@ Om du avaktiverar det här alternativet kan du aktivera CRXDE Lite genom att fö
 
 ## Aktivera CRXDE Lite med cURL {#enabling-crxde-lite-curl}
 
-Du kan även aktivera CRXDE Lite via cURL genom att köra det här kommandot:
+Du kan även aktivera CRXDE Lite via cURL genom att köra (båda) följande två kommandon:
 
-```shell
-curl -u admin:admin -F "jcr:primaryType=sling:OsgiConfig" -F "alias=/crx/server" -F "dav.create-absolute-uri=true" -F "dav.create-absolute-uri@TypeHint=Boolean" http://localhost:4502/apps/system/config/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet
-```
+* Aktivera `create-absolute-uri`:
+
+  ```shell
+  curl -u admin:admin 'http://localhost:4502/system/console/configMgr/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet' --data-raw 'apply=true&action=ajaxConfigManager&%24location=&dav.create-absolute-uri=true&propertylist=dav.create-absolute-uri'
+  ```
+
+* Definiera `alias`:
+
+  ```shell
+  curl -u admin:admin 'http://localhost:4502/system/console/configMgr/org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet' --data-raw 'apply=true&action=ajaxConfigManager&%24location=&alias=/crx/server&propertylist=alias'
+  ```
 
 ## Andra resurser {#other-resources}
 
