@@ -9,7 +9,7 @@ feature: Configuring
 exl-id: 5b0c9a8c-0f5f-46ee-a455-adb9b9d27270
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2d6caa10e8f1cf3d0811280e31c2f40bceac20ee
 workflow-type: tm+mt
 source-wordcount: '6470'
 ht-degree: 1%
@@ -24,7 +24,7 @@ ht-degree: 1%
 >
 >Mer information om felsökning och korrigering av prestandaproblem finns också i [prestandaträdet](/help/sites-deploying/performance-tree.md).
 >
->Du kan även läsa en artikel i kunskapsbasen om [tips för prestandajustering](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
+>Du kan även läsa en artikel i kunskapsbasen om [tips för prestandajustering](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-17466).
 
 Ett viktigt problem är den tid det tar för er webbplats att svara på besökarnas förfrågningar. Även om det här värdet varierar för varje begäran kan ett genomsnittligt målvärde definieras. När det här värdet har visat sig vara både genomförbart och underhållbart kan det användas för att övervaka webbplatsens prestanda och indikera utvecklingen av potentiella problem.
 
@@ -41,7 +41,7 @@ Den här miljön innehåller innehåll som du gör tillgängligt för användarn
 >[!NOTE]
 >
 >* När du har konfigurerat för prestandaoptimering följer du anvisningarna i [Tough Day](/help/sites-developing/tough-day.md) för att testa miljön under tung belastning.
->* Se även [Prestandajusteringstips.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)
+>* Se även [Prestandajusteringstips.](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-17466)
 
 ## Prestandaoptimeringsmetod {#performance-optimization-methodology}
 
