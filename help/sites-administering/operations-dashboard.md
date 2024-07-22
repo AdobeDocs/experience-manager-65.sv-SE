@@ -10,9 +10,9 @@ exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: e4c8901ab9484d91a1f5ced285efe60613984aeb
+source-git-commit: eef7849464540fa3d7bb705e1be9f6e0cf1c8cff
 workflow-type: tm+mt
-source-wordcount: '5686'
+source-wordcount: '5744'
 ht-degree: 0%
 
 ---
@@ -492,6 +492,8 @@ Följande åtgärder är tillgängliga på kontrollpanelen för åtgärder:
 1. Aktiviteten **Data Store Garbage Collection** som finns under menyn **Veckounderhåll**.
 1. Underhållsuppgiften **Granskningslogg**, som finns under menyn **Veckounderhåll**.
 1. Aktiviteten **Rensa underhåll** av version, som finns under menyn **Veckounderhåll**.
+1. Underhållsuppgiften **Projektrensning**, som finns under menyn **Underhållsfönster** varje vecka, med alternativet **Lägg till**.
+1. Underhållsaktiviteten **Rensa ad ad hoc-aktiviteter** som finns under menyn **Veckounderhåll** och som använder alternativet **Lägg till**.
 
 Standardtimingen för det dagliga underhållet är 2:00 till 5:00. De uppgifter som konfigurerats för att köras varje vecka i underhållsfönstret körs mellan 1:00 A.M och 2:00 A.M. på lördagar.
 
@@ -562,6 +564,26 @@ Du kan schemalägga underhållsaktiviteten Rensa version så att tidigare versio
 >[!CAUTION]
 >
 >För att optimera databasstorleken bör du köra versionsrensningen ofta. Uppgiften bör schemaläggas utanför kontorstid när trafiken är begränsad.
+
+### Rensa projekt {#project-purge}
+
+<!--
+Override the out-of-the-box Maintenance window configuration node under `/libs` by creating properties under the folder `/apps/settings/granite/operations/maintenance/granite_weekly`, `granite_daily` or `granite_monthly`. See the Maintenance Window table below for additional configuration details.
+
+Enable the maintenance task by adding another node under the node above (name it `granite_ProjectPurgeTask`) with the appropriate properties. 
+-->
+
+Konfigurera OSGI-egenskaperna under **Adobe Projects Purge Configuration** (com.adobe.cq.projects.purge.Scheduler).
+
+### Rensa ad hoc-uppgifter {#purge-of-ad-hoc-tasks}
+
+<!--
+Override the out-of-the-box Maintenance window configuration node under `/libs` by creating properties under the folder `/apps/settings/granite/operations/maintenance/granite_weekly`, `granite_daily` or `granite_monthly`.
+
+See the Maintenance Window table below for additional configuration details. Enable the maintenance task by adding another node under the node above. Name it `granite_TaskPurgeTask`, with attribute `sling:resourceType` set to `granite/operations/components/maintenance/task` and attribute `granite.maintenance.name` set to `TaskPurge`. 
+-->
+
+Konfigurera OSGI-egenskaperna under **Ad-hoc-aktivitetsrensning** (`com.adobe.granite.taskmanagement.impl.purge.TaskPurgeMaintenanceTask`).
 
 ## Anpassade underhållsaktiviteter {#custom-maintenance-tasks}
 
