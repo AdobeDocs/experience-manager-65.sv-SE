@@ -9,9 +9,9 @@ exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 solution: Experience Manager, Experience Manager Sites
 feature: Compliance
 role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: 5c1eda486e31be01f614a3a7ada71563fd996656
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '837'
 ht-degree: 0%
 
 ---
@@ -66,9 +66,9 @@ Som standard lagras inte besökardata i AEM, AEM skickar regler till datalagret 
 
 >[!NOTE]
 >
->Före Adobe CQ 5.6 skickade ClientContexten (en tidigare version av ContextHub) data till servern, men lagrade dem inte.
+>Före Adobe AEM(CQ) 5.6 skickade ClientContexten (en tidigare version av ContextHub) data till servern, men lagrade dem inte.
 >
->Adobe CQ 5.5 och tidigare är nu EOL och omfattas inte av denna dokumentation.
+>Adobe AEM 6.4 och tidigare versioner är nu EOL och omfattas inte av denna dokumentation. Se [Äldre versioner av Adobe Experience Manager, CQ och CRX dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions).
 
 ### Implementera anmälan/avanmälan {#implementing-opt-in-opt-out}
 
@@ -85,19 +85,19 @@ I dessa riktlinjer används anmälan som standard. Därför måste en besökare 
 
 * Om en besökare godkänner villkoren för webbplatsen bör cookien för ContextHub-avanmälan tas bort:
 
-  ```
+  ```java
   ContextHub.Utils.Cookie.removeItem('cq-opt-out');
   ```
 
 * Om en besökare inte accepterar webbplatsens villkor ska cookie för ContextHub-avanmälan anges:
 
-  ```
+  ```java
   ContextHub.Utils.Cookie.setItem('cq-opt-out', 1);
   ```
 
 * För att kontrollera om ContextHub körs i avanmälningsläge bör följande anrop göras i webbläsarens konsol:
 
-  ```
+  ```java
   var isOptedOut = ContextHub.isOptedOut(true) === true;
   // if isOptedOut is true, ContextHub is running in opt-out mode
   ```
@@ -183,7 +183,7 @@ Om du vill förhandsgranska den beständiga ContextHub som används kan använda
 
 Så här visar du data som lagras i localStorage:
 
-```
+```java
 var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persistence.Modes.LOCAL });
 console.log(storage.getTree());
 ```
@@ -194,7 +194,7 @@ Så här rensar du ContextHub-beständighet:
 
 * Så här rensar du beständighet för inlästa arkiv:
 
-  ```
+  ```java
   // to be able to fully access persistence layer, Opt-Out must be turned off
   ContextHub.Utils.Cookie.removeItem('cq-opt-out');
   
@@ -207,7 +207,7 @@ Så här rensar du ContextHub-beständighet:
 
 * Så här rensar du ett visst beständigt lager, till exempel sessionStorage:
 
-  ```
+  ```java
   var storage = new ContextHub.Utils.Persistence({ mode: ContextHub.Utils.Persistence.Modes.SESSION });
   storage.setItem('/store', null);
   storage.setItem('/_', null);
