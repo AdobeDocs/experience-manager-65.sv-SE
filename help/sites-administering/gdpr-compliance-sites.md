@@ -9,7 +9,7 @@ exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 solution: Experience Manager, Experience Manager Sites
 feature: Compliance
 role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
-source-git-commit: 5c1eda486e31be01f614a3a7ada71563fd996656
+source-git-commit: 207c6bcc25eca05d128115f7235e83a6965009c5
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Som standard lagras inte besökardata i AEM, AEM skickar regler till datalagret 
 
 >[!NOTE]
 >
->Före Adobe AEM(CQ) 5.6 skickade ClientContexten (en tidigare version av ContextHub) data till servern, men lagrade dem inte.
+>Före Adobe AEM (CQ) 5.6 skickade ClientContexten (en tidigare version av ContextHub) data till servern, men lagrade dem inte.
 >
 >Adobe AEM 6.4 och tidigare versioner är nu EOL och omfattas inte av denna dokumentation. Se [Äldre versioner av Adobe Experience Manager, CQ och CRX dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions).
 
