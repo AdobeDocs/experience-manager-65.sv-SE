@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 721837590521aeaa82ab8a960098eba87c0ffb43
+source-git-commit: d5d1c3909a135de61d777c39ba60fbb897722e8e
 workflow-type: tm+mt
-source-wordcount: '7456'
+source-wordcount: '7445'
 ht-degree: 1%
 
 ---
@@ -809,7 +809,7 @@ ht-degree: 1%
       + [Skapa korrespondens](/help/forms/using/create-correspondence.md)
       + [Fjärrfunktioner i Expression Builder](/help/forms/using/expression-builder.md)
       + [Hantera agentsignaturbilder](/help/forms/using/manage-agent-signature-images.md)
-      + [Post behandling av brev och interaktiv kommunikation](/help/forms/using/submit-letter-topostprocess.md)
+      + [Efterbearbetning av brev och interaktiv kommunikation](/help/forms/using/submit-letter-topostprocess.md)
       + [Lägg till anpassad åtgärd i resurslista-vyn](/help/forms/using/add-custom-action-asset-listing-view.md)
       + [Lägg till anpassad åtgärd/knapp i användargränssnittet Skapa korrespondens](/help/forms/using/add-action-button-in-create-correspondence-ui.md)
       + [Lägg till anpassade egenskaper i Correspondence Management-resurser](/help/forms/using/add-custom-properties-cm-assets.md)
@@ -1260,9 +1260,6 @@ ht-degree: 1%
          + [eCommerce](/help/commerce/cif-classic/developing/ecommerce.md)
          + [Utveckla (allmän)](/help/commerce/cif-classic/developing/generic.md)
          + [Utveckla med SAP Commerce Cloud](/help/commerce/cif-classic/developing/sap-commerce-cloud.md)
-+ Edge Delivery Services {#edge-delivery-services}
-   + [Komma igång med Edge Delivery](/help/edge/overview.md)
-   + [Använda Edge Delivery](/help/edge/using.md)
 + Headless {#headless}
    + [AEM Headless Journeys](/help/journey-headless/overview.md)
    + AEM Headless Developer Journey {#developer}
@@ -1381,7 +1378,7 @@ ht-degree: 1%
          + Huvudlösa resor {#journeys}
             + Headless Developer Journey {#developer}
                + [Förstå Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/overview.html)
-               + [Läs mer om CMS Headless Development](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/learn-about.html)
+               + [Läs om CMS Headless Development](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/learn-about.html)
                + [Komma igång med AEM Headless as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/getting-started.html)
                + [Sökväg till din första upplevelse med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/path-to-first-experience.html)
                + [Så här modellerar du innehåll som AEM innehållsmodeller](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/developer/model-your-content.html)
@@ -1603,7 +1600,7 @@ ht-degree: 1%
          + [Lazy Content Migration](/help/sites-deploying/lazy-content-migration.md)
          + [Använda migreringsverktyget för CRX2Oak](/help/sites-deploying/using-crx2oak.md)
          + [Underhållsaktiviteter före uppgraderingen](/help/sites-deploying/pre-upgrade-maintenance-tasks.md)
-         + [Post Upgrade Checks and Troubleshooting](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)
+         + [Kontrollera och felsök efter uppgradering](/help/sites-deploying/post-upgrade-checks-and-troubleshooting.md)
          + [Uppgraderar Forms för anpassad sökning](/help/sites-deploying/upgrading-custom-search-forms.md)
          + [Hållbara uppgraderingar](/help/sites-deploying/sustainable-upgrades.md)
          + [Uppgradera kod och anpassningar](/help/sites-deploying/upgrading-code-and-customizations.md)
