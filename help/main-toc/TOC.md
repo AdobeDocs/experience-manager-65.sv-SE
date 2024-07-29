@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: d5d1c3909a135de61d777c39ba60fbb897722e8e
+source-git-commit: 7dc864a044e73e855fe08bcf8418b0349cd0d3bd
 workflow-type: tm+mt
-source-wordcount: '7445'
+source-wordcount: '7443'
 ht-degree: 1%
 
 ---
@@ -230,6 +230,7 @@ ht-degree: 1%
          + [Konfigurera videospårning för Adobe Analytics](/help/sites-administering/adobeanalytics-video.md)
          + [HTTP2 Delivery of Content FAQ](/help/sites-administering/scene7-http2faq.md)
          + [Felsöka Adobe Campaign-integreringen](/help/sites-administering/troubleshooting-campaignintegration.md)
+         + [SharePoint Connector](/help/sites-administering/sharepoint-connector.md)
          + [SharePoint Connector-licenser, copyrightmeddelanden och friskrivningsklausuler](/help/sites-administering/sharepoint-connector-licenses.md)
          + [Vanliga frågor om slutdatum för DHTML Viewer](/help/sites-administering/dhtml-viewer-endoflifefaqs.md)
          + [Integrera med Adobe Campaign Classic](/help/sites-administering/campaignonpremise.md)
@@ -268,7 +269,6 @@ ht-degree: 1%
          + [Administrera taggar](/help/sites-administering/tags.md)
          + [Sidexporteraren](/help/sites-administering/page-exporter.md)
          + [Klassiskt gränssnitt, taggningskonsol](/help/sites-administering/classic-console.md)
-         + [Innehållshantering för Screens](/help/sites-administering/content-management-screens.md)
          + [WebDAV-åtkomst](/help/sites-administering/webdav-access.md)
    + Klassisk gränssnittsredigering {#classic-ui}
       + Introduktion till klassisk gränssnittsredigering {#introduction}
