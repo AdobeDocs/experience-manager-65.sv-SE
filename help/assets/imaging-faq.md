@@ -9,7 +9,7 @@ feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 0d491be4fb2605220b1558c8c877151ab4405978
 workflow-type: tm+mt
 source-wordcount: '3494'
 ht-degree: 0%
@@ -144,13 +144,15 @@ När en bild efterfrågas av en konsument kontrollerar Smart Imaging användaren
 * Konvertera automatiskt till AVIF om webbläsaren stöder formatet
 * Konvertera automatiskt till WebP om AVIF-konvertering inte är fördelaktig eller om webbläsaren inte stöder AVIF
 * Konvertera automatiskt till JPEG2000 om Safari inte stöder WebP
-* Konvertera automatiskt till JPEGXR för IE 9+ eller om Edge inte stöder WebP\
+* Konvertera automatiskt till JPEGXR för IE 9+ eller om Edge inte stöder WebP
+
   | Bildformat | Webbläsare som stöds |
-|—|—|
-| AVIF | [https://caniuse.com/avif](https://caniuse.com/avif) |
-| WebP | [https://caniuse.com/webp](https://caniuse.com/webp) |
-| JPEG 2000 | [https://caniuse.com/jpeg2000](https://caniuse.com/jpeg2000) |
-| JPEGXR | [https://caniuse.com/jpegxr](https://caniuse.com/jpegxr) |
+  |---|---|
+  | AVIF | [https://caniuse.com/avif](https://caniuse.com/avif) |
+  | WebP | [https://caniuse.com/webp](https://caniuse.com/webp) |
+  | JPEG 2000 | [https://caniuse.com/jpeg2000](https://caniuse.com/jpeg2000) |
+  | JPEGXR | [https://caniuse.com/jpegxr](https://caniuse.com/jpegxr) |
+
 * För webbläsare som inte stöder dessa format används det bildformat som ursprungligen begärdes.
 
 Om den ursprungliga bildstorleken är mindre än vad Smart Imaging skapar, behålls originalbilden.

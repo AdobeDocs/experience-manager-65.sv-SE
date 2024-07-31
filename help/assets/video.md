@@ -11,7 +11,7 @@ feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 7e0f1225d5bf4de095c4a8cc042517997898a44c
+source-git-commit: 0d491be4fb2605220b1558c8c877151ab4405978
 workflow-type: tm+mt
 source-wordcount: '11043'
 ht-degree: 1%
@@ -840,6 +840,7 @@ Det går inte att hämta det ursprungliga ljudspåret som har extraherats från 
    | Skapa en separat mapp för varje resurs | Skapa en mapp för varje bildtextfil eller ljudspårsfil som du valde för hämtning. |
    | E-post | Använd ditt standardprogram för e-post för att skicka ZIP-filen till en angiven e-postadress. |
    | Assets | Anger antalet filer som du hämtar och den sammanlagda storleken för alla markerade filer. Om du avmarkerar det här alternativet tonas knappen **[!UICONTROL Download]** ned (inaktiveras), vilket förhindrar att du hämtar någon fil. |
+
 1. Välj **[!UICONTROL Download]**.
 1. Publish videon. Se [Publish-resurser](publishing-dynamicmedia-assets.md).
 

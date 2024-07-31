@@ -6,7 +6,8 @@ solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 6b86212a2b3a86b2205714c802dc1581d30e7441
+exl-id: 3a9d7943-2c34-4e0a-9803-7ce1ef40f676
+source-git-commit: 0d491be4fb2605220b1558c8c877151ab4405978
 workflow-type: tm+mt
 source-wordcount: '11687'
 ht-degree: 0%
@@ -93,7 +94,7 @@ I LiveCycle Designer är det här alternativet markerat som standard.
 
 ## Välj rätt kontroller {#choose-right-controls}
 
-När du utformar formulär ska du använda utvecklingsobjekt från flikarna i LiveCycle Designer objektbibliotek. Du kan visa den här panelen genom att välja Fönster > Objektbibliotek eller genom att trycka på Skift+F12 (se figur 1).
+När du utformar formulär ska du använda utvecklingsobjekt från flikarna i LiveCyclet Designer objektbibliotek. Du kan visa den här panelen genom att välja Fönster > Objektbibliotek eller genom att trycka på Skift+F12 (se figur 1).
 
 ![Objektbibliotekspanelen](/help/forms/using/assets/image-1.png)
 
@@ -133,7 +134,7 @@ Tänk på följande när du anger alternativ text:
 * Skapa inte textbeskrivningar för statiska bilder som bara används för dekoration.
 * Använd inte skannade data som bakgrundsinformation. Det här kan hända när en designer skannar ett utskriftsformulär och använder Adobe LiveCycle Designer för att lägga till nya fält i formuläret. Skärmläsare kan inte identifiera inlästa data i det här läget.
 
-När du lägger in rent dekorativt grafiskt innehåll i formulären måste du se till att skärmläsarna inte meddelar om bilden. För de flesta skärmläsare kan du uppnå detta genom att ange egenskapen Reader text på skärmen till Ingen på paletten Tillgänglighet. Om du inte gör det kan vissa skärmläsare meddela att det finns en bild, utan att ange vad bilden representerar. För dynamiska bilder, t.ex. bildfältsobjekt, måste du se till att textalternativen uppdateras korrekt när bilden ändras. Skapa inte textbeskrivningar för bildfältsobjekt som bara används för dekoration. Du kan använda skriptspråket FormCalc för att tilldela textbeskrivningar till ett bildfältsobjekt dynamiskt. FormCalc är standardskriptspråket i Adobe LiveCycle Designer. Ta till exempel ett formulär med bildfältet ImageField1 och tillhörande text i bildtextnoden för körningsdata. Du kan använda skript för att skicka den här texten i en lämplig händelse (till exempel `form:ready`) enligt följande:
+När du lägger in rent dekorativt grafiskt innehåll i formulären bör du se till att skärmläsarna inte meddelar om bilden. För de flesta skärmläsare kan du uppnå detta genom att ange egenskapen Reader text på skärmen till Ingen på paletten Tillgänglighet. Om du inte gör det kan vissa skärmläsare meddela att det finns en bild, utan att ange vad bilden representerar. För dynamiska bilder, t.ex. bildfältsobjekt, måste du se till att textalternativen uppdateras korrekt när bilden ändras. Skapa inte textbeskrivningar för bildfältsobjekt som bara används för dekoration. Du kan använda skriptspråket FormCalc för att tilldela textbeskrivningar till ett bildfältsobjekt dynamiskt. FormCalc är standardskriptspråket i Adobe LiveCycle Designer. Ta till exempel ett formulär med bildfältet ImageField1 och tillhörande text i bildtextnoden för körningsdata. Du kan använda skript för att skicka den här texten i en lämplig händelse (till exempel `form:ready`) enligt följande:
 
 `ImageField1.assist.toolTip = $record.imagetext.value`
 
@@ -154,7 +155,9 @@ Etiketten eller bildtexten för en formulärkontroll identifierar vad formulärk
 
 Etiketten som upplevs av skärmläsaranvändare behöver inte nödvändigtvis vara samma som den visuella bildtexten. I vissa fall kanske du vill vara mer specifik när det gäller kontrollens syfte.
 För varje fältobjekt i ett formulär kan hjälpmedelspaletten (se figur 3) användas för att ange vad skärmläsaren ska meddela för att identifiera det specifika formulärfältet.
+
 Så här använder du paletten Tillgänglighet:
+
 1. Visa paletten Tillgänglighet genom att välja Fönster > Tillgänglighet eller genom att trycka på Skift+F6.
 1. Markera ett objekt i formuläret. På paletten visas objektets hjälpmedelsegenskaper.
 
@@ -170,8 +173,8 @@ När formuläret sparas som PDF söker LiveCycle Designer igenom formuläret eft
 
 Följande alternativ är tillgängliga:
 
-* **Egen text** som du anger i textfältet Reader på hjälpmedelspaletten. Med det här alternativet kan du ange vilken text som helst som du vill att hjälpmedelstekniken, t.ex. skärmläsare, ska använda. I de flesta fall är det bäst att använda bildtextsinställningen - att skapa Reader-text för anpassad skärm bör endast vara ett alternativ när det inte går att använda bildtext eller en funktionsbeskrivning.
-* **Verktygstips** som du anger i fältet Verktygstips på paletten Tillgänglighet. För de flesta objekt visas verktygstips vid körning när användaren håller pekaren över objektet. Verktygstips visas bara för vissa skrivskyddade objekt, till exempel ett streckkodsobjekt för ett pappersformulär, när en skärmläsare används.
+* **Egen text** som du anger i fältet Reader text på hjälpmedelspaletten. Med det här alternativet kan du ange vilken text som helst som du vill att hjälpmedelstekniken, t.ex. skärmläsare, ska använda. I de flesta fall är det bäst att använda bildtextsinställningen - att skapa Reader-text för anpassad skärm bör endast vara ett alternativ när det inte går att använda bildtext eller en funktionsbeskrivning.
+* **Verktygstips** som du anger i fältet Verktygstips på paletten Tillgänglighet. För de flesta objekt visas verktygstips vid körning när användaren håller pekaren över objektet. Verktygstips visas endast för vissa skrivskyddade objekt, till exempel ett streckkodsobjekt för ett pappersformulär, när en skärmläsare används.
 * **Bildtext**, vilket gör att LiveCyclet Designer använder formulärfältets associerade (visuella) etikett som skärmläsartext.
 * **Namn** som du anger i fältet Namn på fliken Bindning. Observera att namnet inte får innehålla blanksteg.
 * **Inget**, vilket gör att objektet inte har något namn. Detta rekommenderas aldrig för formulärkontroller.
@@ -185,9 +188,9 @@ Tänk på följande när du använder paletten Tillgänglighet för formulärkon
 * Om du måste skapa en beskrivning med alternativen Verktygstips eller Egen Reader-text på skärmen, ska du alltid inkludera den bildtext som är synlig i formuläret, förutom när den synliga bildtexten inte är meningsfull, till exempel när själva bildtexten är förkortad. Detta gör att skärmläsaranvändare kan kommunicera effektivt med andra användare om gränssnittselement. Dessa olika användargrupper har svårt att identifiera samma gränssnittselement om bildtexten skiljer sig från Reader-texten för verktygstips eller anpassade skärmar.
 * För kryssrutor och listrutekontroller i tabellceller kommer skärmläsaren att meddela vilken bildtext, funktionsbeskrivning eller anpassad skärmläsartext du har angett för objektet. Om du vill använda kolumnrubriken för den alternativa texten för dessa objekt när de placeras i en tabell ska du inte ange någon beskrivning, funktionsbeskrivning eller anpassad uppläsningstext.
 * Om kontrollen kräver ytterligare instruktioner, se till att de också finns med i textalternativet. Inkludera tillräckligt med talad information så att användarna vet vilka indata som förväntas och hur fältet ska fyllas i korrekt, men överbelasta inte användare med redundant information.
-* Lämna inte information som beskriver hur du använder kontroller i onödan - låt användarens hjälpfunktioner hantera detta för användaren. Användarna kan konfigurera den utförliga färgen så att den passar deras komfort.
+* Lämna inte information som beskriver hur du använder kontroller i onödan - låt användarens hjälpfunktioner hantera detta åt användaren. Användarna kan konfigurera den utförliga färgen så att den passar deras komfort.
 
-Bild 4 visar ett exempel på ett textfält med en visuell bildtext som kan vara oklar för vissa skärmläsaranvändare. I det här exemplet är Reader-text för anpassad skärm inställd på&quot;Antal sidor&quot; och Reader prioritet för skärm är inställd på Anpassad text. Därför kommer den faktiska (visuella) bildtexten (&quot;# av sidor&quot;) inte att användas av skärmläsaren. Ett verktygstips kan också ha angetts.
+Bild 4 visar ett exempel på ett textfält med en visuell bildtext som kan vara oklar för vissa skärmläsaranvändare. I det här exemplet är Reader-text för anpassad skärm inställd på &quot;Antal sidor&quot; och Reader prioritet för skärm är inställd på Anpassad text. Därför kommer den faktiska (visuella) bildtexten (&quot;# av sidor&quot;) inte att användas av skärmläsaren. Ett verktygstips kan också ha angetts.
 
 ![Ange Reader-text för anpassad skärm när den synliga etiketten inte är tillräcklig](/help/forms/using/assets/image-4.png)
 
@@ -370,7 +373,7 @@ Du kan ändra ett objekts koordinater mer exakt med paletten Layout (visas i bil
 Bild 10: **Använda koordinater för att exakt positionera ett objekt med layoutpaletten**
 
 >[!NOTE]
-> När bildtexten och kontrollen inte sammanfogas, är positionen för bildtexten för en formulärkontroll oberoende av den ordning i vilken skärmläsare läser objektet och dess element. Mer information om bildtexter finns i avsnitt 2.5 Ange korrekta etiketter för formulärkontroller i den här handboken.
+> När bildtexten och kontrollen inte sammanfogas är positionen för bildtexten för en formulärkontroll oberoende av den ordning i vilken skärmläsare läser objektet och dess element. Mer information om bildtexter finns i avsnitt 2.5 Ange korrekta etiketter för formulärkontroller i den här handboken.
 
 ### Använda delformulär för att påverka standardtabbordningen
 
@@ -514,7 +517,7 @@ Recommendations för färganvändning:
 
 ## Ange rubrikceller för tabeller{#provide-heading-cells}
 
-Tabeller är ett effektivt sätt att ordna och presentera innehåll i hjälpmedelsförberedda formulär. När en tabells rader och kolumner används på rätt sätt blir strukturen förutsägbar och konsekvent för formulärinnehållet. När en skärmläsaranvändare till exempel navigerar till en innehållsradcell anger skärmläsaren cellens placering och läser sedan cellinnehållet. Skärmläsaren anger cellens placering med en kombination av rad- och kolumnrubriker eller rad- och kolumnnummer. Eftersom skärmläsare anger information som orienterar användaren till platsen för innehållet i tabellen, påverkar layouten direkt tabellens hjälpmedel.
+Tabeller är ett effektivt sätt att ordna och presentera innehåll i hjälpmedelsförberedda formulär. När den används på rätt sätt ger tabellens rader och kolumner en förutsägbar och konsekvent struktur för formulärinnehållet. När en skärmläsaranvändare till exempel navigerar till en innehållsradcell anger skärmläsaren cellens placering och läser sedan cellinnehållet. Skärmläsaren anger cellens placering med en kombination av rad- och kolumnrubriker eller rad- och kolumnnummer. Eftersom skärmläsare anger information som orienterar användaren till platsen för innehållet i tabellen, påverkar layouten direkt tabellens hjälpmedel.
 
 Du kan ange följande roller för tabellelement när du skapar tabeller. Med de här rollerna kan skärmläsare navigera i tabellstrukturen med särskilda kortkommandon och förmedla relationen mellan tabellceller och motsvarande rubrikceller till användaren.
 * Tabell
@@ -661,7 +664,7 @@ Som en del av formulärdesignprocessen kan formulärutvecklare använda skript f
 Tänk på följande allmänna riktlinjer när du utformar hjälpmedelsskript:
 
 * Se till att formulärinnehållet inte innehåller några visuella störningar. Undvik till exempel funktioner som gör att innehållet flimrar, blinkar eller rör sig.
-* Kontrollera att popup-fönster bara visas som ett resultat av åtgärder som användaren har initierat. Tillåt inte heller formulärets aktuella fokus (användarens aktuella vy) att ändras eller att innehållet visas på nytt om inte användaren har startat det. Om användaren t.ex. fyller i fält i formulärets nedre halva ska fokus inte ändras till formulärets övre vänstra hörn om inte användaren väljer att navigera till den här platsen.
+* Kontrollera att popup-fönster bara visas som ett resultat av åtgärder som användaren har initierat. Tillåt inte heller formulärets aktuella fokus (användarens aktuella vy) att ändras eller att innehållet visas igen om inte användaren har startat det. Om användaren t.ex. fyller i fält i formulärets nedre halva ska fokus inte ändras till formulärets övre vänstra hörn om inte användaren väljer att navigera till den här platsen.
 * Användare med funktionshinder kan behöva mer tid för att ange indata i fält. Ange inte tidsbaserade svar för inmatningsfält.
 * Tänk på att skript på klienten kan störa skärmläsare och tangentbord om skriptet ändrar klientprogrammets fokus. Händelserna change och mouseEnter, när de används med nedrullningsbara listor eller listrutor, kan till exempel orsaka oväntade åtgärder. Kontrollera att dina klientskript inte orsakar några problem för skärmläsaranvändare och användare med enbart tangentbord.
 * Användare av hjälpmedel behöver ibland ytterligare tid för att utföra uppgifter. Om en tidsbestämd rutin håller på att gå ut visar du ett hjälpmedelsanpassat meddelande som tillåter ett tillägg. Varningsrutor som skapas via JavaScript kan användas med hjälpmedel. Ett nytt fönster med ett meddelande som varnar användaren om att tidsgränsen närmar sig kan också distribueras.
