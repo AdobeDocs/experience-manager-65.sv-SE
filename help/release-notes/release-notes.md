@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: fb689e86deaabcc4033ed75f615086b630a9a525
+source-git-commit: 447ff116c822c7ab0d5826103d6485e7d4ed13ce
 workflow-type: tm+mt
-source-wordcount: '4309'
+source-wordcount: '4367'
 ht-degree: 0%
 
 ---
@@ -550,6 +550,8 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
    1. Navigera till katalogen `/libs/fd/aemforms/install/` i CRXDE.
    1. Ta bort paketet med namnet `com.adobe.granite.ui.commons-5.10.26.jar`.
    1. Starta om AEM.
+
+* När en användare uppdaterar till AEM Forms Service Pack 20 (6.5.20.0) som installerats med Forms Add-On, fungerar inte konfigurationer som använder den gamla molntjänsten för Adobe Analytics med inloggningsuppgifter korrekt, vilket kan leda till att analysreglerna inte kan köras. Läs artikeln [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) om du vill hämta och installera snabbkorrigeringen. (FORMS-15428)
 
 * När en användare uppdaterar till AEM Forms Service Pack 20 (6.5.20.0) på JEE-servern och genererar PDF med hjälp av utdatatjänster, återges PDF med tillgänglighetsproblem. Läs artikeln [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) om du vill hämta och installera snabbkorrigeringen. (LC-3922112)
 * När en användare genererar taggat PDF med hjälp av utdatatjänsten för JEE visas&quot;Olämplig strukturvarning&quot;. Läs artikeln [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) om du vill hämta och installera snabbkorrigeringen. (LC-3922038)

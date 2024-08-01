@@ -5,9 +5,9 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: fb689e86deaabcc4033ed75f615086b630a9a525
+source-git-commit: c524e4355794ab598b6b69a8ce96cdba90abaa22
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
@@ -92,6 +92,7 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
      <li>När ett anpassat formulär skickas från en Adobe Experience Manager Publish-instans till ett Adobe Experience Manager-arbetsflöde, kan arbetsflödet inte spara de bifogade filerna.  (FORMS-14209) </li>
      <li> När du installerar AEM 6.5 Forms Service Pack 20-paket (AEM Forms tilläggspaket för SP20) uppvisar AEM Sites användargränssnitt en avsevärd prestandaförsämring.  (FORMS-13791) </li>
      <li>Förifyllningstjänsten misslyckas med ett null-pekarundantag i Interactive Communications. (CQDOC-21355)</li>
+     <li>Konfigurationer som använder den gamla molntjänsten för Adobe Analytics med användarautentiserad autentisering fungerar inte korrekt, vilket gör att analysreglerna inte kan köras. (FORMS-15428)
     </ul>
     </td>    
   </tr>
