@@ -5,9 +5,9 @@ exl-id: 968bba02-98fe-4eaf-9937-ce5cfdf5b413
 solution: Experience Manager, Experience Manager Sites
 feature: Language Copy
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: 26ac50aa27501fe6a80b38a474e9811338c4fb56
 workflow-type: tm+mt
-source-wordcount: '3506'
+source-wordcount: '3519'
 ht-degree: 2%
 
 ---
@@ -188,9 +188,13 @@ Du kan lägga till sidor, resurser, taggar eller i18n-ordlistor i översättning
 
    ![chlimage_1-251](assets/chlimage_1-251.png)
 
-1. Markera det lexikon du vill lägga till och klicka sedan på knappen Lägg till.
+1. Markera **rotkatalogen** och ordlistan (om det behövs) som du vill lägga till och välj sedan **Lägg till**.
 
-   ![chlimage_1-252](assets/chlimage_1-252.png)
+   ![i18N-ordlista](assets/tc-manage-i18n-dictionary.png)
+
+1. Välj typ av uppdatering om det efterfrågas:
+
+   ![Översätt](assets/tc-manage-translate.png)
 
 Din ordbok är nu i ditt översättningsjobb.
 
