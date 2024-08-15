@@ -10,9 +10,9 @@ exl-id: 4ce19c95-32cb-4bb8-9d6f-a5bc08a3688d
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '759'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Du kan lägga till behörigheter genom att söka i textfältet och sedan välja 
 
 >[!NOTE]
 >
->En fullständig lista över behörigheter och beskrivningar finns på [den här sidan](/help/sites-administering/user-group-ac-admin.md#access-right-management).
+>En fullständig lista över behörigheter och beskrivningar finns i [Administrering av användar-, grupp- och åtkomsträttigheter](/help/sites-administering/user-group-ac-admin.md#access-right-management).
 
 ![Sökbehörighet för en angiven sökväg.](assets/image2019-3-21_0-5-47.png) ![Lägg till ny post för &quot;dam-users&quot;, vilket visas av en sökväg som är markerad i lodräta kolumner.](assets/image2019-3-21_0-6-53.png)
 

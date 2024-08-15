@@ -10,9 +10,9 @@ exl-id: 1b8c6075-13c6-4277-b726-8dea7991efec
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '3441'
+source-wordcount: '3442'
 ht-degree: 0%
 
 ---
@@ -244,7 +244,7 @@ Du kan markera en del av landningssidan för import som en&quot;redigerbar Call 
 
 #### Klicka genom länken {#click-through-link}
 
-Denna CTA-komponent kan användas för att lägga till en textlänk på landningssidan.
+Den här CTA-komponenten kan användas för att lägga till en textlänk på landningssidan.
 
 Egenskaper som stöds
 
@@ -276,7 +276,7 @@ Den här komponenten kan användas i alla fristående program eller importeras f
 
 #### Grafisk länk {#graphical-link}
 
-CTA-komponenten kan användas för att lägga till grafik med länk på landningssidan. Bilden kan vara en enkel knapp eller en grafisk bild som bakgrund. När användaren klickar på bilden dirigeras användaren till den mål-URL som anges i komponentegenskaperna. Det ingår i gruppen&quot;Call to Action&quot;.
+Den här CTA-komponenten kan användas för att lägga till grafik med en länk på landningssidan. Bilden kan vara en enkel knapp eller en grafisk bild som bakgrund. När användaren klickar på bilden dirigeras användaren till den mål-URL som anges i komponentegenskaperna. Det ingår i gruppen&quot;Call to Action&quot;.
 
 Egenskaper som stöds
 
@@ -318,15 +318,15 @@ Taggen HTML om du vill ta med en grafisk länkkomponent i det importerade postnu
 
 ### Leadformulär {#lead-form}
 
-Ett lead-formulär är ett formulär som används för att samla in profilinformation för en besökare/lead. Denna information kan lagras och användas senare för att skapa en effektiv marknadsföring utifrån informationen. Informationen innehåller vanligtvis titel, namn, e-postadress, födelsedatum, adress, ränta osv. Det ingår i gruppen&quot;CTA Lead form&quot;.
+Ett lead-formulär är ett formulär som används för att samla in profilinformation för en besökare/lead. Denna information kan lagras och användas senare för att skapa en effektiv marknadsföring utifrån informationen. Informationen innehåller vanligtvis titel, namn, e-postadress, födelsedatum, adress, ränta osv. Den ingår i gruppen&quot;CTA Lead form&quot;.
 
 **Funktioner som stöds**
 
 * Fördefinierade lead-fält - förnamn, efternamn, adress, dob, kön, about, userId, emailId, submit-knapp är tillgängliga i sidosparken. Dra-och-släpp den komponent du behöver i ditt lead-formulär.
 * Med hjälp av dessa komponenter kan författaren utforma ett fristående lead-formulär, motsvarar dessa fält formulärfält lead. I det fristående eller importerade ZIP-programmet kan användaren lägga till extra fält med cq:form eller cta lead-formulärfält, namn och utforma dem enligt kraven.
-* Mappa leadformulärfält med specifika fördefinierade namn för CTA-leadformulär, till exempel: firstName för förnamn i lead-formulär och så vidare.
+* Mappa lead-formulärfält med specifika fördefinierade namn för CTA lead-formulär, till exempel: firstName för förnamn i lead-formulär och så vidare.
 * Fält som inte är mappade till lead-formulärmappar till cq:formulärkomponenter - text, radio, kryssruta, listruta, dold, lösenord.
-* Användaren kan ange titeln med taggen&quot;label&quot; och formateringen med hjälp av formatattributet&quot;class&quot; (endast tillgängligt för CTA-formulärkomponenter).
+* Användaren kan ange rubriken med taggen &quot;label&quot; och formateringen kan fås genom att använda formatattributet &quot;class&quot; (endast tillgängligt för komponenter i CTA lead-formulär).
 * Tack! Sidan och prenumerationslistan kan anges som en dold parameter i formuläret (finns i index.htm) eller kan läggas till/redigeras från redigeringsfältet i &quot;Början av lead-formuläret&quot;
 
   &lt;input type=&quot;hidden&quot; name=&quot;redirectUrl&quot; value=&quot;/content/we-retail/en/user/register/thanks_you&quot;/>
@@ -443,7 +443,7 @@ Om ingen kodning anges i det importerade HTML är standardkodningen som anges av
 
 Mallen för tom landningssida kan vara överlagrad genom att skapa en på: `/apps/<appName>/designimporter/templates/<templateName>`
 
-Steg för att skapa en mall i AEM förklaras [här](/help/sites-developing/templates.md).
+Steg för att skapa en mall i AEM beskrivs under [Mallar](/help/sites-developing/templates.md).
 
 ### Referera en komponent från landningssidan {#referring-a-component-from-landing-page}
 

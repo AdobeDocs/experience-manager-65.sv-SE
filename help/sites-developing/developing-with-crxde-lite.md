@@ -10,9 +10,9 @@ exl-id: 9e88ca55-ac3d-4857-b6b2-aeb732562664
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '2118'
+source-wordcount: '2114'
 ht-degree: 0%
 
 ---
@@ -219,7 +219,7 @@ En dialogruta med följande struktur skapas:
 
 Nu kan du anpassa dialogrutan efter dina behov genom att ändra egenskaper eller skapa noder.
 
-Du kan också använda Dialogruteredigeraren för att redigera en dialogruta. Om du dubbelklickar på dialognoden i CRXDE Lite öppnas redigeraren. Mer information om Dialog Editor finns [här](/help/sites-developing/dialog-editor.md).
+Du kan också använda Dialogruteredigeraren för att redigera en dialogruta. Om du dubbelklickar på dialognoden i CRXDE Lite öppnas redigeraren. Mer information finns i [Dialogruteredigeraren](/help/sites-developing/dialog-editor.md).
 
 ## Skapa en nod {#creating-a-node}
 

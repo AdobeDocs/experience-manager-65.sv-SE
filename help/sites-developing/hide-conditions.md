@@ -9,9 +9,9 @@ exl-id: 65f5d5e1-ac11-4a3c-8a51-ce06a741c264
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '581'
 ht-degree: 1%
 
 ---
@@ -77,7 +77,7 @@ Om en mallskapare väljer att inaktivera alternativet med underordnade sidor, st
 
 1. Värdet för `disableChildren` hämtas från designkonfigurationen och uttrycket `${cqDesign.disableChildren}` utvärderas till `false`, vilket innebär att alternativet inte återges som en del av komponenten.
 
-   Du kan visa det dolda uttrycket som värdet för egenskapen `granite:hide` [ i GitHub här](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40).
+   Du kan visa det dolda uttrycket som värdet för egenskapen `granite:hide` [ i GitHub](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/list/v1/list/_cq_dialog/.content.xml#L40).
 
 1. Alternativet **Underordnade sidor** återges inte längre för sidförfattaren när listkomponenten används.
 

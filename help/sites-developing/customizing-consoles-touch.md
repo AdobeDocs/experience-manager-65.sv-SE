@@ -10,9 +10,9 @@ exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '649'
 ht-degree: 0%
 
 ---
@@ -161,4 +161,4 @@ Så här anpassar du kolumnerna i listvyn:
 
 När du använder en konsol är ett vanligt användningsfall när användaren måste välja bland resurser (till exempel sidor, komponenter, resurser och så vidare). Detta kan t.ex. vara en lista som författaren måste välja ett alternativ från.
 
-För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Mer information finns i [den här artikeln](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources).
+För att hålla listan i en rimlig storlek och även relevant för användningsfallet kan ett filter implementeras i form av ett anpassat predikat. Mer information finns i [Anpassa sidredigering - filtreringsresurser](/help/sites-developing/customizing-page-authoring-touch.md#filtering-resources).

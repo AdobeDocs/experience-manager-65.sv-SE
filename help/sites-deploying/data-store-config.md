@@ -8,9 +8,9 @@ feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '3476'
+source-wordcount: '3461'
 ht-degree: 0%
 
 ---
@@ -46,11 +46,9 @@ Så här konfigurerar du både nodarkivet och datalagret:
 
 >[!CAUTION]
 >
->Nyare versioner av Oak har ett nytt namngivningsschema och format för OSGi-konfigurationsfiler. Det nya namnschemat kräver att konfigurationsfilen får namnet **.config** och det nya formatet kräver att värden skrivs och [dokumenteras här](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format).
+>Nyare versioner av Oak har ett nytt namngivningsschema och format för OSGi-konfigurationsfiler. Det nya namnschemat kräver att konfigurationsfilen får namnet **.config** och det nya formatet kräver att värden skrivs. Mer information finns i [Provisioning Model för Apache Sling och Apache SlingStart - Standardkonfigurationsformat](https://sling.apache.org/documentation/development/slingstart.html#default-configuration-format).
 >
 >Om du uppgraderar från en äldre version av Oak måste du först säkerhetskopiera mappen `crx-quickstart/install`. Efter uppgraderingen återställer du innehållet i mappen till den uppgraderade installationen och ändrar tillägget för konfigurationsfilerna från **.cfg** till **.config**.
->
->Om du läser den här artikeln som förberedelse för en uppgradering från en **AEM 5.x** -installation bör du kontrollera att du först läser [upgrade](https://experienceleague.adobe.com/docs/) -dokumentationen.
 
 ### Segmentnodarkiv {#segment-node-store}
 
@@ -372,7 +370,7 @@ Följande steg krävs för att konfigurera en binär replikering med S3:
 
    * Om du använder S3 som datalager skapar du en fil med namnet `rg.apache.jackrabbit.oak.plugins.blob.datastore.S3DataStore.config` i mappen `<aem-install>/crx-quickstart/install` enligt ovan.
 
-1. Ändra konfigurationsfilerna för datalagret på varje instans så att de pekar på samma datalager. Mer information finns i [den här artikeln](/help/sites-deploying/data-store-config.md#data-store-configurations).
+1. Ändra konfigurationsfilerna för datalagret på varje instans så att de pekar på samma datalager. Mer information finns i [Konfigurationer för datalager](/help/sites-deploying/data-store-config.md#data-store-configurations).
 1. Om instansen har klonats från en befintlig server måste du ta bort den nya instansens `clusterId` med hjälp av det senaste körningsverktyget när databasen är offline. Kommandot du måste köra är:
 
    ```xml

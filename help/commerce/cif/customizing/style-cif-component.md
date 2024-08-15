@@ -11,7 +11,7 @@ thumbnail: 3456-style-cif.jpg
 exl-id: 04d553be-c67d-4ecb-a23f-2694c2adfc2b
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
 source-wordcount: '2338'
 ht-degree: 0%
@@ -435,7 +435,7 @@ Webbpack-dev-server-proxies bilder och en del CSS/JavaScript från den lokala in
 
    ![Ändringar i WebPack Dev Server-teaser](../assets/style-cif-component/webpack-dev-server-teaser-changes.png)
 
-   Ändringarna har dock inte distribuerats till AEM än. Du kan hämta [lösningsfilen här](../assets/style-cif-component/_productteaser.scss).
+   Ändringarna har dock inte distribuerats till AEM än. Du kan [hämta lösningsfilen här](../assets/style-cif-component/_productteaser.scss).
 
 1. Distribuera uppdateringarna till AEM med hjälp av dina Maven-kunskaper från en kommandoradsterminal:
 

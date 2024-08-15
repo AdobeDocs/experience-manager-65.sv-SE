@@ -9,9 +9,9 @@ feature: Configuring
 exl-id: 5a305a5b-0c3d-413b-88c1-1f5abf7e1579
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '2939'
+source-wordcount: '2937'
 ht-degree: 1%
 
 ---
@@ -429,7 +429,7 @@ Nedan visas riktlinjerna för arkitektur för webbplatser AEM AEM Assets.
 
 ### Riktlinje för inställningar för TARMK {#tarmk-settings-guideline}
 
-För bästa prestanda bör du följa riktlinjerna nedan. Instruktioner om hur du ändrar inställningarna [finns på den här sidan](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
+För bästa prestanda bör du följa riktlinjerna nedan. Instruktioner om hur du ändrar inställningarna finns i [Prestandaoptimering](/help/sites-deploying/configuring-performance.md).
 
 <table>
  <tbody>
@@ -539,7 +539,7 @@ För att få bra prestanda när du använder MongoMK bör du utgå från följan
 
 ### Riktlinjer för MongoMK-inställningar {#mongomk-settings-guidelines}
 
-För bästa prestanda bör du följa riktlinjerna nedan. Instruktioner om hur du ändrar inställningarna [finns på den här sidan](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
+För bästa prestanda bör du följa riktlinjerna nedan. Instruktioner om hur du ändrar inställningarna finns i [Prestandaoptimering](/help/sites-deploying/configuring-performance.md).
 
 <table>
  <tbody>

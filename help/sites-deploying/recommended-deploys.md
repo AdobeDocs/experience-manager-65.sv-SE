@@ -10,9 +10,9 @@ exl-id: baec7fc8-d48c-4bc6-b12b-4bf4eff695ea
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1756'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ Fördelarna:
 
 >[!NOTE]
 >
->I diagrammet ovan visas AEM Server 3 och AEM Server 4 med en inaktiv status som förutsätter en nätverksfördröjning mellan de AEM servrarna i datacenter 2 och den primära MongoDB-noden i datacenter 1 som är högre än vad som krävs [här](/help/sites-deploying/aem-with-mongodb.md#checklists). Om den maximala fördröjningen är kompatibel med kraven, till exempel genom användning av tillgänglighetszoner, kan AEM i Data Center 2 också vara aktiva och skapa ett aktivt AEM över flera datacenter.
+>I diagrammet ovan visas AEM Server 3 och AEM Server 4 med en inaktiv status som förutsätter en nätverksfördröjning mellan de AEM servrarna i datacenter 2 och den primära MongoDB-noden i datacenter 1 som är högre än vad som krävs enligt [Adobe Experience Manager med MongoDB - checklistor](/help/sites-deploying/aem-with-mongodb.md#checklists). Om den maximala fördröjningen är kompatibel med kraven, till exempel genom användning av tillgänglighetszoner, kan AEM i Data Center 2 också vara aktiva och skapa ett aktivt AEM över flera datacenter.
 
 >[!NOTE]
 >
@@ -151,7 +151,7 @@ Det är nästan omöjligt att förutsäga exakt vilken samtidighetsmodell som ko
 
 >[!NOTE]
 >
->Tough Day kan användas för att utvärdera prestanda för kundens program i samband med den maskinvarukonfiguration som distribueras. Mer information om verktyget finns [här](/help/sites-developing/tough-day.md).
+>[Tough Day](/help/sites-developing/tough-day.md) kan användas för att utvärdera prestanda för kundens program i kontexten för den maskinvarukonfiguration som distribueras.
 
 En minimidistribution med MongoDB omfattar vanligtvis följande topologi:
 
@@ -184,9 +184,9 @@ En uppsättning förutsättningar och rekommendationer är tillgängliga om du �
 
 **Starka rekommendationer för MongoDB-distributioner:**
 
-* Läs MongoDB för Adobe Experience Manager [artikel](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager);
-* Granska MongoDB-produktionen [checklista](https://docs.mongodb.org/manual/administration/production-checklist/);
-* Delta i en certifieringsklass på MongoDB som är tillgänglig online [här](https://university.mongodb.com/).
+* Läs [MongoDB-distributionsgranskningen för Adobe Experience Manager](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager);
+* Granska checklistan för [MongoDB-åtgärder](https://docs.mongodb.org/manual/administration/production-checklist/);
+* Delta i en [certifieringsklass på MongoDB - tillgänglig online](https://university.mongodb.com/).
 
 >[!NOTE]
 >

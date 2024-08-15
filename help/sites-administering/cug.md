@@ -10,9 +10,9 @@ exl-id: 9efba91d-45e8-42e1-9db6-490d21bf7412
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '710'
 ht-degree: 0%
 
 ---
@@ -93,7 +93,7 @@ Detta är valfritt, om det lämnas tomt används standardinloggningssidan.
    >
    >CUG-filer på fliken Behörigheter kan inte rullas ut till Live-kopior från utkast. Planera runt detta när du konfigurerar Live Copy.
    >
-   >Mer information finns på [den här sidan](closed-user-groups.md#aem-livecopy).
+   >Mer information finns i [Stängda användargrupper i AEM - LiveCycle](closed-user-groups.md#aem-livecopy).
 
 1. Dialogrutan **Redigera stängd användargrupp** öppnas. Här kan du söka efter och markera din CUG och sedan bekräfta gruppmarkeringen med **Spara**.
 

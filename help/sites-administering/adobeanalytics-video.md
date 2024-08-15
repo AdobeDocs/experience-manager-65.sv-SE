@@ -10,9 +10,9 @@ exl-id: 5d51f898-b6d1-40ac-bdbf-127cda1dc777
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: eae057caed533ef16bb541b4ad41b8edd7aaa1c7
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1754'
+source-wordcount: '1758'
 ht-degree: 0%
 
 ---
@@ -379,7 +379,7 @@ När du använder metoden** för tidigare sekunder* aktiveras Adobe Analytics-an
 
    ![lseconds](assets/lseconds.png)
 
-   *Anropet liknar anropet för äldre milstolpar ovan. Se informationen om föregående3 **[som finns där](/help/sites-administering/adobeanalytics.md)**.*
+   *Anropet liknar anropet för äldre milstolpar ovan. Se informationen om föregående3 under [Integrera med Adobe Analytics](/help/sites-administering/adobeanalytics.md).*.
 
 **Referenser som används i den här självstudiekursen:**
 

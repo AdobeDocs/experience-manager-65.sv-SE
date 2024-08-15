@@ -10,9 +10,9 @@ exl-id: 39e35a07-140f-4853-8f0d-8275bce27a65
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '6650'
+source-wordcount: '6662'
 ht-degree: 0%
 
 ---
@@ -78,7 +78,7 @@ Till skillnad från den tidigare implementeringen identifieras och behandlas de 
 
 Förutom en dedikerad åtkomstkontrollshantering för CUG:er kan du med den nya auktoriseringsmodellen villkorligt aktivera behörighetsutvärdering för dess principer. Detta gör att du kan konfigurera CUG-principer i en staging-miljö, och bara aktiverar utvärdering av de effektiva behörigheterna när de har replikerats till produktionsmiljön.
 
-Behörighetsutvärderingen för CUG-profiler och interaktionen med standardauktoriseringsmodellen eller någon annan auktoriseringsmodell följer mönstret som utformats för flera auktoriseringsmekanismer i Apache Jackrabbit Oak. Det innebär att en viss uppsättning behörigheter beviljas endast om alla modeller beviljar åtkomst. Mer information finns på [den här sidan](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html).
+Behörighetsutvärderingen för CUG-profiler och interaktionen med standardauktoriseringsmodellen eller någon annan auktoriseringsmodell följer mönstret som utformats för flera auktoriseringsmekanismer i Apache Jackrabbit Oak. Det innebär att en viss uppsättning behörigheter beviljas endast om alla modeller beviljar åtkomst. Mer information finns i [Jackrabbit Oak-dokumentationen](https://jackrabbit.apache.org/oak/docs/security/authorization/composite.html).
 
 Följande egenskaper gäller för behörighetsutvärderingen som är kopplad till behörighetsmodellen som är utformad för att hantera och utvärdera CUG-principer:
 
@@ -129,7 +129,7 @@ Samma sak gäller för egenskapen `granite:loginPath`. Den respekteras endast om
 
 Eftersom den här typen av autentiseringskrav förväntas begränsas till vissa körningslägen och till en liten delmängd av träd i innehållsdatabasen, är spårning av kravet på blandningstyp och egenskaper för inloggningssökväg villkorlig. Den är dessutom bunden till en motsvarande konfiguration som definierar de sökvägar som stöds (se Konfigurationsalternativ nedan). Därför utlöser endast ändringar inom omfånget för de här sökvägarna en uppdatering av OSGi-registreringen, någon annanstans ignoreras både mixin-typen och egenskapen.
 
-Standardinställningen för AEM använder nu den här konfigurationen genom att tillåta att mixinen ställs in i författarens körningsläge, men att den endast får effekt vid replikering till publiceringsinstansen. Se [den här sidan](https://sling.apache.org/documentation/the-sling-engine/authentication/authenticationframework.html) för mer information om hur Sling verkställer autentiseringskravet.
+Standardinställningen för AEM använder nu den här konfigurationen genom att tillåta att mixinen ställs in i författarens körningsläge, men att den endast får effekt vid replikering till publiceringsinstansen. I dokumentationen för [Sling Authentication - Framework](https://sling.apache.org/documentation/the-sling-engine/authentication/authentication-framework.html) finns mer information om hur Sling verkställer autentiseringskravet.
 
 Om du lägger till blandningstypen `granite:AuthenticationRequired` i de sökvägar som stöds, uppdateras OSGi-registreringen av den ansvariga hanteraren med en ny, extra post med egenskapen `sling.auth.requirements`. Om ett givet autentiseringskrav anger den valfria egenskapen `granite:loginPath`, registreras värdet även med autentiseraren med ett &#39;-&#39;-prefix som ska uteslutas från autentiseringskravet.
 
@@ -187,7 +187,7 @@ Följande bästa metoder bör beaktas när autentiseringskrav definieras:
 
 ### CUG-principrepresentation i databasen {#cug-policy-representation-in-the-repository}
 
-I Oak-dokumentationen beskrivs hur de nya CUG-profilerna återspeglas i databasinnehållet. Mer information finns på [den här sidan](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#Representation_in_the_Repository).
+I Oak-dokumentationen beskrivs hur de nya CUG-profilerna återspeglas i databasinnehållet. Mer information finns i [Jackrabbit Oak-dokumentationen om hur du hanterar åtkomst med CUG](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html#Representation_in_the_Repository).
 
 ### Autentiseringskrav i databasen {#authentication-requirement-in-the-repository}
 

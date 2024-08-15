@@ -5,9 +5,9 @@ exl-id: 8933942e-be49-49d3-bf0a-7225257e2803
 feature: Commerce Integration Framework
 solution: Experience Manager,Commerce
 role: Admin, Developer
-source-git-commit: ddd411a5dde57cf66cbcb458578b0aa32139b649
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '2302'
+source-wordcount: '2305'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ Värdet **Yes** är heltalet **1**. Detta är användbart när du skriver GraphQ
 
 >[!TIP]
 >
->Mer detaljerad dokumentation om [Adobe Commerce GraphQL finns här](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
+>Mer detaljerad dokumentation om Adobe Commerce GraphQL finns i följande [GraphQL-översikt](https://devdocs.magento.com/guides/v2.4/graphql/index.html).
 
 ## Uppdatera produktundervisningsmodellen {#updating-sling-model-product-teaser}
 
@@ -386,7 +386,7 @@ I det här fallet vill du återge en banderoll ovanpå teaser för att ange att 
 
    När du anropar en Sling Model-metod i HTML tas delen `get` och `is` av metoden bort och den första bokstaven sänks. `isShowBadge()` blir alltså `.showBadge` och `isEcoFriendly` blir `.ecoFriendly`. Baserat på det booleska värdet som returneras från `.isEcoFriendly()` avgör om `<span>Eco Friendly</span>` visas.
 
-   Mer information om `data-sly-test` och andra [HTML-blocksatser finns här](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html).
+   Mer information om `data-sly-test` och andra HTML-blocksatser finns i [HTML-specifikationen](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html).
 
 1. Spara ändringarna och distribuera uppdateringarna till AEM med dina Maven-kunskaper från en kommandoradsterminal:
 

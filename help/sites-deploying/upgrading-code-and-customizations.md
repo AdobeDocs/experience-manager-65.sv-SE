@@ -11,9 +11,9 @@ feature: Upgrading
 exl-id: a36a310d-5943-4ff5-8ba9-50eaedda98c5
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '2135'
+source-wordcount: '2140'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ När man planerar en uppgradering måste man undersöka och åtgärda följande 
 
 ## Ökning {#overview}
 
-1. **Mönsteravkännare** - Kör mönsteravkännaren enligt beskrivningen i uppgraderingsplaneringen och beskrivs i detalj på [den här sidan](/help/sites-deploying/pattern-detector.md). Du får en mönsterdetektorrapport som innehåller mer information om områden som måste åtgärdas utöver de otillgängliga API:erna/paketen i målversionen av AEM. Rapporten Mönsteridentifiering ger dig en indikation på eventuella inkompatibiliteter i koden. Om det inte finns någon är din distribution redan 6.5-kompatibel. Du kan fortfarande välja att göra ny utveckling för att använda 6.5-funktioner, men du behöver den inte bara för att bibehålla kompatibiliteten. Om inkompatibiliteter rapporteras kan du välja att köra i kompatibilitetsläge och skjuta upp utvecklingen för nya 6.5-funktioner eller kompatibilitet. Eller så kan du välja att göra utvecklingen efter uppgraderingen och gå vidare till steg 2. Mer information finns i [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md).
+1. **Mönsteravkännare** - Kör mönsteravkännaren enligt beskrivningen i uppgraderingsplaneringen och beskrivs i detalj på sidan [Utvärderar uppgraderingskomplexiteten med mönsteravkännaren](/help/sites-deploying/pattern-detector.md). Du får en mönsterdetektorrapport som innehåller mer information om områden som måste åtgärdas utöver de otillgängliga API:erna/paketen i målversionen av AEM. Rapporten Mönsteridentifiering ger dig en indikation på eventuella inkompatibiliteter i koden. Om det inte finns någon är din distribution redan 6.5-kompatibel. Du kan fortfarande välja att göra ny utveckling för att använda 6.5-funktioner, men du behöver den inte bara för att bibehålla kompatibiliteten. Om inkompatibiliteter rapporteras kan du välja att köra i kompatibilitetsläge och skjuta upp utvecklingen för nya 6.5-funktioner eller kompatibilitet. Eller så kan du välja att göra utvecklingen efter uppgraderingen och gå vidare till steg 2. Mer information finns i [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md).
 
 1. **Utveckla kodbas för 6.5 **- Skapa en dedikerad gren eller databas för kodbasen för Target-versionen. Använd information från Kompatibilitet före uppgradering för att planera områden med kod att uppdatera.
 1. **Kompilera med 6.5 Uber jar **- Uppdatera källkodens POM till 6.5 uber jar och kompilera koden mot den.
@@ -40,7 +40,7 @@ När man planerar en uppgradering måste man undersöka och åtgärda följande 
 
 Innan du fortsätter med en uppgradering bör du ha en stabil programkodbas som har testats noggrant mot målversionen av AEM. Baserat på observationer från testningen kan det finnas sätt att optimera den anpassade koden. Det kan till exempel vara att omfaktorisera koden för att undvika att gå igenom databasen, anpassa indexeringen för att optimera sökningen eller använda osorterade noder i JCR, bland annat.
 
-Förutom att du kan uppgradera din kodbas och anpassa den så att den fungerar med den nya AEM-versionen kan 6.5 även hantera dina anpassningar mer effektivt med funktionen Bakåtkompatibilitet som beskrivs på [den här sidan](/help/sites-deploying/backward-compatibility.md).
+Förutom att du kan uppgradera din kodbas och anpassa den så att den fungerar med den nya AEM-versionen kan 6.5 även hantera dina anpassningar mer effektivt med funktionen Bakåtkompatibilitet som beskrivs i [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md).
 
 Som vi nämnt ovan och som visas i diagrammet nedan kan du genom att köra [Mönsteravkännaren](/help/sites-deploying/pattern-detector.md) i det första steget utvärdera uppgraderingens totala komplexitet. Det kan också hjälpa dig att avgöra om du vill köra i kompatibilitetsläge eller uppdatera dina anpassningar så att de använder alla nya AEM 6.5-funktioner. Mer information finns på sidan [Bakåtkompatibilitet i AEM 6.5](/help/sites-deploying/backward-compatibility.md).
 [![opt_cropped](assets/opt_cropped.png)](assets/upgrade-code-base-highlevel.png)
@@ -67,7 +67,7 @@ AEM Uber jar innehåller alla AEM-API:er som ett enda beroende i Maven-projektet
 
 ### Avveckla användningen av den administrativa resurslösaren {#phase-out-use-of-administrative-resource-resolver}
 
-Användning av en administrativ session via `SlingRepository.loginAdministrative()` och `ResourceResolverFactory.getAdministrativeResourceResolver()` var vanligt i kodbaser före AEM 6.0. Dessa metoder har tagits bort av säkerhetsskäl eftersom de ger för stor åtkomstnivå. [I framtida versioner av Sling kommer dessa metoder att tas bort](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication). Vi rekommenderar att du omfaktoriserar kod så att du kan använda tjänstanvändare i stället. Mer information om tjänstanvändare och [hur du fasar ut administrativa sessioner finns här](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions).
+Användning av en administrativ session via `SlingRepository.loginAdministrative()` och `ResourceResolverFactory.getAdministrativeResourceResolver()` var vanligt i kodbaser före AEM 6.0. Dessa metoder har tagits bort av säkerhetsskäl eftersom de ger för stor åtkomstnivå. [I framtida versioner av Sling kommer dessa metoder att tas bort](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html#deprecation-of-administrative-authentication). Vi rekommenderar att du omfaktoriserar kod så att du kan använda tjänstanvändare i stället. Mer information om tjänstanvändare och om hur du fasar ut administrativa sessioner finns i [Tjänstanvändare i Adobe Experience Manager (AEM)](/help/sites-administering/security-service-users.md#how-to-phase-out=admin-sessions).
 
 ### Frågor och Oak Index {#queries-and-oak-indexes}
 
@@ -83,7 +83,7 @@ Följande verktyg är tillgängliga för att analysera och inspektera frågepres
 
 ### Skapa klassiskt användargränssnitt {#classic-ui-authoring}
 
-Klassisk gränssnittsredigering är fortfarande tillgängligt i AEM 6.5, men är nu föråldrat. Mer information finns [här](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release). Om ditt program körs i den klassiska användargränssnittets redigeringsmiljö bör du uppgradera till AEM 6.5 och fortsätta använda det klassiska användargränssnittet. Migrering till Touch-gränssnittet kan sedan planeras som ett separat projekt som kan slutföras under flera utvecklingscykler. Om du vill använda det klassiska användargränssnittet i AEM 6.5 måste flera OSGi-konfigurationer implementeras i kodbasen. Mer information om hur du gör konfigurationen finns [här](/help/sites-administering/enable-classic-ui.md).
+Klassisk gränssnittsredigering är fortfarande tillgängligt i AEM 6.5, men är nu föråldrat. Mer information finns i [Borttagna och borttagna funktioner](/help/release-notes/deprecated-removed-features.md#pre-announcement-for-next-release). Om ditt program körs i den klassiska användargränssnittets redigeringsmiljö bör du uppgradera till AEM 6.5 och fortsätta använda det klassiska användargränssnittet. Migrering till Touch-gränssnittet kan sedan planeras som ett separat projekt som kan slutföras under flera utvecklingscykler. Om du vill använda det klassiska användargränssnittet i AEM 6.5 måste flera OSGi-konfigurationer implementeras i kodbasen. Mer information om hur du gör konfigurationen finns under [Aktivera åtkomst till det klassiska gränssnittet](/help/sites-administering/enable-classic-ui.md).
 
 ## Justera med 6.5-databasstruktur {#align-repository-structure}
 
@@ -97,7 +97,7 @@ Alla anpassningar av AEM redigeringsmiljö i källversionen av AEM måste identi
 
 ### Övertäckningar i allmänhet {#overlays-in-general}
 
-Det är vanligt att utöka AEM genom att lägga över noder och/eller filer under /libs med ytterligare noder under /apps. Dessa övertäckningar bör spåras i versionskontroll och testas mot målversionen av AEM. Om en fil (till exempel JS, JSP och HTL) överlappas rekommenderar Adobe att du lämnar en kommentar om vilken funktion som utökats för enklare regressionstestning i målversionen av AEM. Mer information om övertäckningar finns [här](/help/sites-developing/overlays.md). Instruktioner för specifika AEM finns nedan.
+Det är vanligt att utöka AEM genom att lägga över noder och/eller filer under /libs med ytterligare noder under /apps. Dessa övertäckningar bör spåras i versionskontroll och testas mot målversionen av AEM. Om en fil (till exempel JS, JSP och HTL) överlappas rekommenderar Adobe att du lämnar en kommentar om vilken funktion som utökats för enklare regressionstestning i målversionen av AEM. Se [Övertäckningar](/help/sites-developing/overlays.md) för allmän information. Instruktioner för specifika AEM finns nedan.
 
 ### Uppgraderar Forms för anpassad sökning {#upgrading-custom-search-forms}
 
@@ -143,11 +143,11 @@ Använd API:t `migrateAllAssets()` för alla andra syften.
 
 ### Anpassa InDesign-skript {#indesign-script-customizations}
 
-Adobe rekommenderar att du skickar anpassade skript på `/apps/settings/dam/indesign/scripts`-platsen. Mer information om anpassning av InDesign Script finns [här](/help/assets/indesign.md#configuring-the-aem-assets-workflow).
+Adobe rekommenderar att du skickar anpassade skript på `/apps/settings/dam/indesign/scripts`-platsen. Mer information om anpassning av InDesign Script finns under [Integrera Adobe Experience Manager Assets med Adobe InDesign Server](/help/assets/indesign.md#configuring-the-aem-assets-workflow).
 
 ### Återställer ContextHub-konfigurationer {#recovering-contexthub-configurations}
 
-ContextHub-konfigurationer påverkas av en uppgradering. Instruktioner om hur du återställer befintliga ContextHub-konfigurationer finns [här](/help/sites-developing/ch-configuring.md#recovering-contexthub-configurations-after-upgrading).
+ContextHub-konfigurationer påverkas av en uppgradering. Mer information om hur du återställer befintliga ContextHub-konfigurationer finns i [Konfigurera ContextHub](/help/sites-developing/ch-configuring.md#recovering-contexthub-configurations-after-upgrading).
 
 ### Anpassningar av arbetsflöden {#workflow-customizations}
 
@@ -163,7 +163,7 @@ Strukturen för redigerbara mallar har ändrats mellan AEM 6.2 och 6.3. Om du up
 
 ### Ändringar av CUG-implementering {#cug-implementation-changes}
 
-Implementeringen av stängda användargrupper har ändrats avsevärt för att åtgärda prestandabegränsningar och skalbarhetsbegränsningar i tidigare versioner av AEM. Den tidigare versionen av CUG har tagits bort i 6.3 och den nya implementeringen stöds bara i Touch-gränssnittet. Om du uppgraderar från 6.2 eller tidigare finns instruktioner för att migrera till den nya CUG-implementeringen [här](/help/sites-administering/closed-user-groups.md#upgradetoaem63).
+Implementeringen av stängda användargrupper har ändrats avsevärt för att åtgärda prestandabegränsningar och skalbarhetsbegränsningar i tidigare versioner av AEM. Den tidigare versionen av CUG har tagits bort i 6.3 och den nya implementeringen stöds bara i Touch-gränssnittet.
 
 ## Testförfarande {#testing-procedure}
 

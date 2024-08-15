@@ -5,9 +5,9 @@ exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '968'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ När en process har skapats med skripttjänsten Execute, kan man sedan använda 
 
 **Om tekniken i Execute Script Service**
 
-För att veta vilka möjligheter och begränsningar som Execute Script-tjänsten har måste man känna till tjänstens tekniska grunder. I AEM Forms på JEE används parsern Apache Xerces Document Object Model (DOM) för att skapa och lagra XML-variabler i processer. Xerces är en Java™-implementering av W3C:s Document Object Model-specifikation, som definieras [här](https://dom.spec.whatwg.org/). DOM-specifikationen är ett standardsätt att hantera XML som har funnits sedan 1998. Java™-implementeringen av Xerces, Xerces-J, stöder DOM Level 2 version 1.0.
+För att veta vilka möjligheter och begränsningar som Execute Script-tjänsten har måste man känna till tjänstens tekniska grunder. I AEM Forms på JEE används parsern Apache Xerces Document Object Model (DOM) för att skapa och lagra XML-variabler i processer. Xerces är en Java™-implementering av W3C:s [Document Object Model-specifikation](https://dom.spec.whatwg.org/). DOM-specifikationen är ett standardsätt att hantera XML som har funnits sedan 1998. Java™-implementeringen av Xerces, Xerces-J, stöder DOM Level 2 version 1.0.
 
 De Java™-klasser som används för att lagra XML-variabler är:
 
@@ -58,7 +58,7 @@ De Java™-klasser som används för att lagra XML-variabler är:
 
 * org.apache.xerces.dom.DocumentImpl
 
-DocumentImpl är en underklass till NodeImpl, så det kan antas att alla XML-processvariabler är en NodeImpl-härledning. Dokumentationen för NodeImpl [finns här](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html).
+DocumentImpl är en underklass till NodeImpl, så det kan antas att alla XML-processvariabler är en NodeImpl-härledning. Mer information finns i dokumentationen för [NodeImpl](https://xerces.apache.org/xerces-j/apiDocs/org/apache/xerces/dom/NodeImpl.html).
 
 **Ett exempel på hur du skapar XML med skripttjänsten**
 

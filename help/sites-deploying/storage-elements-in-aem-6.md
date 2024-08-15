@@ -10,9 +10,9 @@ exl-id: 52437eb5-f9fb-4945-9950-5a1562fe878d
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '729'
 ht-degree: 0%
 
 ---
@@ -118,8 +118,8 @@ Red Hat® Linux® använder en minneshanteringsalgoritm som kallas för Transpar
 >
 >Se följande resurser:
 >
->* Mer information om genomskinliga stora sidor på Red Hat® Linux® finns i den här [artikeln](https://access.redhat.com/solutions/46111).
->* Linux®-justeringstips finns i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
+>* Mer information om genomskinliga stora sidor på Red Hat® Linux® finns i följande artikel på Red Hat®-kundportalen: [Så här använder, övervakar och inaktiverar du genomskinliga sidor i Red Hat Enterprise Linux 6,7 och 8?](https://access.redhat.com/solutions/46111)
+>* Inställningstips för Linux® finns i [Prestandaoptimering](/help/sites-deploying/configuring-performance.md).
 >
 
 ## Underhålla databasen {#maintaining-the-repository}

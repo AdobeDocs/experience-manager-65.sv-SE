@@ -9,9 +9,9 @@ exl-id: d77e9e39-6117-4d09-b34b-a97ab347397e
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '147'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ Adobe Consulting Services Team har genererat en serie Adobe Experience Manager (
 
 En självstudiekurs i flera delar som är utformad för utvecklare som inte är vana att AEM om grundläggande ämnen som projektkonfiguration, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling: [Komma igång med AEM Sites - WKND-självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
 
-Det finns en Maven-mall som du kan använda för att skapa ett AEM som utgångspunkt för att utveckla egna funktioner [här](https://github.com/adobe/aem-project-archetype).
+En Maven-mall som används för att skapa ett AEM som utgångspunkt för att utveckla egna funktioner finns tillgänglig [på GitHub - AEM Project Archetype](https://github.com/adobe/aem-project-archetype).
 
-Exemplen med gränssnittskod som har aktiverats för pekfunktioner som standard är tillgängliga [här](/help/sites-developing/developing-components.md).
+Exemplen med gränssnittskod som har aktiverats för pekfunktioner som standard finns tillgängliga från [Utveckla AEM](/help/sites-developing/developing-components.md).
 
 >[!NOTE]
 >

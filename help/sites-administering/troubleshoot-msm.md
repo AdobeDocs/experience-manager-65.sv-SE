@@ -5,9 +5,9 @@ feature: Multi Site Manager
 role: Admin
 exl-id: 23f3391b-5ce3-48e1-ab27-a37737778089
 solution: Experience Manager, Experience Manager Sites
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Här är några vanliga frågor om MSM och Live Copy.
 
 MSM-synkroniseringsåtgärder är mycket konfigurerbara. Vilka egenskaper eller komponenter som ändras under utrullningar beror direkt på egenskaperna för dessa konfigurationer.
 
-Mer information om det här ämnet finns i [den här artikeln](msm-best-practices.md).
+Mer information om det här ämnet finns i [Bästa praxis för MSM](msm-best-practices.md).
 
 ### Hur tar jag bort utrullningsbehörigheter för en grupp författare? {#remove-rollout-permissions}
 

@@ -6,16 +6,16 @@ exl-id: e1616385-0855-4f70-b787-b01701929bbc
 solution: Experience Manager, Experience Manager Sites
 feature: Security
 role: Admin
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
 
 # Stöd för samma webbplats-cookie för AEM 6.5 {#same-site-cookie-support-for-aem-65}
 
-Sedan version 80 har Chrome och senare Safari infört en ny modell för cookie-säkerhet. Det här läget är utformat för att införa säkerhetskontroller för tillgänglighet av cookies till tredjepartswebbplatser, via en inställning som kallas `SameSite`. Mer detaljerad information finns i den här [artikeln](https://web.dev/samesite-cookies-explained/).
+Sedan version 80 har Chrome och senare Safari infört en ny modell för cookie-säkerhet. Det här läget är utformat för att införa säkerhetskontroller för tillgänglighet av cookies till tredjepartswebbplatser, via en inställning som kallas `SameSite`. Mer detaljerad information finns i den här artikeln om [web.dev - cookies för samma webbplats som förklaras](https://web.dev/samesite-cookies-explained/).
 
 Standardvärdet för den här inställningen (`SameSite=Lax`) kan göra att autentisering mellan AEM instanser eller tjänster inte fungerar. Detta beror på att domänerna eller URL-strukturerna för dessa tjänster kanske inte omfattas av begränsningarna i den här cookie-principen.
 

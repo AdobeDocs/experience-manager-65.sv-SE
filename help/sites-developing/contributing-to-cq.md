@@ -9,9 +9,9 @@ exl-id: 43fb4fa3-269a-4635-b055-4b7d787da21f
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '2635'
+source-wordcount: '2642'
 ht-degree: 0%
 
 ---
@@ -120,7 +120,7 @@ Bakåtkompatibiliteten bör också beaktas när det gäller den allmänna konsek
 
 **Författarinstans** - Av säkerhetsskäl, av styrningsskäl och av andra skäl delas instanser av AEM upp på en produktionsplats i författare- och Publish-instanser. Mer information om distributionsarkitekturen (inklusive författare/Publish-instanser) finns i dokumentationen om AEM instanser.
 
-**Cachelagring, fritering och bakning** - Traditionellt är koncepten bakning och fritering en viktig skillnad mellan olika system för webbinnehållshantering. I CMS-jargon avser&quot;baking&quot; begreppet implementering av data i statiska filer vid publicering, medan&quot;frying&quot; avser begreppet bearbetning av data för slutlig presentation vid begäran (dvs. precis i tid).
+**Cachelagring, fritering och bakning** - Traditionellt är koncepten bakning och fritering en viktig skillnad mellan olika system för webbinnehållshantering. I CMS jargon avser &quot;baking&quot; begreppet att implementera data i statiska filer vid publicering, medan &quot;frying&quot; avser begreppet att bearbeta data för slutlig presentation vid begäran (dvs. precis i tid).
 
 **Klustring och lastbalansering** - För att öka tillgängligheten och förbättra prestandan i en produktionsmiljö är det vanligt att kombinera flera författare- och/eller Publish-instanser (i kluster), antingen genom att göra dem tillgängliga för olika användargrupper eller genom att belastningsbalansera dem bakom en Dispatcher-konfiguration.
 
@@ -142,7 +142,7 @@ JCR är alltså ett system med noder och egenskaper, där noder kan ärva från 
 
 JCR har flera fördefinierade nodtyper och egenskapstyper, men i allmänhet är typningssystemet flexibelt och (faktiskt) en av styrkorna hos JCR är att det gör det möjligt att lagra/hantera strukturerat och ostrukturerat innehåll lika enkelt. JCR kan alltså rymma mycket strukturerade data, men kan även rymma godtyckliga dynamiska datastrukturer utan schemabegränsningar.
 
-JavaDoc för JCR:s Java™-API är [här](https://jackrabbit.apache.org/jcr/jcr-api.html).
+JavaDoc för JCR:s Java™-API är tillgängligt från [API:t för Apache Software Foundation - JCR](https://jackrabbit.apache.org/jcr/jcr-api.html).
 
 Innan du försöker läsa JavaDoc eller JCR-specifikationen själv kanske du vill titta på [den här förklaringen](/help/sites-developing/the-basics.md#java-content-repository) av JCR på hög nivå som implementerats av Adobe Experience Services.
 

@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar IMS-integreringar för AEM
 feature: Security
 role: Admin
 exl-id: 3c6dbb7e-847f-407b-ac9c-4676dba671a5
-source-git-commit: c2d996586d2ec7299e856a97ae1b744245c730bb
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe-kunder använder [Adobe Developer Console](https://developer.adobe.com/console) för att generera autentiseringsuppgifter som möjliggör åtkomst till olika API:er. Kunderna väljer mellan olika typer av autentiseringsuppgifter, från OAuth Server-to-Server till Single-Page App. JWT (Credential Type Service Account) är nu föråldrat till förmån för OAuth Server-to-Server-autentiseringsuppgifterna med Service Pack 20. Den här ändringen kan porteras tillbaka till äldre Service Pack, med början från Service Pack 11 till Service Pack 20 med hjälp av en snabbkorrigering som du kan hämta [här](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip).
+>Adobe-kunder använder [Adobe Developer Console](https://developer.adobe.com/console) för att generera autentiseringsuppgifter som möjliggör åtkomst till olika API:er. Kunderna väljer mellan olika typer av autentiseringsuppgifter, från OAuth Server-to-Server till Single-Page App. JWT (Credential Type Service Account) är nu föråldrat till förmån för OAuth Server-to-Server-autentiseringsuppgifterna med Service Pack 20. Den här ändringen kan porteras tillbaka till äldre Service Pack, från Service Pack 11 till Service Pack 20 med hjälp av en snabbkorrigering som du kan [hämta](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/ims-jwt-compatibility-package-6.5-1.0.zip).
 
 Adobe Experience Manager (AEM) kan integreras med många andra Adobe-lösningar. Exempel: Adobe Target, Adobe Analytics med flera.
 

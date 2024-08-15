@@ -9,7 +9,7 @@ exl-id: eb5ce76a-bf28-4540-bc2d-3b5ecb8286f2
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Komponenter kan utforskas med hjälp av en AEM och den interaktiva [Community Co
 
 Om den underliggande mallen tillåter ändringar av sidans design vid redigering av sidinnehåll, är det möjligt att aktivera komponenter som inte redan är tillgängliga i komponentwebbläsaren som en del av webbplatsdesignen.
 
-Tillgängliga webbgruppskomponenter visas [här](author-communities.md#available-communities-components).
+Se listan under [Tillgängliga communitykomponenter](author-communities.md#available-communities-components).
 
 >[!NOTE]
 >

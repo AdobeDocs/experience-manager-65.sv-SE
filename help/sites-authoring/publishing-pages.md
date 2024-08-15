@@ -5,9 +5,9 @@ exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
 workflow-type: tm+mt
-source-wordcount: '1673'
+source-wordcount: '1669'
 ht-degree: 5%
 
 ---
@@ -32,16 +32,14 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 >
 >* **Replikera/replikera**
 >  Detta är de tekniska termer som beskriver hur data flyttas (till exempel sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan, till exempel när användarkommentarer publiceras eller replikeras om.
->
 
->[!NOTE]
->
->Om du inte har behörighet att publicera en viss sida:
->
->* Ett arbetsflöde kommer att utlösas för att meddela lämplig person om din begäran om publicering.
->* Det här [arbetsflödet kan ha anpassats](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6) av ditt utvecklingsteam.
->* Ett meddelande visas kort för att meddela dig att arbetsflödet har utlösts.
->
+## Otillräckliga privilegier {#insufficient-privileges}
+
+Om du inte har behörighet att publicera en viss sida:
+
+* Ett arbetsflöde kommer att utlösas för att meddela lämplig person om din begäran om publicering.
+* Det här [arbetsflödet kan ha anpassats](/help/sites-developing/workflows-models.md#main-pars-procedure-6fe6) av ditt utvecklingsteam.
+* Ett meddelande visas kort för att meddela dig att arbetsflödet har utlösts.
 
 ## Publicera sidor {#publishing-pages-1}
 
@@ -185,7 +183,9 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    >[!NOTE]
    >
-   >Steget **Arbetsflöden** visas baserat på vilka rättigheter din användare har eller inte har. Mer information finns i [föregående anteckning på den här sidan](/help/sites-authoring/publishing-pages.md#main-pars-note-0-ejsjqg-refd) om publiceringsbehörigheter och [Hantera åtkomst till arbetsflöden](/help/sites-administering/workflows-managing.md) och [Använda arbetsflöden på sidor](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd).
+   >Steget **Arbetsflöden** visas baserat på vilka rättigheter din användare har eller inte har.
+   >
+   >Mer information finns i avsnitten [Otillräckliga behörigheter](/help/sites-authoring/publishing-pages.md#insufficient-privileges), [Hantera åtkomst till arbetsflöden](/help/sites-administering/workflows-managing.md) och [Använda arbetsflöden på sidor](/help/sites-authoring/workflows-applying.md#main-pars-text-5-bvhbkh-refd).
 
    Resurserna grupperas efter de arbetsflöden som utlöses och de olika alternativen:
 

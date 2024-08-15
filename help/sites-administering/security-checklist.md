@@ -10,7 +10,7 @@ exl-id: 314a6409-398c-470b-8799-0c4e6f745141
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
 source-wordcount: '2959'
 ht-degree: 0%
@@ -339,7 +339,7 @@ Du kan åtgärda det här problemet genom att göra följande:
 
 Med standardservern för hämtning av resurser kan autentiserade användare skicka godtyckligt stora, samtidiga hämtningsbegäranden för att skapa ZIP-filer med resurser. Om du skapar stora ZIP-arkiv kan servern och nätverket överbelastas. För att minska en potentiell denial of service-risk (DoS) som orsakas av detta beteende är `AssetDownloadServlet` OSGi-komponenten inaktiverad som standard på [!DNL Experience Manager] -publiceringsinstansen. Det är aktiverat på författarinstansen [!DNL Experience Manager] som standard.
 
-Om du inte behöver nedladdningsfunktionen kan du inaktivera servern för författare och publicera distributioner. Om din installation kräver att funktionen för hämtning av resurser är aktiverad, se [den här artikeln](/help/assets/download-assets-from-aem.md) för mer information. Du kan också ange en maximal hämtningsgräns som din distribution kan stödja.
+Om du inte behöver nedladdningsfunktionen kan du inaktivera servern för författare och publicera distributioner. Om din installation kräver att funktionen för hämtning av resurser är aktiverad finns mer information i [Hämta resurser från Adobe Experience Manager](/help/assets/download-assets-from-aem.md). Du kan också ange en maximal hämtningsgräns som din distribution kan stödja.
 
 ### Inaktivera WebDAV {#disable-webdav}
 
@@ -395,7 +395,7 @@ Som standard lagrar AEM systemmetadata, till exempel `jcr:createdBy` eller `jcr:
 
 Precis som alla databasdata förmedlas dessa egenskaper av Oak behörighetsstack. Åtkomsten till dem bör begränsas i enlighet med principen om minst privilegium.
 
-Som stöd för detta tillhandahåller Adobe ett behörighetskontrollerande paket som kan användas av kunder. Det fungerar genom att installera en &quot;deny&quot;-åtkomstkontrollpost i databasroten, vilket begränsar anonym åtkomst till vanliga systemegenskaper. Paketet är tillgängligt för hämtning [här](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) och kan installeras på alla versioner av AEM som stöds.
+Som stöd för detta tillhandahåller Adobe ett behörighetskontrollerande paket som kan användas av kunder. Det fungerar genom att installera en &quot;deny&quot;-åtkomstkontrollpost i databasroten, vilket begränsar anonym åtkomst till vanliga systemegenskaper. Paketet kan [hämtas](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/helper/anonymous-permissions-pkg-0.1.2.zip) och installeras på alla AEM som stöds.
 
 För att illustrera ändringarna kan vi jämföra nodegenskaperna som kan visas anonymt innan paketet installeras:
 

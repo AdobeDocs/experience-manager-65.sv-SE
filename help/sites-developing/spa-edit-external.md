@@ -5,7 +5,7 @@ exl-id: 25236af4-405a-4152-8308-34d983977e9a
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
 source-wordcount: '2391'
 ht-degree: 0%
@@ -363,7 +363,7 @@ Följande steg krävs för att aktivera redigering i AEM för det här SPA.
 
 ## Rambegränsningar {#framework-limitations}
 
-RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett resursmanifest som den [som finns här](https://github.com/shellscape/webpack-manifest-plugin). RemotePage-komponenten har bara testats för att fungera med React Framework (och Next.js via komponenten remote-page-next) och stöder därför inte fjärrinläsning av program från andra ramverk, till exempel Angular.
+RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett tillgångsmanifest som [webpack-manifest-plugin i GitHub](https://github.com/shellscape/webpack-manifest-plugin). RemotePage-komponenten har bara testats för att fungera med React Framework (och Next.js via komponenten remote-page-next) och stöder därför inte fjärrinläsning av program från andra ramverk, till exempel Angular.
 
 ## Ytterligare resurser {#additional-resources}
 

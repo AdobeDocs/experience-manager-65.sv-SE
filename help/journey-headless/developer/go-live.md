@@ -5,7 +5,7 @@ exl-id: ec3356ef-9e60-4151-984d-3ebdab593b96
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin, Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
 source-wordcount: '1803'
 ht-degree: 0%
@@ -154,7 +154,7 @@ När uppdateringarna har överförts till Cloud Manager distribuerar du dem till
 
 <!-- Cannot find a parallel link -->
 <!--
-You can start deploying your code by using the Cloud Manager CI/CD pipeline, which is covered extensively [here](/help/implementing/deploying/overview.md).
+You can start deploying your code by using the Cloud Manager CI/CD pipeline, which is covered extensively - see the [Overview](/help/implementing/deploying/overview.md) to start.
 -->
 
 ## Prestandaövervakning {#performance-monitoring}
@@ -229,6 +229,6 @@ Om den här typen av flexibilitet är något du behöver för ditt projekt kan d
 
    * Konfigurerar [CDN Rewriter](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html) (*sök efter CDN Rewriter*)
 
-* [Introduktion till AEM som headless CMS](/help/sites-developing/headless/introduction.md)
+* [Introduktion till AEM som Headless CMS](/help/sites-developing/headless/introduction.md)
 * [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 * [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

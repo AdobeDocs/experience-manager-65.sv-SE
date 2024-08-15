@@ -1,5 +1,5 @@
 ---
-title: Post Upgrade Checks and Troubleshooting
+title: Kontrollera och felsök efter uppgradering
 description: Lär dig hur du felsöker problem som kan uppstå efter en uppgradering.
 contentOwner: sarchiz
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +10,16 @@ feature: Upgrading
 exl-id: ceac2b52-6885-496d-9517-5fc7291ad070
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1793'
+source-wordcount: '1798'
 ht-degree: 0%
 
 ---
 
-# Post Upgrade Checks and Troubleshooting{#post-upgrade-checks-and-troubleshooting}
+# Kontrollera och felsök efter uppgradering{#post-upgrade-checks-and-troubleshooting}
 
-## Post Upgrade Checks {#post-upgrade-checks}
+## Bokför uppgraderingskontroller {#post-upgrade-checks}
 
 Efter [lokal uppgradering](/help/sites-deploying/in-place-upgrade.md) ska följande aktiviteter utföras för att slutföra uppgraderingen. Det antas att AEM har startats med 6.5-behållaren och att den uppgraderade kodbasen har distribuerats.
 
@@ -103,7 +103,7 @@ Flera funktioner i AEM kräver ytterligare steg efter uppgraderingen. En fullst�
 
 #### Aktivera skräpinsamling för datalager {#enable-data-store-garbage-collection}
 
-Om du använder ett fildatalager måste du se till att aktiviteten Skräpinsamling i datalagret är aktiverad och läggs till i listan Veckounderhåll. Instruktioner beskrivs [här](/help/sites-administering/data-store-garbage-collection.md).
+Om du använder ett fildatalager måste du se till att aktiviteten Skräpinsamling i datalagret är aktiverad och läggs till i listan Veckounderhåll. Instruktioner beskrivs under [Revision Cleanup](/help/sites-administering/data-store-garbage-collection.md).
 
 >[!NOTE]
 >
@@ -111,7 +111,7 @@ Om du använder ett fildatalager måste du se till att aktiviteten Skräpinsamli
 
 #### Aktivera rensning av onlineändringar {#enable-online-revision-cleanup}
 
-Om du använder MongoMK eller det nya StjärmMK-segmentformatet kontrollerar du att aktiviteten Revision Clean Up (Revision Clean Up) är aktiverad och läggs till i listan Daily Maintenance (Dagligt underhåll). Instruktioner som anges [här](/help/sites-deploying/revision-cleanup.md).
+Om du använder MongoMK eller det nya StjärmMK-segmentformatet kontrollerar du att aktiviteten Revision Clean Up (Revision Clean Up) är aktiverad och läggs till i listan Daily Maintenance (Dagligt underhåll). Instruktioner beskrivs under [Revision Cleanup](/help/sites-deploying/revision-cleanup.md).
 
 ### Kör testplan {#execute-test-plan}
 

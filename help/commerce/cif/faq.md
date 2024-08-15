@@ -5,9 +5,9 @@ exl-id: d541607f-c4c9-4dd5-aadf-64d4cb5f9f2a
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '958'
 ht-degree: 0%
 
 ---
@@ -78,4 +78,4 @@ Ja, självutvärderingsformulär D och försäkran om överensstämmelse finns t
 
 ## 16. Hur begär jag en I/O Runtime-licens?
 
-Du kan begära en utvärderingslicens för att använda I/O-miljön [här](https://adobeio.typeform.com/to/obqgRm).
+Mer information om hur du begär en utvärderingslicens för att använda I/O-miljön finns i [Få åtkomst](https://developer.adobe.com/runtime/docs/guides/overview/getting_access/).

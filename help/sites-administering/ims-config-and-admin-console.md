@@ -9,9 +9,9 @@ exl-id: 95eae97c-01c2-4f5c-8068-f504eab7c49e
 feature: Security
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 55bf7104dbd9b9fadf6cb37efa28084fe43393c3
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1602'
 ht-degree: 6%
 
 ---
@@ -70,9 +70,9 @@ När en kund finns som IMS-organisation och AMS har etablerat kunden för IMS ä
 
 >[!NOTE]
 >
->Mer information om grunderna i Adobe Identity Management, inklusive IDP-konfigurationen, finns i artikeln [den här sidan.](https://helpx.adobe.com/enterprise/using/set-up-identity.html)
+>Mer information om grunderna i Adobe Identity Management, inklusive IDP-konfiguration, finns i artikeln om [Konfigurera identitet och enkel inloggning](https://helpx.adobe.com/enterprise/using/set-up-identity.html).
 >
->Mer information om Enterprise Administration och [!DNL Admin Console] finns i artikeln [this page](https://helpx.adobe.com/enterprise/managing/user-guide.html).
+>Mer information om företagsadministration och [!DNL Admin Console] finns i [Välkommen till administratörshandboken för företag och team](https://helpx.adobe.com/enterprise/managing/user-guide.html).
 
 ### Onboarding-användare till [!DNL Admin Console] {#onboarding-users-to-the-admin-console}
 
@@ -122,15 +122,16 @@ Mer information om de nya gruppfunktionerna finns här:
 
 >[!NOTE]
 >
->Mer information om verktyget för användarsynkronisering finns på [dokumentationssidan](https://adobe-apiplatform.github.io/user-sync.py/en/).
+>Mer information finns i:
 >
+>* [användarsynkroniseringsverktyget - användarsynkronisering i Adobe](https://adobe-apiplatform.github.io/user-sync.py/en/)
 >
->Verktyget för användarsynkronisering måste registrera dig som ett UMAPI för en Adobe I/O-klient med den procedur som beskrivs [här](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html).
+>* användarsynkroniseringsverktyget måste registreras som Adobe I/O klient-UMAPI enligt proceduren som beskrivs under [Autentisering för API-åtkomst](https://adobe-apiplatform.github.io/umapi-documentation/en/UM_Authentication.html)
 >
->Adobe Developer Console-dokumentationen finns [här](https://developer.adobe.com/developer-console/docs/guides/).
+>* [Adobe Developer Console-dokumentation](https://developer.adobe.com/developer-console/docs/guides/).
 >
+>* [API-dokumentation för användarhantering](https://adobe-apiplatform.github.io/umapi-documentation/en/).
 >
->API:t [!DNL User Management] som används av verktyget för användarsynkronisering beskrivs på den här [platsen](https://adobe-apiplatform.github.io/umapi-documentation/en/).
 
 >[!NOTE]
 >

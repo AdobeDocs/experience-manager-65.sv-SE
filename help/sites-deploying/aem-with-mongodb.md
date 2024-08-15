@@ -10,9 +10,9 @@ exl-id: 70a39462-8584-4c76-a097-05ee436247b7
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: a8203a6bccff821dd6ca3f63c196829379aabe55
+source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
 workflow-type: tm+mt
-source-wordcount: '6192'
+source-wordcount: '6216'
 ht-degree: 0%
 
 ---
@@ -488,7 +488,7 @@ Du kan inaktivera det genom att följa nedanstående procedur:
 
 >[!NOTE]
 >
->Mer information om genomskinliga stora sidor finns i den här [artikeln](https://access.redhat.com/solutions/46111).
+>Mer information om genomskinliga stora sidor finns i följande artikel på Red Hat®-kundportalen: [Så här använder, övervakar och inaktiverar du genomskinliga sidor i Red Hat Enterprise Linux 6,7 och 8?](https://access.redhat.com/solutions/46111).
 
 #### Inaktivera NUMA {#disable-numa}
 

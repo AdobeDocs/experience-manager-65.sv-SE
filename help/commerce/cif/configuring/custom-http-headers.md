@@ -5,9 +5,9 @@ exl-id: 834aadac-c3be-4e7a-a3cb-349608810b40
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '272'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Komponenterna som använder molntjänstkonfigurationen ovan skickar dessa HTTP-h
 
 ## Begränsningar {#restrictions}
 
-Även om tjänsten tillåter att rubriknamn definieras, inklusive standardnamn, är de inte tillgängliga för konfigurering. Du kan alltså inte åsidosätta de vanliga HTTP-rubrikerna med den här funktionen. En lista med begränsade rubriknamn finns [här](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers). Det finns ytterligare två rubriker som inte kan användas:
+Även om tjänsten tillåter att rubriknamn definieras, inklusive standardnamn, är de inte tillgängliga för konfigurering. Du kan alltså inte åsidosätta de vanliga HTTP-rubrikerna med den här funktionen. En lista med begränsade rubriknamn finns under [mdn-webbdokument - HTTP-rubriker](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers). Det finns ytterligare två rubriker som inte kan användas:
 
 * &quot;Store&quot; - används av CIF för att identifiera Adobe Commerce Store
 * &quot;Preview-Version&quot; - används av CIF för att hämta mellanprodukter

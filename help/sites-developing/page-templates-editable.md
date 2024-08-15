@@ -10,9 +10,9 @@ exl-id: dcb66b6d-d731-493e-8936-12d529f6cbde
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
 workflow-type: tm+mt
-source-wordcount: '3186'
+source-wordcount: '3187'
 ht-degree: 0%
 
 ---
@@ -434,7 +434,7 @@ När du skapar en redigerbar mall kopieras värdet från malltypen till den ensk
 
 Om du har skapat en mall som kan användas som bas för andra mallar kan du kopiera den här mallen som en malltyp.
 
-1. Skapa en mall på samma sätt som du skapar en redigerbar mall [, som beskrivs här](/help/sites-authoring/templates.md#creating-a-new-template-template-author), som kan fungera som grund för din malltyp.
+1. Skapa en mall på samma sätt som du skapar redigerbara mallar. Se [Skapa sidmallar](/help/sites-authoring/templates.md#creating-a-new-template-template-author). Detta kan fungera som grund för malltypen.
 1. Kopiera med CRXDE Lite den nya mallen från noden `templates` till noden `template-types` under [mallmappen](/help/sites-developing/page-templates-editable.md#template-folders).
 1. Ta bort mallen från noden `templates` under [mallmappen](/help/sites-developing/page-templates-editable.md#template-folders).
 1. I kopian av mallen som finns under noden `template-types` tar du bort alla `cq:template` - och `cq:templateType` -egenskaper från alla `jcr:content` -noder.

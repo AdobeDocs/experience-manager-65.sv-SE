@@ -10,9 +10,9 @@ feature: Administering
 exl-id: dadde3ee-d60c-4b87-9af0-a12697148161
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
 workflow-type: tm+mt
-source-wordcount: '2666'
+source-wordcount: '2673'
 ht-degree: 0%
 
 ---
@@ -409,7 +409,7 @@ Det är viktigt att du kör skräpinsamlingen på fildatalagrets instanser då o
 1. Kör underhåll av kallt vänteläge enligt beskrivningen i avsnittet [ovan](/help/sites-deploying/tarmk-cold-standby.md#cold-standby-repository-maintenance).
 1. När underhållsprocessen har slutförts och instanserna startats om:
 
-   * Kör skräpinsamlingen i datalagret med den relevanta JMX-böljan enligt beskrivningen i [den här artikeln](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console).
+   * Kör skräpinsamlingen i datalagret med den relevanta JMX-böljan enligt beskrivningen i [Skräpinsamlingen i datalagret via JMX-konsolen](/help/sites-administering/data-store-garbage-collection.md#running-data-store-garbage-collection-via-the-jmx-console).
    * I vänteläge är skräpinsamlingen i datalagret bara tillgänglig via **BlobGarbageCollection** MBean - `startBlobGC()`. **RepositoryManagement** MBean är inte tillgängligt i vänteläge.
 
    >[!NOTE]

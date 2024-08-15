@@ -10,9 +10,9 @@ exl-id: f9a88156-91a2-4c85-9bc9-8f23700c2cbd
 feature: Operations
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: eef7849464540fa3d7bb705e1be9f6e0cf1c8cff
+source-git-commit: db7830895c8a2d1b7228dc4780296d43f15776df
 workflow-type: tm+mt
-source-wordcount: '5744'
+source-wordcount: '5743'
 ht-degree: 0%
 
 ---
@@ -507,7 +507,7 @@ Du kan också konfigurera timinginställningarna genom att trycka på kugghjulsi
 
 ### Rensa version {#revision-clean-up}
 
-Mer information om hur du utför rensning av revision [finns i den här dedikerade artikeln](/help/sites-deploying/revision-cleanup.md).
+Mer information finns i [Revision Cleanup](/help/sites-deploying/revision-cleanup.md).
 
 ### Lucene Binaries Cleanup {#lucene-binaries-cleanup}
 
@@ -522,7 +522,7 @@ Du kommer åt rensningsaktiviteten för Lucene-binärfiler från: **AEM > Verkty
 
 ### Skräpinsamling för datalager {#data-store-garbage-collection}
 
-Mer information om skräpinsamling i datalagret finns på den dedikerade [dokumentationssidan](/help/sites-administering/data-store-garbage-collection.md).
+Mer information om skräpinsamling för datalager finns på dokumentationssidan för [skräpinsamlingen för datalager](/help/sites-administering/data-store-garbage-collection.md).
 
 ### Rensa arbetsflöde {#workflow-purge}
 
@@ -533,7 +533,7 @@ Arbetsflöden kan också rensas från kontrollpanelen för underhåll. Så här 
 
 >[!NOTE]
 >
->Mer detaljerad information om underhåll av arbetsflöden finns på [den här sidan](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances).
+>Mer information om underhåll av arbetsflöden finns i [Administrera arbetsflödesinstanser](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances).
 
 ### Underhåll av granskningslogg {#audit-log-maintenance}
 

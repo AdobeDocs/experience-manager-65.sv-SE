@@ -9,9 +9,9 @@ exl-id: 90594588-db8e-4d4c-a208-22c1c6ea2a2d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1264'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ För att hålla listan i en rimlig storlek och även relevant för användningsf
 * Implementera det anpassade predikatet genom att implementera gränssnittet [`com.day.cq.commons.predicate.AbstractNodePredicate`](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/commons/predicate/package-summary.html).
 * Ange ett namn för predikatet och referera det namnet när du använder `pathbrowser`.
 
-Mer information om hur du skapar ett anpassat predikat finns i [den här artikeln](/help/sites-developing/implementing-custom-predicate-evaluator.md).
+Mer information om hur du skapar ett anpassat predikat finns i [Implementera en anpassad predikatutvärderare för frågeverktyget](/help/sites-developing/implementing-custom-predicate-evaluator.md).
 
 >[!NOTE]
 >
