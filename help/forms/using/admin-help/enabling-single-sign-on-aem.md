@@ -9,9 +9,9 @@ exl-id: 89561ed0-d094-4ef7-9bc1-bde11f3c5bc3
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: c941de0b069b5bea9edb822eca0ebbb5483ae9ed
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1704'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,13 @@ När enkel inloggning är implementerad är AEM inloggningssidor inte obligatori
 
 Om AEM inte kan autentisera en användare på något av dessa sätt dirigeras användaren om till en inloggningssida.
 
+* [Aktivera enkel inloggning med HTTP-huvuden](#enable-sso-using-http-headers)
+* [Aktivera enkel inloggning med SPNEGO](#enable-sso-using-spnego)
+* [Tilldela roller till användare och grupper](#assign-roles-to-users-groups)
+
 ## Aktivera enkel inloggning med HTTP-huvuden {#enable-sso-using-http-headers}
 
-Du kan använda sidan Portal Configuration för att aktivera enkel inloggning (SSO) mellan program och alla program som stöder överföring av identiteten via HTTP-huvudet. När enkel inloggning är implementerad är AEM inloggningssidor inte obligatoriska och visas inte om användaren redan är autentiserad via sin företagsportal.
+Du kan använda sidan Portal Configuration för att aktivera enkel inloggning (SSO) mellan program och alla program som stöder överföring av identiteten via ett HTTP-huvud. När enkel inloggning är implementerad är AEM inloggningssidor inte obligatoriska och visas inte om användaren redan är autentiserad via sin företagsportal.
 
 Du kan även aktivera enkel inloggning med SPNEGO. (Se [Aktivera enkel inloggning med SPNEGO](enabling-single-sign-on-aem.md#enable-sso-using-spnego).)
 
@@ -51,6 +55,10 @@ Du kan även aktivera enkel inloggning med SPNEGO. (Se [Aktivera enkel inloggnin
 ### Konfigurera tillåtna referenser {#configure-allowed-referers}
 
 Anvisningar om hur du konfigurerar tillåtna referenter finns i [Konfigurera tillåtna referenter](/help/forms/using/admin-help/preventing-csrf-attacks.md#configure-allowed-referers).
+
+### Tilldela roller till användare och grupper
+
+Klicka om du vill veta hur du [tilldelar roller till användare och grupper](/help/forms/using/admin-help/enabling-single-sign-on-aem.md#assign-roles-to-users-and-groups-assign-roles-to-users-groups).
 
 ## Aktivera enkel inloggning med SPNEGO {#enable-sso-using-spnego}
 
@@ -167,3 +175,21 @@ Om servern används med datornamnet, till exempel https://lcserver:8080, krävs 
    `lcserver.um.lc.com` - Konfigurerar Firefox så att SPNEGO endast tillåts för din specifika server. Börja inte det här värdet med en punkt (&quot;.&quot;).
 
 1. Testa konfigurationen genom att använda programmet. Välkomstsidan för målprogrammet ska visas.
+
+Klicka om du vill veta hur du [tilldelar roller till användare och grupper](/help/forms/using/admin-help/enabling-single-sign-on-aem.md#assign-roles-to-users-and-groups-assign-roles-to-users-groups).
+
+## Tilldela roller till användare och grupper {#assign-roles-to-users-groups}
+
+1. Logga in på din AEM Forms i JEE-miljö.
+1. Klicka på Inställningar > Användarhantering > Domänhantering i administrationskonsolen.
+1. Välj domänkonfiguration, till exempel LDAP, och klicka på den. Du hittar alla skapade användare och grupper i katalogen. Om det behövs kan du skapa nya användare eller grupper.
+   ![Domänhanteringssida](/help/forms/using/assets/domain-mgmt-page.png)
+1. Klicka på Autentisering på den nya sidan och välj en autentiseringsprovider, till exempel LDAP.
+1. Navigera till sidan Domänhantering, markera LDAP och klicka på **Synkronisera nu** för att synkronisera katalogen med det autentiseringsschema som du har konfigurerat för AEM åtkomst.
+   ![Synkronisera ldap](/help/forms/using/assets/sync-ldap.png)
+1. Gå till Användarhantering och klicka på Användare och grupper.
+1. Sök efter användare eller grupper med deras namn, vilket visas i bilden nedan.
+   ![Sök efter användargrupp](/help/forms/using/assets/search-user-group.png)
+1. Tilldela rollerna till användarna eller grupperna efter behov.
+   ![Tilldelning av användarroll](/help/forms/using/assets/user-role-assign.png)
+
