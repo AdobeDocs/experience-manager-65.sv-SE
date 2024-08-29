@@ -6,9 +6,9 @@ role: Admin
 feature: Renditions,Developer Tools,Asset Processing
 exl-id: b67465f9-177c-49c4-b4eb-a1d6e09ac9a2
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 9014a7dd3c9279a4da3944c1b095fd60352fdbeb
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '927'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Förutom stöd för ett stort antal filformat och profiler har Imaging Transcodi
 
 ## Plattformar som stöds {#supported-platforms}
 
-Imaging Transcoding Library är bara tillgängligt för distributioner av RHEL 7 och CentOS 7.
+Bildkonverteringsbiblioteket är endast tillgängligt för distributionerna RHEL 8, RHEL 7 och CentOS 7.
 
 >[!NOTE]
 >
