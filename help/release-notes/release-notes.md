@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: a52311b9-ed7a-432e-8f35-d045c0d8ea4c
-source-git-commit: 447ff116c822c7ab0d5826103d6485e7d4ed13ce
+source-git-commit: 1fa3a56d2868cad0e1b54bf3fe1b018061b4b7a8
 workflow-type: tm+mt
-source-wordcount: '4367'
+source-wordcount: '4371'
 ht-degree: 0%
 
 ---
@@ -544,7 +544,7 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 
 * När du har uppgraderat till AEM Forms Service Pack 6.5.21.0 kan tjänsten `PaperCapture` inte utföra OCR-åtgärder (Optical Character Recognition) på PDF. Tjänsten genererar inte utdata i form av PDF eller en loggfil. Läs artikeln [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) om du vill hämta och installera snabbkorrigeringen. (CQDOC-21680)
 
-* När användare uppdaterar från AEM 6.5 Forms Service Pack 18 (6.5.18.0) eller AEM 6.5 Forms Service Pack 19 (6.5.19.0) till AEM 6.5 Forms Service Pack 20 (6.5.20.0) eller AEM 6.5 Forms Service Pack 21 (6.5.21.0) stöter användare på en JSP-kompilator åtgärdsfel, som förhindrar att de öppnar eller skapar anpassningsbara formulär och som även orsakar fel i andra AEM gränssnitt som sidredigeraren, AEM Forms och AEM. (FORMS-1256)
+* När användare uppdaterar från AEM 6.5 Forms Service Pack 18 (6.5.18.0) eller AEM 6.5 Forms Service Pack 19 (6.5.19.0) till AEM 6.5 Forms Service Pack 20 (6.5.20.0) eller AEM 6.5 Forms Service Pack 21 (6.5.21.0) stöter användare på en JSP-kompilator åtgärdsfel, som förhindrar att de öppnar eller skapar anpassade formulär och som även orsakar fel med andra AEM gränssnitt som sidredigeraren, AEM Forms, redigeraren för AEM och avslutningsgränssnittet för systemöversikt. (FORMS-1256)
 
   Om du råkar ut för ett sådant problem följer du de här stegen för att lösa det:
    1. Navigera till katalogen `/libs/fd/aemforms/install/` i CRXDE.
