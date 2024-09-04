@@ -6,7 +6,7 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: ab8248e9d0df67bed3c2d5ad3fadce08db2e9ba0
+source-git-commit: ca896466072225cc57d7c0c4f008294cc60f7b94
 workflow-type: tm+mt
 source-wordcount: '7448'
 ht-degree: 1%
@@ -536,7 +536,7 @@ ht-degree: 1%
          + [Referera till adaptiva formulärfragment](/help/forms/using/reference-adaptive-form-fragments.md)
          + [Referensteman](/help/forms/using/reference-themes.md)
          + [Mallar för referensbrev](/help/forms/using/reference-cm-layout-templates.md)
-         + [Konfigurera Microsoft Dynamics 365 för arbetsflödet för inteckning i hemmet på referenswebbplatsen för We.Finance](/help/forms/using/ms-dynamics-configuration-home-mortgage.md)
+         + [Konfigurera Microsoft Dynamics 365 för arbetsflödet för bostadslån på referensplatsen Web.Finance](/help/forms/using/ms-dynamics-configuration-home-mortgage.md)
    + Installera och konfigurera AEM Forms {#install-aem-forms}
       + [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md)
       + [Välja en beständig typ för en AEM Forms-installation](/help/forms/using/choosing-persistence-type-for-aem-forms.md)
@@ -610,8 +610,8 @@ ht-degree: 1%
    + Formulärdatamodell {#form-data-model}
       + [Introduktion till AEM Forms dataintegrering](/help/forms/using/data-integration.md)
       + [Konfigurera datakällor](/help/forms/using/configure-data-sources.md)
-      + [Konfiguration av Microsoft Dynamics Odata](/help/forms/using/ms-dynamics-odata-configuration.md)
-      + [Salesforce-integrering med OAuth 2.0-flödesautentisering för klientautentiseringsuppgifter](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
+      + [Microsoft Dynamics Odata-konfiguration](/help/forms/using/ms-dynamics-odata-configuration.md)
+      + [Salesforce-integrering med OAuth 2.0-autentisering av klientautentiseringsuppgifter](/help/forms/using/oauth2-client-credentials-flow-for-server-to-server-integration.md)
       + [Skapa formulärdatamodell](/help/forms/using/create-form-data-models.md)
       + [Arbeta med formulärdatamodell](/help/forms/using/work-with-form-data-model.md)
       + [Använd formulärdatamodell](/help/forms/using/using-form-data-model.md)
@@ -620,7 +620,6 @@ ht-degree: 1%
       + [Skapa en grundkomponentbaserad adaptiv form](/help/forms/using/create-an-adaptive-form-core-components.md)
       + [Skapa och använda adaptiva Forms-fragment i ett adaptivt formulär](/help/forms/using/adaptive-form-fragment-core-components.md)
       + [Skapa teman för grundkomponentbaserade adaptiva Forms](/help/forms/using/create-or-customize-themes-for-adaptive-forms-core-components.md)
-      + [Skapa och använda anpassade funktioner i ett adaptivt formulär](/help/forms/using/create-and-use-custom-functions.md)
       + [Regelredigeraren](/help/forms/using/rule-editor-core-components.md)
       + [Skapa och använda anpassade funktioner i en adaptiv Form Core-komponent](/help/forms/using/create-and-use-custom-functions-core-components.md)
       + [Skapa och använd anpassad felhanterare för Core Components-baserade Adaptive Forms](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
@@ -677,6 +676,7 @@ ht-degree: 1%
       + [Integrera Adobe Sign med AEM Forms](/help/forms/using/adobe-sign-integration-adaptive-forms.md)
       + [Skapa och hantera granskningar av resurser i formulär](/help/forms/using/create-reviews-forms.md)
       + [Bädda in ett anpassningsbart formulär eller interaktiv kommunikation i AEM Sites Single Page Application](/help/forms/using/embed-adaptive-form-aem-sites-spa.md)
+      + [Skapa och använda anpassade funktioner i ett adaptivt formulär](/help/forms/using/create-and-use-custom-functions.md)
       + [Skapa och använda en anpassad felhanterare för Adaptive Forms](/help/forms/using/standard-validation-error-messages-adaptive-forms.md)
    + Interaktiv kommunikation {#interactive-communications}
       + [Introduktion till gränssnittet för utveckling av interaktiv kommunikation](/help/forms/using/introduction-interactive-communication-authoring.md)

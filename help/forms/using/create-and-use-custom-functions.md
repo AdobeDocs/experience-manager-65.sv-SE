@@ -1,26 +1,16 @@
 ---
 title: Skapa och lägga till anpassade funktioner i ett adaptivt formulär
 description: AEM Forms stöder anpassade funktioner som gör att användare kan skapa och använda sina egna funktioner i regelredigeraren.
-keywords: Lägg till en anpassad funktion, använd en anpassad funktion, skapa en anpassad funktion, använd anpassad funktion i regelredigeraren.
-contentOwner: Ruchita Srivastav
-content-type: reference
-feature: Adaptive Forms,Core Components
-exl-id: a328b4a8-e8dd-42a0-b73b-94e76c7692a8
+feature: Adaptive Forms, Foundation Components
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: f63dcd7edca640cee47c8f615d1675ef5052953c
 workflow-type: tm+mt
-source-wordcount: '1111'
+source-wordcount: '1076'
 ht-degree: 0%
 
 ---
 
-
-# Anpassade funktioner i Adaptive Forms (Core Components)
-
-| Version | Artikellänk |
-| -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/create-and-use-custom-functions) |
-| AEM 6.5 | Den här artikeln |
+# Anpassade funktioner i Adaptive Forms
 
 ## Introduktion
 
