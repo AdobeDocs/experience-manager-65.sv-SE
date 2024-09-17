@@ -5,9 +5,9 @@ exl-id: 5837ef4f-d4e0-49d7-a671-87d5547e0d98
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer,Leader
-source-git-commit: 9eeba0532a9eddb668b8488218c0570ca2241439
+source-git-commit: 658e1f6e07fb1219ba186137eb8403bf85383723
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1348'
 ht-degree: 0%
 
 ---
@@ -89,8 +89,6 @@ Det diskutrymme som krävs beror till stor del på både volymen och typen av we
 * den totala innehållstillväxten över tiden
 
 Diskutrymmet övervakas kontinuerligt under rensning online och offline. Om det tillgängliga diskutrymmet skulle sjunka under ett kritiskt värde avbryts processen. Det kritiska värdet är 25 % av databasens aktuella diskutrymme och kan inte konfigureras. Adobe rekommenderar att diskens storlek är minst två eller tre gånger större än databasstorleken, inklusive den beräknade tillväxten.
-
-Överväg att konfigurera redundanta matriser med oberoende diskar (RAID, till exempel RAID10) för dataredundans.
 
 ### Virtualisering {#virtualization}
 
