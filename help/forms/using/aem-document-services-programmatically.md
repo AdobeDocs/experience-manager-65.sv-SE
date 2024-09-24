@@ -8,9 +8,9 @@ feature: Document Services,APIs & Integrations
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 exl-id: f2e4f509-cca2-44a3-9231-e1954b0fefe3
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 60414285277281d9b1e0c9d93ddf04bc267fd0fb
 workflow-type: tm+mt
-source-wordcount: '6409'
+source-wordcount: '6388'
 ht-degree: 0%
 
 ---
@@ -5069,24 +5069,26 @@ Med API:t Automatisk tagg för PDF kan du göra ett PDF-dokument tillgängligt g
 
 ![Automatiskt taggat PDF-dokument](assets/auto-tag-api.png)
 
+<!--
+
 **Syntax**: `tag(Document inDoc)`
 
-**Indataparametrar**
+**Input Parameters**
 
 <table>
  <tbody>
   <tr>
-   <th>Parametrar</th>
-   <th>Beskrivning</th>
+   <th>Parameters</th>
+   <th>Description</th>
   </tr>
   <tr>
    <td><code>inDoc</code><br /> </td>
-   <td>Dokumentobjekt som innehåller PDF.<br /> </td>
+   <td>Document object containing PDF.<br /> </td>
   </tr>
  </tbody>
 </table>
 
-Följande Java-kod taggar PDF-dokumentet med listor och stycken.
+The following Java code tags the PDF document with lists and paragraphs.
 
 ```java
 /*************************************************************************
@@ -5167,4 +5169,6 @@ StructLib.AutoTagDoc(outDoc);
 }
         return outDoc;
 }
+
 ```
+-->
