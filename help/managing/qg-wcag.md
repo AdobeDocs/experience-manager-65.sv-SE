@@ -5,10 +5,10 @@ exl-id: 9cd37f5a-ff59-4617-a0f3-cd8994fbf4ab
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
 role: Developer,Leader,Architect,Data Architect,User
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: a4ccee3e8256c098339fb5308b1b4214e67b8b74
 workflow-type: tm+mt
-source-wordcount: '1734'
-ht-degree: 89%
+source-wordcount: '1744'
+ht-degree: 87%
 
 ---
 
@@ -24,7 +24,9 @@ Adobe Experience Manager (AEM) har utvecklats för att maximera kompatibiliteten
 
 >[!NOTE]
 >
->En [uppdaterad version av riktlinjerna, WCAG 2.2,](https://www.w3.org/TR/WCAG22/) håller på att utvecklas, men kommer inte att behandlas just nu.
+>Eftersom dessa dokument skrevs med den [uppdaterade versionen av riktlinjerna blev WCAG 2.2](https://www.w3.org/TR/) tillgänglig i oktober 2023.
+>
+>Se [Jämförelse med WCAG 2.1](https://www.w3.org/TR/WCAG/#comparison-with-wcag-2-1) och [Nya funktioner i WCAG 2.2](https://www.w3.org/TR/WCAG/#new-features-in-wcag-2-2).
 
 WCAG 2.1 består av en uppsättning teknikoberoende riktlinjer och framgångskriterier för att göra webbinnehåll tillgängligt för och användbart för personer med funktionshinder. De ger råd till webbinnehållsförfattare, designers och utvecklare om att se till att de resurser de producerar är så tillgängliga som möjligt för så många människor som möjligt, oavsett vilka funktionshinder de har, t.ex. synnedsättning, hörselnedsättning, inlärningssvårigheter, åldersrelaterade begränsningar.
 
