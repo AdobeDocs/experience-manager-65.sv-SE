@@ -1,6 +1,6 @@
 ---
 title: Introduktion till  [!DNL Adobe Experience Manager Assets]
-description: Skapa, hantera, bearbeta och distribuera digitala resurser i Experience Manager.  I dessa handledningar beskrivs de effektivaste strategierna, tillgänglighetsfunktioner och hur du använder AEM 6.5-resurser.
+description: Skapa, hantera, bearbeta och distribuera digitala resurser i Experience Manager. I dessa handledningar beskrivs de effektivaste strategierna, tillgänglighetsfunktioner och hur du använder AEM 6.5-resurser.
 hide: true
 feature: Asset Management
 role: Leader, Architect, User
@@ -68,7 +68,7 @@ När du arbetar med digitala resurser i [!DNL Experience Manager] är det bra om
 * **Metadata** [!DNL Assets] har metadata, till exempel författare, förfallodatum och DRM-information (Digital Rights Management). Metadata är under åtkomstkontroll. [!DNL Assets] har stöd för följande vanliga metadatascheman:
 
    * Dublin Core: inklusive författare, beskrivning, datum, ämne och så vidare.
-   * IPTC: inklusive händelse, modell, plats och så vidare.
+   * IPTC: inkludera händelse, modell, plats och så vidare.
    * WCM: inkluderar sidegenskaper, [!UICONTROL On Time] och [!UICONTROL Off Time] osv.
 
 * **Taggning**: [!DNL Assets] kan taggas och klassificeras. Se [ordna resurser](/help/assets/organize-assets.md).
