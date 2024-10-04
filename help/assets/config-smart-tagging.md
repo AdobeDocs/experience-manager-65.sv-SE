@@ -5,7 +5,7 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 110636c0208a23e0b088e19fe47c38f28adb9bdd
+source-git-commit: fed35f2b90e2b8fd9e7240abf3b25e3650fa31c2
 workflow-type: tm+mt
 source-wordcount: '1832'
 ht-degree: 13%
@@ -14,7 +14,7 @@ ht-degree: 13%
 
 # Förbered [!DNL Assets] för smart taggning {#configure-asset-tagging-using-the-smart-content-service}
 
-Innan du kan börja tagga dina resurser med smarta innehållstjänster måste du integrera [!DNL Experience Manager Assets] med Adobe Developer Console för att använda den smarta tjänsten i [!DNL Adobe Sensei]. När du har konfigurerat tåget med några bilder och en tagg.
+Innan du kan börja tagga dina resurser med smarta innehållstjänster måste du integrera [!DNL Experience Manager Assets] med Adobe Developer Console för att använda den smarta tjänsten i [!DNL Adobe Sensei]. När konfigurationen är klar kan du utbilda tjänsten med några bilder och en tagg.
 
 >[!NOTE]
 >
