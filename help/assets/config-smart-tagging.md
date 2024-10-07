@@ -5,7 +5,7 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: fed35f2b90e2b8fd9e7240abf3b25e3650fa31c2
+source-git-commit: 6729a2dbd8c761eb1bba84d8efba7393ac686190
 workflow-type: tm+mt
 source-wordcount: '1832'
 ht-degree: 13%
@@ -21,7 +21,7 @@ Innan du kan börja tagga dina resurser med smarta innehållstjänster måste du
 >* Tjänster för smart innehåll är inte längre tillgängliga för nya [!DNL Experience Manager Assets]-lokala kunder. Befintliga lokala kunder, som redan har den här funktionen aktiverad, kan fortsätta använda smarta innehållstjänster.
 >* Smarta innehållstjänster är tillgängliga för befintliga [!DNL Experience Manager Assets] Managed Services-kunder som redan har den här funktionen aktiverad.
 >* Nya Experience Manager Assets Managed Services-kunder kan följa instruktionerna i den här artikeln för att konfigurera smarta innehållstjänster.
->* För Service Pack 20 och äldre måste du utföra de tillfälliga åtgärderna för SCS för att stödja Oauth-integrering. Se [Felsöka smarta taggar för OAuth-autentiseringsuppgifter](#config-smart-tagging.md).
+>* För Service Pack 20 och äldre måste du utföra de tillfälliga åtgärderna för SCS för att stödja Oauth-integrering. Se [Felsöka smarta taggar för OAuth-autentiseringsuppgifter](config-oauth.md).
 >* Om du vill ha stöd för Oauth-integreringen i Service Pack 21 måste du installera [hotfixen för SP 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip).
 >* För befintlig SCS-konfiguration är processen densamma som att konfigurera en ny OAuth-integrering. Alla äldre konfigurationer rensas automatiskt.
 
