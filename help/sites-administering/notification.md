@@ -9,9 +9,9 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: aa91b0f84929affb527c57cf92d7b4714c98ba74
 workflow-type: tm+mt
-source-wordcount: '2037'
+source-wordcount: '2141'
 ht-degree: 0%
 
 ---
@@ -299,8 +299,15 @@ Konfigurera först e-posttjänsten:
 
 Konfigurera sedan SMTP OAuth-providern genom att följa proceduren nedan:
 
+>[!WARNING]
+>
+>Om du efter att ha slutfört den här konfigurationen ändrar *någon* av värdena i OSGi-konfigurationen **CQ Mailer SMTP OAuth2 Provide** måste du auktorisera igen enligt dessa steg.
+>
+>Om dessa inte utförs blir åtkomsttoken som lagras på `/conf/global/settings/mailer/oauth` ogiltig och OAuth2-anslutningen till SMTP-servern misslyckas.
+
 1. Öppna AEM webbkonsol genom att gå till `http://serveraddress:serverport/system/console/configMgr`
 1. Leta efter och klicka sedan på **CQ Mailer SMTP OAuth2 Provider**
+
 1. Fyll i den obligatoriska informationen enligt följande:
    * Autentiserings-URL: `https://accounts.google.com/o/oauth2/auth`
    * Token-URL: `https://accounts.google.com/o/oauth2/token`
@@ -371,6 +378,12 @@ För att kunna göra en sammanfattning måste du ha följande information för a
 **AEM sidkonfigurationer**
 
 Integrera sedan dina OAuth2-inställningar med AEM:
+
+>[!WARNING]
+>
+>Om du efter att ha slutfört den här konfigurationen ändrar *någon* av värdena i OSGi-konfigurationen **CQ Mailer SMTP OAuth2 Provide** måste du auktorisera igen enligt dessa steg.
+>
+>Om dessa inte utförs blir åtkomsttoken som lagras på `/conf/global/settings/mailer/oauth` ogiltig och OAuth2-anslutningen till SMTP-servern misslyckas.
 
 1. Gå till webbkonsolen för den lokala instansen genom att bläddra till `http://serveraddress:serverport/system/console/configMgr`
 1. Leta efter och klicka på **Day CQ Mail Service**
