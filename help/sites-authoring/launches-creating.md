@@ -10,10 +10,10 @@ exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 82597d52ed774f08ce7136d271148e720b56fcf1
 workflow-type: tm+mt
-source-wordcount: '1039'
-ht-degree: 13%
+source-wordcount: '1097'
+ht-degree: 12%
 
 ---
 
@@ -158,7 +158,16 @@ Så här skapar du en kapslad start från konsolen **Platser** - baserat på en 
 
    Om du väljer **Klar** återgår du till rutan **Referenser** i **Sites**-konsolen och om du väljer rätt sida visas den nya startsidan.
 
-### Ta bort en start {#deleting-a-launch}
+### Klona en start {#cloning-a-launch}
+
+Du kan klona en start från [startkonsolen](/help/sites-authoring/launches.md#the-launches-console):
+
+* Välj start genom att trycka på/klicka på miniatyrbilden.
+* Verktygsfältet visas. Välj Klona.
+   * Klonen skapas och visas i konsolen.
+   * **Starttitel** anger att det är en klon. Du kan uppdatera titeln genom att redigera [Starta konfigurationen](/help/sites-authoring/launches-editing.md#editing-a-launch-configuration) (**Egenskaper**).
+
+## Ta bort en start {#deleting-a-launch}
 
 Du kan ta bort en start från [startkonsolen](/help/sites-authoring/launches.md#the-launches-console):
 
