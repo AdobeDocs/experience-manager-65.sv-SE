@@ -5,9 +5,9 @@ exl-id: 372e6a46-72bb-4db4-ad01-534ca723ae58
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 573057b8e4c01b1c14f8c66b3da7b44e9d857760
+source-git-commit: 1788e5f77d4c46a548710361e9e5dae3c6daab28
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '221'
 ht-degree: 2%
 
 ---
@@ -34,6 +34,24 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
 
 * Korrigerade gränssnittstester för att fungera korrekt med CIF kärnkomponenter.
 * Ett problem med kategorins URL-format som inte fungerar som väntat i molninstansen har åtgärdats.
+
+## Releasedatum: september 2024
+
+| Komponent | Version | Information |
+|:-------|:-------:|-----------------------------------------------------------------------------------------------------------:|
+| CIF kärnkomponenter | 2.14.2 | [GitHub](https://github.com/adobe/aem-core-cif-components/releases/tag/core-cif-components-reactor-2.14.2) |
+
+### Förbättringar {#improvements-September}
+
+* Gör kategorigränsen anpassningsbar.
+
+### Felkorrigeringar {#bug-fixes-September}
+
+* Commerce-fälten är inte korrekt integrerade med Assets metadataschredigerare.
+* Problem med Carousel Products Multifield för dra och släpp.
+* Problem med Carousel Category Multifield för dra och släpp
+* Det går inte att klicka på menyerna på sidan Sidinformation på kategoritexten och produktredigeringssidan.
+* Ordernummer visas inte på orderbekräftelsesidan.
 
 ## Releasedatum: januari 2024
 
