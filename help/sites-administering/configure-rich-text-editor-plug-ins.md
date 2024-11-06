@@ -6,7 +6,7 @@ exl-id: 6bfd6caa-a68a-40ba-9826-4ba02cd1dbfb
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f64a1014dfd1155bcf815e75a27102244ef6c6de
 workflow-type: tm+mt
 source-wordcount: '4376'
 ht-degree: 0%
@@ -721,7 +721,7 @@ Om du vill konfigurera hur länkar läggs till i AEM från ett annat program def
       * Ange målläge:
 
          * **Namn** `mode`
-         * **Typ** `String`)
+         * **Typ** `String`
          * **Värde**
 
             * `auto`: betyder att ett automatiskt mål har valts
