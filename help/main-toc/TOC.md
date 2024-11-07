@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: caf2d5b4f03823e57c579eafdd47b52ef9357493
+source-git-commit: 717c9ae2d6b0552ca5c6386247ef7504dc9785e9
 workflow-type: tm+mt
-source-wordcount: '7448'
+source-wordcount: '7450'
 ht-degree: 1%
 
 ---
@@ -19,6 +19,7 @@ ht-degree: 1%
 + Versionsinformation {#release-notes}
    + [Versionsinformation](/help/release-notes/release-notes.md)
    + Tidigare versionsinformation {#service-pack}
+      + [6.5.21](/help/release-notes/previous/6-5-21.md)
       + [6.5.20](/help/release-notes/previous/6-5-20.md)
       + [6.5.19](/help/release-notes/previous/6-5-19.md)
       + [6.5.18](/help/release-notes/previous/6-5-18.md)
@@ -536,7 +537,7 @@ ht-degree: 1%
          + [Referera till adaptiva formulärfragment](/help/forms/using/reference-adaptive-form-fragments.md)
          + [Referensteman](/help/forms/using/reference-themes.md)
          + [Mallar för referensbrev](/help/forms/using/reference-cm-layout-templates.md)
-         + [Konfigurera Microsoft Dynamics 365 för arbetsflödet för bostadslån på referensplatsen Web.Finance](/help/forms/using/ms-dynamics-configuration-home-mortgage.md)
+         + [Konfigurera Microsoft Dynamics 365 för inteckningsarbetsflödet i Web.Finance-referenswebbplatsen](/help/forms/using/ms-dynamics-configuration-home-mortgage.md)
    + Installera och konfigurera AEM Forms {#install-aem-forms}
       + [Arkitektur och driftsättningstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md)
       + [Välja en beständig typ för en AEM Forms-installation](/help/forms/using/choosing-persistence-type-for-aem-forms.md)
