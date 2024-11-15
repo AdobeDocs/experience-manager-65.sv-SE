@@ -5,16 +5,16 @@ feature: Content Fragments
 role: User
 exl-id: 8b93fd6e-47d1-46fd-901b-621caa25be7b
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 3648662306bb1e7ea27a9d74f42bfa321bf5b91f
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '257'
 ht-degree: 4%
 
 ---
 
 # Associerat innehåll{#associated-content}
 
-Funktionen AEM associerat innehåll ger anslutningen så att resurser kan användas tillsammans med fragmentet när det läggs till på en innehållssida. Detta ger flexibilitet för leverans av headless-innehåll genom att [tillhandahålla ett intervall med resurser som du kan komma åt när du använder innehållsfragmentet på en sida](/help/sites-authoring/content-fragments.md#using-associated-content), samtidigt som det minskar den tid som krävs för att söka efter rätt resurs.
+Funktionen AEM associerat innehåll ger anslutningen så att resurser (valfritt) kan användas med fragmentet när det läggs till på en innehållssida. Detta ger flexibilitet för leverans av headless-innehåll genom att [tillhandahålla ett intervall med resurser som du kan komma åt när du använder innehållsfragmentet på en sida](/help/sites-authoring/content-fragments.md#using-associated-content), samtidigt som det minskar den tid som krävs för att söka efter rätt resurs. Allt associerat innehåll kan konfigureras med redigeraren för innehållsfragment.
 
 ## Lägga till associerat innehåll {#adding-associated-content}
 
