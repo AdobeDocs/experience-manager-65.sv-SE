@@ -9,9 +9,9 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: aa91b0f84929affb527c57cf92d7b4714c98ba74
+source-git-commit: bbd2bc3fa2ebdca111084450941439a37f79cd73
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2149'
 ht-degree: 0%
 
 ---
@@ -119,9 +119,11 @@ This is an automatically generated message. Please do not reply.
 
 Så här anpassar du den engelska e-postmallen för sidmeddelanden:
 
-1. Öppna filen i CRXDE:
+1. Skapa en övertäckning för [Sidmeddelanden](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-event-notification-e-mail-template)
 
-   `/libs/settings/notification-templates/com.day.cq.wcm.core.page/en.txt`
+1. Öppna filen:
+
+   `en.txt`
 
 1. Ändra filen efter dina behov.
 1. Spara ändringarna.
@@ -181,9 +183,11 @@ This is an automatically generated message. Please do not reply.
 
 Så här anpassar du den engelska e-postmallen för meddelanden om arbetsflödeshändelser:
 
-1. Öppna filen i CRXDE:
+1. Skapa en övertäckning för [Arbetsflödesmeddelanden](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
 
-   `/libs/settings/workflow/notification/email/default/en.txt`
+1. Öppna filen:
+
+   `en.txt`
 
 1. Ändra filen efter dina behov.
 1. Spara ändringarna.
@@ -239,11 +243,12 @@ Följande variabler kan användas i e-postmallen:
 
 Lägga till en mall för ett nytt språk:
 
-1. Lägg till en fil `<language-code>.txt` nedan i CRXDE:
+1. Skapa en [övertäckning](/help/sites-developing/overlays.md) efter behov.
 
-   * `/libs/settings/notification-templates/com.day.cq.wcm.core.page`: för sidmeddelanden
-   * `/libs/settings/workflow/notification/email/default`: för arbetsflödesmeddelanden
+   * [Sidmeddelanden](/help/sites-deploying/sites-repository-restructuring-in-aem-6-5.md#page-event-notification-e-mail-template)
+   * [Arbetsflödesmeddelanden](/help/sites-deploying/all-repository-restructuring-in-aem-6-5.md#workflow-notification-email-templates)
 
+1. Lägg till filen `<language-code>.txt`.
 1. Anpassa filen till språket.
 1. Spara ändringarna.
 
