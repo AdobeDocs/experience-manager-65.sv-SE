@@ -5,10 +5,10 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 5b4153f83d725c307e23ea10c4ea151911d4d390
+source-git-commit: 917723f89c037756a74fef9a54df9237d4283c1d
 workflow-type: tm+mt
-source-wordcount: '1914'
-ht-degree: 12%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -38,13 +38,13 @@ Innan du använder tjänsten för smart innehåll bör du kontrollera följande:
 
 **Nya användare**
 
-Installera Service Pack 2. Om du vill ha stöd för OAuth-integrering i Service Pack 21 måste du installera [hotfix för Service Pack 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip).
+Installera Service Pack 2. Om du vill ha stöd för OAuth-integrering i Service Pack 22 måste du installera [hotfix för Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip).
 
 Följ instruktionerna i den här artikeln för att konfigurera tjänster för smart innehåll.
 
 **Befintliga användare**
 
-Om du har uppgraderat till Service Pack 21 installerar du [hotfixen för SP 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) som stöd för Oauth-integrering. Alla befintliga konfigurationer tas bort automatiskt. Följ instruktionerna i den här artikeln för att konfigurera tjänster för smart innehåll.
+Om du har uppgraderat till Service Pack 21 installerar du [programfixen för Service Pack 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) som stöd för OAuth-integrering. Alla befintliga konfigurationer tas bort automatiskt. Följ instruktionerna i den här artikeln för att konfigurera tjänster för smart innehåll. Om du uppgraderar till Service Pack 2 måste du installera denna [programfix för Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip).
 
 För Service Pack 20 och äldre måste du utföra de tillfälliga åtgärderna för SCS för att stödja Oauth-integrering. Se [Felsöka smarta taggar för OAuth-autentiseringsuppgifter](config-oauth.md).
 
@@ -58,7 +58,7 @@ Smarta innehållstjänster är inte längre tillgängliga för nya [!DNL Experie
 
 Befintliga lokala användare, som redan har den här funktionen aktiverad, kan fortsätta använda smarta innehållstjänster.
 
-Om du har uppgraderat till Service Pack 21 installerar du [hotfixen för SP 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) som stöd för Oauth-integrering. Alla befintliga konfigurationer tas bort automatiskt. Följ instruktionerna i den här artikeln för att konfigurera tjänster för smart innehåll.
+Om du har uppgraderat till Service Pack 21 installerar du [programfixen för Service Pack 21](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-40772-1.2.zip) som stöd för OAuth-integrering. Alla befintliga konfigurationer tas bort automatiskt. Följ instruktionerna i den här artikeln för att konfigurera tjänster för smart innehåll. Om du uppgraderar till Service Pack 2 måste du installera denna [programfix för Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fproduct%2Fassets%2Fcq-6.5.0-hotfix-42384-1.2.zip).
 
 För Service Pack 20 och äldre måste du utföra de tillfälliga åtgärderna för SCS för att stödja Oauth-integrering. Se [Felsöka smarta taggar för OAuth-autentiseringsuppgifter](config-oauth.md).
 
