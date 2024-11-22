@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 38271b27134afa2b350c6595cf0bdc335f110be3
+source-git-commit: e3b96392f656b6dcbd583c18a343b56d4371c4ef
 workflow-type: tm+mt
-source-wordcount: '5016'
+source-wordcount: '4722'
 ht-degree: 0%
 
 ---
@@ -50,21 +50,6 @@ Bland huvudfunktionerna och förbättringarna i den här versionen finns följan
 ### [!DNL Assets]
 
 IPTC-fliken har nu stöd för textfälten [!UICONTROL Alt Text] och [!UICONTROL Extended Description]. (ASSETS-34918)
-
-### [!DNL Forms]
-
-* **Stöd för OAuth-autentiseringsuppgifter**: En ny och enklare att använda autentiseringsuppgifter för server-till-server-autentisering och ersätter den befintliga JWT-autentiseringsuppgiften (Service Account). (NPR-41994)
-* [Förbättringar av regelredigeraren i AEM Forms](/help/forms/using/rule-editor-core-components.md):
-   * Stöd för implementering av kapslade villkor med funktionen `When-then-else`.
-   * Validera eller återställ paneler och formulär, inklusive fält.
-   * Stöd för moderna JavaScript-funktioner, t.ex. låt- och pilfunktioner (ES10-stöd) i de anpassade funktionerna.
-* [AutoTag API för hjälpmedel](/help/forms/using/aem-document-services-programmatically.md#doc-utility-services-doc-utility-services): AEM Forms på OSGi har nu stöd för det nya AutoTag-API:t som förbättrar PDF för tillgänglighetsstandarder genom att lägga till taggar: stycken och listor. Det gör PDF mer tillgängligt för användare med hjälpmedel.
-* **Stöd för 16-bitars PNG**: PDF Generator ImageToPdf stöder nu konvertering av PNG-filer med 16-bitars färgdjup.
-* **Tillämpa artefakter på enskilda textblock i XDP-filer**: I Forms Designer kan användare nu konfigurera inställningar för enskilda textblock i XDP-filer. Med den här funktionen kan du styra de element som behandlas som artefakter i det resulterande PDF. Dessa element, som sidhuvuden och sidfötter, är tillgängliga för hjälpmedelstekniker. De viktigaste funktionerna är att markera textblock som artefakter och att bädda in dessa inställningar i XDP-metadata. Forms Output-tjänsten tillämpar dessa inställningar under PDF-genereringen och ser till att PDF/UA-taggningen är korrekt.
-* **AEM Forms Designer är certifierat med `GB18030:2022` standard**: Med `GB18030:2022`-certifieringen stöder nu Forms Designer den kinesiska Unicode-teckenuppsättningen som gör att du kan mata in kinesiska tecken i alla redigerbara fält och dialogrutor.
-* Tjänsten PDF Generator på JEE-servern har nu [stöd för WebToPDF-vägen](/help/forms/using/admin-help/configure-service-settings.md#generate-pdf-service-settings-generate-pdf-service-settings) för konvertering av HTML till PDF, tillsammans med befintliga WebKit- och WebCapture-vägar i Windows. Vägen WebToPDF är redan tillgänglig i OSGi och utökas till JEE. På både JEE- och OSGi-plattformarna stöder nu tjänsten PDF Generator följande vägar i olika operativsystem:
-   * **Windows**: WebKit, WebCapture, WebToPDF
-   * **Linux®**: WebKit, WebToPDF
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
