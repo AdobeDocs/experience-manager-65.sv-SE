@@ -10,9 +10,9 @@ role: Admin, User, Developer
 feature: Forms Designer,Designer
 exl-id: 90503d29-e079-43f4-a5dc-ce90ed7844c6
 solution: Experience Manager, Experience Manager Forms
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 4ce52d90f9d3300e543563ce3dc242f28e00912e
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '811'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,7 @@ ht-degree: 0%
 >
 >* 64-bitarsversionen av designern introducerades med AEM 6.5 Forms Service Pack 19 (6.5.19.0).
 >* 32-bitarsversionen av designern har tagits bort sedan [AEM Forms Service Pack 21 (6.5.21.0)](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases) släpptes.
+> * De plattformar som stöds för Forms Designer är anpassade efter de plattformar som stöds av AEM Forms. [Klicka här](/help/forms/using/aem-forms-jee-supported-platforms.md) om du vill veta mer om vilka plattformar som stöds för Forms Designer.
 
 Mer information om hur du installerar Forms Designer finns på [Frågor och svar](#fandq).
 
