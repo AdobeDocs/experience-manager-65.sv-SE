@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: e3b96392f656b6dcbd583c18a343b56d4371c4ef
+source-git-commit: 3fa791c50b79a5d8f68dcc8414e14b59ca831d61
 workflow-type: tm+mt
-source-wordcount: '4722'
+source-wordcount: '6059'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,27 @@ ht-degree: 0%
 
 ## Viktiga funktioner och förbättringar
 
+### Forms {#forms-sp22}
+
 Bland huvudfunktionerna och förbättringarna i den här versionen finns följande:
+
+* [hCaptcha](/help/forms/using/integrate-adaptive-forms-hcaptcha.md) och [Cloudfare Turnstile Captcha-tjänster](/help/forms/using/integrate-adaptive-forms-turnstile.md): AEM Forms stöder följande Captcha-tjänster:
+   * Captcha skyddar formulär från stötar, skräppost och automatiskt missbruk genom att utmana användare med en kryssrutewidget. Det säkerställer att endast mänskliga användare går vidare och förbättrar säkerheten vid onlinetransaktioner.
+   * Cloudflare Turnstile erbjuder en säkerhetsåtgärd som syftar till att skydda formulär från automatiserade robotar, skadliga attacker, skräppost och oönskad automatiserad trafik. Den visar en kryssruta när formuläret skickas in för att verifiera att det är humant, innan det går att skicka in formuläret.
+
+* Versionshantering för adaptiva formulär:
+   * [Skapa flera versioner av ett adaptivt formulär](/help/forms/using/add-versioning-reviews-comments.md): Nu kan användare enkelt hantera varianter av befintliga formulär. Detta förenklar versionskontrollen och underlättar jämförelse för formuläroptimering, allt i ett enda smidigt arbetsflöde.
+   * [Jämför adaptiv Forms](/help/forms/using/compare-forms-core-components.md): Nu kan användare enkelt jämföra två formulär för att identifiera skillnader. Det underlättar smidigt samarbete genom att teammedlemmarna kan jämföra revisioner och diskutera ändringar effektivt.
+
+* Stöd har lagts till för att aktivera teckensnittsinbäddning i [API:er för Interactive Communications Batch](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel): Interactive Communications har nu stöd för inbäddning av Adobe Ming- och Adobe Myungjo-teckensnitt i PDF som genererats via batch-API:n. Den här förbättringen säkerställer korrekt textåtergivning i genererade dokument, även när deluppsättningar av teckensnitt används, vilket ger bättre stöd för flerspråkigt innehåll i utdata från PDF.
+
+* [Innehållsförtecknings-API för hjälpmedel för PDF](/help/forms/using/aem-document-services-programmatically.md#auto-tag-pdf-documents-auto-tag-api): AEM Forms på OSGi har nu stöd för det nya TOC-taggens API för att förbättra PDF för tillgänglighetsstandarder. Det gör PDF mer tillgängligt för användare med hjälpmedel.
+
+* [Fragment-XDP-upplösning](/help/forms/using/assembler-service.md#resolve-references-on-crx-repository-resolve-references-on-crx-repository): AEM Forms på OSGi löser nu fragment-XDP:er som refereras i huvud-XDP:er och lagras i AEM CRX-databas.
+
+* [Kompatibilitetsförbättringar för PDF/A](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdfa-documents-converting-documents-to-pdf-a-documents): Nu kan användare konvertera PDF till PDF/A-format (1a, 2a, 3a) för arkiveringsändamål, samtidigt som de säkerställer tillgänglighet och verifierar överensstämmelse med dessa standarder.
+
+* **Stöd för automatisk storlek av teckensnitt för statiska PDF-dokument**: AEM Forms Designer har nu stöd för funktioner för automatisk storlek i XDP-filer. Nu kan användare ange automatisk storlek för textfält, numeriska fält, lösenordsfält och datum/tid-fält i XDP-filer för att återge textfältets innehåll utan att trunkera dessa fält i statiska PDF-dokument.
 
 <!-- * _6.5.21.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
@@ -195,10 +215,57 @@ I AEM 6.5.18 och 6.5.19 genererades flera inaktiveringsbegäranden för varje un
 
 Ett produktionsproblem avbröt migreringsprocessen när en videoöverföring till Dynamic Media misslyckades och ett processfel i användargränssnittet visades. (ASSETS-36038)
 
+<!--
 
 ### [!DNL Forms]{#forms-6522}
 
-Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tilläggspaket en vecka efter den schemalagda versionen av [!DNL Experience Manager] Service Pack. I det här fallet planeras AEM 6.5.22.0 Forms-tilläggspaketet för torsdagen den 28 november 2024. En lista över Forms-korrigeringar och förbättringar har lagts till i det här avsnittet när utgåvan släppts.
+Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the AEM 6.5.22.0 Forms add-on package release is scheduled for Thursday, November 28, 2024. A list of Forms fixes and enhancements is added to this section post the release.
+
+-->
+
+#### Forms {#forms-bug-fixes-sp22}
+
+* De URL:er som genereras för bifogade filer i sparade utkast i AEM Forms återspeglar inte de konfigurerade mappningarna för Apache Sling Resource Resolver Factory. (FORMS-16949)
+* När en användare av AEM Forms Service Pack 19 (6.5.19.0) förhandsgranskar en bokstav justeras inte innehållet korrekt eftersom blanksteg saknas och tecknet x visas på vissa platser. (FORMS-1670)
+* När en användare använder AEM Forms Service Pack 18 (6.5.18.0) och försöker skriva ut filerna med CIF protokoll misslyckas det med följande fel: (FORMS-16629)
+  `ALC-OUT-001-401: Unknown error while printing using CIFS on the Printer: \\\\\\\\NSMVPLUETEST01\\\\TH_Test`.
+* När en användare uppgraderar från AEM Forms Service Pack 17 (6.5.17.0) till AEM Forms Service Pack 20 (6.5.20.0) visas inte ikonen Regelredigerare på nivån Formulärbehållare. (FORMS-16430)
+* När en användare uppgraderar från AEM Forms Service Pack 17 (6.5.17.0) till AEM Forms Service Pack 21 (6.5.21.0) fungerar inte den ändrade URL-sökvägen för sändning av anpassat formulär. (FORMS15894)
+* I AEM Forms Service Pack 19 (6.5.19.0) misslyckas AEM Forms 6.5 PDF/A-valideringen för vissa filer med felet `creation date and modification date mismatch with timezone`, medan den fungerar smidigt i Acrobat Pro PDF/A-valideringen för en kompatibilitetskontroll. (FORMS-15840)
+* När en användare tar bort formulärutkast med komponenten &quot;Utkast och överföringar&quot; på en webbplatssida i AEM Forms Service Pack 15 (6.5.15.0) i OSGi misslyckas borttagningen. (FORMS-1575)
+* När en användare har en SharePoint-lista med fler än 999 poster och formuläret innehåller en bifogad fil, misslyckas överföringen av formuläret. (FORMS-15057)
+* När en användare använder två datumväljarkomponenter som är märkta som Startdatum och Slutdatum, efter att ha lagt till en valideringsregel för att säkerställa att slutdatumet inte är tidigare än startdatumet och ställt in ett anpassat skriptvalideringsmeddelande, utlöses inte valideringen om slutdatumet är tidigare än startdatumet. (FORMS-14757)
+* När en användare använder funktionerna för att visa och dölja en tabell i ett anpassat format, krymper fältstorleken. Fältstorleken rättas till när du lägger till och tar bort en rad. (FORMS-14756)
+* När en användare skriver ut formulär i AEM Forms Service Pack 19 (6.5.19.0) återges vissa formulär inte korrekt på servern, vilket orsakar fel under utskriften. (FORMS14734)
+* När användare uppdaterar från AEM Forms Service Pack 15 (6.5.15.0) till AEM Forms Service Pack 19 (6.5.19.0) och använder ett formulär där en viss variabel är inställd som tal och det anpassade visningsmönstret är inställt som num{$zzz,zz9.99}, återges mönstret inte korrekt i förhandsvisnings- och agentgränssnittet. (FORMS-14694)
+* När en användare förhandsgranskar en bokstav i ett interaktivt dokument med sparad data-xml fastnar bokstaven i tillståndet&quot;Läser in&quot; AEM användargränssnittet. Det går bra att förhandsgranska brevet igen med samma XML. (FORMS-14521)
+* När en användare av AEM Forms Service Pack 20 (6.5.20.0) skickar ett e-postmeddelande med en bifogad fil med en Skicka e-post-åtgärdsknapp i ett anpassat formulär, visas namnet på den bifogade filen på nästa rad i stället för på den inbyggda raden. (FORMS-1426)
+* När en användare genererar en PDF i AEM Forms med punktlistor inställda på standardformatet Skiva, misslyckas PDF med tillgänglighetskontrollen i Adobe Acrobat hjälpmedelsverktyg. Lista med punkttecken- och fyrkantsformat godkänns vid tillgänglighetskontrollen. (FORMS-13802, LC-3922179)
+* När en användare uppgraderar från AEMForms-6.5.0-0065 till AEMForms-6.5.0-0087 i den fristående konfigurationen av RHEL8 JBoss kan den inte ansluta till LiveCyclets tjänstbehållare. (FORMS-15907) ・
+* När en användare väljer ett tidigare skickat formulär och startar en ny formulärprocess i AEM Forms på JEE, i AEM Workspace rensas alla data som tidigare skickats ut och ersätts med data som fyllts i, utan att några fält som fyllts i manuellt i det föregående formuläret behålls. (FORMS-15376)
+* På AEM Forms Service Pack 20 (6.5.20.0) när en användare konverterar Tiff-filen till PDF med PDFG-tjänsten misslyckas den med följande fel: (FORMS-14879) ALC-PDG-011-028-Error occurred while converting image file to PDF. com/sun/image/codec/jpeg/JPEGCodec
+* Uppgradera i AEM Forms med JEE jar-filer: Biblioteket `commons-collections:commons-collections:jar` ingår nu för att förbättra beroendeupplösningen och funktionaliteten i olika AEM Forms JEE-jobb som:
+   * Förbättrade jobb för att förbättra jobbbearbetning och felhantering.
+   * PDF Generator (PDFG) Jobbförbättring för smidigare dokumentgenerering och -konvertering.
+   * LC-Upgrade Job enhancement förbättrar uppgraderingsprocessen samtidigt som man säkerställer en stabil övergång mellan versionerna.
+   * Förbättrade Rights Management-jobb för säker dokumenthantering och förbättrade behörighetshanteringsfunktioner.
+   * Förbättrade processhanteringsjobb för tillförlitligare jobbbearbetning och systemhantering.
+
+
+#### XML FM {#forms-xmlfm-sp22}
+
+* I AEM Forms Service Pack 21 (6.5.21.0), när en användare lägger till taggar som inte är standard i PDF med XMLFM, uppfyller dokumentet inte kraven för PDF. (LC-3922484)
+* När en användare genererar ett PDF med hjälp av utdatatjänsten i AEM Forms Service Pack 20 (6.5.20.0) misslyckas det med CORBA.COMM_FAILURE och felet `15:04:35,973 ERROR [com.adobe.formServer.PA.XMLFormAgentWrapper] (default task-14) ALCOUT-002-013: XMLFormFactory, PAexecute failure: "org.omg.CORBA.COMM_FAILURE"` visas. Tjänsten godkänns när tillgänglighetsrollen &quot;Referens&quot; exkluderas från XDP-mallens delformulär. Denna roll behövs dock för att 508 regler ska uppfyllas. (LC-3922402)
+* När en användare konverterar ett XFA-formulär till ett AcroForm PDF misslyckas det. (LC-3922363)
+* I AEM Forms Service Pack 19 (6.5.19.0) visas FS_DATA_SOM tom för namnlösa delformulär när en användare skapar en XDP-fil med namnlösa delformulär. (LC-3922034)
+
+#### Forms Designer {#forms-designer-sp22}
+
+* När en användare öppnar ett fragmentbibliotek genom att markera en fragmentmapp i AEM Forms Designer version 6.5.21.0 kraschar det. (LC-3922439)
+* När en användare avinstallerar 32-bitars AEM Forms Designer version 6.5.20.0 och installerar AEM Forms Designer version 6.5.21.0 startar inte Forms Designer. Felloggarna visar att det inte finns tillräckligt med minne för JRE (Java Runtime Environment). (LC-3922404)
+* När en användare har installerat AEM Forms Designer version 6.5.20.0 visas inte makroalternativet på menyn. Då visas bara standardmakrot &#39;Tillgänglighetskontroll&#39; och det går inte att köra. (LC-3922321)
+* När en användare lägger till en ny mallplats för att skapa XDP-filer i AEM Forms Designer version 6.5.20.0 kraschar Forms Designer. (LC-3922316)
+* När en användare genererar utdata med metoden ExportData i AEM Forms 6.5 Service Pack 15 (6.5.15.0) OSGI, skapas ofullständiga och felaktiga data. (LC-3922340)
 
 
 <!-- #### [!DNL Adaptive Forms] {#forms-6522}
@@ -547,7 +614,16 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 * I förhandsgranskningen av gränssnittet för Interactive Communications Agent visas valutasymbolen (till exempel dollartecknet $) inkonsekvent för alla fältvärden. Den visas för värden upp till 999 men saknas för värden över 1 000. (FORMS-1657)
 * Eventuella ändringar av det kapslade layoutfragmentets XDP i en interaktiv kommunikation återspeglas inte i IC-redigeraren. (FORMS-16575)
 * I förhandsgranskningen av gränssnittet för den interaktiva kommunikationsagenten visas vissa beräknade värden inte korrekt. (FORMS-16603)
-* När brevet visas i Förhandsgranska utskrift ändras innehållet. Vissa blanksteg försvinner och vissa bokstäver ersätts med&quot;x&quot; (FORMS-15681)
+* När brevet visas i Förhandsgranska utskrift ändras innehållet. Vissa blanksteg försvinner och vissa bokstäver ersätts med &quot;x&quot;. (FORMS-15681)
+* När en användare konfigurerar en WebLogic 14c-instans misslyckas PDFG-tjänsten i AEM Forms Service Pack 21 (6.5.21.0) på JEE som körs på JBoss på grund av klassinläsarkonflikter i SLF4J-biblioteket. Felet visas enligt följande (CQDOC-22178):
+
+  ```java
+  Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"
+  the class loader org.ungoverned.moduleloader.ModuleClassLoader @404a2f79 (instance of org.ungoverned.moduleloader.ModuleClassLoader, child of 'deployment.adobe-livecycle-jboss.ear'
+  @7e313f80 org.jboss.modules.ModuleClassLoader) of the current class, org/slf4j/LoggerFactory, and the class loader 'org.slf4j.impl@1.1.0.Final-redhat-00001' @506ab52
+  (instance of org.jboss.modules.ModuleClassLoader, child of 'app' jdk.internal.loader.ClassLoaders$AppClassLoader) for the method's defining class, org/slf4j/impl/StaticLoggerBinder,
+  have different Class objects for the type org/slf4j/ILoggerFactory used in the signature
+  ```
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 

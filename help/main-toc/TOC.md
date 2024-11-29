@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: f3dda5271c0d3bdd9d23bc26f3b5abe50fc1b90a
+source-git-commit: bf750ddc14ce083a949c57322e0bc45594e66311
 workflow-type: tm+mt
-source-wordcount: '7454'
+source-wordcount: '7477'
 ht-degree: 1%
 
 ---
@@ -624,6 +624,8 @@ ht-degree: 1%
       + [Regelredigeraren](/help/forms/using/rule-editor-core-components.md)
       + [Skapa och använda anpassade funktioner i en adaptiv Form Core-komponent](/help/forms/using/create-and-use-custom-functions-core-components.md)
       + [Skapa och använd anpassad felhanterare för Core Components-baserade Adaptive Forms](/help/forms/using/add-custom-error-handler-adaptive-forms-core-components.md)
+      + [Lägga till versioner, kommentarer och anteckningar i ett adaptivt formulär](/help/forms/using/add-versioning-reviews-comments.md)
+      + [Jämför adaptiv Forms](/help/forms/using/compare-forms-core-components.md)
    + Adaptiv Forms - grundläggande redigering {#adaptive-forms-basic-authoring}
       + [Bästa tillvägagångssätt för arbete med anpassningsbara formulär](/help/forms/using/adaptive-forms-best-practices.md)
       + [Skapa ett anpassat formulär](/help/forms/using/creating-adaptive-form.md)
@@ -631,6 +633,8 @@ ht-degree: 1%
       + [Anpassningsbara formulärfragment](/help/forms/using/adaptive-form-fragments.md)
       + [Konfigurera åtgärden Skicka](/help/forms/using/configuring-submit-actions.md)
       + [Använda CAPTCHA i anpassningsbara formulär](/help/forms/using/captcha-adaptive-forms.md)
+      + [Använda Captcha i anpassningsbara formulär](/help/forms/using/integrate-adaptive-forms-hcaptcha.md)
+      + [Använda Turnstile Captcha i adaptiva former](/help/forms/using/integrate-adaptive-forms-turnstile.md)
       + [Nyckelord för adaptiva formulär](/help/forms/using/adaptive-forms-keywords.md)
       + [Tabeller i anpassningsbara former](/help/forms/using/adaptive-forms-tables.md)
       + [Diagram i anpassningsbara former](/help/forms/using/adaptive-form-charts.md)

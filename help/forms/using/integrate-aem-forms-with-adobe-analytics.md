@@ -6,9 +6,9 @@ exl-id: 030fe9f2-cd41-4290-b8a6-2f9ade6b5789
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 38e3439b5b9f3b4bc56bb1618d33e570ca0603f5
 workflow-type: tm+mt
-source-wordcount: '1561'
+source-wordcount: '1609'
 ht-degree: 0%
 
 ---
@@ -220,6 +220,11 @@ Så här skapar du en konfiguration för Adobe Launch:
 1. Välj **[!UICONTROL Save & Close]**.
 
 1. Publish konfigurationen.
+
+>[!NOTE]
+>
+> När du [bäddar in AEM Forms på en AEM Sites-sida](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-basic-authoring/embed-adaptive-form-aem-sites) stöds inte Adobe Launch-konfigurationer i en iFrame för adaptiva formulär. Du löser detta genom att konfigurera Adobe Launch-regler direkt på sidan Sites eller migrera befintliga Adobe Launch-konfigurationer från AEM Forms till sidan Sites.
+
 
 ### Aktivera [!DNL Adobe Analytics] för ett anpassat formulär {#enable-analytics-adaptive-form}
 

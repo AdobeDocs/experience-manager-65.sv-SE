@@ -9,9 +9,9 @@ role: Developer
 exl-id: 966c3554-25df-4467-866e-11c43cc15b58
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Services,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 4df88fc37b86b6ff3b3a9b788c91b61e2aa7b07f
 workflow-type: tm+mt
-source-wordcount: '2331'
+source-wordcount: '2347'
 ht-degree: 0%
 
 ---
@@ -36,6 +36,8 @@ Du kan använda tjänsten DocConverter för att konvertera ett PDF-dokument till
 Specifikationen PDF/A-1 består av två överensstämmelsenivåer, nämligen A och B. Den största skillnaden mellan de två är stöd för logisk struktur (hjälpmedel), som inte krävs för överensstämmelsenivå B. Oavsett överensstämmelsenivå anger PDF/A-1 att alla teckensnitt är inbäddade i det genererade PDF/A-dokumentet. För närvarande stöds endast PDF/A-1b vid validering (och konvertering).
 
 PDF/A är standard för arkivering av PDF-dokument, men det är inte obligatoriskt att använda PDF/A för arkivering om ett standarddokument från PDF uppfyller företagets krav. Syftet med standarden PDF/A är att upprätta en PDF fil som är avsedd för långtidsarkivering och dokumentarkivering.
+
+De kompatibilitetsstandarder för PDF/A som stöds är PDF/A-1a, 1b, 2a, 2b, 3a och 3b.
 
 >[!NOTE]
 >
