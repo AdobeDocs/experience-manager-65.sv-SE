@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 3fa791c50b79a5d8f68dcc8414e14b59ca831d61
+source-git-commit: 27283286bd514c6f8902297cd9229b5e92a3c60d
 workflow-type: tm+mt
-source-wordcount: '6059'
+source-wordcount: '6078'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Bland huvudfunktionerna och förbättringarna i den här versionen finns följan
 
 * [Kompatibilitetsförbättringar för PDF/A](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdfa-documents-converting-documents-to-pdf-a-documents): Nu kan användare konvertera PDF till PDF/A-format (1a, 2a, 3a) för arkiveringsändamål, samtidigt som de säkerställer tillgänglighet och verifierar överensstämmelse med dessa standarder.
 
-* **Stöd för automatisk storlek av teckensnitt för statiska PDF-dokument**: AEM Forms Designer har nu stöd för funktioner för automatisk storlek i XDP-filer. Nu kan användare ange automatisk storlek för textfält, numeriska fält, lösenordsfält och datum/tid-fält i XDP-filer för att återge textfältets innehåll utan att trunkera dessa fält i statiska PDF-dokument.
+* **Stöd för automatisk storleksändring av teckensnitt för statiska PDF-dokument**: AEM Forms Designer, OutputService och FormsService har nu stöd för automatisk storleksändring av teckensnitt för statiska PDF. Om användaren anger teckensnittsstorleken 0 i mallen för fält som textfält, numeriskt fält, lösenordsfält eller datumtidsfält justeras teckensnittsstorleken automatiskt i dessa fält utan att fältets storlek ändras. Användarna skickar en flagga i den anpassade xci: `<behaviorOverride>patch-LC-3921991:1</behaviorOverride>` för att använda funktionen.
 
 <!-- * _6.5.21.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
@@ -223,7 +223,7 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 
 -->
 
-#### Forms {#forms-bug-fixes-sp22}
+### Forms {#forms-bug-fixes-sp22}
 
 * De URL:er som genereras för bifogade filer i sparade utkast i AEM Forms återspeglar inte de konfigurerade mappningarna för Apache Sling Resource Resolver Factory. (FORMS-16949)
 * När en användare av AEM Forms Service Pack 19 (6.5.19.0) förhandsgranskar en bokstav justeras inte innehållet korrekt eftersom blanksteg saknas och tecknet x visas på vissa platser. (FORMS-1670)
