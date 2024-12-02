@@ -1,5 +1,5 @@
 ---
-title: "[!DNL Assets] - startsida"
+title: '[!DNL Assets] - startsida'
 description: Anpassa  [!DNL Experience Manager Assets] hemsidan för en rik välkomstskärm, inklusive en ögonblicksbild av nyligen gjorda aktiviteter runt resurser.
 contentOwner: AG
 feature: Asset Management

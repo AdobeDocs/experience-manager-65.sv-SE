@@ -1,5 +1,5 @@
 ---
-title: 'Självstudiekurs: Skapa ett adaptivt formulär'
+title: 'Självstudiekurs: Skapa ett anpassat formulär'
 description: Lär dig skapa, layouta och förhandsgranska ett anpassat formulär. Lär dig även att konfigurera skicka-åtgärder.
 feature: Adaptive Forms
 exl-id: c0a2adcd-528a-41af-99b5-d8b423cd6605

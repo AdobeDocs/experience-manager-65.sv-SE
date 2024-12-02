@@ -1,5 +1,5 @@
 ---
-title: "Återanvända innehåll: Multi Site Manager och Live Copy"
+title: 'Återanvända innehåll: Multi Site Manager och Live Copy'
 description: Lär dig hur du återanvänder innehåll med Live-kopior och Multi Site Manager.
 contentOwner: AEM Docs
 products: SG_EXPERIENCEMANAGER/6.5/SITES

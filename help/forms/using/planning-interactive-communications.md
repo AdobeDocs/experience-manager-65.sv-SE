@@ -1,5 +1,5 @@
 ---
-title: "Självstudie: Planera interaktiv kommunikation"
+title: 'Självstudiekurs: Planera interaktiv kommunikation'
 description: Planera anatomin för interaktiv kommunikation
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS

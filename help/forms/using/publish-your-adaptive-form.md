@@ -1,5 +1,5 @@
 ---
-title: "Självstudiekurs: Publish ditt adaptiva formulär"
+title: 'Självstudiekurs: Publish ditt adaptiva formulär'
 description: Publish det adaptiva formuläret som en AEM, bädda in formuläret på en AEM Sites-sida eller bädda in det i en extern webbsida
 contentOwner: khsingh
 topic-tags: introduction

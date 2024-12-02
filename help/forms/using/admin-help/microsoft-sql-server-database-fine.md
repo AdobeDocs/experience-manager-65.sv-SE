@@ -1,5 +1,5 @@
 ---
-title: "Microsoft SQL Server-databas: finjustera konfigurationen"
+title: 'Microsoft SQL Server-databas: finjusterar konfigurationen'
 description: Lär dig hur du kan finjustera konfigurationen av din Microsoft SQL Server-databas.
 contentOwner: admin
 content-type: reference

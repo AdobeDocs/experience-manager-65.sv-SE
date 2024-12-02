@@ -1,5 +1,5 @@
 ---
-title: "Självstudiekurs: Skapa ditt första adaptiva formulär"
+title: 'Självstudiekurs: Skapa ditt första anpassningsbara formulär'
 description: Lär dig skapa interaktiva och responsiva blanketter i affärsklass.
 topic-tags: introduction
 docset: aem65

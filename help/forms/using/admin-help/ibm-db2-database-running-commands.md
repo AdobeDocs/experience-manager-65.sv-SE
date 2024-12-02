@@ -1,5 +1,5 @@
 ---
-title: "IBM DB2-databas: Kör kommandon för regelbundet underhåll"
+title: 'IBM DB2-databas: Kör kommandon för regelbundet underhåll'
 description: I det här dokumentet visas IBM DB2-kommandon som rekommenderas för regelbundet underhåll av AEM formulärdatabas.
 contentOwner: admin
 content-type: reference

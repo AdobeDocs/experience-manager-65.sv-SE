@@ -1,6 +1,6 @@
 ---
 title: Allmän versionsinformation för  [!DNL Adobe Experience Manager] 6.5
-description: "[!DNL Adobe Experience Manager] 6.5 innehåller information om versionsinformation, nyheter, hur du installerar och detaljerade ändringslistor."
+description: I [!DNL Adobe Experience Manager] 6.5 beskrivs versionsinformation, nyheter, hur du installerar och detaljerade ändringslistor.
 exl-id: b3d4a527-44ca-4eb6-b393-f3e8117cf1a6
 solution: Experience Manager
 feature: Release Information

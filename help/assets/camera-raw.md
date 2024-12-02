@@ -1,5 +1,5 @@
 ---
-title: "[!DNL Adobe Camera Raw]-stöd för bearbetning av digitala resurser"
+title: '[!DNL Adobe Camera Raw]-stöd för bearbetning av digitala resurser'
 description: Lär dig hur du aktiverar  [!DNL Adobe Camera Raw] stöd i [!DNL Adobe Experience Manager Assets]
 contentOwner: AG
 role: Admin

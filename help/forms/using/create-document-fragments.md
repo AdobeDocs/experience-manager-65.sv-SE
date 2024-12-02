@@ -1,5 +1,5 @@
 ---
-title: "Självstudiekurs: Skapa dokumentfragment"
+title: 'Självstudie: Skapa dokumentfragment'
 description: Skapa dokumentfragment för interaktiv kommunikation
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS

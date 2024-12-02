@@ -1,6 +1,6 @@
 ---
 title: Mobilappar
-description: "Mobilappar"
+description: Mobilappar
 contentOwner: msm-service
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/MOBILE

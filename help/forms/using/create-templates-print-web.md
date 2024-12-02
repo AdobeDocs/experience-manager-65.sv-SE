@@ -1,5 +1,5 @@
 ---
-title: "Självstudiekurs: Skapa mallar"
+title: 'Självstudiekurs: Skapa mallar'
 description: Skapa utskrifts- och webbmallar för interaktiv kommunikation
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS

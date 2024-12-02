@@ -1,5 +1,5 @@
 ---
-title: "[!DNL Assets] storleksguide"
+title: Storleksstödlinje för [!DNL Assets]
 description: Bästa tillvägagångssätt för att fastställa effektiva mått för att uppskatta infrastrukturen och resurserna som krävs för att distribuera  [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
 role: Architect, Admin

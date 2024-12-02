@@ -1,5 +1,5 @@
 ---
-title: "Självstudiekurs: Skapa interaktiv kommunikation"
+title: 'Självstudiekurs: Skapa interaktiv kommunikation '
 description: Skapa en interaktiv kommunikation med alla byggstenar
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS

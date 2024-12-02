@@ -1,5 +1,5 @@
 ---
-title: "Självstudie: Skapa formulärdatamodell i AEM Forms"
+title: 'Självstudie: Skapa formulärdatamodell i AEM Forms'
 description: Skapa formulärdatamodell för interaktiv kommunikation
 contentOwner: anujkapo
 products: SG_EXPERIENCEMANAGER/6.5/FORMS

@@ -1,5 +1,5 @@
 ---
-title: "Självstudiekurs: Skapa formulärdatamodell "
+title: 'Självstudiekurs: Skapa formulärdatamodell '
 description: Lär dig hur du konfigurerar MySQL som datakälla, skapar en formulärdatamodell (FDM), konfigurerar den och testar för AEM Forms.
 contentOwner: khsingh
 products: SG_EXPERIENCEMANAGER/6.3/FORMS
@@ -76,7 +76,7 @@ Gör följande för att konfigurera din [!DNL MySQL]-databas:
 
       >[!NOTE]
       >
-      > När databasen [!DNL MySQL] ligger bakom en brandvägg är databasvärdnamnet inte en publik DNS. Databasens IP-adress måste läggas till i *filen /etc/hosts* på AEM.
+      > När databasen [!DNL MySQL] ligger bakom en brandvägg är databasvärdnamnet inte en publik DNS. IP-adressen för databasen måste läggas till i *filen /etc/hosts* på den AEM värddatorn.
 
       * **Användarnamn:** Databasens användarnamn. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
       * **Lösenord:** Lösenord för databasen. Det krävs för att JDBC-drivrutinen ska kunna upprätta en anslutning till databasen.
@@ -100,7 +100,7 @@ Gör följande för att konfigurera din [!DNL MySQL]-databas:
 
 AEM [!DNL Forms] har ett intuitivt användargränssnitt för att [skapa en formulärdatamodell](data-integration.md) från konfigurerade datakällor. Du kan använda flera datakällor i en formulärdatamodell. I det här användningsfallet kan du använda den konfigurerade [!DNL MySQL] datakällan.
 
-Gör så här för att skapa en formulärdatamodell:
+Gör följande för att skapa en formulärdatamodell:
 
 1. I AEM författarinstans går du till **[!UICONTROL Forms]** > **[!UICONTROL Data Integrations]**.
 1. Välj **[!UICONTROL Create]** > **[!UICONTROL Form Data Model]**.
@@ -189,7 +189,7 @@ Gör följande för att konfigurera formulärdatamodellen:
       * **Returmatris**: Inaktivera alternativet **Retur-matris**.
       * **Argument**: Välj argument med namnet **ID.**
 
-      Välj **[!UICONTROL Done]**. Tjänsten för att hämta kundinformation från MySQL-databasen är konfigurerad.
+      Välj **[!UICONTROL Done]**. Tjänsten för att hämta kundinformation från MySQL-databasen har konfigurerats.
 
       ![shiiping-address-retrieval](assets/shiiping-address-retrieval.png)
 

@@ -1,5 +1,5 @@
 ---
-title: "DB2&reg; database: Kör en process varje vecka"
+title: 'DB2&reg; databas: Kör en process varje vecka'
 description: Lär dig hur du kan förbättra prestandan i din AEM Forms DB2&reg;-databas.
 contentOwner: admin
 content-type: reference
