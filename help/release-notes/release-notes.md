@@ -5,9 +5,10 @@ mini-toc-levels: 4
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 36238364383c380269812641acc66e452e2362ba
+exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
+source-git-commit: 167d897cc5f44a2302a4ba932e238e6ba973635d
 workflow-type: tm+mt
-source-wordcount: '6078'
+source-wordcount: '6019'
 ht-degree: 0%
 
 ---
@@ -42,23 +43,23 @@ ht-degree: 0%
 
 Bland huvudfunktionerna och förbättringarna i den här versionen finns följande:
 
-* [hCaptcha](/help/forms/using/integrate-adaptive-forms-hcaptcha.md) och [Cloudfare Turnstile Captcha-tjänster](/help/forms/using/integrate-adaptive-forms-turnstile.md): AEM Forms stöder följande Captcha-tjänster:
+* [hCaptcha](/help/forms/using/integrate-adaptive-forms-hcaptcha.md) och [Cloudflare Turnstile CAPTCHA-tjänster](/help/forms/using/integrate-adaptive-forms-turnstile.md): AEM Forms stöder följande Captcha-tjänster:
    * Captcha skyddar formulär från stötar, skräppost och automatiskt missbruk genom att utmana användare med en kryssrutewidget. Det säkerställer att endast mänskliga användare går vidare och förbättrar säkerheten vid onlinetransaktioner.
    * Cloudflare Turnstile erbjuder en säkerhetsåtgärd som syftar till att skydda formulär från automatiserade robotar, skadliga attacker, skräppost och oönskad automatiserad trafik. Den visar en kryssruta när formuläret skickas in för att verifiera att det är humant, innan det går att skicka in formuläret.
 
 * Versionshantering för adaptiva formulär:
-   * [Skapa flera versioner av ett adaptivt formulär](/help/forms/using/add-versioning-reviews-comments.md): Nu kan användare enkelt hantera varianter av befintliga formulär. Detta förenklar versionskontrollen och underlättar jämförelse för formuläroptimering, allt i ett enda smidigt arbetsflöde.
+   * [Skapa flera versioner av ett adaptivt formulär](/help/forms/using/add-versioning-reviews-comments.md) - Nu kan användare enkelt hantera varianter av befintliga formulär. Denna process förenklar versionskontrollen och underlättar jämförelse för formuläroptimering, allt i ett enda smidigt arbetsflöde.
    * [Jämför adaptiv Forms](/help/forms/using/compare-forms-core-components.md): Nu kan användare enkelt jämföra två formulär för att identifiera skillnader. Det underlättar smidigt samarbete genom att teammedlemmarna kan jämföra revisioner och diskutera ändringar effektivt.
 
-* Stöd har lagts till för att aktivera teckensnittsinbäddning i [API:er för Interactive Communications Batch](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel): Interactive Communications har nu stöd för inbäddning av Adobe Ming- och Adobe Myungjo-teckensnitt i PDF som genererats via batch-API:n. Den här förbättringen säkerställer korrekt textåtergivning i genererade dokument, även när deluppsättningar av teckensnitt används, vilket ger bättre stöd för flerspråkigt innehåll i utdata från PDF.
+* Stöd har lagts till för att aktivera teckensnittsinbäddning i [API:er för Interactive Communications Batch](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel) - Interactive Communications har nu stöd för inbäddning av Adobe Ming- och Adobe Myungjo-teckensnitt i PDF som genererats via batch-API:n. Den här förbättringen säkerställer korrekt textåtergivning i genererade dokument, även när deluppsättningar av teckensnitt används, vilket ger bättre stöd för flerspråkigt innehåll i utdata från PDF.
 
-* [Innehållsförtecknings-API för hjälpmedel för PDF](/help/forms/using/aem-document-services-programmatically.md#auto-tag-pdf-documents-auto-tag-api): AEM Forms på OSGi har nu stöd för det nya TOC-taggens API för att förbättra PDF för tillgänglighetsstandarder. Det gör PDF mer tillgängligt för användare med hjälpmedel.
+* [Innehållsförtecknings-API för hjälpmedel för PDF](/help/forms/using/aem-document-services-programmatically.md#auto-tag-pdf-documents-auto-tag-api) - AEM Forms på OSGi har nu stöd för det nya innehållsförtecknings-API:t för att förbättra PDF för tillgänglighetsstandarder. Det gör PDF mer tillgängligt för användare med hjälpmedel.
 
-* [Fragment-XDP-upplösning](/help/forms/using/assembler-service.md#resolve-references-on-crx-repository-resolve-references-on-crx-repository): AEM Forms på OSGi löser nu fragment-XDP:er som refereras i huvud-XDP:er och lagras i AEM CRX-databas.
+* [Fragment-XDP-upplösning](/help/forms/using/assembler-service.md#resolve-references-on-crx-repository-resolve-references-on-crx-repository) - AEM Forms på OSGi löser nu fragment-XDP:er som refereras i primära XDP:er och lagras i AEM CRX-databas.
 
-* [Kompatibilitetsförbättringar för PDF/A](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdfa-documents-converting-documents-to-pdf-a-documents): Nu kan användare konvertera PDF till PDF/A-format (1a, 2a, 3a) för arkiveringsändamål, samtidigt som de säkerställer tillgänglighet och verifierar överensstämmelse med dessa standarder.
+* [Kompatibilitetsförbättringar för PDF/A](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdfa-documents-converting-documents-to-pdf-a-documents) - Nu kan användare konvertera PDF till PDF/A-format (1a, 2a, 3a) för arkiveringsändamål, samtidigt som de säkerställer tillgänglighet och verifierar överensstämmelse med dessa standarder.
 
-* **Stöd för automatisk storleksändring av teckensnitt för statiska PDF-dokument**: AEM Forms Designer, OutputService och FormsService har nu stöd för automatisk storleksändring av teckensnitt för statiska PDF. Om användaren anger teckensnittsstorleken 0 i mallen för fält som textfält, numeriskt fält, lösenordsfält eller datumtidsfält justeras teckensnittsstorleken automatiskt i dessa fält utan att fältets storlek ändras. Användarna skickar en flagga i den anpassade xci: `<behaviorOverride>patch-LC-3921991:1</behaviorOverride>` för att använda funktionen.
+* **Stöd för automatisk storleksändring av teckensnitt för statiska PDF-dokument** - AEM Forms Designer, OutputService och FormsService har nu stöd för automatisk storleksändring av teckensnitt för statiska PDF. Om användaren anger teckenstorleken 0 för text-, numeriska fält, lösenordsfält eller datumtidsfält justeras teckensnittsstorleken automatiskt i dessa fält utan att ändra fältets totala storlek. Användarna skickar en flagga i den anpassade XCI:n `<behaviorOverride>patch-LC-3921991:1</behaviorOverride>` för att använda funktionen.
 
 <!-- * _6.5.21.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
@@ -159,7 +160,7 @@ När du använder innehållsfragment med flerradiga textfältsobjekt, bibehölls
 
 * Experience Fragments sorterar inte efter rubrik som förväntat när du klickar på kolumnrubriken **Title** i listvyn. En snabb flimmer av skärmen visas, men den sorteras inte. (SITES-23706)
 
-* I AEM 6.5.17 påträffades ett fel när en sidkomponent konverterades till ett Experience Fragment med hjälp av funktionen som inte finns i kartongen. Efter konverteringen verkade Experience Fragment tomt under redigeringen, trots att det visades korrekt på sidan där det användes. Problemet uppstod när en felaktig nod skapades: komponentnoden placerades utanför roten/behållarnoden, vilket bröt mot mallens struktur. Du måste flytta komponentnoden manuellt till rätt rot-/behållarnod för att kunna återställa fragmentets redigerbarhet. (SITES-22974)
+* I AEM 6.5.17 påträffades ett fel när en sidkomponent konverterades till ett Experience Fragment med hjälp av funktionen som inte finns i kartongen. Efter konverteringen verkade Experience Fragment tomt under redigeringen, trots att det visades korrekt på sidan där det användes. Problemet uppstod när en felaktig nod skapades: komponentnoden placerades utanför rot-/behållarnoden, vilket bröt mot mallens struktur. Du måste flytta komponentnoden manuellt till rätt rot-/behållarnod för att kunna återställa fragmentets redigerbarhet. (SITES-22974)
 
 * Efter migrering från AEM 6.5.11 till 6.5.20 sparades inte molnkonfigurationer på Experience Fragments korrekt. Även om konfigurationerna verkade ha sparats i `crx/de`, visas de inte när konfigurationskonsolen öppnas igen, vilket tyder på ett problem med beständighet. (SITES-22287)
 
@@ -225,29 +226,29 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
 ### Forms {#forms-bug-fixes-sp22}
 
 * De URL:er som genereras för bifogade filer i sparade utkast i AEM Forms återspeglar inte de konfigurerade mappningarna för Apache Sling Resource Resolver Factory. (FORMS-16949)
-* När en användare av AEM Forms Service Pack 19 (6.5.19.0) förhandsgranskar en bokstav justeras inte innehållet korrekt eftersom blanksteg saknas och tecknet x visas på vissa platser. (FORMS-1670)
+* När en användare av AEM Forms Service Pack 19 (6.5.19.0) förhandsgranskar en bokstav justeras inte innehållet korrekt, eftersom blanksteg verkar saknas och tecknet `x` visas på vissa platser. (FORMS-1670)
 * När en användare använder AEM Forms Service Pack 18 (6.5.18.0) och försöker skriva ut filerna med CIF protokoll misslyckas det med följande fel: (FORMS-16629)
   `ALC-OUT-001-401: Unknown error while printing using CIFS on the Printer: \\\\\\\\NSMVPLUETEST01\\\\TH_Test`.
 * När en användare uppgraderar från AEM Forms Service Pack 17 (6.5.17.0) till AEM Forms Service Pack 20 (6.5.20.0) visas inte ikonen Regelredigerare på nivån Formulärbehållare. (FORMS-16430)
-* När en användare uppgraderar från AEM Forms Service Pack 17 (6.5.17.0) till AEM Forms Service Pack 21 (6.5.21.0) fungerar inte den ändrade URL-sökvägen för sändning av anpassat formulär. (FORMS15894)
+* När en användare uppgraderar från AEM Forms Service Pack 17 (6.5.17.0) till AEM Forms Service Pack 21 (6.5.21.0) fungerar inte den ändrade URL-sökvägen för att skicka anpassningsbara formulär. (FORMS15894)
 * I AEM Forms Service Pack 19 (6.5.19.0) misslyckas AEM Forms 6.5 PDF/A-valideringen för vissa filer med felet `creation date and modification date mismatch with timezone`, medan den fungerar smidigt i Acrobat Pro PDF/A-valideringen för en kompatibilitetskontroll. (FORMS-15840)
 * När en användare tar bort formulärutkast med komponenten &quot;Utkast och överföringar&quot; på en webbplatssida i AEM Forms Service Pack 15 (6.5.15.0) i OSGi misslyckas borttagningen. (FORMS-1575)
 * När en användare har en SharePoint-lista med fler än 999 poster och formuläret innehåller en bifogad fil, misslyckas överföringen av formuläret. (FORMS-15057)
-* När en användare använder två datumväljarkomponenter som är märkta som Startdatum och Slutdatum, efter att ha lagt till en valideringsregel för att säkerställa att slutdatumet inte är tidigare än startdatumet och ställt in ett anpassat skriptvalideringsmeddelande, utlöses inte valideringen om slutdatumet är tidigare än startdatumet. (FORMS-14757)
-* När en användare använder funktionerna för att visa och dölja en tabell i ett anpassat format, krymper fältstorleken. Fältstorleken rättas till när du lägger till och tar bort en rad. (FORMS-14756)
+* En valideringsregel läggs till för att säkerställa att slutdatumet inte är tidigare än startdatumet, tillsammans med ett anpassat skript för valideringsmeddelandet. Valideringen utlöses emellertid inte när slutdatumet är tidigare än startdatumet. (FORMS-14757)
+* När en användare använder funktionerna för att visa/dölja i en tabell i ett adaptivt format krymper fältstorleken. Fältstorleken rättas till när du lägger till och tar bort en rad. (FORMS-14756)
 * När en användare skriver ut formulär i AEM Forms Service Pack 19 (6.5.19.0) återges vissa formulär inte korrekt på servern, vilket orsakar fel under utskriften. (FORMS14734)
-* När användare uppdaterar från AEM Forms Service Pack 15 (6.5.15.0) till AEM Forms Service Pack 19 (6.5.19.0) och använder ett formulär där en viss variabel är inställd som tal och det anpassade visningsmönstret är inställt som num{$zzz,zz9.99}, återges mönstret inte korrekt i förhandsvisnings- och agentgränssnittet. (FORMS-14694)
+* När en användare uppdaterar från AEM Forms Service Pack 15 (6.5.15.0) till Service Pack 19 (6.5.19.0) uppstår ett problem. Ett anpassat visningsmönster inställt på `num{$zzz,zz9.99}` återges inte korrekt i förhandsgransknings- och agentgränssnittet. (FORMS-14694)
 * När en användare förhandsgranskar en bokstav i ett interaktivt dokument med sparad data-xml fastnar bokstaven i tillståndet&quot;Läser in&quot; AEM användargränssnittet. Det går bra att förhandsgranska brevet igen med samma XML. (FORMS-14521)
-* När en användare av AEM Forms Service Pack 20 (6.5.20.0) skickar ett e-postmeddelande med en bifogad fil med en Skicka e-post-åtgärdsknapp i ett anpassat formulär, visas namnet på den bifogade filen på nästa rad i stället för på den inbyggda raden. (FORMS-1426)
+* I AEM Forms Service Pack 20 (6.5.20.0) kan användare skicka e-postmeddelanden med bilagor med knappen &quot;Skicka e-post&quot; i anpassningsbara formulär rapportera ett problem. Namnet på den bifogade filen visas på nästa rad i stället för på raden. (FORMS-1426)
 * När en användare genererar en PDF i AEM Forms med punktlistor inställda på standardformatet Skiva, misslyckas PDF med tillgänglighetskontrollen i Adobe Acrobat hjälpmedelsverktyg. Lista med punkttecken- och fyrkantsformat godkänns vid tillgänglighetskontrollen. (FORMS-13802, LC-3922179)
-* När en användare uppgraderar från AEMForms-6.5.0-0065 till AEMForms-6.5.0-0087 i den fristående konfigurationen av RHEL8 JBoss kan den inte ansluta till LiveCyclets tjänstbehållare. (FORMS-15907) ・
-* När en användare väljer ett tidigare skickat formulär och startar en ny formulärprocess i AEM Forms på JEE, i AEM Workspace rensas alla data som tidigare skickats ut och ersätts med data som fyllts i, utan att några fält som fyllts i manuellt i det föregående formuläret behålls. (FORMS-15376)
+* När en användare uppgraderar från AEMForms-6.5.0-0065 till AEMForms-6.5.0-0087 på en fristående konfiguration av RHEL8 JBoss® kan den inte ansluta till LiveCyclets tjänstbehållare. (FORMS-15907) *
+* I AEM Forms on JEE, i AEM Workspace, uppstår ett problem om du väljer ett tidigare skickat formulär för att starta en ny formulärprocess. Forms med förifyllda data skriver över alla tidigare inskickade data och tar bort manuellt ifyllda fält. (FORMS-15376)
 * På AEM Forms Service Pack 20 (6.5.20.0) när en användare konverterar Tiff-filen till PDF med PDFG-tjänsten misslyckas den med följande fel: (FORMS-14879) ALC-PDG-011-028-Error occurred while converting image file to PDF. com/sun/image/codec/jpeg/JPEGCodec
 * Uppgradera i AEM Forms med JEE jar-filer: Biblioteket `commons-collections:commons-collections:jar` ingår nu för att förbättra beroendeupplösningen och funktionaliteten i olika AEM Forms JEE-jobb som:
    * Förbättrade jobb för att förbättra jobbbearbetning och felhantering.
    * PDF Generator (PDFG) Jobbförbättring för smidigare dokumentgenerering och -konvertering.
    * LC-Upgrade Job enhancement förbättrar uppgraderingsprocessen samtidigt som man säkerställer en stabil övergång mellan versionerna.
-   * Förbättrade Rights Management-jobb för säker dokumenthantering och förbättrade behörighetshanteringsfunktioner.
+   * Förbättrade Rights Management-jobb för säker dokumenthantering och förbättrade Rights Management-funktioner.
    * Förbättrade processhanteringsjobb för tillförlitligare jobbbearbetning och systemhantering.
 
 
@@ -613,8 +614,8 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 * I förhandsgranskningen av gränssnittet för Interactive Communications Agent visas valutasymbolen (till exempel dollartecknet $) inkonsekvent för alla fältvärden. Den visas för värden upp till 999 men saknas för värden över 1 000. (FORMS-1657)
 * Eventuella ändringar av det kapslade layoutfragmentets XDP i en interaktiv kommunikation återspeglas inte i IC-redigeraren. (FORMS-16575)
 * I förhandsgranskningen av gränssnittet för den interaktiva kommunikationsagenten visas vissa beräknade värden inte korrekt. (FORMS-16603)
-* När brevet visas i Förhandsgranska utskrift ändras innehållet. Vissa blanksteg försvinner och vissa bokstäver ersätts med &quot;x&quot;. (FORMS-15681)
-* När en användare konfigurerar en WebLogic 14c-instans misslyckas PDFG-tjänsten i AEM Forms Service Pack 21 (6.5.21.0) på JEE som körs på JBoss på grund av klassinläsarkonflikter i SLF4J-biblioteket. Felet visas enligt följande (CQDOC-22178):
+* När brevet visas i Förhandsgranska utskrift ändras innehållet. Vissa blanksteg försvinner och vissa bokstäver ersätts med `x`. (FORMS-15681)
+* När en användare konfigurerar en WebLogic 14c-instans misslyckas PDFG-tjänsten i AEM Forms Service Pack 21 (6.5.21.0) på JEE som körs på JBoss® på grund av klassloader-konflikter i SLF4J-biblioteket. Felet visas enligt följande (CQDOC-22178):
 
   ```java
   Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"
