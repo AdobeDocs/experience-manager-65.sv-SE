@@ -9,14 +9,16 @@ exl-id: c708936d-7aa7-4b92-be2d-d97008f187d2
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: eac8a82c78d7f209512d32e7fcd7083bbebf1cb5
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '941'
 ht-degree: 0%
 
 ---
 
 # Lägga till domäner {#adding-domains}
+
+Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 ## Lägg till en företagsdomän {#add-an-enterprise-domain}
 
