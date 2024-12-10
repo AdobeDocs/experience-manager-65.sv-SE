@@ -4,9 +4,9 @@ description: Förbättra säkerheten i blanketterna med problemfri hantering. St
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: bed93ce3-89db-477a-8316-7598275e4bca
-source-git-commit: 65425a4a779c6e7adffb1174c0076e03cbc54ac1
+source-git-commit: 4a0e8def5bafd4d90f50bf4b34a537c51e09ce27
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -77,13 +77,13 @@ Så här integrerar du AEM Forms med den färdiga tjänsten:
 1. Välj ett anpassat formulär och klicka på **[!UICONTROL Properties]**. I **[!UICONTROL Configuration Container]** väljer du din molnkonfiguration för Turnstle®.
 1. Klicka på **[!UICONTROL Save & Close]**.
 
-   Om du inte har någon sådan konfigurationsbehållare kan du läsa avsnittet [Anslut din AEM Forms-miljö med Turnstle](#connect-your-forms-environment-with-turnstile-service) för att lära dig hur du skapar en konfigurationsbehållare.
+   Om du inte har någon konfigurationsbehållare för att konfigurera Captcha-tjänsten kan du läsa avsnittet [Konfigurera Tech](#configure-turnstile-steps-to-configure-hcaptcha) för att lära dig hur du skapar en konfigurationsbehållare.
 
    ![Välj konfigurationsbehållare](assets/captcha-properties.png)
 
 1. Välj ett anpassat formulär och klicka på **[!UICONTROL Edit]** för att öppna det anpassade formuläret i redigeraren.
 1. Dra komponenten **[!UICONTROL Captcha]** från komponentwebbläsaren till det adaptiva formuläret.
-1. Markera komponenten **[!UICONTROL Adaptive Form Turnstile]** och klicka på egenskapsikonen ![Egenskaper](assets/configure-icon.svg) . Dialogrutan Egenskaper öppnas. Ange följande egenskaper:
+1. Markera komponenten **[!UICONTROL Captcha]** och klicka på egenskapsikonen ![Egenskaper](assets/configure-icon.svg) . Dialogrutan Egenskaper öppnas. Ange följande egenskaper:
 
    <!--![Turnstile v2](assets/turnstile-settings-v2.png)-->
    ![Molnresa v1](assets/turnstile-setting-v1.png)
@@ -95,7 +95,8 @@ Så här integrerar du AEM Forms med den färdiga tjänsten:
    * **[!UICONTROL Configuration Settings]:** Välj din molnkonfiguration som är konfigurerad för Turnstle®.
      >[!NOTE]
      >Du kan ha flera molnkonfigurationer i din miljö i liknande syfte. Välj tjänsten noggrant. Om ingen tjänst visas läser du [Ansluta AEM Forms-miljön med Turnstile](#connect-your-forms-environment-with-turnstile-service) för att lära dig hur du skapar en Cloud Service som ansluter AEM Forms-miljön till den färdiga tjänsten.
-   * **Felmeddelande:** Ange felmeddelandet som ska visas för användaren när Captcha-överföringen misslyckas.
+
+   * **[!UICONTROL Error Message]:** Ange felmeddelandet som ska visas för användaren när Captcha-överföringen misslyckas.
    * **Captcha-storlek:** Du kan välja visningsstorlek för utmaningsdialogrutan hCaptcha®. Använd alternativet **[!UICONTROL Compact]** om du vill visa en liten storlek och **[!UICONTROL Normal]** om du vill visa en relativt stor hCaptcha®-utmaningsdialogruta.
 
 1. Välj **[!UICONTROL Done]**.

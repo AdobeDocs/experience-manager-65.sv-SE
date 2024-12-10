@@ -3,9 +3,10 @@ title: Hur man använder hCaptcha&reg; i en AEM 6.5 Forms?
 description: Förbättra formulärsäkerheten med Captcha&reg; service utan problem. Stegvisa anvisningar inifrån!
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
-source-git-commit: 65425a4a779c6e7adffb1174c0076e03cbc54ac1
+exl-id: 6aa7a0a5-bd45-4628-abd0-312a9e6cf6fe
+source-git-commit: 96e6705349fc6969ab0c40c8c770c9a0d1967619
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
@@ -75,13 +76,13 @@ Så här integrerar du AEM Forms med tjänsten Captcha®:
 1. I **[!UICONTROL Configuration Container]** väljer du din molnkonfiguration för Captcha®.
 1. Klicka på **[!UICONTROL Save & Close]**.
 
-   Om du inte har någon sådan konfigurationsbehållare kan du läsa avsnittet [Anslut AEM Forms-miljön med hCaptcha®](#connect-your-forms-environment-with-hcaptcha-service) för att få information om hur du skapar en konfigurationsbehållare.
+   Om du inte har någon konfigurationsbehållare för hCaptcha läser du avsnittet [Anslut AEM Forms-miljön med hCaptcha®](#configure-hcaptcha-steps-to-configure-hcaptcha) för att lära dig hur du skapar en konfigurationsbehållare.
 
    ![Välj konfigurationsbehållare](/help/forms/using/assets/captcha-properties.png)
 
 1. Markera ett anpassat formulär och klicka på **[!UICONTROL Edit]** för att öppna formuläret i redigeraren.
 1. Dra komponenten **[!UICONTROL Captcha]** från komponentwebbläsaren till det adaptiva formuläret.
-1. Markera komponenten **[!UICONTROL Adaptive Form hCaptcha®]** och klicka på egenskapsikonen ![Egenskaper](assets/configure-icon.svg) för att öppna egenskapsdialogrutan. Ange följande egenskaper:
+1. Markera komponenten **[!UICONTROL Captcha]** och klicka på egenskapsikonen ![Egenskaper](assets/configure-icon.svg) för att öppna egenskapsdialogrutan. Ange följande egenskaper:
 
    ![hCaptcha® v1](assets/config-hcaptcha-v1-img.png)
 
@@ -91,13 +92,14 @@ Så här integrerar du AEM Forms med tjänsten Captcha®:
    * **[!UICONTROL Configuration Settings]:** Välj din molnkonfiguration som är konfigurerad för hCaptcha®.
      >[!NOTE]
      >Du kan ha flera molnkonfigurationer i din miljö i liknande syfte. Välj tjänsten noggrant. Om ingen tjänst finns med i listan kan du läsa [Koppla din AEM Forms-miljö till hCaptcha®](#connect-your-forms-environment-with-hcaptcha-service) för att lära dig hur du skapar en Cloud Service som ansluter din AEM Forms-miljö till hCaptcha®-tjänsten.
-   * **Felmeddelande:** Ange felmeddelandet som ska visas för användaren när Captcha-överföringen misslyckas.
-   * **Captcha-storlek:** Du kan välja visningsstorlek för utmaningsdialogrutan hCaptcha®. Använd alternativet **[!UICONTROL Compact]** för att visa en liten storlek och alternativet **[!UICONTROL Normal]** för att visa en relativt stor hCaptcha®-utmaningsdialogruta eller **[!UICONTROL Invisible]** för att validera hCaptcha® utan att explicit återge kryssrutewidgeten i användargränssnittet.
+
+   * **[!UICONTROL Error Message]:** Ange felmeddelandet som ska visas för användaren när Captcha-överföringen misslyckas.
+   * **[!UICONTROL Captcha Size]:** Du kan välja visningsstorlek för utmaningsdialogrutan hCaptcha®. Använd alternativet **[!UICONTROL Compact]** för att visa en liten storlek och alternativet **[!UICONTROL Normal]** för att visa en relativt stor hCaptcha®-utmaningsdialogruta eller **[!UICONTROL Invisible]** för att validera hCaptcha® utan att explicit återge kryssrutewidgeten i användargränssnittet.
 
 1. Välj **[!UICONTROL Done]**.
 
 
-Nu är det bara berättigade formulär, där formuläranvändaren kan ta bort utmaningen från tjänsten hCaptcha®, som kan användas för att skicka in formuläret. hCaptcha®
+Nu är det bara berättigade formulär, där formuläranvändaren kan ta bort utmaningen från tjänsten hCaptcha®, som kan användas för att skicka in formuläret.
 
 **hCaptcha® är ett registrerat varumärke som tillhör Intuition Machines, Inc.**
 

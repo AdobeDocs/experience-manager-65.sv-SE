@@ -6,7 +6,7 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 26c1fe9d032729dd8d1737c922c4b2fab55f2d48
+source-git-commit: 9c58545406bc539dbd0c224b3c88365d3851deb8
 workflow-type: tm+mt
 source-wordcount: '6074'
 ht-degree: 0%
@@ -250,7 +250,13 @@ Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on
    * LC-Upgrade Job enhancement förbättrar uppgraderingsprocessen samtidigt som man säkerställer en stabil övergång mellan versionerna.
    * Förbättrade Rights Management-jobb för säker dokumenthantering och förbättrade Rights Management-funktioner.
    * Förbättrade processhanteringsjobb för tillförlitligare jobbbearbetning och systemhantering.
+* Med början från AEM Forms OSGi 6.5.22 kommer Forms-tjänstens renderPDFForm-åtgärd inte att köra skript som bara innehåller klient (runAt=client) på servern. Endast de som är märkta runAt=server eller runAt=båda kommer att köras enligt beskrivningen i tabellen nedan. (FORMS-16564)
 
+  | Skript markerat som runAt | Kördes på servern |
+  |---------------------|-------------------------|
+  | server | ja |
+  | båda | ja |
+  | klient | no |
 
 #### XML FM {#forms-xmlfm-sp22}
 
@@ -615,14 +621,6 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 * Eventuella ändringar av det kapslade layoutfragmentets XDP i en interaktiv kommunikation återspeglas inte i IC-redigeraren. (FORMS-16575)
 * I förhandsgranskningen av gränssnittet för den interaktiva kommunikationsagenten visas vissa beräknade värden inte korrekt. (FORMS-16603)
 * När brevet visas i Förhandsgranska utskrift ändras innehållet. Vissa blanksteg försvinner och vissa bokstäver ersätts med &quot;x&quot;. (FORMS-15681)
-* Med början från AEM Forms OSGi 6.5.22 kommer Forms-tjänstens renderPDFForm-åtgärd inte att köra skript som bara innehåller klient (runAt=client) på servern. Endast de som är märkta runAt=server eller runAt=båda kommer att köras enligt beskrivningen i tabellen nedan. (FORMS-16564)
-
-  | Skript markerat som runAt | Kördes på servern |
-  |---------------------|-------------------------|
-  | server | ja |
-  | båda | ja |
-  | klient | no |
-
 * När en användare konfigurerar en WebLogic 14c-instans misslyckas PDFG-tjänsten i AEM Forms Service Pack 21 (6.5.21.0) på JEE som körs på JBoss på grund av klassinläsarkonflikter i SLF4J-biblioteket. Felet visas enligt följande (CQDOC-22178):
 
   ```java
