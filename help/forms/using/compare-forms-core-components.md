@@ -3,16 +3,18 @@ title: Jämför två distinkta adaptiva former.
 description: Jämför två olika formulär baserade på fält, innehåll och formulärkomponenter.
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
-source-git-commit: a4e155de8a4f60d3746cecea110466b1d5d44dbb
+source-git-commit: 794d93d890ba752f9036a85831f7cbc8391fb545
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '179'
 ht-degree: 0%
 
 ---
 
 # Jämför adaptiv Forms {#compare-two-forms}
 
-<span class="preview"> Den här funktionen är under det tidiga adopterprogrammet. Om du är intresserad av att delta i vårt program för tidig åtkomst för den här funktionen kan du skicka ett e-postmeddelande från din officiella adress till aem-forms-ea@adobe.com och begära åtkomst till </span>
+<!--
+<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
+-->
 
 Jämförelsefunktionen i adaptiva Forms Core Components hjälper formulärförfattare att identifiera skillnader mellan två formulär genom att analysera fält, innehåll och komponenter.
 

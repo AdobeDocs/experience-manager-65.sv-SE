@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 167d897cc5f44a2302a4ba932e238e6ba973635d
+source-git-commit: 26c1fe9d032729dd8d1737c922c4b2fab55f2d48
 workflow-type: tm+mt
-source-wordcount: '6019'
+source-wordcount: '6074'
 ht-degree: 0%
 
 ---
@@ -614,8 +614,16 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 * I förhandsgranskningen av gränssnittet för Interactive Communications Agent visas valutasymbolen (till exempel dollartecknet $) inkonsekvent för alla fältvärden. Den visas för värden upp till 999 men saknas för värden över 1 000. (FORMS-1657)
 * Eventuella ändringar av det kapslade layoutfragmentets XDP i en interaktiv kommunikation återspeglas inte i IC-redigeraren. (FORMS-16575)
 * I förhandsgranskningen av gränssnittet för den interaktiva kommunikationsagenten visas vissa beräknade värden inte korrekt. (FORMS-16603)
-* När brevet visas i Förhandsgranska utskrift ändras innehållet. Vissa blanksteg försvinner och vissa bokstäver ersätts med `x`. (FORMS-15681)
-* När en användare konfigurerar en WebLogic 14c-instans misslyckas PDFG-tjänsten i AEM Forms Service Pack 21 (6.5.21.0) på JEE som körs på JBoss® på grund av klassloader-konflikter i SLF4J-biblioteket. Felet visas enligt följande (CQDOC-22178):
+* När brevet visas i Förhandsgranska utskrift ändras innehållet. Vissa blanksteg försvinner och vissa bokstäver ersätts med &quot;x&quot;. (FORMS-15681)
+* Med början från AEM Forms OSGi 6.5.22 kommer Forms-tjänstens renderPDFForm-åtgärd inte att köra skript som bara innehåller klient (runAt=client) på servern. Endast de som är märkta runAt=server eller runAt=båda kommer att köras enligt beskrivningen i tabellen nedan. (FORMS-16564)
+
+  | Skript markerat som runAt | Kördes på servern |
+  |---------------------|-------------------------|
+  | server | ja |
+  | båda | ja |
+  | klient | no |
+
+* När en användare konfigurerar en WebLogic 14c-instans misslyckas PDFG-tjänsten i AEM Forms Service Pack 21 (6.5.21.0) på JEE som körs på JBoss på grund av klassinläsarkonflikter i SLF4J-biblioteket. Felet visas enligt följande (CQDOC-22178):
 
   ```java
   Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"

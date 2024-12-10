@@ -3,19 +3,17 @@ title: Hur man använder hCaptcha&reg; i en AEM 6.5 Forms?
 description: Förbättra formulärsäkerheten med Captcha&reg; service utan problem. Stegvisa anvisningar inifrån!
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
-exl-id: 6aa7a0a5-bd45-4628-abd0-312a9e6cf6fe
-source-git-commit: 25dfe85048184e34cc3afb5e7b08cc0e2f054a01
+source-git-commit: 65425a4a779c6e7adffb1174c0076e03cbc54ac1
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: '816'
 ht-degree: 0%
 
 ---
 
 # Koppla samman din AEM Forms-miljö med Captcha® {#connect-your-forms-environment-with-hcaptcha-service}
 
-<!--
-<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
--->
+<span class="preview">Den här funktionen är baserad på funktions växlings-ID `FT_FORMS-12407`. Om du vill aktivera funktionen följer du stegen som anges i artikeln [Aktivera växling mellan funktioner](/help/forms/using/enable-feature-toggle.md). </span>
+
 
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
 
@@ -82,7 +80,7 @@ Så här integrerar du AEM Forms med tjänsten Captcha®:
    ![Välj konfigurationsbehållare](/help/forms/using/assets/captcha-properties.png)
 
 1. Markera ett anpassat formulär och klicka på **[!UICONTROL Edit]** för att öppna formuläret i redigeraren.
-1. Dra och släpp eller lägg till komponenten **[!UICONTROL Adaptive Form hCaptcha®]** i det adaptiva formuläret från komponentwebbläsaren.
+1. Dra komponenten **[!UICONTROL Captcha]** från komponentwebbläsaren till det adaptiva formuläret.
 1. Markera komponenten **[!UICONTROL Adaptive Form hCaptcha®]** och klicka på egenskapsikonen ![Egenskaper](assets/configure-icon.svg) för att öppna egenskapsdialogrutan. Ange följande egenskaper:
 
    ![hCaptcha® v1](assets/config-hcaptcha-v1-img.png)
