@@ -3,9 +3,10 @@ title: Lägg till versioner, kommentarer och anteckningar i AEM 6.5 adaptive for
 description: Använd AEM 6.5 adaptiva formulärkärnkomponenter för att lägga till kommentarer, anteckningar och versionshantering i ett adaptivt formulär.
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
-source-git-commit: 794d93d890ba752f9036a85831f7cbc8391fb545
+exl-id: 91e6fca2-60ba-45f1-98c3-7b3fb1d762f5
+source-git-commit: 94a9f4087e36bfe5701ad9aafd4e8446ca643ddf
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '598'
 ht-degree: 0%
 
 ---
@@ -13,11 +14,10 @@ ht-degree: 0%
 # Versionshantering, granskning och kommentering i ett adaptivt formulär
 
 <!--
-
 <span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
-
 -->
 
+<span class="preview">Den här funktionen är inte aktiverad som standard. Du kan skriva från din officiella adress till aem-forms-ea@adobe.com för att begära åtkomst till funktionen.</span>
 
 Med de adaptiva kärnkomponenterna kan formulärförfattare lägga till versionshantering, kommentarer och anteckningar i formulär. Dessa funktioner förenklar formulärutvecklingen genom att man kan skapa och hantera flera versioner, samarbeta genom kommentarer och lägga in kommentarer i specifika formuläravsnitt, vilket förbättrar formulärbyggandet.
 

@@ -4,16 +4,20 @@ description: Förbättra säkerheten i blanketterna med problemfri hantering. St
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: bed93ce3-89db-477a-8316-7598275e4bca
-source-git-commit: 4a0e8def5bafd4d90f50bf4b34a537c51e09ce27
+source-git-commit: 94a9f4087e36bfe5701ad9aafd4e8446ca643ddf
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
 
 # Koppla samman din AEM Forms-miljö med Turnstile {#connect-your-forms-environment-with-turnstile-service}
 
-<span class="preview">Den här funktionen är baserad på funktions växlings-ID `FT_FORMS-12407`. Om du vill aktivera funktionen följer du stegen som anges i artikeln [Aktivera växling mellan funktioner](/help/forms/using/enable-feature-toggle.md). </span>
+<!--
+<span class="preview">This feature is based on Feature Toggle id `FT_FORMS-12407`. To enable the feature, follow the steps given in the [Enable Feature Toggle](/help/forms/using/enable-feature-toggle.md) article. </span>
+-->
+
+<span class="preview">Den här funktionen är inte aktiverad som standard. Du kan skriva från din officiella adress till aem-forms-ea@adobe.com för att begära åtkomst till funktionen.</span>
 
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
 
@@ -74,7 +78,7 @@ Så här integrerar du AEM Forms med den färdiga tjänsten:
 
 1. Öppna AEM Forms-miljön.
 1. Gå till **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]**.
-1. Välj ett anpassat formulär och klicka på **[!UICONTROL Properties]**. I **[!UICONTROL Configuration Container]** väljer du din molnkonfiguration för Turnstle®.
+1. Välj ett anpassat formulär och klicka på **[!UICONTROL Properties]**. I **[!UICONTROL Configuration Container]** väljer du den konfigurationsbehållare som innehåller den molnkonfiguration som ansluter AEM Forms till Turnstle.
 1. Klicka på **[!UICONTROL Save & Close]**.
 
    Om du inte har någon konfigurationsbehållare för att konfigurera Captcha-tjänsten kan du läsa avsnittet [Konfigurera Tech](#configure-turnstile-steps-to-configure-hcaptcha) för att lära dig hur du skapar en konfigurationsbehållare.

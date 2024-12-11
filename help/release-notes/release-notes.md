@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 9c58545406bc539dbd0c224b3c88365d3851deb8
+source-git-commit: 64bc2ecbb2b5ef5847af4449562240a7c1ec45e9
 workflow-type: tm+mt
-source-wordcount: '6074'
+source-wordcount: '6135'
 ht-degree: 0%
 
 ---
@@ -43,13 +43,7 @@ ht-degree: 0%
 
 Bland huvudfunktionerna och förbättringarna i den här versionen finns följande:
 
-* [hCaptcha](/help/forms/using/integrate-adaptive-forms-hcaptcha.md) och [Cloudflare Turnstile CAPTCHA-tjänster](/help/forms/using/integrate-adaptive-forms-turnstile.md): AEM Forms stöder följande Captcha-tjänster:
-   * Captcha skyddar formulär från stötar, skräppost och automatiskt missbruk genom att utmana användare med en kryssrutewidget. Det säkerställer att endast mänskliga användare går vidare och förbättrar säkerheten vid onlinetransaktioner.
-   * Cloudflare Turnstile erbjuder en säkerhetsåtgärd som syftar till att skydda formulär från automatiserade robotar, skadliga attacker, skräppost och oönskad automatiserad trafik. Den visar en kryssruta när formuläret skickas in för att verifiera att det är humant, innan det går att skicka in formuläret.
-
-* Versionshantering för adaptiva formulär:
-   * [Skapa flera versioner av ett adaptivt formulär](/help/forms/using/add-versioning-reviews-comments.md) - Nu kan användare enkelt hantera varianter av befintliga formulär. Denna process förenklar versionskontrollen och underlättar jämförelse för formuläroptimering, allt i ett enda smidigt arbetsflöde.
-   * [Jämför adaptiv Forms](/help/forms/using/compare-forms-core-components.md): Nu kan användare enkelt jämföra två formulär för att identifiera skillnader. Det underlättar smidigt samarbete genom att teammedlemmarna kan jämföra revisioner och diskutera ändringar effektivt.
+#### Nya GA-funktioner i AEM Forms {#ga-aem-forms-sp22}
 
 * Stöd har lagts till för att aktivera teckensnittsinbäddning i [API:er för Interactive Communications Batch](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/interactive-communications/create-interactive-communication#output-format-print-channel) - Interactive Communications har nu stöd för inbäddning av Adobe Ming- och Adobe Myungjo-teckensnitt i PDF som genererats via batch-API:n. Den här förbättringen säkerställer korrekt textåtergivning i genererade dokument, även när deluppsättningar av teckensnitt används, vilket ger bättre stöd för flerspråkigt innehåll i utdata från PDF.
 
@@ -60,6 +54,18 @@ Bland huvudfunktionerna och förbättringarna i den här versionen finns följan
 * [Kompatibilitetsförbättringar för PDF/A](/help/forms/developing/pdf-a-documents.md#converting-documents-to-pdfa-documents-converting-documents-to-pdf-a-documents) - Nu kan användare konvertera PDF till PDF/A-format (1a, 2a, 3a) för arkiveringsändamål, samtidigt som de säkerställer tillgänglighet och verifierar överensstämmelse med dessa standarder.
 
 * **Stöd för automatisk storleksändring av teckensnitt för statiska PDF-dokument** - AEM Forms Designer, OutputService och FormsService har nu stöd för automatisk storleksändring av teckensnitt för statiska PDF. Om användaren anger teckenstorleken 0 för text-, numeriska fält, lösenordsfält eller datumtidsfält justeras teckensnittsstorleken automatiskt i dessa fält utan att ändra fältets totala storlek. Användarna skickar en flagga i den anpassade XCI:n `<behaviorOverride>patch-LC-3921991:1</behaviorOverride>` för att använda funktionen.
+
+#### Nya Beta-funktioner i AEM Forms {#beta-aem-forms-sp22}
+
+Betafunktionen ger dig en unik möjlighet att få exklusiv tillgång till de senaste innovationerna och hjälper dig att utveckla dem. Vill du aktivera en betafunktion för dina miljöer? Skicka ett e-postmeddelande från din officiella adress till aem-forms-ea@adobe.com med en lista över funktioner som du är intresserad av.
+
+* [hCaptcha](/help/forms/using/integrate-adaptive-forms-hcaptcha.md) och [Cloudflare Turnstile CAPTCHA-tjänster](/help/forms/using/integrate-adaptive-forms-turnstile.md): AEM Forms stöder följande Captcha-tjänster:
+   * Captcha skyddar formulär från stötar, skräppost och automatiskt missbruk genom att utmana användare med en kryssrutewidget. Det säkerställer att endast mänskliga användare går vidare och förbättrar säkerheten vid onlinetransaktioner.
+   * Cloudflare Turnstile erbjuder en säkerhetsåtgärd som syftar till att skydda formulär från automatiserade robotar, skadliga attacker, skräppost och oönskad automatiserad trafik. Den visar en kryssruta när formuläret skickas in för att verifiera att det är humant, innan det går att skicka in formuläret.
+
+* Versionshantering för adaptiva formulär:
+   * [Skapa flera versioner av ett adaptivt formulär](/help/forms/using/add-versioning-reviews-comments.md) - Nu kan användare enkelt hantera varianter av befintliga formulär. Denna process förenklar versionskontrollen och underlättar jämförelse för formuläroptimering, allt i ett enda smidigt arbetsflöde.
+   * [Jämför adaptiv Forms](/help/forms/using/compare-forms-core-components.md): Nu kan användare enkelt jämföra två formulär för att identifiera skillnader. Det underlättar smidigt samarbete genom att teammedlemmarna kan jämföra revisioner och diskutera ändringar effektivt.
 
 <!-- * _6.5.21.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE?_ -->
 
@@ -621,7 +627,7 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 * Eventuella ändringar av det kapslade layoutfragmentets XDP i en interaktiv kommunikation återspeglas inte i IC-redigeraren. (FORMS-16575)
 * I förhandsgranskningen av gränssnittet för den interaktiva kommunikationsagenten visas vissa beräknade värden inte korrekt. (FORMS-16603)
 * När brevet visas i Förhandsgranska utskrift ändras innehållet. Vissa blanksteg försvinner och vissa bokstäver ersätts med &quot;x&quot;. (FORMS-15681)
-* När en användare konfigurerar en WebLogic 14c-instans misslyckas PDFG-tjänsten i AEM Forms Service Pack 21 (6.5.21.0) på JEE som körs på JBoss på grund av klassinläsarkonflikter i SLF4J-biblioteket. Felet visas enligt följande (CQDOC-22178):
+* När en användare konfigurerar en WebLogic 14c-instans misslyckas PDFG-tjänsten i AEM Forms Service Pack 21 (6.5.21.0) på JEE som körs på JBoss® på grund av klassloader-konflikter i SLF4J-biblioteket. Felet visas enligt följande (CQDOC-22178):
 
   ```java
   Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"

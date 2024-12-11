@@ -4,17 +4,20 @@ description: Förbättra formulärsäkerheten med Captcha&reg; service utan prob
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 exl-id: 6aa7a0a5-bd45-4628-abd0-312a9e6cf6fe
-source-git-commit: 96e6705349fc6969ab0c40c8c770c9a0d1967619
+source-git-commit: 94a9f4087e36bfe5701ad9aafd4e8446ca643ddf
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '822'
 ht-degree: 0%
 
 ---
 
 # Koppla samman din AEM Forms-miljö med Captcha® {#connect-your-forms-environment-with-hcaptcha-service}
 
-<span class="preview">Den här funktionen är baserad på funktions växlings-ID `FT_FORMS-12407`. Om du vill aktivera funktionen följer du stegen som anges i artikeln [Aktivera växling mellan funktioner](/help/forms/using/enable-feature-toggle.md). </span>
+<!--
+<span class="preview">This feature is based on Feature Toggle id `FT_FORMS-12407`. To enable the feature, follow the steps given in the [Enable Feature Toggle](/help/forms/using/enable-feature-toggle.md) article. </span>
+-->
 
+<span class="preview">Den här funktionen är inte aktiverad som standard. Du kan skriva från din officiella adress till aem-forms-ea@adobe.com för att begära åtkomst till funktionen.</span>
 
 CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart) är ett program som ofta används vid onlinetransaktioner för att skilja mellan människor och automatiserade program eller organ. Det utgör en utmaning och utvärderar användarens svar för att avgöra om det är en människa eller en robot som interagerar med webbplatsen. Det förhindrar användaren att fortsätta om testet misslyckas och gör onlinetransaktionerna säkra genom att förhindra att skräppost eller skadliga syften publiceras.
 
@@ -68,12 +71,12 @@ Så här integrerar du AEM Forms med tjänsten Captcha®:
 
    När hCAPTCHA-tjänsten har konfigurerats kan den användas i ditt adaptiva formulär.
 
-## Använd hCaptcha® i en anpassad Forms {#using-hCaptcha-in-aem-6.5}
+## Använd Captcha® i en anpassad form {#using-hCaptcha-in-aem-6.5}
 
 1. Öppna AEM Forms-miljön.
 1. Gå till **[!UICONTROL Forms]** > **[!UICONTROL Forms and Documents]**.
 1. Välj ett anpassat formulär och klicka på **[!UICONTROL Properties]**.
-1. I **[!UICONTROL Configuration Container]** väljer du din molnkonfiguration för Captcha®.
+1. I **[!UICONTROL Configuration Container]** väljer du den konfigurationsbehållare som innehåller den molnkonfiguration som ansluter AEM Forms till Captcha.
 1. Klicka på **[!UICONTROL Save & Close]**.
 
    Om du inte har någon konfigurationsbehållare för hCaptcha läser du avsnittet [Anslut AEM Forms-miljön med hCaptcha®](#configure-hcaptcha-steps-to-configure-hcaptcha) för att lära dig hur du skapar en konfigurationsbehållare.
