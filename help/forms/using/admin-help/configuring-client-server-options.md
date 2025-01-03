@@ -9,14 +9,18 @@ feature: Document Security
 exl-id: fe132f13-5f9a-4c86-a385-0a0026c812e2
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '10266'
+source-wordcount: '10278'
 ht-degree: 0%
 
 ---
 
 # Konfigurera dokumentsäkerhetsservern {#configure-the-document-security-server}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 1. I administrationskonsolen klickar du på Tjänster > dokumentsäkerhet > Konfiguration > Serverkonfiguration.
 1. Konfigurera inställningarna och klicka på OK.
@@ -308,9 +312,9 @@ Du kan aktivera och inaktivera händelsegranskning och ange vilka typer av händ
 
 **Byt princip på dokument:** En användare eller administratör växlar den princip som är kopplad till ett dokument.
 
-**Publish Document As:** Ett nytt dokument vars documentName och license är identiska med ett befintligt dokument är registrerat på servern och dokumenten har ingen överordnad-underordnad relation. Den här händelsen kan utlösas med AEM formulär SDK.
+**Publish Document As:** Ett nytt dokument vars documentName och license är identiska med ett befintligt dokument är registrerat på servern och dokumenten har ingen överordnad-underordnad relation. Den här händelsen kan utlösas med AEM SDK.
 
-**Upprepa dokument:** Ett nytt dokument vars documentName och license är identiska med ett befintligt dokument är registrerat på servern och dokumenten har en överordnad-underordnad relation. Den här händelsen kan utlösas med AEM formulär SDK.
+**Upprepa dokument:** Ett nytt dokument vars documentName och license är identiska med ett befintligt dokument är registrerat på servern och dokumenten har en överordnad-underordnad relation. Den här händelsen kan utlösas med AEM SDK.
 
 **Principhändelser**
 
@@ -366,7 +370,7 @@ Synkroniseringen är klar:** Den här informationen är inte tillgänglig från 
 
 **Synkroniserad klient** Klientprogrammet måste synkronisera information med servern för att tillåta offlineåtkomst.
 
-**Versionsfel:** En version av SDK för AEM formulär som inte är kompatibel med servern försökte ansluta till servern.
+**Versionsmatchningsfel:** En version av SDK för AEM formulär som inte är kompatibel med servern försökte ansluta till servern.
 
 **Katalogsynkroniseringsinformation:** Den här informationen är inte tillgänglig från sidan Händelser. Den aktuella katalogsynkroniseringsinformationen, inklusive det aktuella synkroniseringstillståndet och tidpunkten för den senaste synkroniseringen, visas på sidan Domänhantering. Om du vill få åtkomst till sidan Domänhantering i administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 
@@ -555,7 +559,7 @@ Dokumentsäkerhet genererar automatiskt en registreringsinbjudan via e-post när
 
 E-postmeddelandet innehåller en länk till en registreringssida och information om hur du registrerar dig. När den inbjudna användaren har registrerat sig utfärdar dokumentsäkerheten ett aktiveringsmejl med en länk till en aktiveringssida. När det är aktiverat fortsätter kontot att gälla tills du inaktiverar eller tar bort det.
 
-Om du aktiverar den inbyggda registreringen anger du SMTP-servern, e-postinformation för registrering, åtkomstfunktioner och återställer e-postinformation för lösenord endast en gång. Innan du aktiverar den inbyggda registreringen bör du kontrollera att du har skapat en lokal domän i Användarhantering som har tilldelat rollen&quot;Bjud in användare för dokumentsäkerhet&quot; till lämpliga användare och grupper i organisationen. (Se [Lägg till en lokal domän](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain) och [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).) Om du inte använder inbyggd registrering måste du ha ett eget användarregistreringssystem som skapats med AEM SDK. Mer information finns i hjälpen om utveckling av SPI för AEM formulär i [Programmering med AEM formulär](/help/forms/developing/introducing-java-api-soap-quick.md). Om du inte använder alternativet Inbyggd registrering rekommenderar vi att du konfigurerar ett meddelande i aktiveringsmeddelandet och på klientinloggningsskärmen för att informera användarna om hur de kontaktar administratören för ett nytt lösenord eller för annan information.
+Om du aktiverar den inbyggda registreringen anger du SMTP-servern, e-postinformation för registrering, åtkomstfunktioner och återställer e-postinformation för lösenord endast en gång. Innan du aktiverar den inbyggda registreringen bör du kontrollera att du har skapat en lokal domän i Användarhantering som har tilldelat rollen&quot;Bjud in användare för dokumentsäkerhet&quot; till lämpliga användare och grupper i organisationen. (Se [Lägg till en lokal domän](/help/forms/using/admin-help/adding-domains.md#add-a-local-domain) och [Skapa och konfigurera roller](/help/forms/using/admin-help/creating-configuring-roles.md#creating-and-configuring-roles).) Om du inte använder inbyggd registrering måste du ha ett eget användarregistreringssystem som skapats med de AEM formulären SDK. Mer information finns i hjälpen om utveckling av SPI för AEM formulär i [Programmering med AEM formulär](/help/forms/developing/introducing-java-api-soap-quick.md). Om du inte använder alternativet Inbyggd registrering rekommenderar vi att du konfigurerar ett meddelande i aktiveringsmeddelandet och på klientinloggningsskärmen för att informera användarna om hur de kontaktar administratören för ett nytt lösenord eller för annan information.
 
 **Aktivera och konfigurera registrering av inbjudna användare**
 
@@ -785,7 +789,7 @@ Funktionen för denial of service kräver att klientprogram använder dokuments�
 * Adobe Reader 9.0 och senare
 * Acrobat Reader DC-tillägg för Microsoft Office 8.2 och senare
 
-Klientprogram använder klient-API:t från dokumentsäkerheten C++ Client SDK för att begära tjänster från dokumentsäkerhet. Klient-API-begäranden innehåller plattforms- och SDK-versionsinformation (som kompilerats i klient-API:t) och produktinformation som hämtas från klientprogrammet.
+Klientprogram använder klient-API:t från SDK för dokumentsäkerhet C++ för att begära tjänster från dokumentsäkerhet. Klient-API-begäranden innehåller plattforms- och SDK-versionsinformation (som kompilerats i klient-API:t) och produktinformation som hämtats från klientprogrammet.
 
 Klientprogram eller plugin-program tillhandahåller produktinformation när de implementerar en callback-funktion. Programmet innehåller följande information:
 

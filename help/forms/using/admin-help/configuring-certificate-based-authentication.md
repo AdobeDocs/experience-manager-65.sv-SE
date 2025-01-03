@@ -9,14 +9,18 @@ exl-id: 9cbea8c8-4d42-446b-b98d-c090709624d7
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '730'
 ht-degree: 0%
 
 ---
 
 # Konfigurera certifikatbaserad autentisering {#configuring-certificate-based-authentication}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Användarhantering utför vanligtvis autentisering med ett användarnamn och lösenord. Användarhantering har även stöd för certifikatbaserad autentisering, som du kan använda för att autentisera användare via Acrobat eller för att autentisera användare programmatiskt. Mer information om programmatisk autentisering av användare finns i [Programmering med AEM formulär](https://www.adobe.com/go/learn_aemforms_programming_63).
 
@@ -47,7 +51,7 @@ När du testar ett certifikat överför Hantering av användare certifikaten fö
 1. Klicka på Ny certifikatsmappning och välj det certifikatalias som konfigurerats i Pålitlighetslagerhantering i listan För utfärdare.
 1. Koppla ett av certifikatets attribut till en användares attribut. Du kan till exempel mappa certifikatets vanliga namn till användarens inloggnings-ID.
 
-   Om innehållet i attributet i certifikatet skiljer sig från innehållet i användarens attribut i databasen för användarhantering, kan du använda ett reguljärt Java-uttryck (regex) för att matcha de två attributen. Om de vanliga namnen på certifikaten till exempel är namn som *Alex Pink (Authentication)* och *Alex Pink (Signing)* och det vanliga namnet i användarhanteringsdatabasen är *Alex Pink* använder du en regex för att extrahera den nödvändiga delen av certifikatattributet (i det här exemplet *Alex Pink*). Det reguljära uttryck du anger måste följa Java regex-specifikationen.
+   Om innehållet i attributet i certifikatet skiljer sig från innehållet i användarens attribut i databasen för användarhantering, kan du använda ett reguljärt Java-uttryck (regex) för att matcha de två attributen. Om de vanliga namnen på certifikaten till exempel är namn som *Alex Pink (autentisering)* och *Alex Pink (signering)* och det vanliga namnet i användarhanteringsdatabasen är *Alex Pink* använder du en regex för att extrahera den nödvändiga delen av certifikatattributet (i det här exemplet *Alex Pink* .) Det reguljära uttrycket som du anger måste överensstämma med Java ava regex-specifikation.
 
    Du kan omforma uttrycket genom att ange gruppernas ordning i rutan Egen ordning. Den anpassade ordningen används med metoden `java.util.regex.Matcher.replaceAll()`. Beteendet som visas motsvarar metodens beteende, och indatasträngen (den anpassade ordningen) måste anges därefter.
 

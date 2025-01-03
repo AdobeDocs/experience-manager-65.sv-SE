@@ -9,14 +9,18 @@ exl-id: 734ed463-2441-49fc-bacb-deb40851af42
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '102'
+source-wordcount: '114'
 ht-degree: 0%
 
 ---
 
 # Konfigurera systeminformationstjänsten {#set-up-the-system-information-service}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Systeminformationstjänsten tillhandahåller REST API:er för att hämta information. Om du vill använda systeminformationstjänsten aktiverar du REST-slutpunkten från administrationskonsolen. Gör så här för att aktivera REST-slutpunkten:
 

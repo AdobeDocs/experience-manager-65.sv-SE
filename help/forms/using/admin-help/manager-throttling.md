@@ -9,14 +9,18 @@ exl-id: 1f765de2-1362-4318-9302-c5036e6fa7d6
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1042'
 ht-degree: 0%
 
 ---
 
 # Arbetshanteraren och begränsning{#work-manager-and-throttling}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 AEM (och tidigare versioner) använde JMS-köer för att köra åtgärder asynkront. I AEM har JMS-köer ersatts av Work Manager. Det här dokumentet innehåller bakgrundsinformation om Work Manager och anvisningar om hur du konfigurerar begränsningsalternativ för Work Manager.
 
@@ -34,7 +38,7 @@ Asynkrona åtgärder hanteras på följande sätt:
 
 1. Work Manager tar emot en arbetsuppgift för körning.
 1. Arbetshanteraren lagrar arbetsuppgiften i en databastabell och tilldelar en unik identifierare till arbetsuppgiften. Databasposten innehåller all information som krävs för att köra arbetsposten.
-1. Arbetshanterartrådar hämtar in arbetsobjekt när trådarna blir kostnadsfria. Innan du drar in arbetsobjekten kan trådarna kontrollera om de nödvändiga tjänsterna har startats, om det finns tillräckligt med stackstorlek för att dra in nästa arbetsuppgift och om det finns tillräckligt med processorcykler för att bearbeta arbetsobjektet. Arbetshanteraren utvärderar också attribut för arbetsuppgiften (till exempel prioritet) när körningen schemaläggs.
+1. Arbetshanterartrådar hämtar in arbetsobjekt när trådarna blir kostnadsfria. Innan du lägger in arbetsuppgifter kan trådarna kontrollera om de tjänster som krävs har startats, om det finns tillräckligt med stackstorlek för att dra in nästa arbetsuppgift och om det finns tillräckligt med CPU-cykler för att bearbeta arbetsuppgiften. Arbetshanteraren utvärderar också attribut för arbetsuppgiften (till exempel prioritet) när körningen schemaläggs.
 
 AEM formuläradministratörer kan använda Health Monitor för att kontrollera Work Manager-statistik, t.ex. antalet arbetsobjekt i kön och deras status. Du kan också använda Hälsoövervakning för att pausa, återuppta, försöka igen eller ta bort arbetsobjekt. (Se [Visa statistik för Work Manager](/help/forms/using/admin-help/view-statistics-related-manager.md#view-statistics-related-to-work-manager).)
 

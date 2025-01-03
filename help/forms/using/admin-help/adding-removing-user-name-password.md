@@ -9,14 +9,18 @@ exl-id: 1e2b82d6-ca1f-4421-9a51-ec97fdc315d3
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '125'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
 
 # Lägga till och ta bort användarnamn och lösenord {#adding-and-removing-user-name-and-password-credentials}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 På sidan Hantering av betrodda lagringsplatser kan du lägga till och ta bort användarnamn och lösenord som används av Forms-tjänsten när den tar emot en begäran med SOAP.
 

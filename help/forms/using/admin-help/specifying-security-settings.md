@@ -9,14 +9,18 @@ exl-id: 004b8a2f-66a0-43a4-be56-7e42b703ebb2
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '98'
 ht-degree: 1%
 
 ---
 
 # Ange säkerhetsinställningar {#specifying-security-settings}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Med Forms kan du styra om externa entiteter i XML-indata är lösta. Som standard är de lösta, men du kan ändra det här beteendet för att öka säkerheten i AEM formulärsystem.
 

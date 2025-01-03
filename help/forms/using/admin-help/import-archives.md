@@ -9,14 +9,18 @@ exl-id: 0c15677a-ee17-425e-a261-fb3ae8688eb2
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1450'
 ht-degree: 0%
 
 ---
 
 # Importera och hantera arkiv {#import-and-manage-archives}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Använd fliken Arkiv för att importera och hantera LCA:er som har skapats i Workbench.
 

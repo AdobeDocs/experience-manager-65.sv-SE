@@ -9,9 +9,9 @@ feature: PDF Generator
 exl-id: 1bcb8429-c06e-4bd3-b422-4c512084dd09
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '7403'
+source-wordcount: '7415'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ Utskriftsjobb misslyckas om de har teckensnitt som inte kan bäddas in. Dessa PD
 **Standard:** Skapar PDF-filer som ska skrivas ut på skrivare eller digitala kopiatorer, publiceras på en cd-skiva eller skickas till en klient som publiceringskorrektur. Den här uppsättningen alternativ använder komprimering och nedsampling för att minska filstorleken. Den bäddar också in deluppsättningar av alla teckensnitt som används i filen, konverterar alla färger till sRGB och skriver ut till en medelhög upplösning för att skapa en korrekt återgivning av originaldokumentet. Observera att deluppsättningar av Microsoft Windows-teckensnitt inte bäddas in som standard. Dessa PDF-filer kan öppnas i Acrobat 5 och Acrobat Reader 5.0 eller senare.
 
 ## Lägga till eller redigera PDF-inställningar {#add-or-edit-pdf-settings}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Inställningarna för PDF avgör exakt hur filer konverteras och vilken struktur och vilka funktioner de ger upphov till i PDF. Definiera en ny inställning för PDF eller redigera en inställning som du har skapat tidigare. Du kan inte ändra fördefinierade inställningar, men du kan skapa en inställning som baseras på en befintlig inställning genom att redigera inställningen och spara den under ett nytt namn.
 

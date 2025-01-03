@@ -9,21 +9,25 @@ exl-id: dd302cfb-eae1-4189-aa7b-9f2533ebd164
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
 
 # Konfigurera inställningar för SAML-tjänstleverantör{#configure-saml-service-provider-settings}
 
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
+
 SAML (Security Assertion Markup Language) är ett av de alternativ som du kan välja när du konfigurerar auktorisering för en företagsdomän eller hybriddomän. SAML används främst för att stödja enkel inloggning över flera domäner. När SAML är konfigurerat som din autentiseringsleverantör loggar användare in och autentiserar till AEM formulär via en angiven identitetsleverantör (IDP).
 
 En förklaring av SAML finns i [Security Assertion Markup Language (SAML) V2.0 Technical Overview](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.html).
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Konfiguration > Inställningar för SAML-tjänstleverantör.
-1. Ange ett unikt ID som ska användas som identifierare för implementeringen av AEM formulärleverantör i rutan Tjänstleverantörens enhets-ID. Du anger också detta unika ID när du konfigurerar din IDP (till exempel `um.lc.com`). Du kan också använda den URL som används för att komma åt AEM formulär (till exempel `https://AEMformsserver`).
+1. Ange ett unikt ID som ska användas som identifierare för implementeringen av AEM formulärleverantör i rutan Tjänstleverantörens enhets-ID. Du kan också ange det här unika ID:t när du konfigurerar din IDP (till exempel `um.lc.com`.) Du kan också använda den URL som används för att komma åt AEM formulär (till exempel `https://AEMformsserver`).
 1. Ange bas-URL:en för din Forms-server (till exempel `https://AEMformsserver:8080`) i rutan Tjänstleverantörens bas-URL.
 1. (Valfritt) Gör så här för att aktivera AEM formulär för att skicka signerade autentiseringsbegäranden till IDP:
 

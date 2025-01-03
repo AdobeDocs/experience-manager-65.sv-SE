@@ -9,14 +9,18 @@ exl-id: 33583a12-4f20-4146-baa4-c9854e454bbf
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '3796'
+source-wordcount: '3808'
 ht-degree: 0%
 
 ---
 
 # Konfigurera e-postslutpunkter {#configuring-email-endpoints}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Med e-postslutpunkter kan användare anropa en tjänst genom att skicka ett eller flera dokument (som e-postbilagor) till ett angivet e-postkonto. Inkorgen för e-post fungerar som en samlingspunkt för de bifogade filerna. Tjänsten övervakar inkorgen och bearbetar de bifogade filerna. Resultatet av konverteringen vidarebefordras till den användare som är definierad i slutpunkten.
 

@@ -9,9 +9,9 @@ exl-id: facbeab2-de95-4778-894c-faa771d3391e
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Document Security
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1322'
+source-wordcount: '1334'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,10 @@ AEM formulär Med digitala signaturer kan du använda autentiseringsuppgifter so
 >När du har ändrat HSM-konfigurationen startar du om AEM Forms Server.
 
 ## Skapa ett alias för en HSM-referens när HSM-enheten är online {#create-an-alias-for-an-hsm-credential-when-the-hsm-device-is-online}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 1. I administrationskonsolen klickar du på Inställningar > Pålitlig lagringshantering > HSM-autentiseringsuppgifter och sedan på Lägg till.
 1. I rutan Profilnamn skriver du en sträng som används för att identifiera aliaset. Det här värdet används som en egenskap för vissa åtgärder för digitala signaturer, till exempel åtgärden Signera signaturfält.
@@ -103,4 +107,4 @@ AEM använder en webbtjänstbaserad IPC/RPC-mekanism. Med den här funktionen ka
 Den här mekanismen stöder inte onlineskapande av HSM-profiler eller statuskontroller. Det finns dock två sätt att skapa HSM-profiler och utföra statuskontroller:
 
 * Skapa en AEM formulär klientautentiseringsuppgifter genom att skicka den till signerarens certifikat. Följ stegen i [Konfigurera HSM-stöd för AEM formulär ES med Sun JDK på 64-bitarsplattformen för Windows ](https://kb2.adobe.com/cps/808/cpsid_80835.html). Webbtjänstplatsen skickas som en autentiseringsuppgiftsegenskap. Det finns även stöd för HSM-profiler som skapats offline med antingen certifikatutfärdare eller SHA-1-hex. Om du har uppgraderat till AEM formulär från en tidigare version av AEM formulär gör du klientändringar eftersom inloggningsuppgifterna medförde certifikat och webbtjänstinformation.
-* Webbtjänstens plats anges i administrationskonsolen för signeringstjänsten. (Se [Inställningar för signaturtjänst](/help/forms/using/admin-help/configure-service-settings.md#signature-service-settings).) Här innehöll klienten bara alias för HSM-profilen i förtroendearkivet. Du kan använda det här alternativet utan ändringar från en kund, även om du har uppgraderat till AEM formulär från en tidigare version av AEM formulär. Det här alternativet stöder inte HSM-profiler som använder certifikat SHA-1.
+* Webbtjänstens plats anges i administrationskonsolen för signeringstjänsten. (Se [Inställningar för signaturtjänsten](/help/forms/using/admin-help/configure-service-settings.md#signature-service-settings).) Här medförde klienten bara aliaset för HSM-profilen i förtroendearkivet. Du kan använda det här alternativet utan ändringar från en kund, även om du har uppgraderat till AEM formulär från en tidigare version av AEM formulär. Det här alternativet stöder inte HSM-profiler som använder certifikat SHA-1.

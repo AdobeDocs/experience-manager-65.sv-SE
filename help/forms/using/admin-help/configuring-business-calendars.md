@@ -9,9 +9,9 @@ exl-id: 4282718a-41f1-411a-9cd7-8c470005107d
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1889'
+source-wordcount: '1901'
 ht-degree: 0%
 
 ---
@@ -64,26 +64,28 @@ Om din organisation innehåller olika uppsättningar användare som har olika ic
 
 >[!NOTE]
 >
->Om du inte skapar någon affärskalender används standardkalendern.
+> * Om du inte skapar någon affärskalender används standardkalendern.
+> * Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
+
 
 1. I administrationskonsolen klickar du på Tjänster > Forms-arbetsflöde > Affärskalendrar.
-1. Om du vill lägga till en ny affärskalender klickar du på ![bus_cal_plus](assets/bus_cal_plus.png). Texten *Ny kalender* visas i listrutan. Markera texten och ange ett annat namn för kalendern.
+2. Om du vill lägga till en ny affärskalender klickar du på ![bus_cal_plus](assets/bus_cal_plus.png). Texten *Ny kalender* visas i listrutan. Markera texten och ange ett annat namn för kalendern.
 
    Om du vill redigera en befintlig affärskalender väljer du den i listrutan.
 
-1. Välj veckodagar som inte är arbetsdagar som standard, t.ex. helger.
-1. [Valfritt] Välj Använd arbetstider och ange start- och sluttider för affärsdagarna.
+3. Välj veckodagar som inte är arbetsdagar som standard, t.ex. helger.
+4. [Valfritt] Välj Använd arbetstider och ange start- och sluttider för affärsdagarna.
 
    Om du väljer det här alternativet flyttas en händelse som inträffar före det angivna tidsintervallet till början av tidsintervallet och en händelse som inträffar efter att tidsintervallet har flyttats till starttiden för nästa arbetsdag.
 
    Tänk dig till exempel en situation där en användare tilldelas en uppgift kl. 2:00 på en tisdag, och påminnelsen för den uppgiften är inställd på två arbetsdagar. Utan arbetstider skulle påminnelsen hållas kl. 2.00 på torsdag. Om arbetstiderna är inställda på 08.00 till 17.00, flyttas påminnelsen till 08.00 på torsdag. Om en påminnelsehändelse skapades kl. 18.00 på tisdagen skulle påminnelsen inträffa efter kontorstid på torsdag. Med öppettider inställda på mellan 08.00 och 17.00, skulle påminnelsen ske kl. 08.00 på fredag.
 
-1. Dubbelklicka i kalendern till vänster på andra icke-vardagar, till exempel helger. Du kan inte välja tidigare dagar. De icke-arbetsdagar som du väljer visas i en lista till höger med datumet två gånger på en rad. Välj datumet till vänster för att ange namn eller beskrivning för icke-affärsdagen.
+5. Dubbelklicka i kalendern till vänster på andra icke-vardagar, till exempel helger. Du kan inte välja tidigare dagar. De icke-arbetsdagar som du väljer visas i en lista till höger med datumet två gånger på en rad. Välj datumet till vänster för att ange namn eller beskrivning för icke-affärsdagen.
 
    Om du vill ta bort en icke-arbetsdag från listan klickar du på ![bus_cal_trash](assets/bus_cal_trash.png) bredvid dagen.
 
-1. [Valfritt] Om den här kalendern ska vara standardkalender väljer du Standardkalender. Standardkalendern används när ingen annan kalendermappning finns för användarassocierade händelser eller när ingen affärskalender har angetts för Timer-händelsen eller Wait-tjänsten. Du kan inte ta bort standardkalendern.
-1. När du är klar med att definiera icke-arbetsdagar väljer du Aktiverad kalender och klickar sedan på Spara.
+6. [Valfritt] Om den här kalendern ska vara standardkalender väljer du Standardkalender. Standardkalendern används när ingen annan kalendermappning finns för användarassocierade händelser eller när ingen affärskalender har angetts för Timer-händelsen eller Wait-tjänsten. Du kan inte ta bort standardkalendern.
+7. När du är klar med att definiera icke-arbetsdagar väljer du Aktiverad kalender och klickar sedan på Spara.
 
    Om du uppdaterar en befintlig kalender träder den nya versionen i kraft omedelbart och används för alla beräkningar i affärskalendern, även för uppgifter som redan körs.
 

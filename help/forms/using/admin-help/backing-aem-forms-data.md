@@ -9,9 +9,9 @@ exl-id: 536615a4-ab42-4b72-83b1-fad110b011ee
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1515'
+source-wordcount: '1527'
 ht-degree: 0%
 
 ---
@@ -120,6 +120,10 @@ Du kan använda kommandoradsgränssnittet `LCBackupMode` för att ställa in AEM
    Mer information om kommandoradsgränssnittet till säkerhetskopieringsläget finns i filen Viktigt i katalogen BackupRestoreCommandline.
 
 ### Lämnar säkerhetskopieringslägen {#leaving-backup-modes}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Du kan använda administrationskonsolen eller kommandoradsalternativet om du vill lämna säkerhetskopieringslägena.
 

@@ -9,14 +9,18 @@ exl-id: 34ac5f8b-f209-4f99-ad71-4df6f2c88c1e
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '321'
 ht-degree: 0%
 
 ---
 
 # Redigera och konvertera befintliga domäner{#editing-and-converting-existing-domains}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Du kan ändra inställningarna för befintliga domäner på sidan Domänhantering. Du kan också konvertera en befintlig företagsdomän till en hybriddomän.
 

@@ -9,14 +9,18 @@ exl-id: 01a4faf0-ec6e-475b-9909-c35298e2fcaf
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '86'
+source-wordcount: '98'
 ht-degree: 0%
 
 ---
 
 # Ta bort en domän {#delete-a-domain}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Använd sidan Domänhantering för att markera en befintlig domän som föråldrad.
 

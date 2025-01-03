@@ -9,14 +9,18 @@ exl-id: d2dd381d-a7d2-4fec-a8ba-7ca037fd9dc1
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '2017'
+source-wordcount: '2029'
 ht-degree: 0%
 
 ---
 
 # Filer som ska säkerhetskopieras och återställas {#files-to-back-up-and-recover}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 De program- och datafiler som måste säkerhetskopieras beskrivs mer ingående i följande avsnitt.
 
@@ -131,7 +135,7 @@ Mer information finns i [Säkerhetskopiera och återställ](https://msdn.microso
 
 ### MySQL {#mysql}
 
-Använd MySQLAdmin eller ändra INI-filerna i Windows för att konfigurera MySQL-databasen så att den körs i binärt loggläge. (Se [Binär MySQL-loggning](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html).) Ett verktyg för säkerhetskopiering av MySQL är också tillgängligt från InnoBase. (Se [Innobase Hot Backup](https://www.innodb.com/hot-backup/features.md).)
+Använd MySQLAdmin eller ändra INI-filerna i Windows för att konfigurera MySQL-databasen så att den körs i binärt loggläge. (Se [Binär MySQL-loggning](https://dev.mysql.com/doc/refman/5.1/en/binary-log.html).) Ett verktyg för säkerhetskopiering under drift för MySQL finns också tillgängligt från programmet InnoBase. (Se [Innobase Hot Backup](https://www.innodb.com/hot-backup/features.md).)
 
 >[!NOTE]
 >

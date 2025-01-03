@@ -9,9 +9,9 @@ exl-id: e1519477-b5a8-4947-8597-26b945a3b819
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 1b76b30d8db59e6ad98af1d29f17443442d5378e
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1768'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,8 @@ Sidan Core Configurations i administrationskonsolen innehåller inställningar s
 
 >[!NOTE]
 >
-> Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
+> * Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
+> * Du bör använda kommandot Ctrl + C för att starta om SDK. Om du startar om AEM SDK med alternativa metoder, till exempel att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 
 Mer information om hur du aktiverar läget för säker säkerhetskopiering finns i [Aktivera och inaktivera läget för säker säkerhetskopiering](/help/forms/using/admin-help/enabling-disabling-safe-backup-mode.md#enabling-and-disabling-safe-backup-mode).
 

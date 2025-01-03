@@ -9,14 +9,18 @@ exl-id: a6a10ff0-6f4d-42df-9b4e-f98a53cf1806
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,Workbench
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '10824'
+source-wordcount: '10836'
 ht-degree: 0%
 
 ---
 
 # Konfigurera tjänstinställningar {#configure-service-settings}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Du kan använda sidan Tjänsthantering för att konfigurera inställningar för var och en av de tjänster som ingår i AEM formulär. De tillgängliga inställningarna varierar beroende på vilken tjänst som konfigureras.
 
@@ -38,7 +42,7 @@ Du kan använda sidan Tjänsthantering för att konfigurera inställningar för 
 
 ## Granska inställningar för arbetsflödestjänst {#audit-workflow-service-settings}
 
-Workbench ger möjlighet att spela in processinstanser när de körs under körning och sedan spela upp dem för att observera processens beteende. (Se [Workbench-hjälp](https://www.adobe.com/go/learn_aemforms_workbench_63).) För att spara utrymme i filsystemet i Forms Server kan du begränsa mängden lagrade processinspelningsdata. Du kan konfigurera följande egenskaper för tjänsten Granskningsarbetsflöde ( `AuditWorkflowService`):
+Workbench ger möjlighet att spela in processinstanser när de körs under körning och sedan spela upp dem för att observera processens beteende. (Se [Workbench-hjälpen](https://www.adobe.com/go/learn_aemforms_workbench_63).) Om du vill spara utrymme i filsystemet på Forms Server kan du begränsa mängden lagrade processinspelningsdata. Du kan konfigurera följande egenskaper för tjänsten Granskningsarbetsflöde ( `AuditWorkflowService`):
 
 **maxNumberOfRecordingInstances:** Det maximala antalet inspelningar som lagras. När det högsta antalet lagras tas den äldsta inspelningen bort från filsystemet när en ny inspelning skapas. Den här egenskapen är användbar om du tenderar att skapa många inspelningar och vill ta bort gamla inspelningar automatiskt. Standardvärdet är 50.
 

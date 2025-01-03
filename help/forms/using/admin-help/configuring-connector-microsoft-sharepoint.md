@@ -9,19 +9,24 @@ exl-id: a8be58f1-1961-4bf5-aaad-feb4489fb389
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 feature: Adaptive Forms
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 98cbaaf64c0268be1afe7196a7bbbf5c93f02148
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '214'
 ht-degree: 0%
 
 ---
 
-# Configuring Connector for Microsoft SharePoint {#configuring-connector-for-microsoft-sharepoint}
+
+# Configuring Connector for Microsoft SharePoint
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Koppling för Microsoft SharePoint möjliggör kommunikation mellan AEM och Microsoft SharePoint. Mer bakgrundsinformation finns i &quot;Connectors for ECM&quot; i [Services Reference](https://www.adobe.com/go/learn_aemforms_services_63).
 
 1. I administrationskonsolen klickar du på Tjänster > Koppling för Microsoft SharePoint.
-1. Ange följande inställningar för din SharePoint-server:
+2. Ange följande inställningar för din SharePoint-server:
 
    **Värdnamn för SharePoint-server:** Webbprogrammets värdnamn på SharePoint-servern, i formatet `[hostname]:'port'`.
 
@@ -31,7 +36,7 @@ Koppling för Microsoft SharePoint möjliggör kommunikation mellan AEM och Micr
 
    **Domännamn:** Domän där SharePoint-servern finns.
 
-1. Klicka på Spara.
+3. Klicka på Spara.
 
 ## Konfigurationstjänst för Microsoft SharePoint {#microsoft-sharepoint-configuration-service}
 

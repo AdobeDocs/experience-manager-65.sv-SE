@@ -9,9 +9,9 @@ exl-id: e8015d59-7587-46dc-a672-e0f1108102ad
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -37,10 +37,14 @@ Trust Store kan innehålla fler än en Acrobat Reader DC Extensions-autentiserin
 
 ## Importera autentiseringsuppgifter för Acrobat Reader DC Extensions {#import-a-acrobat-reader-dc-extensions-credential}
 
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
+
 1. I administrationskonsolen klickar du på Inställningar > Lita på arkivhantering > Lokala autentiseringsuppgifter.
 1. Klicka på Importera och välj Acrobat Reader DC Extensions Credential under Pålitlig lagringstyp.
 1. (Valfritt) Om du vill ange att den här autentiseringsuppgiften är standardautentiseringsuppgiften som används med Acrobat Reader DC Extensions väljer du Standard.
-1. Ange en identifierare för autentiseringsuppgifterna i rutan Alias. Den här identifieraren används som visningsnamn för autentiseringsuppgifterna i Acrobat Reader DC Extensions. Det här aliaset används även för att få åtkomst till autentiseringsuppgifter via programmering med AEM formulär SDK.
+1. Ange en identifierare för autentiseringsuppgifterna i rutan Alias. Den här identifieraren används som visningsnamn för autentiseringsuppgifterna i Acrobat Reader DC Extensions. Det här aliaset används även för att få åtkomst till autentiseringsuppgifterna via programmering med hjälp av de AEM formulären SDK.
 
    >[!NOTE]
    >

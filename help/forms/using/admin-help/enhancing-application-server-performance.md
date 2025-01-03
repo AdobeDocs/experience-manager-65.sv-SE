@@ -9,9 +9,9 @@ exl-id: 6e2f3d4c-2ead-45b3-98e7-32cacc7e2985
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1870'
+source-wordcount: '1882'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,10 @@ Ett dokument som är större än den maximala textbundna storleken lagras i det 
 När dokumentinnehållet är infogat (d.v.s. mindre än den maximala infogade storleken) lagras innehållet i databasen som en del av dokumentets serialiseringsnyttolast. Om du ökar den maximala textbundna storleken kan det därför påverka databasstorleken.
 
 **Ändra den maximala textbundna storleken**
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 1. I administrationskonsolen klickar du på Inställningar > Systeminställningar > Konfigurationer.
 1. Ange ett värde i rutan Maximal infogad storlek för standarddokument och klicka på OK.

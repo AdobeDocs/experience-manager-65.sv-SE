@@ -9,9 +9,9 @@ exl-id: 5f4467c1-0f3f-4dc6-9bd5-98259f327295
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,10 @@ När uppgifterna delas kan de utföras av användaren, med åtkomst till kön, m
 >Flex Workspace används inte i AEM.
 
 ### Konfigurera åtkomst till en vald användarkö {#configuring-access-to-a-selected-user-queue}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 1. Logga in på administrationskonsolen med ett administratörskonto.
 1. Välj **Tjänster** > **Forms Workflow** > **Delad kö**.

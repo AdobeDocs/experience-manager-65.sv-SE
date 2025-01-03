@@ -9,9 +9,9 @@ exl-id: 7a64a643-808b-4644-8fd3-0dafe83e8dd9
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '672'
+source-wordcount: '684'
 ht-degree: 0%
 
 ---
@@ -82,13 +82,15 @@ Du kan ändra GDS-platsen i administrationskonsolen när installationen av AEM f
 
 >[!NOTE]
 >
->Migrera data på följande sätt, annars inträffar dataförluster.
+> * Migrera data på följande sätt, annars inträffar dataförluster.
+> * Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
+
 
 1. Logga in på administrationskonsolen och klicka på Inställningar > Systeminställningar > Konfigurationer.
-1. Ange den fullständiga sökvägen till den nya GDS-katalogen i rutan Global Document Storage och klicka sedan på OK.
-1. Stäng programservern omedelbart.
-1. Flytta alla filer från den gamla GDS-katalogen till den nya platsen och behåll den interna katalogstrukturen.
-1. Starta om programservern.
+2. Ange den fullständiga sökvägen till den nya GDS-katalogen i rutan Global Document Storage och klicka sedan på OK.
+3. Stäng programservern omedelbart.
+4. Flytta alla filer från den gamla GDS-katalogen till den nya platsen och behåll den interna katalogstrukturen.
+5. Starta om programservern.
 
 ## Om distributionsfiler {#about-deployment-files}
 

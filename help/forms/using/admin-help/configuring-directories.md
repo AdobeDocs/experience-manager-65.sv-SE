@@ -9,12 +9,13 @@ exl-id: 30edcef2-e8fa-403a-9850-b8dfeeb9ac65
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: e9afc12af78140ae0ec12cc2ee95fc9e175f8d94
 workflow-type: tm+mt
-source-wordcount: '3229'
+source-wordcount: '3241'
 ht-degree: 0%
 
 ---
+
 
 # Konfigurera kataloger {#configuring-directories}
 
@@ -25,6 +26,10 @@ Ange de kataloger som autentiseringsprovidern efterfrågar användarinformation 
 Ange de kataloger som autentiseringsprovidern efterfrågar användarinformation för varje företagsdomän som du konfigurerar. Du kan lägga till en katalog i en befintlig företagsdomän eller i en ny företagsdomän som du lägger till. Du kan konfigurera flera kataloger för en domän. Du kan också konfigurera en domän så att den använder ett anpassat SPI (Service Provider Interface) för synkronisering.
 
 ### Lägg till en katalog {#add-a-directory}
+
+>[!NOTE]
+>
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
 1. Klicka på Ny företagsdomän eller välj en befintlig företagsdomän.

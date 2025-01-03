@@ -9,14 +9,18 @@ exl-id: 0d9eb7fe-28a6-444e-957d-023687158c61
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
 
 # Konfigurera platser för Forms {#configuring-locations-for-forms}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Du kan ange URL, URI och filplatser för attribut som webbroten, platsen för de formulär som ska hämtas, PDF-startfilen som används i PDF-formulärsomformningar och cacheplatsen.
 
@@ -52,7 +56,7 @@ Där `host name` och `port` är servernamnet och portnumret för den server som 
 
 Standardvärdet är en tom sträng.
 
-**Webbrot-URI:** Programmets webbrot. Det här värdet kombineras med parametern sTargetURL (när sTargetURL anges som relativ), som anges med AEM formulär SDK, för att skapa en absolut URL för att komma åt programspecifikt webbinnehåll.
+**Webbrot-URI:** Programmets webbrot. Det här värdet kombineras med parametern sTargetURL (när sTargetURL anges som relativ), som anges via AEM formulär SDK, för att skapa en absolut URL för att komma åt programspecifikt webbinnehåll.
 
 Standardvärdet är en tom sträng.
 

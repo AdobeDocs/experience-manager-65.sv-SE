@@ -9,9 +9,9 @@ exl-id: 1c8ad09b-d44a-4d90-86d5-d4c66cf5c57c
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '671'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,10 @@ Funktionen Frånvarande gör att användare och administratörer kan ange när e
 När du skapar en process kan Workbench-användaren ange om en uppgift kan omdirigeras på grund av inställningar för frånvaro.
 
 ## Visa information om frånvaro för en användare {#view-a-user-s-out-of-office-information}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 1. Klicka på Tjänster > Formulärarbetsflöde > Frånvarande i administrationskonsolen.
 1. I rutan uppe på sidan Frånvarande kan du göra något av följande:

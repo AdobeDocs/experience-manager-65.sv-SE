@@ -9,9 +9,9 @@ feature: PDF Generator,Document Security
 exl-id: be076477-2681-4570-953d-6c44d3c30843
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -23,6 +23,10 @@ Du kan begränsa åtkomsten till PDF-dokument genom att ange lösenord och begr�
 På sidan Skyddsinställningar kan du göra följande:
 
 ## Skapa eller redigera en säkerhetsinställning {#create-or-edit-a-security-setting}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 En *säkerhetsinställning* styr säkerhet och behörigheter för filer som konverteras med den säkerhetsinställningen.
 

@@ -9,12 +9,13 @@ exl-id: cb642289-4137-4ba7-8bde-0e458c8c94fe
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e821be5233fd5f6688507096790d219d25903892
+source-git-commit: 0835dca60d8011ce8660f1e7fdefb2b14ccd6129
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1015'
 ht-degree: 0%
 
 ---
+
 
 # Synkroniserar kataloger {#synchronizing-directories}
 
@@ -50,11 +51,13 @@ Användarhantering utför följande steg när deltakatalogsynkronisering är akt
 
 >[!NOTE]
 >
->Användare och grupper som tagits bort från katalogen tas inte bort från databasen för användarhantering förrän du utför en fullständig katalogsynkronisering.
+> * Användare och grupper som tagits bort från katalogen tas inte bort från databasen för användarhantering förrän du utför en fullständig katalogsynkronisering.
+> * Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
+
 
 1. I administrationskonsolen klickar du på Inställningar > Användarhantering > Domänhantering.
-1. Markera kryssrutan under Deltasynkronisering och klicka på Spara.
-1. Redigera kataloginställningarna för var och en av de företagsdomäner som ska använda funktionen för deltakatalogsynkronisering. På sidorna Användarinställningar och Gruppinställningar letar du reda på inställningen Ändra tidsstämpel och anger `modify TimeStamp` som värde. Mer information om hur du redigerar företagsdomäner finns i [Redigera och konvertera befintliga domäner](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains).
+2. Markera kryssrutan under Deltasynkronisering och klicka på Spara.
+3. Redigera kataloginställningarna för var och en av de företagsdomäner som ska använda funktionen för deltakatalogsynkronisering. På sidorna Användarinställningar och Gruppinställningar letar du reda på inställningen Ändra tidsstämpel och anger `modify TimeStamp` som värde. Mer information om hur du redigerar företagsdomäner finns i [Redigera och konvertera befintliga domäner](/help/forms/using/admin-help/editing-converting-existing-domains.md#editing-and-converting-existing-domains).
 
 ## Aktivera eller inaktivera detaljerad loggning under synkronisering {#enable-or-disable-detailed-logging-during-synchronization}
 

@@ -9,14 +9,18 @@ feature: Document Security
 exl-id: caa31752-a02d-4d20-b7d9-c4aad5d0fae6
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
 workflow-type: tm+mt
-source-wordcount: '921'
+source-wordcount: '933'
 ht-degree: 0%
 
 ---
 
 # Använda webbsidor för dokumentsäkerhet {#using-the-document-security-webpages}
+
+>[!NOTE]
+> 
+> Kontrollera att användaren har administratörsbehörighet för att komma åt administratörskonsolen.
 
 Användare och administratörer använder dokumentsäkerhetswebbsidorna för att skapa och hantera profiler, hantera profilskyddade dokument och övervaka händelser som är kopplade till profilskyddade dokument. Administratörer använder också webbsidorna för att skapa uppsättningar av profiler och utse samordnare för principuppsättningar, konfigurera standardinställningar för dokumentsäkerhet, hantera inbjudna användarregistreringar och konton samt övervaka och hantera server-, princip-, användar- och dokumentrelaterade händelser.
 
