@@ -8,18 +8,16 @@ exl-id: 50785534-5784-4354-b123-5e640b7c0242
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---
 
 # Modeller - översikt{#models-overview}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 Modellhantering innefattar att skapa och hantera modeller för att associera med slutliga dataobjekt. Varje modell innehåller alla egenskaper och fältdefinitioner som behövs för att det ska bli enklare att skapa och återge objekt.
 

@@ -9,18 +9,16 @@ exl-id: 8bcf70ef-94d2-4958-90b5-bc375b360916
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1218'
+source-wordcount: '1197'
 ht-degree: 1%
 
 ---
 
 # Hantera apppanel{#manage-app-tile}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 På panelen **`Manage App`** på appkontrollpanelen kan du redigera information om programmet. Om du vill öppna informationssidan klickar du på informationslänken för **`Manage App`**. På sidan **`Manage App`** kan du redigera inställningarna för PhoneGap Application Configuration (config.xml) och förbereda programmet för att skickas till de olika programbutikerna.
 

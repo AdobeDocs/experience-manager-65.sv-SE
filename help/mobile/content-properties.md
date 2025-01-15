@@ -9,18 +9,16 @@ exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '333'
 ht-degree: 1%
 
 ---
 
 # Innehållsegenskaper och noder {#content-properties-and-nodes}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 Artiklar, banners och samlingar representeras som cq:Pages in AEM.
 

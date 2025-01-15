@@ -9,18 +9,16 @@ exl-id: be093025-b19f-4499-a7b5-aae5ab74f966
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '604'
 ht-degree: 0%
 
 ---
 
 # Skapa ett AEM Mobile-program med guiden Skapa{#creating-a-new-aem-mobile-app-using-create-wizard}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 AEM Mobile-programmen bygger på en plan som definierar en sidstruktur och egenskaper. Du kan konfigurera följande programegenskaper:
 
@@ -33,7 +31,7 @@ AEM Mobile-programmen bygger på en plan som definierar en sidstruktur och egens
 
 Du kan också tillhandahålla en bildfil som du kan använda som programminiatyrbild, välja vilken PhoneGap Build-konfiguration som ska användas och välja vilken mobilappsanalyskonfiguration som ska användas. Den här bilden används bara som miniatyrbild för att representera ditt mobilprogram i mobilappskonsolen i Experience Manager.
 
-Det finns ytterligare (och valfria) flikar för att bygga molntjänster och integrera plugin-programmet Adobe Mobile Services SDK i appen.
+Det finns ytterligare flikar (och valfria) för att bygga molntjänster och integrera SDK-pluginmodulen för Adobe Mobile Services i appen.
 
 * Bygg: Klicka på Hantera konfigurationer och konfigurera build.phonegap.com här. I listrutan kan du sedan välja den nya molntjänsten PhoneGap build.
 * Analys: Klicka på Hantera konfigurationer och konfigurera molntjänsten [Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html). I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.

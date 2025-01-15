@@ -10,18 +10,16 @@ exl-id: 309d256b-c67c-4df9-8851-b1ee3faa55ed
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '204'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
 
 # Mobil webb{#mobile-web}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 AEM innehåller flera verktyg som gör att du kan utveckla webbplatser för mobila enheter och integrera ditt innehåll i mobilprogram.
 

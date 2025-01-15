@@ -8,18 +8,16 @@ exl-id: ab4f1c61-be83-420e-a339-02cf1f33efed
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '2605'
+source-wordcount: '2584'
 ht-degree: 0%
 
 ---
 
 # The Anatomy of an App{#the-anatomy-of-an-app}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 ## Sidmallar för mobilappar {#page-templates-for-mobile-apps}
 

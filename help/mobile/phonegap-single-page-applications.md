@@ -9,18 +9,16 @@ exl-id: daf7bf39-a105-46eb-ab7b-1c59484949e2
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '930'
 ht-degree: 0%
 
 ---
 
 # Enkelsidiga program{#single-page-applications}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 [Single-Page-program](https://en.wikipedia.org/wiki/Single-page_application) (SPA) har nått en kritisk massa, som allmänt anses vara det mest effektiva mönstret för att skapa sömlösa upplevelser med webbteknik. Genom att följa ett SPA mönster kan du skapa ett program som fungerar likadant som ett skrivbordsprogram eller mobilprogram, men som når en mängd olika enhetsplattformar och formfaktorer på grund av dess grund i öppna webbstandarder.
 

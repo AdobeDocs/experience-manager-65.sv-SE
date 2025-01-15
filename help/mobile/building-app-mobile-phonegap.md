@@ -9,18 +9,16 @@ exl-id: 7c2e5ed8-9f8e-4a81-b736-589ef4089f29
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
 
 # Bygger mobilprogram{#building-mobile-applications}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 Bygg applikationen för installation på en enhet eller simulator för testning eller publicering i appbutiker. Du kan skapa program lokalt med PhoneGap Command Line Interface eller i molnet med PhoneGap Build.
 
@@ -84,7 +82,7 @@ Om du vill bygga med PhoneGap CLI måste du installera Node.js och PhoneGap-klie
    └── cordova@3.3.0-0.1.1 (...)
    ```
 
-1. (Valfritt) Skaffa SDK för den mobila plattform som ni riktar er mot:
+1. (Valfritt) Skaffa SDK för mobilplattformen som ni riktar er mot:
 
    * Installera den senaste versionen av [Xcode](https://developer.apple.com/xcode/) om du vill skapa appar för iOS-plattformen.
    * Installera [Android™ SDK](https://developer.android.com/) om du vill skapa Android™-appar.

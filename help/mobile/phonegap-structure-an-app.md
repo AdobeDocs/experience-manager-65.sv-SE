@@ -9,18 +9,16 @@ exl-id: f37f239f-065b-44f8-acb1-93485b713b49
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '850'
 ht-degree: 0%
 
 ---
 
 # Strukturera ett program{#structure-an-app}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 Ett AEM Mobile-projekt innehåller en mängd olika innehållstyper, bland annat sidor, JavaScript- och CSS-klientbibliotek, återanvändbara AEM, Content Sync-konfigurationer och PhoneGap-appskalinnehåll. Att bygga din nya AEM Mobile-app på [Starter Kit](https://github.com/Adobe-Marketing-Cloud-Apps/aem-phonegap-starter-kit) är ett bra sätt att få in alla olika typer av innehåll i vår rekommenderade struktur för att underlätta både portabilitet och underhåll på lång sikt.
 

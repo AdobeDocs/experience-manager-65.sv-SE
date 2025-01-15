@@ -9,18 +9,16 @@ exl-id: 8d965e94-c368-481d-b000-6e22456c34db
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
 
 # Lägg till Adobe Analytics i ditt mobilprogram{#add-adobe-analytics-to-your-mobile-application}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 Vill du skapa engagerande och relevanta upplevelser för mobilanvändare? Om du inte använder Adobe Mobile Services SDK för att övervaka och mäta programmets livscykel och användning, vad baserar du dina beslut på? Var är era mest lojala kunder? Hur kan ni garantera att ni är relevanta och optimerar konverteringarna?
 
@@ -50,7 +48,7 @@ När Analytics-kontot har konfigurerats skapar du en konfiguration för innehål
 
 Mer information finns i Konfigurera Innehållssynkronisering. Konfigurationen måste instruera Innehållssynkronisering att placera ADBMobleConfig i katalogen /www. I Geometrixx Outdoors App är till exempel konfigurationen för innehållssynkronisering: */content/phonegap/geometrixx-outdoor/shell/jcr:content/page-app/app-config/ams-ADBMobleConfig*. Det finns även en konfiguration för utveckling. Den är dock identisk med icke-utvecklingskonfigurationen om det finns Geometrixx Outdoors.
 
-Mer information om hur du hämtar ADBMomobileConfig från kontrollpanelen för mobilprogram AEM appar finns i Analytics - Mobile Services - Adobe Mobile Services SDK Config-fil.
+Mer information om hur du hämtar ADBMomobileConfig från kontrollpanelen för mobilprogram AEM program finns i Analytics - Mobile Services - Adobe Mobile Services SDK Config-fil.
 
 ```xml
 <jcr:root xmlns:jcr="https://www.jcp.org/jcr/1.0" xmlns:nt="https://www.jcp.org/jcr/nt/1.0"

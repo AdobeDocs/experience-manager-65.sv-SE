@@ -9,18 +9,16 @@ exl-id: 9d350935-129a-40d3-89f4-2e6f69676e5e
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '685'
 ht-degree: 1%
 
 ---
 
 # Skapa och hantera appinnehåll{#creating-and-managing-app-content}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 Hantering av appinnehåll kräver en gemensam åtgärd från [utvecklare](#developer), innehållsförfattare[författare](#author) och [administratörer](#administrator). Författarna hanterar sidor, som bygger på mallar och komponenter som genereras av apputvecklare.
 

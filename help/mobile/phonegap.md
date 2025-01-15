@@ -8,18 +8,16 @@ exl-id: 930a6950-150a-4670-ab48-250b655132fb
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '207'
 ht-degree: 0%
 
 ---
 
 # PhoneGap{#phonegap}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 Adobe Experience Manager (AEM) Mobile är bara en av de två pelarna som utgör den kompletta AEM.
 

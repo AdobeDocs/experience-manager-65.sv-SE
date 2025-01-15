@@ -9,18 +9,16 @@ exl-id: e10e1904-7016-4eb0-9408-36297285f378
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
 
 # Testar mobilappar{#testing-mobile-apps}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 Med tanke på det stora utbudet av enheter på marknaden och de enheter som släpps har testning av apparna blivit avgörande. Det här är ett område där funktionalitet och användbarhet kan ge låga granskningar i en appbutik, men ett enda fel kan leda till att appen avinstalleras. Var försiktig med testningsplaner och kvalitetssäkring. Följande länk täcker många av de ämnen som måste behandlas i allmänhet, t.ex. att identifiera din miljö, definiera testfall, testtyper, antaganden och kundens medverkan. De verktyg som är till hjälp vid testningen beskrivs också. Interna verktyg, som [Hobbes](/help/sites-developing/hobbes.md), kan vara till hjälp vid webbaserad gränssnittstestning. [Med Dag](/help/sites-developing/tough-day.md) kan du stressa dina instanser med en simulerad belastning. Om din testmiljö redan har erfarenhet av tredjepartsverktyg, som Selenium, kan även dessa användas.
 

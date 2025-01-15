@@ -5,9 +5,9 @@ exl-id: 25236af4-405a-4152-8308-34d983977e9a
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+source-git-commit: 984c0a25ea84588b430b3d82ef26d747d4ae5a14
 workflow-type: tm+mt
-source-wordcount: '2391'
+source-wordcount: '2387'
 ht-degree: 0%
 
 ---
@@ -80,7 +80,7 @@ I det här exemplet initieras `ModelManager` och en tom `ModelStore` skapas.
 
 * `path` - Vid initiering hämtas modellen vid den definierade sökvägen och lagras i `ModelStore`. Detta kan användas för att hämta `rootModel` vid initiering om det behövs.
 * `modelClient` - Tillåter att du anger en anpassad klient som ansvarar för att hämta modellen.
-* `model` - Ett `model`-objekt skickas som en parameter som vanligtvis fylls i när [SSR används.](spa-ssr.md)
+* `model` - Ett `model`-objekt som skickas som en parameter som vanligtvis fylls i när SSR används.
 
 ### AEM Authorable Components {#authorable-leaf-components}
 
@@ -375,4 +375,3 @@ Följande referensmaterial kan vara användbart för att förstå SPA i samband 
 * [SPA (API-referenser)](spa-reference-materials.md)
 * [SPA Blueprint och PageModelManager](spa-blueprint.md#pagemodelmanager)
 * [SPA](spa-routing.md)
-* [SPA- och serveråtergivning](spa-ssr.md)

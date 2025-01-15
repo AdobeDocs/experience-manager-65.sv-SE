@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 2fc6225887436685f598baf4ea2c4a01534d8704
+source-git-commit: 984c0a25ea84588b430b3d82ef26d747d4ae5a14
 workflow-type: tm+mt
-source-wordcount: '7475'
+source-wordcount: '7471'
 ht-degree: 1%
 
 ---
@@ -1447,7 +1447,6 @@ ht-degree: 1%
          + [RemotePage-komponenten](/help/sites-developing/spa-remote-page.md)
          + [Redigera en extern SPA i AEM](/help/sites-developing/spa-edit-external.md)
          + [Sammansatta komponenter i SPA](/help/sites-developing/spa-composite-component.md)
-         + [SPA- och serveråtergivning](/help/sites-developing/spa-ssr.md)
          + [Aktivera JSON-export för en komponent](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/developing/components/json-exporter-components.html)
          + [Starta integrering](/help/sites-developing/spa-launch.md)
          + [SPA referensmaterial](/help/sites-developing/spa-reference-materials.md)

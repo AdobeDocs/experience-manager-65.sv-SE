@@ -10,18 +10,16 @@ exl-id: 4625890c-2b76-4c78-88e8-23741bc09f5b
 solution: Experience Manager
 feature: Mobile
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '697'
 ht-degree: 1%
 
 ---
 
 # Är din hybridapp redo för Adobe Experience Manager Mobile?{#is-your-hybrid-app-ready-for-aem-mobile}
 
->[!NOTE]
->
->Adobe rekommenderar att du använder SPA Editor för projekt som kräver ramverksbaserad klientåtergivning för en sida (till exempel React). [Läs mer](/help/sites-developing/spa-overview.md).
+{{ue-over-mobile}}
 
 Så du har importerat din Hybrid PhoneGap- eller Cordova-app till AEM, nu vad? Du kanske vill lägga till innehåll som är redigerbart i appen. För att kunna utföra den här uppgiften behöver du en allmän förståelse för strukturen i en AEM. En app i AEM delas vanligtvis in i två delar. Gränssnittet och innehållet. Gränssnittet innehåller statiska delar av programmet, t.ex. konfigurationsfilerna för PhoneGap, appramverket och navigeringskontrollerna. Innehållet i det importerade arkivet lagras som en del av skalet. I det här dokumentet är gränssnittet allt icke-AEM innehåll i din Hybrid PhoneGap-app som skapats av apputvecklaren.
 

@@ -5,16 +5,16 @@ exl-id: 91eadda2-b881-4e4a-867f-8c5c54e8f8b4
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
 role: Admin, Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 984c0a25ea84588b430b3d82ef26d747d4ae5a14
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1248'
 ht-degree: 0%
 
 ---
 
 # Skapa enkelsidiga program (SPA) med AEM {#create-spa}
 
-I den här valfria fortsättningen av [AEM Headless Developer Journey ](overview.md) får du lära dig hur Adobe Experience Manager (AEM) kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA Editor och integrera externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
+I den här valfria fortsättningen av [AEM Headless Developer Journey ](overview.md) får du lära dig hur Adobe Experience Manager (AEM) kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA och integrera externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
 
 ## Story hittills {#story-so-far}
 
@@ -127,7 +127,6 @@ Nedan följer ytterligare resurser som ger en djupdykning i några koncept som n
 * [SPA Introduktion och genomgång.](/help/sites-developing/spa-walkthrough.md) - En bra introduktion till SPA i AEM
 * [Utveckla SPA för AEM](/help/sites-developing/spa-architecture.md) - Riktlinjer för hur du utvecklar SPA för AEM
 * [SPA Översikt över redigeraren](/help/sites-developing/spa-overview.md) - Information om hur SPA redigeraren fungerar
-* [Återgivning på serversidan](/help/sites-developing/spa-ssr.md) - Så här konfigurerar du SSR för AEM SPA
 * [SPA Referensdokument](/help/sites-developing/spa-reference-materials.md) - JavaScript API-referenser och länkar till öppna AEM SPA GitHub-projekt
 * [Innehållsfragment](/help/assets/content-fragments/content-fragments.md) - Skapa innehållsfragment
 * [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) - Maven-mall som skapar ett minimalt, metodbaserat Adobe Experience Manager-projekt (AEM) som utgångspunkt för din webbplats
