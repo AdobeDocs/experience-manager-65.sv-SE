@@ -10,12 +10,13 @@ exl-id: c1429889-e2ed-4e2f-a45f-33f8a6a52745
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2018'
 ht-degree: 0%
 
 ---
+
 
 # Utveckla SPA för AEM{#developing-spas-for-aem}
 
@@ -23,9 +24,7 @@ Single page applications (SPA) can offer compelling experiences for website user
 
 I den här artikeln finns viktiga frågor att tänka på när en frontutvecklare ska utveckla en SPA för AEM och en översikt över arkitekturen i AEM för att distribuera SPA på AEM.
 
->[!NOTE]
->
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad klientåtergivning (till exempel React eller Angular).
+{{ue-over-spa}}
 
 ## SPA för AEM {#spa-development-principles-for-aem}
 
@@ -82,17 +81,17 @@ Det kan dock finnas fall där detta inte är helt nödvändigt. Tabellen nedan g
    <th><strong>Nackdelar</strong></th>
   </tr>
   <tr>
-   <td>AEM används som ett headless CMS utan att <a href="/help/sites-developing/spa-reference-materials.md">SPA Editor SDK-ramverket används.</a></td>
+   <td>AEM används som en headless CMS utan att <a href="/help/sites-developing/spa-reference-materials.md">SPA Editor SDK Framework används.</a></td>
    <td>Utvecklaren har fullständig kontroll över appen.</td>
    <td><p>Innehållsförfattare kan inte använda AEM för innehållsredigering.</p> <p>Koden är inte portabel eller återanvändbar om den innehåller statiska referenser eller routning.</p> <p>Det går inte att använda mallredigeraren, så frontendutvecklaren måste underhålla redigerbara mallar via JCR.</p> </td>
   </tr>
   <tr>
-   <td>Utvecklaren använder SDK-ramverket för SPA Editor, men bara vissa områden öppnas för innehållsförfattaren.</td>
+   <td>Framtidsutvecklaren använder SDK-ramverket SPA redigeraren, men bara vissa områden öppnas för innehållsförfattaren.</td>
    <td>Utvecklaren behåller kontrollen över appen genom att endast aktivera redigering i begränsade delar av appen.</td>
    <td><p>Författare av innehåll är begränsade till en begränsad uppsättning AEM redigeringsupplevelser.</p> <p>Koden kan varken vara flyttbar eller återanvändbar om den innehåller statiska referenser eller routning.</p> <p>Det går inte att använda mallredigeraren, så frontendutvecklaren måste underhålla redigerbara mallar via JCR.</p> </td>
   </tr>
   <tr>
-   <td>I projektet används SPA Editor SDK fullt ut och klientkomponenterna utvecklas som ett bibliotek och innehållsstrukturen i programmet delegeras till AEM.</td>
+   <td>Projektet använder till fullo SPA Editor SDK och klientkomponenterna utvecklas som ett bibliotek och innehållsstrukturen för programmet delegeras till AEM.</td>
    <td><p>Appen är återanvändbar och portabel.</p> <p>Innehållsförfattaren kan redigera appen med hjälp AEM redigeringsgränssnittet.<br /> </p> <p>SPA är kompatibelt med mallredigeraren.</p> </td>
    <td><p>Utvecklaren har inte kontroll över programmets struktur och den del av innehållet som har delegerats till AEM.</p> <p>Utvecklaren kan fortfarande reservera områden i programmet för innehåll som inte ska redigeras med AEM.</p> </td>
   </tr>
@@ -230,4 +229,4 @@ En steg-för-steg-guide till hur du skapar egna SPA finns i [Komma igång med SP
 
 Mer information om den dynamiska mappningen av modell till komponent och hur den fungerar i SPA i AEM finns i artikeln [Dynamisk mappning av modell till komponent för SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
-Om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill fördjupa dig i hur SPA SDK för AEM fungerar läser du artikeln [SPA Blueprint](/help/sites-developing/spa-blueprint.md).
+Om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill fördjupa dig i hur SPA SDK for AEM fungerar läser du artikeln [SPA Blueprint](/help/sites-developing/spa-blueprint.md).

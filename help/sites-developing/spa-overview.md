@@ -10,12 +10,13 @@ exl-id: 7b34be66-bb61-4697-8cc8-428f7c63a887
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1626'
 ht-degree: 0%
 
 ---
+
 
 # SPA{#spa-editor-overview}
 
@@ -23,9 +24,7 @@ Single page applications (SPA) can offer compelling experiences for website user
 
 SPA Editor erbjuder en omfattande lösning för SPA inom AEM. På den här sidan får du en översikt över hur SPA stöds är uppbyggt i AEM, hur SPA redigeraren fungerar och hur SPA ramverk och AEM är synkroniserade.
 
->[!NOTE]
->
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad klientåtergivning (till exempel React eller Angular).
+{{ue-over-spa}}
 
 ## Introduktion {#introduction}
 
@@ -158,7 +157,7 @@ Det här är en mer detaljerad översikt som fokuserar på redigeringsupplevelse
 
 ## Krav och begränsningar {#requirements-limitations}
 
-Om du vill att författaren ska kunna använda sidredigeraren för att redigera innehållet i en SPA måste ditt SPA program implementeras för att interagera med AEM SDK för SPA. Se [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md) för att få reda på vad du behöver veta för att komma igång.
+Om du vill att författaren ska kunna använda sidredigeraren för att redigera innehållet i en SPA måste ditt SPA-program implementeras för att interagera med den AEM SPA redigeraren SDK. Se [Komma igång med SPA i AEM](/help/sites-developing/spa-getting-started-react.md) för att få reda på vad du behöver veta för att komma igång.
 
 ### Ramverk som stöds {#supported-frameworks}
 
@@ -167,7 +166,7 @@ SPA Editor SDK har stöd för följande minimiversioner:
 * Reagera 16.x och uppåt
 * Angular 6.x och uppåt
 
-Tidigare versioner av dessa ramverk kan fungera med AEM SDK för redigeraren, men stöds inte.
+Tidigare versioner av de här ramverken kan fungera med AEM SPA Editor SDK, men stöds inte.
 
 ### Ytterligare ramar {#additional-frameworks}
 
@@ -175,7 +174,7 @@ Ytterligare SPA kan implementeras för att fungera med AEM SPA Editor SDK. Se [S
 
 ### Använda flera väljare {#multiple-selectors}
 
-Ytterligare anpassade väljare kan definieras och användas som en del av en SPA som utvecklats för AEM SDK. Det här stödet kräver dock att väljaren `model` är den första väljaren och tillägget är `.json` som [krävs av JSON-exporteraren.](json-exporter-components.md#multiple-selectors)
+Ytterligare anpassade väljare kan definieras och användas som en del av en SPA som utvecklats för AEM SPA SDK. Det här stödet kräver dock att väljaren `model` är den första väljaren och tillägget är `.json` som [krävs av JSON-exporteraren.](json-exporter-components.md#multiple-selectors)
 
 ### Krav för textredigeraren {#text-editor-requirements}
 
@@ -190,7 +189,7 @@ Mer information om egenskapen `editElementQuery` och konfigurationen för RTF-re
 
 ### Begränsningar {#limitations}
 
-AEM SDK för SPA introducerades med AEM 6.4 Service Pack 2. Det stöds till fullo av Adobe, och fortsätter att förbättras och utökas. Följande AEM stöds ännu inte av SPA Editor:
+AEM SPA Editor SDK introducerades med AEM 6.4 Service Pack 2. Det stöds till fullo av Adobe, och fortsätter att förbättras och utökas. Följande AEM stöds ännu inte av SPA Editor:
 
 * Målläge
 * ContextHub

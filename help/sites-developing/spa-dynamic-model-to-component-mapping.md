@@ -1,6 +1,6 @@
 ---
 title: Dynamisk mappning av modell till komponent för SPA
-description: Lär dig hur dynamisk mappning av modell till komponent sker i JavaScript SPA SDK för Adobe Experience Manager.
+description: Lär dig hur den dynamiska mappningen av modell till komponent sker i JavaScript SPA SDK för Adobe Experience Manager.
 contentOwner: bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: spa
@@ -9,20 +9,19 @@ exl-id: 5b2ccac0-bf1d-4f06-8743-7fce6fb68378
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
 
+
 # Dynamisk mappning av modell till komponent för SPA{#dynamic-model-to-component-mapping-for-spas}
 
-I det här dokumentet beskrivs hur den dynamiska mappningen av modell till komponent sker i JavaScript SPA SDK för Adobe Experience Manager (AEM).
+I det här dokumentet beskrivs hur den dynamiska mappningen av modell till komponent sker i JavaScript SPA SDK for Adobe Experience Manager (AEM).
 
->[!NOTE]
->
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad klientåtergivning (till exempel React eller Angular).
+{{ue-over-spa}}
 
 ## ComponentMapping-modul {#componentmapping-module}
 
@@ -36,7 +35,7 @@ Se även npm-paketet: [https://www.npmjs.com/package/@adobe/aem-spa-component-ma
 
 ## Modellstyrt Single Page-program {#model-driven-single-page-application}
 
-Single Page-program som använder JavaScript SPA SDK för AEM är modelldrivna:
+Single Page-program som använder JavaScript SPA SDK for AEM är modellstyrda:
 
 1. Front-end-komponenter registrerar sig själva för [Component Mapping Store](/help/sites-developing/spa-dynamic-model-to-component-mapping.md#componentmapping-module).
 1. Sedan itererar [behållaren](/help/sites-developing/spa-blueprint.md#container), när den har tillhandahållits med en modell av [modellprovidern](/help/sites-developing/spa-blueprint.md#the-model-provider), över sitt modellinnehåll ( `:items`).

@@ -9,12 +9,13 @@ exl-id: 9528d92b-0989-4e2d-83be-ba6c07c845e2
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '978'
 ht-degree: 0%
 
 ---
+
 
 # Komma igång med SPA i AEM - Angular{#getting-started-with-spas-in-aem-angular}
 
@@ -26,9 +27,7 @@ SPA innehåller en omfattande lösning för SPA inom AEM. I den här artikeln pr
 >
 >Den här artikeln baseras på ramverket för Angular. Motsvarande dokument för React framework finns i [Komma igång med SPA i AEM - React](/help/sites-developing/spa-getting-started-react.md).
 
->[!NOTE]
->
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad klientåtergivning (till exempel React eller Angular).
+{{ue-over-spa}}
 
 ## Introduktion {#introduction}
 
@@ -293,4 +292,4 @@ Mer information om hur du organiserar dig för att utveckla SPA för AEM finns i
 
 Mer information om den dynamiska mappningen av modell till komponent och hur den fungerar i SPA i AEM finns i artikeln [Dynamisk mappning av modell till komponent för SPA](/help/sites-developing/spa-dynamic-model-to-component-mapping.md).
 
-Om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill fördjupa dig i hur SPA SDK för AEM fungerar läser du artikeln [SPA Blueprint](/help/sites-developing/spa-blueprint.md).
+Om du vill implementera SPA i AEM för ett annat ramverk än React eller Angular eller bara vill fördjupa dig i hur SPA SDK for AEM fungerar läser du artikeln [SPA Blueprint](/help/sites-developing/spa-blueprint.md).

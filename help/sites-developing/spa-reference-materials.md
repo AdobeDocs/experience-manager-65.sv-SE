@@ -9,22 +9,21 @@ exl-id: 3d66e861-aaf4-4227-b31a-3545bb3561d0
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
+
 # SPA referensmaterial {#spa-reference-materials}
+
+{{ue-over-spa}}
 
 ## SPA JavaScript API-referenser{#spa-javascript-api-references}
 
-Nedan följer de tillgängliga JavaScript API-referenserna för NPM-modulerna för AEM SDK-ramverket för redigeraren.
-
->[!NOTE]
->
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad klientåtergivning (till exempel React eller Angular).
+Nedan följer de tillgängliga JavaScript API-referenserna för NPM-modulerna för AEM SDK-ramverket SPA redigeraren.
 
 * [Komponentmappning](https://www.npmjs.com/package/@adobe/aem-spa-component-mapping)
 * [Sidmodellhanteraren](https://www.npmjs.com/package/@adobe/aem-spa-model-manager)

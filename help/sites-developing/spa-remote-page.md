@@ -5,16 +5,19 @@ exl-id: 3f015997-0d42-4241-a890-0f16a19c5e34
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
 
 ---
 
+
 # RemotePage-komponenten {#remote-page-component}
 
 När du bestämmer vilken nivå av integration du vill ha mellan dina externa SPA och AEM är det ofta tydligt att du måste kunna visa och redigera SPA inom AEM. RemotePage-komponenten är en anpassad sidkomponent för just detta ändamål.
+
+{{ue-over-spa}}
 
 ## Ökning {#overview}
 

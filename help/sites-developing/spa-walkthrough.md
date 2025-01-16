@@ -7,9 +7,9 @@ exl-id: 95990112-2afc-420a-a7c7-9613f40d4c4a
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: d28019efcead89cb66edfa672d6b928cbb7bcc25
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '1945'
+source-wordcount: '1925'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,7 @@ Single page applications (SPA) can offer compelling experiences for website user
 
 SPA Editor erbjuder en omfattande lösning för SPA inom AEM. I den här artikeln går vi igenom hur du använder ett grundläggande SPA för att skapa och visar hur det är relaterat till den underliggande AEM SPA Editor.
 
->[!NOTE]
->
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad klientåtergivning (till exempel React eller Angular).
+{{ue-over-spa}}
 
 ## Introduktion {#introduction}
 

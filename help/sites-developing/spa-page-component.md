@@ -10,20 +10,19 @@ exl-id: 0e9e2350-67ef-45c3-991f-6c1cd98fe93d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '727'
+source-wordcount: '707'
 ht-degree: 0%
 
 ---
+
 
 # SPA sidkomponent{#spa-page-component}
 
 I en SPA tillhandahåller inte sidkomponenten elementen HTML i de underordnade komponenterna, utan delegerar i stället detta till det SPA ramverket. Det här dokumentet förklarar hur det gör sidkomponenten i ett SPA unik.
 
->[!NOTE]
->
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad klientåtergivning (till exempel React eller Angular).
+{{ue-over-spa}}
 
 ## Introduktion {#introduction}
 
@@ -92,7 +91,7 @@ Meta-resursegenskaperna som beskriver SPA innehåll:
 >
 >Det här dokumentet använder appen We.Retail Journal endast i demonstrationssyfte. Använd inte för projektarbete.
 >
->Alla AEM projekt ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som har stöd för SPA projekt som använder React eller Angular och som använder SPA SDK. Alla SPA projekt på AEM ska baseras på Maven Archetype för SPA Starter Kit.
+>Alla AEM ska använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html), som har stöd för SPA projekt som använder React eller Angular och som använder SPA SDK. Alla SPA projekt på AEM ska baseras på Maven Archetype för SPA Starter Kit.
 
 ## Synkronisering av sidredigeringsövertäckning {#page-editor-overlay-synchronization}
 

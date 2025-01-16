@@ -5,12 +5,13 @@ exl-id: 02b6c698-d169-467a-9168-9fa6181bed6c
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 0%
 
 ---
+
 
 # Sammansatta komponenter i SPA {#composite-components-in-spas}
 
@@ -19,6 +20,8 @@ Komponenter som består av sammansatta komponenter är modulära AEM genom att k
 När sammansatta komponenter implementeras på rätt sätt i redigeringsramverket för AEM Single Page Application (SPA) kan innehållsförfattarna dra och släppa sådana komponenter som vilken annan komponent som helst, men ändå ha möjlighet att redigera varje komponent som utgör den sammansatta komponenten separat.
 
 I den här artikeln visas hur du kan lägga till en sammansatt komponent i ett enkelsidigt program för att fungera sömlöst med AEM SPA.
+
+{{ue-over-spa}}
 
 ## Användningsfall {#use-case}
 

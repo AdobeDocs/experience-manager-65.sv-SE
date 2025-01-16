@@ -10,12 +10,13 @@ exl-id: f4959c12-54c5-403a-9973-7a4ab5f16bed
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
+
 
 # Implementera en React Component for SPA{#implementing-a-react-component-for-spa}
 
@@ -23,9 +24,7 @@ Single page applications (SPA) can offer compelling experiences for website user
 
 SPA innehåller en omfattande lösning för SPA inom AEM. I den här artikeln visas ett exempel på hur du anpassar en enkel, befintlig React-komponent så att den fungerar med AEM SPA.
 
->[!NOTE]
->
->SPA Editor är den rekommenderade lösningen för projekt som kräver SPA ramverksbaserad klientåtergivning (till exempel React eller Angular).
+{{ue-over-spa}}
 
 ## Introduktion {#introduction}
 
