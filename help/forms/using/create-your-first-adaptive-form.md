@@ -7,9 +7,9 @@ feature: Adaptive Forms
 exl-id: 77a05f83-ac9a-4221-85ac-439e82623a28
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: f6771bd1338a4e27a48c3efd39efe18e57cb98f9
+source-git-commit: f941782f9a4201e7bff898853d3fc18954418500
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '908'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Mål:
 * Skapa en Skicka-åtgärd för att skicka ett e-postmeddelande som innehåller formulärinnehåll.
 * Förhandsgranska och skicka ett anpassat formulär.
 
-[![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-adaptive-form.md)
+[![Se guiden](assets/see-the-guide-sm.png)](create-adaptive-form.md)
 
 ## Steg 2: Skapa formulärdatamodell {#step-create-form-data-model}
 
@@ -82,7 +82,7 @@ Mål:
 * Konfigurera läs- och skrivtjänster för formulärdatamodellen.
 * Testa formulärdatamodellen och konfigurerade tjänster med testdata.
 
-[![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](create-form-data-model.md)
+[![Se guiden](assets/see-the-guide-sm.png)](create-form-data-model.md)
 
 ## Steg 3: Använd regler för anpassningsbara formulärfält {#step-apply-rules-to-adaptive-form-fields}
 
@@ -95,7 +95,7 @@ Mål:
 * Skapa och tillämpa regler för anpassningsbara formulärfält.
 * Använd regler för att aktivera datamodelltjänster för formulär för att uppdatera data till databasen.
 
-[![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
+[![Se guiden](assets/see-the-guide-sm.png)](apply-rules-to-adaptive-form-fields.md)
 
 ## Steg 4: Formatera en anpassad blankett {#step-style-your-adaptive-form}
 
@@ -109,7 +109,7 @@ Mål:
 * Skapa ett tema för anpassningsbara formulär med temaredigeraren.
 * Använd Web Fonts i ett anpassat tema.
 
-[![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](style-your-adaptive-form.md)
+[![Se guiden](assets/see-the-guide-sm.png)](style-your-adaptive-form.md)
 
 ## Steg 5: Publish ditt adaptiva formulär {#step-publish-your-adaptive-form}
 
@@ -123,4 +123,4 @@ Mål:
 * Bädda in det adaptiva formuläret på en AEM [!DNL Sites]-sida.
 * Bädda in det adaptiva formuläret på en extern webbsida (en icke-AEM webbsida som finns på andra AEM).
 
-[![Se guiden](https://helpx.adobe.com/content/dam/help/en/marketing-cloud/how-to/digital-foundation/_jcr_content/main-pars/image_1250343773/see-the-guide-sm.png)](publish-your-adaptive-form.md)
+[![Se guiden](assets/see-the-guide-sm.png)](publish-your-adaptive-form.md)
