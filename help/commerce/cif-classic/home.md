@@ -5,9 +5,9 @@ exl-id: ae0823b3-d847-42b6-ba92-e4e949da1799
 solution: Experience Manager,Commerce
 feature: Commerce Integration Framework
 role: Admin, Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: 90a8548cdcaadffb9930a5c06a601cb39e835146
 workflow-type: tm+mt
-source-wordcount: '54'
+source-wordcount: '72'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ På den här sidan visas självhjälpsresurser för AEM Classic.
 
 >[!NOTE]
 >
->CIF Classic är i underhållsläge.
+>CIF Classic har tagits bort från och med AEM 6.5 SP 22.  [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/?support-solution=General#support) om du behöver ett kompatibilitetspaket.
 >
 >* Nya projekt bör använda [AEM CIF](/help/commerce/cif/introduction.md).
 >* Befintlig CIF Classic ska [migrera till AEM CIF](/help/commerce/cif/migration.md).
