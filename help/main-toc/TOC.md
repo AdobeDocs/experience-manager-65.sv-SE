@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 984c0a25ea84588b430b3d82ef26d747d4ae5a14
+source-git-commit: b5a87404435758d660f136d2e236de699ecad541
 workflow-type: tm+mt
-source-wordcount: '7471'
+source-wordcount: '7475'
 ht-degree: 1%
 
 ---
@@ -1217,6 +1217,8 @@ ht-degree: 1%
       + [Konfigurera och felsöka ett AEM Forms i JEE-serverkluster](/help/forms/developing/configure-server-cluster.md)
       + [Generera och arbeta med hashvärden i dynamisk PDF forms](/help/forms/developing/hashing-forms.md)
       + [Skicka inloggningsuppgifter med WS-Security-huvuden](/help/forms/developing/passing-credentials.md)
+   + Ordlista {#aem-forms-glossary}
++[AEM Forms-ordlistor](/help/forms/using/aem-forms-glossary.md)
 + Innehåll och Commerce {#commerce}
    + [Introduktion och översikt](/help/commerce/cif/introduction.md)
    + [Betydande ändringar av AEM och Commerce](/help/commerce/cif/changes.md)
