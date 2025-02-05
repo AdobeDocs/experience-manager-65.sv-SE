@@ -6,9 +6,9 @@ exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 01fa8cd75c00b04578fe103d07fa52553d2b6b93
 workflow-type: tm+mt
-source-wordcount: '3652'
+source-wordcount: '3656'
 ht-degree: 0%
 
 ---
@@ -196,11 +196,11 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 
 | **Plattform** | **Supportnivå** |
 |---|---|
-| **Linux®, baserat på Red Hat®-distributionen** | A: Stöds `[1]` `[3]` |
-| Linux®, baserat på Debian-distribution inkl. Ubuntu | A: Stöds `[1]` `[2]` |
-| Linux®, baserat på SUSE®-distribution | A: `[1]` stöds |
+| **Linux®, baserat på Red Hat-distributionen®** | S: Stöds `[1]` `[3]` |
+| Linux®, baserat på Debian-distribution inkl. Ubuntu (Ubuntu) | S: Stöds `[1]` `[2]` |
+| Linux®, baserat på SUSE-distribution® | A: `[1]` stöds |
 | Microsoft® Windows Server 2019 `[4]` | R: Begränsad support för nya kontrakt `[5]` |
-| Microsoft® Windows Server 2016 `[4]` | R: Begränsad support för nya kontrakt `[5]` |
+| Microsoft® Windows Server 2016 `[4]` | R: Begränsat stöd för nya kontrakt `[5]` |
 | Microsoft® Windows Server 2012 R2 | Z: Stöds inte |
 | Oracle Solaris™ 11 | Z: Stöds inte |
 | IBM® AIX® 7.2 | Z: Stöds inte |
@@ -217,6 +217,7 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
    >* zlib.x86-64 (1.2.7-17)
    >* libxcb.x86_64 (1.13-1.el7)
    >* libXau.x86_64 (1.0.8-2.1.el7)
+   >* glibc-locale.x86_64 (2.17 eller senare)
 
 1. Produktionsinstallationer i Microsoft® Windows stöds för kunder som uppgraderar till 6.5 och för icke-produktionsanvändning. Nya driftsättningar är på begäran för AEM Sites och Assets.
 1. AEM Forms stöds på Microsoft® Windows Server utan begränsningar på supportnivå R.
@@ -253,14 +254,14 @@ Följande webbservrar kan användas med Dispatcher version 4.3.2:
 
 | Plattform | Supportnivå |
 |---|---|
-| **Apache httpd 2.4.x** `[1,2]` | S: Stöds |
-| Microsoft® IIS 10 (Internet Information Server) | S: Stöds |
+| **Apache httpd 2.4.x** `[1,2]` | A: Stöds |
+| Microsoft® IIS 10 (Internet Information Server) | A: Stöds |
 | Microsoft® IIS 8.5 (Internet Information Server) | Z: Stöds inte |
 
-1. Webbservrar som byggts utifrån Apache httpd-källkoden har lika mycket stöd som den version av httpd som den baseras på. Om du är osäker kan du be Adobe om en bekräftelse av den supportnivå som gäller respektive serverprodukt. Följande fall:
+1. Webbservrar som byggs baserat på Apache httpd-källkoden har lika mycket stöd som den version av httpd som den är baserad på. Om du är osäker kan du be Adobe om bekräftelse på supportnivån för respektive serverprodukt. Följande fall:
 
-   1. HTTP-servern byggdes med enbart officiella källdistributioner av Apache, eller
-   1. HTTP-servern levererades som en del av det operativsystem där den körs. Exempel: IBM® HTTP Server, Oracle HTTP Server
+   1. HTTP-servern byggdes med endast officiella Apache-källkodsdistributioner, eller
+   1. HTTP-servern levererades som en del av operativsystemet som den körs på. Exempel: IBM® HTTP Server, Oracle HTTP Server
 
 1. Dispatcher finns inte för Apache 2.4.x för Windows.
 
@@ -268,7 +269,7 @@ Följande webbservrar kan användas med Dispatcher version 4.3.2:
 
 ### Webbläsare som stöds för redigeringsgränssnittet {#supported-browsers-for-authoring-user-interface}
 
-Adobe Experience Manager användargränssnitt fungerar med följande klientplattformar. Alla webbläsare testas med standarduppsättningen med plugin-program och tillägg.
+Adobe Experience Manager användargränssnitt fungerar med följande klientplattformar. Alla webbläsare testas med standarduppsättningen av plugin-program och tillägg.
 
 Det AEM användargränssnittet är optimerat för större skärmar (vanligen bärbara och stationära datorer) och surfplattor (t.ex. Apple iPad eller Microsoft® Surface). Telefonformfaktorn stöds inte.
 
@@ -302,7 +303,7 @@ Det AEM användargränssnittet är optimerat för större skärmar (vanligen bä
   </tr>
   <tr>
    <td>Mozilla Firefox (Evergreen)</td>
-   <td>S: Stöds</td>
+   <td>A: Stöds</td>
    <td>A: Stöds</td>
   </tr>
   <tr>
@@ -333,7 +334,7 @@ Det AEM användargränssnittet är optimerat för större skärmar (vanligen bä
  </tbody>
 </table>
 
-1. Extended Support Release av Firefox [Läs mer på mozilla.org](https://www.mozilla.org/en-US/firefox/enterprise/)
+1. Extended Support Release of Firefox [Läs mer om mozilla.org](https://www.mozilla.org/en-US/firefox/enterprise/)
 1. stöd för Apple iPad
 
 ### Webbläsare som stöds för webbplatser {#supported-browsers-for-websites}
@@ -360,7 +361,7 @@ I det här avsnittet finns specialanteckningar och mer detaljerad information om
 
 Alla element i Adobe Experience Manager (Instance, Dispatcher) kan installeras i både IPv4- och IPv6-nätverk.
 
-Driften är sömlös eftersom ingen speciell konfiguration krävs. Du anger en IP-adress i det format som är lämpligt för din nätverkstyp, om det behövs.
+Åtgärden är smidig eftersom ingen speciell konfiguration krävs. Om det behövs anger du en IP-adress i det format som passar nätverkstypen.
 
 När en IP-adress måste anges kan du välja (efter behov) bland följande:
 
@@ -388,7 +389,7 @@ När Dynamic Media är aktiverat gäller följande ytterligare tekniska krav.
 
 Följande maskinvarukrav gäller för både Linux® och Windows:
 
-* Intel Xeon®- eller AMD® Opteron-processor med minst fyra kärnor
+* Intel Xeon® eller AMD® Opteron CPU med minst fyra kärnor
 * Minst 16 GB RAM
 
 #### Linux® {#linux}
@@ -412,11 +413,11 @@ Om du använder Dynamic Media i Linux® måste följande krav vara uppfyllda:
 
 >[!NOTE]
 >
->**NUMA-arkitektur:** System med processorer med AMD64 och Intel® EM64T konfigureras vanligtvis som NUMA-plattformar (non-uniform memory architecture). Det innebär att kärnan konstruerar flera minnesnoder vid start i stället för att konstruera en enda minnesnod.
+>**NUMA-arkitektur:** System med processorer med AMD64 och Intel® EM64T är vanligtvis konfigurerade som icke-enhetliga minnesarkitekturplattformar (NUMA). Det innebär att kärnan konstruerar flera minnesnoder vid start i stället för att konstruera en enda minnesnod.
 >
->Konstruktionen för flera noder kan resultera i minnesöverbelastning på en eller flera av noderna innan andra noder töms. När minnesöverbelastning inträffar kan kärnan bestämma sig för att avsluta processer (till exempel Image Server eller Platform Server) trots att det finns tillgängligt minne.
+>Konstruktionen för flera noder kan resultera i minnesöverbelastning på en eller flera av noderna innan andra noder töms. När minnet tar slut kan kärnan bestämma sig för att avsluta processer (till exempel Image Server eller Platform Server) även om det finns tillgängligt minne.
 >
->Därför rekommenderar Adobe att om du kör ett sådant system att du stänger av NUMA med startalternativet **numa=off** för att undvika att kärnan dödar dessa processer.
+>Därför rekommenderar Adobe att du, om du kör ett sådant system, stänger av NUMA med startalternativet **numa=off** för att undvika att kärnan dödar dessa processer.
 
 >[!NOTE]
 >
@@ -427,7 +428,7 @@ Om du använder Dynamic Media i Linux® måste följande krav vara uppfyllda:
 #### Windows {#windows}
 
 * Microsoft® Windows Server 2016
-* Växlingsutrymme som motsvarar minst dubbelt så mycket fysiskt minne (RAM)
+* Växlingsutrymme som är lika med minst dubbelt så mycket fysiskt minne (RAM)
 
 Om du vill använda Dynamic Media i Windows installerar du Microsoft® Visual Studio 2010, 2013 och 2015 redistributable för x64 och x86.
 
@@ -435,15 +436,15 @@ För Windows x64:
 
 * Få Microsoft® Visual Studio 2010 omdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
 * Få Microsoft® Visual Studio 2013 omdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
-* Få Microsoft® Visual Studio 2015 omdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+* Få Microsoft® Visual Studio 2015 återdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
 För Windows x86:
 
 * Få Microsoft® Visual Studio 2010 återdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
 * Få Microsoft® Visual Studio 2013 återdistribuerbart på [https://www.microsoft.com/en-in/download/details.aspx?id=40769](https://www.microsoft.com/en-in/download/details.aspx?id=40769)
-* Få Microsoft® Visual Studio 2015 omdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
+* Få Microsoft® Visual Studio 2015 återdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=52685](https://www.microsoft.com/en-us/download/details.aspx?id=52685)
 
-#### macOS (macOS) {#macos}
+#### macOS {#macos}
 
 * 10.9.x och senare
 * Stöds endast i demos- och testversioner
@@ -463,7 +464,7 @@ För Windows x86:
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Senaste versionen av den klassiska versionen</a> av Acrobat 2017 (borttagen)</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 Classic track</a> senaste versionen (inaktuell)</td>
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
   </tr>
   <tr>
@@ -475,7 +476,7 @@ För Windows x86:
    <td>DOC, DOCX, XLS, XLSX, PPT, PPTX, RTF och TXT</td>
   </tr>
   <tr>
-   <td>WordPerfect 2020<br /> </td>
+   <td>WordPerfect 2020 (på engelska)<br /> </td>
    <td>WP, WPD</td>
   </tr>
   <tr>
@@ -517,7 +518,7 @@ För Windows x86:
 >* PDF Generator stöder 32- och 64-bitarsversionerna av OpenOffice i Linux®.
 >* PDF Generator stöder inte Microsoft® Office 365.
 >* Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
->* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator. Programmatiskt få tillgång till den paketerade versionen endast med AEM Forms, under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning enligt din distribution ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
+>* En version av Acrobat levereras med AEM Forms för att aktivera PDF Generator-funktioner. Programmatiskt få tillgång till den paketerade versionen endast med AEM Forms, under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning enligt din distribution ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
 >* Tjänsten PDF Generator stöder inte Microsoft® Windows 10.
 >* PDF Generator kan inte konvertera filer med Microsoft® Visio 2019. Du kan fortsätta använda Microsoft® Visio 2016 för att konvertera `.VSD`- och `.VSDX`-filer.
 >* PDF Generator kan inte konvertera filer med Microsoft® Project 2019. Du kan fortsätta använda Microsoft® Project 2016 för att konvertera `.VSD`- och `.VSDX`-filer.
@@ -534,7 +535,7 @@ För Windows x86:
 * Skärmupplösning på 1024 X 768 pixlar eller mer
 * Maskinvaruacceleration för video (tillval)
 * Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC
-* Administrativa behörigheter för att installera Designer
+* Administrativ behörighet för att installera Designer
 * Microsoft Visual C++ 2019 (VC 14.28 eller senare) 32-bitars körningsmiljö för 32-bitars AEM Forms Designer
 * Microsoft Visual C++ 2019 (VC 14.28 eller senare) 64-bitars runtime för 64-bitars AEM Forms Designer (för både OSGI- och JEE-stacken)
 
@@ -542,7 +543,7 @@ För Windows x86:
 
 ### Krav för AEM Assets XMP metadata write-back {#requirements-for-aem-assets-xmp-metadata-write-back}
 
-XMP-tillbakaskrivning stöds och aktiveras för följande plattformar och filformat:
+XMP stöds och är aktiverat för följande plattformar och filformat:
 
 * **Operativsystem:**
 
@@ -553,6 +554,6 @@ XMP-tillbakaskrivning stöds och aktiveras för följande plattformar och filfor
 
 * **Filformat**: JPEG, PNG, TIFF, PDF, INDD, AI och EPS.
 
-### Krav för AEM Assets för att bearbeta metadatatunga resurser i Linux® {#assetsonlinux}
+### Krav för AEM Assets att bearbeta metadataintensiva resurser i Linux® {#assetsonlinux}
 
 XMPFilesProcessor-processen kräver att biblioteket GLIBC_2.14 fungerar. Använd en Linux®-kärna som innehåller GLIBC_2.14, till exempel Linux®-kärna version 3.1.x. Prestandan för bearbetning av resurser som innehåller en stor mängd metadata förbättras, till exempel PSD-filer. Om du använder en tidigare version av GLIBC uppstår fel i loggar som börjar med `com.day.cq.dam.core.impl.handler.xmp.NCommXMPHandler Failed to read XMP`.
