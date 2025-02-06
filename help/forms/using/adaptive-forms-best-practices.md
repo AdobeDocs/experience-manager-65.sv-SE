@@ -7,9 +7,9 @@ feature: Adaptive Forms,Foundation Components,Core Components
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: c55c959123f7feaa6571835974f1ce6fe3ead22b
 workflow-type: tm+mt
-source-wordcount: '5538'
+source-wordcount: '5597'
 ht-degree: 0%
 
 ---
@@ -210,6 +210,7 @@ Använd följande metodtips för att lösa prestandaproblem med stora formulär:
 * Inkludera endast de fält och paneler i anpassningsbara formulär som hämtar information från användaren. Tänk på att behålla statiskt innehåll så lite som möjligt eller använd URL:er för att öppna dem i ett separat fönster.
 * Alla formulär har utformats för ett specifikt ändamål, men det finns några vanliga segment i de flesta formulär. Exempel: personuppgifter, adress, anställningsinformation osv. Skapa [anpassningsbara formulärfragment](/help/forms/using/adaptive-form-fragments.md) för vanliga formulärelement och avsnitt och använd dem i olika formulär. Du kan också spara en panel i ett befintligt formulär som ett fragment. Alla ändringar i ett fragment återspeglas i alla tillhörande adaptiva former. Det främjar samarbete när flera författare kan arbeta samtidigt i olika fragment som utgör ett formulär.
 
+   * Överväg att skapa formulärfragment även för avsnitt som inte kan återanvändas vid formulärredigering. I takt med att formulären blir allt större och mer komplicerade kan du förenkla redigeringsprocessen avsevärt genom att dela upp dem i fragment och göra formuläret enklare att underhålla. På så sätt kan du fokusera på mindre, mer hanterbara delar av formuläret i stället för att hantera hela formuläret samtidigt.
    * Precis som adaptiva formulär rekommenderar vi att alla fragmentspecifika format och anpassade skript definieras i klientbiblioteket med hjälp av dialogrutan fragmentbehållare. Försök också att skapa egna fragment som inte är beroende av objekt utanför den.
    * Undvik att använda korsfragmentsskript. Om det finns något objekt utanför fragmentet som du måste referera till, kan du försöka göra det objektet till en del av det överordnade formuläret. Om objektet fortfarande måste finnas i ett annat fragment refererar du till det med namnet i skriptet.
 
