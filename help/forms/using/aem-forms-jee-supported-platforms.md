@@ -9,9 +9,9 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 7b0f1c79a019e01e5814d00d5a3de0861999b7fd
 workflow-type: tm+mt
-source-wordcount: '4010'
+source-wordcount: '4098'
 ht-degree: 0%
 
 ---
@@ -361,7 +361,7 @@ Tänk på följande undantag när du väljer en plattform för att konfigurera A
 1. CRX-databasen stöder beständighet av typen tarMK, MongoDB och relationsdatabaser (RDBMK). Du kan inte ha två olika databassystem mellan programservern och CRX-databasen. I en AEM Forms-miljö för JEE kan du emellertid använda MongoMK med CRX-databas och en relationsdatabas som stöds med programserver.
 1. AEM Forms i JEE stöder inte WebSphere®-programserver i CentOS.
 1. AEM Forms på JEE stöder inte rollbaserad åtkomstkontroll JBoss® (RBAC).
-1. AEM Forms på JEE har endast stöd för Java™ SE 11 (64 bitar) SDK för programserver JBoss® EAP 7.4.
+1. AEM Forms på JEE stöder endast Oraclet Java™ SE 11 (64 bitar) SDK för programservern JBoss® EAP 7.4.
 1. JDK-versioner som är högre än 1.8.0_281 stöds inte för WebLogic-servern. (FORMS-8498)
 1. JDK 11.0.20 stöds inte för installation av AEM Forms i JEE Installer. Endast JDK 11.0.19 och tidigare versioner stöds för installation av AEM Forms i JEE Installer.
 
@@ -487,6 +487,8 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 >Dessutom:
 >
 >- PDF Generator stöder endast 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering.
+>- Installationen av Microsoft® Office Professional Plus kan använda volymlicenser baserade på Retail eller MAK/KMS/AD.
+>- Om en Microsoft® Office-installation inaktiveras eller inte licensieras av någon anledning, t.ex. en volymlicensierad installation som inte kan hitta en KMS-värd inom en angiven period, kan konverteringen misslyckas tills installationen har licensierats på nytt och återaktiverats.
 >- PDF Generator stöder inte Microsoft® Office 365.
 >- PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux®.
 >- Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
@@ -494,7 +496,12 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 >- Tjänsten PDF Generator stöder inte Microsoft® Windows 10.
 >- PDF Generator kan inte konvertera filer med Microsoft® Visio 2019.
 >- PDF Generator kan inte konvertera filer med Microsoft® Project 2019.
->- Om en Microsoft® Office-installation inaktiveras eller inte licensieras av någon anledning, t.ex. en volymlicensierad installation som inte kan hitta en KMS-värd inom en angiven period, kan konverteringen misslyckas tills installationen har licensierats på nytt och återaktiverats.
+
+PDF Generator stöder endast 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering.
+
+Installationen av Microsoft® Office Professional Plus kan använda volymlicenser baserade på Retail eller MAK/KMS/AD.
+
+Om en Microsoft® Office-installation inaktiveras eller inte licensieras av någon anledning, t.ex. en volymlicensierad installation som inte kan hitta en KMS-värd inom en angiven period, kan konverteringen misslyckas tills installationen har licensierats på nytt och återaktiverats.
 
 <!-- Removed lines: >- PDF Generator fails to convert files using Microsoft&reg; Visio 2019. You can continue to use Microsoft&reg; Visio 2016 to convert .VSD and .VSDX files.
 >- PDF Generator fails to convert files using Microsoft&reg; Project 2019. You can continue to use Microsoft&reg; Project 2016 to convert .MPP files.-->
@@ -895,7 +902,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 | Tillagd support | Borttaget stöd | Föråldrat stöd |
 | -------------- | --------------- | ------------------- |
-| Oracle Java™ SE 11 (64 bitar) SDK för programserver JBoss® EAP 7.4. | | [Adobe Acrobat 2017 - Core-stöd för Adobe Acrobat 2017 upphör 6 juni 2022.](https://helpx.adobe.com/support/programs/eol-matrix.html) |
+| Oracle Java™ SE 11 (64 bitar) SDK for application server JBoss® EAP 7.4. | | [Adobe Acrobat 2017 - Core-stöd för Adobe Acrobat 2017 upphör 6 juni 2022.](https://helpx.adobe.com/support/programs/eol-matrix.html) |
 |  | | Red Hat® Enterprise Linux® 7 (Kernel 3.x) (64-bitars) |
 |  | | Microsoft® Windows Server 2016 (64-bitars) |
 |  | | Microsoft® Office 2016 |

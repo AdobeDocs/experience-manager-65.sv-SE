@@ -6,9 +6,9 @@ exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 01fa8cd75c00b04578fe103d07fa52553d2b6b93
+source-git-commit: 7b0f1c79a019e01e5814d00d5a3de0861999b7fd
 workflow-type: tm+mt
-source-wordcount: '3656'
+source-wordcount: '3681'
 ht-degree: 0%
 
 ---
@@ -514,15 +514,16 @@ För Windows x86:
 >
 >* PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) eller Acrobat 2017 version 17.011.30078 för att kunna utföra konverteringen.
 >* PDF Generator-konverteringar för OpenOffice stöds bara i Windows och Linux®.
->* PDF Generator har endast stöd för 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering i Windows.
->* PDF Generator stöder 32- och 64-bitarsversionerna av OpenOffice i Linux®.
->* PDF Generator stöder inte Microsoft® Office 365.
+>* PDF Generator stöder endast 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering.
+>* Installationen av Microsoft® Office Professional Plus kan använda volymlicenser baserade på Retail eller MAK/KMS/AD.
+>* Om en Microsoft® Office-installation inaktiveras eller inte licensieras av någon anledning, t.ex. en volymlicensierad installation som inte kan hitta en KMS-värd inom en angiven period, kan konverteringen misslyckas tills installationen har licensierats på nytt och återaktiverats.
+>* PDF Generator har stöd för 32-bitars- och 64-bitarsversionerna av OpenOffice på operativsystemet Linux®.
+>* PDF Generator har inte stöd för Microsoft® Office 365.
 >* Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
->* En version av Acrobat levereras med AEM Forms för att aktivera PDF Generator-funktioner. Programmatiskt få tillgång till den paketerade versionen endast med AEM Forms, under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning enligt din distribution ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
+>* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator. Programmatiskt få tillgång till den paketerade versionen endast med AEM Forms, under AEM Forms-licensens löptid, för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning enligt din distribution ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
 >* Tjänsten PDF Generator stöder inte Microsoft® Windows 10.
->* PDF Generator kan inte konvertera filer med Microsoft® Visio 2019. Du kan fortsätta använda Microsoft® Visio 2016 för att konvertera `.VSD`- och `.VSDX`-filer.
->* PDF Generator kan inte konvertera filer med Microsoft® Project 2019. Du kan fortsätta använda Microsoft® Project 2016 för att konvertera `.VSD`- och `.VSDX`-filer.
->
+>* PDF Generator kan inte konvertera filer med Microsoft® Visio 2019.
+>* PDF Generator kan inte konvertera filer med Microsoft® Project 2019.
 
 ### Krav för AEM Forms Designer {#requirements-for-aem-forms-designer}
 
