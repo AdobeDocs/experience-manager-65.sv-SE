@@ -10,22 +10,29 @@ exl-id: 61152b2d-4c0b-4cfd-9669-cf03d32cb7c7
 solution: Experience Manager, Experience Manager Sites
 feature: Operations
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 17c4084d9ee93e5fe6652d63438eaf34cbc83c12
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
 
+
 # Konfigurera layoutbehållare och layoutläge{#configuring-layout-container-and-layout-mode}
+
+Lär dig hur du konfigurerar layoutbehållaren och layoutläget.
+
+>[!TIP]
+>
+>Det här dokumentet innehåller en översikt över responsiv design för webbplatsadministratörer och utvecklare som beskriver hur funktioner implementeras i AEM.
+>
+>För innehållsförfattare finns information om hur du använder responsiva designfunktioner på en innehållssida i dokumentet [Responsiv layout för dina innehållssidor.](/help/sites-authoring/responsive-layout.md)
+
+## Ökning {#overview}
 
 [Responsiv layout](/help/sites-authoring/responsive-layout.md) är en mekanism för att förverkliga [responsiv webbdesign](https://en.wikipedia.org/wiki/Responsive_web_design). På så sätt kan användaren skapa webbsidor som har en layout och dimensioner som är beroende av vilka enheter som användarna använder.
 
->[!NOTE]
->
->Detta kan jämföras med funktionerna för [Mobile Web](/help/sites-developing/mobile-web.md) som använder adaptiv webbdesign (främst för det klassiska användargränssnittet).
-
-AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer:
+AEM implementerar en responsiv layout för dina sidor med en kombination av mekanismer:
 
 * [**Layoutbehållare**](/help/sites-authoring/responsive-layout.md#adding-a-layout-container-and-its-content-edit-mode)-komponent
 
@@ -33,7 +40,7 @@ AEM realiserar responsiv layout för dina sidor med en kombination av mekanismer
 
    * Standardkomponenten för **Layoutbehållare** definieras under:
 
-     /libs/wcm/foundation/components/responsivegrid
+     `/libs/wcm/foundation/components/responsivegrid`
 
    * Du kan definiera layoutbehållare:
 
@@ -49,10 +56,6 @@ När layoutbehållaren har placerats på sidan kan du använda **layoutläget** 
 * [**Emulator**](/help/sites-authoring/responsive-layout.md#selecting-a-device-to-emulate)
 På så sätt kan du skapa och redigera responsiva webbplatser som ändrar layouten beroende på enhetens/fönstrets storlek genom att ändra komponenternas storlek interaktivt. Användaren kan sedan se hur innehållet återges med hjälp av emulatorn.
 
->[!CAUTION]
->
->Även om komponenten **Layoutbehållare** är tillgänglig i det klassiska användargränssnittet, är dess fullständiga funktioner bara tillgängliga i det beröringsaktiverade användargränssnittet.
-
 Med dessa responsiva rutnätsmekanismer kan du:
 
 * Använd brytpunkter (som indikerar enhetsgruppering) för att definiera olika innehållsbeteenden baserat på enhetslayout.
@@ -60,9 +63,17 @@ Med dessa responsiva rutnätsmekanismer kan du:
 * Använd vågrät fäst mot rutnät (placera komponenter i rutnätet, ändra storlek efter behov, definiera när de ska komprimeras/omformas så att de ligger sida vid sida eller ovanför/nedanför).
 * Uppnå kolumnkontroll.
 
+>[!TIP]
+>
+>Adobe tillhandahåller [GitHub-dokumentation](https://adobe-marketing-cloud.github.io/aem-responsivegrid/) för den responsiva layouten som en referens som kan ges till gränssnittsutvecklare så att de kan använda AEM-rutnätet utanför AEM, till exempel när de skapar statiska HTML-modeller för en framtida AEM-webbplats.
+
 >[!NOTE]
 >
 >I en körklar installation har responsiv layout konfigurerats för referenswebbplatsen [We.Retail](/help/sites-developing/we-retail.md). [Aktivera layoutbehållarkomponenten](#enable-the-layout-container-component-for-page) för andra sidor.
+
+>[!CAUTION]
+>
+>Även om komponenten **Layoutbehållare** är tillgänglig i det klassiska användargränssnittet, är dess fullständiga funktioner bara tillgängliga i det beröringsaktiverade användargränssnittet.
 
 ## Konfigurera den responsiva emulatorn {#configuring-the-responsive-emulator}
 
@@ -148,7 +159,7 @@ Brytpunkter finns i avsnittet `<jcr:content>` i `.context.html` under lämplig m
 
 En exempeldefinition:
 
-```xml
+```html
 <cq:responsive jcr:primaryType="nt:unstructured">
   <breakpoints jcr:primaryType="nt:unstructured">
     <phone jcr:primaryType="nt:unstructured" title="{String}Phone" width="{Decimal}768"/>
@@ -186,13 +197,13 @@ I följande två exempel illustreras definitionen:
 
 * **HTML:**
 
-  ```xml
+  ```html
   <sly data-sly-resource="${'par' @ resourceType='wcm/foundation/components/responsivegrid'}/>
   ```
 
 * **JSP:**
 
-  ```
+  ```html
   <cq:include path="par" resourceType="wcm/foundation/components/responsivegrid" />
   ```
 
@@ -200,11 +211,11 @@ I följande två exempel illustreras definitionen:
 
 #### CSS för brytpunkter med LESS {#css-for-breakpoints-using-less}
 
-AEM använder LESS för att generera delar av den CSS som behövs, och dessa måste inkluderas i dina projekt.
+AEM använder LESS för att generera delar av den CSS som behövs, och dessa måste ingå i dina projekt.
 
 Du måste också skapa ett [klientbibliotek](https://experienceleague.adobe.com/docs/) för att kunna tillhandahålla ytterligare konfigurations- och funktionsanrop. Följande LESS-extrakt är ett exempel på det minsta som du måste lägga till i projektet:
 
-```java
+```css
 @import (once) "/libs/wcm/foundation/clientlibs/grid/grid_base.less";
 
 /* maximum amount of grid cells to be provided */
@@ -311,3 +322,61 @@ Du kan konfigurera antalet kolumner som är tillgängliga för varje särskild i
    * Komponenter som kan läggas till i den aktuella komponenten:
 
       * `components="[/libs/wcm/foundation/components/responsivegrid, ...`
+
+## Kapslade responsiva stödraster {#nested-responsive-grids}
+
+Det kan finnas tillfällen då du tycker att det är nödvändigt att kapsla in responsiva rutnät för att tillgodose ditt projekts behov. Tänk dock på att Adobe rekommenderade metod är att hålla strukturen så platt som möjligt.
+
+När du inte kan undvika att använda kapslade responsiva stödraster bör du kontrollera följande:
+
+* Alla behållare (behållare, flikar, dragspelspaneler osv.) har egenskapen `layout = responsiveGrid`.
+* Blanda inte egenskapen `layout = simple` i behållarhierarkin.
+
+Detta inkluderar alla strukturella behållare från sidmallen.
+
+Kolumnnumret för den inre behållaren får aldrig vara större än det för den yttre behållaren. Följande exempel uppfyller det här villkoret. Medan kolumnnumret för den yttre behållaren är 8 för standardskärmen (skrivbordet) är kolumnnumret för den inre behållaren 4.
+
+>[!BEGINTABS]
+
+>[!TAB Exempel på nodstruktur]
+
+```text
+container
+  @layout = responsiveGrid
+  cq:responsive
+    default
+      @offset = 0
+      @width = 8
+  container
+  @layout = responsiveGrid
+    cq:responsive
+      default
+        @offset = 0
+        @width = 4
+    text
+      @text =" Text Column 1"
+```
+
+>[!TAB Exempelresultat för HTML]
+
+```html
+<div class="container responsivegrid aem-GridColumn--default--none aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--offset--default--0">
+  <div id="container-c9955c233c" class="cmp-container">
+    <div class="aem-Grid aem-Grid--8 aem-Grid--default--8 ">
+      <div class="container responsivegrid aem-GridColumn--default--none aem-GridColumn aem-GridColumn--offset--default--0 aem-GridColumn--default--4">
+        <div id="container-8414e95866" class="cmp-container">
+          <div class="aem-Grid aem-Grid--4 aem-Grid--default--4 ">
+            <div class="text aem-GridColumn aem-GridColumn--default--4">
+              <div data-cmp-data-layer="..." id="text-1234567890" class="cmp-text">
+                <p>Text Column 1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+>[!ENDTABS]
