@@ -1,12 +1,12 @@
 ---
 title: Universell redigerare
-description: Läs om flexibiliteten i Universal Editor och hur den kan hjälpa till att driva dina headless-upplevelser med AEM 6.5.
+description: Läs om flexibiliteten i Universal Editor och hur den kan hjälpa till att ge kraft åt dina headless-upplevelser med AEM 6.5.
 feature: Developing
 role: Developer
 exl-id: 7bdf1fcc-02b9-40bc-8605-e6508a84d249
-source-git-commit: 773e398af5247a0de12143334ecfa44955ebbbcd
+source-git-commit: bf9dc1695be7f7a10cb76160b531c9adbbfc8c34
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Universell redigerare {#universal-editor}
 
-Läs om flexibiliteten i Universal Editor och hur den kan hjälpa till att driva dina headless-upplevelser med AEM 6.5.
+Läs om flexibiliteten i Universal Editor och hur den kan hjälpa till att ge kraft åt dina headless-upplevelser med AEM 6.5.
 
 ## Ökning {#overview}
 
@@ -29,9 +29,9 @@ Mer information finns i [AEM as a Cloud Service-dokumentationen för Universal E
 
 Universell redigerare är en tjänst som fungerar tillsammans med AEM för att skapa innehåll utan problem.
 
-* Den universella redigeraren finns på `https://experience.adobe.com/#/aem/editor/canvas` och kan redigera sidor som återges av AEM 6.5.
-* Den AEM sidan läses av den universella redigeraren via dispatchern från AEM författarinstans.
-* Tjänsten Universal Editor, som körs på samma värd som Dispatcher, skriver tillbaka ändringar i AEM författarinstans.
+* Den universella redigeraren finns på `https://experience.adobe.com/#/aem/editor/canvas` och du kan redigera sidor som återges av AEM 6.5.
+* AEM-sidan läses av Universal Editor via dispatchern från AEM författarinstans.
+* Universal Editor-tjänsten, som körs på samma värd som Dispatcher, skriver tillbaka ändringarna till AEM författarinstans.
 
 ![Författarflöde med den universella redigeraren](assets/author-flow.png)
 
@@ -39,7 +39,7 @@ Universell redigerare är en tjänst som fungerar tillsammans med AEM för att s
 
 Om du vill testa den universella redigeraren måste du:
 
-1. [Uppdatera och konfigurera AEM.](#update-configure-aem)
+1. [Uppdatera och konfigurera din AEM-redigeringsinstans.](#update-configure-aem)
 1. [Konfigurera en lokal Universal Editor-tjänst.](#set-up-ue)
 1. [Justera din dispatcher så att den kan användas i den universella redigeringstjänsten.](#update-dispatcher)
 
@@ -55,7 +55,7 @@ Kontrollera att du kör minst Service Pack 21 eller 22 för AEM 6.5. Du kan häm
 
 #### Installera Universal Editor Feature Pack {#feature-pack}
 
-Installera **Funktionspaketet för den universella redigeraren för AEM 6.5** [som är tillgängligt för programdistribution.](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)
+Installera **Universal Editor Feature Pack för AEM 6.5** [som finns tillgängligt för programdistribution.](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/cq-6.5.21-universal-editor-1.0.0.zip)
 
 Om du redan kör Service Pack 23 eller senare är funktionspaketet inte nödvändigt.
 
@@ -83,7 +83,7 @@ Funktionspaketet installerar ett antal nya paket för vilka ytterligare konfigur
 
 1. Öppna Configuration Manager.
    * `http://<host>:<port>/system/console/configMgr`
-1. Leta reda på **Autentiseringshanteraren för frågeparametern Adobe Granite** i listan och klicka på **Redigera konfigurationsvärdena**.
+1. Leta reda på **Autentiseringshanteraren för Adobe Granite-frågeparametern** i listan och klicka på **Redigera konfigurationsvärdena**.
 1. I fältet **Sökväg** (`path`) lägger du till `/` för att aktivera.
    * Ett tomt värde inaktiverar autentiseringshanteraren.
 1. Klicka på **Spara**.
@@ -97,12 +97,19 @@ Funktionspaketet installerar ett antal nya paket för vilka ytterligare konfigur
    * Ange sökvägarna som den universella redigeraren öppnas för i fältet **Öppna mappning för den universella redigeraren**.
    * I fältet **Sling:resourceTypes, som ska öppnas av Universell redigerare**, anger du en lista över resurser som ska öppnas direkt av Universell redigerare.
 1. Klicka på **Spara**.
+1. Kontrollera din [externaliserarkonfiguration](/help/sites-developing/externalizer.md) och se till att du har minst den lokala miljön, författarmiljön och publiceringsmiljön inställd som i följande exempel.
 
-AEM kommer att öppna den universella redigeraren för sidor som baseras på den här konfigurationen.
+   ```text
+   "local $[env:AEM_EXTERNALIZER_LOCAL;default=http://localhost:4502]",
+   "author $[env:AEM_EXTERNALIZER_AUTHOR;default=http://localhost:4502]",
+   "publish $[env:AEM_EXTERNALIZER_PUBLISH;default=http://localhost:4503]"
+   ```
+
+När dessa konfigurationssteg är klara öppnas AEM Universell redigerare för sidor i följande ordning.
 
 1. AEM kontrollerar mappningarna under `Universal Editor Opening Mapping` och om innehållet finns under sökvägar som definierats där öppnas Universell redigerare för det.
-1. För innehåll som inte finns under sökvägar som definieras i `Universal Editor Opening Mapping` kontrollerar AEM om `resourceType` för innehållet matchar de som definieras i **Sling:resourceTypes, som ska öppnas av Universal Editor**, och om innehållet matchar någon av dessa typer, öppnas Universell redigerare för det på `${author}${path}.html`.
-1. I annat fall AEM sidredigeraren.
+1. För innehåll som inte finns under sökvägar som definieras i `Universal Editor Opening Mapping`, kontrollerar AEM om `resourceType` för innehållet matchar de som definieras i **Sling:resourceTypes, som ska öppnas av Universal Editor**, och om innehållet matchar någon av dessa typer, öppnas Universell redigerare för det på `${author}${path}.html`.
+1. I annat fall öppnas sidredigeraren.
 
 Följande variabler är tillgängliga för att definiera dina mappningar under `Universal Editor Opening Mapping`.
 
@@ -116,7 +123,7 @@ Följande variabler är tillgängliga för att definiera dina mappningar under `
 
 Exempelmappningar:
 
-* Öppna alla sidor under `/content/foo` på AEM författare:
+* Öppna alla sidor under `/content/foo` på AEM Author:
    * `/content/foo:${author}${path}.html?login-token=${token}`
    * Detta resulterar i att `https://localhost:4502/content/foo/x.html?login-token=<token>` öppnas
 * Öppna alla sidor under `/content/bar` på en fjärr-NextJS-server, med alla variabler som information
@@ -125,7 +132,7 @@ Exempelmappningar:
 
 ### Konfigurera Universal Editor-tjänsten {#set-up-ue}
 
-Med AEM uppdaterad och konfigurerad kan du skapa en lokal universell redigeringstjänst för lokal utveckling och testning.
+Med AEM uppdaterat och konfigurerat kan du skapa en lokal universell redigeringstjänst för lokal utveckling och testning.
 
 1. Installera Node.js version >=20.
 1. Hämta och packa upp den senaste universella redigeringstjänsten från [Programvarudistribution](https://experienceleague.adobe.com/en/docs/experience-cloud/software-distribution/home)
@@ -155,7 +162,7 @@ Om AEM är konfigurerat och en lokal Universal Editor-tjänst körs måste du ti
 
 ## Instrumentera din app {#instrumentation}
 
-Med AEM uppdaterat och en lokal Universal Editor-tjänst kan du börja redigera headless-innehåll med hjälp av den universella redigeraren.
+Med AEM uppdaterad och en lokal Universal Editor-tjänst kan du börja redigera headless-innehåll med hjälp av Universell Editor.
 
 Ditt program måste dock vara instrumenterat för att du ska kunna använda den universella redigeraren. Det innebär att du inkluderar metataggar för att instruera redigeraren hur och var innehållet ska sparas. Information om den här instrumenteringen finns i [Universal Editor-dokumentationen för AEM as a Cloud Service.](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started#instrument-page)
 
@@ -177,7 +184,7 @@ Observera att följande dokumentation för Universal Editor med AEM as a Cloud S
 
 >[!TIP]
 >
->En utförlig guide till hur utvecklare kommer igång med Universal Editor finns i dokumentet [Universal Editor Overview for AEM Developers](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/developer-overview) i AEM as a Cloud Service-dokumentationen, med hänsyn tagen till de ändringar som krävs för AEM 6.5-stöd som nämns i detta avsnitt.
+>En utförlig guide till hur utvecklare kommer igång med Universal Editor finns i dokumentet [Universal Editor Overview for AEM Developers](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/developer-overview) i AEM as a Cloud Service-dokumentationen, med hänsyn tagen till de ändringar som krävs för stöd för AEM 6.5 enligt detta avsnitt.
 
 ## Skillnader mellan AEM 6.5 och AEM as a Cloud Service {#differences}
 
