@@ -6,9 +6,9 @@ role: Admin
 feature: Asset Management
 exl-id: 3a9b44d4-1756-4ad5-91df-df8d53e82193
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 6ab943894398733d178f561430d3f391e8722195
 workflow-type: tm+mt
-source-wordcount: '2854'
+source-wordcount: '2852'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 
 [Adobe Asset Link (AAL)](https://www.adobe.com/creativecloud/business/enterprise/adobe-asset-link.html) effektiviserar samarbetet mellan kreatörer och marknadsförare när innehåll skapas. Den kopplar samman Adobe Experience Manager Assets med Creative Cloud datorprogram Adobe InDesign, Adobe Photoshop och Adobe Illustrator. På Adobe Asset Link-panelen kan kreativa användare komma åt och ändra innehåll som lagras i AEM Assets utan att lämna de kreativa program de är mest bekanta med.
 
-Implementera följande uppgifter om du vill konfigurera Experience Manager Assets att användas med Asset Link. Använd administratörskontot för Experience Manager för att göra konfigurationen:
+Implementera följande uppgifter om du vill konfigurera Experience Manager Assets att användas med Asset Link. Använd Experience Manager administratörskonto för att göra konfigurationen:
 
 1. Installera paketen efter behov. Information finns i [förutsättningarna](#prerequisites).
 
-1. Konfigurera Experience Manager antingen [manuellt](#manual-configuration) eller med ett [paket](#configure-using-package).
+1. Konfigurera Experience Manager [manuellt](#manual-configuration) eller med ett [paket](#configure-using-package).
 
-1. Hantera [åtkomstkontrollen](#user-access) om du vill mappa Creative Cloud-licensierade användare med Experience Manager.
+1. Om du vill mappa Creative Cloud-licensierade användare till Experience Manager-användare hanterar du [åtkomstkontrollen](#user-access).
 
 1. Skapa [anpassat frågeindex](#create-custom-index), konfigurera [FPO-återgivningar](/help/assets/configure-fpo-renditions.md) för InDesign, konfigurera [Adobe Stock-integrering](/help/assets/aem-assets-adobe-stock.md) och konfigurera [visuell eller liknande sökning](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/search-assets.html#configvisualsearch).
 
@@ -31,7 +31,7 @@ Implementera följande uppgifter om du vill konfigurera Experience Manager Asset
 
 Kontrollera att du har installerat rätt Service Pack och paket efter behov. Se följande krav för respektive Experience Manager-version och för specifika funktioner.
 
-| Assets | Experience Manager version och supportkrav |
+| Assets | Experience Manager-version och supportkrav |
 |--- |--- |
 | Resurslänk fungerar som standard | Experience Manager 6.5 och 6.5.2 eller senare. </br> Experience Manager 6.4.4 och 6.4.6 eller senare. </br> Adobe rekommenderar att du installerar det senaste [Experience Manager Service Pack (SP)](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html) innan du använder AAL. |
 | Resurslänk fungerar efter installation av ett paket | För Experience Manager 6.4.0 - 6.4.3 installerar du paketet [adobe-asset-link-support](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq640/featurepack/adobe-asset-link-support). |
@@ -45,7 +45,7 @@ Adobe rekommenderar att du installerar konfigurationspaketet [adobe-asset-link-c
 
 >[!CAUTION]
 >
->Använd inte konfigurationspaketet om din Experience Manager-instans har konfigurerats för användarinloggning med Adobe IMS-konton. [konfigurera ](#manual-configuration) din Experience Manager-instans manuellt i stället.
+>Använd inte konfigurationspaketet om din Experience Manager-instans har konfigurerats för användarinloggning med Adobe IMS-konton. [konfigurera i stället](#manual-configuration) din Experience Manager-instans manuellt.
 
 1. Öppna Package Manager genom att gå till **[!UICONTROL Tools]** > **[!UICONTROL Deployment]** > **[!UICONTROL Package Share]** i Experience Manager webbgränssnitt. Installera paketet `adobe-asset-link-config`.
 
@@ -63,7 +63,7 @@ Adobe rekommenderar att du installerar konfigurationspaketet [adobe-asset-link-c
 
 ## Konfigurera Experience Manager manuellt {#manual-configuration}
 
-Konfigurera Experience Manager manuellt om du väljer att inte använda ett konfigurationspaket eller om din distribution i Experience Manager är konfigurerad för användarinloggning med Adobe IMS-konton.
+Konfigurera Experience Manager manuellt om du väljer att inte använda ett konfigurationspaket eller om din Experience Manager-distribution är konfigurerad att stödja användarinloggning med Adobe IMS-konton.
 
 Så här konfigurerar du Experience Manager manuellt:
 
@@ -86,7 +86,7 @@ Så här konfigurerar du Experience Manager manuellt:
 
    Klicka på `+` om du vill lägga till varje `Client ID`. Klicka på **[!UICONTROL Save]** när du har lagt till alla ID.
 
-1. Granska de befintliga **[!UICONTROL Adobe Granite OAuth Authentication Handler]**-instanserna i konfigurationen **[!UICONTROL Adobe Granite OAuth Application and Provider]**. Om du hittar en instans med värdet `Config ID` för `ims` kan du använda den för instruktionerna i den här proceduren. Annars klickar du på `+` för att skapa en konfigurationsinstans. Ange följande egenskapsvärden och klicka på **[!UICONTROL Save]**.
+1. Granska de befintliga **[!UICONTROL Adobe Granite OAuth Application and Provider]**-instanserna i konfigurationen **[!UICONTROL Adobe Granite OAuth Application and Provider]**. Om du hittar en instans med värdet `Config ID` för `ims` kan du använda den för instruktionerna i den här proceduren. Annars klickar du på `+` för att skapa en konfigurationsinstans. Ange följande egenskapsvärden och klicka på **[!UICONTROL Save]**.
 
    * [!UICONTROL Client ID]: Ändra inte
    * [!UICONTROL Client Secret]: Ändra inte
@@ -110,26 +110,26 @@ Så här konfigurerar du Experience Manager manuellt:
 
    >[!NOTE]
    >
-   >Varje begäran som autentiseras med en innehavartoken medför att tre anrop till Adobe IMS, användarsynkronisering och skapandet av en inloggningstoken görs i Experience Manager. För att komma över detta tar Adobe Asset Link emot inloggningstoken som returnerades från Experience Manager och skickar den med efterföljande förfrågningar. För att den här processen ska fungera måste den relativa prioriteten för hanteraren för innehavarautentisering justeras.
+   >Varje begäran som autentiseras med en innehavartoken medför att tre anrop till Adobe IMS, användarsynkronisering och skapandet av en inloggningstoken görs i Experience Manager. Adobe Asset Link fångar upp den inloggningstoken som returnerades i svaret från Experience Manager och skickar den med efterföljande förfrågningar. För att den här processen ska fungera måste den relativa prioriteten för hanteraren för innehavarautentisering justeras.
 
-1. (Valfritt) Om Experience Manager-användarna har versaler eller blandat skiftläge för domännamn i sina e-post-ID:n väljer du **[!UICONTROL Change Locking User to Lower Case]** i **[!UICONTROL Adobe Granite ACP Platform Configs]** i Experience Manager Web Console.
+1. (Valfritt) Om Experience Manager-användarna har versaler eller blandade domännamn i sina e-post-ID:n väljer du **[!UICONTROL Change Locking User to Lower Case]** i **[!UICONTROL Adobe Granite ACP Platform Configs]** i Experience Manager Web Console.
 
 ## Ytterligare konfiguration efter migrering till affärsprofiler {#configure-migration-activity}
 
-Adobe Asset Link-användare kan ansluta till Experience Manager för att tillåta IMS-inloggning från huvudorganisationen för Creative Cloud for Enterprise (CCE). Experience Manager använder klient-ID:n för att identifiera den tillåtna IMS-organisationen. Efter migrering till affärsprofiler måste du konfigurera klient-ID och hemlig nyckel för IMS-organisationen i Experience Manager för Bearer Authentication Handler. Mer information om affärsprofiler finns i [Introduktion till Adobe-profiler](https://helpx.adobe.com/enterprise/kb/introducing-adobe-profiles.html).
+Adobe Asset Link-användare kan ansluta till Experience Manager för att tillåta IMS-inloggning från huvudorganisationen för Creative Cloud for Enterprise (CCE). Experience Manager använder klient-ID för att identifiera den tillåtna IMS-organisationen. Efter migrering till affärsprofiler måste du konfigurera klient-ID och hemlig nyckel för IMS-organisationen i Experience Manager för Bearer Authentication Handler. Mer information om affärsprofiler finns i [Introduktion till Adobe-profiler](https://helpx.adobe.com/enterprise/kb/introducing-adobe-profiles.html).
 
-Ytterligare konfiguration krävs bara om du använder olika Adobe IMS-organisationer för Experience Manager och Creative Cloud för Enterprise (CCE) och en domänförtroenderelation upprättas mellan dessa två organisationer.
+Ytterligare konfiguration krävs endast om du använder olika Adobe IMS-organisationer för Experience Manager och Creative Cloud for Enterprise (CCE) och en domänförtroenderelation upprättas mellan dessa två organisationer.
 
 >[!NOTE]
 >
->* Korrigeringen för företagsprofiler finns i Experience Manager 6.5.11.0.
->* Den befintliga konfigurationen fortsätter att fungera om du använder samma Adobe IMS-organisation som Experience Manager och CCE.
+>* Korrigering för företagsprofiler tillhandahålls i Experience Manager 6.5.11.0.
+>* Den befintliga konfigurationen fortsätter att fungera om du använder samma Adobe IMS-organisation med Experience Manager och CCE.
 
 
 **Förutsättningar**
 
-1. En Experience Manager-instans som är igång och som har Bearer Authentication konfigurerat för AAL.
-1. Installera följande paket (Service Pack 11) på Experience Manager 6.5-instansen.
+1. En Experience Manager-instans som körs och som har Bearer Authentication konfigurerat för AAL.
+1. Installera följande paket (Service Pack 11) på din Experience Manager 6.5-instans.
 
    [Hämta Experience Manager 6.5.11.0](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.11.zip)
 
@@ -163,9 +163,9 @@ I det här avsnittet beskrivs hur du hanterar användare och deras åtkomst till
 
 ### Gruppmappning {#group-mapping}
 
-Gruppmappning avgör hur grupper i Experience Manager motsvarar grupper i Adobe IMS. Det spelar en viktig roll när det gäller hur användare av Adobe Asset Link får åtkomst till Experience Manager Assets.
+Gruppmappning avgör hur grupper i Experience Manager motsvarar grupper i Adobe IMS. Det spelar en viktig roll när det gäller hur Adobe Asset Link-användare ges behörighet att komma åt Experience Manager Assets.
 
-När det används med Adobe Asset Link delegerar Experience Manager användarhanteringsfunktioner till Adobe IMS. Användare och grupper som motsvarar användare och grupper i Adobe IMS skapas automatiskt. Dessutom synkroniseras användare, grupper och gruppmedlemskap i Experience Manager så att de matchar dem i Adobe IMS.
+När Experience Manager används med Adobe Asset Link delegeras användarhanteringsfunktioner till Adobe IMS. Användare och grupper som motsvarar användare och grupper i Adobe IMS skapas automatiskt. Dessutom synkroniseras användare, grupper och gruppmedlemskap i Experience Manager så att de matchar dem i Adobe IMS.
 
 Tänk dig till exempel ett scenario där Adobe Asset Link-användare är medlemmar i Adobe IMS-gruppen assetlink-users. I det här fallet skapas en synkroniserad grupp med namnet assetlink-users i Experience Manager när en användare från den Adobe IMS-gruppen ansluter till Adobe Asset Link för första gången. Varje ny användare i Adobe IMS-gruppen läggs till i motsvarande grupp i Experience Manager när de ansluter till Experience Manager via Adobe Asset Link för första gången.
 
@@ -177,65 +177,65 @@ Följande regler gäller för gruppmappningar i Experience Manager:
 
 * Kontrollera att egenskapen **[!UICONTROL Group Mappings]** i konfigurationen **[!UICONTROL Adobe Granite OAuth IMS Provider]** är tom.
 * Medlemskap i användargruppen Adobe Asset Link utvärderas när användaren autentiserar sig och tidsperioden i egenskapen **[!UICONTROL User Expiration Time]** i konfigurationen **[!UICONTROL Apache Jackrabbit Oak Default Sync Handler]** har gått ut. För närvarande kan användare läggas till i och tas bort från grupper i Experience Manager för att synkronisera med det som finns i Adobe IMS.
-* Undvik gruppnamnskonflikter. Se till att namnen som används för grupper som skapats i Adobe IMS (för att hantera användare) skiljer sig från systemgruppsnamnen i Experience Manager.
+* Undvik gruppnamnskonflikter. Kontrollera att namnen som används för grupper som skapats i Adobe IMS (för att hantera användare) inte är samma som alla Experience Manager systemgruppnamn.
 
-  Kontrollera till exempel att de skiljer sig från gruppen `dam-users` och grupperna som skapats av Experience Manager-administratören.
+  Kontrollera till exempel att de skiljer sig från gruppen `dam-users` och de grupper som skapas av Experience Manager-administratören.
 
   En Adobe IMS-grupp vars namn står i konflikt med namnet på en Experience Manager-systemgrupp eller grupp som skapats manuellt används inte för att styra användarbehörigheter.
-* Om en Adobe IMS-användare ansluter till en Experience Manager-instans där användarens namn står i konflikt med en tidigare skapad Experience Manager-användare, får Adobe IMS-användaren ett annat namn med siffror som gör den unik.
+* Om en Adobe IMS-användare ansluter till en Experience Manager-instans, där användarens namn står i konflikt med en tidigare skapad Experience Manager-användare, får Adobe IMS-användaren ett annat namn med siffror som läggs till så att det blir unikt.
 
 **Konfigurera förstagångskontroll för åtkomst**
 
-Användare som ansluter via Adobe Asset Link kan bara visa och interagera med resurser efter att de har fått nödvändig behörighet. I avsnittet [Gruppmappning](#group-mapping) ovan beskrivs hur användargrupper som skapats i Experience Manager, som motsvarar och synkroniseras med användargrupper i din organisation inom Adobe IMS, är. Vi rekommenderar att Experience Manager-administratörerna använder dessa grupper för att hantera åtkomstkontroll för användare av Adobe Asset Link.
+Användare som ansluter via Adobe Asset Link kan bara visa och interagera med resurser efter att de har fått den behörighet som krävs. I avsnittet [Gruppmappning](#group-mapping) ovan beskrivs hur användargrupper som skapats i Experience Manager, som motsvarar och synkroniseras med användargrupper i din organisation inom Adobe IMS, är skapade i. Vi rekommenderar att Experience Manager-administratörerna använder dessa grupper för att hantera åtkomstkontroll för Adobe Asset Link-användare.
 
 För varje Experience Manager-grupp som synkroniseras med en Adobe IMS-grupp (som används för att hantera åtkomstkontroll):
 
-1. Se till att gruppen har en medlem som kan användas för en första anslutning från Adobe Asset Link.
+1. Kontrollera att gruppen har en medlem som kan användas för en första anslutning från Adobe Asset Link.
 1. Använd den användaren för att logga in på Adobe Asset Link och ansluta till Experience Manager. Den här anslutningen förväntas misslyckas.
-1. I Experience Manager letar du reda på den grupp som motsvarar gruppen i Adobe IMS och ger den den åtkomstkontroll som du behöver. Den nya gruppen blir till exempel medlem i gruppen dam-users.
-1. Stäng Adobe Asset Link och starta om programmet Creative Cloud.
-1. Om du vill verifiera att användaren har rätt åtkomst öppnar du Adobe Asset Link igen.
+1. I Experience Manager letar du reda på den grupp som motsvarar gruppen i Adobe IMS och ger den önskad åtkomstkontroll. Den nya gruppen blir till exempel medlem i gruppen dam-users.
+1. Stäng Adobe Asset Link och starta om Creative Cloud.
+1. Kontrollera att användaren har rätt åtkomst genom att öppna Adobe Asset Link igen.
 
-När dessa steg har utförts kan andra användare i samma grupp ansluta till Experience Manager med Adobe Asset Link i sitt första försök. De får automatiskt samma behörigheter som de andra användarna i gruppen.
+När de här stegen har utförts kan andra användare i samma grupp ansluta till Experience Manager med Adobe Asset Link vid första försöket. De får automatiskt samma behörigheter som de andra användarna i gruppen.
 
 ## Hantera Experience Manager-användare för Adobe Asset Link {#manage-users}
 
-Adobe Asset Link-användare kan ansluta till Experience Manager när de är inloggade i Creative Cloud. Denna autentisering använder Adobe IMS-teknik och skapar användarinformation i Experience Manager, om den inte finns. Det är vanligt att Experience Manager företagskunder hanterar sina användare med en extern identitetsleverantör som är integrerad med Experience Manager. Identitetsleverantörer inkluderar Adobe IMS och andra produkter som använder SAML- och LDAP-protokoll. Du kan också skapa och hantera användare lokalt i Experience Manager.
+Adobe Asset Link-användare kan ansluta till Experience Manager när de är inloggade i sina Creative Cloud-program. Denna autentisering använder Adobe IMS-teknik och skapar användarinformation i Experience Manager, om den inte finns. Det är vanligt att Experience Manager Enterprise-kunder hanterar sina användare med en extern identitetsleverantör som är integrerad med Experience Manager. Identitetsleverantörer inkluderar Adobe IMS och andra produkter som använder SAML- och LDAP-protokoll. Du kan också skapa och hantera användare lokalt i Experience Manager.
 
-Användare som ansluter till Experience Manager från Adobe Asset Link har ingen konflikt med befintlig användarinformation som lagrats i Experience Manager från tidigare direktinloggning, om:
+Användare som ansluter till Experience Manager från Adobe Asset Link har ingen konflikt med befintlig användarinformation som lagras i Experience Manager från tidigare direktinloggning, om:
 
-* Alla användarnamn som används för direkt inloggning i Experience Manager skiljer sig från användarnamn som används i Adobe IMS för Creative Cloud-inloggning.
-* Adobe IMS används som identitetsleverantör för direkt inloggning i Experience Manager.
-* Användare ansluter till Experience Manager från Adobe Asset Link före direkt inloggning från Experience Manager med samma konto.
+* Alla användarnamn som används för direkt inloggning på Experience Manager skiljer sig från användarnamn som används i Adobe IMS för Creative Cloud-inloggning.
+* Adobe IMS används som identitetsleverantör för direkt inloggning från Experience Manager.
+* Användare ansluter till Experience Manager från Adobe Asset Link innan de direkt loggar in på Experience Manager med samma konto.
 
 
 Å andra sidan måste användarinformationen som skapas som ett resultat av direkt inloggning från Experience Manager uppdateras för att fungera med Adobe Asset Link i följande scenarier:
 
-* Samma användarnamn, t.ex. användarens e-postadress, används för båda - kontot i Creative Cloud som använder Adobe IMS, och kontot i en annan extern identitetsleverantör än Adobe IMS.
-* Samma användarnamn används för båda - kontot i Creative Cloud och ett lokalt Experience Manager-konto.
+* Samma användarnamn, t.ex. användarens e-postadress, används för båda - kontot i Creative Cloud, som använder Adobe IMS, och kontot i en annan extern identitetsleverantör än Adobe IMS.
+* Samma användarnamn används för båda, dvs. kontot i Creative Cloud och ett lokalt Experience Manager-konto.
 * Creative Cloud-konton i Adobe IMS är Federated ID:n, som hanteras av samma externa identitetsleverantör som är integrerad med Experience Manager för direkt inloggning.
 
 De användare som skapas med dessa scenarier har ingen egenskap som krävs för användare, som synkroniseras med Adobe IMS.
 
 Så här uppdaterar du användare i Experience Manager så att de kan arbeta med Adobe Asset Link:
 
-1. Leta reda på konfigurationen för **[!UICONTROL Apache Jackrabbit Oak External PrincipalConfiguration]** i webbkonsolen Experience Manager och klicka för att redigera den. Avmarkera kryssrutan **[!UICONTROL External Identity Protection]** och klicka på **[!UICONTROL Save]**.
-1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]** om du vill komma åt användarhanteringsgränssnittet i Experience Manager. Markera den användare som du vill uppdatera och notera sedan slutet på webbläsarens URL-sökväg för den användaren, med början `/home/users`. Du kan också söka efter användarnamnet i CRXDE. Ett exempel på användarsökväg: `/home/users/x/xTac082TDh-guJzzG7WM`.
+1. Leta reda på konfigurationen för **[!UICONTROL Apache Jackrabbit Oak External PrincipalConfiguration]** i Experience Manager webbkonsol och klicka för att redigera den. Avmarkera kryssrutan **[!UICONTROL External Identity Protection]** och klicka på **[!UICONTROL Save]**.
+1. Om du vill komma åt användarhanteringsgränssnittet i Experience Manager går du till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**. Markera den användare som du vill uppdatera och notera sedan slutet på webbläsarens URL-sökväg för den användaren, med början `/home/users`. Du kan också söka efter användarnamnet i CRXDE. Ett exempel på användarsökväg: `/home/users/x/xTac082TDh-guJzzG7WM`.
 1. I CRXDE navigerar du till användarsökvägen, markerar användarnoden och visar nodens egenskaper genom att välja fliken **[!UICONTROL Properties]** i området längst ned i mitten. Den här noden har `jcr:primaryType`-egenskapsvärdet `rep:User`.
 1. Längst ned på fliken **[!UICONTROL Properties]** anger du `Name` värdet `rep:externalId`, `Type` värdet `String` och `Value` värdet `rep:authorizableId`;`ims`, där `rep:authorizableId` är värdet på egenskapen `rep:authorizableId` för noden. (Ett semikolon används utan blanksteg för att skilja värdet `rep:authorizableId` från `ims`.)
 1. Klicka på knappen **[!UICONTROL Add]** till höger om det nya inlägget och klicka sedan på **[!UICONTROL Save All]**.
 1. Upprepa steg 2 till 5 för alla andra användare som du vill uppgradera för att arbeta med Adobe Asset Link.
-1. Leta reda på konfigurationen för **[!UICONTROL Apache Jackrabbit Oak External PrincipalConfiguration]** i webbkonsolen Experience Manager och klicka för att redigera den. Avmarkera kryssrutan **[!UICONTROL External Identity Protection]** och klicka på **[!UICONTROL Save]**.
+1. Leta reda på konfigurationen för **[!UICONTROL Apache Jackrabbit Oak External PrincipalConfiguration]** i Experience Manager webbkonsol och klicka för att redigera den. Avmarkera kryssrutan **[!UICONTROL External Identity Protection]** och klicka på **[!UICONTROL Save]**.
 
 >[!NOTE]
 >
 >Om tjänsterna inte återställs på några minuter startar du om Experience Manager för att tillåta lyckade autentiseringar.
 
-Efter den här ändringen kan en uppdaterad Experience Manager-användare ansluta till Adobe Asset Link och fortsätta att använda den metod för direktinloggning till Experience Manager som användes före uppdateringen. När autentiseringen med Adobe IMS är klar synkroniseras informationen om användarprofilen i Experience Manager med användarprofilen i Adobe IMS.
+Efter den här ändringen kan en uppdaterad Experience Manager-användare ansluta till Adobe Asset Link och fortsätta att använda den metod för direktinloggning till Experience Manager som användes före uppdateringen. När autentiseringen med Adobe IMS är klar synkroniseras Experience Manager användarprofilinformation med användarprofilen i Adobe IMS.
 
 Det finns en metod som gör att flera Experience Manager-användare kan migreras satsvis för att de ska kunna arbeta med Adobe Asset Link. Kontakta Adobe Care för mer information och hjälp med att aktivera det här alternativet.
 
-Som ett alternativ till stegen kan en användare av Adobe Asset Link under vissa omständigheter få snabb åtkomst till Experience Manager. I sådana fall hittas och raderas den befintliga användarinformationen med Experience Manager User Management eller Experience Manager CRXDE innan den kopplas till Adobe Asset Link. Ny användarinformation skapas i Experience Manager efter anslutningen. Använd bara den här metoden om du är säker på att det inte finns några viktiga data som läggs till som underordnad till användarnoden. Sådana extra data är alla noder som är underordnade användarnoden förutom noderna `tokens`, `preferences`, `profile`, `profiles`, `profiles/public` och `rep:policy/*`.
+Som ett alternativ till dessa steg kan en Adobe Asset Link-användare under vissa omständigheter få snabb åtkomst till Experience Manager. I sådana fall hittas och raderas den befintliga användarinformationen med Experience Manager användarhantering eller Experience Manager CRXDE innan de ansluter till Adobe Asset Link. Ny användarinformation skapas i Experience Manager efter anslutningen. Använd bara den här metoden om du är säker på att det inte finns några viktiga data som läggs till som underordnad till användarnoden. Sådana extra data är alla noder som är underordnade användarnoden förutom noderna `tokens`, `preferences`, `profile`, `profiles`, `profiles/public` och `rep:policy/*`.
 
 ## Starta arbetsflödet automatiskt för att bearbeta resurser på villkor {#auto-start-workflow}
 
@@ -243,10 +243,10 @@ I Experience Manager 6.4 och Experience Manager 6.5 kan administratörer konfigu
 
 Konfigurationen är användbar för företagsanvändare och marknadsförare, till exempel för att skapa ett anpassat arbetsflöde i några specifika mappar. Anta att alla resurser från en reklambyrås foton kan vara vattenstämplade eller att alla resurser som överförts av en frilansare kan bearbetas för att skapa specifika renderingar.
 
-Mer information och information om konfigurationen för Experience Manager finns i [autokörningsarbetsflöde för resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html#auto-execute-workflow-on-some-assets).
+Mer information och information om Experience Manager-konfiguration finns i [autokörningsarbetsflöde för resurser](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html#auto-execute-workflow-on-some-assets).
 
 
-## Skapa ett anpassat index i Experience Manager 6.4.x-versioner {#create-custom-index}
+## Skapa ett anpassat index i Experience Manager 6.4.x {#create-custom-index}
 
 Experience Manager innehåller index som används för frågor. Skapa följande anpassade index för den angivna versionen. Experience Manager 6.5.0 innehåller detta index som standard. Adobe Asset Link kräver detta index för att avgöra vilka resurser en användare har checkat ut.
 
@@ -282,12 +282,12 @@ Om du får problem när du konfigurerar eller använder Adobe Asset Link kan du 
 
 * Se till att driftsättningen uppfyller kraven. Kontrollera i synnerhet att rätt funktionspaket eller funktionspaket är installerade.
 * Kontakta din organisations partner eller systemintegratör.
-* Om dina Creative Cloud-användare inte kan verifiera de utcheckade resurserna ska du kontrollera om de har placerat domännamnen i e-post-ID:n. Mer information finns i [manuell konfiguration](#manual-configuration).
+* Om dina Creative Cloud-användare inte kan verifiera de utcheckade resurserna ska du kontrollera om domännamnen finns i e-post-ID:n. Mer information finns i [manuell konfiguration](#manual-configuration).
 * Mer information finns i [felsökning av resurslänk](https://helpx.adobe.com/enterprise/kb/asset-link-troubleshooting.html).
 
 
 >[!MORELIKETHIS]
 >
 >* [Om Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html)
->* [Använd resurslänk i skrivbordsappen Creative Cloud och hantera resurser](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)
+>* [Använd resurslänk i Creative Cloud-datorprogrammet och hantera resurser](https://helpx.adobe.com/se/enterprise/using/manage-assets-using-adobe-asset-link.html)
 >* [Konfigurera Adobe Experience Manager Assets as a Cloud Service](https://helpx.adobe.com/enterprise/using/configure-aem-assets-for-asset-link.html).
