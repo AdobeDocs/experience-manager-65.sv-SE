@@ -6,9 +6,9 @@ solution-title: Experience Cloud
 user-guide-description: Läs Adobe Experience Manager 6.5-dokumentationen och se hur det fungerar och vad programmet kan göra för dig.
 breadcrumb-title: Användarhandbok
 user-guide-title: AEM 6.5
-source-git-commit: 236dac79430bc974b9cc95299a566283a748476a
+source-git-commit: 0109abf51045224912d130ee29f67d7274cfc4f4
 workflow-type: tm+mt
-source-wordcount: '7474'
+source-wordcount: '7471'
 ht-degree: 1%
 
 ---
@@ -884,7 +884,7 @@ ht-degree: 1%
       + [Designer FormCalc-referens](https://www.adobe.com/go/learn_aemforms_formCalc_65)
       + [Använda klottersignaturer i HTML5-formulär](/help/forms/using/scribble-signature.md)
       + [Ändra sidans nollinnehåll i Designer](/help/forms/using/changing-page-zero-content-designer.md)
-      + [Bästa metoder för hjälpmedel]{#accessibility-best-practices}
+      + Bästa praxis för hjälpmedel {#accessibility-best-practices}
          + [Introduktion](/help/forms/using/introduction-accessibility-forms-designer.md)
          + [Bästa tillvägagångssätt för att skapa formulär](/help/forms/using/best-practices-for-creating-forms-in-designer.md)
          + [Tekniker för att testa formulärtillgänglighet](/help/forms/using/techniques-for-testing-form-accessibility.md)
@@ -1203,7 +1203,7 @@ ht-degree: 1%
       + [Det går inte att öppna XFA-baserad PDF forms i Google Chrome, Firefox, Microsoft Edge, Microsoft Internet Explorer eller Apple Safari](/help/forms/using/xfa-based-forms-in-chrome-firefox-ie-internet-explorter-safari-edge.md)
       + [Det går inte att återställa CRX-databasen](/help/forms/using/restore-crx-repository.md)
       + [Fel som inte är tillgängliga för tjänsten efter installation av AEM 6.5.15.0 Service Pack](/help/forms/using/aem-service-pack-installation-solution.md)
-      + [AEM Forms JEE 6.5.15.0 Service Pack - installationsproblem i JBoss Linux-miljö](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
+      + [Installationsproblem för AEM Forms JEE 6.5.15.0 Service Pack i JBoss Linux-miljö](/help/forms/using/linux-jboss-installation-issue-on-sp15.md)
       + [Bearbetar dokument även om AEM Forms-servern inte är helt igång](/help/forms/using/processing-documents-even-if-aem-forms-server-not-fully-up.md)
       + [Det går inte att använda utdatatjänsten, Forms-tjänsten eller DoR-tjänsten (Document of Record)](/help/forms/using/connection-issues-with-output-forms-and-document-of-record-dor-services.md)
       + [Minska STORLEK 2 RCE-sårbarhet för Experience Manager Forms](/help/forms/using/mitigating-struts-2-rce-vulnerabilities-for-experience-manager-manager-form.md)
