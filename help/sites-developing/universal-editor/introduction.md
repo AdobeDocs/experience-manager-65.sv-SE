@@ -4,9 +4,9 @@ description: Läs om flexibiliteten i Universal Editor och hur den kan hjälpa t
 feature: Developing
 role: Developer
 exl-id: 7bdf1fcc-02b9-40bc-8605-e6508a84d249
-source-git-commit: bf9dc1695be7f7a10cb76160b531c9adbbfc8c34
+source-git-commit: d3dd827e93549c558284be1c1991b4e003c9e0e8
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1252'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,16 @@ Universell redigerare är en tjänst som fungerar tillsammans med AEM för att s
 * Universal Editor-tjänsten, som körs på samma värd som Dispatcher, skriver tillbaka ändringarna till AEM författarinstans.
 
 ![Författarflöde med den universella redigeraren](assets/author-flow.png)
+
+## Krav {#requirements}
+
+Universal Editor stöds av:
+
+* AEM 6.5 (Service Pack 21 eller 22 plus ett funktionspaket)
+   * Både lokala värdtjänster och AMS-värdtjänster stöds.
+* [AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction) (release `2023.8.13099` eller senare)
+
+Det här dokumentet fokuserar på stöd för AEM 6.5 i Universal Editor.
 
 ## Inställningar {#setup}
 
