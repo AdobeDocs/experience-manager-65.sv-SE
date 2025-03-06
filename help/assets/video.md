@@ -11,9 +11,9 @@ feature: Asset Management
 role: User, Admin
 exl-id: 28cf9e39-cab4-4278-b6c9-e84cc31964db
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 13c495b8b7e9824c5de8469df96bec00c74c8dbc
+source-git-commit: 54b508809733ed86798558aee50f8c7b5de00af9
 workflow-type: tm+mt
-source-wordcount: '10369'
+source-wordcount: '10340'
 ht-degree: 1%
 
 ---
@@ -553,8 +553,6 @@ Några av användningsområdena för att lägga till flera bildtexter och ljudsp
 |  | Beskrivande ljud |
 
 Alla [videoformat som stöds i Dynamic Media](/help/assets/assets-formats.md) och alla videovisningsprogram för Dynamic Media - utom i visningsprogrammet för Dynamic Media *Video_360* - stöds för användning med flera beskrivnings- och ljudspår.
-
-Funktionen för flera bildtexter och ljudspår är tillgänglig för ditt Dynamic Media-konto via en funktion som måste aktiveras (aktiveras) av Adobe kundsupport.
 
 ### Lägga till flera bildtexter och ljudspår i videon {#add-msma}
 
@@ -1389,7 +1387,7 @@ Du anropar servern genom att utföra en `GET`-åtgärd på `/dmSample/dynamicmed
 | `manifestType` | Valfritt. Parametern kan vara DASH eller HLS. Om det inte skickas blir standardvärdet DASH. |
 | `onlyIfPublished` | Valfritt. Om det skickas returneras `manifestUrl` bara om videon publiceras. |
 
-I det här exemplet antar vi följande inställningar:
+I det här exemplet antar du följande inställningar:
 
 * Företaget är `samplecompany`.
 * Redigeringsinstansen är `http://sample-aem-author.com`.

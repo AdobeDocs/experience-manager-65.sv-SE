@@ -11,9 +11,9 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 13c495b8b7e9824c5de8469df96bec00c74c8dbc
+source-git-commit: 54b508809733ed86798558aee50f8c7b5de00af9
 workflow-type: tm+mt
-source-wordcount: '3568'
+source-wordcount: '3548'
 ht-degree: 6%
 
 ---
@@ -301,7 +301,7 @@ Du kan redigera en befintlig videokodningsprofil för att dra nytta av avancerad
    <td><code>audioBitrateCustom</code></td>
    <td>Ange värdet <code>true</code> för att tvinga fram en konstant bithastighet för ljudströmmen, om det stöds av ljudkodeken.</td>
    <td><code>String</code></td>
-   <td><p><code>true</code>/<code>false</code></p> <p>Standardvärdet är <code>false</code>.</p> <p>Rekommenderat värde för DASH eller HLS är <code>false</code>. (Om du vill använda DASH för videoklipp måste det först aktiveras på ditt konto. Se <a href="/help/assets/video.md#enable-dash">Aktivera DASH för ditt konto</a>.)</p> <p> </p> </td>
+   <td><p><code>true</code>/<code>false</code></p> <p>Standardvärdet är <code>false</code>.</p> <p>Rekommenderat värde för DASH eller HLS är <code>false</code>.</p> <p> </p> </td>
   </tr>
  </tbody>
 </table>
