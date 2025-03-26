@@ -5,9 +5,10 @@ topic-tags: platform
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 9891d7e61e62c541073c177eb88c49d685cbcb5f
+exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
+source-git-commit: 61f658fc4390610686a308d02a8d74505252434a
 workflow-type: tm+mt
-source-wordcount: '3681'
+source-wordcount: '3638'
 ht-degree: 0%
 
 ---
@@ -116,8 +117,8 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 | **Filsystem med TAR-filer** `[1]` | Databas | A: Stöds |
 | **Filsystem med datalager** `[1]` | Binärfiler | A: Stöds |
 | Lagra binärfiler i TAR-filer i filsystemet `[1]` | Binärfiler | Z: Stöds inte för produktion |
-| Amazon S3 | Binärfiler | A: Stöds |
-| Microsoft® Azure Blob Storage | Binärfiler | A: Stöds |
+| Amazon S3 | Binärer | S: Stöds |
+| Microsoft® Azure Blob Storage | Binärer | A: Stöds |
 | MongoDB Enterprise 6.0 | Databas | A: `[3, 4]` stöds |
 | MongoDB Enterprise 5.0 | Databas | A: `[3, 4]` stöds |
 | MongoDB Enterprise 4.4 | Databas | A: `[2, 3, 4, 7]` stöds |
@@ -147,7 +148,7 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 
 >[!NOTE]
 >
->MongoDB är ett program från tredje part och ingår inte i AEM licenspaket. Mer information finns på sidan [MongoDB-licenspolicy](https://www.mongodb.com/licensing/server-side-public-license/faq).
+>MongoDB är ett program från tredje part och ingår inte i AEM licenspaket. Mer information finns på sidan om [MongoDB-licensieringsprincip](https://www.mongodb.com/licensing/server-side-public-license/faq) .
 >
 >För att få ut så mycket som möjligt av er AEM-distribution med MongoDB rekommenderar Adobe att man licensierar MongoDB Enterprise-versionen för att få tillgång till professionell support. Mer information finns i [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md#prerequisites-and-recommendations-when-deploying-aem-with-mongomk).
 >
@@ -157,21 +158,22 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 >
 >Adobe kundtjänst hjälper dig att hantera kvalificeringsproblem i samband med användningen av MongoDB med AEM.
 >
->Mer information finns på [sidan](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager) MongoDB för Adobe Experience Manager.
+>Mer information finns på sidan [MongoDB för Adobe Experience Manager](https://www.mongodb.com/lp/contact/mongodb-adobe-experience-manager).
 
+<!--
 >[!NOTE]
 >
->De relationsdatabaser som stöds ovan är tredjepartsprogram och ingår inte i AEM licenspaket.
+>Supported relational databases as listed above are third-party software and are not included in the AEM licensing package.
 >
->För att köra AEM 6.5 med en relationsdatabas som stöds krävs ett separat supportavtal med en databasleverantör. Adobe kundtjänst hjälper dig att hantera kvalificeringsproblem i samband med användning av relationsdatabaser med AEM 6.5.
+>To run AEM 6.5 with a supported relational database, a separate support contract with a database vendor is required. Adobe Customer Care assists qualifying issues related to the usage of relational databases with AEM 6.5.
 >
->**De flesta relationsdatabaser stöds för närvarande i Level-R på AEM 6.5, som innehåller supportvillkor och ett supportprogram enligt beskrivningen ovan.**
+>**Most relational databases are currently supported within Level-R on AEM 6.5, which comes with support criteria and a support program as stated in the Level-R description above.**-->
 
-### Servletmotorer/programservrar {#servlet-engines-application-servers}
+### Servletmotorer / Applikationsservrar {#servlet-engines-application-servers}
 
-Adobe Experience Manager kan köras antingen som en fristående server (snabbstart-JAR-filen) eller som ett webbprogram i en tredjepartsprogramserver (WAR-filen).
+Adobe Experience Manager kan köras antingen som en fristående server (JAR-filen för snabbstart) eller som ett webbprogram i en tredjepartsprogramserver (WAR-filen).
 
-Den lägsta servlet API-version som krävs är Servlet 3.1
+Den minsta Servlet API-version som krävs är Servlet 3.1
 
 | Plattform | Supportnivå |
 |---|---|
@@ -195,11 +197,11 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 
 | **Plattform** | **Supportnivå** |
 |---|---|
-| **Linux®, baserat på Red Hat-distributionen®** | S: Stöds `[1]` `[3]` |
-| Linux®, baserat på Debian-distribution inkl. Ubuntu (Ubuntu) | S: Stöds `[1]` `[2]` |
-| Linux®, baserat på SUSE-distribution® | A: `[1]` stöds |
+| **Linux®, baserat på Red Hat®-distributionen** | A: Stöds `[1]` `[3]` |
+| Linux®, baserat på Debian-distribution inkl. Ubuntu | A: Stöds `[1]` `[2]` |
+| Linux®, baserat på SUSE®-distribution | A: `[1]` stöds |
 | Microsoft® Windows Server 2019 `[4]` | R: Begränsad support för nya kontrakt `[5]` |
-| Microsoft® Windows Server 2016 `[4]` | R: Begränsat stöd för nya kontrakt `[5]` |
+| Microsoft® Windows Server 2016 `[4]` | R: Begränsad support för nya kontrakt `[5]` |
 | Microsoft® Windows Server 2012 R2 | Z: Stöds inte |
 | Oracle Solaris™ 11 | Z: Stöds inte |
 | IBM® AIX® 7.2 | Z: Stöds inte |
@@ -219,14 +221,14 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
    >* glibc-locale.x86_64 (2.17 eller senare)
 
 1. Produktionsinstallationer i Microsoft® Windows stöds för kunder som uppgraderar till 6.5 och för icke-produktionsanvändning. Nya driftsättningar är på begäran för AEM Sites och Assets.
-1. AEM Forms stöds på Microsoft® Windows Server utan begränsningar på supportnivå R.
-1. AEM Forms har tagit bort stöd för Microsoft® Windows Server 2016.
+1. AEM Forms stöds på Microsoft® Window Server utan begränsningar på supportnivå R.
+1. AEM Forms har tagit bort stödet för Microsoft® Windows Server 2016.
 
 >[!NOTE]
 >
->Om du installerar AEM Forms 6.5 ska du kontrollera att du har installerat följande 32-bitars omdistribuerbara Microsoft® Visual C++.
+>Om du installerar AEM Forms 6.5 kontrollerar du att du har installerat följande 32-bitars omdistribuerbara® Microsoft Visual C++.
 >
->* Microsoft® Visual C++ 2008 återdistribuerbar
+>* Microsoft® Visual C++ 2008 omdistribuerbar
 >* Återdistribuerbar Microsoft® Visual C++ 2010
 >* Microsoft® Visual C++ 2012 återdistribuerbar
 >* Microsoft® Visual C++ 2013 återdistribuerbar
@@ -260,7 +262,7 @@ Följande webbservrar kan användas med Dispatcher version 4.3.2:
 1. Webbservrar som byggs baserat på Apache httpd-källkoden har lika mycket stöd som den version av httpd som den är baserad på. Om du är osäker kan du be Adobe om bekräftelse på supportnivån för respektive serverprodukt. Följande fall:
 
    1. HTTP-servern byggdes med endast officiella Apache-källkodsdistributioner, eller
-   1. HTTP-servern levererades som en del av operativsystemet som den körs på. Exempel: IBM® HTTP Server, Oracle HTTP Server
+   1. HTTP-servern levererades som en del av det operativsystem där den körs. Exempel: IBM® HTTP Server, Oracle HTTP Server
 
 1. Dispatcher finns inte för Apache 2.4.x för Windows.
 
@@ -268,7 +270,7 @@ Följande webbservrar kan användas med Dispatcher version 4.3.2:
 
 ### Webbläsare som stöds för redigeringsgränssnittet {#supported-browsers-for-authoring-user-interface}
 
-Adobe Experience Manager användargränssnitt fungerar med följande klientplattformar. Alla webbläsare testas med standarduppsättningen av plugin-program och tillägg.
+Adobe Experience Manager användargränssnitt fungerar med följande klientplattformar. Alla webbläsare testas med standarduppsättningen med plugin-program och tillägg.
 
 AEM användargränssnitt är optimerat för större skärmar (vanligen bärbara och stationära datorer) och surfplattor (t.ex. Apple iPad eller Microsoft® Surface). Telefonformfaktorn stöds inte.
 
@@ -308,12 +310,12 @@ AEM användargränssnitt är optimerat för större skärmar (vanligen bärbara 
   <tr>
    <td>Mozilla Firefox last ESR [1]</td>
    <td>A: Stöds</td>
-   <td>A: Stöds</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
    <td>Apple Safari på macOS (Evergreen)</td>
-   <td>A: Stöds</td>
-   <td>A: Stöds</td>
+   <td>S: Stöds</td>
+   <td>S: Stöds</td>
   </tr>
   <tr>
    <td>Apple Safari 11.x på macOS</td>
@@ -338,7 +340,7 @@ AEM användargränssnitt är optimerat för större skärmar (vanligen bärbara 
 
 ### Webbläsare som stöds för webbplatser {#supported-browsers-for-websites}
 
-I allmänhet är webbläsarstöd för webbplatser som återges av AEM Sites beroende av implementeringen av AEM sidmallar, design och komponentutdata, och det är därför den part som implementerar dessa delar som bestämmer.
+I allmänhet är webbläsarstöd för webbplatser som återges av AEM Sites beroende av implementeringen av AEM sidmallar, design och komponentutdata, och kontrolleras därför av den part som implementerar dessa delar.
 
 ### WebDAV-klienter {#webdav-clients}
 
@@ -350,7 +352,7 @@ När du ansluter med Microsoft® Windows 7+ till en AEM-instans som inte är sä
 
    * HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters
 
-1. Lägg till registerposten BasicAuthLevel till den här undernyckeln med värdet 2 eller mer.
+1. Lägg till registerposten BasicAuthLevel i den här undernyckeln med värdet 2 eller mer.
 
 ## Information om ytterligare plattformar {#additional-platform-notes}
 
@@ -360,7 +362,7 @@ I det här avsnittet finns specialanteckningar och mer detaljerad information om
 
 Alla element i Adobe Experience Manager (Instance, Dispatcher) kan installeras i både IPv4- och IPv6-nätverk.
 
-Åtgärden är smidig eftersom ingen speciell konfiguration krävs. Om det behövs anger du en IP-adress i det format som passar nätverkstypen.
+Driften är sömlös eftersom ingen speciell konfiguration krävs. Du anger en IP-adress i det format som är lämpligt för din nätverkstyp, om det behövs.
 
 När en IP-adress måste anges kan du välja (efter behov) bland följande:
 
@@ -406,7 +408,7 @@ Om du använder Dynamic Media i Linux® måste följande krav vara uppfyllda:
 
 >[!NOTE]
 >
->**Inaktiverar SELinux:** Bildservern fungerar inte med SELinux aktiverat. Det här alternativet är aktiverat som standard. Du kan åtgärda problemet genom att redigera filen **/etc/selinux/config** och ändra SELinux-värdet från:
+>**Inaktivera SELinux:** Image Serving fungerar inte när SELinux är aktiverat. Det här alternativet är aktiverat som standard. Du kan åtgärda problemet genom att redigera filen **/etc/selinux/config** och ändra SELinux-värdet från:
 >
 >`SELINUX=enforcing` **till** `SELINUX=disabled`
 
@@ -427,14 +429,14 @@ Om du använder Dynamic Media i Linux® måste följande krav vara uppfyllda:
 #### Windows {#windows}
 
 * Microsoft® Windows Server 2016
-* Växlingsutrymme som är lika med minst dubbelt så mycket fysiskt minne (RAM)
+* Växla utrymme motsvarande minst dubbelt så mycket fysiskt minne (RAM)
 
-Om du vill använda Dynamic Media i Windows installerar du Microsoft® Visual Studio 2010, 2013 och 2015 redistributable för x64 och x86.
+Om du vill använda Dynamic Media i Windows installerar du Microsoft® Visual Studio 2010, 2013 och 2015 som kan återdistribueras för x64 och x86.
 
 För Windows x64:
 
-* Få Microsoft® Visual Studio 2010 omdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
-* Få Microsoft® Visual Studio 2013 omdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
+* Få Microsoft® Visual Studio 2010 återdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=26999](https://www.microsoft.com/en-us/download/details.aspx?id=26999)
+* Få Microsoft® Visual Studio 2013 återdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=40784](https://www.microsoft.com/en-us/download/details.aspx?id=40784)
 * Få Microsoft® Visual Studio 2015 återdistribuerbart på [https://www.microsoft.com/en-us/download/details.aspx?id=48145](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
 För Windows x86:
@@ -446,9 +448,13 @@ För Windows x86:
 #### macOS {#macos}
 
 * 10.9.x och senare
-* Stöds endast i demos- och testversioner
+* Stöds endast för utvärderings- och demoändamål
 
 ### Krav för AEM Forms PDF Generator {#requirements-for-aem-forms-pdf-generator}
+
+* Kontrollera att du har följande konfigurationer för att testa PDF-konverteringar på SUSE® Linux®-servern:
+   * Navigera till filen `/etc/profile` och ställ in miljövariabeln `OpenOffice_PATH` på `/opt/openoffice4` för att konfigurera den globalt.
+   * Installera 32-bitarsversionen av OpenOffice på Linux®-operativsystemet
 
 ### Programsupport för PDF Generator {#software-support-for-pdf-generator}
 
@@ -463,7 +469,7 @@ För Windows x86:
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 Classic track</a> senaste versionen (inaktuell)</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Senaste versionen av Acrobat 2017 klassisk bana</a> (borttagen)</td>
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
   </tr>
   <tr>
@@ -475,7 +481,7 @@ För Windows x86:
    <td>DOC, DOCX, XLS, XLSX, PPT, PPTX, RTF och TXT</td>
   </tr>
   <tr>
-   <td>WordPerfect 2020 (på engelska)<br /> </td>
+   <td>WordPerfect 2020<br /> </td>
    <td>WP, WPD</td>
   </tr>
   <tr>
@@ -515,9 +521,9 @@ För Windows x86:
 >* PDF Generator stöder endast 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering.
 >* Installationen av Microsoft® Office Professional Plus kan använda volymlicenser baserade på Retail eller MAK/KMS/AD.
 >* Om en Microsoft® Office-installation inaktiveras eller inte licensieras av någon anledning, t.ex. en volymlicensierad installation som inte kan hitta en KMS-värd inom en angiven period, kan konverteringen misslyckas tills installationen har licensierats på nytt och återaktiverats.
->* PDF Generator stöder 32- och 64-bitarsversionerna av OpenOffice i Linux®.
->* PDF Generator har inte stöd för Microsoft® Office 365.
->* PDF Generator-konverteringar för OpenOffice stöds endast på Windows och Linux®.
+>* PDF Generator stöder 32-bitarsversionen av OpenOffice i Linux®.
+>* PDF Generator stöder inte Microsoft® Office 365.
+>* PDF Generator-konverteringar för OpenOffice stöds endast i Windows och Linux®.
 >* Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
 >* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktioner. Programmatiskt få tillgång till den paketerade versionen endast med AEM Forms under AEM Forms-licensens löptid för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning enligt din distribution ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
 >* PDF Generator-tjänsten stöder inte Microsoft® Windows 10.
@@ -527,19 +533,19 @@ För Windows x86:
 ### Krav för AEM Forms Designer {#requirements-for-aem-forms-designer}
 
 * Microsoft® Windows® 2016 Server, Microsoft® Windows® 2019 Server, Microsoft® Windows® 10 eller Windows® 11
-* Processor på 1 GHz eller snabbare med stöd för PAE, NX och SSE2.
-* 1 GB RAM-minne för 32-bitars eller 2 GB RAM-minne för 64-bitars operativsystem
-* 16 GB diskutrymme för 32-bitars eller 20 GB diskutrymme för 64-bitars operativsystem
+* 1 GHz eller snabbare processor med stöd för PAE, NX och SSE2.
+* 1 GB RAM för 32-bitars eller 2 GB RAM för 64-bitars operativsystem
+* 16 GB diskutrymme för 32-bitars eller 20 GB för 64-bitars operativsystem
 * Grafikminne - 128 MB GPU (256 MB rekommenderas)
-* 2,35 GB tillgängligt hårddiskutrymme
-* Skärmupplösning på 1024 X 768 pixlar eller mer
-* Maskinvaruacceleration för video (tillval)
+* 2,35 GB ledigt hårddiskutrymme
+* Bildskärmsupplösning på 1 024 x 768 pixlar eller högre
+* Maskinvaruacceleration för video (valfritt)
 * Acrobat Pro DC, Acrobat Standard DC eller Adobe Acrobat Reader DC
 * Administrativ behörighet för att installera Designer
 * Microsoft Visual C++ 2019 (VC 14.28 eller senare) 32-bitars körningsmiljö för 32-bitars AEM Forms Designer
-* Microsoft Visual C++ 2019 (VC 14.28 eller senare) 64-bitars runtime för 64-bitars AEM Forms Designer (för både OSGI- och JEE-stacken)
+* Microsoft Visual C++ 2019 (VC 14.28 eller senare) 64-bitars körning för 64-bitars AEM Forms Designer (för både OSGI- och JEE-stacken)
 
-[Installera och konfigurera AEM Forms designer](/help/forms/using/installing-configuring-designer.md)
+[Installera och konfigurera AEM Forms-designer](/help/forms/using/installing-configuring-designer.md)
 
 ### Krav för återskrivning av AEM Assets XMP-metadata {#requirements-for-aem-assets-xmp-metadata-write-back}
 
@@ -550,7 +556,7 @@ XMP-återskrivningsfunktionen stöds och är aktiverad för följande plattforma
    * Linux® (stöd för 32-bitars och 32-bitars program i 64-bitarssystem). Anvisningar om hur du installerar 32-bitars klientbibliotek finns i [Så här aktiverar du XMP-extrahering och återskrivning på 64-bitars Red Hat® Linux®](https://helpx.adobe.com/experience-manager/kb/enable-xmp-write-back-64-bit-redhat.html).
 
    * Windows Server
-   * macOS X (64 bitar)
+   * macOS X (64-bitars)
 
 * **Filformat**: JPEG, PNG, TIFF, PDF, INDD, AI och EPS.
 
