@@ -5,9 +5,9 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: c524e4355794ab598b6b69a8ce96cdba90abaa22
+source-git-commit: bc67c991d7498beafd20fa7a9f20cbd901d79045
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '1034'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,26 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
   <tbody>
   <tr>
     <td><strong>Datum</strong></td>
-    <td><strong>Länk för hämtning av snabbkorrigeringar (AEM Software Distribution link)</strong></td>
+    <td><strong>Länk för hämtning av snabbkorrigeringar (länken AEM Software Distribution)</strong></td>
     <td><strong>Åtgärdade problem</strong></td>
+  </tr>
+  <tr>
+    <td>26 mars 2025 </br> </br> Följ anvisningarna <a href="/help/forms/using/mitigating-spring-framework-vulnerabilities-for-aem-forms-on-jee.md"> Minska sårbarheten för vårregelverket för AEM Forms i JEE </a> för att installera den här korrigeringen.</td>
+     <td>
+     <ul>
+     <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-vuln-30727/jboss/adobe-aem-forms-jee-hotfix-6.5.22.0-win-jboss.tar.gz">Programfix för AEM Service Pack 6.5.22.0 i Windows för JBoss JEE-server </a> </li>
+      <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-vuln-30727/jboss/adobe-aem-forms-jee-hotfix-6.5.22.0-linux-jboss.tar.gz">Programfix för AEM Service Pack 6.5.22.0 i Linux för JBoss JEE-server </a> </li>
+       <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-vuln-30727/weblogic/adobe-aem-forms-jee-hotfix-6.5.22.0-win-weblogic.tar.gz">Programfix för AEM Service Pack 6.5.22.0 i Windows för Weblogic JEE-server </a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-vuln-30727/weblogic/adobe-aem-forms-jee-hotfix-6.5.22.0-linux-weblogic.tar.gz">Programfix för AEM Service Pack 6.5.2.0 i Linux för Weblogic JEE-server</a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-vuln-30727/websphere/adobe-aem-forms-jee-hotfix-6.5.22.0-win-websphere.tar.gz">Programfix för AEM Service Pack 6.5.22.0 i Windows för Websphere JEE-server </a> </li>
+        <li><a href="https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/aem-6-5-0-hotfix-vuln-30727/websphere/adobe-aem-forms-jee-hotfix-6.5.22.0-linux-websphere.tar.gz">Programfix för AEM Service Pack 6.5.22.0 i Linux för Websphere JEE-server</a> </li>
+     </ul>
+     </td>
+    <td>
+    <ul>
+    <li>Minska vårens ramverk - sårbarheter för AEM Forms i JEE</li>
+    </ul>
+    </td>    
   </tr>
   <tr>
     <td>10 juli 2024</td>
@@ -42,7 +60,7 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
      </ul>
      </td>
     <td>
-    <ul><li>När en användare uppdaterar till AEM Forms Service Pack 20 (6.5.20.0) på JEE-servern och genererar PDF med hjälp av utdatatjänster, återges PDF med tillgänglighetsproblem. (LC-3922112)</li><li>Taggad PDF som genererats med utdatatjänsten i AEM Forms JEE visar "Olämplig strukturvarning". (LC-3922038)</li><li>När ett formulär skickas i AEM Forms JEE tas instanser av ett upprepat XML-element bort från data. (LC-3922017)</li><li>När en användare i en Linux-miljö återger ett adaptivt formulär (på JEE) i HTML återges det inte korrekt. (LC-3921957)</li><li>När en användare konverterar en XTG-fil till PostScript-format med hjälp av utdatatjänsten i AEM Forms JEE misslyckas den med följande fel: AEM_OUT_001_003: Oväntat undantag: PAExecute-fel: XFA_RENDER_FAILURE. (LC-3921720)</li><li>När en användare har uppgraderat till AEM Forms Service Pack 18 (6.5.18.0) på JEE-servern återges inte HTML5 eller PDF forms och XMLFM-krascher när användaren skickar ett formulär. (LC-3921718)
+    <ul><li>När en användare uppdaterar till AEM Forms Service Pack 20 (6.5.20.0) på JEE-servern och genererar PDF-filer med hjälp av utdatatjänster, återges PDF-filerna med tillgänglighetsproblem. (LC-3922112)</li><li>Taggade PDF-filer som genererats med utdatatjänsten i AEM Forms JEE visar "Olämplig strukturvarning". (LC-3922038)</li><li>När ett formulär skickas i AEM Forms JEE tas instanser av ett upprepat XML-element bort från data. (LC-3922017)</li><li>När en användare i en Linux-miljö återger ett adaptivt formulär (i JEE) i HTML återges det inte korrekt. (LC-3921957)</li><li>När en användare konverterar en XTG-fil till PostScript-format med hjälp av utdatatjänsten i AEM Forms JEE misslyckas den med följande fel: AEM_OUT_001_003: Oväntat undantag: PAExecute-fel: XFA_RENDER_FAILURE. (LC-3921720)</li><li>När en användare har uppgraderat till AEM Forms Service Pack 18 (6.5.18.0) på JEE-servern återges inte HTML5 eller PDF forms och XMLFM-krascher när användaren skickar ett formulär. (LC-3921718)
     </ul>
     </td>    
   </tr>
@@ -58,7 +76,7 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
      </td>
     <td>
     <ul>
-    <li> När du har uppgraderat till AEM Forms Service Pack 6.5.21.0 kan tjänsten PaperCapture inte utföra OCR-åtgärder (Optical Character Recognition) på PDF. Installationsanvisningar finns i artikeln <a href="/help/forms/using/papercapture-service-resolution.md"> troubleshooting</a> (Felsökning).(CQDOC-21680) </li>
+    <li> När du har uppgraderat till AEM Forms Service Pack 6.5.21.0 kan tjänsten PaperCapture inte utföra OCR-åtgärder (Optical Character Recognition) på PDF-filer. Installationsanvisningar finns i artikeln <a href="/help/forms/using/papercapture-service-resolution.md"> troubleshooting</a> (Felsökning).(CQDOC-21680) </li>
     </ul>
     </td>    
   </tr>
@@ -90,7 +108,7 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
      <li> Rader i datumväljarwidgeten trunkeras när du går igenom flera månader i snabbwidgeten för fält med redigerings-/visningsmönster. Det finns en programfix för den här utgåvan. (FORMS-13620) </li>
      <li>Det går inte att skicka formulär när DOR-tjänsten (Document of Record) används i serverdelen. Felmeddelandet som påträffades är: "Det gick inte att skicka åtgärden eftersom formulärresursen inte är korrekt tilldelad." (FORMS-13798) </li>
      <li>När ett anpassat formulär skickas från en Adobe Experience Manager Publish-instans till ett Adobe Experience Manager-arbetsflöde, kan arbetsflödet inte spara de bifogade filerna.  (FORMS-14209) </li>
-     <li> När du installerar AEM 6.5 Forms Service Pack 20-paket (AEM Forms tilläggspaket för SP20) uppvisar AEM Sites användargränssnitt en avsevärd prestandaförsämring.  (FORMS-13791) </li>
+     <li> När du installerar AEM 6.5 Forms Service Pack 20-paketet (AEM Forms-tilläggspaket för SP20) uppvisar AEM Sites användargränssnitt en avsevärd prestandaförsämring.  (FORMS-13791) </li>
      <li>Förifyllningstjänsten misslyckas med ett null-pekarundantag i Interactive Communications. (CQDOC-21355)</li>
      <li>Konfigurationer som använder den gamla molntjänsten för Adobe Analytics med användarautentiserad autentisering fungerar inte korrekt, vilket gör att analysreglerna inte kan köras. (FORMS-15428)
     </ul>
@@ -105,7 +123,7 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
      </td>
     <td>
     <ul>
-    <li>På AEM Forms på JEE-servern kan inte HTML5 Forms som använder kontextsökvägen återges. (FORMS-12485, FORMS-12691).</li>
+    <li>På AEM Forms på JEE-servern kan HTML5 Forms som använder kontextsökvägen inte återges. (FORMS-12485, FORMS-12691).</li>
     </ul>
     </td>    
   </tr>
