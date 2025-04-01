@@ -5,9 +5,9 @@ exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+source-git-commit: ee990092f3174a8c29443eb451d7188c1e27fa7d
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,11 @@ När processen har skapats med aktiviteten Execute Script Service definierad kan
 
 ## Skapa XML med tjänsten Execute Script {#create-xml-execute-script-service}
 
-När en process har skapats med skripttjänsten Execute, kan man sedan använda det här skriptet för att skapa XML. Du skulle skriva skripten som beskrivs nedan i textrutan som beskrivs i avsnittet Lägg till ett skript i processen med tjänsten `Execute Script` ovan.
+När en process har skapats med skripttjänsten Execute, kan man sedan använda det här skriptet för att skapa XML. Du skulle skriva skripten som beskrivs nedan i textrutan som beskrivs i Lägg till ett skript i processen med tjänstavsnittet `Execute Script` ovan.
+
+>[!NOTE]
+>
+> Om JAVA-skriptkoden överstiger 10 rader rekommenderar vi att du lägger till koden i anpassade DSC:er (Document Service Components) i stället för att skriva den direkt i processen. Anpassade DSC:er förbättrar underhållet, återanvändbarheten och prestandan genom att hålla arbetsflödena lätta. Genom att referera till de här komponenterna i arbetsflöden blir exekveringen effektivare och förhindrar eventuella flaskhalsar som orsakas av bearbetning av stora kodblock i arbetsflödet.
 
 **Om tekniken i Execute Script Service**
 
