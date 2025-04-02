@@ -9,9 +9,9 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 8fda6635ec0e28b95209431bd12d191f36df943b
+source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
 workflow-type: tm+mt
-source-wordcount: '4197'
+source-wordcount: '4216'
 ht-degree: 0%
 
 ---
@@ -317,7 +317,7 @@ Adobe Experience Manager Forms kräver att en Java™ Virtual Machine körs, vil
    <td><p>Service Pack, kumulativa patchar och viktiga säkerhetsuppdateringar</p> </td>
   </tr>
   <tr>
-   <td><p>SUSE® Linux® Enterprise Server 15 SP6 (64-bitars)</p> </td>
+   <td><p>SUSE® Linux® Enterprise Server 15 SP6 (64-bitars) </p> </td>
    <td><p>A: Stöds</p> </td>
    <td><p>Service Pack, kumulativa patchar och viktiga säkerhetsuppdateringar</p> </td>
   </tr>
@@ -467,9 +467,9 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 
 ### Krav för PDF Generator
 
-- Kontrollera att du har följande konfigurationer för att testa PDF-konverteringar på SUSE® Linux®-servern:
+- Kontrollera att du har följande konfigurationer för att testa PDF-konverteringar på SUSE® Linux®-servern (SLES 15 SP6 eller senare):
    - Navigera till filen `/etc/profile` och ställ in miljövariabeln `OpenOffice_PATH` på `/opt/openoffice4` för att konfigurera den globalt.
-   - Installera 32-bitarsversionen av OpenOffice på Linux®-operativsystemet
+   - Installera 32-bitarsversionen av OpenOffice.
 
 ### Programsupport för PDF Generator {#software-support-for-pdf-generator}
 
@@ -508,6 +508,7 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 >
 >Dessutom:
 >
+>- PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) för att kunna utföra konverteringen.
 >- PDF Generator stöder endast 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering.
 >- Installationen av Microsoft® Office Professional Plus kan använda volymlicenser baserade på Retail eller MAK/KMS/AD.
 >- Om en Microsoft® Office-installation inaktiveras eller inte licensieras av någon anledning, t.ex. en volymlicensierad installation som inte kan hitta en KMS-värd inom en angiven period, kan konverteringen misslyckas tills installationen har licensierats på nytt och återaktiverats.

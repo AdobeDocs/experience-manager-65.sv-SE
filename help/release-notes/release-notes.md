@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 39ad2f3eedb35e98dc2239c0b81b3792a0ddc73f
+source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
 workflow-type: tm+mt
-source-wordcount: '6147'
+source-wordcount: '6150'
 ht-degree: 0%
 
 ---
@@ -595,20 +595,21 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 
 ### Kända fel för AEM Forms {#known-issues-aem-forms-6522}
 
-* Om konverteringen från HTML till PDF misslyckas på SLES 15 SP6 Linux®-servern, med följande fel: `Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57`. Utför följande steg för att lösa problemet:
-   1. Starta behållaren och ange miljövariabeln `OPENSSL_CONF` med följande kommando:
+* Om konverteringen från HTML till PDF misslyckas på SUSE® Linux®-servern (SLES 15 SP6 eller senare) med felet: `Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57`.
+Utför följande steg för att lösa problemet:
+   1. Starta servern och ange miljövariabeln `OPENSSL_CONF` med följande kommando:
       `export OPENSSL_CONF=/etc/ssl`
-Du kan också ange miljövariabeln när du startar behållaren:
+Du kan också ange miljövariabeln när du startar servern:
       `-e OPENSSL_CONF=/etc/ssl`
    1. Starta om servern.
 * När du har installerat AEM Forms JEE Service Pack 21 (6.5.21.0) utför du följande steg för att lösa problemet om du hittar dubblettposter för Geode jars `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` i mappen `<AEM_Forms_Installation>/lib/caching/lib` (FORMS-14926):
 
    1. Stoppa positionerarna om de är igång.
-   2. Stoppa AEM Server.
-   3. Gå till `<AEM_Forms_Installation>/lib/caching/lib`.
-   4. Ta bort alla Geode-korrigeringsfiler utom `geode-*-1.15.1.2.jar`. Bekräfta att det bara finns Geode-burkar med `version 1.15.1.2`.
-   5. Öppna kommandotolken i administratörsläge.
-   6. Installera Geode-korrigeringen med filen `geode-*-1.15.1.2.jar`.
+   1. Stoppa AEM Server.
+   1. Gå till `<AEM_Forms_Installation>/lib/caching/lib`.
+   1. Ta bort alla Geode-korrigeringsfiler utom `geode-*-1.15.1.2.jar`. Bekräfta att det bara finns Geode-burkar med `version 1.15.1.2`.
+   1. Öppna kommandotolken i administratörsläge.
+   1. Installera Geode-korrigeringen med filen `geode-*-1.15.1.2.jar`.
 
 * Om en användare försöker förhandsgranska ett utkast med sparade XML-data fastnar den i läget `Loading` för vissa specifika bokstäver. Läs artikeln [Adobe Experience Manager Forms Hotfixes](/help/release-notes/aem-forms-hotfix.md#hotfix-for-adaptive-forms) om du vill hämta och installera snabbkorrigeringen. (FORMS-14521)
 

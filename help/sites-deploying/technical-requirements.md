@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 61f658fc4390610686a308d02a8d74505252434a
+source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
 workflow-type: tm+mt
-source-wordcount: '3638'
+source-wordcount: '3632'
 ht-degree: 0%
 
 ---
@@ -452,9 +452,9 @@ För Windows x86:
 
 ### Krav för AEM Forms PDF Generator {#requirements-for-aem-forms-pdf-generator}
 
-* Kontrollera att du har följande konfigurationer för att testa PDF-konverteringar på SUSE® Linux®-servern:
+* Kontrollera att du har följande konfigurationer för att testa PDF-konverteringar på SUSE® Linux®-servern (SLES 15 SP6 eller senare):
    * Navigera till filen `/etc/profile` och ställ in miljövariabeln `OpenOffice_PATH` på `/opt/openoffice4` för att konfigurera den globalt.
-   * Installera 32-bitarsversionen av OpenOffice på Linux®-operativsystemet
+   * Installera 32-bitarsversionen av OpenOffice.
 
 ### Programsupport för PDF Generator {#software-support-for-pdf-generator}
 
@@ -517,7 +517,7 @@ För Windows x86:
 >
 >Dessutom
 >
->* PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) eller Acrobat 2017 version 17.011.30078 för att kunna utföra konverteringen.
+>* PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) för att kunna utföra konverteringen.
 >* PDF Generator stöder endast 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering.
 >* Installationen av Microsoft® Office Professional Plus kan använda volymlicenser baserade på Retail eller MAK/KMS/AD.
 >* Om en Microsoft® Office-installation inaktiveras eller inte licensieras av någon anledning, t.ex. en volymlicensierad installation som inte kan hitta en KMS-värd inom en angiven period, kan konverteringen misslyckas tills installationen har licensierats på nytt och återaktiverats.
