@@ -5,9 +5,9 @@ exl-id: 2ec57cd4-f41b-4e5c-849d-88ca3d2cfe19
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: e67f19784abae1cd41819dd2a763ddd064beee08
+source-git-commit: 361f0a5f2d1484cf594edfda73250c5690ed7cab
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1030'
 ht-degree: 0%
 
 ---
@@ -52,9 +52,6 @@ När en process har skapats med skripttjänsten Execute, kan man sedan använda 
 >
 > Om JAVA-skriptkoden överstiger 10 rader rekommenderar vi att du lägger till koden i anpassade DSC:er (Document Service Components) i stället för att skriva den direkt i processen. Anpassade DSC:er förbättrar underhållet, återanvändbarheten och prestandan genom att hålla arbetsflödena lätta. Genom att referera till de här komponenterna i arbetsflöden blir exekveringen effektivare och förhindrar eventuella flaskhalsar som orsakas av bearbetning av stora kodblock i arbetsflödet.
 
->[!NOTE]
->
-> Om JAVA-skriptkoden överstiger 10 rader rekommenderar vi att du lägger till koden i anpassade DSC:er (Document Service Components) i stället för att skriva den direkt i processen. Anpassade DSC:er förbättrar underhållet, återanvändbarheten och prestandan genom att hålla arbetsflödena lätta. Genom att referera till de här komponenterna i arbetsflöden blir exekveringen effektivare och förhindrar eventuella flaskhalsar som orsakas av bearbetning av stora kodblock i arbetsflödet.
 
 **Om tekniken i Execute Script Service**
 
