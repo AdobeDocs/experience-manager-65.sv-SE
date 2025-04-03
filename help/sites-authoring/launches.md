@@ -10,9 +10,9 @@ exl-id: b25d3f8e-5687-49ab-95e1-19ec75c87f6e
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
 role: User,Admin,Architect,Developer
-source-git-commit: 82597d52ed774f08ce7136d271148e720b56fcf1
+source-git-commit: 7c4be888c392520c82ef7b2172d0eee61fc3ee44
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '892'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,9 @@ ht-degree: 4%
 
 Med lanseringar kan du effektivt utveckla innehåll för en framtida release.
 
-En startsida skapas så att du kan göra ändringar redo för framtida publicering (samtidigt som du behåller dina aktuella sidor). När du har redigerat och uppdaterat startsidorna befordrar du dem tillbaka till källan och aktiverar sedan källsidorna (översta nivån). Befordra duplicerar startinnehållet tillbaka till källsidorna och kan göras antingen manuellt eller automatiskt (beroende på fält som anges när du skapar och redigerar startsidan).
+En *Launch* skapas så att du kan göra ändringar inför framtida publicering, samtidigt som du behåller de aktuella sidorna. Det innebär att du redigerar två versioner samtidigt: sidor som för närvarande är publicerade och en version av dessa sidor, som ska publiceras i taget i framtiden. När tiden är inne kan du ersätta originalsidorna och publicera den nya versionen.
+
+Du skapar en *Launch* och när du har redigerat och uppdaterat dina *Launch* -sidor *höjer du* dem tillbaka till *Source*. Du kan sedan aktivera dessa *Source*-sidor (översta nivån). Befordra duplicerar startinnehållet tillbaka till källsidorna och kan göras antingen manuellt eller automatiskt (beroende på fält som anges när du skapar och redigerar startsidan).
 
 Till exempel kommer säsongsproduktsidorna i din onlinebutik att uppdateras kvartalsvis så att de aktuella produkterna passar den aktuella säsongen. Om du vill förbereda dig för nästa kvartalsvisa uppdatering kan du skapa en startsida med lämpliga webbsidor. Under hela kvartalet ackumuleras följande ändringar i startversionen:
 
@@ -66,7 +68,7 @@ Med Launches:
    * Manuellt:
 
       * Befordra startinnehållet tillbaka till **Target** (källsidor) när det är klart för publicering.
-      * Publish innehållet från källsidorna (efter att de har befordrats).
+      * Publicera innehållet från källsidorna (efter att ha befordrat dem).
       * Befordra antingen alla sidor eller endast ändrade sidor.
 
    * Automatiskt - det innebär följande:
