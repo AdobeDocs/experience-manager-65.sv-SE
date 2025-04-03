@@ -9,9 +9,9 @@ exl-id: 918fcbbc-a78a-4fab-a933-f183ce6a907f
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: bbd2bc3fa2ebdca111084450941439a37f79cd73
+source-git-commit: efaff4557aba3557a355ed385a5358cf1108c159
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2154'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Följande begränsningar gäller:
 * **SMTP-serverporten** måste vara 25 eller senare.
 
 * **SMTP-servervärdnamnet** får inte vara tomt.
-* **&quot;Från&quot;-adressen** får inte vara tom.
+* **&quot;Från&quot;-adressen** får inte vara tom och du måste ändra standardvärdet <noreply@day.com>.
 
 Du kan hjälpa dig att felsöka ett problem med **Day CQ Mail Service** genom att titta på tjänstens loggar:
 
@@ -60,7 +60,7 @@ Konfigurationen ser ut så här i webbkonsolen:
 
 När du prenumererar på en sida eller ett forumhändelsemeddelande ställs e-postadressen in på `no-reply@acme.com` som standard. Du kan ändra det här värdet genom att konfigurera tjänsten **Notification Email Channel** i webbkonsolen.
 
-Om du vill konfigurera from-email-adressen lägger du till en `sling:OsgiConfig`-nod i databasen. Använd följande procedur för att lägga till noden direkt med CRXDE Lite:
+Om du vill konfigurera from-email-adressen lägger du till en `sling:OsgiConfig`-nod i databasen. Gör så här för att lägga till noden direkt med CRXDE Lite:
 
 1. I CRXDE Lite lägger du till en mapp med namnet `config` under din programmapp.
 1. Lägg till en nod med namnet:
@@ -84,7 +84,7 @@ Använd följande procedur för att definiera noden i innehållspaketets källma
 
 ## Konfigurera e-postmeddelandetjänsten för arbetsflöde {#configuring-the-workflow-email-notification-service}
 
-När du får e-postmeddelanden om arbetsflöden anges standardvärden för både from-email-adressen och värd-URL-prefixet. Du kan ändra dessa värden genom att konfigurera **Day CQ Workflow Email Notification Service** i webbkonsolen. Om du gör det bör du behålla ändringen i databasen.
+När du får e-postmeddelanden om arbetsflöden anges standardvärden för både from-email-adressen och värd-URL-prefixet. Du kan ändra dessa värden genom att konfigurera **Day CQ Workflow Email Notification Service** i webbkonsolen. Om du gör det måste du behålla ändringen i databasen.
 
 Standardkonfigurationen ser ut så här i webbkonsolen:
 
@@ -261,7 +261,7 @@ Lägga till en mall för ett nytt språk:
 När samlingar i AEM Assets delas eller inte delas kan användare få e-postmeddelanden från AEM. Följ de här stegen för att konfigurera e-postmeddelanden.
 
 1. Konfigurera e-posttjänsten enligt beskrivningen ovan i [Konfigurera e-posttjänsten](/help/sites-administering/notification.md#configuring-the-mail-service).
-1. Logga in AEM som administratör. Klicka på **Verktyg** > **Åtgärder** > **Webbkonsol** för att öppna webbkonsolkonfigurationen.
+1. Logga in i AEM som administratör. Klicka på **Verktyg** > **Åtgärder** > **Webbkonsol** för att öppna webbkonsolkonfigurationen.
 1. Redigera **Day CQ DAM Resource Collection-server**. Välj **skicka e-post**. Klicka på **Spara**.
 
 ## Konfigurera OAuth {#setting-up-oauth}
@@ -286,15 +286,15 @@ Du kan konfigurera OAuth för flera e-postleverantörer enligt instruktionerna n
 1. Ett nytt fönster öppnas med klient-ID och Klienthemlighet.
 1. Spara dessa autentiseringsuppgifter.
 
-**AEM sidkonfigurationer**
+**AEM Side Configurations**
 
 >[!NOTE]
 >
->Adobe Managed Service-kunder kan samarbeta med sin kundtjänsttekniker för att göra dessa ändringar i produktionsmiljöerna.
+>Adobe kunder inom hanterade tjänster kan samarbeta med sin kundtjänsttekniker för att göra dessa ändringar i produktionsmiljöerna.
 
 Konfigurera först e-posttjänsten:
 
-1. Öppna AEM webbkonsol genom att gå till `http://serveraddress:serverport/system/console/configMgr`
+1. Öppna AEM Web Console genom att gå till `http://serveraddress:serverport/system/console/configMgr`
 1. Leta efter och klicka sedan på **Day CQ Mail Service**
 1. Lägg till följande inställningar:
    * SMTP-servervärdnamn: `smtp.gmail.com`
@@ -310,7 +310,7 @@ Konfigurera sedan SMTP OAuth-providern genom att följa proceduren nedan:
 >
 >Om dessa inte utförs blir åtkomsttoken som lagras på `/conf/global/settings/mailer/oauth` ogiltig och OAuth2-anslutningen till SMTP-servern misslyckas.
 
-1. Öppna AEM webbkonsol genom att gå till `http://serveraddress:serverport/system/console/configMgr`
+1. Öppna AEM Web Console genom att gå till `http://serveraddress:serverport/system/console/configMgr`
 1. Leta efter och klicka sedan på **CQ Mailer SMTP OAuth2 Provider**
 
 1. Fyll i den obligatoriska informationen enligt följande:
@@ -372,7 +372,7 @@ Bekräfta slutligen konfigurationen genom att:
 1. Gå sedan till **Certifikat och hemligheter**, klicka på **Ny klienthemlighet** och följ stegen på skärmen för att skapa en hemlighet. Observera denna hemlighet för senare bruk
 1. Tryck på **Översikt** i den vänstra rutan och kopiera värdena för **program-ID** och **katalog-ID** för senare bruk
 
-För att kunna göra en sammanfattning måste du ha följande information för att konfigurera OAuth2 för tjänsten Mailer på AEM sida:
+För att komma tillbaka måste du ha följande information för att konfigurera OAuth2 för tjänsten Mailer på AEM-sidan:
 
 * Autentiserings-URL, som skapas med klientorganisations-ID. Det kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/authorize`
 * Token URL, som skapas med klient-ID. Det kommer att ha följande formulär: `https://login.microsoftonline.com/<tenantID>/oauth2/v2.0/token`
@@ -380,7 +380,7 @@ För att kunna göra en sammanfattning måste du ha följande information för a
 * Klient-ID
 * Klienthemlighet
 
-**AEM sidkonfigurationer**
+**AEM Side Configurations**
 
 Integrera sedan dina OAuth2-inställningar med AEM:
 
