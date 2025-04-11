@@ -1,6 +1,6 @@
 ---
 title: Använda bibliotek på klientsidan
-description: AEM innehåller biblioteksmappar på klientsidan, som du använder för att lagra klientkoden i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
+description: AEM tillhandahåller biblioteksmappar på klientsidan, där du kan lagra klientsidans kod i databasen, ordna den i kategorier och definiera när och hur varje kodkategori ska skickas till klienten
 contentOwner: msm-service
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: introduction
@@ -10,7 +10,7 @@ exl-id: 408ac30c-60ab-4d6c-855c-d544af8d5cf9
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Personalization
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: f965c449da06a1b7e60428e0734c621f004d318c
 workflow-type: tm+mt
 source-wordcount: '2791'
 ht-degree: 0%
@@ -25,7 +25,7 @@ AEM tillhandahåller **Biblioteksmappar på klientsidan** som du kan använda f�
 
 ## Hur klientbibliotek fungerar i AEM {#how-client-side-libraries-work-in-aem}
 
-Standardsättet att inkludera ett klientbibliotek (dvs. en JS- eller CSS-fil) HTML på en sida är helt enkelt att ta med en `<script>` - eller `<link>` -tagg i JSP-filen för den sidan, som innehåller sökvägen till filen i fråga. Exempel:
+Standardsättet att inkludera ett klientbibliotek (dvs. en JS- eller CSS-fil) i en sidas HTML är helt enkelt att ta med en `<script>` - eller `<link>` -tagg i JSP-filen för den sidan, som innehåller sökvägen till filen i fråga. Exempel:
 
 ```xml
 ...
@@ -37,7 +37,7 @@ Standardsättet att inkludera ett klientbibliotek (dvs. en JS- eller CSS-fil) HT
 ...
 ```
 
-Detta tillvägagångssätt fungerar i AEM, men kan leda till problem när sidor och deras beståndsdelar blir komplexa. I sådana fall finns det en risk för att flera exemplar av samma JS-bibliotek kan ingå i den slutliga utskriften för HTML. För att undvika detta och för att tillåta logisk organisation av klientbibliotek använder AEM **biblioteksmappar på klientsidan**.
+Detta tillvägagångssätt fungerar i AEM, men kan leda till problem när sidor och deras beståndsdelar blir komplexa. I sådana fall finns det en risk för att flera kopior av samma JS-bibliotek kan inkluderas i den slutliga HTML-utskriften. För att undvika detta och för att tillåta logisk organisation av klientbibliotek använder AEM **biblioteksmappar på klientsidan**.
 
 En biblioteksmapp på klientsidan är en databasnod av typen `cq:ClientLibraryFolder`. Dess definition i [CND-notation](https://jackrabbit.apache.org/node-type-notation.html) är
 
@@ -49,7 +49,7 @@ En biblioteksmapp på klientsidan är en databasnod av typen `cq:ClientLibraryFo
   - channels (string) multiple
 ```
 
-Som standard kan `cq:ClientLibraryFolder`-noder placeras var som helst i underträden `/apps`, `/libs` och `/etc` i databasen (dessa standardvärden och andra inställningar kan styras via panelen **Adobe Granite HTML Library Manager** i [Systemkonsolen](https://localhost:4502/system/console/configMgr)).
+Som standard kan `cq:ClientLibraryFolder`-noder placeras var som helst i underträden `/apps`, `/libs` och `/etc` i databasen (dessa standardinställningar och andra inställningar kan styras via panelen **Adobe Granite HTML Library Manager** i [Systemkonsolen](https://localhost:4502/system/console/configMgr)).
 
 Varje `cq:ClientLibraryFolder` fylls i med en uppsättning JS- och/eller CSS-filer, tillsammans med några stödfiler (se nedan). Egenskaperna för `cq:ClientLibraryFolder` är konfigurerade enligt följande:
 
@@ -57,12 +57,12 @@ Varje `cq:ClientLibraryFolder` fylls i med en uppsättning JS- och/eller CSS-fil
 
 * `dependencies`: Det här är en lista över andra klientbibliotekskategorier som den här biblioteksmappen är beroende av. Om till exempel två `cq:ClientLibraryFolder`-noder `F` och `G` kräver en annan fil i `F` för att den ska fungera på rätt sätt i `G` måste minst en av `categories` i `G` finnas bland `dependencies` i `F` .
 
-* `embed`: Används för att bädda in kod från andra bibliotek. Om nod F bäddar in noderna G och H blir HTML en koncentration av innehållet från noderna G och H.
+* `embed`: Används för att bädda in kod från andra bibliotek. Om nod F bäddar in noderna G och H blir resultatet för HTML en innehållskoncentration från noderna G och H.
 * `allowProxy`: Om ett klientbibliotek finns under `/apps` tillåter den här egenskapen åtkomst till det via en proxyserver. Se [Hitta en biblioteksmapp för klient och Använda servern för proxyklientbibliotek](/help/sites-developing/clientlibs.md#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) nedan.
 
 ## Referera till bibliotek på klientsidan {#referencing-client-side-libraries}
 
-Eftersom HTML är den rekommenderade tekniken för att utveckla AEM webbplatser bör HTML användas för att inkludera klientbibliotek i AEM. Det går dock även att göra det med JSP.
+Eftersom HTML är den rekommenderade tekniken för utveckling av AEM-webbplatser bör HTML användas för att inkludera klientbibliotek i AEM. Det går dock även att göra det med JSP.
 
 ### Använda HTML {#using-htl}
 
@@ -74,7 +74,7 @@ I HTML läses klientbibliotek in via en hjälpmall från AEM, som du kommer åt 
 
 Varje hjälpmall förväntar sig ett `categories`-alternativ för att referera till de önskade klientbiblioteken. Det alternativet kan antingen vara en array med strängvärden eller en sträng som innehåller en kommaseparerad värdelista.
 
-Mer information och exempel på användning finns i dokumentet [Komma igång med mallspråket HTML](https://helpx.adobe.com/experience-manager/htl/using/getting-started.html#loading-client-libraries).
+Mer information och exempel på användning finns i dokumentet [Komma igång med HTML mallspråk](https://helpx.adobe.com/experience-manager/htl/using/getting-started.html#loading-client-libraries).
 
 ### Använda JSP {#using-jsp}
 
@@ -139,13 +139,13 @@ I tidigare versioner fanns klientbiblioteksmapparna under `/etc/clientlibs` i da
 >
 >Om du vill isolera kod bättre från innehåll och konfiguration bör du leta upp klientbibliotek under `/apps` och visa dem via `/etc.clientlibs` med egenskapen `allowProxy`.
 
-En proxyserver används för att klientbiblioteken under `/apps` ska kunna nås. Åtkomstkontrollistorna används fortfarande i klientbiblioteksmappen, men med den kan innehållet läsas via `/etc.clientlibs/` om egenskapen `allowProxy` är inställd på `true`.
+För att klientbiblioteken under `/apps` ska vara tillgängliga används en proxyserver. Åtkomstkontrollistorna används fortfarande i klientbiblioteksmappen, men med den kan innehållet läsas via `/etc.clientlibs/` om egenskapen `allowProxy` är inställd på `true`.
 
 En statisk resurs kan bara nås via proxyn om den finns under en resurs under klientbiblioteksmappen.
 
 Exempel:
 
-* Du har ett klientlib i `/apps/myproject/clientlibs/foo`
+* Du har ett klientlib i `/apps/myprojects/clientlibs/foo`
 * Du har en statisk bild i `/apps/myprojects/clientlibs/foo/resources/icon.png`
 
 Sedan ställer du in egenskapen `allowProxy` för `foo` på true.
@@ -155,11 +155,11 @@ Sedan ställer du in egenskapen `allowProxy` för `foo` på true.
 
 >[!CAUTION]
 >
->När du använder proxyanslutna klientbibliotek kan det hända att den AEM Dispatcher-konfigurationen kräver en uppdatering för att säkerställa att URI:er med tilläggets klientlib tillåts.
+>När du använder proxyanslutna klientbibliotek kan AEM Dispatcher-konfigurationen kräva en uppdatering för att säkerställa att URI:er med tilläggsklienter tillåts.
 
 >[!CAUTION]
 >
->Adobe rekommenderar att du letar upp klientbibliotek under `/apps` och gör dem tillgängliga med proxyservern. Tänk dock på att bästa praxis fortfarande kräver att offentliga webbplatser aldrig inkluderar något som opereras direkt över en `/apps`- eller `/libs`-sökväg.
+>Adobe rekommenderar att du hittar klientbibliotek under `/apps` och gör dem tillgängliga med proxyservern. Tänk dock på att bästa praxis fortfarande kräver att offentliga webbplatser aldrig inkluderar något som opereras direkt över en `/apps`- eller `/libs`-sökväg.
 
 ### Skapa en biblioteksmapp för klient {#create-a-client-library-folder}
 
@@ -233,7 +233,7 @@ Använd egenskapen categories för att identifiera klientbiblioteksmappen som sk
 
 #### Använda inbäddning för att minimera begäranden {#using-embedding-to-minimize-requests}
 
-I vissa fall kan du upptäcka att det sista HTML som genereras för den typiska sidan av din publiceringsinstans innehåller ett relativt stort antal `<script>`-element, särskilt om din webbplats använder klientkontextinformation för analys eller målanpassning. I ett icke-optimerat projekt kan du till exempel hitta följande serie med `<script>` element i HTML för en sida:
+I vissa fall kan du upptäcka att den slutliga HTML som genereras för den typiska sidan av din publiceringsinstans innehåller ett relativt stort antal `<script>`-element, särskilt om din webbplats använder klientkontextinformation för analys eller målanpassning. I ett icke-optimerat projekt kan du till exempel hitta följande serie med `<script>`-element i HTML för en sida:
 
 ```xml
 <script type="text/javascript" src="/etc/clientlibs/granite/jquery.js"></script>
@@ -322,7 +322,7 @@ I följande tabell visas värdet för egenskapen `channels` för varje klientbib
 
 ## Använda preprocessorer {#using-preprocessors}
 
-AEM tillåter anslutningsbara preprocessorer och levereras med stöd för [YUI Compressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor) för CSS och JavaScript och [Google Closure Compiler (GCC)](https://developers.google.com/closure/compiler/) för JavaScript med YUI inställt som AEM standardpreprocessor.
+AEM tillåter anslutningsbara preprocessorer och levereras med stöd för [YUI Compressor](https://github.com/yui/yuicompressor#yui-compressor---the-yahoo-javascript-and-css-compressor) för CSS och JavaScript samt [Google Closure Compiler (GCC)](https://developers.google.com/closure/compiler/) för JavaScript med YUI inställt som AEM standardpreprocessor.
 
 De anslutningsbara preprocessorerna möjliggör flexibel användning, inklusive:
 
@@ -391,10 +391,10 @@ Mer information om GCC-alternativ finns i [GCC-dokumentationen](https://develope
 
 ### Ange systemstandardminiatyr {#set-system-default-minifier}
 
-YUI anges som standardminifierare i AEM. Följ de här stegen för att ändra detta till GCC.
+YUI anges som standardminiprogram i AEM. Följ de här stegen för att ändra detta till GCC.
 
 1. Gå till Apache Felix Config Manager på [https://localhost:4502/system/console/configMgr](https://localhost:4502/system/console/configMgr)
-1. Hitta och redigera bibliotekshanteraren **Adobe Granite HTML**.
+1. Hitta och redigera **Adobe Granite HTML Library Manager**.
 1. Aktivera alternativet **Minify** (om det inte redan är aktiverat).
 1. Ange värdet **JS-processorns standardkonfigurationer** till `min:gcc`.
 
@@ -422,7 +422,7 @@ Om du öppnar filen `publicmain.css` visas följande kod:
 @import url("/apps/myapp/clientlib/styles/main.css");
 ```
 
-1. Lägg till följande text i URL:en för HTML i webbläsarens adressruta:
+1. Lägg till följande text i webbadressen för din HTML i webbläsarens adressruta:
 
    `?debugClientLibs=true`
 1. Visa sidans källa när sidan läses in.
