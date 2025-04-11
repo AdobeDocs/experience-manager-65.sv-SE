@@ -9,9 +9,9 @@ exl-id: e3f018e6-563e-456f-99d5-d232f1a4aa55
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 12b370e3041ff179cd249f3d4e6ef584c4339909
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '1061'
 ht-degree: 1%
 
 ---
@@ -20,19 +20,19 @@ ht-degree: 1%
 
 Administratörer behöver ofta automatisera eller förenkla vanliga uppgifter i alla system. I AEM är till exempel hantering av användare, installation av paket och hantering av OSGi-paket uppgifter som måste utföras ofta.
 
-På grund av Sling-ramverkets RESTful-karaktär, som AEM bygger på, kan de flesta åtgärder utföras med ett URL-anrop. cURL kan användas för att köra sådana URL-anrop och kan vara ett användbart verktyg för AEM administratörer.
+På grund av Sling-ramverkets RESTful-karaktär, som AEM bygger på, kan de flesta åtgärder utföras med ett URL-anrop. cURL kan användas för att köra sådana URL-anrop och kan vara ett användbart verktyg för AEM-administratörer.
 
-## Vad är cURL? {#what-is-curl}
+## Vad är cURL {#what-is-curl}
 
-cURL är ett kommandoradsverktyg med öppen källkod som används för att utföra URL-ändringar. Den stöder ett brett spektrum av Internetprotokoll, inklusive HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, LDAP, DAP, DICT, TELNET, FILE, IMAP, POP3, SMTP och RTSP.
+cURL är ett kommandoradsverktyg med öppen källkod som används för att utföra URL-manipulationer. Den stöder ett brett utbud av internetprotokoll inklusive HTTP, HTTPS, FTP, FTPS, SCP, SFTP, TFTP, LDAP, DAP, DICT, TELNET, FILE, IMAP, POP3, SMTP och RTSP.
 
-cURL är ett väletablerat och allmänt använt verktyg för att hämta och skicka data med URL-syntaxen och släpptes ursprungligen 1997. Namnet cURL betydde ursprungligen &quot;se URL&quot;.
+cURL är ett väletablerat och allmänt använt verktyg för att hämta eller skicka data med hjälp av URL-syntaxen och släpptes ursprungligen 1997. Namnet cURL betydde ursprungligen &quot;se URL&quot;.
 
 På grund av Sling-ramverkets RESTful-karaktär, som AEM bygger på, kan de flesta åtgärder minskas till ett URL-anrop, som kan köras med cURL. [Åtgärder för innehållsredigering](/help/sites-administering/curl.md#common-content-manipulation-aem-curl-commands), t.ex. aktivering av sidor och start av arbetsflöden samt [operativa uppgifter](/help/sites-administering/curl.md#common-operational-aem-curl-commands), t.ex. pakethantering och hantering av användare, kan automatiseras med cURL. Dessutom kan du [skapa egna cURL](/help/sites-administering/curl.md#building-a-curl-ready-aem-command)-kommandon för de flesta åtgärder i AEM.
 
 >[!NOTE]
 >
->Alla AEM som utförs via cURL måste godkännas precis som alla andra användare som ska AEM. Alla åtkomstkontrollistor och åtkomsträttigheter respekteras när cURL används för att köra ett AEM.
+>Alla AEM-kommandon som utförs via cURL måste godkännas precis som alla andra användare till AEM. Alla åtkomstkontrollistor och åtkomsträttigheter respekteras när cURL används för att köra ett AEM-kommando.
 
 ## Hämtar cURL {#downloading-curl}
 
@@ -40,15 +40,15 @@ cURL är en standarddel av macOS och vissa Linux-miljöer. Det finns dock för d
 
 Källdatabasen för cURL finns även på GitHub.
 
-## Skapa ett cURL-klart AEM {#building-a-curl-ready-aem-command}
+## Skapa ett cURL-klart AEM-kommando {#building-a-curl-ready-aem-command}
 
-cURL-kommandon kan byggas för de flesta åtgärder i AEM, som att utlösa arbetsflöden, kontrollera OSGi-konfigurationer, utlösa JMX-kommandon, skapa replikeringsagenter och mycket annat.
+cURL-kommandon kan byggas för de flesta åtgärder i AEM, till exempel för att utlösa arbetsflöden, kontrollera OSGi-konfigurationer, utlösa JMX-kommandon, skapa replikeringsagenter och mycket annat.
 
-Om du vill hitta exakt det kommando som du behöver för en viss åtgärd måste du använda utvecklarverktygen i webbläsaren för att fånga upp anropet till POSTEN när du kör AEM.
+Om du vill hitta exakt det kommando som du behöver för en viss åtgärd måste du använda utvecklarverktygen i webbläsaren för att hämta POST-anropet till servern när du kör AEM-kommandot.
 
 I följande steg beskrivs hur du gör detta genom att skapa en ny sida i webbläsaren i Chrome.
 
-1. Förbered den åtgärd som du vill anropa inom AEM. I det här fallet har vi gått till slutet av guiden **Skapa sida**, men ännu inte klickat på **Skapa**.
+1. Förbered den åtgärd du vill anropa i AEM. I det här fallet har vi gått till slutet av guiden **Skapa sida**, men ännu inte klickat på **Skapa**.
 
    ![chlimage_1-66](assets/chlimage_1-66a.png)
 
@@ -57,7 +57,7 @@ I följande steg beskrivs hur du gör detta genom att skapa en ny sida i webblä
    ![chlimage_1-67](assets/chlimage_1-67a.png)
 
 1. Klicka på **Skapa** i guiden **Skapa sida** för att skapa arbetsflödet.
-1. Högerklicka på den resulterande POSTEN och välj **Kopiera** > **Kopiera som cURL**.
+1. Högerklicka på den resulterande POST-åtgärden och välj **Kopiera** > **Kopiera som cURL**.
 
    ![chlimage_1-68](assets/chlimage_1-68a.png)
 
@@ -69,13 +69,13 @@ I följande steg beskrivs hur du gör detta genom att skapa en ny sida i webblä
 
    ![chlimage_1-70](assets/chlimage_1-70a.png)
 
-## AEM cURL-kommandon {#common-operational-aem-curl-commands}
+## Vanliga AEM cURL-kommandon {#common-operational-aem-curl-commands}
 
-Här är en lista AEM cURL-kommandon för vanliga administrativa och operativa uppgifter.
+Här är en lista med AEM cURL-kommandon för vanliga administrativa och operativa uppgifter.
 
 >[!NOTE]
 >
->I följande exempel antas att AEM körs på `localhost` på port `4502` och använder användaren `admin` med lösenordet `admin`. Ytterligare kommandoplatshållare anges inom vinkelparenteser.
+>I följande exempel antas att AEM körs på `localhost` på port `4502` och att användaren `admin` använder lösenordet `admin`. Ytterligare kommandoplatshållare anges inom vinkelparenteser.
 
 ### Pakethantering {#package-management}
 
@@ -103,13 +103,13 @@ curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.jso
 curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/console.html/etc/packages/mycontent.zip?cmd=contents
 ```
 
-#### Skapa ett paket {#build-a-package}
+#### Bygg ett paket {#build-a-package}
 
 ```shell
 curl -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=build
 ```
 
-#### Radbryt ett paket {#rewrap-a-package}
+#### Packa om ett paket {#rewrap-a-package}
 
 ```shell
 curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.json/etc/packages/mycontent.zip?cmd=rewrap
@@ -121,7 +121,7 @@ curl -u <user>:<password> -X POST http://localhost:4502/crx/packmgr/service/.jso
 curl -u <user>:<password> -X POST -Fname=<New Name> http://localhost:4502/etc/packages/<Group Name>/<Package Name>.zip/jcr:content/vlt:definition
 ```
 
-#### Överföra ett paket {#upload-a-package}
+#### Ladda upp ett paket {#upload-a-package}
 
 ```shell
 curl -u <user>:<password> -F cmd=upload -F force=true -F package=@test.zip http://localhost:4502/crx/packmgr/service/.json
@@ -201,7 +201,7 @@ curl -u <user>:<password> -FaddMembers=testuser1 http://localhost:4502/home/grou
 curl -u <user>:<password> -FremoveMembers=testuser1 http://localhost:4502/home/groups/t/testGroup.rw.html
 ```
 
-#### Ange användarens gruppmedlemskap {#set-a-user-s-group-membership}
+#### Ange en användares gruppmedlemskap {#set-a-user-s-group-membership}
 
 ```shell
 curl -u <user>:<password> -Fmembership=contributor -Fmembership=testgroup http://localhost:4502/home/users/t/testuser.rw.html
@@ -239,13 +239,13 @@ curl -u <user>:<password> -Faction=stop http://localhost:4502/system/console/bun
 
 ### Dispatcher {#dispatcher}
 
-#### Förvräng cachen {#invalidate-the-cache}
+#### Ogiltigförklara cachen {#invalidate-the-cache}
 
 ```shell
 curl -H "CQ-Action: Activate" -H "CQ-Handle: /content/test-site/" -H "CQ-Path: /content/test-site/" -H "Content-Length: 0" -H "Content-Type: application/octet-stream" http://localhost:4502/dispatcher/invalidate.cache
 ```
 
-#### Evict the Cache {#evict-the-cache}
+#### Ta bort cachen {#evict-the-cache}
 
 ```shell
 curl -H "CQ-Action: Deactivate" -H "CQ-Handle: /content/test-site/" -H "CQ-Path: /content/test-site/" -H "Content-Length: 0" -H "Content-Type: application/octet-stream" http://localhost:4502/dispatcher/invalidate.cache
@@ -316,13 +316,13 @@ Mer information finns i [Gå till Adobe Analytics och Adobe Target](/help/sites-
 
 Mer information finns i [Enkel inloggning](/help/sites-deploying/single-sign-on.md).
 
-## Vanlig innehållshantering AEM cURL-kommandon {#common-content-manipulation-aem-curl-commands}
+## Vanliga kommandon för innehållshantering i AEM cURL {#common-content-manipulation-aem-curl-commands}
 
-Här är en lista AEM cURL-kommandon för innehållsändring.
+Här är en lista med AEM cURL-kommandon för innehållsändring.
 
 >[!NOTE]
 >
->I följande exempel antas att AEM körs på `localhost` på port `4502` och använder användaren `admin` med lösenordet `admin`. Ytterligare kommandoplatshållare anges inom vinkelparenteser.
+>I följande exempel antas att AEM körs på `localhost` på port `4502` och att användaren `admin` använder lösenordet `admin`. Ytterligare kommandoplatshållare anges inom vinkelparenteser.
 
 ### Sidhantering {#page-management}
 
@@ -362,6 +362,30 @@ curl -u <user>:<password> -X POST -F cmd="unlockPage" -F path="/content/path/to/
 curl -u <user>:<password> -F cmd=copyPage -F destParentPath=/path/to/destination/parent -F srcPath=/path/to/source/location http://localhost:4502/bin/wcmcommand
 ```
 
+### Så här utför du en grund utrullning {#shallow-rollout}
+
+När du använder AEM as a Cloud Service kan det finnas tillfällen då du behöver lansera en enskild, specifik sida utan att dess undersidor sprids. Om det inte är korrekt konfigurerat kan det vanliga kommandot för att rulla ut sidor av misstag innehålla undersidor. I det här avsnittet beskrivs hur du justerar rullningskommandot för att få en grund utrullning av en viss sida och utesluter eventuella ytterligare undersidor.
+
+Så här utför du en grund utrullning:
+
+1. Ändra det befintliga curl-kommandot genom att ändra parametern från `type=deep` till `type=page`.
+1. Använd följande syntax för kommandot curl:
+
+```shell
+curl -H "Authorization: Bearer <token>" "https://<instance-url>/bin/asynccommand" \
+   -d type=page \
+   -d operation=asyncRollout \
+   -d cmd=rollout \
+   -d path="/content/<your-path>"
+```
+
+Kontrollera även följande:
+
+1. Se till att du ersätter `<token>` med din faktiska auktoriseringstoken och `<instance-url>` med din specifika instans-URL.
+1. Ersätt `/content/<your-path>` med sökvägen till den specifika sida som du vill ta bort.
+
+Genom att ange `type=page` aktiverar kommandot bara den angivna sidan, exklusive eventuella underordnade sidor. Den här konfigurationen ger exakt kontroll över distributionen av innehåll och säkerställer att endast de tänkta ändringarna sprids i olika miljöer. Den här justeringen anpassas dessutom till hur rollouter hanteras via AEM GUI när du markerar enskilda sidor.
+
 ### Arbetsflöden {#workflows}
 
 Mer information finns i [Interagera med arbetsflöden programmatiskt](/help/sites-developing/workflows-program-interaction.md).
@@ -392,19 +416,19 @@ curl -u <user>:<password> -F":operation=move" -F":applyTo=/sourceurl"  -F":dest=
 curl -u <user>:<password> -F":operation=copy" -F":applyTo=/sourceurl"  -F":dest=/target/parenturl/" https://localhost:4502/content
 ```
 
-#### Överför filer med Sling PostServlet {#upload-files-using-sling-postservlet}
+#### Ladda upp filer med Sling PostServlet {#upload-files-using-sling-postservlet}
 
 ```shell
 curl -u <user>:<password> -F"*=@test.properties"  http://localhost:4502/etc/test
 ```
 
-#### Överför filer med Sling PostServlet och ange nodnamn {#upload-files-using-sling-postservlet-and-specifying-node-name}
+#### Ladda upp filer med Sling PostServlet och ange nodnamn {#upload-files-using-sling-postservlet-and-specifying-node-name}
 
 ```shell
 curl -u <user>:<password> -F"test2.properties=@test.properties"  http://localhost:4502/etc/test
 ```
 
-#### Överför filer som anger en innehållstyp {#upload-files-specifying-a-content-type}
+#### Ladda upp filer som anger en innehållstyp {#upload-files-specifying-a-content-type}
 
 ```shell
 curl -u <user>:<password> -F "*=@test.properties;type=text/plain" http://localhost:4502/etc/test
