@@ -1,14 +1,14 @@
 ---
 title: Installera och konfigurera dokumenttjänster
-description: Installera AEM Forms Document Services för att skapa, sammanställa, distribuera, arkivera PDF-dokument, lägga in digitala signaturer för att begränsa dokumentåtkomsten samt avkoda Barcoded Forms.
+description: Installera AEM Forms dokumenttjänster för att skapa, sammanställa, distribuera, arkivera PDF-dokument, lägga in digitala signaturer för att begränsa åtkomsten till dokument samt avkoda Barcoded Forms.
 topic-tags: installing
 role: Admin, User, Developer
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
-source-git-commit: cf3247e437af7447fd6a6121c6a4e2ef750d06b7
+source-git-commit: 5dbdce2d8e558e6bf26c6713fd44d58038d38152
 workflow-type: tm+mt
-source-wordcount: '5503'
+source-wordcount: '5567'
 ht-degree: 0%
 
 ---
@@ -17,29 +17,29 @@ ht-degree: 0%
 
 AEM Forms tillhandahåller en uppsättning OSGi-tjänster för att utföra olika åtgärder på dokumentnivå, till exempel tjänster för att skapa, sammanställa, distribuera och arkivera PDF-dokument, lägga till digitala signaturer för att begränsa åtkomst till dokument samt avkoda Barcoded Forms. Dessa tjänster ingår i AEM Forms tilläggspaket. Tillsammans kallas dessa tjänster dokumenttjänster. Listan över tillgängliga dokumenttjänster och deras viktigaste funktioner är följande:
 
-* **Assembler-tjänst:** Gör att du kan kombinera, ordna om och förstärka PDF- och XDP-dokument och få information om PDF-dokument. Det hjälper även till att konvertera och validera PDF-dokument till standarden PDF/A, omformar PDF forms, XML-formulär och PDF forms till PDF/A-1b, PDF/A-2b och PDFA/A-3b. Mer information finns i [Assembler Service](/help/forms/using/assembler-service.md).
+* **Assembler-tjänst:** Gör att du kan kombinera, ordna om och förstärka PDF- och XDP-dokument och få information om PDF-dokument. Det hjälper även till att konvertera och validera PDF-dokument till PDF/A-standard, omformar PDF forms, XML-formulär och PDF forms till PDF/A-1b, PDF/A-2b och PDFA/A-3b. Mer information finns i [Assembler Service](/help/forms/using/assembler-service.md).
 
-* **ConvertPDF-tjänsten:** Gör att du kan konvertera PDF-dokument till PostScript- eller bildfiler (JPEG, JPEG 2000, PNG och TIFF). Mer information finns i [Konvertera PDF-tjänst](/help/forms/using/using-convertpdf-service.md).
+* **ConvertPDF-tjänst:** Gör att du kan konvertera PDF-dokument till PostScript eller bildfiler (JPEG, JPEG 2000, PNG och TIFF). Mer information finns i [Konvertera PDF-tjänst](/help/forms/using/using-convertpdf-service.md).
 
-* **Barcoded Forms-tjänst:** Gör att du kan extrahera data från elektroniska bilder av streckkoder. Tjänsten accepterar TIFF och PDF som innehåller en eller flera streckkoder som indata och extraherar streckkodsdata. Mer information finns i [Barcoded Forms Service](/help/forms/using/using-barcoded-forms-service.md).
+* **Barcoded Forms-tjänst:** Gör att du kan extrahera data från elektroniska bilder av streckkoder. Tjänsten accepterar TIFF- och PDF-filer som innehåller en eller flera streckkoder som indata och extraherar streckkodsdata. Mer information finns i [Barcoded Forms Service](/help/forms/using/using-barcoded-forms-service.md).
 
-* **DocAssurance-tjänsten:** Gör att du kan kryptera och dekryptera dokument, utöka Adobe Reader funktioner med ytterligare användningsbehörighet och lägga till digitala signaturer i dina dokument. Tjänsten Doc Assurance innehåller tre tjänster: signatur, kryptering och läsartillägg. Mer information finns i [DocAssurance-tjänsten](/help/forms/using/overview-aem-document-services.md).
+* **DocAssurance-tjänsten:** Gör att du kan kryptera och dekryptera dokument, utöka funktionaliteten i Adobe Reader med ytterligare användningsbehörighet och lägga till digitala signaturer i dina dokument. Tjänsten Doc Assurance innehåller tre tjänster: signatur, kryptering och läsartillägg. Mer information finns i [DocAssurance-tjänsten](/help/forms/using/overview-aem-document-services.md).
 
 * **Krypteringstjänst:** Gör att du kan kryptera och dekryptera dokument. När ett dokument är krypterat blir innehållet oläsligt. En behörig användare kan dekryptera dokumentet för att få åtkomst till dess innehåll. Mer information finns i [Krypteringstjänst](/help/forms/using/overview-aem-document-services.md#encryption-service).
 
-* **Forms-tjänst:** Gör att du kan skapa interaktiva klientprogram för datainhämtning som validerar, bearbetar, omvandlar och levererar formulär som vanligtvis skapas i Forms Designer. Forms-tjänsten återger alla formulärdesigner som du utvecklar för PDF-dokument. Mer information finns i [Forms-tjänsten](/help/forms/using/forms-service.md).
+* **Forms-tjänst:** Gör att du kan skapa interaktiva klientprogram för datainhämtning som validerar, bearbetar, omvandlar och levererar formulär som vanligtvis skapas i Forms Designer. Forms-tjänsten återger alla formulärdesigner som du skapar i PDF-dokument. Mer information finns i [Forms-tjänsten](/help/forms/using/forms-service.md).
 
-* **Utdatatjänst:** Gör att du kan skapa dokument i olika format, t.ex. PDF, laserskrivarformat och etikettskrivarformat. Laserskrivarformat är PostScript och Printer Control Language (PCL). Mer information finns i [Utdatatjänst](/help/forms/using/output-service.md).
+* **Utdatatjänst:** Gör att du kan skapa dokument i olika format, bland annat PDF, laserskrivarformat och etikettskrivarformat. Laserskrivarformat är PostScript och Printer Control Language (PCL). Mer information finns i [Utdatatjänst](/help/forms/using/output-service.md).
 
-* **PDF Generator-tjänst:** Tjänsten PDF Generator tillhandahåller API:er för konvertering av ursprungliga filformat till PDF. Dessutom konverteras PDF till andra filformat och storleken på PDF-dokument optimeras. Mer information finns i [PDF Generator-tjänsten](aem-document-services-programmatically.md#pdfgeneratorservice).
+* **PDF Generator-tjänst:** PDF Generator-tjänsten tillhandahåller API:er för konvertering av interna filformat till PDF. Den konverterar även PDF till andra filformat och optimerar storleken på PDF-dokument. Mer information finns i [PDF Generator-tjänsten](aem-document-services-programmatically.md#pdfgeneratorservice).
 
-* **Reader-tilläggstjänsten:** Gör det möjligt för din organisation att enkelt dela interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader med ytterligare användningsbehörighet. Med tjänsten aktiveras funktioner som inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader, t.ex. för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet. Mer information finns i [Reader-tilläggstjänsten](/help/forms/using/overview-aem-document-services.md#reader-extension-service).
+* **Reader Extension-tjänsten:** Gör det möjligt för din organisation att enkelt dela interaktiva PDF-dokument genom att utöka funktionaliteten i Adobe Reader med ytterligare användningsbehörighet. Tjänsten aktiverar funktioner som inte är tillgängliga när ett PDF-dokument öppnas med Adobe Reader, t.ex. för att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet. Mer information finns i [Reader Extension Service](/help/forms/using/overview-aem-document-services.md#reader-extension-service).
 
-* **Signaturtjänst:** Gör att du kan arbeta med digitala signaturer och dokument på AEM server. Signaturtjänsten används till exempel vanligtvis i följande situationer:
+* **Signaturtjänst:** Gör att du kan arbeta med digitala signaturer och dokument på AEM-servern. Signaturtjänsten används till exempel vanligtvis i följande situationer:
 
-   * AEM certifierar ett formulär innan det skickas till en användare för att öppnas med Acrobat eller Adobe Reader.
-   * Den AEM servern validerar en signatur som har lagts till i ett formulär med Acrobat eller Adobe Reader.
-   * Den AEM servern signerar ett formulär för en offentlig notarius publicus.
+   * AEM-servern certifierar ett formulär innan det skickas till en användare för att öppnas med Acrobat eller Adobe Reader.
+   * AEM-servern validerar en signatur som har lagts till i ett formulär med Acrobat eller Adobe Reader.
+   * AEM-servern signerar ett formulär för en offentlig notarius publicus.
 
   Signaturtjänsten får åtkomst till certifikat och autentiseringsuppgifter som lagras i förtroendearkivet. Mer information finns i [Signaturtjänst](/help/forms/using/aem-document-services-programmatically.md).
 
@@ -47,13 +47,13 @@ AEM Forms är en kraftfull plattform för större företag och dokumenttjänster
 
 ## Distributionstopologi {#deployment-topology}
 
-AEM Forms tilläggspaket är ett program som distribueras till AEM. I allmänhet behöver du bara en AEM (författare eller publicerad) för att köra AEM Forms Document Services. Följande topologi rekommenderas för att köra AEM Forms Document Services. Mer information om topologier finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
+AEM Forms tilläggspaket är ett program som distribueras till AEM. I allmänhet krävs endast en AEM-instans (författare eller publicering) för att köra AEM Forms Document Services. Följande topologi rekommenderas för att köra AEM Forms Document Services. Mer information om topologier finns i [Arkitektur och distributionstopologier för AEM Forms](/help/forms/using/aem-forms-architecture-deployment.md).
 
 ![Arkitektur och distributionstopologier för AEM Forms](do-not-localize/document-services.png)
 
 >[!NOTE]
 >
->Även om du kan använda AEM Forms för att konfigurera och köra alla funktioner från en enda server, bör du göra kapacitetsplanering, lastbalansering och konfigurera dedikerade servrar för specifika funktioner i en produktionsmiljö. I en miljö som använder tjänsten PDF Generator för att konvertera tusentals sidor om dagen och flera adaptiva formulär för att hämta in data, kan du skapa separata AEM Forms-servrar för tjänsten PDF Generator och funktioner för adaptiva formulär. Det ger optimala prestanda och skalar servrarna oberoende av varandra.
+>Även om du kan använda AEM Forms för att konfigurera och köra alla funktioner från en enda server, bör du göra kapacitetsplanering, lastbalansering och konfigurera dedikerade servrar för specifika funktioner i en produktionsmiljö. I en miljö där PDF Generator-tjänsten används för att konvertera tusentals sidor om dagen och flera adaptiva formulär för datainhämtning kan du skapa separata AEM Forms-servrar för PDF Generator-tjänsten och adaptiva formulärfunktioner. Det ger optimala prestanda och skalar servrarna oberoende av varandra.
 
 ## Systemkrav {#system-requirements}
 
@@ -62,17 +62,17 @@ Innan du börjar installera och konfigurera AEM Forms Document Services bör du 
 * Maskinvaru- och programvaruinfrastruktur finns på plats. En detaljerad lista över maskinvara och programvara som stöds finns i [Tekniska krav](/help/sites-deploying/technical-requirements.md).
 
 * Installationssökvägen för AEM-instansen innehåller inte blanksteg.
-* En AEM-instans körs. I AEM är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. I allmänhet behöver du bara en AEM (författare eller publicerad) för att köra AEM Forms Document Services:
+* En AEM-instans körs. I AEM-terminologi är &quot;instance&quot; en kopia av AEM som körs på en server i författar- eller publiceringsläge. I allmänhet behöver du bara en AEM-instans (författare eller publicerad) för att köra AEM Forms Document Services:
 
-   * **Författare**: En AEM som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
-   * **Publish**: En AEM som skickar det publicerade innehållet till allmänheten via Internet eller ett internt nätverk.
+   * **Författare**: En AEM-instans användes för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
+   * **Publicera**: En AEM-instans som skickar det publicerade innehållet till allmänheten via Internet eller ett internt nätverk.
 
 * Minneskraven är uppfyllda. AEM Forms tilläggspaket kräver:
 
    * 15 GB temporärt utrymme för Microsoft® Windows-baserade installationer.
    * 6 GB temporärt utrymme för UNIX-baserade installationer.
 
-* Klientprogramvara som krävs för att skapa PDF för konvertering i Microsoft® Windows och Linux® installeras:
+* Klientprogramvara som krävs för att PDF generator ska kunna utföra konvertering i Microsoft® Windows och Linux® installeras:
 
    * **Microsoft® Windows**: Installera [Microsoft® Office](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p) eller [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator)
    * **Linux®**: Installera [Apache OpenOffice](/help/forms/using/aem-forms-jee-supported-platforms.md#p-software-support-for-pdf-generator-p)
@@ -80,7 +80,7 @@ Innan du börjar installera och konfigurera AEM Forms Document Services bör du 
 >[!NOTE]
 >
 >* I Microsoft® Windows stöder PDF Generator konverteringsvägar för WebKit, Acrobat WebCapture och WebToPDF för att konvertera HTML-filer till PDF-dokument.
->* På UNIX-baserade operativsystem stöder PDF Generator konverteringsvägar för WebKit och WebToPDF för konvertering av HTML-filer till PDF.
+>* På UNIX-baserade operativsystem stöder PDF Generator konverteringsvägar för WebKit och WebToPDF för konvertering av HTML-filer till PDF-dokument.
 >
 
 ### Extra krav för UNIX-baserat operativsystem {#extrarequirements}
@@ -163,13 +163,13 @@ Om du använder ett UNIX-baserat operativsystem installerar du följande 32-bita
  </tbody>
 </table>
 
-* **(endast PDF Generator**) Installera 32-bitarsversionen av bibliotek för libcurl, libcrypto och libssl och skapa nedanstående symboler. Symbolerna pekar på den senaste versionen av respektive bibliotek:
+* **(Endast PDF Generator**) Installera 32-bitarsversionen av biblioteken libcurl, libcrypto och libssl och skapa nedanstående symboler. Symbolerna pekar på den senaste versionen av respektive bibliotek:
 
    * /usr/lib/libcurl.so
    * /usr/lib/libcrypto.so
    * /usr/lib/libssl.so
 
-* **(endast PDF Generator)** PDF Generator-tjänsten stöder WebKit- och WebToPDF-vägar för konvertering av HTML-filer till PDF-dokument. Installera nedanstående 64-bitarsbibliotek om du vill aktivera konvertering för WebToPDF-vägar. I allmänhet är dessa bibliotek redan installerade. Om något bibliotek saknas installerar du det manuellt:
+* **(Endast PDF Generator)** PDF Generator-tjänsten stöder WebKit- och WebToPDF-vägar för konvertering av HTML-filer till PDF-dokument. Installera nedanstående 64-bitarsbibliotek om du vill aktivera konvertering för WebToPDF-vägar. I allmänhet är dessa bibliotek redan installerade. Om något bibliotek saknas installerar du det manuellt:
 
    * linux-gate.so.1
    * libz.so.1
@@ -187,21 +187,21 @@ Om du använder ett UNIX-baserat operativsystem installerar du följande 32-bita
 
 ## Konfigurationer före installation {#preinstallationconfigurations}
 
-Konfigurationer som listas i avsnittet med förinstallationskonfigurationer gäller endast för tjänsten PDF Generator. Om du inte konfigurerar tjänsten PDF Generator kan du hoppa över konfigurationsavsnittet före installation.
+Konfigurationer som listas i avsnittet med förinstallationskonfigurationer gäller endast för PDF Generator-tjänsten. Om du inte konfigurerar PDF Generator-tjänsten kan du hoppa över konfigurationsavsnittet före installation.
 
 ### Installera Adobe Acrobat och tredjepartsprogram {#install-adobe-acrobat-and-third-party-applications}
 
-Om du ska använda tjänsten PDF Generator för att konvertera inbyggda filformat som Microsoft® Word, Microsoft® Excel, Microsoft® PowerPoint, OpenOffice, WordPerfect X7 och Adobe Acrobat till PDF-dokument måste du kontrollera att dessa program är installerade på AEM Forms Server.
+Om du ska använda PDF Generator-tjänsten för att konvertera filformat som Microsoft® Word, Microsoft® Excel, Microsoft® PowerPoint, OpenOffice, WordPerfect X7 och Adobe Acrobat till PDF-dokument måste du se till att dessa program är installerade på AEM Forms Server.
 
 >[!NOTE]
 >
 >* Om din AEM Forms-server är offline eller i en säker miljö och Internet inte är tillgängligt för att aktivera Adobe Acrobat finns mer information i [Offlineaktivering](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en) om hur du aktiverar sådana instanser av Adobe Acrobat.
 >* Adobe Acrobat, Microsoft® Word, Excel och PowerPoint finns endast för Microsoft® Windows. Om du använder det UNIX-baserade operativsystemet måste du installera OpenOffice för att konvertera RTF-filer och Microsoft® Office-filer som stöds till PDF-dokument.
 >* Stäng alla dialogrutor som visas när du har installerat Adobe Acrobat och tredjepartsprogram för alla användare som har konfigurerats att använda tjänsten PDF Generator.
->* Starta alla installerade program minst en gång. Stäng alla dialogrutor för alla användare som har konfigurerats att använda tjänsten PDF Generator.
+>* Starta alla installerade program minst en gång. Stäng alla dialogrutor för alla användare som har konfigurerats att använda PDF Generator-tjänsten.
 >* [Kontrollera förfallodatumet för dina Adobe Acrobat-serienummer](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html) och ange ett datum för att uppdatera licensen eller [migrera ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) baserat på förfallodatumet.
 
-När du har installerat Acrobat öppnar du Microsoft® Word. På fliken **Acrobat** klickar du på **Skapa PDF** och konverterar en .doc- eller .docx-fil som finns på datorn till ett PDF-dokument. Om konverteringen lyckas är AEM Forms redo att använda Acrobat tillsammans med PDF Generator.
+När du har installerat Acrobat öppnar du Microsoft® Word. På fliken **Acrobat** klickar du på **Skapa PDF** och konverterar en .doc- eller .docx-fil som finns på datorn till ett PDF-dokument. Om konverteringen lyckas är AEM Forms redo att använda Acrobat med PDF Generator-tjänsten.
 
 ### Konfigurera miljövariabler {#setup-environment-variables}
 
@@ -232,7 +232,7 @@ Ange miljövariabler för 64-bitars Java Development Kit, tredjepartsprogram och
   <tr>
    <td><p><strong>OpenOffice</strong></p> </td>
    <td><p>OpenOffice_PATH</p> </td>
-   <td><p>C:\Program filer (x86)\OpenOffice.org4</p> </td>
+   <td><p>C:\Program filer (x86)\OpenOffice 4</p> </td>
   </tr>
  </tbody>
 </table>
@@ -243,10 +243,13 @@ Ange miljövariabler för 64-bitars Java Development Kit, tredjepartsprogram och
 >* JAVA_HOME och Acrobat_PATH (endast Windows) är obligatoriska miljövariabler.
 >* Miljövariabeln OpenOffice_PATH ställs in på installationsmappen i stället för på sökvägen till den körbara filen.
 >* Ställ inte in miljövariabler för Microsoft® Office-program som Word, PowerPoint, Excel och Project, eller för AutoCAD. Om dessa program är installerade på servern startar tjänsten Generate PDF automatiskt dessa program.
->* Installera OpenOffice som /root på UNIX-baserade plattformar. Om OpenOffice inte är installerat som rot kan tjänsten PDF Generator inte konvertera OpenOffice-dokument till PDF-dokument. Om du måste installera och köra OpenOffice som en icke-rotanvändare anger du sudo-rättigheter till användaren som inte är rotanvändare.
->* Om du använder OpenOffice på en UNIX-baserad plattform kör du följande kommando för att ange variabeln path:
->
->  `export OpenOffice_PATH=/opt/openoffice.org4`
+>* Installera OpenOffice som /root på UNIX-baserade plattformar. Om OpenOffice inte är installerat som rot kan inte PDF Generator konvertera OpenOffice-dokument till PDF-dokument. Om du måste installera och köra OpenOffice som en icke-rotanvändare anger du sudo-rättigheter till användaren som inte är rotanvändare.
+>* Om du använder OpenOffice på en UNIX-baserad plattform kör du följande kommando för att ange variabeln path:\
+> `export OpenOffice_PATH=/opt/openoffice.org4`
+>* På SUSE® Linux®-baserade plattformar (SLES 15 SP6 eller senare) följer du de här stegen för att konfigurera OpenOffice:
+>     * Installera den senaste tillgängliga 32-bitarsvarianten av `OpenOffice 4.1.x` till en katalog som `/opt/openoffice4`.
+>     * Ställ in miljövariabeln `OpenOffice_PATH` så att den pekar på den här platsen. Till exempel: `OpenOffice_PATH=/opt/openoffice4`.
+>     * Kontrollera att variabeln `OpenOffice_PATH` är global (till exempel med `/etc/profile` eller systemspecifik motsvarighet) så att den är tillgänglig för alla användare vid inloggning.
 
 ### (Endast för IBM® WebSphere®) Konfigurera IBM® SSL-socketleverantör {#only-for-ibm-websphere-configure-ibm-ssl-socket-provider}
 
@@ -283,13 +286,13 @@ Utför följande steg för att konfigurera IBM® SSL-socketprovidern:
 
 ### (Endast Windows) Konfigurera filblocksinställningarna för Microsoft® Office {#configure-the-file-block-settings-for-microsoft-office}
 
-Ändra inställningarna för Microsoft® Office Trust Center så att tjänsten PDF Generator kan konvertera filer som skapats med äldre versioner av Microsoft® Office.
+Ändra inställningarna för Microsoft® Office Trust Center så att PDF Generator-tjänsten kan konvertera filer som skapats med äldre versioner av Microsoft® Office.
 
 1. Öppna ett Microsoft® Office-program. Exempel: Microsoft® Word. Navigera till **[!UICONTROL File]**> **[!UICONTROL Options]**. Dialogrutan Alternativ visas.
 
 1. Klicka på **[!UICONTROL Trust Center]** och sedan på **[!UICONTROL Trust Center Settings]**.
 1. Klicka på **[!UICONTROL File Block Settings]** i **[!UICONTROL Trust Center settings]**.
-1. I listan **[!UICONTROL File Type]** avmarkerar du **[!UICONTROL Open]** för den filtyp som tjänsten PDF Generator ska kunna konvertera till PDF-dokument.
+1. Avmarkera **[!UICONTROL Open]** i listan **[!UICONTROL File Type]** för den filtyp som PDF Generator-tjänsten ska ha behörighet att konvertera till PDF-dokument.
 
 ### (Endast Windows) Bevilja privilegiet Ersätt en token på processnivå {#grant-the-replace-a-process-level-token-privilege}
 
@@ -301,11 +304,11 @@ Användarkontot som används för att starta programservern kräver privilegiet 
 
 >[!NOTE]
 >
-> Om AEM körs som en tjänst under LocalSystem-kontot (LSA) är det inte nödvändigt att uttryckligen tilldela detta privilegium till en användare, vilket anges ovan.
+> Om AEM-servern körs som en tjänst under LocalSystem-kontot (LSA) är det inte nödvändigt att uttryckligen tilldela denna behörighet till en användare, vilket anges ovan.
 
-### (Endast Windows) Aktivera tjänsten PDF Generator för icke-administratörer {#enable-the-pdf-generator-service-for-non-administrators}
+### (Endast Windows) Aktivera PDF Generator-tjänsten för icke-administratörer {#enable-the-pdf-generator-service-for-non-administrators}
 
-Du kan göra det möjligt för en icke-administratörsanvändare att använda tjänsten PDF Generator. Normalt kan endast användare med administratörsbehörighet använda tjänsten:
+Du kan göra det möjligt för en icke-administratörsanvändare att använda PDF Generator-tjänsten. Normalt kan endast användare med administratörsbehörighet använda tjänsten:
 
 1. Skapa en miljövariabel, PDFG_NON_ADMIN_ENABLED.
 1. Ange värdet för miljövariabeln till TRUE.
@@ -313,7 +316,7 @@ Du kan göra det möjligt för en icke-administratörsanvändare att använda tj
 
 >[!NOTE]
 >
-> Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
+> Du bör använda kommandot Ctrl + C för att starta om SDK. Om du startar om AEM SDK med alternativa metoder, till exempel att stoppa Java-processer, kan det leda till inkonsekvenser i AEM utvecklingsmiljö.
 
 ### (Endast Windows) Inaktivera Kontroll av användarkonto (UAC) {#disable-user-account-control-uac}
 
@@ -331,13 +334,13 @@ Du kan göra det möjligt för en icke-administratörsanvändare att använda tj
 
 ### (Endast Windows) Inaktivera felrapporteringstjänsten {#disable-error-reporting-service}
 
-När ett dokument konverteras till PDF med tjänsten PDF Generator på Windows Server rapporteras ibland om att den körbara filen har stött på ett problem och måste stängas. Den påverkar dock inte konverteringen av PDF eftersom den fortsätter i bakgrunden.
+När du konverterar ett dokument till PDF med PDF Generator-tjänsten på Windows Server rapporteras ibland att ett problem har uppstått och den körbara filen måste stängas. Men det påverkar inte PDF-konverteringen eftersom den fortsätter i bakgrunden.
 
 Du kan undvika att få felmeddelanden genom att inaktivera Windows-felrapportering. Mer information om hur du inaktiverar felrapportering finns i [https://technet.microsoft.com/en-us/library/cc754364.aspx](https://technet.microsoft.com/en-us/library/cc754364.aspx).
 
-### (Endast Windows) Konfigurera konvertering från HTML till PDF {#configure-html-to-pdf-conversion}
+### (Endast Windows) Konfigurera konvertering av HTML till PDF {#configure-html-to-pdf-conversion}
 
-Tjänsten PDF Generator tillhandahåller vägar eller metoder för WebKit, WebCapture och WebToPDF för att konvertera HTML-filer till PDF-dokument. Om du vill aktivera konvertering för WebKit- och Acrobat WebCapture-vägar i Windows kopierar du Unicode-teckensnittet till katalogen %windir%\fonts.
+PDF Generator-tjänsten tillhandahåller vägar eller metoder för WebKit, WebCapture och WebToPDF för att konvertera HTML-filer till PDF-dokument. Om du vill aktivera konvertering för WebKit- och Acrobat WebCapture-vägar i Windows kopierar du Unicode-teckensnittet till katalogen %windir%\fonts.
 
 >[!NOTE]
 >
@@ -345,7 +348,7 @@ Tjänsten PDF Generator tillhandahåller vägar eller metoder för WebKit, WebCa
 
 ### (Endast UNIX-baserade plattformar) Extra konfigurationer för konvertering från HTML till PDF  {#extra-configurations-for-html-to-pdf-conversion}
 
-På UNIX-baserade plattformar har PDF Generator-tjänsten stöd för WebKit- och WebToPDF-vägar för konvertering av HTML-filer till PDF. Om du vill aktivera konvertering från HTML till PDF ska du göra följande konfigurationer som passar din önskade konverteringsväg:
+På UNIX-baserade plattformar stöder PDF Generator WebKit- och WebToPDF-vägar för konvertering av HTML-filer till PDF-dokument. Om du vill aktivera konvertering från HTML till PDF ska du göra följande konfigurationer, som passar din önskade konverteringsväg:
 
 ### (Endast UNIX-baserade plattformar) Aktivera stöd för Unicode-teckensnitt (endast WebKit) {#enable-support-for-unicode-fonts-webkit-only}
 
@@ -365,7 +368,7 @@ Kopiera Unicode-teckensnittet till någon av följande kataloger som passar ditt
 >* Ta bort alla .lst-teckensnittscachefiler från katalogerna Html2PdfSvc/bin och /usr/share/fonts.
 >* Kontrollera att katalogerna /usr/lib/X11/fonts och /usr/share/fonts finns. Om katalogerna inte finns använder du ln-kommandot för att skapa en symbolisk länk från /usr/share/X11/fonts till /usr/lib/X11/fonts och en annan symbolisk länk från /usr/share/fonts till /usr/share/X11/fonts. Se även till att teckensnitten finns på /usr/lib/X11/fonts.
 >* Kontrollera att alla teckensnitt (Unicode och icke-unicode) är tillgängliga i katalogen /usr/share/fonts eller /usr/share/X11/fonts.
->* När du kör PDF Generator som en icke-rotanvändare ska du ge icke-rotanvändaren läs- och skrivåtkomst till alla teckensnittskataloger.
+>* När du kör PDF Generator-tjänsten som en icke-rotanvändare ska du ge icke-rotanvändaren läs- och skrivåtkomst till alla teckensnittskataloger.
 >* När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
 >
 
@@ -384,15 +387,15 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 
    Du kan även hämta paketet via den direktlänk som visas i artikeln [AEM Forms-utgåvor](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
-1. När paketet har installerats uppmanas du att starta om AEM. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms Server väntar du tills ServiceEvent REGISTERED- och ServiceEvent UNREGISTERED-meddelandena inte längre visas i filen `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log och loggen är stabil.
+1. När paketet har installerats uppmanas du att starta om AEM-instansen. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms Server väntar du tills ServiceEvent REGISTERED- och ServiceEvent UNREGISTERED-meddelandena inte längre visas i filen `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log och loggen är stabil.
 
-## Post-installationskonfigurationer {#post-installation-configurations}
+## Konfiguration efter installation {#post-installation-configurations}
 
 ### Konfigurera Boot Delegation för RSA/BouncyCastle-bibliotek  {#configure-boot-delegation-for-rsa-bouncycastle-libraries}
 
-1. Stoppa AEM. Navigera till mappen [AEM installationskatalogen]\crx-quickstart\conf\. Öppna filen sling.properties för redigering.
+1. Stoppa AEM-instansen. Gå till mappen [AEM installationskatalog]\crx-quickstart\conf\. Öppna filen sling.properties för redigering.
 
-   Om du använder `[AEM installation directory]\crx-quickstart\bin\start.bat` för att starta en AEM ska du redigera sling.properties som finns på `[AEM_root]\crx-quickstart\`.
+   Om du använder `[AEM installation directory]\crx-quickstart\bin\start.bat` för att starta en AEM-instans redigerar du sling.properties som finns på `[AEM_root]\crx-quickstart\`.
 
 1. Lägg till följande egenskaper i filen sling.properties:
 
@@ -415,21 +418,21 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
 
    >[!NOTE]
    >
-   >Din rätt att använda teckensnitt som tillhandahålls av andra parter än Adobe regleras av de licensavtal som dessa parter ger dig med dessa teckensnitt och omfattas inte av din licens att använda Adobe. Adobe rekommenderar att du granskar och ser till att du följer alla tillämpliga licensavtal som inte är Adobe innan du använder teckensnitt som inte är Adobe med Adobe, särskilt när det gäller användning av teckensnitt i servermiljöer.
+   >Din rätt att använda teckensnitt som tillhandahålls av andra än Adobe regleras av de licensavtal som dessa parter ger dig med dessa teckensnitt och omfattas inte av din licens att använda Adobe-program. Adobe rekommenderar att du granskar och kontrollerar att du följer alla tillämpliga licensavtal som inte är från Adobe innan du använder teckensnitt som inte är från Adobe med Adobe, särskilt när det gäller användning av teckensnitt i en servermiljö.
    >När du installerar nya teckensnitt i teckensnittsmappen startar du om AEM Forms-instansen.
    >
 
-### Konfigurera ett lokalt användarkonto för att köra tjänsten PDF Generator  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
+### Konfigurera ett lokalt användarkonto för att köra PDF Generator-tjänsten  {#configure-a-local-user-account-to-run-the-pdf-generator-service}
 
-Det krävs ett lokalt användarkonto för att köra tjänsten PDF Generator. Anvisningar om hur du skapar en lokal användare finns i [Skapa ett användarkonto i Windows](https://support.microsoft.com/en-us/help/13951/windows-create-user-account) eller skapa ett användarkonto på UNIX-baserade plattformar.
+Det krävs ett lokalt användarkonto för att köra PDF Generator-tjänsten. Anvisningar om hur du skapar en lokal användare finns i [Skapa ett användarkonto i Windows](https://support.microsoft.com/en-us/help/13951/windows-create-user-account) eller skapa ett användarkonto på UNIX-baserade plattformar.
 
-1. Öppna sidan [Konfiguration i AEM Forms PDF Generator](http://localhost:4502/libs/fd/pdfg/config/ui.html).
+1. Öppna sidan [AEM Forms PDF Generator Configuration](http://localhost:4502/libs/fd/pdfg/config/ui.html).
 
 1. Ange autentiseringsuppgifter för ett lokalt användarkonto på fliken **[!UICONTROL User Accounts]** och klicka på **[!UICONTROL Submit]**. Tillåt åtkomst till användaren om du uppmanas att göra det i Microsoft® Windows. När den konfigurerade användaren läggs till visas den under avsnittet **[!UICONTROL Your user accounts]** på fliken **[!UICONTROL User Accounts]**.
 
 ### Konfigurera timeout-inställningar {#configure-the-time-out-settings}
 
-1. I [AEM konfigurationshanteraren](http://localhost:4502/system/console/configMgr) letar du reda på och öppnar tjänsten **[!UICONTROL Jacorb ORB Provider]**.
+1. Leta reda på och öppna tjänsten **[!UICONTROL Jacorb ORB Provider]** i [AEM konfigurationshanterare](http://localhost:4502/system/console/configMgr).
 
    Lägg till följande i fältet **[!UICONTROL Custom Properties.name]** och klicka på **[!UICONTROL Save]**. Tidsgränsen för väntande svar (kallas även CORBA-klienttimeout) anges till 600 sekunder.
 
@@ -458,7 +461,7 @@ Det krävs ett lokalt användarkonto för att köra tjänsten PDF Generator. Anv
   </tr>
   <tr>
    <td>Utgångsdatum i sekunder för jobb</td>
-   <td>Varaktighet som tjänsten PDF Generator får utföra en konvertering för. Kontrollera att värdet för Sekunder för jobbförfallodatum är större än värdet för PDFG-rensningsgenomsökning.</td>
+   <td>Varaktighet som PDF Generator-tjänsten får utföra en konvertering för. Kontrollera att värdet för Sekunder för jobbförfallodatum är större än värdet för PDFG-rensningsgenomsökning.</td>
    <td>7 200 sekunder</td>
   </tr>
  </tbody>
@@ -466,11 +469,11 @@ Det krävs ett lokalt användarkonto för att köra tjänsten PDF Generator. Anv
 
 ### (Endast Windows) Konfigurera Acrobat för tjänsten PDF Generator {#configure-acrobat-for-the-pdf-generator-service}
 
-I Microsoft® Windows används Adobe Acrobat för att konvertera de filformat som stöds till ett PDF-dokument. Så här konfigurerar du Adobe Acrobat för tjänsten PDF Generator:
+I Microsoft® Windows använder PDF Generator-tjänsten Adobe Acrobat för att konvertera filformat som stöds till ett PDF-dokument. Så här konfigurerar du Adobe Acrobat för tjänsten PDF Generator:
 
 1. Öppna Acrobat och välj **[!UICONTROL Edit]**> **[!UICONTROL Preferences]**> **[!UICONTROL Updater]**. I Leta efter uppdateringar avmarkerar du **[!UICONTROL Automatically install updates]** och klickar på **[!UICONTROL OK]**. Stäng Acrobat.
-1. Dubbelklicka på ett PDF-dokument på datorn. När Acrobat startas för första gången visas dialogrutorna för inloggning, välkomstskärm och licensavtal. Stäng de här dialogrutorna för alla användare som har konfigurerats att använda PDF Generator.
-1. Kör batchfilen för verktyget PDF Generator för att konfigurera Acrobat för tjänsten PDF Generator:
+1. Dubbelklicka på ett PDF-dokument i datorn. När Acrobat startas för första gången visas dialogrutorna för inloggning, välkomstskärm och licensavtal. Stäng de här dialogrutorna för alla användare som har konfigurerats att använda PDF Generator.
+1. Kör batchfilen för PDF Generator-verktyget för att konfigurera Acrobat för PDF Generator-tjänsten:
 
    1. Öppna [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) och hämta filen `adobe-aemfd-pdfg-common-pkg-[version].zip` från Package Manager.
    1. Zippa upp den hämtade ZIP-filen. Öppna kommandotolken med administratörsbehörighet.
@@ -480,17 +483,17 @@ I Microsoft® Windows används Adobe Acrobat för att konvertera de filformat so
 
       `Acrobat_for_PDFG_Configuration.bat`
 
-      Acrobat är konfigurerat att köras med tjänsten PDF Generator.
+      Acrobat är konfigurerat att köras med PDF Generator-tjänsten.
 
 1. Kör [Systemberedskapsverktyget ](#SRT) för att validera Acrobat-installationen.
 
 ### (Endast Windows) Konfigurera primär väg för konvertering från HTML till PDF {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
 
-Tjänsten PDF Generator erbjuder flera vägar för att konvertera HTML-filer till PDF-dokument: Webkit, Acrobat WebCapture (endast Windows) och WebToPDF. Adobe rekommenderar att WebToPDF-vägen används eftersom den kan hantera dynamiskt innehåll och inte är beroende av 32-bitars bibliotek eller inte kräver några extra teckensnitt. WebToPDF-flödet kräver inte heller sudo- eller root-åtkomst för att köra konverteringen.
+PDF Generator-tjänsten tillhandahåller flera vägar för konvertering av HTML-filer till PDF-dokument: Webkit, Acrobat WebCapture (endast Windows) och WebToPDF. Adobe rekommenderar att WebToPDF-vägen används eftersom den kan hantera dynamiskt innehåll och inte är beroende av 32-bitars bibliotek eller inte kräver några extra teckensnitt. WebToPDF-flödet kräver inte heller sudo- eller root-åtkomst för att köra konverteringen.
 
 Den primära standardvägen för konvertering från HTML till PDF är Webkit. Så här ändrar du konverteringsflödet:
 
-1. Navigera AEM författarinstansen till **[!UICONTROL Tools]**> **[!UICONTROL Forms]**> **[!UICONTROL Configure PDF Generator]**.
+1. I AEM-författarinstans går du till **[!UICONTROL Tools]**> **[!UICONTROL Forms]**> **[!UICONTROL Configure PDF Generator]**.
 
 1. Välj önskad konverteringsväg i listrutan **[!UICONTROL Primary Route for HTML to PDF conversions]** på fliken **[!UICONTROL General Configuration]**.
 
@@ -502,9 +505,9 @@ Med pålitlighetslagerhanteringen kan du importera, redigera och ta bort certifi
 1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Trust Store]**.
 1. Klicka på **[!UICONTROL Create TrustStore]**. Ange lösenord och välj **[!UICONTROL Save]**.
 
-### Konfigurera certifikat för Reader-tilläggs- och krypteringstjänsten {#set-up-certificates-for-reader-extension-and-encryption-service}
+### Konfigurera certifikat för Reader-tilläggstjänst och krypteringstjänst {#set-up-certificates-for-reader-extension-and-encryption-service}
 
-DocAssurance-tjänsten kan tillämpa användarrättigheter på PDF-dokument. Konfigurera certifikaten om du vill tillämpa användarrättigheter på PDF-dokument.
+Tjänsten DocAssurance kan lägga in användarrättigheter i PDF-dokument. Konfigurera certifikaten om du vill tillämpa användningsbehörighet på PDF-dokument.
 
 Innan du konfigurerar certifikaten bör du kontrollera att du har en:
 
@@ -515,13 +518,13 @@ Innan du konfigurerar certifikaten bör du kontrollera att du har en:
 * Alias för privat nyckel. Du kan köra kommandot för Java-nyckelverktyget för att visa alias för den privata nyckeln:
   `keytool -list -v -keystore [keystore-file] -storetype pkcs12`
 
-* Lösenord för nyckelbehållarfil. Om du använder certifikatet för Adobe Reader Extensions är lösenordet för nyckelfilen alltid detsamma som lösenordet för den privata nyckeln.
+* Lösenord för nyckelbehållarfil. Om du använder Adobe Reader Extensions-certifikat är lösenordet för nyckelfilen alltid detsamma som lösenordet för den privata nyckeln.
 
 Utför följande steg för att konfigurera certifikaten:
 
-1. Logga in AEM författarinstansen som administratör. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
-1. Klicka på fältet **[!UICONTROL name]** för användarkontot. Sidan **[!UICONTROL Edit User Settings]** öppnas. I AEM Author-instansen finns certifikat i en KeyStore. Om du inte har skapat en KeyStore tidigare klickar du på **[!UICONTROL Create KeyStore]** och anger ett nytt lösenord för KeyStore. Om servern redan innehåller en KeyStore hoppar du över det här steget.  Om du använder certifikatet för Adobe Reader Extensions är lösenordet för nyckelfilen alltid detsamma som lösenordet för den privata nyckeln.
-1. Välj fliken **[!UICONTROL KeyStore]** på sidan **[!UICONTROL Edit User Settings]**. Expandera alternativet **[!UICONTROL Add Private Key from Key Store file]** och ange ett alias. Aliaset används för att utföra Reader-tilläggsåtgärden.
+1. Logga in på AEM Author-instansen som administratör. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**.
+1. Klicka på fältet **[!UICONTROL name]** för användarkontot. Sidan **[!UICONTROL Edit User Settings]** öppnas. I AEM Author-instansen finns certifikat i KeyStore. Om du inte har skapat en KeyStore tidigare klickar du på **[!UICONTROL Create KeyStore]** och anger ett nytt lösenord för KeyStore. Om servern redan innehåller en KeyStore hoppar du över det här steget.  Om du använder Adobe Reader Extensions-certifikat är lösenordet för nyckelfilen alltid detsamma som lösenordet för den privata nyckeln.
+1. Välj fliken **[!UICONTROL KeyStore]** på sidan **[!UICONTROL Edit User Settings]**. Expandera alternativet **[!UICONTROL Add Private Key from Key Store file]** och ange ett alias. Aliaset används för att utföra Reader Extensions-åtgärden.
 1. Om du vill överföra certifikatfilen klickar du på **[!UICONTROL Select Key Store File]** och överför en &lt;filnamn>.pfx-fil.
 
    Lägg till **[!UICONTROL Key Store Password]**, **[!UICONTROL Private Key Password]** och **[!UICONTROL Private Key Alias]** som är associerad med certifikatet till respektive fält. Klicka på **[!UICONTROL Submit]**.
@@ -536,7 +539,7 @@ Utför följande steg för att konfigurera certifikaten:
 
 Om du vill använda AES 256-kryptering för PDF-filer hämtar och installerar du Java Cryptography Extension (JCE) Unlimited Strength Jurisdential Policy-filer. Ersätt filerna local_policy.jar och US_export_policy.jar i mappen jre/lib/security. Om du till exempel använder Sun JDK kopierar du de hämtade filerna till mappen `[JAVA_HOME]/jre/lib/security`.
 
-Assembler-tjänsten är beroende av tjänsten Reader Extensions, tjänsten Signature, Forms och Output. Utför följande steg för att verifiera att de tjänster som krävs är igång:
+Assembler-tjänsten är beroende av Reader Extensions-tjänsten, Signature-tjänsten, Forms-tjänsten och Output-tjänsten. Utför följande steg för att verifiera att de tjänster som krävs är igång:
 
 1. Logga in på URL `https://'[server]:[port]'/system/console/bundles` som administratör.
 1. Sök i följande tjänst och kontrollera att tjänsterna körs:
@@ -552,7 +555,7 @@ Assembler-tjänsten är beroende av tjänsten Reader Extensions, tjänsten Signa
    <td>adobe-aemfd-signatures</td>
   </tr>
   <tr>
-   <td>Tjänsten Reader Extensions</td>
+   <td>Reader Extensions Service</td>
    <td>com.adobe.aemfd.adobe-aemfd-readerextensions<br /> </td>
   </tr>
   <tr>
@@ -578,7 +581,7 @@ När du har installerat AEM Forms-tillägget och Microsoft® Project på datorn 
 
 ## Kända fel och felsökning {#known-issues-and-troubleshooting}
 
-* Konverteringen från HTML till PDF misslyckas om en ZIP-indatafil innehåller HTML-filer med dubbelbytetecken i filnamn. Undvik det här problemet genom att inte använda dubbelbytetecken när du namnger HTML-filer.
+* Konverteringen från HTML till PDF misslyckas om en zippad indatafil innehåller HTML-filer med dubbelbytetecken i filnamn. Undvik det här problemet genom att inte använda dubbelbytetecken när du namnger HTML-filer.
 
 * På UNIX-baserade operativsystem gör du följande för att hitta bibliotek som saknas:
 
@@ -657,8 +660,8 @@ Kontrollera att [Systemberedskapsverktyget](#SRT) inte rapporterar något fel in
 * Kontrollera att endast [version](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Microsoft® Office (32-bitars) och Adobe Acrobat som stöds är installerade och att dialogrutorna för att öppna är avbrutna.
 * Kontrollera att Adobe Acrobat Update Service är inaktiverad.
 * Kontrollera att gruppfilen [Acrobat_for_PDFG_Configuration.bat](#configure-acrobat-for-the-pdf-generator-service) kördes med administratörsbehörighet.
-* Se till att en PDF Generator-användare läggs till i användargränssnittet för PDF-konfigurationen.
-* Kontrollera att behörigheten [Ersätt en token på processnivå](#grant-the-replace-a-process-level-token-privilege) har lagts till för PDF Generator-användaren.
+* Se till att en PDF Generator-användare läggs till i PDF konfigurationsgränssnitt.
+* Se till att behörigheten [Ersätt en processnivåtoken](#grant-the-replace-a-process-level-token-privilege) läggs till för PDF Generator-användaren.
 * Kontrollera att Office COM-tillägget för Acrobat PDFMaker är aktiverat för Microsoft Office-program.
 
 +++
@@ -668,10 +671,10 @@ Kontrollera att [Systemberedskapsverktyget](#SRT) inte rapporterar något fel in
 **Microsoft® Windows**
 
 * Kontrollera att 32-bitars [version](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Microsoft Office som stöds är installerad och att dialogrutorna för att öppna är avbrutna för alla program.
-* Se till att en PDF Generator-användare läggs till i användargränssnittet för PDF-konfigurationen.
-* Kontrollera att PDF Generator-användaren är medlem i en administratörsgrupp och att privilegiet [Ersätt en token](#grant-the-replace-a-process-level-token-privilege) för processnivå har angetts för användaren.
-* Se till att användaren är konfigurerad i användargränssnittet i PDF Generator och utför följande åtgärder:
-   1. Logga in på Microsoft® Windows med PDF Generator.
+* Se till att en PDF Generator-användare läggs till i PDF konfigurationsgränssnitt.
+* Kontrollera att PDF Generator-användaren är medlem i en administratörsgrupp och att privilegiet [Ersätt en token ](#grant-the-replace-a-process-level-token-privilege) för processnivå har angetts för användaren.
+* Se till att användaren är konfigurerad i PDF Generator UI och utför följande åtgärder:
+   1. Logga in på Microsoft® Windows med PDF Generator-användare.
    1. Öppna Microsoft® Office- eller OpenOffice-program och avbryt alla dialogrutor.
    1. Ange Adobe PDF som standardskrivare.
    1. Ange Acrobat som standardprogram för PDF-filer.
@@ -688,9 +691,9 @@ Kontrollera att [Systemberedskapsverktyget](#SRT) inte rapporterar något fel in
 
 +++
 
-+++HTML till konverteringsproblem i PDF
++++HTML till PDF konverteringsproblem
 
-* Se till att teckensnittskataloger läggs till i användargränssnittet för PDF Generator config.
+* Se till att teckensnittskataloger läggs till i PDF Generator config UI.
 
 **Linux och Solaris (WebToPDF-konverteringsflöde)**
 
@@ -763,7 +766,7 @@ Kontrollera att [Systemberedskapsverktyget](#SRT) inte rapporterar något fel in
 
 * Kontrollera att den användare som konfigurerats för PDF Generator har lokala administratörsrättigheter.
 
-* Kontrollera att PDF Generator har läs-, skriv- och körbehörighet för tillfälliga LC- och PDFG-användare.
+* Kontrollera att PDF Generator-användare har läs-, skriv- och körbehörighet för tillfälliga LC- och PDFG-användare.
 
 * För Microsoft® Office och OpenOffice utför du minst en konvertering manuellt (som varje användare) för att säkerställa att ingen dialogruta öppnas under konverteringen. Om någon dialogruta visas, stänger du den. Ingen sådan dialogruta ska visas vid automatisk konvertering.
 
@@ -796,13 +799,13 @@ Kontrollera att [Systemberedskapsverktyget](#SRT) inte rapporterar något fel in
 
 +++ AEM Forms Server är offline eller säker och Internet är inte tillgängligt för att aktivera Acrobat.
 
-* Du kan gå online inom 7 dagar efter det att du startat Adobe för att slutföra aktiveringen och registreringen online eller använda en internetaktiverad enhet och produktens serienummer för att slutföra processen. Mer information finns i [Aktivering offline](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en).
+* Du kan gå online inom 7 dagar efter det att du startat Adobe-produkten för att slutföra aktiveringen och registreringen online eller använda en internetaktiverad enhet och produktens serienummer för att slutföra processen. Mer information finns i [Aktivering offline](https://exception.licenses.adobe.com/aoes/aoes/v1/t1?locale=en).
 
 +++
 
 +++ Det går inte att konvertera Word- eller Excel-filen till PDF på Windows Server
 
-När en användare försöker konvertera Word- eller Excel-filer till PDF på Microsoft Windows Server, uppstår följande fel:
+När användare försöker konvertera Word- eller Excel-filer till PDF på Microsoft Windows Server uppstår följande fel:
 
 *Felmeddelande från den primära konverteraren:
 ALC-PDG-015-003-Systemet kan inte öppna indatafilen. Skicka filen igen eller kontakta systemadministratören.*
@@ -815,7 +818,7 @@ Information om hur du löser problemet finns i [Det går inte att konvertera Wor
 
 När du konverterar Microsoft Excel 2019 till PDF på Microsoft Windows Server 2019 måste du se till följande:
 
-* När du använder tjänsten PDF Generator bör din Windows-dator inte ha någon aktiv fjärranslutning till AEM (Windows RDP-session).
+* När du använder tjänsten PDF Generator bör din Windows-dator inte ha någon aktiv fjärranslutning till AEM-servern (Windows RDP-session).
 * Standardskrivaren måste ställas in på Adobe PDF.
 
   >[!NOTE]
@@ -823,7 +826,7 @@ När du konverterar Microsoft Excel 2019 till PDF på Microsoft Windows Server 2
 
 +++
 
-+++ Det går inte att konvertera XPS-filer till PDF
++++ Det går inte att konvertera XPS-filer till PDF-filer
 
 Du löser problemet genom att [skapa en funktionsspecifik registernyckel i Windows](https://helpx.adobe.com/in/acrobat/kb/unable-convert-xps-to-pdfs.html).
 

@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 07f45107bceee9e793a39f4167985da91fb51e4a
+source-git-commit: 461ec6a48bc41d46338c2c0162869525e49de97f
 workflow-type: tm+mt
-source-wordcount: '6150'
+source-wordcount: '6127'
 ht-degree: 0%
 
 ---
@@ -595,13 +595,12 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 
 ### Kända fel för AEM Forms {#known-issues-aem-forms-6522}
 
-* Om konverteringen från HTML till PDF misslyckas på SUSE® Linux®-servern (SLES 15 SP6 eller senare) med felet: `Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57`.
-Utför följande steg för att lösa problemet:
-   1. Starta servern och ange miljövariabeln `OPENSSL_CONF` med följande kommando:
-      `export OPENSSL_CONF=/etc/ssl`
-Du kan också ange miljövariabeln när du startar servern:
-      `-e OPENSSL_CONF=/etc/ssl`
-   1. Starta om servern.
+* Om konverteringen från HTML till PDF misslyckas på en SUSE® Linux®-server (SLES 15 SP6 och senare) med följande fel:
+
+  ```Auto configuration failed 4143511872:error:0E079065:configuration file routines:DEF_LOAD_BIO:missing equal sign:conf_def.c:362:line 57```
+Ange sedan följande miljövariabel och starta om servern:
+  `OPENSSL_CONF=/etc/ssl`
+
 * När du har installerat AEM Forms JEE Service Pack 21 (6.5.21.0) utför du följande steg för att lösa problemet om du hittar dubblettposter för Geode jars `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` i mappen `<AEM_Forms_Installation>/lib/caching/lib` (FORMS-14926):
 
    1. Stoppa positionerarna om de är igång.
