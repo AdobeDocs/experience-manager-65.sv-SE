@@ -5,9 +5,9 @@ exl-id: cb7a9da2-7112-4ef0-b1cf-211a7df93625
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: d2e2f330dadb7c327324e53a17e8398ef3a473a9
 workflow-type: tm+mt
-source-wordcount: '1510'
+source-wordcount: '1567'
 ht-degree: 2%
 
 ---
@@ -21,6 +21,13 @@ Versionshantering skapar en ögonblicksbild av en sida vid en viss tidpunkt. Med
    * om du vill ångra en ändring som du har gjort på sidan.
 * Jämför den aktuella versionen av en sida med en tidigare version:
    * om du vill framhäva skillnader i text och bilder.
+
+>[!NOTE]
+>
+>Endast innehåll versionshanteras i AEM-databasen. Dynamiska resurser som kod, CSS och JavaScript är inte versionshanterade.
+>
+>* När du visar versioner visas innehållet med den aktuella koden, CSS och JavaScript för databasen.
+>* När du återställer versioner återställs endast innehållet och den aktuella koden, CSS och JavaScript för databasen tillämpas på det.
 
 ## Skapa en ny version {#creating-a-new-version}
 
@@ -196,7 +203,7 @@ Timewarp är en funktion som har utformats för att simulera en sidas *publicera
 
 >[!TIP]
 >
->[Timewarp kan också användas med Launches för att förhandsgranska framtiden](/help/sites-authoring/launches.md) när AEM 6.5.10.0 eller senare körs.
+>[Timewarp kan också användas med Launches för att förhandsgranska framtiden](/help/sites-authoring/launches.md) när du kör AEM 6.5.10.0 eller senare.
 
 Att skapa innehåll är en pågående och samarbetsorienterad process. Syftet med Timewarp är att författarna ska kunna spåra den publicerade webbplatsen över tid för att hjälpa dem förstå hur innehållet har ändrats. Den här funktionen använder sidversionerna för att avgöra status för publiceringsmiljön:
 
