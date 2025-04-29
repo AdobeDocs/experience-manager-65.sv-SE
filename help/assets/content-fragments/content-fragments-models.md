@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: c361d62beb93fc546f3ef2e53f52ff50bdcdc530
 workflow-type: tm+mt
-source-wordcount: '2310'
+source-wordcount: '2343'
 ht-degree: 1%
 
 ---
@@ -105,6 +105,13 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
    * Lägg till ett eller flera fält med en enda textrad. Den maximala längden kan definieras
 * **Flerradstext**
    * Ett textområde som kan vara RTF, Oformaterad text eller Markering
+
+     >[!NOTE]
+     >
+     Av prestandaskäl bör du inte ha fler än tio RTF-fält i en modell.
+     >
+     Om det behövs rekommenderar vi att du använder [kapslade innehållsfragment](#fragment-reference-nested-fragments) för att sprida inläsningen.
+
 * **Number**
    * Lägg till ett eller flera numeriska fält
 * **Boolean**
@@ -135,7 +142,7 @@ I fragmentredigeraren visas varje instans som en flik.
 
      >[!NOTE]
      >
-     Den här datatypen används endast för formatering, den ignoreras av AEM GraphQL-schema.
+     Den här datatypen används endast för formatering, den ignoreras av AEM GraphQL-schemat.
 
 ## Egenskaper {#properties}
 
@@ -383,7 +390,7 @@ De Content Fragment-modeller som tillåts för en mapp löses enligt följande:
 
 * **Profiler** för **Tillåtna modeller för innehållsfragment**.
 * Om den är tom kan du försöka identifiera principen med arvsreglerna.
-* Om arvskedjan inte ger något resultat ska du titta på konfigurationen **Cloud Services** för den mappen (också först direkt och sedan via arv).
+* Om arvskedjan inte ger något resultat ska du titta på konfigurationen **Cloud Services** för den mappen (även först direkt och sedan via arv).
 * Om inget av ovanstående ger några resultat finns det inga tillåtna modeller för den mappen.
 
 ## Ta bort en innehållsfragmentmodell {#deleting-a-content-fragment-model}
@@ -412,7 +419,7 @@ Så här publicerar du en innehållsfragmentmodell:
 1. Navigera till **Verktyg**, **Assets** och öppna sedan **Content Fragment Models**.
 
 1. Navigera till mappen som innehåller innehållsfragmentmodellen.
-1. Välj en modell, följt av **Publish** i verktygsfältet.
+1. Välj en modell, följt av **Publicera** i verktygsfältet.
 Publiceringsstatusen anges i konsolen.
 
    >[!NOTE]
