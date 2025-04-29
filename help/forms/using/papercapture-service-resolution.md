@@ -1,27 +1,28 @@
 ---
-title: Felsökning av artikel för att lösa problemet när tjänsten PaperCapture inte kan utföra OCR-åtgärder (optisk teckenigenkänning) på PDF.
-description: Lär dig hur du löser problemet där tjänsten PaperCapture inte kan utföra OCR-åtgärder (Optical Character Recognition) på PDF.
+title: Felsöka artikel för att lösa problemet när tjänsten PaperCapture inte kan utföra OCR-åtgärder (Optical Character Recognition) på PDF-filer.
+description: Lär dig hur du löser problemet där tjänsten PaperCapture inte kan utföra OCR-åtgärder (Optical Character Recognition) på PDF-filer.
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
 exl-id: 64e120ee-5f16-4cd3-9ae9-95b165169e47
-source-git-commit: f9e98d7de24d516eab163d42f6c1c3155915856e
+source-git-commit: e030a71a0f52e22a803597122369cb111774f49b
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '200'
 ht-degree: 0%
 
 ---
 
 
-# Tjänsten PaperCature kan inte utföra OCR-åtgärder på PDF
+# Tjänsten PaperCature kan inte utföra OCR-åtgärder på PDF-filer
 
 ## Problem
 
-När du har uppgraderat till AEM Forms Service Pack 6.5.21.0 kan tjänsten `PaperCapture` inte utföra OCR-åtgärder (Optical Character Recognition) på PDF. Tjänsten genererar inte utdata i form av PDF eller en loggfil.
+När du har uppgraderat till AEM Forms Service Pack 6.5.21.0 eller AEM Forms Service Pack 6.5.22.0 misslyckas tjänsten `PaperCapture` med att utföra OCR-åtgärder (Optical Character Recognition) på PDF-filer. Tjänsten genererar inte utdata i form av en PDF- eller loggfil.
 
 ## Gäller för
 
 Denna lösning gäller
+
 * AEM Forms på alla (JBoss, Weblogic, Websphere) JEE-servrar
 * AEM Forms på OSGi-servrar
 
@@ -44,4 +45,4 @@ Denna lösning gäller
 
    >[!NOTE]
    >
-   > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
+   > Du bör använda kommandot Ctrl + C för att starta om SDK. Om du startar om AEM SDK med alternativa metoder, till exempel att stoppa Java-processer, kan det leda till inkonsekvenser i AEM utvecklingsmiljö.
