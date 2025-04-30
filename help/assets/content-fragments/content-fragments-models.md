@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: c361d62beb93fc546f3ef2e53f52ff50bdcdc530
+source-git-commit: ae9c45982d8c11b88a96d8b4556028fde51d0086
 workflow-type: tm+mt
-source-wordcount: '2343'
+source-wordcount: '2310'
 ht-degree: 1%
 
 ---
@@ -105,13 +105,6 @@ Det finns ett urval datatyper som du kan använda för att definiera din modell:
    * Lägg till ett eller flera fält med en enda textrad. Den maximala längden kan definieras
 * **Flerradstext**
    * Ett textområde som kan vara RTF, Oformaterad text eller Markering
-
-     >[!NOTE]
-     >
-     Av prestandaskäl bör du inte ha fler än tio RTF-fält i en modell.
-     >
-     Om det behövs rekommenderar vi att du använder [kapslade innehållsfragment](#fragment-reference-nested-fragments) för att sprida inläsningen.
-
 * **Number**
    * Lägg till ett eller flera numeriska fält
 * **Boolean**
