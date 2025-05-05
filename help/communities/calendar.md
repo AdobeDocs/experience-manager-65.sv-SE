@@ -92,7 +92,7 @@ Under fliken **Inställningar** anger du om du vill tillåta att taggar tillämp
 
 * **Maximal filstorlek för bifogad bild**
 
-  Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 **&#x200B; **(2 MB).
+  Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 **&#x200B; &#x200B;**(2 MB).
 
 * **Tillåtna omslagsbildtyper**
 

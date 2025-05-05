@@ -140,7 +140,7 @@ Medan produktionsinstanser körs på dedikerade datorer som kör ett operativsys
 
 För att bli bekant och för att kunna utveckla AEM är det vanligt att använda en instans som är installerad på din dator och som kör Apple OS X eller datorversioner av Microsoft® Windows eller Linux®.
 
-På klientsidan fungerar AEM med alla moderna webbläsare (**Microsoft® Edge**, **Internet Explorer** 11, **Chrome &#x200B;** 51+**&#x200B; **, **Firefox &#x200B;** 47+, **Safari** 8+) både på datorer och surfplattor. Mer information finns i [Klientplattformar som stöds](/help/sites-deploying/technical-requirements.md#supported-client-platforms).
+På klientsidan fungerar AEM med alla moderna webbläsare (**Microsoft® Edge**, **Internet Explorer** 11, **Chrome &#x200B;** 51+**&#x200B; &#x200B;**, **Firefox &#x200B;** 47+, **Safari** 8+) både på datorer och surfplattor. Mer information finns i [Klientplattformar som stöds](/help/sites-deploying/technical-requirements.md#supported-client-platforms).
 
 ### Hämta programvaran {#getting-the-software}
 
