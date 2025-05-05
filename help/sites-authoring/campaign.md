@@ -232,7 +232,7 @@ I Adobe Campaign Classic:
 
 >[!NOTE]
 >
-Ej godkänt innehåll kan synkroniseras med en leverans i Adobe Campaign, men leveransen kan inte utföras. Endast godkänt innehåll kan skickas via kampanjleveranser.
+>Ej godkänt innehåll kan synkroniseras med en leverans i Adobe Campaign, men leveransen kan inte utföras. Endast godkänt innehåll kan skickas via kampanjleveranser.
 
 ## Länka AEM med Adobe Campaign Standard och Adobe Campaign Classic {#linking-aem-with-adobe-campaign-standard-and-adobe-campaign-classic}
 
@@ -256,7 +256,7 @@ På så sätt kan ni leverera innehållet. Du ser om ett nyhetsbrev är länkat 
 
 >[!NOTE]
 >
-Om ett nyhetsbrev är länkat till flera leveranser visas antalet länkade leveranser (men inte varje ID).
+>Om ett nyhetsbrev är länkat till flera leveranser visas antalet länkade leveranser (men inte varje ID).
 
 Så här länkar du en sida som skapats i AEM med ett e-postmeddelande från Adobe Campaign:
 
@@ -272,7 +272,7 @@ Så här länkar du en sida som skapats i AEM med ett e-postmeddelande från Ado
 
    >[!NOTE]
    >
-   Om alternativet **Länka med en Adobe Experience Manager** inte visas i åtgärdsfältet kontrollerar du att **redigeringsläget** är korrekt konfigurerat till **Adobe Experience Manager** i e-postegenskaperna.
+   >Om alternativet **Länka med en Adobe Experience Manager** inte visas i åtgärdsfältet kontrollerar du att **redigeringsläget** är korrekt konfigurerat till **Adobe Experience Manager** i e-postegenskaperna.
 
    ![chlimage_1-38](assets/chlimage_1-38a.png)
 
@@ -287,7 +287,7 @@ Så här länkar du en sida som skapats i AEM med ett e-postmeddelande från Ado
 
    >[!NOTE]
    >
-   Som standard är det innehåll som redan är synkroniserat med en leverans dolt. Du kan dock visa den och använda den. Om du till exempel vill använda innehåll som mall för flera leveranser.
+   >Som standard är det innehåll som redan är synkroniserat med en leverans dolt. Du kan dock visa den och använda den. Om du till exempel vill använda innehåll som mall för flera leveranser.
 
    När e-postmeddelandet är länkat till ett AEM kan innehållet inte redigeras i Adobe Campaign.
 
@@ -296,11 +296,11 @@ Så här länkar du en sida som skapats i AEM med ett e-postmeddelande från Ado
 
    >[!NOTE]
    >
-   Om innehållet uppdateras i AEM medan det länkas till ett e-postmeddelande uppdateras det automatiskt i Adobe Campaign under analysen. Synkroniseringen kan också utföras manuellt med **Uppdatera Adobe Experience Manager-innehåll** från innehållsåtgärdsfältet.
+   >Om innehållet uppdateras i AEM medan det länkas till ett e-postmeddelande uppdateras det automatiskt i Adobe Campaign under analysen. Synkroniseringen kan också utföras manuellt med **Uppdatera Adobe Experience Manager-innehåll** från innehållsåtgärdsfältet.
    >
-   Du kan avbryta länken mellan ett e-postmeddelande och AEM innehåll med **Ta bort länken med Adobe Experience Manager-innehållet** från innehållsåtgärdsfältet. Den här knappen är bara tillgänglig om innehållet redan är länkat till leveransen. Om du vill länka ett annat innehåll till en leverans måste du ta bort den aktuella innehållslänken innan du kan skapa en ny länk.
+   >Du kan avbryta länken mellan ett e-postmeddelande och AEM innehåll med **Ta bort länken med Adobe Experience Manager-innehållet** från innehållsåtgärdsfältet. Den här knappen är bara tillgänglig om innehållet redan är länkat till leveransen. Om du vill länka ett annat innehåll till en leverans måste du ta bort den aktuella innehållslänken innan du kan skapa en ny länk.
    >
-   När länken tas bort behålls det lokala innehållet och blir redigerbart i Adobe Campaign. Om du länkar innehållet igen efter att ha ändrat det går alla ändringar förlorade.
+   >När länken tas bort behålls det lokala innehållet och blir redigerbart i Adobe Campaign. Om du länkar innehållet igen efter att ha ändrat det går alla ändringar förlorade.
 
 ### Synkronisera innehåll som skapats i AEM med en leverans från Adobe Campaign Classic {#synchronizing-content-created-in-aem-with-a-delivery-from-adobe-campaign-classic}
 
@@ -319,11 +319,11 @@ Om ett nyhetsbrev är länkat till en enda leverans AEM visas leveranskoden på 
 
 >[!NOTE]
 >
-Om nyhetsbrevet är länkat till flera leveranser visas antalet länkade leveranser (men inte varje ID).
+>Om nyhetsbrevet är länkat till flera leveranser visas antalet länkade leveranser (men inte varje ID).
 >
-[!NOTE]
+>[!NOTE]
 >
-Arbetsflödessteget **Publish till Adobe Campaign** har tagits bort i AEM 6.1. Detta steg ingick i AEM 6.0-integreringen med Adobe Campaign och behövs inte längre.
+>Arbetsflödessteget **Publish till Adobe Campaign** har tagits bort i AEM 6.1. Detta steg ingick i AEM 6.0-integreringen med Adobe Campaign och behövs inte längre.
 
 Synkronisera innehåll som skapats i AEM med en leverans från Adobe Campaign:
 
@@ -335,7 +335,7 @@ Synkronisera innehåll som skapats i AEM med en leverans från Adobe Campaign:
 
    >[!NOTE]
    >
-   Om alternativet **Synkronisera** inte visas i leveransens verktygsfält kontrollerar du att fältet **Innehållsredigeringsläge** är korrekt konfigurerat i **AEM** genom att välja **Egenskaper** > **Avancerat**.
+   >Om alternativet **Synkronisera** inte visas i leveransens verktygsfält kontrollerar du att fältet **Innehållsredigeringsläge** är korrekt konfigurerat i **AEM** genom att välja **Egenskaper** > **Avancerat**.
 
    ![chlimage_1-41](assets/chlimage_1-41a.png)
 
@@ -350,7 +350,7 @@ Synkronisera innehåll som skapats i AEM med en leverans från Adobe Campaign:
 
    >[!NOTE]
    >
-   Som standard är det innehåll som redan är synkroniserat med en leverans dolt. Du kan dock visa den och använda den. Om du till exempel vill använda innehåll som mall för flera leveranser.
+   >Som standard är det innehåll som redan är synkroniserat med en leverans dolt. Du kan dock visa den och använda den. Om du till exempel vill använda innehåll som mall för flera leveranser.
 
    ![chlimage_1-42](assets/chlimage_1-42a.png)
 
@@ -360,8 +360,8 @@ Synkronisera innehåll som skapats i AEM med en leverans från Adobe Campaign:
 
    >[!NOTE]
    >
-   * När leverans och innehåll har synkroniserats blir leveransinnehållet i Adobe Campaign skrivskyddat. Ämnet och innehållet i e-postmeddelandet kan inte längre ändras.
-   * Om innehållet uppdateras i AEM medan det är länkat till en leverans i Adobe Campaign uppdateras det automatiskt i leveransen under leveransanalysen. Synkroniseringen kan också utföras manuellt med knappen **Uppdatera innehåll nu** .
-   * Du kan avbryta synkroniseringen mellan en leverans och AEM innehåll med knappen **Avsynkronisera** . Detta är bara tillgängligt om innehållet redan är synkroniserat med leveransen. Om du vill synkronisera ett annat innehåll med en leverans måste du avbryta den aktuella innehållssynkroniseringen innan du kan skapa en ny länk.
-   * Om det lokala innehållet avsynkroniseras behålls det och blir redigerbart i Adobe Campaign. Om du synkroniserar om innehållet efter att ha ändrat det förlorar du alla ändringar.
-   * För återkommande och kontinuerliga leveranser stoppas synkroniseringen med AEM innehåll varje gång leveransen utförs.
+   >* När leverans och innehåll har synkroniserats blir leveransinnehållet i Adobe Campaign skrivskyddat. Ämnet och innehållet i e-postmeddelandet kan inte längre ändras.
+   >* Om innehållet uppdateras i AEM medan det är länkat till en leverans i Adobe Campaign uppdateras det automatiskt i leveransen under leveransanalysen. Synkroniseringen kan också utföras manuellt med knappen **Uppdatera innehåll nu** .
+   >* Du kan avbryta synkroniseringen mellan en leverans och AEM innehåll med knappen **Avsynkronisera** . Detta är bara tillgängligt om innehållet redan är synkroniserat med leveransen. Om du vill synkronisera ett annat innehåll med en leverans måste du avbryta den aktuella innehållssynkroniseringen innan du kan skapa en ny länk.
+   >* Om det lokala innehållet avsynkroniseras behålls det och blir redigerbart i Adobe Campaign. Om du synkroniserar om innehållet efter att ha ändrat det förlorar du alla ändringar.
+   >* För återkommande och kontinuerliga leveranser stoppas synkroniseringen med AEM innehåll varje gång leveransen utförs.

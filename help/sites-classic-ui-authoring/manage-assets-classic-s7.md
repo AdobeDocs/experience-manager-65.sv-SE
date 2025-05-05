@@ -308,7 +308,7 @@ Komponenten Dynamic Media Classic (Scene7) **[!UICONTROL Video]** (tillgänglig 
 
 Den kan användas för adaptiva videouppsättningar, en enda MP4-video eller en enda F4V-video.
 
-Mer information om hur videofilmer fungerar med Dynamic Media Classic-integrering (Scene7) finns i [Video](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md). Se även hur [Dynamic Media Classic-videokomponenten (Scene7) **** jämförs med **videokomponenten**](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md) som utgör grunden.
+Mer information om hur videofilmer fungerar med Dynamic Media Classic-integrering (Scene7) finns i [Video](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md). Se även hur [Dynamic Media Classic-videokomponenten (Scene7) **&#x200B;**&#x200B;jämförs med **videokomponenten**](/help/sites-classic-ui-authoring/manage-assets-classic-s7-video.md) som utgör grunden.
 
 ![chlimage_1-63](assets/chlimage_1-63.png)
 
@@ -395,7 +395,7 @@ Som standard söker Experience Manager i den markerade mappen och i alla underma
 >* I det klassiska användargränssnittet kan du även söka efter **Flash** och **FXG**. Det går inte att filtrera efter dessa två termer i det pekoptimerade användargränssnittet.
 >
 >* När du söker efter video söker du efter en enskild återgivning. Resultatet returnerar den ursprungliga återgivningen (endast &#42;.mp4) och den kodade återgivningen.
-* När du söker i en adaptiv videouppsättning söker du i mappen och i alla undermappar, men bara om du har lagt till ett nyckelord i sökningen. Om du inte har lagt till något nyckelord söker Experience Manager inte i undermapparna.
+>* När du söker i en adaptiv videouppsättning söker du i mappen och i alla undermappar, men bara om du har lagt till ett nyckelord i sökningen. Om du inte har lagt till något nyckelord söker Experience Manager inte i undermapparna.
 >
 
 **Publish-status** - Du kan filtrera efter resurser baserat på publiceringsstatus: Opublicerad eller Publicerad. Om du inte väljer någon Publish-status söker Experience Manager som standard igenom alla publiceringsstatusar.

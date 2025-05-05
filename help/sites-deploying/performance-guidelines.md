@@ -320,7 +320,7 @@ Mer information om tillgängliga konfigurationsalternativ finns i [Konfigurera n
 >
 >Adobe rekommenderar att du arbetar direkt med molnleverantören för att få rekommendationer om hur du ska distribuera AEM på Azure eller AWS utanför Adobe Managed Services. Eller samarbeta med en av Adobe som stöder driftsättningen av AEM i molnmiljön. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationerna, designen och implementeringen av den arkitektur de stöder för att uppfylla just dina krav på prestanda, belastning, skalbarhet och säkerhet.
 >
->>Se även sidan [Tekniska krav](/help/sites-deploying/technical-requirements.md#supported-platforms).
+>&#x200B;>Se även sidan [Tekniska krav](/help/sites-deploying/technical-requirements.md#supported-platforms).
 
 ### Sök {#search-features}
 

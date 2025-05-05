@@ -90,7 +90,7 @@ Om du vill komma igång med Developers roller och ansvar kan du läsa [Utveckla 
 
 ## AEM {#aem-author}
 
-En ***AEM författare* (eller *Marketer*)**använder de anpassade utvecklade mallarna eller komponenterna som är klara för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM Authors* för att skapa innehållsrika och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
+En ***AEM författare* (eller *Marketer*)**&#x200B;använder de anpassade utvecklade mallarna eller komponenterna som är klara för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM Authors* för att skapa innehållsrika och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
 
 AEM måste förstå följande när de skapar ett program med AEM Mobile On-demand Services:
 

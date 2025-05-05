@@ -248,7 +248,7 @@ Så här sparar du inställningarna:
 
 När du har konfigurerat den grundläggande anslutningen till Adobe Analytics måste du skapa eller redigera ett ramverk för communitywebbplatsen. Syftet med ramverket är att mappa AEM (Communities feature)-variabler till analysvariabler (report suite).
 
-* Välj ikonen `[+]` bredvid **[!UICONTROL  Available Frameworks]** så att du kan skapa ett ramverk.
+* Välj ikonen `[+]` bredvid **[!UICONTROL &#x200B; Available Frameworks]** så att du kan skapa ett ramverk.
 
   ![analytics-framework](assets/analytics-framework.png)
 

@@ -245,7 +245,7 @@ Den enda REST-begäran som har gjorts för social inloggning är *[GET-konto/ver
 
 ### Skapa en Twitter Connect-Cloud Service {#create-a-twitter-connect-cloud-service}
 
-OAuth-programmet och providern](#adobe-granite-oauth-application-and-provider) för [Adobe Granite, som initieras genom att en molntjänstkonfiguration skapas, identifierar Twitterna och medlemsgrupperna som de nya användarna läggs till i.
+OAuth-programmet och providern[&#128279;](#adobe-granite-oauth-application-and-provider) för Adobe Granite, som initieras genom att en molntjänstkonfiguration skapas, identifierar Twitterna och medlemsgrupperna som de nya användarna läggs till i.
 
 1. Logga in med administratörsbehörighet på författarinstansen.
 1. Välj **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Twitter Social login configuration]** från global navigering.
@@ -474,17 +474,17 @@ Inloggad med administratörsbehörighet för en författarinstans:
 1. Ändra egenskaperna för noden ntBaseLucene-oauth:
 
    * **[!UICONTROL indexPath]**: `/oak:index/ntBaseLucene-oauth`
-   * **[!UICONTROL name]**: `oauthid-123****`
+   * **[!UICONTROL name]**: `oauthid-123&#x200B;**&#x200B;**`
    * **[!UICONTROL reindex]**: `true`
    * **[!UICONTROL reindexCount]**: `1`
 
 1. Under noden /oak:index/ntBaseLucene-oauth/indexRules/nt:base/properties:
 
    * Ta bort alla underordnade noder, förutom cqTags.
-   * Byt namn på cqTags till `oauthid-123****`
-   * Ändra egenskaperna för noden `oauthid-123****`
+   * Byt namn på cqTags till `oauthid-123**&#x200B;**`
+   * Ändra egenskaperna för noden `oauthid-123**&#x200B;**`
 
-      * **[!UICONTROL name]**: `oauthid-123****`
+      * **[!UICONTROL name]**: `oauthid-123&#x200B;**&#x200B;**`
 
    * Välj **[!UICONTROL Save All]**.
 

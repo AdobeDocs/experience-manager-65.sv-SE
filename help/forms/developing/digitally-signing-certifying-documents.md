@@ -597,7 +597,7 @@ Du kan lägga till följande konfigurationsvärde i filen cknfastrc, som finns p
 
 När du har lagt till det här konfigurationsvärdet i cknfastrc-filen kan de nya autentiseringsuppgifterna användas utan att J2EE-programservern startas om.
 
-    >[!OBS!]
+    >[ !OBS!]
     >
     > Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
 

@@ -303,17 +303,17 @@ Så här skapar du en mall baserad på en befintlig mall:
    >Ändringar som görs i noden **/apps/&lt;webbplats>/templates/** påverkar mallinstansen (som i urvalslistan).
    >
    >
-   Ändringar som görs i noden **/apps/&lt;webbplats>/components/&lt;komponentnamn>** påverkar innehållssidan som skapas när mallen används.
+   >Ändringar som görs i noden **/apps/&lt;webbplats>/components/&lt;komponentnamn>** påverkar innehållssidan som skapas när mallen används.
 
    Nu kan du skapa en sida på webbplatsen med den nya mallen.
 
 >[!NOTE]
 >
-Redigeringsklientbiblioteket förutsätter att namnområdet `cq.shared` finns på innehållssidorna, och om det saknas returneras JavaScript-felet `Uncaught TypeError: Cannot read property 'shared' of undefined`.
+>Redigeringsklientbiblioteket förutsätter att namnområdet `cq.shared` finns på innehållssidorna, och om det saknas returneras JavaScript-felet `Uncaught TypeError: Cannot read property 'shared' of undefined`.
 >
-Alla exempelinnehållssidor innehåller `cq.shared`, så allt innehåll som baseras på dem inkluderar automatiskt `cq.shared`. Om du vill skapa egna innehållssidor från grunden utan att basera dem på exempelinnehåll måste du se till att inkludera namnutrymmet `cq.shared`.
+>Alla exempelinnehållssidor innehåller `cq.shared`, så allt innehåll som baseras på dem inkluderar automatiskt `cq.shared`. Om du vill skapa egna innehållssidor från grunden utan att basera dem på exempelinnehåll måste du se till att inkludera namnutrymmet `cq.shared`.
 >
-Mer information finns i [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md).
+>Mer information finns i [Använda bibliotek på klientsidan](/help/sites-developing/clientlibs.md).
 
 ## Göra en befintlig mall tillgänglig {#making-an-existing-template-available}
 

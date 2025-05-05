@@ -130,7 +130,7 @@ Den här processen startar en Solr HTTP-server med standardport 8983. Du kan bl�
 >
 >Om Solr Console inte är tillgänglig kontrollerar du loggarna under &lt;solrinstall>/example/logs. Kontrollera om SOLR försöker binda till ett specifikt värdnamn som inte kan matchas (till exempel &quot;user-macbook-pro&quot;).
 >
-Om så är fallet bör du uppdatera filen `etc/hosts` med en ny post för det här värdnamnet (till exempel 127.0.0.1 user-macbook-pro) så att Solr startas korrekt.
+>Om så är fallet bör du uppdatera filen `etc/hosts` med en ny post för det här värdnamnet (till exempel 127.0.0.1 user-macbook-pro) så att Solr startas korrekt.
 
 ### SolrCloud {#solrcloud}
 

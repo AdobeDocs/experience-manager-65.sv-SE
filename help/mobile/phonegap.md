@@ -29,7 +29,7 @@ För att starta en ny AEM Mobile-appupplevelse krävs det att rollerna är enhet
 
 ## Om du redigerar PhoneGap-program {#authoring-phonegap-applications}
 
-En ***AEM författare* (eller *Marketer*)**kan använda färdiga mallar och komponenter för att lägga till och redigera sidor. Du kan dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment).
+En ***AEM författare* (eller *Marketer*)**&#x200B;kan använda färdiga mallar och komponenter för att lägga till och redigera sidor. Du kan dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment).
 
 Se följande resurser:
 

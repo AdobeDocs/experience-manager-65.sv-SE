@@ -27,7 +27,7 @@ Om du har problem som är relaterade till plattformen kontaktar du plattformslev
 
 Lägsta krav för installation av Adobe Experience Manager:
 
-* Installerad Java™ Platform, Standard Edition JDK eller andra Java™ Virtual Machines som stöds [](#java-virtual-machines)
+* Installerad Java™ Platform, Standard Edition JDK eller andra Java™ Virtual Machines som stöds [&#128279;](#java-virtual-machines)
 * Snabbstartsfil för Experience Manager (fristående JAR eller WAR för distribution av webbprogram)
 
 ### Minimikrav för dimensionering {#minimum-sizing-requirements}

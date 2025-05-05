@@ -47,7 +47,7 @@ HTML5-formulär innehåller en implementering av widgetramverket som kan utökas
   </tr>
   <tr>
    <td>getEventMap</td>
-   <td>Returnerar en karta som konverterar HTML-händelser till XFA-händelser. <br /> <br /> oskärpa: XFA_EXIT_EVENT,<br /> }<br /> Det här exemplet visar att oskärpan är en HTML-händelse och att XFA_EXIT_EVENT motsvarar en XFA-händelse. </td>
+   <td>Returnerar en karta som konverterar HTML-händelser till XFA-händelser. <br /> <br /> oskärpa: XFA_EXIT_EVENT,<br /> &rbrace;<br /> Det här exemplet visar att oskärpan är en HTML-händelse och att XFA_EXIT_EVENT motsvarar en XFA-händelse. </td>
   </tr>
   <tr>
    <td>getOptionsMap</td>

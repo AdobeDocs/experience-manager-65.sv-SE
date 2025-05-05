@@ -260,7 +260,7 @@ Implementeringar av [MediaQueryList-gränssnittet](https://drafts.csswg.org/csso
 
 W3C [picture-elementet](https://html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element) använder mediefrågor för att avgöra vilken källa som ska användas för bildelement. Bildelementet använder elementattribut för att associera mediefrågor med bildsökvägar.
 
-Biblioteket ](https://github.com/scottjehl/picturefill) [picturefill.js `picture` som är fritt tillgängligt har liknande funktioner som det föreslagna elementet  och använder en liknande strategi. Biblioteket picturefill.js anropar `window.matchMedia` för att utvärdera de mediefrågor som har definierats för en uppsättning med `div` element. Varje `div`-element anger också en bildkälla. Källan används när mediefrågan för elementet `div` returnerar `true`.
+Biblioteket [&#128279;](https://github.com/scottjehl/picturefill) picturefill.js `picture` som är fritt tillgängligt har liknande funktioner som det föreslagna elementet  och använder en liknande strategi. Biblioteket picturefill.js anropar `window.matchMedia` för att utvärdera de mediefrågor som har definierats för en uppsättning med `div` element. Varje `div`-element anger också en bildkälla. Källan används när mediefrågan för elementet `div` returnerar `true`.
 
 Biblioteket `picturefill.js` kräver HTML-kod som liknar följande exempel:
 

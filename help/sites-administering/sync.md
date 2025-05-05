@@ -354,9 +354,11 @@ Om Sling ID för en Publish-instans matchar Sling ID för någon annan Publish-i
    * sök efter och ta bort filen *sling.id.file*
 
       * i ett Linux®-system:
+
         `rm -i $(find . -type f -name sling.id.file)`
 
       * i ett Windows-system:
+
         `use windows explorer and search for *sling.id.file*`
 
 1. starta Publish-instansen
@@ -416,7 +418,7 @@ När konsolen [Användaradministration och säkerhet](/help/sites-administering/
 
 ### Använda användarsynkronisering offline {#how-to-take-user-sync-offline}
 
-Distributionskön måste vara tom och tyst om du vill ta bort en Publish-instans](#how-to-remove-a-publish-instance) eller [manuellt synkronisera data](#manually-syncing-users-and-user-groups) för att göra användarsynkroniseringen offline.[
+Distributionskön måste vara tom och tyst om du vill ta bort en Publish-instans[&#128279;](#how-to-remove-a-publish-instance) eller [manuellt synkronisera data](#manually-syncing-users-and-user-groups) för att göra användarsynkroniseringen offline.
 
 Så här kontrollerar du status för distributionskön:
 

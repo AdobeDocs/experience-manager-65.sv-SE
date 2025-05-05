@@ -182,9 +182,9 @@ För att e-postmeddelandet ska kunna hämtas till databasen måste du konfigurer
 
 * **[!UICONTROL URL]**
 
-  *(Obligatoriskt)* Servern för utgående e-post. Exempel: `pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=****`.
+  *(Obligatoriskt)* Servern för utgående e-post. Exempel: `pop.gmail.com:995/INBOX?username=community-emailgmail.com&password=**&#x200B;**`.
 
-* **[!UICONTROL Import to Path]**&amp;ast;
+* **[!UICONTROL Import to Path]**&ast;
 
   *(Obligatoriskt)* Ange till `/content/usergenerated/mailFolder/postEmails`
 genom att bläddra till mappen `postEmails` och välja **OK** .

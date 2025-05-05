@@ -169,7 +169,7 @@ Om en användare utan de obligatoriska AEM och CQ-behörigheterna försöker log
 * Correspondence Management-lösning
 * AEM formulär Workspace
 
-  ***Obs!**Flex Workspace är föråldrat för AEM formulärrelease.*
+  ***Obs!**&#x200B;Flex Workspace är föråldrat för AEM formulärrelease.*
 
 * formulärhanterare
 * Processrapportering

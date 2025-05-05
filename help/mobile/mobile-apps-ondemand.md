@@ -32,7 +32,7 @@ ht-degree: 0%
 
 ## AEM Mobile Author {#aem-mobile-author}
 
-En ***AEM författare* (eller *Marketer*)**använder anpassade eller färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM Authors* för att skapa innehållsrika och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
+En ***AEM författare* (eller *Marketer*)**&#x200B;använder anpassade eller färdiga mallar och komponenter för att lägga till och redigera sidor, dra och släppa komponenter och lägga till media av alla typer från DAM, inklusive bilder, videor och textfragment (innehållsfragment). AEM inbyggda innehållsredigeraren används sedan av *AEM Authors* för att skapa innehållsrika och relevanta upplevelser i appen, inklusive integrering med resten av Adobe Experience Cloud.
 
 En AEM författare ansvarar för följande när de skapar ett program med AEM Mobile On-demand Services.
 

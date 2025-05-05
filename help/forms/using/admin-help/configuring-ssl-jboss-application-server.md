@@ -89,7 +89,7 @@ I denna procedur:
 
    * Serverkluster - `[appserver root]`/domän/konfiguration/domän_&lt;dbname>.xml
 
-1. 
+1. &#x200B;
    * **För en enskild server,** i filen lc_&lt;dbaname/tunkey>.xml, lägger du till följande efter &lt;security-realms>-avsnittet:
 
    ```xml

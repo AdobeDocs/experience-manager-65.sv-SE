@@ -52,7 +52,7 @@ Se även [Valfritt - Konfigurera och konfigurera Dynamic Media - Inställningar 
    * Fliken [Illustrator](#illustrator-tab)
 
    ![Dynamic Media sida med allmänna inställningar](/help/assets/assets-dm/dm-general-settings.png)
-   *Sidan Allmänna inställningar i Dynamic Media, med fliken **[!UICONTROL Image Editing]**markerad.*<br><br>
+   *Sidan Allmänna inställningar i Dynamic Media, med fliken **[!UICONTROL Image Editing]**&#x200B;markerad.*<br><br>
 
 1. När du är klar väljer du **[!UICONTROL Save]** i sidans övre högra hörn.
 

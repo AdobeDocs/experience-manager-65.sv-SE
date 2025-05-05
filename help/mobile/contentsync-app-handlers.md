@@ -63,8 +63,8 @@ Hanteraren bör läggas till i alla AEM Apps ContentSync Config.
 
 * ***type - String - mobilecontentlisting***
 * ***path*** - String - keep empty, måste finnas för att kunna ses som en giltig hanterare, men path härleds till aktuell ContentSync-cache. Det här värdet ignoreras.
-* ***targetRootDirectory* -**String - det prefix som ska läggas till i sökvägar som målrot för innehållsuppdatering för hanteraren.
-* ***order - Long* -**Order for ContentSync to execute this handler. Det här talet ska anges högre än alla andra hanterare, till exempel 100. Den ska köras efter traditionella innehållshanterare.
+* ***targetRootDirectory* -**&#x200B;String - det prefix som ska läggas till i sökvägar som målrot för innehållsuppdatering för hanteraren.
+* ***order - Long* -**&#x200B;Order for ContentSync to execute this handler. Det här talet ska anges högre än alla andra hanterare, till exempel 100. Den ska köras efter traditionella innehållshanterare.
 
 ```xml
 {
@@ -89,9 +89,9 @@ Hanteraren bör läggas till i alla AEM Apps ContentSync Config.
 Hanteraren ska användas i AEM App Shell ContentSync Config (nod med page-type=app-instance)
 
 * ***type - String - mobilecontentpackageslisting***
-* ***path **-**String*** - Sökväg till ett programskal (nod med page-type=app-instance).
+* ***path &#x200B;**-**String*** - Sökväg till ett programskal (nod med page-type=app-instance).
 * ***targetRootDirectory - String*** - det prefix som ska läggas till i sökvägar som målrot för innehållsuppdatering för hanteraren.
-* ***order - Long* -**Order for ContentSync to execute this handler. Det här talet ska anges högre än alla andra hanterare, till exempel 100. Den ska köras efter traditionella innehållshanterare.
+* ***order - Long* -**&#x200B;Order for ContentSync to execute this handler. Det här talet ska anges högre än alla andra hanterare, till exempel 100. Den ska köras efter traditionella innehållshanterare.
 
 >[!NOTE]
 >
@@ -123,8 +123,8 @@ Hanteraren ska användas i AEM App Shell ContentSync Config (nod med page-type=a
 
 Hanteraren bör användas i en AEM App Shell ContentSync-konfiguration (nod med page-type=[app-instance]).
 
-* ***type - String* - **widgetconfig
-* ***path **-**String*** - Sökväg till en underordnad programgränssnittsnod (nod med page-type=[app-instance]).
+* ***type - String* - &#x200B;** widgetconfig
+* ***path &#x200B;**-**String*** - Sökväg till en underordnad programgränssnittsnod (nod med page-type=[app-instance]).
 * ***targetRootDirectory - String*** - det prefix som ska läggas till i sökvägar som målrot för innehållsuppdatering för hanteraren.
 * ***targetIconDirectory - String*** - katalogen där ikonerna för programmet ska placeras
 
@@ -165,7 +165,7 @@ AEM är de som är namnmellanrumsbaserade med&quot;cq&quot;,&quot;sling&quot; el
 
 * ***type - String*** - app-assets
 
-* ***sökväg **-**sträng*** - sökväg till en plats under en programinstans där appresurser lagras
+* ***sökväg &#x200B;**-**sträng*** - sökväg till en plats under en programinstans där appresurser lagras
 
 **mobileappoffers** En ny innehållssynkroniseringshanterare har introducerats för Personalization-användningsfall för att återge målinnehåll. Hanteraren mobileappoffers vet hur man återger associerade målerbjudanden som har skapats av innehållsförfattaren. Hanteraren för mobileappoffers utökar den abstrakta siduppdateringshanteraren, vilket innebär att många av egenskaperna liknar varandra. Mer information om hanteraren för mobileappoffers har följande egenskaper.
 
@@ -178,7 +178,7 @@ Hanteraren för mobileappers utökar hanteraren för mobileappspages och lägger
 
 **mobileappconfig** Hanteraren för innehållssynkronisering i mobileappconfig erbjuder ett sätt att mata in JSON-data i MobileAppsConfig.json. För att registrera en leverantörsklass lägger utvecklare till sin MobileAppsInfoProvider-klass med listan över providers. Hanteraren itererar över listan med MobileAppsInfoProviders och tillåter att providern matar in data i den resulterande JSON-filen. Listan med egenskaper som hanteraren stöder är:
 
-* ***path **-**String*** - sökvägen till en programinstansnod med pge-type=app-instance eller en RT som utökar /libs/mobileapps/core/components/instance
+* ***path &#x200B;**-**String*** - sökvägen till en programinstansnod med pge-type=app-instance eller en RT som utökar /libs/mobileapps/core/components/instance
 * ***providers - String*** `[]` - listan med fullständigt kvalificerade MobileAppsInfoProviders
 * ***targetRootDirectory - String*** - katalogen där filen MobileAppsConfig.json ska skrivas.
 * **fileName - String** - valfritt namn på filen som JSON ska skrivas till, standard är MobileAppsConfig.json

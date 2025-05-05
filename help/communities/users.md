@@ -227,7 +227,7 @@ Detta resulterar i att användare automatiskt tilldelas medlemsgruppen för comm
 
 När du använder en [publiceringsgrupp](topologies.md) måste användarna ha samma sökväg för varje publiceringsinstans genom att först importera användarna till en instans och [aktivera användarsynkronisering](sync.md) för att distribuera användarna till de andra publiceringsinstanserna.
 
-Om du importerar användargrupper måste du importera till en instans, skapa ett paket](../../help/sites-administering/package-manager.md#creating-a-new-package) för export och installera paketet på alla andra publiceringsinstanser, så att användargrupperna har samma sökväg för varje publiceringsinstans. [Skapa sedan ett paket för export.
+Om du importerar användargrupper måste du importera till en instans, skapa ett paket[&#128279;](../../help/sites-administering/package-manager.md#creating-a-new-package) för export och installera paketet på alla andra publiceringsinstanser, så att användargrupperna har samma sökväg för varje publiceringsinstans. Skapa sedan ett paket för export.
 
 Synkronisering av användargrupper via användarsynkronisering ingår i en framtida release, men för närvarande synkroniseras endast *medlemskapet* för en användargrupp när användarsynkroniseringen körs.
 

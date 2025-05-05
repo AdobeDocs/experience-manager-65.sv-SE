@@ -210,7 +210,7 @@ Under fliken **Taggfält** är de taggar som kan användas, om de tillåts under
 
 * **Förslagsgräns**
 
-  Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet **-**1 betyder inga gränser. Standardvärdet är 0.
+  Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Värdet **-**&#x200B;1 betyder inga gränser. Standardvärdet är 0.
 
 #### Fliken Sorteringsinställningar {#sort-settings-tab}
 

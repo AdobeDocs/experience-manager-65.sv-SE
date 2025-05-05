@@ -219,7 +219,7 @@ Under fliken **Taggfält** är de taggar som kan användas, om de tillåts under
 
 * **Förslagsgräns**
 
-  Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Standardvärdet är **-**1 (inga gränser).
+  Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Standardvärdet är **-**&#x200B;1 (inga gränser).
 
 #### Fliken Översättning {#translation-tab}
 

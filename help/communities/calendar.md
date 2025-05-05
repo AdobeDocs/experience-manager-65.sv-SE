@@ -92,7 +92,7 @@ Under fliken **Inställningar** anger du om du vill tillåta att taggar tillämp
 
 * **Maximal filstorlek för bifogad bild**
 
-  Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152** **(2 MB).
+  Endast relevant om Tillåt filöverföringar är markerat. Maximalt antal byte som en överförd bildfil kan ha. Standardvärdet är 2097152 **&#x200B; **(2 MB).
 
 * **Tillåtna omslagsbildtyper**
 
@@ -164,7 +164,7 @@ Under fliken **Taggfält** är de taggar som kan användas, om de tillåts under
 
 * **Förslagsgräns**
 
-  Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Standardvärdet är **-**1 (inga gränser).
+  Ange antalet taggar som ska visas som ett förslag till medlemmens inlägg i forumet. Standardvärdet är **-**&#x200B;1 (inga gränser).
 
 >[!NOTE]
 >

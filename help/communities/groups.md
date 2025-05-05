@@ -99,6 +99,7 @@ Standardroten är den överordnade platsen, men roten kan flyttas till valfri pl
    * Dubbelkontrollera namnet eftersom det inte är lätt att ändra efter att gruppen har skapats.
    * Bas-URL visas under `Community Group Name`.
    * Lägg till &quot;.html&quot; för en giltig URL
+
      *till exempel*, `https://localhost:4502/content/sites/mysight/en/mygroup.html`.
 
 * **Community-gruppmall**-menyn

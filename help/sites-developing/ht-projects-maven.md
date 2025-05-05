@@ -22,6 +22,6 @@ AEM 6.5 följer de senaste bästa metoderna för pakethantering och projektstruk
 >
 >* Artikeln [AEM Projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i AEM as a Cloud Service-dokumentationen innehåller information om hur du strukturerar moderna AEM projekt.
 >* [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)-dokumentation som visar hur du startar ett nytt AEM med hjälp av arkivtypen.
->* Plugin-programmet ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html#developer-tools) för innehållspaketet [Adobe finns i AEM as a Cloud Service-dokumentationen för hur du distribuerar AEM program.
+>* Plugin-programmet [&#128279;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developer-tools/maven-plugin.html#developer-tools) för innehållspaketet Adobe finns i AEM as a Cloud Service-dokumentationen för hur du distribuerar AEM program.
 >
 >Alla tre dokumenten gäller för AEM 6.5.

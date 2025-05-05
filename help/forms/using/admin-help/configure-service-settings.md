@@ -74,11 +74,11 @@ Följande inställningar är tillgängliga för den streckkodade formulärtjäns
 
 Bridge-tjänsten för central migrering ( `CentralMigrationBridge`) anropar en delmängd av Adobe Central Pro Output Server (Central)-funktionen, som innehåller kommandona JFMERGE, JFTRANS och XMLIMPORT. Med Bridge-tjänståtgärder för central migrering kan du återanvända följande centrala resurser i AEM formulär:
 
-* malldesign (&amp;ast;.ifd)
-* utdatamallar (&amp;ast;.mdf)
-* datafiler (&amp;ast;.dat-filer)
-* inledningsfiler (&amp;ast;.pre-filer)
-* datadefinitionsfiler (&amp;ast;.tdf)
+* malldesign (&ast;.ifd)
+* utdatamallar (&ast;.mdf)
+* datafiler (&ast;.dat-filer)
+* inledningsfiler (&ast;.pre-filer)
+* datadefinitionsfiler (&ast;.tdf)
 
 Följande inställning är tillgänglig för Bridge-tjänsten för central migrering.
 

@@ -118,7 +118,7 @@ Med funktionen **Språkkopia** kan författare kopiera sin huvudspråkkopia och 
    >
    >Språkkopieringsnoder kan bara finnas som direkt underordnad till Space.
 
-1. Välj **Språk&amp;ämpel för innehållspaket;ast;** och ange **Title&amp;ast;** i dialogrutan **Skapa språkkopia**.
+1. Välj **Språk&amp;ämpel för innehållspaket;ast;** och ange **Title&ast;** i dialogrutan **Skapa språkkopia**.
 
    Klicka på **Skapa**.
 
@@ -237,7 +237,7 @@ Om underordnade entiteter, som är andra entiteter, samlas in för datamodelleri
 
 Du kan välja **Publish Tree** eller **Quick Publish** för att publicera din entitet.
 
-1. Välj en enhet i utrymmeskonsollistan och klicka på **Publish Tree **för att publicera den enheten och dess underordnade objekt.
+1. Välj en enhet i utrymmeskonsollistan och klicka på **Publish Tree &#x200B;** för att publicera den enheten och dess underordnade objekt.
 
    ![chlimage_1-105](assets/chlimage_1-105.png)
 

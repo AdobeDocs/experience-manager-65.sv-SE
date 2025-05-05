@@ -78,7 +78,7 @@ Använd den inbyggda AEM dra och släpp-redigeraren för att lägga till eller �
 Arbetsflödet för att redigera en artikel:
 
 1. Välj mobilappen i katalogen i Mobile On-Demand.
-1. Välj en banderoll AEM källa i rutan** Hantera banners**.
+1. Välj en banderoll AEM källa i rutan **&#x200B; Hantera banners**.
 1. Klicka på den markerade banderollen i listvyn för att öppna den i innehållsredigeraren.
 1. Använd innehållsredigeraren för att dra banderollinnehåll (manuskript, bilder, text och så vidare).
 

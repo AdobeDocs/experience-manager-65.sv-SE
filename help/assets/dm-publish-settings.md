@@ -55,7 +55,7 @@ Se även [Valfritt - Konfigurera och konfigurera Dynamic Media - Inställningar 
    * Fliken [Färghanteringsattribut](#color-management-attributes-tab)
 
    ![Dynamic Media Publish - installationssida](/help/assets/assets-dm/dm-publish-setup.png)
-   *Dynamic Media Publish Setup page, with the **[!UICONTROL Request Attributes]**tab selected.*<br><br>
+   *Dynamic Media Publish Setup page, with the **[!UICONTROL Request Attributes]**&#x200B;tab selected.*<br><br>
 
 1. När du är klar klickar du på **[!UICONTROL Save]** i sidans övre högra hörn.
 

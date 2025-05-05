@@ -45,6 +45,6 @@ Om du vill använda token måste du replikera HMAC-binärfilen till alla instans
 
 >[!NOTE]
 >
->Om du använder manifestcachen med ditt webbprogram måste du lägga till **&amp;ast;** i manifestet för att se till att token inte tar CSRF-tokengenereringsanropet offline. Mer information finns i den här [länken](https://www.w3.org/TR/offline-webapps/).
+>Om du använder manifestcachen med ditt webbprogram måste du lägga till **&ast;** i manifestet för att se till att token inte tar CSRF-tokengenereringsanropet offline. Mer information finns i den här [länken](https://www.w3.org/TR/offline-webapps/).
 >
-Mer information om CSRF-attacker och sätt att mildra dem finns på sidan [Cross-Site Request Falery OWASP](https://owasp.org/www-community/attacks/csrf).
+>Mer information om CSRF-attacker och sätt att mildra dem finns på sidan [Cross-Site Request Falery OWASP](https://owasp.org/www-community/attacks/csrf).
