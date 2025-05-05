@@ -116,12 +116,12 @@ Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-ap
    ![fbsocialloginconfigpng](assets/fbsocialloginconfigpng.png)
 
    * **[!UICONTROL Title]** (*Required*) Ange en visningsrubrik som identifierar Facebook App. Använd samma namn som anges som *visningsnamn* för Facebook-programmet.
-   * **[!UICONTROL App ID/API Key]** (*Required*) Ange ***program-ID*** för Facebook App. Detta identifierar instansen [Adobe Granite OAuth Application och Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) som skapats från dialogrutan.
+   * **[!UICONTROL App ID/API Key]** (*Required*) Ange ***program-ID*** för Facebook App. Detta identifierar instansen [Adobe Granite OAuth Application och Provider](https://helpx.adobe.com/se/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) som skapats från dialogrutan.
    * **[!UICONTROL App Secret]** (*Required*) Ange ***apphemlighet*** för Facebook App.
    * **[!UICONTROL Create Users]** Om det här alternativet är markerat skapas en AEM användarpost och läggs till som medlem i de valda användargrupperna när du loggar in med ett Facebook-konto.  Standard är markerat (rekommenderas starkt).
    * **[!UICONTROL Mask User IDs]**: Låt vara avmarkerat.
    * **[!UICONTROL Scope Email]**: användarens e-post-ID ska hämtas från Facebook.
-   * **[!UICONTROL Add to User Groups]** Välj Lägg till användargrupp om du vill välja en eller flera [medlemsgrupper](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) för den community som användarna ska läggas till i.
+   * **[!UICONTROL Add to User Groups]** Välj Lägg till användargrupp om du vill välja en eller flera [medlemsgrupper](https://helpx.adobe.com/se/experience-manager/6-3/communities/using/users.html) för den community som användarna ska läggas till i.
 
    >[!NOTE]
    >
@@ -130,7 +130,7 @@ Instansen [Adobe Granite OAuth Application och Provider](#adobe-granite-oauth-ap
    * Välj **[!UICONTROL SAVE]**.
    * **[!UICONTROL Publish]**.
 
-Resultatet är en [Adobe Granite OAuth-programinstans och Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) som inte behöver ändras ytterligare om inte ytterligare scope (behörigheter) läggs till. Standardomfånget är standardbehörigheten för Facebook-inloggning. Om ytterligare omfattning önskas är det nödvändigt att redigera OSGI-konfigurationen direkt. Om ändringar görs direkt via system/konsol ska du undvika att redigera molntjänstkonfigurationerna från pekgränssnittet för att undvika att skriva över dem.
+Resultatet är en [Adobe Granite OAuth-programinstans och Provider](https://helpx.adobe.com/se/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) som inte behöver ändras ytterligare om inte ytterligare scope (behörigheter) läggs till. Standardomfånget är standardbehörigheten för Facebook-inloggning. Om ytterligare omfattning önskas är det nödvändigt att redigera OSGI-konfigurationen direkt. Om ändringar görs direkt via system/konsol ska du undvika att redigera molntjänstkonfigurationerna från pekgränssnittet för att undvika att skriva över dem.
 
 ### AEM Communities Facebook OAuth Provider {#aem-communities-facebook-oauth-provider}
 
@@ -270,7 +270,7 @@ OAuth-programmet och providern[&#128279;](#adobe-granite-oauth-application-and-p
 
    * **[!UICONTROL Consumer Key]**
 
-     (*Obligatorisk*) Ange **API-nyckeln** för Twitterna. Detta identifierar instansen [Adobe Granite OAuth Application och Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) som skapats från dialogrutan.
+     (*Obligatorisk*) Ange **API-nyckeln** för Twitterna. Detta identifierar instansen [Adobe Granite OAuth Application och Provider](https://helpx.adobe.com/se/experience-manager/6-3/communities/using/social-login.html#AdobeGraniteOAuthApplicationandProvider) som skapats från dialogrutan.
 
    * **[!UICONTROL Consumer Secret]**
 
@@ -286,7 +286,7 @@ OAuth-programmet och providern[&#128279;](#adobe-granite-oauth-application-and-p
 
    * **[!UICONTROL Add to User Groups]**
 
-     Välj Lägg till användargrupp om du vill välja en eller flera [medlemsgrupper](https://helpx.adobe.com/experience-manager/6-3/communities/using/users.html) för den community som användarna ska läggas till i.
+     Välj Lägg till användargrupp om du vill välja en eller flera [medlemsgrupper](https://helpx.adobe.com/se/experience-manager/6-3/communities/using/users.html) för den community som användarna ska läggas till i.
 
    >[!NOTE]
    >
@@ -295,7 +295,7 @@ OAuth-programmet och providern[&#128279;](#adobe-granite-oauth-application-and-p
 
 1. Välj **[!UICONTROL SAVE]** och **[!UICONTROL Publish]**.
 
-Resultatet är en [Adobe Granite OAuth-programinstans och Provider](https://helpx.adobe.com/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) som inte behöver ändras ytterligare. Standardomfånget är standardbehörigheten för Twitternas inloggning.
+Resultatet är en [Adobe Granite OAuth-programinstans och Provider](https://helpx.adobe.com/se/experience-manager/6-3/communities/using/social-login.html#adobe-granite-oauth-application-and-provider) som inte behöver ändras ytterligare. Standardomfånget är standardbehörigheten för Twitternas inloggning.
 
 ### AEM Communities Twitter OAuth Provider {#aem-communities-twitter-oauth-provider}
 
@@ -346,7 +346,7 @@ Nästa steg är samma för både Facebook och Twitter:
 
 ### AEM Communities Sites Console {#aem-communities-sites-console}
 
-När en molntjänst har konfigurerats kan den aktiveras för den relevanta inställningen för social inloggning för en community-webbplats med underpanelen [Inställningar för användarhantering](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#USERMANAGEMENT) när communitywebbplatsen [skapas](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#SiteCreation) eller [hanteras](https://helpx.adobe.com/experience-manager/6-3/communities/using/sites-console.html#ModifyingSiteProperties).
+När en molntjänst har konfigurerats kan den aktiveras för den relevanta inställningen för social inloggning för en community-webbplats med underpanelen [Inställningar för användarhantering](https://helpx.adobe.com/se/experience-manager/6-3/communities/using/sites-console.html#USERMANAGEMENT) när communitywebbplatsen [skapas](https://helpx.adobe.com/se/experience-manager/6-3/communities/using/sites-console.html#SiteCreation) eller [hanteras](https://helpx.adobe.com/se/experience-manager/6-3/communities/using/sites-console.html#ModifyingSiteProperties).
 
 1. Välj den platskonfiguration där du sparade dina konfigurationer för social inloggning.
 

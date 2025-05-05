@@ -180,7 +180,7 @@ Vi rekommenderar att du klonar produktionssystemet och skapar offlineindexet med
 
 ### Förbered en körning av en Runbook och en testversion {#prepare-a-runbook-and-trial-run}
 
-Vi rekommenderar att du förbereder en [runbook](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade-planning.html#building-the-upgrade-and-rollback-runbook) och utför några försök innan du kör uppgraderingen i produktion.
+Vi rekommenderar att du förbereder en [runbook](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade-planning.html?lang=sv-SE#building-the-upgrade-and-rollback-runbook) och utför några försök innan du kör uppgraderingen i produktion.
 
 ### Dokumentspårningsläge med offlineindexering {#doc-traversal-mode-with-offline-indexing}
 

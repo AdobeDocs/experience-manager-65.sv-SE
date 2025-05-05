@@ -168,7 +168,7 @@ Det behövs ett ställningar för varje enskild produkttyp. Den lämpliga strukt
 >
 >`/etc/commerce/products/...`
 >
->Det innebär att de som standard blockeras av [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html), så konfigurera som det behövs.
+>Det innebär att de som standard blockeras av [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE), så konfigurera som det behövs.
 
 #### Redigera produktinformation - Touchoptimerat gränssnitt {#editing-product-information-touch-optimized-ui}
 

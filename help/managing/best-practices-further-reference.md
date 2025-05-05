@@ -33,7 +33,7 @@ När du implementerar AEM (särskilt för första gången) ska du granska [funkt
 Fundera på AEM du använder och hur designen påverkas, till exempel:
 
 * [Commerce](/help/commerce/cif-classic/administering/ecommerce.md)
-* [Screens](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [Screens](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=sv-SE)
 * [Assets](/help/assets/assets.md)
 * [Taggar](/help/sites-administering/tags.md)
 * [Hantering och översättning av flera webbplatser](/help/sites-administering/msm-and-translation.md)

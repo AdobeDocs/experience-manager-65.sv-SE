@@ -304,7 +304,7 @@ I AEM kan binära data lagras oberoende av innehållsnoder. Platsen där binära
 
 >[!CAUTION]
 >
->Mikrokärnan i relationsdatabasen har begränsat stöd. Kontakta [Adobe kundtjänst](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) innan du använder den här typen av mikrokärna.
+>Mikrokärnan i relationsdatabasen har begränsat stöd. Kontakta [Adobe kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General&amp;support-tab=home#support) innan du använder den här typen av mikrokärna.
 
 ![chlimage_1-3](assets/chlimage_1-3a.png)
 

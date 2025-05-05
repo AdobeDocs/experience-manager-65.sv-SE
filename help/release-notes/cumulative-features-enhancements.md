@@ -28,13 +28,13 @@ Se även [Versionsinformation om Adobe Experience Manager 6.5 Senaste Service Pa
 ### [!DNL Forms]
 
 * **Nya kärnkomponenter för adaptiva formulär**: Lodräta flikar, villkor och kryssruta läggs till för att öka formulärens skalbarhet.
-   * **[Kryssrutekomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en kryssrutekomponent. Det gör att användare kan göra binära val, markera eller avmarkera ett visst alternativ. Det visas vanligtvis som en liten ruta som du kan klicka på eller peka på för att växla mellan två lägen: markerad och avmarkerad. Kryssrutan är ett vanligt formulärelement som används för att ange ett ja/nej- eller sant/falskt-val.
+   * **[Kryssrutekomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/checkbox.html?lang=sv-SE)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en kryssrutekomponent. Det gör att användare kan göra binära val, markera eller avmarkera ett visst alternativ. Det visas vanligtvis som en liten ruta som du kan klicka på eller peka på för att växla mellan två lägen: markerad och avmarkerad. Kryssrutan är ett vanligt formulärelement som används för att ange ett ja/nej- eller sant/falskt-val.
 
-   * **[Villkorskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en villkorskomponent. Det gör det möjligt för Forms-författare att införa ett specifikt avsnitt i formuläret där användarna presenteras med de villkor eller juridiska avtal som är kopplade till användningen av en tjänst, produkt eller plattform. Den här komponenten är utformad för att informera användare om de regler, bestämmelser och skyldigheter som de godkänner genom att skicka in formuläret.
+   * **[Villkorskomponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/terms-and-conditions.html?lang=sv-SE)**: Adaptiv Forms baserad på kärnkomponenter kan nu innehålla en villkorskomponent. Det gör det möjligt för Forms-författare att införa ett specifikt avsnitt i formuläret där användarna presenteras med de villkor eller juridiska avtal som är kopplade till användningen av en tjänst, produkt eller plattform. Den här komponenten är utformad för att informera användare om de regler, bestämmelser och skyldigheter som de godkänner genom att skicka in formuläret.
 
      ![Lodräta flikar, villkor och kryssrutekomponenter](/help/forms/using/assets/forms-components.png)
 
-   * **[Komponent för lodräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html)**: Adaptiv Forms baserad på kärnkomponenter kan nu ordna formulärinnehåll i en lodrät lista med flikar, vilket ger en strukturerad och navigeringsbar layout. Om du använder vertikala flikar i ett formulär kan det förbättra användarupplevelsen genom att förenkla navigeringen och förbättra organisationen av formulärinnehållet, särskilt i situationer där ett formulär innehåller flera avsnitt eller komplex information.
+   * **[Komponent för lodräta flikar](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/vertical-tabs.html?lang=sv-SE)**: Adaptiv Forms baserad på kärnkomponenter kan nu ordna formulärinnehåll i en lodrät lista med flikar, vilket ger en strukturerad och navigeringsbar layout. Om du använder vertikala flikar i ett formulär kan det förbättra användarupplevelsen genom att förenkla navigeringen och förbättra organisationen av formulärinnehållet, särskilt i situationer där ett formulär innehåller flera avsnitt eller komplex information.
 
 * **[64-bitarsversionen av AEM Forms Designer](/help/forms/using/installing-configuring-designer.md)**: 64-bitarsversionen av AEM Forms Designer ger bättre prestanda, skalbarhet och minneshantering så att du kan skapa formulär. Med 64-bitarsarkitekturen kan du enkelt hantera ännu större och mer komplexa projekt, vilket ger smidiga designarbetsflöden och optimerad effektivitet. Förbättra dina formulärdesignmöjligheter och ta till vara framtiden för AEM Forms Designer med denna banbrytande release.
 
@@ -55,9 +55,9 @@ Se även [Versionsinformation om Adobe Experience Manager 6.5 Senaste Service Pa
 
 ### [!DNL Forms]
 
-* **[Förbättrad felhantering med anpassade felhanterare i regelredigeraren](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html)** - Du kan nu anropa en anpassad funktion (med klientbibliotek) som svar på ett fel som returnerats av en extern tjänst. Och ni kan ge slutanvändarna ett skräddarsytt svar. Du kan också vidta specifika åtgärder för fel som returneras av en tjänst. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten är nere
+* **[Förbättrad felhantering med anpassade felhanterare i regelredigeraren](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/standard-validation-error-messages-adaptive-forms.html?lang=sv-SE)** - Du kan nu anropa en anpassad funktion (med klientbibliotek) som svar på ett fel som returnerats av en extern tjänst. Och ni kan ge slutanvändarna ett skräddarsytt svar. Du kan också vidta specifika åtgärder för fel som returneras av en tjänst. Du kan till exempel anropa ett anpassat arbetsflöde i serverdelen för specifika felkoder eller informera kunden om att tjänsten är nere
 
-* **[Förbättrat arbetsflödessteg i Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html#sign-document-step)** - Arbetsflödessteget i Adobe Sign i AEM-arbetsflöden är tillgängligt med följande förbättringar.
+* **[Förbättrat arbetsflödessteg i Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/workflows/aem-forms-workflow-step-reference.html?lang=sv-SE#sign-document-step)** - Arbetsflödessteget i Adobe Sign i AEM-arbetsflöden är tillgängligt med följande förbättringar.
 
    * **Förbättrad säkerhet med offentlig ID-baserad autentisering för Adobe Sign** - Adobe Acrobat Sign ID-baserad autentisering för myndigheter erbjuder ytterligare ett verifieringslager. Det gör det möjligt för användare att autentisera sin identitet med hjälp av ett foto-ID (körkort, nationellt ID, pass). Genom att använda pålitliga identifieringsdokument ger den här förbättringen ytterligare tillförlitlighet i signeringsprocessen, vilket gör den idealisk för scenarier som kräver högre säkerhet, regelefterlevnad och användarvalidering.
 
@@ -67,7 +67,7 @@ Se även [Versionsinformation om Adobe Experience Manager 6.5 Senaste Service Pa
    * **Utökade roller för avtalsmottagare utöver bara signeraren** - Med Adobe Acrobat Sign kan du utöka rollerna för avtalsmottagare till andra än bara signeraren för att bättre matcha deras arbetsflödesbehov. När det här alternativet är aktiverat kan varje mottagare i ett avtal konfigureras individuellt, med signerare som standard.
 
 
-* **[AEM Forms i JEE med fullständigt installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html)** - Service Pack har ett fullständigt installationsprogram för AEM Forms i JEE som har stöd för flera nya programkombinationer, inklusive:
+* **[AEM Forms i JEE med fullständigt installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/jee-installation/aem-forms-jee-supported-platforms.html?lang=sv-SE)** - Service Pack har ett fullständigt installationsprogram för AEM Forms i JEE som har stöd för flera nya programkombinationer, inklusive:
    * Microsoft® Windows Server 2022
    * Microsoft® Active Directory 2022
    * Oracle WebLogic 14C i Windows Server 2022
@@ -85,7 +85,7 @@ Om du installerar eller planerar att använda den senaste programvaran för din 
    * Relatera eller inte relatera tillgångar
 
   Du behöver inte navigera till resursplatsen och visa dess egenskaper för att utföra dessa åtgärder.
-* **Dynamiska medier _ögonblicksbild_**- Experimentera med testbilder eller dynamiska medie-URL:er för att se utdata från olika bildmodifierare och optimering av smarta bilder för filstorlek (med WebP- och AVIF-leverans), nätverksbandbredd och enhetspixelproportioner. Se [Dynamisk medieögonblicksbild](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html).
+* **Dynamiska medier _ögonblicksbild_**- Experimentera med testbilder eller dynamiska medie-URL:er för att se utdata från olika bildmodifierare och optimering av smarta bilder för filstorlek (med WebP- och AVIF-leverans), nätverksbandbredd och enhetspixelproportioner. Se [Dynamisk medieögonblicksbild](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot.html?lang=sv-SE).
 * **DASH-direktuppspelning med dynamiska media** - nytt protokoll (DASH - Dynamic Adaptive Streaming over HTTP) startades för adaptiv direktuppspelning i Dynamic Media-leverans (med CMAF aktiverat). Finns nu för alla regioner.
 * **Integrering av Experience Manager Sites- och innehållsfragment med Assets nästa generation av dynamiska media** - Användare av Experience Manager Assets as a Cloud Service nästa generation av dynamiska media kan nu använda dessa molnbaserade resurser för redigering och leverans med lokala eller Managed Services-instanser av Experience Manager Sites 6.5.
 
@@ -110,9 +110,9 @@ Det nya protokollet DASH (Dynamic Adaptive Streaming over HTTP) startades för s
 
 ### [!DNL Forms]
 
-* Med [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) kan dina utvecklare skapa, publicera och hantera interaktiva formulär som kan nås och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt.
+* Med [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=sv-SE) kan dina utvecklare skapa, publicera och hantera interaktiva formulär som kan nås och interagera med via API:er, i stället för via ett traditionellt grafiskt användargränssnitt.
 
-* [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html#features) är en uppsättning med 24 BEM-kompatibla komponenter med öppen källkod som bygger på grundvalen för Adobe Experience Manager WCM Core-komponenter. Dessa komponenter har öppen källkod och ger utvecklare möjlighet att enkelt anpassa och utöka komponenterna så att de passar organisationens specifika behov. Alla som har befintliga kunskaper för att anpassa [WCM Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/authoring.html) kan enkelt anpassa och formatera de här komponenterna.
+* [Adaptiva Forms Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE#features) är en uppsättning med 24 BEM-kompatibla komponenter med öppen källkod som bygger på grundvalen för Adobe Experience Manager WCM Core-komponenter. Dessa komponenter har öppen källkod och ger utvecklare möjlighet att enkelt anpassa och utöka komponenterna så att de passar organisationens specifika behov. Alla som har befintliga kunskaper för att anpassa [WCM Core-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/authoring.html?lang=sv-SE) kan enkelt anpassa och formatera de här komponenterna.
 
 * Reader Extension-tjänsten på OSGi har nu olika alternativ för att aktivera import- och exportanvändningsrättigheter för en PDF för import eller export av data i Adobe Acrobat Reader.
 
@@ -120,9 +120,9 @@ Det nya protokollet DASH (Dynamic Adaptive Streaming over HTTP) startades för s
 
 ### [!DNL Forms]
 
-* AEM Forms Designer finns nu på [spanska](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+* AEM Forms Designer finns nu på [spanska](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE).
 * Du kan nu använda [OAuth2 för att autentisera med e-postserverprotokoll för Microsoft® Office 365 (SMTP och IMAP)](/help/forms/using/oauth2-support-for-mail-service.md).
-* Du kan ställa in egenskapen [Revalidate på server](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html#enabling-server-side-validation-br) på true om du vill identifiera dolda fält som ska uteslutas från ett postdokument på serversidan.
+* Du kan ställa in egenskapen [Revalidate på server](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/configure-submit-actions-and-metadata-submission/configuring-submit-actions.html?lang=sv-SE#enabling-server-side-validation-br) på true om du vill identifiera dolda fält som ska uteslutas från ett postdokument på serversidan.
 * AEM Forms Designer kräver 32-bitarsversionen av Visual C++ 2019 Redistributable (x86).
 
 ## AEM 6.5, Service Pack 14-25 augusti 2022

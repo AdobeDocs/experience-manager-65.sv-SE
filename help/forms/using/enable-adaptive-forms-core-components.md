@@ -20,14 +20,14 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components.html?lang=sv-SE) |
 | AEM 6.5 | Denna artikel |
 
 <!--**Applies to:** ✅ Adaptive Form Core Components ❎ [Adaptive Form Foundation Components](/help/forms/using/create-adaptive-form.md).-->
 
-Om du aktiverar adaptiva Forms Core-komponenter kan du börja skapa, publicera och leverera [Core-baserade adaptiva Forms](create-an-adaptive-form-core-components.md) och [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html) från din AEM 6.5 Forms-miljö.
+Om du aktiverar adaptiva Forms Core-komponenter kan du börja skapa, publicera och leverera [Core-baserade adaptiva Forms](create-an-adaptive-form-core-components.md) och [Headless Adaptive Forms](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/overview.html?lang=sv-SE) från din AEM 6.5 Forms-miljö.
 
-Om du vill aktivera adaptiva Forms Core-komponenter i din Forms-miljö med AEM 6.5 installerar och distribuerar du ett [AEM Archetype 41 eller senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)-baserat projekt (med formuläralternativ aktiverade) på alla dina författare- och Publish-instanser.
+Om du vill aktivera adaptiva Forms Core-komponenter i din Forms-miljö med AEM 6.5 installerar och distribuerar du ett [AEM Archetype 41 eller senare](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE)-baserat projekt (med formuläralternativ aktiverade) på alla dina författare- och Publish-instanser.
 
 I den här artikeln finns detaljerade anvisningar om hur du konfigurerar och distribuerar AEM Archetype 41 eller senare baserat på ditt projekt i Forms-miljön AEM 6.5 för att aktivera adaptiva Forms Core-komponenter. Du kan läsa listan nedan för **AEM 6.5**-kompatibla versioner för att aktivera Forms Core-komponenter:
 
@@ -35,7 +35,7 @@ I den här artikeln finns detaljerade anvisningar om hur du konfigurerar och dis
 
 Innan du aktiverar adaptiva Forms Core-komponenter i en AEM 6.5 Forms-miljö:
 
-* [Uppgradera till AEM 6.5 Forms Service Pack 16 (6.5.16.0) eller senare](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html).
+* [Uppgradera till AEM 6.5 Forms Service Pack 16 (6.5.16.0) eller senare](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=sv-SE).
 
 * Installera den senaste versionen av [Apache Maven](https://maven.apache.org/download.cgi).
 
@@ -106,11 +106,11 @@ Så här skapar du ett AEM Archetype 41- eller [senare](https://github.com/adobe
 1. Uppdatera projektet så att det innehåller den senaste versionen av Forms Core Components:
 
    1. Öppna projektmappen [AEM Archetype]/pom.xml för redigering.
-   1. Ange version av `core.forms.components.version` och `core.forms.components.af.version` till den [senaste Forms Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history)-versionen och se till att båda har samma version som **Forms Core Components** som nämns i tabellen, och ange version av `core.wcm.components.version` enligt [WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html) .
+   1. Ange version av `core.forms.components.version` och `core.forms.components.af.version` till den [senaste Forms Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html?lang=sv-SE#aem-as-form-version-history)-versionen och se till att båda har samma version som **Forms Core Components** som nämns i tabellen, och ange version av `core.wcm.components.version` enligt [WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/versions.html?lang=sv-SE) .
 
       >[!WARNING]
       >
-      >* När du skapar ett Arketype-projekt med version 45 ställer `[AEM Archetype Project Folder]/pom.xml` först in versionen för formulärets kärnkomponenter till 1.1.28. Innan du bygger eller driftsätter Archetype-projektet ska du uppdatera formulärkärnkomponentens version till 1.1.26. Den senaste versionen finns i [AEM 6.5 Forms-versionshistorik ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html#aem-as-form-version-history) .
+      >* När du skapar ett Arketype-projekt med version 45 ställer `[AEM Archetype Project Folder]/pom.xml` först in versionen för formulärets kärnkomponenter till 1.1.28. Innan du bygger eller driftsätter Archetype-projektet ska du uppdatera formulärkärnkomponentens version till 1.1.26. Den senaste versionen finns i [AEM 6.5 Forms-versionshistorik ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/version.html?lang=sv-SE#aem-as-form-version-history) .
 
       >[!NOTE]
       >
@@ -134,7 +134,7 @@ Så här skapar du ett AEM Archetype 41- eller [senare](https://github.com/adobe
 
    När det AEM Archetype-projektet har skapats skapas ett AEM. Paketet finns på [AEM Archetype Project Folder]\all\target\[appid].all-[version].zip
 
-1. Använd [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en) för att distribuera [AEM Archetype Project Folder]\all\target\[appid].all-[version].zip-paketet på alla Author- och Publish-instanser.
+1. Använd [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=sv-SE) för att distribuera [AEM Archetype Project Folder]\all\target\[appid].all-[version].zip-paketet på alla Author- och Publish-instanser.
 
 >[!NOTE]
 >
@@ -149,7 +149,7 @@ Kärnkomponenterna är aktiverade för din miljö. En tom Core Components-basera
 
 ### Vad är kärnkomponenter?
 
-[Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
+[Kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) är en uppsättning standardiserade WCM-komponenter (Web Content Management) för AEM som snabbar upp utvecklingstiden och minskar underhållskostnaderna för dina webbplatser.
 
 ### Vad finns det för funktioner för att aktivera kärnkomponenter?
 

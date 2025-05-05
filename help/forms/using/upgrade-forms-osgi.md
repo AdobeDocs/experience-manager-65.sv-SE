@@ -20,13 +20,13 @@ ht-degree: 0%
 
 Du kan uppgradera direkt från AEM 6.3 Forms eller AEM 6.4 Forms till AEM 6.5 Forms.
 
-Direktuppgradering från **AEM 6.0 Forms, AEM 6.1 Forms** och **AEM 6.2 Forms** till AEM 6.5 Forms är inte tillgängligt. Utför en mellanliggande [uppgradering till AEM 6.2 Forms](https://helpx.adobe.com/experience-manager/6-2/forms/using/upgrade.html), [uppgradering till AEM 6.3 Forms](https://helpx.adobe.com/experience-manager/6-3/forms/using/upgrade.html) eller [uppgradering till AEM 6.4 Forms](/help/forms/using/upgrade.md) och uppgradera sedan från AEM 6.3 Forms eller AEM 6.4 Forms till AEM 6.5.
+Direktuppgradering från **AEM 6.0 Forms, AEM 6.1 Forms** och **AEM 6.2 Forms** till AEM 6.5 Forms är inte tillgängligt. Utför en mellanliggande [uppgradering till AEM 6.2 Forms](https://helpx.adobe.com/se/experience-manager/6-2/forms/using/upgrade.html), [uppgradering till AEM 6.3 Forms](https://helpx.adobe.com/se/experience-manager/6-3/forms/using/upgrade.html) eller [uppgradering till AEM 6.4 Forms](/help/forms/using/upgrade.md) och uppgradera sedan från AEM 6.3 Forms eller AEM 6.4 Forms till AEM 6.5.
 
 Gör följande för att uppgradera från AEM 6.3 Forms eller AEM 6.4 Forms till AEM 6.5 Forms:
 
 1. Uppgradera den befintliga AEM till AEM 6.5. Stegen listas nedan:
 
-   1. Installera den senaste Service Pack-uppdateringen och patcharna för AEM 6.3 Forms eller AEM 6.4 Forms. Mer information finns i [AEMuthållighet](https://helpx.adobe.com/experience-manager/aem-releases-updates.html).
+   1. Installera den senaste Service Pack-uppdateringen och patcharna för AEM 6.3 Forms eller AEM 6.4 Forms. Mer information finns i [AEMuthållighet](https://helpx.adobe.com/se/experience-manager/aem-releases-updates.html).
    1. Förbered källinstansen för uppgraderingen. Mer information finns i [Uppgradera till AEM 6.5](/help/sites-deploying/upgrade.md).
    1. Hämta [AEM 6.5 QuickStart](/help/sites-deploying/deploy.md#getting%20the%20software).
    1. **(Endast Unix/Linux-baserade installationer)** Om du använder UNIX eller Linux som underliggande operativsystem öppnar du terminalfönstret, navigerar till mappen som innehåller crx-quickstart och kör följande kommando:
@@ -49,10 +49,10 @@ Gör följande för att uppgradera från AEM 6.3 Forms eller AEM 6.4 Forms till 
       1. Välj **[!UICONTROL Forms]** i listrutan **[!UICONTROL Solution]**.
       1. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
    1. Välj det paketnamn som gäller för ditt operativsystem, välj **[!UICONTROL Accept EULA Terms]** och välj **[!UICONTROL Download]**.
-   1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka på **[!UICONTROL Upload Package]** för att överföra paketet.
+   1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=sv-SE) och klicka på **[!UICONTROL Upload Package]** för att överföra paketet.
    1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-      Du kan också hämta paketet med hjälp av den direktlänk som finns i artikeln [AEM Forms-utgåvor](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html) .
+      Du kan också hämta paketet med hjälp av den direktlänk som finns i artikeln [AEM Forms-utgåvor](https://helpx.adobe.com/se/aem-forms/kb/aem-forms-releases.html) .
 
       >[!NOTE]
       >
@@ -70,7 +70,7 @@ Gör följande för att uppgradera från AEM 6.3 Forms eller AEM 6.4 Forms till 
 
      Migreringsverktyget gör att anpassningsbara formulär och korrespondenshanteringsresurser i tidigare versioner blir kompatibla med AEM 6.5-formulär. Du kan hämta verktyget från AEM Software Distribution. Stegvis information om hur du konfigurerar och använder migreringsverktyget finns i [migreringsverktyget](../../forms/using/migration-utility.md).
 
-     Om du använder [Exempel för att integrera utkast och inskickskomponent](https://helpx.adobe.com/experience-manager/6-3/forms/using/integrate-draft-submission-database.html) med databasen och uppgradera från en tidigare version kör du följande SQL-frågor när du har utfört uppgraderingen:
+     Om du använder [Exempel för att integrera utkast och inskickskomponent](https://helpx.adobe.com/se/experience-manager/6-3/forms/using/integrate-draft-submission-database.html) med databasen och uppgradera från en tidigare version kör du följande SQL-frågor när du har utfört uppgraderingen:
 
      ```sql
      UPDATE metadata m, additionalmetadatatable am

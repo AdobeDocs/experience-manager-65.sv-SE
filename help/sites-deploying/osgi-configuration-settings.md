@@ -37,7 +37,7 @@ Följande OSGi-konfigurationsinställningar (listade efter paket) är relevanta 
 
 >[!NOTE]
 >
->Diff-verktyget för OSGi-konfiguration, som ingår i [AEM Tools](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17488.html), kan användas för att lista OSGi-standardkonfigurationer.
+>Diff-verktyget för OSGi-konfiguration, som ingår i [AEM Tools](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17488.html?lang=sv-SE), kan användas för att lista OSGi-standardkonfigurationer.
 
 >[!NOTE]
 >
@@ -273,7 +273,7 @@ När du skapar en konfiguration ska du inte ändra fabrikskonfigurationen. Skapa
 
 >[!CAUTION]
 >
->När du ändrar inställningen för antingen **Minify** eller **Gzip** tar du bort innehållet i cachen för klienter. Mer information finns i [kunskapsbasartikeln](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html).
+>När du ändrar inställningen för antingen **Minify** eller **Gzip** tar du bort innehållet i cachen för klienter. Mer information finns i [kunskapsbasartikeln](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-16543.html?lang=sv-SE).
 
 >[!NOTE]
 >

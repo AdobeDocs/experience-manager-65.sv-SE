@@ -140,7 +140,7 @@ En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM i 
      | allowExplicitSharing | allowExplicitSharing | BOOLEAN |
 
 
-   * Distribuera indexen via ett AEM. Du kan använda ett [AEM Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=en) -projekt för att skapa ett distribuerbart AEM. Använd följande exempelkod för att lägga till index i ett AEM Archetype-projekt:
+   * Distribuera indexen via ett AEM. Du kan använda ett [AEM Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/using.html?lang=sv-SE) -projekt för att skapa ett distribuerbart AEM. Använd följande exempelkod för att lägga till index i ett AEM Archetype-projekt:
 
    ```Java
       .property("sharedWith", "sharedWith").type(TYPENAME_STRING).propertyIndex()
@@ -150,8 +150,8 @@ En arbetsflödesmodellägare kan inte visa objekt som är relaterade till AEM i 
       .property("allowExplicitSharing", "allowExplicitSharing").type(TYPENAME_BOOLEAN).propertyIndex()
    ```
 
-1. [Skapa ett egenskapsindex och ange det till true](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html#the-property-index).
+1. [Skapa ett egenskapsindex och ange det till true](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html?lang=sv-SE#the-property-index).
 
 1. När du har konfigurerat index i CRX DE eller distribuerat via ett paket indexerar [om databasen](https://helpx.adobe.com/in/experience-manager/kb/HowToCheckLuceneIndex.html#Completelyrebuildtheindex).
 
-https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html
+https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/queries-and-indexing.html?lang=sv-SE

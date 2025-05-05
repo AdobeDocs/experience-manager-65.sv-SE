@@ -66,7 +66,7 @@ När integreringen är klar kan du [skapa riktat innehåll](/help/sites-authorin
 
 Att integrera AEM med Adobe Target kräver kunskap om Adobe Target, AEM och AEM. Du bör känna till följande information:
 
-* Adobe Target (se [Adobe Target-dokumentationen](https://experienceleague.adobe.com/docs/target/using/target-home.html)).
+* Adobe Target (se [Adobe Target-dokumentationen](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=sv-SE)).
 * Konsolen AEM aktiviteter (se [Hantera aktiviteter](/help/sites-authoring/activitylib.md)).
 * AEM målgrupper (se [Hantera målgrupper](/help/sites-authoring/managing-audiences.md)).
 

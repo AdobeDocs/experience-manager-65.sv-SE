@@ -31,7 +31,7 @@ Innan du börjar AEM utvecklingsprojektet bör du först granska följande metod
 * [Code Pitfalls](/help/sites-developing/code-pitfalls.md)
 * [JCR-samverkan](/help/sites-developing/jcr-integration.md)
 * [OSGi Bundles](/help/sites-developing/osgi-bundles.md)
-* [Bästa praxis för Java API](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html)
+* [Bästa praxis för Java API](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/understand-java-api-best-practices.html?lang=sv-SE)
 
 ### Ytterligare metodinformation {#additional-best-practices-information}
 
@@ -95,8 +95,8 @@ HTML Template Language (HTL) är ett nytt mallsystem för HTML, som introducerad
 
 |  |  |  |
 |---|---|---|
-| HTML - översikt | [Översikt och syntax för HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) | Det här dokumentet beskriver vad HTML är, hur du går till HTML, ett exempelprojekt, syntax, uttryck och programsatser |
-| Använda API i java | [HTL Java Use-API](https://helpx.adobe.com/experience-manager/htl/using/use-api.html) | Med HTL Java Use-API:t kan en HTML-fil få åtkomst till hjälpmetoder i en anpassad Java-klass. |
+| HTML - översikt | [Översikt och syntax för HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=sv-SE) | Det här dokumentet beskriver vad HTML är, hur du går till HTML, ett exempelprojekt, syntax, uttryck och programsatser |
+| Använda API i java | [HTL Java Use-API](https://helpx.adobe.com/se/experience-manager/htl/using/use-api.html) | Med HTL Java Use-API:t kan en HTML-fil få åtkomst till hjälpmetoder i en anpassad Java-klass. |
 
 >[!NOTE]
 >

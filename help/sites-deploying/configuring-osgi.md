@@ -174,7 +174,7 @@ Eftersom samma konfigurationsparameter finns på flera ställen:
 
 >[!NOTE]
 >
->Läs även [hur du definierar en databasbaserad konfiguration för en specifik instans endast](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html).
+>Läs även [hur du definierar en databasbaserad konfiguration för en specifik instans endast](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17500.html?lang=sv-SE).
 
 ### Lägga till en ny konfiguration i databasen {#adding-a-new-configuration-to-the-repository}
 

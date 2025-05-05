@@ -122,7 +122,7 @@ Följande konsoler finns i Navigation:
   </tr>
   <tr>
    <td>Screens</td>
-   <td>Med <a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a> kan du hantera alla kundriktade skärmar, oavsett storlek och plats.</td>
+   <td>Med <a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html?lang=sv-SE">Screens</a> kan du hantera alla kundriktade skärmar, oavsett storlek och plats.</td>
   </tr>
   <tr>
    <td>Sites</td>

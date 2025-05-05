@@ -595,7 +595,7 @@ Eftersom Dispatcher är tillståndslöst kan det enkelt skalas vågrätt. I viss
 
 För att köra AEM utan Dispatcher krävs att SSL-avslutning och belastningsutjämning utförs av ett annat program. Det är obligatoriskt eftersom sessioner måste ha tillhörighet till den AEM instansen som de skapas i, ett koncept som kallas klibbiga anslutningar. Orsaken är att uppdateringarna av innehållet har minimal fördröjning.
 
-Läs [Dispatcher-dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/dispatcher) om du vill ha mer information om hur du konfigurerar den.
+Läs [Dispatcher-dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/dispatcher) om du vill ha mer information om hur du konfigurerar den.
 
 ### Ytterligare konfiguration {#additional-configuration}
 

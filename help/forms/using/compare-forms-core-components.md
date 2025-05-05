@@ -23,7 +23,7 @@ Jämförelsefunktionen i adaptiva Forms Core Components hjälper formulärförfa
 
 ## Förutsättning {#prerequisite-versioning}
 
-Om du vill använda funktionen Jämför i ett adaptivt formulär baserat på kärnkomponenter kontrollerar du att [adaptiva Form Core-komponenter](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) är aktiverade i din AEM 6.5 Forms-miljö.
+Om du vill använda funktionen Jämför i ett adaptivt formulär baserat på kärnkomponenter kontrollerar du att [adaptiva Form Core-komponenter](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) är aktiverade i din AEM 6.5 Forms-miljö.
 
 ## Jämför distinkta adaptiva formulär {#compare-af-65}
 

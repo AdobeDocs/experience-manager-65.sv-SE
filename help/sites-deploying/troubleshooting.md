@@ -67,7 +67,7 @@ Så här felsöker du:
 
 >[!NOTE]
 >
->Se även [Analysera minnesproblem](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html).
+>Se även [Analysera minnesproblem](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=sv-SE).
 
 
 CRX har också lite minnesutrymme. Om programmet som körs i CRX har större minnesbehov eller begär minnesintensiva åtgärder (till exempel stora transaktioner), måste JVM-instansen där CRX körs startas med lämpliga minnesinställningar.

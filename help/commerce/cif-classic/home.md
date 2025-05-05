@@ -19,7 +19,7 @@ På den här sidan visas självhjälpsresurser för AEM Classic.
 
 >[!NOTE]
 >
->CIF Classic har tagits bort från och med AEM 6.5 SP 22.  [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/?support-solution=General#support) om du behöver ett kompatibilitetspaket.
+>CIF Classic har tagits bort från och med AEM 6.5 SP 22.  [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/sv?support-solution=General#support) om du behöver ett kompatibilitetspaket.
 >
 >* Nya projekt bör använda [AEM CIF](/help/commerce/cif/introduction.md).
 >* Befintlig CIF Classic ska [migrera till AEM CIF](/help/commerce/cif/migration.md).

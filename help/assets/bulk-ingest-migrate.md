@@ -37,7 +37,7 @@ Se även [Konfigurera Dynamic Media - Scene7-läge](/help/assets/config-dms7.md)
 
 1. Gå till **[!UICONTROL Tool]** > **[!UICONTROL Security]** > **[!UICONTROL Users]** i din Experience Manager-instans och välj **[!UICONTROL Create User]**. Den här tjänstanvändaren måste ha *läs-/skrivbehörighet* till `/content/dam.`
 1. I fälten **[!UICONTROL ID]** och **[!UICONTROL Password]** anger du ett användarnamn och ett lösenord, till exempel **FTP-användare**. Det här namnet visas på tidslinjen som den användare som skapade resursen. När en resurs överförs från FTP betraktas en resurs som skapad när den överförs till FTP-servern och överförs till Experience Manager.
-1. Kontakta [Adobe kundsupport för Experience Manager](https://experienceleague.adobe.com/?support-solution=General#support) om du vill begära åtkomst till funktionspaketet 18912 för hämtning. Du kan behöva följande information när du kontaktar supporten:
+1. Kontakta [Adobe kundsupport för Experience Manager](https://experienceleague.adobe.com/sv?support-solution=General#support) om du vill begära åtkomst till funktionspaketet 18912 för hämtning. Du kan behöva följande information när du kontaktar supporten:
 
    * Serverns IP-adress för din Author-instans, inklusive portnumret (portnumret är som standard 4502.)
    * Användarnamn och lösenord för Experience Manager-tjänsten från föregående steg.

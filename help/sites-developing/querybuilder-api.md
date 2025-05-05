@@ -32,15 +32,15 @@ REST API ger åtkomst till samma funktioner via HTTP med svar som skickas i JSON
 
 >[!NOTE]
 >
->QueryBuilder-API:t byggs med JCR-API:t. Du kan även fråga Adobe Experience Manager JCR genom att använda JCR-API:t i ett OSGi-paket. Mer information finns i [Adobe Experience Manager med JCR API](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/access-jcr.html).
+>QueryBuilder-API:t byggs med JCR-API:t. Du kan även fråga Adobe Experience Manager JCR genom att använda JCR-API:t i ett OSGi-paket. Mer information finns i [Adobe Experience Manager med JCR API](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/access-jcr.html?lang=sv-SE).
 
 ## Gruppsession {#gem-session}
 
-[Adobe Experience Manager (AEM) Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html) är en serie tekniska djupdykningar i Adobe Experience Manager som levereras av Adobe experter. Den här sessionen som är avsedd för frågebyggaren är användbar för en översikt över och användning av verktyget.
+[Adobe Experience Manager (AEM) Gems](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/overview.html?lang=sv-SE) är en serie tekniska djupdykningar i Adobe Experience Manager som levereras av Adobe experter. Den här sessionen som är avsedd för frågebyggaren är användbar för en översikt över och användning av verktyget.
 
 >[!NOTE]
 >
->AEM Gem-session [Söka i formulär som är enkla med AEM querybuilder](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html) för en detaljerad översikt över frågebyggaren.
+>AEM Gem-session [Söka i formulär som är enkla med AEM querybuilder](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2017/aem-search-forms-using-querybuilder.html?lang=sv-SE) för en detaljerad översikt över frågebyggaren.
 
 ## Exempelfrågor {#sample-queries}
 

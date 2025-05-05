@@ -53,7 +53,7 @@ En framtvingad avstängning medför AEM asynkron indexering i upp till 30 minute
 
 >[!NOTE]
 >
->Kontrollera att [AEM 6.1 CFP 11](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) är installerat för AEM 6.1.
+>Kontrollera att [AEM 6.1 CFP 11](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=sv-SE) är installerat för AEM 6.1.
 
 I undantagsfall kan den trådpool som används för att hantera asynkron indexering bli överbelastad. Om du vill isolera indexeringsprocessen kan en trådpool konfigureras för att förhindra att andra AEM stör Oak förmåga att indexera innehåll i tid. I så fall gör du följande:
 
@@ -128,7 +128,7 @@ Så här identifierar och korrigerar du en fast omindexeringsprocess:
 1. När du har samlat in all information som beskrivs i steg 1 startar du om AEM.
 
    * Att starta om AEM kan lösa problemet om det finns en hög samtidig belastning (spill i observationskön eller något liknande).
-   * Om en omstart inte löser problemet kan du öppna ett problem med [Adobe kundtjänst](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) och ange all information som samlats in i steg 1.
+   * Om en omstart inte löser problemet kan du öppna ett problem med [Adobe kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General&amp;support-tab=home#support) och ange all information som samlats in i steg 1.
 
 ## Säkert avbrytande av asynkron omindexering {#safely-aborting-asynchronous-re-indexing}
 

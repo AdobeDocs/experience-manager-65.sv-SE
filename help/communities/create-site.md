@@ -119,7 +119,7 @@ Exempel:
 
 >[!NOTE]
 >
->[Tunneltjänsten](https://helpx.adobe.com/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) tillåter endast urval av medlemmar och grupper som finns i publiceringsmiljön.
+>[Tunneltjänsten](https://helpx.adobe.com/se/experience-manager/6-3/help/communities/deploy-communities.html#tunnel-service-on-author) tillåter endast urval av medlemmar och grupper som finns i publiceringsmiljön.
 
 ![användarroller på den nya platsen](assets/site-admin-1.png)
 

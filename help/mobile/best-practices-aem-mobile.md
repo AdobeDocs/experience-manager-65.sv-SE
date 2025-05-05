@@ -28,8 +28,8 @@ Att skapa en AEM Mobile On-demand Services-app skiljer sig från att skapa en ap
 >
 >Mer information om plugin-program finns i följande resurser:
 >
->* [Använda Cordova-plugin-program i AEM Mobile](https://helpx.adobe.com/digital-publishing-solution/help/cordova-api.html)
->* [Använda AEM Mobile-specifika Cordova-aktiverade plugin-program](https://helpx.adobe.com/digital-publishing-solution/help/app-runtime-api.html)
+>* [Använda Cordova-plugin-program i AEM Mobile](https://helpx.adobe.com/se/digital-publishing-solution/help/cordova-api.html)
+>* [Använda AEM Mobile-specifika Cordova-aktiverade plugin-program](https://helpx.adobe.com/se/digital-publishing-solution/help/app-runtime-api.html)
 >
 
 * Mallar som använder plugin-funktioner bör skrivas på ett sådant sätt att de fortfarande är redigerbara i webbläsaren, utan att plugin-bryggan finns.

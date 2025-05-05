@@ -57,7 +57,7 @@ När du har lärt dig grunderna hittar du mer avancerad och detaljerad informati
 * [Introduktion till AEM](/help/sites-deploying/platform.md)
 * [Riktlinjer för prestanda](/help/sites-deploying/performance-guidelines.md)
 * [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md)
-* [Vad är AEM Screens?](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [Vad är AEM Screens?](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=sv-SE)
 
 ## Grundläggande begrepp {#basic-concepts}
 
@@ -130,7 +130,7 @@ Med AEM Managed Services kan man dra nytta av följande fördelar:
 
 **Cloud Manager**: Cloud Manager, som ingår i Adobe Experience Manager Managed Services-erbjudandet, är en självbetjäningsportal som gör det möjligt för organisationer att självhantera Adobe Experience Manager i molnet. Den innehåller en modern pipeline för kontinuerlig integrering och kontinuerlig leverans (CI/CD) som gör att IT-team och implementeringspartners kan snabba upp leveransen av anpassningar eller uppdateringar utan att kompromissa med prestanda eller säkerhet. Cloud Manager är endast tillgängligt för Adobe-kunder med hanterade tjänster.
 
-Mer information om Cloud Manager och dess resurser finns i [**Cloud Manager användarhandbok**](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html).
+Mer information om Cloud Manager och dess resurser finns i [**Cloud Manager användarhandbok**](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=sv-SE).
 
 ## Komma igång {#getting-started}
 
@@ -316,4 +316,4 @@ Ovanstående avsnitt bör ge dig en god förståelse för grunderna i AEM instal
 * [Introduktion till AEM](/help/sites-deploying/platform.md)
 * [Riktlinjer för prestanda](/help/sites-deploying/performance-guidelines.md)
 * [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md)
-* [Vad är AEM Screens?](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
+* [Vad är AEM Screens?](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=sv-SE)

@@ -188,7 +188,7 @@ Stegen **Ange variabel** körs upprepade gånger och värdet för variabeln **co
 
 >[!NOTE]
 >
->Se [ELLER Dela steg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html#use-a-variable)
+>Se [ELLER Dela steg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/extending-workflows/using-variables-in-aem-workflows.html?lang=sv-SE#use-a-variable)
 
 ![Förgreningar med ELLER dela](assets/variables_orsplit_new.png)
 

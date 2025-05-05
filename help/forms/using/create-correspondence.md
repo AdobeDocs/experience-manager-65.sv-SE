@@ -57,7 +57,7 @@ Markera den bokstav du vill förhandsgranska genom att följa följande steg:
 
    >[!NOTE]
    >
-   >Mer information om hur du växlar mellan återgivningsläget HTML eller PDF i förhandsgranskningen av bokstaven finns i [Ändra återgivningsläget för bokstaven](#changerenditionmode). Mer information om stöd för PDF i Correspondence Management och AEM finns i [Avbryta plugin-program för NPAPI-webbläsare och dess påverkan](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html). <!-- and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html). THIS URL IS A 404 AND NO SUITABLE REPLACEMENT TOPIC WAS FOUND. CONSIDER DELETING OR ADDING NEW LINK. COMMENTING OUT SO USERS DON'T CLICK IT. -->
+   >Mer information om hur du växlar mellan återgivningsläget HTML eller PDF i förhandsgranskningen av bokstaven finns i [Ändra återgivningsläget för bokstaven](#changerenditionmode). Mer information om stöd för PDF i Correspondence Management och AEM finns i [Avbryta plugin-program för NPAPI-webbläsare och dess påverkan](https://helpx.adobe.com/se/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html). <!-- and [PDF Forms to HTML5 Forms](https://helpx.adobe.com/aem-forms/kb/pdf-forms-to-html5-forms.html). THIS URL IS A 404 AND NO SUITABLE REPLACEMENT TOPIC WAS FOUND. CONSIDER DELETING OR ADDING NEW LINK. COMMENTING OUT SO USERS DON'T CLICK IT. -->
 
 ### Ange data {#enterdata}
 
@@ -375,7 +375,7 @@ Mer information om skriptstöd i HTML5-formulär finns i [Skriptstöd för HTML5
 
 Som standard använder gränssnittet Skapa korrespondens HTML eller mobilformulär för att återge förhandsgranskningen av brevet. Förhandsgranskningen av mobilformulär har inga problem med återgivningen i någon webbläsare, eftersom webbläsarens inbyggda plugin-program används och inga ytterligare plugin-program krävs. Du kan ändra förhandsgranskningsläget för brev till PDF. Webbläsarbegränsningar kan dock skapa problem för olika funktioner i den interaktiva PDF-förhandsvisningen av brevet.
 
-Mer information om webbläsarkompatibilitet med förhandsgranskning av brev finns i [Avbryta plugin-program för NPAPI-webbläsare och dess påverkan](https://helpx.adobe.com/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html).
+Mer information om webbläsarkompatibilitet med förhandsgranskning av brev finns i [Avbryta plugin-program för NPAPI-webbläsare och dess påverkan](https://helpx.adobe.com/se/acrobat/kb/change-in-support-for-acrobat-and-reader-plug-ins-in-modern-web-.html).
 
 Om du vill ändra förhandsgranskningsläget för brevet utför du följande steg:
 

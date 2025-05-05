@@ -32,9 +32,9 @@ I följande tabell visas upplösning för alla påverkade versioner:
 
 | Frigör | Aktuell version | Användaråtgärd |
 |---|---|---|
-| Experience Manager 6.5 Forms i JEE | 6.5.19.0 | [Installera den senaste Service Pack-versionen](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en) |
-| Experience Manager 6.5 Forms i JEE | 6.5.13.0 - 6.5.18.0 | Använd någon av följande metoder: <ul><li>  <a href="https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en"> Installera den senaste Service Pack-versionen </a> </li> <li> <a href ="#use-manual-mitigation-steps"> Använd manuell begränsning </a> |
-| Experience Manager 6.5 Forms i JEE | 6.5-6.5.12.0 | [Installera den senaste Service Pack-versionen](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=en) </br> </br> **OBS!** AEM Forms stöder för närvarande versionerna 6.5.13.0 till 6.5.19.0. Om du använder en äldre version rekommenderar vi att du uppgraderar till 6.5.13.0 eller senare. Anvisningar om hur du installerar AEM 6.5.13.0 eller senare finns i versionsinformationen. |
+| Experience Manager 6.5 Forms i JEE | 6.5.19.0 | [Installera den senaste Service Pack-versionen](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=sv-SE) |
+| Experience Manager 6.5 Forms i JEE | 6.5.13.0 - 6.5.18.0 | Använd någon av följande metoder: <ul><li>  <a href="https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=sv-SE"> Installera den senaste Service Pack-versionen </a> </li> <li> <a href ="#use-manual-mitigation-steps"> Använd manuell begränsning </a> |
+| Experience Manager 6.5 Forms i JEE | 6.5-6.5.12.0 | [Installera den senaste Service Pack-versionen](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=sv-SE) </br> </br> **OBS!** AEM Forms stöder för närvarande versionerna 6.5.13.0 till 6.5.19.0. Om du använder en äldre version rekommenderar vi att du uppgraderar till 6.5.13.0 eller senare. Anvisningar om hur du installerar AEM 6.5.13.0 eller senare finns i versionsinformationen. |
 
 ### Använd manuella begränsningssteg {#use-manual-mitigation-steps}
 

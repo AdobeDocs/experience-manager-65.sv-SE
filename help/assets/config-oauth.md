@@ -27,7 +27,7 @@ Mer information om konfigurationen av OAuth-tjänster för en ny användare finn
 
 >[!NOTE]
 >
->Om det behövs kan du skicka in en supportanmälan efter [supportprocessen](https://experienceleague.adobe.com/?lang=en&amp;support-tab=home#support).
+>Om det behövs kan du skicka in en supportanmälan efter [supportprocessen](https://experienceleague.adobe.com/sv?lang=en&amp;support-tab=home#support).
 
 ## OAuth-konfiguration för befintliga AMS-användare {#oauth-config-new-ams-users}
 
@@ -44,7 +44,7 @@ En OAuth-konfiguration kräver följande krav:
 
 ### OAuth-konfiguration för befintliga AMS- och On-prem-användare {#steps-config-oauth-onprem}
 
-Följande steg kan utföras av systemadministratören i **CRXDE**. AMS-kunden kan kontakta Adobe-representanten eller skicka in en supportanmälan efter [supportprocessen](https://experienceleague.adobe.com/?lang=en&amp;support-tab=home#support).
+Följande steg kan utföras av systemadministratören i **CRXDE**. AMS-kunden kan kontakta Adobe-representanten eller skicka in en supportanmälan efter [supportprocessen](https://experienceleague.adobe.com/sv?lang=en&amp;support-tab=home#support).
 
 1. Lägg till eller uppdatera nedanstående egenskaper i `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`:
 
@@ -89,7 +89,7 @@ Valideringsresultaten visas i samma dialogruta.
 
 >[!NOTE]
 >
->Om felet `unsupported_grant_type` inträffar, försök sedan installera snabbkorrigeringen för Granite. Se [migrering från tjänstkonto (JWT) till autentiseringsuppgifter för OAuth Server-till-server](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24660).
+>Om felet `unsupported_grant_type` inträffar, försök sedan installera snabbkorrigeringen för Granite. Se [migrering från tjänstkonto (JWT) till autentiseringsuppgifter för OAuth Server-till-server](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-24660).
 
 ## Integrera med Adobe Developer Console {#integrate-adobe-io}
 
@@ -198,4 +198,4 @@ Om du vill konfigurera integreringen använder du värdena för fälten [!UICONT
 >
 >* [Översikt och utbildning av smarta taggar](enhanced-smart-tags.md)
 >* [Konfigurera smart taggning](config-smart-tagging.md)
->* [Videosjälvstudiekurs om smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
+>* [Videosjälvstudiekurs om smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=sv-SE)

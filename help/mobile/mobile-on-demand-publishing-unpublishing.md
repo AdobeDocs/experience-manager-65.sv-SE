@@ -24,7 +24,7 @@ När du känner till innehållshanteringsåtgärder för artiklar, banners och s
 
 >[!NOTE]
 >
->Mer information om designöverväganden för AEM Mobile-program finns i [Designöverväganden för AEM Mobile-program](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) i onlinehjälpen.
+>Mer information om designöverväganden för AEM Mobile-program finns i [Designöverväganden för AEM Mobile-program](https://helpx.adobe.com/se/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) i onlinehjälpen.
 
 ## Publicera/avpublicera innehållet {#publishing-unpublishing-the-content}
 

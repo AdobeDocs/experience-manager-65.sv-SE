@@ -32,7 +32,7 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF kärnkomponenter s�
 
 ## Konfiguration {#configuration}
 
-1. Konfigurera flera butiker och butiksvyer enligt mönstret som beskrivs i [Adobe Commerce webbplatser, butiker och vyer](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html)
+1. Konfigurera flera butiker och butiksvyer enligt mönstret som beskrivs i [Adobe Commerce webbplatser, butiker och vyer](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html?lang=sv-SE)
 
 2. Kontrollera att anslutningen mellan AEM &amp; Adobe Commerce fungerar.
 
@@ -58,7 +58,7 @@ Följ stegen nedan för att ansluta en AEM plats och AEM CIF kärnkomponenter s�
 
 ## Ytterligare resurser
 
-* [Adobe Commerce webbplatser, butiker och vyer](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html)
+* [Adobe Commerce webbplatser, butiker och vyer](https://experienceleague.adobe.com/docs/commerce-admin/start/setup/websites-stores-views.html?lang=sv-SE)
 * [AEM CIF kärnkomponenter - konfiguration för flera butiker/platser](https://github.com/adobe/aem-core-cif-components#multi-store--site-configuration)
-* [Använder Multi-Site Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html)
+* [Använder Multi-Site Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/translation/multi-site-manager-feature-video-use.html?lang=sv-SE)
 * [Återanvända innehåll: Multi Site Manager och Live Copy](/help/sites-administering/msm.md)

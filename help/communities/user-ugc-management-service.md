@@ -29,7 +29,7 @@ Mer information finns på sidan [GDPR på Adobe Privacy Center](https://www.adob
 
 >[!NOTE]
 >
->Om du har konfigurerat [Adobe Analytics på AEM Communities](/help/communities/analytics.md)-platsen skickas den hämtade användarinformationen till Adobe Analytics-servern. Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata och följa GDPR. Mer information finns i [Skicka in begäran om åtkomst och borttagning](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html).
+>Om du har konfigurerat [Adobe Analytics på AEM Communities](/help/communities/analytics.md)-platsen skickas den hämtade användarinformationen till Adobe Analytics-servern. Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata och följa GDPR. Mer information finns i [Skicka in begäran om åtkomst och borttagning](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-submit-access-delete.html?lang=sv-SE).
 
 Om du vill använda dessa API:er måste du aktivera slutpunkten `/services/social/ugcmanagement` genom att aktivera tjänsten UserUgcManagement. Om du vill aktivera den här tjänsten installerar du [exempelservern](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet) som finns på [GitHub.com](https://github.com/Adobe-Marketing-Cloud/aem-communities-ugc-migration/tree/main/bundles/communities-ugc-management-servlet). Tryck sedan på slutpunkten på publiceringsinstansen av communitywebbplatsen med lämpliga parametrar med en http-begäran, som:
 
@@ -61,7 +61,7 @@ Om du till exempel vill ta bort användargränssnittskontrollen för en använda
 
 ### Ta bort användargenererat innehåll från Adobe Analytics {#delete-ugc-from-adobe-analytics}
 
-Om du vill ta bort användardata från Adobe Analytics följer du [GDPR Analytics-arbetsflödet](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html) eftersom API:t inte tar bort användardata från Adobe Analytics.
+Om du vill ta bort användardata från Adobe Analytics följer du [GDPR Analytics-arbetsflödet](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-workflow.html?lang=sv-SE) eftersom API:t inte tar bort användardata från Adobe Analytics.
 
 Information om Adobe Analytics-variabelmappningar som används av AEM Communities finns i följande bild:
 

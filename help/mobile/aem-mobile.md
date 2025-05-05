@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Om du inte använder Adobe Experience Manager (AEM) som innehållshanteringskälla kan du läsa [AEM Mobile On-demand Services-hjälpen](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>Om du inte använder Adobe Experience Manager (AEM) som innehållshanteringskälla kan du läsa [AEM Mobile On-demand Services-hjälpen](https://helpx.adobe.com/se/digital-publishing-solution/topics.html).
 
 ## AEM-administratör {#aem-administrator}
 
@@ -36,7 +36,7 @@ En ***AEM-administratör*** ansvarar för att lägga till ett program i AEM Mobi
 
 >[!NOTE]
 >
->Mer information om hur du konfigurerar AEM Grupper och behörigheter får du genom att klicka på [Skapa användarroller och bevilja åtkomst](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) i onlinehjälpen.
+>Mer information om hur du konfigurerar AEM Grupper och behörigheter får du genom att klicka på [Skapa användarroller och bevilja åtkomst](https://helpx.adobe.com/se/digital-publishing-solution/help/account-admin-dps.html) i onlinehjälpen.
 
 En AEM är ansvarig för följande när du skapar ett program med AEM Mobile On-demand Services:
 

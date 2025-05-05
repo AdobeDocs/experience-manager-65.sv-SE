@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >De flesta Foundation Components är nu ersatta med AEM 6.5. Mer information finns i [versionsinformationen](/help/release-notes/deprecated-removed-features.md).
 >
->Adobe rekommenderar att du använder de mer moderna och utbyggbara [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i AEM projekt. De här komponenterna ingår i [Web.Retail-exempelinnehållet](/help/sites-developing/we-retail.md) och kan även [installeras separat och användas för utveckling](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html) av administratören.
+>Adobe rekommenderar att du använder de mer moderna och utbyggbara [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i AEM projekt. De här komponenterna ingår i [Web.Retail-exempelinnehållet](/help/sites-developing/we-retail.md) och kan även [installeras separat och användas för utveckling](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/using.html?lang=sv-SE) av administratören.
 >
 >Du kan använda [AEM Modernize Tools Suite](https://opensource.adobe.com/aem-modernize-tools/) för att omforma den grundläggande komponentbaserade webbplatsen så att den använder kärnkomponenter.
 
@@ -57,7 +57,7 @@ De allmänna komponenterna är de grundläggande komponenter som du använder f�
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 Du kan definiera en länk med rubrik och beskrivning.
 
@@ -67,7 +67,7 @@ Du kan definiera en länk med rubrik och beskrivning.
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=sv-SE) i stället.
 
 Med komponenten Adaptive Image Foundation genereras bilder som är storleksanpassade för att passa det fönster där webbsidan öppnas. Om du vill använda komponenten anger du en bildresurs från filsystemet eller DAM. När webbsidan öppnas hämtar webbläsaren en kopia av bilden som har ändrat storlek så att den passar för det aktuella fönstret.
 
@@ -150,7 +150,7 @@ Mer information om hur du anpassar komponenten Adaptiv bild finns i [Förstå ko
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Carousel Core-komponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Carousel Core-komponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=sv-SE) i stället.
 
 Med Carousel-komponenten kan du visa bilder som är kopplade till enskilda sidor:
 
@@ -216,13 +216,13 @@ Valfritt. Det maximala antalet objekt som du vill använda i Carousel.
 
 >[!NOTE]
 >
->Du kan skapa en anpassad karusellkomponent för Adobe Experience Manager som visar digitala resurser i AEM DAM. Se [Skapa anpassade Carousel-komponenter för Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).
+>Du kan skapa en anpassad karusellkomponent för Adobe Experience Manager som visar digitala resurser i AEM DAM. Se [Skapa anpassade Carousel-komponenter för Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE).
 
 ### Diagram {#chart}
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 Med diagramkomponenten kan du lägga till ett stapel-, linje- eller cirkeldiagram. AEM skapar ett diagram utifrån de data du anger. Du anger data genom att skriva direkt på fliken Data eller genom att kopiera och klistra in ett kalkylblad.
 
@@ -251,13 +251,13 @@ I följande exempel visas ett exempel på diagramdata följt av det resulterande
 
 >[!NOTE]
 >
->Du kan skapa en anpassad AEM som visar data i AEM JCR. Mer information finns i [Visa Adobe Experience Manager-data i ett diagram](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html).
+>Du kan skapa en anpassad AEM som visar data i AEM JCR. Mer information finns i [Visa Adobe Experience Manager-data i ett diagram](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE).
 
 ### Innehållsfragment {#content-fragment}
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE) i stället.
 
 [Innehållsfragment](/help/sites-authoring/content-fragments.md) skapas och hanteras som sidoberoende resurser. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
@@ -265,7 +265,7 @@ I följande exempel visas ett exempel på diagramdata följt av det resulterande
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 Med den här komponenten kan du överföra en ZIP-fil som innehåller ett designpaket.
 
@@ -273,7 +273,7 @@ Med den här komponenten kan du överföra en ZIP-fil som innehåller ett design
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 Komponenten Download skapar en länk på den valda webbsidan för att hämta en viss fil. Du kan antingen dra en resurs från Content Finder eller överföra en fil.
 
@@ -293,7 +293,7 @@ I följande exempel visas komponenten Download i Geometrixx:
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 Med integrationskomponenten för det externa programmet (**External**) kan du bädda in externa program på AEM med hjälp av en iframe.
 
@@ -324,7 +324,7 @@ Det externa programmet är integrerat i styckesystemet på AEM, till exempel nä
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 >[!CAUTION]
 >
@@ -372,7 +372,7 @@ Med komponenten Flash kan du läsa in en Flash film. Du kan dra en Flash-resurs 
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=sv-SE) i stället.
 
 I bildkomponenten visas en bild och tillhörande text enligt de angivna parametrarna.
 
@@ -458,13 +458,13 @@ Den här komponenten innehåller ett rutnätsstyckesystem där du kan lägga til
 
 >[!NOTE]
 >
->Den här komponenten har implementerats med [HTML Template Language (HTML)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html).
+>Den här komponenten har implementerats med [HTML Template Language (HTML)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=sv-SE).
 
 ### Lista {#list}
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [List Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [List Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=sv-SE) i stället.
 
 Med List-komponenten kan du konfigurera sökvillkor för att visa en lista:
 
@@ -538,7 +538,7 @@ I följande exempel visas en **List** -komponent på samma sätt som en lista me
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 >[!CAUTION]
 >
@@ -604,7 +604,7 @@ Du kan konfigurera
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/content-fragment-component.html?lang=sv-SE) i stället.
 
 Med komponenten **Reference** kan du referera till text från en annan sida på AEM webbplats (i den aktuella instansen). Innehållet i det refererade stycket visas sedan som om det fanns på den aktuella sidan. Innehållet uppdateras när källstycket ändras (kan behöva uppdateras).
 
@@ -638,7 +638,7 @@ Efter konfigurationen visas innehållet exakt som på källsidan. Det faktum att
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för snabbsökning](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/quick-search.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för snabbsökning](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/quick-search.html?lang=sv-SE) i stället.
 
 Sökkomponenten lägger till sökfunktioner på sidan.
 
@@ -707,7 +707,7 @@ I följande exempel visas en felstavad sökterm som inte är tillgänglig:
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Navigation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html), [Language Navigation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/language-navigation.html) och [Breadcrumb Core-komponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/breadcrumb.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Navigation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html?lang=sv-SE), [Language Navigation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/language-navigation.html?lang=sv-SE) och [Breadcrumb Core-komponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/breadcrumb.html?lang=sv-SE) i stället.
 
 En automatisk platskarta som (med standardinställningarna) visar alla sidor (som aktiva länkar) på den aktuella webbplatsen. Ett extrakt visar till exempel:
 
@@ -725,7 +725,7 @@ Om det behövs kan du konfigurera följande:
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Carousel Core-komponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Carousel Core-komponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/carousel.html?lang=sv-SE) i stället.
 
 >[!CAUTION]
 >
@@ -759,7 +759,7 @@ Bildspelskomponenten visar sedan upprepade gånger i sekvens, under en kort tid,
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Text Core-komponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Text Core-komponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=sv-SE) i stället.
 
 >[!NOTE]
 >
@@ -808,7 +808,7 @@ Mer information om hur du använder taggar finns på [Använda taggar](/help/sit
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Text Core-komponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Text Core-komponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=sv-SE) i stället.
 
 >[!NOTE]
 >
@@ -837,7 +837,7 @@ Förutom det dialogbaserade redigeringsläget Rich Text innehåller AEM även [I
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Image](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html) och [Text Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Image](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=sv-SE) och [Text Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=sv-SE) i stället.
 
 Komponenten Text och bild lägger till ett textblock och en bild. Du kan också lägga till och redigera text och bilder separat. Mer information finns i komponenterna [Text](#text) och [Bild](#image).
 
@@ -885,7 +885,7 @@ I följande exempel visas en textbildskomponent som visar bilden vänsterjustera
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för titel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för titel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/list.html?lang=sv-SE) i stället.
 
 Titelkomponenten kan antingen:
 
@@ -914,7 +914,7 @@ I följande exempel visas en **Title** -komponent som visas. Designen bestäms a
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Core Components Embed Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Core Components Embed Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/embed.html?lang=sv-SE) i stället.
 
 >[!CAUTION]
 >
@@ -974,7 +974,7 @@ Med komponenten Kolumnkontroll kan användarna välja hur de vill dela upp inneh
 
 >[!CAUTION]
 >
->Foundation-komponenten är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Foundation-komponenten är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 Formulärkomponenter används för att skapa formulär som besökare kan skicka in indata i. Forms och blankettkomponenter kan användas för att samla in information, t.ex. användarfeedback (t.ex. ett kundfrågeformulär) och användarinformation (t.ex. användarregistrering).
 
@@ -1094,7 +1094,7 @@ Det här fältet är obligatoriskt och får endast innehålla följande tecken:
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärbehållaren](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärbehållaren](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=sv-SE) i stället.
 
 Form-komponenten definierar både början och slutet av ett formulär med elementen **Formulärstart** och **Formulärslut** . Början och slutet är alltid kopplade för att säkerställa att formuläret är korrekt definierat.
 
@@ -1104,7 +1104,7 @@ Mellan formulärets början och slut kan du lägga till formulärkomponenter som
 
 >[!NOTE]
 >
->Foundation-komponenterna har bara stöd för användning av andra grundkomponenter (knapp, text, dold och så vidare). Det går inte att använda [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i ett grundkomponentformulär (och omvänt).
+>Foundation-komponenterna har bara stöd för användning av andra grundkomponenter (knapp, text, dold och så vidare). Det går inte att använda [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i ett grundkomponentformulär (och omvänt).
 
 #### Formulärets början {#start-of-form}
 
@@ -1322,7 +1322,7 @@ Markerar formulärets slut. Du kan konfigurera följande:
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärtext](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärtext](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html?lang=sv-SE) i stället.
 
 Låter användaren ange ett kontonamn:
 
@@ -1332,7 +1332,7 @@ Låter användaren ange ett kontonamn:
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärtext](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärtext](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html?lang=sv-SE) i stället.
 
 Gör att du kan lägga till ett internationellt adressfält med följande format:
 
@@ -1344,7 +1344,7 @@ Komponenten är konfigurerad för omedelbar användning, men du kan ändra konfi
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 >[!CAUTION]
 >
@@ -1360,7 +1360,7 @@ Du kan konfigurera olika parametrar för den här komponenten, inklusive ett med
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formuläralternativ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formuläralternativ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html?lang=sv-SE) i stället.
 
 Med en kryssruta kan du skapa en lista med en av flera kryssrutor, som flera kan markeras samtidigt.
 
@@ -1378,7 +1378,7 @@ Du kan ange olika parametrar, inklusive rubrik, beskrivning och elementnamn. Med
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 Här kan du ange de fält som behövs för att ange kreditkortsinformation. Du kan konfigurera det för att ange vilka typer av kort som accepteras och vilken information som krävs (till exempel säkerhetskod).
 
@@ -1388,7 +1388,7 @@ Här kan du ange de fält som behövs för att ange kreditkortsinformation. Du k
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formuläralternativ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formuläralternativ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html?lang=sv-SE) i stället.
 
 En nedrullningsbar lista kan konfigureras så att du kan använda ett intervall av värden för val:
 
@@ -1406,7 +1406,7 @@ Du kan ange en titel och vilka objekt som ska visas i listan. Med knapparna + oc
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 Komponenten för filöverföring ger användaren en funktion för att välja och överföra en fil.
 
@@ -1420,7 +1420,7 @@ Komponenten för filöverföring ger användaren en funktion för att välja och
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Form Hidden Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-hidden.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [Form Hidden Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-hidden.html?lang=sv-SE) i stället.
 
 Gör att du kan skapa ett dolt fält. Dessa dolda fält kan användas för olika syften. Om du till exempel måste utföra en åtgärd efter att du har skickat formuläret eller när dolda data krävs vid efterbearbetning.
 
@@ -1436,7 +1436,7 @@ Gör att du kan skapa ett dolt fält. Dessa dolda fält kan användas för olika
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärknappen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärknappen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html?lang=sv-SE) i stället.
 
 Med en bildknapp kan du skapa en knapp med egen bild och text:
 
@@ -1446,7 +1446,7 @@ Med en bildknapp kan du skapa en knapp med egen bild och text:
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 Bildöverföringskomponenten ger användaren en mekanism för att välja och överföra en bildfil.
 
@@ -1456,7 +1456,7 @@ Bildöverföringskomponenten ger användaren en mekanism för att välja och öv
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 I länkfältet kan användaren ange en URL:
 
@@ -1468,7 +1468,7 @@ Det används oftast för kalenderhändelsematerialet, där det används för URL
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 Låter användaren ange sitt lösenord:
 
@@ -1478,7 +1478,7 @@ Låter användaren ange sitt lösenord:
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 Den här komponenten ger användaren två fält för:
 
@@ -1493,7 +1493,7 @@ Med standardinställningarna visas komponenten som följande:
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formuläralternativ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formuläralternativ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-options.html?lang=sv-SE) i stället.
 
 En alternativknappsgrupp ger dig en lista över en eller flera kryssrutor, där bara en av kryssrutorna kan markeras vid en viss tidpunkt.
 
@@ -1511,7 +1511,7 @@ Du kan ange elementnamnet tillsammans med en titel och en beskrivning. Med knapp
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärknappen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärknappen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html?lang=sv-SE) i stället.
 
 Med den här komponenten kan du skapa en skicka-knapp med antingen standardtexten:
 
@@ -1525,7 +1525,7 @@ Eller med egen text:
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) i stället.
 
 I det här fältet kan du välja taggar:
 
@@ -1552,7 +1552,7 @@ Du kan ange olika parametrar, inklusive namnutrymmen, med hjälp av fliken Speci
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärtext](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärtext](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-text.html?lang=sv-SE) i stället.
 
 Standardtextfältet kan konfigureras till den önskade storleken och med ditt eget lead i meddelandet:
 
@@ -1562,7 +1562,7 @@ Standardtextfältet kan konfigureras till den önskade storleken och med ditt eg
 
 >[!CAUTION]
 >
->Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärknappen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html) i stället.
+>Denna Foundation-komponent är föråldrad. Adobe rekommenderar att du använder [kärnkomponenten för formulärknappen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-button.html?lang=sv-SE) i stället.
 
 Gör att du kan skapa en Skicka-knapp som kan användas i ett arbetsflöde.
 

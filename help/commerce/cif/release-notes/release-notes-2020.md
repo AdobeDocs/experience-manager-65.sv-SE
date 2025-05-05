@@ -192,7 +192,7 @@ Detta är den första versionen av CIF Core Components som stöds i Adobe Experi
 
 ### Nyheter {#what-is-new-april}
 
-* Konfigurationsinställningarna för CIF Connector är enhetliga och förenklade. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html) eller [Ny AEM CIF projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
+* Konfigurationsinställningarna för CIF Connector är enhetliga och förenklade. Mer information finns i [Komma igång](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=sv-SE) eller [Ny AEM CIF projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=sv-SE)
 
 ### Vad har förbättrats {#what-is-improved-april}
 

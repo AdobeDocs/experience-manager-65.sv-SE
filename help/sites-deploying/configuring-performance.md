@@ -24,7 +24,7 @@ ht-degree: 1%
 >
 >Mer information om felsökning och korrigering av prestandaproblem finns också i [prestandaträdet](/help/sites-deploying/performance-tree.md).
 >
->Du kan även läsa en artikel i kunskapsbasen om [tips för prestandajustering](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-17466).
+>Du kan även läsa en artikel i kunskapsbasen om [tips för prestandajustering](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-17466).
 
 Ett viktigt problem är den tid det tar för er webbplats att svara på besökarnas förfrågningar. Även om det här värdet varierar för varje begäran kan ett genomsnittligt målvärde definieras. När det här värdet har visat sig vara både genomförbart och underhållbart kan det användas för att övervaka webbplatsens prestanda och indikera utvecklingen av potentiella problem.
 
@@ -41,7 +41,7 @@ Den här miljön innehåller innehåll som du gör tillgängligt för användarn
 >[!NOTE]
 >
 >* När du har konfigurerat för prestandaoptimering följer du anvisningarna i [Tough Day](/help/sites-developing/tough-day.md) för att testa miljön under tung belastning.
->* Se även [Prestandajusteringstips.](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-17466)
+>* Se även [Prestandajusteringstips.](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-17466)
 
 ## Prestandaoptimeringsmetod {#performance-optimization-methodology}
 
@@ -203,7 +203,7 @@ Vissa aspekter av AEM (och/eller den underliggande databasen) kan konfigureras f
 
 >[!NOTE]
 >
->Se [Prestandaoptimering](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
+>Se [Prestandaoptimering](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=sv-SE).
 
 ### Sökindexering {#search-indexing}
 
@@ -478,7 +478,7 @@ När alla tester är slutförda, rapportera följande:
 
 ## Optimera prestanda när du använder Dispatcher {#optimizing-performance-when-using-the-dispatcher}
 
-[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är Adobe- och/eller belastningsutjämningsverktyget. När du använder Dispatcher bör du överväga att optimera webbplatsen för att få cacheprestanda.
+[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE) är Adobe- och/eller belastningsutjämningsverktyget. När du använder Dispatcher bör du överväga att optimera webbplatsen för att få cacheprestanda.
 
 >[!NOTE]
 >
@@ -494,7 +494,7 @@ Dispatcher har flera inbyggda funktioner som du kan använda för att optimera p
 >
 >I allmänhet innebär många cachelagringsstrategier att du måste välja bra URL:er och inte förlita dig på dessa ytterligare data.
 >
->Med Dispatcher version 4.1.11 kan du även cachelagra svarshuvuden, se [Cachelagra HTTP-svarshuvuden](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache).
+>Med Dispatcher version 4.1.11 kan du även cachelagra svarshuvuden, se [Cachelagra HTTP-svarshuvuden](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#configuring-the-dispatcher-cache-cache).
 >
 
 ### Beräkna Dispatcher-cacheförhållandet {#calculating-the-dispatcher-cache-ratio}
@@ -530,7 +530,7 @@ Med Dispatcher version 4.1.11 kan du cachelagra svarshuvuden. Om du inte cachela
 
 #### Undvik URL-parametrar {#avoid-url-parameters}
 
-Undvik om möjligt URL-parametrar för sidor som du vill cachelagra. Om du till exempel har ett bildgalleri cachelagras aldrig följande URL (såvida inte Dispatcher [har konfigurerats därefter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-the-dispatcher-cache-cache)):
+Undvik om möjligt URL-parametrar för sidor som du vill cachelagra. Om du till exempel har ett bildgalleri cachelagras aldrig följande URL (såvida inte Dispatcher [har konfigurerats därefter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#configuring-the-dispatcher-cache-cache)):
 
 ```xml
 www.myCompany.com/pictures/gallery.html?event=christmas&amp;page=1
@@ -603,22 +603,22 @@ Vi rekommenderar att du begränsar personaliseringen till där det är nödvänd
 * Om du däremot erbjuder ett alternativ på tio olika startsidor kan du cachelagra var och en av dem, vilket förbättrar prestandan.
 
 >[!TIP]
->Mer information om hur du konfigurerar cacheminnet för Dispatcher finns i [AEM självstudiekursen för Dispatcher-cachen](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html) och dess avsnitt om [Cachelagring av skyddat innehåll.](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-1.html#dispatcher-tips-and-tricks)
+>Mer information om hur du konfigurerar cacheminnet för Dispatcher finns i [AEM självstudiekursen för Dispatcher-cachen](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/overview.html?lang=sv-SE) och dess avsnitt om [Cachelagring av skyddat innehåll.](https://experienceleague.adobe.com/docs/experience-manager-learn/dispatcher-tutorial/chapter-1.html?lang=sv-SE#dispatcher-tips-and-tricks)
 
 Om du anpassar varje sida genom att placera användarens namn i namnlisten (till exempel), har det en prestandaeffekt.
 
 >[!TIP]
->Mer information om cachelagring av skyddat innehåll finns i [Cachelagra skyddat innehåll](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html) i Dispatcher-handboken.
+>Mer information om cachelagring av skyddat innehåll finns i [Cachelagra skyddat innehåll](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=sv-SE) i Dispatcher-handboken.
 
 När det gäller att blanda begränsat och offentligt innehåll på en sida bör du överväga en strategi där SSI används i Dispatcher, eller också innehåller klientsidan Ajax i webbläsaren.
 
 >[!TIP]
 >
->Information om hur du hanterar blandat offentligt och begränsat innehåll finns i [Konfigurera dynamisk SSLING-infogning.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html)
+>Information om hur du hanterar blandat offentligt och begränsat innehåll finns i [Konfigurera dynamisk SSLING-infogning.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-sling-dynamic-include.html?lang=sv-SE)
 
 #### Fästiga anslutningar {#sticky-connections}
 
-[Antagliga anslutningar](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#the-benefits-of-load-balancing) säkerställer att dokumenten för en användare är sammansatta på samma server. Om en användare lämnar den här mappen och senare återgår till den, stannar anslutningen fortfarande kvar. Om du vill lagra alla dokument som kräver klisterlappar för webbplatsen, definierar du en mapp. Försök att inte ha med andra dokument i den. Det här scenariot påverkar belastningsutjämningen om du använder personaliserade sidor och sessionsdata.
+[Antagliga anslutningar](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE#the-benefits-of-load-balancing) säkerställer att dokumenten för en användare är sammansatta på samma server. Om en användare lämnar den här mappen och senare återgår till den, stannar anslutningen fortfarande kvar. Om du vill lagra alla dokument som kräver klisterlappar för webbplatsen, definierar du en mapp. Försök att inte ha med andra dokument i den. Det här scenariot påverkar belastningsutjämningen om du använder personaliserade sidor och sessionsdata.
 
 #### MIME-typer {#mime-types}
 

@@ -40,7 +40,7 @@ Nedan beskrivs de viktigaste aspekterna, medan följande sidor innehåller mer i
 >
 >* Delta i arbetsflöden, se [Använda arbetsflöden](/help/sites-authoring/workflows.md).
 >* Administrera arbetsflöden och arbetsflödesinstanser, se [Administrera arbetsflöden](/help/sites-administering/workflows.md).
->* En communityartikel från början till slut finns i [Ändra Digital Assets med Adobe Experience Manager-arbetsflöden.](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html)
+>* En communityartikel från början till slut finns i [Ändra Digital Assets med Adobe Experience Manager-arbetsflöden.](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=sv-SE)
 >* Se [Fråga webbinariet AEM experter om arbetsflöden](https://communities.adobeconnect.com/p5s33iburd54/).
 >* Ändringar av informationsplatserna finns i [Databasomstrukturering i AEM 6.5](/help/sites-deploying/repository-restructuring.md) och [Bästa praxis för arbetsflöden - platser](/help/sites-developing/workflows-best-practices.md#locations).
 >
@@ -206,7 +206,7 @@ För ett arbetsflöde med sex steg och fyra steg:
 
 ### Arbetsflöden och Forms {#workflows-and-forms}
 
-Vanligtvis används arbetsflöden för att bearbeta formulärinskickade formulär i AEM. Det kan vara med [kärnkomponenterna från komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html) som är tillgängliga i en AEM eller med [AEM Forms-lösningen](/help/forms/using/aem-forms-workflow.md).
+Vanligtvis används arbetsflöden för att bearbeta formulärinskickade formulär i AEM. Det kan vara med [kärnkomponenterna från komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/forms/form-container.html?lang=sv-SE) som är tillgängliga i en AEM eller med [AEM Forms-lösningen](/help/forms/using/aem-forms-workflow.md).
 
 När du skapar ett formulär kan du enkelt koppla formuläröverföringen till en arbetsflödesmodell. Du kan till exempel lagra innehållet på en viss plats i databasen eller meddela en användare om att formuläret skickas och dess innehåll.
 

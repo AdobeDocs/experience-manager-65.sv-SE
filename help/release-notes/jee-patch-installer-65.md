@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[Kontakta support](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) om du vill ha mer information eller vill hämta korrigeringen.
+>[Kontakta support](https://experienceleague.adobe.com/sv?support-solution=General&amp;support-tab=home#support) om du vill ha mer information eller vill hämta korrigeringen.
 
 ## Om patch-installationsprogrammet {#about-the-patch-installer}
 
@@ -97,4 +97,4 @@ Om du har konfigurerat SAML-autentisering och har problem med stora IDP-metadata
 * Dokumentsäkerhet
 * Foundation JEE
 
-[Kontakta support](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)
+[Kontakta support](https://experienceleague.adobe.com/sv?support-solution=General&amp;support-tab=home#support)

@@ -28,9 +28,9 @@ Som en del av integrationsprocessen konfigurerar du arbetsflödet **DAM Update A
 
 >[!NOTE]
 >
->Du kan generera mallar för InDesign från InDesigner innan du importerar dem till AEM Assets. Mer information finns i [Arbeta med filer och mallar](https://helpx.adobe.com/indesign/using/files-templates.html).
+>Du kan generera mallar för InDesign från InDesigner innan du importerar dem till AEM Assets. Mer information finns i [Arbeta med filer och mallar](https://helpx.adobe.com/se/indesign/using/files-templates.html).
 >
->Du kan mappa elementen i InDesignens mallar till XML-märkord. De mappade taggarna visas som egenskaper när du mappar produktegenskaper med mallegenskaper i Catalog Producer. Mer information om XML-taggning i textfiler finns i [Tagga innehåll för XML](https://helpx.adobe.com/indesign/using/tagging-content-xml.html).
+>Du kan mappa elementen i InDesignens mallar till XML-märkord. De mappade taggarna visas som egenskaper när du mappar produktegenskaper med mallegenskaper i Catalog Producer. Mer information om XML-taggning i textfiler finns i [Tagga innehåll för XML](https://helpx.adobe.com/se/indesign/using/tagging-content-xml.html).
 
 >[!NOTE]
 >

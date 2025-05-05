@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Om du inte använder Adobe Experience Manager (AEM) som innehållshanteringskälla kan du läsa [AEM Mobile On-demand Services-hjälpen](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>Om du inte använder Adobe Experience Manager (AEM) som innehållshanteringskälla kan du läsa [AEM Mobile On-demand Services-hjälpen](https://helpx.adobe.com/se/digital-publishing-solution/topics.html).
 
 AEM innehåller flera verktyg som gör att du kan integrera ditt innehåll i mobilprogram.
 
@@ -32,7 +32,7 @@ AEM kan betraktas som en testmiljö för att förhandsgranska appen och innehål
 
 >[!NOTE]
 >
->Mer information om preflight-appen finns i [Använda AEM Preflight-appen](https://helpx.adobe.com/digital-publishing-solution/help/preflight-app.html) i AEM Mobile On-demand Services-hjälpen.
+>Mer information om preflight-appen finns i [Använda AEM Preflight-appen](https://helpx.adobe.com/se/digital-publishing-solution/help/preflight-app.html) i AEM Mobile On-demand Services-hjälpen.
 
 ![chlimage_1-171](assets/chlimage_1-171.png)
 
@@ -104,4 +104,4 @@ Om du vill komma igång med en författares roller och ansvarsområden, se [Skap
 
 >[!NOTE]
 >
->En AEM författare ansvarar också för att ställa in tillstånd, skapa kort och layouter samt skicka push-meddelanden. Mer information om metoder för att skapa innehåll, hantera artiklar och samlingar, skapa banners, kort och layouter i AEM Mobile finns i [AEM Mobile On-Demand Portal](https://helpx.adobe.com/digital-publishing-solution/topics.html#dynamicpod_reference_2).
+>En AEM författare ansvarar också för att ställa in tillstånd, skapa kort och layouter samt skicka push-meddelanden. Mer information om metoder för att skapa innehåll, hantera artiklar och samlingar, skapa banners, kort och layouter i AEM Mobile finns i [AEM Mobile On-Demand Portal](https://helpx.adobe.com/se/digital-publishing-solution/topics.html#dynamicpod_reference_2).

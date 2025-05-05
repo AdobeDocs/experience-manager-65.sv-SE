@@ -30,9 +30,9 @@ Banderoller representerar vanligtvis grafiska kampanjlänkar.
 >
 >Läs följande resurser i onlinehjälpen om du vill veta mer om följande ämnen i AEM Mobile-program:
 >
->* [Designöverväganden](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [Designöverväganden](https://helpx.adobe.com/se/digital-publishing-solution/help/design-app.html)
 >
->* [Skapar banderoller](https://helpx.adobe.com/digital-publishing-solution/help/creating-banners.html)
+>* [Skapar banderoller](https://helpx.adobe.com/se/digital-publishing-solution/help/creating-banners.html)
 >
 
 ## Skapa en banderoll {#creating-a-banner}

@@ -52,7 +52,7 @@ ht-degree: 4%
 
 * Helt redigerbara mallar för produktinformationssidor och produktlistsidor. Nu kan författare skapa mallar och dra och släppa produktlistor och produktinformationskomponenter på dessa mallar. Förutom att lägga till andra komponenter kan författarna nu ändra layouten på mallarna också, vilket ger dem obegränsad frihet att skapa fantastiska upplevelser som kombinerar marknadsförings- och e-handelsinnehåll.
 
-* Alla författarvänliga CIF kärnkomponenter har förbättrats med stöd för [AEM Style System](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html). Exempelformat har angetts för produktlistkomponenten.
+* Alla författarvänliga CIF kärnkomponenter har förbättrats med stöd för [AEM Style System](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=sv-SE). Exempelformat har angetts för produktlistkomponenten.
 
 * Reaktionsbaserade komponenter på klientsidan för kontohantering. Den här versionen har stöd för följande funktioner: Logga in, Har du glömt lösenordet och Skapa ett konto.
 

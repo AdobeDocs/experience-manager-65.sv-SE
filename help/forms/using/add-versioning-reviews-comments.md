@@ -23,7 +23,7 @@ Med de adaptiva kärnkomponenterna kan formulärförfattare lägga till versions
 
 ## Förutsättning {#prerequisite-versioning}
 
-Om du vill använda versionshantering, kommentarer och anteckningsfunktioner i ett adaptivt formulär kontrollerar du att [kärnkomponenterna för det adaptiva formuläret](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) är aktiverade i din AEM 6.5 Forms-miljö.
+Om du vill använda versionshantering, kommentarer och anteckningsfunktioner i ett adaptivt formulär kontrollerar du att [kärnkomponenterna för det adaptiva formuläret](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) är aktiverade i din AEM 6.5 Forms-miljö.
 
 ## Versionshantering av anpassningsbara formulär {#adaptive-form-versioning}
 

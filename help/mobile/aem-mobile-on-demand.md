@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Om du inte använder AEM som innehållshanteringskälla kan du läsa [AEM Mobile On-demand Services-hjälpen](https://helpx.adobe.com/digital-publishing-solution/topics.html).
+>Om du inte använder AEM som innehållshanteringskälla kan du läsa [AEM Mobile On-demand Services-hjälpen](https://helpx.adobe.com/se/digital-publishing-solution/topics.html).
 
 >[!NOTE]
 >

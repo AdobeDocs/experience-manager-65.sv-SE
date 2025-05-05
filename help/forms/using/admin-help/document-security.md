@@ -24,7 +24,7 @@ Dokumentsäkerheten säkerställer att bara behöriga användare kan använda di
 * Adobe PDF-filer
 * Microsoft® Word, Excel och PowerPoint
 
-Mer information om hur profiler skyddar filtyper som stöds finns i [mer dokumentsäkerhetsinformation](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-security/document-security-offerings.html?lang=en).
+Mer information om hur profiler skyddar filtyper som stöds finns i [mer dokumentsäkerhetsinformation](https://experienceleague.adobe.com/docs/experience-manager-65/forms/use-document-security/document-security-offerings.html?lang=sv-SE).
 
 Med dokumentsäkerhet kan du enkelt skapa, lagra och använda fördefinierade sekretessinställningar i dina dokument. För att förhindra att information sprids utanför räckhåll kan du också övervaka och styra hur mottagarna använder dokumenten när du har distribuerat dem.
 

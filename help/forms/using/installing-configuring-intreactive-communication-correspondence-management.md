@@ -94,10 +94,10 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
    1. Välj **[!UICONTROL Forms]** i listrutan **[!UICONTROL Solution]**.
    2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
 1. Välj det paketnamn som gäller för ditt operativsystem, välj **[!UICONTROL Accept EULA Terms]** och välj **[!UICONTROL Download]**.
-1. Öppna [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html)  och klicka för **[!UICONTROL Upload Package]** att ladda upp paketet.
+1. Öppna [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=sv-SE)  och klicka för **[!UICONTROL Upload Package]** att ladda upp paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-   Du kan också hämta paketet via direktlänken i artikeln [AEM Forms releaser](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) .
+   Du kan också hämta paketet via direktlänken i artikeln [AEM Forms releaser](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE) .
 
 1. När paketet har installerats uppmanas du att starta om AEM. **Starta inte om servern omedelbart.** Innan du stoppar AEM Forms Server väntar du tills meddelandena ServiceEvent REGISTERED och ServiceEvent UNREGISTERED slutar visas i [filen AEM-Installation-Directory]/crx-quickstart/logs/error.log och loggen är stabil.
 
@@ -144,7 +144,7 @@ Utför följande steg på alla Author- och Publish-instanser för att lägga til
 
 #### Installera kompatibilitetspaket {#install-compatibility-package}
 
-Interaktiv kommunikation är standard och rekommenderad metod för att skapa kundkommunikation i AEM 6.5 Forms. Om du har uppgraderat eller migrerat från en tidigare version och planerar att fortsätta använda bokstäver (Correspondence Management) installerar du AEMFD-kompatibilitetspaketet[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=en).
+Interaktiv kommunikation är standard och rekommenderad metod för att skapa kundkommunikation i AEM 6.5 Forms. Om du har uppgraderat eller migrerat från en tidigare version och planerar att fortsätta använda bokstäver (Correspondence Management) installerar du AEMFD-kompatibilitetspaketet[&#128279;](https://experienceleague.adobe.com/docs/experience-manager-65/forms/upgrade-aem-forms/aem-forms-osgi-upgrade/compatibility-package.html?lang=sv-SE).
 
 Med AEMFD-kompatibilitetspaketet kan du använda följande resurser från AEM 6.4 Forms, AEM 6.3 Forms och AEM 6.2 Forms på AEM 6.5 Forms:
 
@@ -155,7 +155,7 @@ Med AEMFD-kompatibilitetspaketet kan du använda följande resurser från AEM 6.
 
 #### Konfigurera Dispatcher {#configure-dispatcher}
 
-Dispatcher är Adobe Experience Manager verktyg för cachelagring och belastningsutjämning som används med en webbserver i företagsklass. Om du använder [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en) ska du göra följande konfigurationer för AEM Forms:
+Dispatcher är Adobe Experience Manager verktyg för cachelagring och belastningsutjämning som används med en webbserver i företagsklass. Om du använder [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE) ska du göra följande konfigurationer för AEM Forms:
 
 1. Konfigurera åtkomst för AEM Forms:
 
@@ -163,7 +163,7 @@ Dispatcher är Adobe Experience Manager verktyg för cachelagring och belastning
 
    `/0025 { /type "allow" /glob "* /bin/xfaforms/submitaction*" } # to enable AEM Forms submission`
 
-   Spara och stäng filen. Mer information om filter finns i [Dispatcher-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en).
+   Spara och stäng filen. Mer information om filter finns i [Dispatcher-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE).
 
 1. Konfigurera tjänsten för refererarfilter:
 

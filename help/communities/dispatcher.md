@@ -24,9 +24,9 @@ För AEM Communities måste du konfigurera Dispatcher för att se till att [comm
 
 För att ta reda på vad som är nödvändigt för din installation och webbplatsdesign
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General&amp;support-tab=home#support)
 
-Se även huvuddokumentationen för [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html).
+Se även huvuddokumentationen för [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE).
 
 ## Dispatcher Caching {#dispatcher-caching}
 
@@ -42,7 +42,7 @@ Om inställningen är aktiverad för Dispatcher-cachning läggs ett TTL-baserat 
 
 ### Krav {#requirements}
 
-* Dispatcher version 4.1.2 eller senare (se [Installera Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html) för den senaste versionen)
+* Dispatcher version 4.1.2 eller senare (se [Installera Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html?lang=sv-SE) för den senaste versionen)
 * [ACS AEM Commons-paket](https://adobe-consulting-services.github.io/acs-aem-commons/)
 
    * Version 3.3.2 eller senare
@@ -69,7 +69,7 @@ OSGi-konfigurationen **ACS AEM Commons - Dispatcher Cache Control Header - Max A
 
 ## Dispatcher Filters {#dispatcher-filters}
 
-Avsnittet /filter i filen `dispatcher.any` beskrivs i [Konfigurera åtkomst till innehåll - /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html).
+Avsnittet /filter i filen `dispatcher.any` beskrivs i [Konfigurera åtkomst till innehåll - /filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE).
 
 I det här avsnittet beskrivs poster som troligtvis är nödvändiga för att funktionen i Communities ska fungera korrekt.
 
@@ -79,7 +79,7 @@ I följande exempel används egenskapsnamn som sannolikt måste ändras för att
 
 Se även:
 
-* [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html)
+* [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=sv-SE)
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ Se även:
 
 >[!CAUTION]
 >
->Se [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html) för mer information om begränsningar av åtkomst med Dispatcher. Läs även [AEM Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) om du vill ha mer säkerhetsinformation om din AEM installation.
+>Se [Dispatcher Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/security-checklist.html?lang=sv-SE) för mer information om begränsningar av åtkomst med Dispatcher. Läs även [AEM Security Checklist](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=sv-SE) om du vill ha mer säkerhetsinformation om din AEM installation.
 >
 
 Följande poster ska läggas till i slutet av /filter-avsnittet, särskilt efter alla nekade poster.

@@ -31,7 +31,7 @@ Uppdatera navigeringsfältet högst upp på arbetsytan i AEM Forms.
 
    >[!NOTE]
    >
-   >Mer information finns i [WebDAV-åtkomst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en).
+   >Mer information finns i [WebDAV-åtkomst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=sv-SE).
 
 1. Referera till den nya bakgrundsbilden i /apps/ws/css/newStyle.css genom att lägga till följande format.
 

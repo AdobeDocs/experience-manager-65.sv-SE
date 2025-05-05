@@ -87,7 +87,7 @@ AEM 6.5 Communities GA innehåller Communities-paketet. Mer information om uppda
 
 Från och med AEM 6.4 levereras uppdateringar av Communities som en del av AEM Cumulative Fix Packs och Service Packs.
 
-De senaste uppdateringarna av AEM 6.5 finns i [Adobe Experience Manager 6.4 Cumulative Fix Packs and Service Packs](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates).
+De senaste uppdateringarna av AEM 6.5 finns i [Adobe Experience Manager 6.4 Cumulative Fix Packs and Service Packs](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates).
 
 ### Tidigare versioner {#version-history}
 
@@ -301,7 +301,7 @@ till exempel
 
 >[!CAUTION]
 >
->Om en annan säkerhetsfunktion redan har konfigurerats som baseras på krypteringsnycklarna kan konfigurationen skadas om du replikerar krypteringsnycklarna. [Kontakta kundtjänst](https://experienceleague.adobe.com/?support-solution=General&amp;support-tab=home#support) om du behöver hjälp.
+>Om en annan säkerhetsfunktion redan har konfigurerats som baseras på krypteringsnycklarna kan konfigurationen skadas om du replikerar krypteringsnycklarna. [Kontakta kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General&amp;support-tab=home#support) om du behöver hjälp.
 
 #### Databasreplikering {#repository-replication}
 
@@ -365,8 +365,8 @@ Var särskilt försiktig med att använda rätt servernamn, inte `localhost`, i 
 
 Om du använder Dispatcher kan du läsa:
 
-* AEM [Dispatcher](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates)-dokumentation
-* [Installerar Dispatcher](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install)
+* AEM [Dispatcher](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates)-dokumentation
+* [Installerar Dispatcher](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install)
 * [Konfigurera Dispatcher för webbgrupper](/help/communities/dispatcher.md)
 * [Kända fel](/help/communities/troubleshooting.md#dispatcher-refetch-fails)
 

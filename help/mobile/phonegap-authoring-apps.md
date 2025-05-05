@@ -104,7 +104,7 @@ Du kan också hämta enhetskällan för att bygga lokalt via PhoneGap CLI (`http
 >
 >Mer information finns i [Konfigurera Cloud Servicen för Adobe Mobile Services](/help/mobile/configure-adobe-mobile-cloud-service.md).
 
-AEM Mobile integreras med Adobe Analytics via [Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html) (AMS).
+AEM Mobile integreras med Adobe Analytics via [Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile.html?lang=sv-SE) (AMS).
 
 Kontrollcentret **Metrics Tile** visar sammanfattningsanalyser som hämtats från AMS för ditt program. Du kan gå in på kontrollpanelen för analyser genom att klicka på&quot;..&quot; längst ned till höger.
 

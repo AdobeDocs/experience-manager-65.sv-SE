@@ -87,17 +87,17 @@ Om du vill konfigurera Analytics för communityfunktioner måste du arbeta med d
 
 ## Adobe Analytics Report Suite for Video Reporting {#adobe-analytics-report-suite-for-video-reporting}
 
-Med Adobe Experience Cloud [Report Suite Manager](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html) kan Analytics-rapportsviter konfigureras så att en communitywebbplats kan aktiveras för att tillhandahålla rapporter om communityfunktioner.
+Med Adobe Experience Cloud [Report Suite Manager](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html?lang=sv-SE) kan Analytics-rapportsviter konfigureras så att en communitywebbplats kan aktiveras för att tillhandahålla rapporter om communityfunktioner.
 
-Genom att logga in på [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) med [Företagsnamn och användarnamn](/help/communities/analytics.md#prerequisites) kan du konfigurera en ny eller befintlig rapportserie så att den har:
+Genom att logga in på [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=sv-SE) med [Företagsnamn och användarnamn](/help/communities/analytics.md#prerequisites) kan du konfigurera en ny eller befintlig rapportserie så att den har:
 
-* [11 Konverteringsvariabler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html) (eVars)
+* [11 Konverteringsvariabler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=sv-SE) (eVars)
 
    * **`evar1`** till och med **`evar11`** aktiverat
 
    * Kan återanvända (byta namn på) befintliga e-variabler eller skapa sådana som kan användas för webbgruppsfunktioner
 
-* [7 lyckade händelser](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html) (händelser)
+* [7 lyckade händelser](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html?lang=sv-SE) (händelser)
 
    * **`event1`** till och med **`event7`** aktiverat
 
@@ -107,7 +107,7 @@ Genom att logga in på [Adobe Experience Cloud](https://experienceleague.adobe.c
 
    * Kan återanvända (byta namn på) befintliga händelser eller skapa händelser som ska användas för communityfunktioner
 
-* [Videohantering](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html)
+* [Videohantering](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=sv-SE)
 
    * Videorapportkonsol
 
@@ -655,10 +655,10 @@ Exempel: **`analytics/reportConfigs/social_forum_components_hbs_topic`**
 
 ## Hantera användardata i Analytics {#manage-user-data-in-analytics}
 
-Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata. Mer information finns i [Skicka in begäran om åtkomst och borttagning](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html).
+Adobe Analytics tillhandahåller API:er som gör att du kan komma åt, exportera och ta bort användardata. Mer information finns i [Skicka in begäran om åtkomst och borttagning](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/data-governance/an-gdpr-workflow.html?lang=sv-SE).
 
 ## Resurser {#resources}
 
-* Adobe Experience Cloud: [Hjälp och referens för analyser](https://experienceleague.adobe.com/docs/analytics.html)
+* Adobe Experience Cloud: [Hjälp och referens för analyser](https://experienceleague.adobe.com/docs/analytics.html?lang=sv-SE)
 * AEM: [Integrera med Adobe Analytics](/help/sites-administering/adobeanalytics.md)
 * AEM: [Analyser med externa leverantörer](/help/sites-administering/external-providers.md)

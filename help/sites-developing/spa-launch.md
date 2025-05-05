@@ -26,7 +26,7 @@ Adobe Experience Platform Launch rekommenderas för att implementera Analytics, 
 
 ## Självstudiekurs {#tutorial}
 
-Mer information om hur du integrerar SPA med Adobe Experience Platform Launch finns i [den här kunskapsbasartikeln och självstudiekursen](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html), som vägleder dig genom Launch-konfigurationen och implementerar Experience Cloud som byggts med Angular eller React.
+Mer information om hur du integrerar SPA med Adobe Experience Platform Launch finns i [den här kunskapsbasartikeln och självstudiekursen](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/spa-editor/spa-editor-framework-feature-video-use.html?lang=sv-SE), som vägleder dig genom Launch-konfigurationen och implementerar Experience Cloud som byggts med Angular eller React.
 
 >[!NOTE]
 >

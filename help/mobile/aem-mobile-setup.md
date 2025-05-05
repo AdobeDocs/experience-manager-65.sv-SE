@@ -32,7 +32,7 @@ Följ de här stegen för att konfigurera AEM Mobile och på så sätt låta anv
 
 För att komma igång med AEM Mobile måste du:
 
-* **Begär en API-nyckel**: Om du vill komma åt API:t för behovsstyrda tjänster måste du begära en API-nyckel. Om du vill begära API-nyckeln fyller du i formuläret [PDF](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html). Skicka det ifyllda formuläret till Adobe Developer Support: [wwds@adobe.com](mailto:wwds@adobe.com)
+* **Begär en API-nyckel**: Om du vill komma åt API:t för behovsstyrda tjänster måste du begära en API-nyckel. Om du vill begära API-nyckeln fyller du i formuläret [PDF](https://helpx.adobe.com/se/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html). Skicka det ifyllda formuläret till Adobe Developer Support: [wwds@adobe.com](mailto:wwds@adobe.com)
 
 * **Generera enhets-ID och enhetstoken**: När du har fått din API-nyckel kan du generera enhets-ID och enhetstoken. Gå till `https://aex.aemmobile.adobe.com` och gör följande:
 
@@ -46,7 +46,7 @@ Om alla villkor uppfylls genereras ett enhets-ID och en enhetstoken.
 
 >[!NOTE]
 >
->Den Adobe ID som behövs ska ges åtkomst till ett AEM Mobile-projekt. Se [Kontoadministration för AEM Mobile](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) i onlinehjälpen.
+>Den Adobe ID som behövs ska ges åtkomst till ett AEM Mobile-projekt. Se [Kontoadministration för AEM Mobile](https://helpx.adobe.com/se/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) i onlinehjälpen.
 
 ## Skapa projekt för AEM Mobile {#creating-projects-for-aem-mobile}
 
@@ -56,7 +56,7 @@ Om du vill skapa ett projekt måste du logga in på On-Demand Services-portalen 
 
 >[!NOTE]
 >
->Klicka [här](https://helpx.adobe.com/digital-publishing-solution/help/creating-projects.html) om du vill veta mer om hur du skapar projekt i AEM Mobile.
+>Klicka [här](https://helpx.adobe.com/se/digital-publishing-solution/help/creating-projects.html) om du vill veta mer om hur du skapar projekt i AEM Mobile.
 
 ## Konfigurera en AEM Mobile Connector {#configuring-an-aem-mobile-connector}
 
@@ -117,7 +117,7 @@ I AEM Mobile apputveckling finns det tre olika roller:
 * Developer
 * Författare
 
-Mer information om hur du skapar roller med olika behörigheter, t.ex. för att skapa och publicera innehåll, får du om du klickar på [Skapa användarroller och bevilja åtkomst](https://helpx.adobe.com/digital-publishing-solution/help/account-admin-dps.html) i AEM Mobile-hjälpen.
+Mer information om hur du skapar roller med olika behörigheter, t.ex. för att skapa och publicera innehåll, får du om du klickar på [Skapa användarroller och bevilja åtkomst](https://helpx.adobe.com/se/digital-publishing-solution/help/account-admin-dps.html) i AEM Mobile-hjälpen.
 
 >[!NOTE]
 >

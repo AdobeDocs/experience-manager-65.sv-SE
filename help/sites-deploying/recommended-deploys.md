@@ -190,7 +190,7 @@ En uppsättning förutsättningar och rekommendationer är tillgängliga om du �
 
 >[!NOTE]
 >
->Kontakta [Adobe kundtjänst](https://helpx.adobe.com/marketing-cloud/contact-support.html) om du har frågor om dessa riktlinjer, villkor och rekommendationer.
+>Kontakta [Adobe kundtjänst](https://helpx.adobe.com/se/marketing-cloud/contact-support.html) om du har frågor om dessa riktlinjer, villkor och rekommendationer.
 
 ### Överväganden för AEM Communities {#considerations-for-aem-communities}
 

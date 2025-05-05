@@ -30,9 +30,9 @@ Artiklar representerar den text som är baserad tillsammans med grafik för att 
 >
 >Läs följande resurser i onlinehjälpen om du vill veta mer om följande ämnen i AEM Mobile-program:
 >
->* [Designöverväganden](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html)
+>* [Designöverväganden](https://helpx.adobe.com/se/digital-publishing-solution/help/design-app.html)
 >
->* [Hantera artiklar](https://helpx.adobe.com/digital-publishing-solution/help/creating-articles.html)
+>* [Hantera artiklar](https://helpx.adobe.com/se/digital-publishing-solution/help/creating-articles.html)
 >
 
 ## Skapa en artikel {#creating-an-article}

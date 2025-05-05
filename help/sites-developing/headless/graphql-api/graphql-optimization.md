@@ -66,7 +66,7 @@ Olika metoder för cachning kan också användas för optimering.
 
 **Rekommendation**
 
-[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är den första nivån i AEM, före CDN-cache.
+[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE) är den första nivån i AEM, före CDN-cache.
 
 **Ytterligare referens**
 
@@ -84,7 +84,7 @@ GraphQL-frågor och deras JSON-svar kan cachelagras om de är riktade som `GET`-
 
 Se:
 
-* [Använder CDN i AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn)
+* [Använder CDN i AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE#using-dispatcher-with-a-cdn)
 
 #### Ange rubriker för HTTP-cachekontroll {#set-http-cache-control-headers}
 

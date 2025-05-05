@@ -20,7 +20,7 @@ Med [AEM moderniseringsverktyg](https://opensource.adobe.com/aem-modernize-tools
 
 * [Statiska mallar](page-templates-static.md) till [redigerbara mallar](page-templates-editable.md)
 * [Designkonfigurationer](page-templates-static.md) till [profiler](page-templates-editable.md)
-* [Foundation Components](/help/sites-authoring/default-components-foundation.md) to [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [Foundation Components](/help/sites-authoring/default-components-foundation.md) to [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE)
 * [Klassiskt gränssnitt](website.md) till [Touchaktiverat gränssnitt](touch-ui-concepts.md)
 
 Mer information om hur dessa verktyg används finns i [dokumentationen för dem](https://opensource.adobe.com/aem-modernize-tools/).

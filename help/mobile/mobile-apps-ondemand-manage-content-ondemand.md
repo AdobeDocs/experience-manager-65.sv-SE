@@ -34,7 +34,7 @@ Om du tänker på en nättidskrift innehåller huvudinnehållet artiklar, annons
 
 >[!NOTE]
 >
->Mer information om designöverväganden för AEM Mobile-program finns i [Designöverväganden för AEM Mobile-program](https://helpx.adobe.com/digital-publishing-solution/help/design-app.html) i onlinehjälpen.
+>Mer information om designöverväganden för AEM Mobile-program finns i [Designöverväganden för AEM Mobile-program](https://helpx.adobe.com/se/digital-publishing-solution/help/design-app.html) i onlinehjälpen.
 
 ## Skapa och hantera innehåll {#creating-and-managing-content}
 

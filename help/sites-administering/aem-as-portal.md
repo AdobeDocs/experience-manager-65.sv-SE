@@ -46,7 +46,7 @@ Information om hur du konfigurerar AEM innehåll så att det visas i en portal f
 
 >[!CAUTION]
 >
->Den AEM Director-portalen är borttagen från och med AEM 6.4. Se [Inaktuella och borttagna funktioner](https://helpx.adobe.com/experience-manager/6-4/release-notes/deprecated-removed-features.html).
+>Den AEM Director-portalen är borttagen från och med AEM 6.4. Se [Inaktuella och borttagna funktioner](https://helpx.adobe.com/se/experience-manager/6-4/release-notes/deprecated-removed-features.html).
 
 ## Administrera AEM Content Portlet {#administering-the-aem-content-portlet}
 

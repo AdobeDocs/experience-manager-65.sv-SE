@@ -34,7 +34,7 @@ Du kan också tillhandahålla en bildfil som du kan använda som programminiatyr
 Det finns ytterligare flikar (och valfria) för att bygga molntjänster och integrera SDK-pluginmodulen för Adobe Mobile Services i appen.
 
 * Bygg: Klicka på Hantera konfigurationer och konfigurera build.phonegap.com här. I listrutan kan du sedan välja den nya molntjänsten PhoneGap build.
-* Analys: Klicka på Hantera konfigurationer och konfigurera molntjänsten [Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html). I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.
+* Analys: Klicka på Hantera konfigurationer och konfigurera molntjänsten [Adobe Mobile Services SDK](https://experienceleague.adobe.com/docs/mobile-services/using/home.html?lang=sv-SE). I listrutan kan du sedan välja den nya mobiltjänsten som ska integreras i din mobilapp.
 
 ## Använda appmallar {#using-app-templates}
 

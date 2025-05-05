@@ -29,7 +29,7 @@ Om du vill anpassa bilderna som används i vägåtgärder utför du stegen som b
 
    >[!NOTE]
    >
-   >Mer information finns i [WebDAV-åtkomst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en).
+   >Mer information finns i [WebDAV-åtkomst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=sv-SE).
 
    >[!NOTE]
    >

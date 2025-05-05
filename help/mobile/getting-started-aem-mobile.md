@@ -29,7 +29,7 @@ AEM Mobile är en del av Adobe Experience Manager digitala flerkanalsplattform s
 AEM Mobile erbjuder flera metoder för att skapa appar. Du kan skapa appar på tre olika sätt:
 
 * **[Använda On Demand-tjänster med AEM](/help/mobile/getting-started-aem-mobile-on-demand.md)**
-* **[Använda On Demand-tjänster utan AEM](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)**
+* **[Använda On Demand-tjänster utan AEM](https://helpx.adobe.com/se/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html)**
 * **[Använda Adobe PhoneGap Enterprise med AEM](/help/mobile/getting-started-aem-mobile-phonegap.md)**
 
 >[!NOTE]

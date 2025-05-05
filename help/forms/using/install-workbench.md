@@ -37,11 +37,11 @@ Resurserna i den här tabellen kan hjälpa dig att lära dig mer om och komma ig
   </tr>
   <tr>
    <td><p>Allmän information om AEM Forms och hur det integreras med andra Adobe-produkter</p> </td>
-   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-aem-forms.html?lang=en">AEM Forms - översikt</a><br /> <br /> </p> </td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-aem-forms.html?lang=sv-SE">AEM Forms - översikt</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>All tillgänglig dokumentation för AEM Forms</p> </td>
-   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-aem-forms.html?lang=en">AEM Forms-dokumentation</a><br /> <br /> </p> </td>
+   <td><p><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-aem-forms.html?lang=sv-SE">AEM Forms-dokumentation</a><br /> <br /> </p> </td>
   </tr>
   <tr>
    <td><p>Lappa uppdateringar, tekniska anteckningar och ytterligare information om den här produktversionen</p> </td>
@@ -191,7 +191,7 @@ Om du vill använda Workbench måste du ha en instans av AEM Forms igång, vanli
 
 ### Konfigurera timeout-inställningar {#configuring-timeout-settings}
 
-Workbench gör som standard en timeout efter två timmar, oavsett aktivitet eller inaktivitet. Mer information om hur du redigerar timeout-inställningen finns i&quot;Konfigurera användarhantering > Konfigurera avancerade systemattribut&quot; i hjälpen för <a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html">administrationskonsolen</a>.
+Workbench gör som standard en timeout efter två timmar, oavsett aktivitet eller inaktivitet. Mer information om hur du redigerar timeout-inställningen finns i&quot;Konfigurera användarhantering > Konfigurera avancerade systemattribut&quot; i hjälpen för <a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/administrator-help/configure-user-management/configure-advanced-system-attributes.html?lang=sv-SE">administrationskonsolen</a>.
 
 ### Konfigurera Workbench för anslutning via HTTPS {#configuring-workbench-to-connect-over-HTTPS}
 

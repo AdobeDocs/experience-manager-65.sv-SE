@@ -37,13 +37,13 @@ Du kan [uppgradera](../../forms/using/upgrade.md) till den senaste versionen av 
 
 **Om det finns en uppgradering på plats**
 
-Om du har utfört en uppgradering på plats har den uppgraderade instansen redan resurserna och dokumenten. Innan du kan använda resurserna och dokumenten måste du installera [AEMFD-kompatibilitetspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) (innehåller kompatibilitetspaketet för hantering av korrespondenshantering)
+Om du har utfört en uppgradering på plats har den uppgraderade instansen redan resurserna och dokumenten. Innan du kan använda resurserna och dokumenten måste du installera [AEMFD-kompatibilitetspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE) (innehåller kompatibilitetspaketet för hantering av korrespondenshantering)
 
 Därefter måste du uppdatera resurserna och dokumenten genom att [köra migreringsverktyget](#runningmigrationutility).
 
 **Om det finns en installation på annan plats**
 
-Om det är en oavslutad (ny) installation måste du installera [AEMFD-kompatibilitetspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en) (inkluderar Correspondence Management Compatibility-paketet) innan du kan använda resurserna och dokumenten.
+Om det är en oavslutad (ny) installation måste du installera [AEMFD-kompatibilitetspaketet](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE) (inkluderar Correspondence Management Compatibility-paketet) innan du kan använda resurserna och dokumenten.
 
 Därefter måste du importera resurspaketet (zip eller cmp) till den nya konfigurationen och sedan uppdatera resurserna och dokumenten genom att [köra migreringsverktyget](#runningmigrationutility). Adobe rekommenderar att du bara skapar resurser på den nya konfigurationen efter att du har kört migreringsverktyget.
 

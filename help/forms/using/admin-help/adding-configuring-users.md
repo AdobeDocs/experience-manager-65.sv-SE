@@ -176,4 +176,4 @@ Om en användare utan de obligatoriska AEM och CQ-behörigheterna försöker log
 
 CQ har en mekanism som åsidosätter standardhanteraren 404 jsp.
 
-Mer information om hur du anpassar felhanteringssidan finns i [Anpassa sidor som visas av felhanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/customizing-errorhandler-pages.html?lang=en) i Adobe Experience Manager-dokumentationen.
+Mer information om hur du anpassar felhanteringssidan finns i [Anpassa sidor som visas av felhanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/customizing-errorhandler-pages.html?lang=sv-SE) i Adobe Experience Manager-dokumentationen.

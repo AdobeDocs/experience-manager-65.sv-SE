@@ -42,7 +42,7 @@ Med preflight-appen Mobile On-Demand kan du visa alla projekt som du har tillgå
 
 >[!NOTE]
 >
->AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Klicka [här](https://helpx.adobe.com/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) om du vill veta mer om Preflight-appen.
+>AEM Preflight-appen används för att förhandsgranska innehåll och bläddra bland sidor. Klicka [här](https://helpx.adobe.com/se/digital-publishing-solution/help/aem-mobile-end-of-life-faq.html) om du vill veta mer om Preflight-appen.
 >
 
 ### Komma i förväg {#getting-ahead}
