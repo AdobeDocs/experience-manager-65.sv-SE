@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3a934bed6d3077efa8d058cc1734fcac21a74506
+source-git-commit: bd29ae46ead836e16362ad3a9a63bb31548415ff
 workflow-type: tm+mt
-source-wordcount: '92'
+source-wordcount: '109'
 ht-degree: 0%
 
 ---
@@ -11,16 +11,16 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->SPA Editor stöds fortfarande av Adobe, men de redigerare som rekommenderas för hantering av headless-innehåll i AEM är nu:
+>SPA-redigeraren [ har tagits bort för nya projekt.](/help/sites-developing/spa-editor-deprecation.md) Det stöds fortfarande av Adobe för befintliga projekt, men bör inte användas för nya projekt. De redigerare som rekommenderas för hantering av headless-innehåll i AEM är nu:
 >
 >* [Den universella redigeraren](/help/sites-developing/universal-editor/introduction.md) för visuell redigering av headless-innehåll.
->* [Innehållsfragmentredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering av rubrikfritt innehåll.
+>* [Innehållsfragmentredigeraren](/help/sites-developing/universal-editor/introduction.md) för formulärbaserad redigering av rubrikfritt innehåll.
 
 ## Universal Editor är att föredra framför Mobile {#ue-over-mobile}
 
 >[!IMPORTANT]
 >
->Nya installationer av AEM 6.5 stöder inte AEM Mobile Apps-funktioner. De redigerare som rekommenderas för att hantera innehåll utan rubriker i AEM är nu:
+>Nya installationer av AEM 6.5 stöder inte AEM Mobile Apps-funktioner. De redigerare som rekommenderas för hantering av headless-innehåll i AEM är nu:
 >
 >* [Den universella redigeraren](/help/sites-developing/universal-editor/introduction.md) för visuell redigering av headless-innehåll.
->* [Innehållsfragmentredigeraren](/help/assets/content-fragments/content-fragments-managing.md) för formulärbaserad redigering av rubrikfritt innehåll.
+>* [Innehållsfragmentredigeraren](/help/sites-developing/universal-editor/introduction.md) för formulärbaserad redigering av rubrikfritt innehåll.
