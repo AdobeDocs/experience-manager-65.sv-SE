@@ -1,12 +1,12 @@
 ---
-title: Lägg till versioner, kommentarer och anteckningar i AEM 6.5 adaptive form.
-description: Använd AEM 6.5 adaptiva formulärkärnkomponenter för att lägga till kommentarer, anteckningar och versionshantering i ett adaptivt formulär.
+title: Lägg till versioner, kommentarer och anteckningar i ett anpassat formulär för AEM 6.5.
+description: Använd AEM 6.5 adaptive form core components för att lägga in kommentarer, anteckningar och versionskommentarer i ett adaptivt formulär.
 feature: Adaptive Forms, Core Components
 role: User, Developer, Admin
 exl-id: 91e6fca2-60ba-45f1-98c3-7b3fb1d762f5
-source-git-commit: 94a9f4087e36bfe5701ad9aafd4e8446ca643ddf
+source-git-commit: 130d900a9c268362b75ffa947606c7145a1f8c9d
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '614'
 ht-degree: 0%
 
 ---
@@ -14,16 +14,20 @@ ht-degree: 0%
 # Versionshantering, granskning och kommentering i ett adaptivt formulär
 
 <!--
-<span class="preview"> This feature is under the early adopter program. If you’re interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
+<span class="preview"> This feature is under the early adopter program. If you're interested in joining our early access program for this feature, send an email from your official address to aem-forms-ea@adobe.com to request access </span>
 -->
 
 <span class="preview">Den här funktionen är inte aktiverad som standard. Du kan skriva från din officiella adress till aem-forms-ea@adobe.com för att begära åtkomst till funktionen.</span>
 
 Med de adaptiva kärnkomponenterna kan formulärförfattare lägga till versionshantering, kommentarer och anteckningar i formulär. Dessa funktioner förenklar formulärutvecklingen genom att man kan skapa och hantera flera versioner, samarbeta genom kommentarer och lägga in kommentarer i specifika formuläravsnitt, vilket förbättrar formulärbyggandet.
 
+I den här stegvideon får du information om versionshantering, kommentarer och anteckningsfunktioner i ett adaptivt formulär.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3463265)
+
 ## Förutsättning {#prerequisite-versioning}
 
-Om du vill använda versionshantering, kommentarer och anteckningsfunktioner i ett adaptivt formulär kontrollerar du att [kärnkomponenterna för det adaptiva formuläret](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) är aktiverade i din AEM 6.5 Forms-miljö.
+Om du vill använda funktioner för versionshantering, kommentarer och anteckningar i ett adaptivt formulär kontrollerar du att [kärnkomponenterna för det adaptiva formuläret](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components) är aktiverade i din AEM 6.5 Forms-miljö.
 
 ## Versionshantering av anpassningsbara formulär {#adaptive-form-versioning}
 
