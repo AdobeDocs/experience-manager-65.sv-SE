@@ -10,9 +10,9 @@ feature: Configuring
 exl-id: d9ec7728-84f7-42c8-9c80-e59e029840da
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: eeeb31d81c22f8dace7a170953bf45a709f5ac73
 workflow-type: tm+mt
-source-wordcount: '3034'
+source-wordcount: '3051'
 ht-degree: 0%
 
 ---
@@ -212,6 +212,10 @@ Det enda dokument som innehåller båda villkoren är 200, som i exemplet nedan:
 
 När flera poster hittas sorteras de sedan efter poäng.
 
+>[!NOTE]
+>
+>Sökfunktionen som beskrivs i det här avsnittet använder Lucene-indexering, inte partiell matchning som kommandot `grep` i Linux.
+
 ### Egenskapsindexet Lucene {#the-lucene-property-index}
 
 Sedan **Oak 1.0.8** kan Lucene användas för att skapa index som innehåller egenskapsbegränsningar som inte är fulltext.
@@ -364,9 +368,9 @@ Syftet med Solr-indexet är fulltextsökning, men det kan också användas för 
 
 Integreringen i AEM sker på databasnivå så att Solr är ett av de möjliga index som kan användas i Oak, den nya databasimplementeringen som levererades med AEM.
 
-Den kan konfigureras för att fungera som en fjärrserver med AEM.
+Den kan konfigureras för att fungera som en fjärrserver med AEM-instansen.
 
-### Konfigurera AEM med en enda fjärr-Solr-server {#configuring-aem-with-a-single-remote-solr-server}
+### Konfigurera AEM med en enda fjärransluten Solr-server {#configuring-aem-with-a-single-remote-solr-server}
 
 AEM kan även konfigureras för att fungera med en fjärrserver för Solr:
 
@@ -439,14 +443,14 @@ Rekommenderade Solr-konfigurationsfiler
 
 [Hämta fil](assets/recommended-conf.zip)
 
-### AEM {#aem-indexing-tools}
+### AEM indexeringsverktyg {#aem-indexing-tools}
 
 AEM 6.1 integrerar även två indexeringsverktyg som finns i AEM 6.0 som en del av Adobe Consulting Services Commons-verktygen:
 
 1. **Förklara fråga**, ett verktyg som är utformat för att hjälpa administratörer att förstå hur frågor utförs;
 1. **Oak Index Manager**, ett webbanvändargränssnitt för att underhålla befintliga index.
 
-Nu kan du nå dem genom att gå till **Verktyg - Åtgärder - Kontrollpanel - Diagnos** från AEM välkomstskärm.
+Nu kan du nå dem genom att gå till **Verktyg - Åtgärder - Kontrollpanel - Diagnos** från välkomstskärmen i AEM.
 
 Mer information om hur du använder dem finns i [dokumentationen för kontrollpanelen för åtgärder](/help/sites-administering/operations-dashboard.md).
 
@@ -478,7 +482,7 @@ Om du vill aktivera loggning måste du aktivera **DEBUG**-nivåloggar för de ka
 * org.apache.jackrabbit.oak.query
 * com.day.cq.search
 
-Kategorin **com.day.cq.search** kan bara användas om du använder det AEM tillhandahållna QueryBuilder-verktyget.
+Kategorin **com.day.cq.search** kan bara användas om du använder verktyget QueryBuilder från AEM.
 
 >[!NOTE]
 >
