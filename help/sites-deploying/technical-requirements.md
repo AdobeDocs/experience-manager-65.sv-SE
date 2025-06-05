@@ -6,7 +6,7 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: cdd0e52c4f64080a76d67baf678a97e91ca7c711
+source-git-commit: 0dca00759fc37a2bc095a5a6e74f6b1b79f9eb76
 workflow-type: tm+mt
 source-wordcount: '3651'
 ht-degree: 0%
@@ -119,6 +119,7 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 | Lagra binärfiler i TAR-filer i filsystemet `[1]` | Binärfiler | Z: Stöds inte för produktion |
 | Amazon S3 | Binärfiler | A: Stöds |
 | Microsoft® Azure Blob Storage | Binärfiler | A: Stöds |
+| MongoDB Enterprise 7.0 | Databas | A: `[3, 4]` stöds |
 | MongoDB Enterprise 6.0 | Databas | A: `[3, 4]` stöds |
 | MongoDB Enterprise 5.0 | Databas | A: `[3, 4]` stöds |
 | MongoDB Enterprise 4.4 | Databas | A: `[2, 3, 4, 7]` stöds |
@@ -207,7 +208,7 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 | Oracle Solaris™ 11 | Z: Stöds inte |
 | IBM® AIX® 7.2 | Z: Stöds inte |
 
-1. Linux® Kernel 2.6, 3. x, 4. x, 5. x och 6. x innehåller derivat från distributionen av Red Hat®, inklusive Red Hat® Enterprise Linux®, CentOS, Oracle Linux® och Amazon Linux®. AEM Forms tilläggsfunktioner stöds endast i CentOS 7, Red Hat® Enterprise Linux® 7, Red Hat® Enterprise Linux® 8 och Red Hat® Enterprise Linux® 9.
+1. Linux® Kernel 2.6, 3. x, 4. x, 5. x och 6. x innehåller derivat från distributionen av Red Hat®, inklusive Red Hat® Enterprise Linux®, Oracle Linux® och Amazon Linux®. AEM Forms tilläggsfunktioner stöds endast i Red Hat® Enterprise Linux® 7, Red Hat® Enterprise Linux® 8 och Red Hat® Enterprise Linux® 9.
 1. AEM Forms stöds på Ubuntu 20.04 LTS.
 1. Linux®-distribution stöds av Adobe Managed Services.
 
@@ -243,7 +244,7 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 
 Adobe Experience Manager stöds när det körs i en virtuell dator i molnmiljöer. Dessa miljöer omfattar Microsoft® Azure och Amazon Web Services (AWS), som körs i enlighet med de tekniska krav som anges på den här sidan och i enlighet med Adobe standardsupportvillkor.
 
-Om du har en molnbaserad miljö kan du titta på det senaste erbjudandet från AEM produktlinje: Adobe Experience Manager as a Cloud Service. Mer information finns i [Adobe Experience Manager as a Cloud Service-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=sv-SE).
+Om du har en molnbaserad miljö kan du titta på det senaste erbjudandet från AEM produktlinje: Adobe Experience Manager as a Cloud Service. Mer information finns i [Adobe Experience Manager as a Cloud Service-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html).
 
 Adobe erbjuder även Adobe Managed Services att distribuera AEM på Azure eller AWS. Adobe Managed Services förser experterna med erfarenhet och kunskaper av att driftsätta och använda AEM i dessa molnmiljöer. Se [ytterligare dokumentation om Adobe Managed Services](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
 
@@ -253,7 +254,7 @@ Adobe rekommenderar att du arbetar direkt med molnleverantören för rekommendat
 
 ### Dispatcher Platforms (webbservrar) {#dispatcher-platforms-web-servers}
 
-Dispatcher är en komponent för cachelagring och lastbalansering. [Hämta den senaste Dispatcher-versionen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=sv-SE). Experience Manager 6.5 kräver Dispatcher version 4.3.2 eller senare.
+Dispatcher är en komponent för cachelagring och lastbalansering. [Hämta den senaste Dispatcher-versionen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html). Experience Manager 6.5 kräver Dispatcher version 4.3.2 eller senare.
 
 Följande webbservrar kan användas med Dispatcher version 4.3.2:
 
@@ -401,7 +402,7 @@ Följande maskinvarukrav gäller för både Linux® och Windows:
 
 Om du använder Dynamic Media i Linux® måste följande krav vara uppfyllda:
 
-* Red Hat® Enterprise 7 eller CentOS 7 och senare med de senaste korrigeringsfilerna
+* Red Hat® Enterprise 7 och senare med de senaste korrigeringsfilerna
 * 64-bitars operativsystem
 * Växling inaktiverad (rekommenderas)
 * SELinux är inaktiverat (se anm. nedan)
@@ -465,11 +466,11 @@ För Windows x86:
    <th><p><strong>Format som stöds för konvertering till PDF</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/se/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 Classic track</a> senaste versionen</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 Classic track</a> senaste versionen</td>
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/se/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 Classic track</a> senaste versionen (inaktuell)</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 Classic track</a> senaste versionen (inaktuell)</td>
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
   </tr>
   <tr>
@@ -517,7 +518,7 @@ För Windows x86:
 >
 >Dessutom
 >
->* PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/se/acrobat/release-note/release-notes-acrobat-reader.html) för att kunna utföra konverteringen.
+>* PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) för att kunna utföra konverteringen.
 >* PDF Generator stöder endast 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering.
 >* Installationen av Microsoft® Office Professional Plus kan använda volymlicenser baserade på Retail eller MAK/KMS/AD.
 >* Om en Microsoft® Office-installation inaktiveras eller inte licensieras av någon anledning, t.ex. en volymlicensierad installation som inte kan hitta en KMS-värd inom en angiven period, kan konverteringen misslyckas tills installationen har licensierats på nytt och återaktiverats.
@@ -525,7 +526,7 @@ För Windows x86:
 >* PDF Generator stöder inte Microsoft® Office 365.
 >* PDF Generator-konverteringar för OpenOffice stöds endast i Windows och Linux®.
 >* Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
->* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktioner. Programmatiskt få tillgång till den paketerade versionen endast med AEM Forms under AEM Forms-licensens löptid för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning enligt din distribution ([On-Premise](https://helpx.adobe.com/se/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/se/legal/product-descriptions/adobe-experience-manager-managed-services.html))
+>* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktioner. Programmatiskt få tillgång till den paketerade versionen endast med AEM Forms under AEM Forms-licensens löptid för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning enligt din distribution ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
 >* PDF Generator-tjänsten stöder inte Microsoft® Windows 10.
 >* PDF Generator kan inte konvertera filer med Microsoft® Visio 2019.
 >* PDF Generator kan inte konvertera filer med Microsoft® Project 2019.
