@@ -219,11 +219,11 @@ Förbättringar av sidinläsning för&quot;Component Live Usage&quot;. Optimerar
 
 ### [!DNL Assets]{#assets-6523}
 
-* Följande problem kan uppstå på navigeringssidan [!DNL AEM] lokalt (6.5.22.0) när du har valt ![Assets ](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets]**, navigerat till mappen **[!UICONTROL Search Adobe Stock]**och valt en stockbild:
+* Följande problem kan uppstå på navigeringssidan [!DNL AEM] lokalt (6.5.22.0) när du har valt ![Assets ](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets]**, navigerat till mappen **[!UICONTROL Search Adobe Stock]**&#x200B;och valt en stockbild:
    * Den valda stockbilden kan inte licensieras och sparas eftersom en tom listruta visas när du klickar på **[!UICONTROL License & Save]**.
    * Om du väljer Stock-bilden eller anger URL:en för Stock-sidan igen dirigeras den till hemsidan [!DNL AEM], vilket förhindrar åtkomst till Adobe Stock-bilden. (ASSETS-48687)
 * Problem vid hantering av mappar om namnet på mappen innehåller `/` i namnet på navigeringssidan [!DNL AEM] On-Premise (6.5.22.0). (ASSETS-46740)
-* På [!DNL AEM] 6.5 läses sidan med resursinformation inte in från vyn ![ Samling ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL Collections]**på grund av hög minnesanvändning. (ASSETS-46738)
+* På [!DNL AEM] 6.5 läses sidan med resursinformation inte in från vyn ![ Samling ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL Collections]**&#x200B;på grund av hög minnesanvändning. (ASSETS-46738)
 * Integrationsproblem med [!DNL InDesign] som `Day CQ DAM Mime Type OSGI`-tjänst identifierar felaktigt [!DNL InDesign]-filer som `x-adobe-indesign` i stället för `x-indesign`. (ASSETS-4953)
 * Sessionsläckan [!DNL AEM 6.5.21] spårade till det körklara **[!UICONTROL Scheduled publish to Brand Portal]**-arbetsflödessteget. (ASSETS-44104)
 * **[!UICONTROL Out of Memory (OOM)]** fel visas i [!DNL AEM] vid bearbetning och publicering av bilder. Det här problemet berodde på föråldrade metoder i arbetsflöden, som **[!DNL Dam Asset update]** och **[!DNL Dynamic Media: Reprocess assets]**. (ASSETS-4343)
