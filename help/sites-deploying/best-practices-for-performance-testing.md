@@ -73,7 +73,7 @@ Dokumentationen [Övervakningsprestanda](/help/sites-deploying/monitoring-and-ma
 
 **Utvecklarläge i Touch-gränssnittet**
 
-En av de nya funktionerna i pekgränssnittet i AEM 6 är utvecklarläget. Precis som författare kan växla mellan redigerings- och förhandsgranskningsläge kan utvecklare växla till utvecklarläget i författargränssnittet. På så sätt kan du se återgivningstiden för varje komponent på sidan och se stackspår för eventuella fel. Mer information om utvecklarläget finns i den här [CQ Gems-presentationen](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html).
+En av de nya funktionerna i pekgränssnittet i AEM 6 är utvecklarläget. Precis som författare kan växla mellan redigerings- och förhandsgranskningsläge kan utvecklare växla till utvecklarläget i författargränssnittet. På så sätt kan du se återgivningstiden för varje komponent på sidan och se stackspår för eventuella fel. Mer information om utvecklarläget finns i den här [CQ Gems-presentationen](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=sv-SE).
 
 **Använda rlog.jar för att läsa begärandeloggarna**
 
@@ -118,7 +118,7 @@ Avsnittet **ObservationQueueMaxLength** visar antalet händelser i Oak observati
 1. Placera den under mappen /crx-quickstart/install.
 
 >[!NOTE]
->Se [AEM 6.x | Tips för prestandajustering ](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)
+>Se [AEM 6.x | Tips för prestandajustering ](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=sv-SE)
 
 Standardinställningen är 10 000, men de flesta distributioner måste öka den till 20 000 eller 50 000.
 
@@ -146,7 +146,7 @@ När du har kört prestandatester på författarinstansen måste eventuella prob
 * Kontrollera om det finns fel eller varningar i felloggen. Mer information finns i [Loggning](/help/sites-deploying/configure-logging.md).
 * Övervaka systemmaskinvaruresurser som minne och CPU-användning, disk-I/O eller nätverks-I/O. Dessa resurser är ofta orsaken till flaskhalsar i prestandan.
 * Optimera sidornas arkitektur och adressering för att minimera användningen av URL-parametrar så att så mycket cache-lagring som möjligt kan användas.
-* Följ dokumentationen för [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) och [Prestandaoptimeringstips](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
+* Följ dokumentationen för [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) och [Prestandaoptimeringstips](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=sv-SE).
 
 * Om det är problem med att redigera vissa sidor eller komponenter på författarinstanser använder du TouchUI Developer Mode för att granska sidan i fråga. Då visas en beskrivning av varje innehållsområde på sidan och dess inläsningstid.
 * Minimera alla JS och CSS på webbplatsen. Se [blogginlägget](https://blogs.adobe.com/foxes/enable-js-and-css-minification/).
