@@ -9,9 +9,9 @@ role: User, Admin,Developer
 exl-id: b0ac587b-8592-4d37-9ce0-98a0859c367f
 feature: Configuration,Rulesets
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
@@ -34,36 +34,31 @@ Du kan distribuera regeluppsättningar i Dynamic Media för att omvandla URL:er.
 
 * Begär att vissa tecken ska kodas, till exempel `$`, `{` och `}`, och vissa tecken ska avkodas mot ImageServer. Facebook fungerar till exempel inte så bra med URL:er som innehåller specialtecken.
 
-  Se [Ta bort specialtecken från URL:er](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/remove-special-characters-urls.html).
-
-I Dynamic Media-sammanhang kan webbplatser som använder ett XML-baserat system för att hantera resursinformation överföra XML-filer till Dynamic Media. Du kan ange en av dessa filer som förbearbetningsregeluppsättningsfil för Dynamic Media-resurser. Den här filen omstrukturerar URL-protokollets standardformat så att det uppfyller affärslogiken i system som integreras med Dynamic Media. Du anger en XML-fil som ska fungera som sökväg till definitionsfilen för regeluppsättningen.
+När det gäller Dynamic Media kan webbplatser som använder ett XML-baserat system för att hantera resursinformation överföra XML-filer till Dynamic Media. Du kan ange en av dessa filer som förbearbetningsregeluppsättningsfil för att hantera Dynamic Media-resurser. Den här filen omstrukturerar standardformatet för URL-protokoll så att det uppfyller affärslogiken i system som integreras med Dynamic Media. Du anger en XML-fil som ska fungera som sökväg till definitionsfilen för regeluppsättningen.
 
 >[!CAUTION]
 >
->Var försiktig när du använder regeluppsättningar. De kan förhindra att Dynamic Media-innehåll visas på din webbplats.
+>Var försiktig när du använder regeluppsättningar. De kan förhindra att dynamiskt medieinnehåll visas på webbplatsen.
 
 Det finns exempellinjaler som kan hjälpa dig att skapa en egen linjaluppsättning.
-Se [Referens för regeluppsättning](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference.html?lang=sv-SE).
+Se [Referens för regeluppsättning](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/rule-set-reference/c-rule-set-reference).
 
 Precis som när du skapar alla regeluppsättningar måste du se till att XML-filen är giltig innan du överför den med ett XML-valideringsprogram som xmlvalid.
-Se även [Felsöka regeluppsättningar](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/scene7-ruleset-troubleshooting.html).
 
 Kontrollera också först att du testar regeluppsättningen i en staging-miljö som inte påverkar produktionsmiljön.
 Produktionsmiljöer och staging-miljöer kräver normalt olika inloggningar.
 
-Se [Adobe Dynamic Media Classic-datorprogrammet för inloggningsinformation](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=sv-SE#sign-in-dmc-app).
+Se [Adobe Dynamic Media Classic-datorprogrammet för inloggningsinformation](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app).
 
 <!-- OBSOLETE INFORMATION * **NA staging environment** login page: [https://s7sps1-staging.scene7.com/IpsWeb/](https://s7sps1-staging.scene7.com/IpsWeb/)
 * **EMEA staging environment** login page: [https://s7sps3-staging.scene7.com/IpsWeb/](https://s7sps3-staging.scene7.com/IpsWeb/)
 * **JAPAC staging environment** login page: [https://s7sps5-staging.scene7.com/IpsWeb/](https://s7sps5-staging.scene7.com/IpsWeb/) -->
 
-Se även [Använd resursen i stället för bilden är i en regeluppsättning](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/ruleset-asset-instead-image.html).
-
 **Så här distribuerar du XML-regeluppsättningar:**
 
-1. Logga in på ditt [Dynamic Media Classic-datorprogram](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/signing-out.html?lang=sv-SE#sign-in-dmc-app).
+1. Logga in på ditt [Dynamic Media Classic-datorprogram](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#sign-in-dmc-app).
 
-   Dina autentiseringsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
+   Dina inloggningsuppgifter och inloggningsuppgifter tillhandahölls av Adobe vid tidpunkten för etableringen. Om du inte har den här informationen kan du kontakta Adobe kundsupport.
 
 1. Överför regeluppsättningsfilen genom att göra följande:
 
@@ -80,8 +75,8 @@ Se även [Använd resursen i stället för bilden är i en regeluppsättning](ht
 1. På sidan **[!UICONTROL Image Server Publish]**, under gruppen **[!UICONTROL Catalog Management]**, letar du reda på **[!UICONTROL Rule Set Definition File Path]** och väljer sedan **[!UICONTROL Select]**.
 1. På sidan **[!UICONTROL Select Rule Set Definition File (XML)]** bläddrar du till regeluppsättningsfilen och väljer **[!UICONTROL Select]** i det nedre högra hörnet på sidan.
 1. Välj **[!UICONTROL Close]** i det nedre högra hörnet på sidan Inställningar.
-1. Kör ett Image Server Publish-jobb.
+1. Kör ett Image Server-publiceringsjobb.
 
-   Regeluppsättningsvillkoren tillämpas på begäranden till Dynamic Media Image-servrar.
+   Regeluppsättningsvillkoren tillämpas på begäranden till dynamiska mediabildsservrar.
 
    Om du ändrar regeluppsättningsfilen tillämpas ändringarna omedelbart när du överför och publicerar den uppdaterade regeluppsättningsfilen igen.

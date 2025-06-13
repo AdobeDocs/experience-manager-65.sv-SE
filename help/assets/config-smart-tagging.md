@@ -5,10 +5,10 @@ role: Admin
 feature: Tagging,Smart Tags
 exl-id: 9f68804f-ba15-4f83-ab1b-c249424b1396
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 917723f89c037756a74fef9a54df9237d4283c1d
+source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1981'
+ht-degree: 11%
 
 ---
 
@@ -32,7 +32,7 @@ Innan du använder tjänsten för smart innehåll bör du kontrollera följande:
 * [Integrera med Adobe Developer Console](#integrate-adobe-io).
 * [Logga in på tjänsten för smart innehåll](#training-the-smart-content-service).
 
-* Installera den senaste [[!DNL Experience Manager] Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=sv-SE).
+* Installera den senaste [[!DNL Experience Manager] Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates).
 
 ## SCS-uppgradering med stöd för Oauth för Adobe Managed Services {#scs-upgrade-oauth-managed-services}
 
@@ -65,13 +65,13 @@ För Service Pack 20 och äldre måste du utföra de tillfälliga åtgärderna f
 
 ## Integrera med Adobe Developer Console {#integrate-adobe-io}
 
-När du integrerar med Adobe Developer Console autentiserar servern [!DNL Experience Manager] dina tjänstinloggningsuppgifter med Adobe Developer Console gateway innan du vidarebefordrar din begäran till Smart Content Service. För att kunna integrera behöver du ett Adobe ID-konto som har administratörsbehörighet för organisationen och som har köpts och aktiverats för din organisation.
+När du integrerar med Adobe Developer Console autentiserar servern [!DNL Experience Manager] dina tjänstinloggningsuppgifter med Adobe Developer Console gateway innan du vidarebefordrar din begäran till Smart Content Service. För att kunna integrera behöver ni ett Adobe ID-konto som har administratörsbehörighet för organisationen och en licens för Smart Content Service som köpts och aktiverats för organisationen.
 
 Så här konfigurerar du tjänsten Smart Content:
 
 1. Skapa en integrering i [Adobe Developer Console](#create-adobe-io-integration).
 
-1. Skapa [IMS-konfiguration för tekniskt konto](#create-ims-account-config) med API-nyckeln och andra autentiseringsuppgifter från Adobe Developer Console.
+1. Skapa en [IMS-konfiguration för tekniskt konto](#create-ims-account-config) med API-nyckeln och andra autentiseringsuppgifter från Adobe Developer Console.
 
 1. [Konfigurera Smart Content-tjänsten](#configure-smart-content-service).
 
@@ -93,7 +93,11 @@ To configure the Smart Content Service, follow these top-level steps:
 
 ### Integrering med Adobe Developer Console {#create-adobe-io-integration}
 
-Om du vill använda API:er för smarta innehållstjänster skapar du en integrering i Adobe Developer Console för att få [!UICONTROL API Key] (som genereras i fältet [!UICONTROL CLIENT ID] för Adobe Developer Console-integrering), [!UICONTROL ORGANIZATION ID] och [!UICONTROL CLIENT SECRET] för [!UICONTROL Assets Smart Tagging Service Settings] av molnkonfigurationen i [!DNL Experience Manager].
+Om du vill använda API:er för smarta innehållstjänster skapar du en integrering i Adobe Developer Console för att få följande:
+
+* [!UICONTROL API KEY] (genereras i fältet [!UICONTROL CLIENT ID] för Adobe Developer Console-integrering),
+* [!UICONTROL ORGANIZATION ID],
+* och [!UICONTROL CLIENT SECRET], för [!UICONTROL Assets Smart Tagging Service Settings] av molnkonfigurationen i [!DNL Experience Manager].
 
 1. Gå till [https://developer.adobe.com](https://developer.adobe.com/) i en webbläsare. Välj rätt konto och verifiera att den associerade organisationsrollen är system **administrator**.
 
@@ -104,17 +108,12 @@ Om du vill använda API:er för smarta innehållstjänster skapar du en integrer
 1. Välj **[!UICONTROL OAuth Server-to-Server]**. Klicka på **[!UICONTROL Next]**.
 Mer information om hur du gör den här konfigurationen finns i Developer Console-dokumentationen, beroende på dina krav:
 
-   * Översikt
-      * [Server till server-autentisering](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/)
-
-   * Skapa en ny OAuth-autentiseringsuppgift:
-      * [Implementeringshandbok för autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-
-   * Migrera en befintlig JWT-autentiseringsuppgift till en OAuth-autentiseringsuppgift:
-      * [Migrerar från JWT-autentiseringsuppgifter (Service Account) till autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+   * En översikt finns i *Server-till-server-autentisering* på developer.adobe.com.
+   * Om du vill skapa en ny OAuth-autentiseringsuppgift läser du *Implementeringsguiden för OAuth Server-to-Server-autentiseringsuppgifter* på developer.adobe.com.
+   * Information om hur du migrerar en befintlig JWT-autentiseringsuppgift till en OAuth-autentiseringsuppgift finns i *Migrera från JWT-autentiseringsuppgifter (Service Account) till OAuth Server-to-Server-autentiseringsuppgifter* på developer.adobe.com.
 
 
-1. Välj **[!UICONTROL Smart Content Services]** på sidan **[!UICONTROL Select product profiles]**. Klicka på **[!UICONTROL Save configured API]**.
+1. Välj **[!UICONTROL Smart Content Services]** på sidan **[!UICONTROL Select product profiles]** och klicka sedan på alternativet **[!UICONTROL Save configured API]**.
 
    En sida visar mer information om konfigurationen. Håll den här sidan öppen för att kopiera och lägga till dessa värden i [!UICONTROL Assets Smart Tagging Service Settings] av molnkonfigurationen i [!DNL Experience Manager] för att konfigurera smarta taggar.
 
@@ -122,7 +121,7 @@ Mer information om hur du gör den här konfigurationen finns i Developer Consol
 
 ### Skapa konfiguration av tekniskt IMS-konto {#create-ims-account-config}
 
-Du måste skapa en teknisk kontokonfiguration för IMS enligt stegen nedan:
+Du måste skapa en konfiguration för ett IMS-konto enligt stegen nedan:
 
 1. I användargränssnittet för [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**.
 
@@ -152,7 +151,7 @@ Du måste skapa en teknisk kontokonfiguration för IMS enligt stegen nedan:
 >[!CAUTION]
 >
 >Previously, configurations that were made with JWT Credentials are now subject to deprecation in the Adobe Developer Console. You cannot create new JWT credentials after June 3, 2024. Such configurations can no longer be created or updated, but can be migrated to OAuth configurations.
-> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
 >See [Steps to configure OAuth for on-premise users](#config-oauth-onprem)
 > See [Troubleshooting smart tags for OAuth credentials](#config-smart-tagging.md)
 -->
@@ -170,12 +169,12 @@ Om du vill konfigurera integreringen använder du värdena för fälten [!UICONT
    | Fält | Beskrivning |
    | -------- | ---------------------------- |
    | Titel | Lägg till namnet på det konfigurerande IMS-kontot. |
-   | Associerad Adobe IMS-konfiguration | Välj konfiguration i listrutan. |
+   | Associerad Adobe IMS-konfiguration | Välj en konfiguration i listrutan. |
    | Tjänst-URL | `https://smartcontent.adobe.io/<region where your Experience Manager author instance is hosted>`. Exempel: `https://smartcontent.adobe.io/apac`. Du kan ange `na`, `emea` eller `apac` som de områden där din Experience Manager-författarinstans finns. |
 
    >[!NOTE]
    >
-   >Om den hanterade tjänsten i Experience Manager etableras före den 1 september 2022 använder du följande tjänst-URL:
+   >Om Experience Manager hanterade tjänst etableras före 1 september 2022 använder du följande tjänst-URL:
    >`https://mc.adobe.io/marketingcloud/smartcontent`
 
 1. Klicka på **[!UICONTROL Save & Close]**.
@@ -292,7 +291,7 @@ To use Smart Content Service APIs, create an integration in Adobe Developer Cons
 >[!CAUTION]
 >
 >Previously, configurations that were made with JWT Credentials are now subject to deprecation in the Adobe Developer Console. You cannot create new JWT credentials after June 3, 2024. Such configurations can no longer be created or updated, but can be migrated to OAuth configurations.
-> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
+> See [Setting up IMS integrations for AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service)
 >See [Steps to configure OAuth for on-premise users](#config-oauth-onprem)
 > See [Troubleshooting smart tags for OAuth credentials](#config-smart-tagging.md)
 
@@ -367,7 +366,7 @@ The validation results are displayed in the same dialog.
 
 1. Klicka på **[!UICONTROL Edit]** i verktygsfältet.
 
-1. Expandera sidopanelen för att visa stegen. Dra steget **[!UICONTROL Smart Tag Asset]** som finns i avsnittet med DAM-arbetsflöden och placera det efter steget **[!UICONTROL Process Thumbnails]**.
+1. Expandera sidopanelen för att visa stegen. Dra det **[!UICONTROL Smart Tag Asset]**-steg som är tillgängligt i DAM-arbetsflödesavsnittet och placera det efter **[!UICONTROL Process Thumbnails]**-steget.
 
    ![Lägg till resurssteget för smarta taggar efter steget med processminiatyrer i arbetsflödet för DAM-uppdatering av resurser](assets/smart-tag-in-dam-update-asset-workflow.png)
 
@@ -387,7 +386,7 @@ The validation results are displayed in the same dialog.
 
 ## Utbilda tjänsten Smart Content {#training-the-smart-content-service}
 
-För att Smart Content Service ska känna igen din företagsklonomi kan du köra den på en uppsättning resurser som redan innehåller taggar som är relevanta för ditt företag. För att effektivt märka upp varumärkesbilderna kräver Smart Content Service att utbildningsbilderna följer vissa riktlinjer. Efter utbildning kan tjänsten tillämpa samma taxonomi på en liknande uppsättning resurser.
+För att Smart Content Service ska känna igen din företagsklonomi kan du köra den på en uppsättning resurser som redan innehåller taggar som är relevanta för ditt företag. För att tagga dina varumärkesbilder effektivt krävs att utbildningsbilderna följer vissa riktlinjer. Efter utbildning kan tjänsten tillämpa samma taxonomi på en liknande uppsättning resurser.
 
 Du kan utbilda tjänsten flera gånger för att förbättra dess förmåga att använda relevanta taggar. Efter varje utbildningscykel kör du ett taggningsarbetsflöde och kontrollerar om dina resurser är taggade på rätt sätt.
 
@@ -409,7 +408,7 @@ Det är till exempel ingen bra idé att tagga alla dessa bilder som `my-party` (
 
 ![Illustrativa bilder som exempel på riktlinjer för utbildning](/help/assets/assets/do-not-localize/coherence.png)
 
-**Täckning**: Använd tillräcklig variation i bilderna i kursen. Tanken är att ge några men relativt olika exempel så att Experience Manager lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
+**Täckning**: Använd tillräcklig variation i bilderna i kursen. Tanken är att ge några exempel som är ganska olika, men som ändå är ganska olika, så att Experience Manager lär sig att fokusera på rätt saker. Om du använder samma tagg på bilder som ser olika ut bör du ta med minst fem exempel av varje typ.
 
 För taggen *model-down-pose* kan du t.ex. inkludera fler utbildningsbilder som liknar den markerade bilden nedan så att tjänsten kan identifiera liknande bilder mer exakt under taggningen.
 
@@ -441,7 +440,7 @@ När det här alternativet har valts för en mapp kör [!DNL Experience Manager]
 
 Du kan utbilda tjänsten för smart innehåll när det behövs från arbetsflödeskonsolen.
 
-1. I gränssnittet [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
+1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]** i gränssnittet [!DNL Experience Manager].
 1. Välj arbetsflödet **[!UICONTROL Smart Tags Training]** på sidan **[!UICONTROL Workflow Models]** och klicka sedan på **[!UICONTROL Start Workflow]** i verktygsfältet.
 1. I dialogrutan **[!UICONTROL Run Workflow]** bläddrar du till nyttolastmappen som innehåller de taggade resurserna för att utbilda tjänsten.
 1. Ange en rubrik för arbetsflödet och lägg till en kommentar. Klicka sedan på **[!UICONTROL Run]**. Resurserna och taggarna skickas in för utbildning.
@@ -456,7 +455,7 @@ Du kan utbilda tjänsten för smart innehåll när det behövs från arbetsflöd
 
 Om du vill kontrollera om Smart Content Service är utbildad i dina taggar i övningsresurserna kan du läsa rapporten om utbildningsarbetsflödet i rapportkonsolen.
 
-1. I gränssnittet [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]**.
+1. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Assets]** > **[!UICONTROL Reports]** i gränssnittet [!DNL Experience Manager].
 1. Klicka på **[!UICONTROL Create]** på sidan **[!UICONTROL Asset Reports]**.
 1. Välj rapporten **[!UICONTROL Smart Tags Training]** och klicka sedan på **[!UICONTROL Next]** i verktygsfältet.
 1. Ange en titel och beskrivning för rapporten. Under **[!UICONTROL Schedule Report]** låter du alternativet **[!UICONTROL Now]** vara markerat. Om du vill schemalägga rapporten till ett senare tillfälle väljer du **[!UICONTROL Later]** och anger ett datum och en tid. Klicka sedan på **[!UICONTROL Create]** i verktygsfältet.
@@ -483,4 +482,4 @@ Om du vill kontrollera om Smart Content Service är utbildad i dina taggar i öv
 >
 >* [Översikt och utbildning av smarta taggar](enhanced-smart-tags.md)
 >* [Felsökning av smarta taggar för OAuth-autentiseringsuppgifter](config-oauth.md)
->* [Videosjälvstudiekurs om smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=sv-SE)
+>* [Videosjälvstudiekurs om smarta taggar](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/metadata/image-smart-tags)

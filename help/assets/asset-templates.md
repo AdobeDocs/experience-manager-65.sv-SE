@@ -6,9 +6,9 @@ role: User
 feature: Asset Management,Developer Tools
 exl-id: 12c92aad-3a1d-486e-a830-31de2fc6d07b
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1517'
 ht-degree: 2%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 2%
 
 Resursmallar är en speciell typ av material som gör det enkelt att snabbt återanvända grafiskt avancerat innehåll för digitala medier och trycksaker. En resursmall består av två delar, avsnittet med fasta meddelanden och det redigerbara avsnittet. Avsnittet med fasta meddelanden kan innehålla eget innehåll, t.ex. varumärkeslogotyp och copyrightinformation som har inaktiverats för redigering. Det redigerbara avsnittet kan innehålla visuellt och textbaserat innehåll i fält som kan redigeras för att anpassa meddelanden.
 
-Flexibiliteten att göra begränsade redigeringar samtidigt som du skyddar globala skyltar gör resursmallarna till idealiska byggstenar för snabb innehållsanpassning och distribution som innehållsartefakter för olika funktioner. Återanvändning av innehåll minskar kostnaderna för att hantera tryckta och digitala kanaler och leverera en helhetsbild och enhetliga upplevelser i alla dessa kanaler.
+Med tillgångsmallar kan du göra begränsade redigeringar samtidigt som du skyddar globala signaturer. Detta gör dem till idealiska byggstenar för att snabbt anpassa och distribuera innehåll för olika funktioner. Återanvändning av innehåll minskar kostnaderna för att hantera tryckta och digitala kanaler och leverera en helhetsbild och enhetliga upplevelser i alla dessa kanaler.
 
-Som marknadsförare kan du lagra och hantera mallar i [!DNL Experience Manager Assets] och använda en enda basmall för att enkelt skapa flera personaliserade utskriftsupplevelser. Ni kan skapa olika typer av marknadsföringsmaterial, som broschyrer, flygblad, vykort, visitkort och så vidare, för att på ett enkelt sätt förmedla ert marknadsföringsbudskap till kunderna. Du kan också montera flersidiga utskrifter från befintliga eller nya utskrifter. Framför allt kan ni enkelt leverera både digitala och tryckta upplevelser samtidigt för att skapa en enhetlig, integrerad upplevelse för användarna.
+Som marknadsförare kan du lagra och hantera mallar i [!DNL Experience Manager Assets] och använda en enda basmall för att enkelt skapa flera personaliserade utskriftsupplevelser. Ni kan skapa olika typer av marknadsföringsmaterial, som broschyrer, flygblad, vykort, visitkort och så vidare, för att förmedla ert marknadsföringsbudskap enkelt till kunderna. Du kan också montera flersidiga utskrifter från befintliga eller nya utskrifter. Framför allt kan ni enkelt leverera både digitala och tryckta upplevelser samtidigt för att skapa en enhetlig, integrerad upplevelse för användarna.
 
 Resursmallar är till största delen [!DNL Adobe InDesign] filer, men kunskaper i [!DNL Adobe InDesign] är inte ett hinder för att skapa stelära artefakter. Du behöver inte mappa fälten i mallen [!DNL Adobe InDesign] till de produktfält som du annars behöver när du skapar kataloger. Du kan redigera mallarna i WYSIWYG-läge direkt i webbgränssnittet. För att [!DNL Adobe InDesign] ska kunna bearbeta dina redigeringsändringar måste du först konfigurera [!DNL Experience Manager Assets] så att den integreras med [!DNL Adobe InDesign Server].
 
-Möjligheten att redigera [!DNL Adobe InDesign]-mallar från webbgränssnittet bidrar till att förbättra samarbetet mellan kreatörer och marknadsförare. Den ökade innehållshastigheten minskar time-to-market för marknadsföringsmaterial.
+Möjligheten att redigera [!DNL Adobe InDesign]-mallar från webbgränssnittet bidrar till ett bättre samarbete mellan kreatörer och marknadsförare. Den ökade innehållshastigheten minskar time-to-market för marknadsföringsmaterial.
 
 Du kan göra följande med resursmallar:
 
@@ -67,7 +67,7 @@ Tänk dig ett scenario där du vill skapa digital tryckbar information som brosc
 
 ## Redigera en bit {#editing-a-collateral}
 
-Du kan redigera en del direkt när du har skapat den. Du kan även öppna den från sidan [!UICONTROL Templates] eller resursen.
+Du kan redigera en del direkt när du har skapat den. Du kan också öppna den från sidan [!UICONTROL Templates] eller från sidan Resurser.
 
 1. Gör något av följande om du vill öppna materialet för redigering:
 
@@ -90,7 +90,7 @@ Du kan redigera en del direkt när du har skapat den. Du kan även öppna den fr
 
    >[!NOTE]
    >
-   >Kontrollera att din [!DNL Experience Manager]-distribution är integrerad med en [!DNL InDesign Server] så att [!DNL Experience Manager Assets] kan extrahera data från [!DNL InDesign]-mallen och göra den tillgänglig för redigering. Mer information finns i [Integrera Experience Manager Assets med InDesign Server](/help/assets/indesign.md).
+   >Integrera din [!DNL Experience Manager]-distribution med en [!DNL InDesign Server] så att [!DNL Experience Manager Assets] kan extrahera data från [!DNL InDesign]-mallen och göra den tillgänglig för redigering. Mer information finns i [Integrera Experience Manager Assets med InDesign Server](/help/assets/indesign.md).
 
 1. Om du vill ändra texten i ett redigerbart fält klickar du på textfältet i listan med redigerbara fält och redigerar texten i fältet.
 
@@ -124,17 +124,16 @@ Du kan redigera en del direkt när du har skapat den. Du kan även öppna den fr
    >
    >Så här aktiverar du [!DNL Experience Manager] för att lösa bilder:
    >
-   >* Bädda in bilder när du skapar [!DNL InDesign]-mallar (se [Om länkar och inbäddade bilder](https://helpx.adobe.com/se/indesign/using/graphics-links.html)).
-   >* Montera [!DNL Experience Manager] i det lokala filsystemet och mappa sedan saknade ikoner med befintliga resurser i [!DNL Experience Manager].
+   >* Bädda in bilder när du skapar [!DNL InDesign]-mallar (se [Om länkar och inbäddade bilder](https://helpx.adobe.com/indesign/using/graphics-links.html)).
+   >* Montera [!DNL Experience Manager] i det lokala filsystemet och mappa sedan de saknade ikonerna med befintliga resurser i [!DNL Experience Manager].
    >
-   >Mer information om hur du arbetar med [!DNL InDesign]-dokument finns i [Bästa tillvägagångssätt för att arbeta med InDesign-dokument i Experience Manager](https://helpx.adobe.com/experience-manager/kb/best-practices-idd-docs-aem.html).
 
 1. Om du vill skapa en PDF-återgivning för broschyren väljer du alternativet Acrobat i dialogrutan och klickar sedan på **[!UICONTROL Continue]**.
 1. Den sammansatta delen skapas i den mapp som du började med. Om du vill visa återgivningarna öppnar du materialet och väljer **[!UICONTROL Renditions]** i listan GlobalNav.
 
    ![chlimage_1-118](assets/chlimage_1-323.png)
 
-1. Markera återgivningen PDF i listan över återgivningar så att du kan hämta PDF-filen. Öppna PDF-filen för att granska materialet.
+1. Markera PDF-återgivningen i listan över återgivningar så att du kan hämta PDF-filen. Öppna PDF-filen för att granska materialet.
 
    ![chlimage_1-119](assets/chlimage_1-324.png)
 

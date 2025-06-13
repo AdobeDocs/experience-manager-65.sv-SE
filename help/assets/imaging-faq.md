@@ -9,9 +9,9 @@ feature: Asset Management,Renditions
 role: User, Admin
 exl-id: e427d4ee-d5c8-421b-9739-f3cf2de36e41
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 7fb3ec9654b56605321f0d12a4c1e23d2e18dab9
+source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
 workflow-type: tm+mt
-source-wordcount: '3285'
+source-wordcount: '3263'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,15 @@ Och nu får du en bättre Google Core Web Vital-poäng för LCP (Störst Content
 
 >[!TIP]
 >
->Prova och upptäck fördelarna med Dynamic Media bildmodifierare och Smart Imaging med Dynamic Media [_Snapshot_](https://snapshot.scene7.com/).
+>Testa och upptäck fördelarna med dynamiska mediefärgmodifieringar och smart bildbehandling med Dynamic Media [_Snapshot_](https://snapshot.scene7.com/).
 >
->Ögonblicksbild är ett visuellt demonstrationsverktyg som är utformat för att illustrera styrkan hos Dynamic Media för optimerad och dynamisk bildleverans. Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare i Dynamic Media visuellt samt optimering av smarta bilder för följande:
+>Ögonblicksbild är ett visuellt demonstrationsverktyg som är utformat för att illustrera kraften i Dynamic Media för optimerad och dynamisk bildleverans. Experimentera med testbilder eller dynamiska medie-URL:er för att se utdata från olika dynamiska mediabildmodifierare visuellt och optimera smart bildhantering för följande:
 >
 >* Filstorlek (med WebP- och AVIF-leverans)
 >* Nätverksbandbredd
 >* DPR (Device Pixel Ratio)
 >
->Om du vill lära dig hur enkelt det är att använda ögonblicksbild kan du spela upp utbildningsvideon [för ögonblicksbild](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot) (3 minuter och 17 sekunder).
+>Om du vill lära dig hur enkelt det är att använda ögonblicksbild kan du spela upp utbildningsvideon [för ögonblicksbild](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot) (3 minuter och 17 sekunder).
 
 Smart Imaging drar nytta av den ökade prestandaförbättringen genom att vara helt integrerad med Adobe förstklassiga CDN-tjänst (Content Delivery Network). Den här tjänsten hittar den optimala Internet-vägen mellan servrar, nätverk och peering-punkter. Här hittas en väg som har lägst latens och lägst paketförlustfrekvens i stället för att använda standardvägen på Internet.
 
@@ -48,16 +48,16 @@ I följande exempel på bildobjekt visas den nya optimeringen av smarta bilder:
 
 | Bild (URL) | Miniatyrbild | Storlek (JPEG) | Storlek (WebP) med smart bildbehandling | Storlek (AVIF) med smart bildbehandling | % minskning med WebP | % minskning med AVIF |
 |---|---|---|---|---|---|---|
-| [Bild 1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![bild1](/help/assets/assets-dm/picture1.png) | 145 kB | 106 kB | 90,2 kB | 26,89 % | 37,79 % |
-| [Bild 2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![bild2](/help/assets/assets-dm/picture2.png) | 412 kB | 346 kB | 113 kB | 16,01 % | 72,57 % |
-| [Bild 3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&amp;fmt=jpg&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![bild3](/help/assets/assets-dm/picture3.png) | 221 kB | 189 kB | 87,1 kB | 14,47 % | 60,58 % |
-| [Bild 4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&amp;qlt=85&amp;resmode=bisharp&amp;op_usm=5,0.125,5,0) | ![bild4](/help/assets/assets-dm/picture4.png) | 594 kB | 545 kB | 286 kB | 8,25 % | 51,85 % |
+| [Bild 1](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_6?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![bild1](/help/assets/assets-dm/picture1.png) | 145 kB | 106 kB | 90,2 kB | 26,89 % | 37,79 % |
+| [Bild 2](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_3?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![bild2](/help/assets/assets-dm/picture2.png) | 412 kB | 346 kB | 113 kB | 16,01 % | 72,57 % |
+| [Bild 3](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_2?hei=500&fmt=jpg&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![bild3](/help/assets/assets-dm/picture3.png) | 221 kB | 189 kB | 87,1 kB | 14,47 % | 60,58 % |
+| [Bild 4](https://techsupport.scene7.com/is/image/TechSupport/SmartImaging_1?hei=500&qlt=85&resmode=bisharp&op_usm=5,0.125,5,0) | ![bild4](/help/assets/assets-dm/picture4.png) | 594 kB | 545 kB | 286 kB | 8,25 % | 51,85 % |
 
-På samma sätt som ovanstående utförde Adobe också ett test med en större exempeluppsättning. Formatet AVIF gav 20 % extra storleksminskning jämfört med WebP, vilket gav en 27-procentig minskning jämfört med JPEG. Allt med samma visuella kvalitet. Totalt ger AVIF upp till 41 % genomsnittlig storleksminskning jämfört med JPEG.
+På samma sätt som ovanstående har Adobe även kört ett test med en större exempeluppsättning. Formatet AVIF gav 20 % extra storleksminskning jämfört med WebP, vilket gav en 27-procentig minskning jämfört med JPEG. Allt med samma visuella kvalitet. Totalt ger AVIF upp till 41 % genomsnittlig storleksminskning jämfört med JPEG.
 
-Jämför WebP och AVIF med PNG, du kan se en storleksminskning på 84 % med WebP och 87 % med AVIF. Och eftersom både WebP- och AVIF-format har stöd för genomskinlighet och flera bildanimeringar är det en bra ersättning för genomskinliga PNG- och GIF-filer.
+Jämför WebP och AVIF med PNG, du kan se en storleksminskning på 84 % med WebP och 87 % med AVIF. Och eftersom både WebP- och AVIF-formaten har stöd för genomskinlighet och flera bildanimeringar är det en bra ersättning för genomskinliga PNG- och GIF-filer.
 
-Se även [Bildoptimering med Next-gen Image Formats (WebP och AVIF)](https://blog.developer.adobe.com/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
+Se även [Bildoptimering med Next-gen Image Formats (WebP och AVIF)](https://medium.com/adobetech/image-optimisation-with-next-gen-image-formats-webp-and-avif-248c75afacc4)
 
 <!-- HIDDEN ON MAY 19, 2022 BASED ON CQDOC-19280 On the mobile web, the challenges are compounded by two factors:
 
@@ -84,11 +84,11 @@ De nyaste fördelarna med den senaste Smart Imaging är följande:
 
 ### Om konvertering av webbläsarformat (bfc) {#bfc}
 
-Om du aktiverar konvertering av webbläsarformat genom att lägga till `bfc=on` till bild-URL:en konverteras JPEG och PNG automatiskt till AVIF, förstörande WebP, förstörande JPEGXR, förstörande JPEG2000 för olika webbläsare. För webbläsare som inte stöder dessa format fortsätter Smart Imaging att fungera som JPEG eller PNG. Smart bildbehandling beräknar om kvaliteten på det nya formatet tillsammans med formatändringen.
+Om du aktiverar konvertering av webbläsarformat genom att lägga till `bfc=on` till bild-URL:en konverteras automatiskt JPEG och PNG till AVIF, förstörande WebP, förstörande JPEGXR, förstörande JPEG2000 för olika webbläsare. För webbläsare som inte stöder dessa format fortsätter Smart Imaging att fungera som JPEG eller PNG. Smart bildbehandling beräknar om kvaliteten på det nya formatet tillsammans med formatändringen.
 
 Du kan inaktivera Smart Imaging genom att lägga till `bfc=off` till bildens URL.
 
-Se även [bfc](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc) i Dynamic Media Image Serving and Rendering API.
+Se även [bfc](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/r-bfc) i API:t för dynamisk mediabildsserver och återgivning.
 
 ### Om optimering av Device Pixel Ratio (dpr) {#dpr}
 
@@ -106,7 +106,7 @@ För närvarande kommer bildskärmens pixeldensitet från Akamai CDN-rubrikvärd
 >[!NOTE]
 >
 >* Du kan använda `dpr=on,dprValue` även om DPR-inställningen på företagsnivå är inaktiverad.
->* På grund av DPR-optimering identifieras alltid MaxPix-bredden när den resulterande bilden är större än Dynamic Media-inställningen MaxPix genom att bildens proportioner behålls.
+>* På grund av DPR-optimering identifieras alltid MaxPix-bredden när den resulterande bilden är större än inställningen för dynamiska medier i MaxPix genom att bildens proportioner behålls.
 
 | Begärd bildstorlek | Enhetspixelproportioner (dpr) | Levererad bildstorlek |
 |---|---|---|
@@ -134,7 +134,7 @@ DPR- och nätverksbandbreddsvärdena baseras på de värden som identifierats p�
 * Använder Adobe Sensei-teknik för konvertering enligt den kvalitet (`qlt`) som anges i bildbegäran.
 * TTL-oberoende (Time To Live). Tidigare var en minsta TTL på 12 timmar obligatorisk för att Smart Imaging skulle fungera.
 * Tidigare cachelagrades både original- och variantbilderna, och det var en tvåstegsprocess att ogiltigförklara cachen. I den senaste versionen av Smart Imaging cachelagras bara derivat, vilket möjliggör en cacheogiltigförklaring i ett enda steg.
-* Kunder som använder anpassade rubriker i sina regeluppsättningar kan dra nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte blockeras, till skillnad från den tidigare versionen av Smart Imaging. Exempel:&quot;Timing Allow Origin&quot; och&quot;X-Robot&quot; som föreslås i [Lägg till ett anpassat rubrikvärde i bildsvaren|Dynamic Media Classic](https://helpx.adobe.com/experience-manager/scene7/kb/base/scene7-rulesets/add-custom-header-val-image.html).
+* Kunder som använder anpassade rubriker i sina regeluppsättningar kan dra nytta av den senaste smarta bildhanteringen eftersom dessa rubriker inte blockeras, till skillnad från den tidigare versionen av Smart Imaging.
 
 ## Frågor och svar
 
@@ -144,7 +144,7 @@ Nej. Smart Imaging ingår i din befintliga licens. Den här regeln gäller antin
 
 >[!NOTE]
 >
->Smart Imaging är inte tillgängligt för Dynamic Media - Hybrid-kunder.
+>Smart Imaging är inte tillgängligt för kunder med Dynamic Media - Hybrid.
 
 +++
 
@@ -177,9 +177,9 @@ Följande bildformat stöds för Smart Imaging:
 * JPEG
 * PNG
 
-Med Smart Imaging räknas kvaliteten om för bildfilsformat i JPEG vid konvertering till ett nytt format.
+Med Smart Imaging beräknas kvaliteten på JPEG bildfilformat om vid konvertering till ett nytt format.
 
-För bildfilsformat som stöder genomskinlighet som PNG kan du konfigurera Smart Imaging så att AVIF och WebP blir förstörande. För konvertering av förlustgivande format använder Smart Imaging den kvalitet som anges i bildens URL, eller i annat fall den kvalitet som konfigurerats i Dynamic Media företagskonto.
+För bildfilsformat som stöder genomskinlighet som PNG kan du konfigurera Smart Imaging så att AVIF och WebP blir förstörande. För konvertering av förlustgivande format använder Smart Imaging den kvalitet som anges i bildens URL, eller i annat fall den kvalitet som konfigurerats i Dynamic Media-företagskontot.
 
 +++
 
@@ -189,7 +189,7 @@ Smart Imaging integreras smidigt med dina befintliga bildförinställningar och 
 
 De enda justeringarna är bildformatet, kvaliteten eller båda. Vid formatkonvertering bevarar Smart Imaging den fullständiga visuella återgivningen enligt dina förinställda inställningar, men ger en mindre filstorlek. Aktivera det bara genom att lägga till `bfc=on`, `dpr=on,dprValue`, `network=on` eller alla tre parameterinställningarna till dina befintliga URL:er eller förinställningar.
 
-Vi kan till exempel säga att en bildförinställning anger formatet JPEG vid 500 × 500 pixlar, med `quality=85` och `unsharp mask=0.1,1,5`. Smart Imaging identifierar om användaren använder en webbläsare i Chrome. Sedan konverteras bilden till WebP med samma dimensioner (500 × 500) och en oskarp mask som matchar JPEG inställningar. Systemet jämför sedan filstorlekarna för WebP- och JPEG-versionerna och skickar den mindre till användaren.
+Låt oss säga att en bildförinställning anger ett JPEG-format som är 500 × 500 pixlar, med `quality=85` och `unsharp mask=0.1,1,5`. Smart Imaging identifierar om användaren använder en webbläsare i Chrome. Sedan konverteras bilden till WebP med samma dimensioner (500 × 500) och en oskarp mask som matchar JPEG-inställningarna. Systemet jämför sedan filstorlekarna för WebP- och JPEG-versionerna och skickar den mindre till användaren.
 
 +++
 
@@ -217,7 +217,7 @@ Smart Imaging fungerar med bilder som levereras via HTTP eller HTTPS. Dessutom f
 
 Smart Imaging är tillgängligt direkt för alla kunder. Om du vill börja dra nytta av fördelarna lägger du bara till `bfc=on`, `dpr=on,dprValue`, `network=on` eller alla tre parameterinställningarna i dina befintliga URL:er eller förinställningar.
 
-Om du vill använda Smart Imaging måste ditt företags Dynamic Media Classic- eller Dynamic Media-konto på Experience Manager inkludera det Adobe-paketerade CDN (Content Delivery Network) som en del av licensen.
+Om du vill använda Smart Imaging måste ditt företags Dynamic Media Classic- eller Dynamic Media-konto på Experience Manager inkludera Adobe paketerade CDN (Content Delivery Network) som en del av licensen.
 
 +++
 
@@ -236,7 +236,7 @@ När du skapar ett supportärende anger du vilka smarta bildredigeringsfunktione
 
 **Så här skapar du ett supportärende för att aktivera Smart Imaging för ditt konto:**
 
-1. [Använd Admin Console för att börja skapa ett nytt supportärende](https://helpx.adobe.com/se/enterprise/using/support-for-experience-cloud.html).
+1. [Använd Admin Console för att börja skapa ett nytt supportärende](https://helpx.adobe.com/enterprise/using/support-for-experience-cloud.html).
 1. Ange följande information i ditt supportärende:
 
    * **Information om primär kontakt:**
@@ -255,7 +255,7 @@ När du skapar ett supportärende anger du vilka smarta bildredigeringsfunktione
 
       * Visa alla relevanta domäner, till exempel *`company.com`* eller *`mycompany.scene7.com`*
       * Smart Imaging stöder både generiska och anpassade domäner.
-      * Identifiera dina domäner genom att öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/sv/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started) och logga in på ditt företagskonto.
+      * Identifiera dina domäner genom att öppna [Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/en/docs/dynamic-media-classic/using/getting-started/signing-out#getting-started) och logga in på ditt företagskonto.
 
          1. Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL General Settings]**.
          1. Kontrollera domänen genom att leta efter fältet **[!UICONTROL Published Server Name]**.
@@ -272,7 +272,7 @@ Justera TTL:
    1. **För Dynamic Media Classic:**
       1. Navigera till **[!UICONTROL Setup]** > **[!UICONTROL Application Setup]** > **[!UICONTROL Publish Setup]** > **[!UICONTROL Image Server]**.
       1. Ange värdet **[!UICONTROL Default Client Cache Time To Live]** till 24 timmar eller mer.
-   1. **För Dynamic Media på Adobe Experience Manager:**
+   1. **För dynamiska media på Adobe Experience Manager:**
       1. Följ [dessa instruktioner](/help/assets/dm-publish-settings.md#common-thumbnail-attributes-tab).
       1. Ange värdet **[!UICONTROL Expiration]** för 24 timmar eller mer.
 
@@ -284,7 +284,7 @@ Kundsupport bearbetar förfrågningar i den ordning de får dem, efter väntelis
 
 >[!NOTE]
 >
->Det kan ta lång tid att skapa eftersom du måste rensa cacheminnet genom att aktivera Smart Imaging. Därför kan bara ett fåtal kundövergångar hanteras vid en viss tidpunkt.
+>Det kan ta lång tid att skapa eftersom Adobe rensar cachen när du aktiverar Smart Imaging. Därför kan bara ett fåtal kundövergångar hanteras vid en viss tidpunkt.
 
 +++
 
@@ -292,13 +292,13 @@ Kundsupport bearbetar förfrågningar i den ordning de får dem, efter väntelis
 
 Det finns ingen risk för kundens webbsida. Övergången till Smart Imaging tar dock bort CDN-cachen. Den här åtgärden innebär att du måste gå till en ny konfiguration av Dynamic Media Classic eller Dynamic Media på Experience Manager.
 
-Under den inledande övergången kommer de icke-cachelagrade bilderna direkt till Adobe origin-servrarna tills cachen återskapas. Adobe planerar därför att hantera ett fåtal kundövergångar i taget så att man behåller godtagbara prestanda när man drar in förfrågningar från ursprungsläget. För de flesta kunder är cacheminnet helt uppbyggt igen på CDN inom cirka 1-2 dagar.
+Under den inledande övergången kommer de icke-cachelagrade bilderna att direkt nå Adobe ursprungsservrar tills cachen återskapas. Därför planerar Adobe att hantera ett fåtal kundövergångar i taget så att godtagbara prestanda upprätthålls när man tar begäranden från ursprungsläget. För de flesta kunder är cacheminnet helt uppbyggt igen på CDN inom cirka 1-2 dagar.
 
 +++
 
 +++Hur verifierar jag om Smart Imaging fungerar som väntat?
 
-1. När ditt konto har konfigurerats med Smart Imaging läser du in en bild-URL för Dynamic Media Classic eller Adobe Experience Manager - Dynamic Media i webbläsaren.
+1. När ditt konto har konfigurerats med Smart Imaging läser du in en Dynamic Media Classic- eller Adobe Experience Manager - Dynamic Media-bild-URL i webbläsaren.
 1. Öppna Chrome-utvecklarfönstret genom att gå till **[!UICONTROL View]** > **[!UICONTROL Developer]** > **[!UICONTROL Developer Tools]** i webbläsaren. Eller välj ett valfritt verktyg för webbläsare.
 
 1. Kontrollera att cachen är inaktiverad när utvecklingsverktygen är öppna.
@@ -336,9 +336,9 @@ Den här rubriken innehåller följande information:
 >**X-Adobe-Smart-Imaging = -1 när WebP levereras**
 >
 >Om värdet för `X-Adobe-Smart-Imaging` är -1 och WebP fortfarande levereras är Smart Imaging aktivt. Storleksfördelarna beräknades dock inte på grund av inaktuell cache. Du kan använda `cache=update` (endast en gång) i bildens URL för att åtgärda problemet.
->Ett exempel på hur du använder modifieraren:
->`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`
->Om du vill göra hela cachen ogiltig måste du skapa ett supportärende.
+>>Ett exempel på hur du använder modifieraren:
+>>`https://smartimaging.scene7.com/is/image/SmartImaging/sample1?cache=update`
+>>Om du vill göra hela cachen ogiltig måste du skapa ett supportärende.
 
 +++
 
@@ -370,7 +370,7 @@ Smart bildbehandling har tre alternativ som du kan aktivera eller inaktivera.
 
 +++I har en URL med fmt=tif i Chrome webbläsare. Men min begäran misslyckas med ett ImageServer-fel. Varför?
 
-Det här felet inträffar inte om Smart Imaging inte är aktiverat på ditt konto. Smart Imaging fungerar endast med JPEG eller PNG-format.
+Det här felet inträffar inte om Smart Imaging inte är aktiverat på ditt konto. Smart Imaging fungerar endast med JPEG- eller PNG-format.
 
 För att undvika det här felet kan du antingen:
 
@@ -400,7 +400,7 @@ Det finns för närvarande ingen sådan etablering.
 
 +++Justerar Smart Imaging automatiskt procentkvalitetsinställningen eller är det en inställning som justeras manuellt och gäller för alla bilder? Inom vilket intervall?
 
-Smart Imaging justerar automatiskt kvalitetsprocenten. Kvaliteten bestäms med hjälp av en maskininlärningsalgoritm som utvecklats av Adobe. Den här procentandelen är inte intervallspecifik.
+Smart Imaging justerar automatiskt kvalitetsprocenten. Kvaliteten bestäms med en maskininlärningsalgoritm som utvecklats av Adobe. Den här procentandelen är inte intervallspecifik.
 
 +++
 
@@ -410,13 +410,13 @@ De enda kommandon som ignoreras är `fmt` och `qlt`. Alla återstående kommando
 
 +++
 
-+++Är bara bilder från JPEG ersatta med smarta bilder? Vad händer om jag begär en WebP, PNG eller något annat?
++++Är bara JPEG-bilder ersatta med Smart Imaging? Vad händer om jag begär en WebP, PNG eller något annat?
 
 Den här funktionen fungerar endast för JPEG och PNG.
 
 +++
 
-+++Varför återgår en JPEG-bild ibland till Chrome istället för till WebP?
++++Varför returneras en JPEG-bild till Chrome istället för till WebP?
 
 Smart bildbehandling avgör om konverteringen är bra eller inte. Den returnerar bara den nya bilden för konverteringen.
 

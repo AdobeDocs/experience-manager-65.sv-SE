@@ -10,9 +10,9 @@ role: Admin
 exl-id: ae33181c-9eec-421c-be55-4bd019de40b8
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 2a6cf0e85aace1516818ce87bc35b1b35f3da6e8
+source-git-commit: 75c15b0f0e4de2ea7fff339ae46b88ce8f6af83f
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '659'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/brand-portal/configure-aem-assets-with-brand-portal.html?lang=sv-SE) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/brand-portal/configure-aem-assets-with-brand-portal) |
 | AEM 6.5 | Den här artikeln |
 
 Med Adobe Experience Manager Assets Brand Portal kan ni publicera godkända varumärkesresurser från Adobe Experience Manager Assets till Brand Portal och distribuera dem till Brand Portal-användarna.
@@ -31,7 +31,7 @@ AEM Assets konfigureras med Brand Portal via Adobe Developer Console, som köper
 
 >[!NOTE]
 >
->Konfigurering av AEM Assets med Brand Portal via Adobe Developer Console stöds i AEM 6.5.4.0 och senare.
+>Konfigurering av AEM Assets med Brand Portal via Adobe Developer Console stöds på AEM 6.5.4.0 och senare.
 >
 <!--
 >Earlier, Brand Portal was configured via legacy OAuth Gateway, which uses the JSON Web Token (JWT) exchange to obtain an IMS Access token for authorization. 
@@ -53,7 +53,7 @@ This help describes the following two use-cases:
 -->
 Informationen baseras på antagandet att alla som läser den här hjälpen känner till följande tekniker:
 
-* Installera, konfigurera och administrera Adobe Experience Manager- och AEM.
+* Installera, konfigurera och administrera Adobe Experience Manager- och AEM-paket.
 
 * Använda Linux® och Microsoft® Windows.
 
@@ -67,23 +67,23 @@ Du behöver följande för att konfigurera AEM Assets med varumärkesportalen:
 
 [Hämta och installera AEM 6.5](#aemquickstart)
 
-[Hämta och installera det senaste AEM Service Pack](#servicepack)
+[Hämta och installera den senaste versionen av AEM Service Pack](#servicepack)
 
 ### Hämta och installera AEM 6.5 {#aemquickstart}
 
-Vi rekommenderar att AEM 6.5 konfigurerar en AEM Author-instans. Om du inte har AEM igång kan du hämta det från följande platser:
+Vi rekommenderar att du använder AEM 6.5 för att skapa en AEM Author-instans. Om du inte har AEM igång kan du ladda ned det från följande platser:
 
-* Om du är en befintlig AEM kan du hämta AEM 6.5 från [Adobe Licensing-webbplatsen](https://licensing.adobe.com).
+* Om du redan är AEM-kund hämtar du AEM 6.5 från [Adobe Licensing-webbplatsen](https://licensing.adobe.com).
 
-* Om du är Adobe-partner kan du använda [Adobe Partner Training Program](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) för att begära AEM 6.5.
+* Om du är Adobe partner kan du beställa AEM 6.5 via Adobe Partner Training Program.
 
-När du har laddat ned AEM finns instruktioner om hur du konfigurerar en AEM Author-instans i [Distribuera och underhålla](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=sv-SE#default-local-install).
+När du har hämtat AEM finns instruktioner om hur du konfigurerar en AEM Author-instans i [Distribuera och underhålla](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy#default-local-install).
 
 ### Hämta och installera AEM senaste Service Pack {#servicepack}
 
-Detaljerade anvisningar finns i den aktuella [AEM 6.5 Service Pack versionsinformationen](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html?lang=sv-SE).
+Detaljerade instruktioner finns i den aktuella [AEM 6.5 Service Pack-versionsinformationen](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/release-notes).
 
-**Kontakta Adobe kundsupport** om du inte hittar det senaste AEM eller Service Pack.
+**Kontakta Adobe kundsupport** om du inte hittar det senaste AEM-paketet eller Service Pack.
 
 ## Skapa konfiguration {#configure-new-integration-65}
 
@@ -123,11 +123,11 @@ Utför följande steg i den angivna sekvensen för att konfigurera Experience Ma
 
 #### Konfigurera OAuth-autentiseringsuppgifterna i Adobe Developer Console {#config-oauth}
 
-[Konfigurera OAuth-autentiseringsuppgifterna i Adobe Developer Console](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#credentials-in-the-developer-console) och välj Brand Portal API.
+[Konfigurera OAuth-autentiseringsuppgifterna i Adobe Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#credentials-in-the-developer-console) och välj Brand Portal API.
 
 #### Skapa ny Adobe IMS-integrering med OAuth {#create-ims-account-configuration}
 
-[Skapa en ny Adobe IMS-integrering med OAuth](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#creating-oauth-configuration) och välj Brand Portal i listrutan.
+[Skapa en ny Adobe IMS-integrering med OAuth](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/setting-up-ims-integrations-for-aem#creating-oauth-configuration) och välj Brand Portal i listrutan.
 
 #### Konfigurera molntjänst {#configure-cloud-service}
 
@@ -370,20 +370,20 @@ To configure the IMS account:
    >
    >Avoid disabling any of the replication agents, as it can cause the replication of the assets (running-in-queue) to fail.
    >
-   >Ensure that all the four replication agents are configured to avoid timeout error. See [troubleshoot issues in parallel publishing to Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html?lang=sv-SE#connection-timeout).
+   >Ensure that all the four replication agents are configured to avoid timeout error. See [troubleshoot issues in parallel publishing to Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/troubleshoot-parallel-publishing.html#connection-timeout).
    >
    >Do not modify any autogenerated settings.
 
 You can now:
 
 * [Publish assets from AEM Assets to Brand Portal](../assets/brand-portal-publish-assets.md)
-* [Publish assets from Brand Portal to AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=sv-SE) - Asset Sourcing in Brand Portal 
+* [Publish assets from Brand Portal to AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html) - Asset Sourcing in Brand Portal 
 * [Publish folders from AEM Assets to Brand Portal](../assets/brand-portal-publish-folder.md)
 * [Publish collections from AEM Assets to Brand Portal](../assets/brand-portal-publish-collection.md) 
-* [Publish presets, schemas, and facets to Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html?lang=sv-SE)
-* [Publish tags to Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html?lang=sv-SE)
+* [Publish presets, schemas, and facets to Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/publish-schema-search-facets-presets.html)
+* [Publish tags to Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/publish/brand-portal-publish-tags.html)
 
-See the [Brand Portal documentation](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html?lang=sv-SE) for more information.
+See the [Brand Portal documentation](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/home.html) for more information.
 
 -->
 <!--

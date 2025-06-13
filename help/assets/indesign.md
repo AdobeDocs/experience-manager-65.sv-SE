@@ -6,9 +6,9 @@ role: Admin
 feature: Publishing
 exl-id: 5ba020a3-c36c-402b-a11b-d6b0426b03bf
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 75c15b0f0e4de2ea7fff339ae46b88ce8f6af83f
 workflow-type: tm+mt
-source-wordcount: '1523'
+source-wordcount: '1518'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 * En proxyarbetare som definierar och hanterar en viss uppgift.
 Dessa kan omfatta en mängd olika uppgifter, till exempel att använda en [!DNL InDesign Server] för att bearbeta filer.
 
-Om du vill överföra filer till [!DNL Experience Manager Assets] som du har skapat med [!DNL Adobe InDesign] används en proxy. Detta använder en proxyarbetare för att kommunicera med [!DNL Adobe InDesign Server], där [ skript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting) körs för att extrahera metadata och generera olika återgivningar för [!DNL Experience Manager Assets]. Proxyarbetaren aktiverar tvåvägskommunikation mellan [!DNL InDesign Server] och [!DNL Experience Manager]-instanserna i en molnkonfiguration.
+Om du vill överföra filer till [!DNL Experience Manager Assets] som du har skapat med [!DNL Adobe InDesign] används en proxy. Detta använder en proxyarbetare för att kommunicera med [!DNL Adobe InDesign Server], där skript körs för att extrahera metadata och generera olika återgivningar för [!DNL Experience Manager Assets]. Proxyarbetaren aktiverar tvåvägskommunikation mellan [!DNL InDesign Server] och [!DNL Experience Manager]-instanserna i en molnkonfiguration.
 
 >[!NOTE]
 >
->[!DNL Adobe InDesign] erbjuds som två separata erbjudanden. [Adobe InDesign](https://www.adobe.com/products/indesign.html) som används för att utforma sidlayouter för tryck och digital distribution. Med [Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html) kan du skapa automatiserade dokument med programkod baserat på vad du har skapat med [!DNL InDesign]. Det fungerar som en tjänst som erbjuder ett gränssnitt till dess [ExtendScript](https://www.adobe.com/devnet/indesign/documentation.html#idscripting)-motor. Skripten skrivs i [!DNL ExtendScript], som liknar [!DNL JavaScript]. Mer information om [!DNL InDesign] skript finns i [https://www.adobe.com/devnet/indesign/documentation.html#idscripting](https://www.adobe.com/devnet/indesign/documentation.html#idscripting).
+>[!DNL Adobe InDesign] erbjuds som två separata erbjudanden. [Adobe InDesign](https://www.adobe.com/products/indesign.html) som används för att utforma sidlayouter för tryck och digital distribution. Med [Adobe InDesign Server](https://www.adobe.com/products/indesignserver.html) kan du skapa automatiserade dokument med programkod baserat på vad du har skapat med [!DNL InDesign]. Den fungerar som en tjänst som erbjuder ett gränssnitt till sin ExtendScript-motor. Skripten skrivs i [!DNL ExtendScript], vilket liknar [!DNL JavaScript].
 
 ## Hur extraheringen fungerar {#how-the-extraction-works}
 
@@ -43,18 +43,18 @@ Detta kommandoskript kommer att:
    * Kör [!DNL InDesign Server]-kommandon:
 
       * Strukturen, texten och eventuella mediefiler extraheras.
-      * PDF och JPG renderingar genereras.
-      * HTML och IDML-renderingar genereras.
+      * PDF- och JPG-renderingar genereras.
+      * HTML- och IDML-renderingar genereras.
 
-   * Post de resulterande filerna tillbaka till [!DNL Experience Manager Assets].
+   * Lägg tillbaka de resulterande filerna på [!DNL Experience Manager Assets].
 
    >[!NOTE]
    >
-   >IDML är ett XML-baserat format som återger allt innehåll i filen [!DNL InDesign]. Den lagras som ett komprimerat paket med [ZIP](https://www.techterms.com/definition/zip) -komprimering. Mer information finns i [InDesign Interchange Formats INX och IDML](https://www.peachpit.com/articles/article.aspx?p=1381880&amp;seqNum=8).
+   >IDML är ett XML-baserat format som återger allt innehåll i filen [!DNL InDesign]. Den lagras som ett komprimerat paket med [ZIP](https://techterms.com/definition/zip) -komprimering. Mer information finns i [InDesign Interchange Formats INX och IDML](https://www.peachpit.com/promotions/adobe-creative-cloud-2024-release-books-ebooks-and-142536).
 
    >[!CAUTION]
    >
-   >Om [!DNL InDesign Server] inte är installerad eller inte konfigurerad kan du ändå överföra en INDD-fil till [!DNL Experience Manager]. De återgivningar som skapas är dock begränsade till PNG och JPEG. Du kommer inte att kunna generera HTML, IDML eller sidåtergivningarna.
+   >Om [!DNL InDesign Server] inte är installerad eller inte konfigurerad kan du ändå överföra en INDD-fil till [!DNL Experience Manager]. De återgivningar som skapas är dock begränsade till PNG och JPEG. Du kommer inte att kunna generera HTML, `.idml` eller sidåtergivningarna.
 
 1. Efter extraheringen och renderingen:
 
@@ -66,10 +66,10 @@ Detta kommandoskript kommer att:
 
 Om du vill integrera [!DNL InDesign Server] för användning med [!DNL Experience Manager Assets] och efter att du har konfigurerat din proxy måste du:
 
-1. [Installera InDesignen Server](#installing-the-indesign-server).
+1. [Installera InDesign Server](#installing-the-indesign-server).
 1. [Konfigurera Experience Manager Assets Workflow](#configuring-the-aem-assets-workflow) om det behövs.
 Detta är bara nödvändigt om standardvärdena inte passar för din instans.
-1. Konfigurera en [proxyarbetare för InDesignen Server](#configuring-the-proxy-worker-for-indesign-server).
+1. Konfigurera en [proxyarbetare för InDesign Server](#configuring-the-proxy-worker-for-indesign-server).
 
 ### Installera [!DNL InDesign Server] {#installing-the-indesign-server}
 
@@ -97,7 +97,7 @@ Så här installerar och startar du [!DNL InDesign Server] för användning med 
 * [Medieextrahering](#media-extraction)
 * [Sidextrahering](#page-extraction)
 
-Det här arbetsflödet är konfigurerat med standardvärden som kan anpassas för konfigurationen för de olika författarinstanserna (det här är ett standardarbetsflöde, så mer information finns under [Redigera ett arbetsflöde](/help/sites-developing/workflows-models.md#configuring-a-workflow-step)). Om du använder standardvärdena (inklusive SOAP) behövs ingen konfiguration.
+Det här arbetsflödet är konfigurerat med standardvärden som kan anpassas för konfigurationen för de olika författarinstanserna (det här är ett standardarbetsflöde, så mer information finns under [Redigera ett arbetsflöde](/help/sites-developing/workflows-models.md#configuring-a-workflow-step)). Om du använder standardvärdena (inklusive SOAP-porten) behövs ingen konfiguration.
 
 Efter konfigurationen aktiveras arbetsflödet för att bearbeta resursen och förbereda de olika återgivningarna när [!DNL InDesign] filer överförs till [!DNL Experience Manager Assets] (med någon av de vanliga metoderna). Testa konfigurationen genom att överföra en INDD-fil till [!DNL Experience Manager Assets] för att bekräfta att du ser de olika renderingar som skapas av IDS under `<*your_asset*>.indd/Renditions`
 
@@ -125,11 +125,11 @@ For information about [!DNL Adobe InDesign] scripts, see [InDesign developer doc
 
 Skriptet `ThumbnailExport.jsx` som körs i arbetsflödessteget Medieextrahering genererar en miniatyrrendering i JPG-format. Den här återgivningen används i arbetsflödet Bearbeta miniatyrbilder för att generera statiska återgivningar som krävs av [!DNL Experience Manager].
 
-Du kan konfigurera arbetsflödessteget Bearbeta miniatyrbilder för att generera statiska återgivningar i olika storlekar. Se till att du inte tar bort standardinställningarna eftersom de krävs av gränssnittet [!DNL Experience Manager Assets]. Arbetsgången Ta bort återgivning för förhandsvisning av bilder tar slutligen bort återgivningen av JPG miniatyrbilder, eftersom den inte längre behövs.
+Du kan konfigurera arbetsflödessteget Bearbeta miniatyrbilder för att generera statiska återgivningar i olika storlekar. Se till att du inte tar bort standardinställningarna eftersom de krävs av gränssnittet [!DNL Experience Manager Assets]. Arbetsflödet för att ta bort återgivning för förhandsvisning av bilder tar slutligen bort återgivningen av JPG-miniatyrer eftersom den inte längre behövs.
 
 #### Sidextrahering {#page-extraction}
 
-Detta skapar en [!DNL Experience Manager]-sida av de extraherade elementen. En extraheringshanterare används för att extrahera data från en återgivning (för närvarande HTML eller IDML). Dessa data används sedan för att skapa en sida med PageBuilder.
+Detta skapar en [!DNL Experience Manager]-sida av de extraherade elementen. En extraheringshanterare används för att extrahera data från en återgivning (för närvarande HTML eller IDML). Dessa data används sedan för att skapa en sida med Page Builder.
 
 Om du vill anpassa kan du redigera fliken **[!UICONTROL Arguments]** i steget **[!UICONTROL Page Extraction]**.
 
@@ -138,11 +138,11 @@ Om du vill anpassa kan du redigera fliken **[!UICONTROL Arguments]** i steget **
 * **Sidextraheringshanterare**: Välj den hanterare som du vill använda i popup-listan. En extraheringshanterare fungerar på en viss återgivning, som väljs av en relaterad `RenditionPicker` (se `ExtractionHandler` API). Följande är tillgängliga i en standardinstallation av [!DNL Experience Manager]:
    * Extraheringshandtag för IDML-export: Fungerar på återgivningen `IDML` som genererades i steget MediaExtract.
 
-* **Sidnamn**: Ange det namn som du vill tilldela den resulterande sidan. Om det lämnas tomt är namnet&quot;page&quot; (eller ett derivat om&quot;page&quot; redan finns).
+* **Sidnamn**: Ange det namn som du vill tilldela till den resulterande sidan. Om det lämnas tomt är namnet&quot;page&quot; (eller ett derivat om&quot;page&quot; redan finns).
 
-* **Sidrubrik**: Ange den rubrik du vill tilldela den resulterande sidan.
+* **Sidrubrik**: Ange den rubrik som du vill tilldela den resulterande sidan.
 
-* **Sidrotsökväg**: Sökvägen till rotplatsen för den resulterande sidan. Om den lämnas tom används noden med resursens återgivningar.
+* **Sidrotsökväg**: Sökvägen till rotplatsen för den resulterande sidan. Om den lämnas tom används den nod som innehåller resursens återgivningar.
 
 * **Sidmall**: Den mall som ska användas när den resulterande sidan genereras.
 
@@ -163,7 +163,7 @@ Om du vill anpassa kan du redigera fliken **[!UICONTROL Arguments]** i steget **
    ![proxy_idsworkerconfig](assets/proxy_idsworkerconfig.png)
 
    * **IDS-pool**
-SOAP slutpunkt(er) som ska användas för kommunikation med [!DNL InDesign Server] . Du kan lägga till, ta bort och beställa objekt.
+De SOAP-slutpunkter som används för att kommunicera med [!DNL InDesign Server] . Du kan lägga till, ta bort och beställa objekt.
 
 1. Spara genom att klicka på OK.
 
@@ -184,7 +184,7 @@ Om [!DNL InDesign Server] och [!DNL Experience Manager] finns på olika värdar 
 Nu kan du aktivera parallell jobbbearbetning för IDS. Fastställ det maximala antalet parallella jobb (`x`) som kan bearbetas av [!DNL InDesign Server]:
 
 * På en enda multiprocessordator är det maximala antalet parallella jobb (`x`) som en [!DNL InDesign Server] kan bearbeta ett mindre än antalet processorer som kör IDS.
-* När du kör IDS på flera datorer måste du räkna antalet tillgängliga processorer (t.ex. på alla datorer) och sedan subtrahera det totala antalet datorer.
+* När du kör IDS på flera datorer måste du räkna antalet tillgängliga processorer (det vill säga på alla datorer) och sedan subtrahera det totala antalet datorer.
 
 Så här konfigurerar du antalet parallella IDS-jobb:
 
@@ -199,9 +199,9 @@ Så här konfigurerar du antalet parallella IDS-jobb:
 
 1. Spara dessa ändringar.
 1. Om du vill aktivera stöd för flera sessioner för Adobe CS6 och senare markerar du kryssrutan `enable.multisession.name` under konfigurationen `com.day.cq.dam.ids.impl.IDSJobProcessor.name`.
-1. Skapa en [pool med `x` IDS-arbetare genom att lägga till SOAP slutpunkter i IDS Worker-konfigurationen](#configuring-the-proxy-worker-for-indesign-server).
+1. Skapa en [pool med `x` IDS-arbetare genom att lägga till SOAP-slutpunkter i IDS Worker-konfigurationen](#configuring-the-proxy-worker-for-indesign-server).
 
-   Om det finns flera datorer som kör [!DNL InDesign Server] lägger du till SOAP slutpunkter (antal processorer per dator -1) för varje dator.
+   Om det finns flera datorer som kör [!DNL InDesign Server] lägger du till SOAP-slutpunkter (antal processorer per dator -1) för varje dator.
 
 <!-- 
 TBD: Make updates to configurations for allow and block list after product updates are done.
@@ -209,7 +209,7 @@ TBD: Make updates to configurations for allow and block list after product updat
 
 >[!NOTE]
 >
->När du arbetar med en grupp arbetare kan du aktivera blockeringslista för IDS-arbetare.
+>När du arbetar med en grupp arbetare kan du aktivera ett blockeringslista av IDS-arbetare.
 >
 >Om du vill göra det aktiverar du kryssrutan **[!UICONTROL enable.retry.name]** under konfigurationen `com.day.cq.dam.ids.impl.IDSJobProcessor.name`, som aktiverar omprövningar av IDS-jobb.
 >
