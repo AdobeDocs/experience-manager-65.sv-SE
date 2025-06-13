@@ -1,5 +1,5 @@
 ---
-title: Användargränssnitt Recommendations för kunder
+title: Rekommendationer för användargränssnitt för kunder
 description: En lista med rekommendationer relaterade till de klassiska och pekoptimerade användargränssnitten.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,16 +10,16 @@ exl-id: 7b71119a-ff58-47c0-aeef-a705ed8c40e0
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '764'
 ht-degree: 0%
 
 ---
 
-# Användargränssnitt Recommendations för kunder{#user-interface-recommendations-for-customers}
+# Rekommendationer för användargränssnitt för kunder{#user-interface-recommendations-for-customers}
 
-Adobe Experience Manager har två användargränssnitt - det enhetliga användargränssnittet för Experience Cloud (kallas även användargränssnittet med pekfunktion) och det klassiska användargränssnittet.
+Adobe Experience Manager har två användargränssnitt - det enhetliga användargränssnittet i Experience Cloud (även kallat användargränssnittet med pekfunktion) och det klassiska användargränssnittet.
 
 Det här dokumentet är avsett att vägleda kunderna att välja vilket användargränssnitt som ska användas beroende på deras situation.
 
@@ -41,7 +41,7 @@ Möjlighet att lägga till/redigera innehållet på en sida.
 Möjlighet att hantera digitalt material (inklusive bilder, video, dokument, nedladdningar).
 
 * **ContextHub**
-Möjlighet att samla information om besökaren och använda den för olika syften. Tillhandahåller ett användargränssnitt för att simulera personer som besöker webbplatsen. Med början AEM 6.2 ersatte ContextHub den tidigare tekniken, Client Context.
+Möjlighet att samla information om besökaren och använda den för olika syften. Tillhandahåller ett användargränssnitt för att simulera personer som besöker webbplatsen. Med början från AEM 6.2 ersatte ContextHub den tidigare tekniken, Client Context.
 
 ## Allmänt {#general}
 
@@ -49,11 +49,11 @@ Under de senaste åren har Adobe uppdaterat alla Adobe Experience Cloud-lösning
 
 Det ursprungliga användargränssnittet för Adobe Experience Manager (tidigare CQ5), som introducerades 2008 och används av kunder som kör version 5.0-5.6.1, finns i AEM 6.5. Detta garanterar att kunderna kan uppdatera till 6.5 och dra nytta av en uppdaterad plattform med nya funktioner samtidigt som de använder samma användargränssnitt.
 
-Adobe rekommenderar att man planerar att gå över till det nya användargränssnittet under 2018/2019. Detta kan antingen göras under uppdateringen till 6.5, eller i ett separat projekt efter uppdateringen som innehåller nödvändiga justeringar av anpassningarna och komponentdialogrutorna.
+Adobe rekommenderar att man planerar att byta till det nya användargränssnittet 2018/2019. Detta kan antingen göras under uppdateringen till 6.5, eller i ett separat projekt efter uppdateringen som innehåller nödvändiga justeringar av anpassningarna och komponentdialogrutorna.
 
 Det klassiska användargränssnittet har tagits bort i AEM 6.4 och Adobe planerar inte att göra ytterligare förbättringar av det klassiska användargränssnittet. Observera att Classic-användargränssnittet fortfarande stöds fullt ut när det är inaktuellt.
 
-### Regler och Recommendations {#rules-and-recommendations}
+### Regler och rekommendationer {#rules-and-recommendations}
 
 Nedan följer en lista över rekommendationer från Product Management för Adobe Experience Manager 6.5:
 
@@ -61,7 +61,7 @@ Nedan följer en lista över rekommendationer från Product Management för Adob
  <tbody>
   <tr>
    <th>Mitt projekt...</th>
-   <th>Recommendations</th>
+   <th>Rekommendationer</th>
   </tr>
   <tr>
    <td>Börjar bara använda Adobe Experience Manager.</td>
@@ -76,11 +76,11 @@ Nedan följer en lista över rekommendationer från Product Management för Adob
      <li>Konfigurera åtgärden Redigera sida för att öppna den klassiska sidredigeraren i användargränssnittet. Se <a href="#selecting-your-ui">Välja användargränssnitt</a>.</li>
     </ol> <p>I en andra fas:</p>
     <ol>
-     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">AEM modereringsverktygen</a> för att uppdatera komponenterna.</li>
+     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du uppdaterar komponenterna med <a href="/help/sites-developing/modernization-tools.md">AEM Moderniseringsverktyg</a> .</li>
     </ol> </td>
   </tr>
   <tr>
-   <td>Har skapat en webbplats som använder ClientContexten med integreringar.<br /> </td>
+   <td>Har skapat en webbplats som använder ClientContext med integreringar.<br /> </td>
    <td>
     <ol>
      <li>Uppdatera till 6.5</li>
@@ -88,8 +88,8 @@ Nedan följer en lista över rekommendationer från Product Management för Adob
      <li>Konfigurera åtgärden Redigera sida för att öppna den klassiska sidredigeraren i användargränssnittet. Se <a href="#selecting-your-ui">Välja användargränssnitt</a>.</li>
     </ol> <p>I en andra fas:</p>
     <ol>
-     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du använder <a href="/help/sites-developing/modernization-tools.md">AEM modereringsverktygen</a> för att uppdatera komponenterna.</li>
-     <li>Konfigurera ContextHub (ersättning för ClientContexten) och uppdatera sidmallarna så att ContextHub används. ContextHub har ett kompatibilitetsläge som tillåter inläsning av anpassade ClientContexter.</li>
+     <li>Uppdatera komponentdialogrutorna så att de använder Dialogrutan Coral 3. Adobe rekommenderar att du uppdaterar komponenterna med <a href="/help/sites-developing/modernization-tools.md">AEM Moderniseringsverktyg</a> .</li>
+     <li>Konfigurera ContextHub (ersättare för ClientContext) och uppdatera sidmallarna så att ContextHub används. ContextHub har ett kompatibilitetsläge som tillåter inläsning av anpassade ClientContext-butiker.</li>
     </ol> </td>
   </tr>
   <tr>
@@ -98,10 +98,6 @@ Nedan följer en lista över rekommendationer från Product Management för Adob
   </tr>
  </tbody>
 </table>
-
-### Vanliga frågor {#faq}
-
-Mer information finns i kunskapsbasartikeln [Vanliga frågor om redigering av användargränssnitt](https://helpx.adobe.com/experience-manager/kb/index/touchui_faq.html), inklusive information om borttagningsschemat för det klassiska användargränssnittet.
 
 ### Välja användargränssnitt {#selecting-your-ui}
 
@@ -122,7 +118,7 @@ För bakgrundsinformation om grundläggande hantering:
 Detaljerad utvecklingsinformation:
 
 * [Användargränssnittsarkitektur aktiverad för pekfunktioner](/help/sites-developing/touch-ui-concepts.md).
-* Använd [AEM moderniseringsverktyg](/help/sites-developing/modernization-tools.md) för att konvertera komponentredigeringsdialogrutor från det klassiska användargränssnittet till det beröringsaktiverade användargränssnittet.
+* Använd [AEM-modereringsverktygen](/help/sites-developing/modernization-tools.md) för att konvertera komponentredigeringsdialogrutor från det klassiska användargränssnittet till det beröringsaktiverade användargränssnittet.
 
 * [Struktur för det beröringsaktiverade användargränssnittet](/help/sites-developing/touch-ui-structure.md).
 

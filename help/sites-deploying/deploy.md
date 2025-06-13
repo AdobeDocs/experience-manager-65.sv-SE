@@ -1,6 +1,6 @@
 ---
 title: Driftsättning och underhåll
-description: Lär dig hur du kommer igång med AEM.
+description: Lär dig hur du kommer igång med AEM-installationen.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -10,9 +10,9 @@ exl-id: 3df0662a-0768-4b56-8b94-c517657b4bd9
 solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1779'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ På den här sidan hittar du:
    * [Förutsättningar](#prerequisites)
    * [Hämta programvaran](#getting-the-software)
    * [Lokal standardinstallation](#default-local-install)
-   * [Skapa och installera Publish](#author-and-publish-installs)
+   * [Skapa och publicera installationer](#author-and-publish-installs)
    * [Opackad installationskatalog](#unpacked-install-directory)
    * [Starta och stoppa](#starting-and-stopping)
 
@@ -54,10 +54,10 @@ När du har lärt dig grunderna hittar du mer avancerad och detaljerad informati
 * [Felsökning av replikering](/help/sites-deploying/troubleshoot-rep.md)
 * [Bästa praxis](/help/sites-deploying/best-practices.md)
 * [Distribuera webbgrupper](/help/communities/deploy-communities.md)
-* [Introduktion till AEM](/help/sites-deploying/platform.md)
+* [Introduktion till AEM Platform](/help/sites-deploying/platform.md)
 * [Riktlinjer för prestanda](/help/sites-deploying/performance-guidelines.md)
 * [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md)
-* [Vad är AEM Screens?](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=sv-SE)
+* [Vad är AEM Screens?](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 
 ## Grundläggande begrepp {#basic-concepts}
 
@@ -65,13 +65,13 @@ När du har lärt dig grunderna hittar du mer avancerad och detaljerad informati
 
 Adobe Experience Manager är ett webbaserat klient-server-system för att bygga, hantera och driftsätta kommersiella webbplatser och tillhörande tjänster. Den kombinerar flera funktioner på infrastruktur- och applikationsnivå i ett enda integrerat paket.
 
-På infrastrukturnivå AEM följande:
+På infrastrukturnivå tillhandahåller AEM följande:
 
-* **Webbprogramserver**: AEM kan distribueras i fristående läge (den innehåller en integrerad Jetty-webbserver) eller som ett webbprogram i en tredjepartsprogramserver.
+* **Webbprogramserver**: AEM kan distribueras i fristående läge (det innehåller en integrerad Jetty-webbserver) eller som ett webbprogram i en tredjepartsprogramserver.
 * **Web Application Framework**: AEM innehåller Sling Web Application Framework som förenklar skrivandet av RESTful, innehållsorienterade webbprogram.
 * **Innehållsdatabas**: AEM innehåller en Java™ Content Repository (JCR), en typ av hierarkisk databas som utformats speciellt för ostrukturerade och halvstrukturerade data. I databasen lagras inte bara användarriktat innehåll utan även all kod, mallar och interna data som används av programmet.
 
-AEM bygger på denna bas och erbjuder även flera funktioner på programnivå för att hantera:
+Baserat på detta har AEM även flera funktioner på applikationsnivå för att hantera:
 
 * **Webbplatser**
 * **Mobilprogram**
@@ -83,7 +83,7 @@ AEM bygger på denna bas och erbjuder även flera funktioner på programnivå f�
 
 Slutligen kan kunderna använda dessa byggstenar på infrastruktur- och applikationsnivå för att skapa anpassade lösningar genom att bygga egna applikationer.
 
-Den AEM servern är **Java-baserad** och körs på de flesta operativsystem som stöder den plattformen. All klientinteraktion med AEM görs via en **webbläsare**.
+AEM-servern är **Java-baserad** och körs på de flesta operativsystem som stöder den plattformen. All klientinteraktion med AEM sker via en **webbläsare**.
 
 >[!NOTE]
 >
@@ -91,10 +91,10 @@ Den AEM servern är **Java-baserad** och körs på de flesta operativsystem som 
 
 ### Vanliga distributionsscenarier {#typical-deployment-scenarios}
 
-I AEM är &quot;instance&quot; en kopia av AEM som körs på en server. AEM omfattar vanligtvis minst två instanser, som vanligtvis körs på olika datorer:
+I AEM-terminologi är &quot;instance&quot; en kopia av AEM som körs på en server. AEM-installationer omfattar vanligtvis minst två instanser, som vanligtvis körs på olika datorer:
 
-* **Författare**: En AEM som används för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
-* **Publish**: En AEM instans som skickar det publicerade innehållet till allmänheten.
+* **Författare**: En AEM-instans användes för att skapa, överföra och redigera innehåll och för att administrera webbplatsen. När innehållet är klart att publiceras replikeras det till publiceringsinstansen.
+* **Publicera**: En AEM-instans som skickar det publicerade innehållet till allmänheten.
 
 De här instanserna är identiska vad gäller installerad programvara. De skiljer sig bara åt genom konfiguration. Dessutom använder de flesta installationer en Dispatcher:
 
@@ -104,23 +104,23 @@ Det finns många avancerade alternativ och lösningar, men det grundläggande m�
 
 I följande avsnitt beskrivs båda scenarierna:
 
-* **Lokal**: AEM driftsatt och hanterad i din företagsmiljö.
+* **Lokal**: AEM har distribuerats och hanterats i din företagsmiljö.
 
 * **Managed Services - Cloud Manager för Adobe Experience Manager**: AEM distribueras och hanteras av Adobe Managed Services.
 
 ### Lokalt {#on-premise}
 
-Du kan installera AEM på servrar i din företagsmiljö. Typiska installationsinstanser är: Utvecklings-, testnings- och publiceringsmiljöer. Se [Komma igång](/help/sites-deploying/deploy.md#getting%20started) för grundläggande information om hur du hämtar AEM för att installera den lokalt.
+Du kan installera AEM på servrar i din företagsmiljö. Typiska installationsinstanser är: Utvecklings-, testnings- och publiceringsmiljöer. Se [Komma igång](/help/sites-deploying/deploy.md#getting%20started) för grundläggande information om hur du får AEM-programmet att installera det lokalt.
 
 Mer information om de typiska lokala distributionerna finns i [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md).
 
 ### Managed Services med Cloud Manager {#managed-services-using-cloud-manager}
 
-AEM Managed Services är en komplett lösning för Digital Experience Management. Det ger fördelar med upplevelseleverans i molnet samtidigt som man behåller kontrollen, säkerheten och anpassningsfördelarna med en lokal driftsättning. AEM Managed Services gör det möjligt för kunderna att lansera snabbare genom att driftsätta i molnet och även genom att lära sig de bästa metoderna och den bästa supporten från Adobe. Organisationer och företagsanvändare kan engagera kunderna på minimal tid, öka marknadsandelen och fokusera på att skapa innovativa marknadsföringskampanjer samtidigt som IT-avdelningen minskar bördan.
+AEM Managed Services är en komplett lösning för Digital Experience Management. Det ger fördelar med upplevelseleverans i molnet samtidigt som man behåller kontrollen, säkerheten och anpassningsfördelarna med en lokal driftsättning. Med AEM Managed Services kan kunderna komma igång snabbare genom att driftsätta i molnet och även genom att lära sig de bästa metoderna och den bästa supporten från Adobe. Organisationer och företagsanvändare kan engagera kunderna på minimal tid, öka marknadsandelen och fokusera på att skapa innovativa marknadsföringskampanjer samtidigt som IT-avdelningen minskar bördan.
 
 Med AEM Managed Services kan man dra nytta av följande fördelar:
 
-**Snabbare time to Market:** Med flexibel molninfrastruktur i Adobe Managed Services kan organisationer snabbt planera, starta och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov och Adobe kundlösningstekniker, hjälp med AEM arkitektur, provisionering, anpassning för att ansluta till back-end-appar och praktiska användningsmetoder.
+**Snabbare time to Market:** Med flexibel molninfrastruktur i Adobe Managed Services kan organisationer snabbt planera, starta och optimera framgångsrika digitala upplevelser. Adobe hanterar molnarkitekturen utan ytterligare kapital-, maskinvaru- eller programvarubehov och Adobe kundlösningstekniker, hjälp med AEM arkitektur, provisionering, anpassning för att ansluta till back-end-appar och bästa praxis för att publicera.
 
 **Högre prestanda:** Tillhandahåller tillförlitliga digitala upplevelser för ditt företag med fyra alternativ för tillgänglighet: 99,5 %, 99,9 %, 99,95 % och 99,99 %. Dessutom kan du använda automatiska modeller för säkerhetskopiering och återställning i flera lägen för att säkerställa tillförlitlighet och hantering av oförutsedda händelser.
 
@@ -128,9 +128,9 @@ Med AEM Managed Services kan man dra nytta av följande fördelar:
 
 **Högsta säkerhet:** Säkerställer fysisk säkerhet, nätverks- och datasäkerhet i företagsklass genom att vara värd för kundprogram i en anläggning med begränsad åtkomst, bakom brandväggssystem eller i ett virtuellt privat moln. Den innehåller virtuella datorer med en klientorganisation och robust kryptering för datalagring, antivirala program och dataisolering.
 
-**Cloud Manager**: Cloud Manager, som ingår i Adobe Experience Manager Managed Services-erbjudandet, är en självbetjäningsportal som gör det möjligt för organisationer att självhantera Adobe Experience Manager i molnet. Den innehåller en modern pipeline för kontinuerlig integrering och kontinuerlig leverans (CI/CD) som gör att IT-team och implementeringspartners kan snabba upp leveransen av anpassningar eller uppdateringar utan att kompromissa med prestanda eller säkerhet. Cloud Manager är endast tillgängligt för Adobe-kunder med hanterade tjänster.
+**Cloud Manager**: Cloud Manager, som ingår i Adobe Experience Manager Managed Services-erbjudandet, är en självbetjäningsportal som gör det möjligt för organisationer att självhantera Adobe Experience Manager i molnet. Den innehåller en modern pipeline för kontinuerlig integrering och kontinuerlig leverans (CI/CD) som gör att IT-team och implementeringspartners kan snabba upp leveransen av anpassningar eller uppdateringar utan att kompromissa med prestanda eller säkerhet. Cloud Manager är endast tillgängligt för Adobe kunder som har hanterade tjänster.
 
-Mer information om Cloud Manager och dess resurser finns i [**Cloud Manager användarhandbok**](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=sv-SE).
+Mer information om Cloud Manager och dess resurser finns i [**Cloud Manager användarhandbok**](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html).
 
 ## Komma igång {#getting-started}
 
@@ -138,15 +138,15 @@ Mer information om Cloud Manager och dess resurser finns i [**Cloud Manager anv�
 
 Medan produktionsinstanser körs på dedikerade datorer som kör ett operativsystem som stöds officiellt (se [Tekniska krav](/help/sites-deploying/technical-requirements.md)), kommer Experience Manager-servern att köras på alla system som stöder [**Java™ Standard Edition 8**](https://www.oracle.com/java/technologies/downloads/#java8).
 
-För att bli bekant och för att kunna utveckla AEM är det vanligt att använda en instans som är installerad på din dator och som kör Apple OS X eller datorversioner av Microsoft® Windows eller Linux®.
+För att kunna bli bekant och utveckla i AEM är det vanligt att använda en instans som är installerad på din dator och som kör Apple OS X eller skrivbordsversioner av Microsoft® Windows eller Linux®.
 
-På klientsidan fungerar AEM med alla moderna webbläsare (**Microsoft® Edge**, **Internet Explorer** 11, **Chrome &#x200B;** 51+**&#x200B; &#x200B;**, **Firefox &#x200B;** 47+, **Safari** 8+) både på datorer och surfplattor. Mer information finns i [Klientplattformar som stöds](/help/sites-deploying/technical-requirements.md#supported-client-platforms).
+På klientsidan fungerar AEM med alla moderna webbläsare (**Microsoft® Edge**, **Internet Explorer** 11, **Chrome **51+** **, **Firefox **47+, **Safari** 8+) både på datorer och surfplattor. Mer information finns i [Klientplattformar som stöds](/help/sites-deploying/technical-requirements.md#supported-client-platforms).
 
 ### Hämta programvaran {#getting-the-software}
 
 Kunder med ett giltigt underhålls- och supportavtal bör ha fått ett e-postmeddelande med en kod och kunna hämta AEM från [**Adobe licenswebbplats**](https://licensing.adobe.com/). Affärspartners kan begära hämtningsåtkomst från [**spphelp@adobe.com**](mailto:spphelp@adobe.com).
 
-Det AEM programpaketet finns i två former:
+AEM programpaket finns i två former:
 
 * **cq-quickstart-6.5.0.jar:** En fristående körbar *jar*-fil som innehåller allt du behöver för att komma igång.
 
@@ -162,7 +162,7 @@ I följande avsnitt beskriver vi den **fristående installationen**. Mer informa
 
    Installationsplats för Windows: **`C:\Program Files\aem`**
 
-   Det är också vanligt att du installerar exempelinstanser i en mapp direkt på skrivbordet. I alla händelser hänvisar Adobe till denna plats i allmänhet som
+   Det är också vanligt att du installerar exempelinstanser i en mapp direkt på skrivbordet. I vilket fall som helst avser Adobe denna plats i allmänhet som:
 
    `<aem-install>`
 
@@ -188,7 +188,7 @@ I följande avsnitt beskriver vi den **fristående installationen**. Mer informa
 
 AEM tar några minuter att packa upp burkfilen, installera sig själv och starta. Ovannämnda procedur ger följande resultat:
 
-* en **AEM författarinstans**
+* en **AEM-författarinstans**
 * körs på **localhost**
 * på port **4502**
 
@@ -198,7 +198,7 @@ Om du vill komma åt instansen pekar du i webbläsaren på:
 
 Resultatet i författarinstansen konfigureras automatiskt för anslutning till en **publiceringsinstans** på **`localhost:4503`**.
 
-### Skapa och installera Publish {#author-and-publish-installs}
+### Skapa och publicera installationer {#author-and-publish-installs}
 
 Standardinstallationen (en **författarinstans** på **`localhost:4502`**) kan ändras genom att namnet på filen `jar` ändras innan den startas för första gången. Namnmönstret är:
 
@@ -257,10 +257,6 @@ Om instansen installerades från användargränssnittet öppnas ett webbläsarf�
 
 ![startskärmen](assets/screen_shot_.png)
 
->[!NOTE]
->
->Om du använder symboler kan du ta en titt på [problem med symbolen](https://helpx.adobe.com/experience-manager/kb/changing-symlink.html).
-
 ### Starta och stoppa {#starting-and-stopping}
 
 När AEM har packat upp sig själv och startat för första gången startar du instansen genom att dubbelklicka på burkfilen i installationskatalogen, utan att installera om den.
@@ -288,7 +284,7 @@ AEM startar och dirigerar automatiskt om webbläsaren till rätt sida, vanligtvi
 
 ![inloggningsskärmen](assets/screen_shot_2019-04-08at83533am.png)
 
-När du har loggat in har du åtkomst till AEM. Mer information, beroende på din roll, finns i:
+När du har loggat in har du tillgång till AEM. Mer information, beroende på din roll, finns i:
 
 * [Redigering](/help/sites-authoring/first-steps.md)
 * [Administratör](/help/sites-administering/home.md)
@@ -297,7 +293,7 @@ När du har loggat in har du åtkomst till AEM. Mer information, beroende på di
 
 ## Avancerad distribution {#advanced-deployment}
 
-Ovanstående avsnitt bör ge dig en god förståelse för grunderna i AEM installation. Att installera ett komplett AEM kan dock innebära en betydligt större komplexitet. Mer information om avancerad installation finns i följande undersidor:
+Ovanstående avsnitt bör ge dig en god förståelse för grunderna i AEM-installationen. Att installera ett komplett produktionssystem av AEM kan dock medföra en betydligt större komplexitet. Mer information om avancerad installation finns i följande undersidor:
 
 * [Tekniska krav](/help/sites-deploying/technical-requirements.md)
 * [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md)
@@ -313,7 +309,7 @@ Ovanstående avsnitt bör ge dig en god förståelse för grunderna i AEM instal
 * [Felsökning av replikering](/help/sites-deploying/troubleshoot-rep.md)
 * [Bästa praxis](/help/sites-deploying/best-practices.md)
 * [Distribuera webbgrupper](/help/communities/deploy-communities.md)
-* [Introduktion till AEM](/help/sites-deploying/platform.md)
+* [Introduktion till AEM Platform](/help/sites-deploying/platform.md)
 * [Riktlinjer för prestanda](/help/sites-deploying/performance-guidelines.md)
 * [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md)
-* [Vad är AEM Screens?](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=sv-SE)
+* [Vad är AEM Screens?](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)

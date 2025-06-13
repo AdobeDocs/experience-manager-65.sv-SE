@@ -1,6 +1,6 @@
 ---
-title: Övervaka och underhålla din Adobe Experience Manager-instans
-description: Lär dig hur du övervakar och underhåller din Adobe Experience Manager-instans.
+title: Övervaka och underhålla Adobe Experience Manager-instansen
+description: Lär dig övervaka och underhålla din Adobe Experience Manager-instans.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: configuring
@@ -10,16 +10,16 @@ feature: Configuring
 exl-id: d3375935-090d-4052-8234-68ef4ddbab6a
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '5792'
+source-wordcount: '5755'
 ht-degree: 0%
 
 ---
 
-# Övervaka och underhålla din Adobe Experience Manager-instans{#monitoring-and-maintaining-your-aem-instance}
+# Övervaka och underhålla Adobe Experience Manager-instansen{#monitoring-and-maintaining-your-aem-instance}
 
-När AEM har distribuerats måste du övervaka och underhålla deras åtgärder, prestanda och integritet.
+När AEM-instanserna har distribuerats måste du övervaka och underhålla deras åtgärder, prestanda och integritet.
 
 En viktig faktor här är att du måste känna till hur systemet ser ut och fungerar under normala förhållanden för att kunna identifiera potentiella problem. Detta görs bäst genom att man övervakar systemet och samlar in information över tid.
 
@@ -30,7 +30,7 @@ En viktig faktor här är att du måste känna till hur systemet ser ut och fung
 | Det finns ett felspårningssystem för rapportering av problem. | Exempel: [Bugzilla](https://www.bugzilla.org/), [Jira](https://www.atlassian.com/software/jira) eller någon annan. |  |
 | Filsystemen övervakas. | CRX-databasen &quot;fryser&quot; om det inte finns tillräckligt med ledigt diskutrymme. Den återupptas när utrymme blir tillgängligt. | `*ERROR* LowDiskSpaceBlocker`-meddelanden kan visas i loggfilen när det lediga utrymmet börjar ta slut. |
 | [Loggfiler](/help/sites-deploying/monitoring-and-maintaining.md#working-with-audit-records-and-log-files) övervakas. |  |  |
-| Systemövervakning körs (kontinuerligt) i bakgrunden. | Inklusive processor-, minnes-, disk- och nätverksanvändning. Med exempelvis iostat / vmstat / permon. | Loggade data visas och kan användas för att spåra prestandaproblem. Rådata är också tillgängliga. |
+| Systemövervakning körs (kontinuerligt) i bakgrunden. | Inklusive CPU, minne, disk- och nätverksanvändning. Med exempelvis iostat / vmstat / permon. | Loggade data visas och kan användas för att spåra prestandaproblem. Rådata är också tillgängliga. |
 | [AEM prestanda övervakas](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-performance). | [Begär räknare](/help/sites-deploying/monitoring-and-maintaining.md#request-counters) för övervakning av trafiknivåer. | Om en betydande eller långvarig förlust av resultat konstateras bör en detaljerad undersökning göras. |
 | Du övervakar dina [replikeringsagenter](/help/sites-deploying/monitoring-and-maintaining.md#monitoring-your-replication-agents). |  |  |
 | Rensa arbetsflödesinstanser regelbundet. | Databasstorlek och arbetsflödets prestanda. | Se [Regelbunden rensning av arbetsflödesinstanser](/help/sites-administering/workflows-administering.md#regular-purging-of-workflow-instances). |
@@ -61,20 +61,20 @@ Ofta utförs en fullständig säkerhetskopiering med regelbundna intervall (t.ex
 
 >[!NOTE]
 >
->Mer information om prestanda för säkerhetskopiering finns i avsnittet Prestanda för [säkerhetskopiering](/help/sites-deploying/configuring-performance.md#backup-performance) .
+>Mer information om säkerhetskopieringsprestanda finns i avsnittet [Säkerhetskopieringsprestanda](/help/sites-deploying/configuring-performance.md#backup-performance).
 
-### Säkerhetskopiera din programvaruinstallation {#backing-up-your-software-installation}
+### Säkerhetskopiera programvaruinstallationen {#backing-up-your-software-installation}
 
-Efter installationen, eller betydande ändringar i konfigurationen, skapar du en säkerhetskopia av din programvaruinstallation.
+Skapa en säkerhetskopia av programvaruinstallationen när installationen är klar eller om konfigurationen har ändrats avsevärt.
 
-För att utföra den här uppgiften, [säkerhetskopiera hela lagringsplatsen](#backing-up-your-repository) och sedan:
+Om du vill utföra den här uppgiften [säkerhetskopierar du hela databasen](#backing-up-your-repository) och sedan:
 
 1. Stoppa AEM.
 1. Säkerhetskopiera hela `<cq-installation-dir>` från filsystemet.
 
 >[!CAUTION]
 >
->Om du använder en tredjepartsprogramserver kan ytterligare mappar finnas på en annan plats och måste säkerhetskopieras. Information om hur du installerar programservrar finns i [Installera AEM med en programserver](/help/sites-deploying/application-server-install.md).
+>Om du använder en tredjepartsprogramserver kan ytterligare mappar finnas på en annan plats och måste säkerhetskopieras. Mer information om hur du installerar programservrar finns i [Installera AEM med en programserver](/help/sites-deploying/application-server-install.md).
 
 >[!CAUTION]
 >
@@ -84,7 +84,7 @@ För att utföra den här uppgiften, [säkerhetskopiera hela lagringsplatsen](#b
 >
 >Diskspegling kan också användas som en säkerhetskopieringsmekanism.
 
-### Säkerhetskopiera din lagringsplats {#backing-up-your-repository}
+### Säkerhetskopiera databasen {#backing-up-your-repository}
 
 Avsnittet [Säkerhetskopiering och återställning](/help/sites-administering/backup-and-restore.md) i CRX-dokumentationen täcker alla problem som rör säkerhetskopiering av CRX-databasen.
 
@@ -94,11 +94,11 @@ Mer information om hur du skapar en &quot;hot&quot;-säkerhetskopiering online f
 
 Verktyget **Rensa versioner** är avsett att rensa versioner av en nod eller en hierarki av noder i din databas. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
 
-I det här avsnittet behandlas underhållsåtgärder som rör versionsfunktionen i AEM. Verktyget **Rensa version** är avsett att rensa versioner av en nod eller en hierarki av noder i databasen. Dess primära syfte är att hjälpa dig att minska storleken på ditt arkiv genom att ta bort gamla versioner av dina noder.
+I det här avsnittet behandlas underhållsåtgärder som rör versionsfunktionen i AEM. Verktyget **Rensa version** är avsett att rensa versioner av en nod eller en hierarki av noder i databasen. Dess främsta syfte är att hjälpa dig att minska storleken på databasen genom att ta bort tidigare versioner av dina noder.
 
-### Överblick {#overview}
+### Ökning {#overview}
 
-Verktyget **Rensa versioner** är tillgängligt som en underhållsåtgärd varje vecka. Innan du använder den för första gången måste den läggas till och sedan konfigureras. Därefter kan det köras på begäran eller varje vecka.
+Verktyget **Rensa versioner** är tillgängligt som en underhållsåtgärd varje vecka. Innan den används för första gången måste den läggas till och sedan konfigureras. Därefter kan det köras på begäran eller varje vecka.
 
 ### Rensa versioner av en webbplats {#purging-versions-of-a-web-site}
 
@@ -178,13 +178,13 @@ Processen visar alla noder som har bearbetats. Under processen kan en nod ha nå
 Konsolen ger dessutom användbar information om versionerna:
 
 * `V 1.0`: versionsnumret.
-* `V 1.0.1`&#42;: Stjärnan anger att versionen är den aktuella (grundversionen) och inte kan rensas.
+* `V 1.0.1`&#42;: stjärnan anger att versionen är den aktuella (bas) versionen och inte kan rensas.
 
-* `Thu Mar 15 2012 08:37:32 GMT+0100`: datumet för versionen.
+* `Thu Mar 15 2012 08:37:32 GMT+0100`: datum för versionen.
 
 I nästa exempel:
 
-* Versionerna **[!DNL Shirts]** rensas eftersom deras versionsålder är längre än två dagar.
+* Versionerna **[!DNL Shirts]** rensas eftersom deras versionsålder är större än två dagar.
 * Versionerna **[!DNL Tonga Fashions!]** rensas eftersom deras antal versioner är större än 5.
 
 ![global_version_screenshot](assets/global_version_screenshot.png)
@@ -207,11 +207,11 @@ Rotation av loggfiler avser den process som begränsar filens tillväxt genom at
 
 * Filen `error.log` har fått ett nytt namn enligt mönstret `{original_filename}.yyyy-MM-dd`. Exempel: den 11 juli 2010 får den aktuella loggfilen namnet `error.log-2010-07-10` och sedan skapas en ny `error.log`.
 
-* Tidigare loggfiler tas inte bort, så det är ditt ansvar att rensa gamla loggfiler med jämna mellanrum för att begränsa diskanvändningen.
+* Tidigare loggfiler tas inte bort, så det är ditt ansvar att regelbundet rensa gamla loggfiler för att begränsa diskanvändningen.
 
 >[!NOTE]
 >
->Om du uppgraderar AEM finns alla befintliga loggfiler som inte längre används av AEM kvar på disken. Du kan ta bort dem utan risk. Alla nya loggposter skrivs i de nya loggfilerna.
+>Om du uppgraderar din AEM-installation finns alla befintliga loggfiler som inte längre används av AEM kvar på disken. Du kan ta bort dem utan risk. Alla nya loggposter skrivs i de nya loggfilerna.
 
 ### Hitta loggfilerna {#finding-the-log-files}
 
@@ -228,13 +228,13 @@ Modereringsåtgärder registreras här.
    * `error.log`
 Felmeddelanden (av varierande allvarlighetsgrad) registreras här.
 
-   * [`ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html?lang=sv-SE)
+   * [`ImageServer-<PortId>-yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-image-server-log.html)
 Den här loggen används bara om [!DNL Dynamic Media] är aktiverat. Det innehåller statistik och analysinformation som används för att analysera beteendet i den interna ImageServer-processen.
 
    * `request.log`
 Varje åtkomstbegäran registreras här tillsammans med svaret.
 
-   * [`s7access-<yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html?lang=sv-SE)
+   * [`s7access-<yyyy>-<mm>-<dd>.log`](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/config-admin/server-logging/c-access-log.html)
 Den här loggen används bara om [!DNL Dynamic Media] är aktiverat. I s7access-loggen registreras varje begäran som gjorts till [!DNL Dynamic Media] till `/is/image` och `/is/content`.
 
    * `stderr.log`
@@ -253,7 +253,7 @@ Information om revideringsjournaler.
 
 >[!NOTE]
 >
->ImageServer- och s7access-loggarna ingår inte i **Download Full &#x200B;** paketet som genereras från sidan **system/console/status-Bundlelist &#x200B;**. Om du har [!DNL Dynamic Media] utgåvor av supporten lägger du till loggarna ImageServer och s7access när du kontaktar kundsupporten.
+>ImageServer- och s7access-loggarna ingår inte i **Download Full **paketet som genereras från sidan **system/console/status-Bundlelist **. Om du har [!DNL Dynamic Media] utgåvor av supporten lägger du till loggarna ImageServer och s7access när du kontaktar kundsupporten.
 
 ### Aktivera loggnivån för FELSÖKNING {#activating-the-debug-log-level}
 
@@ -276,7 +276,7 @@ Loggnivåerna är följande:
 | 0 | Allvarligt fel | Åtgärden misslyckades och installationsprogrammet kan inte fortsätta. |
 |---|---|---|
 | 1 | Fel | Åtgärden misslyckades. Installationen fortsätter, men en del av AEM WCM installerades inte korrekt och fungerar inte. |
-| 2 | Varning | Åtgärden har slutförts men problem uppstod. AEM WCM kanske inte fungerar som det ska. |
+| 2 | Varning | Åtgärden har slutförts men problem uppstod. AEM WCM fungerar eventuellt inte som det ska. |
 | 3 | Information | Åtgärden har slutförts. |
 
 ### Skapa en anpassad loggfil {#create-a-custom-log-file}
@@ -292,7 +292,7 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. G�
 
    * Namn: `org.apache.sling.commons.log.LogManager.factory.config-<identifier>`
 
-     Där `<identifier>` ersätts av fritext som du (måste) ange för att identifiera instansen (du kan inte utelämna den här informationen).
+     Där `<identifier>` ersätts med fritext som du (måste) anger för att identifiera instansen (du kan inte utelämna den här informationen).
 
      Exempel: `org.apache.sling.commons.log.LogManager.factory.config-MINE`
 
@@ -300,7 +300,7 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. G�
 
    >[!NOTE]
    >
-   >Även om det inte är ett tekniskt krav, är det lämpligt att göra `<identifier>` unikt.
+   >Även om det inte är ett tekniskt krav är det tillrådligt att göra `<identifier>` unik.
 
 1. Ange följande egenskaper för den här noden:
 
@@ -332,7 +332,7 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. G�
 
         Typ: `String`
 
-        Värde: ange mönstret för loggmeddelandet efter behov. till exempel
+        Värde: ange loggmeddelandets mönster efter behov, till exempel
 
         `{0,date,dd.MM.yyyy HH:mm:ss.SSS} *{4}* [{2}] {3} {5}`
 
@@ -433,11 +433,11 @@ I vissa fall kanske du vill skapa en anpassad loggfil med en annan loggnivå. G�
    >för att ange när en ny fil skapas (och den befintliga filen får ett nytt namn enligt namnmönstret).
    >
    >* En storleksgräns kan anges med ett tal. Om ingen storleksindikator anges används den som antal byte, eller så kan du lägga till en av storleksindikatorerna - `KB`, `MB` eller `GB` (versaler ignoreras).
-   >* Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat` mönster. Den definierar den tidsperiod efter vilken filen roteras. Dessutom läggs suffixet till i den roterade filen (för identifiering).
+   >* Ett tids-/datumschema kan anges som ett `java.util.SimpleDateFormat`-mönster. Den anger efter vilken tidsperiod som filen roteras. Dessutom läggs suffixet till i den roterade filen (för identifiering).
    >
-   >Standardvärdet är &#39;.&#39;yyyy-MM-dd (för daglig loggrotation).
+   >Standardvärdet är .yyyy-MM-dd (för daglig loggrotation)
    >
-   >Till exempel vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta datum inträffar för att vara exakt), .. /logs/error.log byter namn till .. /logs/error.log.2010-01-20. Loggning för 21 januari matas ut till (en ny och tom) .. /logs/error.log tills den rullas över vid nästa dagändring.
+   >Exempel: vid midnatt den 20 januari 2010 (eller när det första loggmeddelandet efter detta datum är exakt), byter ../logs/error.log namn till ../logs/error.log.2010-01-20. Loggning för 21 januari skickas till (en ny och tom version) ../logs/error.log tills den överförs vid nästa ändring av dagen.
    >
    >| `'.'yyyy-MM` | Rotation i början av varje månad |
    >|---|---|
@@ -483,7 +483,7 @@ Dessa poster innehåller samma information som den som visas när du redigerar e
 
 #### OSGi Granskningsposter från webbkonsolen {#osgi-audit-records-from-the-web-console}
 
-OSGi-händelser genererar också granskningsposter som kan visas på fliken **Konfigurationsstatus** > fliken **Loggfiler** i AEM webbkonsol:
+OSGi-händelser genererar också granskningsposter som kan visas på fliken **Konfigurationsstatus** > **Loggfiler** på AEM webbkonsol:
 
 ![screen_shot_2012-02-13at50346pm](assets/screen_shot_2012-02-13at50346pm.png)
 
@@ -546,21 +546,21 @@ Nedan visas vanliga prestandaproblem som uppstår, tillsammans med förslag om h
 
 | Område | Symptom | Öka kapaciteten.. | Minska volymen... |
 |---|---|---|---|
-| Klient | CPU-användning med hög klient. | Installera en klientprocessor med högre prestanda. | Förenkla (HTML) layouten. |
-|   | Låg processoranvändning på servern. | Uppgradera till en snabbare webbläsare. | Förbättra cacheminnet på klientsidan. |
+| Klient | Användning av CPU med hög kundnivå. | Installera en klient-CPU med högre prestanda. | Förenkla (HTML) layouten. |
+|   | Låg användning av CPU på servern. | Uppgradera till en snabbare webbläsare. | Förbättra cacheminnet på klientsidan. |
 |   | Vissa kunder är snabba, vissa långsamma. |  |  |
 | Server |  |  |  |
-| Nätverk | CPU-användningen låg på både servrar och klienter. | Ta bort eventuella flaskhalsar i nätverket. | Förbättra/optimera konfigurationen av klientcachen. |
+| Nätverk | CPU har låg användning både på servrar och klienter. | Ta bort eventuella flaskhalsar i nätverket. | Förbättra/optimera konfigurationen av klientcachen. |
 |   | Det går snabbt att bläddra lokalt på servern (relativt). | Öka nätverkets bandbredd. | Minska&quot;vikten&quot; på dina webbsidor (till exempel färre bilder, optimerad HTML). |
-| Webbserver | Processoranvändningen på webbservern är hög. | Klustra dina webbservrar. | Minska antalet träffar per sida (besök). |
+| Webbserver | CPU på webbservern är hög. | Klustra dina webbservrar. | Minska antalet träffar per sida (besök). |
 |   |  | Använd en maskinvarubaserad belastningsutjämnare. |  |
-| Program | Serverns processoranvändning är hög. | Klustera dina AEM instanser. | Sök efter, och eliminera, processor- och minnesgropar (använd kodgranskning och tidsutdata). |
+| Program | Serverns CPU-användning är hög. | Klustra dina AEM-instanser. | Sök efter, och ta bort, CPU och minnesgropar (använd kodgranskning och tidsutdata). |
 |   | Hög minnesförbrukning. |  | Förbättra cachelagringen på alla nivåer. |
 |   | Låga svarstider. |  | Optimera mallar och komponenter (till exempel struktur, logik). |
 | Databas |  |  |  |
 | Cache |  |  |  |
 
-Prestandaproblem kan bero på olika orsaker som inte har något med din webbplats att göra, bland annat tillfälliga avbrott i anslutningshastigheten, processorbelastningen och många andra.
+Prestandaproblem kan bero på olika orsaker som inte har något med din webbplats att göra, bland annat tillfälliga avbrottstakten i anslutningshastigheten, CPU-belastningen och många andra.
 
 Det kan även påverka alla besökare eller bara en del av dem.
 
@@ -613,12 +613,12 @@ Vissa av dessa verktyg är beroende av operativsystemet.
   <tr>
    <td>Heap Dumps</td>
    <td>Slut på minne som orsakar långsamma prestanda.</td>
-   <td><p>Lägg till alternativet:<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> i det Java™-anrop som går till AEM.</p> <p>Se <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/prepapp002.html#CEGBHDFH">Alternativ/flaggor för JVM-felsökningssidan</a>.</p> </td>
+   <td><p>Lägg till alternativet:<br /> <code>-XX:+HeapDumpOnOutOfMemoryError</code><br /> i Java™-anropet som går till AEM.</p> <p>Se <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/prepapp002.html#CEGBHDFH">Alternativ/flaggor för JVM-felsökningssidan</a>.</p> </td>
   </tr>
   <tr>
    <td>Systemanrop</td>
    <td>Identifiera timingproblem.</td>
-   <td><p>Anrop till <code>System.currentTimeMillis()</code> eller <code>com.day.util</code>. Tidsinställningen används för att generera tidsstämplar från din kod, eller genom <a href="#html-comments">HTML-kommentarer</a>.</p> <p><strong>Obs!</strong> Implementera de här sakerna så att de kan aktiveras/inaktiveras efter behov. När ett system körs smidigt behövs inte den allmänna kostnaden för att samla in statistik.</p> </td>
+   <td><p>Anrop till <code>System.currentTimeMillis()</code> eller <code>com.day.util</code>. Tidsinställningen används för att generera tidsstämplar från din kod eller genom <a href="#html-comments">HTML-kommentarer</a>.</p> <p><strong>Obs!</strong> Implementera de här sakerna så att de kan aktiveras/inaktiveras efter behov. När ett system körs smidigt behövs inte den allmänna kostnaden för att samla in statistik.</p> </td>
   </tr>
   <tr>
    <td>Apache Bench</td>
@@ -637,7 +637,7 @@ Vissa av dessa verktyg är beroende av operativsystemet.
   </tr>
   <tr>
    <td>JProfiler</td>
-   <td>Detaljerad processor- och minnesprofilering.</td>
+   <td>Detaljinfo om CPU och minnesprofilering.</td>
    <td><a href="https://www.ej-technologies.com/">https://www.ej-technologies.com/</a></td>
   </tr>
   <tr>
@@ -666,7 +666,7 @@ Vissa av dessa verktyg är beroende av operativsystemet.
    <td><p>Om du vill se tidsstatistik för sidåtergivning kan du använda <strong>Ctrl-Skift-U</strong> tillsammans med <code>?debugClientLibs=true</code> som anges i URL:en.</p> </td>
   </tr>
   <tr>
-   <td>Processorn och minnesprofileringsverktyget <br /> </td>
+   <td>CPU och minnesprofileringsverktyget <br /> </td>
    <td><a href="#interpreting-the-request-log">Används vid analys av långsamma begäranden under utveckling</a>.</td>
    <td>Exempel: <a href="https://www.yourkit.com/">Ditt paket</a>. eller <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr004.html#BABJJEEE">Java™ Flight Recorder</a>.</td>
   </tr>
@@ -680,9 +680,9 @@ Vissa av dessa verktyg är beroende av operativsystemet.
 
 ### Tolka request.log {#interpreting-the-request-log}
 
-Den här filen registrerar grundläggande information om varje begäran som görs till AEM. Därigenom kan värdefulla slutsatser dras.
+Den här filen registrerar grundläggande information om alla förfrågningar som görs till AEM. Därigenom kan värdefulla slutsatser dras.
 
-`request.log` erbjuder ett inbyggt sätt att se hur lång tid det tar att begära. I utvecklingssyfte är det användbart att `tail -f` `request.log` och hålla utkik efter långsamma svarstider. Om du vill analysera ett större `request.log` rekommenderar Adobe [användningen av `rlog.jar`, vilket gör att du kan sortera och filtrera efter svarstider ](#using-rlog-jar-to-find-requests-with-long-duration-times).
+`request.log` erbjuder ett inbyggt sätt att se hur lång tid det tar att begära. I utvecklingssyfte är det användbart att `tail -f` `request.log` och hålla utkik efter långsamma svarstider. Om du vill analysera ett större `request.log` rekommenderar Adobe [användning av `rlog.jar`, vilket gör att du kan sortera och filtrera efter svarstider ](#using-rlog-jar-to-find-requests-with-long-duration-times).
 
 Adobe rekommenderar att du isolerar de &quot;långsamma&quot; sidorna från `request.log` och sedan justerar dem individuellt för att få bättre prestanda. Inkludera prestandamått per komponent eller använd ett prestandaprofileringsverktyg som ` [yourkit](https://www.yourkit.com/)`.
 
@@ -695,7 +695,7 @@ Begärandeloggen registrerar varje begäran som gjorts, tillsammans med svaret:
 09:43:41 [66] <- 200 text/html 797ms
 ```
 
-Genom att summera alla GETTER inom specifika perioder (t.ex. under olika 24-timmarsperioder) kan du göra utdrag om den genomsnittliga trafiken på webbplatsen.
+Genom att summera alla GET-poster inom specifika perioder (t.ex. under olika 24-timmarsperioder) kan du göra utdrag om den genomsnittliga trafiken på din webbplats.
 
 #### Övervaka svarstider med request.log {#monitoring-response-times-with-the-request-log}
 
@@ -768,7 +768,7 @@ Testerna måste göras för att avgöra hur många samtidiga användare som syst
 
 ### Använda rlog.jar för att hitta begäranden med lång varaktighet {#using-rlog-jar-to-find-requests-with-long-duration-times}
 
-AEM innehåller olika hjälpverktyg i följande:
+AEM innehåller olika hjälpverktyg:
 `<cq-installation-dir>/crx-quickstart/opt/helpers`
 
 Ett av dessa verktyg, `rlog.jar`, kan användas för att snabbt sortera `request.log` så att begäranden visas med varaktighet, från längsta till kortaste tid.
@@ -877,7 +877,7 @@ Percentage of the requests served within a certain time (ms)
 100% 8106 (longest request)
 ```
 
-Siffrorna ovan hämtas från en vanlig bärbar dator från MAcBook Pro (mitten av 2010) som har åtkomst till Geometrixx företagssida, vilket ingår i en AEM. Sidan är enkel, men inte optimerad för prestanda.
+Siffrorna ovan hämtas från en vanlig bärbar dator från MAcBook Pro (mitten av 2010) som har åtkomst till Geometrixx företagssida, vilket ingår i en AEM standardinstallation. Sidan är enkel, men inte optimerad för prestanda.
 
 `apachebench` visar också tiden per begäran som medelvärde, för alla samtidiga begäranden, se `Time per request: 54.595 [ms]` (medelvärde, för alla samtidiga begäranden). Du kan ändra värdet på parametern för samtidig användning `-c` (antalet flera begäranden som ska utföras samtidigt) för att se eventuella effekter.
 
@@ -897,7 +897,7 @@ De insamlade uppgifterna kan användas för att ange
 * en redundant instans
 * alla omstarter (räknaren återställs till 0)
 
-### HTML kommentarer {#html-comments}
+### HTML Comments {#html-comments}
 
 Vi rekommenderar att alla projekt innehåller `html comments` för serverprestanda. Många bra exempel finns. Välj en sida, öppna sidkällan för visning och rulla längst ned. Kod som följande kan ses:
 
@@ -913,9 +913,9 @@ Vi rekommenderar att alla projekt innehåller `html comments` för serverprestan
 
 Verktygskommandot `jconsole` är tillgängligt med JDK.
 
-1. Starta AEM.
+1. Starta din AEM-instans.
 1. Kör `jconsole.`
-1. Markera AEM och **Anslut**.
+1. Markera din AEM-instans och **Anslut**.
 
 1. Dubbelklicka på `com.day.crx.quickstart.Main` i programmet `Local`. Översikten visas som standard:
 
@@ -923,11 +923,11 @@ Verktygskommandot `jconsole` är tillgängligt med JDK.
 
    Nu kan du välja andra alternativ.
 
-### Övervaka prestanda med hjälp av (J)VisualVM {#monitoring-performance-using-j-visualvm}
+### Övervakningsprestanda med (J)VisualVM {#monitoring-performance-using-j-visualvm}
 
 För JDK 6-8 är verktygskommandot `visualvm` tillgängligt. När du har installerat en JDK kan du göra följande:
 
-1. Starta AEM.
+1. Starta din AEM-instans.
 
    >[!NOTE]
    >
@@ -1037,7 +1037,7 @@ Använd en databasfråga, via CRXDE - Verktyg - Fråga, om du vill se hur många
 
 #### Vilken är den genomsnittliga storleken på resurserna? {#what-is-the-average-size-of-the-assets}
 
-Så här fastställer du den totala storleken på mappen `/var/dam` :
+Så här avgör du den totala storleken på mappen `/var/dam`:
 
 1. Använd WebDAV för att mappa databasen till det lokala filsystemet.
 
@@ -1098,19 +1098,10 @@ Här följer en lista med förslag på vad du ska kontrollera om du får vissa p
 >
 >Se även följande artiklar för mer information:
 >
->* [Tråd dumpar](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=sv-SE)
->* [Analysera minnesproblem](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=sv-SE)
->* [Analysera med den inbyggda profileraren](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html?lang=sv-SE)
->* [Analysera långsamma och blockerade processer](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
+>* [Tråd dumpar](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html)
+>* [Analysera minnesproblem](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html)
+>* [Analysera med den inbyggda profileraren](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17499.html)
 >
-
-### CPU vid 100 % {#cpu-at}
-
-Om datorns CPU hela tiden körs med 100 %, se följande:
-
-* Kunskapsbasen:
-
-   * [Analysera långsamma och blockerade processer](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)
 
 ### Slut på minne {#out-of-memory}
 
@@ -1125,7 +1116,7 @@ Kontrollera i så fall:
 * JVM-inställningarna som används för att [starta AEM](/help/sites-deploying/deploy.md#getting-started)
 * Kunskapsbasen:
 
-   * [Analysera minnesproblem](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=sv-SE)
+* [Analysera minnesproblem](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html)
 
 ### Skiva-I/O {#disk-i-o}
 
@@ -1134,32 +1125,31 @@ Om det inte finns tillräckligt med diskutrymme på datorn eller om det uppstår
 * Oavsett om du har inaktiverat en samling felsökningsinformation kan den konfigureras på olika platser, bland annat följande:
 
    * [Apache Sling JSP Script Handler](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjspscripthandler)
-   * [JavaScript-hanterare för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
+   * [Apache Sling JavaScript Handler](/help/sites-deploying/osgi-configuration-settings.md#apacheslingjavascripthandler)
    * [Konfiguration av Apache Sling-loggning](/help/sites-deploying/osgi-configuration-settings.md#apacheslingloggingconfiguration)
-   * [Bibliotekshanterare för CQ HTML](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
-   * [Felsökningsfilter för CQ WCM](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
-   * [Loggers](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
+   * [CQ HTML Library Manager](/help/sites-deploying/osgi-configuration-settings.md#daycqhtmllibrarymanager)
+   * [CQ WCM-felsökningsfilter](/help/sites-deploying/osgi-configuration-settings.md#daycqwcmdebugfilter)
+   * [Loggare](/help/sites-deploying/monitoring-and-maintaining.md#activating-the-debug-log-level)
 
 * Om och hur du har konfigurerat [versionsrensning](/help/sites-deploying/version-purging.md)
 * Kunskapsbasen:
 
-   * [För många öppna filer](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html?lang=sv-SE)
-   * [Journalen förbrukar för mycket diskutrymme](https://helpx.adobe.com/experience-manager/kb/JournalTooMuchDiskSpace.html)
+   * [För många öppna filer]&#x200B;(https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17470.html)
 
 ### Regelbunden prestandaförsämring {#regular-performance-degradation}
 
-Om du ser att prestandan för din instans försämras efter varje omstart (ibland en vecka eller senare) kan du kontrollera följande:
+Om du ser att instansens prestanda försämras efter varje omstart (ibland en vecka eller senare) kan du kontrollera följande:
 
 * [Slut på minne](#outofmemory)
 * Kunskapsbasen:
 
-   * [Oavslutade sessioner](https://helpx.adobe.com/experience-manager/kb/AnalyzeUnclosedSessions.html)
+   * [Ostängd resurslösare](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23761)
 
 ### JVM-justering {#jvm-tuning}
 
 Java™ Virtual Machine (JVM) har förbättrats när det gäller justering (särskilt sedan Java™ 7). Därför är det ofta lämpligt att ange en rimlig fast JVM-storlek och att använda standardvärdena.
 
-Om standardinställningarna inte är lämpliga är det viktigt att upprätta en metod för att övervaka och utvärdera GC-prestanda. Gör det innan du försöker justera JVM. Den här processen kan omfatta övervakningsfaktorer, inklusive heapstorlek, algoritm och andra aspekter.
+Om standardinställningarna inte är lämpliga är det viktigt att du skapar en metod för att övervaka och utvärdera GC-prestanda. Gör det innan du försöker justera JVM. Den här processen kan omfatta övervakningsfaktorer som stackstorlek, algoritm och andra aspekter.
 
 Några vanliga alternativ är:
 
@@ -1194,6 +1184,6 @@ Du kan se hur mycket minne som används, vilka GC-algoritmer som används, hur l
 
 >[!NOTE]
 >
->För Oraclets virtuella dator finns även information på:
+>För Oracle VM finns även information på:
 >
 >[https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html](https://docs.oracle.com/javase/8/docs/technotes/guides/vm/server-class.html)

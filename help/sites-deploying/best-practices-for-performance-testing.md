@@ -9,9 +9,9 @@ exl-id: fcac75e1-15c1-4a37-8d43-93c95267b903
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-Prestandatestning är en viktig del i all AEM. Beroende på kundens krav kan prestandatestning utföras på publiceringsinstanser, författarinstanser eller både och.
+Prestandatestning är en viktig del av all AEM-driftsättning. Beroende på kundens krav kan prestandatestning utföras på publiceringsinstanser, författarinstanser eller både och.
 
-I denna dokumentation beskrivs övergripande strategier och metoder för att utföra prestandatester och några av de verktyg som Adobe tillhandahåller för att hjälpa processen. Läs slutligen en analys av de verktyg som är tillgängliga i AEM 6 som hjälp vid prestandajustering, både från kodanalys och systemkonfigurationsperspektiv.
+I denna dokumentation beskrivs övergripande strategier och metoder för att utföra prestandatester och några av de verktyg som Adobe tillhandahåller för att hjälpa processen. Läs slutligen en analys av de verktyg som finns i AEM 6 som hjälp vid prestandajustering, både ur kodanalys och systemkonfigurationsperspektiv.
 
 ### Simulera verklighet {#simulating-reality}
 
@@ -34,7 +34,7 @@ Många prestandamått i AEM, t.ex. svarstid för frågor, kan påverkas av storl
 
 * Produktionskod
 
-De AEM versionerna och snabbkorrigeringarna som används i produktionen bör vara desamma i testmiljön. Det är också viktigt att testa vilken version av koden som distribueras till produktionen.
+De AEM-versioner och snabbkorrigeringar som används i produktionen bör vara desamma i testmiljön. Det är också viktigt att testa vilken version av koden som distribueras till produktionen.
 
 * Produktionsliknande maskinvara och nätverkskonfiguration
 
@@ -54,12 +54,10 @@ Det finns många kommersiellt tillgängliga verktyg för prestandatestning på m
 
 #### Testverktyg {#testing-tools}
 
-* Verktyget Adobe **Tough Day** kan användas för att generera inläsning AEM instanser och samla in prestandadata. Adobe AEM tekniker använder faktiskt verktyget för att ladda ned testning av själva AEM. Skript som körs under Tough Day konfigureras via egenskapsfiler och JMX XML-filer. Mer information finns i dokumentationen för [Tough Day](/help/sites-developing/tough-day.md).
+* Adobe **Tough Day**-verktyg kan användas för att generera inläsning på AEM-instanser och samla in prestandadata. Adobe AEM tekniker använder faktiskt verktyget för att ladda ned testning av själva AEM-produkten. Skript som körs under Tough Day konfigureras via egenskapsfiler och JMX XML-filer. Mer information finns i dokumentationen för [Tough Day](/help/sites-developing/tough-day.md).
 
-* AEM innehåller färdiga verktyg för att snabbt se problematiska frågor, förfrågningar och felmeddelanden. Mer information finns i avsnittet [Diagnosverktyg](/help/sites-administering/operations-dashboard.md#diagnosis-tools) i dokumentationen för kontrollpanelen för åtgärder.
+* AEM har färdiga verktyg för att snabbt se problematiska frågor, förfrågningar och felmeddelanden. Mer information finns i avsnittet [Diagnosverktyg](/help/sites-administering/operations-dashboard.md#diagnosis-tools) i dokumentationen för kontrollpanelen för åtgärder.
 * Apache tillhandahåller en produkt med namnet **JMeter** som kan användas för prestanda- och inläsningstestning samt funktionellt beteende. Det är programvara med öppen källkod och kan användas utan extra kostnad, men har en mindre funktionsuppsättning än företagsprodukter och en brantare inlärningskurva. JMeter finns på Apache webbplats på [https://jmeter.apache.org/](https://jmeter.apache.org/)
-
-* **Load Runner** är en inläsningstestprodukt i enterpriseklass. Det finns en kostnadsfri utvärderingsversion. Mer information finns på [https://www.microfocus.com/en-us/portfolio/performance-engineering/overview](https://www.microfocus.com/en-us/portfolio/performance-engineering/overview)
 
 * Inläsningstestverktyg för webbplatser som [Vercara](https://vercara.com/website-performance-management) kan också användas.
 * När du testar mobila eller responsiva webbplatser måste du använda en separat uppsättning verktyg. De fungerar genom att begränsa nätverksbandbredden och simulera långsammare mobilanslutningar som 3G eller EDGE. Bland de verktyg som används mest finns följande:
@@ -75,15 +73,15 @@ Dokumentationen [Övervakningsprestanda](/help/sites-deploying/monitoring-and-ma
 
 **Utvecklarläge i Touch-gränssnittet**
 
-En av de nya funktionerna i pekgränssnittet AEM 6 är utvecklarläget. Precis som författare kan växla mellan redigerings- och förhandsgranskningsläge kan utvecklare växla till utvecklarläget i författargränssnittet. På så sätt kan du se återgivningstiden för varje komponent på sidan och se stackspår för eventuella fel. Mer information om utvecklarläget finns i den här [CQ Gems-presentationen](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html?lang=sv-SE).
+En av de nya funktionerna i pekgränssnittet i AEM 6 är utvecklarläget. Precis som författare kan växla mellan redigerings- och förhandsgranskningsläge kan utvecklare växla till utvecklarläget i författargränssnittet. På så sätt kan du se återgivningstiden för varje komponent på sidan och se stackspår för eventuella fel. Mer information om utvecklarläget finns i den här [CQ Gems-presentationen](https://experienceleague.adobe.com/docs/experience-manager-gems-events/gems/gems2014/aem-developer-mode.html).
 
 **Använda rlog.jar för att läsa begärandeloggarna**
 
-För en mer omfattande analys av begärandeloggarna i ett AEM kan `rlog.jar` användas för att söka igenom och sortera de `request.log`-filer som AEM genererar. Denna jar-fil ingår i en AEM installation i mappen `/crx-quickstart/opt/helpers`. Mer information om loggverktyget och den allmänna inloggningen för begäran finns i dokumentationen för [Övervakning och underhåll](/help/sites-deploying/monitoring-and-maintaining.md).
+Om du vill göra en mer omfattande analys av begärandeloggarna på ett AEM-system kan `rlog.jar` användas för att söka igenom och sortera de `request.log`-filer som genereras av AEM. Denna jar-fil ingår i en AEM-installation i mappen `/crx-quickstart/opt/helpers`. Mer information om loggverktyget och den allmänna inloggningen för begäran finns i dokumentationen för [Övervakning och underhåll](/help/sites-deploying/monitoring-and-maintaining.md).
 
 **Förklara fråga**
 
-Verktyget [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query) i ACS AEM Tools kan användas för att visa de index som används när en fråga körs. Det här verktyget är användbart när du optimerar frågor som körs långsamt.
+Verktyget [Förklara fråga](/help/sites-administering/operations-dashboard.md#explain-query) i ACS AEM-verktygen kan användas för att visa de index som används när en fråga körs. Det här verktyget är användbart när du optimerar frågor som körs långsamt.
 
 **Verktyg för sidhastighet**
 
@@ -120,11 +118,11 @@ Avsnittet **ObservationQueueMaxLength** visar antalet händelser i Oak observati
 1. Placera den under mappen /crx-quickstart/install.
 
 >[!NOTE]
->Se [AEM 6.x | Tips för prestandajustering ](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=sv-SE)
+>Se [AEM 6.x | Tips för prestandajustering ](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html)
 
 Standardinställningen är 10 000, men de flesta distributioner måste öka den till 20 000 eller 50 000.
 
-## Publish Environment {#publish-environment}
+## Publiceringsmiljö {#publish-environment}
 
 ### Utföra tester {#performing-tests-1}
 
@@ -134,7 +132,7 @@ Automatiska testverktyg från tredje part kan användas för att testa webbplats
 
 De flesta webbplatser har optimeringar som Dispatcher cachning och ett leveransnätverk. Kontrollera att även dessa optimeringar är tillgängliga för testmiljön när du testar. Förutom att övervaka slutanvändarnas svarstider bör du övervaka systemvärden på publiceringsservrarna och utskickarna för att se till att systemet inte begränsas av maskinvaruresurser.
 
-På ett system som inte kräver en hög nivå av personalisering bör Dispatcher cachelagra de flesta förfrågningar. Därför bör inläsningen av publiceringsinstansen förbli relativt platt. Om det krävs en hög nivå av personalisering rekommenderar vi att du använder tekniker som iFrames eller AJAX förfrågningar för det personaliserade innehållet för att tillåta så mycket Dispatcher-cachning som möjligt.
+På ett system som inte kräver en hög nivå av personalisering bör Dispatcher cachelagra de flesta förfrågningar. Därför bör inläsningen av publiceringsinstansen förbli relativt platt. Om det krävs en hög nivå av personalisering rekommenderar vi att du använder tekniker som iFrames eller AJAX-förfrågningar för det personaliserade innehållet för att tillåta så mycket Dispatcher-cachning som möjligt.
 
 För grundläggande tester kan Apache Bench användas för att mäta svarstider på webbservern och för att skapa belastning för att mäta minnesläckage. Se exemplet i [övervakningsdokumentationen](/help/sites-deploying/monitoring-and-maintaining.md#apache-bench).
 
@@ -146,13 +144,13 @@ När du har kört prestandatester på författarinstansen måste eventuella prob
 * Analysera långsamma frågor som körs med [frågeprestandaverktyget](/help/sites-administering/operations-dashboard.md#query-performance)
 
 * Kontrollera om det finns fel eller varningar i felloggen. Mer information finns i [Loggning](/help/sites-deploying/configure-logging.md).
-* Övervaka systemmaskinvaruresurser som minne och processoranvändning, disk-I/O eller nätverks-I/O. Dessa resurser är ofta orsaken till flaskhalsar i prestandan.
+* Övervaka systemmaskinvaruresurser som minne och CPU-användning, disk-I/O eller nätverks-I/O. Dessa resurser är ofta orsaken till flaskhalsar i prestandan.
 * Optimera sidornas arkitektur och adressering för att minimera användningen av URL-parametrar så att så mycket cache-lagring som möjligt kan användas.
-* Följ dokumentationen för [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) och [Prestandaoptimeringstips](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=sv-SE).
+* Följ dokumentationen för [Prestandaoptimering](/help/sites-deploying/configuring-performance.md) och [Prestandaoptimeringstips](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html).
 
 * Om det är problem med att redigera vissa sidor eller komponenter på författarinstanser använder du TouchUI Developer Mode för att granska sidan i fråga. Då visas en beskrivning av varje innehållsområde på sidan och dess inläsningstid.
 * Minimera alla JS och CSS på webbplatsen. Se [blogginlägget](https://blogs.adobe.com/foxes/enable-js-and-css-minification/).
 * Eliminera inbäddad CSS och JS från komponenterna. De bör inkluderas och minimeras med klientbiblioteken för att minimera antalet begäranden som krävs för att återge sidan.
 * Om du vill inspektera serverförfrågningarna och se vilka som tar längst tid använder du webbläsarverktyg som Chrome nätverksflik.
 
-När problemområden har identifierats kan programkoden genomsökas efter prestandaoptimeringar. Alla AEM som inte fungerar som de ska kan hanteras med Adobe Support.
+När problemområden har identifierats kan programkoden genomsökas efter prestandaoptimeringar. Alla AEM-funktioner som inte fungerar som de ska kan hanteras med Adobe Support.

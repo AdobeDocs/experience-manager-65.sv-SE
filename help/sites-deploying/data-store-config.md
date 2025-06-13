@@ -8,7 +8,7 @@ feature: Configuring
 exl-id: c1c90d6a-ee5a-487d-9a8a-741b407c8c06
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
 source-wordcount: '3461'
 ht-degree: 0%
@@ -27,11 +27,11 @@ Både datalager och nodarkiv kan konfigureras med OSGi-konfiguration. Varje OSGi
 
 Så här konfigurerar du både nodarkivet och datalagret:
 
-1. Kopiera den AEM snabbstartsfilen till installationskatalogen.
+1. Kopiera AEM snabbstart-JAR-filen till installationskatalogen.
 1. Skapa en mapp `crx-quickstart/install` i installationskatalogen.
 1. Konfigurera först nodarkivet genom att skapa en konfigurationsfil med namnet på det nodarkivalternativ som du vill använda i katalogen `crx-quickstart/install`.
 
-   Exempelvis används filen `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config` i dokumentnodarkivet (som är grunden för AEM av MongoMK-implementeringen).
+   Exempelvis används filen `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService.config` i dokumentnodarkivet (som är grunden för AEM MongoMK-implementering).
 
 1. Redigera filen och ange konfigurationsalternativ.
 1. Skapa en konfigurationsfil med PID:t för det datalager som du vill använda. Redigera filen för att ange konfigurationsalternativ.
@@ -40,7 +40,7 @@ Så här konfigurerar du både nodarkivet och datalagret:
    >
    >Mer information om konfigurationsalternativ finns i [Konfigurationer för nodarkivet](#node-store-configurations) och [Konfigurationer för datalagret](#data-store-configurations).
 
-1. Börja AEM.
+1. Starta AEM.
 
 ## Konfigurationer för nodarkivet {#node-store-configurations}
 
@@ -52,7 +52,7 @@ Så här konfigurerar du både nodarkivet och datalagret:
 
 ### Segmentnodarkiv {#segment-node-store}
 
-Segmentnodarkivet är grunden för AdobeMK-implementeringen i AEM6. Det använder `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService`-PID:t för konfiguration.
+Segmentnodbutiken är grunden för Adobe TjärMK-implementering i AEM6. Det använder `org.apache.jackrabbit.oak.segment.SegmentNodeStoreService`-PID:t för konfiguration.
 
 >[!CAUTION]
 >
@@ -80,7 +80,7 @@ customBlobStore=B"true"
 
 #### Dokumentnodarkiv {#document-node-store}
 
-Dokumentnodarkivet är grunden för AEM mongoMK-implementering. Den använder `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService`* *PID. Följande konfigurationsalternativ är tillgängliga:
+Dokumentnodarkivet är grunden för AEM MongoMK-implementering. Den använder `org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService`* *PID. Följande konfigurationsalternativ är tillgängliga:
 
 * `mongouri`: [MongoURI](https://docs.mongodb.org/manual/reference/connection-string/) som krävs för att ansluta till Mongo-databasen. Standardvärdet är `mongodb://localhost:27017`
 
@@ -141,13 +141,13 @@ AEM kan konfigureras för att lagra data i Amazon Simple Storage Service (S3). D
 
 >[!NOTE]
 >
->AEM 6.5 har stöd för datalagring i Amazon S3, men det finns inte stöd för att lagra data på andra plattformar, vars leverantörer kan ha egna implementeringar av Amazon S3-API:er.
+>AEM 6.5 har stöd för datalagring i Amazon CS3, men det finns inte stöd för datalagring på andra plattformar, vars leverantörer kan ha egna implementeringar av Amazon S3-API:er.
 
-Om du vill aktivera S3-datalagringsfunktionen måste ett funktionspaket som innehåller S3 Datastore Connector hämtas och installeras. Gå till [Adobe-databasen](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/) och hämta den senaste versionen från 1.10.x-versionerna av funktionspaketet (till exempel com.adobe.granite.oak.s3connector-1.10.0.zip). Du måste även hämta och installera det senaste AEM Service Pack som finns på sidan [AEM 6.5 Release Notes](/help/release-notes/release-notes.md).
+Om du vill aktivera S3-datalagringsfunktionen måste ett funktionspaket som innehåller S3 Datastore Connector hämtas och installeras. Gå till [Adobe-databasen](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/) och hämta den senaste versionen från 1.10.x-versionerna av funktionspaketet (till exempel com.adobe.granite.oak.s3connector-1.10.0.zip). Du måste även hämta och installera den senaste AEM Service Pack-versionen som finns på sidan [AEM 6.5 Release Notes](/help/release-notes/release-notes.md) .
 
 >[!NOTE]
 >
->När du använder AEM med tarMK lagras binärfiler som standard i `FileDataStore`. Om du vill använda tarMK med S3-datastore måste du starta AEM med `crx3tar-nofds`-körningsläget, till exempel:
+>När du använder AEM med tarMK lagras binärfiler som standard i `FileDataStore`. Om du vill använda tarMK med S3-datastore måste du starta AEM med runmode `crx3tar-nofds`, till exempel:
 
 ```shell
 java -jar <aem-jar-file>.jar -r crx3tar-nofds
@@ -185,15 +185,15 @@ När du har laddat ned den kan du installera och konfigurera S3 Connector på f�
    >Utför ovanstående steg på alla noder i klustret en i taget i en klusterkonfiguration. Se även till att använda samma S3-inställningar för alla noder.
 
 1. Redigera filen och lägg till de konfigurationsalternativ som krävs för installationen.
-1. Börja AEM.
+1. Starta AEM.
 
 ## Uppgradera till en ny version av 1.10.x S3 Connector {#upgrading-to-a-new-version-of-the-s-connector}
 
 Så här uppgraderar du till en ny version av 1.10.x S3-kontakten (till exempel från 1.10.0 till 1.10.4):
 
-1. Stoppa AEM.
+1. Stoppa AEM-instansen.
 
-1. Navigera till `<aem-install>/crx-quickstart/install/15` i AEM installationsmapp och gör en säkerhetskopia av innehållet.
+1. Navigera till `<aem-install>/crx-quickstart/install/15` i installationsmappen för AEM och gör en säkerhetskopia av dess innehåll.
 1. Efter säkerhetskopieringen tar du bort den gamla versionen av S3 Connector och dess beroenden genom att ta bort alla jar-filer i mappen `<aem-install>/crx-quickstart/install/15`, till exempel:
 
    * **oak-blob-cloud-1.6.1.jar**
@@ -203,7 +203,7 @@ Så här uppgraderar du till en ny version av 1.10.x S3-kontakten (till exempel 
    >
    >Filnamnen ovan används endast som illustrationer.
 
-1. Hämta den senaste versionen av funktionspaketet 1.10.x från [Adobe-databasen](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/).
+1. Hämta den senaste versionen av funktionspaketet 1.10.x från [Adobe Repository](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.s3connector/).
 1. Zippa upp innehållet i en separat mapp och navigera sedan till `jcr_root/libs/system/install/15`.
 1. Kopiera jar-filerna till **&lt;aem-install>**/crx-quickstart/install/15 i AEM installationsmapp.
 1. Starta AEM och kontrollera anslutningsfunktionen.
@@ -242,7 +242,7 @@ Du kan använda konfigurationsfilen med alternativen nedan.
 | maxConnections | Ange maximalt antal tillåtna öppna HTTP-anslutningar. | 50 | Nej. |
 | maxErrorRetry | Ange det maximala antalet försök för misslyckade (hämtningsbara) begäranden. | 3 | Nej. |
 | minRecordLength | Den minsta storleken för ett objekt (i byte) som ska lagras i datalagret. | 16384 | Nej. |
-| bana | Den lokala sökvägen för AEM. | `crx-quickstart/repository/datastore` | Nej. |
+| bana | Den lokala sökvägen för AEM-datalagret. | `crx-quickstart/repository/datastore` | Nej. |
 | proxyHost | Ange den valfria proxyvärd som klienten ansluter via. | | Nej. |
 | proxyPort | Ange den valfria proxyport som klienten ansluter via. | | Nej. |
 | s3Bucket | Namn på S3-bucket. | | Ja |
@@ -355,12 +355,12 @@ Följande steg krävs för att konfigurera en binär replikering med S3:
 
 1. Installera de två paket som krävs för S3-datalagret enligt beskrivningen ovan.
 1. Kontrollera att MongoDB är installerat och att en instans av `mongod` körs.
-1. AEM med följande kommando:
+1. Starta AEM med följande kommando:
 
    `java -Xmx1024m -jar cq-quickstart.jar -r crx3,crx3mongo`
 
-1. Upprepa steg 1 till 4 för den andra AEM.
-1. Starta den andra AEM.
+1. Upprepa steg 1 till 4 för den andra AEM-instansen.
+1. Starta den andra AEM-instansen.
 
 #### Konfigurera ett delat datalager {#configuring-a-shared-data-store}
 
@@ -389,12 +389,12 @@ Följande steg krävs för att konfigurera en binär replikering med S3:
    >[https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/](https://mvnrepository.com/artifact/org.apache.jackrabbit/oak-run/)
    >
    >
-   >Olika versioner av verktyget måste användas beroende på vilken version av Oak du använder tillsammans med AEM. Kontrollera listan över versionskrav innan du använder verktyget:
+   >Olika versioner av verktyget måste användas beroende på vilken Oak-version du använder med din AEM-installation. Kontrollera listan över versionskrav innan du använder verktyget:
    >
    >
    >
    >    * För Oak-versionerna **1.2.x** använder du Oak-run **1.2.12 eller senare**
-   >    * För Oak-versioner **som är nyare än ovanstående** använder du den version av Oak som matchar Oak-kärnan i din AEM.
+   >    * För Oak-versioner **som är nyare än ovanstående** använder du den version av Oak som matchar Oak-kärnan i din AEM-installation.
    >
    >
 
@@ -411,11 +411,11 @@ Följande steg krävs för att konfigurera en binär replikering med S3:
 
 AEM kan konfigureras för att lagra data i Microsoft® Azure-lagringstjänst. Det använder `org.apache.jackrabbit.oak.plugins.blob.datastore.AzureDataStore.config`-PID:t för konfiguration.
 
-Om du vill aktivera Azure-datalagrets funktioner måste ett funktionspaket som innehåller Azure Connector hämtas och installeras. Gå till [Adobe-databasen](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/) och hämta den senaste versionen från version 1.6.x av funktionspaketet (till exempel com.adobe.granite.oak.azureblobconnector-1.6.3.zip).
+Om du vill aktivera Azure-datalagrets funktioner måste ett funktionspaket som innehåller Azure Connector hämtas och installeras. Gå till [Adobe-databasen](https://repo1.maven.org/maven2/com/adobe/granite/com.adobe.granite.oak.azureblobconnector/) och hämta den senaste versionen från 1.6.x-versionerna av funktionspaketet (till exempel com.adobe.granite.oak.azureblobconnector-1.6.3.zip).
 
 >[!NOTE]
 >
->När du använder AEM med tarMK lagras binärfiler som standard i FileDataStore. Om du vill använda tarMK med Azure DataStore måste du börja AEM med `crx3tar-nofds`-körningsläget, till exempel:
+>När du använder AEM med tarMK lagras binärfiler som standard i FileDataStore. Om du vill använda tarMK med Azure DataStore måste du starta AEM med runmode `crx3tar-nofds`, till exempel:
 
 ```shell
 java -jar <aem-jar-file>.jar -r crx3tar-nofds
@@ -438,14 +438,14 @@ När du har hämtat den kan du installera och konfigurera Azure-anslutningen på
 
 1. Återgå till den tillfälliga platsen där funktionspaketet har extraherats och kopiera innehållet i `jcr_root/libs/system/config` till mappen `<aem-install>/crx-quickstart/install`.
 1. Redigera konfigurationsfilen och lägg till de konfigurationsalternativ som krävs för installationen.
-1. Börja AEM.
+1. Starta AEM.
 
 Du kan använda konfigurationsfilen med följande alternativ:
 
 * azureSas=&quot;&quot;: I version 1.6.3 av anslutningsprogrammet har stöd för Azure Shared Access Signature (SAS) lagts till. **Om det finns både SAS- och lagringsreferenser i konfigurationsfilen har SAS prioritet.** Mer information om SAS finns i den [officiella dokumentationen](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview). Se till att tecknet &#39;=&#39; escape-konverteras som &#39;\=&#39;.
 
 * azureBlobEndpoint=&quot;&quot;: Azure Blob Endpoint. Till exempel https://&lt;storage-account>.blob.core.windows.net.
-* accessKey=&quot;&quot;: Lagringskontots namn. Mer information om autentiseringsuppgifter för Microsoft® Azure finns i den [officiella dokumentationen](https://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account).
+* accessKey=&quot;&quot;: Lagringskontots namn. Mer information om autentiseringsuppgifter för Microsoft® Azure finns i den [officiella dokumentationen](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-create).
 
 * secretsKey=&quot;&quot;: Lagringsåtkomstnyckeln. Se till att tecknet &#39;=&#39; escape-konverteras som &#39;\=&#39;.
 * container=&quot;&quot;: Microsoft® Azure-blobbens lagringsbehållarnamn. Behållaren är en gruppering av en uppsättning blober. Mer information finns i den [officiella dokumentationen](https://learn.microsoft.com/en-us/rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata?redirectedfrom=MSDN).
@@ -501,11 +501,11 @@ Du kan köra skräpinsamling för datalager genom att:
 >
 >Om du använder en delad datalagerinställning och datalagrets skräpinsamling är inaktiverad kan rensningen av Lucene-binärfilen plötsligt öka diskutrymmet som används. Överväg att inaktivera BlobTracker för alla författare- och publiceringsinstanser genom att göra följande:
 >
->1. Stoppa AEM.
+>1. Stoppa AEM Instance.
 >2. Lägg till parametern `blobTrackSnapshotIntervalInSecs=L"0"` i filen `crx-quickstart/install/org.apache.jackrabbit.oak.segment.SegmentNodeStoreService.config`. Den här parametern kräver Oak 1.12.0, 1.10.2 eller senare.
->3. Starta om AEM.
+>3. Starta om AEM Instance.
 
-Med senare versioner av AEM kan skräpinsamlingen i datalagret även köras på datalager som delas av mer än en databas. Så här kan du köra skräpinsamling i datalager på ett delat datalager:
+Med nyare versioner av AEM kan skräpinsamlingen i datalagret även köras på datalager som delas av mer än en databas. Så här kan du köra skräpinsamling i datalager på ett delat datalager:
 
 1. Se till att alla underhållsuppgifter som konfigurerats för datalagrets skräpinsamling är inaktiverade för alla databasinstanser som delar datalagret.
 1. Kör stegen som anges i [binär skräpinsamling](/help/sites-deploying/data-store-config.md#data-store-garbage-collection) individuellt på **alla** databasinstanser som delar datalagret. Tänk dock på att ange `true` för parametern `markOnly` innan du klickar på knappen Anropa:

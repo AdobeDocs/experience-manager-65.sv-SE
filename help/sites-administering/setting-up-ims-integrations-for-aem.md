@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar IMS-integreringar för AEM
 feature: Security
 role: Admin
 exl-id: 3c6dbb7e-847f-407b-ac9c-4676dba671a5
-source-git-commit: f30decf0e32a520dcda04b89c5c1f5b67ab6e028
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%
@@ -50,11 +50,11 @@ Mer information om hur du gör den här konfigurationen finns i Developer Consol
 
 * Skapa en ny OAuth-autentiseringsuppgift:
 
-   * [Implementeringshandbok för autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+   * [Implementeringshandbok för autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
 
 * Migrera en befintlig JWT-autentiseringsuppgift till en OAuth-autentiseringsuppgift:
 
-   * [Migrerar från JWT-autentiseringsuppgifter (Service Account) till autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+   * [Migrerar från JWT-autentiseringsuppgifter (Service Account) till autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration)
 
 Till exempel:
 
@@ -68,7 +68,7 @@ Så här skapar du en ny Adobe IMS-integrering med OAuth:
 
 1. Välj **Skapa**.
 
-1. Slutför konfigurationen baserat på information från [Developer Console](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/). Till exempel:
+1. Slutför konfigurationen baserat på information från [Developer Console](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation). Till exempel:
 
    ![Skapa OAuth-konfiguration](assets/ims-create-oauth-configuration.png)
 

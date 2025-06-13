@@ -9,9 +9,9 @@ exl-id: 6ce6a204-db59-4ed2-8383-00c6afba82b4
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '1775'
+source-wordcount: '1767'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Följande detaljer är idéer och kommentarer från David Nuescheler.
 
-David var en av grundarna av och CTO på Day Software AG, en ledande leverantör av programvara för global innehållshantering och innehållsinfrastruktur, som Adobe förvärvade 2010. David är nu medlem i och Vice President för Enterprise Technology på Adobe och leder också utvecklingen av JSR-170, Java™ Content Repository (JCR), teknikstandarden för content management.
+David var en av grundarna och CTO på Day Software AG, en ledande leverantör av programvara för global innehållshantering och innehållsinfrastruktur, som förvärvades av Adobe 2010. David är nu medlem i och Vice President för Enterprise Technology på Adobe och leder också utvecklingen av JSR-170, Java™ Content Repository (JCR), teknikstandarden för content management.
 
 Ytterligare uppdateringar kan också visas på [https://cwiki.apache.org/confluence/display/jackrabbit/DavidsModel](https://cwiki.apache.org/confluence/display/jackrabbit/DavidsModel).
 
@@ -73,8 +73,6 @@ Personligen föredrar jag hierarkiska konventioner framför nodtypningssystemet 
 >[!CAUTION]
 >
 >Det sätt på vilket en innehållsdatabas är strukturerad kan även påverka prestanda. För bästa prestanda bör antalet underordnade noder som är kopplade till enskilda noder i en innehållsdatabas inte överstiga 1 000.
->
->Se [Hur mycket data kan CRX hantera?](https://helpx.adobe.com/experience-manager/kb/CrxLimitation.html)
 
 #### Exempel {#example-2}
 
@@ -175,7 +173,7 @@ Jag tror att det finns fall där ett system verkligen inte fungerar om en refere
 
 Om en innehållsmodell visar något som till och med luktar på fjärrbasis som en fil eller en mapp försöker jag använda (eller utöka från) `nt:file`, `nt:folder` och `nt:resource`.
 
-Enligt min erfarenhet tillåter många generiska program interaktion med nt:folder och nt:files implicit och vet hur de ska hantera och visa dessa händelser om de har anrikats med ytterligare metainformation. En direkt interaktion med filserverimplementeringar som CIF eller WebDAV som sitter ovanpå JCR blir till exempel implicit.
+Enligt min erfarenhet tillåter många generiska program interaktion med nt:folder och nt:files implicit och vet hur de ska hantera och visa dessa händelser om de har anrikats med ytterligare metainformation. En direkt interaktion med filserverimplementeringar som CIFS eller WebDAV som sitter ovanpå JCR blir till exempel implicit.
 
 Som tumregel kan jag använda följande: Om du måste lagra filnamnet och mime-typen så är `nt:file`/ `nt:resource` en bra matchning. Om du kan ha flera &quot;filer&quot; kan det vara bra att lagra mappen int:folder.
 

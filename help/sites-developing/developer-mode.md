@@ -10,7 +10,7 @@ exl-id: aef0350f-4d3d-47f4-9c7e-5675efef65d9
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
 source-wordcount: '683'
 ht-degree: 2%
@@ -56,8 +56,8 @@ Detta hjälper en utvecklare att:
 >
 >Se
 >
->* Kunskapsbasartikeln [Felsökning AEM TouchUI-problem](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html) innehåller ytterligare tips och verktyg.
->* AEM Gems-session om [AEM 6.0 Developer Mode](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html?lang=sv-SE).
+>* Kunskapsbasartikeln [Felsökning av AEM TouchUI-problem](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-16935) innehåller ytterligare tips och verktyg.
+>* AEM Gems-session om [AEM 6.0 Developer Mode](https://experienceleague.adobe.com/docs/events/experience-manager-gems-recordings/gems2014/aem-developer-mode.html).
 >
 
 ## Öppnar utvecklarläge {#opening-developer-mode}

@@ -1,6 +1,6 @@
 ---
 title: Anpassa konsolerna
-description: AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna i redigeringsinstansen
+description: I AEM finns olika mekanismer som du kan använda för att anpassa konsolerna i din redigeringsinstans
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
@@ -10,7 +10,7 @@ exl-id: 6e67f2b3-78b9-45f2-b496-61776b9fd9cc
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
+source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >I det här dokumentet beskrivs hur du anpassar konsoler i det moderna, pekaktiverade användargränssnittet och det gäller inte det klassiska användargränssnittet.
 
-AEM innehåller olika mekanismer som gör att du kan anpassa konsolerna (och [sidredigeringsfunktionen](/help/sites-developing/customizing-page-authoring-touch.md)) för din redigeringsinstans.
+I AEM finns olika mekanismer som du kan använda för att anpassa konsolerna (och [sidredigeringsfunktionen](/help/sites-developing/customizing-page-authoring-touch.md)) för din redigeringsinstans.
 
 * Clientlibs
 Med Clientlibs kan du utöka standardimplementeringen för att få nya funktioner, samtidigt som du återanvänder standardfunktioner, objekt och standardmetoder. När du anpassar kan du skapa ett eget klientbibliotek under `/apps.`. Det kan till exempel innehålla den kod som krävs för den anpassade komponenten.
@@ -31,7 +31,7 @@ Med Clientlibs kan du utöka standardimplementeringen för att få nya funktione
 * Övertäckningar
 Övertäckningar baseras på noddefinitioner och gör att du kan täcka över standardfunktionerna (i `/libs`) med din egen anpassade funktion (i `/apps`). När du skapar en övertäckning krävs inte en 1:1-kopia av originalet, eftersom sammanslagningen av försäljningsresurser tillåter arv.
 
-De kan användas på många sätt för att utöka dina AEM. En liten markering beskrivs nedan (på en hög nivå).
+Dessa kan användas på många sätt för att utöka dina AEM-konsoler. En liten markering beskrivs nedan (på en hög nivå).
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ Följande plats i `/libs`-strukturen kan till exempel överlappas:
 
 >[!NOTE]
 >
->Mer information finns i kunskapsbasartikeln [Felsökning AEM TouchUI-problem](https://helpx.adobe.com/experience-manager/kb/troubleshooting-aem-touchui-issues.html).
+>Mer information finns i kunskapsbasartikeln [Felsökning av AEM TouchUI-problem](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-16935).
 
 ## Anpassa standardvyn för en konsol {#customizing-the-default-view-for-a-console}
 
@@ -94,7 +94,7 @@ Du kan anpassa standardvyn (kolumn, kort, lista) för en konsol:
 
 ### Lägg till ny åtgärd i verktygsfältet {#add-new-action-to-the-toolbar}
 
-1. Du kan skapa egna komponenter och inkludera motsvarande klientbibliotek för anpassade åtgärder. Exempel: en **Befordra till Twitter**-åtgärd vid:
+1. Du kan skapa egna komponenter och inkludera motsvarande klientbibliotek för anpassade åtgärder. Exempel: en **Befordra till Twitter**-åtgärd på:
 
    `/apps/wcm/core/clientlibs/sites/js/twitter.js`
 
@@ -151,7 +151,6 @@ Så här anpassar du kolumnerna i listvyn:
 1. Valfritt:
 
    * Om du vill lägga till ytterligare data måste du skriva en [PageInforProvider](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageInfoProvider.html) med en
-
      Egenskapen `pageInfoProviderType`.
 
    Se till exempel klassen/paketet som bifogas (från GitHub) nedan.

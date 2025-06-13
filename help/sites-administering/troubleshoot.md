@@ -10,16 +10,16 @@ exl-id: d2d351e7-87a5-4895-b4ec-391fb0b66798
 solution: Experience Manager, Experience Manager Sites
 feature: Administering
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '527'
 ht-degree: 0%
 
 ---
 
 # Felsökning av Adobe Experience Manager {#troubleshooting-aem}
 
-I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM (Adobe Experience Manager), tillsammans med förslag på hur du felsöker dem.
+I följande avsnitt beskrivs några problem som du kan stöta på när du använder AEM (Adobe Experience Manager), samt förslag på hur du felsöker dem.
 
 >[!NOTE]
 >
@@ -49,7 +49,7 @@ I följande tabell visas en översikt över problem som administratörer kan fel
   </tr>
   <tr>
    <td><p>Systemadministratör</p> </td>
-   <td><p>AEM välkomstskärm visas inte i webbläsaren när du dubbelklickat AEM CM QuickStart</p> </td>
+   <td><p>Välkomstskärmen i AEM visas inte i webbläsaren när du har dubbelklickat på AEM CM QuickStart</p> </td>
   </tr>
   <tr>
    <td><p>Systemadministratör</p> <p>admin-användare</p> </td>
@@ -68,24 +68,24 @@ Mer information om följande felsökningsscenarier finns i [Vanliga installation
 
 * Att dubbelklicka på Quickstart-behållaren har ingen effekt och JAR-filen har ingen effekt med ett annat program (t.ex. arkivhanteraren).
 * Program som körs på CRX orsakar fel av typen slut på minne.
-* AEM välkomstskärm visas inte i webbläsaren när du dubbelklickat AEM QuickStart.
+* Välkomstskärmen i AEM visas inte i webbläsaren när du har dubbelklickat på AEM Quickstart.
 
 ## Metoder för felsökningsanalys {#methods-for-troubleshooting-analysis}
 
 ### Göra en tråddump {#making-a-thread-dump}
 
-Tråddumpen är en lista över alla Java™-trådar som är aktiva. Om AEM inte reagerar som de ska kan tråddumpen hjälpa dig att identifiera lås eller andra problem.
+Tråddumpen är en lista över alla Java™-trådar som är aktiva. Om AEM inte svarar som det ska kan du identifiera problem med låsning eller andra problem med tråddumpen.
 
 ### Använda Sling Thread Dumper {#using-sling-thread-dumper}
 
-1. Öppna **AEM-webbkonsolen**, till exempel `https://localhost:4502/system/console/`.
+1. Öppna **AEM Web Console**, till exempel `https://localhost:4502/system/console/`.
 1. Välj fliken **Threads** under **Status** .
 
 ![screen_shot_2012-02-13at43925pm](assets/screen_shot_2012-02-13at43925pm.png)
 
 ### Använda jstack (kommandorad) {#using-jstack-command-line}
 
-1. Hitta PID (process-id) för den AEM Java™-instansen.
+1. Hitta PID (process-id) för AEM Java™-instansen.
 
    Du kan till exempel använda `ps -ef` eller `jps`.
 
@@ -101,23 +101,23 @@ Tråddumpen är en lista över alla Java™-trådar som är aktiva. Om AEM inte 
 >
 >`jstack <pid> >> /path/to/logfile.log`
 
-Mer information finns i [Så här tar du trådmodeller från en JVM](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html?lang=sv-SE) -dokumentation
+Mer information finns i [Så här tar du trådmodeller från en JVM](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17452.html) -dokumentation
 
 ### Söker efter oavslutade JCR-sessioner {#checking-for-unclosed-jcr-sessions}
 
-När funktionalitet utvecklas för AEM WCM kan JCR-sessioner öppnas (vilket kan jämföras med att öppna en databasanslutning). Om de öppnade sessionerna aldrig stängs kan systemet få följande symtom:
+När funktioner utvecklas för AEM WCM kan JCR-sessioner öppnas (vilket kan jämföras med att öppna en databasanslutning). Om de öppnade sessionerna aldrig stängs kan systemet få följande symtom:
 
 * Systemet blir långsammare.
 * Du kan se mycket av CacheManager: resizeAll-poster i loggfilen. Följande nummer (size=&lt;x>) visar antalet cacheminnen, varje session öppnar flera cacheminnen.
 * Från tid till annan har systemet slut på minne (efter några timmar, dagar eller veckor - beroende på allvarlighetsgraden).
 
-Om du vill analysera oavslutade sessioner och ta reda på vilken kod som inte stänger en session kan du läsa artikeln [Analysera oavslutade sessioner](https://helpx.adobe.com/experience-manager/kb/AnalyzeUnclosedSessions.html) i kunskapsbasen.
+Information om hur du börjar analysera oavslutade sessioner finns i kunskapsbasartikeln [Ostängd resurslösare](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23761).
 
 ### Använda Adobe Experience Manager Web Console {#using-the-adobe-experience-manager-web-console}
 
 OSGi-paketens status kan också ge en tidig indikation på eventuella problem.
 
-1. Öppna **AEM-webbkonsolen**, till exempel `https://localhost:4502/system/console/`.
+1. Öppna **AEM Web Console**, till exempel `https://localhost:4502/system/console/`.
 1. Välj **Paket** under fliken **OSGI**.
 1. Kontrollera:
 

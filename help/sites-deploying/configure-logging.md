@@ -9,9 +9,9 @@ feature: Configuring
 exl-id: b32001a1-0078-43f6-89d6-781d6d2e9c94
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 48d12388d4707e61117116ca7eb533cea8c7ef34
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Det här är alla [OSGi-konfigurationer](/help/sites-deploying/configuring-osgi.
 
 >[!NOTE]
 >
->Inloggning AEM baseras på Sling-principer. Mer information finns i [Sling Logging](https://sling.apache.org/site/logging.html).
+>Inloggning i AEM baseras på Sling-principer. Mer information finns i [Sling Logging](https://sling.apache.org/site/logging.html).
 
 ## Global loggning {#global-logging}
 
-[Loggningskonfiguration för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md) används för att konfigurera rotloggaren. Detta definierar de globala inställningarna för inloggning AEM:
+[Loggningskonfiguration för Apache Sling](/help/sites-deploying/osgi-configuration-settings.md) används för att konfigurera rotloggaren. Detta definierar de globala inställningarna för inloggning i AEM:
 
 * loggningsnivån
 * platsen för den centrala loggfilen
@@ -40,13 +40,9 @@ Det här är alla [OSGi-konfigurationer](/help/sites-deploying/configuring-osgi.
 * versionsrotation; antingen maximal storlek eller ett tidsintervall
 * det format som ska användas när loggmeddelanden skrivs
 
->[!NOTE]
->
->I den här [kunskapsbasartikeln](https://helpx.adobe.com/experience-manager/kb/HowToRotateRequestAndAccessLog.html) beskrivs hur du roterar filen request.log och access.log.
-
 ## Loggare och skribenter för enskilda tjänster {#loggers-and-writers-for-individual-services}
 
-Förutom de globala loggningsinställningarna kan du med AEM konfigurera specifika inställningar för en enskild tjänst:
+Förutom de globala loggningsinställningarna kan du i AEM konfigurera specifika inställningar för en enskild tjänst:
 
 * den specifika loggningsnivån
 * platsen för den enskilda loggfilen
@@ -83,7 +79,7 @@ Dessa element är länkade med följande parametrar för de relevanta elementen:
 
 ### Standardloggare och -författare {#standard-loggers-and-writers}
 
-Vissa loggare och skrivprogram ingår i en AEM standardinstallation.
+Vissa loggare och skrivprogram ingår i en standardinstallation av AEM.
 
 Det första är ett specialfall eftersom det styr både `request.log`- och `access.log`-filerna:
 

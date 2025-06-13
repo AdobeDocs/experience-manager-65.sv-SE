@@ -9,9 +9,9 @@ exl-id: fbe15e1b-830b-4752-bd02-0d239a90bc68
 solution: Experience Manager, Experience Manager Sites
 feature: Configuring
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1202'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Prestanda för tillgångsbearbetning mäts i genomsnittlig slutförandetid för 
 * under en minut för bilder som är mindre än 100 MB med standardrenderingar
 * under fem minuter för HD-videoklipp som är kortare än en minut
 
-**3. Hämtningshastighet** Ett genomströmningsproblem uppstår när det tar lång tid att hämta från AEM DAM och miniatyrerna visas inte omedelbart när du bläddrar i DAM-administratören eller DAM Finder.
+**3. Hämtningshastighet** Ett genomströmningsproblem uppstår när hämtningen från AEM DAM tar lång tid och miniatyrerna visas inte direkt när du bläddrar i DAM-administratören eller DAM Finder.
 
 Dataöverföringsprestanda mäts i hämtningshastigheten i kilobit per sekund. Det normala målet är 300 kbit/s för 100 samtidiga nedladdningar.
 
@@ -48,7 +48,7 @@ Dataöverföringsprestanda mäts i hämtningshastigheten i kilobit per sekund. D
 För att kunna beräkna vilken maskinvara du behöver för att bearbeta resurser bör följande aspekter beaktas:
 
 * Bildernas upplösning i antalet pixlar
-* Den heap som tilldelats AEM processen
+* Den heap som tilldelats AEM process
 
 Antalet pixlar i bilden avgör bearbetningstiden - fler pixlar innebär att bearbetningen tar längre tid.
 Bildtyp, komprimeringshastighet eller den relaterade storleken på filen som bilden lagras i påverkar inte den övergripande prestandan nämnvärt.
@@ -61,7 +61,7 @@ DAM-processerna är väl lämpade att utföras parallellt för stora mängder. N
 
 Omfattande bearbetning av digitala resurser kräver optimerade maskinvaruresurser, de viktigaste faktorerna är bildstorlek och högsta genomströmning för bearbetade bilder.
 
-Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet [!UICONTROL DAM Update Asset] så att det använder det [Camera Raw paketet](/help/assets/camera-raw.md) för konsumtion av råbilder.
+Allokera minst 16 GB stackutrymme och konfigurera arbetsflödet [!UICONTROL DAM Update Asset] så att det använder [Camera Raw-paketet](/help/assets/camera-raw.md) för konsumtion av råbilder.
 
 ## Förstå systemet {#understanding-the-system}
 
@@ -73,9 +73,9 @@ I följande förklaring beskrivs de möjliga prestandafallsområdena med vissa l
 
 **Tillfälligt filsystem** Ett långsamt lokalt filsystem kan orsaka interaktiva prestandaproblem, särskilt vid sökning, eftersom sökindexen lagras på den lokala disken. Det kan också orsaka problem med resursbearbetningen om kommandoradsprocessen används.
 
-**AEM DAM Finder** Interaktiva prestandaproblem som ofta förekommer i sökningar orsakas av hög processoranvändning på grund av många samtidiga användare eller andra CPU-krävande processer i samma instans. Genom att gå från virtuella datorer till dedikerade datorer och se till att inga andra tjänster körs på datorn kan du förbättra prestandan. Om hög processorbelastning orsakas av resursbearbetning och många samtidiga användare rekommenderar dag att du lägger till ytterligare klusternoder.
+**AEM DAM Finder** Interaktiva prestandaproblem som ofta uppstår vid sökningar orsakas av hög användning av CPU på grund av många samtidiga användare eller andra CPU-krävande processer i samma instans. Genom att gå från virtuella datorer till dedikerade datorer och se till att inga andra tjänster körs på datorn kan du förbättra prestandan. Om CPU-belastningen är hög på grund av resursbearbetning och många samtidiga användare rekommenderar dag att du lägger till ytterligare klusternoder.
 
-**AEM DAM-arbetsflöde** Långvariga arbetsflödesprocesser under tillgångsintag orsakar prestandaproblem vid bearbetning av resurser. Beroende på vilken typ av resurser som bearbetas kan detta visa på överanvändning av processorn. Dag rekommenderar att du minskar antalet andra processer som körs i systemet och ökar antalet tillgängliga processorer genom att lägga till klusternoder.
+**AEM DAM-arbetsflöde** Långvariga arbetsflödesprocesser vid tillgångsintag orsakar prestandaproblem vid bearbetning av resurser. Beroende på vilken typ av mediefiler som bearbetas kan detta tyda på överutnyttjande av CPU. Dag rekommenderar att du minskar antalet andra processer som körs i systemet och ökar antalet tillgängliga processorer genom att lägga till klusternoder.
 
 **NAS-anslutning** Dålig nätverksanslutning till NAS orsakar interaktiva prestandaproblem eftersom åtkomst av nya noder under resurshanteringen blir långsammare på grund av nätverksfördröjning. Dessutom påverkar långsam nätverksgenomströmning negativt genomströmning, men även bearbetningsprestanda eftersom inläsning och sparande av återgivningar blir långsammare.
 
@@ -94,7 +94,7 @@ För varje digitalt resurshanteringsprojekt måste du se till att det finns ett 
 1. Prestandatester från början till slut med JMeter - Simulera en exempelsession för sökning och bläddring för att upptäcka interaktiva prestandaproblem.
 1. Genomströmnings- och latenstester med JMeter - Att köras på en klientdator säkerställer att det inte finns några topologirelaterade problem.
 1. Standardiserade materialbearbetningstester - Infoga några exempelresurser och mät tiden. Detta bör omfatta integration med externa arbetsflöden.
-1. Övervaka processoranvändning, disk- och minnesanvändning för varje klusternod.
+1. Övervaka användningen av CPU, disk och minne för varje klusternod.
 1. CRX läs- och skrivprestandadiagnostik för att identifiera problem som inte är relaterade till bearbetning.
 1. Övervaka nätverksfördröjning och -genomströmning från DAM-kluster till din NAS.
 1. Testa, läs och skriv prestanda och diskfördröjning direkt på NAS, om det är möjligt.
@@ -105,7 +105,3 @@ Följande prestandaförbättringar har hittills använts i projekt:
 
 * Selektiv renderingsgenerering: Generera bara de renderingar du behöver genom att lägga till villkor i arbetsflödet för resursbearbetning, så att mer kostsamma renderingar bara genereras för vissa resurser.
 * Delat datalager mellan instanser: när det börjar ta slut på diskutrymme kan detta avsevärt minska mängden diskutrymme som behövs till priset av högre konfigurationsinsatser och förlorad automatisk rensning av datalagret.
-
-## Ytterligare läsning {#further-reading}
-
-* [Analyserar långsamma och blockerade processer](https://helpx.adobe.com/experience-manager/kb/AnalyzeSlowAndBlockedProcesses.html)

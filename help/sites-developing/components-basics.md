@@ -10,9 +10,9 @@ exl-id: 7ff92872-697c-4e66-b654-15314a8cb429
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: f96b178ae84b4b930b59e36d4994970682c53dbd
 workflow-type: tm+mt
-source-wordcount: '4843'
+source-wordcount: '4828'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 När du börjar utveckla nya komponenter måste du förstå grunderna i deras struktur och konfiguration.
 
-Den här processen innebär att man läser teorin och tittar på ett brett urval av komponentimplementeringar i en AEM. Det senare tillvägagångssättet är något komplicerat av det faktum att även om AEM har övergått till en ny standard, modern, pekaktiverad användarupplevelse, har det fortfarande stöd för det klassiska användargränssnittet.
+Denna process innebär att läsa teorin och titta på ett stort antal komponentimplementeringar i en standardinstans av AEM. Det senare tillvägagångssättet är något komplicerat av det faktum att AEM, trots att man har gått över till ett nytt standardgränssnitt med pekfunktioner, fortfarande har stöd för det klassiska användargränssnittet.
 
 ## Ökning {#overview}
 
@@ -35,11 +35,11 @@ Innan du börjar konfigurera eller koda komponenten bör du fråga:
    * En tydlig specifikation hjälper till i alla faser av utveckling, testning och överlämning. Detaljerna kan förändras över tid, men specifikationen kan uppdateras (men ändringarna bör också dokumenteras).
 * Behöver du skapa komponenten från grunden, eller kan du ärva grunderna från en befintlig komponent?
    * Man behöver inte förnya hjulet.
-   * Det finns flera mekanismer från AEM som gör att du kan ärva och utöka information från en annan komponentdefinition, inklusive åsidosättning, övertäckning och [delningskonvertering](/help/sites-developing/sling-resource-merger.md).
+   * Det finns flera mekanismer från AEM som gör att du kan ärva och utöka information från en annan komponentdefinition, till exempel åsidosättning, övertäckning och [Sling Resource Merger](/help/sites-developing/sling-resource-merger.md).
 * Kräver komponenten logik för att markera eller ändra innehållet?
    * Logiken ska hållas åtskild från användargränssnittslagret. HTML är utformat för att säkerställa att detta sker.
 * Behöver komponenten CSS-formatering?
-   * CSS-formateringen ska hållas åtskild från komponentdefinitionerna. Definiera konventioner för att namnge elementen i HTML så att du kan ändra dem via externa CSS-filer.
+   * CSS-formateringen ska hållas åtskild från komponentdefinitionerna. Definiera konventioner för att namnge dina HTML-element så att du kan ändra dem via externa CSS-filer.
 * Vilka säkerhetsaspekter bör jag tänka på?
    * Mer information finns i [Säkerhetschecklista - Bästa metoder för utveckling](/help/sites-administering/security-checklist.md#development-best-practices).
 
@@ -50,9 +50,9 @@ Innan något allvarligt samtal börjar om att utveckla komponenter måste du vet
 * **Pekaktiverat gränssnitt**
   [Standardanvändargränssnittet](/help/sites-developing/touch-ui-concepts.md) baseras på den enhetliga användarupplevelsen för Adobe Experience Cloud med hjälp av de underliggande teknikerna i [Coral UI](/help/sites-developing/touch-ui-concepts.md#coral-ui) och [Granite-gränssnittet](/help/sites-developing/touch-ui-concepts.md#granite-ui).
 * **Klassiskt användargränssnitt**
-Användargränssnitt som bygger på ExtJS-teknik som ersatts med AEM 6.4.
+Användargränssnitt som bygger på ExtJS-teknik som har ersatts med AEM 6.4.
 
-Mer information finns i [Gränssnittet Recommendations för kunder](/help/sites-deploying/ui-recommendations.md).
+Mer information finns i [Gränssnittsrekommendationer för kunder](/help/sites-deploying/ui-recommendations.md).
 
 Komponenter kan implementeras för att stödja det beröringsaktiverade användargränssnittet, det klassiska användargränssnittet eller båda. När du tittar på en standardinstans ser du även färdiga komponenter som ursprungligen designats för det klassiska användargränssnittet, det pekaktiverade användargränssnittet eller båda.
 
@@ -60,19 +60,19 @@ Grunderna för båda beskrivs på den här sidan och hur du känner igen dem.
 
 >[!NOTE]
 >
->Adobe rekommenderar att du använder användargränssnittet med pekskärm för att utnyttja den senaste tekniken. [AEM Moderniseringsverktyg](modernization-tools.md) kan göra migreringen enklare.
+>Adobe rekommenderar att du använder användargränssnittet med pekskärm för att utnyttja den senaste tekniken. [AEM moderniseringsverktyg](modernization-tools.md) kan göra en migrering enklare.
 
 ### Innehållslogik och återgivningsmarkeringar  {#content-logic-and-rendering-markup}
 
 Adobe rekommenderar att koden som ansvarar för kod och återgivning hålls åtskild från koden som styr logiken som används för att markera komponentens innehåll.
 
-Den här filosofin stöds av [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=sv-SE), ett mallspråk som är avsiktligt begränsat för att säkerställa att ett verkligt programmeringsspråk används för att definiera den underliggande affärslogiken. Den här (valfria) logiken anropas från HTML med ett specifikt kommando. Den här mekanismen markerar koden som anropas för en viss vy och, om det behövs, tillåter specifik logik för olika vyer av samma komponent.
+Den här filosofin stöds av [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html), ett mallspråk som är avsiktligt begränsat för att säkerställa att ett verkligt programmeringsspråk används för att definiera den underliggande affärslogiken. Den här (valfria) logiken anropas från HTML med ett specifikt kommando. Den här mekanismen markerar koden som anropas för en viss vy och, om det behövs, tillåter specifik logik för olika vyer av samma komponent.
 
 ### HTL vs JSP {#htl-vs-jsp}
 
-HTML är ett mallspråk för HTML som introducerades med AEM 6.0.
+HTL är ett mallspråk från HTML som introducerades med AEM 6.0.
 
-Diskussionen om du ska använda [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=sv-SE) eller JSP (Java™ Server Pages) när du utvecklar egna komponenter bör vara okomplicerad eftersom HTML nu är det rekommenderade skriptspråket för AEM.
+Diskussionen om du ska använda [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html) eller JSP (Java™ Server Pages) när du utvecklar egna komponenter bör vara enkel eftersom HTML nu är det rekommenderade skriptspråket för AEM.
 
 Både HTML och JSP kan användas för att utveckla komponenter för både det klassiska och det beröringskänsliga användargränssnittet. Även om det finns en tendens att anta att HTML bara är för det beröringsaktiverade användargränssnittet och JSP för det klassiska användargränssnittet, är detta en missuppfattning och beror mer på timing. Användargränssnittet med pekfunktion och HTML integrerades i AEM under ungefär samma period. Eftersom HTML nu är det rekommenderade språket används det för nya komponenter, som ofta används för användargränssnittet med pekfunktioner.
 
@@ -84,20 +84,20 @@ Både HTML och JSP kan användas för att utveckla komponenter för både det kl
 
 Information om hur du skapar egna komponenter för rätt användargränssnitt finns i (efter att du har läst den här sidan):
 
-* [AEM komponenter för det touchaktiverade gränssnittet](/help/sites-developing/developing-components.md)
-* [AEM komponenter för det klassiska användargränssnittet](/help/sites-developing/developing-components-classic.md)
+* [AEM Components for the Touch-Enabled UI](/help/sites-developing/developing-components.md)
+* [AEM-komponenter för det klassiska användargränssnittet](/help/sites-developing/developing-components-classic.md)
 
 Ett snabbt sätt att komma igång är att kopiera en befintlig komponent och sedan göra de ändringar du vill. Mer information om hur du skapar egna komponenter och lägger till dem i styckesystemet finns i:
 
 * [Utveckla komponenter](/help/sites-developing/developing-components-samples.md) (fokuserat på det beröringsaktiverade användargränssnittet)
 
-### Flytta komponenter till Publish-instansen {#moving-components-to-the-publish-instance}
+### Flytta komponenter till publiceringsinstansen {#moving-components-to-the-publish-instance}
 
-Komponenterna som återger innehåll måste distribueras på samma AEM som innehållet. Därför måste alla komponenter som används för att skapa och återge sidor på författarinstansen distribueras på publiceringsinstansen. När de distribueras är komponenterna tillgängliga för återgivning av aktiverade sidor.
+Komponenterna som återger innehåll måste distribueras på samma AEM-instans som innehållet. Därför måste alla komponenter som används för att skapa och återge sidor på författarinstansen distribueras på publiceringsinstansen. När de distribueras är komponenterna tillgängliga för återgivning av aktiverade sidor.
 
 Använd följande verktyg för att flytta dina komponenter till publiceringsinstansen:
 
-* [Använd Package Manager](/help/sites-administering/package-manager.md) för att lägga till dina komponenter i ett paket och flytta dem till en annan AEM.
+* [Använd Package Manager](/help/sites-administering/package-manager.md) för att lägga till dina komponenter i ett paket och flytta dem till en annan AEM-instans.
 * [Använd verktyget Aktivera trädreplikering](/help/sites-authoring/publishing-pages.md#manage-publication) för att replikera komponenterna.
 
 >[!NOTE]
@@ -121,7 +121,7 @@ Använd följande verktyg för att flytta dina komponenter till publiceringsinst
 
 ## Struktur {#structure}
 
-Strukturen i en AEM är kraftfull och flexibel, de viktigaste aspekterna är:
+Strukturen i en AEM-komponent är kraftfull och flexibel, de viktigaste aspekterna är:
 
 * Resurstyp
 * Komponentdefinition
@@ -146,8 +146,8 @@ Detta är en abstraktion som säkerställer att även när utseendet och känsla
 
 Definitionen av en komponent kan delas upp enligt följande:
 
-* AEM baseras på [Sling](https://sling.apache.org/documentation.html).
-* AEM finns (vanligtvis) under:
+* AEM-komponenter baseras på [Sling](https://sling.apache.org/documentation.html).
+* AEM-komponenterna finns (vanligtvis) under:
 
    * HTML: `/libs/wcm/foundation/components`
    * JSP: `/libs/foundation/components`
@@ -234,7 +234,7 @@ Om du vill avbryta arvet av ikoner från superkomponenter återställs standardb
 
 [Komponentkonsolen](/help/sites-authoring/default-components-console.md#component-details) visar hur ikonen för en viss komponent definieras.
 
-#### Exempel på SVG-ikon {#svg-icon-example}
+#### Exempel på SVG-ikoner {#svg-icon-example}
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -314,7 +314,7 @@ En komponent är en nod av typen `cq:Component` och har följande egenskaper och
   <tr>
    <td><code>cq:cellName</code></td>
    <td><code>String</code></td>
-   <td>Om den anges används den här egenskapen som cell-ID. Mer information finns i kunskapsbasartikeln <a href="https://helpx.adobe.com/experience-manager/kb/DesigneCellId.html">How are Design Cell IDs built</a>.<br /> </td>
+   <td>Om den här egenskapen anges används den som cell-ID.<br /> </td>
   </tr>
   <tr>
    <td><code>cq:childEditConfig</code></td>
@@ -429,7 +429,7 @@ Dialogrutedefinitioner är specifika för användargränssnittet:
 >[!NOTE]
 >
 >* Av kompatibilitetsskäl kan det beröringsaktiverade användargränssnittet använda definitionen för en klassisk användargränssnittsdialogruta när ingen dialogruta har definierats för det beröringsaktiverade användargränssnittet.
->* Verktygen [AEM Modernisering](/help/sites-developing/modernization-tools.md) finns också för att hjälpa dig att utöka/konvertera komponenter som bara har dialogrutor definierade för det klassiska användargränssnittet.
+>* [AEM-moderniseringsverktygen](/help/sites-developing/modernization-tools.md) finns även för att hjälpa dig att utöka/konvertera komponenter som bara har dialogrutor definierade för det klassiska användargränssnittet.
 >
 
 * Pekaktiverat användargränssnitt
@@ -599,7 +599,7 @@ Det finns många befintliga konfigurationer i databasen. Du kan enkelt söka eft
 
   `//element(cq:editConfig, cq:EditConfig)[@cq:actions]`
 
-* Om du till exempel vill söka efter en underordnad nod till `cq:editConfig` kan du söka efter `cq:dropTargets`, som är av typen `cq:DropTargetConfig`. Du kan använda frågeverktyget i* CRXDE Lite** och söka med följande XPath-frågesträng:
+* Om du till exempel vill söka efter en underordnad nod till `cq:editConfig` kan du söka efter `cq:dropTargets` som är av typen `cq:DropTargetConfig`. Du kan använda frågeverktyget i* CRXDE Lite** och söka med följande XPath-frågesträng:
 
   `//element(cq:dropTargets, cq:DropTargetConfig)`
 
@@ -614,7 +614,7 @@ Den typiska HTML-koden för en platshållare är följande:
 <div class="cq-placeholder" data-emptytext="Component Name"></div>
 ```
 
-Det typiska HTL-skriptet som återger platshållaren HTML är följande:
+Det typiska HTML-skriptet som återger platshållaren HTML är följande:
 
 ```HTML
 <div class="cq-placeholder" data-emptytext="${component.properties.jcr:title}"
@@ -623,7 +623,7 @@ Det typiska HTL-skriptet som återger platshållaren HTML är följande:
 
 I föregående exempel är `isEmpty` en variabel som bara är true när komponenten inte har något innehåll och är osynlig för författaren.
 
-För att undvika upprepningar rekommenderar Adobe att komponentimplementerare använder en HTML-mall för dessa platshållare, [som den som finns i Core Components.](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html)
+För att undvika upprepningar rekommenderar Adobe att implementerare av komponenter använder en HTML-mall för dessa platshållare, [som den som finns i Core-komponenterna.](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/commons/v1/templates.html)
 
 Mallen i den föregående länken används sedan med följande rad i HTML:
 
@@ -923,7 +923,7 @@ Noden `cq:inplaceEditing` (nodtypen `cq:InplaceEditingConfig`) definierar en red
    <td><code>editorType</code></td>
    <td><p>(<code>String</code>) Typ av redigerare. De tillgängliga typerna är:</p>
     <ul>
-     <li>plaintext: ska användas för innehåll som inte är HTML.<br /> </li>
+     <li>plaintext: ska användas för icke-HTML-innehåll.<br /> </li>
      <li>title: är en förbättrad textredigerare som konverterar grafiska titlar till klartext innan redigeringen börjar. Används av Geometrixx titelkomponent.<br /> </li>
      <li>text: som ska användas för HTML-innehåll (använder RTF-redigeraren).<br /> </li>
     </ul> </td>
