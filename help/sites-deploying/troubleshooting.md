@@ -72,7 +72,7 @@ Så här felsöker du:
 
 CRX har också lite minnesutrymme. Om programmet som körs i CRX har större minnesbehov eller begär minnesintensiva åtgärder (till exempel stora transaktioner), måste JVM-instansen där CRX körs startas med lämpliga minnesinställningar.
 
-Använd Java™-kommandoalternativen för att definiera minnesinställningar för JVM (t.ex. java -Xmx512m -jar crx&amp;ast;.jar för att ange heapsize till 512 MB).
+Använd Java™-kommandoalternativen för att definiera minnesinställningar för JVM (t.ex. java -Xmx512m -jar crx&ast;.jar för att ange heapsize till 512 MB).
 
 Ange minnesinställningen när du startar AEM WCM från kommandoraden. AEM WCM-skript för start/stopp eller egna skript för hantering av AEM WCM-start kan också ändras för att definiera de nödvändiga minnesinställningarna.
 
@@ -80,7 +80,7 @@ Om du redan har definierat stackstorleken till 512 MB kan du analysera minnespro
 
 Använd följande kommando för att automatiskt skapa en stackdump när minnet tar slut:
 
-java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &amp;ast;.jar
+java -Xmx256m -XX:+HeapDumpOnOutOfMemoryError -jar &ast;.jar
 
 Den här metoden genererar en stackdumpfil (**java_...hprof**) när minnet tar slut. Processen kan fortsätta att köras efter att stackdumpen har skapats.
 

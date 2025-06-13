@@ -157,9 +157,11 @@ Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM
      ```
 
    * Variabeldeklarationer med datavänligt angivna:
+
      `<sly data-sly-set.title="${currentPage.title}"/>${title}`
 
    * Parametrar för att visa och upprepa kontroller: begin, step, end:
+
      `<h2 data-sly-repeat="${currentPage.listChildren @ begin = 1, step=2}">${item.title}</h2>`
 
    * Identifierare för datauppfriskande:
