@@ -1,11 +1,12 @@
 ---
 title: RemotePage-komponenten
-description: RemotePage-komponenten är en anpassad sidkomponent för redigering av SPA för fjärreaktion i AEM.
+description: RemotePage-komponenten är en anpassad sidkomponent för redigering av fjärreaktions-SPA i AEM.
 exl-id: 3f015997-0d42-4241-a890-0f16a19c5e34
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,SPA Editor
 role: Developer
-source-git-commit: 6d961456e0e1f7a26121da9be493308a62c53e04
+index: false
+source-git-commit: 1509ca884e2f9eb931fc7cd416801957459cc4a0
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 # RemotePage-komponenten {#remote-page-component}
 
-När du bestämmer vilken nivå av integration du vill ha mellan dina externa SPA och AEM är det ofta tydligt att du måste kunna visa och redigera SPA inom AEM. RemotePage-komponenten är en anpassad sidkomponent för just detta ändamål.
+När du bestämmer vilken nivå av integration du vill ha mellan det externa SPA-programmet och AEM är det ofta tydligt att du behöver kunna visa och redigera SPA-programmet inom AEM. RemotePage-komponenten är en anpassad sidkomponent för just detta ändamål.
 
 {{ue-over-spa}}
 
@@ -24,10 +25,10 @@ När du bestämmer vilken nivå av integration du vill ha mellan dina externa SP
 RemotePage-komponenten hämtar alla nödvändiga resurser från programmets genererade `asset-manifest.json` och använder den för att återge SPA i AEM.
 
 * Med RemotePage kan du mata in skript och formatmallar för en SPA i brödtexten för en AEM Page-komponent.
-* Med Virtual Front Components (Komponenter för virtuella sidslut) kan du markera avsnitt som redigerbara i AEM SPA Editor.
+* Med Virtual Front Components (Komponenter för virtuell frontend) kan du markera avsnitt som redigerbara i AEM SPA Editor.
 * Tillsammans kan en SPA på en annan domän göras redigerbar i AEM.
 
-Mer information om redigerbar, extern SPA i AEM finns i artikeln [Redigera en extern SPA i AEM](spa-edit-external.md).
+Mer information om redigerbara externa SPA:er i AEM finns i artikeln [Redigera en extern SPA i AEM](spa-edit-external.md).
 
 ## Krav {#requirements}
 
@@ -45,9 +46,9 @@ Mer information om redigerbar, extern SPA i AEM finns i artikeln [Redigera en ex
 
 ## Begränsningar {#limitations}
 
-* RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett tillgångsmanifest som den [ som finns här.](https://github.com/shellscape/webpack-manifest-plugin) RemotePage-komponenten har bara testats för att fungera med React Framework (och Next.js via komponenten remote-page-next) och stöder därför inte fjärrinläsning av program från andra ramverk, till exempel Angular.
-* Intern CSS som är definierad i programmets rotfil och infogad CSS på DOM-rotnoden är inte tillgänglig vid fjärråtergivning i AEM.
+* RemotePage-komponenten förväntar sig att implementeringen tillhandahåller ett tillgångsmanifest som den [ som finns här.](https://github.com/shellscape/webpack-manifest-plugin) RemotePage-komponenten har bara testats för att fungera med React Framework (och Next.js via komponenten remote-page-next) och stöder därför inte fjärrinläsning av program från andra ramverk, som Angular.
+* Intern CSS som är definierad i programmets HTML-rotfil och infogad CSS på DOM-rotnoden är inte tillgänglig vid fjärråtergivning i AEM.
 
 ## Teknisk information {#technical-details}
 
-Precis som resten av AEM SPA är RemotePage-komponenten öppen källkod. Fullständig teknisk information om RemotePage-komponenten finns i [GitHub-databasen.](https://github.com/adobe/aem-spa-project-core/tree/master/ui.apps/src/main/content/jcr_root/apps/spa-project-core/components/remotepage)
+Precis som resten av AEM SPA-projektet är RemotePage-komponenten en öppen källkod. Fullständig teknisk information om RemotePage-komponenten finns i [GitHub-databasen.](https://github.com/adobe/aem-spa-project-core/tree/master/ui.apps/src/main/content/jcr_root/apps/spa-project-core/components/remotepage)
