@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 8f638eb384bdca59fb6f4f8990643e64f34622ce
+source-git-commit: b5ee4815f981aa32faab24ff5e80a7ad9541e45e
 workflow-type: tm+mt
-source-wordcount: '3630'
+source-wordcount: '3688'
 ht-degree: 0%
 
 ---
@@ -129,19 +129,21 @@ Det finns olika alternativ för att distribuera Adobe Experience Manager-databas
 | MongoDB Enterprise 3.4 | Databas | Z: Stöds inte |
 | IBM® DB2® 10.5 | Databas och databas för Forms | R: Begränsat stöd `[5]` |
 | Oracle Database 12c (12.1.x) | Databas och databas för Forms | R: Begränsat stöd |
+| Oracle Database 19c | Databas och databas för Forms | R: Begränsat stöd |
 | Microsoft® SQL Server 2016 | Forms-databas | A: Stöds |
+| Microsoft® SQL Server 2019 (borttagen) | Forms-databas | A: Stöds |
+| Microsoft® SQL Server 2022 | Forms-databas | A: Stöds |
 | **Apache Lucene (inbyggd Quickstart)** | Söktjänst | A: Stöds |
 | Apache Solr | Söktjänst | A: Stöds |
 
 1. &#39;Filsystem&#39; inkluderar blocklagring som är POSIX-kompatibel. Innehåller nätverkslagringsteknik. Tänk på att filsystemets prestanda kan variera och påverka den övergripande prestandan. Läs in test-AEM med nätverks-/fjärrfilsystemet.
-1. MongoDB Enterprise version 4.2 och 4.4 kräver minst AEM 6.5 SP9.
-1. MongoDB-delning stöds inte i AEM.
-1. MongoDB-lagringsmotorn WiredTiger stöds endast.
-1. Stöds för AEM Forms uppgraderingskunder. Stöds inte för nya installationer.
-1. Gäller endast AEM Forms:
+2. MongoDB Enterprise version 4.2 och 4.4 kräver minst AEM 6.5 SP9.
+3. MongoDB-delning stöds inte i AEM.
+4. MongoDB-lagringsmotorn WiredTiger stöds endast.
+5. Stöds för AEM Forms uppgraderingskunder. Stöds inte för nya installationer.
+6. Gäller endast AEM Forms:
    * Borttaget stöd för Oracle Database 12c och utökat stöd för Oracle Database 19c.
-   * Borttaget stöd för Microsoft® SQL Server 2016 och utökat stöd för Microsoft® SQL Server 2019.
-1. Stöds inte för AEM Forms.
+   * Borttaget stöd för Microsoft® SQL Server 2016 och utökat stöd för Microsoft® SQL Server 2019 och Microsoft® SQL Server 2022.
 
 >[!NOTE]
 >
@@ -182,14 +184,16 @@ Den lägsta servlet API-version som krävs är Servlet 3.1
 | Oracle WebLogic Server 12.2 (12cR2) | Z: Stöds inte |
 | IBM® WebSphere® Application Server Continuous Delivery (LibertyProfile) med Web Profile 7.0 och IBM® JRE 1.8 | R: Begränsad support för nya kontrakt `[2]` |
 | IBM® WebSphere® Application Server 9.0 och IBM® JRE 1.8 | R: Begränsad support för nya kontrakt `[1]` `[2]` |
+| IBM® WebSphere® Application Server 9.0.0.10 | R: Begränsad support för nya kontrakt `[1]` `[2]` |
 | Apache Tomcat 8.5.x | R: Begränsad support för nya kontrakt `[2]` |
 | JBoss® EAP 7.2.x med JBoss® Application Server | Z: Stöds inte |
 | JBoss® EAP 7.1.4 med JBoss® Application Server | R: Begränsad support för nya kontrakt `[1]` `[2]` |
 | JBoss® EAP 7.0.x med JBoss® Application Server | Z: Stöds inte |
+| JBoss® EAP 7.4 med JBoss® Application Server <sup>[2] [3] [7] | A: Stöds |
 
 1. Rekommenderas för driftsättningar med AEM Forms.
-1. När AEM 6.5-distributioner startas på programservrar övergår stödet till begränsad support. Befintliga kunder kan uppgradera till AEM 6.5 och fortsätta använda programservrar. För nya kunder innehåller det supportkriterier och ett supportprogram enligt beskrivningen ovan.
-1. Gäller endast AEM Forms:
+2. När AEM 6.5-distributioner startas på programservrar övergår stödet till begränsad support. Befintliga kunder kan uppgradera till AEM 6.5 och fortsätta använda programservrar. För nya kunder innehåller det supportkriterier och ett supportprogram enligt beskrivningen ovan.
+3. Gäller endast AEM Forms:
    * Borttaget stöd för JBoss® EAP 7.1.4 och utökat stöd för JBoss® EAP 7.4.10.
 
 ### Operativsystem för servrar {#server-operating-systems}
@@ -202,15 +206,15 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 | Linux®, baserat på Debian-distribution inkl. Ubuntu | A: Stöds `[1]` `[2]` |
 | Linux®, baserat på SUSE®-distribution | A: `[1]` stöds |
 | Microsoft® Windows Server 2022 | R: Begränsat stöd |
-| Microsoft® Windows Server 2019 `[4]` | R: Begränsad support för nya kontrakt `[5]` |
+| Microsoft® Windows Server 2019 `[4]` (borttagen) | R: Begränsad support för nya kontrakt `[5]` |
 | Microsoft® Windows Server 2016 `[4]` | R: Begränsad support för nya kontrakt `[5]` |
 | Microsoft® Windows Server 2012 R2 | Z: Stöds inte |
 | Oracle Solaris™ 11 | Z: Stöds inte |
 | IBM® AIX® 7.2 | Z: Stöds inte |
 
-1. Linux® Kernel 2.6, 3. x, 4. x, 5. x och 6. x innehåller derivat från distributionen av Red Hat®, inklusive Red Hat® Enterprise Linux®, Oracle Linux® och Amazon Linux®. AEM Forms tilläggsfunktioner stöds endast i Red Hat® Enterprise Linux® 7, Red Hat® Enterprise Linux® 8 och Red Hat® Enterprise Linux® 9.
-1. AEM Forms stöds på Ubuntu 20.04 LTS.
-1. Linux®-distribution stöds av Adobe Managed Services.
+1. Linux® Kernel 2.6, 3. x, 4. x, 5. x, 6. x och 9. x innehåller derivat från distributionen av Red Hat®, inklusive Red Hat® Enterprise Linux®, Oracle Linux® och Amazon Linux®. AEM Forms tilläggsfunktioner stöds endast i Red Hat® Enterprise Linux® 7, Red Hat® Enterprise Linux® 8 och Red Hat® Enterprise Linux® 9.
+2. AEM Forms stöds på Ubuntu 20.04 och SUSE® Linux® Enterprise Server 15 SP6 (64 bitar).
+3. Linux®-distribution stöds av Adobe Managed Services.
 
    >[!NOTE]
    >
@@ -225,9 +229,9 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 
    *För OpenSSL 3-installation: Biblioteken libcrypto.so.3 och libssl.so.3 måste vara tillgängliga i standardbibliotekssökvägen som representeras av miljövariabeln LD_LIBRARY_PATH. Om de är installerade på en plats som inte är standard måste du lägga till sökvägen till LD_LIBRARY_PATH innan du startar servern.*
 
-1. Produktionsinstallationer i Microsoft® Windows stöds för kunder som uppgraderar till 6.5 och för icke-produktionsanvändning. Nya driftsättningar är på begäran för AEM Sites och Assets.
-1. AEM Forms stöds på Microsoft® Windows Server utan begränsningar på supportnivå R.
-1. AEM Forms har tagit bort stöd för Microsoft® Windows Server 2016.
+4. Produktionsinstallationer i Microsoft® Windows stöds för kunder som uppgraderar till 6.5 och för icke-produktionsanvändning. Nya driftsättningar är på begäran för AEM Sites och Assets.
+5. AEM Forms stöds på Microsoft® Windows Server utan begränsningar på supportnivå R.
+6. AEM Forms har tagit bort stöd för Microsoft® Windows Server 2016.
 
 >[!NOTE]
 >
@@ -244,7 +248,7 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 
 Adobe Experience Manager stöds när det körs i en virtuell dator i molnmiljöer. Dessa miljöer omfattar Microsoft® Azure och Amazon Web Services (AWS), som körs i enlighet med de tekniska krav som anges på den här sidan och i enlighet med Adobe standardsupportvillkor.
 
-Om du har en molnbaserad miljö kan du titta på det senaste erbjudandet från AEM produktlinje: Adobe Experience Manager as a Cloud Service. Mer information finns i [Adobe Experience Manager as a Cloud Service-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=sv-SE).
+Om du har en molnbaserad miljö kan du titta på det senaste erbjudandet från AEM produktlinje: Adobe Experience Manager as a Cloud Service. Mer information finns i [Adobe Experience Manager as a Cloud Service-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html).
 
 Adobe erbjuder även Adobe Managed Services att distribuera AEM på Azure eller AWS. Adobe Managed Services förser experterna med erfarenhet och kunskaper av att driftsätta och använda AEM i dessa molnmiljöer. Se [ytterligare dokumentation om Adobe Managed Services](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
 
@@ -254,7 +258,7 @@ Adobe rekommenderar att du arbetar direkt med molnleverantören för rekommendat
 
 ### Dispatcher Platforms (webbservrar) {#dispatcher-platforms-web-servers}
 
-Dispatcher är en komponent för cachelagring och lastbalansering. [Hämta den senaste Dispatcher-versionen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=sv-SE). Experience Manager 6.5 kräver Dispatcher version 4.3.2 eller senare.
+Dispatcher är en komponent för cachelagring och lastbalansering. [Hämta den senaste Dispatcher-versionen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html). Experience Manager 6.5 kräver Dispatcher version 4.3.2 eller senare.
 
 Följande webbservrar kan användas med Dispatcher version 4.3.2:
 
@@ -466,11 +470,11 @@ För Windows x86:
    <th><p><strong>Format som stöds för konvertering till PDF</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/se/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 Classic track</a> senaste versionen</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 Classic track</a> senaste versionen</td>
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/se/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 Classic track</a> senaste versionen (inaktuell)</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2017 Classic track</a> senaste versionen (inaktuell)</td>
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
   </tr>
   <tr>
@@ -518,7 +522,7 @@ För Windows x86:
 >
 >Dessutom
 >
->* PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/se/acrobat/release-note/release-notes-acrobat-reader.html) för att kunna utföra konverteringen.
+>* PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) för att kunna utföra konverteringen.
 >* PDF Generator stöder endast 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering.
 >* Installationen av Microsoft® Office Professional Plus kan använda volymlicenser baserade på Retail eller MAK/KMS/AD.
 >* Om en Microsoft® Office-installation inaktiveras eller inte licensieras av någon anledning, t.ex. en volymlicensierad installation som inte kan hitta en KMS-värd inom en angiven period, kan konverteringen misslyckas tills installationen har licensierats på nytt och återaktiverats.
@@ -526,7 +530,7 @@ För Windows x86:
 >* PDF Generator stöder inte Microsoft® Office 365.
 >* PDF Generator-konverteringar för OpenOffice stöds endast i Windows och Linux®.
 >* Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
->* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktioner. Programmatiskt få tillgång till den paketerade versionen endast med AEM Forms under AEM Forms-licensens löptid för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning enligt din distribution ([On-Premise](https://helpx.adobe.com/se/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/se/legal/product-descriptions/adobe-experience-manager-managed-services.html))
+>* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktioner. Programmatiskt få tillgång till den paketerade versionen endast med AEM Forms under AEM Forms-licensens löptid för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning enligt din distribution ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
 >* PDF Generator-tjänsten stöder inte Microsoft® Windows 10.
 >* PDF Generator kan inte konvertera filer med Microsoft® Visio 2019.
 >* PDF Generator kan inte konvertera filer med Microsoft® Project 2019.
