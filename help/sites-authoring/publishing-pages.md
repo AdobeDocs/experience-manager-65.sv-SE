@@ -5,9 +5,9 @@ exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 6f3c4f4aa4183552492c6ce5039816896bd67495
+source-git-commit: 2a843cefdd881e3cab60b2ddba12a26d0a498d13
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1701'
 ht-degree: 5%
 
 ---
@@ -24,14 +24,14 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 >
 >Vissa termer om publicering kan vara förvirrade:
 >
->* **Publish/Avpublicera**
->  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
+>* **Publicera/avpublicera**
+>  >  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
 >
 >* **Aktivera/inaktivera**
->  Dessa termer är synonyma med publicera/avpublicera.
+>  >  Dessa termer är synonyma med publicera/avpublicera.
 >
 >* **Replikera/replikera**
->  Detta är de tekniska termer som beskriver hur data flyttas (till exempel sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan, till exempel när användarkommentarer publiceras eller replikeras om.
+>  >  Detta är de tekniska termer som beskriver hur data flyttas (till exempel sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan, till exempel när användarkommentarer publiceras eller replikeras om.
 
 ## Otillräckliga privilegier {#insufficient-privileges}
 
@@ -52,22 +52,22 @@ Beroende på din plats kan du publicera:
 
 Om du redigerar en sida kan den publiceras direkt från redigeraren.
 
-1. Välj ikonen **Sidinformation** för att öppna menyn och sedan alternativet **Publish Page** .
+1. Välj ikonen **Sidinformation** för att öppna menyn och sedan alternativet **Publicera sida** .
 
    ![screen_shot_2018-03-21at152734](assets/screen_shot_2018-03-21at152734.png)
 
 1. Beroende på om sidan har referenser som behöver publiceras:
 
    * Sidan publiceras direkt om det inte finns några referenser att publicera.
-   * Om sidan innehåller referenser som behöver publiceras visas dessa i guiden **Publish** där du kan antingen:
+   * Om sidan innehåller referenser som behöver publiceras visas dessa i guiden **Publicera** där du kan antingen:
 
-      * Ange vilka resurser eller taggar du vill publicera tillsammans med sidan och använd sedan **Publish** för att slutföra processen.
+      * Ange vilka resurser eller taggar du vill publicera tillsammans med sidan och använd sedan **Publicera** för att slutföra processen.
 
       * Använd **Avbryt** om du vill avbryta åtgärden.
 
    ![chlimage_1](assets/chlimage_1.png)
 
-1. Om du väljer **Publish** replikeras sidan till publiceringsmiljön. I sidredigeraren visas en informationsbanderoll som bekräftar publiceringsåtgärden.
+1. Om du väljer **Publicera** replikeras sidan till publiceringsmiljön. I sidredigeraren visas en informationsbanderoll som bekräftar publiceringsåtgärden.
 
    ![screen_shot_2018-03-21at152840](assets/screen_shot_2018-03-21at152840.png)
 
@@ -81,26 +81,26 @@ Om du redigerar en sida kan den publiceras direkt från redigeraren.
 
 >[!NOTE]
 >
->Sidor som används av [alias](/help/sites-authoring/editing-page-properties.md#advanced) i redigeraren kan inte publiceras. Publish-alternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
+>Sidor som används av [alias](/help/sites-authoring/editing-page-properties.md#advanced) i redigeraren kan inte publiceras. Publiceringsalternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
 
 ### Publicera från konsolen {#publishing-from-the-console}
 
 I platskonsolen finns det två alternativ för publicering:
 
-* [Snabb Publish](/help/sites-authoring/publishing-pages.md#quick-publish)
+* [Snabbpublicering](/help/sites-authoring/publishing-pages.md#quick-publish)
 * [Hantera publikation](/help/sites-authoring/publishing-pages.md#manage-publication)
 
-#### Snabb Publish {#quick-publish}
+#### Snabbpublicering {#quick-publish}
 
-**Snabba Publish** är till för enkla ärenden och publicerar de markerade sidorna direkt utan ytterligare interaktion. Därför kommer alla icke-publicerade referenser också att publiceras automatiskt.
+**Snabbpublicering** är för enkla fall och publicerar de markerade sidorna direkt utan ytterligare interaktion. Därför kommer alla icke-publicerade referenser också att publiceras automatiskt.
 
-Så här publicerar du en sida med Quick Publish:
+Så här publicerar du en sida med Snabbpublicering:
 
-1. Markera sidan eller sidorna i webbplatskonsolen och klicka på knappen **Snabba Publish** .
+1. Markera sidan eller sidorna i webbplatskonsolen och klicka på knappen **Snabbpublicering** .
 
    ![pp-02](assets/pp-02.png)
 
-1. Bekräfta publikationen genom att klicka på **Publish** i dialogrutan Snabb Publish eller klicka på **Avbryt**. Kom ihåg att alla opublicerade referenser också publiceras automatiskt.
+1. I dialogrutan Snabbpublicering bekräftar du publikationen genom att klicka på **Publicera** eller avbryta genom att klicka på **Avbryt**. Kom ihåg att alla opublicerade referenser också publiceras automatiskt.
 
    ![chlimage_1-1](assets/chlimage_1-1.png)
 
@@ -108,11 +108,11 @@ Så här publicerar du en sida med Quick Publish:
 
 >[!NOTE]
 >
->Quick Publish är en ytlig publicering, d.v.s. endast den markerade sidan/de markerade sidorna publiceras och inga underordnade sidor publiceras.
+>Snabbpublicering är en ytlig publicering, d.v.s. endast den valda sidan/de markerade sidorna publiceras och inga underordnade sidor publiceras.
 
 #### Hantera publikation {#manage-publication}
 
-**Hantera publikation** erbjuder fler alternativ än Snabb-Publish, vilket gör att underordnade sidor kan inkluderas, referenser anpassas och tillämpliga arbetsflöden startas och möjlighet att publicera vid ett senare datum erbjuds.
+**Hantera publikation** har fler alternativ än Snabbpublicering, vilket gör att underordnade sidor kan inkluderas, referenser anpassas och tillämpliga arbetsflöden startas och möjlighet att publicera vid ett senare datum.
 
 Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
@@ -141,7 +141,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    Om du klickar på knappen Lägg till innehåll startas [sökvägsläsaren](/help/sites-authoring/author-environment-tools.md#path-browser) så att innehållet kan markeras.
 
-   Markera önskade sidor och klicka sedan på **Välj** för att lägga till innehållet i guiden eller **Avbryt &#x200B;** för att avbryta valet och återgå till guiden.
+   Markera önskade sidor och klicka sedan på **Välj** för att lägga till innehållet i guiden eller **Avbryt **för att avbryta valet och återgå till guiden.
 
    I guiden kan du markera ett objekt i listan för att konfigurera ytterligare alternativ, till exempel:
 
@@ -175,7 +175,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    ![pp-05](assets/pp-05.png)
 
-1. Klicka på **Publish** för att slutföra.
+1. Klicka på **Publicera** för att slutföra.
 
    I webbplatskonsolen bekräftar ett meddelande publikationen.
 
@@ -197,6 +197,10 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    ![chlimage_1-4](assets/chlimage_1-4.png)
 
+>[!TIP]
+>
+>När du schemalägger innehåll för publicering återges innehållet och publiceringsarbetsflödena respekteras. Om du tillfälligt vill dölja redan publicerat innehåll utan att avpublicera, bör du överväga att [**På tid** och **Av tid** är tillgängliga i sidegenskaperna.](/help/sites-authoring/editing-page-properties.md#on-time)
+
 ## Avpublicerar sidor {#unpublishing-pages}
 
 Om du avpublicerar en sida tas den bort från publiceringsmiljön så att den inte längre är tillgänglig för läsarna.
@@ -212,7 +216,7 @@ Om du vill avpublicera en sida när du redigerar den väljer du **Avpublicera si
 
 >[!NOTE]
 >
->Sidor som används av [alias](/help/sites-authoring/editing-page-properties.md#advanced) i redigeraren kan inte avpubliceras. Publish-alternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
+>Sidor som används av [alias](/help/sites-authoring/editing-page-properties.md#advanced) i redigeraren kan inte avpubliceras. Publiceringsalternativen i redigeraren är bara tillgängliga för sidor som du kommer åt via de faktiska sökvägarna.
 
 ### Avpublicera från konsolen {#unpublishing-from-the-console}
 
@@ -268,7 +272,7 @@ Du kan ange en sidas publiceringsstatus:
 
   Publikationsstatusen visas i [kort](/help/sites-authoring/basic-handling.md#card-view)-, [kolumn](/help/sites-authoring/basic-handling.md#column-view)- och [list](/help/sites-authoring/basic-handling.md#list-view)vyerna i Sites-konsolen.
 
-* På tidslinjen [&#128279;](/help/sites-authoring/basic-handling.md#timeline)
+* På tidslinjen [](/help/sites-authoring/basic-handling.md#timeline)
 
   ![screen_shot_2018-03-21at154420](assets/screen_shot_2018-03-21at154420.png)
 
