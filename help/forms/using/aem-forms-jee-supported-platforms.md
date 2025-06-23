@@ -9,9 +9,9 @@ role: Admin
 exl-id: 74d22cf4-56b2-48f5-92d9-928eaa134866
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,AEM Forms on JEE,Platform Matrix
-source-git-commit: 64ffbf05eb3ae6ca3f2475fc99979e420cef15ec
+source-git-commit: 2920e7fd0ce336817a445952a3213c185b224ca9
 workflow-type: tm+mt
-source-wordcount: '3827'
+source-wordcount: '4283'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ ht-degree: 0%
 <div class="preview">
 
 
-Adobe har släppt ett [fullständigt installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE) med AEM 6.5.23.0 Forms Service Pack 23 (6.5.23.0) på JEE tillsammans med patch-installationsprogrammen. Det fullständiga installationsprogrammet har stöd för nya plattformar medan korrigeringsprogrammets installationsprogram endast innehåller felkorrigeringar.
+Adobe har släppt ett [fullständigt installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) med AEM 6.5.23.0 Forms Service Pack 23 (6.5.23.0) på JEE tillsammans med patch-installationsprogrammen. Det fullständiga installationsprogrammet har stöd för nya plattformar medan korrigeringsprogrammets installationsprogram endast innehåller felkorrigeringar.
 
-Om du utför en ny installation eller planerar att använda den senaste programvaran för din AEM 6.5.23.0 Forms i JEE-miljö rekommenderar Adobe att du använder [ AEM 6.5.23.0 Forms i JEE med det fullständiga installationsprogrammet ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE) som släpptes den 6 juni 2025 i stället för AEM 6.5.18 Forms som släpptes den 31 augusti 2023 eller AEM 6.5.12 Forms installationsprogrammet som släpptes 8 april 2019.
+Om du utför en ny installation eller planerar att använda den senaste programvaran för din AEM 6.5.23.0 Forms i JEE-miljö rekommenderar Adobe att du använder [ AEM 6.5.23.0 Forms i JEE med det fullständiga installationsprogrammet ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) som släpptes den 6 juni 2025 i stället för AEM 6.5.18 Forms som släpptes den 31 augusti 2023 eller AEM 6.5.12 Forms installationsprogrammet som släpptes 8 april 2019.
 
 
 </div>
@@ -46,6 +46,7 @@ I det här dokumentet visas vilka klient- och serverplattformar som stöds för 
 
 >[!NOTE]
 >
+>- En fullständig lista över undantag för serverplattformar som stöds finns i [Undantag för serverplattformar som stöds](#p-exceptions-to-supported-server-platforms-p).
 >- AEM Forms på JEE har endast stöd för engelska, franska, tyska och japanska versioner av de operativsystem och program som stöds.
 
 ### Policy för uppgradering och support
@@ -420,39 +421,37 @@ Du kan köra AEM Forms på JEE på en fysisk dator eller en virtuell miljö. Om 
 </tbody>
 </table>
 
-
-<!--
-### Exceptions to supported server platforms {#exceptions-to-supported-server-platforms}
+### Undantag för serverplattformar som stöds {#exceptions-to-supported-server-platforms}
 
 
-Consider the following exceptions while choosing a platform to set up your AEM Forms on JEE server.
+Tänk på följande undantag när du väljer en plattform för att konfigurera AEM Forms på JEE-servern.
 
 
-1. AEM Forms on JEE do not support IBM&reg; WebSphere&reg; with MySQL.
-1. AEM Forms on JEE do not support JBoss&reg; on SUSE&reg; Linux&reg; Enterprise Server 12. Only IBM&reg; WebSphere&reg; is supported on SUSE&reg; Linux&reg; Enterprise Server 12.
-1. AEM Forms on JEE do not support any JDK with JBoss&reg; other than Oracle Java&trade; SE.
-1. AEM Forms on JEE do not support any JDK with IBM&reg; WebSphere&reg; other than IBM&reg; JDK.
-1. CRX-repository supports persistence of type TarMK, MongoDB, and relational databases (RDBMK). You cannot have two different database systems between the application server and the CRX-repository. However, on an AEM Forms on JEE environment, you can use MongoMK with CRX-repository and a supported relational database with application server.
-1. AEM Forms on JEE do not support WebSphere&reg; application server on CentOS.
-1. AEM Forms on JEE do not support JBoss&reg; role-based access control (RBAC).
-1. AEM Forms on JEE support Oracle Java&trade; SE 11 (64 bit) SDK for application server JBoss&reg; EAP 7.4 only.
-1. JDK versions higher than 1.8.0_281 are not supported for WebLogic server. (FORMS-8498)
-1. JDK 11.0.20 is not supported to install AEM Forms on JEE Installer. Only JDK 11.0.19 or earlier versions are supported to install AEM Forms on JEE Installer.
+1. AEM Forms på JEE stöder inte IBM® WebSphere® med MySQL.
+1. AEM Forms på JEE stöder inte JBoss® på SUSE® Linux® Enterprise Server 12. Endast IBM® WebSphere® stöds i SUSE® Linux® Enterprise Server 12.
+1. AEM Forms på JEE stöder inte JDK med JBoss® annat än Oracle Java™ SE.
+1. AEM Forms på JEE stöder inte JDK med andra IBM® WebSphere® än IBM® JDK.
+1. CRX-databasen stöder beständighet av typen tarMK, MongoDB och relationsdatabaser (RDBMK). Du kan inte ha två olika databassystem mellan programservern och CRX-databasen. I en AEM Forms-miljö för JEE kan du emellertid använda MongoMK med CRX-databas och en relationsdatabas som stöds med programserver.
+1. AEM Forms i JEE stöder inte WebSphere®-programserver i CentOS.
+1. AEM Forms på JEE stöder inte rollbaserad åtkomstkontroll JBoss® (RBAC).
+1. AEM Forms på JEE stöder endast Oracle Java™ SE 11 (64 bitar) SDK för programservern JBoss® EAP 7.4.
+1. JDK-versioner som är högre än 1.8.0_281 stöds inte för WebLogic-servern. (FORMS-8498)
+1. JDK 11.0.20 stöds inte för installation av AEM Forms i JEE Installer. Endast JDK 11.0.19 och tidigare versioner stöds för installation av AEM Forms i JEE Installer.
 
-2. [!DNL Microsoft&reg; Windows Server 2019] does not support [!DNL MySQL 5.7] and [!DNL JBoss&reg; EAP 7.1], [!DNL Microsoft&reg; Windows Server 2019] does not support turnkey installations for [!DNL Experience Manager Forms Service Pack 6.5.10.0 and later]. (CQDOC-18312)
-
-
-In addition, consider the following points while choosing software for Adobe AEM Forms on JEE deployments:
+1. [!DNL Microsoft® Windows Server 2019] stöder inte [!DNL MySQL 5.7] och [!DNL JBoss® EAP 7.1], [!DNL Microsoft® Windows Server 2019] stöder inte körklara installationer för [!DNL Experience Manager Forms Service Pack 6.5.10.0 and later]. (CQDOC-18312)
 
 
-- AEM Forms on JEE support updates, patches, and fix packs on top of the specified major and minor version of supported software. However, update to the next major or minor version is not supported unless specified.
-- Cluster-based installations do not support TarMK persistence. For information about supported persistence, see [Choosing a persistence type for an AEM Forms installation](/help/forms/using/choosing-persistence-type-for-aem-forms.md).
-- AEM Forms on JEE support various third-party software as per Adobe's [Third-party software support Policy](../../forms/using/aem-forms-jee-supported-platforms.md#p-third-party-patch-support-policy-p).
-- AEM Forms on JEE support platforms as per the support provided by third-party vendors. Some combinations may not be allowed by third-party vendors. For example, many vendors have not certified their application servers with Oracle. As a result, AEM Forms on JEE also do not support these combinations. To ensure that you choose the supported software versions, check the support matrix for the third-party vendors as well.
-- AEM Forms on JEE do not support TarMK Cold Standby.
-- AEM Forms on JEE do not support vertical clustering.
-- AEM Forms on JEE do not support MySQL database on a clustered environment.
-- For the list of removed or updated platforms, see [AEM 6.5 Forms New Feature Summary](../../forms/using/whats-new.md) document.-->
+Tänk dessutom på följande när du väljer program för Adobe AEM Forms i JEE-distributioner:
+
+
+- AEM Forms på JEE har stöd för uppdateringar, patchar och korrigeringspaket utöver den angivna större och mindre versionen av den programvara som stöds. Uppdatering till nästa större eller mindre version stöds dock inte om det inte anges.
+- Klusterbaserade installationer stöder inte TjärMK-beständighet. Mer information om stöd för beständighet finns i [Välja en beständig typ för en AEM Forms-installation](/help/forms/using/choosing-persistence-type-for-aem-forms.md).
+- AEM Forms på JEE stöder olika tredjepartsprogram enligt Adobe [Supportpolicy för tredjepartsprogram](../../forms/using/aem-forms-jee-supported-platforms.md#p-third-party-patch-support-policy-p).
+- AEM Forms på JEE-supportplattformar enligt support från tredjepartsleverantörer. Vissa kombinationer kanske inte tillåts av tredjepartsleverantörer. Till exempel har många leverantörer inte certifierat sina programservrar med Oracle. Därför stöder inte AEM Forms på JEE dessa kombinationer. Se även till att du väljer vilka programversioner som stöds i supportmatrisen för tredjepartsleverantörer.
+- AEM Forms på JEE stöder inte TjärMK Cold Standby.
+- AEM Forms på JEE har inte stöd för vertikal klustring.
+- AEM Forms på JEE stöder inte MySQL-databaser i en klustrad miljö.
+- En lista över borttagna eller uppdaterade plattformar finns i dokumentet [AEM 6.5 Forms New Feature Summary](../../forms/using/whats-new.md) .
 
 ### LDAP-servrar (tillval) {#ldap-servers-optional}
 
@@ -546,7 +545,7 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
   <th><p><strong>Format som stöds för konvertering till PDF</strong></p> </th>
  </tr>
  <tr>
-  <td><a href="https://helpx.adobe.com/se/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 Classic track</a> senaste versionen</td>
+  <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat 2020 Classic track</a> senaste versionen</td>
   <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML, HTM, DWG, DXF och DWF</td>
  </tr>
  <tr>
@@ -579,7 +578,7 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 >
 >Dessutom:
 >
->- PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/se/acrobat/release-note/release-notes-acrobat-reader.html) för att kunna utföra konverteringen.
+>- PDF Generator kräver en 32-bitarsversion av [Acrobat 2020 Classic track version 20.004.30006](https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html) för att kunna utföra konverteringen.
 >- PDF Generator stöder endast 32-bitarsversionen av Microsoft® Office Professional Plus och andra program som krävs för konvertering.
 >- Installationen av Microsoft® Office Professional Plus kan använda volymlicenser baserade på Retail eller MAK/KMS/AD.
 >- Om en Microsoft® Office-installation inaktiveras eller inte licensieras av någon anledning, t.ex. en volymlicensierad installation som inte kan hitta en KMS-värd inom en angiven period, kan konverteringen misslyckas tills installationen har licensierats på nytt och återaktiverats.
@@ -587,7 +586,7 @@ AEM Forms App har nu stöd för Apache Cordova. Följande plattformsspecifika ve
 >- PDF Generator stöder 32-bitarsversionen av OpenOffice i Linux®.
 >- PDF Generator-konverteringar för OpenOffice stöds endast i Windows och Linux®.
 >- Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
->- En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktioner. Programmeringsversionen får endast användas med AEM Forms under AEM Forms-licensens löptid för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([On-Premise](https://helpx.adobe.com/se/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/se/legal/product-descriptions/adobe-experience-manager-managed-services.html))
+>- En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktioner. Programmeringsversionen får endast användas med AEM Forms under AEM Forms-licensens löptid för användning med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning för din distribution ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html))
 >- PDF Generator-tjänsten stöder inte Microsoft® Windows 10.
 >- PDF Generator kan inte konvertera filer med Microsoft® Visio 2019.
 >- PDF Generator kan inte konvertera filer med Microsoft® Project 2019.
@@ -896,7 +895,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.13.0 release
 The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release on September 7, 2021:
 
 
-- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/se/support/programs/eol-matrix.html).
+- Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
 - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
 - Microsoft&reg; Windows Server 2016 (64-bit)
 - Microsoft&reg; Office 2016
@@ -993,7 +992,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
  - **Deprecated support**: [!DNL Adobe Experience Manager Forms] on JEE has deprecated the following platforms:
 
 
-   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/se/support/programs/eol-matrix.html).
+   - Adobe Acrobat 2017 - [Core support for Adobe Acrobat 2017 ends on June 6, 2022](https://helpx.adobe.com/support/programs/eol-matrix.html).
    - Red Hat&reg; Enterprise Linux&reg; 7 (Kernel 3.x) (64-bit)
    - Microsoft&reg; Windows Server 2016 (64-bit)
    - Microsoft&reg; Office 2016
@@ -1101,7 +1100,7 @@ The following platforms are marked as deprecated with AEM Forms 6.5.10.0 release
 
 | Tillagd support | Borttaget stöd | Föråldrat stöd |
 | -------------- | --------------- | ------------------- |
-| Oracle Java™ SE 11 (64 bitar) SDK för programservern JBoss® EAP 7.4. | | [Adobe Acrobat 2017 - Core-stöd för Adobe Acrobat 2017 upphör 6 juni 2022.](https://helpx.adobe.com/se/support/programs/eol-matrix.html) |
+| Oracle Java™ SE 11 (64 bitar) SDK för programservern JBoss® EAP 7.4. | | [Adobe Acrobat 2017 - Core-stöd för Adobe Acrobat 2017 upphör 6 juni 2022.](https://helpx.adobe.com/support/programs/eol-matrix.html) |
 |  | | Red Hat® Enterprise Linux® 7 (Kernel 3.x) (64-bitars) |
 |  | | Microsoft® Windows Server 2016 (64-bitars) |
 |  | | Microsoft® Office 2016 |
