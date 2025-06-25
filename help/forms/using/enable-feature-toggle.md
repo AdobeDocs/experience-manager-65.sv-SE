@@ -4,16 +4,39 @@ description: Växla funktion är en funktion i AEM som gör att administratörer
 feature: Adaptive Forms, Foundation Components
 role: User, Developer
 hidefromtoc: true
-source-git-commit: 794d93d890ba752f9036a85831f7cbc8391fb545
+exl-id: 08815c2b-23b3-4545-a3ab-ba47ba1c3c55
+source-git-commit: 9b28ab12422743cd7849d2761aef9916ec6710f5
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '377'
 ht-degree: 0%
 
 ---
 
 # Växla funktion i Adobe Experience Manager (AEM) 6.5{#enable-feature-toggle-aem-forms-65}
 
-Växla funktion är en funktion i AEM som gör att administratörer kan aktivera eller inaktivera specifika funktioner dynamiskt. Den här funktionen är särskilt användbar för hantering av **funktioner för tidig Adobe** och **förhandsversion** utan att kodbasen behöver distribueras eller ändras. Det ger flexibilitet och kontroll över vilka funktioner som är tillgängliga i en AEM miljö.
+Växla funktion är en funktion i AEM som gör att administratörer kan aktivera eller inaktivera specifika funktioner dynamiskt. Den här funktionen är särskilt användbar för hantering av **funktioner för tidig Adobe** och **förhandsversion** utan att kodbasen behöver distribueras eller ändras. Programmet ger flexibilitet och kontroll över vilka funktioner som är tillgängliga i en AEM-miljö.
+
+## Varför ska du använda Funktion? Växlar i en AEM 6.5-konfiguration?
+
+När du arbetar i en AEM 6.5-konfiguration växlar funktionen hjälpen i:
+
+* Testa experimentella funktioner på ett säkert sätt.
+
+* Nya komponenter rullas ut i faser.
+
+* En och samma kodbas i olika miljöer.
+
+* Minska riskerna vid driftsättning och uppgraderingar.
+
+## Förutsättningar
+
+Innan du aktiverar funktionsväxlingar i AEM 6.5 ska du kontrollera följande:
+
+* Användaren är medlem i gruppen `forms-users`.
+
+* Navigera till `http://<author-instance-url>:portnumber/system/console/bundles` och kontrollera om paketet **(com.adobe.granite.toggle.impl.dev-1.1.2.jar)** finns eller inte. Om det inte finns [hämtar du paketet från länken](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/hotfix/com.adobe.granite.toggle.impl.dev-1.1.2%20.jar).
+
+  ![Växla funktion](/help/forms/using/assets/feature-toggle-6.5.png)
 
 ## Aktivera växling av funktioner {#enable-feature-toggle-65}
 
