@@ -193,7 +193,7 @@ Om du installerar eller planerar att använda den senaste programvaran för din 
 
   Du behöver inte navigera till resursplatsen och visa dess egenskaper för att utföra dessa åtgärder.
 
-* Med **Dynamic Media _Snapshot_**kan du förhandsgranska bildmodifierare och optimering av smarta bilder - som WebP- eller AVIF-utdata, bandbreddsmedveten komprimering och skalning av enhetspixelproportioner - med testbilder eller dynamiska medie-URL:er. Du kan sedan omedelbart jämföra hur varje inställning påverkar kvalitet och filstorlek.
+* Med **Dynamic Media _Snapshot_**&#x200B;kan du förhandsgranska bildmodifierare och optimering av smarta bilder - som WebP- eller AVIF-utdata, bandbreddsmedveten komprimering och skalning av enhetspixelproportioner - med testbilder eller dynamiska medie-URL:er. Du kan sedan omedelbart jämföra hur varje inställning påverkar kvalitet och filstorlek.
 Se [Dynamisk medieögonblicksbild](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot).
 * **DASH-direktuppspelning med Dynamic Media** - Nytt protokoll (DASH - Dynamic Adaptive Streaming over HTTP) startades för Adaptive Streaming i Dynamic Media-leverans (med CMAF aktiverat). Finns nu för alla regioner.
 * **Integrering av Experience Manager Sites- och innehållsfragment med Assets nästa generations dynamiska media** - Användare kan nu använda sina molnbaserade resurser i Experience Manager Sites 6.5. De kan skapa och leverera dessa resurser lokalt eller i Managed Services-instanser.
