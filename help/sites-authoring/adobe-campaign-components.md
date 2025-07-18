@@ -10,12 +10,14 @@ exl-id: d1132fcd-e6a0-44a2-8753-d250f68fbd78
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+index: false
+source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
 workflow-type: tm+mt
-source-wordcount: '2857'
+source-wordcount: '2855'
 ht-degree: 1%
 
 ---
+
 
 # Adobe Campaign Components{#adobe-campaign-components}
 
@@ -23,13 +25,13 @@ När du integrerar med Adobe Campaign finns det komponenter som du kan använda 
 
 >[!CAUTION]
 >
->AEM e-postkomponenter har tagits bort. På grund av e-postens natur, som sammanfogar innehåll och format, blir de e-postkomponenter som AEM tillhandahåller direkt i kartong av begränsad återanvändning för kunderna på grund av behovet av att implementera anpassade format i de komponenter som behövs för projekt.
+>E-postkomponenterna i AEM har tagits bort. På grund av e-postens natur, som sammanfogar innehåll och format, kommer de e-postkomponenter som AEM tillhandahåller att vara färdiga att användas endast i begränsad omfattning av kunderna, eftersom de måste implementera anpassade format i de komponenter som behövs för projekten.
 >
->E-postkomponenter kan implementeras på projektnivå och de borttagna AEM e-postkomponenterna visar hur man kan uppnå detta. Använd dock inte de här inaktuella komponenterna i projekt.
+>E-postkomponenter kan implementeras på projektnivå och de borttagna e-postkomponenterna i AEM visar hur man kan uppnå detta. Använd dock inte de här inaktuella komponenterna i projekt.
 
 ## Adobe Campaign Newsletter Components {#adobe-campaign-newsletter-components}
 
-Alla Campaign-komponenter följer den bästa praxis som beskrivs i [Bästa praxis för e-postmallar](/help/sites-administering/best-practices-for-email-templates.md) och baseras på Adobe-markeringsspråket [HTL](https://helpx.adobe.com/se/experience-manager/htl/using/overview.html).
+Alla Campaign-komponenter följer den bästa praxis som beskrivs i [Bästa praxis för e-postmallar](/help/sites-administering/best-practices-for-email-templates.md) och baseras på Adobe markeringsspråk [HTML](https://helpx.adobe.com/experience-manager/htl/using/overview.html).
 
 När du öppnar ett nyhetsbrev/e-postmeddelande som är konfigurerat för integrering med Adobe Campaign, bör du se följande komponenter i avsnittet **Adobe Campaign Newsletter**:
 
@@ -64,7 +66,7 @@ Du kan konfigurera följande:
 Om du vill använda ett annat namn än sidrubriken anger du det här.
 
 * **Rubriknivå (1, 2, 3, 4)**
-Rubriknivån baserad på HTML rubrikstorlekarna 1-4.
+Rubriknivån baseras på HTML rubrikstorlek 1-4.
 
 I följande exempel visas en rubrikkomponent (Campaign).
 
@@ -169,15 +171,15 @@ I följande exempel visas en länkkomponent (Campaign).
 
 ![chlimage_1-48](assets/chlimage_1-48.png)
 
-### Dynamic Media Classic (Scene7) bildmall (kampanj) {#scene-image-template-campaign}
+### Dynamic Media Classic (Scene7) Bildmall (Campaign) {#scene-image-template-campaign}
 
 Dynamic Media Classic (Scene7) Bildmallar är lageruppbyggda bildfiler, där innehåll och egenskaper kan parametriseras för variabilitet. Med komponenten **[!UICONTROL Image template]** kan du använda Scene7-mallar i nyhetsbrev och ändra värdena för mallparametrar. Dessutom kan du använda Adobe Campaign-metadatavariabler inuti parametrarna, så att varje användare upplever bilden på ett personaliserat sätt.
 
 ![chlimage_1-49](assets/chlimage_1-49.png)
 
-Klicka på **Redigera** för att konfigurera komponenten. Du kan konfigurera inställningarna som beskrivs i det här avsnittet. Den här Scene7 Image-mallen beskrivs mer ingående i [Scene7 Image Template-komponenten](/help/assets/scene7.md#image-template).
+Klicka på **Redigera** för att konfigurera komponenten. Du kan konfigurera inställningarna som beskrivs i det här avsnittet. Den här Scene7-bildmallen beskrivs i detalj i [Scene7-bildmallskomponenten](/help/assets/scene7.md#image-template).
 
-Dessutom listas alla mallparametrar som har definierats för mallen i Scene7 på parameterpanelen. För var och en av dessa parametrar kan du anpassa värdet, infoga variabler eller återställa dem till deras standardvärde.
+Dessutom visar parameterpanelen alla mallparametrar som har definierats för mallen i Scene7. För var och en av dessa parametrar kan du anpassa värdet, infoga variabler eller återställa dem till deras standardvärde.
 
 ![chlimage_1-50](assets/chlimage_1-50.png)
 
@@ -246,7 +248,7 @@ I följande exempel visas en text- och bildkomponent (Campaign).
 
 ### Text &amp; Personalization (Campaign) {#text-personalization-campaign}
 
-Med Text &amp; Personalization-komponenten (Campaign) kan du ange ett textblock med en WYSIWYG-redigerare med funktioner som tillhandahålls av [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md). Med den här komponenten kan du dessutom använda kontextfält och anpassningsblock som finns i Adobe Campaign. Se även [Infoga Personalization](/help/sites-authoring/campaign.md#inserting-personalization).
+Med Text &amp; Personalization-komponenten (Campaign) kan du ange ett textblock med en WYSIWYG-redigerare, med funktioner som tillhandahålls av [RTF-redigeraren](/help/sites-authoring/rich-text-editor.md). Med den här komponenten kan du dessutom använda kontextfält och anpassningsblock som finns i Adobe Campaign. Se även [Infoga Personalization](/help/sites-authoring/campaign.md#inserting-personalization).
 
 Om du väljer ikoner kan du formatera texten, inklusive teckensnittsegenskaper, justering, länkar, listor och indrag. Funktionen är i stort sett densamma i [båda användargränssnitten](/help/sites-authoring/editing-content.md), även om utseendet är annorlunda:
 
@@ -265,7 +267,7 @@ I redigeraren kan du lägga till text, ändra justeringen, lägga till och ta bo
 
 >[!NOTE]
 >
->Endast de fält som definieras i schemat **nms:seedMember** eller ett av dess tillägg beaktas. Attributen för de tabeller som är länkade till **nms:seedMember** är inte tillgängliga.
+>Endast fält som definierats i **nms:seedMember**-schemat eller ett av dess tillägg tas med i beräkningen. Attributen för de tabeller som är länkade till **nms:seedMember** är inte tillgängliga.
 
 ## Adobe Campaign Form Components {#adobe-campaign-form-components}
 

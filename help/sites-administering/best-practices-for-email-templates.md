@@ -10,9 +10,10 @@ exl-id: 6666eddc-dc17-4bd4-9d55-e6522f40a680
 solution: Experience Manager, Experience Manager Sites
 feature: Integration
 role: Admin
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+index: false
+source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 0%
 
 ---
@@ -22,13 +23,13 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Den här artikeln gäller för de inaktuella Foundation Components-baserade AEM e-postkomponenterna.
+>Den här artikeln gäller de inaktuella Foundation Components-baserade e-postkomponenterna för AEM.
 >
->Användare uppmuntras att använda de moderna e-postkomponenterna för [kärnkomponenter.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html?lang=sv-SE)
+>Användare uppmuntras att använda de moderna e-postkomponenterna för [kärnkomponenter.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/email/introduction.html)
 
 I det här dokumentet beskrivs några av de bästa sätten att arbeta med e-postdesign, vilket resulterar i en välutvecklad mall för e-postkampanjer.
 
-Den demokampanj som finns i AEM följer alla dessa bästa metoder. Hur de bästa metoderna implementeras i demokampanjen beskrivs för varje bästa praxis.
+Demokampanjen som finns i AEM följer alla dessa bästa metoder. Hur de bästa metoderna implementeras i demokampanjen beskrivs för varje bästa praxis.
 
 Använd dessa rutiner när du skapar ett eget nyhetsbrev.
 
@@ -46,7 +47,7 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
 
 >[!NOTE]
 >
->När du skapar en e-postmall för Adobe Campaign måste du ta med egenskapen **acMapping** med värdet **mapRecipient** i noden **jcr:content** i mallen. Om du inte gör det kan du inte välja Adobe Campaign-mallen i **Sidegenskaper** i Experience Manager (fältet är inaktiverat).
+>När du skapar en e-postmall för Adobe Campaign måste du inkludera egenskapen **acMapping** med värdet **mapRecipient** i **jcr:content** -noden i mallen. Om du inte gör det kan du inte välja Adobe Campaign-mallen i **Sidegenskaper** i Experience Manager (fältet är inaktiverat).
 
 ## Komponenten Mall/sida {#template-page-component}
 
@@ -80,7 +81,7 @@ Använd dessa rutiner när du skapar ett eget nyhetsbrev.
   </tr>
   <tr>
    <td>Inline CSS är bättre än att placera all CSS i början.</td>
-   <td><p>För att bättre visa den underliggande strukturen för HTML och förenkla möjligheten att anpassa nyhetsbrevsstrukturen har bara vissa CSS-definitioner infogats.</p> <p>Basformat och mallvarianter har extraherats till ett formatblock på &lt;head&gt; på sidan. När nyhetsbrevet är färdigt infogas dessa CSS-definitioner i HTML. En automatisk infogningsmekanism planeras, men är för närvarande inte tillgänglig.</p> </td>
+   <td><p>För att bättre demonstrera den underliggande HTML-strukturen och förenkla möjligheten att anpassa nyhetsbrevsstrukturen har endast vissa CSS-definitioner infogats.</p> <p>Basformat och mallvarianter har extraherats till ett formatblock på &lt;head&gt; på sidan. När nyhetsbrevet är färdigt infogas dessa CSS-definitioner i HTML. En automatisk infogningsmekanism planeras, men är för närvarande inte tillgänglig.</p> </td>
   </tr>
   <tr>
    <td>Gör din CSS enkel. Undvik sammansatta formatdeklarationer, kodförkortningar, CSS-layoutegenskaper, komplexa väljare och pseudoelement.</td>
@@ -147,7 +148,7 @@ Alla har ett **sidhuvud**, en **sidfot** och ett **brödavsnitt**. Under brödav
 
 ### Komponenter {#components}
 
-Det finns för närvarande [sju komponenter som kan användas i kampanjmallar](/help/sites-authoring/adobe-campaign-components.md). De här komponenterna är alla baserade på Adobe markup-språket **HTL**.
+Det finns för närvarande [sju komponenter som kan användas i kampanjmallar](/help/sites-authoring/adobe-campaign-components.md). De här komponenterna är alla baserade på Adobe markeringsspråk **HTML**.
 
 | **Komponentnamn** | **Komponentsökväg** |
 |---|---|
@@ -156,7 +157,7 @@ Det finns för närvarande [sju komponenter som kan användas i kampanjmallar](/
 | Text&amp;Personalization | /libs/mcm/campaign/components/personalization |
 | Textimage | /libs/mcm/campaign/components/textimage |
 | Länk | /libs/mcm/campaign/components/reference |
-| Dynamic Media Classic (tidigare Scene7) bildmall | /libs/mcm/campaign/s7image |
+| Dynamic Media Classic (tidigare Scene7) Bildmall | /libs/mcm/campaign/s7image |
 | Riktad referens | /libs/mcm/campaign/components/reference |
 
 >[!NOTE]

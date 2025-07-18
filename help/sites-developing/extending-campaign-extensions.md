@@ -1,6 +1,6 @@
 ---
-title: Skapa anpassade tillägg
-description: Du kan anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign.
+title: Anpassade Adobe Campaign-tillägg
+description: Du kan ringa din egen kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: extending-aem
@@ -9,14 +9,15 @@ exl-id: 0702858e-5e46-451f-9ac3-40a4fec68ca0
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '503'
 ht-degree: 1%
 
 ---
 
-# Skapa anpassade tillägg{#creating-custom-extensions}
+
+# Anpassade Adobe Campaign-tillägg{#creating-custom-extensions}
 
 När du implementerar ett projekt har du vanligtvis anpassad kod i både AEM och Adobe Campaign. Med det befintliga API:t kan du anropa din anpassade kod i Adobe Campaign från AEM eller från AEM till Adobe Campaign. I det här dokumentet beskrivs hur du gör det.
 
@@ -35,11 +36,7 @@ Standardintegrationen mellan AEM och Campaign baseras på JSON och JSSP (JavaScr
 
 ![chlimage_1-15](assets/chlimage_1-15a.png)
 
->[!NOTE]
->
->[I det här exemplet finns Geometrixx](/help/sites-developing/we-retail.md), som är tillgänglig från Paketresurs.
-
-I det här exemplet skapades en ny anpassad JSSP-fil som anropar den från AEM sida för att hämta resultatet. Den kan till exempel användas för att hämta data från Adobe Campaign eller spara data i Adobe Campaign.
+I det här exemplet skapades en ny anpassad JSSP-fil som anropar den från AEM-sidan för att hämta resultatet. Den kan till exempel användas för att hämta data från Adobe Campaign eller spara data i Adobe Campaign.
 
 1. Om du vill skapa en JSSP-fil i Adobe Campaign klickar du på ikonen **Nytt** .
 
@@ -58,10 +55,10 @@ I det här exemplet skapades en ny anpassad JSSP-fil som anropar den från AEM s
    %>
    ```
 
-1. Spara ditt arbete. Det återstående arbetet är i AEM.
-1. Skapa en enkel servlet på AEM sida så att du kan anropa den här JSSP:en. I det här exemplet kan du anta följande:
+1. Spara ditt arbete. Resten av jobbet görs i AEM.
+1. Skapa en enkel servlet på AEM-sidan så att du kan anropa denna JSSP. I det här exemplet kan du anta följande:
 
-   * Kopplingen fungerar mellan AEM och Campaign
+   * Anslutningen mellan AEM och Campaign fungerar
    * Kampanjmolntjänsten är konfigurerad för **/content/geometrixx-outdoor**
 
    Det viktigaste objektet i det här exemplet är **GenericCampaignConnector** som gör att du kan anropa (hämta och posta) jssp-filer på Adobe Campaign-sidan.
@@ -169,21 +166,21 @@ AEM erbjuder API:er som kan hämta objekt var som helst i platadminutforskarvyn.
 
 >[!NOTE]
 >
->[I det här exemplet finns Geometrixx](/help/sites-developing/we-retail.md), som är tillgänglig från Paketresurs.
+>[Det här exemplet finns i Geometrixx](/help/sites-developing/we-retail.md), som är tillgängligt från Paketdelning.
 
 För varje nod i Utforskaren finns det ett API som är länkat till det. För noden:
 
-* [http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends](http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends)
+* [http://localhost:4502/siteadmin#/content/campaign/geometrixx/scott-recommendations](http://localhost:4502/siteadmin#/content/campaigns/geometrixx/scott-recommends)
 
 API:t är:
 
-* [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
+* [http://localhost:4502/content/campaign/geometrixx/scott-recommendations.1.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
 Slutet av URL:en **.1.json** kan ersättas med **.2.json**, **.3.json**, enligt antalet undernivåer som du är intresserad av att få. Om du vill få alla nyckelord kan du använda **infinity**:
 
 * [http://localhost:4502/content/campaigns/geometrixx/scott-recommends.infinity.json](http://localhost:4502/content/campaigns/geometrixx/scott-recommends.2.json)
 
-För att förbruka API:t använder AEM som standard grundläggande autentisering.
+AEM använder som standard grundläggande autentisering för att förbruka API.
 
 Ett JS-bibliotek med namnet **amcIntegration.js** är tillgängligt i 6.1.1 (build 8624 och senare) som implementerar den logiken bland flera andra.
 

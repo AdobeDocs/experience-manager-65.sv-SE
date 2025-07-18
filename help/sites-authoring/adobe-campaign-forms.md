@@ -9,9 +9,9 @@ exl-id: 7d60673e-484a-4447-83cf-d62a0d7ad745
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Integration
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 389d5fa8de320a7237fc8290992a33743b15db99
 workflow-type: tm+mt
-source-wordcount: '1281'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Formuläret uppdateras automatiskt baserat på användaren. Mer information finn
 
 ## Göra en mall tillgänglig {#making-a-template-available}
 
-Innan du kan skapa formulär som är specifika för Adobe Campaign måste du göra de olika mallarna tillgängliga i ditt AEM.
+Innan du kan skapa formulär som är specifika för Adobe Campaign måste du göra de olika mallarna tillgängliga i ditt AEM-program.
 
 Om du vill göra det läser du [malldokumentationen](/help/sites-developing/templates.md#template-availability).
 
@@ -52,10 +52,10 @@ Först och främst bör du kontrollera anslutningen mellan författaren och publ
 
 >[!NOTE]
 >
->Kontrollera att egenskapen **acMapping** på sidans **jcr:content** -nod är inställd på **mapRecipient** eller **profile** när du använder Adobe Campaign Classic respektive Adobe Campaign Standard
+>Kontrollera att egenskapen **acMapping** på sidans **jcr:content**-nod är inställd på **mapRecipient** eller **profile** när du använder Adobe Campaign Classic respektive Adobe Campaign Standard
 >
 
-1. I AEM navigerar du till den plats där du vill skapa en sida.
+1. I AEM navigerar du till den plats där du vill skapa en sida i Sites.
 1. Skapa en sida och välj **Adobe Campaign Classic-profil** eller **Adobe Campaign Standard-profil** och klicka på **Nästa**.
 
    ![chlimage_1-43](assets/chlimage_1-43a.png)
@@ -66,7 +66,7 @@ Först och främst bör du kontrollera anslutningen mellan författaren och publ
 
 1. Lägg till sidans namn i fältet **Namn**. Det måste vara ett giltigt JCR-namn.
 1. Ange en titel i fältet **Titel** och klicka på **Skapa**.
-1. Öppna sidan och välj **Öppna egenskaper**. I Cloud Service lägger du till Adobe Campaign-konfigurationen och markerar bockmarkeringen för att spara ändringarna.
+1. Öppna sidan och välj **Öppna egenskaper**. I Cloud Services lägger du till Adobe Campaign-konfigurationen och markerar kryssrutan för att spara ändringarna.
 
    ![chlimage_1-44](assets/chlimage_1-44a.png)
 
@@ -78,11 +78,11 @@ Forms som riktar sig till Adobe Campaign har specifika komponenter. Dessa kompon
 
 >[!NOTE]
 >
->Om den önskade mallen inte är tillgänglig läser du [Göra en mall tillgänglig](/help/sites-authoring/adobe-campaign.md).
+>Om den önskade mallen inte är tillgänglig går du till [Göra en mall tillgänglig.](/help/sites-authoring/campaign.md)
 
 I det här avsnittet beskrivs endast specifika länkar till Adobe Campaign. Mer information om hur du använder formulär i Adobe Experience Manager finns i [Komponenter i redigeringsläge](/help/sites-authoring/default-components-foundation.md).
 
-1. Välj **Öppna egenskaper** och lägg till Adobe Campaign-konfigurationen i Cloud Service och markera kryssrutan för att spara ändringarna.
+1. Välj **Öppna egenskaper** och lägg till Adobe Campaign-konfigurationen i molntjänster och markera bockmarkeringen för att spara ändringarna.
 
    ![chlimage_1-45](assets/chlimage_1-45a.png)
 
@@ -114,7 +114,7 @@ I det här avsnittet beskrivs endast specifika länkar till Adobe Campaign. Mer 
    >
    >Du kan lägga till/ta bort fält som visas i mottagartabellen genom att följa instruktionerna här: [https://blogs.adobe.com/experiencedelivers/experience-management/aem-campaign-integration/](https://blogs.adobe.com/experiencedelivers/experience-management/aem-campaign-integration/)
 
-1. Klicka på **Publish Page**. Sidan aktiveras på din webbplats. Du kan visa den genom att gå till AEM. Du kan också [testa ett formulär](#testing-a-form).
+1. Klicka på **Publicera sida**. Sidan aktiveras på din webbplats. Du kan visa den genom att gå till publiceringsinstansen för AEM. Du kan också [testa ett formulär](#testing-a-form).
 
    >[!CAUTION]
    >
