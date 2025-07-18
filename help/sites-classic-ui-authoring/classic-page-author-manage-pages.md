@@ -9,9 +9,9 @@ exl-id: bd2636d1-6f13-4c6c-b8cd-3bed9e83a101
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ I det här avsnittet beskrivs hur du skapar och hanterar sidor med Adobe Experie
 
 ## Organisera din webbplats {#organizing-your-website}
 
-Som författare måste du ordna din webbplats inom AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
+Som författare måste du organisera din webbplats inom AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
 
 * kan du enkelt hitta dem i redigeringsmiljön
 * besökare på er webbplats kan enkelt bläddra bland dem i publiceringsmiljön
@@ -37,13 +37,13 @@ Du kan också använda [mappar](#creating-a-new-folder) för att ordna ditt inne
 
 Strukturen på en webbplats kan ses som en *trädstruktur* som innehåller dina innehållssidor. Namnen på dessa innehållssidor används för att skapa URL-adresserna, medan titeln visas när sidinnehållet visas.
 
-Här nedan visas ett utdrag från webbplatsen för Geometrixx. Där kan du till exempel komma åt sidan `Triangle`:
+Här nedan visas ett utdrag från Geometrixx webbplats, där du till exempel kommer åt sidan `Triangle`:
 
 * Författarmiljö
 
   `http://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
-* Publish
+* Publiceringsmiljö
 
   `http://localhost:4503/content/geometrixx/en/products/triangle.html`
 
@@ -87,7 +87,7 @@ När du skapar en sida finns det två nyckelfält:
    * Detta används för att generera URI.
    * Användarindata för det här fältet är valfria. Om inget anges hämtas namnet från titeln.
 
-När du skapar en sida validerar AEM [sidnamnet enligt konventionerna ](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört.
+När du skapar en sida validerar AEM [sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR.
 
 Implementeringen och listan över tillåtna tecken skiljer sig något beroende på användargränssnittet (det är mer omfattande för det beröringsaktiverade användargränssnittet), men det minsta tillåtna är:
 
@@ -106,16 +106,16 @@ Om du bara anger sidan **Rubrik** när du skapar en sida, hämtar AEM sidan **Na
 | Titel | Härlett namn |
 |---|---|
 | Schön | schoen.html |
-| SC%&amp;&ast;ç+ | sc---c-.html |
+| SC%&amp;&amp;ast;ç+ | sc---c-.html |
 
 #### Namn {#name}
 
-Om du anger en sida **Namn** när du skapar en sida, validerar AEM [namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR tillämpar.
+Om du anger en sida **Namn** när du skapar en sida, validerar AEM [namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR.
 
 I det klassiska användargränssnittet kan du **inte ange ogiltiga tecken** i fältet **Namn**.
 
 >[!NOTE]
->I det beröringsaktiverade användargränssnittet kan du **inte skicka ogiltiga tecken** i fältet **Namn**. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+>I det beröringsaktiverade användargränssnittet kan du **inte skicka ogiltiga tecken** i fältet **Namn**. När AEM identifierar ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
 
 >[!NOTE]
 >
@@ -129,7 +129,7 @@ I AEM anger en mall en speciell typ av sida. En mall används som bas för alla 
 
 Mallen definierar strukturen för en sida, inklusive en miniatyrbild och andra egenskaper. Du kan till exempel ha separata mallar för produktsidor, platskartor och kontaktinformation. Mallar består av [komponenter](#components).
 
-AEM innehåller flera färdiga mallar. Vilka mallar som visas beror på den enskilda webbplatsen och vilken information som behöver anges (när du skapar den nya sidan) beroende på vilket gränssnitt som används. Nyckelfälten är:
+AEM levereras med flera färdiga mallar. Vilka mallar som visas beror på den enskilda webbplatsen och vilken information som behöver anges (när du skapar den nya sidan) beroende på vilket gränssnitt som används. Nyckelfälten är:
 
 * **Titel**
 Titeln som visas på den slutliga webbsidan.
@@ -142,7 +142,7 @@ En lista med mallar som är tillgängliga för att användas när den nya sidan 
 
 ### Komponenter {#components}
 
-Komponenterna är de element som AEM tillhandahåller så att du kan lägga till specifika typer av innehåll. AEM innehåller en rad färdiga komponenter som ger omfattande funktionalitet:
+Komponenterna är de element som finns i AEM så att du kan lägga till specifika typer av innehåll. AEM har en rad färdiga komponenter som ger omfattande funktionalitet:
 
 * Text
 * Bild
@@ -173,7 +173,7 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * Ange en **titel**. Den visas för användaren.
    * Ange ett **namn**. Detta används för att generera URI:n. Om inget anges hämtas namnet från titeln.
 
-      * Om du anger sidan **Namn** när du skapar en sida, validerar AEM [namnet enligt konventionerna ](/help/sites-developing/naming-conventions.md) som AEM och JCR har angett.
+      * Om du anger sidan **Namn** när du skapar en sida, validerar AEM [namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört.
       * I det klassiska användargränssnittet kan du **inte ange ogiltiga tecken** i fältet **Namn**.
 
    * Klicka på den mall som du vill använda för att skapa den nya sidan.
@@ -252,7 +252,7 @@ Du flyttar eller byter namn på en sida på samma sätt. Med samma åtgärd kan 
 * byta namn på en sida på samma plats
 * flytta en sida till en ny plats och byta namn på den samtidigt
 
-I AEM finns funktioner för att uppdatera interna länkar till sidan som byter namn eller flyttas. Detta kan göras sida för sida för att ge full flexibilitet.
+AEM erbjuder funktioner för att uppdatera interna länkar till sidan som byter namn eller flyttas. Detta kan göras sida för sida för att ge full flexibilitet.
 
 Så här flyttar eller byter du namn på en sida:
 
@@ -266,7 +266,7 @@ Så här flyttar eller byter du namn på en sida:
 
    ![screen_shot_2012-02-15at121336pm](assets/screen_shot_2012-02-15at121336pm.png)
 
-   På sidan visas även alla sidor som refererar till den sida som flyttas. Beroende på status för referenssidan kan du eventuellt justera länkarna på och/eller publicera om sidorna.
+   På sidan visas även alla sidor som direkt eller indirekt refererar till den sida som flyttas. Beroende på status för referenssidan kan du eventuellt justera länkarna på och/eller publicera om sidorna.
 
 1. Fyll i följande fält, beroende på vad som är tillämpligt:
 
@@ -286,7 +286,7 @@ Så här flyttar eller byter du namn på en sida:
 
    * **Justera**
 
-     Uppdatera länkarna på den sida som listas där pekar på den flyttade sidan: om sidan A t.ex. har länkar till sidan B, AEM justerar länkarna på sidan A om du flyttar sidan B.
+     Uppdatera länkarna på den sida som listas där pekar på den flyttade sidan: om sidan A till exempel har länkar till sidan B justerar AEM länkarna på sidan A om du flyttar sidan B.
 
      Detta kan markeras/avmarkeras för varje enskild referenssida.
 

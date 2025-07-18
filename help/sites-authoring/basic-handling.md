@@ -1,5 +1,5 @@
 ---
-title: Grundläggande hantering när du använder AEM redigeringsmiljö
+title: Grundläggande hantering i AEM redigeringsmiljö
 description: Bekväm navigering i Adobe Experience Manager och grundläggande användning.
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -10,9 +10,9 @@ exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
 workflow-type: tm+mt
-source-wordcount: '2964'
+source-wordcount: '2965'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 1%
 >* Den här sidan är avsedd att ge en översikt över grundläggande hantering när du använder Adobe Experience Manager (AEM) redigeringsmiljö. Konsolen **Platser** används som bas.
 >
 >* Vissa funktioner är inte tillgängliga i alla konsoler, och i vissa konsoler kan ytterligare funktioner vara tillgängliga. Specifik information om de enskilda konsolerna och deras relaterade funktioner beskrivs mer ingående på andra sidor.
->* Kortkommandon är tillgängliga i hela AEM. Särskilt när [använder konsoler](/help/sites-authoring/keyboard-shortcuts.md) och [redigerar sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
+>* Kortkommandon finns i hela AEM. Särskilt när [använder konsoler](/help/sites-authoring/keyboard-shortcuts.md) och [redigerar sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
 >
 
 ## Komma igång {#getting-started}
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 AEM användargränssnitt har aktiverats för beröring. Med ett pekaktiverat gränssnitt kan du använda touchfunktioner för att interagera med programvaran med gester som att markera, hålla ned och dra. Detta står i kontrast till hur ett vanligt skrivbordsgränssnitt fungerar med musåtgärder som att klicka, dubbelklicka, högerklicka och föra musen över.
 
-När användargränssnittet för AEM är pekaktiverat kan du använda pekgester på dina touchenheter (till exempel mobilenheter eller surfplattor) och musåtgärder på en vanlig stationär dator.
+När användargränssnittet i AEM är pekaktiverat kan du använda pekgester på dina touchenheter (till exempel mobilenheter eller surfplattor) och musåtgärder på en vanlig stationär dator.
 
 ### Steg 1 {#first-steps}
 
@@ -43,13 +43,13 @@ Omedelbart efter inloggningen kommer du till [navigeringspanelen](#navigation-pa
 
 >[!NOTE]
 >
->För att få en god förståelse för hur AEM används är det här dokumentet baserat på konsolen **Platser**.
+>För att få en god förståelse för den grundläggande användningen av AEM är det här dokumentet baserat på konsolen **Platser**.
 >
 >Klicka på **Webbplatser** för att komma igång.
 
 ### Produktnavigering {#product-navigation}
 
-När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Klicka igenom så får du en bra översikt över den grundläggande hanteringen av AEM.
+När en användare först kommer åt en konsol startas en produktnavigeringssjälvstudie. Klicka igenom så får du en bra översikt över AEM grundläggande hantering.
 
 ![Produktnavigering](assets/bh-02.png)
 
@@ -78,7 +78,7 @@ De alternativ som är tillgängliga på dessa paneler beskrivs nedan.
 
 ### Navigeringspanel {#navigation-panel}
 
-Navigeringspanelen ger åtkomst till AEM:
+Navigeringspanelen ger åtkomst till AEM-konsolerna:
 
 ![Navigering](assets/bh-01.png)
 
@@ -94,7 +94,7 @@ Följande konsoler finns i Navigation:
   </tr>
   <tr>
    <td>Assets<br /> </td>
-   <td>Med dessa konsoler kan du importera och <a href="/help/assets/assets.md">hantera digitala resurser</a>, till exempel bilder, videor, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM. </td>
+   <td>Med dessa konsoler kan du importera och <a href="/help/assets/assets.md">hantera digitala resurser</a>, till exempel bilder, videor, dokument och ljudfiler. Dessa resurser kan sedan användas av alla webbplatser som körs på samma AEM-instans. </td>
   </tr>
   <tr>
    <td>Communities</td>
@@ -122,11 +122,11 @@ Följande konsoler finns i Navigation:
   </tr>
   <tr>
    <td>Screens</td>
-   <td>Med <a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html?lang=sv-SE">Screens</a> kan du hantera alla kundriktade skärmar, oavsett storlek och plats.</td>
+   <td>Med <a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a> kan du hantera alla kundriktade skärmar, oavsett storlek och plats.</td>
   </tr>
   <tr>
    <td>Sites</td>
-   <td>Med platskonsolerna kan du <a href="/help/sites-authoring/page-authoring.md">skapa, visa och hantera webbplatser</a> som körs på din AEM. Med dessa konsoler kan du skapa, redigera, kopiera, flytta och ta bort webbsidor, starta arbetsflöden och publicera sidor.<br /> </td>
+   <td>På webbplatskonsolerna kan du <a href="/help/sites-authoring/page-authoring.md">skapa, visa och hantera webbplatser</a> som körs på din AEM-instans. Med dessa konsoler kan du skapa, redigera, kopiera, flytta och ta bort webbsidor, starta arbetsflöden och publicera sidor.<br /> </td>
   </tr>
  </tbody>
 </table>
@@ -171,7 +171,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   >[!NOTE]
   >
-  >AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Mer information finns i [Inkorgen - administrativa uppgifter som inte är tillgängliga](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks).
+  >Körklar AEM levereras med administrativa uppgifter som tilldelats administratörsanvändargruppen. Mer information finns i [Inkorgen - administrativa uppgifter som inte är tillgängliga](/help/sites-authoring/inbox.md#out-of-the-box-administrative-tasks).
 
 * [Användaregenskaper](/help/sites-authoring/user-properties.md)
 
@@ -209,7 +209,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
 * [Vyer](/help/sites-authoring/basic-handling.md#viewingandselectingyourresourcescardlistcolumn)
 
-  Vyikonen finns längst till höger i verktygsfältet AEM. Eftersom den aktuella vyn också visas ändras den. I standardvyn **Kolumnvy** visas till exempel:
+  Vyikonen finns längst till höger i verktygsfältet i AEM. Eftersom den aktuella vyn också visas ändras den. I standardvyn **Kolumnvy** visas till exempel:
 
   ![Kolumnvy](assets/bh-07.png)
 
@@ -237,7 +237,7 @@ Det finns olika hjälpresurser:
 
 * **Navigering**
 
-  Första gången du navigerar i systemet introducerar [en serie bilder AEM navigering](/help/sites-authoring/basic-handling.md#product-navigation).
+  Första gången du navigerar i systemet introducerar [en serie bilder AEM-navigering](/help/sites-authoring/basic-handling.md#product-navigation).
 
 * **Sidredigeraren**
 
@@ -568,15 +568,16 @@ De här alternativen är tillgängliga via markeringen bredvid fältet **Komment
 
 ### Referenser {#references}
 
-**Referenser** visar alla anslutningar till den valda resursen. I **Platser**-konsolen [&#128279;](/help/sites-authoring/author-environment-tools.md#showingpagereferences) visar till exempel referenser för sidor:
+**Referenser** visar anslutningar till den valda resursen. I **Platser**-konsolen [ ](/help/sites-authoring/author-environment-tools.md#showingpagereferences) visar till exempel referenser för sidor:
 
+* [Ritningar](/help/sites-administering/msm.md)
 * [Launches](/help/sites-authoring/launches.md#launches-in-references-sites-console)
 * [Live-kopior](/help/sites-administering/msm-livecopy-overview.md#openingthelivecopyoverviewfromreferences)
 * [Språkversioner](/help/sites-administering/tc-prep.md#seeing-the-status-of-language-roots)
 * Innehållsreferenser:
 
-   * länkar från andra sidor till den markerade sidan
-   * innehåll som lånats från, eller lånats ut, eller både och, till den valda sidan av referenskomponenten
+   * Direktlänkar från andra sidor till den markerade sidan
+   * Innehåll som lånats från, lånats ut till, eller båda, den valda sidan av referenskomponenten
 
 ![bh-28](assets/bh-28.png)
 

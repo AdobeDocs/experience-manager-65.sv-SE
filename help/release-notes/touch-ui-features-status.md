@@ -5,24 +5,24 @@ exl-id: 7b71e8db-e8c6-4470-bc22-db3d4600b7fc
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1087'
 ht-degree: 0%
 
 ---
 
 # Funktionsstatus för Touch UI {#touch-ui-feature-status}
 
-Adobe Experience Manager (AEM) 6.4 och framåt [Klassiskt användargränssnitt är föråldrat](../release-notes/deprecated-removed-features.md). Adobe gör inga fler förbättringar av det klassiska användargränssnittet och användare uppmanas att använda de nya kraftfulla funktionerna i det beröringskänsliga användargränssnittet.
+Adobe Experience Manager (AEM) 6.4 och framåt [Klassiskt användargränssnitt är inaktuellt](../release-notes/deprecated-removed-features.md). Adobe gör inga fler förbättringar av det klassiska användargränssnittet, och användare uppmanas att använda de kraftfulla nya funktionerna i det beröringskänsliga användargränssnittet.
 
-Från och med version 6.0 har AEM introducerat ett nytt användargränssnitt som kallas &quot;pekaktiverat användargränssnitt&quot; (kallas &quot;Touch-användargränssnitt&quot;) som är anpassat till [!DNL Adobe Experience Cloud] och de övergripande riktlinjerna för användargränssnittet i Adobe. Med nästan samma funktionsparitet har detta blivit standardgränssnittet i AEM med det äldre skrivbordsorienterade gränssnittet som kallas &quot;klassiskt gränssnitt&quot;.
+Från och med version 6.0 har AEM introducerat ett nytt användargränssnitt som kallas &quot;pekaktiverat användargränssnitt&quot; (kallas &quot;Touch UI&quot;) som är anpassat till [!DNL Adobe Experience Cloud] och Adobe allmänna riktlinjer för användargränssnittet. Med nästan samma funktionsparitet har detta blivit standardgränssnittet i AEM med det äldre skrivbordsorienterade gränssnittet som kallas &quot;klassiskt användargränssnitt&quot;.
 
 De flesta funktioner finns i det beröringskänsliga användargränssnittet, men det finns funktioner som ännu inte är fullständiga och som kommer att läggas till i framtida versioner.
 
 Följande lista visar statusen för funktionerna som implementerats i AEM 6.5.
 
-Rekommendationer för kunder som uppgraderar till AEM 6.5 finns i [Rekommendationer för användargränssnitt för kunder](/help/sites-deploying/ui-recommendations.md).
+Rekommendationer för kunder som uppgraderar till AEM 6.5 finns i [Användargränssnittets rekommendationer för kunder](/help/sites-deploying/ui-recommendations.md).
 
 >[!NOTE]
 >
@@ -57,10 +57,10 @@ Det här är en lista över funktioner som den klassiska användargränssnittsad
 | Sök | Complete |  |
 | Kopiera och klistra in sida (duplicera) | Complete |  |
 | Flytta sidor | Complete |  |
-| Publish sidor | Complete |  |
-| Publish-sidor utan replikeringsrättigheter | Complete |  |
-| Publish senare | Complete |  |
-| Publish | Complete |  |
+| Publicera sidor | Complete |  |
+| Publicera sidor utan replikeringsrättigheter | Complete |  |
+| Publicera senare | Complete |  |
+| Publiceringsträd | Complete |  |
 | Avpublicera sidor | Complete |  |
 | Avpublicera sidor utan replikeringsrättigheter | Complete |  |
 | Avpublicera senare | Complete |  |
@@ -76,7 +76,7 @@ Det här är en lista över funktioner som den klassiska användargränssnittsad
 | Se språkkopior | Complete |  |
 | Sök och ersätt | Saknas | Använd klassiskt användargränssnitt. |
 | Inkorgen för meddelanden (JCR-händelser) | Saknas | Använd klassiskt användargränssnitt. Ersätts med en annan implementering i framtiden. |
-| Referenser | Complete | Visa inkommande sidlänkar som lagts till i AEM 6.5. |
+| Referenser | Complete | Visa inkommande sidlänkar som lagts till i AEM 6.5. Endast direkta länkar till sidan visas av prestandaskäl. |
 
 ## Funktionsstatus: sidredigeraren {#feature-status-page-editor}
 
@@ -103,7 +103,7 @@ Det här är en lista över funktioner som den klassiska sidredigeraren i använ
 | Starta och visa arbetsflöde | Complete |  |
 | Hantering av arbetsflödespaket | Mest | Finns i det pekaktiverade användargränssnittet. Flera arbetsflödesnyttolaster visas fortfarande i det klassiska användargränssnittet. |
 | Lås/lås upp sida | Complete |  |
-| Publish Page | Complete |  |
+| Publicera sida | Complete |  |
 | Avpublicera sida | Complete |  |
 | Kopiera sida | Borttagen | Använd Webbplatsadministratör för att [kopiera sidor](/help/sites-authoring/managing-pages.md#copying-and-pasting-a-page). |
 | Flytta sida | Borttagen | Använd Webbplatsadministratör för att [flytta sidor](/help/sites-authoring/managing-pages.md#moving-or-renaming-a-page). |

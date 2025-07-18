@@ -10,9 +10,9 @@ exl-id: 5d7b6b2e-d1d8-4efe-b9ff-c9542b4e67d7
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '931'
 ht-degree: 2%
 
 ---
@@ -37,11 +37,11 @@ Det finns en separat sidredigerare med det klassiska användargränssnittet som 
 
 ## Få hjälp {#accessing-help}
 
-Olika **hjälp**-resurser kan nås direkt från AEM:
+Du kan komma åt olika **hjälp**-resurser direkt från AEM:
 
 Förutom att du får åtkomst till [hjälpen från konsolens verktygsfält](/help/sites-classic-ui-authoring/author-env-basic-handling.md#accessing-help) kan du även få åtkomst till hjälpen från sidosparken (med ? ikon) när du redigerar en sida:
 
-![Sidekick komprimerad](do-not-localize/sidekick-collapsed-2.png)
+![Sidekick komprimerat](do-not-localize/sidekick-collapsed-2.png)
 
 Eller genom att använda knappen **Hjälp** i redigeringsdialogrutan för specifika komponenter. Då visas sammanhangsberoende hjälp.
 
@@ -60,7 +60,7 @@ Du kan använda innehållssökaren för att hitta en rad olika resurser. Om det 
 * [Bilder](#finding-images)
 * [Dokument](#finding-documents)
 * [Filmer](#finding-movies)
-* [Dynamic Media webbläsare](/help/sites-administering/scene7.md#scene7contentbrowser)
+* [Dynamisk medieläsare](/help/sites-administering/scene7.md#scene7contentbrowser)
 * [Sidor](#finding-pages)
 
 * [Stycken](#referencing-paragraphs-from-other-pages)
@@ -87,7 +87,7 @@ När du har skapat ett nedladdningsstycke på sidan kan du dra ett objekt och sl
 
 ### Söka efter filmer {#finding-movies}
 
-På den här fliken visas alla filmer (till exempel Flashar) i databasen.
+På den här fliken visas alla filmer (till exempel Flash-objekt) i databasen.
 
 När du har skapat ett lämpligt stycke (till exempel Flash) på sidan kan du dra ett objekt och släppa det i stycket.
 
@@ -154,19 +154,23 @@ Du kan använda valfritt antal jokertecken i en fråga.
 
 ## Visar referenser {#showing-references}
 
-AEM låter dig se vilka sidor som är länkade till den sida du arbetar med just nu.
+I AEM kan du se vilka sidor som är länkade till den sida du arbetar med just nu.
 
-Så här visar du direkta sidreferenser:
+Så här visar du sidreferenser:
 
 1. I sidosparken väljer du flikikonen **Sida** .
 
    ![screen_shot_2012-02-16at83127pm](assets/screen_shot_2012-02-16at83127pm.png)
 
-1. Välj **Visa referenser..** AEM öppnar fönstret Referenser och visar vilka sidor som refererar till den valda sidan, inklusive deras sökvägar.
+1. Välj **Visa referenser..** AEM öppnar fönstret Referenser och visar vilka sidor som refererar till den markerade sidan, inklusive sökvägar för dem.
 
    ![screen_shot_2012-02-16at83311pm](assets/screen_shot_2012-02-16at83311pm.png)
 
-I vissa situationer finns det ytterligare åtgärder att vidta från Sidekick, bland annat:
+AEM visar alla sidor som direkt refererar till den valda sidan samt eventuella indirekta referenser. Det är praktiskt att förstå alla länkar som kommer att uppdateras om du behöver flytta eller ta bort sidan.
+
+## Fler Sidekick-åtgärder {#additional-actions}
+
+I vissa situationer kan Sidekick vidta ytterligare åtgärder, bland annat:
 
 * [Launches](/help/sites-classic-ui-authoring/classic-launches.md)
 * [Live-kopior](/help/sites-administering/msm.md)
@@ -191,7 +195,7 @@ När du redigerar en sida med det klassiska användargränssnittet finns det oli
 
 ![Sidlägen](do-not-localize/chlimage_1-12.png)
 
-Ikonerna längst ned på Sidekick används för att växla mellan olika lägen för att arbeta med sidorna:
+Ikonerna längst ned i Sidekick används för att växla mellan olika lägen när du arbetar med sidorna:
 
 * [Redigera](/help/sites-classic-ui-authoring/classic-page-author-edit-mode.md)
 Det här är standardläget och du kan redigera sidan, lägga till eller ta bort komponenter och göra andra ändringar.

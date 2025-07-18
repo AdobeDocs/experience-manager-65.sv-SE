@@ -5,9 +5,9 @@ exl-id: 74576e51-4b4e-464e-a0b8-0fae748a505d
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
 role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+source-git-commit: 383192083ec84176f67882a869550374f6074eef
 workflow-type: tm+mt
-source-wordcount: '2417'
+source-wordcount: '2476'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ I följande exempel visas ett exempel från webbplatsen We.Retail, där du kan k
 * Författarmiljö
   `https://localhost:4502/editor.html/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
-* Publish
+* Publiceringsmiljö
   `https://localhost:4503/content/we-retail/us/en/products/equipment/hiking/desert-sky-shorts.html`
 
 Beroende på konfigurationen för din instans kan det vara valfritt att använda `/content` i publiceringsmiljön.
@@ -97,7 +97,7 @@ När du skapar en sida finns det två nyckelfält:
 
 Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 
-* När du skapar en sida krävs bara fältet **Titel**. Om inget **namn** anges när sidan skapas, genererar AEM ett namn från de första 64 tecknen i titeln (observerar valideringen som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
+* När du skapar en sida krävs bara fältet **Titel**. Om inget **namn** anges när sidan skapas, genererar AEM ett namn från de 64 första tecknen i titeln (med den validering som anges nedan). Endast de första 64 tecknen används för att ge stöd åt de bästa sätten med namn på korta sidor.
 
 * Om ett sidnamn anges manuellt av författaren gäller inte gränsen på 64 tecken, men andra tekniska begränsningar på sidnamnets längd kan förekomma.
 
@@ -107,7 +107,7 @@ Sidans **titel** och **namn** kan skapas separat men hänger ihop:
 >
 >Tänk också på att vissa webbläsare (till exempel äldre versioner av IE) bara kan acceptera URL:er med en viss längd, så det finns också tekniska skäl att hålla sidnamnen korta.
 
-När du skapar en sida validerar AEM [sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR har infört.
+När du skapar en sida validerar AEM [sidnamnet enligt konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR.
 
 Minsta tillåtna tecken är:
 
@@ -134,7 +134,7 @@ Om du bara anger sidan **Rubrik** när du skapar en sida, hämtar AEM sidan **Na
 
 #### Namn {#name}
 
-När du anger en sida **Namn** när du skapar en sida, validerar AEM [namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR tillämpar. Du kan inte skicka ogiltiga tecken i fältet **Namn**. När AEM upptäcker ogiltiga tecken markeras fältet med en förklaring.
+När du anger en sida **Namn** när du skapar en sida, validerar AEM [namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR. Du kan inte skicka ogiltiga tecken i fältet **Namn**. När AEM identifierar ogiltiga tecken markeras fältet med en förklaring.
 
 ![caop-02](assets/caop-02.png)
 
@@ -150,7 +150,7 @@ I AEM anger en mall en speciell typ av sida. En mall används som bas för alla 
 
 Mallen definierar strukturen för en sida, inklusive en miniatyrbild och andra egenskaper. Du kan till exempel ha separata mallar för produktsidor, platskartor och kontaktinformation. Mallar består av [komponenter](#components).
 
-AEM innehåller flera färdiga mallar. Vilka mallar som är tillgängliga beror på den enskilda webbplatsen. Nyckelfälten är:
+AEM levereras med flera färdiga mallar. Vilka mallar som är tillgängliga beror på den enskilda webbplatsen. Nyckelfälten är:
 
 * **Titel**
 Titeln som visas på den slutliga webbsidan.
@@ -167,7 +167,7 @@ En lista med mallar som är tillgängliga för att användas när den nya sidan 
 
 ### Komponenter {#components}
 
-Komponenterna är de element som AEM tillhandahåller så att du kan lägga till specifika typer av innehåll. AEM innehåller ett urval av [komponenter som inte är installerade](/help/sites-authoring/default-components-console.md) och som har omfattande funktionalitet. Bland dessa finns:
+Komponenterna är de element som finns i AEM så att du kan lägga till specifika typer av innehåll. AEM innehåller ett urval av [komponenter som inte finns installerade](/help/sites-authoring/default-components-console.md) och som har omfattande funktionalitet. Bland dessa finns:
 
 * Text
 * Bild
@@ -216,9 +216,9 @@ Om du inte har skapat alla sidor åt dig i förväg måste du skapa en sida inna
    * **Namn**:
 
       * Detta används för att generera URI. Om inget anges hämtas namnet från titeln.
-      * Om du anger en sida **Namn** när du skapar en sida, validerar AEM [namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) som AEM och JCR tillämpar.
+      * Om du anger en sida **Namn** när du skapar en sida, validerar AEM [namnet enligt konventionerna](/help/sites-developing/naming-conventions.md) från AEM och JCR.
 
-      * Du **kan inte skicka ogiltiga tecken** i fältet **Namn**. När AEM upptäcker ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
+      * Du **kan inte skicka ogiltiga tecken** i fältet **Namn**. När AEM identifierar ogiltiga tecken markeras fältet och en förklaring visas som anger vilka tecken som behöver tas bort/ersättas.
 
    >[!NOTE]
    >
@@ -326,10 +326,9 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
    Guiden Flytta sida öppnas.
 
-1. Från steget **Byt namn** i guiden kan du antingen:
+1. I steget **Byt namn** i guiden får du **information** om sidan, inklusive skapandedatum, sökväg och antal direkta referenser. Här kan du antingen:
 
    * Ange det namn du vill att sidan ska ha efter att den har flyttats och klicka sedan på **Nästa** för att fortsätta.
-
    * **Avbryt** om du vill avbryta processen.
 
    ![caop-07](assets/caop-07.png)
@@ -365,7 +364,8 @@ I AEM finns funktioner för att uppdatera interna länkar som refererar till sid
 
    >[!NOTE]
    >
-   >Om sidan varken är länkad till eller refererad är det här steget inte tillgängligt.
+   >* Om sidan varken är länkad till eller refererad är det här steget inte tillgängligt.
+   >* I det här steget visas både direkta och indirekta referenser. Detta kan skilja sig från mängden som rapporteras i steget **Byt namn** i guiden samt referenserna som rapporteras av referenslinjen, där båda endast rapporterar direkta referenser av prestandaskäl.
 
    ![caop-09](assets/caop-09.png)
 
