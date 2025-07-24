@@ -5,9 +5,9 @@ exl-id: 37287332-3c8d-4ddc-a77e-3c5ee332898b
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: 59d667004bb41a973847e9c53333afaa188ccac1
+source-git-commit: f472766dbfeb8d84b0b97f621828b1c0491529c4
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1340'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
 >
 > Programfixarna är avsedda att vara kumulativa och omfattar alla föregående korrigeringar. När du tillämpar den senaste snabbkorrigeringen på en release åtgärdar den inte bara det senaste problemet utan även alla tidigare felkorrigeringar och förbättringar.
 
-## Programfixar för Adaptive Forms {#hotfix-for-adaptive-forms}
+## Programfixar för AEM Forms {#hotfix-for-aem-forms}
 
 <table>
   <tbody>
@@ -46,7 +46,16 @@ I den här artikeln listas de viktiga korrigeringar som har implementerats för 
     </td>
     <td>
     <ul>
-    <li>Programfix SP23 för AEM Forms på JEE</li>
+    <li><strong>Den här snabbkorrigeringen åtgärdar följande:</strong>
+      <ul>
+        <li><strong>FORMS-20533:</strong> AEM Forms innehåller nu en uppgradering av Struts-versionen från 2.5.33 till 6.x för formulärkomponenten. Detta ger tidigare missade strängändringar som inte ingick i SP23. Supporten lades till via en hotfix som du kan ladda ned och installera för att lägga till stöd för den senaste versionen av Struts.</li>
+        <li><strong>FORMS-20532:</strong> AEM Forms innehåller nu en uppgradering av Struts-versionen från 2.5.33 till 6.x för utdatakomponenten. Detta ger tidigare missade strängändringar som inte ingick i SP23. Supporten lades till via en hotfix som du kan ladda ned och installera för att lägga till stöd för den senaste versionen av Struts.</li>
+        <li><strong>FORMS-20203:</strong> När en användare uppgraderar från AEM Service Pack 2.5.x till AEM Forms Service Pack 6.x visas inte alla konfigurationer i principgränssnittet, t.ex. alternativet att lägga till en vattenstämpel. Du kan hämta och installera programfixen för att lösa problemet.</li>
+        <li><strong>FORMS-20360:</strong> Efter uppgradering till AEM Forms Service Pack 6.5.23.0 misslyckas ImageToPDF-konverteringstjänsten med felet:<br>
+        <code>17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp</code><br>
+        Du kan hämta och installera programfixen för att lösa problemet.</li>
+      </ul>
+    </li>
     </ul>
     </td>    
   </tr>
