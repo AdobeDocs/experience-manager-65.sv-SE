@@ -260,4 +260,4 @@ Om du använder Dokumentsäkerhet (tidigare Rights Management) anger du följand
 - [CWE-611: Felaktig begränsning av XML-extern entitetsreferens](https://cwe.mitre.org/data/definitions/611.html)
 - [CWE-16: Konfiguration](https://cwe.mitre.org/data/definitions/16.html)
 - [OWASP XXE Prevention Cheat Sheet](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_XXE_Processing)
-- [Adobe Experience Manager Forms bästa säkerhetspraxis](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)
+- [Adobe Experience Manager Forms bästa säkerhetspraxis](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=sv-SE)
