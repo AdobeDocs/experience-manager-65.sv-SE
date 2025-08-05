@@ -86,7 +86,7 @@ Med den här säkerhetsfunktionen kan du återställa det ursprungliga läget om
 
 **Steg 1: Hämta och extrahera snabbkorrigeringspaketet**
 
-- Hämta [snabbkorrigeringen för 6.5.18.0 - 6.5.22.2} från Adobe Software Distribution Portal](/help/release-notes/aem-forms-hotfix.md)
+- Hämta [snabbkorrigeringen för 6.5.18.0 - 6.5.22.2&rbrace; från Adobe Software Distribution Portal](/help/release-notes/aem-forms-hotfix.md)
 - Extrahera lokalt
 
 **Steg 2: Navigera till rätt versionsmapp**
