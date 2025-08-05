@@ -6,16 +6,15 @@ products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: Security
 geptopics: SG_AEMFORMS/categories/jee
 role: Admin
-exl-id: c8f3e7c1-d5a2-4e2f-8b9c-1a8d7f8e2a9b
+exl-id: 9fade12f-a038-4fd6-8767-1c30966574c5
 solution: Experience Manager, Experience Manager Forms
 release-date: 2025-08-05T00:00:00Z
-source-git-commit: b810aadeb2741ff2fba28f81b508637f21feb8f9
+source-git-commit: 8420597b7ee09b15a7f0004acc64e3625771a4d8
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '674'
 ht-degree: 3%
 
 ---
-
 
 # Mitigating RCE (CVE-2025-49533), Struts Dev Mode Configuration (CVE-2025-54253), XXE (CVE-2025-54254) och Vulnerabilities for AEM Forms on JEE {#mitigating-xxe-configuration-rce-vulnerabilities-aem-forms}
 
@@ -67,26 +66,22 @@ Med den här säkerhetsfunktionen kan du återställa det ursprungliga läget om
 ### Alternativ 1: (För användare i version 6.5.23.0) Installera den senaste snabbkorrigeringen
 
 1. [Hämta snabbkorrigeringen för 6.5.23.0](/help/release-notes/aem-forms-hotfix.md).
-2. Följ standardinstruktionerna för installation av [snabbkorrigering/korrigering](/help/release-notes/jee-patch-installer-65.md)
-3. Om du använder dokumentsäkerhet (tidigare Rights Management) på IBM WebSphere eller Oracle WebLogic anger du följande Java-systemegenskap (JVM-argument) innan du startar AEM Forms-servern:
+1. Följ standardinstruktionerna för installation av [snabbkorrigering/korrigering](/help/release-notes/jee-patch-installer-65.md)
+1. Om du använder dokumentsäkerhet (tidigare Rights Management) på IBM WebSphere eller Oracle WebLogic anger du följande Java-systemegenskap (JVM-argument) innan du startar AEM Forms-servern:
 
    ```
    -Dcom.adobe.forms.jee.services.allowDoctypeDeclaration=true
    ```
 
-4. Starta om programservern
-
-</details>
+1. Starta om programservern
 
 ### Alternativ 2: (För användare på 6.5.18.0 - 6.5.22.0) Manuell Hotfix-installation
 
-
-<details>
-<summary><b>Manuell programfixinstallation för 6.5.18.0 - 6.5.22.0</b></summary>
++++<b>Manuell snabbkorrigering för 6.5.18.0 - 6.5.22.0</b>
 
 **Steg 1: Hämta och extrahera snabbkorrigeringspaketet**
 
-- Hämta [snabbkorrigeringen för 6.5.18.0 - 6.5.22.2&rbrace; från Adobe Software Distribution Portal](/help/release-notes/aem-forms-hotfix.md)
+- Hämta [snabbkorrigeringen för 6.5.18.0 - 6.5.22.2} från Adobe Software Distribution Portal](/help/release-notes/aem-forms-hotfix.md)
 - Extrahera lokalt
 
 **Steg 2: Navigera till rätt versionsmapp**
@@ -125,7 +120,7 @@ Med den här säkerhetsfunktionen kan du återställa det ursprungliga läget om
 
    Exempel: `adobe-xxe-configuration-hotfix/SP20/jboss/adminui.war`
 
-2. I `adobe-core-jboss.ear` går du till mappen `lib/` och ersätter `adobe-uisupport.jar` med:
+1. I `adobe-core-jboss.ear` går du till mappen `lib/` och ersätter `adobe-uisupport.jar` med:
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/adobe-uisupport.jar
@@ -133,10 +128,10 @@ Med den här säkerhetsfunktionen kan du återställa det ursprungliga läget om
 
    Exempel: `adobe-xxe-configuration-hotfix/SP20/adobe-uisupport.jar`
 
-3. Spara på EAR. Se till att ändringarna sparas korrekt.
+1. Spara på EAR. Se till att ändringarna sparas korrekt.
 
 
-4. Ersätt `adobe-edcserver-jboss.ear` med
+1. Ersätt `adobe-edcserver-jboss.ear` med
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/jboss/adobe-edcserver-jboss.ear
@@ -144,7 +139,7 @@ Med den här säkerhetsfunktionen kan du återställa det ursprungliga läget om
 
    Exempel: `adobe-xxe-configuration-hotfix/SP20/jboss/adobe-edcserver-jboss.ear`
 
-5. Ersätt `adobe-forms-jboss.ear` med
+1. Ersätt `adobe-forms-jboss.ear` med
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/jboss/adobe-forms-jboss.ear
@@ -164,7 +159,7 @@ Med den här säkerhetsfunktionen kan du återställa det ursprungliga läget om
 
    Exempel: `adobe-xxe-configuration-hotfix/SP20/weblogic/adminui.war`
 
-2. I `adobe-core-weblogic.ear` ersätter du `adobe-uisupport.jar` med:
+1. I `adobe-core-weblogic.ear` ersätter du `adobe-uisupport.jar` med:
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/adobe-uisupport.jar
@@ -172,10 +167,10 @@ Med den här säkerhetsfunktionen kan du återställa det ursprungliga läget om
 
    Exempel: `adobe-xxe-configuration-hotfix/SP20/adobe-uisupport.jar`
 
-3. Spara på EAR. Se till att ändringarna sparas korrekt.
+1. Spara på EAR. Se till att ändringarna sparas korrekt.
 
 
-4. Ersätt `adobe-edcserver-weblogic.ear` med
+1. Ersätt `adobe-edcserver-weblogic.ear` med
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/weblogic/adobe-edcserver-weblogic.ear
@@ -183,7 +178,7 @@ Med den här säkerhetsfunktionen kan du återställa det ursprungliga läget om
 
    Exempel: `adobe-xxe-configuration-hotfix/SP20/weblogic/adobe-edcserver-weblogic.ear`
 
-5. Ersätt `adobe-forms-weblogic.ear` med
+1. Ersätt `adobe-forms-weblogic.ear` med
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/weblogic/adobe-forms-weblogic.ear
@@ -201,7 +196,7 @@ Med den här säkerhetsfunktionen kan du återställa det ursprungliga läget om
 
    Exempel: `adobe-xxe-configuration-hotfix/SP20/websphere/adminui.war`
 
-2. I `adobe-core-websphere.ear` ersätter du `adobe-uisupport.jar` med:
+1. I `adobe-core-websphere.ear` ersätter du `adobe-uisupport.jar` med:
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/adobe-uisupport.jar
@@ -209,10 +204,10 @@ Med den här säkerhetsfunktionen kan du återställa det ursprungliga läget om
 
    Exempel: `adobe-xxe-configuration-hotfix/SP20/adobe-uisupport.jar`
 
-3. Spara på EAR. Se till att ändringarna sparas korrekt.
+1. Spara på EAR. Se till att ändringarna sparas korrekt.
 
 
-4. Ersätt `adobe-edcserver-websphere.ear` med
+1. Ersätt `adobe-edcserver-websphere.ear` med
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/websphere/adobe-edcserver-websphere.ear
@@ -220,7 +215,7 @@ Med den här säkerhetsfunktionen kan du återställa det ursprungliga läget om
 
    Exempel: `adobe-xxe-configuration-hotfix/SP20/websphere/adobe-edcserver-websphere.ear`
 
-5. Ersätt `adobe-forms-websphere.ear` med
+1. Ersätt `adobe-forms-websphere.ear` med
 
    ```
    adobe-xxe-configuration-hotfix/SP[version]/websphere/adobe-forms-websphere.ear
@@ -253,16 +248,16 @@ Om du använder Dokumentsäkerhet (tidigare Rights Management) anger du följand
 
 - Starta Configuration Manager för att omdistribuera den uppdaterade EAR-uppdateringen och tillämpa snabbkorrigeringen
 
-</details>
++++
 
 ### Alternativ 3: (För användare på 6.5.17.0 och tidigare) Uppgraderingssökväg
 
 1. [Uppgradera till en Service Pack-version som stöds](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md)
-2. Följ alternativ 1 eller alternativ 2 ovan baserat på den nya versionen
+1. Följ alternativ 1 eller alternativ 2 ovan baserat på den nya versionen
 
 ## Referenser
 
 - [CWE-611: Felaktig begränsning av XML-extern entitetsreferens](https://cwe.mitre.org/data/definitions/611.html)
 - [CWE-16: Konfiguration](https://cwe.mitre.org/data/definitions/16.html)
 - [OWASP XXE Prevention Cheat Sheet](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_XXE_Processing)
-- [Adobe Experience Manager Forms bästa säkerhetspraxis](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=sv-SE)
+- [Adobe Experience Manager Forms bästa säkerhetspraxis](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)
