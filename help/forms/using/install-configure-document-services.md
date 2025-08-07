@@ -6,9 +6,9 @@ role: Admin, Developer
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
-source-git-commit: b5e44b78659f0cb1b8b0025be30143b98c0bf8df
+source-git-commit: 62baf682b75823f52f968a70960aff2388d49cad
 workflow-type: tm+mt
-source-wordcount: '9894'
+source-wordcount: '9928'
 ht-degree: 0%
 
 ---
@@ -253,6 +253,12 @@ Installationsprocessen för Adobe Acrobat Pro DC för Microsoft Office varierar 
 * **Distributionstyp**: En användare eller flera användare
 
 På varje flik finns skräddarsydda instruktioner som är optimerade för just din konfiguration, vilket hjälper dig att undvika konfigurationsproblem och säkerställa att licenserna är korrekta.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469669)
+
+>[!NOTE]
+>
+>I videon visas installationsprocessen för en Retail License-konfiguration för en användare. För andra distributionsscenarier (Detaljhandel - Flera användare, Volymlicens - En användare eller Volymlicens - Flera användare), se instruktionerna i steg 9 på motsvarande flikar nedan för att säkerställa att servern startas och att licensen aktiveras korrekt för din distributionstyp.
 
 >[!BEGINTABS]
 
@@ -701,7 +707,7 @@ När du har avinstallerat den tidigare versionen måste du hämta och installera
 När du har slutfört alla processer utför du ett snabbåtgärdstest för att bekräfta att installationen är giltig:
 
 1. Använd Fjärrskrivbord (RDP) för att logga in på servern och starta AEM Forms-servern med hjälp av tjänster.
-2. Använd Fjärrskrivbord (RDP) för att logga in på servern och starta AEM Forms-servern med Windows Services. Stäng inte bara RDP-fönstret när servern är igång. I stället loggar du ut genom att logga ut användaren på ett smidigt sätt. Detta garanterar att sessionen avslutas korrekt medan tjänsten fortsätter att köras i bakgrunden.
+2. Stäng inte bara RDP-fönstret när servern är igång. I stället loggar du ut genom att logga ut användaren på ett smidigt sätt. Detta garanterar att sessionen avslutas korrekt medan tjänsten fortsätter att köras i bakgrunden.
 
 ###### Steg 10: Testa tjänsten PDF Generator
 
