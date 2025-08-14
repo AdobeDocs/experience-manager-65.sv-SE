@@ -9,7 +9,7 @@ role: Admin
 exl-id: 9fade12f-a038-4fd6-8767-1c30966574c5
 solution: Experience Manager, Experience Manager Forms
 release-date: 2025-08-05T00:00:00Z
-source-git-commit: 9be9bfc9e20a151afdb9ae2cddcc39b4d2701c1b
+source-git-commit: 3f64cfa688ef1f0090b7ce0d821324593cbea693
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 3%
@@ -81,7 +81,7 @@ Med den här säkerhetsfunktionen kan du återställa det ursprungliga läget om
 
 **Steg 1: Hämta och extrahera snabbkorrigeringspaketet**
 
-- Hämta [snabbkorrigeringen för 6.5.18.0 - 6.5.22.2&rbrace; från Adobe Software Distribution Portal](/help/release-notes/aem-forms-hotfix.md)
+- Hämta [snabbkorrigeringen för 6.5.18.0 - 6.5.22.2} från Adobe Software Distribution Portal](/help/release-notes/aem-forms-hotfix.md)
 - Extrahera lokalt
 
 **Steg 2: Navigera till rätt versionsmapp**
@@ -260,4 +260,4 @@ Om du använder Dokumentsäkerhet (tidigare Rights Management) anger du följand
 - [CWE-611: Felaktig begränsning av XML-extern entitetsreferens](https://cwe.mitre.org/data/definitions/611.html)
 - [CWE-16: Konfiguration](https://cwe.mitre.org/data/definitions/16.html)
 - [OWASP XXE Prevention Cheat Sheet](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_XXE_Processing)
-- [Adobe Experience Manager Forms bästa säkerhetspraxis](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=sv-SE)
+- [Adobe Experience Manager Forms bästa säkerhetspraxis](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html)
