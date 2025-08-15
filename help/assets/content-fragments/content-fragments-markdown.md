@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User
 exl-id: e4340828-fe16-4edf-94c9-b0b145740e74
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 2809ae0f2c712ce8e6d94e18211649f2fa6ab8b4
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '522'
 ht-degree: 3%
 
 ---
@@ -130,7 +130,7 @@ Du kan ha kapslade blockcitattecken. Till exempel:
 
 Du kan skapa både sorterade och osorterade listor.
 
-Om du vill skapa en osorterad lista använder du symbolen &ast; före objekten i listan. Till exempel:
+Om du vill skapa en osorterad lista använder du symbolen &amp;ast; före objekten i listan. Till exempel:
 
     `* item in list`
 
@@ -166,7 +166,7 @@ Du kan fet text enligt följande:
 
     `Keyboard shortcut: Ctrl-B (Cmd-B)`
 
-Om du vill ange ett intervall med kod omsluter du det med citattecken (&grave;). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
+Om du vill ange ett intervall med kod omsluter du det med citattecken (`` ` ``). Till skillnad från ett förformaterat kodblock anger ett kodintervall koden i ett normalt stycke.
 
 Till exempel:
 
@@ -182,7 +182,7 @@ Kodblock används vanligtvis för att illustrera källkod. Du kan skapa kodblock
 
 ## Omvända snedstreck {#backslash-escapes}
 
-Du kan använda omvänt snedstreck för att generera litterala tecken som har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omsluta ett ord med literala asterisker (i stället för en HTML-tagg med &lt;em>) kan du använda omvända snedstreck före asteriskerna, enligt följande:
+Du kan använda omvänt snedstreck för att generera litterala tecken som har en speciell betydelse för formateringssyntaxen. Om du till exempel vill omsluta ett ord med literala asterisker (i stället för en HTML &lt;em>-tagg) kan du använda omvända snedstreck före asteriskerna, enligt följande:
 
     `\\*literal asterisks\\*`
 
