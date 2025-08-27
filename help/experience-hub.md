@@ -5,9 +5,9 @@ landing-page-description: Läs om Adobe Experience Hub, en central startpunkt f�
 solution: Experience Manager, Experience Manager 6.5
 feature: Cloud Manager, Developing
 role: Admin, Architect, Developer
-source-git-commit: fe1d00d1a3587cc768abeba6f995969c35203bad
+source-git-commit: b7977fcc76a3d8b4ec9e8d9e8ae8622ff13a441a
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Available as a private beta, Experience Hub offers an optimized experience focus
 
    ![Adobe Experience Cloud hemsida](/help/assets/assets-experience-hub/experience-cloud-experiencemanager-ams.png)
 
-1. Klicka på **Experience Manager**&#x200B;[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
+1. Klicka på **Experience Manager**[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
 1. Första gången du öppnar den klickar du på önskat alternativ på sidan **Berätta för oss vad du vill göra** så att Adobe kan skräddarsy din upplevelse.
 
    Du kan ändra den här inställningen när som helst.
@@ -75,7 +75,7 @@ I avsnittet **Senaste**, som visas i bilden nedan, visas sidor som du nyligen ha
 
 ![Experience Hub snabbkortkommandon](/help/assets/assets-experience-hub/experience-hub-quick-shortcuts-ams.png)
 
-Om det inte finns någon AEM Cloud-tjänst för produktion eller Managed Services-miljöer visas de valda alternativen som nedtonade och otillgängliga.
+Om det inte finns någon AEM Cloud-tjänst för produktion eller Managed Services-miljöer visas markeringsalternativen som nedtonade (inte tillgängliga).
 
 ![Experience Hub inga produktionsmiljöer](/help/assets/assets-experience-hub/experience-hub-no-prod-environs-ams.png)
 
