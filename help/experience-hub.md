@@ -7,9 +7,9 @@ feature: Authoring, AI Assistant, Central Interface Components, Getting Started,
 feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
 role: Admin, Architect, Developer, User
 exl-id: 8193e420-2e37-45a6-a1fc-01873fed539b
-source-git-commit: fa84767b13e3b13ee5115b7dc7d2032092a9063b
+source-git-commit: eb0deb1cb401964c86f38cc42961d2c428d9311c
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '593'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ Experience Hub introducerar en central startpunkt för hantering av innehåll, r
 
 Se en snabb genomgång av den omdesignade arbetsytan i AEM Experience Hub (4 minuter, 9 sekunder).
 
->[!VIDEO](https://video.tv.adobe.com/v/3471445?learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3471396?learn=on)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
@@ -31,12 +31,12 @@ Available as a private beta, Experience Hub offers an optimized experience focus
 
    ![Adobe Experience Cloud hemsida](/help/assets/assets-experience-hub/experience-cloud-experiencemanager-ams.png)
 
-1. Klicka på **Experience Manager**&#x200B;[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
-1. Första gången du öppnar den klickar du på önskat alternativ på sidan **Berätta för oss vad du vill göra** så att Adobe kan skräddarsy din upplevelse.
+1. Klicka på **Experience Manager**[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
+1. Vid första åtkomsten tilldelas du förinställningen **Innehållsförfattare** (visas i det övre högra hörnet på sidan). Den styr widgetar, navigeringsobjekt och innehåll som du ser.
 
-   Du kan ändra den här inställningen när som helst.
+   Du kan när som helst ändra den här förinställningen.
 
-   ![The tell us what you want to do page](/help/assets/assets-experience-hub/experience-cloud-tellus-ams.png)
+   ![Listrutan med förinställningen Innehållsförfattare är markerad](/help/assets/assets-experience-hub/experience-hub-role-selection.png)
 
 Adobe Experience Manager-sidan har uppdaterats med förbättrad navigering och interaktiva widgetar. Den tidigare samlingen av lösningskort ger tillgång till verktyg som följande:
 
@@ -59,7 +59,7 @@ De här funktionerna är tillgängliga för den primära produktionsmiljön som 
 
 ![Prod- och scenmiljöer](/help/assets/assets-experience-hub/experience-hub-prod-stage-ams.png)
 
-Experience Hub-sidan fungerar som central nav för Adobe Experience Manager och utökas med ytterligare widgetar och åtgärder som är skräddarsydda för varje användarroll. Sidan är helt anpassningsbar och du kan välja den optimala layouten för skärmen. Widgetar kan filtreras så att endast de valda visas på huvudsidan, vilket ger en personlig upplevelse.
+Experience Hub-sidan fungerar som central nav för Adobe Experience Manager och utökas med ytterligare widgetar och åtgärder som är anpassade för varje användarroll (förinställning). Sidan är helt anpassningsbar och du kan välja den optimala layouten för skärmen. Widgetar kan filtreras så att endast de valda visas på huvudsidan, vilket ger en personlig upplevelse.
 
 ![Experience Hub anpassat](/help/assets/assets-experience-hub/experience-hub-custom-ams.png)
 
