@@ -7,7 +7,7 @@ feature: Authoring, AI Assistant, Central Interface Components, Getting Started,
 feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
 role: Admin, Architect, Developer, User
 exl-id: 8193e420-2e37-45a6-a1fc-01873fed539b
-source-git-commit: eb0deb1cb401964c86f38cc42961d2c428d9311c
+source-git-commit: 27439e09198596d13bf45e6b70b79b6b7d121e5d
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 3%
@@ -18,9 +18,9 @@ ht-degree: 3%
 
 Experience Hub introducerar en central startpunkt för hantering av innehåll, resurser och webbplatser inom Adobe Experience Manager. Experience Hub är utformat för att leverera en personaliserad upplevelse och låter er navigera smidigt i AEM ekosystem efter era roller och mål. Det är en guide som ger viktiga insikter och rekommenderade åtgärder som hjälper er att uppnå era mål på ett effektivt sätt. Med en tydlig, personstyrd layout får Experience Hub snabb tillgång till viktiga verktyg som stöder en smidig och effektiv upplevelse i alla AEM-funktioner.
 
-Se en snabb genomgång av den omdesignade arbetsytan i AEM Experience Hub (4 minuter, 9 sekunder).
+Se en snabb genomgång av den omdesignade arbetsytan i AEM Experience Hub (2 minuter, 39 sekunder).
 
->[!VIDEO](https://video.tv.adobe.com/v/3471445?learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3475190/?learn=on&enablevpops)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
@@ -31,7 +31,7 @@ Available as a private beta, Experience Hub offers an optimized experience focus
 
    ![Adobe Experience Cloud hemsida](/help/assets/assets-experience-hub/experience-cloud-experiencemanager-ams.png)
 
-1. Klicka på **Experience Manager**&#x200B;[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
+1. Klicka på **Experience Manager**[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
 1. Vid första åtkomsten tilldelas du förinställningen **Innehållsförfattare** (visas i det övre högra hörnet på sidan). Den styr widgetar, navigeringsobjekt och innehåll som du ser.
 
    Du kan när som helst ändra den här förinställningen.
