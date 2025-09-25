@@ -107,8 +107,8 @@ Adobe rekommenderar dessa konfigurationer och ger fullständig eller begränsad 
 >[!NOTE]
 >
 >För att hjälpa AEM Forms-kunder att minska ägandekostnaden, förenkla driftsättningsarkitekturen och modernisera utvecklingsstacken går Adobe Experience Manager Enterprise-plattform bort från applikationsserverbaserad driftsättning till förmån för fristående OSGi-baserade driftsättningar. Adobe fortsätter att stödja AEM Forms JEE-stacken med en reducerad matris med infrastrukturkomponenter.
->><br>
->>I och med version 6.5 stöds inte längre infrastrukturkomponenter som har den lägsta användningen bland Adobe-kunder, enligt följande:
+>&#x200B;><br>
+>&#x200B;>I och med version 6.5 stöds inte längre infrastrukturkomponenter som har den lägsta användningen bland Adobe-kunder, enligt följande:
 >
 > - IBM® DB2®-databas
 > - IBM® AIX® och Sun Solaris™
