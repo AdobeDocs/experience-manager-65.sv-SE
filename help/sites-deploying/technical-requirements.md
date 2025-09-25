@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager Sites
 feature: Deploying
 role: Admin
 exl-id: 47529b9a-c4e5-434f-ac26-b01714ff863b
-source-git-commit: 6fd6b5182dfb51fa0563c7eb191ba0d0cc85b113
+source-git-commit: f202069d2fb8cbb942dad06974636592279fe245
 workflow-type: tm+mt
-source-wordcount: '3539'
+source-wordcount: '3534'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ Adobe Experience Manager fungerar med följande versioner av Java™ Virtual Mac
 | Azul Zulu OpenJDK 8 - 64 bitar | A: `[3]` stöds | |
 
 1. Oracle har övergått till&quot;LTS-modell&quot; (Long Term Support) för Oracle Java™ SE-produkter. Java™ 9, Java™ 10 och Java™ 12 är icke-LTS-versioner från Oracle (se [Oracle Java™ SE support roadmap](https://www.oracle.com/technetwork/java/eol-135779.html)). För att driftsätta AEM i en produktionsmiljö tillhandahåller Adobe endast stöd för LTS-versionerna av Java™. Stöd för och distribution av Oracle Java™ SE JDK, inklusive alla underhållsuppdateringar av LTS-releaser som ligger utanför de offentliga uppdateringarna, stöds av Adobe direkt för alla AEM-kunder som använder Oracle Java™ SE-tekniken. Se [Java™-supportpolicyn för Adobe Experience Manager](assets/Java_Policy_for_Adobe_Experience_Manager.pdf).
-   **Viktigt! Oracle Java™ 11 stöds minst fram till september 2026. Oracle Java™ 17 och 21 stöds på [AEM 6.5 LTS](https://experienceleague.adobe.com/sv/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements).**
+   **Viktigt! Oracle Java™ 11 stöds minst fram till september 2026. Oracle Java™ 17 och 21 stöds på [AEM 6.5 LTS](https://experienceleague.adobe.com/en/docs/experience-manager-65-lts/content/implementing/deploying/introduction/technical-requirements).**
 
 1. IBM® JRE stöds endast tillsammans med WebSphere® Application Server.
 
@@ -214,7 +214,7 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 | Oracle Solaris™ 11 | Z: Stöds inte |
 | IBM® AIX® 7.2 | Z: Stöds inte |
 
-1. Linux® Kernel 2.6, 3. x, 4. x, 5. x, 6. x och 9. x innehåller derivat från distributionen av Red Hat®, inklusive Red Hat® Enterprise Linux®, Oracle Linux® och Amazon Linux®. AEM Forms tilläggsfunktioner stöds endast i Red Hat® Enterprise Linux® 7, Red Hat® Enterprise Linux® 8 och Red Hat® Enterprise Linux® 9.
+1. Linux® Kernel 2.6, 3. x, 4. x, 5. x, 6. x och 9. x innehåller derivat från distributionen av Red Hat®, inklusive Red Hat® Enterprise Linux®, Oracle Linux® och Amazon Linux®. AEM Forms tilläggsfunktioner stöds endast i Red Hat® Enterprise Linux® 8 och Red Hat® Enterprise Linux® 9.
 2. AEM Forms stöds på Ubuntu 20.04 och SUSE® Linux® Enterprise Server 15 SP6 (64 bitar).
 3. Linux®-distribution stöds av Adobe Managed Services.
 
@@ -250,7 +250,7 @@ Adobe Experience Manager fungerar med följande serverplattformar för produktio
 
 Adobe Experience Manager stöds när det körs i en virtuell dator i molnmiljöer. Dessa miljöer omfattar Microsoft® Azure och Amazon Web Services (AWS), som körs i enlighet med de tekniska krav som anges på den här sidan och i enlighet med Adobe standardsupportvillkor.
 
-Om du har en molnbaserad miljö kan du titta på det senaste erbjudandet från AEM produktlinje: Adobe Experience Manager as a Cloud Service. Mer information finns i [Adobe Experience Manager as a Cloud Service-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html?lang=sv-SE).
+Om du har en molnbaserad miljö kan du titta på det senaste erbjudandet från AEM produktlinje: Adobe Experience Manager as a Cloud Service. Mer information finns i [Adobe Experience Manager as a Cloud Service-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service.html).
 
 Adobe erbjuder även Adobe Managed Services att distribuera AEM på Azure eller AWS. Adobe Managed Services förser experterna med erfarenhet och kunskaper av att driftsätta och använda AEM i dessa molnmiljöer. Se [ytterligare dokumentation om Adobe Managed Services](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
 
@@ -260,7 +260,7 @@ Adobe rekommenderar att du arbetar direkt med molnleverantören för rekommendat
 
 ### Dispatcher Platforms (webbservrar) {#dispatcher-platforms-web-servers}
 
-Dispatcher är en komponent för cachelagring och lastbalansering. [Hämta den senaste Dispatcher-versionen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=sv-SE). Experience Manager 6.5 kräver Dispatcher version 4.3.2 eller senare.
+Dispatcher är en komponent för cachelagring och lastbalansering. [Hämta den senaste Dispatcher-versionen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html). Experience Manager 6.5 kräver Dispatcher version 4.3.2 eller senare.
 
 Följande webbservrar kan användas med Dispatcher version 4.3.2:
 
@@ -470,7 +470,7 @@ För Windows x86:
    <th><p><strong>Format som stöds för konvertering till PDF</strong></p> </th>
   </tr>
   <tr>
-   <td><a href="https://helpx.adobe.com/se/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> senaste versionen</td>
+   <td><a href="https://helpx.adobe.com/acrobat/release-note/release-notes-acrobat-reader.html">Acrobat Pro DC</a> senaste versionen</td>
    <td>XPS, bildformat (BMP, GIF, JPEG, JPG, TIF, TIFF, PNG, JPF, JPX, JP2, J2K, J2C, JPC), HTML och HTML</td>
   </tr>
 
@@ -498,7 +498,7 @@ För Windows x86:
 >* PDF Generator stöder inte Microsoft® Office 365.
 >* PDF Generator-konverteringar för OpenOffice stöds endast i Windows och Linux®.
 >* Funktionerna OCR PDF, Optimize PDF och Export PDF stöds endast i Windows.
->* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktioner. Programmeringsversionen ska endast nås med AEM Forms under AEM Forms-licensens löptid, och endast användas med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning enligt din distribution ([On-Premise](https://helpx.adobe.com/se/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/se/legal/product-descriptions/adobe-experience-manager-managed-services.html)).
+>* En version av Acrobat medföljer AEM Forms för att aktivera PDF Generator-funktioner. Programmeringsversionen ska endast nås med AEM Forms under AEM Forms-licensens löptid, och endast användas med AEM Forms PDF Generator. Mer information finns i AEM Forms produktbeskrivning enligt din distribution ([On-Premise](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-on-premise.html) eller [Managed Services](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-manager-managed-services.html)).
 >* PDF Generator-tjänsten stöder inte Microsoft® Windows 11.
 
 ### Krav för AEM Forms Designer {#requirements-for-aem-forms-designer}
