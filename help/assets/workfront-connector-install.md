@@ -6,9 +6,9 @@ feature: Workfront Integrations and Apps
 exl-id: 087bc811-e8f8-4db5-b066-627a9b082f57
 hide: true
 solution: Experience Manager, Workfront
-source-git-commit: 5ccac0aadce3971e66da052d393cbd33b61e94f7
+source-git-commit: 633b1378d97ea0544f27822fb5801caa3ed15f8e
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '426'
 ht-degree: 1%
 
 ---
@@ -17,25 +17,25 @@ ht-degree: 1%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-install.html?lang=sv-SE) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/integrations/workfront-connector-install.html?lang=en) |
 | AEM 6.5 | Den här artikeln |
 
-En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] installerar den utökade anslutningen. Granska plattformsstödet och andra [krav för anslutningen](https://one.workfront.com/s/csh?context=2467&amp;pubname=the-new-workfront-experience) innan du installerar.
+En användare med administratörsåtkomst i [!DNL Adobe Experience Manager] installerar den utökade anslutningen. Granska plattformsstödet och andra [krav för anslutningen](https://one.workfront.com/s/csh?context=2467&pubname=the-new-workfront-experience) innan du installerar.
 
 >[!IMPORTANT]
 >
 >* Adobe kräver att [!DNL Adobe Workfront for Experience Manager enhanced connector] distribueras och konfigureras endast via certifierade partners eller [!DNL Adobe Professional Services]. Om den distribueras och konfigureras utan en certifierad partner eller [!DNL Adobe Professional Services] stöds den inte av Adobe.
 >
->* Adobe kan släppa uppdateringar till [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör den här kopplingen överflödig. Om detta inträffar kan kunderna behöva gå över från att använda den här kopplingen.
+>* Adobe kan släppa uppdateringar av [!DNL Adobe Workfront] och [!DNL Adobe Experience Manager] som gör den här kopplingen överflödig. Om detta inträffar kan kunderna behöva gå över från att använda den här anslutningen.
 >
->* Adobe har stöd för utökade anslutningsversioner 1.7.4 och senare. Tidigare förhandsversioner och anpassade versioner stöds inte. Om du vill kontrollera den utökade anslutningsversionen går du till gruppen `digital.hoodoo` som finns i den vänstra rutan i [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=sv-SE).
+>* Adobe har stöd för utökade anslutningsversioner 1.7.4 och senare. Tidigare förhandsversioner och anpassade versioner stöds inte. Om du vill kontrollera den utökade anslutningsversionen går du till gruppen `digital.hoodoo` som finns i den vänstra rutan i [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=en).
 >
 >* Se [Partnercertifieringsprov för Workfront för Experience Manager Assets förbättrade anslutningsprogram](https://solutionpartners.adobe.com/solution-partners/home/applications/experience_cloud/workfront/journey/dev_core.html). Mer information om provet finns i [Handbok för prov](https://express.adobe.com/page/Tc7Mq6zLbPFy8/).
 
 Så här installerar du kopplingen:
 
 1. Hämta kopplingen från [[!DNL Software Distribution] link](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/product/assets/workfront-tools.ui.apps.zip).
-1. [Konfigurera brandväggen](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FAdministration_and_Setup%2FGet_started-WF_administration%2Fconfigure-your-firewall.html).
+1. [Konfigurera brandväggen](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&topicId=Content%2FAdministration_and_Setup%2FGet_started-WF_administration%2Fconfigure-your-firewall.html).
 1. På Dispatcher tillåter du HTTP-huvuden med namnen `authorization`, `username` och `apikey`. Tillåt `GET`, `POST` och `PUT` förfrågningar till `/bin/workfront-tools`.
 1. Kontrollera att följande sökvägar inte finns i databasen [!DNL Experience Manager]:
 
@@ -49,11 +49,14 @@ Så här installerar du kopplingen:
 1. Skapa `wf-workfront-users` i [!DNL Experience Manager]-användargruppen och tilldela behörigheten `jcr:all` till `/content/dam`.
 1. Lägg till en anpassad egenskap i indexdefinitionen utanför rutan för **`ntFolderDamLucene(/oak:index/ntFolderDamLucene)`**. Utför följande steg:
    * Lägg till en **`nt:unstructured`**-egenskap med namnet **`wfReferenceNumber`** i:
-
      `/oak:index/ntFolderDamLucene/indexRules/nt:folder/properties/wfReferenceNumber`.
    * Indexera om `index /oak:index/ntFolderDamLucene` genom att vända indexeringsflaggan till `true`.
 
 En systemanvändare `workfront-tools` skapas automatiskt och de behörigheter som krävs hanteras automatiskt. Alla användare från [!DNL Workfront] som använder anslutningen läggs till automatiskt som en del av den här gruppen.
+
+>[!NOTE]
+>
+> När du använder företagsproxyservrar tar du med [!DNL workfront] i [!UICONTROL Apache HTTP Components Proxy Configuration PID] för [!UICONTROL Enhanced Workfront Connector] för att identifiera den. Det obligatoriska PID-formatet är: `org.apache.http.proxyconfigurator~workfront`.
 
 ## Konfigurera anslutningen mellan [!DNL Experience Manager] och [!DNL Workfront] {#configure-connection}
 
