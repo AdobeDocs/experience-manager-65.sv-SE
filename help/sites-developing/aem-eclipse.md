@@ -9,27 +9,27 @@ exl-id: 00473769-c447-4966-a71e-117c669e0151
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 172b8667b1ff0bd533a035b21c316e2e66721bf8
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '747'
 ht-degree: 2%
 
 ---
 
 # AEM Developer Tools for Eclipse{#aem-developer-tools-for-eclipse}
 
-![Cirkulärt bildmotiv för AEM för Eclipse.](do-not-localize/chlimage_1-9.png)
+![Cirkulärt bildmotiv för AEM Developer Tools för Eclipse.](do-not-localize/chlimage_1-9.png)
 
 ## Ökning {#overview}
 
 &quot;AEM Developer Tools&quot; är en Eclipse-plugin som baseras på [Eclipse-pluginen för Apache Sling](https://sling.apache.org/documentation/development/ide-tooling.html) som släppts under Apache License 2.
 
-Den har flera funktioner som gör AEM enklare:
+Den har flera funktioner som underlättar utvecklingen av AEM:
 
-* Smidig integrering med AEM instanser via Eclipse Server Connector.
+* Smidig integrering med AEM-instanser via Eclipse Server Connector.
 * Synkronisering för både innehåll och OSGI-paket.
 * Felsökningsstöd med möjlighet att byta kod under drift.
-* Enkelt Bootstrap i AEM projekt med hjälp av en särskild projektguide.
+* Enkelt Bootstrap för AEM-projekt med en särskild projektguide.
 * Enkel redigering av JCR-egenskaper.
 
 ## Krav {#requirements}
@@ -45,11 +45,11 @@ Innan du använder AEM Developer Tools ska du göra följande:
 >
 >I macOS högerklickar du på **Eclipse.app** och väljer sedan **Visa paketinnehåll** för att hitta `eclipse.ini`.
 
-## Installera AEM Developer Tools for Eclipse {#how-to-install-the-aem-developer-tools-for-eclipse}
+## Installera AEM Developer Tools för Eclipse {#how-to-install-the-aem-developer-tools-for-eclipse}
 
 När du har uppfyllt [kraven](#requirements) ovan kan du installera plugin-programmet på följande sätt:
 
-1. Bläddra på webbplatsen **AEM Developer Tools** på `https://eclipse.adobe.com/aem/dev-tools/`.
+1. Öppna webbplatsen [AEM Developer Tools](https://eclipse.adobe.com/).
 
 1. Kopiera **installationslänken**.
 
@@ -58,10 +58,10 @@ När du har uppfyllt [kraven](#requirements) ovan kan du installera plugin-progr
 1. Öppna menyn **Hjälp** i Eclipse.
 1. Klicka på **Installera ny programvara**.
 1. Klicka på **Lägg till..**.
-1. I **Namn** AEM du Utvecklarverktyg.
+1. I **Namn** skriver du AEM Developer Tools.
 1. I **Plats** kopierar du installations-URL:en.
 1. Klicka på **OK**.
-1. Kontrollera både **AEM** och **Sling** plugin-program.
+1. Kontrollera både **AEM**- och **Sling**-plugin-program.
 1. Klicka på **Nästa**.
 1. Klicka på **Nästa**.
 1. Acceptera de länkade avtalen och klicka på **Slutför**.
@@ -73,19 +73,19 @@ När du har uppfyllt [kraven](#requirements) ovan kan du installera plugin-progr
 >
 >Se [Arbeta med ett paket i Eclipse när det hämtades från AEM](https://stackoverflow.com/questions/29699726/how-to-work-with-a-bundle-in-eclipse-when-it-was-downloaded-from-aem/29705407#29705407).
 
-## AEM {#the-aem-perspective}
+## AEM Perspective {#the-aem-perspective}
 
-AEM utvecklingsverktyg för Eclipse levereras med ett perspektiv som ger dig full kontroll över dina AEM projekt och instanser.
+AEM utvecklingsverktyg för Eclipse har ett perspektiv som ger dig full kontroll över dina AEM-projekt och instanser.
 
 ![chlimage_1-2](assets/chlimage_1-2a.jpeg)
 
 ## Exempel på flermodulsprojekt {#sample-multi-module-project}
 
-&quot;AEM utvecklingsverktyg&quot; innehåller ett exempel på ett flermodulsprojekt som hjälper dig att snabbt komma igång med projektkonfigurationen i Eclipse. Det är också en praktisk guide till flera AEM funktioner. [Läs mer om projekttypen](https://github.com/adobe/aem-project-archetype).
+&quot;AEM Developer Tools&quot; innehåller ett exempel på ett flermodulsprojekt som hjälper dig att snabbt komma igång med projektkonfigurationen i Eclipse. Det är också en metodguide till flera AEM-funktioner. [Läs mer om projekttypen](https://github.com/adobe/aem-project-archetype).
 
 Så här skapar du exempelprojektet:
 
-1. I menyn **Arkiv** > **Nytt** > **Projekt** bläddrar du till avsnittet **AEM** och väljer **AEM Exempelprojekt med flera moduler** .
+1. Gå till avsnittet **AEM** på menyn **Arkiv** > **Nytt** > **Projekt** och välj **AEM Sample Multi-Module Project**.
 
    ![chlimage_1-69](assets/chlimage_1-69a.png)
 
@@ -105,7 +105,7 @@ Så här skapar du exempelprojektet:
 
    ![chlimage_1-72](assets/chlimage_1-72a.png)
 
-1. Konfigurera nu en AEM som Eclipse kan ansluta till.
+1. Konfigurera nu en AEM-server som Eclipse kan ansluta till.
 
    Om du vill använda felsökningsfunktionen måste du ha startat AEM i felsökningsläge, vilket du kan göra genom att lägga till följande på kommandoraden:
 
@@ -134,9 +134,9 @@ Så här löser du ogiltiga beroenden och projektdefinitioner:
 
 ### Aktivera automatisk komplettering av taggbibliotek i JSP-filer {#enabling-tag-library-autocompletion-in-jsp-files}
 
-Automatisk komplettering av taggbibliotek går inte att utföra eftersom rätt beroenden läggs till i projektet. Det finns ett känt fel i AEM Uber Jar, som inte innehåller de tld- och TagExtraInfo-filer som behövs.
+Automatisk komplettering av taggbibliotek går inte att utföra eftersom rätt beroenden läggs till i projektet. Det finns ett känt fel när du använder AEM Uber Jar, som inte innehåller de tld- och TagExtraInfo-filer som behövs.
 
-Se till att artefakten org.apache.sling.scripting.jsp.taglib finns i klassökvägen före AEM Uber Jar. För Maven-projekt placerar du följande beroende i pom.xml före Uber Jar.
+Se till att artefakten org.apache.sling.scripting.jsp.taglib finns i klassökvägen före AEM Uber Jar för att undvika problemet. För Maven-projekt placerar du följande beroende i pom.xml före Uber Jar.
 
 ```xml
 <dependency>
