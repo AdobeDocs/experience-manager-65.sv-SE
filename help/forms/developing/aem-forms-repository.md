@@ -46,7 +46,7 @@ Följande värden visar några exempel på URI-värden:
 
 >[!NOTE]
 >
->Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL i en webbläsare `https://[server name]:[server port]/repository`. Du kan verifiera snabbstartsresultat som är kopplade till avsnittet Arbeta med AEM Forms-databas med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare. (Se [Snabbstart (SOAP läge): Skriver en resurs med Java API ](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
+>Du kan bläddra i AEM Forms-databasen med en webbläsare. Om du vill bläddra i databasen anger du följande URL i en webbläsare `https://[server name]:[server port]/repository`. Du kan verifiera snabbstartsresultat som är kopplade till avsnittet Arbeta med AEM Forms-databas med en webbläsare. Om du till exempel lägger till innehåll i AEM Forms-databasen kan du se innehållet i en webbläsare. (Se [Snabbstart (SOAP läge): Skriver en resurs med Java API &#x200B;](/help/forms/developing/repository-service-api-quick-starts.md#quick-start-soap-mode-writing-a-resource-using-the-java-api).)
 
 Databas-API:t innehåller flera åtgärder som du kan använda för att lagra och hämta information från databasen. Du kan till exempel få en lista med resurser eller hämta särskilda resurser som lagras i databasen när en resurs behövs som en del av bearbetningen av ett program.
 

@@ -45,7 +45,7 @@ S. Beskrivningen av de nya Acrobat Reader Extensions-certifikaten anger **G3-P24
 
 **Q. Hur får jag tag i de senaste certifikaten?**
 
-S. Alla berättigade Forms-kunder (med aktiv licens) kan hämta de nya certifikaten (certifikat som baseras på&quot;Adobe Root CA G2&quot;) från [Adobe licenswebbplats](https://licensing.adobe.com/). Om du inte kan hitta certifikatet på Adobe licenswebbplats kontaktar du [Adobe Support](https://experienceleague.adobe.com/sv?support-solution=Experience+Manager&amp;lang=en#support) eller ber om en supportanmälan.
+S. Alla berättigade Forms-kunder (med aktiv licens) kan hämta de nya certifikaten (certifikat som baseras på&quot;Adobe Root CA G2&quot;) från [Adobe licenswebbplats](https://licensing.adobe.com/). Om du inte kan hitta certifikatet på Adobe licenswebbplats kontaktar du [Adobe Support](https://experienceleague.adobe.com/sv?support-solution=Experience+Manager&lang=en#support) eller ber om en supportanmälan.
 
 **Q. Fortsätter mina PDF-dokument som har utökats med certifikat som har utfärdats från&quot;Adobe Root CA&quot; (den gamla certifikatutfärdaren) att fungera efter den 7 januari 2023?**
 

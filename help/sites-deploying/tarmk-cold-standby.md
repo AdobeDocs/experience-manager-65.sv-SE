@@ -317,7 +317,7 @@ Om den primära instansen av någon anledning inte fungerar kan du ange att en a
    ```
 
 1. Lägg till den nya primära till belastningsutjämnaren.
-1. Skapa och starta en ny standby-instans. Mer information finns i proceduren ovan om att [skapa en AEM Styla standby-inställning förMK Cold ](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup).
+1. Skapa och starta en ny standby-instans. Mer information finns i proceduren ovan om att [skapa en AEM Styla standby-inställning förMK Cold &#x200B;](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup).
 
 ## Använda snabbkorrigeringar i en konfiguration för vänteläge i kallt format {#applying-hotfixes-to-a-cold-standby-setup}
 

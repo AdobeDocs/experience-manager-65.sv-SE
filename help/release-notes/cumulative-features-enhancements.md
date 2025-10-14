@@ -43,7 +43,7 @@ Se även [Versionsinformation om Adobe Experience Manager 6.5 Senaste Service Pa
 
    * Red Hat® Enterprise Linux® 9 (Kernel 4.x, 64 bitar)
 
-* [Komponenten för bifogad fil ](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment) med hög densitet: Komponenten förhindrar nu att filer skickas med ändrade tillägg som försöker kringgå tillåtna filtypskontroller. Sådana filer blockeras under överföringen för att säkerställa att endast giltiga filtyper accepteras.
+* [Komponenten för bifogad fil &#x200B;](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment) med hög densitet: Komponenten förhindrar nu att filer skickas med ändrade tillägg som försöker kringgå tillåtna filtypskontroller. Sådana filer blockeras under överföringen för att säkerställa att endast giltiga filtyper accepteras.
 
 ## AEM 6.5, Service Pack 22 - 21 november 2024
 

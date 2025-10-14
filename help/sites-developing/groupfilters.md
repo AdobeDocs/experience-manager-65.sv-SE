@@ -255,4 +255,4 @@ Vid redigeringen är 5.5.2 den version av WCM Mobile API-paketet som finns i den
 </project>
 ```
 
-Lägg till den profil som finns i avsnittet [Hämtning av innehållspaketet från Plugin-programmet ](/help/sites-developing/vlt-mavenplugin.md) för din maven-inställningsfil för användning i den publika Adobe-databasen.
+Lägg till den profil som finns i avsnittet [Hämtning av innehållspaketet från Plugin-programmet &#x200B;](/help/sites-developing/vlt-mavenplugin.md) för din maven-inställningsfil för användning i den publika Adobe-databasen.

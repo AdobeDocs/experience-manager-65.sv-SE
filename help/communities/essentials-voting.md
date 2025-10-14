@@ -61,7 +61,7 @@ Anonym publicering av en röst stöds inte. Besökare på webbplatsen måste reg
 
 * [Tally API:er](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/api/package-summary.html)
 
-* [Slutpunkter ](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
+* [Slutpunkter &#x200B;](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/tally/client/endpoints/package-summary.html)
 
 * [Anpassningar på serversidan](server-customize.md)
 

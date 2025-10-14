@@ -35,4 +35,4 @@ För att åtgärda installationsproblemet med Service Pack för AEM Forms JEE 6.
 1. Kopiera filen `Resource1.zip` på en annan plats utanför den extraherade mappen och packa upp filen `Resource1.zip`.
 1. Navigera till `/C_/builds/dev_releng/branches/rrt/aem6.5.0_rollup/tier1/install/patch/fileset_dir/xml` och kopiera filen `RUP_BOM.xml`.
 1. Klistra in filen RUP_BOM.xml på `[aem_forms_jee_installation_dir]/patch/AEMForms-6.5.0-0057/xml`.
-1. Installera om [AEM Forms JEE 6.5.15.0 Service Pack ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE).
+1. Installera om [AEM Forms JEE 6.5.15.0 Service Pack &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE).

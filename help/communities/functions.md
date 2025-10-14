@@ -210,7 +210,7 @@ Beroende på [inställningar](/help/communities/sites-console.md#groupmanagement
 
 När en community-grupp skapas skapas en medlemsgrupp dynamiskt för den nya gruppen, som medlemmar kan tilldelas eller ansluta till. Mer information finns i [Hantera användare och användargrupper](/help/communities/users.md).
 
-Från och med [funktionspaketet ](/help/communities/deploy-communities.md#latestfeaturepack) för Communities skapas communitygrupper i författarmiljön med hjälp av [gruppkonsolen för Communities](/help/communities/groups.md) och kan skapas i publiceringsmiljön när det är aktiverat.
+Från och med [funktionspaketet &#x200B;](/help/communities/deploy-communities.md#latestfeaturepack) för Communities skapas communitygrupper i författarmiljön med hjälp av [gruppkonsolen för Communities](/help/communities/groups.md) och kan skapas i publiceringsmiljön när det är aktiverat.
 
 När du lägger till en mall öppnas följande dialogruta:
 

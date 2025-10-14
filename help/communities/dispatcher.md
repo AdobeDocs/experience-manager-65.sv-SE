@@ -24,7 +24,7 @@ För AEM Communities måste du konfigurera Dispatcher för att se till att [comm
 
 För att ta reda på vad som är nödvändigt för din installation och webbplatsdesign
 
-* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General&amp;support-tab=home#support)
+* Kontakta [kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General&support-tab=home#support)
 
 Se även huvuddokumentationen för [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE).
 

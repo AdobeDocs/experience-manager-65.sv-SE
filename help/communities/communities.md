@@ -44,7 +44,7 @@ En översikt och självstudiekurser för att komma igång finns på:
 * [SCF Handlebars Helpers](handlebars-helpers.md): standardhjälpredor och hur du skriver anpassade hjälpredor.
 * [Anpassning på klientsidan](client-customize.md): anpassar kod som körs i webbläsaren.
 * [Anpassning på serversidan](server-customize.md): anpassar kod som körs på servern.
-* [Lagringsresursprovider ](srp.md): översikt över lagring av communityinnehåll.
+* [Lagringsresursprovider &#x200B;](srp.md): översikt över lagring av communityinnehåll.
 * [Riktlinjer för kodning](code-guide.md): riktlinjer, tips och tricks.
 * [Användarhandbok för communitykomponenter](components-guide.md): interaktivt utvecklingsverktyg.
 

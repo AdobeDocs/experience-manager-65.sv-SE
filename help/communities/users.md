@@ -118,7 +118,7 @@ I publiceringsmiljön kan en besökare bli en community-medlem, beroende på [in
 
 ### Tilldela medlemmar till Publish grupproller {#assigning-members-to-publish-group-roles}
 
-När [skapar en community-plats](sites-console.md) i författarmiljön, eller när [webbplatsegenskaper ändras, kan ](sites-console.md#modifying-site-properties) medlemmar tilldelas olika roller som utförs i publiceringsmiljön, till exempel moderatorer, gruppadministratörer, resurskontakter eller behöriga medlemmar.
+När [skapar en community-plats](sites-console.md) i författarmiljön, eller när [webbplatsegenskaper ändras, kan &#x200B;](sites-console.md#modifying-site-properties) medlemmar tilldelas olika roller som utförs i publiceringsmiljön, till exempel moderatorer, gruppadministratörer, resurskontakter eller behöriga medlemmar.
 
 [Om du aktiverar tunneltjänsten](sync.md#accessingpublishusersfromauthor) visas tilldelningsalternativ från medlemmar vid publicering i stället för användare vid författare.
 

@@ -106,4 +106,4 @@ Om det blir problem med att spara konfigurationen loggar du in igen och konfigur
 
 >[!NOTE]
 >
->Användningen av `cq:designPath` är valfri och har inget samband med [användningen av clientlibs](develop-app.md#includeclientlibsintemplate) som krävs eftersom SCF-komponenterna använder [ clientlibs](client-customize.md#clientlibs-for-scf) för att hantera sina JS- och CSS-filer.
+>Användningen av `cq:designPath` är valfri och har inget samband med [användningen av clientlibs](develop-app.md#includeclientlibsintemplate) som krävs eftersom SCF-komponenterna använder [&#x200B; clientlibs](client-customize.md#clientlibs-for-scf) för att hantera sina JS- och CSS-filer.

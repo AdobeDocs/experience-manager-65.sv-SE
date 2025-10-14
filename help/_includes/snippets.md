@@ -11,7 +11,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->SPA-redigeraren [ har tagits bort för nya projekt.](/help/sites-developing/spa-editor-deprecation.md) Det stöds fortfarande av Adobe för befintliga projekt, men bör inte användas för nya projekt. De redigerare som rekommenderas för hantering av headless-innehåll i AEM är nu:
+>SPA-redigeraren [&#x200B; har tagits bort för nya projekt.](/help/sites-developing/spa-editor-deprecation.md) Det stöds fortfarande av Adobe för befintliga projekt, men bör inte användas för nya projekt. De redigerare som rekommenderas för hantering av headless-innehåll i AEM är nu:
 >
 >* [Den universella redigeraren](/help/sites-developing/universal-editor/introduction.md) för visuell redigering av headless-innehåll.
 >* [Innehållsfragmentredigeraren](/help/sites-developing/universal-editor/introduction.md) för formulärbaserad redigering av rubrikfritt innehåll.

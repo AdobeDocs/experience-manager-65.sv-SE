@@ -43,7 +43,7 @@ or
 
 >[!NOTE]
 >
->[På grund av databasomstrukturering i AEM 6.4 ](/help/sites-deploying/repository-restructuring.md) har platsen för ContextHub-konfigurationer ändrats från `/etc/cloudsettings` till:
+>[På grund av databasomstrukturering i AEM 6.4 &#x200B;](/help/sites-deploying/repository-restructuring.md) har platsen för ContextHub-konfigurationer ändrats från `/etc/cloudsettings` till:
 >
 >* `/libs/settings/cloudsettings`
 >* `/conf/global/settings/cloudsettings`
@@ -71,7 +71,7 @@ Gränssnittslägen visas som en serie ikoner till vänster i verktygsfältet. N�
 
 ![chlimage_1-319](assets/chlimage_1-319.png)
 
-Ikoner är referenser från ikonbiblioteket [Coral UI ](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons).
+Ikoner är referenser från ikonbiblioteket [Coral UI &#x200B;](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons).
 
 ### Lägga till ett gränssnittsläge {#adding-a-ui-mode}
 

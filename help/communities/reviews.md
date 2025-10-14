@@ -178,7 +178,7 @@ Under fliken **[!UICONTROL Review Summary]**
 
 * `Review Path`
 
-  Ange eller bläddra till den monterade instansen av `reviews`-komponenten så att du kan sammanfatta, om du till exempel har lagt till den på webbsidan för [Geometrixx Engage-webbplatsen ](getting-started.md) , så blir sökvägen:
+  Ange eller bläddra till den monterade instansen av `reviews`-komponenten så att du kan sammanfatta, om du till exempel har lagt till den på webbsidan för [Geometrixx Engage-webbplatsen &#x200B;](getting-started.md) , så blir sökvägen:
 
   `/content/sites/engage/en/page/jcr:content/content/primary/reviews`
 

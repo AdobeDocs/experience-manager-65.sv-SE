@@ -27,7 +27,7 @@ Mer information om konfigurationen av OAuth-tjänster för en ny användare finn
 
 >[!NOTE]
 >
->Om det behövs kan du skicka in en supportanmälan efter [supportprocessen](https://experienceleague.adobe.com/sv?lang=en&amp;support-tab=home#support).
+>Om det behövs kan du skicka in en supportanmälan efter [supportprocessen](https://experienceleague.adobe.com/sv?lang=en&support-tab=home#support).
 
 ## OAuth-konfiguration för befintliga AMS-användare {#oauth-config-new-ams-users}
 
@@ -44,7 +44,7 @@ En OAuth-konfiguration kräver följande krav:
 
 ### OAuth-konfiguration för befintliga AMS- och On-prem-användare {#steps-config-oauth-onprem}
 
-Följande steg kan utföras av systemadministratören i **CRXDE**. AMS-kunden kan kontakta Adobe-representanten eller skicka in en supportanmälan efter [supportprocessen](https://experienceleague.adobe.com/sv?lang=en&amp;support-tab=home#support).
+Följande steg kan utföras av systemadministratören i **CRXDE**. AMS-kunden kan kontakta Adobe-representanten eller skicka in en supportanmälan efter [supportprocessen](https://experienceleague.adobe.com/sv?lang=en&support-tab=home#support).
 
 1. Lägg till eller uppdatera nedanstående egenskaper i `com.adobe.granite.auth.oauth.accesstoken.provider.<randomnumbers>.config`:
 

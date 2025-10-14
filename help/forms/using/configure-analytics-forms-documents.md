@@ -102,7 +102,7 @@ Utför följande steg för att skapa en rapportserie.
 
    >[!NOTE]
    >
-   >Ett händelsenummer och ett prop-nummer som används för att konfigurera AEM Forms-analys måste skilja sig från det händelsenummer och det prop-nummer som används i konfigurationen för [AEM ](/help/sites-administering/adobeanalytics.md).
+   >Ett händelsenummer och ett prop-nummer som används för att konfigurera AEM Forms-analys måste skilja sig från det händelsenummer och det prop-nummer som används i konfigurationen för [AEM &#x200B;](/help/sites-administering/adobeanalytics.md).
 
 1. Logga ut från Adobe Marketing Cloud-kontot.
 

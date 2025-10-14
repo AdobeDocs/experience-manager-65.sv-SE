@@ -75,7 +75,7 @@ Gå till Google-sidan [här](https://developer.android.com/google/gcm/index.html
 
 I följande steg visas en annan metod för att skapa GCM API-nycklar:
 
-1. Logga in på Google och gå till [Google Developer-sidan](https://developers.google.com/mobile/add?platform=android&amp;cntapi=gcm).
+1. Logga in på Google och gå till [Google Developer-sidan](https://developers.google.com/mobile/add?platform=android&cntapi=gcm).
 1. Välj din app i listan (eller skapa en).
 1. Ange ditt program-ID under Paketnamn för Android™, det vill säga `com.adobe.cq.mobile.weretail.outdoorsapp`. (Om det inte fungerar kan du försöka igen med &quot;test.test&quot;.)
 1. Klicka på **Fortsätt för att välja och konfigurera tjänster**

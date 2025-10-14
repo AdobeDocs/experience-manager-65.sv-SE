@@ -167,4 +167,4 @@ Beroende på vilket utrymme som är tillgängligt placeras komponentens verktygs
 
 Mer information om begreppen kring det beröringsaktiverade användargränssnittet finns i [Concepts of the AEM Touch-Enabled UI](/help/sites-developing/touch-ui-concepts.md).
 
-Mer teknisk information finns i [JS-dokumentationen ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för den beröringsaktiverade sidredigeraren.
+Mer teknisk information finns i [JS-dokumentationen &#x200B;](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/jsdoc/ui-touch/editor-core/index.html) för den beröringsaktiverade sidredigeraren.

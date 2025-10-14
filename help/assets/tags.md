@@ -158,7 +158,7 @@ Slutför konfigurationsstegen i avsnitten [Konfigurera Adobe Analytics](#configu
 
 Om konfigurationen är korrekt kan du lägga till stöd för Experience Platform-taggar på en webbsida med ett dynamiskt medievisningsprogram.
 
-Mer information om hur du använder inbäddningskoden för Experience Platform-taggbiblioteket finns i [Lägga till Experience Platform-taggar ](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-in-websites/configure-tags/add-embed-code) .
+Mer information om hur du använder inbäddningskoden för Experience Platform-taggbiblioteket finns i [Lägga till Experience Platform-taggar &#x200B;](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-in-websites/configure-tags/add-embed-code) .
 
 <!-- To be reviewed and updated although this is found live in the Experience ManageraaCS version:
 See [Embedding the Video or Image Viewer on a Web Page](https://helpx.adobe.com/experience-manager/6-5/help/assets/embed-code.html) to learn more about how to use the embed code feature of Experience Manager Dynamic Media.

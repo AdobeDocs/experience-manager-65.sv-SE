@@ -42,6 +42,6 @@ Affärslogik och serverdelskommunikation med Adobe Commerce för de AEM kärnkom
 
 >[!TIP]
 >
->Sidan [Anpassa AEM ](../customizing/customize-cif-components.md) CIF kärnkomponenter innehåller ett detaljerat exempel och bästa praxis för hur du anpassar CIF kärnkomponenter.
+>Sidan [Anpassa AEM &#x200B;](../customizing/customize-cif-components.md) CIF kärnkomponenter innehåller ett detaljerat exempel och bästa praxis för hur du anpassar CIF kärnkomponenter.
 
 I projekt kan AEM kärnkomponenter och anpassade projektkomponenter enkelt hämta den konfigurerade klienten för en Adobe Commerce-butik som är kopplad till en AEM sida via Sling Context-Aware-konfiguration.

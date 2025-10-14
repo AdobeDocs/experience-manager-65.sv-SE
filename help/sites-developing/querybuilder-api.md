@@ -358,7 +358,7 @@ p.nodedepth=5
 
 ## Fler prognoser {#morepredicates}
 
-Mer information om predikat finns på sidan [Referens för frågeverktyget ](/help/sites-developing/querybuilder-predicate-reference.md).
+Mer information om predikat finns på sidan [Referens för frågeverktyget &#x200B;](/help/sites-developing/querybuilder-predicate-reference.md).
 
 Du kan också kontrollera [JavaScript för `PredicateEvaluator`-klasserna](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/search/eval/PredicateEvaluator.html). Javadoc för dessa klasser innehåller en lista med egenskaper som du kan använda.
 

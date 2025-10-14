@@ -32,7 +32,7 @@ Navigera till den publicerade Forms Portal-sidan. Mer information om hur du skap
 
 Söknings- och listkomponenten i Forms Portal visar de formulär som är tillgängliga på Publish-instansen av AEM. Den här listan innehåller alla formulär eller de formulär som definieras i filtret vid redigeringen av Forms Portal-sidan. En Forms Portal-sida ser ut ungefär som i bilden nedan:
 
-![En exempelformulärportalsida ](assets/forms-portal-page.png)
+![En exempelformulärportalsida &#x200B;](assets/forms-portal-page.png)
 
 Exempel på en Forms Portal-sida
 

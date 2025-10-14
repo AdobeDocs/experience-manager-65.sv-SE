@@ -301,7 +301,7 @@ till exempel
 
 >[!CAUTION]
 >
->Om en annan säkerhetsfunktion redan har konfigurerats som baseras på krypteringsnycklarna kan konfigurationen skadas om du replikerar krypteringsnycklarna. [Kontakta kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General&amp;support-tab=home#support) om du behöver hjälp.
+>Om en annan säkerhetsfunktion redan har konfigurerats som baseras på krypteringsnycklarna kan konfigurationen skadas om du replikerar krypteringsnycklarna. [Kontakta kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General&support-tab=home#support) om du behöver hjälp.
 
 #### Databasreplikering {#repository-replication}
 

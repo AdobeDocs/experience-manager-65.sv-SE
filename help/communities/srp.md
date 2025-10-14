@@ -43,7 +43,7 @@ Se även:
 För att förstå SRP är det bra att förstå hur AEM (Oak) fungerar på en AEM community-webbplats.
 
 **Java™ Content Repository (JCR)**
-Den här standarden definierar en datamodell och ett programprogrammeringsgränssnitt ([JCR API ](https://jackrabbit.apache.org/jcr/jcr-api.html)) för innehållsdatabaser. Det kombinerar egenskaper i vanliga filsystem med egenskaper i relationsdatabaser och lägger till flera funktioner som innehållsprogram ofta behöver.
+Den här standarden definierar en datamodell och ett programprogrammeringsgränssnitt ([JCR API &#x200B;](https://jackrabbit.apache.org/jcr/jcr-api.html)) för innehållsdatabaser. Det kombinerar egenskaper i vanliga filsystem med egenskaper i relationsdatabaser och lägger till flera funktioner som innehållsprogram ofta behöver.
 
 En implementering av JCR är AEM, Oak.
 

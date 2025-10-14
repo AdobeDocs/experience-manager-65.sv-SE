@@ -85,7 +85,7 @@ Se [Justera gruppstorleken för arbetsflödet för ombearbetning](#adjusting-loa
 1. Välj **[!UICONTROL Dynamic Media Reprocess]** i listrutan **[!UICONTROL Start Workflow]**.
 1. (Valfritt) Ange ett namn för arbetsflödet i textfältet **Ange arbetsflödets namn**. Du kan använda namnet för att referera till arbetsflödesinstansen, om det behövs.
 
-   ![Bearbeta resurser igen ](/help/assets/assets/reprocess-assets2.png)
+   ![Bearbeta resurser igen &#x200B;](/help/assets/assets/reprocess-assets2.png)
 
 1. Välj **[!UICONTROL Start]** och sedan **[!UICONTROL Confirm]**.
 

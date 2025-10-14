@@ -20,7 +20,7 @@ ht-degree: 2%
 
 Du publicerar dina Dynamic Media-resurser genom att välja de resurser som du redan har överfört och trycka på **[!UICONTROL Publish]** eller **[!UICONTROL Quick Publish]**. När dina Dynamic Media-resurser har publicerats kan du inkludera dem på en webbsida via en URL-adress eller genom att bädda in koden på webbsidan.
 
-Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Se [Konfigurera Dynamic Media - Scene7 ](config-dms7.md).
+Du kan också publicera resurser som du överför direkt - utan att behöva göra något från användaren. Se [Konfigurera Dynamic Media - Scene7 &#x200B;](config-dms7.md).
 Eller så kan du selektivt publicera resurser till antingen Dynamic Media eller Adobe Experience Manager, som utesluter varandra, med **[!UICONTROL Selective Publish]** på mappnivå. Se [Arbeta med selektiv Publish i Dynamic Media](/help/assets/selective-publishing.md).
 
 I **[!UICONTROL Card View]** visas en liten globala ikon direkt under namnet på en resurs och till vänster om datumet och tiden för att ange att den är publicerad. I **[!UICONTROL List View]** anger kolumnen **[!UICONTROL Published]** vilka resurser som har publicerats och inte.

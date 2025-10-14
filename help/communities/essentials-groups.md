@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Funktionen för communitygrupper är möjligheten för en undercommunity att skapas dynamiskt på en community-webbplats av behöriga användare från publicerings- och författarmiljöerna.
 
-Från och med [funktionspaketet ](deploy-communities.md#latestfeaturepack) för Communities är det möjligt att kapsla grupper inom andra grupper.
+Från och med [funktionspaketet &#x200B;](deploy-communities.md#latestfeaturepack) för Communities är det möjligt att kapsla grupper inom andra grupper.
 
 ## Grundläggande för klientsidan {#essentials-for-client-side}
 

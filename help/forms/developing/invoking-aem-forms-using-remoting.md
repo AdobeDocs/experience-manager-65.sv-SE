@@ -254,7 +254,7 @@ I följande kodexempel skickas ett PDF-dokument till `MyApplication/EncryptDocum
      ...
 ```
 
-I det här kodexemplet är `pdfDocument` en `DocumentReference`-instans som innehåller ett oskyddat PDF-dokument. Mer information om `DocumentReference` finns i [Hantera dokument med (borttaget för AEM formulär) AEM Forms Remoting ](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting).
+I det här kodexemplet är `pdfDocument` en `DocumentReference`-instans som innehåller ett oskyddat PDF-dokument. Mer information om `DocumentReference` finns i [Hantera dokument med (borttaget för AEM formulär) AEM Forms Remoting &#x200B;](invoking-aem-forms-using-remoting.md#handling-documents-with-remoting).
 
 **Anropar en specifik version av en tjänst**
 

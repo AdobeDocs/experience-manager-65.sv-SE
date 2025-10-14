@@ -128,7 +128,7 @@ Om du uppgraderar från en befintlig AEM 6.0-social communitywebbplats måste du
 
 Om du får autentiseringsfel mot datacenter-URL:en, och AEM error.log innehåller meddelanden om inaktuella tidsstämplar, kontrollerar du att tidssynkronisering pågår.
 
-Använd ett verktyg som [NTP ](https://www.ntp.org/) (Network Time Protocol) för att synkronisera alla AEM författare- och publiceringsservrar.
+Använd ett verktyg som [NTP &#x200B;](https://www.ntp.org/) (Network Time Protocol) för att synkronisera alla AEM författare- och publiceringsservrar.
 
 ### Nytt innehåll visas inte i sökningar {#new-content-does-not-appear-in-searches}
 

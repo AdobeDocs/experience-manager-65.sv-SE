@@ -223,7 +223,7 @@ För att Campaign ska kunna kommunicera med AEM måste du ange ett lösenord fö
 
 ## Konfigurera det AEM externa kontot i kampanj {#acc-setup}
 
-När [installerar paketet **AEM Integration** i Campaign ](#install-package) skapas ett externt konto för AEM. Genom att konfigurera det här externa kontot kan Adobe Campaign ansluta till AEM, vilket möjliggör tvåvägskommunikation mellan lösningarna.
+När [installerar paketet **AEM Integration** i Campaign &#x200B;](#install-package) skapas ett externt konto för AEM. Genom att konfigurera det här externa kontot kan Adobe Campaign ansluta till AEM, vilket möjliggör tvåvägskommunikation mellan lösningarna.
 
 1. Logga in på Adobe Campaign som administratör med klientkonsolen.
 

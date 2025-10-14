@@ -57,7 +57,7 @@ Följande steg-för-steg-beskrivning av arbetsflödet hjälper dig att komma ig�
 
 Innan du arbetar med 3D-resurser i Dynamic Media måste du kontrollera att administratören för Experience Manager redan har aktiverat och konfigurerat Dynamic Media-Cloud Service i läget Dynamic Media - Scene7.
 
-Se [Konfigurera Dynamic Media-Cloud Service](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - Scene7 och [Felsöka Dynamic Media - Scene7 ](/help/assets/troubleshoot-dms7.md).
+Se [Konfigurera Dynamic Media-Cloud Service](/help/assets/config-dms7.md#configuring-dynamic-media-cloud-services) i Konfigurera Dynamic Media - Scene7 och [Felsöka Dynamic Media - Scene7 &#x200B;](/help/assets/troubleshoot-dms7.md).
 
 1. **Överför 3D-resurser**
 

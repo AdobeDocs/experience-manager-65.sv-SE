@@ -19,7 +19,7 @@ För att komma igång med AEM och Commerce måste du installera AEM Content och 
 
 ## Lägsta programvarukrav
 
-[AEM 6.5 Service Pack ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 7 eller senare krävs.
+[AEM 6.5 Service Pack &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html) 7 eller senare krävs.
 
 ## Onboarding {#onboarding}
 

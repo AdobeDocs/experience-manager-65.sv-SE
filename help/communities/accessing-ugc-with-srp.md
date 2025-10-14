@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Alla AEM Communities-komponenter och -funktioner bygger på [ramverket för sociala komponenter (SCF)](/help/communities/scf.md), som anropar SocialResourceProvider-API:t för att komma åt allt användargenererat innehåll (UGC).
 
-Innan en community-plats skapas måste [lagringsresursprovidern ](/help/communities/working-with-srp.md) konfigureras för att välja en implementering som är konsekvent med den underliggande [topologin](/help/communities/topologies.md). SRP-implementeringarna baseras på tre lagringsalternativ:
+Innan en community-plats skapas måste [lagringsresursprovidern &#x200B;](/help/communities/working-with-srp.md) konfigureras för att välja en implementering som är konsekvent med den underliggande [topologin](/help/communities/topologies.md). SRP-implementeringarna baseras på tre lagringsalternativ:
 
 1. [ASRP](/help/communities/asrp.md) - lagring på begäran Adobe
 1. [MSRP](/help/communities/msrp.md) - MongoDB

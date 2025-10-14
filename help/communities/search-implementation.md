@@ -20,7 +20,7 @@ ht-degree: 0%
 
 ## Ökning {#overview}
 
-Sökfunktionen är en viktig funktion i Adobe Experience Manager (AEM) Communities. Förutom funktionerna för [AEM plattformssökning](../../help/sites-deploying/queries-and-indexing.md) innehåller AEM Communities [UGC-söknings-API ](#ugc-search-api) för sökning efter användargenererat innehåll (UGC). UGC har unika egenskaper eftersom de anges och lagras separat från andra AEM och användardata.
+Sökfunktionen är en viktig funktion i Adobe Experience Manager (AEM) Communities. Förutom funktionerna för [AEM plattformssökning](../../help/sites-deploying/queries-and-indexing.md) innehåller AEM Communities [UGC-söknings-API &#x200B;](#ugc-search-api) för sökning efter användargenererat innehåll (UGC). UGC har unika egenskaper eftersom de anges och lagras separat från andra AEM och användardata.
 
 För Communities är de två saker som generellt söks igenom:
 
@@ -44,7 +44,7 @@ Se [SRP och UGC Essentials](srp-and-ugc.md) för information om verktygsmetoder 
 
 ## API för UGC-sökning {#ugc-search-api}
 
-[Den gemensamma lagringsplatsen ](working-with-srp.md) för UGC tillhandahålls av en av flera olika lagringsresursleverantörer (SRP), som båda kanske har olika inbyggda frågespråk. Därför bör anpassad kod, oavsett vald SRP, använda metoder från [UGC API-paketet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*) som anropar det frågespråk som är lämpligt för vald SRP.
+[Den gemensamma lagringsplatsen &#x200B;](working-with-srp.md) för UGC tillhandahålls av en av flera olika lagringsresursleverantörer (SRP), som båda kanske har olika inbyggda frågespråk. Därför bör anpassad kod, oavsett vald SRP, använda metoder från [UGC API-paketet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/cq/social/ugc/api/package-summary.html) (*com.adobe.cq.social.ugc.api*) som anropar det frågespråk som är lämpligt för vald SRP.
 
 ### ASRP-sökningar {#asrp-searches}
 

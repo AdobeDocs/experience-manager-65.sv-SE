@@ -147,4 +147,4 @@ Konfiguration av huvudpanelskomponent:
 
 Mer information finns på sidan [Ledarpanel Essentials](/help/communities/leaderboard.md) för utvecklare.
 
-Instruktioner för hur du skapar regler finns på sidan [Värderingar och märken för ](/help/communities/implementing-scoring.md) för administratörer.
+Instruktioner för hur du skapar regler finns på sidan [Värderingar och märken för &#x200B;](/help/communities/implementing-scoring.md) för administratörer.

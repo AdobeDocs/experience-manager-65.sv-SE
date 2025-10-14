@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Formulärkomponenten HTML5 i AEM kan återge XFA-formulärmallen till HTML5-format. Formulärdesigners kan utforma formulärmallar med [Forms Designer](https://www.adobe.com/go/learn_aemforms_designer_63) och använda återgivningsfunktionen HTML 5. Dessa formulärmallar, tillsammans med deras resurser, kan ligga i AEM, filsystem eller visas via http. Men om du tänker hantera dina formulär med Forms Manager bör mallarna och resurserna finnas i AEM.
 
-Även om HTML5-formulär i stor utsträckning överensstämmer med PDF forms beteende finns det vissa funktioner i båda formaten som inte kan användas i det andra formatet. Hur streckkoder tillämpas på ett PDF-formulär i Adobe Reader varierar till exempel från ett mobilformulär eller hur ett formulär signeras digitalt varierar också mellan formaten. Mer information om sådana variationer finns i [Funktionsdifferentiering mellan HTML5-formulär och PDF forms ](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
+Även om HTML5-formulär i stor utsträckning överensstämmer med PDF forms beteende finns det vissa funktioner i båda formaten som inte kan användas i det andra formatet. Hur streckkoder tillämpas på ett PDF-formulär i Adobe Reader varierar till exempel från ett mobilformulär eller hur ett formulär signeras digitalt varierar också mellan formaten. Mer information om sådana variationer finns i [Funktionsdifferentiering mellan HTML5-formulär och PDF forms &#x200B;](../../forms/using/feature-differentiation-html5-forms-pdf-forms.md).
 
 Vanliga XFA-funktioner finns i följande metodtips och riktlinjer för att utforma ett formulär som fungerar i båda formaten.
 

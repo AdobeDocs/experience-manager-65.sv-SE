@@ -254,7 +254,7 @@ Implementeringar av [MediaQueryList-gränssnittet](https://drafts.csswg.org/csso
 
 * Webbläsare som implementerar MediaQueryList-gränssnittet stöder funktionen `window.matchMedia()`. Den här funktionen testar mediefrågor mot en angiven sträng. Funktionen returnerar ett `MediaQueryList`-objekt som ger åtkomst till frågeresultaten.
 
-* För webbläsare som inte implementerar gränssnittet kan du använda en `matchMedia()`-polyfyllning, till exempel [ matchMedia.js ](https://github.com/paulirish/matchMedia.js), ett kostnadsfritt tillgängligt JavaScript-bibliotek.
+* För webbläsare som inte implementerar gränssnittet kan du använda en `matchMedia()`-polyfyllning, till exempel [&#x200B; matchMedia.js &#x200B;](https://github.com/paulirish/matchMedia.js), ett kostnadsfritt tillgängligt JavaScript-bibliotek.
 
 #### Välja mediespecifika resurser {#selecting-media-specific-resources}
 
@@ -506,7 +506,7 @@ Mer information om hur du konfigurerar AEM tjänster finns i [Konfigurera OSGi](
 
 #### Implementeringsinformation {#implementation-details}
 
-Klassen `com.day.cq.wcm.foundation.impl.AdaptiveImageComponentServlet` utökar klassen [ AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) . Källkoden för AdaptiveImageComponentServer finns i mappen `/libs/foundation/src/impl/src/com/day/cq/wcm/foundation/impl`.
+Klassen `com.day.cq.wcm.foundation.impl.AdaptiveImageComponentServlet` utökar klassen [&#x200B; AbstractImageServlet](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/day/cq/wcm/commons/AbstractImageServlet.html) . Källkoden för AdaptiveImageComponentServer finns i mappen `/libs/foundation/src/impl/src/com/day/cq/wcm/foundation/impl`.
 
 Klassen använder Felix SCR-anteckningar för att konfigurera resurstypen och filtillägget som serverleten är associerad med och namnet på den första väljaren.
 

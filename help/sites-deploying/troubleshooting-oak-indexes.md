@@ -128,7 +128,7 @@ Så här identifierar och korrigerar du en fast omindexeringsprocess:
 1. När du har samlat in all information som beskrivs i steg 1 startar du om AEM.
 
    * Att starta om AEM kan lösa problemet om det finns en hög samtidig belastning (spill i observationskön eller något liknande).
-   * Om en omstart inte löser problemet kan du öppna ett problem med [Adobe kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General&amp;support-tab=home#support) och ange all information som samlats in i steg 1.
+   * Om en omstart inte löser problemet kan du öppna ett problem med [Adobe kundtjänst](https://experienceleague.adobe.com/sv?support-solution=General&support-tab=home#support) och ange all information som samlats in i steg 1.
 
 ## Säkert avbrytande av asynkron omindexering {#safely-aborting-asynchronous-re-indexing}
 

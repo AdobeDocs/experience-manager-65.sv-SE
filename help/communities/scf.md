@@ -154,7 +154,7 @@ Resultatet är en underordnad JCR-nod under en par-nod, som är Sling-adresserba
 
 **Inkludera en komponent**
 
-Att ta med en komponent hänvisar till processen att lägga till en referens till en [&quot;icke-befintlig&quot; resurs ](srp.md#for-non-existing-resources-ners) (ingen JCR-nod) i mallen, till exempel med ett skriptspråk.
+Att ta med en komponent hänvisar till processen att lägga till en referens till en [&quot;icke-befintlig&quot; resurs &#x200B;](srp.md#for-non-existing-resources-ners) (ingen JCR-nod) i mallen, till exempel med ett skriptspråk.
 
 Från och med Adobe Experience Manager (AEM) 6.1 går det att redigera komponentens egenskaper i *designläge* när en komponent inkluderas dynamiskt i stället för att läggas till.
 

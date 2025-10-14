@@ -1382,7 +1382,7 @@ public class AssemblePDFWithDynamicDDXSOAP {
 
 ## Snabbstart (SOAP läge): Samla in PDF Portfolio med Java API {#quick-start-soap-mode-assembling-pdf-portfolios-using-the-java-api}
 
-I följande Java-kodexempel skapas en PDF-portfölj. PDF-portföljen sparas som en PDF-fil med namnet *AssemblerResultPortfolio.pdf*. (Se [Sammanställa PDF Portfolio ](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios).)
+I följande Java-kodexempel skapas en PDF-portfölj. PDF-portföljen sparas som en PDF-fil med namnet *AssemblerResultPortfolio.pdf*. (Se [Sammanställa PDF Portfolio &#x200B;](/help/forms/developing/assembling-pdf-documents.md#assembling-pdf-portfolios).)
 
 ```java
  /*

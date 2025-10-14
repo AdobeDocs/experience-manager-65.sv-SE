@@ -310,7 +310,7 @@ Webbplatsadministratörer kan skapa en grupp på vilken hierarkinivå som helst 
 
 **Stöd för SCORM 2017.1**
 
-Aktiveringsfunktionen i AEM 6.5 Communities har stöd för motorn [ (SCORM) 2017.1 ](https://rusticisoftware.com/blog/scorm-engine-2017-released/) med funktionen Shareable Content Object Reference Model.
+Aktiveringsfunktionen i AEM 6.5 Communities har stöd för motorn [&#x200B; (SCORM) 2017.1 &#x200B;](https://rusticisoftware.com/blog/scorm-engine-2017-released/) med funktionen Shareable Content Object Reference Model.
 
 * Stöd för tangentbordsnavigering i aktiveringskomponenter
 * Aktivera komponenter (t.ex. Katalog- och kursuppspelning, Uppdrag, Filbibliotek) i AEM Communities med stöd för tangentbordsnavigering för förbättrad tillgänglighet.

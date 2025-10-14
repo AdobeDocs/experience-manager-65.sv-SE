@@ -118,7 +118,7 @@ Avsnittet **ObservationQueueMaxLength** visar antalet händelser i Oak observati
 1. Placera den under mappen /crx-quickstart/install.
 
 >[!NOTE]
->Se [AEM 6.x | Tips för prestandajustering ](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=sv-SE)
+>Se [AEM 6.x | Tips för prestandajustering &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-performance.html?lang=sv-SE)
 
 Standardinställningen är 10 000, men de flesta distributioner måste öka den till 20 000 eller 50 000.
 

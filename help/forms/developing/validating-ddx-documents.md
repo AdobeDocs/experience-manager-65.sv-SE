@@ -138,7 +138,7 @@ Validera ett DX-dokument med Assembler Service API (Java):
 
 [Validerar DDX-dokument](#validating-ddx-documents)
 
-[Snabbstart (SOAP läge): Validerar DDX-dokument med Java API ](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api) (SOAP)
+[Snabbstart (SOAP läge): Validerar DDX-dokument med Java API &#x200B;](/help/forms/developing/assembler-service-java-api-quick.md#quick-start-soap-mode-validating-ddx-documents-using-the-java-api) (SOAP)
 
 [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files)
 

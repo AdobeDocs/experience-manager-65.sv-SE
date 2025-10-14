@@ -214,7 +214,7 @@ AEM Demo Machine kräver en giltig AEM.
 
 >[!NOTE]
 >
->Visa en [videointroduktion](https://www.youtube.com/watch?v=zEE_zkR9fVQ&amp;feature=youtu.be) till AEM Demo Machine (13:26).
+>Visa en [videointroduktion](https://www.youtube.com/watch?v=zEE_zkR9fVQ&feature=youtu.be) till AEM Demo Machine (13:26).
 
 ## AEM Communities Documentation {#aem-communities-documentation}
 

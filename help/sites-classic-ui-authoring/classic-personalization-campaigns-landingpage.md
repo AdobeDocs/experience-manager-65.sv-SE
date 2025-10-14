@@ -32,7 +32,7 @@ Förberedelsen av designpaketet för import beskrivs i [Utöka och konfigurera d
 
 >[!CAUTION]
 >
->Designimporteraren, som används för att importera landningssidor, [ har ersatts med AEM 6.5](/help/release-notes/deprecated-removed-features.md#deprecated-features).
+>Designimporteraren, som används för att importera landningssidor, [&#x200B; har ersatts med AEM 6.5](/help/release-notes/deprecated-removed-features.md#deprecated-features).
 
 >[!CAUTION]
 >

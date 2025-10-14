@@ -248,7 +248,7 @@ Om du skapar en bildförinställning för Dynamic Media kan du använda dessa in
 >Om du använder Internet Explorer 9 visas inte den förinställning du har skapat i förinställningslistan direkt när du har sparat. Du kan lösa problemet genom att inaktivera cacheminnet för IE9.
 
 Om du tänker ge stöd för att lägga in AI-, PDF- och EPS-filer så att du kan generera en dynamisk återgivning av dessa filformat bör du granska följande information innan du skapar bildförinställningar.
-Se [Adobe Illustrator (AI), Postscript (EPS) och PDF ](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats).
+Se [Adobe Illustrator (AI), Postscript (EPS) och PDF &#x200B;](#adobe-illustrator-ai-postscript-eps-and-pdf-file-formats).
 
 Om du tänker ge stöd för inmatning av INDD-filer så att du kan generera en dynamisk återgivning av det här filformatet, kanske du vill granska följande information innan du skapar bildförinställningar.
 Se [InDesignens (INDD) filformat](#indesign-indd-file-format).

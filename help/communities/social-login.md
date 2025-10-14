@@ -488,7 +488,7 @@ Inloggad med administratörsbehörighet för en författarinstans:
 
    * Välj **[!UICONTROL Save All]**.
 
-* Ersätt *123* för **name** `oauthid-123` med Facebook ***App ID*** eller Twitter ***Consumer (API) Key*** som är värdet för **Client ID** i [Adobe Granite OAuth-programkonfigurationen och providerkonfigurationen ](social-login.md#adobe-granite-oauth-application-and-provider).
+* Ersätt *123* för **name** `oauthid-123` med Facebook ***App ID*** eller Twitter ***Consumer (API) Key*** som är värdet för **Client ID** i [Adobe Granite OAuth-programkonfigurationen och providerkonfigurationen &#x200B;](social-login.md#adobe-granite-oauth-application-and-provider).
 
   ![graniteoauth-crxde](assets/graniteoauth-crxde.png)
 

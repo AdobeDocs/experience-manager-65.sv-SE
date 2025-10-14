@@ -29,7 +29,7 @@ Du kan hämta den senaste versionen av crx2oak från den offentliga Adobe-databa
 
 >[!NOTE]
 >
->Mer information om Apache Oak och viktiga koncept för Adobe Experience Manager (AEM) persistence finns i [Introduktion till AEM ](/help/sites-deploying/platform.md).
+>Mer information om Apache Oak och viktiga koncept för Adobe Experience Manager (AEM) persistence finns i [Introduktion till AEM &#x200B;](/help/sites-deploying/platform.md).
 
 ## Användningsexempel vid migrering {#migration-use-cases}
 

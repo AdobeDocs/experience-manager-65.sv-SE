@@ -49,11 +49,11 @@ Om du vill använda XFA-baserade PDF forms i Firefox och Chrome utför du följa
 
 1. Klicka på Inaktivera under Chrome PDF Viewer och klicka på Aktivera under Adobe PDF Plug-In.
    ![chrome-pdf-viewer](/help/forms/using/assets/chrome-image.png)
-Mer information finns i [Adobe PDF plug-in ](https://support.google.com/chrome/?hl=en&amp;visit_id=638803785294106945-2276548125&amp;rd=4&amp;topic=3421431#topic=7439538) -dokumentationen från Google.
+Mer information finns i [Adobe PDF plug-in &#x200B;](https://support.google.com/chrome/?hl=en&visit_id=638803785294106945-2276548125&rd=4&topic=3421431#topic=7439538) -dokumentationen från Google.
 
 >[!NOTE]
 > 
 > LiveCycle ES4 har stöd för återgivning av XFA-baserade formulär till HTML5 så att formulären kan öppnas i webbläsare med stöd för HTML5, även på mobila enheter som iPad. Formuläråtergivningen i HTML5 bevarar layouten i formulärdesignen och stöder de flesta formulärlogik (som JavaScript, formulärberäkning och formulärvalidering) som är inbäddad i XFA-formulärmallen. På så sätt överförs era teknikinvesteringar i XFA-formulär enkelt till enheter där det inte går att köra Adobe Reader-pluginprogrammet.
 >Mer information finns i [LiveCycle-produktdokumentation](https://business.adobe.com/products/experience-manager/forms/aem-forms.html).
 
-[Juridiska meddelanden](https://chl-author-preview.corp.adobe.com/content/help/en/legal/legal-notices.html)    |    [Integritetspolicy ](https://www.adobe.com/privacy.html)
+[Juridiska meddelanden](https://chl-author-preview.corp.adobe.com/content/help/en/legal/legal-notices.html)    |    [Integritetspolicy &#x200B;](https://www.adobe.com/privacy.html)

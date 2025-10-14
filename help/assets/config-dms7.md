@@ -29,7 +29,7 @@ I följande arkitekturdiagram beskrivs hur läget Dynamic Media - Scene7 fungera
 Med den nya arkitekturen ansvarar Experience Manager för de viktigaste källresurserna och synkningarna med Dynamic Media för bearbetning och publicering av mediefiler:
 
 1. När den primära källresursen överförs till Experience Manager replikeras den till Dynamic Media. Då hanterar Dynamic Media all bearbetning och generering av resurser, till exempel videokodning och dynamiska varianter av en bild.
-(I Dynamic Media - Scene7-läge är standardstorleken för överföring 2 GB eller mindre. Om du vill aktivera filstorlekar på 2 GB upp till 15 GB läser du [ (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](#optional-config-dms7-assets-larger-than-2gb).)
+(I Dynamic Media - Scene7-läge är standardstorleken för överföring 2 GB eller mindre. Om du vill aktivera filstorlekar på 2 GB upp till 15 GB läser du [&#x200B; (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](#optional-config-dms7-assets-larger-than-2gb).)
 1. När återgivningarna har genererats kan Experience Manager på ett säkert sätt komma åt och förhandsgranska Dynamic Media-fjärråtergivningarna (inga binärfiler skickas tillbaka till Experience Manager-instansen).
 1. När innehållet är klart att publiceras och godkännas utlöses Dynamic Media-tjänsten av att skicka ut innehåll till leveransservrar och cachelagra innehåll på leveransnätverket.
 
@@ -161,7 +161,7 @@ Markera en markerad mapp för synkronisering till Dynamic Media genom att marker
 1. Välj **[!UICONTROL Save]**.
 1. För att på ett säkert sätt förhandsgranska Dynamic Media-innehåll innan det publiceras använder Experience Manager Author tokenbaserad validering och Experience Manager Author förhandsgranskar därmed Dynamic Media-innehåll som standard. Du kan dock tillåtslista fler IP-adresser för att ge användarna tillgång till säkert förhandsgranskningsmaterial. Information om hur du konfigurerar den här åtgärden i Experience Manager finns i [Konfigurera Dynamic Media Publish-inställningar för Image Server - fliken Säkerhet](/help/assets/dm-publish-settings.md#security-tab).
 
-Om du vill anpassa konfigurationen ytterligare, t.ex. aktivera åtkomstkontrollistor (ACL), kan du utföra alla åtgärder under [(Valfritt) Konfigurera avancerade inställningar i Dynamic Media - Scene7-läge ](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
+Om du vill anpassa konfigurationen ytterligare, t.ex. aktivera åtkomstkontrollistor (ACL), kan du utföra alla åtgärder under [(Valfritt) Konfigurera avancerade inställningar i Dynamic Media - Scene7-läge &#x200B;](#optional-configuring-advanced-settings-in-dynamic-media-scene-mode).
 
 <!-- 1. To securely preview Dynamic Media content before it gets published, Experience Manager uses token-based validation and hence Experience Manager Author previews Dynamic Media content by default. However, you can *allowlist* more IPs to provide users access to securely preview content. To set up this action in Experience Manager, see [Configure Dynamic Media Publish Setup for Image Server - Security tab](/help/assets/dm-publish-settings.md#security-tab).     * In Experience Manager Author mode, select the Experience Manager logo to access the global navigation console.
     * In the left rail, select the **[!UICONTROL Tools]** icon, then go to **[!UICONTROL Assets]** > **[!UICONTROL Dynamic Media Publish Setup]**.

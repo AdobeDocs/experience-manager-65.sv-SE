@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Skapa enkelsidiga program (SPA) med AEM {#create-spa}
 
-I den här valfria fortsättningen av [AEM Headless Developer Journey ](overview.md) får du lära dig hur Adobe Experience Manager (AEM) kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA och integrera externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
+I den här valfria fortsättningen av [AEM Headless Developer Journey &#x200B;](overview.md) får du lära dig hur Adobe Experience Manager (AEM) kan kombinera headless-leverans med traditionella CMS-funktioner i full hög och hur du kan skapa redigerbara SPA med hjälp av AEM ramverk för SPA och integrera externa SPA, vilket möjliggör redigeringsfunktioner efter behov.
 
 ## Story hittills {#story-so-far}
 

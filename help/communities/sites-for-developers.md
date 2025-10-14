@@ -80,7 +80,7 @@ Rekommenderad metod för replikering av anpassad kod är att [skapa ett paket](.
 
 När en communitywebbplats har skapats kan du exportera webbplatsen som ett AEM paket som lagras i Package Manager och som är tillgängligt för hämtning och överföring.
 
-Det här är tillgängligt från konsolen [Webbplatser för ](sites-console.md#exporting-the-site).
+Det här är tillgängligt från konsolen [Webbplatser för &#x200B;](sites-console.md#exporting-the-site).
 
 UGC och anpassad kod ingår inte i communityplatspaketet.
 

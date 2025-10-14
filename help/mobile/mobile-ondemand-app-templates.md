@@ -97,7 +97,7 @@ Välj **+** på den vänstra panelen för att lägga till komponenter i artikeln
 
 ### Skapa färdiga mallar {#creating-out-of-the-box-templates}
 
-Det finns inga färdiga artikelmallar, men det finns en standardmall som anpassade mallar ska utöka. Mer information finns i [Artikelmallexemplet ](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article) för Geometrixx Unlimited-programmet.
+Det finns inga färdiga artikelmallar, men det finns en standardmall som anpassade mallar ska utöka. Mer information finns i [Artikelmallexemplet &#x200B;](http://localhost:4502/crx/de/index.jsp#/apps/geometrixx-unlimited-app/templates/article) för Geometrixx Unlimited-programmet.
 
 De viktigaste egenskaperna utöver de normala AEM som krävs är bland annat
 

@@ -23,7 +23,7 @@ Konsolen Gruppmallar liknar konsolen [Platsmallar](/help/communities/sites.md). 
 
 En communitygrupp ingår i en webbplatsmall genom att inkludera funktionen [Grupper](/help/communities/functions.md#groups-function) (som inte är den första eller enda funktionen i mallen).
 
-Från och med [funktionspaketet ](/help/communities/deploy-communities.md#latestfeaturepack) för Communities är det möjligt att kapsla grupper genom att inkludera funktionen Groups i en gruppmall.
+Från och med [funktionspaketet &#x200B;](/help/communities/deploy-communities.md#latestfeaturepack) för Communities är det möjligt att kapsla grupper genom att inkludera funktionen Groups i en gruppmall.
 
 När en åtgärd vidtas för att skapa en community-grupp väljs gruppens mall (struktur). Valet beror på hur funktionen Grupper konfigurerades när den lades till i plats- eller gruppmallen.
 

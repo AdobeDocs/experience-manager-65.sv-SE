@@ -29,7 +29,7 @@ Europeiska unionens allmänna dataskyddsförordning om integritetsskydd får ver
 
 Med Adobe körklara Commerce-integreringar är AEM upplevelselagret, konsumerar tjänster och skickar tillbaka data till kundens e-handelsplattform som körs i headlessläge.
 
-För vissa e-handelsplattformar lagrar Adobe profilinformation ( `/home/users`) och e-handelstoken (för inloggning på e-handelsplattformen) i AEM. Läs [Hantera GDPR-begäranden för AEM ](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md) om du vill använda dessa exempel.
+För vissa e-handelsplattformar lagrar Adobe profilinformation ( `/home/users`) och e-handelstoken (för inloggning på e-handelsplattformen) i AEM. Läs [Hantera GDPR-begäranden för AEM &#x200B;](/help/sites-administering/handling-gdpr-requests-for-aem-platform.md) om du vill använda dessa exempel.
 
 ![screen_shot_2018-03-22at11621](assets/screen_shot_2018-03-22at111621.jpg)
 

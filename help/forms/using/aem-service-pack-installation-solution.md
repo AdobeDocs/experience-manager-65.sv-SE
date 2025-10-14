@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Problem {#issue}
 
-Efter installation av [AEM 6.5.15.0 Service Pack ](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip) inträffar felet som:
+Efter installation av [AEM 6.5.15.0 Service Pack &#x200B;](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.15.0.zip) inträffar felet som:
 * FEL [FelixDispatchQueue] org.apache.sling.scripting.console FrameworkEvent FEL (org.osgi.framework.BundleException: Det går inte att matcha org.apache.sling.scripting.console
 
 När du har installerat AEM 6.5.15.0-Service Pack visar CRX/bundle och startsidan fel som inte är tillgängliga.

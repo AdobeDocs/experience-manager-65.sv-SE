@@ -112,7 +112,7 @@ När förutsättningarna är uppfyllda utför du följande steg för att konfigu
    * widget_write
    * workflow_read
 
-   Stegvis information om hur du konfigurerar OAuth-inställningar för ett [!DNL Adobe Sign]-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programmets ](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) utvecklardokumentation.
+   Stegvis information om hur du konfigurerar OAuth-inställningar för ett [!DNL Adobe Sign]-program och hämtar nycklarna finns i [Konfigurera autentiseringsinställningar för programmets &#x200B;](https://www.adobe.io/apis/documentcloud/sign/docs.html#!adobedocs/adobe-sign/master/gstarted/configure_oauth.md) utvecklardokumentation.
 
    ![OAuth-konfiguration](assets/oauthconfig_new.png)
 
@@ -213,7 +213,7 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 
 #### Använd de inloggningsuppgifter som tas emot för att ansluta AEM Forms till Adobe Acrobat Sign Solutions för offentlig sektor
 
-1. Öppna `re-direct URL` i webbläsaren. Du skapade och lade märke till `re-direct URL` i det sista steget i avsnittet [Skapa en omdirigerings-URL för din AEM ](#create-redirect-url).
+1. Öppna `re-direct URL` i webbläsaren. Du skapade och lade märke till `re-direct URL` i det sista steget i avsnittet [Skapa en omdirigerings-URL för din AEM &#x200B;](#create-redirect-url).
 
 1. På fliken **[!UICONTROL General]** på sidan **[!UICONTROL Create Adobe Sign Configuration]** anger du **[!UICONTROL Name]** för konfigurationen och väljer **[!UICONTROL Next]**. Du kan också ange en **[!UICONTROL Title]** och bläddra för att välja en **[!UICONTROL Thumbnail]** för konfigurationen. Klicka på **[!UICONTROL Next]**.
 
@@ -264,7 +264,7 @@ Representanten genererar och delar uppgifter med dig. I nästa avsnitt använder
 1. Publish konfigurationen.
 1. Använd [replikering](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/replication.html?lang=sv-SE) om du vill skapa en identisk konfiguration för motsvarande publiceringsinstanser.
 
-Nu kan du [använda Adobe Acrobat Sign-fält i ett anpassat formulär](working-with-adobe-sign.md) eller [AEM ](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step). Se till att du lägger till den konfigurationsbehållare som används för Cloud Servicen i alla adaptiva Forms som aktiveras för [!DNL Adobe Acrobat Sign]. Du kan ange en konfigurationsbehållare bland egenskaperna för ett adaptivt formulär.
+Nu kan du [använda Adobe Acrobat Sign-fält i ett anpassat formulär](working-with-adobe-sign.md) eller [AEM &#x200B;](/help/forms/using/aem-forms-workflow-step-reference.md#sign-document-step-sign-document-step). Se till att du lägger till den konfigurationsbehållare som används för Cloud Servicen i alla adaptiva Forms som aktiveras för [!DNL Adobe Acrobat Sign]. Du kan ange en konfigurationsbehållare bland egenskaperna för ett adaptivt formulär.
 
 
 ## Konfigurera schemaläggaren för [!DNL Adobe Sign] för att synkronisera signeringsstatusen {#configure-adobe-sign-scheduler-to-sync-the-signing-status}

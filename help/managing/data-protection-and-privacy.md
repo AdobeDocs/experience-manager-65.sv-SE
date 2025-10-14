@@ -103,7 +103,7 @@ Se [AEM Sites - Dataskydd och sekretesshantering.](/help/sites-administering/gdp
 
 ## AEM Commerce {#aem-commerce}
 
-Se [AEM Commerce - Dataskydd och integritet ](/help/sites-administering/gdpr-compliance-commerce.md).
+Se [AEM Commerce - Dataskydd och integritet &#x200B;](/help/sites-administering/gdpr-compliance-commerce.md).
 
 ## AEM Mobile {#aem-mobile}
 

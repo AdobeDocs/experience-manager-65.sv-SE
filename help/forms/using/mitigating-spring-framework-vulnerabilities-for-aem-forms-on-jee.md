@@ -35,7 +35,7 @@ I det här dokumentet finns vägledning om hur du åtgärdar två allvarliga sä
 | AEM Forms Version | Nödvändig åtgärd |
 |-------------------|-----------------|
 | 6.5.22.0 | 1. [Hämta snabbkorrigeringen för din miljö](/help/release-notes/aem-forms-hotfix.md). </br> 2. Installera den här korrigeringen genom att följa instruktionerna för att [installera Service Pack på ett AEM-formulär på JEE](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). |
-| 6.5.17.0 - 6.5.21.0 | [Använd manuell reducering ](#manual-mitigation-steps). |
+| 6.5.17.0 - 6.5.21.0 | [Använd manuell reducering &#x200B;](#manual-mitigation-steps). |
 | 6.5 - 6.5.16.0 | 1. [Installera den senaste Service Pack-versionen](/help/release-notes/release-notes.md)<br>2. [Implementera lämplig lösning](#version-specific-solutions) baserat på din uppdaterade version. |
 
 > **Obs!**: AEM Forms stöder officiellt endast de sex senaste Service Pack-paketen. Användare med äldre versioner bör först uppgradera till det senaste Service Pack-paketet och sedan installera den snabbkorrigering som krävs.

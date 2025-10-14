@@ -204,7 +204,7 @@ Till exempel: admin:admin
 
 >[!NOTE]
 >
->Om du [omindexerar DSRP-servern ](dsrp.md) är URL:en **/services/social/datastore/rdb/reindex**
+>Om du [omindexerar DSRP-servern &#x200B;](dsrp.md) är URL:en **/services/social/datastore/rdb/reindex**
 
 ### Exempel på omindexering av MSRP {#msrp-reindex-example}
 

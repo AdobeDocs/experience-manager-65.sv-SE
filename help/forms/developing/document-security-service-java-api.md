@@ -701,7 +701,7 @@ I följande Java-kodexempel återkallas ett principskyddat dokument med namnet *
 
 ## Snabbstart (SOAP läge): Inspektera principskyddade PDF-dokument med Java API {#quick-start-soap-mode-inspecting-policy-protected-pdf-documents-using-the-java-api}
 
-Följande Java-kodexempel undersöker ett principskyddat PDF-dokument med namnet *PolicyProtectedLoanDoc.pd* f. (Se [Inspektera skyddat PDF-dokument ](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).)
+Följande Java-kodexempel undersöker ett principskyddat PDF-dokument med namnet *PolicyProtectedLoanDoc.pd* f. (Se [Inspektera skyddat PDF-dokument &#x200B;](/help/forms/developing/protecting-documents-policies.md#inspecting-policy-protected-pdf-documents).)
 
 ```java
  /*

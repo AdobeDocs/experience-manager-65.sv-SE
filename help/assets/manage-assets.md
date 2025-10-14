@@ -57,7 +57,7 @@ Du kan överföra olika typer av resurser (inklusive bilder, PDF-filer, RAW-file
 
 >[!NOTE]
 >
->I Dynamic Media - Scene7-läge är standardfilstorleken för överföring av resurser 2 GB eller mindre. Om du vill konfigurera överföring av resurser som är större än 2 GB upp till 15 GB läser du [ (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb).
+>I Dynamic Media - Scene7-läge är standardfilstorleken för överföring av resurser 2 GB eller mindre. Om du vill konfigurera överföring av resurser som är större än 2 GB upp till 15 GB läser du [&#x200B; (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb).
 
 >[!IMPORTANT]
 >
@@ -166,7 +166,7 @@ Dynamic Media möjliggör batchöverföring av resurser via FTP-server. Om du t�
 
 >[!NOTE]
 >
->I Dynamic Media - Scene7-läge är standardfilstorleken för överföring av resurser 2 GB eller mindre. Om du vill konfigurera överföring av resurser som är större än 2 GB upp till 15 GB läser du [ (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb).
+>I Dynamic Media - Scene7-läge är standardfilstorleken för överföring av resurser 2 GB eller mindre. Om du vill konfigurera överföring av resurser som är större än 2 GB upp till 15 GB läser du [&#x200B; (Valfritt) Konfigurera Dynamic Media - Scene7-läge för överföring av resurser som är större än 2 GB](/help/assets/config-dms7.md#optional-config-dms7-assets-larger-than-2gb).
 
 >[!NOTE]
 >
@@ -691,7 +691,7 @@ Med redigeringsverktygen i gränssnittet [!DNL Assets] kan du utföra små redig
 
 1. Markera området som ska beskäras och ändra storlek på det eller flytta det på bilden.
 
-1. Använd alternativen i verktygsfältet **[!UICONTROL Undo]** ![Ångra ](assets/do-not-localize/undo.png) och **[!UICONTROL Redo]** ![Gör om ](assets/do-not-localize/redo.png) för att återgå till den obeskurna bilden eller behålla den beskurna bilden.
+1. Använd alternativen i verktygsfältet **[!UICONTROL Undo]** ![Ångra &#x200B;](assets/do-not-localize/undo.png) och **[!UICONTROL Redo]** ![Gör om &#x200B;](assets/do-not-localize/redo.png) för att återgå till den obeskurna bilden eller behålla den beskurna bilden.
 1. Klicka på lämpligt **[!UICONTROL Rotate]**-alternativ för att rotera bilden medsols eller motsols.
 
    ![Roteringsalternativ medsols och motsols](assets/do-not-localize/rotate-options.png)
@@ -771,7 +771,7 @@ Videoanteckningar stöds bara i webbläsare med HTML5-kompatibla videoformat. Vi
 
    Ange önskad färg i rutan **[!UICONTROL Annotation Color]** och klicka sedan på **[!UICONTROL Accept]**.
 
-   ![Välj anteckningsfärg i Användarinställningar för att ange färg för användarens persona ](assets/Annotation-color.png)
+   ![Välj anteckningsfärg i Användarinställningar för att ange färg för användarens persona &#x200B;](assets/Annotation-color.png)
 
 >[!NOTE]
 >
@@ -832,7 +832,7 @@ Om du vill skriva ut anteckningarna och granskningsstatusen klickar du på **[!U
 
 1. Klicka på **[!UICONTROL Print]**. Beroende på vilket alternativ du väljer i steg 2 visar den genererade PDF-filen anteckningarna/statusen vid den angivna positionen. Om du till exempel väljer att skriva ut både anteckningar och granskningsstatus med inställningen **Överst till vänster** liknar genererade utdata den PDF-fil som återges här.
 
-   ![Antecknings- och granskningsstatus för genererad PDF ](assets/annotation-status-pdf.png)
+   ![Antecknings- och granskningsstatus för genererad PDF &#x200B;](assets/annotation-status-pdf.png)
 
 1. Hämta ![hämtningsalternativ för PDF](assets/do-not-localize/download.png) eller ![utskriftsalternativ på PDF](assets/do-not-localize/print.png) i PDF med alternativen längst upp till höger.
 

@@ -22,7 +22,7 @@ Lär dig mer om dokumentsäkerhet, lästillägg och Java Programming Language f�
 
 Du kan använda dokumentskydd för att begränsa åtkomsten till specifika PDF-dokument till endast behöriga användare. Du kan också bestämma hur en mottagare ska kunna använda ett skyddat dokument. Du kan till exempel ange om mottagarna ska kunna skriva ut, kopiera eller redigera text i ett dokument som skyddas av dokumentsäkerhetsregler. Mer information om dokumentsäkerhet finns i [om dokumentsäkerhet](/help/forms/using/admin-help/document-security.md).
 
-Du kan använda läsartillägg för att aktivera interaktiva funktioner i Adobe PDF-dokument via Acrobat Reader. Dessa interaktiva funktioner som normalt bara är tillgängliga via Adobe Acrobat Professional och Standard. Mer information om de interaktiva funktioner som läsartillägg kan aktivera finns i [Adobe Experience Manager Forms DocAssurance-tjänsten ](/help/forms/using/overview-aem-document-services.md)**.**
+Du kan använda läsartillägg för att aktivera interaktiva funktioner i Adobe PDF-dokument via Acrobat Reader. Dessa interaktiva funktioner som normalt bara är tillgängliga via Adobe Acrobat Professional och Standard. Mer information om de interaktiva funktioner som läsartillägg kan aktivera finns i [Adobe Experience Manager Forms DocAssurance-tjänsten &#x200B;](/help/forms/using/overview-aem-document-services.md)**.**
 
 Du kan använda det portabla skyddsbiblioteket för att tillämpa skyddsprofiler på dokumentet utan att behöva skicka dokumentet via nätverket. Det är bara säkerhetsreferenser och skyddsprofiler som rör sig över nätverket. Det faktiska dokumentet lämnar aldrig klienten och skyddsprofiler tillämpas lokalt på klienten.
 
