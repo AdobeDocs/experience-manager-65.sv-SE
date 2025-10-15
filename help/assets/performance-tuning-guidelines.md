@@ -243,7 +243,7 @@ När du replikerar resurser till ett stort antal publiceringsinstanser, till exe
 
 ## Sökindex {#search-indexes}
 
-Installera [de senaste Service Packs](/help/release-notes/release-notes.md) och prestandarelaterade snabbkorrigeringar eftersom de ofta innehåller uppdateringar av systemindex. Se [tips för prestandajustering](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/administer/performance-tuning-guidelines) för vissa indexoptimeringar.
+Installera [de senaste Service Packs](/help/release-notes/release-notes.md) och prestandarelaterade snabbkorrigeringar eftersom de ofta innehåller uppdateringar av systemindex. Se [tips för prestandajustering](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/assets/administer/performance-tuning-guidelines) för vissa indexoptimeringar.
 
 Skapa anpassade index för frågor som du kör ofta. Mer information finns i metoden [för att analysera långsamma frågor](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) och [skapa anpassade index](/help/sites-deploying/queries-and-indexing.md). Mer information om bästa praxis för frågor och index finns i [Bästa praxis för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
