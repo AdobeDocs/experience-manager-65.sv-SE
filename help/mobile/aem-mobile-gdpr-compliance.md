@@ -29,7 +29,7 @@ AEM Mobile är redo att hjälpa kunderna med deras GDPR-efterlevnadsskyldigheter
 
 ## Adobe Digital Publishing Suite {#adobe-digital-publishing-suite}
 
-Adobe digital publishing product (som föregår AEM Mobile) stöder beredskapsinitiativ i Adobe GDPR. Se [https://business.adobe.com/privacy/general-data-protection-regulation.html](https://business.adobe.com/privacy/general-data-protection-regulation.html). Nedan ges närmare information om stöd för relevanta funktioner i den allmänna dataskyddsförordningen i Digital Publishing Suite, inklusive hur man arbetar med Adobe för att initiera förfrågningar om den allmänna dataskyddsförordningen.
+Adobe digital publishing product (som föregår AEM Mobile) stöder beredskapsinitiativ i Adobe GDPR. Se [https://business.adobe.com/se/privacy/general-data-protection-regulation.html](https://business.adobe.com/se/privacy/general-data-protection-regulation.html). Nedan ges närmare information om stöd för relevanta funktioner i den allmänna dataskyddsförordningen i Digital Publishing Suite, inklusive hur man arbetar med Adobe för att initiera förfrågningar om den allmänna dataskyddsförordningen.
 
 För att vara säker på att du inte blandar ihop AEM Mobile med den äldre Digital Publishing Suite-produkten kan du logga in på Digital Publishing Suite här:
 

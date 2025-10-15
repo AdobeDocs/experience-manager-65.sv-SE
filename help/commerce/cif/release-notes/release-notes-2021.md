@@ -131,7 +131,7 @@ Granska de lägsta systemkraven i tabellen nedan för den CIF versionen som du a
    * Visuell indikator för mellanlagrade produktdata i redigeringsläge för bättre synlighet för kommande ändringar
    * Ny platskarta för innehålls- och e-handelssidor
 
-* Stöd för [Adobe Commerce Sensei produktrekommendation från Adobe Sensei](https://business.adobe.com/products/magento/product-recommendations.html) i AEM Storefront med fördefinierade eller direkt skapade rekommendationer
+* Stöd för [Adobe Commerce Sensei produktrekommendation från Adobe Sensei](https://business.adobe.com/se/products/magento/product-recommendations.html) i AEM Storefront med fördefinierade eller direkt skapade rekommendationer
 
 ## Releasedatum: juni 2021
 

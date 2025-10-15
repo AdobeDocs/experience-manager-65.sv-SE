@@ -24,7 +24,7 @@ ht-degree: 0%
 >
 >Det här dokumentet ingår i [Komma igång med AEM Mobile](/help/mobile/getting-started-aem-mobile.md) Guide, en rekommenderad startpunkt för AEM Mobile referens.
 
-Med funktionen för innehållspersonalisering i AEM Mobile kan [AEM författare](#author) anpassa mobilappsinnehåll med [Adobe Target](https://business.adobe.com/products/target/adobe-target.html). Detta gör att man kan leverera riktade erbjudanden till användare av mobilappar. Adobe Experience Manager Mobile ger möjlighet att skapa, målinrikta och leverera innehåll som ger användaren innehåll som är specifikt för den egna smaken.
+Med funktionen för innehållspersonalisering i AEM Mobile kan [AEM författare](#author) anpassa mobilappsinnehåll med [Adobe Target](https://business.adobe.com/se/products/target/adobe-target.html). Detta gör att man kan leverera riktade erbjudanden till användare av mobilappar. Adobe Experience Manager Mobile ger möjlighet att skapa, målinrikta och leverera innehåll som ger användaren innehåll som är specifikt för den egna smaken.
 
 I AEM måste administratörer och utvecklare först förbereda miljön för att kunna börja skapa det här innehållet.
 

@@ -40,7 +40,7 @@ Detta innebär att
 
 >[!CAUTION]
 >
->Integreringsramverket [eCommerce](https://business.adobe.com/products/experience-manager/sites/ecommerce-integrations.html) är en AEM.
+>Integreringsramverket [eCommerce](https://business.adobe.com/se/products/experience-manager/sites/ecommerce-integrations.html) är en AEM.
 >
 >Säljaren kan ge fullständig information enligt lämplig motor.
 

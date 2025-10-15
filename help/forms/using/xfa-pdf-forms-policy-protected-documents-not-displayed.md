@@ -31,6 +31,6 @@ Kontrollera följande om du inte kan öppna ett XFA-baserat PDF-formulär eller 
 >[!NOTE]
 >
 >LiveCycle ES4 har stöd för återgivning av XFA-baserade formulär till HTML5 så att formulären kan öppnas i webbläsare med stöd för HTML5, även på mobila enheter som iPad. Formuläråtergivningen i HTML5 bevarar layouten i formulärdesignen och stöder de flesta formulärlogik (som JavaScript, formulärberäkning och formulärvalidering) som är inbäddad i XFA-formulärmallen. På så sätt överförs era teknikinvesteringar i XFA-formulär enkelt till de enheter där Adobe Reader-pluginen inte kan köras.
->Mer information finns i Uppgradera till [LiveCycle-produktdokumentation](https://business.adobe.com/products/experience-manager/forms/aem-forms.html).
+>Mer information finns i Uppgradera till [LiveCycle-produktdokumentation](https://business.adobe.com/se/products/experience-manager/forms/aem-forms.html).
 
 [Juridiska meddelanden](https://chl-author-preview.corp.adobe.com/content/help/en/legal/legal-notices.html)    |    [Integritetspolicy &#x200B;](https://www.adobe.com/privacy.html)

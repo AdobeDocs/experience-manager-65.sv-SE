@@ -24,7 +24,7 @@ Vill du skapa engagerande och relevanta upplevelser för mobilanvändare? Om du 
 
 Kommer användarna åt allt innehåll? Överger de appen, och i så fall, var? Hur ofta stannar de i appen och hur ofta de kommer tillbaka för att använda appen? Vilka förändringar kan ni införa och sedan mäta den ökade lojaliteten? Vad gäller för kraschfrekvenser, kraschar din app för dina användare?
 
-Dra nytta av [mobilappsanalys](https://business.adobe.com/products/analytics/mobile-marketing.html) i dina Adobe Experience Manager-appar (AEM) genom att integrera med [Adobe mobiltjänster](https://business.adobe.com/products/campaign/mobile-marketing.html).
+Dra nytta av [mobilappsanalys](https://business.adobe.com/se/products/analytics/mobile-marketing.html) i dina Adobe Experience Manager-appar (AEM) genom att integrera med [Adobe mobiltjänster](https://business.adobe.com/se/products/campaign/mobile-marketing.html).
 
 Instrumentera era AEM appar för att spåra, rapportera och förstå hur användarna interagerar med mobilappen och -innehållet och för att mäta nyckeltal under livscykeln, som starter, apptid och kraschfrekvens.
 

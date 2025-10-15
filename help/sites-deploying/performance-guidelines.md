@@ -316,7 +316,7 @@ Mer information om tillgängliga konfigurationsalternativ finns i [Konfigurera n
 
 >[!NOTE]
 >
->Adobe rekommenderar att du väljer alternativet att distribuera AEM på Azure eller Amazon Web Services (AWS) med Adobe Managed Services. Kunderna drar nytta av ett team som har erfarenhet och kompetens av att driftsätta och AEM i dessa molnmiljöer. Se [ytterligare dokumentation om Adobe Managed Services](https://business.adobe.com/products/experience-manager/managed-services.html?aemClk=t).
+>Adobe rekommenderar att du väljer alternativet att distribuera AEM på Azure eller Amazon Web Services (AWS) med Adobe Managed Services. Kunderna drar nytta av ett team som har erfarenhet och kompetens av att driftsätta och AEM i dessa molnmiljöer. Se [ytterligare dokumentation om Adobe Managed Services](https://business.adobe.com/se/products/experience-manager/managed-services.html?aemClk=t).
 >
 >Adobe rekommenderar att du arbetar direkt med molnleverantören för att få rekommendationer om hur du ska distribuera AEM på Azure eller AWS utanför Adobe Managed Services. Eller samarbeta med en av Adobe som stöder driftsättningen av AEM i molnmiljön. Den valda molnleverantören eller partnern ansvarar för storleksspecifikationerna, designen och implementeringen av den arkitektur de stöder för att uppfylla just dina krav på prestanda, belastning, skalbarhet och säkerhet.
 >
