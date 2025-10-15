@@ -7,9 +7,9 @@ role: User
 feature: Workflow,Renditions
 exl-id: cfd6c981-1a35-4327-82d7-cf373d842cc3
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+source-git-commit: f8588ef353bd08b41202350072728d80ee51f565
 workflow-type: tm+mt
-source-wordcount: '2043'
+source-wordcount: '2039'
 ht-degree: 1%
 
 ---
@@ -123,7 +123,7 @@ Följande metoder måste implementeras:
 
 Här är en exempelmall:
 
-paketera my.own.stuff; /&ast;&ast; &ast; @scr.component inherit=&quot;true&quot; &ast; @scr.service &ast;/ public class MyMediaHandler utökar com.day.cq.dam.core.AbstractAssetHandler { // implementera relevanta delar }
+paketera my.own.stuff; /&amp;ast;&amp;ast; &amp;ast; @scr.component inherit=&quot;true&quot; &amp;ast; @scr.service &amp;ast;/ public class MyMediaHandler utökar com.day.cq.dam.core.AbstractAssetHandler { // implementera relevanta delar }
 
 Gränssnittet och klasserna omfattar:
 
@@ -449,7 +449,7 @@ Med [!DNL Experience Manager] kan du köra valfritt kommandoradsverktyg i ett ar
 
 Följande konverteringar kan köras och lagras automatiskt i [!DNL Assets]:
 
-* EPS- och AI-omvandling med [ImageMagick](https://www.imagemagick.org/script/index.php) och [Ghostscript](https://www.ghostscript.com/).
+* EPS- och AI-omvandling med `https://www.imagemagick.org/script/index.php` och [Ghostscript](https://www.ghostscript.com/).
 * FLV-videotranskodning med [FFmpeg](https://ffmpeg.org/).
 * MP3-kodning med [LAME](https://lame.sourceforge.io/).
 * Ljudbearbetning med [SOX](https://sourceforge.net/projects/sox/).
@@ -470,13 +470,13 @@ Processen `CommandLineProcess` utför följande åtgärder i den listade ordning
 
 ### Ett exempel med [!DNL ImageMagick] {#an-example-using-imagemagick}
 
-I följande exempel visas hur du ställer in kommandoradsprocesssteget så att en vänd bild av originalet skapas varje gång en resurs med e-typen miMIME GIF eller TIFF läggs till i `/content/dam` på [!DNL Experience Manager]-servern. Tre miniatyrbilder till: 140x100, 48x48 och 10x250 skapas också.
+I följande exempel visas hur du ställer in kommandoradsprocessteget så att en speglad bild av originalet skapas varje gång en resurs med e-typen miMIME GIF eller TIFF läggs till i `/content/dam` på [!DNL Experience Manager]-servern. Tre miniatyrbilder till: 140x100, 48x48 och 10x250 skapas också.
 
 Använd [!DNL ImageMagick] om du vill göra det. [!DNL ImageMagick] är ett kostnadsfritt kommandoradsprogram som används för att skapa, redigera och komponera bitmappsbilder.
 
 Installera [!DNL ImageMagick] på disken som är värd för servern [!DNL Experience Manager]:
 
-1. Installera [!DNL ImageMagick]: Se [ImageMagick-dokumentation](https://www.imagemagick.org/script/download.php).
+1. Installera [!DNL ImageMagick]: Se webbplatsen `https://www.imagemagick.org/script/download.php`.
 1. Konfigurera verktyget så att du kan köra `convert` med kommandoraden.
 1. Kör följande kommando `convert -h` på kommandoraden för att se om verktyget är korrekt installerat.
 
@@ -486,15 +486,15 @@ Installera [!DNL ImageMagick] på disken som är värd för servern [!DNL Experi
    >
    >I vissa versioner av Windows kanske kommandot convert inte kan köras eftersom det står i konflikt med det inbyggda konverteringsverktyget som ingår i installationen av [!DNL Windows]. I det här fallet anger du den fullständiga sökvägen för programmet [!DNL ImageMagick] som används för att konvertera bildfiler till miniatyrbilder. Exempel: `"C:\Program Files\ImageMagick-6.8.9-Q16\convert.exe" -define jpeg:size=319x319 ${filename} -thumbnail 319x319 cq5dam.thumbnail.319.319.png`.
 
-1. Om du vill se om verktyget fungerar som det ska lägger du till en JPG i arbetskatalogen och kör kommandot convert `<image-name>.jpg -flip <image-name>-flipped.jpg` på kommandoraden. En speglad bild läggs till i katalogen. Lägg sedan till kommandoradssteget i arbetsflödet för **[!UICONTROL DAM Update Asset]**.
+1. Om du vill se om verktyget fungerar som det ska lägger du till en JPG-bild i arbetskatalogen och kör kommandot convert `<image-name>.jpg -flip <image-name>-flipped.jpg` på kommandoraden. En speglad bild läggs till i katalogen. Lägg sedan till kommandoradssteget i arbetsflödet för **[!UICONTROL DAM Update Asset]**.
 1. Gå till konsolen **[!UICONTROL Workflow]**.
-1. Redigera modellen **[!UICONTROL DAM Update Asset]** på fliken **[!UICONTROL Models]**.
+1. Redigera modellen **[!UICONTROL Models]** på fliken **[!UICONTROL DAM Update Asset]**.
 1. Ändra [!UICONTROL Arguments] för **[!UICONTROL Web enabled rendition]**-steget till: `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`.
 1. Spara arbetsflödet.
 
 Om du vill testa det ändrade arbetsflödet lägger du till en resurs i `/content/dam`.
 
-1. Hämta en valfri TIFF-bild i filsystemet. Byt namn på den till `myImage.tiff` och kopiera den till `/content/dam`, till exempel med hjälp av WebDAV.
+1. Hämta en TIFF-bild i filsystemet. Byt namn på den till `myImage.tiff` och kopiera den till `/content/dam`, till exempel med hjälp av WebDAV.
 1. Gå till konsolen **[!UICONTROL CQ5 DAM]**, till exempel `https://localhost:4502/libs/wcm/core/content/damadmin.html`.
 1. Öppna resursen **[!UICONTROL myImage.tiff]** och kontrollera att den vända bilden och de tre miniatyrbilderna har skapats.
 
@@ -514,7 +514,7 @@ Om till exempel [!DNL ImageMagick] är installerat på den disk som är värd f�
 
 `mime:image/gif,mime:image/tiff,tn:140:100,tn:48:48,tn:10:250,cmd:convert ${directory}/${filename} -flip ${directory}/${basename}.flipped.jpg`
 
-När arbetsflödet sedan körs gäller steget endast resurser som har `image/gif` eller `mime:image/tiff` som `mime-types`. Den skapar en vänd bild av originalet, konverterar den till JPG och skapar tre miniatyrbilder med måtten 140x100, 48x48 och 10x250.
+När arbetsflödet sedan körs gäller steget endast resurser som har `image/gif` eller `mime:image/tiff` som `mime-types`. Den skapar en vänd bild av originalet, konverterar det till JPG och skapar tre miniatyrbilder med måtten 140x100, 48x48 och 10x250.
 
 Använd följande [!UICONTROL Process Arguments] för att skapa de tre standardminiatyrbilderna med [!DNL ImageMagick]:
 

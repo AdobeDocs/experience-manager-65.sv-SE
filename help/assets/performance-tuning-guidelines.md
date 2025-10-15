@@ -7,7 +7,7 @@ role: Architect, Admin
 feature: Asset Management
 exl-id: 1d9388de-f601-42bf-885b-6a7c3236b97e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 0b90fdd13efc5408ef94ee1966f04a80810b515e
+source-git-commit: f8588ef353bd08b41202350072728d80ee51f565
 workflow-type: tm+mt
 source-wordcount: '2663'
 ht-degree: 0%
@@ -156,7 +156,7 @@ Om du till exempel har kört flera icke-tillfälliga arbetsflöden (som skapar a
 
 Som standard kör [!DNL Experience Manager] ett maximalt antal parallella jobb som är lika med antalet processorer på servern. Problemet med den här inställningen är att under perioder med hög belastning används alla processorer av [!UICONTROL DAM Update Asset] arbetsflöden, vilket gör att gränssnittets svarstid minskar och hindrar [!DNL Experience Manager] från att köra andra processer som skyddar serverns prestanda och stabilitet. Det är en god vana att ange det här värdet till hälften av de processorer som är tillgängliga på servern genom att utföra följande steg:
 
-1. Åtkomst till `https://[aem_server]:[port]/system/console/slingevent` för [!DNL Experience Manager] Author.
+1. Åtkomst till [!DNL Experience Manager] för `https://[aem_server]:[port]/system/console/slingevent` Author.
 
 1. Klicka på **[!UICONTROL Edit]** i varje arbetsflödeskö som är relevant för implementeringen, till exempel **[!UICONTROL Granite Transient Workflow Queue]**.
 
@@ -211,7 +211,7 @@ Dessutom anger du sökvägen till ImageMagick:s tillfälliga mapp i filen `confi
 
 >[!NOTE]
 >
->ImageMagick `policy.xml`- och `configure.xml`-filerna är tillgängliga på `/usr/lib64/ImageMagick-&#42;/config/` i stället för på `/etc/ImageMagick/`. Information om var konfigurationsfilerna finns i [dokumentationen för ImageMagick](https://www.imagemagick.org/script/resources.php) .
+>ImageMagick `policy.xml`- och `configure.xml`-filerna är tillgängliga på `/usr/lib64/ImageMagick-&#42;/config/` i stället för på `/etc/ImageMagick/`. Mer information om var konfigurationsfilerna finns i dokumentationen för ImageMagick (`https://www.imagemagick.org/script/resources.php`-webbplatsen).
 
 Om du använder [!DNL Experience Manager] på Adobe Managed Services (AMS) kan du kontakta Adobe kundsupport om du tänker bearbeta många stora PSD- eller PSB-filer. Samarbeta med en av Adobe kundsupport för att implementera de bästa metoderna för AMS-driftsättningen och för att välja de bästa möjliga verktygen och modellerna för Adobe egna format. [!DNL Experience Manager] kan inte bearbeta PSB-filer med hög upplösning som är större än 30000 x 23000 pixlar.
 
@@ -243,7 +243,7 @@ När du replikerar resurser till ett stort antal publiceringsinstanser, till exe
 
 ## Sökindex {#search-indexes}
 
-Installera [de senaste Service Packs](/help/release-notes/release-notes.md) och prestandarelaterade snabbkorrigeringar eftersom de ofta innehåller uppdateringar av systemindex. Se [tips för prestandajustering](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/assets/administer/performance-tuning-guidelines) för vissa indexoptimeringar.
+Installera [de senaste Service Packs](/help/release-notes/release-notes.md) och prestandarelaterade snabbkorrigeringar eftersom de ofta innehåller uppdateringar av systemindex. Se [tips för prestandajustering](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/administer/performance-tuning-guidelines) för vissa indexoptimeringar.
 
 Skapa anpassade index för frågor som du kör ofta. Mer information finns i metoden [för att analysera långsamma frågor](https://aemfaq.blogspot.com/2014/08/oak-query-log-file-analyzer-tool.html) och [skapa anpassade index](/help/sites-deploying/queries-and-indexing.md). Mer information om bästa praxis för frågor och index finns i [Bästa praxis för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 
@@ -258,7 +258,7 @@ Vissa optimeringar kan göras för Oak indexkonfigurationer som kan förbättra 
 
 Om dina användare inte behöver göra fulltextsökning av resurser, till exempel söka igenom text i PDF-dokument, kan du inaktivera det. Du kan förbättra indexets prestanda genom att inaktivera fulltextindexering. Så här inaktiverar du textrahering av [!DNL Apache Lucene]:
 
-1. Gå till [!UICONTROL Package Manager] i gränssnittet [!DNL Experience Manager].
+1. Gå till [!DNL Experience Manager] i gränssnittet [!UICONTROL Package Manager].
 1. Överför och installera det paket som finns på [disable_indexingbinarytextextraction-10.zip](assets/disable_indexingbinarytextextraction-10.zip).
 
 ### Gissa totalt {#guess-total}
