@@ -10,9 +10,9 @@ feature: Administering
 exl-id: dadde3ee-d60c-4b87-9af0-a12697148161
 solution: Experience Manager, Experience Manager Sites
 role: Admin
-source-git-commit: 3aa55b88f589749fb49d5ff46340b0912d490157
+source-git-commit: 5575628c54e2e588dfae4c34383af7d6d55ce859
 workflow-type: tm+mt
-source-wordcount: '2673'
+source-wordcount: '2680'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ ht-degree: 0%
 
 Tack vare kapaciteten för vänteläge i kallt läge för Tjärmikrokärnan kan en eller flera Adobe Experience Manager-instanser i vänteläge (AEM) ansluta till en primär instans. Synkroniseringsprocessen är bara ett sätt, vilket innebär att den bara utförs från den primära instansen till standby-instansen.
 
-Syftet med standby-instanserna är att garantera en live-datakopia av huvuddatabasen och se till att det går snabbt att växla utan dataförlust om mallsidan inte är tillgänglig av någon anledning.
+Syftet med standby-instanserna är att garantera en live-datakopia av huvuddatabasen och säkerställa en snabb växling utan dataförlust om den primära instansen inte är tillgänglig av någon anledning.
 
 Innehållet synkroniseras linjärt mellan den primära instansen och standby-instansen utan några integritetskontroller för att filer eller databaser är skadade. På grund av den här designen är standby-instanser exakta kopior av den primära instansen och kan inte bidra till att minska inkonsekvenser i primära instanser.
 
 >[!NOTE]
 >
->Funktionen Vänteläge i kallt format är avsedd att skydda scenarier där hög tillgänglighet krävs för **Författare** -instanser. I situationer där hög tillgänglighet krävs för **Publish**-instanser som använder Tjärmikrokärnan rekommenderar Adobe att du använder en publiceringsgrupp.
+>Funktionen Vänteläge i kallt format är avsedd att skydda scenarier där hög tillgänglighet krävs för **Författare** -instanser. I situationer där hög tillgänglighet krävs för **Publicera**-instanser med hjälp av Tjärmikrokärnan rekommenderar Adobe att du använder en publiceringsgrupp.
 >
 >Mer information om fler tillgängliga distributioner finns på sidan [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md).
 
@@ -43,7 +43,7 @@ Innehållet synkroniseras linjärt mellan den primära instansen och standby-ins
 
 ## Så här fungerar det {#how-it-works}
 
-På den primära AEM öppnas en TCP-port och lyssnar på inkommande meddelanden. För närvarande finns det två typer av meddelanden som slavarna skickar till mallsidan:
+På den primära AEM-instansen öppnas en TCP-port och lyssnar på inkommande meddelanden. För närvarande finns det två typer av meddelanden som vänteläge skickar till den primära:
 
 * ett meddelande som begär segment-ID för aktuellt huvud
 * ett meddelande som begär segmentdata med ett angivet ID
@@ -66,13 +66,13 @@ Dataflödet är utformat för att automatiskt upptäcka och hantera anslutnings-
 
 #### Prestanda {#performance}
 
-Om du aktiverar TonaMK Cold Standby på den primära instansen påverkas prestanda nästan inte. Den extra processorförbrukningen är låg och den extra hårddisk- och nätverks-I/O-funktionen bör inte ge upphov till prestandaproblem.
+Om du aktiverar TonaMK Cold Standby på den primära instansen påverkas prestanda nästan inte. Den extra CPU-förbrukningen är låg och den extra hårddisk- och nätverks-I/O-funktionen bör inte ge upphov till prestandaproblem.
 
-I vänteläge kan du förvänta dig hög processorförbrukning under synkroniseringsprocessen. Eftersom proceduren inte är flertrådig går det inte att öka hastigheten genom att använda flera kärnor. Om inga data ändras eller överförs finns det ingen mätbar aktivitet. Anslutningshastigheten varierar beroende på maskinvara och nätverksmiljö, men beror inte på storleken på databasen eller SSL-användningen. Tänk på detta när du beräknar den tid som krävs för en inledande synkronisering eller när mycket data har ändrats under tiden på den primära noden.
+I vänteläge kan du förvänta dig hög förbrukning av CPU under synkroniseringsprocessen. Eftersom proceduren inte är flertrådig går det inte att öka hastigheten genom att använda flera kärnor. Om inga data ändras eller överförs finns det ingen mätbar aktivitet. Anslutningshastigheten varierar beroende på maskinvara och nätverksmiljö, men beror inte på storleken på databasen eller SSL-användningen. Tänk på detta när du beräknar den tid som krävs för en inledande synkronisering eller när mycket data har ändrats under tiden på den primära noden.
 
 #### Dokumentskydd {#security}
 
-Om man utgår ifrån att alla instanser körs i samma säkerhetszon för intranätet minskar risken för säkerhetsöverträdelse avsevärt. Du kan dock lägga till ett extra säkerhetslager genom att aktivera SSL-anslutningar mellan slavarna och mallsidan. På så sätt minskar risken för att data äventyras av en man-in-the-middle.
+Om man utgår ifrån att alla instanser körs i samma säkerhetszon för intranätet minskar risken för säkerhetsöverträdelse avsevärt. Du kan dock lägga till ett extra säkerhetslager genom att aktivera SSL-anslutningar mellan standby och de primära instanserna. På så sätt minskar risken för att data äventyras av en man-in-the-middle.
 
 Du kan dessutom ange vilka standby-instanser som tillåts ansluta genom att begränsa IP-adressen för inkommande begäranden. Detta bör bidra till att garantera att ingen i intranätet kan kopiera databasen.
 
@@ -80,7 +80,7 @@ Du kan dessutom ange vilka standby-instanser som tillåts ansluta genom att begr
 >
 >Vi rekommenderar att en belastningsutjämnare läggs till mellan Dispatcher och de servrar som ingår i konfigurationen för vänteläge i kylformat. Belastningsutjämnaren ska konfigureras så att den endast dirigerar användartrafik till instansen **primär**. Detta är nödvändigt för att säkerställa enhetlighet och förhindra att innehåll kopieras i standby-instansen på andra sätt än med funktionen för vänteläge i Cold.
 
-## Skapa en AEM Stjärtöverläge i Cold {#creating-an-aem-tarmk-cold-standby-setup}
+## Skapa en väntelägesinställning för AEM tarMK {#creating-an-aem-tarmk-cold-standby-setup}
 
 >[!CAUTION]
 >
@@ -93,7 +93,7 @@ Du kan dessutom ange vilka standby-instanser som tillåts ansluta genom att begr
 
 Om du vill skapa ett kalliget TjärMK-vänteläge skapar du först standby-instanserna genom att utföra en kopia av hela installationsmappen för det primära till en ny plats. Du kan sedan starta varje instans med ett körningsläge som anger dess roll ( `primary` eller `standby`).
 
-Nedan visas proceduren som måste följas för att skapa en konfiguration med en master- och en standby-instans:
+Nedan visas proceduren som måste följas för att skapa en konfiguration med en primär och en standby-instans:
 
 1. Installera AEM.
 
@@ -218,7 +218,7 @@ Tjänsten kan även konfigureras via webbkonsolen genom att:
 >
 >Du kan när som helst kontrollera rollen för en instans genom att kontrollera om körningslägena **primär** eller **standby** finns i webbkonsolen för delningsinställningar.
 >
->Detta kan du göra genom att gå till *https://localhost:4502/system/console/status-slingsettings* och kontrollera raden **&quot;Körningslägen&quot;**.
+>Detta kan du göra genom att gå till *https://localhost:4502/system/console/status-slingssettings* och kontrollera raden **&quot;Run Modes&quot;** .
 
 ## Första synkroniseringen {#first-time-synchronization}
 
@@ -293,7 +293,7 @@ Följande OSGi-inställningar är tillgängliga för tjänsten Cold Standby:
 
 >[!NOTE]
 >
->Adobe rekommenderar att det primära ID:t och vänteläget har olika ID:n för databas så att de kan identifieras separat för tjänster som Avlastning.
+>Adobe rekommenderar att det primära ID:t och vänteläget har olika databas-ID:n för att de ska kunna identifieras separat för tjänster som Offloading.
 >
 >Det bästa sättet att se till att detta täcks är att ta bort *sling.id* i vänteläge och starta om instansen.
 
@@ -317,7 +317,7 @@ Om den primära instansen av någon anledning inte fungerar kan du ange att en a
    ```
 
 1. Lägg till den nya primära till belastningsutjämnaren.
-1. Skapa och starta en ny standby-instans. Mer information finns i proceduren ovan om att [skapa en AEM Styla standby-inställning förMK Cold &#x200B;](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup).
+1. Skapa och starta en ny standby-instans. Mer information finns i proceduren ovan om [Skapa en väntelägesinställning för AEM tarMK ](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup).
 
 ## Använda snabbkorrigeringar i en konfiguration för vänteläge i kallt format {#applying-hotfixes-to-a-cold-standby-setup}
 
@@ -325,18 +325,18 @@ Det rekommenderade sättet att tillämpa snabbkorrigeringar i ett kallt väntel�
 
 Du kan göra detta genom att följa stegen nedan:
 
-1. Stoppa synkroniseringsprocessen på den kalla standby-instansen genom att gå till JMX-konsolen och använda **org.apache.jackrabbit.oak: Status (&quot;Standby&quot;)**&#x200B;bean. Mer information om hur du gör detta finns i avsnittet [Övervakning](#monitoring).
+1. Stoppa synkroniseringsprocessen på den kalla standby-instansen genom att gå till JMX-konsolen och använda **org.apache.jackrabbit.oak: Status (&quot;Standby&quot;)**bean. Mer information om hur du gör detta finns i avsnittet [Övervakning](#monitoring).
 1. Stoppa kallstartsinstansen.
 1. Installera snabbkorrigeringen på den primära instansen. Mer information om hur du installerar en snabbkorrigering finns i [Arbeta med paket](/help/sites-administering/package-manager.md).
 1. Testa instansen efter problem efter installationen.
 1. Ta bort instansen av det kalla vänteläget genom att ta bort installationsmappen.
 1. Stoppa den primära instansen och klona den genom att utföra en kopia av hela installationsmappen i filsystemet till platsen för det kalla vänteläget.
-1. Konfigurera om den nya klonen så att den fungerar som en instans i kallt vänteläge. Se [Skapa en AEM väntelägesinställning för TARMK Cold.](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)
+1. Konfigurera om den nya klonen så att den fungerar som en instans i kallt vänteläge. Se [Skapa en väntelägesinställning för AEM tarMK Cold.](/help/sites-deploying/tarmk-cold-standby.md#creating-an-aem-tarmk-cold-standby-setup)
 1. Starta både den primära instansen och kallstartsinstansen.
 
 ## Övervakning {#monitoring}
 
-Funktionen visar information med JMX eller MBeans. Detta gör att du kan inspektera det aktuella läget för standby och master med [JMX-konsolen](/help/sites-administering/jmx-console.md). Informationen finns i MBean på `type org.apache.jackrabbit.oak:type="Standby"`med namnet `Status`.
+Funktionen visar information med JMX eller MBeans. Detta gör att du kan inspektera det aktuella läget för standby och primär med [JMX-konsolen](/help/sites-administering/jmx-console.md). Informationen finns i MBean på `type org.apache.jackrabbit.oak:type="Standby"`med namnet `Status`.
 
 **Standby**
 
@@ -365,7 +365,7 @@ När du observerar den primära informationen visas viss allmän information med
 
 * `Mode:` visar alltid värdet `primary`.
 
-Dessutom kan information för upp till tio klienter (väntelägesinstanser) som är anslutna till mallen hämtas. MBean-ID:t är instansens UUID. Det finns inga anropbara metoder för dessa MBeans, men några användbara skrivskyddade attribut:
+Dessutom går det att hämta information för upp till tio klienter (standby-instanser) som är anslutna till den primära. MBean-ID:t är instansens UUID. Det finns inga anropbara metoder för dessa MBeans, men några användbara skrivskyddade attribut:
 
 * `Name:` klientens ID.
 * `LastSeenTimestamp:` tidsstämpeln för den senaste begäran i en textbeteckning.
@@ -391,7 +391,7 @@ Adobe rekommenderar regelbundet underhåll för att förhindra alltför stor dat
 
 1. Stoppa standbyprocessen i standby-instansen genom att gå till JMX-konsolen och använda **org.apache.jackrabbit.oak: Status (&quot;Standby&quot;)** -böna. Mer information om hur du gör detta finns i avsnittet ovan [Övervakning](/help/sites-deploying/tarmk-cold-standby.md#monitoring).
 
-1. Stoppa den primära AEM.
+1. Stoppa AEM primära instans.
 1. Kör Oak-komprimeringsverktyget på den primära instansen. Mer information finns i [Underhålla databasen](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
 1. Starta den primära instansen.
 1. Starta standby-processen i standby-instansen med samma JMX-böna som i det första steget.
