@@ -50,7 +50,7 @@ Funktionsväxlar för tidiga användare eller nya funktioner kan konfigureras vi
 2. Navigera till `http://<author-instance-url>:portnumber/system/console/configMgr`.
 3. Sök efter **Adobe Granite Dynamic Toggle Provider** i Configuration Manager.
 4. Klicka på ikonen ![pennikon](assets/illustratorcc_penciltool_cur_edit_2_17.png).
-5. Klicka på [!UICONTROL Enabled Toggles]pennikonen![ i avsnittet ](assets/aem6forms_add.png).
+5. Klicka på [!UICONTROL Enabled Toggles]pennikonen![&#x200B; i avsnittet &#x200B;](assets/aem6forms_add.png).
 6. Lägg till alternativknapps-ID för funktionen enligt bilden nedan.
    ![Lägg till växlingsknapp](assets/add_toggle_number_forms.png)
 
@@ -68,7 +68,7 @@ Följ stegen nedan för att inaktivera funktionsknapparna för funktioner vars v
 2. Navigera till `http://<author-instance-url>:portnumber/system/console/configMgr`.
 3. Sök efter **Adobe Granite Dynamic Toggle Provider** i Configuration Manager.
 4. Klicka på ikonen ![pennikon](assets/illustratorcc_penciltool_cur_edit_2_17.png).
-5. Klicka på [!UICONTROL Disabled Toggles]pennikonen![ i avsnittet ](assets/aem6forms_add.png).
+5. Klicka på [!UICONTROL Disabled Toggles]pennikonen![&#x200B; i avsnittet &#x200B;](assets/aem6forms_add.png).
 6. Lägg till växlingsnumret för den funktion som ska inaktiveras.
    ![Ta bort växlingsknapp](assets/remove_toggle_feature_forms.png)
 7. Klicka på Spara.
