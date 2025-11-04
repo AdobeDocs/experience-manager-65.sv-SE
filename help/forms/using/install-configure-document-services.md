@@ -6,9 +6,9 @@ role: Admin, Developer
 exl-id: 5d48e987-16c2-434b-8039-c82181d2e028
 solution: Experience Manager, Experience Manager Forms
 feature: Interactive Communication
-source-git-commit: 62baf682b75823f52f968a70960aff2388d49cad
+source-git-commit: c6d38c682dc45e3dcebef194b3b80510ab10f9e2
 workflow-type: tm+mt
-source-wordcount: '9928'
+source-wordcount: '9929'
 ht-degree: 0%
 
 ---
@@ -184,7 +184,7 @@ Om du använder ett UNIX-baserat operativsystem installerar du följande 32-bita
    * libc.so.6
    * ld-linux.so.2
    * libexpat.so.1
-* (Endast PDF Generator) Om du vill aktivera WebKit-vägen i RHEL 8- eller RHEL 9-inställningarna kanske 32-bitars `nspr`-biblioteket inte är tillgängligt som standard. Installera det om det inte finns.
+* (Endast PDF Generator) Om du vill aktivera WebKit-vägen på RHEL 8- eller RHEL 9-inställningarna, SLES15, kanske 32-bitars `nspr`-biblioteket inte är tillgängligt som standard. Installera det om det inte finns.
 
 * (Endast PDF Generator) Om WebToPDF-konverteringen misslyckas på Unix®-servern med följande fel:
 
@@ -210,7 +210,7 @@ Om du ska använda PDF Generator-tjänsten för att konvertera filformat som Mic
 >* Adobe Acrobat, Microsoft® Word, Excel och PowerPoint finns endast för Microsoft® Windows. Om du använder det UNIX-baserade operativsystemet måste du installera OpenOffice för att konvertera RTF-filer och Microsoft® Office-filer som stöds till PDF-dokument.
 >* Stäng alla dialogrutor som visas när du har installerat Adobe Acrobat och tredjepartsprogram för alla användare som har konfigurerats att använda tjänsten PDF Generator.
 >* Starta alla installerade program minst en gång. Stäng alla dialogrutor för alla användare som har konfigurerats att använda PDF Generator-tjänsten.
->* [Kontrollera förfallodatumet för dina Adobe Acrobat-serienummer](https://helpx.adobe.com/se/enterprise/kb/volume-license-expiration-check.html) och ange ett datum för att uppdatera licensen eller [migrera ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) baserat på förfallodatumet.
+>* [Kontrollera förfallodatumet för dina Adobe Acrobat-serienummer](https://helpx.adobe.com/enterprise/kb/volume-license-expiration-check.html) och ange ett datum för att uppdatera licensen eller [migrera ditt serienummer](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/licensing.html#migrating-your-serial-number) baserat på förfallodatumet.
 
 ### Installera Adobe Acrobat Pro DC
 
@@ -905,7 +905,7 @@ Följ de här stegen:
 >
 >Du måste inaktivera skyddat läge för automatiseringsscenarier på serversidan, t.ex. AEM Forms PDF Generator. Den här inställningen bör endast ändras i dedikerade servermiljöer, inte i slutanvändarnas datorer.
 
-Mer information finns i [Adobe-dokumentation om skyddat läge](https://helpx.adobe.com/se/acrobat/kb/protected-mode-troubleshooting-reader.html).
+Mer information finns i [Adobe-dokumentation om skyddat läge](https://helpx.adobe.com/acrobat/kb/protected-mode-troubleshooting-reader.html).
 
 
 
@@ -1088,10 +1088,10 @@ AEM Forms tilläggspaket är ett program som distribueras till AEM. Paketet inne
    1. Välj **[!UICONTROL Forms]** i listrutan **[!UICONTROL Solution]**.
    2. Välj version och typ för paketet. Du kan också använda alternativet **[!UICONTROL Search Downloads]** för att filtrera resultaten.
 1. Välj det paketnamn som gäller för ditt operativsystem, välj **[!UICONTROL Accept EULA Terms]** och välj **[!UICONTROL Download]**.
-1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html?lang=sv-SE) och klicka på **[!UICONTROL Upload Package]** för att överföra paketet.
+1. Öppna [Pakethanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/package-manager.html) och klicka på **[!UICONTROL Upload Package]** för att överföra paketet.
 1. Markera paketet och klicka på **[!UICONTROL Install]**.
 
-   Du kan även hämta paketet via den direktlänk som visas i artikeln [AEM Forms-utgåvor](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE).
+   Du kan även hämta paketet via den direktlänk som visas i artikeln [AEM Forms-utgåvor](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
 
 1. När paketet har installerats uppmanas du att starta om AEM-instansen. **Stoppa inte servern omedelbart.** Innan du stoppar AEM Forms Server väntar du tills ServiceEvent REGISTERED- och ServiceEvent UNREGISTERED-meddelandena inte längre visas i filen `[AEM-Installation-Directory]/crx-quickstart/logs/error`.log och loggen är stabil.
 
@@ -1138,7 +1138,7 @@ Det krävs ett lokalt användarkonto för att köra PDF Generator-tjänsten. Anv
 
 ### Konfigurera timeout-inställningar {#configure-the-time-out-settings}
 
-1. Leta reda på och öppna tjänsten [&#x200B; i &#x200B;](http://localhost:4502/system/console/configMgr)AEM konfigurationshanterare **[!UICONTROL Jacorb ORB Provider]**.
+1. Leta reda på och öppna tjänsten [ i ](http://localhost:4502/system/console/configMgr)AEM konfigurationshanterare **[!UICONTROL Jacorb ORB Provider]**.
 
    Lägg till följande i fältet **[!UICONTROL Custom Properties.name]** och klicka på **[!UICONTROL Save]**. Tidsgränsen för väntande svar (kallas även CORBA-klienttimeout) anges till 600 sekunder.
 
@@ -1191,7 +1191,7 @@ I Microsoft® Windows använder PDF Generator-tjänsten Adobe Acrobat för att k
 
       Acrobat är konfigurerat att köras med PDF Generator-tjänsten.
 
-1. Kör [Systemberedskapsverktyget &#x200B;](#SRT) för att validera Acrobat-installationen.
+1. Kör [Systemberedskapsverktyget ](#SRT) för att validera Acrobat-installationen.
 
 
 ### (Endast Windows) Konfigurera primär väg för konvertering från HTML till PDF {#configure-primary-route-for-html-to-pdf-conversion-windows-only}
@@ -1379,7 +1379,7 @@ Kontrollera att [Systemberedskapsverktyget](#SRT) inte rapporterar något fel in
 
 * Kontrollera att 32-bitars [version](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av Microsoft Office som stöds är installerad och att dialogrutorna för att öppna är avbrutna för alla program.
 * Se till att en PDF Generator-användare läggs till i PDF konfigurationsgränssnitt.
-* Kontrollera att PDF Generator-användaren är medlem i en administratörsgrupp och att privilegiet [Ersätt en token &#x200B;](#grant-the-replace-a-process-level-token-privilege) för processnivå har angetts för användaren.
+* Kontrollera att PDF Generator-användaren är medlem i en administratörsgrupp och att privilegiet [Ersätt en token ](#grant-the-replace-a-process-level-token-privilege) för processnivå har angetts för användaren.
 * Se till att användaren är konfigurerad i PDF Generator UI och utför följande åtgärder:
    1. Logga in på Microsoft® Windows med PDF Generator-användare.
    1. Öppna Microsoft® Office- eller OpenOffice-program och avbryt alla dialogrutor.
@@ -1393,12 +1393,12 @@ Kontrollera att [Systemberedskapsverktyget](#SRT) inte rapporterar något fel in
 
 * Installera den [version](aem-forms-jee-supported-platforms.md#software-support-for-pdf-generator) av OpenOffice som stöds. AEM Forms stöder både 32- och 64-bitarsversioner. När du har installerat öppnar du alla OpenOffice-program, avbryter alla dialogrutor och stänger programmen. Öppna programmen igen och se till att ingen dialogruta visas när du öppnar ett OpenOffice-program.
 
-* Skapa en miljövariabel `OpenOffice_PATH` och ställ in den så att den pekar på OpenOffice-installationen anges i [&#x200B; console](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) - eller dt-profilen (enhetsträd).
+* Skapa en miljövariabel `OpenOffice_PATH` och ställ in den så att den pekar på OpenOffice-installationen anges i [ console](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/) - eller dt-profilen (enhetsträd).
 * Om det uppstår problem när du installerar OpenOffice kontrollerar du att [32-bitars bibliotek](#extrarequirements) som krävs för OpenOffice-installation är tillgängliga.
 
 +++
 
-+++HTML till PDF konverteringsproblem
++++Konverteringsproblem mellan HTML och PDF
 
 * Se till att teckensnittskataloger läggs till i PDF Generator config UI.
 
@@ -1459,7 +1459,7 @@ Kontrollera att [Systemberedskapsverktyget](#SRT) inte rapporterar något fel in
 
 +++
 -->
-+++Fel vid automatiseringstest
++++Fel vid automatiseringstestning
 
 * För Microsoft® Office och OpenOffice utför du minst en konvertering manuellt (som varje användare) för att säkerställa att ingen dialogruta öppnas under konverteringen. Om någon dialogruta visas, stänger du den. Ingen sådan dialogruta ska visas vid automatisk konvertering.
 
