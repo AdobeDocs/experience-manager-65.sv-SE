@@ -14,7 +14,7 @@ ht-degree: 35%
 
 # Användarhandbok om AEM 6.5-hantering
 
-Upptäck hur du kan hantera ett AEM projekt utan problem, med stöd från nyckelresurser, tillsammans med bästa praxis och riktlinjer.
+Upptäck hur du kan hantera ett AEM-projekt utan problem, med stöd från nyckelresurser, tillsammans med bästa praxis och riktlinjer.
 
 ## Viktiga artiklar
 

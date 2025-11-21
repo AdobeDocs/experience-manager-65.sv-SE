@@ -20,7 +20,7 @@ ht-degree: 3%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html?lang=sv-SE) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/forms-overview/home.html) |
 | AEM 6.5 | Den här artikeln |
 
 Information om de senaste funktionerna och förbättringarna i AEM Forms finns i [Nyheter i AEM Forms](../../forms/using/whats-new.md).
@@ -31,21 +31,21 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 
 AEM Forms kombinerar framtagning, hantering och publicering av blanketter med funktioner för korrespondenshantering, dokumentsäkerhet och integrerad analys för att skapa engagerande helhetsupplevelser. AEM Forms är utformat för att fungera i både webb- och mobilkanaler och kan effektivt integreras i era affärsprocesser, minska antalet pappersprocesser och fel samtidigt som effektiviteten förbättras.
 
-I stora företag skapas formulär ofta en gång och återanvänds genom att man kopierar till ett innehållshanteringssystem. Det kan vara en stor utmaning att hålla en stor databas med blanketter uppdaterad och kunna upptäckas. AEM har en anpassningsbar Forms Portal som ser till att kunderna hittar och har tillgång till formulär de behöver via både webben och mobila kanaler.
+I stora företag skapas formulär ofta en gång och återanvänds genom att man kopierar till ett innehållshanteringssystem. Det kan vara en stor utmaning att hålla en stor databas med blanketter uppdaterad och kunna upptäckas. AEM har en anpassningsbar Forms Portal som ser till att kunderna hittar och har tillgång till de formulär de behöver via både webben och mobila kanaler.
 
 AEM Forms har verktyg för blanketthantering som inte bara gör det möjligt att hantera adaptiva formulär, utan även XFA-formulär, PDF forms och relaterade resurser. Mer information finns i [Introduktion till formulärhantering](../../forms/using/introduction-managing-forms.md).
 
 >[!NOTE]
 >
->Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=sv-SE), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
+>Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
 
-![AEM formulärfunktioner](do-not-localize/4th-draft-updated.gif)
+![AEM-formulärfunktioner](do-not-localize/4th-draft-updated.gif)
 
 ### Viktiga funktioner {#key-capabilities}
 
 Sammanfattningsvis har AEM Forms kraftfulla funktioner för blanketthantering, som följande, som minskar antalet manuella processer och ger nöjdare kunder.
 
-* En centraliserad Forms-portal för utformning och driftsättning av dynamiska blanketter som PDF, HTML 5 och anpassningsbara blanketter
+* En central Forms-portal för utformning och driftsättning av dynamiska blanketter, som PDF, HTML5 och adaptiva blanketter
 * Ett lättanvänt grafiskt användargränssnitt med vilket man enkelt kan importera, hantera, förhandsgranska och publicera blanketter
 * En responsiv formulärkatalog med kraftfulla sökfunktioner med nyckelord, taggar och metadata
 * Dynamisk identifiering av en användares enhet och plats för att återge formuläret på rätt sätt via webben och mobila kanaler
@@ -53,11 +53,11 @@ Sammanfattningsvis har AEM Forms kraftfulla funktioner för blanketthantering, s
 * Integrering med Adobe Document Cloud eSign-tjänster eller Scribble för att elektroniskt signera dokument som innehåller konfidentiell information
 * Automatiserade funktioner för blankettpublicering och möjlighet att leverera skräddarsydd kommunikation i rätt tid via flera kanaler
 
-## AEM formulärtyper {#aem-form-types}
+## AEM-formulärtyper {#aem-form-types}
 
 Med AEM Forms kan du utöka nya och befintliga formulär för att skapa:
 
-* pixelperfekt, paginerad HTML och PDF forms som ser nästan ut som papper, eller
+* pixelperfekt, paginerad HTML och PDF forms som ser ut nästan som papper, eller
 * anpassningsbara formulär som automatiskt återges för användarens enhet och webbläsare.
 
 **PDF forms**
@@ -66,11 +66,11 @@ PDF forms kan fyllas i offline, sparas lokalt och formulärdata skickas nästa g
 
 **HTML-formulär**
 
-Webbläsarbaserade HTML5-formulär kan visas både på mobila enheter och i webbläsare på stationära datorer. Du kan signera HTML-formulär elektroniskt med Scribble- eller eSign-tjänster.
+Webbläsarbaserade HTML5-formulär kan visas både på mobila enheter och i webbläsare på datorer. Du kan signera HTML-formulär elektroniskt med Scribble- eller eSign-tjänster.
 
 **Anpassningsbara formulär**
 
-Anpassningsbara formulär kan dynamiskt anpassa sig till användarsvar genom att lägga till eller ta bort fält eller avsnitt efter behov. AEM kan du återanvända Adobe XML-formulärmallar för att skapa anpassningsbara formulär.
+Anpassningsbara formulär kan dynamiskt anpassa sig till användarsvar genom att lägga till eller ta bort fält eller avsnitt efter behov. Med AEM kan du återanvända Adobe XML-formulärmallar för att skapa anpassningsbara formulär.
 
 ### Funktioner som stöds {#supported-features}
 
@@ -83,7 +83,7 @@ Alla formulärtyper stöder följande funktioner:
 * Utformning och kontroll av tillgänglighet
 * Möjlighet att spara blanketter på serversidan
 * Stöd för bifogade filer
-* Integrering med HTML Workspace för datainhämtning
+* Integrering med HTML Workspace for Data Capture
 
 ## Datainsamling offline {#offline-data-collection}
 
@@ -95,11 +95,11 @@ Att samla in data offline och synkronisera dem nästa gång du returnerar online
 
 **Fördelar med att använda Forms Workspace för datainsamling offline**
 
-* Lättanvänt program för arbetsytan i HTML för att utföra uppgifter och spåra dem
+* Lättanvänt program för HTML arbetsyta för uppdragstilldelning och spårning
 * Arbetsflödesdesignmiljö med dra-och-släpp
 * ECM-kontakter (Enterprise Content Management)
 * Stöd för öppna standarder, inklusive XML och SOAP för att koppla blankettdata till affärssystemen
-* Enkel HTML-rapportering övervakar eftersläpningar, arbetsköer och KPI (Key Performance Indicators)
+* Körklar HTML rapporterar eftersläpningar, arbetsköer och KPI (Key Performance Indicators)
 * Anpassningsbara instrumentpaneler för realtidsinsikter i affärsverksamheten
 * API för att ansluta till rapporteringsverktyg från tredje part
 

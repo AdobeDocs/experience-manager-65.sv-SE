@@ -18,14 +18,14 @@ ht-degree: 3%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/overview) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/overview) |
 | AEM 6.5 | Den här artikeln |
 
-AEM [!DNL Assets] är ett DAM-verktyg (Digital Asset Management) som är en del av [!DNL Experience Manager]-plattformen och gör att ditt företag kan hantera och distribuera digitala resurser. Användare i en hel organisation kan hantera, lagra och få tillgång till många typer av digitalt material som bilder, videor, dokument, ljudklipp, 3D-filer och multimedia för användning på webben, i tryck och för digital distribution.
+AEM [!DNL Assets] är ett DAM-verktyg (Digital Asset Management) som är en del av [!DNL Experience Manager] -plattformen och gör att ditt företag kan hantera och distribuera digitala resurser. Användare i en hel organisation kan hantera, lagra och få tillgång till många typer av digitalt material som bilder, videor, dokument, ljudklipp, 3D-filer och multimedia för användning på webben, i tryck och för digital distribution.
 
 ## Vad är Digital Asset Management? {#what-is-digital-asset-management}
 
-[!DNL Assets] ger företagsövergripande delning och distribution av en organisations viktigaste digitala resurser. Användare i en hel organisation kan lagra, hantera och komma åt digitala resurser som bilder, grafik, ljud, video och dokument via ett webbgränssnitt (eller en CIF eller WebDAV-mapp).
+[!DNL Assets] ger företagsövergripande delning och distribution av en organisations viktigaste digitala resurser. Användare i en hel organisation kan lagra, hantera och komma åt digitala resurser som bilder, grafik, ljud, video och dokument via ett webbgränssnitt (eller en CIFS- eller WebDAV-mapp).
 
 [!DNL Assets]-funktionen i [!DNL Experience Manager] gör följande:
 
@@ -33,7 +33,7 @@ AEM [!DNL Assets] är ett DAM-verktyg (Digital Asset Management) som är en del 
 * Hantera resurser genom att gruppera dem efter taggar, ljusbord eller stjärnor (dina favoriter). Lägg till anteckningar i resurser.
 * Sök efter resurser genom att söka efter filnamn, den fullständiga texten i dokument och genom att söka efter datum, dokumenttyp och taggar.
 * Lägg till eller redigera metadatainformation för resurser. Metadata versionshanteras automatiskt tillsammans med motsvarande resurs. Du kan importera eller exportera metadata för resurser.
-* Utför bildredigeringsfunktioner som skalning och lägga till bildfilter. Importera och exportera flera digitala resurser samtidigt i en WebDAV- eller CIF-mapp.
+* Utför bildredigeringsfunktioner som skalning och lägga till bildfilter. Importera och exportera flera digitala resurser samtidigt med en WebDAV- eller CIFS-mapp.
 * Använd arbetsflöden och meddelanden för att möjliggöra gemensam bearbetning och hämtning av alla typer av resurser och hantera åtkomsträttigheter till resurser.
 
 ### [!DNL Experience Manager Assets] är integrerat med [!DNL Experience Manager Sites] {#aem-assets-fully-integrated-in-cq-wcm}
@@ -94,7 +94,7 @@ Du kan även använda arbetsflöden manuellt. En lista med standardarbetsflöden
 
 ## [!DNL Experience Manager Assets] och [!DNL Media Library] {#cq-dam-vs-cq-medialibrary}
 
-Mer information om skillnaderna finns i [Assets och Media Library](medialibrary.md).
+Mer information om skillnaderna finns i [Assets och mediebibliotek](medialibrary.md).
 
 >[!MORELIKETHIS]
 >

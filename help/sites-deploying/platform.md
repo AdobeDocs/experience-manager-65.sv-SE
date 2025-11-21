@@ -1,5 +1,5 @@
 ---
-title: Introduktion till AEM
+title: Introduktion till AEM Platform
 description: Lär dig mer om AEM-plattformen och dess viktigaste komponenter, inklusive installation och driftsättning av Adobe Experience Manager 6.5 samt om dess arkitektur, inklusive driftsättning av molnet i Adobe Managed Services.
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -18,9 +18,9 @@ ht-degree: 4%
 ---
 
 
-# Introduktion till AEM{#introduction-to-the-aem-platform}
+# Introduktion till AEM Platform{#introduction-to-the-aem-platform}
 
-Den AEM plattformen i AEM 6 bygger på Apache Jackrabbit Oak.
+AEM i AEM 6 bygger på Apache Jackrabbit Oak.
 
 Apache Jackrabbit Oak är ett försök att implementera ett skalbart och prestandabaserat hierarkiskt innehållsarkiv som kan användas som grund för moderna webbplatser i världsklass och andra krävande innehållsprogram.
 
@@ -116,13 +116,13 @@ MongoDB-lagring lägger till data i ett dokument vid varje ändring. Data tas do
 
 Data om aktiva och inaktiva klusternoder sparas i databasen för att underlätta klusteråtgärder.
 
-En typisk konfiguration AEM kluster med MongoDB-lagring:
+En typisk AEM-klusterkonfiguration med MongoDB-lagring:
 
 ![chlimage_1-85](assets/chlimage_1-85.png)
 
 ## Vad är annorlunda än Jackrabbit 2? {#what-is-different-from-jackrabbit}
 
-Eftersom Oak är bakåtkompatibelt med JCR 1.0-standarden sker nästan inga förändringar på användarnivå. Det finns dock vissa märkbara skillnader som du måste ta hänsyn till när du konfigurerar en Oak-baserad AEM:
+Eftersom Oak är bakåtkompatibelt med JCR 1.0-standarden sker nästan inga förändringar på användarnivå. Det finns dock vissa märkbara skillnader som du måste ta hänsyn till när du konfigurerar en Oak-baserad AEM-installation:
 
 * Oak skapar inte index automatiskt. Därför måste anpassade index skapas vid behov.
 * Till skillnad från Jackrabbit 2, där sessionerna alltid återspeglar databasens senaste status, visar Oak en session en stabil vy av databasen från den tidpunkt då sessionen skapades. Orsaken är den MVCC-modell som Oak baseras på.
@@ -130,7 +130,7 @@ Eftersom Oak är bakåtkompatibelt med JCR 1.0-standarden sker nästan inga för
 
 ## Annan plattformsrelaterad dokumentation {#other-platform-related-documentation}
 
-Mer information om den AEM plattformen finns i följande artiklar:
+Mer information om AEM finns i följande artiklar:
 
 * [Konfigurera nodarkiv och datalager i AEM 6](/help/sites-deploying/data-store-config.md)
 * [Oak Queries and Indexing](/help/sites-deploying/queries-and-indexing.md)

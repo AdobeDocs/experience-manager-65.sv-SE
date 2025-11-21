@@ -16,7 +16,7 @@ ht-degree: 2%
 
 # Innehåll och Commerce {#content-commerce}
 
-Med Adobe Experience Manager innehåll och e-handel kan varumärken skalas och utvecklas snabbare för att särskilja handelsupplevelser och fånga upp ökade webbutgifter. AEM Content och Commerce kombinerar de engagerande, flerkanaliga och personaliserade upplevelserna i Experience Manager med ett obegränsat antal e-handelslösningar för att ge alla delar av kundresan olika upplevelser, minska time to value och öka konverteringsgraden.
+Med Adobe Experience Manager innehåll och e-handel kan varumärken skalas och utvecklas snabbare för att särskilja handelsupplevelser och fånga upp ökade webbutgifter. AEM Content och Commerce kombinerar de engagerande, flerkanaliga och personaliserade upplevelserna i Experience Manager med valfritt antal e-handelslösningar för att ge alla delar av kundresan olika upplevelser, minska time to value och öka konverteringsgraden.
 
 ## Hur innehåll och Commerce hjälper kunderna att lyckas
 
@@ -30,7 +30,7 @@ Varumärken kan integrera Experience Manager med Adobe Commerce, en del av Adobe
 * Berika och differentiera upplevelser för kunderna
 * Effektivisera framtagningen av e-handelsdata
 
-## Introduktion AEM Commerce integration framework (CIF) {#cif-intro}
+## Nu kommer AEM Commerce integration framework (CIF) {#cif-intro}
 
 Eftersom dessa projekt måste ta itu med komplexiteten med att integrera en handelslösning. En handelslösning kan vara allt från en kommersiell lösning som Adobe Commerce till en uppsättning anpassade e-handelstjänster. Integrationen är mycket beroende av användningsfall och ekosystem. Den finns oftast på olika ställen och har många olika varianter:
 
@@ -38,33 +38,33 @@ Eftersom dessa projekt måste ta itu med komplexiteten med att integrera en hand
 * Företag måste hantera produktinnehåll med sin egen livscykel på ett effektivt och flerkanaligt sätt
 * Bygga komplexa och personaliserade kundresor för olika chefer
 * Möjlighet att snabbt anpassa och förnya på baksidan och framsidan
-* En skalbar och stabil E2E-infrastruktur som är byggd för bästa prestanda (Flash, Black Friday, ...). Detta inkluderar enhetlig sökning och cachehantering.
+* En skalbar och stabil E2E-infrastruktur som är byggd för bästa prestanda (Flash-försäljning, Black Friday, ...). Detta inkluderar enhetlig sökning och cachehantering.
 
-Denna komplexitet öppnar dörren till potentiella felpunkter, ökad ägandekostnad, förseningar och minskad värdeutveckling. Dessa orsaker har lett till utvecklingen av Commerce integrationa frameworken (CIF) som är ett tillägg för Experience Manager. CIF utökar Experience Manager med e-handelsfunktioner och standardiserar integreringen med en e-handelsmotor. Resultatet är en framtidssäker, stabil och skalbar lösning med lägre total ägandekostnad. Den ger teknikinnovation och affärsinnovation med smidiga verktyg och smidigt integrerade funktioner som bygger övertygande handelsupplevelser.
+Denna komplexitet öppnar dörren till potentiella felpunkter, ökad ägandekostnad, förseningar och minskad värdeutveckling. Dessa orsaker har lett till utvecklingen av Commerce integration framework (CIF), som är ett tillägg för Experience Manager. CIF utökar Experience Manager med e-handelsfunktioner och standardiserar integreringen med en e-handelsmotor. Resultatet är en framtidssäker, stabil och skalbar lösning med lägre total ägandekostnad. Den ger teknikinnovation och affärsinnovation med smidiga verktyg och smidigt integrerade funktioner som bygger övertygande handelsupplevelser.
 
 ![CIF Elements](./assets/CIF/CIF_Overview.png)
 
-## CIF har stött kunder sedan 2013
+## CIF har lyckats stödja kunder sedan 2013
 
 Med över 200 kunder har CIF etablerat sig som en framgångsrik ingrediens i ett framgångsrikt innehålls- och handelsprojekt. Detta ger värde för IT och företag både idag och i framtiden. I de senaste kundprojekten beskrivs CIF som en&quot;fantastisk accelerator och en enorm tidsbesparing med mycket värde&quot;.
 
-## CIF {#cif-benefits}
+## Fördelar med CIF {#cif-benefits}
 
-CIF tillhandahåller färdiga e-handelskomponenter som minskar behovet av anpassad kod och snabbar upp time-to-market för varumärken. Alla huvudkomponenter är integrerade med Adobe datalager på klientsidan för att ge bättre överblick över kundprofiler, som den enhetliga profilen. Den här profilen fångar i detalj en besökares beteende, som kan användas för att förutse och personalisera kundresan i realtid.
+CIF har färdiga affärskomponenter som minskar behovet av anpassad kod och snabbar upp time-to-market för varumärken. Alla kärnkomponenter är direkt integrerade med Adobe datalager på klientsidan för att utöka kundprofiler, till exempel den enhetliga profilen. Den här profilen fångar i detalj en besökares beteende, som kan användas för att förutse och personalisera kundresan i realtid.
 
-Tillägget CIF ger produktkontext i Experience Manager och innehåller redigeringsverktyg som produktkonsol och produkt-/kategoriväljare som ger marknadsföraren möjlighet att skapa och leverera köpbara upplevelser i Experience Manager utan att vara beroende av utvecklaren. Fördelar:
+CIF lägger in produktkontext i Experience Manager och innehåller redigeringsverktyg som produktkonsol och produkt-/kategoriväljare som ger marknadsföraren möjlighet att skapa och leverera köpbara upplevelser i Experience Manager utan att vara beroende av utvecklaren. Fördelar:
 
 ### Erfarenheter
 
-Kraftfulla CIF i AEM gör det möjligt för innehållsskapare att snabbt skapa komplexa och personaliserade e-handelsupplevelser på ett skalbart och oberoende sätt för att utnyttja affärsmöjligheter.
+Med de kraftfulla CIF-verktygen i AEM kan innehållsskapare snabbt skapa komplexa och personaliserade e-handelsupplevelser på ett skalbart och oberoende sätt för att utnyttja affärsmöjligheter.
 
 ![CIF Elements](./assets/CIF/CIF_Product_Experience_Management.png)
 
 ### Tid till värde (TTV)
 
-Snabbar upp projektutvecklingen med [AEM Core Components](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) och integreringsmönster för PWA (Headless Content and Commerce).
+Snabbar upp projektutvecklingen med [AEM Core Components](https://www.aemcomponents.dev/), [AEM Venia reference storefront](https://github.com/adobe/aem-cif-guides-venia), [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) och integreringsmönster för PWA (Headless Content and Commerce).
 
-CIF har tagits fram för kontinuerlig innovation med ett kontinuerligt uppdaterat tillägg som ger kunden tillgång till nya och förbättrade funktioner.
+CIF är utvecklat för kontinuerlig innovation med ett kontinuerligt uppdaterat tillägg som ger kunden tillgång till nya och förbättrade funktioner.
 
 ### Integreringar
 
