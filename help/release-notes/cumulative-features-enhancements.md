@@ -43,7 +43,7 @@ Se även [Versionsinformation om Adobe Experience Manager 6.5 Senaste Service Pa
 
    * Red Hat® Enterprise Linux® 9 (Kernel 4.x, 64 bitar)
 
-* [Komponenten för bifogad fil ](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment) med hög densitet: Komponenten förhindrar nu att filer skickas med ändrade tillägg som försöker kringgå tillåtna filtypskontroller. Sådana filer blockeras under överföringen för att säkerställa att endast giltiga filtyper accepteras.
+* [Komponenten för bifogad fil &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment) med hög densitet: Komponenten förhindrar nu att filer skickas med ändrade tillägg som försöker kringgå tillåtna filtypskontroller. Sådana filer blockeras under överföringen för att säkerställa att endast giltiga filtyper accepteras.
 
 ## AEM 6.5, Service Pack 22 - 21 november 2024
 
@@ -193,7 +193,7 @@ Om du installerar eller planerar att använda den senaste programvaran för din 
 
   Du behöver inte navigera till resursplatsen och visa dess egenskaper för att utföra dessa åtgärder.
 
-* Med **Dynamic Media _Snapshot_**kan du förhandsgranska bildmodifierare och optimering av smarta bilder - som WebP- eller AVIF-utdata, bandbreddsmedveten komprimering och skalning av enhetspixelproportioner - med testbilder eller dynamiska medie-URL:er. Du kan sedan omedelbart jämföra hur varje inställning påverkar kvalitet och filstorlek.
+* Med **Dynamic Media _Snapshot_**&#x200B;kan du förhandsgranska bildmodifierare och optimering av smarta bilder - som WebP- eller AVIF-utdata, bandbreddsmedveten komprimering och skalning av enhetspixelproportioner - med testbilder eller dynamiska medie-URL:er. Du kan sedan omedelbart jämföra hur varje inställning påverkar kvalitet och filstorlek.
 Se [Dynamisk medieögonblicksbild](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-snapshot).
 * **DASH-direktuppspelning med Dynamic Media** - Nytt protokoll (DASH - Dynamic Adaptive Streaming over HTTP) startades för Adaptive Streaming i Dynamic Media-leverans (med CMAF aktiverat). Finns nu för alla regioner.
 * **Integrering av Experience Manager Sites- och innehållsfragment med Assets nästa generations dynamiska media** - Användare kan nu använda sina molnbaserade resurser i Experience Manager Sites 6.5. De kan skapa och leverera dessa resurser lokalt eller i Managed Services-instanser.
