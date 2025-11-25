@@ -293,7 +293,7 @@ Till exempel:
 1. Lägg till nya bilder i `/apps/livecycle/core/content/login`. Så här lägger du till bild:
 
    1. Installera WebDAV-klienten.
-   1. Navigera till mappen `/apps/livecycle/core/content/login` med webDAV-klienten. Mer information finns i [WebDAV-åtkomst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en).
+   1. Navigera till mappen `/apps/livecycle/core/content/login` med webDAV-klienten. Mer information finns i [WebDAV-åtkomst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=sv-SE).
 
    1. Lägg till nya bilder.
 
