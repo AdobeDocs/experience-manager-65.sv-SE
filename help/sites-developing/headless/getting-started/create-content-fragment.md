@@ -1,11 +1,11 @@
 ---
 title: Skapa innehållsfragment Headless Quick Start Guide
-description: Lär dig hur du använder AEM innehållsfragment för att utforma, skapa, strukturera och använda sidoberoende innehåll för rubrikfri leverans.
+description: Lär dig hur du använder AEM Content Fragments för att utforma, skapa, strukturera och använda sidoberoende innehåll för rubrikfri leverans.
 exl-id: 5787204d-bcce-447e-b98c-2bc1c0d744c3
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Skapa innehållsfragment Headless Quick Start Guide {#creating-content-fragments}
 
-Lär dig hur du använder AEM innehållsfragment för att utforma, skapa, strukturera och använda sidoberoende innehåll för rubrikfri leverans.
+Lär dig hur du använder AEM Content Fragments för att utforma, skapa, strukturera och använda sidoberoende innehåll för rubrikfri leverans.
 
 ## Vad är innehållsfragment? {#what-are-content-fragments}
 
@@ -28,7 +28,7 @@ Innehållsfragment innehåller strukturerat innehåll och kan levereras i JSON-f
 
 Innehållsförfattare skapar valfritt antal innehållsfragment som representerar det innehåll de skapar. Detta kommer att vara deras huvuduppgift i AEM. I den här guiden behöver vi bara skapa en.
 
-1. Logga in AEM och välj **Navigering > Assets** på huvudmenyn.
+1. Logga in på AEM och välj **Navigering > Assets** på huvudmenyn.
 1. Navigera till mappen [som du skapade tidigare.](create-assets-folder.md)
 1. Klicka på **Skapa > Innehållsfragment**.
 1. Skapandet av ett innehållsfragment presenteras som en guide i två steg. Välj först vilken modell du vill använda för att skapa ditt innehållsfragment och klicka sedan på **Nästa**.
@@ -49,7 +49,7 @@ Innehållsförfattare skapar valfritt antal innehållsfragment som representerar
 
 Innehållsfragment kan referera till andra innehållsfragment, vilket möjliggör en kapslad innehållsstruktur om det behövs.
 
-Innehållsfragment kan också referera till andra resurser i AEM. [Resurserna måste lagras i AEM](/help/assets/manage-assets.md) innan du skapar ett referensinnehållsfragment.
+Innehållsfragment kan också referera till andra resurser i AEM. [Dessa resurser måste lagras i AEM](/help/assets/manage-assets.md) innan du kan skapa ett referensinnehållsfragment.
 
 ## Nästa steg {#next-steps}
 

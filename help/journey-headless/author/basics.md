@@ -4,39 +4,39 @@ description: Lär dig mer om hur du skapar innehåll för Headless CMS med hjäl
 exl-id: 125c4d0b-1572-4dba-823d-cdef2778f275
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 0%
 
 ---
 
-# Grundläggande om redigering för Headless med AEM {#author-headless-basics}
+# Grundläggande om redigering för headless med AEM {#author-headless-basics}
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Journey](overview.md) innehöll [Introduction](introduction.md) grundläggande begrepp och terminologi som är relevant för redigering utan rubrik.
+I början av [AEM Headless Content Author Journey](overview.md) innehöll [Introduktion](introduction.md) grundläggande begrepp och terminologi som är relevanta för redigering utan rubrik.
 
-Den här artikeln bygger vidare på dessa artiklar så att du förstår hur du skapar ditt eget innehåll för AEM headless-projekt.
+Den här artikeln bygger vidare på detta så att du förstår hur du skapar ditt eget innehåll för AEM headless-projekt.
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Mål**: Introducera grunderna för Headless CMS-redigering:
+* **Mål**: Introducera grunderna för Headless CMS Authoring:
    * Introduktion till utveckling med AEMaaCS
    * Introduktion till innehållsfragment
 
 ## Grundläggande hantering {#basic-handling}
 
-Innan du får grepp om innehållsfragment finns det en (mycket) snabb introduktion till AEM...men ingenting ersätter faktiskt upplevelsen av att logga in och försöka använda systemet.
+Innan du får grepp om innehållsfragment är det här en snabb introduktion till AEM...men ingenting ersätter faktiskt upplevelsen av att logga in och försöka använda systemet.
 
-### Författare och Publish {#author-preview-publish}
+### Skapa och publicera {#author-preview-publish}
 
-En AEM består vanligtvis av minst två miljöer:
+En AEM-installation består vanligtvis av minst två miljöer:
 
 * Författare
-* Publish
+* Publicera
 
 Du loggar in på och använder redigeringsmiljön för att generera ditt innehåll. När det är klart publicerar du sedan innehållet så att det blir allmänt tillgängligt. För hemlösa är detta för andra program, för webbsidor är det för läsare på webben.
 
@@ -50,20 +50,20 @@ Precis som med de flesta system måste du logga in. Som författare får du:
 * Lösenord
 * Länk till inloggningsskärmen
 
-Ditt konto har konfigurerats med de privilegier du behöver. Om du har några problem rekommenderar Adobe att du kontaktar ditt interna projektsupportteam.
+Ditt konto har konfigurerats med de privilegier du behöver. Om du har problem rekommenderar Adobe att du kontaktar ditt interna projektsupportteam.
 
 ### Navigering {#navigation}
 
 Första gången du loggar in i en liten onlinekurs kommer några av huvudfunktionerna i användargränssnittet att markeras.
 
-Du kan sedan använda navigeringspanelen för att komma åt AEM nyckelområden. För innehållsfragment använder du **Assets Console**.
+Du kan sedan använda navigeringspanelen för att komma åt nyckelområden i AEM. För innehållsfragment använder du **Assets Console**.
 
-Du kan öppna navigeringspanelen genom att välja ikonen Adobe längst upp till vänster, följt av den lilla kompassikonen:
+Du kan öppna navigeringspanelen genom att välja Adobe-ikonen längst upp till vänster, följt av den lilla kompassikonen:
 
 ![Navigeringspanelen](/help/journey-headless/author/assets/headless-journey-author-navigation-01.png)
 
 >[!NOTE]
->Innehållsfragment är en funktion i AEM **Webbplatser**, men de finns i **Assets**-konsolen. Detta är en teknisk detalj som inte bör påverka dig, men som kan vara användbar att känna till.
+>Även om innehållsfragment är en funktion i AEM **Sites** finns de i **Assets**-konsolen. Detta är en teknisk detalj som inte bör påverka dig, men som kan vara användbar att känna till.
 
 I konsolen kan du välja mappar för att navigera till ditt innehållsfragment, eller de synliga mapparna (i sidhuvudet) för att gå tillbaka till trädet.
 
@@ -91,7 +91,7 @@ Du kan visa ytterligare information om objekt med hjälp av Rail Selector. Detta
 
 ## Skapa innehållsfragment {#authoring-content-fragments}
 
-Det var en mycket snabb introduktion till AEM användargränssnitt, men du har förhoppningsvis haft en chans att prova det. Nu kommer vi till ditt verkliga intresse - innehållsfragment för Headless.
+Det var en mycket snabb introduktion till AEM användargränssnitt, men förhoppningsvis har du haft en chans att prova det. Nu kommer vi till ditt verkliga intresse - innehållsfragment för Headless.
 
 Vi måste gå igenom allt från början till slut, men din instans kanske redan har mappar och/eller fragment skapade, och dessa kan finnas på olika platser. Principerna är desamma.
 
@@ -125,11 +125,11 @@ När du har skapat mappen kan du öppna mappen **Egenskaper**. Här finns olika 
 
 Du navigerar sedan genom de här mapparna för att skapa och redigera dina innehållsfragment.
 
-#### Precis in case - Konfiguration av mappkonfiguration {#cloud-services-folder}
+#### Precis in case - Folder Cloud Services Configuration {#cloud-services-folder}
 
 Bara om..
 
-Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. Detta beror på att viss konfigurationsinformation måste tillämpas (vanligtvis av en utvecklare eller systemadministratör) på rotmappen. Detta intresserar dig förmodligen inte, men om det behövs kan du kontrollera **Konfiguration** i **Cloud Service** i mappen **Egenskaper**:
+Du kommer antagligen att få en inledande mapp där du kan skapa dina mappar. Detta beror på att viss konfigurationsinformation måste tillämpas (vanligtvis av en utvecklare eller systemadministratör) på rotmappen. Detta är antagligen inget intresse för dig, men om det behövs kan du kontrollera **konfigurationen** i **molntjänsterna** i mappen **Egenskaper**:
 
 ![Skapa mappegenskaper - Konfiguration](/help/journey-headless/author/assets/headless-journey-author-folder-03.png)
 
@@ -198,13 +198,13 @@ Modeller för innehållsfragment är faktiskt viktiga för dina innehållsfragme
 
   >[!NOTE]
   >
-  >Om du vill veta mer kan du läsa den AEM Headless Content Architect Journey.
+  >Om du vill veta mer kan du läsa AEM Headless Content Architect Journey.
 
 * **Associerat innehåll**
 
   Den här är ganska självklar eftersom den är en flik i redigeraren.
 
-  Innehållsfragment har varit tillgängliga i AEM i ganska många versioner. Ursprungligen var de tillgängliga för&quot;traditionell&quot; användning vid redigering av sidor...och de används fortfarande i detta sammanhang. Detta kan innebära att resurser (till exempel bilder) som inte är inbäddade i fragmentet måste vara tillgängliga för författaren när sidan redigeras.
+  Innehållsfragment har funnits i AEM i många olika versioner. Ursprungligen var de tillgängliga för&quot;traditionell&quot; användning vid redigering av sidor...och de används fortfarande i detta sammanhang. Detta kan innebära att resurser (till exempel bilder) som inte är inbäddade i fragmentet måste vara tillgängliga för författaren när sidan redigeras.
 
 * **Förhandsgranska**
 
@@ -218,7 +218,7 @@ Modeller för innehållsfragment är faktiskt viktiga för dina innehållsfragme
 
 <!-- needs more details -->
 
-När du har slutfört fragmentet kan du **Publish** så att det blir tillgängligt för de headless-program som använder det.
+När du har slutfört fragmentet kan du **Publicera** det så att det blir tillgängligt för de Headless-program som använder det.
 
 Publiceringsåtgärderna är tillgängliga i redigeraren (eller från verktygsfältet i **Assets** -konsolen):
 
@@ -269,4 +269,4 @@ Nu när du har lärt dig grunderna är nästa steg att [Lär dig mer om referens
 
 * [AEM Headless Content Architect Journey](/help/journey-headless/architect/overview.md)
 
-* [AEM översättningsresa utan rubrik](/help/journey-headless/translation/overview.md)
+* [AEM Headless Translation Journey](/help/journey-headless/translation/overview.md)

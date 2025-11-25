@@ -2,11 +2,11 @@
 title: Migrera resurser i grupp
 description: Beskriver hur du hämtar resurser till  [!DNL Adobe Experience Manager], använder metadata, genererar återgivningar och aktiverar dem för publiceringsinstanser.
 contentOwner: AG
-role: Architect, Admin
+role: Developer, Admin
 feature: Migration,Renditions,Asset Management
 exl-id: 184f1645-894a-43c1-85f5-8e0d2d77aa73
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1721'
 ht-degree: 6%
@@ -62,7 +62,7 @@ Det finns två sätt att läsa in resurser i systemet: en push-baserad metod med
 
 #### Skicka via HTTP {#pushing-through-http}
 
-Adobe Managed Services team använder ett verktyg som kallas Glutton för att läsa in data i kundmiljöer. Glutton är ett litet Java-program som läser in alla resurser från en katalog till en annan katalog i en [!DNL Experience Manager]-distribution. I stället för Glutton kan du också använda verktyg som Perl-skript för att publicera resurserna i databasen.
+Adobe Managed Services-team använder ett verktyg som heter Glutton för att läsa in data i kundmiljöer. Glutton är ett litet Java-program som läser in alla resurser från en katalog till en annan katalog i en [!DNL Experience Manager]-distribution. I stället för Glutton kan du också använda verktyg som Perl-skript för att publicera resurserna i databasen.
 
 Det finns två nackdelar med att använda metoden att gå igenom https:
 
@@ -73,7 +73,7 @@ Det andra sättet att importera resurser är att hämta resurser från det lokal
 
 #### Hämta från det lokala filsystemet {#pulling-from-the-local-filesystem}
 
-[ACS AEM Tools CSV Asset Importer](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) hämtar resurser från filsystemet och metadata för resurser från en CSV-fil för resursimporten. Experience Manager Asset Manager API används för att importera resurserna till systemet och använda de konfigurerade metadataegenskaperna. Resurser monteras helst på servern via en nätverksfilmontering eller via en extern enhet.
+[ACS AEM Tools CSV-resursimporteraren](https://adobe-consulting-services.github.io/acs-aem-tools/features/csv-asset-importer/index.html) hämtar resurser från filsystemet och metadata för resurser från en CSV-fil för resursimporten. Experience Manager Asset Manager API används för att importera resurserna till systemet och använda de konfigurerade metadataegenskaperna. Resurser monteras helst på servern via en nätverksfilmontering eller via en extern enhet.
 
 Eftersom resurser inte behöver överföras via ett nätverk förbättras prestandan avsevärt, och den här metoden anses generellt vara det mest effektiva sättet att läsa in resurser i databasen. Eftersom verktyget har stöd för metadatainmatning kan du dessutom importera alla resurser och metadata i ett enda steg i stället för att skapa ett andra steg för att använda metadata via ett separat verktyg.
 
@@ -88,7 +88,7 @@ När du har konfigurerat arbetsflödet efter dina behov finns det två alternati
 
 ### Aktivera resurser {#activating-assets}
 
-För distributioner som har en publiceringsnivå måste du aktivera resurserna i publiceringsgruppen. Adobe rekommenderar att du kör mer än en publiceringsinstans, men det är mest effektivt att replikera alla resurser till en publiceringsinstans och sedan klona den instansen. När du aktiverar ett stort antal resurser kan du behöva ingripa efter att ha aktiverat ett träd. Därför: När aktiveringar utlöses läggs objekt till i kön för Samling-jobb/händelse. När storleken på den här kön börjar bli över cirka 40 000 objekt tar det dramatiskt lång tid att bearbeta. När storleken på den här kön överstiger 100 000 objekt börjar systemstabiliteten försämras.
+För distributioner som har en publiceringsnivå måste du aktivera resurserna i publiceringsgruppen. Adobe rekommenderar att du kör mer än en publiceringsinstans, men det är effektivast att replikera alla resurser till en publiceringsinstans och sedan klona den instansen. När du aktiverar ett stort antal resurser kan du behöva ingripa efter att ha aktiverat ett träd. Därför: När aktiveringar utlöses läggs objekt till i kön för Samling-jobb/händelse. När storleken på den här kön börjar bli över cirka 40 000 objekt tar det dramatiskt lång tid att bearbeta. När storleken på den här kön överstiger 100 000 objekt börjar systemstabiliteten försämras.
 
 Du kan lösa det här problemet genom att använda [Snabb åtgärdshanterare](https://adobe-consulting-services.github.io/acs-aem-commons/features/fast-action-manager.html) för att hantera resursreplikering. Detta fungerar utan att använda Sling-köerna, vilket sänker overheadkostnaderna samtidigt som arbetsbelastningen begränsas för att förhindra att servern blir överbelastad. Ett exempel på hur du använder FAM för att hantera replikering visas på funktionens dokumentationssida.
 
@@ -98,9 +98,9 @@ För någon av dessa metoder är caveat att resurserna i författarinstansen int
 
 >[!NOTE]
 >
->Adobe stöder inte Grabbit.
+>Adobe underhåller eller stöder inte Grabbit.
 
-### Clone Publish {#cloning-publish}
+### Klona publicering {#cloning-publish}
 
 När resurserna har aktiverats kan du klona publiceringsinstansen och skapa så många kopior som behövs för distributionen. Det är ganska enkelt att klona en server, men det finns några viktiga steg att komma ihåg. Så här klonar du publiceringen:
 
@@ -133,6 +133,6 @@ I det här fallet är dina resurser redan ifyllda med metadata och återgivninga
 
 1. Aktivera resurser: Följ instruktionerna för [aktivering av resurser](#activating-assets) som dokumenterats för den första migreringen till [!DNL Experience Manager].
 
-1. Klona publicering: Precis som med en ny migrering är det effektivare att läsa in en enda publiceringsinstans och klona den än att aktivera innehållet på båda noderna. Se [Klona Publish.](#cloning-publish)
+1. Klona publicering: Precis som med en ny migrering är det effektivare att läsa in en enda publiceringsinstans och klona den än att aktivera innehållet på båda noderna. Se [Klona publicering.](#cloning-publish)
 
 1. Aktivera arbetsflöden: När du har slutfört migreringen aktiverar du starkarna för arbetsflödet [!UICONTROL DAM Update Asset] igen så att återgivningsgenerering och metadataextrahering stöds för den dagliga systemanvändningen.

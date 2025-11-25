@@ -1,6 +1,6 @@
 ---
 title: Hantera projekt - checklista för bästa praxis
-description: Planering och förståelse krävs för att hantera ett projekt som ska implementera Adobe Experience Manager (AEM). Projektchecklistor är avsedda som en uppsättning bästa metoder för projektleverans. De vägleder dig genom alla faser i projektets livscykel och ger dig en högnivåövervakning av din status.
+description: För att hantera ett projekt som ska implementera Adobe Experience Manager (AEM) krävs planering och förståelse. Projektchecklistor är avsedda som en uppsättning bästa metoder för projektleverans. De vägleder dig genom alla faser i projektets livscykel och ger dig en högnivåövervakning av din status.
 contentOwner: User
 products: SG_EXPERIENCEMANAGER/6.5/MANAGING
 topic-tags: managing-checklist, introduction
@@ -9,10 +9,10 @@ docset: aem65
 exl-id: 94b91996-d2b2-4d4a-b770-334cfa2dc0b7
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
-role: Admin,Architect,Data Architect,Developer,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer,Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3212'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Kalkylbladet **Projektpulsslag** innehåller en grafisk översikt över kritiska
 
 ## Status efter roll {#status-by-role}
 
-Kalkylbladet **Status efter roll** visar detaljerad beskrivning av [**Hälsa**, **Kvalitet och &#x200B;** Fullständighet&#x200B;**](#projectheartbeat) av &#x200B;** [Fas](#phases-and-milestones)**&#x200B; och &#x200B;** [Persona](#persona)**.
+Kalkylbladet **Status efter roll** visar detaljerad beskrivning av [**Hälsa**, **Kvalitet och **Fullständighet**](#projectheartbeat) av **[Fas](#phases-and-milestones)** och **[Persona](#persona)**.
 
 ## Faser och milstolpar {#phases-and-milestones}
 
@@ -66,7 +66,7 @@ Varje fas innehåller sina egna milstolpar. För varje [persona](#persona) (elle
 
 >[!NOTE]
 >
->Det finns ingen direkt 1:1-relation mellan de enskilda dokumenten och slutprodukterna.
+>Det finns ingen direkt :1-relation mellan enskilda obligatoriska dokument och slutprodukter.
 
 ### Förberedelse {#preparation}
 
@@ -188,8 +188,8 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
 
    * Processer för varje miljö, t.ex. krav på driftsättning och underhåll
    * Underhållsaktiviteter (Datastore GC, TarPM-optimering och så vidare)
-   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE)-cachelagring
-   * [Klustring](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) Publish/Authorshare
+   * [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)-cachelagring
+   * [Klustring](/help/sites-deploying/recommended-deploys.md#deployment-scenarios) Publicera/författarresurs
    * Prestanda för klientsidan (JS minify, concat, css sprites, total number of http requests, and others)
 
 * **Programarkitektur**
@@ -227,7 +227,7 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
    * Förberedelse av allt innehåll som krävs för dessa tester
    * Information om eventuella testverktyg som ska användas
    * Indikation på hög nivå om vem som kommer att delta i testningen, särskilt grupper utanför QA-teamet
-   * Detaljer om automatiserad testning, t.ex. med selen eller AEM.
+   * Detaljer om automatiserad testning, t.ex. med Selenium eller AEM Developer mode
 
 * **Experience Design**
 
@@ -239,7 +239,7 @@ Att planera utvecklingsarbetet är avgörande för att säkerställa att projekt
 
   Innan utveckling bör alla supportprocesser som krävs för att driftsätta, frisläppa, testa och rapportera problem fastställas.
 
-  Se även [Adobe supportportal](https://experienceleague.adobe.com/sv?support-solution=General&support-tab=home#support).
+  Se även [Adobe supportportal](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support).
 
 ### Planering och drift {#operations-planning-and-operations}
 
@@ -276,7 +276,7 @@ På liknande sätt måste åtgärderna planeras på rätt sätt för att säkers
 
 * **Återställningsplan**
 
-  Kontrollera att du har en återställningsplan. I en nödsituation måste denna vara tillgänglig för att säkerställa att AEM används vid produktionen. Detta bör omfatta situationer som säkerhetskopiering, återställning, återställning och reservlösningar.
+  Kontrollera att du har en återställningsplan. I en krissituation måste denna vara tillgänglig för att säkerställa produktionsanvändningen av AEM. Detta bör omfatta situationer som säkerhetskopiering, återställning, återställning och reservlösningar.
 
 ### Utveckling {#development}
 
@@ -323,7 +323,7 @@ Utveckling är en avgörande fas som kräver mer än bara kodning.
    * Programintegrering/beroenden från tredje part
    * Säkerhetsinställningar
    * Baslinjeprestanda verifierat genom att köra [Tough Day-tester](/help/sites-developing/tough-day.md) i produktionsinställningarna
-   * Krav för prestandatester. Se [Bästa metoder för kvalitetssäkring](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)
+   * Krav för prestandatester. Mer information finns i [Bästa praxis för Assurance med hög kvalitet](/help/sites-deploying/configuring-performance.md#best-practices-for-quality-assurance)
 
 * **Integrering**
 
@@ -492,7 +492,7 @@ Lösningsarkitekten:
 
 * Ansvarar för lösningens och systemets konstruktion på hög nivå.
 * Hjälper till att definiera implementeringsstrategin för AEM. Exempel: om en klustrad installation ska implementeras, om ett kallt vänteläge eller när ett leveransnätverk (CDN) krävs.
-* Definiera också den AEM lösningsarkitekturen baserat på kundens krav. Detta kan omfatta konceptet för användarroller (med relaterade behörigheter), relationen mellan mallar och komponenter eller när multisitehantering ska användas.
+* Definiera också AEM lösningsarkitektur baserat på kundens behov. Detta kan omfatta konceptet för användarroller (med relaterade behörigheter), relationen mellan mallar och komponenter eller när multisitehantering ska användas.
 
 ### Affärsanalytiker {#business-analyst}
 
@@ -520,7 +520,7 @@ Utvecklingsledd:
    * säkerställa att den är anpassad efter nyckeltal för verksamhet och prestanda
    * med beaktande av kriterier för framgång och definition,
 
-* Fungerar nära ihop med arkitekten (särskilt när du utarbetar utvecklingsstrategin för AEM) för att definiera aspekter som förhållandet mellan mallar och komponenter, integrationsstrategin för tredjepartsprogram och eventuella specialfunktioner.
+* Fungerar nära ihop med arkitekten (särskilt när du utarbetar utvecklingsstrategin för AEM) för att definiera aspekter som förhållandet mellan mallar och komponenter, integreringsstrategin för tredjepartsprogram och eventuella specialfunktioner.
 
 ### Kvalitetslead {#quality-lead}
 
@@ -579,7 +579,7 @@ Säkerhetsledaren:
 
 Checklistorna täcker **obligatoriska dokument** och **slutprodukter** för varje milstolpe.
 
-* Det finns ingen 1:1-relation mellan dessa. En grupp av obligatoriska dokument kan till exempel resultera i en enda slutprodukt.
+* Det finns ingen :1-relation mellan dessa. En grupp av obligatoriska dokument kan till exempel resultera i en enda slutprodukt.
 * En slutprodukt från en person kan vara ett obligatoriskt dokument för en annan person under samma milstolpe.
 
 ### Obligatoriska dokument {#required-documents}
@@ -605,7 +605,7 @@ Leveranser används ofta som **Obligatoriska dokument** för den aktuella eller 
 
 De bästa sätten att distribuera, administrera, utveckla eller skapa finns i följande:
 
-* Övriga bästa metoder och riktlinjer för att hantera ett AEM projekt:
+* Övriga bästa metoder och riktlinjer för att hantera ett AEM-projekt:
    * [Riktlinjer för maskinvarans storlek](/help/managing/hardware-sizing-guidelines.md)
    * [Enterprise DevOps](/help/managing/enterprise-devops.md)
    * [Bästa praxis för hantering av SEO och URL](/help/managing/seo-and-url-management.md)
@@ -617,19 +617,19 @@ De bästa sätten att distribuera, administrera, utveckla eller skapa finns i f�
 
 ## Viktiga dokumentationsområden {#key-documentation-areas}
 
-* AEM
-Dessutom är följande avsnitt av AEM dokumentation av särskilt intresse (denna förteckning är dock inte uttömmande):
+* AEM Documentation
+Dessutom är följande avsnitt av AEM dokumentation av särskilt intresse (listan är dock inte uttömmande):
 
    * [Dokumentskydd](/help/sites-developing/security.md)
    * [Rekommenderade distributioner](/help/sites-deploying/recommended-deploys.md)
    * [Enterprise DevOps](/help/managing/enterprise-devops.md)
    * [Maskinvarustorlek](/help/managing/hardware-sizing-guidelines.md)
-   * AEM:
+   * AEM koncept:
 
       * [Utveckla - grunderna](/help/sites-developing/the-basics.md)
       * [MSM-koncept](/help/sites-administering/msm.md)
-      * [HTML-mallspråk (HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=sv-SE)
+      * [HTML-mallspråk (HTL)](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)
 
 * Relaterad dokumentation
 
-   * Adobe Experience Cloud - [Planering för Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html?lang=sv-SE)
+   * Adobe Experience Cloud - [Planering för Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/services/core-services.html)

@@ -6,7 +6,7 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: 650131b88e06d59e6c206e07b8512149cd360b08
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '6744'
 ht-degree: 0%
@@ -74,7 +74,7 @@ Bland huvudfunktionerna och förbättringarna i den här versionen finns följan
 
    * Red Hat® Enterprise Linux® 9 (Kernel 4.x, 64 bitar) 
 
-* [Komponenten för bifogad fil &#x200B;](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment) med hög densitet: Komponenten förhindrar nu att filer skickas med ändrade tillägg som försöker kringgå tillåtna filtypskontroller. Sådana filer blockeras under överföringen för att säkerställa att endast giltiga filtyper accepteras.
+* [Komponenten för bifogad fil ](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment) med hög densitet: Komponenten förhindrar nu att filer skickas med ändrade tillägg som försöker kringgå tillåtna filtypskontroller. Sådana filer blockeras under överföringen för att säkerställa att endast giltiga filtyper accepteras.
 
 * FORMS-20533, FORMS-20532: AEM Forms innehåller nu en uppgradering av Struts-versionen från 2.5.33 till 6.x. Stödet lades till via en [hotfix](/help/release-notes/aem-forms-hotfix.md) som du kan [hämta och installera](/help/release-notes/aem-forms-hotfix.md) för att lägga till stöd för den senaste versionen av Struts.
 
@@ -233,11 +233,11 @@ Förbättringar av sidinläsning för&quot;Component Live Usage&quot;. Optimerar
 
 ### [!DNL Assets]{#assets-6523}
 
-* Följande problem kan uppstå på navigeringssidan [!DNL AEM] lokalt (6.5.22.0) när du har valt ![Assets &#x200B;](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets]**, navigerat till mappen **[!UICONTROL Search Adobe Stock]**&#x200B;och valt en stockbild:
+* Följande problem kan uppstå på navigeringssidan [!DNL AEM] lokalt (6.5.22.0) när du har valt ![Assets ](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets]**, navigerat till mappen **[!UICONTROL Search Adobe Stock]**och valt en stockbild:
    * Den valda stockbilden kan inte licensieras och sparas eftersom en tom listruta visas när du klickar på **[!UICONTROL License & Save]**.
    * Om du väljer Stock-bilden eller anger URL:en för Stock-sidan igen dirigeras den till hemsidan [!DNL AEM], vilket förhindrar åtkomst till Adobe Stock-bilden. (ASSETS-48687)
 * Problem vid hantering av mappar om namnet på mappen innehåller `/` i namnet på navigeringssidan [!DNL AEM] On-Premise (6.5.22.0). (ASSETS-46740)
-* På [!DNL AEM] 6.5 läses sidan med resursinformation inte in från vyn ![&#x200B; Samling &#x200B;](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL Collections]**&#x200B;på grund av hög minnesanvändning. (ASSETS-46738)
+* På [!DNL AEM] 6.5 läses sidan med resursinformation inte in från vyn ![ Samling ](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL Collections]**på grund av hög minnesanvändning. (ASSETS-46738)
 * Integrationsproblem med [!DNL InDesign] som `Day CQ DAM Mime Type OSGI`-tjänst identifierar felaktigt [!DNL InDesign]-filer som `x-adobe-indesign` i stället för `x-indesign`. (ASSETS-4953)
 * Sessionsläckan [!DNL AEM 6.5.21] spårade till det körklara **[!UICONTROL Scheduled publish to Brand Portal]**-arbetsflödessteget. (ASSETS-44104)
 * **[!UICONTROL Out of Memory (OOM)]** fel visas i [!DNL AEM] vid bearbetning och publicering av bilder. Det här problemet berodde på föråldrade metoder i arbetsflöden, som **[!DNL Dam Asset update]** och **[!DNL Dynamic Media: Reprocess assets]**. (ASSETS-4343)
@@ -362,9 +362,9 @@ Tilläggspaketet Hybrid är öppet för distribution av Adobe-program från och 
 
 * På AEM Forms 6.5.21.0 misslyckas PDFG-konverteringen med följande fel: (FORMS-16851)(FORMS-14613)
 
-* I AEM Forms 6.5.23.0 misslyckades konverteringen av PS till PDF och HTML till PDF (WebKit). Du löser problemet genom att hämta och installera programfixen från [Adobe Experience Manager Forms Hotfixes](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) (FORMS-21721)
+* I AEM Forms 6.5.23.0 misslyckades konverteringen av PS till PDF och HTML till PDF (WebKit). Du löser problemet genom att hämta och installera programfixen från [Adobe Experience Manager Forms Hotfixes](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) (FORMS-21721)
 
-* I AEM Forms 6.5.23.0 misslyckas konverteringen av bild till PDF. Du löser problemet genom att hämta och installera programfixen från [Adobe Experience Manager Forms Hotfixes](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) (FORMS-2029)
+* I AEM Forms 6.5.23.0 misslyckas konverteringen av bild till PDF. Du löser problemet genom att hämta och installera programfixen från [Adobe Experience Manager Forms Hotfixes](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) (FORMS-2029)
 
 #### Forms Captcha {#forms-captcha-6523}
 
@@ -494,7 +494,7 @@ Löste ett problem i `EmailNotificationServiceProcessor` där metoden `getSegmen
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.23.0 kräver [!DNL Experience Manager] 6.5. Mer information finns i [&#x200B; uppgraderingsdokumentationen &#x200B;](/help/sites-deploying/upgrade.md) . <!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.23.0 kräver [!DNL Experience Manager] 6.5. Mer information finns i [ uppgraderingsdokumentationen ](/help/sites-deploying/upgrade.md) . <!-- UPDATE FOR EACH NEW RELEASE -->
 * Hämtningen av Service Pack är tillgänglig på Adobe [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.23.0.zip).
 * Installera [!DNL Experience Manager] 6.5.23.0 på en av författarinstanserna med Package Manager på en distribution med MongoDB och flera instanser.<!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -549,7 +549,7 @@ Instruktioner om hur du installerar Service Pack på Experience Manager Forms fi
 
 >[!NOTE]
 >
->Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/deploying/deploy), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
+>Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
 
 ### Installera GraphQL Index Package för Experience Manager Content Fragments{#install-aem-graphql-index-add-on-package}
 
@@ -586,7 +586,7 @@ Om du vill använda UberJar i ett Maven-projekt ska du läsa [Använda UberJar](
 
 ## Föråldrade och borttagna funktioner{#removed-deprecated-features}
 
-Se [Inaktuella och borttagna funktioner](/help/release-notes/deprecated-removed-features.md/) för en detaljerad lista över alla funktioner som har tagits bort eller tagits bort för AEM 6.5.
+Se [Inaktuella och borttagna funktioner](/help/release-notes/deprecated-removed-features.md) för en detaljerad lista över alla funktioner som har tagits bort eller tagits bort för AEM 6.5.
 
 ### SPA Editor {#spa-editor}
 
@@ -694,7 +694,7 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 
 ### Känt problem för AEM Sites {#known-issues-aem-sites-6523}
 
-Content Fragments-Preview misslyckas på grund av DoS-skydd för ett stort träd med fragment. Se artikeln [KB om standardkonfigurationsalternativ för GraphQL Query Executor](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-23945) (SITES-17934)
+Content Fragments-Preview misslyckas på grund av DoS-skydd för ett stort träd med fragment. Se artikeln [KB om standardkonfigurationsalternativ för GraphQL Query Executor](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23945) (SITES-17934)
 
 ### Kända fel för AEM Forms {#known-issues-aem-forms-6523}
 
@@ -767,10 +767,10 @@ Följande textdokument innehåller en lista över de OSGi-paket och innehållspa
 Dessa webbplatser är endast tillgängliga för kunder. Kontakta din kontoansvarige på Adobe om du är kund och behöver åtkomst.
 
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/)
-* [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/sv/docs/customer-one/using/home).
+* [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/en/docs/customer-one/using/home).
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] produktsida](https://business.adobe.com/se/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/sv/docs/experience-manager-65)
+>* [[!DNL Experience Manager] produktsida](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [Prenumerera på Adobe Priority-produktuppdateringar](https://www.adobe.com/subscription/priority-product-update.html)

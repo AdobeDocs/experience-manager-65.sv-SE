@@ -9,9 +9,9 @@ exl-id: 0f731ec6-a12e-4098-a1ec-ee4cd4dc1432
 solution: Experience Manager
 feature: Communities
 role: Admin
-source-git-commit: 1f56c99980846400cfde8fa4e9a55e885bc2258d
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '297'
 ht-degree: 0%
 
 ---
@@ -20,14 +20,14 @@ ht-degree: 0%
 
 ## Paketet SocialUtils har tagits bort {#socialutils-package-deprecated}
 
-Paketet `com.adobe.cq.social.ugcbase.SocialUtils` togs bort i AEM 6.1.
+Paketet `com.adobe.cq.social.ugcbase.SocialUtils` har tagits bort i AEM 6.1.
 
 I följande tabeller visas de metoder som ska användas i stället för `SocialUtils` metoder.
 
 ## Paket för SocialResourceUtilities  {#socialresourceutilities-package}
 
-| Metoder i com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities |
-|---|
+| Metoder i com.adobe.cq.social.srp.utilities.api.SocialResourceUtilities | Anteckningar |
+|---|---|
 | Boolean checkPermission(ResourceResolver resolver, String path, String action) |  |
 | SocialResourceProvider getSocialResourceProvider(Resurs) |  |
 | SocialResourceConfiguration getStorageConfig(resurs) |  |
@@ -42,8 +42,8 @@ I följande tabeller visas de metoder som ska användas i stället för `SocialU
 | Sträng UGCToResourcePath(String ugcPath) | metodsignaturen har ändrats |
 | Sträng UGCToResourcePath(String ugcPath, ResourceResolver resolver) | new |
 
-| Metoder i `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities |
-|---|
+| Metoder i `com.adobe.cq.social.`utilities.resource.api.SocialResourceUtilities | Anteckningar |
+|---|---|
 | SocialResourceProvider getSocialResourceProvider(Resurs) | ersätter SocialResourceProvider getConfiguringProvider(Resource) |
 
 ## SCFUtilities Package {#scfutilities-package}

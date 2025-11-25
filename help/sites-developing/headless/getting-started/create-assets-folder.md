@@ -4,8 +4,8 @@ description: Använd AEM Content Fragment Models för att definiera strukturen f
 exl-id: 8d913056-fcfa-4cdd-b40a-771f13dfd0f4
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Assets-mappar används för att [ordna traditionella innehållsresurser](/help/a
 
 En administratör behöver bara skapa mappar då och då för att ordna innehållet när det skapas. I den här guiden behöver vi bara skapa en mapp.
 
-1. Logga in AEM och välj **Navigering > Assets > Filer** på huvudmenyn.
+1. Logga in i AEM och välj **Navigering > Assets > Filer** på huvudmenyn.
 1. Klicka på **Skapa > Mapp**.
 1. Ange en **titel** och ett **namn** för din mapp.
    * **Rubriken** ska vara beskrivande.
@@ -38,7 +38,7 @@ En administratör behöver bara skapa mappar då och då för att ordna innehål
 
    ![Skapa mapp](assets/assets-folder-create.png)
 1. Markera mappen som du skapade och välj sedan **Egenskaper** i verktygsfältet (eller använd `p` [kortkommandot.](/help/sites-authoring/keyboard-shortcuts.md))
-1. I fönstret **Egenskaper** väljer du fliken **Cloud Service** .
+1. I fönstret **Egenskaper** väljer du fliken **Molntjänster** .
 1. För **molnkonfigurationen** väljer du den [konfiguration du skapade tidigare.](create-configuration.md)
    ![Konfigurera resursmappen](assets/assets-folder-configure.png)
 1. Klicka på **Spara och stäng**.

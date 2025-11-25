@@ -4,11 +4,11 @@ description: Lär dig mer om metadatatyperna och hur du hanterar metadata för r
 contentOwner: AG
 mini-toc-levels: 1
 feature: Tagging, Metadata
-role: Architect, Leader
+role: Developer, Leader
 exl-id: c630709a-7e8b-417c-83a4-35ca9be832a0
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '2231'
 ht-degree: 10%
@@ -19,7 +19,7 @@ ht-degree: 10%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-metadata.html?lang=sv-SE) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/manage-metadata.html?lang=en) |
 | AEM 6.5 | Den här artikeln |
 
 <!-- Scope of metadata articles:
@@ -36,9 +36,9 @@ Metadata är ytterligare information om resursen som kan sökas igenom. Den läg
 
 Följande metoder kan användas för att lägga till metadata i digitala resurser:
 
-* Till att börja med lägger de program som skapar resurser till metadata i det. [Acrobat lägger till exempel till metadata](https://helpx.adobe.com/se/acrobat/using/pdf-properties-metadata.html) i PDF-filer eller så lägger en kamera till några grundläggande metadata i fotona. När du genererar resurser kan du lägga till metadata i de ursprungliga programmen. Du kan till exempel [lägga till IPTC-metadata i Adobe Lightroom](https://helpx.adobe.com/se/lightroom-classic/help/metadata-basics-actions.html).
+* Till att börja med lägger de program som skapar resurser till metadata i det. [Acrobat lägger till exempel till metadata](https://helpx.adobe.com/acrobat/using/pdf-properties-metadata.html) i PDF-filer eller så lägger en kamera till några grundläggande metadata i fotona. När du genererar resurser kan du lägga till metadata i de ursprungliga programmen. Du kan till exempel [lägga till IPTC-metadata i Adobe Lightroom](https://helpx.adobe.com/lightroom-classic/help/metadata-basics-actions.html).
 
-* Innan du överför en resurs till [!DNL Experience Manager] kan du redigera och ändra metadata med hjälp av det ursprungliga programmet som användes för att skapa en resurs eller med något annat metadataredigeringsprogram. När du överför en resurs till Experience Manager bearbetas metadata. Se till exempel hur du [arbetar med metadata i [!DNL Adobe Bridge]](https://helpx.adobe.com/se/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html) och se [taggpanelen för  [!DNL Adobe Bridge]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html) i [!DNL Adobe Exchange].
+* Innan du överför en resurs till [!DNL Experience Manager] kan du redigera och ändra metadata med hjälp av det ursprungliga programmet som användes för att skapa en resurs eller med något annat metadataredigeringsprogram. När du överför en resurs till Experience Manager bearbetas metadata. Se till exempel hur du [arbetar med metadata i [!DNL Adobe Bridge]](https://helpx.adobe.com/bridge/user-guide.html/bridge/using/metadata-adobe-bridge.ug.html) och se [taggpanelen för  [!DNL Adobe Bridge]](https://exchange.adobe.com/creativecloud.details.20009.aem-tags-panel-for-bridge-cc.html) i [!DNL Adobe Exchange].
 
 * I [!DNL Experience Manager Assets] kan du lägga till eller redigera metadata för resurser manuellt på sidan [!UICONTROL Properties].
 
@@ -66,9 +66,9 @@ Så här redigerar du metadata för en resurs i användargränssnittet för [!DN
    >
    >Om ett textfält är tomt finns det ingen befintlig metadatauppsättning. Du kan ange ett värde i fältet och spara det för att lägga till metadataegenskapen.
 
-Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP data. Metadataåterskrivningsarbetsflödet lägger till metadata i den ursprungliga binärfilen. Ändringar som görs i befintliga egenskaper (till exempel `dc:title`) skrivs över och nya egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs till i schemat.
+Alla ändringar av metadata för en resurs skrivs tillbaka till den ursprungliga binärfilen som en del av dess XMP-data. Metadataåterskrivningsarbetsflödet lägger till metadata i den ursprungliga binärfilen. Ändringar som görs i befintliga egenskaper (till exempel `dc:title`) skrivs över och nya egenskaper (inklusive anpassade egenskaper som `cq:tags`) läggs till i schemat.
 
-XMP stöds och är aktiverat för de plattformar och filformat som beskrivs i [tekniska krav.](/help/sites-deploying/technical-requirements.md)
+XMP-återskrivning stöds och är aktiverat för de plattformar och filformat som beskrivs i [tekniska krav.](/help/sites-deploying/technical-requirements.md)
 
 ## Redigera metadataegenskaper för flera resurser {#editing-metadata-properties-of-multiple-assets}
 
@@ -101,7 +101,7 @@ Använd [schemaredigeraren](metadata-config.md#folder-metadata-schema) om du vil
 
 Med [!DNL Assets] kan du importera resursmetadata gruppvis med hjälp av en CSV-fil. Du kan göra satsvisa uppdateringar för de nyligen överförda resurserna eller för befintliga resurser genom att importera en CSV-fil. Du kan också importera resursmetadata i grupp från tredjepartssystem i CSV-format.
 
-Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig uppdatering av metadata för flera resurser kan vara resurskrävande på grund av XMP återskrivningsaktivitet om arbetsflödesflaggan är markerad. Planera en sådan import under begränsad serveranvändning så att prestanda för andra användare inte påverkas.
+Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig uppdatering av metadata för flera resurser kan vara resurskrävande på grund av XMP tillbakaskrivningsaktivitet om arbetsflödesflaggan är markerad. Planera en sådan import under begränsad serveranvändning så att prestanda för andra användare inte påverkas.
 
 >[!NOTE]
 >
@@ -109,15 +109,15 @@ Import av metadata är asynkron och påverkar inte systemets prestanda. Samtidig
 
 1. Navigera till användargränssnittet för [!DNL Assets] och klicka på **[!UICONTROL Create]** i verktygsfältet.
 1. Välj **[!UICONTROL Metadata]** i menyn.
-1. Klicka på **[!UICONTROL Select File]** på sidan **[!UICONTROL Metadata Import]**. Markera CSV-filen med metadata.
+1. Klicka på **[!UICONTROL Metadata Import]** på sidan **[!UICONTROL Select File]**. Markera CSV-filen med metadata.
 1. Ange följande parametrar. Se ett exempel på en CSV-fil på [metadata-import-sample-file.csv](/help/assets/assets/metadata-import-sample-file.csv).
 
    | Parametrar för metadataimport | Beskrivning |
    |:---|:---|
    | [!UICONTROL Batch Size] | Antal resurser i en grupp som metadata ska importeras för. Standardvärdet är 50. Maxvärdet är 100. |
    | [!UICONTROL Field Separator] | Standardvärdet är `,` (komma). Du kan ange vilket annat tecken som helst. |
-   | [!UICONTROL Multi Value Delimiter] | Avgränsare för metadatavärden. Standardvärdet är `|`. |
-   | [!UICONTROL Launch Workflows] | Falskt som standard. När det är inställt på `true` och standardinställningarna används för arbetsflödet [!UICONTROL DAM Metadata WriteBack] (som skriver metadata till binära XMP). Om du aktiverar arbetsflödena blir systemet långsammare. |
+   | [!UICONTROL Multi Value Delimiter] | Avgränsare för metadatavärden. Standardvärdet är `\|`. |
+   | [!UICONTROL Launch Workflows] | Falskt som standard. När det är inställt på `true` och standardinställningarna används för arbetsflödet [!UICONTROL DAM Metadata WriteBack] (som skriver metadata till binära XMP-data). Om du aktiverar arbetsflödena blir systemet långsammare. |
    | [!UICONTROL Asset Path Column Name] | Definierar kolumnnamnet för CSV-filen med resurser. |
 
 1. Klicka på **[!UICONTROL Import]** i verktygsfältet. När metadata har importerats visas ett meddelande i inkorgen [!UICONTROL Notification].
@@ -241,7 +241,7 @@ Du kan ta bort en metadataprofil från en mapp på menyn **[!UICONTROL Tools]** 
 >
 >* [Metadatabegrepp och -förståelse](metadata-concepts.md).
 >* [Redigera metadataegenskaper för flera samlingar](manage-collections.md#editing-collection-metadata-in-bulk)
->* [Import och export av metadata i Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html?lang=sv-SE)
+>* [Import och export av metadata i Experience Manager Assets](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/metadata-import-feature-video-use.html)
 
 <!-- TBD: Try filling the available information in these topics to the extent possible. As and when complete, publish the sections live.
 

@@ -2,11 +2,11 @@
 title: Proxyutveckling för [!DNL Assets]
 description: En proxy är en  [!DNL Experience Manager] -instans som använder proxyarbetare för att bearbeta jobb. Lär dig hur du konfigurerar en  [!DNL Experience Manager] proxy, åtgärder som stöds, proxykomponenter och hur du utvecklar en anpassad proxyarbetare.
 contentOwner: AG
-role: Admin, Architect
+role: Admin, Developer
 exl-id: 42fff236-b4e1-4f42-922c-97da32a933cf
 solution: Experience Manager, Experience Manager Assets
 feature: Proxy Workers
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 0%
@@ -105,7 +105,7 @@ Nedan följer ett exempel på API-användning:
  proxyJobService.removeJob(jobId);
 ```
 
-### Konfigurationer av Cloud Service {#cloud-service-configurations}
+### Cloud Service-konfigurationer {#cloud-service-configurations}
 
 <!-- TBD: Cannot find com.day.cq.dam.api.proxy at https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/index.html which were generated in May 2020. Hiding this broken link for now.
 >[!NOTE]
@@ -136,7 +136,7 @@ Nedan följer ett exempel på API-användning:
 
 ### Utveckla en anpassad proxyarbetare {#developing-a-customized-proxy-worker}
 
-[IDS-proxyarbetaren](indesign.md) är ett exempel på en [!DNL Assets]-proxyarbetare som redan har tillhandahållits utanför ramarna för att lägga ut bearbetning av InDesign resurser på entreprenad.
+[IDS-proxyarbetaren](indesign.md) är ett exempel på en [!DNL Assets]-proxyarbetare som redan har tillhandahållits utanför ramarna för att lägga ut bearbetningen av InDesign-resurser på entreprenad.
 
 Du kan också utveckla och konfigurera din egen [!DNL Assets]-proxyarbetare för att skapa en specialarbetare som skickar och lägger ut [!DNL Assets]-bearbetningsuppgifterna på entreprenad.
 
@@ -160,7 +160,7 @@ Följande diagram och steg visar hur du fortsätter:
 
 >[!NOTE]
 >
->I följande steg anges motsvarigheter till InDesigner som referensexempel.
+>I följande steg anges InDesign-motsvarigheter som referensexempel.
 
 1. Ett [delningsjobb](https://sling.apache.org/site/eventing-and-jobs.html) används, så du måste definiera ett jobbämne för ditt användningsfall.
 

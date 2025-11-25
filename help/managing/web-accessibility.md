@@ -4,8 +4,8 @@ description: En introduktion till Adobe Experience Manager (AEM) och Web Accessi
 exl-id: db8785b9-09eb-444a-addc-74c520e710a9
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
-role: Developer,Leader,Architect,Data Architect,User
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Developer, Leader, User
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '397'
 ht-degree: 62%
@@ -14,9 +14,9 @@ ht-degree: 62%
 
 # AEM och riktlinjerna för webbtillgänglighet{#aem-and-the-web-accessibility-guidelines}
 
-Det finns många sociala, ekonomiska och juridiska skäl för att se till att webbinnehåll är utformat för att vara så tillgängligt som möjligt för målgruppen, oavsett eventuella funktionshinder eller begränsningar som de har. Webbtillgänglighet med Adobe Experience Manager (AEM) är därför en allt viktigare aspekt av god webbdesign.
+Det finns många sociala, ekonomiska och juridiska skäl för att se till att webbinnehåll är utformat för att vara så tillgängligt som möjligt för målgruppen, oavsett eventuella funktionshinder eller begränsningar som de har. Webbtillgänglighet med Adobe Experience Manager (AEM) är därför en allt viktigare del av bra webbdesign.
 
-Skapa tillgängliga webbplatser och innehåll med AEM påverkan:
+Skapa tillgängliga webbplatser och innehåll med AEM-effekter:
 
 * Administratörer som ansvarar för att konfigurera AEM så att hjälpmedelsfunktionerna är korrekt aktiverade.
 
@@ -51,15 +51,15 @@ Med Adobe Experience Manager kan författare och/eller webbplatsägare skapa web
 * [Skapa hjälpmedelsanpassat innehåll](/help/sites-authoring/creating-accessible-content.md) beskriver hur de relaterar till AEM.
 
 * [Konfigurera RTF-redigeraren för produktion av tillgängliga platser](/help/sites-administering/rte-accessible-content.md)
-Riktlinjer för hur administratörer kan konfigurera AEM för att skapa tillgängligt innehåll.
+Riktlinjer för hur administratörer kan konfigurera AEM för att producera tillgängligt innehåll.
 
 * [Skapar tillgänglig adaptiv Forms](/help/forms/using/creating-accessible-adaptive-forms.md)
-Adobe Experience Manager (AEM) innehåller flera funktioner som gör det enklare att använda adaptiva formulär för användare med olika funktioner. Lösningen hjälper också formulärförfattare att skapa tillgängliga adaptiva formulär.
+Adobe Experience Manager (AEM) har flera funktioner som gör det enklare att använda adaptiva formulär för användare med olika funktioner. Lösningen hjälper också formulärförfattare att skapa tillgängliga adaptiva formulär.
 
 >[!NOTE]
 >
 >När du skapar din webbplats bör du bestämma den övergripande nivån som du vill att din plats ska anpassas efter.
 
-## Tillgänglighet i Adobe {#accessibility-at-adobe}
+## Tillgänglighet på Adobe {#accessibility-at-adobe}
 
 Mer information finns på [Adobe Accessibility Resource Center](https://www.adobe.com/accessibility/).

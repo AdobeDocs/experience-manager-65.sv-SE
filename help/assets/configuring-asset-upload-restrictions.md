@@ -2,14 +2,14 @@
 title: Konfigurera överföringsbegränsningar för resurser
 description: Begränsa den typ av resurser (filer) som användare kan överföra
 contentOwner: AG
-role: Developer, Admin, Architect
+role: Developer, Admin
 feature: Asset Management,Upload
 exl-id: 0e009b9a-54c4-4715-98ee-0207839f90f6
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '178'
-ht-degree: 32%
+ht-degree: 16%
 
 ---
 
@@ -26,4 +26,4 @@ Du kan konfigurera [!DNL Adobe Experience Manager Assets] för att begränsa vil
 
    ![chlimage_1-379](assets/chlimage_1-379.png)
 
-1. Klicka på **[!UICONTROL Save]** om du vill spara ändringarna. Om du anger MIME-strängar för tillåtna MIME-typer misslyckas överföringen för alla resurser med en MIME-typ som inte matchar de konfigurerade MIME-strängarna i dessa fält.
+1. Klicka på **[!UICONTROL Save]** om du vill spara ändringarna. Om du anger MIME-strängar för tillåtna MIME-typer misslyckas överföringen för alla resurser med MIME-typ som inte matchar de konfigurerade MIME-strängarna i dessa fält.

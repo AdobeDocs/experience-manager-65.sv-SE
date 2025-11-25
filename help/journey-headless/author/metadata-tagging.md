@@ -4,8 +4,8 @@ description: Läs om hur du definierar metadata och taggar för innehållsfragme
 exl-id: b4cc1311-1ef7-409a-bd41-0456519b3436
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author Journey](overview.md) innehöll [Introduction](introduction.md) grundläggande begrepp och terminologi som är relevant för redigering utan rubrik.
+I början av [AEM Headless Content Author Journey](overview.md) innehöll [Introduktion](introduction.md) grundläggande begrepp och terminologi som är relevanta för redigering utan rubrik.
 
 I föregående steg introducerades du att använda referenser för Headless CMS Authoring. Du lärde dig vilka typer av referenser som är tillgängliga och vad som är deras syften: Innehållsreferenser, Resurser/Mediereferenser och Fragmentreferenser.
 
-Den här artikeln bygger på dessa så att du förstår hur du använder metadata och taggning för att skapa ditt eget innehåll för ditt AEM headless-projekt.
+Den här artikeln bygger vidare på dessa så att du förstår hur du använder metadata och taggning för att skapa ditt eget innehåll för AEM headless-projekt.
 
 ## Syfte {#objective}
 

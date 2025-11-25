@@ -2,11 +2,11 @@
 title: Nätverksaspekter och -krav
 description: Diskuterar nätverksaspekter när du utformar en  [!DNL Adobe Experience Manager Assets] distribution.
 contentOwner: AG
-role: Architect, Admin
+role: Developer, Admin
 feature: Developer Tools
 exl-id: 1313842c-18b1-4727-ba63-b454d0f5a2cc
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1010'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Diagrammet visar högre hastigheter för överordnad länk inom företagsnätver
 
 ![chlimage_1-355](assets/chlimage_1-355.png)
 
-Det är viktigt att ta hänsyn till okända faktorer på Internet och VPC-anslutningen eftersom bandbredden över Internet kan försämras på grund av belastningstopp eller storskaliga leverantörsavbrott. I allmänhet är internetanslutningen tillförlitlig. Ibland kan det dock medföra att kontrollpunkter läggs till.
+Det är viktigt att ta hänsyn till okända faktorer på Internet och VPC eftersom bandbredden på Internet kan försämras på grund av belastningstoppar eller storskaliga avbrott hos leverantörer. I allmänhet är internetanslutningen tillförlitlig. Ibland kan det dock medföra att kontrollpunkter läggs till.
 
 På uppkopplingen från ett företagsnätverk till Internet kan det finnas andra tjänster som använder bandbredden. Det är viktigt att du förstår hur stor del av bandbredden som kan dedikeras eller prioriteras för Assets. Om till exempel en 1 Gbit/s-länk redan har 80 % utnyttjandegrad kan du bara allokera högst 20 % av bandbredden för [!DNL Experience Manager Assets].
 
@@ -70,7 +70,7 @@ I exempeldiagrammen kan du dra slutsatsen att sex enheter delar en konceptuell k
 
 För att designa topologin för miljön [!DNL Experience Manager] krävs detaljerade kunskaper om systemkonfigurationen och hur nätverket är anslutet i användarmiljön.
 
-Exempelscenariot innehåller en publiceringsgrupp med fem servrar, en binär S3-butik och Dynamic Media-konfigurerad.
+Exempelscenariot innehåller en publiceringsgrupp med fem servrar, ett binärt S3-arkiv och Dynamic Media konfigurerat.
 
 Dispatcharen delar sin 100 Mbit/s-anslutning med två entiteter, utsidan och distributionen [!DNL Experience Manager]. För samtidiga överförings- och nedladdningsåtgärder bör du dividera numret med två. Den anslutna externa lagringsplatsen använder en separat anslutning.
 

@@ -4,8 +4,8 @@ description: Lär dig hur du definierar översättningsregler för att identifie
 exl-id: 262503af-361b-491c-8639-0bb32f0a4c0e
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,Language Copy
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 0%
@@ -18,7 +18,7 @@ Lär dig hur du definierar översättningsregler för att identifiera innehåll 
 
 ## Story hittills {#story-so-far}
 
-I det tidigare dokumentet av den AEM översättningsresan [Konfigurera översättningsintegrering](configure-connector.md) lärde du dig att installera och konfigurera översättningsintegrationen och bör nu:
+I det tidigare dokumentet på AEM headless Translation-resa lärde du dig [Konfigurera översättningsintegrering](configure-connector.md) hur du installerar och konfigurerar översättningsintegrationen och bör nu:
 
 * Förstå de viktiga parametrarna i översättningsintegreringsramverket i AEM.
 * Du kan skapa en egen anslutning till översättningstjänsten.
@@ -36,7 +36,7 @@ Det här dokumentet hjälper dig att förstå hur du använder AEM översättnin
 
 Content Fragments, som representerar ditt headless-innehåll, kan innehålla mycket information som är ordnad efter strukturerade fält. Beroende på dina projektbehov är det troligt att inte alla fält i ett innehållsfragment måste översättas.
 
-Översättningsregler identifierar innehållet som ingår i, eller utesluts från, översättningsprojekt. När innehåll översätts extraherar AEM eller skördar innehållet baserat på dessa regler. På så sätt skickas endast innehåll som måste översättas till översättningstjänsten.
+Översättningsregler identifierar innehållet som ingår i, eller utesluts från, översättningsprojekt. När innehåll översätts extraherar eller skördar AEM innehållet baserat på dessa regler. På så sätt skickas endast innehåll som måste översättas till översättningstjänsten.
 
 Översättningsreglerna innehåller följande information:
 
@@ -45,7 +45,7 @@ Content Fragments, som representerar ditt headless-innehåll, kan innehålla myc
 * Namnen på egenskaperna som innehåller det innehåll som ska översättas
    * Egenskapen kan vara specifik för en viss resurstyp eller för alla resurstyper
 
-Eftersom modeller för innehållsfragment, som definierar strukturen för dina innehållsfragment, är unika för ditt eget projekt, är det viktigt att skapa översättningsregler så att AEM vet vilka element i dina innehållsmodeller som ska översättas.
+Eftersom modeller för innehållsfragment, som definierar strukturen för dina innehållsfragment, är unika för ditt eget projekt är det viktigt att du skapar översättningsregler så att AEM vet vilka element i dina innehållsmodeller som ska översättas.
 
 >[!TIP]
 >
@@ -78,7 +78,6 @@ I användargränssnittet för **översättningskonfiguration** finns det flera t
    1. Klicka på **Lägg till**.
    1. Upprepa dessa steg för alla fält som du måste översätta.
    1. Klicka på **Spara**.
-
       ![Lägg till egenskap](assets/add-property.png)
 
 Du har nu konfigurerat dina översättningsregler.
@@ -96,7 +95,7 @@ Nu när du är klar med den här delen av den headless översättningsresan ska 
 * Förstå vad översättningsreglerna gör.
 * Ange egna översättningsregler.
 
-Bygg vidare på den här kunskapen och fortsätt din AEM headless-översättning genom att nästa gång du granskar dokumentet [Översätt innehåll](translate-content.md) där du får lära dig hur integrering och regler fungerar tillsammans för att översätta rubrikfritt innehåll.
+Bygg vidare på den här kunskapen och fortsätt din arbetsfria översättningsresa med AEM genom att nästa gång läsa dokumentet [Översätt innehåll](translate-content.md) där du får lära dig hur integrering och regler fungerar tillsammans för att översätta rubrikfritt innehåll.
 
 ## Ytterligare resurser {#additional-resources}
 

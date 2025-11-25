@@ -1,29 +1,29 @@
 ---
-title: Läs om hur du skapar modeller för innehållsfragment i AEM
-description: Lär dig mer om koncept och mekanismer för att modellera innehåll för Headless CMS med Content Fragments Models.
+title: Läs om hur du skapar innehållsfragmentmodeller i AEM
+description: Lär dig mer om koncepten och mekanismerna i att modellera innehåll för din Headless CMS med Content Fragments Models.
 exl-id: b377e01f-e392-4ef5-a259-73ce9ff941d0
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '690'
 ht-degree: 0%
 
 ---
 
-# Läs om hur du skapar modeller för innehållsfragment i AEM {#architect-headless-content-fragment-models}
+# Läs om hur du skapar innehållsfragmentmodeller i AEM {#architect-headless-content-fragment-models}
 
 ## Story hittills {#story-so-far}
 
-I början av [AEM Headless Content Author &#x200B;](overview.md) innehöll [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) grundläggande koncept och terminologi som är relevant för redigering för headless.
+I början av [AEM Headless Content Author ](overview.md) innehöll [Grundläggande om innehållsmodellering för Headless med AEM](basics.md) grundläggande koncept och terminologi som är relevant för redigering utan rubrik.
 
-Den här artikeln bygger vidare på dessa så att du förstår hur du skapar egna modeller för innehållsfragment för AEM headless-projekt.
+Den här artikeln bygger vidare på detta så att du förstår hur du skapar egna Content Fragment Models för AEM headless-projekt.
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
-* **Mål**: koncept och mekanismer för att modellera innehåll för det Headless CMS med hjälp av modeller för innehållsfragment.
+* **Mål**: koncept och mekanismer för att modellera innehåll för ditt Headless CMS med Content Fragments Models.
 
 <!-- which persona does this? -->
 <!-- and who allows the configuration on the folders? -->

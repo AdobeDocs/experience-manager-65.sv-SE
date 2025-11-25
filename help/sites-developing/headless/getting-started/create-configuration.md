@@ -1,11 +1,11 @@
 ---
 title: Skapa en guide till Headless-konfiguration
-description: Skapa en konfiguration som ett första steg för att komma igång med headless i AEM 6.5.
+description: Skapa en konfiguration som ett första steg i arbetet med headless i AEM 6.5.
 exl-id: f1df97a1-164f-4ed4-bb63-34caf35ae27c
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 1%
@@ -14,23 +14,23 @@ ht-degree: 1%
 
 # Skapa en guide till Headless-konfiguration {#creating-configuration}
 
-Som ett första steg till att komma igång med headless i AEM 6.5 måste du skapa en konfiguration.
+Som ett första steg mot headless i AEM 6.5 måste du skapa en konfiguration.
 
 ## Vad är en konfiguration? {#what-is-a-configuration}
 
 I Configuration Browser finns ett allmänt konfigurations-API, innehållsstruktur och lösningsmekanism för konfigurationer i AEM.
 
-När det gäller headless content management i AEM kan du tänka på en konfiguration som en arbetsplats i AEM där du kan skapa dina innehållsmodeller, som definierar strukturen för ditt framtida innehåll och innehållsfragment. Du kan ha flera konfigurationer för att separera dessa modeller.
+När det gäller headless content management i AEM kan du tänka dig en konfiguration som en arbetsplats i AEM där du kan skapa dina innehållsmodeller, som definierar strukturen för ditt framtida innehåll och dina framtida innehållsfragment. Du kan ha flera konfigurationer för att separera dessa modeller.
 
 >[!NOTE]
 >
->Om du är bekant med [sidmallar i en AEM-implementering i en hel hög &#x200B;](/help/sites-authoring/templates.md) är användningen av konfigurationer för hantering av innehållsmodeller likartad.
+>Om du är bekant med [sidmallar i en AEM-implementering i full hög ](/help/sites-authoring/templates.md) är användningen av konfigurationer för hantering av innehållsmodeller likartad.
 
 ## Så här skapar du en konfiguration {#how-to-create-a-configuration}
 
 En administratör behöver bara skapa en konfiguration en gång, eller mycket sällan, när det krävs en ny arbetsyta för att kunna ordna dina innehållsmodeller. I den här guiden behöver vi bara skapa en konfiguration.
 
-1. Logga in AEM och välj **Verktyg > Allmänt > Konfigurationsläsaren** på huvudmenyn.
+1. Logga in på AEM och välj **Verktyg > Allmänt > Konfigurationsläsaren** på huvudmenyn.
 1. Ange en **titel** för din konfiguration.
    * Ett namn genereras automatiskt baserat på titeln och justeras enligt [AEM namnkonventioner.](/help/sites-developing/naming-conventions.md). Det blir nodnamnet i databasen.
 1. Markera följande alternativ:

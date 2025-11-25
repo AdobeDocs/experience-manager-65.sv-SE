@@ -1,6 +1,6 @@
 ---
 title: Hantera slutpunkter programmatiskt
-description: Använd tjänsten Endpoint Registry för att lägga till EJB-slutpunkter, lägga till SOAP slutpunkter, lägga till övervakade mappslutpunkter, lägga till e-postslutpunkter, lägga till fjärrslutpunkter, lägga till Task Manager-slutpunkter, ändra slutpunkter, ta bort slutpunkter och hämta slutpunktsanslutningsinformation.
+description: Använd tjänsten Endpoint Registry för att lägga till EJB-slutpunkter, lägga till SOAP-slutpunkter, lägga till övervakade mappslutpunkter, lägga till e-postslutpunkter, lägga till fjärrslutpunkter, lägga till Task Manager-slutpunkter, ändra slutpunkter, ta bort slutpunkter och hämta slutpunktsanslutningsinformation.
 contentOwner: admin
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
@@ -9,9 +9,9 @@ role: Developer
 exl-id: b94dcca2-136b-4b7d-b5ce-544804575876
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms,APIs & Integrations
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '10800'
+source-wordcount: '10799'
 ht-degree: 0%
 
 ---
@@ -28,12 +28,12 @@ Tjänsten Endpoint Registry ger möjlighet att programmässigt hantera slutpunkt
 * SOAP
 * Bevakad mapp
 * E-post
-* (Borttaget för AEM formulär) Remoting
+* (Borttaget för AEM-formulär) Remoting
 * Aktivitetshanteraren
 
 >[!NOTE]
 >
->SOAP, EJB och (Borttaget för AEM formulär i JEE) Slutpunkter för fjärrstyrning skapas automatiskt för varje aktiverad tjänst. SOAP- och EJB-slutpunkterna aktiverar SOAP och EJB för alla serviceåtgärder.
+>SOAP, EJB och (Borttaget för AEM-formulär i JEE) Slutpunkter för fjärrstyrning skapas automatiskt för varje aktiverad tjänst. SOAP- och EJB-slutpunkterna möjliggör SOAP och EJB för alla serviceåtgärder.
 
 En fjärrslutpunkt gör att Flex-klienter kan anropa åtgärder för den AEM Forms-tjänst som slutpunkten läggs till i. Ett Flex-mål med samma namn som slutpunkten skapas och Flex-klienter kan skapa RemoteObjects som pekar på det här målet för att anropa åtgärder på den aktuella tjänsten.
 
@@ -44,7 +44,7 @@ Du kan ordna TaskManager-slutpunkter i grupper som kallas *kategorier*. Dessa ka
 Du kan utföra följande uppgifter med hjälp av tjänsten för slutpunktsregister:
 
 * Lägg till EJB-slutpunkter. (Se [Lägga till EJB-slutpunkter](programmatically-endpoints.md#adding-ejb-endpoints).)
-* Lägg till SOAP slutpunkter. (Se [Lägga till SOAP slutpunkter](programmatically-endpoints.md#adding-soap-endpoints).)
+* Lägg till SOAP-slutpunkter. (Se [Lägga till SOAP-slutpunkter](programmatically-endpoints.md#adding-soap-endpoints).)
 * Lägg till övervakade mappslutpunkter (Se [Lägga till övervakade mappslutpunkter](programmatically-endpoints.md#adding-watched-folder-endpoints).)
 * Lägg till e-postslutpunkter. (Se [Lägga till e-postslutpunkter](programmatically-endpoints.md#adding-email-endpoints).)
 * Lägg till fjärrslutpunkter. (Se [Lägga till fjärrslutpunkter](programmatically-endpoints.md#adding-remoting-endpoints).)
@@ -156,26 +156,26 @@ Lägg till en EJB-slutpunkt med Java API:
 
 [Ange anslutningsegenskaper](/help/forms/developing/invoking-aem-forms-using-java.md#setting-connection-properties)
 
-## Lägga till SOAP {#adding-soap-endpoints}
+## Lägga till SOAP-slutpunkter {#adding-soap-endpoints}
 
-Du kan programmässigt lägga till en SOAP slutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en SOAP slutpunkt aktiverar du ett klientprogram att anropa tjänsten i SOAP. När du anger de anslutningsegenskaper som krävs för att anropa AEM Forms kan du alltså välja SOAP.
-
->[!NOTE]
->
->Du kan inte lägga till en SOAP slutpunkt med hjälp av webbtjänster.
+Du kan programmässigt lägga till en SOAP-slutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en SOAP-slutpunkt aktiverar du ett klientprogram att anropa tjänsten i SOAP-läge. När du anger de anslutningsegenskaper som krävs för att anropa AEM Forms kan du alltså välja SOAP-läget.
 
 >[!NOTE]
 >
->Vanligtvis läggs en SOAP slutpunkt till i en tjänst som standard, men en SOAP slutpunkt kan läggas till i en process som distribueras programmatiskt eller när en SOAP slutpunkt togs bort och måste läggas till igen.
+>Du kan inte lägga till en SOAP-slutpunkt med hjälp av webbtjänster.
+
+>[!NOTE]
+>
+>Vanligtvis läggs en SOAP-slutpunkt till i en tjänst som standard, men en SOAP-slutpunkt kan läggas till i en process som distribueras programmatiskt eller när en SOAP-slutpunkt tas bort och måste läggas till igen.
 
 ### Sammanfattning av steg {#summary_of_steps-1}
 
-Så här lägger du till en SOAP slutpunkt till en tjänst:
+Så här lägger du till en SOAP-slutpunkt till en tjänst:
 
 1. Inkludera projektfiler.
 1. Skapa ett `EndpointRegistryClient`-objekt.
-1. Ange SOAP slutpunktsattribut.
-1. Skapa en SOAP slutpunkt.
+1. Ange SOAP-slutpunktsattribut.
+1. Skapa en SOAP-slutpunkt.
 1. Aktivera slutpunkten.
 
 **Inkludera projektfiler**
@@ -189,25 +189,25 @@ Följande JAR-filer måste läggas till i projektets klasssökväg:
 * adobe-utilities.jar (krävs om AEM Forms körs på JBoss Application Server)
 * jbossall-client.jar (krävs om AEM Forms körs på JBoss Application Server)
 
-Dessa JAR-filer krävs för att skapa en SOAP slutpunkt. Du behöver emellertid ytterligare JAR-filer om du använder SOAP slutpunkt för att anropa tjänsten. Mer information om AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
+Dessa JAR-filer krävs för att skapa en SOAP-slutpunkt. Du behöver dock lägga till JAR-filer om du använder SOAP-slutpunkten för att anropa tjänsten. Mer information om AEM Forms JAR-filer finns i [Inkludera AEM Forms Java-biblioteksfiler](/help/forms/developing/invoking-aem-forms-using-java.md#including-aem-forms-java-library-files).
 
 **Skapa ett EndpointRegistry-klientobjekt**
 
-Om du vill lägga till en SOAP till en tjänst med programkod måste du skapa ett `EndpointRegistryClient`-objekt.
+Om du vill lägga till en SOAP-slutpunkt i en tjänst med programkod måste du skapa ett `EndpointRegistryClient`-objekt.
 
-**Ange SOAP för slutpunkter**
+**Ange SOAP-slutpunktsattribut**
 
-Om du vill lägga till en SOAP slutpunkt till en tjänst anger du följande värden:
+Om du vill lägga till en SOAP-slutpunkt till en tjänst anger du följande värden:
 
-* **Kopplingsidentifierarvärde**: Anger vilken typ av slutpunkt som ska skapas. Om du vill skapa en SOAP slutpunkt anger du `SOAP`.
+* **Kopplingsidentifierarvärde**: Anger vilken typ av slutpunkt som ska skapas. Om du vill skapa en SOAP-slutpunkt anger du `SOAP`.
 * **Beskrivning**: Anger slutpunktsbeskrivningen.
 * **Namn**: Anger slutpunktens namn.
 * **Tjänstidentifierarvärde**: Anger den tjänst som slutpunkten tillhör.
-* **Åtgärdsnamn**: Anger namnet på åtgärden som anropas med slutpunkten. När du skapar en SOAP slutpunkt anger du ett jokertecken ( `*`). Om du vill ange en specifik åtgärd i stället för att anropa alla tjänståtgärder, anger du åtgärdens namn i stället för att använda jokertecknet ( `*`).
+* **Åtgärdsnamn**: Anger namnet på åtgärden som anropas med slutpunkten. När du skapar en SOAP-slutpunkt anger du ett jokertecken ( `*`). Om du vill ange en specifik åtgärd i stället för att anropa alla tjänståtgärder, anger du åtgärdens namn i stället för att använda jokertecknet ( `*`).
 
-**Skapa en SOAP slutpunkt**
+**Skapa en SOAP-slutpunkt**
 
-När du har angett SOAP slutpunktsattribut kan du skapa en SOAP slutpunkt.
+När du har angett SOAP-slutpunktsattribut kan du skapa en SOAP-slutpunkt.
 
 **Aktivera slutpunkten**
 
@@ -223,7 +223,7 @@ När du har skapat en slutpunkt måste du aktivera den. När slutpunkten är akt
 
 ### Lägga till en SOAP-slutpunkt med Java API {#add-a-soap-endpoint-using-the-java-api}
 
-Lägg till en SOAP slutpunkt till en tjänst med hjälp av Java API:
+Lägg till en SOAP-slutpunkt till en tjänst med hjälp av Java API:
 
 1. Inkludera projektfiler.
 
@@ -234,7 +234,7 @@ Lägg till en SOAP slutpunkt till en tjänst med hjälp av Java API:
    * Skapa ett `ServiceClientFactory`-objekt som innehåller anslutningsegenskaper.
    * Skapa ett `EndpointRegistryClient`-objekt med hjälp av dess konstruktor och skicka `ServiceClientFactory`-objektet.
 
-1. Ange SOAP slutpunktsattribut.
+1. Ange SOAP-slutpunktsattribut.
 
    * Skapa ett `CreateEndpointInfo`-objekt med hjälp av dess konstruktor.
    * Ange värdet för anslutaridentifieraren genom att anropa `CreateEndpointInfo`-objektets `setConnectorId`-metod och skicka strängvärdet `SOAP`.
@@ -243,7 +243,7 @@ Lägg till en SOAP slutpunkt till en tjänst med hjälp av Java API:
    * Ange den tjänst som slutpunkten tillhör genom att anropa `CreateEndpointInfo`-objektets `setServiceId`-metod och skicka ett strängvärde som anger tjänstnamnet.
    * Ange åtgärden som anropas genom att anropa `CreateEndpointInfo`-objektets `setOperationName`-metod och skicka ett strängvärde som anger åtgärdsnamnet. För SOAP- och EJB-slutpunkter anger du ett jokertecken ( `*`), vilket betyder alla åtgärder.
 
-1. Skapa en SOAP slutpunkt.
+1. Skapa en SOAP-slutpunkt.
 
    Skapa slutpunkten genom att anropa `EndpointRegistryClient`-objektets `createEndpoint`-metod och skicka `CreateEndpointInfo`-objektet. Den här metoden returnerar ett `Endpoint`-objekt som representerar den nya SOAP-slutpunkten.
 
@@ -263,7 +263,7 @@ Lägg till en SOAP slutpunkt till en tjänst med hjälp av Java API:
 
 ## Lägga till bevakade mappslutpunkter {#adding-watched-folder-endpoints}
 
-Du kan programmässigt lägga till en bevakad mappslutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en bevakad mappslutpunkt kan användare placera en fil (till exempel en PDF-fil) i en mapp. När filen placeras i mappen anropas den konfigurerade tjänsten och filen ändras. När tjänsten har utfört den angivna åtgärden sparas den ändrade filen i en angiven utdatamapp. En bevakad mapp är konfigurerad för att skannas med ett fast intervall eller med ett cron-schema, till exempel varje måndag, onsdag och fredag vid tolv.
+Du kan programmässigt lägga till en bevakad mappslutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en bevakad mappslutpunkt kan användarna placera en fil (t.ex. en PDF-fil) i en mapp. När filen placeras i mappen anropas den konfigurerade tjänsten och filen ändras. När tjänsten har utfört den angivna åtgärden sparas den ändrade filen i en angiven utdatamapp. En bevakad mapp är konfigurerad för att skannas med ett fast intervall eller med ett cron-schema, till exempel varje måndag, onsdag och fredag vid tolv.
 
 Om du vill lägga till en övervakad mappslutpunkt i en tjänst programmatiskt bör du överväga följande kortlivade process med namnet *EncryptDocument*. (Se [Förstå AEM Forms-processer](/help/forms/developing/aem-forms-processes.md#understanding-aem-forms-processes).)
 
@@ -331,7 +331,7 @@ Följande lista anger konfigurationsvärden som anges när en bevakad mappslutpu
 * **userName**: Det användarnamn som används när en måltjänst anropas från den bevakade mappen. Detta värde är obligatoriskt. Standardvärdet är SuperAdmin.
 * **domainName**: Användarens domän. Detta värde är obligatoriskt. Standardvärdet är DefaultDom.
 * **batchSize**: Antalet filer eller mappar som ska hämtas per skanning. Använd det här värdet om du vill förhindra överbelastning på datorn. Om du skannar för många filer samtidigt kan det resultera i en krasch. Standardvärdet är 2.
-* **waitTime**: Tiden i millisekunder att vänta innan en mapp eller fil genomsöks efter att den har skapats. Om väntetiden t.ex. är 36 000 000 millisekunder (en timme) och filen skapades för en minut sedan, hämtas den här filen när 59 eller fler minuter har gått. Det här attributet är användbart för att säkerställa att en fil eller mapp kopieras helt till indatamappen. Om du t.ex. har en stor fil att bearbeta och det tar tio minuter att hämta filen anger du väntetiden till 10&ast;60 &ast;1000 millisekunder. Den här inställningen förhindrar att den bevakade mappen skannar filen om den inte har väntat i tio minuter. Standardvärdet är 0.
+* **waitTime**: Tiden i millisekunder att vänta innan en mapp eller fil genomsöks efter att den har skapats. Om väntetiden t.ex. är 36 000 000 millisekunder (en timme) och filen skapades för en minut sedan, hämtas den här filen när 59 eller fler minuter har gått. Det här attributet är användbart för att säkerställa att en fil eller mapp kopieras helt till indatamappen. Om du t.ex. har en stor fil att bearbeta och det tar tio minuter att hämta filen anger du väntetiden till 10&amp;ast;60 &amp;ast;1000 millisekunder. Den här inställningen förhindrar att den bevakade mappen skannar filen om den inte har väntat i tio minuter. Standardvärdet är 0.
 * **excludeFilePattern**: Det mönster som används av en bevakad mapp för att avgöra vilka filer och mappar som ska sökas igenom och hämtas. Filer eller mappar med det här mönstret skannas inte för bearbetning. Den här inställningen är användbar när indata är en mapp som innehåller flera filer. Innehållet i mappen kan kopieras till en mapp som har ett namn som kommer att hämtas av den bevakade mappen. Det här steget förhindrar att den bevakade mappen hämtar en mapp för bearbetning innan mappen kopieras helt till indatamappen. Om värdet för excludeFilePattern till exempel är `data*` hämtas inte alla filer och mappar som matchar `data*`. Detta inkluderar filer och mappar med namnen `data1`, `data2` och så vidare. Dessutom kan mönstret kompletteras med jokertecken för att ange filmönster. Den bevakade mappen ändrar det reguljära uttrycket så att det stöder jokerteckenmönster som `*.*` och `*.pdf`. Dessa mönster med jokertecken stöds inte av reguljära uttryck.
 * **includeFilePattern**: Det mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska sökas igenom och hämtas. Om det här värdet till exempel är `*` hämtas alla filer och mappar som matchar `input*`. Detta inkluderar filer och mappar med namnen `input1`, `input2` och så vidare. Standardvärdet är `*`. Detta värde anger alla filer och mappar. Dessutom kan mönstret kompletteras med jokertecken för att ange filmönster. Den bevakade mappen ändrar det reguljära uttrycket så att det stöder jokerteckenmönster som `*.*` och `*.pdf`. Dessa mönster med jokertecken stöds inte av reguljära uttryck. Detta värde är obligatoriskt.
 * **resultFolderName**: Mappen där de sparade resultaten lagras. Platsen kan vara en absolut eller relativ katalogsökväg. Om resultaten inte visas i den här mappen kontrollerar du felmappen. Skrivskyddade filer bearbetas inte och sparas i felmappen. Standardvärdet är `result/%Y/%M/%D/`. Det här är resultatmappen i den bevakade mappen.
@@ -429,7 +429,7 @@ Lägg till en bevakad mappslutpunkt med AEM Forms Java API:
    * Ett strängvärde som anger namnet på indataparametern. Namnet på indataparametern för EncryptDocument-tjänsten är till exempel `InDoc`.
    * Ett strängvärde som anger datatypen för indataparametern. Datatypen för indataparametern `InDoc` är till exempel `com.adobe.idp.Document`.
    * Ett strängvärde som anger mappningstypen. Du kan till exempel ange `variable`.
-   * Ett strängvärde som anger mappningstypsvärdet. Du kan till exempel ange &ast;.pdf som filmönster.
+   * Ett strängvärde som anger mappningstypsvärdet. Du kan till exempel ange &amp;ast;.pdf som filmönster.
 
    >[!NOTE]
    >
@@ -566,7 +566,7 @@ Följande konfigurationsvärden ställs in när en e-postslutpunkt läggs till i
 * **userName**: Det användarnamn som används när en måltjänst anropas från e-post. Standardvärdet är `SuperAdmin`.
 * **domainName**: Ett obligatoriskt konfigurationsvärde. Standardvärdet är `DefaultDom`.
 * **domainPattern**: Anger domänmönster för inkommande e-post som accepteras av providern. Om `adobe.com` till exempel används, kommer endast e-post från adobe.com att bearbetas, e-post från andra domäner ignoreras.
-* **filePattern**: Anger inkommande mönster för bifogade filer som accepteras av providern. Detta inkluderar filer som har specifika filnamnstillägg (&ast;.dat, &ast;.xml), filer som har specifika namn (data) och filer som har sammansatta uttryck i namnet och filnamnstillägget (&ast;.[dD][aA]&#39;port&#39;). Standardvärdet är `*`.
+* **filePattern**: Anger inkommande mönster för bifogade filer som accepteras av providern. Detta inkluderar filer som har specifika filnamnstillägg (&amp;ast;.dat, &amp;ast;.xml), filer som har specifika namn (data) och filer som har sammansatta uttryck i namnet och filnamnstillägget (&amp;ast;.``[dD][aA]``&#39;port&#39;). Standardvärdet är `*`.
 * **receiveSuccessfulJob**: En e-postadress dit meddelanden skickas för att ange slutförda jobb. Som standard skickas alltid ett meddelande om att jobbet lyckades till avsändaren. Om du skriver `sender` skickas e-postresultat till avsändaren. Stöd för upp till 100 mottagare. Ange ytterligare mottagare med e-postadresser, där var och en avgränsas med kommatecken. Om du vill inaktivera det här alternativet lämnar du det här värdet tomt. I vissa fall kanske du vill utlösa en process och inte skicka ett e-postmeddelande om resultatet. Standardvärdet är `sender`.
 * **receiveFailedJob**: En e-postadress som meddelanden skickas till som anger misslyckade jobb. Som standard skickas alltid ett meddelande om misslyckat jobb till avsändaren. Om du skriver `sender` skickas e-postresultat till avsändaren. Stöd för upp till 100 mottagare. Ange ytterligare mottagare med e-postadresser, där var och en avgränsas med kommatecken. Om du vill inaktivera det här alternativet lämnar du det här värdet tomt. Standardvärdet är `sender`.
 * **inboxHost**: Inkorgens värdnamn eller IP-adress som e-postprovidern kan läsa in.
@@ -583,7 +583,7 @@ Följande konfigurationsvärden ställs in när en e-postslutpunkt läggs till i
 * **charSet**: Den teckenuppsättning som används av e-postprovidern. Standardvärdet är `UTF-8`.
 * **smtpSSLEnabled**: Ange det här värdet för att tvinga e-postprovidern att använda SSL när meddelanden om resultat eller fel skickas. Kontrollera att SMTP-värden stöder SSL.
 * **failedJobFolder**: Anger en katalog där resultat ska lagras när SMTP-e-postservern inte är i drift.
-* **asynkron**: När den är synkron bearbetas alla indatadokument och ett enda svar returneras. När inställningen är asynkron skickas ett svar för varje indatadokument som bearbetas. En e-postslutpunkt skapas till exempel för den process som introduceras i det här avsnittet, och ett e-postmeddelande skickas till slutpunktens inkorg som innehåller flera oskyddade PDF-dokument. När alla PDF-dokument har krypterats med ett lösenord, och om slutpunkten har konfigurerats som synkron, skickas ett enda e-postmeddelande med alla säkra PDF-dokument bifogade. Om slutpunkten är konfigurerad som asynkron skickas ett separat e-postmeddelande för svar för varje skyddat PDF-dokument. Varje e-postmeddelande innehåller ett enda dokument i PDF som en bifogad fil. Standardvärdet är asynkront.
+* **asynkron**: När den är synkron bearbetas alla indatadokument och ett enda svar returneras. När inställningen är asynkron skickas ett svar för varje indatadokument som bearbetas. En e-postslutpunkt skapas till exempel för den process som introduceras i det här avsnittet, och ett e-postmeddelande skickas till slutpunktens inkorg som innehåller flera oskyddade PDF-dokument. När alla PDF-dokument har krypterats med ett lösenord, och om slutpunkten har konfigurerats som synkron, skickas ett enda e-postmeddelande med alla säkra PDF-dokument bifogade. Om slutpunkten är konfigurerad som asynkron skickas ett separat e-postmeddelande för varje skyddat PDF-dokument. Varje e-postmeddelande innehåller ett enda PDF-dokument som en bilaga. Standardvärdet är asynkront.
 
 **Definiera indataparametervärden**
 
@@ -674,7 +674,7 @@ Lägg till en e-postslutpunkt med Java API:
    * Ett strängvärde som anger namnet på indataparametern. Namnet på indataparametern för EncryptDocument-tjänsten är till exempel `InDoc`.
    * Ett strängvärde som anger datatypen för indataparametern. Datatypen för indataparametern `InDoc` är till exempel `com.adobe.idp.Document`.
    * Ett strängvärde som anger mappningstypen. Du kan till exempel ange `variable`.
-   * Ett strängvärde som anger mappningstypsvärdet. Du kan till exempel ange &ast;.pdf som filmönster.
+   * Ett strängvärde som anger mappningstypsvärdet. Du kan till exempel ange &amp;ast;.pdf som filmönster.
 
    >[!NOTE]
    >
@@ -750,9 +750,9 @@ Lägg till en e-postslutpunkt med Java API:
 
 >[!NOTE]
 >
->LiveCycle Remoting-API:er har tagits bort för AEM formulär i JEE.
+>LiveCycle Remoting-API:er har tagits bort för AEM-formulär i JEE.
 
-Du kan programmässigt lägga till en fjärrslutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en fjärrslutpunkt aktiverar du ett Flex-program att anropa tjänsten med hjälp av fjärrkommunikation. (Se [Anropa AEM Forms med (borttaget för AEM formulär) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
+Du kan programmässigt lägga till en fjärrslutpunkt till en tjänst med hjälp av AEM Forms Java API. Genom att lägga till en fjärrslutpunkt aktiverar du ett Flex-program att anropa tjänsten med hjälp av fjärrkommunikation. (Se [Anropa AEM Forms med (borttaget för AEM-formulär) AEM Forms Remoting](/help/forms/developing/invoking-aem-forms-using-remoting.md#invoking-aem-forms-using-remoting).)
 
 Om du vill lägga till en fjärrslutpunkt till en tjänst programmatiskt bör du överväga följande kortlivade process med namnet *EncryptDocument*.
 
@@ -801,7 +801,7 @@ Om du vill skapa en fjärrslutpunkt för en tjänst anger du följande värden:
 * **Beskrivning**: Anger beskrivningen av slutpunkten.
 * **Namn**: Anger slutpunktens namn.
 * **Tjänstidentifierarvärde**: Anger den tjänst som slutpunkten tillhör. Om du till exempel vill lägga till en fjärrslutpunkt i processen som introduceras i det här avsnittet (en process blir en tjänst när den aktiveras i Workbench) anger du `EncryptDocument`.
-* **Åtgärdsnamn**: Anger namnet på åtgärden som anropas med slutpunkten. När du skapar en fjärrslutpunkt anger du ett jokertecken (&ast;).
+* **Åtgärdsnamn**: Anger namnet på åtgärden som anropas med slutpunkten. När du skapar en fjärrslutpunkt anger du ett jokertecken (&amp;ast;).
 
 **Skapa en fjärrslutpunkt**
 
@@ -839,7 +839,7 @@ Lägg till en fjärrslutpunkt med Java API:
    * Ange beskrivningen av slutpunkten genom att anropa `CreateEndpointInfo`-objektets `setDescription`-metod och skicka ett strängvärde som beskriver slutpunkten.
    * Ange slutpunktens namn genom att anropa `CreateEndpointInfo`-objektets `setName`-metod och skicka ett strängvärde som anger namnet.
    * Ange den tjänst som slutpunkten tillhör genom att anropa `CreateEndpointInfo`-objektets `setServiceId`-metod och skicka ett strängvärde som anger tjänstnamnet.
-   * Ange den åtgärd som anropas av `CreateEndpointInfo`-objektets `setOperationName`-metod och skicka ett strängvärde som anger åtgärdsnamnet. Ange ett jokertecken (&ast;) för en fjärrslutpunkt.
+   * Ange den åtgärd som anropas av `CreateEndpointInfo`-objektets `setOperationName`-metod och skicka ett strängvärde som anger åtgärdsnamnet. Ange ett jokertecken (&amp;ast;) för en fjärrslutpunkt.
 
 1. Skapa en fjärrslutpunkt.
 
@@ -1084,7 +1084,7 @@ Ange nya konfigurationsvärden när du ändrar en slutpunkt. Om du till exempel 
 
 ## Tar bort slutpunkter {#removing-endpoints}
 
-Du kan ta bort en slutpunkt från en tjänst programmatiskt med AEM Forms Java API. När du har tagit bort en slutpunkt kan tjänsten inte anropas med den anropsmetod som slutpunkten aktiverade. Om du till exempel tar bort en SOAP slutpunkt från en tjänst kan du inte anropa tjänsten i SOAP.
+Du kan ta bort en slutpunkt från en tjänst programmatiskt med AEM Forms Java API. När du har tagit bort en slutpunkt kan tjänsten inte anropas med den anropsmetod som slutpunkten aktiverade. Om du till exempel tar bort en SOAP-slutpunkt från en tjänst kan du inte anropa tjänsten i SOAP-läge.
 
 För att visa hur du tar bort en slutpunkt från en tjänst tar det här avsnittet bort en EJB-slutpunkt från en tjänst med namnet *EncryptDocument*.
 
@@ -1215,7 +1215,7 @@ Skapa ett `ConnectorRegistryClient`-objekt om du vill hämta slutpunktsanslutnin
 Ange den typ av koppling som informationen ska hämtas från. Följande typer av anslutningar finns:
 
 * **EJB**: Gör att ett klientprogram kan anropa en tjänst i EJB-läge.
-* **SOAP**: Gör att ett klientprogram kan anropa en tjänst i SOAP läge.
+* **SOAP**: Gör att ett klientprogram kan anropa en tjänst i SOAP-läge.
 * **Bevakad mapp**: Gör att bevakade mappar kan anropa en tjänst.
 * **E-post**: Aktiverar e-postmeddelanden för att anropa en tjänst.
 * **Remoting**: Gör att ett Flex-klientprogram kan anropa en tjänst.

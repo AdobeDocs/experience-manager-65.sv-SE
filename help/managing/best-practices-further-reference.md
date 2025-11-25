@@ -8,8 +8,8 @@ content-type: reference
 exl-id: 36620e3e-ecdf-4062-bbef-65513362d691
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
-role: Admin,Architect,Data Architect,Developer,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer,Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '3699'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Den här sidan innehåller mer information om hur du kan arbeta vidare med och/eller förstärka de dokument och principer som omfattas av checklistan [Hantera projekt - Bästa metoder](/help/managing/best-practices.md).
 
-## AEM - Vad ska du använda? {#aem-what-will-you-be-using}
+## AEM - Vad tänker du använda? {#aem-what-will-you-be-using}
 
 >[!CAUTION]
 >
@@ -28,19 +28,19 @@ Den här sidan innehåller mer information om hur du kan arbeta vidare med och/e
 
 ### Funktioner i AEM {#features-within-aem}
 
-När du implementerar AEM (särskilt för första gången) ska du granska [funktionerna och arbetsflödena i AEM](https://business.adobe.com/se/products/experience-manager/adobe-experience-manager.html) för att se vilka områden du vill ha eller behöver.
+När du implementerar AEM (särskilt för första gången) ska du kontrollera vilka områden du vill ha eller behöver i [funktionerna och arbetsflödena i AEM](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html).
 
-Fundera på AEM du använder och hur designen påverkas, till exempel:
+Ta en titt på de funktioner i AEM som du använder och hur designen påverkas, till exempel:
 
 * [Commerce](/help/commerce/cif-classic/administering/ecommerce.md)
-* [Screens](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=sv-SE)
+* [Screens](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html)
 * [Assets](/help/assets/assets.md)
 * [Taggar](/help/sites-administering/tags.md)
 * [Hantering och översättning av flera webbplatser](/help/sites-administering/msm-and-translation.md)
 * [Forms](/help/forms/using/introduction-aem-forms.md)
 * [Communities](/help/communities/deploy-communities.md)
 
-Kontrollera dessutom [Versionsinformationen](/help/release-notes/release-notes.md) för de olika versionerna av AEM för att se när nya funktioner lades till.
+Kontrollera dessutom [Versionsinformation](/help/release-notes/release-notes.md) för de olika versionerna av AEM för att se när nya funktioner lades till.
 
 ### Integreringar {#integrations}
 
@@ -66,7 +66,7 @@ Precis som med andra projekt är det viktigt att fastställa grundregler så sna
 
 >[!NOTE]
 >
->Dessa punkter är generiska och checklistan [Best Practices](/help/managing/best-practices.md) behandlar detaljer i relation till AEM.
+>Dessa punkter är generiska och checklistan [Best Practices](/help/managing/best-practices.md) behandlar information om AEM.
 
 * **Roller**
 
@@ -108,7 +108,7 @@ Precis som med andra projekt är det viktigt att fastställa grundregler så sna
   Definiera tydligt vad som ska täckas av projektet på olika nivåer:
 
    * de enskilda releaserna (om en iterativ versionsprocess används och oavsett om de levereras till kunder eller till ditt interna testteam).
-   * AEM.
+   * AEM-projektet.
    * hela projektet, inklusive eventuella tredjepartsprogram, deras inverkan på testning, organisatoriska frågor och många andra.
    * För vissa aspekter kan det också vara användbart att ange vad som är *inte* inom projektets omfång. Denna idé kan bidra till att förhindra förvirring och felaktiga antaganden, även om den bör begränsas till väsentliga frågor.
 
@@ -214,7 +214,7 @@ För att definiera eller bedöma infrastrukturen kan det hjälpa till att defini
 Beroende på din situation och webbplatsens strategiska betydelse kan en definition av infrastruktur hjälpa dig att bedöma och välja din infrastruktur:
 
 * antal servrar
-* antal AEM (författare och publicering)
+* antal AEM-instanser (författare och publicera)
 
 ### Prestanda {#performance}
 
@@ -246,7 +246,7 @@ De svarstider du vill ha skiljer sig åt mellan olika utvecklings- och publiceri
    * tillgodose ett fåtal användare som skapar ett stort antal förfrågningar när de uppdaterar innehållssidor och de enskilda elementen på dessa sidor
    * vara så snabb som möjligt för att maximera produktiviteten och få ut materialet på webbplatsen
 
-* **Publish-miljö**
+* **Publiceringsmiljö**
 
   Den här miljön innehåller innehåll som du gör tillgängligt för användarna:
 
@@ -276,7 +276,7 @@ Numren ovan förutsätter följande villkor:
 
 * mätt vid publicering (ingen redigeringsmiljö och/eller CFC-overhead)
 * mätt på servern (ingen nätverksbelastning)
-* inte cachelagrad (ingen AEM, inget Dispatcher-cache)
+* inte cachelagrad (ingen AEM-utdatacache, ingen Dispatcher-cache)
 * endast för komplexa objekt med många beroenden (HTML, JS, PDF, ...)
 * ingen annan belastning på systemet
 
@@ -306,7 +306,7 @@ Sökförfrågningar kan ha stor effekt på din webbplats, både när det gäller
 
 Att ange mål för sökbegäranden är återigen en fråga om erfarenhet beroende på:
 
-* AEM
+* upplevelse av AEM
 * en bedömning av hur ofta sökning används i jämförelse med andra mål
 * din persistence Manager
 * ditt sökindex
@@ -332,7 +332,7 @@ Målen för antalet samtidiga användare, beroende på miljötypen:
 
    * Vanligtvis kan antalet samtidiga användare uppskattas korrekt. Du kan veta hur många författare du har totalt, men (troligen) alla är inte aktiva samtidigt.
 
-* **Publish-miljö**
+* **Publiceringsmiljö**
 
    * Publiceringsmiljön är en större utmaning att förutse, så du måste välja ett målvärde. Återigen bör den baseras på erfarenheterna av den aktuella webbplatsen och realistiska förväntningar på den nya webbplatsen.
    * Specialhändelser (t.ex. när du publicerar nytt populärt innehåll) kan överstiga förväntningarna - eller till och med möjligheterna (som ibland rapporteras i pressen när biljetter till vissa evenemang görs tillgängliga för försäljning).
@@ -357,7 +357,7 @@ Innan du diskuterar relaterade mätvärden ska du snabbt definiera termerna:
   | Klient | Datorkraft i användarens dator. | Sidlayoutens komplexitet. |
   | Nätverk | Nätverksbandbredd. | Sidans storlek (kod, bilder o.s.v.). |
   | Dispatcher cache | Webbserverminne (huvudminne och hårddisk). | Webbserver (huvudminne och hårddisk). Antal och storlek för cachelagrade sidor. |
-  | Utdatacache | Serverminne för AEM (huvudminne och hårddisk). | Antal och storlek för sidorna i utdatacachen, antalet beroenden per sida. Dispatcher-cachen sänker volymen. |
+  | Utdatacache | Serverminne för AEM-servern (huvudminne och hårddisk). | Antal och storlek för sidorna i utdatacachen, antalet beroenden per sida. Dispatcher-cachen sänker volymen. |
   | Webbserver | Webbserverns datorkraft. | Antal begäranden. Cachelagring sänker volymen. |
   | Mall | Webbserverns datorkraft. | Mallarnas komplexitet. |
   | Databas | Databasens prestanda. | Antal sidor som lästs in från databasen. |
@@ -374,7 +374,7 @@ Men det är bättre att ha en liten uppsättning exakta, viktiga mätvärden som
 
 Säkerhet är avgörande och en ständigt ökande utmaning. Det ***måste*** övervägas och planeras från de tidigaste stadierna i ditt projekt.
 
-[Säkerhetschecklistan](/help/sites-administering/security-checklist.md) innehåller information om de steg du bör utföra för att se till att din AEM är säker när den distribueras. Andra säkerhetsaspekter beskrivs under [Säkerhet (vid utveckling)](/help/sites-developing/security.md) och [Användaradministration och säkerhet](/help/sites-administering/security.md).
+[Säkerhetschecklistan](/help/sites-administering/security-checklist.md) innehåller information om de åtgärder du bör vidta för att se till att din AEM-installation är säker när den distribueras. Andra säkerhetsaspekter beskrivs under [Säkerhet (vid utveckling)](/help/sites-developing/security.md) och [Användaradministration och säkerhet](/help/sites-administering/security.md).
 
 ## Parallella och interaktiva uppgifter {#parallel-and-iterative-tasks}
 
@@ -382,12 +382,12 @@ Säkerhet är avgörande och en ständigt ökande utmaning. Det ***måste*** öv
 >
 >Följande:
 >
->* Erbjuder en översikt relaterad till den *första*-implementeringen av ett AEM projekt.
+>* Erbjuder en översikt relaterad till den *första*-implementeringen av ett AEM-projekt.
 >* Är avsedd som en abstrakt översikt. Se [Projektchecklista](/help/managing/best-practices.md) för specifika faser/milstolpar/uppgifter.
 >* Alla tidsskalor är teoretiska.
 >
 
-För en ny implementering av ett AEM-projekt bör du överväga följande:
+För en ny implementering av ett AEM-standardprojekt bör du överväga följande:
 
 * Överleverans från försäljningsprocessen.
 * Implementering av kundprogrammet (**Utveckling**).
@@ -422,7 +422,7 @@ Några poäng för varje kategori är:
       * Varje fjäder ger ett körbart resultat.
       * Varje Sprint får en kundsignatur (minimum av strukturerat test med feedback).
 
-   * Planera för en eventuell uppdatering av den tillgängliga AEM under projektet.
+   * Planera för en eventuell uppdatering av den tillgängliga AEM-versionen under projektet.
    * Planera för tester och optimering under skarvar.
    * Planera för stabiliserings- och optimeringsfaser.
    * Skapa en logg med artiklar som ska planeras för ytterligare versioner.
@@ -473,7 +473,7 @@ I följande lista visas ungefärliga uppskattningar och inbördes samband mellan
 
 >[!CAUTION]
 >
->Dessa siffror kan endast användas för ursprungliga uppskattningar. En erfaren AEM måste göra en detaljerad analys.
+>Dessa siffror kan endast användas för ursprungliga uppskattningar. En erfaren AEM-utvecklare måste göra en detaljerad analys.
 
 | Fas | Insats |
 |---|---|
@@ -489,7 +489,7 @@ Detaljerad planering kan sedan relatera tillgängliga eller nödvändiga resurse
 
 ## Referensarkitektur {#reference-architecture}
 
-Referensarkitekturen ges för att ge en malllösning för den AEM arkitekturen. Referensarkitekturen åtgärdar problem som ofta uppstår i företagssystem, t.ex. skalning, tillförlitlighet och säkerhet.
+Referensarkitekturen är avsedd som en malllösning för AEM-arkitekturen. Referensarkitekturen åtgärdar problem som ofta uppstår i företagssystem, t.ex. skalning, tillförlitlighet och säkerhet.
 
 Följande webbplatsmått ska definieras:
 
@@ -521,7 +521,7 @@ Följande lista innehåller information om verktyg som kan användas. Den är av
   </tr>
   <tr>
    <td>AEM</td>
-   <td><p>AEM innehåller en mängd mekanismer som du kan använda för att övervaka, testa, undersöka och felsöka programmet, bland annat:</p>
+   <td><p>AEM har också en rad funktioner som hjälper dig att övervaka, testa, undersöka och felsöka programmet:</p>
     <ul>
      <li><a href="/help/sites-developing/developer-mode.md">Utvecklarläge</a></li>
      <li><a href="/help/sites-developing/hobbes.md">Testkonsolen</a></li>
@@ -552,11 +552,11 @@ Följande lista innehåller information om verktyg som kan användas. Den är av
   </tr>
   <tr>
    <td>Eclipse</td>
-   <td><p>Eclipse är en öppen Source-utvecklingsmiljö som består av olika projekt. Det handlar om att bygga en öppen utvecklingsplattform som består av flexibla ramverk, verktyg och runtimes för att bygga, driftsätta och hantera programvara under hela livscykeln.</p> <p>Mer information finns i <a href="/help/sites-developing/howto-projects-eclipse.md">Utveckla AEM projekt med Eclipse</a>.</p> </td>
+   <td><p>Eclipse är en öppen Source-utvecklingsmiljö som består av olika projekt. Det handlar om att bygga en öppen utvecklingsplattform som består av flexibla ramverk, verktyg och runtimes för att bygga, driftsätta och hantera programvara under hela livscykeln.</p> <p>Mer information finns i <a href="/help/sites-developing/howto-projects-eclipse.md">Utveckla AEM-projekt med Eclipse</a>.</p> </td>
   </tr>
   <tr>
    <td>IntelliJ</td>
-   <td><p>En professionell utvecklingsmiljö (som därför kan ge upphov till licenskostnader) med ett omfattande utbud av funktioner. </p> <p>Mer information finns i <a href="/help/sites-developing/ht-intellij.md">Utveckla AEM med IntelliJ IDEA</a>.</p> </td>
+   <td><p>En professionell utvecklingsmiljö (som därför kan ge upphov till licenskostnader) med ett omfattande utbud av funktioner. </p> <p>Mer information finns i <a href="/help/sites-developing/ht-intellij.md">Utveckla AEM-projekt med IntelliJ IDEA</a> .</p> </td>
   </tr>
   <tr>
    <td>Maven</td>
@@ -575,7 +575,7 @@ Dessutom är följande avsnitt av särskilt intresse:
 
 ### Bästa praxis {#best-practices}
 
-Adobe tillhandahåller ytterligare bästa praxis för alla faser och målgrupper:
+Adobe tillhandahåller ytterligare metodtips för alla faser och målgrupper:
 
 * [Distribuerar](/help/sites-deploying/best-practices.md)
 * [Redigering](/help/sites-authoring/best-practices.md)

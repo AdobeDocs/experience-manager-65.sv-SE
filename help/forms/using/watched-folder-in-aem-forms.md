@@ -9,16 +9,16 @@ exl-id: fbf5c7c3-cb01-4fda-8e5d-11d56792d4bf
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: Admin, User, Developer
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '7164'
+source-wordcount: '7136'
 ht-degree: 0%
 
 ---
 
 # Bevakad mapp i AEM Forms{#watched-folder-in-aem-forms}
 
-En administratör kan konfigurera en nätverksmapp, en så kallad bevakad mapp, så att när en användare placerar en fil (till exempel en PDF-fil) i den bevakade mappen så startas ett förkonfigurerat arbetsflöde, en tjänst eller en skriptåtgärd för att bearbeta den tillagda filen. När tjänsten har utfört den angivna åtgärden sparas resultatfilen i en angiven utdatamapp. Mer information om arbetsflöde, tjänst och skript finns i [Olika metoder för bearbetning av filer](#variousmethodsforprocessingfiles).
+En administratör kan konfigurera en nätverksmapp, en så kallad bevakad mapp, så att när en användare monterar en fil (till exempel en PDF-fil) i den bevakade mappen så startas ett förkonfigurerat arbetsflöde, en tjänst eller en skriptåtgärd för att bearbeta den tillagda filen. När tjänsten har utfört den angivna åtgärden sparas resultatfilen i en angiven utdatamapp. Mer information om arbetsflöde, tjänst och skript finns i [Olika metoder för bearbetning av filer](#variousmethodsforprocessingfiles).
 
 ## Skapa en bevakad mapp {#create-a-watched-folder}
 
@@ -102,9 +102,9 @@ Du kan använda [filmönster](../../forms/using/watched-folder-in-aem-forms.md#p
    * Filer med specifika namn, till exempel data&#42;, skulle exkludera filer och mappar med namnen data1, data2 och så vidare.
    * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
-      * Data[0-9][0-9][0-9].[d][aA]&#39;port&#39;
-      * &#42;.[d][Aa]&#39;port&#39;
-      * &#42;.[xx][mm][Ll]
+      * Data`[0-9][0-9][0-9]`.`[dD][aA]`&#39;port&#39;
+      * &#42;.`[dD][aA]`&#39;port&#39;
+      * &#42;.`[Xx][Mm][Ll]`
 
 Mer information om filmönster finns i [Om filmönster](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p).
 
@@ -115,10 +115,10 @@ Mer information om filmönster finns i [Om filmönster](../../forms/using/watche
 
 * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
-   * Data[0-9][0-9][0-9].[d][aA]&#39;port&#39;
+   * Data`[0-9][0-9][0-9]`.`[dD][aA]`&#39;port&#39;
 
-      * &#42;.[d][Aa]&#39;port&#39;
-      * &#42;.[xx][mm][Ll]
+      * &#42;.`[dD][aA]`&#39;port&#39;
+      * &#42;.`[Xx][Mm][Ll]`
 
 Mer information om filmönster finns i [Om filmönster](../../forms/using/watched-folder-in-aem-forms.md#p-file-and-folder-patterns-p)
 
@@ -297,13 +297,13 @@ Om du tänker placera dina skript på en anpassad plats, är det troligt att sta
 1. Skapa en systemanvändare programmatiskt eller via konsolen https://&#39;[server]:[port]/crx/explorer. Du kan också använda en befintlig systemanvändare. Det är viktigt att du arbetar med systemanvändare här i stället för med vanliga användare.
 1. Ge läsbehörighet till den nyskapade eller befintliga systemanvändaren på den anpassade plats där skripten lagras. Du kan ha flera anpassade platser. Ange minst läsbehörighet för alla anpassade platser.
 1. I Felix konfigurationskonsol (/system/console/configMgr) letar du reda på tjänstanvändarmappningen för de bevakade mapparna. Mappningen ser ut som &#39;Mappning: adobe-aemds-core-watch-folder=..&#39;.
-1. Klicka på mappningen. För posten &#39;adobe-aemds-core-watch-folder:scripts=fd-service&#39; ändrar du fd-service till ID:t för den anpassade systemanvändaren. Klicka på Spara.
+1. Klicka på mappningen. För posten adobe-aemds-core-watch-folder:scripts=fd-service ändrar du fd-service till ID:t för den anpassade systemanvändaren. Klicka på Spara.
 
 Nu kan du använda konfigurerad anpassad plats för att spara skripten.
 
 ### Använda ett arbetsflöde för att bearbeta filer i en bevakad mapp {#using-a-workflow-to-process-files-of-a-watched-folder}
 
-Med arbetsflöden kan du automatisera aktiviteter i Experience Manager. Arbetsflöden består av en serie steg som körs i en viss ordning. Varje steg utför en distinkt aktivitet som att aktivera en sida eller skicka ett e-postmeddelande. Arbetsflöden kan samverka med resurser i databasen, användarkonton och Experience Manager-tjänster. Därför kan arbetsflöden koordinera komplicerade saker.
+Med arbetsflöden kan du automatisera Experience Manager-aktiviteter. Arbetsflöden består av en serie steg som körs i en viss ordning. Varje steg utför en distinkt aktivitet som att aktivera en sida eller skicka ett e-postmeddelande. Arbetsflöden kan samverka med resurser i databasen, användarkonton och Experience Manager-tjänster. Därför kan arbetsflöden koordinera komplicerade saker.
 
 * Innan du skapar ett arbetsflöde bör du tänka på följande:
 * Resultatet av ett steg måste vara tillgängligt för alla efterföljande steg.
@@ -325,9 +325,9 @@ Utför följande steg för att bearbeta filer med hjälp av arbetsflöden:
    * workflowSession
    * metadata
 
-Om du använder Java-programmeringsspråket för att implementera arbetsflödet, ger den AEM arbetsflödesmotorn värdet för variablerna workItem, workflowSession och metadata. Dessa variabler skickas som argument till execute()-metoden för den anpassade WorkflowProcess-implementeringen.
+Om du använder programmeringsspråket Java för att implementera arbetsflödet, tillhandahåller arbetsflödesmotorn i AEM ett värde för variablerna workItem, workflowSession och metadata. Dessa variabler skickas som argument till execute()-metoden för den anpassade WorkflowProcess-implementeringen.
 
-Om du använder ECMAScript för att implementera arbetsflödet, tillhandahåller den AEM arbetsflödesmotorn värden för graniteWorkItem, graniteWorkflowSession och metadatavariabler. Dessa variabler skickas som argument till metoden WorkflowContextService.execute().
+Om du använder ECMAScript för att implementera arbetsflödet, tillhandahåller AEM arbetsflödesmotor värde för graniteWorkItem, graniteWorkflowSession och metadatavariabler. Dessa variabler skickas som argument till metoden WorkflowContextService.execute().
 
 Argumentet för processWorkflowContext() är ett objekt av typen com.adobe.aemfd.watchfolder.workflow.api.WorkflowContext. WorkflowContext-gränssnittet har följande API:er för att underlätta de arbetsflödesspecifika överväganden som nämns ovan:
 
@@ -406,9 +406,9 @@ Om nyttolastens struktur skiljer sig från den bevakade mappens struktur kan du 
 1. Konfigurera klient-SDK i byggsökvägen för det maven-baserade projektet. För att komma igång kan du ladda ned och öppna följande maven-baserade projekt i den utvecklingsmiljö du vill.
 1. Redigera den filterkod för nyttolastsmappning som finns i exempelpaketet efter dina behov.
 1. Använd maven för att skapa ett paket med det anpassade nyttolastmappningsfiltret.
-1. Använd [AEM paketkonsolen](https://localhost:4502/system/console/bundles) för att installera paketet.
+1. Använd [AEM bundles-konsolen](https://localhost:4502/system/console/bundles) för att installera paketet.
 
-   Nu visas det anpassade filtret för nyttolastmappning i AEM bevakade mappanvändargränssnittet. Du kan använda den i ditt arbetsflöde.
+   Nu visas ett anpassat nyttolastmappfilter i användargränssnittet för bevakade AEM-mappar. Du kan använda den i ditt arbetsflöde.
 
    Följande exempelkod implementerar en enkel filbaserad mappare för filerna som sparas i förhållande till en nyttolast. Du kan använda den för att komma igång.
 
@@ -568,9 +568,9 @@ Administratörer kan ange vilken typ av fil som kan anropa en tjänst. Du kan sk
 * Filer med specifika namn, till exempel data.&#42;
 * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
-   * Data[0-9][0-9][0-9].[d][aA]&#39;port&#39;
-   * &#42;.[d][Aa]&#39;port&#39;
-   * &#42;.[xx][mm][Ll]
+   * Data`[0-9][0-9][0-9]`.`[dD][aA]`&#39;port&#39;
+   * &#42;.`[dD][aA]`&#39;port&#39;
+   * &#42;.`[Xx][Mm][Ll]`
 
 * Administratören kan definiera filmönstret för utdatamappen där resultaten ska lagras. För utdatamappar (resultat, bevarande och fel) kan administratören ange något av följande filmönster:
 * %Y = år (full)
@@ -605,7 +605,7 @@ Så här konfigurerar du en bevakad mapp med PDF Generator:
 
 ### Skapa ett ECMAScript {#create-an-ecmascript}
 
-ECMAScript använder PDF GeneratorCreatePDF API för att konvertera Microsoft Word-dokument (.docx) till PDF-dokument. Så här skapar du skriptet:
+ECMAScript använder PDF Generator createPDF API för att konvertera Microsoft Word-dokument (.docx) till PDF-dokument. Så här skapar du skriptet:
 
 1. Öppna CRXDE lite i ett webbläsarfönster. URL:en är https://&#39;[server]:[port]&#39;/crx/de.
 
@@ -640,7 +640,7 @@ ECMAScript använder PDF GeneratorCreatePDF API för att konvertera Microsoft Wo
 
 ### Skapa ett arbetsflöde {#create-a-workflow}
 
-1. Öppna AEM gränssnitt i ett webbläsarfönster.
+1. Öppna användargränssnittet för AEM Workflow i ett webbläsarfönster.
    <https://[servername>]:&#39;port&#39;/workflow
 
 1. Klicka på **Nytt** i modellvyn. Ange **Titel** i dialogrutan Nytt arbetsflöde och klicka på **OK**.
@@ -663,7 +663,7 @@ ECMAScript använder PDF GeneratorCreatePDF API för att konvertera Microsoft Wo
 
 1. Öppna CRXDE lite i ett webbläsarfönster. https://&#39;[server]:[port]/crx/de/
 
-1. Navigera till mappen /etc/fd/watchfolder/config/ och skapa en nod av typen nt:undefined.
+1. Navigera till mappen /etc/fd/watchfolder/config/ och skapa en nod av typen nt:unstructured.
 
    ![configure-the-watch-folder-pdf](assets/configure-the-watched-folder-pdf.png)
 
@@ -680,4 +680,4 @@ inputProcessorType (String): Den typ av process som ska startas. I den här sjä
 
 ## Kända fel {#watched-folder-known-issues}
 
-När du startar AEM 6.5 Forms på JEE börjar filerna bearbetas innan JBoss startar helt och filerna inte kan bearbetas. Du undviker detta genom att ta bort alla bevakade mappar innan du startar JBoss.
+När AEM 6.5 Forms startas på JEE börjar filerna bearbetas innan JBoss startar helt och filerna inte kan bearbetas. Du undviker detta genom att ta bort alla bevakade mappar innan du startar JBoss.

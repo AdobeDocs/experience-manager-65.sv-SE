@@ -4,34 +4,34 @@ description: En introduktion till de kraftfulla och flexibla headlessfunktionern
 exl-id: 39d2218a-4f11-459d-8514-cfd312246be5
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments
-role: Admin, Architect,Data Architect,Developer,User,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin, Developer, User, Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 0%
 
 ---
 
-# Om du skriver för Headless med AEM - introduktion {#author-headless-introduction}
+# Om du skriver för Headless med AEM - en introduktion {#author-headless-introduction}
 
-I den här delen av [AEM Headless Content Author Journey](overview.md) kan du lära dig de (grundläggande) begrepp och termer som behövs för att förstå hur du redigerar innehåll för headless Content Delivery med Adobe Experience Manager (AEM).
+I den här delen av [AEM Headless Content Author Journey](overview.md) kan du lära dig de (grundläggande) begrepp och termer som behövs för att förstå hur du skapar innehåll för headless Content Delivery med Adobe Experience Manager (AEM).
 
 ## Syfte {#objective}
 
 * **Målgrupp**: Nybörjare
 * **Mål**: Introducera de koncept och termer som är relevanta för Headless Authoring.
 
-## CMS (Content Management System) {#content-management-system}
+## Content Management System (CMS) {#content-management-system}
 
 Vad är ett innehållshanteringssystem?
 
-CMS (Content Management System) är precis vad det står att det är - ett datorsystem som används för att hantera innehåll. Det är lite allmänt, så för att vara mer exakt används det (vanligtvis) för att hantera innehåll som du vill göra tillgängligt på dina webbplatser.
+Ett innehållshanteringssystem (CMS) är precis vad det sägs vara - ett datorsystem som används för att hantera innehåll. Det är lite allmänt, så för att vara mer exakt används det (vanligtvis) för att hantera innehåll som du vill göra tillgängligt på dina webbplatser.
 
 ## Headless CMS {#headless-cms}
 
 Headless är en term som används för att beskriva system som effektivt skiljer innehållet från hur det visas på webben.
 
-Traditionellt sett hanterar du innehållet i ett CMS-system, och samma CMS-system ansvarar för återgivningen av innehållet på webbsidorna.
+Traditionellt sett hanterar du materialet i CMS och samma CMS ansvarar för återgivningen av materialet på webbsidorna.
 
 Nu innebär headless att ditt innehåll kan hanteras i CMS och sedan nås av ett eller flera (oberoende) program.
 
@@ -56,7 +56,7 @@ Det innebär att innehållet kan nå ut till en mängd olika enheter, i en mäng
 (Och som en dubbelpanorering kan dessa fragment också användas när du skapar AEM webbsidor - om du vill.)
 
 * &quot;Traditionell&quot; CMS
-   * Innehåll skapas för webbsidor med hjälp av en rad komponenter som anger hur innehållet ska återges på webbplatsen. Även här är AEM extremt flexibla eftersom projektteamet kan utveckla anpassade komponenter.
+   * Innehåll skapas för webbsidor med hjälp av en rad komponenter som anger hur innehållet ska återges på webbplatsen. Även här är AEM extremt flexibelt eftersom projektteamet kan utveckla anpassade komponenter.
 
 ## Innehållsmodellering {#content-modeling}
 
@@ -66,7 +66,7 @@ För att de headless-appar ska kunna komma åt ditt innehåll och göra något m
 
 Processen att definiera strukturen för ditt innehåll som ska följas inbegriper att utforma en modell - och detta kallas datamodellering.
 
-AEM rollen Innehållsarkitektur (ofta en annan person) utför datamodelleringen för att utforma ett intervall av **modeller för innehållsfragment** som du sedan använder som grund för ditt innehåll genom att använda **Innehållsfragment**.
+För AEM utför rollen Innehållsarkitektur (ofta en annan person) datamodelleringen för att utforma ett intervall av **modeller för innehållsfragment** som du sedan använder som grund för ditt innehåll med **Innehållsfragment**.
 
 >[!NOTE]
 >
@@ -74,7 +74,7 @@ AEM rollen Innehållsarkitektur (ofta en annan person) utför datamodelleringen 
 
 ## What&#39;s Next {#whats-next}
 
-Nu när du har lärt dig koncept och terminologi är nästa steg att [Lär dig grunderna i att skapa innehållsfragment](basics.md). Då introduceras grundläggande hantering av AEM tillsammans med hur du skapar innehållsfragment.
+Nu när du har lärt dig koncept och terminologi är nästa steg att [Lär dig grunderna i att skapa innehållsfragment](basics.md). Då introduceras den grundläggande hanteringen av AEM tillsammans med hur du skapar innehållsfragment.
 
 ## Ytterligare resurser {#additional-resources}
 
@@ -85,8 +85,8 @@ Nu när du har lärt dig koncept och terminologi är nästa steg att [Lär dig g
 
 * [AEM Headless Content Translation Journey](/help/journey-headless/translation/overview.md)
 
-* [Introduktion till AEM som headless CMS](/help/sites-developing/headless/introduction.md)
+* [Introduktion till AEM som Headless CMS](/help/sites-developing/headless/introduction.md)
 
-* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
+* [AEM Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 
-* [Tutorials för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE)
+* [Självstudiekurser för Headless i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html)

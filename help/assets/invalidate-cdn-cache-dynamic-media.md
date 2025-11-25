@@ -1,6 +1,6 @@
 ---
-title: Invalidera Content Delivery Network-cachen med Dynamic Media
-description: Med hjälp av det inbyggda CDN-innehållet (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media, i stället för att vänta tills cachen har gått ut.
+title: Invalidera cacheminnet för innehållsleveransnätverket med hjälp av dynamiska media
+description: Med hjälp av det inbyggda CDN-innehållet (Content Delivery Network) kan du snabbt uppdatera resurser som levereras av Dynamic Media i stället för att vänta på att cachen ska upphöra att gälla.
 contentOwner: Rick Brough
 products: SG_EXPERIENCEMANAGER/6.5.6/ASSETS
 topic-tags: dynamic-media
@@ -9,7 +9,7 @@ role: User, Admin
 feature: CDN Cache
 exl-id: 23d3c274-0736-49f7-8d44-a56a55cfd06d
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 0%
@@ -17,19 +17,19 @@ ht-degree: 0%
 ---
 
 
-# Invalidera CDN-cachen med Dynamic Media {#invalidating-cdn-cache-for-dm-assets}
+# Gör CDN-cachen ogiltig via Dynamic Media {#invalidating-cdn-cache-for-dm-assets}
 
-Dynamic Media-resurser cachas av CDN (Content Delivery Network) för snabb leverans till dina kunder. När du uppdaterar resurserna vill du dock att ändringarna ska börja gälla omedelbart på webbplatsen. Genom att rensa eller göra CDN-cachen ogiltig kan du snabbt uppdatera resurser som levereras av Dynamic Media. I stället för att vänta på att cachen ska förfalla med ett TTL-värde (Time To Live) (standard är tio timmar) kan du skicka en begäran från Dynamic Media om att cachen ska förfalla inom några minuter.
+Dynamiska mediefiler cachas av CDN (Content Delivery Network) för snabb leverans till dina kunder. När du uppdaterar resurserna vill du dock att ändringarna ska börja gälla omedelbart på webbplatsen. Genom att rensa eller göra CDN-cachen ogiltig kan du snabbt uppdatera resurser som levereras av Dynamic Media. I stället för att vänta på att cachen ska förfalla med ett TTL-värde (Time To Live) (standard är tio timmar) kan du skicka en begäran från Dynamic Media om att cachen ska förfalla inom några minuter.
 
 
 
 >[!IMPORTANT]
 >
->Följande steg gäller endast för Dynamic Media - Scene7-läge i Adobe Experience Manager 6.5, Service Pack 6 (Experience Manager 6.5.6) eller senare. CDN-invalideringsfunktionen kräver också att du använder det färdiga CDN som medföljer Adobe Experience Manager - Dynamic Media. Andra anpassade CDN stöds inte med den här funktionen.<br>Om du använder Dynamic Media i Experience Manager 6.5, Service Pack 5 (Experience Manager 6.5.5) eller tidigare, följer du stegen i [Invalidera CDN-cachen med Dynamic Media Classic](/help/assets/invalidate-cdn-cache-dm-classic.md).
+>Följande steg gäller endast för Dynamic Media - Scene7-läge i Adobe Experience Manager 6.5, Service Pack 6 (Experience Manager 6.5.6) eller senare. CDN-funktionen kräver också att du använder det färdiga CDN som medföljer Adobe Experience Manager - Dynamic Media. Andra anpassade CDN stöds inte med den här funktionen.<br>Om du använder Dynamic Media i Experience Manager 6.5, Service Pack 5 (Experience Manager 6.5.5) eller tidigare, följer du stegen i [Invalidera CDN-cachen med Dynamic Media Classic](/help/assets/invalidate-cdn-cache-dm-classic.md).
 
 <!-- REMOVED MARCH 28, 2022 BECAUSE OF 404; NO REDIRECT WAS PUT IN PLACE BY SUPPORT See also [Caching overview in Dynamic Media](https://helpx.adobe.com/experience-manager/scene7/kb/base/caching-questions/scene7-caching-overview.html). -->
 
-**Så här gör du ditt CDN-cachelagrade innehåll för Dynamic Media-resurser ogiltigt:**
+**Gör ditt CDN-cachelagrade innehåll för dynamiska medieresurser ogiltigt:**
 
 *Del 1 av 2: Skapa en mall för CDN-invalidering*
 
@@ -42,7 +42,7 @@ Dynamic Media-resurser cachas av CDN (Content Delivery Network) för snabb lever
    | Scenario | Alternativ |
    | --- | --- |
    | Jag har redan skapat en CDN-invalideringsmall med Dynamic Media Classic. | Textfältet **[!UICONTROL Create Template]** är förifyllt med malldata. I så fall kan du antingen redigera mallen eller fortsätta till nästa steg. |
-   | Jag måste skapa en mall. Vad ska jag ange? | I textfältet **[!UICONTROL Create Template]** anger du en bild-URL (inklusive bildförinställningar eller modifierare) som refererar till `<ID>`, i stället för ett specifikt bild-ID, som i följande exempel:<br>`https://my.publishserver.com/is/image/company_name/<ID>?$product$`<br>Om mallen bara innehåller `<ID>`, fylls Dynamic Media i `https://<publishserver_name>/is/image/<company_name>/<ID>` där `<publishserver_name>` är namnet på din Publish-server som definieras i Allmänna inställningar i Dynamic Media Classic. `<company_name>` är namnet på företagsroten som är associerad med den här Experience Manager-instansen, och `<ID>` är de markerade resurserna via resursväljaren som ska ogiltigförklaras.<br>Alla förinställningar/modifierare efter `<ID>` kopieras som de är i URL-definitionen.<br>Endast bilder - det vill säga `/is/image` - kan formateras automatiskt baserat på mallen.<br>Om du lägger till resurser som videoklipp eller PDF med resursväljaren för `/is/content/` genereras inte URL-adresser automatiskt. I stället måste du ange sådana resurser antingen i CDN-valideringsmallen, eller så kan du manuellt lägga till URL:en till sådana resurser i *Del 2 av 2: Ange alternativ för CDN-validering*.<br>**Exempel:**<br> I det här första exemplet innehåller ogiltighetsmallen `<ID>` tillsammans med resursens URL som har `/is/content`. Exempel: `http://my.publishserver.com:8080/is/content/dms7snapshot/<ID>`. Dynamic Media skapar URL:en baserat på den här sökvägen, där `<ID>` är de resurser som väljs via resursväljaren som du vill ogiltigförklara.<br>I det här andra exemplet innehåller invalideringsmallen den fullständiga URL:en för resursen som används i dina webbegenskaper med `/is/content` (inte beroende av resursväljaren). Exempel: `http://my.publishserver.com:8080/is/content/dms7snapshot/backpack` där ryggsäck är resurs-ID.<br>Resursformat som stöds i Dynamic Media kan ogiltigförklaras. Resursfiltyper som *inte* stöds för CDN-ogiltigförklaring är bland annat PostScript®, Encapsulated PostScript®, Adobe Illustrator, Adobe InDesign, Microsoft® PowerPoint, Microsoft® Excel, Microsoft® Word och Rich Text Format.<br><br> ・ När du skapar mallen, men vill vara noga med syntax och typos, gör inte Dynamic Media någon mallvalidering.<br> ・ CDN-valideringsmallen kan spara upp till 2 500 tecken.<br> ・ Ange URL:er för smart beskärning av bilder antingen i den här CDN-valideringsmallen eller i textfältet **[!UICONTROL Add URL]** i *Del 2: Ange CDN-valideringsalternativ.*<br> ・ Varje post i en CDN-valideringsmall måste finnas på en egen rad.<br> ・ Följande exempel på en CDN-valideringsmall är endast avsett som exempel. |
+   | Jag måste skapa en mall. Vad ska jag ange? | I textfältet **[!UICONTROL Create Template]** anger du en bild-URL (inklusive bildförinställningar eller modifierare) som refererar till `<ID>`, i stället för ett specifikt bild-ID som i följande exempel:<br>`https://my.publishserver.com/is/image/company_name/<ID>?$product$`<br>Om mallen bara innehåller `<ID>` fylls Dynamic Media i `https://<publishserver_name>/is/image/<company_name>/<ID>` där `<publishserver_name>` är namnet på din Publish Server som definieras i Allmänna inställningar i Dynamic Media Classic. `<company_name>` är namnet på företagsroten som är associerad med den här Experience Manager-instansen, och `<ID>` är de valda resurserna via resursväljaren som ska ogiltigförklaras.<br>Alla förinställningar/modifierare efter `<ID>` kopieras som de är i URL-definitionen.<br>Endast bilder - det vill säga `/is/image` - kan formateras automatiskt baserat på mallen.<br>Om du lägger till resurser som videor eller PDF-filer med resursväljaren för `/is/content/` genereras inte URL-adresser automatiskt. I stället måste du ange sådana resurser antingen i CDN-valideringsmallen, eller så kan du manuellt lägga till URL:en till sådana resurser i *Del 2 av 2: Ange alternativ för CDN-validering*.<br>**Exempel:**<br> I det här första exemplet innehåller ogiltighetsmallen `<ID>` tillsammans med resursens URL som har `/is/content`. Exempel: `http://my.publishserver.com:8080/is/content/dms7snapshot/<ID>`. Dynamic Media skapar URL:en baserat på den här sökvägen, där `<ID>` är de resurser som väljs via resursväljaren som du vill ogiltigförklara.<br>I det här andra exemplet innehåller invalideringsmallen den fullständiga URL:en för resursen som används i dina webbegenskaper med `/is/content` (inte beroende av resursväljaren). Exempel: `http://my.publishserver.com:8080/is/content/dms7snapshot/backpack` där ryggsäck är resurs-ID.<br>Resursformat som stöds i Dynamic Media kan ogiltigförklaras. Resursfiltyper som *inte* stöds för CDN-ogiltigförklaring är bland annat PostScript®, Encapsulated PostScript®, Adobe Illustrator, Adobe InDesign, Microsoft® PowerPoint, Microsoft® Excel, Microsoft® Word och Rich Text Format.<br><br> ・ När du skapar mallen, men ser till att du är noggrann med syntax och typos. Dynamic Media utför ingen mallvalidering.<br> ・ CDN-valideringsmallen kan spara upp till 2 500 tecken.<br> ・ Ange URL:er för smart beskärning av bilder antingen i den här CDN-valideringsmallen eller i textfältet **[!UICONTROL Add URL]** i *Del 2: Ange CDN-valideringsalternativ.*<br> ・ Varje post i en CDN-valideringsmall måste finnas på en egen rad.<br> ・ Följande exempel på en CDN-valideringsmall är endast avsett som exempel. |
 
    ![Mall för CDN-invalidering - Skapa](/help/assets/assets-dm/cdn-invalidation-template-create-2.png)
 
@@ -91,7 +91,7 @@ I samtliga fall bearbetas hela gruppen för att ogiltigförklaras, eller så mis
 
 | Fel | Förklaring |
 | --- | --- |
-| *Det gick inte att hämta URL:er för valda resurser.* | Inträffar om något av följande scenarier uppfylls:<br>- Det går inte att hitta någon Dynamic Media-konfiguration.<br> - Det finns ett undantag när en tjänstanvändare hämtas genom vilket Dynamic Media-konfigurationen läses.<br> - Publish-servern eller företagsroten som används för att skapa URL:er saknas i Dynamic Media-konfigurationen. |
+| *Det gick inte att hämta URL:er för valda resurser.* | Inträffar om något av följande scenarier uppfylls:<br>- Det går inte att hitta någon dynamisk mediekonfiguration.<br> - Det finns ett undantag när en tjänstanvändare hämtas genom vilket konfigurationen för dynamiska media läses.<br> - Publiceringsservern eller företagsroten som används för att skapa URL:er saknas i Dynamic Media-konfigurationen. |
 | *Vissa URL:er är inte korrekt definierade. Korrigera och skicka om.* | Inträffar om invaliderings-API:t för IPS CDN-cache returnerar ett fel om att URL:en refererar till ett annat företag. Eller om URL:en inte är giltig enligt den validering som görs av API:t för IPS `cdnCacheInvalidation`. |
 | *Det gick inte att ogiltigförklara CDN-cachen.* | Inträffar om CDN-cachen ogiltigförklarar begäran av någon annan anledning. |
 | *Inga URL:er har angetts som ogiltiga.* | Inträffar om det inte finns några URL:er på sidan **[!UICONTROL CDN Invalidation - Confirm]** och du väljer **[!UICONTROL Submit]**. |

@@ -2,11 +2,11 @@
 title: Storleksstödlinje för [!DNL Assets]
 description: Bästa tillvägagångssätt för att fastställa effektiva mått för att uppskatta infrastrukturen och resurserna som krävs för att distribuera  [!DNL Adobe Experience Manager Assets].
 contentOwner: AG
-role: Architect, Admin
+role: Developer, Admin
 feature: Asset Management
 exl-id: fd58ead9-5e18-4f55-8d20-1cf4402fad97
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1619'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Storleksstödlinje för [!DNL Assets] {#assets-sizing-guide}
 
-När miljön för en [!DNL Adobe Experience Manager Assets]-implementering storleksändras är det viktigt att se till att det finns tillräckligt med resurser tillgängliga i form av disk, processor, minne, IO och nätverksdataflöde. Om du vill ändra storlek på många av dessa resurser måste du känna till hur många resurser som läses in i systemet. Om det inte finns något bättre mätvärde kan du dividera storleken på det befintliga biblioteket med bibliotekets ålder för att hitta frekvensen som resurserna skapas med.
+När miljön för en [!DNL Adobe Experience Manager Assets]-implementering storleksanpassas är det viktigt att se till att det finns tillräckligt med resurser tillgängliga vad gäller disk, CPU, minne, IO och nätverksdataflöde. Om du vill ändra storlek på många av dessa resurser måste du känna till hur många resurser som läses in i systemet. Om det inte finns något bättre mätvärde kan du dividera storleken på det befintliga biblioteket med bibliotekets ålder för att hitta frekvensen som resurserna skapas med.
 
 ## Skiva {#disk}
 
@@ -30,9 +30,9 @@ Versionshanteringsfunktionerna i [!DNL Experience Manager] lagrar dubbletter av 
 Med tanke på dessa faktorer behöver du en metod för att beräkna ett tillräckligt exakt lagringsutrymme för lagring av användarresurser.
 
 1. Fastställ storleken och antalet resurser som läses in i systemet.
-1. Hämta ett representativt urval av resurserna som ska överföras till [!DNL Experience Manager]. Om du t.ex. tänker läsa in PSD, JPG, AI och PDF i systemet, behöver du flera exempelbilder för varje filformat. Dessutom bör dessa prover representera de olika filstorlekarna och komplexiteterna i bilderna.
+1. Hämta ett representativt urval av resurserna som ska överföras till [!DNL Experience Manager]. Om du till exempel tänker läsa in PSD-, JPG-, AI- och PDF-filer i systemet behöver du flera exempelbilder för varje filformat. Dessutom bör dessa prover representera de olika filstorlekarna och komplexiteterna i bilderna.
 1. Definiera de återgivningar som ska användas.
-1. Skapa återgivningarna i [!DNL Experience Manager] med [!DNL ImageMagick] eller [!DNL Adobe Creative Cloud] program. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Dynamic Media kan du använda IC-binärfilen för att generera PTIFF-återgivningar som ska lagras i Experience Manager.
+1. Skapa återgivningarna i [!DNL Experience Manager] med [!DNL ImageMagick] eller [!DNL Adobe Creative Cloud] program. Förutom de återgivningar som användarna anger skapar du färdiga återgivningar. För användare som implementerar Dynamic Media kan du använda IC-binärfilen för att generera PTIFF-renderingar som ska lagras i Experience Manager.
 1. Om du tänker använda delresurser genererar du dem för rätt filtyper.
 1. Jämför storleken på utdatabilder, återgivningar och delresurser med originalbilderna. Du kan generera en förväntad tillväxtfaktor när systemet är inläst. Om du till exempel genererar återgivningar och delresurser med en kombinerad storlek på 3 GB efter att ha bearbetat 1 GB resurser, blir återgivningens tillväxtfaktor 3.
 1. Fastställer den maximala tid som tillgångsversionerna ska underhållas i systemet.
@@ -98,7 +98,7 @@ Det är svårt att få fram exakta siffror för storleken för en NodeStore elle
 
 Eftersom binärfilerna lagras i datalagret tar varje binärfil upp lite utrymme. De flesta databaser är mindre än 100 GB. Det kan dock finnas större databaser som är upp till 1 TB stora. För att utföra offlinekomprimering behöver du dessutom tillräckligt med ledigt utrymme på volymen för att skriva om den komprimerade databasen tillsammans med den förkomprimerade versionen. En bra tumregel är att ändra storlek på disken till 1,5 gånger den storlek som förväntas för databasen.
 
-Använd SSD-diskar eller diskar med en IOPS-nivå som är högre än 3 000 för databasen. För att eliminera riskerna att IOPS inför flaskhalsar i prestandan bör du övervaka CPU-IO-väntenivåer för tidiga tecken på problem.
+Använd SSD-diskar eller diskar med en IOPS-nivå som är högre än 3 000 för databasen. För att eliminera riskerna med att IOPS inför flaskhalsar i prestandan bör du övervaka CPU IO Wait-nivåer för tidiga tecken på problem.
 
 [Hämta fil](assets/aem_environment_sizingtool.xlsx)
 
@@ -118,9 +118,9 @@ Du kan dessutom redigera egenskapen för tröskelstorlek för komponenten `com.d
 
 Gränsen för antalet filer som kan finnas i ett datalager kan vara 2,1 miljarder på grund av begränsningar i filsystemet. Det är troligt att databasen stöter på problem på grund av ett stort antal noder långt innan datalagrets gräns har nåtts.
 
-Använd det Camera Raw biblioteket om återgivningarna genereras felaktigt. I det här fallet får dock den längsta sidan av bilden inte vara större än 65 000 pixlar. Dessutom får bilden inte innehålla fler än 512 MP (512 x 1 024 x 1 024 pixlar). Storleken på resursen spelar ingen roll.
+Använd Camera Raw-biblioteket om återgivningarna genereras på fel sätt. I det här fallet får dock den längsta sidan av bilden inte vara större än 65 000 pixlar. Dessutom får bilden inte innehålla fler än 512 MP (512 x 1 024 x 1 024 pixlar). Storleken på resursen spelar ingen roll.
 
-Det är svårt att göra en korrekt uppskattning av storleken på den TIFF-fil som stöds med en särskild heap för [!DNL Experience Manager] eftersom ytterligare faktorer, som pixelstorlek, påverkar bearbetningen. Det är möjligt att [!DNL Experience Manager] kan bearbeta en fil som är 255 MB färdig, men inte kan bearbeta en filstorlek på 18 MB eftersom den senare innehåller ett ovanligt högre antal pixlar jämfört med den första.
+Det är svårt att göra en korrekt uppskattning av storleken på TIFF-filen som stöds med en särskild heap för [!DNL Experience Manager] eftersom ytterligare faktorer, som pixelstorlek, påverkar bearbetningen. Det är möjligt att [!DNL Experience Manager] kan bearbeta en fil som är 255 MB färdig, men inte kan bearbeta en filstorlek på 18 MB eftersom den senare innehåller ett ovanligt högre antal pixlar jämfört med den första.
 
 ## Storlek på resurser {#size-of-assets}
 

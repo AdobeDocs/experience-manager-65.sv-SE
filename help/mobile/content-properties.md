@@ -9,9 +9,9 @@ exl-id: 05c8c846-69cc-4075-9149-33890b3d1e08
 solution: Experience Manager
 feature: Mobile
 role: User
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '312'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ ht-degree: 1%
 
 {{ue-over-mobile}}
 
-Artiklar, banners och samlingar representeras som cq:Pages in AEM.
+Artiklar, banners och samlingar representeras som cq:Pages i AEM.
 
-De delar samma gemensamma egenskaper som finns i alla cq:Page, förutom flera andra som visas nedan som representerar metadata för Adobe Experience Manager (AEM) Mobile On-Demand-tjänster och integreringsegenskaper som stöds.
+De delar samma gemensamma egenskaper som finns i någon cq:Page förutom flera andra som visas nedan som representerar metadata och integreringsegenskaper för Adobe Experience Manager (AEM) Mobile On-Demand-tjänster.
 
 I följande tabeller beskrivs innehållsegenskaperna och noderna.
 
@@ -31,11 +31,11 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 | **Egenskapsnamn** | **Typ** | **Standardvärden eller förväntade värden** | **Beskrivning** |
 |---|---|---|---|
 | dps-id | Sträng |  | som tilldelats av AEM Mobile och lagras av AEM när de överförts till AEM Mobile eller importerats från AEM Mobile |
-| dps-resourceType | Sträng | dps:artikel | dps:Banner | dps:Samling | entitetstyp, egenskap |
+| dps-resourceType | Sträng | dps:Article | `dps:Banner` \| `dps:Collection` \| `entity type property` |
 | dps-version | Sträng |  | version av AEM Mobile (ingår också i det fullständiga aemm-id:t) |
 | dps-lastSynced | Datum |  | datum för senaste synkronisering/import från AEM Mobile till AEM |
 | dps-lastUploaded | Datum |  | datum för senaste överföring från AEM till AEM Mobile |
-| dps-lastUploadedBy | String:userid |  | ID-användare som utförde den senaste överföringsbegäran från AEM till AEM Mobile |
+| dps-lastUploadedBy | Sträng:userid |  | ID-användare som utförde den senaste överföringsbegäran från AEM till AEM Mobile |
 
 ## Egenskaper för kärnmetadata {#core-metadata-properties}
 
@@ -88,7 +88,7 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 
 | Nodnamn | Typ | Standardvärden eller förväntade värden | Beskrivning |
 |--- |--- |--- |--- |
-| image | jcr:primärType=nt:ostrukturerad <br> sling:resourceType=foundation/components/image |  |  |
+| image | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |
 
 ### Enheter {#entities}
 
@@ -96,7 +96,7 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 
 | Nodnamn | Typ | Standardvärden för förväntade värden | Beskrivning |
 |--- |--- |--- |--- |
-| social-share-image |  | jcr:primärType=nt:ostrukturerad <br> sling:resourceType=foundation/components/image |  |
+| social-share-image |  | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |
 
 #### Banderoller {#banners-1}
 
@@ -108,4 +108,4 @@ I följande tabeller beskrivs innehållsegenskaperna och noderna.
 
 | Nodnamn | Typ | Standardvärden för förväntade värden | Beskrivning |
 |--- |--- |--- |--- |
-| background-image | jcr:primärType=nt:ostrukturerad <br> sling:resourceType=foundation/components/image |  |  |
+| background-image | jcr:primaryType=nt:unstructured <br> sling:resourceType=foundation/components/image |  |  |

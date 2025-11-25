@@ -1,6 +1,6 @@
 ---
 title: Så här använder du VLT-verktyget
-description: Jackrabbit FileVault-verktyget (VLT) har utvecklats av Apache Foundation som mappar innehållet i en Jackrabbit/AEM-instans till filsystemet
+description: Jackrabbit FileVault-verktyget (VLT) har utvecklats av Apache Foundation som mappar innehållet i en Jackrabbit/AEM-instans till ditt filsystem
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: development-tools
@@ -9,7 +9,7 @@ exl-id: efbba312-9fc8-4670-b8f1-d2a86162d075
 solution: Experience Manager, Experience Manager Sites
 feature: Developing,Developer Tools
 role: Developer
-source-git-commit: 305227eff3c0d6414a5ae74bcf3a74309dccdd13
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '2687'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Så här använder du VLT-verktyget {#how-to-use-the-vlt-tool}
 
-Jackrabbit FileVault-verktyget (VLT) är ett verktyg som utvecklats av [Apache Foundation](https://www.apache.org/) och som mappar innehållet i en Jackrabbit/AEM-instans till filsystemet. VLT-verktyget har liknande funktioner som en VLT-klient (till exempel en Subversion-klient), med normala in-, utchecknings- och hanteringsåtgärder samt konfigurationsalternativ för flexibel representation av projektinnehållet.
+Jackrabbit FileVault-verktyget (VLT) är ett verktyg som utvecklats av [Apache Foundation](https://www.apache.org/) och som mappar innehållet i en Jackrabbit/AEM-instans till ditt filsystem. VLT-verktyget har liknande funktioner som en VLT-klient (till exempel en Subversion-klient), med normala in-, utchecknings- och hanteringsåtgärder samt konfigurationsalternativ för flexibel representation av projektinnehållet.
 
 Du kör VLT-verktyget från kommandoraden. I det här dokumentet beskrivs hur du använder verktyget, inklusive hur du kommer igång och får hjälp, och en lista över alla [kommandon](#vlt-commands) och tillgängliga [alternativ](#vlt-global-options).
 
@@ -31,8 +31,8 @@ Se sidan [Fillevaöversikt](https://jackrabbit.apache.org/filevault/overview.htm
 Om du vill börja använda VLT måste du göra följande:
 
 1. Installera VLT, uppdatera miljövariabler och uppdatera globala ignorerade underversionsfiler.
-1. Konfigurera AEM (om du inte redan har gjort det).
-1. Ta en titt på AEM.
+1. Konfigurera AEM-databasen (om du inte redan har gjort det).
+1. Ta en titt på AEM-databasen.
 1. Synkronisera med databasen.
 1. Testa om synkroniseringen fungerade.
 
@@ -389,7 +389,7 @@ vlt import http://localhost:4502/crx . /
 
 ### Utcheckning (co) {#checkout-co}
 
-Utför en första utcheckning från en JCR-databas till det lokala filsystemet från &lt;uri> till det lokala filsystemet på &lt;local-path>. Du kan också lägga till ett &lt;jcrPath>-argument för att checka ut en underkatalog till fjärrträdet. Workspace-filter kan anges som kopieras till META-INF-katalogen.
+Utför en första utcheckning från en JCR-databas till det lokala filsystemet från &lt;uri> till det lokala filsystemet på &lt;local-path>. Du kan också lägga till ett &lt;jcrPath>-argument för att checka ut en underkatalog till fjärrträdet. Workspace-filter som kopieras till META-INF-katalogen kan anges.
 
 #### Syntax {#syntax-2}
 
@@ -443,7 +443,7 @@ analyze -l <format>|-v|-q <localPaths1> [<localPaths2> ...]
 
 |  |  |
 |--- |--- |
-| `-l (--linkFormat) <format>` | utskriftsformat för snabbkorrigeringslänkar (namn,id), till exempel `[CQ520_HF_%s|%s]` |
+| `-l (--linkFormat) <format>` | utskriftsformat för snabbkorrigeringslänkar (namn,id), till exempel `[CQ520_HF_%s\|%s]` |
 | `-v (--verbose)` | utförlig utskrift |
 | `-q (--quiet)` | så lite som möjligt |
 | `<localPaths> [<localPaths> ...]` | lokal sökväg |

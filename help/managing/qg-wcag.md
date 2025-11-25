@@ -4,11 +4,11 @@ description: A Quick Guide to Web Content Accessibility Guidelines (WCAG) versio
 exl-id: 9cd37f5a-ff59-4617-a0f3-cd8994fbf4ab
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
-role: Developer,Leader,Architect,Data Architect,User
-source-git-commit: a4ccee3e8256c098339fb5308b1b4214e67b8b74
+role: Developer, Leader, User
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1744'
-ht-degree: 87%
+ht-degree: 84%
 
 ---
 
@@ -108,7 +108,7 @@ Techniques for WCAG 2.1 finns på sidan [Techniques for WCAG 2.1](https://www.w3
 
 **Tekniker** utgör nivån under framgångskriterierna i WCAG 2.1-hierarkin. De klassas av WAI som informativa, inte normativa. En specifik teknik behöver alltså inte följas för att en resurs ska uppfylla kraven i WCAG 2.1.
 
-Eftersom tekniker är mycket mer specifika än framgångskriterier avser de vanligtvis en viss teknik eller innehållstyp (till exempel HTML eller video), eller en situation (till exempel e-handel eller e-utbildningsprogram). Du kan tänka på tekniker som beprövade exempel på hur specifika riktlinjer och framgångskriterier kan uppfyllas, därför är de till stor hjälp för författare och utvecklare som arbetar i särskilda sammanhang.
+Eftersom tekniker är mycket mer specifika än framgångskriterier avser de vanligtvis en viss teknik eller innehållstyp (t.ex. HTML eller video), eller en situation (t.ex. e-handel eller e-learning-program). Du kan tänka på tekniker som beprövade exempel på hur specifika riktlinjer och framgångskriterier kan uppfyllas, därför är de till stor hjälp för författare och utvecklare som arbetar i särskilda sammanhang.
 
 Du kan komma åt tekniker:
 
@@ -131,15 +131,15 @@ Listan över tekniker är inte fullständig och WAI uppdaterar hela tiden listan
 
 Detta är en serie dokument som innehåller råd som hjälper läsarna att förstå syftet med specifika riktlinjer och framgångskriterier. Du kan [ladda ned en introduktion samt länkar till mer detaljerad information](https://www.w3.org/WAI/WCAG21/Understanding/).
 
-Varje riktlinje och framgångskriterium har också en egen Understanding-sida med information om:
+Varje enskild riktlinje och kriterium för framgång har också en egen&quot;Förstå&quot;-sida med information om:
 
 * Syftet med riktlinjen
 * Särskilda framgångskriterier
 * Rådgivande tekniker som hjälper till att uppfylla kraven i riktlinjen, men som inte omfattas av något särskilt framgångskriterium.
 
-Sidan Understanding för varje framgångskriterium innehåller information om:
+Varje resultatkriteris sida för&quot;förståelse&quot; innehåller information om:
 
-* Syftet med framgångskriteriet.
+* Framgångskriteriets avsikt.
 * Allmänna exempel på hur framgångskriteriet kan uppfyllas.
 * Relaterade resurser (ej från W3C) om hur man uppfyller framgångskriteriet.
 * Tekniker och fel: specifika och detaljerade exempel på hur framgångskriteriet kan uppfyllas (beskrivs nedan)
@@ -149,7 +149,7 @@ Ett exempel finns på: [Understanding Success Criterion 1.1.1 (&quot;Non-text co
 
 ### Hur WCAG 2.1 fungerar {#how-to-meet-wcag}
 
-Avsnittet How to Meet finns på sidan [How To Meet WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/). Avsnittet innehåller en alternativ presentation av WCAG som låter läsarna förfina innehållet i riktlinjerna till de som är mest relevanta för en deras intressen och/eller omständigheter. Läsare kan filtrera de framgångskriterier som de vill visa genom att ange särskilda tekniker för webbinnehåll, t.ex. Cascading Style Sheets eller skript eller genom att ange en eller flera prioritetsnivåer.
+Avsnittet &quot;Så här möts&quot; finns på sidan [Så här uppfyller du WCAG 2.1](https://www.w3.org/WAI/WCAG21/quickref/). Avsnittet innehåller en alternativ presentation av WCAG som låter läsarna förfina innehållet i riktlinjerna till de som är mest relevanta för en deras intressen och/eller omständigheter. Läsare kan filtrera de framgångskriterier som de vill visa genom att ange särskilda tekniker för webbinnehåll, t.ex. Cascading Style Sheets eller skript eller genom att ange en eller flera prioritetsnivåer.
 
 Utan filtrering visar den här resursen alla framgångskriterier grupperade efter riktlinjer. För varje framgångskriterium anges följande:
 

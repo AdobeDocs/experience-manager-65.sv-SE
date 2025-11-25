@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 9672f7a4-82b7-4175-874d-181846115442
 solution: Experience Manager, Experience Manager 6.5
 feature: Compliance
-role: Admin,Architect,Data Architect,Developer,Leader
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer,Leader
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '6926'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Godkännandetester används för att bekräfta att
 * Användarna accepterar lösningen och kan tänka sig att arbeta med den.
 * Kunden godkänner projektet.
 
-Ju tidigare ni planerar och utformar era godkännandetester, desto enklare blir den slutliga driftsättningen. De bör definieras tillsammans med kunden och ditt kvalitetssäkringsteam.
+Ju tidigare ni planerar och utformar era godkännandetester, desto enklare blir den slutliga driftsättningen. De ska definieras tillsammans med kunden och ditt kvalitetsteamet på Assurance.
 
 Även om du kanske inte kan definiera alla detaljer i början av projektet bör de inledande definitionerna diskuteras och godkännas. Godkännandetesterna kommer antagligen att baseras på de grundläggande kraven (funktion och prestanda).
 
@@ -46,31 +46,31 @@ Kontrollera att de nödvändiga nivåerna av systemåtkomst har beviljats för a
 
 ### Adobe Security Checklist {#adobe-security-checklist}
 
-[Säkerhetschecklistan för Adobe](/help/sites-administering/security-checklist.md) är den officiella checklistan som tillhandahålls för att säkerställa att Adobe Experience Manager (AEM) är säkert vid installationen. Den innehåller de säkerhetsåtgärder och verifieringssteg som du måste utföra för att säkerställa instansens integritet.
+[Adobe-checklistan för säkerhet](/help/sites-administering/security-checklist.md) är den officiella checklistan som tillhandahålls för att säkerställa att Adobe Experience Manager (AEM) är säkert vid installationen. Den innehåller de säkerhetsåtgärder och verifieringssteg som du måste utföra för att säkerställa instansens integritet.
 
-### Projektinställningar för Adobe supportportal {#adobe-support-portal-project-set-up}
+### Adobe supportportalprojekt {#adobe-support-portal-project-set-up}
 
-På Adobe Support Portal kan implementeringspartners och kunder ställa in AEM implementering som ett projekt i supportportalen.
+Med Adobe supportportal kan implementeringspartners och kunder konfigurera AEM-implementeringen som ett projekt i supportportalen.
 
 Information kan registreras, t.ex. om de tekniker och versioner som implementeras. Dessa ger transparens mellan kunden och Adobe.
 
-### Utbildning av AEM {#aem-administrator-training}
+### AEM Administrator Training {#aem-administrator-training}
 
-Utbildning för administrativ personal i lösningen. Mer information finns i [Adobe Training Services](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager).
+Utbildning för administrativ personal i lösningen. Mer information finns i [Adobe utbildningstjänster](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager).
 
-### Utbildning av AEM {#aem-author-training}
+### AEM Author Training {#aem-author-training}
 
-Utbildning för personal som ska producera (skriva) innehåll för lösningen. Mer information finns i [Adobe Training Services](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager).
+Utbildning för personal som ska producera (skriva) innehåll för lösningen. Mer information finns i [Adobe utbildningstjänster](https://training.adobe.com/training/courses.html#solution=adobeExperienceManager).
 
-### AEM certifieringsprov {#aem-certification-exam}
+### AEM Certification Exam {#aem-certification-exam}
 
-Se till att rätt personer är registrerade för att genomföra relevanta [certifieringsprov](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
+Se till att rätt personer är registrerade för att genomföra relevanta [certifieringsprov](https://training.adobe.com/certification/exams.html#p=1&solution=adobeExperienceManager).
 
-### AEM Certifierad {#aem-certified}
+### AEM Certified {#aem-certified}
 
-Kontrollera att rätt person har klarat de relevanta [certifieringsproven](https://training.adobe.com/certification/exams.html#p=1&amp;solution=adobeExperienceManager).
+Kontrollera att rätt person har klarat de relevanta [certifieringsproven](https://training.adobe.com/certification/exams.html#p=1&solution=adobeExperienceManager).
 
-### AEM teknisk utbildning {#aem-technical-training}
+### AEM Technical Training {#aem-technical-training}
 
 Erbjuda teknisk utbildning för lämplig personal, t.ex. utvecklare, arkitekter, ingenjörer och yrkesverksamma.
 
@@ -107,9 +107,9 @@ Förutom vanliga underhållsåtgärder för Adobe Experience Manager (AEM) måst
 
 Se till att ditt team består av personal med lämplig utbildning. För projektteam är rekommendationen att ha följande:
 
-* minst en AEM certifierad Lead Developer
-* minst en AEM certifierad arkitekt
-* minst 75 % av utvecklarna AEM certifierade;
+* minst en AEM-certifierad Lead Developer
+* minst en AEM-certifierad arkitekt
+* minst 75 % av utvecklarna är AEM-certifierade;
 detta gör att certifierade utvecklare kan mentera ledande utvecklare och säkerställa kunskapsutbyte och öppenhet
 
 ### Arkitekturdiagram {#architecture-diagram}
@@ -142,7 +142,7 @@ Automatiseringsskript och grundläggande automatiserade användningsområden:
 
 ### Automatiserad testningsstrategi {#automated-testing-strategy}
 
-Denna strategi definierar ett ramverk för återanvändbara automatiserade skript, tillsammans med den strategi som planeras av kvalitetsteamet (QA). Den sammanfattar den övergripande planen för automatiseringstestning för att säkerställa:
+Denna strategi definierar ett ramverk för återanvändbara automatiserade skript, tillsammans med den strategi som planeras av kvalitetsteamet för Assurance (QA). Den sammanfattar den övergripande planen för automatiseringstestning för att säkerställa:
 
 * högre avkastning på investeringar
 * mer testtäckning
@@ -355,7 +355,7 @@ Rapporter från kunden till kvalitetsledaren under UAT-perioden (User Acceptance
 
 Alla anpassningar och/eller tillämpade snabbkorrigeringar måste dokumenteras eftersom de kan påverka framtida uppgraderingar:
 
-* AEM kan anpassas mycket efter företagets behov. Alla anpassningar som kan påverka uppgraderingen måste dokumenteras fullt ut. Till exempel alla större ändringar i användargränssnittet för AEM.
+* AEM kan anpassas mycket efter företagets behov. Alla anpassningar som kan påverka uppgraderingen måste dokumenteras fullt ut. Exempel: alla större ändringar i användargränssnittet i AEM.
 * Alla uppdateringar som krävs för den aktuella lösningen måste dokumenteras fullt ut. Dessa kan omfatta:
 
    * kumulativa korrigeringspaket
@@ -500,7 +500,7 @@ Godkänn, från affärsintressenter, att reservsystemet och relaterade procedure
 
 ### Förberedande bekräftelse på nyckeltal {#feasibility-confirmation-on-kpis}
 
-Resultat av en genomförbarhetsstudie för både AEM och konstruktion av högnivålösningar. Dessa bör mätas mot nyckeltal för att säkerställa att dessa kan uppfyllas.
+Resultat av en genomförbarhetsstudie för både AEM och design av högnivålösningar. Dessa bör mätas mot nyckeltal för att säkerställa att dessa kan uppfyllas.
 
 ### Slutet kontrakt {#finalized-contract}
 
@@ -528,7 +528,7 @@ En bra sökväg är ett standardscenario som inte innehåller några exceptionel
 
 Ursprungliga uppskattningar av:
 
-* den maskinvara som krävs för grundläggande AEM
+* den maskinvara som krävs för grundläggande AEM-installation
 * eventuella ytterligare krav, baserade på konstruktion av högnivålösningar
 
 ### Maskinvara är tillgänglig för att uppfylla kraven {#hardware-will-be-available-to-fulfill-requirements}
@@ -602,7 +602,7 @@ Implementering av roller och rättigheter, användare och grupper.
 
 ### Implementering - säkerhetskoncept {#implementation-security-concept}
 
-Implementering av alla säkerhetsåtgärder, inklusive AEM.
+Implementering av alla säkerhetsåtgärder, inklusive AEM standardinställningar.
 
 ### Implementering - säkerhetsprogramvara {#implementation-security-software}
 
@@ -633,9 +633,9 @@ Implementeringskonceptet innehåller riktlinjer för hela implementeringen. Den 
 
 Detta koncept beskriver också ramverk, bibliotek och andra artefakter som används i lösningen.
 
-### Informera Adobe support om Go Live Schedule {#inform-adobe-support-about-the-go-live-schedule}
+### Informera Adobe Support om Go Live Schedule {#inform-adobe-support-about-the-go-live-schedule}
 
-Kontakta supporten på Adobe för att säkerställa att allt stöd som behövs kan aktiveras när du är på språng.
+Kontakta Adobe Support för att säkerställa att all support som behövs kan aktiveras när du är på språng.
 
 ### Inledande upplevelsedesign {#initial-experience-designs}
 
@@ -680,7 +680,7 @@ En översikt över de verktyg som används vid implementeringen; verktygen ska o
 
 ### Lista över användare som behöver åtkomst till Adobe supportportal {#list-of-users-that-require-access-to-adobe-support-portal}
 
-En lista över alla användare och roller som behöver åtkomst till supportportalen i Adobe.
+En lista över alla användare och roller som behöver tillgång till Adobe supportportal.
 
 Listan består normalt av Solution Architect och/eller kundens IT-personal.
 
@@ -692,9 +692,9 @@ En analys, tillsammans med de rekommendationer som blir resultatet, som definier
 * granularitetsnivå
 * information som loggats för varje aktivitet
 
-### Underhållsaktiviteter (AEM specifika) Testade och aktiverade {#maintenance-tasks-aem-specific-tested-and-enabled}
+### Underhållsaktiviteter (AEM-specifika) Testade och aktiverade {#maintenance-tasks-aem-specific-tested-and-enabled}
 
-Testa och aktivera AEM underhållsuppgifter som:
+Testa och aktivera underhållsåtgärder som AEM:
 
 * komprimering
 * rensa
@@ -718,7 +718,7 @@ Det bör även rekommendera hur innehållet ska hållas uppdaterat (eller så up
 
 ### Övervakning - CPU {#monitoring-cpu}
 
-Övervaka hur lösningen använder systemets CPU:
+Övervaka hur lösningen använder CPU:
 
 * medel
 * toppar
@@ -783,7 +783,7 @@ Du bör övervaka användningen genom att:
 
 De övervakningskoncept som ska tillämpas på din lösning, inklusive:
 
-* AEM
+* AEM standardövervakning
 * systemövervakning
 * kundspecifika övervakningskrav
 
@@ -873,7 +873,7 @@ Detta används ofta i UAT (User Acceptance Testing).
 
 Konceptbeviset (POC) mäts mot kraven för att säkerställa att båda är justerade.
 
-### Checklista för Post-distribution {#post-deployment-checklist}
+### Checklista efter distribution {#post-deployment-checklist}
 
 En checklista som definierar antalet kontroller och uppgifter som ska utföras efter varje distribution.
 
@@ -964,7 +964,7 @@ Versionsinformation är en del av dokumentationen för releasen. Versionsinforma
 * lösta problem
 * kända fel i versionen
 
-Den används med Runbook för att köra för- och efterinstallationssteg och -kontroller.
+Den används med Runbook för att utföra för- och efterinstallationssteg och -kontroller.
 
 >[!NOTE]
 >
@@ -988,7 +988,7 @@ Data skrivs aldrig över i en tjärfil, diskanvändningen ökar även om bara be
 
 För att motverka den ständigt ökande storleken på databasen har en optimeringsstrategi införts för att ta bort föråldrade data.
 
-### Begäran om att konfigurera projektavsnitt i supportportalen för Adobe {#request-for-setting-up-project-section-in-adobe-support-portal}
+### Begäran om att konfigurera projektavsnitt i Adobe supportportal {#request-for-setting-up-project-section-in-adobe-support-portal}
 
 Den officiella förfrågan om att konfigurera ditt projekt i Adobe supportportal.
 
@@ -1037,9 +1037,9 @@ Granska rollerna och rättighetskonceptet för att säkerställa att det uppfyll
 
 En detaljerad specifikation baserad på konceptet Roller och rättigheter.
 
-### Security Architecture Recommendations {#security-architecture-recommendations}
+### Rekommendationer för säkerhetsarkitektur {#security-architecture-recommendations}
 
-Recommendations för säkerhet för programvaran och maskinvaruarkitekturen.
+Rekommendationer som rör säkerhet för programvaran och maskinvaruarkitekturen.
 
 ### Riktlinjer för säkerhetsbaserad kodning {#security-based-coding-guidelines}
 
@@ -1116,11 +1116,11 @@ Den kan också fungera som en avtalsmässig milstolpe.
 
 ### Specialfunktionskoncept {#special-functionality-concept}
 
-Det inledande konceptet för specialfunktioner som inte omfattas av den normala utvecklingsnivån på den AEM plattformen.
+Det inledande konceptet för specialfunktioner som inte omfattas av AEM normala utvecklingsomfång.
 
 ### Speciell funktionsspecifikation {#special-functionality-specification}
 
-Uppgifter om eventuella specialfunktioner som inte omfattas av den normala utvecklingsnivån på den AEM plattformen.
+Information om specialfunktioner som inte omfattas av AEM normala utvecklingsområde.
 
 ### Riktlinjer för specifikationer {#specification-guidelines}
 
@@ -1177,7 +1177,7 @@ En del av ansvaret för kvalitetsledaren är att se till att det finns resurser 
 
 ### Supportprocesser och åtkomst till Adobe supportportal {#support-processes-and-access-to-adobe-support-portal}
 
-Tillgång till Adobe Support Portal är avgörande för att skicka in biljetter om produktrelaterade problem som kan uppstå under implementeringen.
+Tillgång till Adobe supportportal är avgörande för att skicka in biljetter om produktrelaterade problem som kan uppstå under implementeringen.
 
 Nyckelmedlemmar i teamet bör tilldelas åtkomst.
 
@@ -1360,7 +1360,7 @@ Lämplig person bör bekräfta att de till fullo förstår
 
 ### URL-hanteringskoncept {#url-handling-concept}
 
-URL-hanteringen ska omfatta AEM URL-funktioner som:
+URL-hanteringen bör omfatta AEM-specifika URL-funktioner, inklusive:
 
 * vanity-URL:er
 * externalisering av länkar
@@ -1412,7 +1412,7 @@ Specifikationen för varje arbetsflöde bör omfatta (minst):
 
 ### Löpande begrepp {#workflows-concept}
 
-Med arbetsflöden kan ni automatisera AEM. Konturer för arbetsflöden:
+Med arbetsflöden kan du automatisera AEM-aktiviteter. Konturer för arbetsflöden:
 
 * de processer som kräver automatisering
 * vilka tjänster och roller i AEM som kommer att påverkas

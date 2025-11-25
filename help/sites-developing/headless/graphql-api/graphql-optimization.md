@@ -4,8 +4,8 @@ description: Lär dig hur du optimerar dina GraphQL-frågor när du filtrerar, s
 exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1949'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Följande checklista hjälper dig att optimera konfigurationen och användningen
 
 Vi rekommenderar starkt att du använder beständiga GraphQL-frågor.
 
-Med permanenta GraphQL-frågor kan du minska frågekörningsprestanda genom att använda CDN (Content Delivery Network). Klientprogram begär beständiga frågor med GET-förfrågningar för snabb körning.
+Med permanenta GraphQL-frågor kan du minska frågekörningsprestanda genom att använda CDN (Content Delivery Network). Klientapplikationer begär beständiga frågor med GET-förfrågningar för snabb körning.
 
 **Ytterligare referens**
 
@@ -45,7 +45,7 @@ Se:
 
 **Rekommendation**
 
-Kunder som använder GraphQL *måste* installera innehållsavsnittet Experience Manager med GraphQL Index Package. På så sätt kan du lägga till den indexdefinition som krävs baserat på de funktioner som de faktiskt använder. Om du inte installerar det här paketet kan GraphQL-frågor bli långsamma eller misslyckas.
+Kunder som använder GraphQL *måste* installera Experience Manager Content Fragment med GraphQL Index Package. På så sätt kan du lägga till den indexdefinition som krävs baserat på de funktioner som de faktiskt använder. Om du inte installerar det här paketet kan GraphQL-frågor bli långsamma eller misslyckas.
 
 Se versionsinformationen för den version som passar ditt Service Pack. Den senaste Service Pack-versionen finns i [Installera GraphQL Index Package för Experience Manager Content Fragments](/help/release-notes/release-notes.md#install-aem-graphql-index-add-on-package) .
 
@@ -62,11 +62,11 @@ Se:
 
 Olika metoder för cachning kan också användas för optimering.
 
-#### Aktivera AEM Dispatcher-cachelagring {#enable-aem-dispatcher-caching}
+#### Aktivera cachelagring i AEM Dispatcher {#enable-aem-dispatcher-caching}
 
 **Rekommendation**
 
-[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE) är den första nivån i AEM, före CDN-cache.
+[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är den första nivån i AEM-tjänsten, före CDN-cache.
 
 **Ytterligare referens**
 
@@ -84,7 +84,7 @@ GraphQL-frågor och deras JSON-svar kan cachelagras om de är riktade som `GET`-
 
 Se:
 
-* [Använder CDN i AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE#using-dispatcher-with-a-cdn)
+* [Använda CDN i AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn)
 
 #### Ange rubriker för HTTP-cachekontroll {#set-http-cache-control-headers}
 
@@ -132,7 +132,7 @@ Contact Adobe to enable this capability for your AEM Cloud Service program and e
 
 ### GraphQL Query Optimization {#graphql-query-optimization}
 
-I en AEM med ett stort antal innehållsfragment som delar samma modell kan GraphQL listfrågor bli dyra (i form av resurser).
+I en AEM-instans med ett stort antal innehållsfragment som delar samma modell kan GraphQL listfrågor bli dyra (i form av resurser).
 
 Detta beror på att *alla* fragment som delar en modell som används i GraphQL-frågan måste läsas in i minnet. Detta förbrukar både tid och minne. Filtrering, som kan minska antalet objekt i den (slutliga) resultatuppsättningen, kan bara tillämpas **efter** att hela resultatuppsättningen har lästs in i minnet.
 
@@ -140,7 +140,7 @@ Detta kan leda till att även små resultatuppsättningar (kan) ger sämre prest
 
 För att minska prestanda- och minnesproblem måste den här första resultatmängden hållas så liten som möjligt.
 
-I AEM finns det två sätt att optimera GraphQL-frågor:
+AEM erbjuder två sätt att optimera GraphQL-frågor:
 
 * [Hybridfiltrering](#use-aem-graphql-hybrid-filtering)
 * [Sidindelning](#use-aem-graphql-pagination) (eller sidindelning)
@@ -149,13 +149,13 @@ I AEM finns det två sätt att optimera GraphQL-frågor:
 
 Varje metod har sina egna användningsfall och begränsningar. I det här avsnittet finns information om Hybrid-filtrering och sidindelning, tillsammans med några av de [bästa metoderna](#best-practices) som kan användas för att optimera GraphQL-frågor.
 
-#### Använd AEM GraphQL hybridfiltrering {#use-aem-graphql-hybrid-filtering}
+#### Använd hybridfiltrering i AEM GraphQL {#use-aem-graphql-hybrid-filtering}
 
 **Rekommendation**
 
-Hybridfiltrering kombinerar JCR-filtrering med AEM.
+Hybridfiltrering kombinerar JCR-filtrering med AEM-filtrering.
 
-Det tillämpar ett JCR-filter (i form av en frågebegränsning) innan resultatuppsättningen läses in i minnet för AEM filtrering. Detta för att minska mängden resultat som läses in i minnet, eftersom JCR-filtret tar bort överflödiga resultat före detta.
+Det tillämpar ett JCR-filter (i form av en frågebegränsning) innan resultatuppsättningen läses in i minnet för AEM-filtrering. Detta för att minska mängden resultat som läses in i minnet, eftersom JCR-filtret tar bort överflödiga resultat före detta.
 
 >[!NOTE]
 >
@@ -165,7 +165,7 @@ Den här tekniken ger den flexibilitet som GraphQL-filter ger och delegerar så 
 
 >[!NOTE]
 >
->AEM Hybrid-filtrering kräver uppdatering av befintliga innehållsfragment
+>AEM hybridfiltrering kräver uppdatering av befintliga innehållsfragment
 
 **Ytterligare referens**
 
@@ -190,7 +190,7 @@ Om du vill använda det måste du ange positionen för det första objektet som 
 Detta ger ett unikt ID för varje objekt, som också kallas markör.
 I frågan anger du markören för det sista objektet på föregående sida plus sidstorleken (det maximala antalet objekt som ska returneras).
 
-  Eftersom markörbaserad sidnumrering inte passar i de listbaserade frågornas datastrukturer har AEM introducerat `Paginated`-frågetyp, till exempel `articlePaginated`. De datastrukturer och parametrar som används följer [GraphQL Cursor ConnectionSpecification](https://relay.dev/graphql/connections.htm).
+  Eftersom markörbaserad sidnumrering inte passar i de listbaserade frågestrukturerna har AEM introducerat `Paginated`-frågetyp, till exempel `articlePaginated`. De datastrukturer och parametrar som används följer [GraphQL Cursor ConnectionSpecification](https://relay.dev/graphql/connections.htm).
 
   >[!NOTE]
   >
@@ -238,7 +238,7 @@ Du kan fortfarande optimera sådana GraphQL-frågor genom att kombinera filterut
 
 ### Använda innehållsstrukturen {#use-content-structure}
 
-I AEM anses det som god praxis att använda databasstrukturen för att begränsa omfattningen av det innehåll som ska behandlas.
+I AEM anses det i allmänhet bra att använda databasstrukturen för att begränsa omfattningen av det innehåll som ska behandlas.
 
 Detta arbetssätt bör även tillämpas på GraphQL-frågor.
 
@@ -271,7 +271,7 @@ Detta kan du göra genom att använda ett filter i fältet `_path` i fragmentet 
 
 Du kan också använda sidindelning för att minska den ursprungliga resultatmängden, särskilt om dina förfrågningar inte använder någon filtrering eller sortering.
 
-Om du filtrerar eller sorterar efter kapslade fragment kan sidnumrerade frågor fortfarande ta lång tid eftersom AEM kan behöva läsa in större mängder fragment i minnet. Om du kombinerar filtrering och sidindelning bör du därför överväga reglerna för filtrering (som nämns ovan).
+Om du filtrerar eller sorterar efter kapslade fragment kan sidnumrerade frågor fortfarande ta lång tid, eftersom AEM kan behöva läsa in större mängder fragment i minnet. Om du kombinerar filtrering och sidindelning bör du därför överväga reglerna för filtrering (som nämns ovan).
 
 För sidindelning är sortering lika viktigt eftersom paginerade resultat alltid sorteras - antingen explicit eller implicit.
 
@@ -333,10 +333,10 @@ Om du skriver ut alla tre formaten ökar textutdatafilens storlek i JSON med fak
 
 ### Ändra innehållsfragment {#modifying-content-fragments}
 
-Ändra bara innehållsfragment och deras resurser med hjälp av AEM gränssnitt eller API:er. Gör inga ändringar direkt i JCR.
+Ändra bara innehållsfragment och deras resurser med AEM-gränssnittet eller API:erna. Gör inga ändringar direkt i JCR.
 
 ### Testa dina frågor {#test-your-queries}
 
-Bearbetning av GraphQL-frågor liknar bearbetning av sökfrågor och är betydligt mer komplicerat än enkel GET-all-content-API-begäran.
+Bearbetning av GraphQL-frågor liknar bearbetning av sökfrågor och är betydligt mer komplicerat än enkel GET-API-begäran med allt innehåll.
 
 Att planera, testa och optimera frågor i en kontrollerad icke-produktionsmiljö är avgörande för att det ska gå bra vid senare användning i produktionen.

@@ -2,11 +2,11 @@
 title: Skapa översättningsprojekt
 description: Lär dig hur du skapar översättningsprojekt i  [!DNL Adobe Experience Manager].
 contentOwner: AG
-role: Architect, Admin
+role: Developer, Admin
 feature: Translation
 exl-id: 8990feca-cfda-4974-915e-27aa9d8f2ee1
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1752'
 ht-degree: 11%
@@ -69,7 +69,7 @@ Om du använder det här alternativet kopieras resurser som ska översättas til
 
 1. I listan **[!UICONTROL Target Languages]** väljer du de språk som du vill skapa en mappstruktur för.
 
-1. Välj **[!UICONTROL Create a new translation project]** i listan **[!UICONTROL Project]**.
+1. Välj **[!UICONTROL Project]** i listan **[!UICONTROL Create a new translation project]**.
 
 1. Ange en titel för projektet i fältet **[!UICONTROL Project Title]**.
 
@@ -261,5 +261,5 @@ När du kör ett översättningsarbetsflöde för att uppdatera en språkkopia m
 
 ## Tips och begränsningar {#tips-limitations}
 
-* Om du startar ett översättningsarbetsflöde för komplexa resurser, som PDF och [!DNL Adobe InDesign] filer, skickas inte deras delresurser eller återgivningar (om det finns några) för översättning.
+* Om du startar ett översättningsarbetsflöde för komplexa resurser, som PDF- och [!DNL Adobe InDesign]-filer, skickas inte deras delresurser eller återgivningar (om det finns några) för översättning.
 * Om du använder maskinöversättning översätts inte resursens binärfiler.

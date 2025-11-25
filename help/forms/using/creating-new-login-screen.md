@@ -1,6 +1,6 @@
 ---
 title: Skapa en inloggningsskärm
-description: Så här ändrar du inloggningssidan för AEM Forms-arbetsytan eller Forms Manager, t.ex. LiveCyclena.
+description: Så här ändrar du inloggningssidan för LiveCycle-moduler, till exempel för arbetsytan i AEM Forms eller Forms Manager.
 content-type: reference
 products: SG_EXPERIENCEMANAGER/6.5/FORMS
 topic-tags: forms-workspace
@@ -9,7 +9,7 @@ exl-id: 5cb906b6-6a3c-498c-94f5-27a9071ea934
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 1%
@@ -71,117 +71,117 @@ Du kan ändra inloggningsskärmen för alla AEM Forms-moduler som använder inlo
 
 1. Ändra följande kodfragment för `/apps/livecycle/core/components/login/login.jsp`:
 
-***Språkkoden är***
+   ***Språkkoden är***
 
-```jsp
-String browserLocale = "en";
+   ```jsp
+   String browserLocale = "en";
+   
+       for(int i=0; i<locales.length; i++)
+       {
+           String prioperty = locales[i];
+           if(prioperty.trim().startsWith("en")) {
+               browserLocale = "en";
+               break;
+           }
+           if(prioperty.trim().startsWith("de")){
+               browserLocale = "de";
+               break;
+           }
+           if(prioperty.trim().startsWith("ja")){
+               browserLocale = "ja";
+               break;
+           }
+           if(prioperty.trim().startsWith("fr")){
+               browserLocale = "fr";
+               break;
+           }
+       }
+   ```
 
-    for(int i=0; i<locales.length; i++)
-    {
-        String prioperty = locales[i];
-        if(prioperty.trim().startsWith("en")) {
-            browserLocale = "en";
-            break;
-        }
-        if(prioperty.trim().startsWith("de")){
-            browserLocale = "de";
-            break;
-        }
-        if(prioperty.trim().startsWith("ja")){
-            browserLocale = "ja";
-            break;
-        }
-        if(prioperty.trim().startsWith("fr")){
-            browserLocale = "fr";
-            break;
-        }
-    }
-```
+   Till
 
-Till
+   ```jsp
+   String browserLocale = "en";
+       for(int i=0; i<locales.length; i++)
+       {
+           String prioperty = locales[i];
+           if(prioperty.trim().startsWith("ar")) {
+               browserLocale = "ar";
+               break;
+           }
+           if(prioperty.trim().startsWith("en")) {
+               browserLocale = "en";
+               break;
+           }
+           if(prioperty.trim().startsWith("de")){
+               browserLocale = "de";
+               break;
+           }
+           if(prioperty.trim().startsWith("ja")){
+               browserLocale = "ja";
+               break;
+           }
+           if(prioperty.trim().startsWith("fr")){
+               browserLocale = "fr";
+               break;
+           }
+       }
+   ```
 
-```jsp
-String browserLocale = "en";
-    for(int i=0; i<locales.length; i++)
-    {
-        String prioperty = locales[i];
-        if(prioperty.trim().startsWith("ar")) {
-            browserLocale = "ar";
-            break;
-        }
-        if(prioperty.trim().startsWith("en")) {
-            browserLocale = "en";
-            break;
-        }
-        if(prioperty.trim().startsWith("de")){
-            browserLocale = "de";
-            break;
-        }
-        if(prioperty.trim().startsWith("ja")){
-            browserLocale = "ja";
-            break;
-        }
-        if(prioperty.trim().startsWith("fr")){
-            browserLocale = "fr";
-            break;
-        }
-    }
-```
+   ```jsp
+   String browserLocale = "en";
+   
+       for(int i=0; i<locales.length; i++)
+       {
+           String prioperty = locales[i];
+           if(prioperty.trim().startsWith("en")) {
+               browserLocale = "en";
+               break;
+           }
+           if(prioperty.trim().startsWith("de")){
+               browserLocale = "de";
+               break;
+           }
+           if(prioperty.trim().startsWith("ja")){
+               browserLocale = "ja";
+               break;
+           }
+           if(prioperty.trim().startsWith("fr")){
+               browserLocale = "fr";
+               break;
+           }
+       }
+   ```
 
-```jsp
-String browserLocale = "en";
+   Till
 
-    for(int i=0; i<locales.length; i++)
-    {
-        String prioperty = locales[i];
-        if(prioperty.trim().startsWith("en")) {
-            browserLocale = "en";
-            break;
-        }
-        if(prioperty.trim().startsWith("de")){
-            browserLocale = "de";
-            break;
-        }
-        if(prioperty.trim().startsWith("ja")){
-            browserLocale = "ja";
-            break;
-        }
-        if(prioperty.trim().startsWith("fr")){
-            browserLocale = "fr";
-            break;
-        }
-    }
-```
-
-Till
-
-```jsp
-String browserLocale = "en";
-    for(int i=0; i<locales.length; i++)
-    {
-        String prioperty = locales[i];
-        if(prioperty.trim().equalsIgnoreCase("ar-DZ")) {
-            browserLocale = "ar-DZ";
-            break;
-        }
-        if(prioperty.trim().startsWith("en")) {
-            browserLocale = "en";
-            break;
-        }
-        if(prioperty.trim().startsWith("de")){
-            browserLocale = "de";
-            break;
-        }
-        if(prioperty.trim().startsWith("ja")){
-            browserLocale = "ja";
-            break;
-        }
-        if(prioperty.trim().startsWith("fr")){
-            browserLocale = "fr";
-            break;
-        }
-    }
-```
+   ```jsp
+   String browserLocale = "en";
+       for(int i=0; i<locales.length; i++)
+       {
+           String prioperty = locales[i];
+           if(prioperty.trim().equalsIgnoreCase("ar-DZ")) {
+               browserLocale = "ar-DZ";
+               break;
+           }
+           if(prioperty.trim().startsWith("en")) {
+               browserLocale = "en";
+               break;
+           }
+           if(prioperty.trim().startsWith("de")){
+               browserLocale = "de";
+               break;
+           }
+           if(prioperty.trim().startsWith("ja")){
+               browserLocale = "ja";
+               break;
+           }
+           if(prioperty.trim().startsWith("fr")){
+               browserLocale = "fr";
+               break;
+           }
+       }
+   ```
 
 ***Om du vill ändra standardspråk***
 
@@ -263,12 +263,12 @@ Till exempel:
 
 * Lägg till följande i `/apps/livecycle/core/content/login/login.css`.
 
-```
-css.newLoginContentArea {
-    width: 700px;
-    padding: 100px 0px 0px 100px;
-   }
-```
+  ```
+  css.newLoginContentArea {
+      width: 700px;
+      padding: 100px 0px 0px 100px;
+  }
+  ```
 
 * Ändra följande i `/apps/livecycle/core/components/login.jsp`.
 
@@ -293,35 +293,35 @@ css.newLoginContentArea {
 1. Lägg till nya bilder i `/apps/livecycle/core/content/login`. Så här lägger du till bild:
 
    1. Installera WebDAV-klienten.
-   1. Navigera till mappen `/apps/livecycle/core/content/login` med webDAV-klienten. Mer information finns i [WebDAV-åtkomst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=sv-SE).
+   1. Navigera till mappen `/apps/livecycle/core/content/login` med webDAV-klienten. Mer information finns i [WebDAV-åtkomst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/contentmanagement/webdav-access.html?lang=en).
 
    1. Lägg till nya bilder.
 
 1. Lägg till nya format i `/apps/livecycle/core/content/login/login.css,` som motsvarar nya bilder som lagts till i `/apps/livecycle/core/content/login`.
 1. Använd de nya formaten i `login.jsp` vid `/apps/livecycle/core/components`.
 
-Exempel:
+   Exempel:
 
 
-```css
-.newLoginContainerBkg {
+   ```css
+   .newLoginContainerBkg {
+   
+    background-image: url(my_Bg.gif);
+    background-repeat: no-repeat;
+    background-position: left top;
+    width: 727px;
+   }
+   ```
 
- background-image: url(my_Bg.gif);
- background-repeat: no-repeat;
- background-position: left top;
- width: 727px;
-}
-```
 
+   * Ändra följande i /apps/livecycle/core/components/login.jsp.
 
-    * Ändra följande i /apps/livecycle/core/components/login.jsp.
+   ```jsp
+   <div class="loginContainerBkg">
+   ```
 
-```jsp
-<div class="loginContainerBkg">
-```
+   Till
 
-Till
-
-```jsp
-<div class="newLginContainerBkg">
-```
+   ```jsp
+   <div class="newLginContainerBkg">
+   ```

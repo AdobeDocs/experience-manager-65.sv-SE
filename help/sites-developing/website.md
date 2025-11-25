@@ -10,9 +10,9 @@ exl-id: d7cf843c-c837-4b97-b6c5-0fbd6793bdd4
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: ed7183efa57db6d97941e3acc99d126c2fc0f6c5
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '4919'
+source-wordcount: '4923'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->I den här artikeln beskrivs hur du skapar en webbplats med JSP och baserat på det klassiska användargränssnittet. Adobe rekommenderar att du använder den senaste Adobe Experience Manager-tekniken (AEM) för dina webbplatser enligt beskrivningen i artikeln [Komma igång med att utveckla AEM Sites](/help/sites-developing/getting-started.md).
+>I den här artikeln beskrivs hur du skapar en webbplats med JSP och baserat på det klassiska användargränssnittet. Adobe rekommenderar att du använder de senaste Adobe Experience Manager-teknikerna (AEM) för dina webbplatser enligt beskrivningen i artikeln [Komma igång med att utveckla AEM Sites](/help/sites-developing/getting-started.md).
 
 Med den här självstudiekursen kan du skapa en komplett webbplats med AEM. Webbplatsen kommer att vara baserad på en allmän webbplats och riktar sig främst till webbutvecklare. All utveckling sker i en författarmiljö.
 
@@ -49,7 +49,7 @@ När du har utfört alla steg ska sidorna se ut så här:
 
 **Hämta det slutliga resultatet**
 
-Ladda ned webbplatsen-1.0.zip om du vill följa med i självstudiekursen i stället för att genomföra övningarna. Den här filen är ett AEM innehållspaket som innehåller resultatet av den här självstudiekursen. Använd [Package Manager](/help/sites-administering/package-manager.md) för att installera paketet till din författarinstans.
+Ladda ned webbplatsen-1.0.zip om du vill följa med i självstudiekursen i stället för att genomföra övningarna. Den här filen är ett AEM-innehållspaket som innehåller resultatet av den här självstudiekursen. Använd [Package Manager](/help/sites-administering/package-manager.md) för att installera paketet till din författarinstans.
 
 **OBS!** Om du installerar det här paketet skrivs resurser över i din redigeringsinstans som du har skapat med den här självstudiekursen.
 
@@ -59,15 +59,15 @@ Webbplatsinnehållspaket
 
 ## Installera Adobe Experience Manager {#installing-adobe-experience-manager}
 
-Om du vill installera en AEM instans för att utveckla webbplatsen följer du instruktionerna för att konfigurera en [distributionsmiljö med författare- och publiceringsinstanser](/help/sites-deploying/deploy.md#author-and-publish-installs) eller utför en [allmän installation](/help/sites-deploying/deploy.md#default-local-install). Den generiska installationen innefattar att hämta den AEM QuickStart JAR-filen, placera filen license.properties i samma katalog som JAR-filen och dubbelklicka på JAR-filen.
+Om du vill installera en AEM-instans för att utveckla din webbplats följer du instruktionerna för att konfigurera en [distributionsmiljö med författare och publiceringsinstanser](/help/sites-deploying/deploy.md#author-and-publish-installs) eller utför en [allmän installation](/help/sites-deploying/deploy.md#default-local-install). Den allmänna installationen innebär att du hämtar JAR-filen för AEM Quickstart, placerar filen license.properties i samma katalog som JAR-filen och dubbelklickar på JAR-filen.
 
-När du har installerat AEM kommer du åt utvecklingsmiljön i CRXDE Lite genom att klicka på länken CRXDE Lite på välkomstsidan:
+När du har installerat AEM får du tillgång till CRXDE Lite utvecklingsmiljö genom att klicka på CRXDE Lite-länken på välkomstsidan:
 
 ![chlimage_1-25](assets/chlimage_1-25.png)
 
 >[!NOTE]
 >
->URL:en för CRXDE Lite för en AEM som installeras lokalt med standardporten är [https://localhost:4502/crx/de/](https://localhost:4502/crx/de/).
+>URL:en för en AEM-redigeringsinstans som installeras lokalt med standardporten är [https://localhost:4502/crx/de/](https://localhost:4502/crx/de/).
 
 ### Konfigurera projektstrukturen i CRXDE Lite {#setting-up-the-project-structure-in-crxde-lite}
 
@@ -95,7 +95,7 @@ Exempel på static.css-fil och bilder
 
 [Hämta fil](assets/mywebsite.zip)
 
-1. Klicka på **Verktyg** på AEM välkomstsida. ([https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html))
+1. Klicka på **Verktyg** på välkomstsidan för AEM. ([https://localhost:4502/libs/cq/core/content/welcome.html](https://localhost:4502/libs/cq/core/content/welcome.html))
 
    ![chlimage_1-27](assets/chlimage_1-27.png)
 
@@ -121,7 +121,7 @@ Skapa en mall som du kan använda som bas för webbplatsens webbsidor.
 
 En mall definierar standardinnehållet för en ny sida. Komplexa webbplatser kan använda flera mallar för att skapa olika typer av sidor på webbplatsen. I den här övningen är alla sidor baserade på en enkel mall.
 
-1. Högerklicka `/apps/mywebsite/templates` i mappträdet i CRXDE Lite och klicka på **Skapa** > **Skapa mall**.
+1. Högerklicka `/apps/mywebsite/templates` i mappträdet för CRXDE Lite och klicka på **Skapa** > **Skapa mall**.
 
 1. I dialogrutan Skapa mall skriver du följande värden och klickar sedan på **Nästa**:
 
@@ -152,7 +152,7 @@ En mall definierar standardinnehållet för en ny sida. Komplexa webbplatser kan
 
 Skapa *komponenten* som definierar innehållet och återger sidorna som använder innehållsidesmallen. Platsen för komponenten måste motsvara värdet för egenskapen Resurstyp i innehållsidesmallen.
 
-1. Högerklicka `/apps/mywebsite/components` i CRXDE Lite och klicka på **Skapa** > **Komponent**.
+1. Högerklicka på `/apps/mywebsite/components` i CRXDE Lite och klicka på **Skapa** > **Komponent**.
 1. I dialogrutan **Skapa komponent** skriver du följande egenskapsvärden:
 
    * **Etikett**: innehållssida
@@ -266,13 +266,13 @@ I det här avsnittet skapar du följande sidor som alla använder innehållsmall
 
    ![chlimage_1-37](assets/chlimage_1-37.png)
 
-1. Öppna [https://localhost:4502/content/mywebsite/en/products.html](https://localhost:4502/content/mywebsite/en/products.html) i en ny webbläsarflik eller ett nytt fönster för att visa sidan Produkter:
+1. Öppna [https://localhost:4502/content/mywebsite/en/products.html](https://localhost:4502/content/mywebsite/en/products.html) på en ny webbläsarflik eller i ett nytt fönster för att visa sidan Produkter:
 
    ![chlimage_1-38](assets/chlimage_1-38.png)
 
 ### Förbättra innehållssidans skript {#enhancing-the-contentpage-script}
 
-I det här avsnittet beskrivs hur du förbättrar innehållsidesskriptet med AEM Foundation-komponentskript och genom att skriva egna skript.
+I det här avsnittet beskrivs hur du kan förbättra innehållsidesskriptet med AEM Foundation-komponentskript och skriva egna skript.
 
 När du är klar bör sidan **Produkter** se ut så här:
 
@@ -280,11 +280,11 @@ När du är klar bör sidan **Produkter** se ut så här:
 
 #### Använda skript för startsidan {#using-the-foundation-page-scripts}
 
-I den här övningen konfigurerar du sidinnehållskomponenten så att dess överordnade typ är AEM sidkomponent. Eftersom komponenter ärver funktionerna i sin supertyp ärver sidinnehållet skripten och egenskaperna för sidkomponenten.
+I den här övningen konfigurerar du sidinnehållskomponenten så att dess supertyp är AEM Page-komponenten. Eftersom komponenter ärver funktionerna i sin supertyp ärver sidinnehållet skripten och egenskaperna för sidkomponenten.
 
 I en komponent-JSP-kod kan du till exempel referera till de skript som supertypskomponenten tillhandahåller som om de är inkluderade i komponenten.
 
-1. Lägg till en egenskap i noden `/apps/mywebsite/components/contentpage` i CRXDE Lite.
+1. I CRXDE Lite lägger du till en egenskap i noden `/apps/mywebsite/components/contentpage`.
 
    1. Markera noden `/apps/mywebsite/components/contentpage`.
    1. Ange följande egenskapsvärden längst ned på fliken Egenskaper och klicka sedan på Lägg till:
@@ -312,7 +312,7 @@ I en komponent-JSP-kod kan du till exempel referera till de skript som supertyps
 
    ![chlimage_1-1](assets/chlimage_1-1.jpeg)
 
-   Öppna sidans källa för att se JavaScript- och HTML-elementen som genereras av head.jsp- och body.jsp-skripten. Följande skriptutdrag öppnas Sidekick när du öppnar sidan:
+   Öppna sidans källa för att se de JavaScript- och HTML-element som skripten head.jsp och body.jsp genererade. Följande skriptutdrag öppnar Sidekick när du öppnar sidan:
 
    ```java
    CQ.WCM.launchSidekick("/content/mywebsite/en/products",
@@ -329,7 +329,7 @@ I det här avsnittet skapar du flera skript som varje skript skapar en del av si
 
 1. Skapa filen `left.jsp` under `/apps/mywebsite/components/contentpage` i CRXDE Lite:
 
-   1. Högerklicka på noden `/apps/mywebsite/components/contentpage` och välj sedan **Skapa &#x200B;** och sedan **Skapa fil**.
+   1. Högerklicka på noden `/apps/mywebsite/components/contentpage` och välj sedan **Skapa **och sedan **Skapa fil**.
 
    1. I fönstret skriver du `left.jsp` som **Namn** och klickar på **OK**.
 
@@ -480,7 +480,7 @@ Så här inkluderar du topnav i innehållsideskomponenten:
 Komponenten Sida definierar egenskaper som gör att du kan ange bildtexter för sidor. Lägg till bildtexter som innehåller information om sidinnehållet.
 
 1. Öppna sidan **Produkter** i webbläsaren.
-1. Klicka på **Sidegenskaper** på Sidekick-fliken **Sida**.
+1. Klicka på **Sidegenskaper** på fliken **Sida** i Sidekick.
 1. På fliken Grundläggande i dialogrutan expanderar du **Fler titlar och beskrivning** och för egenskapen **Underrubrik** skriver du **vad vi gör**. Klicka på **OK**.
 1. Upprepa föregående steg för att lägga till underrubriken **om våra tjänster** på sidan **Tjänster**.
 1. Upprepa föregående steg för att lägga till underrubriken **det förtroende vi tjänar** på sidan **Kunder**.
@@ -922,7 +922,7 @@ Skapa en dialogruta där du kan konfigurera logotypkomponenten i designläge. Di
       * **Titel:** `Logo (Design)`
 
 1. Högerklicka på noden tab1 i grenen design_dialog och klicka på Ta bort. Klicka på Spara alla.
-1. Skapa en nod med namnet `img` av typen `cq:Widget` under `design_dialog/items/items`noden. Lägg till följande egenskaper och klicka sedan på Spara alla:
+1. Skapa en nod med namnet `design_dialog/items/items` av typen `img` under `cq:Widget`noden. Lägg till följande egenskaper och klicka sedan på Spara alla:
 
    | Namn | Typ | Värde |
    |---|---|---|
@@ -1030,7 +1030,7 @@ public class img_GET extends AbstractImageServlet {
 
 I det här avsnittet beskrivs hur du anger en bild som logotyp i dialogrutan för designläge.
 
-1. Med sidan Produkter öppen i webbläsaren klickar du på knappen Design längst ned i Sidekick för att gå in i designläget.
+1. Med sidan Produkter öppen i webbläsaren klickar du på knappen Design längst ned i Sidekick för att öppna designläget.
 
    ![Knappen Design indikeras av en höger kvadrat.](do-not-localize/chlimage_1-1.png)
 
@@ -1039,11 +1039,11 @@ I det här avsnittet beskrivs hur du anger en bild som logotyp i dialogrutan fö
 
    ![chlimage_1-49](assets/chlimage_1-49.png)
 
-1. Klicka på triangeln på namnlisten Sidekick för att återgå till redigeringsläget.
+1. Klicka på triangeln i namnlisten i Sidekick för att återgå till redigeringsläget.
 
    ![chlimage_1-3](assets/chlimage_1-3.jpeg)
 
-1. Gå till följande nod i CRXDE Lite för att se de lagrade egenskapsvärdena:
+1. I CRXDE Lite går du till följande nod för att se de lagrade egenskapsvärdena:
 
    `/etc/designs/mywebsite/jcr:content/contentpage/logo`
 
@@ -1051,7 +1051,7 @@ I det här avsnittet beskrivs hur du anger en bild som logotyp i dialogrutan fö
 
 I det här avsnittet inkluderar du komponenten breadcrumb (trail), som är en av grundkomponenterna.
 
-1. Bläddra till `/apps/mywebsite/components/contentpage` i CRXDE Lite, öppna filen `center.jsp` och ersätt:
+1. I CRXDE Lite bläddrar du till `/apps/mywebsite/components/contentpage`, öppnar filen `center.jsp` och ersätter:
 
    ```java
    <div>trail</div>
@@ -1072,7 +1072,7 @@ I det här avsnittet inkluderar du komponenten breadcrumb (trail), som är en av
 
 I det här avsnittet inkluderar du titelkomponenten, som är en av grundkomponenterna.
 
-1. Bläddra till `/apps/mywebsite/components/contentpage` i CRXDE Lite, öppna filen `center.jsp` och ersätt:
+1. I CRXDE Lite bläddrar du till `/apps/mywebsite/components/contentpage`, öppnar filen `center.jsp` och ersätter:
 
    ```xml
    <div>title</div>
@@ -1172,18 +1172,18 @@ I det här avsnittet beskrivs hur du skapar bildskriptet.
 
 1. Spara ändringarna.
 
-#### Skapa Image cq:editConfig-noden {#creating-the-image-cq-editconfig-node}
+#### Skapar bildens cq:editConfig-nod {#creating-the-image-cq-editconfig-node}
 
 Med nodtypen `cq:editConfig` kan du konfigurera vissa beteenden för komponenter när du redigerar deras egenskaper.
 
 I det här avsnittet använder du en cq:editConfig-nod för att dra resurser från Content Finder till bildkomponenten.
 
-1. I CRXDE Lite, under noden /apps/mywebsite/components/image, skapar du en nod på följande sätt:
+1. I CRXDE Lite skapar du en nod på följande sätt under noden /apps/mywebsite/components/image:
 
    * Namn: cq:editConfig.
    * Typ: cq:EditConfig.
 
-1. Skapa en nod på följande sätt under noden cq:editConfig:
+1. Skapa en nod enligt följande under noden cq:editConfig:
 
    * Namn: cq:dropTargets.
    * Typ: cq:DropTargetConfig.
@@ -1191,13 +1191,13 @@ I det här avsnittet använder du en cq:editConfig-nod för att dra resurser fr�
 1. Skapa en nod enligt följande under noden cq:dropTargets:
 
    * Namn: bild.
-   * Typ: nt:ostrukturerad.
+   * Typ: nt:unstructured.
 
 1. I CRXDE anger du egenskaperna enligt följande:
 
 | Namn | Typ | Värde |
 |---|---|---|
-| acceptera | Sträng | image/(gif | jpeg | png) |
+| acceptera | Sträng | image/(gif\|jpeg\|png) |
 | grupper | Sträng | media |
 | propertyName | Sträng | ./imageReference |
 
@@ -1241,7 +1241,7 @@ Det finns flera alternativ i redigeringsläge och designläge.
    <cq:include path="toolbar" resourceType="foundation/components/toolbar"/>
    ```
 
-1. I mappträdet på sidan AEM webbplatser väljer du Webbplatser/Min webbplats/engelska och klickar sedan på Ny > Ny sida. Ange följande egenskapsvärden och klicka på Skapa:
+1. I mappträdet på sidan AEM-webbplatser väljer du Webbplatser/Min webbplats/engelska och klickar sedan på Ny > Ny sida. Ange följande egenskapsvärden och klicka på Skapa:
 
    * Titel: Verktygsfält
    * Välj Min mall för webbplatsinnehåll
@@ -1502,8 +1502,8 @@ I det här avsnittet lägger du till sökkomponenten i styckesystemet.
 1. Klicka på ikonen för designläge i Sidekick.
 1. Klicka på Redigera i designen av paragrafblocket (under sökrubriken).
 1. Bläddra nedåt till gruppen **Mina webbplatser** i dialogrutan, markera **Min sökkomponent** och klicka på **OK**.
-1. Klicka på triangeln på Sidekick för att återgå till redigeringsläget.
-1. Dra Min sökkomponent från Sidekick till den parsys-bildrutan. Den ser ut så här:
+1. Klicka på triangeln i Sidekick för att återgå till redigeringsläget.
+1. Dra My Search Component från Sidekick till den parsys-bildrutan. Den ser ut så här:
 
    ![chlimage_1-58](assets/chlimage_1-58.png)
 
@@ -1530,6 +1530,6 @@ För den här komponenten kan du ange flera parametrar i både redigeringsläge 
    ```
 
 1. Spara ändringarna.
-1. Läs in sidan **&#x200B; Products** på nytt i webbläsaren. Hela sidan ser ut så här:
+1. Läs in sidan** Products** på nytt i webbläsaren. Hela sidan ser ut så här:
 
    ![chlimage_1-5](assets/chlimage_1-5.jpeg)

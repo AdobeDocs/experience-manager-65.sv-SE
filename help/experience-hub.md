@@ -5,9 +5,9 @@ landing-page-description: Ta reda på mer om Adobe Experience Hub, en central ut
 solution: Experience Manager, Experience Manager 6.5
 feature: Authoring, AI Assistant, Central Interface Components, Getting Started, Onboarding, Programs, Workflows
 feature-set: Experience Cloud,Experience Manager Sites,Experience Cloud Services
-role: Admin, Architect, Developer, User
+role: Admin, Developer, User
 exl-id: 8193e420-2e37-45a6-a1fc-01873fed539b
-source-git-commit: 3d4396ede2abe477665a8cc4877245780e555078
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Experience Hub introducerar en central startpunkt för hantering av innehåll, r
 
 Se en snabb genomgång av den omdesignade arbetsytan i AEM Experience Hub (2 minuter, 39 sekunder).
 
->[!VIDEO](https://video.tv.adobe.com/v/3475196/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475190/?learn=on&enablevpops)
 
 <!--
 Available as a private beta, Experience Hub offers an optimized experience focused on improving workflows, prioritizing goals, and delivering results. Opting in lets you influence Experience Hub's development by providing feedback that helps shape its future and enhances its value for the entire AEM community. -->
@@ -31,7 +31,7 @@ Available as a private beta, Experience Hub offers an optimized experience focus
 
    ![Adobe Experience Cloud hemsida](/help/assets/assets-experience-hub/experience-cloud-experiencemanager-ams.png)
 
-1. Klicka på **Experience Manager**&#x200B;[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
+1. Klicka på **Experience Manager**[**i grupperingen** Snabbåtkomst](https://experience.adobe.com).
 1. Vid första åtkomsten tilldelas du förinställningen **Innehållsförfattare** (visas i det övre högra hörnet på sidan). Den styr widgetar, navigeringsobjekt och innehåll som du ser.
 
    Du kan när som helst ändra den här förinställningen.

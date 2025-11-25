@@ -3,12 +3,12 @@ title: Återanvända resurser med MSM
 description: Använd resurser på flera sidor/mappar som är härledda från och länkade till överordnade resurser. Resurserna hålls synkroniserade med en primär kopia och med några klick får du uppdateringar från överordnade resurser.
 contentOwner: AG
 mini-toc-levels: 1
-role: User, Admin, Architect
+role: User, Admin, Developer
 feature: Asset Management,Multi Site Manager
 exl-id: 4d0367c4-88aa-4aef-b23d-828609b0df09
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '3175'
 ht-degree: 9%
@@ -19,7 +19,7 @@ ht-degree: 9%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/reuse-assets-using-msm.html?lang=sv-SE) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/reuse-assets-using-msm.html?lang=en) |
 | AEM 6.5 | Den här artikeln |
 
 MSM-funktionaliteten (Multi Site Manager) i [!DNL Adobe Experience Manager] gör att användare kan återanvända innehåll som har skapats en gång och återanvänds på flera webbplatser. Samma sak är tillgängligt för digitala resurser som MSM för funktionen [!DNL Assets]. Med MSM för [!DNL Assets] kan du:
@@ -30,7 +30,7 @@ MSM-funktionaliteten (Multi Site Manager) i [!DNL Adobe Experience Manager] gör
 
 ## Förutsättningar {#prereq}
 
-Installera minst [!DNL Experience Manager] 6.5 Service Pack 1 om du vill använda MSM för [!DNL Assets]. Mer information finns i [versionsinformationen för senaste Service Pack](/help/release-notes/release-notes.md).
+Installera minst [!DNL Assets] 6.5 Service Pack 1 om du vill använda MSM för [!DNL Experience Manager]. Mer information finns i [versionsinformationen för senaste Service Pack](/help/release-notes/release-notes.md).
 
 ## Förstå fördelarna och begreppen {#concepts}
 
@@ -253,7 +253,7 @@ En live-kopia är en kopia av den ursprungliga källan när den skapas. Metadata
 
 Du kan dock göra lokala ändringar i en live-kopia för att ändra vissa egenskaper. Om du vill göra lokala ändringar avbryter du arvet av den önskade egenskapen. När arvet efter ett eller flera metadatafält avbryts behålls resursens live-relation och arvet efter de andra metadatafälten. Synkronisering eller utrullning skriver inte över lokala ändringar. Om du vill göra det öppnar du sidan **[!UICONTROL Properties]** för en live-kopia av en resurs och klickar på alternativet **[!UICONTROL cancel inheritance]** bredvid ett metadatafält.
 
-Du kan ångra alla lokala ändringar och återställa resursen till källans läge. Återställ åtgärd oåterkalleligt och omedelbart åsidosätter alla lokala ändringar och återupprättar arv på alla metadatafält. Om du vill återgå klickar du på **[!UICONTROL Reset]** från verktygsfältet på sidan **[!UICONTROL Properties]** för en live-kopia.
+Du kan ångra alla lokala ändringar och återställa resursen till källans läge. Återställ åtgärd oåterkalleligt och omedelbart åsidosätter alla lokala ändringar och återupprättar arv på alla metadatafält. Om du vill återgå klickar du på **[!UICONTROL Properties]** från verktygsfältet på sidan **[!UICONTROL Reset]** för en live-kopia.
 
 ![Återställningsåtgärden skriver över lokala redigeringar och delar av den aktiva kopian med källan skrivs över.](assets/livecopy_reset.png)
 
@@ -310,7 +310,7 @@ I fler scenarier matchar MSM för [!DNL Assets] beteendet hos MSM för platsfunk
 * Platser har vanligtvis underordnade, men det har inte [!DNL Assets]. Alternativet att inkludera eller exkludera underordnade objekt finns inte när du skapar live-kopior av enskilda resurser.
 * Det går inte att ta bort kapitelsteget i guiden Skapa plats i MSM för [!DNL Assets].
 * Konfigurering av MSM-lås på sidegenskaper (användargränssnitt med pekfunktioner) stöds inte i MSM för [!DNL Assets].
-* Använd bara **[!UICONTROL Standard rollout config]** för MSM för [!DNL Assets]. De andra rollout-konfigurationerna är inte tillgängliga för MSM för [!DNL Assets].
+* Använd bara [!DNL Assets] för MSM för **[!UICONTROL Standard rollout config]**. De andra rollout-konfigurationerna är inte tillgängliga för MSM för [!DNL Assets].
 
 ## God praxis {#best-practices}
 

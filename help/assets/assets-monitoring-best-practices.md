@@ -2,13 +2,13 @@
 title: Bästa tillvägagångssätt för att övervaka [!DNL Assets] distributionen
 description: Bästa tillvägagångssätt för att övervaka miljön och prestandan för din [!DNL Adobe Experience Manager] distribution efter att den har distribuerats.
 contentOwner: AG
-role: Admin, Architect
+role: Admin, Developer
 feature: Asset Management
 exl-id: a9e1bd6b-c768-4faa-99a3-7110693998dc
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1638'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Från [!DNL Experience Manager Assets]-synpunkt bör övervakningen omfatta övervakning och rapportering av följande processer och tekniker:
 
-* Systemprocessor
+* System CPU
 * Systemminnesanvändning
 * Väntetid för systemdisk-I/O och IO
 * Systemets nätverks-I
@@ -30,15 +30,15 @@ Vanligtvis kan [!DNL Experience Manager Assets] övervakas på två sätt: live-
 
 Du bör utföra direktövervakning under prestandatestningsfasen av din utveckling eller under situationer med hög belastning för att förstå prestandaegenskaperna i din miljö. Vanligtvis bör direktövervakning utföras med en uppsättning verktyg. Här är några rekommendationer:
 
-* [Visual VM](https://visualvm.github.io/): Visual VM gör att du kan visa detaljerad information om Java VM, inklusive processoranvändning och Java-minnesanvändning. Dessutom kan du ta prov på och utvärdera kod som körs i en distribution.
-* [Överkant](https://man7.org/linux/man-pages/man1/top.1.html): Överkant är ett Linux-kommando som öppnar en kontrollpanel som visar användningsstatistik, inklusive processor-, minnes- och IO-användning. Den ger en översikt på hög nivå över vad som händer i en instans.
-* [Htop](https://hisham.hm/htop/): Htop är ett interaktivt processvisningsprogram. Den ger detaljerad processor- och minnesanvändning utöver vad Top kan tillhandahålla. Htop kan installeras på de flesta Linux-system med `yum install htop` eller `apt-get install htop`.
+* [Visual VM](https://visualvm.github.io/): Visual VM gör att du kan visa detaljerad Java VM-information, inklusive CPU-användning och Java-minnesanvändning. Dessutom kan du ta prov på och utvärdera kod som körs i en distribution.
+* [Överkant](https://man7.org/linux/man-pages/man1/top.1.html): Överkant är ett Linux-kommando som öppnar en kontrollpanel som visar användningsstatistik, inklusive CPU, minne och IO-användning. Den ger en översikt på hög nivå över vad som händer i en instans.
+* [Htop](https://hisham.hm/htop/): Htop är ett interaktivt processvisningsprogram. Den innehåller detaljerad information om CPU och minnesanvändning utöver vad Top kan tillhandahålla. Htop kan installeras på de flesta Linux-system med `yum install htop` eller `apt-get install htop`.
 
 * IoTop: IoTop är en detaljerad kontrollpanel för diskens I/O-användning. Här visas staplar och mätare som avbildar de processer som använder disk-I/O och hur mycket de använder. Jotop kan installeras på de flesta Linux-system som använder `yum install iotop` eller `apt-get install iotop`.
 
 * [InfoTop](https://www.ex-parrot.com/pdw/iftop/): Iftop visar detaljerad information om Ethernet-/nätverksanvändning. Om Iftop visar statistik per kommunikationskanal för de enheter som använder Ethernet och den bandbredd de använder. Iftop kan installeras på de flesta Linux-system med `yum install iftop` eller `apt-get install iftop`.
 
-* Java Flight Recorder (JFR): Ett kommersiellt verktyg från Oraclet som du kan använda fritt i icke-produktionsmiljöer. Mer information finns i [Använda Java Flight Recorder för att diagnostisera CQ-körningsproblem](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
+* Java Flight Recorder (JFR): Ett kommersiellt verktyg från Oracle som du kan använda fritt i icke-produktionsmiljöer. Mer information finns i [Använda Java Flight Recorder för att diagnostisera CQ-körningsproblem](https://cq-ops.tumblr.com/post/73865704329/how-to-use-java-flight-recorder-to-diagnose-cq).
 * [!DNL Experience Manager] `error.log`-fil: Du kan undersöka filen [!DNL Experience Manager] `error.log` för att få information om fel som loggats i systemet. Använd kommandot `tail -F quickstart/logs/error.log` för att identifiera fel som ska undersökas.
 * [Arbetsflödeskonsol](/help/sites-administering/workflows.md): Använd arbetsflödeskonsolen för att övervaka arbetsflöden som ligger efter eller fastnar.
 
@@ -194,7 +194,7 @@ Här följer några färdiga hälsokontroller som är bra att övervaka:
 Om du råkar ut för problem i samband med övervakningen finns det några felsökningsuppgifter som du kan utföra för att lösa vanliga problem med [!DNL Experience Manager]-distributioner:
 
 * Om du använder tarMK ska du köra Tjärkomprimering ofta. Mer information finns i [Underhåll databasen](/help/sites-deploying/storage-elements-in-aem-6.md#maintaining-the-repository).
-* Kontrollera `OutOfMemoryError` loggar. Mer information finns i [Analysera minnesproblem](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html?lang=sv-SE).
+* Kontrollera `OutOfMemoryError` loggar. Mer information finns i [Analysera minnesproblem](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17482.html).
 
 * Kontrollera loggarna om det finns referenser till oindexerade frågor, trädgenomgångar eller indexgenomgångar. Dessa indikerar oindexerade frågor eller otillräckligt indexerade frågor. Mer information om hur du optimerar fråga- och indexeringsprestanda finns i [Bästa tillvägagångssätt för frågor och indexering](/help/sites-deploying/best-practices-for-queries-and-indexing.md).
 * Använd arbetsflödeskonsolen för att verifiera att arbetsflödena fungerar som förväntat. Om det är möjligt kan du komprimera flera arbetsflöden till ett enda arbetsflöde.

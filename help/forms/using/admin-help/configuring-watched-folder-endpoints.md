@@ -9,9 +9,9 @@ exl-id: ec169a01-a113-47eb-8803-bd783ea2c943
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 539da06db98395ae6eaee8103a3e4b31204abbb8
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '7192'
+source-wordcount: '7168'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ När du har konfigurerat tjänsten Bevakade mappar lägger du till en bevakad ma
 Du kan skapa en bevakad mapp på följande två sätt:
 
 * När du konfigurerar inställningarna för en bevakad mappslutpunkt skriver du den fullständiga sökvägen till den överordnade katalogen i rutan Sökväg och lägger till namnet på den bevakade mapp som ska skapas, enligt följande exempel:
-  `  C:\MyPDFs\MyWatchedFolder`Eftersom mappen MyWatchedFolder inte redan finns försöker AEM skapa den på den platsen.
+  `  C:\MyPDFs\MyWatchedFolder`Eftersom mappen MyWatchedFolder inte redan finns försöker AEM att skapa den på den platsen.
 
 * Skapa en mapp i filsystemet innan du konfigurerar en bevakad mappslutpunkt och skriv sedan den fullständiga sökvägen i rutan Sökväg.
 
@@ -61,13 +61,13 @@ Om jobbet innehåller mer än en indatafil måste användaren skapa en mapp utan
 
 >[!NOTE]
 >
->Kontrollera att programservern har tagit bort åtkomsten till filerna i den bevakade mappen. Om AEM inte kan ta bort filerna från indatamappen efter att de har skannats in, kommer den tillhörande processen att anropas i oändlighet.
+>Kontrollera att programservern har tagit bort åtkomsten till filerna i den bevakade mappen. Om AEM-formulär inte kan ta bort filerna från indatamappen efter att de har skannats in, kommer den tillhörande processen att anropas i oändlighet.
 
 ## Bevakade mapputdata {#watched-folder-output}
 
-När indata är en mapp och utdata består av flera filer skapar AEM en utdatamapp med samma namn som indatamappen och kopierar utdatafilerna till den mappen. När utdata består av en dokumentöversikt som innehåller ett nyckelvärdepar, till exempel utdata från en utdataprocess, används nyckeln som utdatafilens namn.
+När indata är en mapp och utdata består av flera filer skapar AEM-formulär en utdatamapp med samma namn som indatamappen och kopierar utdatafilerna till den mappen. När utdata består av en dokumentöversikt som innehåller ett nyckelvärdepar, till exempel utdata från en utdataprocess, används nyckeln som utdatafilens namn.
 
-Namn på utdatafiler som härrör från en slutpunktsprocess får inte innehålla andra tecken än bokstäver, siffror och punkter (.) före filtillägget. AEM konverterar andra tecken till sina hexadecimala värden.
+Namn på utdatafiler som är ett resultat av en slutpunktsprocess får inte innehålla andra tecken än bokstäver, siffror och en punkt (.) före filtillägget. AEM-formulär konverterar andra tecken till sina hexadecimala värden.
 
 Klientprogrammen hämtar resultatdokumenten från den bevakade mappens resultatmapp. Processfel loggas i den bevakade mappen för mappfel.
 
@@ -130,7 +130,7 @@ Använd följande inställningar för att konfigurera en bevakad mappslutpunkt.
 
 **Antal upprepningar:** Antal gånger den bevakade mappen genomsöker mappen eller katalogen. Värdet -1 anger oändlig skanning. Standardvärdet är -1.
 
-**Begränsning:** När det här alternativet är markerat begränsas antalet bevakade mappjobb som AEM formulärprocesser vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Batchstorlek. (Se Om begränsning.)
+**Begränsning:** När det här alternativet är markerat begränsas antalet bevakade mappjobb som bearbetas i AEM-formulär vid en given tidpunkt. Det maximala antalet jobb bestäms av värdet för Batchstorlek. (Se Om begränsning.)
 
 **Användarnamn:** (obligatoriskt) Det användarnamn som används när en måltjänst anropas från den bevakade mappen. Standardvärdet är SuperAdmin.
 
@@ -146,7 +146,7 @@ När filer släpps i den bevakade mappen visas filerna i indata, vilket kan för
 
 **Väntetid:** Den tid i millisekunder som du vill vänta innan du skannar en mapp eller fil efter att den har skapats. Om väntetiden till exempel är 3 600 000 millisekunder (en timme) och filen skapades för en minut sedan, kommer filen att hämtas efter 59 eller fler minuter. Standardvärdet är 0.
 
-Den här inställningen är användbar för att säkerställa att en fil eller mapp kopieras helt till indatamappen. Om du t.ex. har en stor fil att bearbeta och det tar tio minuter att hämta filen anger du väntetiden till 10&ast;60 &ast;1000 millisekunder. Detta förhindrar att den bevakade mappen skannar filen om den inte är tio minuter gammal.
+Den här inställningen är användbar för att säkerställa att en fil eller mapp kopieras helt till indatamappen. Om du t.ex. har en stor fil att bearbeta och det tar tio minuter att hämta filen anger du väntetiden till 10&amp;ast;60 &amp;ast;1000 millisekunder. Detta förhindrar att den bevakade mappen skannar filen om den inte är tio minuter gammal.
 
 **Uteslut filmönster:** Ett semikolon **;** avgränsad lista över mönster som används i en bevakad mapp för att avgöra vilka filer och mappar som ska sökas igenom och plockas upp. Filer och mappar med det här mönstret skannas inte för bearbetning.
 
@@ -154,29 +154,29 @@ Den här inställningen är användbar när indata är en mapp med flera filer. 
 
 Du kan använda filmönster för att exkludera:
 
-* Filer med specifika filnamnstillägg, till exempel &ast;.dat, &ast;.xml, &ast;.pdf.
-* Filer med specifika namn, till exempel data.&ast; skulle exkludera filer och mappar med namnen *data1*, *data2* och så vidare.
+* Filer med specifika filnamnstillägg, till exempel &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf.
+* Filer med specifika namn, till exempel data.&amp;ast; skulle exkludera filer och mappar med namnen *data1*, *data2* och så vidare.
 * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
-   * Data[0-9][0-9][0-9].[d][aA]&#39;port&#39;
-   * &ast;..[d][Aa]&#39;port&#39;
-   * &ast;..[xx][mm][Ll]
+   * Data`[0-9][0-9][0-9]`.`[dD][aA]`&#39;port&#39;
+   * &amp;ast;..`[dD][aA]`&#39;port&#39;
+   * &amp;ast;.`[Xx][Mm][Ll]`
 
 Mer information om filmönster finns i [Om filmönster](configuring-watched-folder-endpoints.md#about-file-patterns).
 
-**Inkludera filmönster:** (obligatoriskt) Ett semikolon **;** avgränsad lista över mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska sökas igenom och plockas upp. Om till exempel Inkludera filmönster är indata&ast; hämtas alla filer och mappar som matchar indata&ast;. Detta inkluderar filer och mappar med namnen input1, input2 och så vidare.
+**Inkludera filmönster:** (obligatoriskt) Ett semikolon **;** avgränsad lista över mönster som den bevakade mappen använder för att avgöra vilka mappar och filer som ska sökas igenom och plockas upp. Om till exempel Inkludera filmönster är indata&amp;ast; hämtas alla filer och mappar som matchar indata&amp;ast;. Detta inkluderar filer och mappar med namnen input1, input2 och så vidare.
 
-Standardvärdet är &ast; och anger alla filer och mappar.
+Standardvärdet är &amp;ast; och anger alla filer och mappar.
 
 Du kan använda filmönster för att inkludera:
 
-* Filer med specifika filnamnstillägg, till exempel &ast;.dat, &ast;.xml, &ast;.pdf.
-* Filer med specifika namn, till exempel data.&ast; skulle innehålla filer och mappar med namnen *data1*, *data2* och så vidare.
+* Filer med specifika filnamnstillägg, till exempel &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf.
+* Filer med specifika namn, till exempel data.&amp;ast; skulle innehålla filer och mappar med namnen *data1*, *data2* och så vidare.
 * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
-   * Data[0-9][0-9][0-9].[d][aA]&#39;port&#39;
-   * &ast;..[d][Aa]&#39;port&#39;
-   * &ast;..[xx][mm][Ll]
+   * Data`[0-9][0-9][0-9]`.`[dD][aA]`&#39;port&#39;
+   * &amp;ast;..`[dD][aA]`&#39;port&#39;
+   * &amp;ast;.`[Xx][Mm][Ll]`
 
 Mer information om filmönster finns i [Om filmönster](configuring-watched-folder-endpoints.md#about-file-patterns).
 
@@ -228,7 +228,7 @@ Värdet -1 dagar anger att resultatmappen aldrig ska tas bort. Standardvärdet �
 
 **Litteral:** Den bevakade mappen använder det värde som anges i fältet när det visas. Alla grundläggande Java-typer stöds. Om ett API till exempel använder indata som String, long, int och Boolean, konverteras strängen till rätt typ och tjänsten anropas.
 
-**Variabel:** Det angivna värdet är ett filmönster som den bevakade mappen använder för att välja indata. Om det till exempel finns en krypterad lösenordstjänst där indatadokumentet måste vara en PDF-fil, kan användaren använda &ast;.pdf som filmönster. Den bevakade mappen hämtar alla filer i den bevakade mappen som matchar mönstret och anropar tjänsten för varje fil. När en variabel används konverteras alla indatafiler till dokument. Endast API:er som använder Document som indatatyp stöds.
+**Variabel:** Det angivna värdet är ett filmönster som den bevakade mappen använder för att välja indata. Om det till exempel finns en krypteringslösenordstjänst där indatadokumentet måste vara en PDF-fil, kan användaren använda &amp;ast;.pdf som filmönster. Den bevakade mappen hämtar alla filer i den bevakade mappen som matchar mönstret och anropar tjänsten för varje fil. När en variabel används konverteras alla indatafiler till dokument. Endast API:er som använder Document som indatatyp stöds.
 
 **Mappningar av utdataparameter:** Används för att konfigurera utdata för tjänsten och åtgärden. Vilka inställningar som är tillgängliga beror på vilken tjänst som använder den bevakade mappens slutpunkt.
 
@@ -242,13 +242,13 @@ Bevakade mapputdata kan vara ett enstaka dokument, en lista med dokument eller e
 
 Administratörer kan ange vilken typ av fil som kan anropa en tjänst. Du kan skapa flera filmönster för varje bevakad mapp. Ett filmönster kan vara någon av följande filegenskaper:
 
-* Filer med specifika filnamnstillägg. Till exempel &ast;.dat, &ast;.xml, &ast;.pdf
-* Filer med specifika namn. Till exempel data.&ast;
+* Filer med specifika filnamnstillägg. Till exempel &amp;ast;.dat, &amp;ast;.xml, &amp;ast;.pdf
+* Filer med specifika namn. Till exempel data.&amp;ast;
 * Filer med sammansatta uttryck i namnet och tillägget, som i följande exempel:
 
-   * Data[0-9][0-9][0-9].[d][aA]&#39;port&#39;
-   * &ast;..[d][Aa]&#39;port&#39;
-   * &ast;..[xx][mm][Ll]
+   * Data`[0-9][0-9][0-9]`.`[dD][aA]`&#39;port&#39;
+   * &amp;ast;..`[dD][aA]`&#39;port&#39;
+   * &amp;ast;.`[Xx][Mm][Ll]`
 
 Administratören kan definiera filmönstret för utdatamappen där resultaten ska lagras. För utdatamappar (resultat, bevarande och fel) kan administratören ange något av följande filmönster:
 
@@ -374,11 +374,11 @@ Här följer några tips och råd när du konfigurerar slutpunkten för bevakad 
 * Om du har en bevakad mapp i Windows som bearbetar bildfiler anger du värden för alternativet Inkludera filmönster eller Uteslut filmönster för att förhindra att den automatiskt genererade Windows-filen Thumbs.db avsöks av den bevakade mappen.
 * Om ett cron-uttryck anges ignoreras det upprepade intervallet. Användningen av cron-uttryck baseras på Quartz-systemet för jobbplanering med öppen källkod, version 1.4.0.
 * Batchstorleken är antalet filer eller mappar som hämtas vid varje sökning i den bevakade mappen. Om gruppstorleken är inställd på två och tio filer eller mappar släpps i den bevakade mappens indatamapp, hämtas endast två vid varje sökning. I nästa sökning, som sker efter den tidpunkt som anges i upprepningsintervallet, hämtas de två följande filerna.
-* För filmönster kan administratörer ange reguljära uttryck med stöd för jokerteckenmönster för att ange filmönster. Bevakad mapp ändrar det reguljära uttrycket så att det stöder mönster för jokertecken som &ast;.&ast; or&ast;.pdf. Dessa mönster med jokertecken stöds inte av reguljära uttryck.
+* För filmönster kan administratörer ange reguljära uttryck med stöd för jokerteckenmönster för att ange filmönster. Bevakad mapp ändrar det reguljära uttrycket så att det stöder mönster för jokertecken som &amp;ast;.&amp;ast; or&amp;ast;.pdf. Dessa mönster med jokertecken stöds inte av reguljära uttryck.
 * Bevakad mapp söker igenom indatamappen efter indatamappen och vet inte om källfilen eller -mappen kopieras fullständigt till indatamappen innan den börjar bearbeta filen eller mappen. Så här ser du till att källfilen eller källmappen kopieras till indatamappen i den bevakade mappen innan filen eller mappen hämtas:
 
-   * Använd väntetid, vilket är den tid i millisekunder som den bevakade mappen väntar från den senaste ändringstiden. Använd den här funktionen om du har stora filer att bearbeta. Om det t.ex. tar 10 minuter att hämta en fil anger du väntetiden som 10&ast;60 &ast;1 000 millisekunder. Detta förhindrar att övervakad mapp kan hämta filen om den inte är lika gammal som tio minuter.
-   * Använd exkludera filmönster och inkludera filmönster. Om det uteslutna filmönstret till exempel är `ex*` och inkluderingsfilmönstret är `in*`, kommer Bevakad mapp att hämta de filer som börjar med &quot;in&quot; och inte hämta de filer som börjar med &quot;ex&quot;. Om du vill kopiera stora filer eller mappar måste du först byta namn på filen eller mappen så att namnet börjar med &quot;ex&quot;. När filen eller mappen med namnet &quot;ex&quot; har kopierats helt till den bevakade mappen byter du namn på den till &quot;in&ast;&quot;.
+   * Använd väntetid, vilket är den tid i millisekunder som den bevakade mappen väntar från den senaste ändringstiden. Använd den här funktionen om du har stora filer att bearbeta. Om det t.ex. tar 10 minuter att hämta en fil anger du väntetiden som 10&amp;ast;60 &amp;ast;1 000 millisekunder. Detta förhindrar att övervakad mapp kan hämta filen om den inte är lika gammal som tio minuter.
+   * Använd exkludera filmönster och inkludera filmönster. Om det uteslutna filmönstret till exempel är `ex*` och inkluderingsfilmönstret är `in*`, kommer Bevakad mapp att hämta de filer som börjar med &quot;in&quot; och inte hämta de filer som börjar med &quot;ex&quot;. Om du vill kopiera stora filer eller mappar måste du först byta namn på filen eller mappen så att namnet börjar med &quot;ex&quot;. När filen eller mappen med namnet &quot;ex&quot; har kopierats helt till den bevakade mappen byter du namn på den till &quot;in&amp;ast;&quot;.
 
 * Använd Töm varaktighet om du vill att resultatmappen ska vara ren. Bevakad mapp rensar alla filer som är äldre än den varaktighet som anges i rensningstiden. Längden är i dagar.
 * När du lägger till en bevakad mappslutpunkt fylls indataparametermappningen i när du har valt åtgärdsnamnet. För varje indata i åtgärden genereras ett mappningsfält för indataparametrar. Här är exempel på indataparametermappningar:
@@ -413,11 +413,11 @@ Här följer några tips och råd när du konfigurerar slutpunkten för bevakad 
 
 För alla tjänster bör du justera gruppstorleken och upprepningsintervallet för den bevakade mappen så att hastigheten med vilken bevakade mappar hämtar nya filer och mappar för bearbetning inte överstiger hastigheten för de jobb som kan bearbetas av AEM Forms Server. De faktiska parametrarna som ska användas kan variera beroende på hur många bevakade mappar som har konfigurerats, vilka tjänster som använder bevakade mappar och hur intensiva jobben är för processorn.
 
-### Generera servicerekommendationer för PDF {#generate-pdf-service-recommendations}
+### Generera PDF servicerekommendationer {#generate-pdf-service-recommendations}
 
 * Tjänsten Generate PDF kan bara konvertera en fil i taget för följande filtyper: Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft Project, AutoCAD, Adobe Photoshop®, Adobe FrameMaker® och Adobe PageMaker®. Det här är långa jobb som körs. Se därför till att batchstorleken är låg. Öka också upprepningsintervallet om det finns fler noder i klustret.
-* För filtyperna PostScript (PS), Encapsulated PostScript (EPS) och image kan tjänsten Generate PDF bearbeta flera filer parallellt. Du bör noggrant justera storleken på sessionsböna (som styr antalet konverteringar som ska göras parallellt) beroende på serverns kapacitet och antalet noder i klustret. Öka sedan gruppstorleken till ett tal som är lika med poolstorleken för den sessionsböna för de filtyper som du försöker konvertera. Avsökningsfrekvensen ska bestämmas av antalet noder i klustret. Men eftersom tjänsten Generate PDF bearbetar den här typen av jobb mycket snabbt, kan du konfigurera upprepningsintervallet till ett lågt värde som 5 eller 10.
-* Även om tjänsten Generate PDF bara kan konvertera en OpenOffice-fil i taget går konverteringen mycket snabbt. Ovanstående logik för PS-, EPS- och bildkonverteringar gäller även för OpenOffice-konverteringar.
+* För filtyperna PostScript (PS), Encapsulated PostScript (EPS) och image kan tjänsten Generate PDF bearbeta flera filer parallellt. Du bör noggrant justera storleken på sessionsböna (som styr antalet konverteringar som ska göras parallellt) beroende på serverns kapacitet och antalet noder i klustret. Öka sedan gruppstorleken till ett tal som är lika med poolstorleken för den sessionsböna för de filtyper som du försöker konvertera. Avsökningsfrekvensen bör bero på antalet noder i klustret. Men eftersom tjänsten Generate PDF utför den här typen av jobb ganska snabbt, kan du konfigurera upprepningsintervallet till ett lågt värde som 5 eller 10.
+* Även om Generate PDF-tjänsten bara kan konvertera en OpenOffice-fil i taget går konverteringen mycket snabbt. Ovanstående logik för PS-, EPS- och bildkonverteringar gäller även för OpenOffice-konverteringar.
 * Om du vill aktivera enhetlig belastningsfördelning i klustret ska du hålla batchstorleken nere och öka repeteringsintervallet.
 
 ### rekommendationer för streckkodsblanketttjänst {#barcoded-forms-service-recommendations}

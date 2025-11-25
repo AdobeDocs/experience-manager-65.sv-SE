@@ -8,9 +8,9 @@ exl-id: f0c543ae-33ed-40bb-9eb7-0dc3bdea69e0
 solution: Experience Manager
 feature: Mobile
 role: Developer
-source-git-commit: 2dae56dc9ec66f1bf36bbb24d6b0315a5f5040bb
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Manager (AEM)-innehåll kan enkelt återges med [Sling Default 
 
 Dessa färdiga återgivningar tar vanligtvis plats i databasen och returnerar innehållet som det är.
 
-AEM, som Sling, stöder också utveckling och driftsättning av anpassade snedstrecksrenderare för att få full kontroll över det renderade schemat och innehållet.
+AEM, via Sling, stöder också utveckling och driftsättning av anpassade snedstrecksrenderare för att få full kontroll över det renderade schemat och innehållet.
 
 Standardrenderare för innehållstjänster fyller luckan mellan färdiga Sling-standardinställningar och Anpassad utveckling som gör det möjligt att anpassa och styra många aspekter av det återgivna innehållet utan att behöva utveckla.
 
@@ -33,7 +33,7 @@ I följande diagram visas återgivningen av innehållstjänster.
 
 ## Begär JSON {#requesting-json}
 
-Använd **&lt;RESOURCE.caas[.&lt;EXPORT-CONFIG][.&lt;EXPORT-CONFIG].json** om du vill begära JSON.
+Använd **&lt;RESOURCE.caas`[.<EXPORT-CONFIG][.&lt;DEPTH-INT&gt;]`.json** för att begära JSON.
 
 <table>
  <tbody>
@@ -60,7 +60,7 @@ Du kan skapa en konfigurationsnod under */apps/mobileapps/caas/exportConfigs.*
 
 | Nodnamn | Konfigurationens namn (för återgivningsväljare) |
 |---|---|
-| jcr:primärType | nt:ostrukturerad |
+| jcr:primaryType | nt:unstructured |
 
 I följande tabell visas egenskaperna för Export Configs:
 
@@ -138,7 +138,7 @@ Skapa en konfigurationsnod under */apps/mobileapps/caas/exportConfigs.*
 
 | name | resourceTypeOverrides |
 |---|---|
-| jcr:primärType | nt:ostrukturerad |
+| jcr:primaryType | nt:unstructured |
 
 I följande tabell visas egenskaperna:
 

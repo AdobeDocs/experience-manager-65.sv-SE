@@ -8,8 +8,8 @@ topic-tags: best-practices
 exl-id: 8c1ea483-7319-4e5c-be4c-d43a2b67d316
 solution: Experience Manager, Experience Manager Sites
 feature: Compliance
-role: Admin, Architect, Developer, Leader, User, Data Architect, Data Engineer
-source-git-commit: 207c6bcc25eca05d128115f7235e83a6965009c5
+role: Admin, Developer, Leader, User
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '837'
 ht-degree: 0%
@@ -50,7 +50,7 @@ AEM har en [tjänst för cookie-avanmälan](/help/sites-developing/cookie-optout
 
 AEM Sites innehåller en valfri integrering med Enhanced Insights by Analytics som använder funktioner i Adobe Analytics On-Demand Service.
 
-Mer information om hur du hanterar förfrågningar om registrerade GDPR-data relaterade till Adobe Analytics finns i [Adobe Analytics och GDPR](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html?lang=sv-SE).
+Mer information om hur du hanterar förfrågningar om registrerade GDPR-data relaterade till Adobe Analytics finns i [Adobe Analytics och GDPR](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/an-gdpr-overview.html).
 
 ## Förbättrade Personalization efter Target {#enhanced-personalization-by-target}
 
@@ -62,13 +62,13 @@ Mer information om hur du hanterar förfrågningar från registrerade GDPR-data 
 
 AEM tillhandahåller ett valfritt datalager med [ContextHub](/help/sites-developing/contexthub.md). På så sätt behålls besökarspecifika data i webbläsaren som ska användas för regelbaserad personalisering.
 
-Som standard lagras inte besökardata i AEM, AEM skickar regler till datalagret för att fatta personaliseringsbeslut i webbläsaren.
+Som standard lagras inte dessa besökardata i AEM. AEM skickar regler till datalagret för att fatta personaliseringsbeslut i webbläsaren.
 
 >[!NOTE]
 >
->Före Adobe AEM (CQ) 5.6 skickade ClientContexten (en tidigare version av ContextHub) data till servern, men lagrade dem inte.
+>Före Adobe AEM (CQ) 5.6 skickade ClientContext (en tidigare version av ContextHub) data till servern, men lagrade dem inte.
 >
->Adobe AEM 6.4 och tidigare versioner är nu EOL och omfattas inte av denna dokumentation. Se [Äldre versioner av Adobe Experience Manager, CQ och CRX dokumentation](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions).
+>Adobe AEM 6.4 och tidigare versioner är nu EOL och omfattas inte av denna dokumentation. Se [Äldre versioner av Adobe Experience Manager, CQ och CRX dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions).
 
 ### Implementera anmälan/avanmälan {#implementing-opt-in-opt-out}
 

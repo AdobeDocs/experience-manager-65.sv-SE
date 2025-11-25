@@ -5,9 +5,9 @@ feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '1588'
+source-wordcount: '1577'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Lär dig hur du använder GraphQL med AEM för att leverera innehåll utan probl
 >* [Modeller för innehållsfragment](/help/assets/content-fragments/content-fragments-models.md)
 >* [AEM GraphQL API för användning med innehållsfragment](/help/sites-developing/headless/graphql-api/graphql-api-content-fragments.md)
 
-Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM innehållsfragment kan det vara bra att se några praktiska exempel.
+Om du vill komma igång med GraphQL-frågor och hur de fungerar med AEM Content Fragments kan det vara bra att se några praktiska exempel.
 
 Mer information finns i:
 
@@ -1720,7 +1720,7 @@ Följande fragment används för rätt modell.
 | Lincoln |  Adobe | |
 | Smith | Adam |   |
 | Slade |  Rensare |  Gameblitz<br>Gamestar |
-| Marmor |  Duke |   |   |
+| Marmor |  Duke |   |
 |  Smith |  Joe |   |
 | Beskär |  Lara | Gamestar |
 | Caulfield |  Max |  Gameblitz |
@@ -1738,10 +1738,10 @@ Följande fragment används för rätt modell.
 
 | Namn | Land | Population | Kategorier |
 |--- |--- |--- |--- |
-| Basel | Schweiz | 172258 | stad:emea |
-| Berlin | Tyskland | 3669491 | stad:huvudstad<br>stad:emea |
-| Bucharest | Rumänien | 1821000 |  stad:huvudstad<br>stad:emea |
+| Basel | Schweiz | 172258 | stad :emea |
+| Berlin | Tyskland | 3669491 | city:capital<br>city:emea |
+| Bucharest | Rumänien | 1821000 |  city:capital<br>city:emea |
 | San Francisco |  USA |  883306 |  city:beach<br>city:na |
-| San Jose |  USA |  102635 |  stad:na |
-| Stuttgart |  Tyskland |  634830 |  stad:emea |
-|  Zürich |  Schweiz |  415367 |  stad:huvudstad<br>stad:emea |
+| San Jose |  USA |  102635 |  stad :na |
+| Stuttgart |  Tyskland |  634830 |  stad :emea |
+|  Zürich |  Schweiz |  415367 |  city:capital<br>city:emea |

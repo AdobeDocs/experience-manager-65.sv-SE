@@ -1,48 +1,48 @@
 ---
-title: AEM dokumentationsresor
-description: Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och skilda funktioner för att lösa ett affärsmål på ett sätt som är lämpligt för alla. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
+title: AEM Documentation Journeys
+description: Dokumentation Journeys innehåller en berättande struktur i AEM-dokumentationen genom att sammanfoga komplexa och skilda funktioner för att lösa ett affärsmål på bästa sätt. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
 exl-id: bb0a26e2-5686-4fb7-bb6e-231dafc8268b
 solution: Experience Manager, Experience Manager Sites
-role: Admin, Architect,Data Architect,Developer,User,Leader
+role: Admin, Developer, User, Leader
 feature: Administering
-source-git-commit: 66db4b0b5106617c534b6e1bf428a3057f2c2708
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1222'
 ht-degree: 0%
 
 ---
 
-# AEM dokumentationsresor {#aem-documentation-journeys}
+# AEM Documentation Journeys {#aem-documentation-journeys}
 
-Dokumentation Journeys innehåller en berättande struktur i AEM dokumentation genom att sammanfoga komplexa och skilda funktioner för att lösa ett affärsmål på ett sätt som är lämpligt för alla. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
+Dokumentation Journeys innehåller en berättande struktur i AEM-dokumentationen genom att sammanfoga komplexa och skilda funktioner för att lösa ett affärsmål på bästa sätt. Resorna är utformade med AEM nybörjare i åtanke och presenterar koncept och funktioner för att uppnå ett mål från A till Ö.
 
 ## Vad är en dokumentationsresa? {#what-is}
 
-En dokumentationsresa knyter ihop många olika och komplexa ämnen och funktioner genom att tillhandahålla en berättelse som hjälper läsaren, som kan vara ny på att AEM, förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskaper.
+En dokumentationsresa knyter ihop många olika och komplexa ämnen och funktioner genom att tillhandahålla en berättarröst som hjälper läsaren, som kan vara nybörjare på AEM, att förstå och lösa ett affärsproblem från början till slut, samtidigt som man antar minimala tidigare ämnesområden eller AEM kunskaper.
 
-Dokumentation Resor står i kontrast till AEM befintliga tekniska dokument som primärt fokuserar på en enda funktion och dokumentation av uppgifter, och som förutsätter att man är bekant med AEM. Genom att fokusera på koncepten och ge detaljerad information till den befintliga tekniska dokumentationen ger Documentation Journeys läsarna nya möjligheter att AEM en plats där de kan förstå hur plattformen kan användas med hjälp av bästa praxis för att hantera vanliga affärsbehov och arbetsflöden. Av den anledningen fungerar Dokumentationsresor som ett komplement till och inte som ersättning för [AEM befintlig teknisk dokumentation.](https://experienceleague.adobe.com/docs/experience-manager-65.html?lang=sv-SE)
+Dokumentation Journeys står i kontrast till AEM befintliga tekniska dokument som huvudsakligen fokuserar på en enda funktion och dokumentation av arbetsmomenten, och som förutsätter att man är bekant med AEM. Genom att fokusera på koncepten och ge detaljerad information till den befintliga tekniska dokumentationen ger Documentation Journeys läsarna nya möjligheter att förstå hur plattformen kan användas med hjälp av bästa praxis för att hantera vanliga affärsbehov och arbetsflöden. Av den anledningen fungerar Dokumentationsresor som ett komplement till och inte som ersättning för [AEM befintliga tekniska dokumentation.](https://experienceleague.adobe.com/docs/experience-manager-65.html)
 
 ### Learning by Narrative {#narrative}
 
-AEM har en omfattande och kraftfull funktionsuppsättning som kan vara överväldigande för nya (och ibland erfarna) användare. Genom att inleda varje resa med ett tydligt affärsmål i stället för tekniska krav visar en resa en berättande vägledning som leder läsaren genom de AEM koncept och funktioner som fungerar tillsammans för att uppnå verksamhetsmålet.
+AEM har en omfattande och kraftfull funktionsuppsättning som kan vara överväldigande för nya (och ibland erfarna) användare. Genom att inleda varje resa med ett tydligt affärsmål i stället för tekniska krav visar en resa en berättande kurs som leder läsaren genom AEM koncept och funktioner som fungerar tillsammans för att uppnå verksamhetsmålet.
 
 Genom att berätta en historia förstår läsaren bättre hur olika delar av AEM fungerar tillsammans för att lösa det aktuella problemet och perspektivet bibehålls. Läsaren kan alltså se vilken affärsmålskog som finns för funktionsträden.
 
 ### Fokusera på koncept, inte funktioner {#concepts}
 
-För att fokusera på berättandet betonar Documentation Journeys koncept i AEM istället för att satsa på tekniska funktioner. Eftersom läsaren vet att det är viktigare att han/hon känner till hur AEM löser ett visst problem i stället för att oroa sig för vilka kryssrutor han ska klicka på, fortsätter läsaren genom berättelsen och visar hur man länkar samman flera viktiga koncept för att uppnå det övergripande målet.
+För att fokusera på berättandet betonar Documentation Journeys koncept i AEM istället för tekniska funktioner. Eftersom läsaren är mer van vid hur AEM löser ett visst problem i stället för att oroa sig för vilka kryssrutor som du ska klicka på, kan läsaren gå framåt genom berättelsen och illustrera hur man länkar samman flera viktiga koncept för att uppnå det övergripande målet.
 
-Resorna ser till att läsaren vet hur AEM kan lösa ett problem i stället för att behöva bekymra sig om varje alternativ som du klickar på. Om läsaren vill fördjupa sig och lära sig mer teknisk information eller vilka ytterligare alternativ som kan göra, länkar varje del av resan till relaterad, uttömmande teknisk dokumentation.
+Resorna ser till att läsaren vet hur AEM kan lösa ett problem i stället för att behöva bekymra sig om de olika alternativen. Om läsaren vill fördjupa sig och lära sig mer teknisk information eller vilka ytterligare alternativ som kan göra, länkar varje del av resan till relaterad, uttömmande teknisk dokumentation.
 
 ### Orientering för bästa praxis {#best-practices}
 
-Dokumentationsresor har utformats utifrån principer för god praxis, som bygger på Adobe senaste forskning, dokumenterad implementeringserfarenhet från Adobes tjänster och feedback från kundprojekt.
+Dokumentationsresor har utformats utifrån principer för god praxis, som bygger på Adobe senaste forskning, beprövade implementeringsupplevelser från Adobes tjänster och feedback från kundprojekt.
 
-Om du vill veta hur Adobe rekommenderar att du löser ett affärsärende med AEM, så är Documentation Journeys där du ska börja.
+Om du vill veta hur Adobe rekommenderar dig att lösa ett affärsärende med AEM så är Documentation Journeys där du ska börja.
 
 ## Hur är en dokumentationsresa strukturerad? {#structure}
 
-En dokumentationsresa fungerar som en introduktion till hur AEM löser vanliga affärsproblem. Därför är varje resa utformad med läsare som inte har AEM i åtanke, som utformar affärsproblemet, beskriver en nödvändig teori och sedan ger en stegvis översikt över hur AEM löser problemet. På grund av den omfattande resan kan det vara användbart för läsare som är nya för AEM och erfarna användare.
+En dokumentationsresa är en introduktion till hur AEM löser vanliga affärsproblem. Därför är varje resa utformad med läsare som inte är AEM i åtanke, som utformar affärsproblemet, beskriver en nödvändig teori och sedan ger en stegvis översikt över hur AEM löser problemet. Eftersom en resa är så omfattande kan den vara användbar för läsare som är nya för AEM och erfarna användare.
 
 En typisk dokumentationsresa har följande delar.
 
@@ -53,15 +53,15 @@ En typisk dokumentationsresa har följande delar.
 * Beskrivning av avsedd målgrupp
 * Implementeringssteg
 
-Målet med en dokumentationsresa är att bekanta läsaren med grunderna i hur AEM använder olika funktioner och verktyg för att lösa ett enda affärsproblem. Därför illustrerar implementeringsstegen de vanligaste användningsmönstren och de viktigaste funktionerna och alternativen. Detaljerade konfigurationsalternativ finns länkade till i den tekniska dokumentationen för ytterligare läsning.
+Målet med Documentation Journey är att bekanta läsaren med grunderna i hur AEM använder olika funktioner och verktyg för att lösa ett enda affärsproblem. Därför illustrerar implementeringsstegen de vanligaste användningsmönstren och de viktigaste funktionerna och alternativen. Detaljerade konfigurationsalternativ finns länkade till i den tekniska dokumentationen för ytterligare läsning.
 
 ## Vem ska läsa dokumentationsresor? {#who}
 
-AEM dokumentation Journeys främsta mål är att hjälpa läsare som inte är AEM förstå hur många olika och kraftfulla funktioner i systemet som kan användas tillsammans för att lösa vanliga affärsproblem genom en berättelse.
+AEM Documentation Journeys främsta mål är att hjälpa läsare som är nybörjare på AEM att förstå hur många olika och kraftfulla funktioner som systemet kan användas tillsammans för att lösa vanliga affärsproblem genom en berättelse.
 
-Så om du inte är van vid att AEM och har ett specifikt affärsfall i åtanke och vill ha en översikt över hur AEM kan lösa det är Documentation Journeys där du vill börja.
+Så om du inte har använt AEM tidigare och har ett specifikt affärsfall i åtanke och vill ha en översikt över hur AEM kan lösa det är Documentation Journeys där du vill börja.
 
-Det finns dock många olika typer av AEM användare med olika behov och förväntningar. Till exempel:
+Det finns dock många olika typer av AEM-användare med olika behov och förväntningar. Till exempel:
 
 * Administratörer
 * Utvecklare
@@ -71,16 +71,16 @@ Det finns dock många olika typer av AEM användare med olika behov och förvän
 
 Varje resa börjar med en tydlig beskrivning av den avsedda målgruppen för resan. Eftersom ingen arbetar i ett vakuum, när läsaren kräver hjälp av indata från en systemanvändare eller persona, förklaras detta tydligt under resan.
 
-## Hur passar Document Journeys in i AEM? {#compare}
+## Hur passar Document Journeys in i AEM Documentation? {#compare}
 
-Dokumentationsresor är avsedda som komplement till befintlig AEM teknisk dokumentation och självstudiekurser. En resa kan t.ex. ge dig en idé, och sedan förklarar de tekniska dokumenten de detaljerade konfigurationsalternativ du kan behöva och en självstudiekurs som hjälper dig igenom specifika inställningar.
+Dokumentationsresor är avsedda som ett komplement till befintlig teknisk dokumentation och självstudiekurser från AEM. En resa kan t.ex. ge dig en idé, och sedan förklarar de tekniska dokumenten de detaljerade konfigurationsalternativ du kan behöva och en självstudiekurs som hjälper dig igenom specifika inställningar.
 
 | Dokumentationstyp | Syfte | Målgrupp | Anta | Utelämnanden | Innehållstyp | Längd |
 |---|---|---|---|---|---|---|
-| Dokumentationsresa | En resa definierar hur AEM kan lösa ett allmänt affärsproblem med hjälp av en berättelse som vägleder läsarna genom komplexa, samhörande processer och funktioner. Det visar hur flera funktioner fungerar tillsammans för att lösa ett affärsbehov på ett bra sätt. | Reader nybörjare på AEM | Allmän CMS-kunskap | Detaljerade alternativ och konfigurationer | Text | Ca. 1 timme |
-| Teknisk dokumentation | Tekniska dokument fokuserar på enskilda funktioner, med detaljerad information om funktionens tekniska arbetssätt och alla alternativ som är tillgängliga för användaren. | Erfarna AEM | AEM upplevelse | Kontext och bakgrund | Text | Varierar |
-| Självstudiekurs | En självstudiekurs är en djupdykning i ett ämne som visar en utvecklare eller administratör hur du kan uppnå ett tekniskt mål (vanligtvis programmering eller systemkonfiguration) steg för steg, med specifika exempel och exempelkod, vanligtvis med en begränsad uppsättning funktioner. | AEM utvecklare eller administratörer | AEM upplevelse | Bakgrund och teori | Video | >1 timme |
-| Starthandbok | En guide för att komma igång är en blixtsnabb genomgång av en viss ny AEM. Det är en snabb översikt av en enskild funktion, som leder användaren genom de viktiga (men inte alla) stegen för att konfigurera och använda ett enkelt användningssätt. | AEM | AEM upplevelse | Bakgrund, teori, detaljerade alternativ | Text | &lt;1 timme |
+| Dokumentationsresa | En resa definierar hur AEM kan lösa ett allmänt affärsproblem med hjälp av en berättelse som vägleder läsarna genom komplexa, samhörande processer och funktioner. Det visar hur flera funktioner fungerar tillsammans för att lösa ett affärsbehov på ett bra sätt. | Läsare som är nya i AEM | Allmän CMS-kunskap | Detaljerade alternativ och konfigurationer | Text | Ca. 1 timme |
+| Teknisk dokumentation | Tekniska dokument fokuserar på enskilda funktioner, med detaljerad information om funktionens tekniska arbetssätt och alla alternativ som är tillgängliga för användaren. | Erfarna AEM-användare | AEM | Kontext och bakgrund | Text | Varierar |
+| Självstudiekurs | En självstudiekurs är en djupdykning i ett ämne som visar en utvecklare eller administratör hur du kan uppnå ett tekniskt mål (vanligtvis programmering eller systemkonfiguration) steg för steg, med specifika exempel och exempelkod, vanligtvis med en begränsad uppsättning funktioner. | AEM utvecklare eller administratörer | AEM | Bakgrund och teori | Video | >1 timme |
+| Starthandbok | En guide för att komma igång är en blixtsnabb genomgång av en specifik ny AEM-funktion. Det är en snabb översikt av en enskild funktion, som leder användaren genom de viktiga (men inte alla) stegen för att konfigurera och använda ett enkelt användningssätt. | AEM-administratörer | AEM | Bakgrund, teori, detaljerade alternativ | Text | &lt;1 timme |
 
 ## Vilka resor finns det? {#journeys}
 

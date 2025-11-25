@@ -5,7 +5,7 @@ exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Architect,Developer
-source-git-commit: bd29ae46ead836e16362ad3a9a63bb31548415ff
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 2%
@@ -37,7 +37,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | Sites | [SPA-redigerare](/help/sites-developing/spa-editor-deprecation.md) | Använd [Universal Editor](/help/sites-developing/universal-editor/introduction.md) för visuell redigering eller [Content Fragment Editor](/help/sites-developing/universal-editor/introduction.md) för formulärbaserad redigering för headless-användning. | 6.5.23 |
 | Sites | Tjänsten **Hanterad avsökningskonfiguration för Adobe AEM**: `com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | Tjänsten **Adobe AEM Analytics Report Sling Importer**. Se Ansluta till Adobe Analytics och skapa bildrutor - [Konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) | 6.5.19.0 |
 | Screens | ActiveMQ i Adobe Experience Manager (AEM). ActiveMQ användes för kommunikation mellan två AEM Publish-instanser. | Adobe rekommenderar att kunderna nu använder en belastningsutjämnare. | 6.5.18.0 |
-| Upplev fragmentegenskaper för **Status för sociala medier**. |   | 6.5.11.0 |
+| Upplev fragmentegenskaper för **Status för sociala medier**. | |  | 6.5.11.0 |
 | [!DNL Sites] | Mallar för innehållsfragment, för att skapa enkla innehållsfragment. | [Modellbaserade strukturerade innehållsfragment](/help/assets/content-fragments/content-fragments-models.md). | 6.5.11.0 |
 | Integrering med Creative Cloud | Mappdelning mellan AEM och Creative Cloud introducerades i AEM 6.2. Det ger kreativa användare tillgång till resurser från AEM, så att de kan öppna dem i [!DNL Creative Cloud]-program och överföra nya filer eller spara ändringar i AEM. Adobe Asset Link är en ny funktion i Creative Cloud som ger en bättre användarupplevelse och kraftfullare åtkomst till material från AEM direkt inifrån Photoshop, InDesign och Illustrator. Adobe planerar inte att göra ytterligare förbättringar av integrationen mellan AEM och Creative Cloud Mappdelning. Även om funktionen ingår i AEM rekommenderar vi att man använder ersättningslösningar. | Vi rekommenderar att du byter till nya integrationsfunktioner för Creative Cloud, bland annat Adobe Asset Link eller AEM. |  |
 | Assets | `AssetDownloadServlet` är inaktiverat som standard för publiceringsinstanserna. Mer information finns i [AEM checklista för säkerhet](/help/sites-administering/security-checklist.md). | Konfiguration som beskrivs i [checklista för AEM-säkerhet](/help/sites-administering/security-checklist.md). |  |
@@ -58,7 +58,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 | Utvecklare | `Granite.Sling.js`-klientbibliotek. Adobe planerar inte att ytterligare förbättra klientbiblioteket Granite.Sling.js som levereras som en del av distributionen (Quickstart). | Adobe rekommenderar att kunder som förlitar sig på att biblioteket kan koda om för att inte längre använda det. |  |
 | Utvecklare | Använda YUI för att komprimera/minimera JavaScript-klientbibliotek. Adobe planerar inte att uppdatera YUI-biblioteket ytterligare. Fram till och med AEM 6.4 var YUI standard att miniatyrgranska JavaScript med möjlighet att växla till Google Closure Compiler (GCC). Från och med AEM 6.5 är GCC standard. | Adobe rekommenderar att man uppgraderar till AEM 6.5 för att gå över till GCC för implementering |  |
 | Utvecklare | Klassisk dialogruteredigerare i CRXDE Lite. Adobe planerar inte att ytterligare förbättra den klassiska dialogruteredigeraren för användargränssnittet som levereras som en del av distributionen (QuickStart) | Det finns ingen ersättning. |  |
-| Forms | AEM Forms integrering med AEM Mobile är föråldrad. | Det finns ingen ersättare. |
+| Forms | AEM Forms integrering med AEM Mobile är föråldrad. | Det finns ingen ersättare. |  |
 | Utvecklare | Klassisk dialogruteredigerare i CRXDE Lite. Adobe planerar inte att ytterligare förbättra den klassiska dialogruteredigeraren för användargränssnittet som levereras som en del av distributionen (QuickStart) | Det finns ingen ersättning. |  |
 | Utvecklare | Klientbibliotek med Lodash/underscore. Adobe planerar inte att ytterligare underhålla och uppdatera Lodash-/understreckklientbiblioteket som levereras som en del av distributionen (Quickstart). | Adobe rekommenderar att kunder som fortfarande behöver Lodash/understreckkod för sin kod lägger till den i sin projektkodbas. |  |
 
@@ -68,17 +68,17 @@ I det här avsnittet visas funktioner som har tagits bort från AEM 6.5. Tidigar
 
 | Område | Funktion | Ersättning | Version (SP) |
 |--- |--- |--- |--- |
-| Commerce | AEM CIF Classic har tagits bort. | Du bör migrera till [AEM CIF](/help/commerce/cif/migration.md). Om du fortfarande behöver CIF Classic har ett kompatibilitetspaket skapats, [kontakta Adobe kundsupport](https://experienceleague.adobe.com/sv?support-solution=General#support). | 6.5.22.0 |
-| Integrering med [!DNL Experience Cloud] | Du kan synkronisera dina resurser med [!DNL Experience Cloud] genom att konfigurera via [!DNL Adobe I/O]. [!DNL Adobe Experience Cloud] kallades tidigare [!DNL Adobe Experience Cloud]. | [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/sv?support-solution=General#support) om du har frågor. |  |
-| Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Använd plugin-programmet [ActivityMap från Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=sv-SE). |  |
+| Commerce | AEM CIF Classic har tagits bort. | Du bör migrera till [AEM CIF](/help/commerce/cif/migration.md). Om du fortfarande behöver CIF Classic har ett kompatibilitetspaket skapats, [kontakta Adobe kundsupport](https://experienceleague.adobe.com/?support-solution=General#support). | 6.5.22.0 |
+| Integrering med [!DNL Experience Cloud] | Du kan synkronisera dina resurser med [!DNL Experience Cloud] genom att konfigurera via [!DNL Adobe I/O]. [!DNL Adobe Experience Cloud] kallades tidigare [!DNL Adobe Experience Cloud]. | [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/?support-solution=General#support) om du har frågor. |  |
+| Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Använd plugin-programmet [ActivityMap från Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html). |  |
 | Integreringar | ExactTarget-integrering har tagits bort från standarddistributionen (Quickstart) och är inte längre tillgänglig. | Ingen ersättning. |  |
-| Integreringar | Integreringen av Salesforce Force API har tagits bort från standarddistributionen (Quickstart) och är nu ett extra paket att installera från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). | Funktionen är fortfarande tillgänglig. |
+| Integreringar | Integreringen av Salesforce Force API har tagits bort från standarddistributionen (Quickstart) och är nu ett extra paket att installera från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). | Funktionen är fortfarande tillgänglig. |  |
 | Forms | Stöd för Bridge-tjänsten Adobe Central Migration har tagits bort eftersom Adobe Central inte längre stöds. | Ingen ersättning. |  |
 | Forms | `com.adobe.fd.df.fdinternal.model.ConfigurationInstance` | Ingen ersättning. |  |
 | Forms | `com.adobe.fd.ccm.channels.print.fdinternal.api.service.PrintDataTransformer` | Ingen ersättning |  |
 | Forms | Uppgradering från LiveCycle ES4 SP1 till AEM 6.5 Forms i JEE är inte tillgänglig | Se [tillgängliga uppgraderingssökvägar](../forms/using/upgrade.md) i uppgraderingsdokumentationen för AEM Forms. |  |
 | Forms | UPD-baserat klusterstöd har tagits bort från AEM Forms på JEE | Du kan bara använda TCP-baserad klustring i AEM Forms på JEE. Om du uppgraderar en UDP-multicast-server från en tidigare version till AEM 5.5 Forms på JEE utförs manuella konfigurationer för att växla till TCP-baserad gemfire-klustring. Mer information finns i [Uppgradera till AEM 6.5-formulär på JEE](../forms/using/upgrade-forms-jee.md) |  |
-| Utvecklare | Firebug Lite har tagits bort från standarddistributionen (Quickstart) | Använd de inbyggda webbläsarkonsolerna för utvecklare |
+| Utvecklare | Firebug Lite har tagits bort från standarddistributionen (Quickstart) | Använd de inbyggda webbläsarkonsolerna för utvecklare |  |
 | Utvecklare | Ta bort stöd för `customJavaScriptPath` i HTML Client Library Manager. | Ingen ersättning |  |
 | [!DNL Assets] | Funktionen för avlastning av resurser har tagits bort i [!DNL Adobe Experience Manager] 6.5. | Det finns ingen ersättning. |  |
 | Cache | `system/console/slingjsp` har tagits bort och är inte längre tillgänglig i AEM 6.5. | Klasser och något cacheminne lagras under paketet Apache Sling Commons FileSystem ClassLoader. Du kan kontrollera paketnumret i AEM Web Console och ta bort cachemappen direkt från filsystemet (`crx-quickstart/launchpad/felix/bundle<ID>`). |  |

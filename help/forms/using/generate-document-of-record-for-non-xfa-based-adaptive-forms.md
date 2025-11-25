@@ -9,20 +9,20 @@ feature: Adaptive Forms,Foundation Components
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
 exl-id: 7240897f-6b3a-427a-abc6-66310c2998f3
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '4155'
+source-wordcount: '4154'
 ht-degree: 0%
 
 ---
 
 # Generera arkivdokument för adaptiva formulär eller adaptiva formulärfragment {#generate-document-of-record-for-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa en ny adaptiv Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till Adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=sv-SE) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) |
 | AEM 6.5 | Den här artikeln |
 
 
@@ -34,7 +34,7 @@ I den här artikeln beskrivs hur du kan generera ett postdokument för Adaptiv F
 
 >[!NOTE]
 >
-> Stödet för att anpassa dina adaptiva formulärfragment och fälten i den adaptiva formulärredigeraren introducerades i AEM 6.5 Forms Service Pack 19 (6.5.19.0).
+> Stödet för att anpassa dina adaptiva formulärfragment och fälten i den adaptiva formulärredigeraren introducerades med AEM 6.5 Forms Service Pack 19 (6.5.19.0).
 
 
 >[!NOTE]
@@ -210,7 +210,7 @@ I följande avsnitt beskrivs hur anpassningsbara formulärelement visas i postdo
 | Adaptiv formkomponent | Motsvarande XFA-komponent | Anteckningar |
 |---|---|---|
 | Bild | Bild | TextDraw- och Image-komponenterna, oavsett om de är bundna eller obundna, visas alltid i postdokumentet för ett XSD-baserat anpassningsbart formulär, såvida de inte utelämnas med hjälp av postinställningsdokumentet. |
-| Text | Text |
+| Text | Text |  |
 
 >[!NOTE]
 >
@@ -244,7 +244,7 @@ En basmall används för att definiera sidhuvud, sidfot, format och utseende fö
 
 * Egenskaperna för dessa fält används för fälten i postdokumentet. Dessa fält bör följa namnkonventionen för `AF_<name of field in all caps>_XFO`. Fältnamnet för kryssrutan bör till exempel vara `AF_CHECKBOX_XFO`.
 
-Så här skapar du en basmall i AEM Designer.
+Så här skapar du en basmall: AEM Designer.
 
 1. Klicka på **Arkiv > Nytt**.
 1. Välj alternativet **Baserat på en mall**.
@@ -274,7 +274,7 @@ Konfigurera dokumentets postmall för formuläret så att kunderna kan hämta en
 
 Utför följande steg för att konfigurera ett postdokument för adaptiva formulär:
 
-1. Klicka på **Forms > Forms och dokument i AEM författarinstans.**
+1. I AEM-författarinstans klickar du på **Forms > Forms och dokument.**
 1. Markera ett formulär och klicka på **Visa egenskaper**.
 1. Välj **Formulärmodell** i fönstret Egenskaper.
 Du kan också välja en formulärmodell när du skapar ett formulär.
@@ -367,7 +367,7 @@ Beroende på om du väljer en standardmall eller en anpassad mall visas några e
 
 ## Tabell- och kolumnlayouter för paneler i dokumentformat {#table-and-column-layouts-for-panels-in-document-of-record}
 
-Ditt anpassningsbara formulär kan vara långt och innehålla flera formulärfält. Du kanske inte vill spara ett postdokument som en exakt kopia av det anpassade formuläret. Nu kan du välja en tabell- eller kolumnlayout för att spara en eller flera adaptiva formulärpaneler i dokumentet med posten PDF.
+Ditt anpassningsbara formulär kan vara långt och innehålla flera formulärfält. Du kanske inte vill spara ett postdokument som en exakt kopia av det anpassade formuläret. Nu kan du välja en tabell- eller kolumnlayout för att spara en eller flera adaptiva formulärpaneler i arkivdokumentet PDF.
 
 Innan du genererar ett postdokument väljer du Layout för postdokumentet för den panelen som Tabell eller Kolumn i inställningarna för en panel. Fälten i panelen ordnas därefter i postdokumentet.
 
@@ -421,7 +421,6 @@ Mer information om hur du använder sidbrytningar och använder flera mallsidor 
 
 * **[!UICONTROL BASIC]**
    * **Mall:** Du kan välja mallen Standard eller Egen.
-
      ![Alt-text](image.png)
    * **Dekorfärg:** Du kan fördefiniera mallfärgen för [!UICONTROL Document of Record].
    * **Teckensnittsfamilj:** Välj teckensnittstyp för [!UICONTROL Document of Record]-texterna.
@@ -434,7 +433,6 @@ Mer information om hur du använder sidbrytningar och använder flera mallsidor 
       * Lodrätt
       * Vågrät
       * Samma som adaptiv form
-
      >[!NOTE]
      > Lodrät och vågrät justering gäller endast för     Alternativknapp och kryssruta
 * **[!UICONTROL MASTER PAGE PROPERTIES]** Klicka för mer information om [Mallsidesegenskaper](#master-page-properties-master-page-properties)
@@ -485,7 +483,7 @@ Tänk på följande när du arbetar med urkunder för anpassade formulär.
 * Postmalldokument har inte stöd för RTF-text. Därför visas all formaterad text i det statiska adaptiva formuläret eller i den information som fylls i av slutanvändaren som oformaterad text i postdokumentet.
 * Dokumentfragment i ett anpassat formulär visas inte i postdokumentet. Däremot stöds adaptiva formulärfragment.
 * Det finns inte stöd för innehållsbindning i dokument med poster som genererats för XML-schemabaserade adaptiva formulär.
-* Lokaliserad version av postdokument skapas på begäran för en språkinställning när användaren begär återgivningen av postdokumentet. Lokalisering av postdokument sker tillsammans med lokalisering av anpassat formulär. Mer information om lokalisering av dokument med post och adaptiva formulär finns i [Använda AEM översättningsarbetsflöde för att lokalisera adaptiva formulär och postdokument](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md).
+* Lokaliserad version av postdokument skapas på begäran för en språkinställning när användaren begär återgivningen av postdokumentet. Lokalisering av postdokument sker tillsammans med lokalisering av anpassat formulär. Mer information om lokalisering av dokument med post och adaptiva formulär finns i [Använda AEM-arbetsflöde för översättning för att lokalisera adaptiva formulär och postdokument](/help/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.md).
 
 ## Använda en anpassad XCI-fil
 
@@ -510,15 +508,15 @@ En XCI-fil hjälper dig att ange olika egenskaper för ett dokument. <!-- Forms 
 | config/present/output/to | Styr platsen dit loggdata eller utdata skrivs. |
 | config/present/script/currentPage | Anger den inledande sidan när dokumentet öppnas. |
 | config/present/script/exclude | Informerar Forms as a Cloud Service om vilka händelser som ska ignoreras. |
-| config/present/pdf/linearized | Anger om utdatadokumentet för PDF är linjärt. |
-| config/present/script/runScripts | Styr vilken uppsättning skript Forms as a Cloud Service ska köra. |
-| config/present/pdf/tagged | Styr om taggar ska tas med i utdatadokumentet för PDF. Taggar i PDF är ytterligare information som ingår i ett dokument för att visa dokumentets logiska struktur. Taggar underlättar hjälpmedelsanvändningen och formateringen. Ett sidnummer kan till exempel taggas som en artefakt så att skärmläsaren inte omsluter den mitt i texten. Även om märkord gör ett dokument mer användbart, ökar de även storleken på dokumentet och bearbetningstiden för att skapa det. |
+| config/present/pdf/linearized | Styr om utdata-PDF-dokumentet är linjärt. |
+| config/present/script/runScripts | Styr vilken uppsättning skript Forms as a Cloud Service kör. |
+| config/present/pdf/tagged | Styr om taggar ska tas med i utdata-PDF-dokumentet. Taggar i PDF-sammanhang är ytterligare information som ingår i ett dokument för att visa dokumentets logiska struktur. Taggar underlättar hjälpmedelsanvändningen och formateringen. Ett sidnummer kan till exempel taggas som en artefakt så att skärmläsaren inte omsluter den mitt i texten. Även om märkord gör ett dokument mer användbart, ökar de även storleken på dokumentet och bearbetningstiden för att skapa det. |
 | config/present/pdf/fontInfo/alwaysEmbed | Anger ett teckensnitt som är inbäddat i utdatadokumentet. |
 | config/present/pdf/fontInfo/neverEmbed | Anger ett teckensnitt som aldrig får bäddas in i utdatadokumentet. |
 | config/present/pdf/pdfa/part | Anger versionsnumret för den PDF/A-specifikation som dokumentet uppfyller. |
 | config/present/pdf/pdfa/amd | Anger ändringsnivån för PDF/A-specifikationen. |
 | config/present/pdf/pdfa/conformance | Anger överensstämmelsenivå med PDF/A-specifikationen. |
-| config/present/pdf/version | Anger vilken version av PDF-dokumentet som ska genereras |
+| config/present/pdf/version | Anger vilken version av PDF-dokument som ska genereras |
 | config/present/pdf/version/map | Anger dokumentets reservteckensnitt |
 
 

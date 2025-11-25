@@ -3,10 +3,10 @@ title: Tillgängliga funktioner och gränssnitt för  [!DNL Experience Manager A
 description: Se hur tillgänglighetsfunktionerna i  [!DNL Adobe Experience Manager] 6.5 [!DNL Assets] kan hjälpa användare med funktionshinder.
 contentOwner: AG
 feature: Asset Management
-role: User, Architect, Leader
+role: User, Developer, Leader
 exl-id: 15555941-99a2-4586-8d7b-b22f3ec17805
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '1879'
 ht-degree: 0%
@@ -209,7 +209,7 @@ Följande funktioner förbättrar tillgängligheten när du delar resurser:
 
 ## Tillgänglig dokumentation {#accessible-docs}
 
-[!DNL Experience Manager] innehåller hjälpmedelsanpassad dokumentation som kan användas av personer med funktionshinder. Följande hjälper till att göra innehåll tillgängligt för tillfället, medan Adobe fortsätter att förbättra mallen och innehållet:
+[!DNL Experience Manager] innehåller hjälpmedelsanpassad dokumentation som kan användas av personer med funktionshinder. Följande hjälper till att göra innehållet tillgängligt för tillfället, medan Adobe fortsätter att förbättra mallen och innehållet:
 
 * Skärmläsare kan läsa texten.
 * Bilder och illustrationer har alternativ text tillgänglig.
@@ -228,4 +228,4 @@ Om du vill ge feedback, ställa frågor och begära produktförbättringar som r
 >* [Hjälpmedelsfunktioner i [!DNL Dynamic Media]](/help/assets/accessibility-dm.md).
 >* [Versionsinformation om förbättringar som har gjorts i varje Service Pack-version](/help/release-notes/release-notes.md).
 >* [[!DNL Adobe Experience Manager] hjälpmedelsvägledning](/help/managing/web-accessibility.md).
->* [Överensstämmelserapporter (ACR) och VPAT-lista för Adobe-lösningar](https://www.adobe.com/accessibility/compliance.html).
+>* [Överensanderapporter (ACR) och VPAT-listor för Adobe-lösningar](https://www.adobe.com/accessibility/compliance.html).

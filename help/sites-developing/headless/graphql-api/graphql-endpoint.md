@@ -4,8 +4,8 @@ description: Lär dig hur du hanterar GraphQL slutpunkter i Adobe Experience Man
 exl-id: a59a5e50-0787-4c1c-a83d-bb3eac1479a8
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
-role: Admin,Architect,Data Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: Admin,Developer
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Det finns två typer av slutpunkter i AEM:
 >
 >Innehållsförfattaren bör styra det här scenariot. Det kan till exempel vara bra att överväga att placera delade modeller för innehållsfragment under konfigurationen för globala webbplatser.
 
-Databassökvägen för den globala slutpunkten för GraphQL AEM är:
+Databassökvägen för den globala slutpunkten för GraphQL för AEM är:
 
 `/content/cq:graphql/global/endpoint`
 
@@ -50,7 +50,7 @@ För vilken ditt program kan använda följande sökväg i URL:en för begäran:
 Om du vill aktivera en slutpunkt för GraphQL för AEM måste du:
 
 * [Aktivera din GraphQL-slutpunkt](#enabling-graphql-endpoint)
-* [Publish din GraphQL-slutpunkt](#publishing-graphql-endpoint)
+* [Publicera din GraphQL-slutpunkt](#publishing-graphql-endpoint)
 
 ## Aktivera din GraphQL-slutpunkt {#enabling-graphql-endpoint}
 
@@ -85,7 +85,7 @@ Så här aktiverar du motsvarande slutpunkt:
 
 ## Publicera din GraphQL-slutpunkt {#publishing-graphql-endpoint}
 
-Markera den nya slutpunkten och **Publish** för att göra den helt tillgänglig i alla miljöer.
+Markera den nya slutpunkten och **Publicera** för att göra den helt tillgänglig i alla miljöer.
 
 >[!CAUTION]
 >

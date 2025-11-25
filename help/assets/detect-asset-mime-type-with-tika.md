@@ -2,11 +2,11 @@
 title: Identifiera MIME-typ av resurser med Apache Tika
 description: Aktivera Apache Tika för att  [!DNL Experience Manager Assets] identifiera MIME-typen för resurser från innehållsströmmen under överföringen i stället för filtillägget.
 contentOwner: AG
-role: Admin, Architect
+role: Admin, Developer
 feature: Metadata,Developer Tools,Asset Management
 exl-id: a312466d-8d84-4c94-af85-1549afc61aed
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '147'
 ht-degree: 1%

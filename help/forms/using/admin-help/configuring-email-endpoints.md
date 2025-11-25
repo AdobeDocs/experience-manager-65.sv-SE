@@ -9,9 +9,9 @@ exl-id: 33583a12-4f20-4146-baa4-c9854e454bbf
 solution: Experience Manager, Experience Manager Forms
 feature: Adaptive Forms
 role: User, Developer
-source-git-commit: 6a9806d8f40f711a610c130c63d9ab9b2460d075
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
-source-wordcount: '3808'
+source-wordcount: '3805'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Med e-postslutpunkter kan användare anropa en tjänst genom att skicka ett elle
 
 För e-postslutpunkter kan behöriga användare anropa en process genom att skicka filer till rätt konto. Resultatet returneras till den avsändande användaren (som standard) eller till den användare som definierats i slutpunktsinställningarna.
 
-Innan du konfigurerar en e-postslutpunkt skapar du ett POP3- eller IMAP-e-postkonto som ska användas av slutpunkten. Skapa ett separat konto för varje typ av konvertering. Ett konto kan till exempel konfigureras för att generera PDF-dokument från inkommande bifogade filer, och ett annat konto kan konfigureras för att generera säkra PDF-dokument.
+Innan du konfigurerar en e-postslutpunkt skapar du ett POP3- eller IMAP-e-postkonto som ska användas av slutpunkten. Skapa ett separat konto för varje typ av konvertering. Ett konto kan till exempel konfigureras för att generera PDF-standarddokument från inkommande bifogade filer, och ett annat konto kan konfigureras för att generera säkra PDF-dokument.
 
 >[!NOTE]
 >
@@ -34,7 +34,7 @@ Innan du konfigurerar en e-postslutpunkt skapar du ett POP3- eller IMAP-e-postko
 
 Alla e-postslutpunkter har konfigurerats med ett auktoriserat användarnamn och lösenord för e-postinkorgen, vilket krävs när tjänsten anropas. E-postkontot skyddas av e-postserversystemet som det är konfigurerat på.
 
-Om dina användare skickar dokument med västerländska europeiska språktecken i namn på fil- och konverteringssökvägar måste de använda ett e-postprogram som har stöd för de kodningstyper som krävs (Latin1 [ISO-8859-1], Västerländsk [Windows] eller UTF-8). Mer information finns i dokumentet *Installera och distribuera AEM formulär* för programservern.
+Om dina användare skickar dokument med västerländska europeiska språktecken i namn på fil- och konverteringssökvägar måste de använda ett e-postprogram som har stöd för de kodningstyper som krävs (Latin1 [ISO-8859-1], Västerländsk [Windows] eller UTF-8). Mer information finns i dokumentet *Installera och distribuera AEM-formulär* för programservern.
 
 Konfigurera e-posttjänsten innan du konfigurerar en e-postslutpunkt. (Se [Konfigurera standardinställningar för e-postslutpunkter](configuring-email-endpoints.md#configure-default-email-endpoint-settings).) E-posttjänstens konfigurationsparametrar har två syften:
 
@@ -49,7 +49,7 @@ Du kan konfigurera POP3, IMAP eller SMTP så att Secure Sockets Layer (SSL) anv�
 1. Exportera ett klientcertifikat från e-postservern.
 1. Använd nyckelverktygsprogrammet för att importera klientcertifikatfilen till programserverns JVM-certifikatarkiv (Java Virtual Machine). Hur det här steget utförs beror på sökvägarna till JVM och klientinstallation.
 
-   Om du till exempel använder en standardinstallation av Oracle WebLogic Server med JDK 1.5.0 i Microsoft Windows Server® 2003 skriver du följande  i en kommandotolk:
+   Om du till exempel använder en standardinstallation av Oracle WebLogic Server med JDK 1.5.0 i Microsoft Windows Server® 2003 skriver du följande text i en kommandotolk:
 
    `keytool -import -file client_certificate -alias myalias -keystore BEA_HOME\jdk150_04\jre\security\cacerts`
 
@@ -89,9 +89,9 @@ För att formulärarbetsflöden ska kunna ta emot och hantera inkommande e-postm
 
 **Domänmönster:** Domännamnsmönstret som används för att filtrera inkommande e-post. Om du till exempel använder adobe.com kommer endast e-post från adobe.com att bearbetas, och e-post från andra domäner ignoreras.
 
-**Filmönster:** Inkommande mönster för bifogade filer som accepteras av providern. Detta inkluderar filer som har specifika tillägg (&ast;.dat, &ast;.xml), specifika namn (data) och sammansatta uttryck i namnet och tillägget (.[dD][aA]&#39;port&#39;). Standardvärdet är &ast;.&ast;..
+**Filmönster:** Inkommande mönster för bifogade filer som accepteras av providern. Detta inkluderar filer som har specifika tillägg (&amp;ast;.dat, &amp;ast;.xml), specifika namn (data) och sammansatta uttryck i namnet och tillägget (.``[dD][aA]``&#39;port&#39;). Standardvärdet är &amp;ast;.&amp;ast;..
 
-**Jobbets mottagare lyckades:** En eller flera e-postadresser som används för att skicka e-post för att ange slutförda jobb. Som standard skickas alltid ett meddelande om att jobbet lyckades till avsändaren av det ursprungliga jobbet. Stöd för upp till 100 mottagare. Om du vill inaktivera den här inställningen lämnar du det här fältet tomt.
+**Slutförda jobbmottagare:** En eller flera e-postadresser som används för att skicka e-post för att ange slutförda jobb. Som standard skickas alltid ett meddelande om att jobbet lyckades till avsändaren av det ursprungliga jobbet. Stöd för upp till 100 mottagare. Om du vill inaktivera den här inställningen lämnar du det här fältet tomt.
 
 **Jobbets mottagare misslyckades:** En eller flera e-postadresser som används för att skicka e-post för att ange misslyckade jobb. Som standard skickas alltid ett meddelande om misslyckat jobb till avsändaren som skickade det ursprungliga jobbet. Stöd för upp till 100 mottagare. Om du vill inaktivera den här inställningen lämnar du det här fältet tomt.
 
@@ -167,7 +167,7 @@ Använd följande inställningar för att konfigurera en e-postslutpunkt.
 
 **Domänmönster:** Anger domänmönster för inkommande e-post som accepteras av providern. Om du till exempel använder adobe.com bearbetas bara e-post från adobe.com. E-post från andra domäner ignoreras.
 
-**Filmönster:** Anger mönster för inkommande bifogade filer som accepteras av providern. Detta inkluderar filer som har specifika tillägg (&ast;.dat, &ast;.xml), specifika namn (data) eller sammansatta uttryck i namnet och tillägget (&ast;.[dD][aA]&#39;port&#39;).
+**Filmönster:** Anger mönster för inkommande bifogade filer som accepteras av providern. Detta inkluderar filer som har specifika tillägg (&amp;ast;.dat, &amp;ast;.xml), specifika namn (data) eller sammansatta uttryck i namnet och tillägget (&amp;ast;.`[dD][aA]`&#39;port&#39;).
 
 **Slutförda jobbmottagare:** En e-postadress dit meddelanden skickas för att ange slutförda jobb. Som standard skickas alltid ett meddelande om att jobbet lyckades till avsändaren. Om du skriver avsändare skickas e-postresultaten till avsändaren. Stöd för upp till 100 mottagare. Ange ytterligare mottagare med e-postadresser, avgränsade med kommatecken (,).
 
@@ -199,7 +199,7 @@ Om du vill inaktivera den här inställningen lämnar du inställningen tom. I v
 
 **SMTP-lösenord:** Lösenordet för SMTP-kontot. Vissa e-postservrar kräver inget SMTP-lösenord.
 
-**Skicka från:** E-postadressen (till exempel user@company.com) som används för att skicka e-postmeddelanden om resultat och fel. Om du inte anger något Skicka från-värde försöker e-postservern att fastställa e-postadressen genom att kombinera värdet som anges i inställningen SMTP-användare med en standarddomän som konfigurerats på e-postservern. Om e-postservern inte har någon standarddomän och du inte anger något värde för Skicka från, kan fel uppstå. Om du vill vara säker på att e-postmeddelandena har rätt från-adress anger du ett värde för inställningen Skicka från.
+**Skicka från:** E-postadressen (till exempel `user@company.com`) som används för att skicka e-postmeddelanden om resultat och fel. Om du inte anger något Skicka från-värde försöker e-postservern att fastställa e-postadressen genom att kombinera värdet som anges i inställningen SMTP-användare med en standarddomän som konfigurerats på e-postservern. Om e-postservern inte har någon standarddomän och du inte anger något värde för Skicka från, kan fel uppstå. Om du vill vara säker på att e-postmeddelandena har rätt från-adress anger du ett värde för inställningen Skicka från.
 
 **SMTP SSL är aktiverat:** Välj den här inställningen för att tvinga e-postprovidern att använda SSL för att skanna inkorgen. Kontrollera att e-postservern stöder SSL.
 
@@ -207,7 +207,7 @@ Om du vill inaktivera den här inställningen lämnar du inställningen tom. I v
 
 **asynkron:** Om den är synkron bearbetas alla indatadokument och ett enda svar returneras. När inställningen är asynkron skickas ett svar för varje dokument som bearbetas.
 
-En e-postslutpunkt skapas till exempel för en tjänst som tar ett enstaka Word-dokument och returnerar det dokumentet som en PDF-fil. Ett e-postmeddelande kan skickas till slutpunktens inkorg som innehåller flera (3) Word-dokument. När alla tre dokument har bearbetats och slutpunkten har konfigurerats som synkron, skickas ett e-postmeddelande med alla tre bifogade dokument. Om slutpunkten är asynkron skickas ett e-postmeddelande när varje Word-dokument har konverterats till PDF. Resultatet är tre e-postmeddelanden, var och en med en bifogad PDF-fil.
+En e-postslutpunkt skapas till exempel för en tjänst som tar ett enstaka Word-dokument och returnerar det dokumentet som en PDF-fil. Ett e-postmeddelande kan skickas till slutpunktens inkorg som innehåller flera (3) Word-dokument. När alla tre dokument har bearbetats och slutpunkten har konfigurerats som synkron, skickas ett e-postmeddelande med alla tre bifogade dokument. Om slutpunkten är asynkron skickas ett e-postmeddelande när varje Word-dokument har konverterats till PDF. Resultatet är tre e-postmeddelanden, vart och ett med en enda bifogad PDF-fil.
 
 Standardvärdet är asynkront.
 
@@ -235,7 +235,7 @@ Standardvärdet är asynkront.
 
 **Litteral:** E-postmeddelandet använder det värde som anges i fältet när det visas.
 
-**Variabel:** Du kan mappa en sträng från e-postmeddelandets ämne, brödtext, huvud eller avsändarens e-postadress. Om du vill göra det använder du något av följande nyckelord: %SUBJECT%, %BODY%, %HEADER% eller %SENDER%. Om du till exempel använder %SUBJECT% används innehållet i e-postämnet som indataparameter. Om du vill hämta bifogade filer anger du ett filmönster som e-postslutpunkten kan använda för att välja bifogade dokument. Om du till exempel anger &ast;.pdf väljs alla bifogade dokument som har filnamnstillägget .pdf. Ange &amp;stämpel;ast; markerar ett bifogat dokument. Om du anger example.pdf väljs alla bifogade dokument som heter example.pdf.
+**Variabel:** Du kan mappa en sträng från e-postmeddelandets ämne, brödtext, huvud eller avsändarens e-postadress. Om du vill göra det använder du något av följande nyckelord: %SUBJECT%, %BODY%, %HEADER% eller %SENDER%. Om du till exempel använder %SUBJECT% används innehållet i e-postämnet som indataparameter. Om du vill hämta bifogade filer anger du ett filmönster som e-postslutpunkten kan använda för att välja bifogade dokument. Om du till exempel anger &amp;ast;.pdf väljs alla bifogade dokument som har filnamnstillägget .pdf. Ange &amp;stämpel;ast; markerar ett bifogat dokument. Om du anger example.pdf väljs alla bifogade dokument som heter example.pdf.
 
 **Mappningar av utdataparameter:** Används för att konfigurera utdata för tjänsten och åtgärden. Följande tecken i mappningsvärdena för utdataparametrar utökas i filnamnet för den bifogade filen:
 
@@ -245,7 +245,7 @@ Standardvärdet är asynkront.
 
 Alla förekomster av det omvända snedstrecket (\) ersätts med %%.
 
-***Obs!**&#x200B;Om tjänstbegärandemeddelandet innehåller flera bifogade filer kan du inte använda parametrarna %F och %E för egenskapen Mappningar av utdataparameter för slutpunkten. Om tjänstsvaret returnerar flera bifogade filer kan du inte ange samma filnamn för fler än en bifogad fil. Om du inte följer dessa rekommendationer skapar den anropade tjänsten namnen för de returnerade filerna, och namnen är inte förutsägbara.*
+***Obs!**Om tjänstbegärandemeddelandet innehåller flera bifogade filer kan du inte använda parametrarna %F och %E för egenskapen Mappningar av utdataparameter för slutpunkten. Om tjänstsvaret returnerar flera bifogade filer kan du inte ange samma filnamn för fler än en bifogad fil. Om du inte följer dessa rekommendationer skapar den anropade tjänsten namnen för de returnerade filerna, och namnen är inte förutsägbara.*
 
 Följande värden är tillgängliga:
 

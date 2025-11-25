@@ -7,7 +7,7 @@ role: User, Admin
 exl-id: 8ec597df-bb64-4768-bf9c-e8cca4fea25b
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 18dd655887293188224f51fa713d0345991d20d7
+source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
 workflow-type: tm+mt
 source-wordcount: '2001'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/aem-assets-adobe-stock.html?lang=sv-SE) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/aem-assets-adobe-stock.html?lang=en) |
 | AEM 6.5 | Den här artikeln |
 
 <!-- old content
@@ -143,7 +143,6 @@ Utför följande steg för att konfigurera en ny [!DNL Adobe Stock IMS configura
    * **[!UICONTROL Scope]**: Navigera till din projektkontrollpanel, klicka på alternativet **[!UICONTROL OAuth Server-to-Server]** i den vänstra rutan, markera **[!UICONTROL Credential details]**, kopiera **[!UICONTROL Scope]** och klistra in den här (se [steg 7](#set-up-a-program-in-developer-console)).
 
    * **[!UICONTROL Org ID]**: Navigera till din projektkontrollpanel, klicka på alternativet **[!UICONTROL OAuth Server-to-Server]** i den vänstra rutan, markera **[!UICONTROL Credential details]**, kopiera **[!UICONTROL Organization ID]** och klistra in den här (se [steg 7](#set-up-a-program-in-developer-console)).
-
      ![aem assets and adobe stock](/help/assets/assets/adobe-ims-technical-account-configuration.png)
 1. Klicka på **[!UICONTROL Create]** så öppnas sidan **[!UICONTROL Adobe IMS Configurations]** och visar den [!DNL Adobe Stock]-integrering som du har skapat.
 
@@ -332,7 +331,7 @@ Du kan skapa en användargrupp eller tilldela behörigheter till en befintlig an
 
 **För att ge åtkomst till en användargrupp från [!DNL Experience Manager]:**
 
-1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Groups]** i användargränssnittet för [!DNL Experience Manager]. Skapa en användargrupp för [!DNL Adobe Stock].
+1. Navigera till [!DNL Experience Manager] > **[!UICONTROL Tools]** > **[!UICONTROL Security]** i användargränssnittet för **[!UICONTROL Groups]**. Skapa en användargrupp för [!DNL Adobe Stock].
 
 1. Navigera till **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Permissions]**.
 
@@ -408,7 +407,7 @@ När en [!DNL Adobe Stock]-resurs har licensierats i [!DNL Experience Manager] k
 
 ![Sök efter [!DNL Adobe Stock] resurser och filtrera resultat från din [!DNL Adobe Experience Manager]-arbetsyta](assets/adobe-stock-search-results-workspace.png)
 
-**A.** Sök efter resurser som liknar de resurser vars [!DNL Adobe Stock]-ID anges. **B.** Sök efter resurser som matchar ditt val av form eller orientering. **C.** Sök efter en eller flera resurstyper som stöds **D.** Öppna eller komprimera filterfönstret **E.** Licensiera och spara den valda resursen i [!DNL Experience Manager] **F.** Spara resursen i [!DNL Experience Manager] med vattenstämpel **G.** Utforska resurser på webbplatsen [!DNL Adobe Stock] som liknar den valda resursen **&rbrace;H.** Visa de markerade resurserna på [!DNL Adobe Stock] webbplatsen **I.** Antal markerade resurser från sökresultaten **J.** Växla mellan kortvyn och listvyn
+**A.** Sök efter resurser som liknar de resurser vars [!DNL Adobe Stock]-ID anges. **B.** Sök efter resurser som matchar ditt val av form eller orientering. **C.** Sök efter en eller flera resurstyper som stöds **D.** Öppna eller komprimera filterfönstret **E.** Licensiera och spara den valda resursen i [!DNL Experience Manager] **F.** Spara resursen i [!DNL Experience Manager] med vattenstämpel **G.** Utforska resurser på webbplatsen [!DNL Adobe Stock] som liknar den valda resursen **}H.** Visa de markerade resurserna på [!DNL Adobe Stock] webbplatsen **I.** Antal markerade resurser från sökresultaten **J.** Växla mellan kortvyn och listvyn
 
 ### Hitta resurser {#find-assets}
 
@@ -468,9 +467,9 @@ Användarna kan se egenskaperna för både, licensierade och olicensierade resur
 
 >[!MORELIKETHIS]
 >
->* [Videosjälvstudiekurs om hur du använder [!DNL Adobe Stock] resurser med [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html?lang=sv-SE)
->* [[!DNL Adobe Stock] Hjälp om företagsplan](https://helpx.adobe.com/se/enterprise/using/adobe-stock-enterprise.html)
->* [[!DNL Adobe Stock] Vanliga frågor](https://helpx.adobe.com/se/stock/faq.html)
+>* [Videosjälvstudiekurs om hur du använder [!DNL Adobe Stock] resurser med [!DNL Experience Manager Assets]](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/creative-workflows/adobe-stock.html)
+>* [[!DNL Adobe Stock] Hjälp om företagsplan](https://helpx.adobe.com/enterprise/using/adobe-stock-enterprise.html)
+>* [[!DNL Adobe Stock] Vanliga frågor](https://helpx.adobe.com/stock/faq.html)
 
 
 <!--old content
