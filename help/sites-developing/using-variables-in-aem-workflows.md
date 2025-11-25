@@ -9,9 +9,9 @@ exl-id: c8aeceec-860c-49ee-b681-d7107e52020d
 solution: Experience Manager, Experience Manager Sites
 feature: Developing
 role: Developer
-source-git-commit: bdbf9b73553c42865560c76eebab76e2fc397fdf
+source-git-commit: 704a815e961dc2c690e034a1b1cbe60800c643ae
 workflow-type: tm+mt
-source-wordcount: '1923'
+source-wordcount: '1930'
 ht-degree: 0%
 
 ---
@@ -20,17 +20,17 @@ ht-degree: 0%
 
 En variabel i en arbetsflödesmodell är ett sätt att lagra ett värde baserat på dess datatyp. Du kan sedan använda namnet på variabeln i vilket arbetsflödessteg som helst för att hämta värdet som lagras i variabeln. Du kan också använda variabelnamn för att definiera uttryck för att fatta beslut om routning.
 
-I AEM arbetsflödesmodeller kan du:
+I AEM arbetsflödesmodeller kan du
 
 * [Skapa en variabel](/help/sites-developing/using-variables-in-aem-workflows.md#create-a-variable) för en datatyp baserat på den informationstyp som du vill lagra i den.
-* [Ange ett värde för variabeln &#x200B;](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable) med hjälp av arbetsflödessteget Ange variabel.
-* [Använd variabeln &#x200B;](/help/sites-developing/using-variables-in-aem-workflows.md#use-a-variable) i arbetsflödesstegen ELLER Dela och Gå till AEM så att du kan definiera ett uttryck för att fatta beslut om routning. Du kan också använda variabler i alla steg i AEM Forms Workflow.
+* [Ange ett värde för variabeln ](/help/sites-developing/using-variables-in-aem-workflows.md#set-a-variable) med hjälp av arbetsflödessteget Ange variabel.
+* [Använd variabeln ](/help/sites-developing/using-variables-in-aem-workflows.md#use-a-variable) i arbetsflödesstegen ELLER Dela och Gå till AEM så att du kan definiera ett uttryck för att fatta beslut om routning. Du kan också använda variabler i alla steg i AEM Forms Workflow.
 
 I följande video visas hur du kan skapa, ange och använda variabler i AEM arbetsflödesmodeller:
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/usevariables_example.mp4)
+[Använd variabelvideo](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/usevariables_example.mp4)
 
 Variabler är ett tillägg till gränssnittet [MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html). Du kan använda [MetaDataMap](https://developer.adobe.com/experience-manager/reference-materials/6-5/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html) i ECMAScript för att komma åt metadata som sparats med variabler.
 
@@ -49,7 +49,7 @@ Ytterligare komplexa datatyper som är tillgängliga i AEM Forms-arbetsflöden f
 
 Om du vill skapa en variabel
 
-1. I en AEM går du till Verktyg > Arbetsflöde > Modeller.
+1. I en AEM-instans går du till Verktyg > Arbetsflöde > Modeller.
 1. Välj **[!UICONTROL Create]** och ange titeln och ett valfritt namn för arbetsflödesmodellen. Markera modellen och välj **[!UICONTROL Edit]**.
 1. Välj variabelikonen som är tillgänglig i sidosparken för arbetsflödesmodellen och välj **[!UICONTROL Add Variable]**.
 
@@ -104,7 +104,7 @@ Välj en variabel av XML-typ som du vill lagra en XML-fil i. Fråga XML-variabel
 
 I det här exemplet väljer du en **formdata** XML-variabel som ska lagra filen **cc-app.xml**. Fråga variabeln **formdata** så att du kan ange värdet för strängvariabeln **emailaddress** för att lagra värdet för egenskapen **emailAddress** som finns i filen **cc-app.xml** .
 
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4 "Ange värdet för en variabel")
+[Ange variabelvideo](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/set_variable_example1.mp4)
 
 ### Exempel 2: Använd ett uttryck för att lagra värden baserat på andra variabler {#example2}
 
@@ -114,7 +114,7 @@ I det här exemplet använder du uttrycksredigeraren för att definiera ett uttr
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
+[Video om variabeluttryck](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_expression.mp4)
 
 ## Använda uttrycksredigeraren {#use-expression-editor}
 
@@ -163,7 +163,7 @@ I det här exemplet använder du [example 2](/help/sites-developing/using-variab
 
 <!-- FUTURE ERROR: YouTube and mp4 videos are not supported -->
 
->[!VIDEO](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
+[ELLER dela upp video](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/using/variables_orsplit_example.mp4)
 
 Välj på liknande sätt en extern skriptsökväg eller ange ECMA-skriptet för routningsuttryck för att utvärdera den aktiva grenen. Välj **[!UICONTROL Rename Branch]** om du vill ange ett alternativt namn för grenen.
 
@@ -251,7 +251,7 @@ workflowSession.startWorkflow(model, wfData, metaData);
 ## Redigera en variabel {#edit-a-variable}
 
 1. På sidan Redigera arbetsflöde väljer du ikonen Variabler som är tillgänglig i arbetsflödesmodellens sidokikon. I avsnittet Variabler i den vänstra rutan visas alla befintliga variabler.
-1. Välj ikonen ![Redigera som indikeras av en pennsymbol.Ikonen &#x200B;](assets/edit.png) (Redigera) bredvid variabelnamnet som du vill redigera.
+1. Välj ikonen ![Redigera som indikeras av en pennsymbol.Ikonen ](assets/edit.png) (Redigera) bredvid variabelnamnet som du vill redigera.
 1. Redigera variabelinformationen och välj ikonen ![Spara som markeras med en bock.](assets/Done_Icon.png) om du vill spara ändringarna. Du kan inte redigera fälten **[!UICONTROL Name]** och **[!UICONTROL Type]** för en variabel.
 
 ## Ta bort en variabel {#delete-a-variable}
