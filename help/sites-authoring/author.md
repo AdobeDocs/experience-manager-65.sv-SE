@@ -84,4 +84,4 @@ När AEM webbplats är en [communitywebbplats](/help/communities/overview.md), e
 
 #### Dispatcher {#dispatcher}
 
-**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)** implementerar belastningsutjämning och cachning för att optimera prestanda för besökare på din webbplats.
+**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE)** implementerar belastningsutjämning och cachning för att optimera prestanda för besökare på din webbplats.

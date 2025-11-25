@@ -74,7 +74,7 @@ Bland huvudfunktionerna och förbättringarna i den här versionen finns följan
 
    * Red Hat® Enterprise Linux® 9 (Kernel 4.x, 64 bitar) 
 
-* [Komponenten för bifogad fil &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment) med hög densitet: Komponenten förhindrar nu att filer skickas med ändrade tillägg som försöker kringgå tillåtna filtypskontroller. Sådana filer blockeras under överföringen för att säkerställa att endast giltiga filtyper accepteras.
+* [Komponenten för bifogad fil &#x200B;](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment) med hög densitet: Komponenten förhindrar nu att filer skickas med ändrade tillägg som försöker kringgå tillåtna filtypskontroller. Sådana filer blockeras under överföringen för att säkerställa att endast giltiga filtyper accepteras.
 
 * FORMS-20533, FORMS-20532: AEM Forms innehåller nu en uppgradering av Struts-versionen från 2.5.33 till 6.x. Stödet lades till via en [hotfix](/help/release-notes/aem-forms-hotfix.md) som du kan [hämta och installera](/help/release-notes/aem-forms-hotfix.md) för att lägga till stöd för den senaste versionen av Struts.
 
@@ -362,9 +362,9 @@ Tilläggspaketet Hybrid är öppet för distribution av Adobe-program från och 
 
 * På AEM Forms 6.5.21.0 misslyckas PDFG-konverteringen med följande fel: (FORMS-16851)(FORMS-14613)
 
-* I AEM Forms 6.5.23.0 misslyckades konverteringen av PS till PDF och HTML till PDF (WebKit). Du löser problemet genom att hämta och installera programfixen från [Adobe Experience Manager Forms Hotfixes](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) (FORMS-21721)
+* I AEM Forms 6.5.23.0 misslyckades konverteringen av PS till PDF och HTML till PDF (WebKit). Du löser problemet genom att hämta och installera programfixen från [Adobe Experience Manager Forms Hotfixes](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) (FORMS-21721)
 
-* I AEM Forms 6.5.23.0 misslyckas konverteringen av bild till PDF. Du löser problemet genom att hämta och installera programfixen från [Adobe Experience Manager Forms Hotfixes](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) (FORMS-2029)
+* I AEM Forms 6.5.23.0 misslyckas konverteringen av bild till PDF. Du löser problemet genom att hämta och installera programfixen från [Adobe Experience Manager Forms Hotfixes](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) (FORMS-2029)
 
 #### Forms Captcha {#forms-captcha-6523}
 
@@ -549,7 +549,7 @@ Instruktioner om hur du installerar Service Pack på Experience Manager Forms fi
 
 >[!NOTE]
 >
->Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
+>Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/deploying/deploy), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
 
 ### Installera GraphQL Index Package för Experience Manager Content Fragments{#install-aem-graphql-index-add-on-package}
 
@@ -694,7 +694,7 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 
 ### Känt problem för AEM Sites {#known-issues-aem-sites-6523}
 
-Content Fragments-Preview misslyckas på grund av DoS-skydd för ett stort träd med fragment. Se artikeln [KB om standardkonfigurationsalternativ för GraphQL Query Executor](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23945) (SITES-17934)
+Content Fragments-Preview misslyckas på grund av DoS-skydd för ett stort träd med fragment. Se artikeln [KB om standardkonfigurationsalternativ för GraphQL Query Executor](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-23945) (SITES-17934)
 
 ### Kända fel för AEM Forms {#known-issues-aem-forms-6523}
 
@@ -767,10 +767,10 @@ Följande textdokument innehåller en lista över de OSGi-paket och innehållspa
 Dessa webbplatser är endast tillgängliga för kunder. Kontakta din kontoansvarige på Adobe om du är kund och behöver åtkomst.
 
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/)
-* [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/en/docs/customer-one/using/home).
+* [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/sv/docs/customer-one/using/home).
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] produktsida](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-65)
+>* [[!DNL Experience Manager] produktsida](https://business.adobe.com/se/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/sv/docs/experience-manager-65)
 >* [Prenumerera på Adobe Priority-produktuppdateringar](https://www.adobe.com/subscription/priority-product-update.html)

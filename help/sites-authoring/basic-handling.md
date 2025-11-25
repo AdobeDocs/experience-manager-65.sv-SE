@@ -122,7 +122,7 @@ Följande konsoler finns i Navigation:
   </tr>
   <tr>
    <td>Screens</td>
-   <td>Med <a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a> kan du hantera alla kundriktade skärmar, oavsett storlek och plats.</td>
+   <td>Med <a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html?lang=sv-SE">Screens</a> kan du hantera alla kundriktade skärmar, oavsett storlek och plats.</td>
   </tr>
   <tr>
    <td>Sites</td>
@@ -155,7 +155,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   Du kan också använda [kortkommandot](/help/sites-authoring/keyboard-shortcuts.md) `/` (snedstreck) för att starta sökningen från en konsol.
 
-* [Lösningar](https://business.adobe.com/)
+* [Lösningar](https://business.adobe.com/se/)
 
   ![Lösningar](do-not-localize/screen_shot_2018-03-23at103552.png)
 

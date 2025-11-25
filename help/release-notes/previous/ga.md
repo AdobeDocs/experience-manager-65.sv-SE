@@ -21,7 +21,7 @@ ht-degree: 0%
 | Version | 6,5 |
 | Typ | Större release |
 | Allmänt tillgänglighetsdatum | 8 april 2019 |
-| Rekommenderade uppdateringar | Se [AEM senaste uppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html). |
+| Rekommenderade uppdateringar | Se [AEM senaste uppdateringar](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=sv-SE). |
 
 ### Trivia {#trivia}
 
@@ -118,7 +118,7 @@ SPA-supporten lanserades först som en del av AEM 6.4 SP2, med AEM 6.5 och har f
 
 #### Headless Content Management {#headless-content-management}
 
-AEM kan hantera innehållet i olika format och från olika nivåer i högen. Vissa har funnits sedan 2008 med [Sling GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) och [POST Servlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html). Innehållstjänster ([Sling Model Exporter](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html)) introducerades i AEM 6.3 och är den metod som används av AEM SJ SDK för att hydratisera enkelsidiga appar. [HTTP-API:t för Assets](/help/assets/mac-api-assets.md) är ett CRUD-API, som utökades för AEM 6.5.
+AEM kan hantera innehållet i olika format och från olika nivåer i högen. Vissa har funnits sedan 2008 med [Sling GET](https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html) och [POST Servlet](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html). Innehållstjänster ([Sling Model Exporter](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=sv-SE)) introducerades i AEM 6.3 och är den metod som används av AEM SJ SDK för att hydratisera enkelsidiga appar. [HTTP-API:t för Assets](/help/assets/mac-api-assets.md) är ett CRUD-API, som utökades för AEM 6.5.
 
 Nya HTTP API-funktioner:
 
@@ -140,7 +140,7 @@ Designa, leverera och optimera effektivt upplevelser på alla digitala skärmar,
 * Anpassa efter plats eller konfiguration av data som utlöses av dynamiska platshållare.
 * Enhetliga insikter som bygger på Adobe Analytics integration i AEM Screens Player
 
-Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM Screens användarhandbok](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html).
+Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM Screens användarhandbok](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/aem-screens-introduction.html?lang=sv-SE).
 
 #### Utveckling av komponenter och mallar {#component-amp-template-development}
 
@@ -246,16 +246,16 @@ Mer information om ändringar i AEM Screens finns i versionsinformationen i [AEM
 
 * Integreringen med Adobe Target använder nu Target Standard API. I tidigare versioner av AEM används Target Classic HTTP API, som nu är föråldrat.
 * Adobe Target `mbox.js` version 63 ingår. Adobe rekommenderar att du byter implementering till `at.js` v1.x.
-* `at.js` version 1.5.0 ingår nu. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) för att etablera `at.js` v1.x på webbplatsen.
+* `at.js` version 1.5.0 ingår nu. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://business.adobe.com/se/products/experience-platform/launch.html) för att etablera `at.js` v1.x på webbplatsen.
 
 #### AEM och Adobe Analytics {#aem-amp-adobe-analytics}
 
 * `s_code.js` H.27.5 ingår. Adobe rekommenderar att du byter implementering till `AppMeasurement.js`
-* `AppMeasurement.js` v1.8.0 ingår. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://business.adobe.com/products/experience-platform/launch.html) för att etablera AppMeasurement.js på webbplatsen.
+* `AppMeasurement.js` v1.8.0 ingår. Adobe rekommenderar att du använder [Adobe Experience Platform Launch](https://business.adobe.com/se/products/experience-platform/launch.html) för att etablera AppMeasurement.js på webbplatsen.
 
 #### AEM och Commerce {#aem-commerce}
 
-Commerce integration framework har förbättrats snabbare sedan AEM 6.4. Läs mer från [AEM och Adobe Commerce Integration med Commerce integration framework](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html).
+Commerce integration framework har förbättrats snabbare sedan AEM 6.4. Läs mer från [AEM och Adobe Commerce Integration med Commerce integration framework](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/integrations/magento.html?lang=sv-SE).
 
 #### Webbgrupper, tillägg {#communities-add-on}
 
@@ -332,7 +332,7 @@ Läs vidare för att lära dig mer om de specifika funktioner och integreringar 
 
 [!DNL Adobe Asset Link] stärker samarbetet mellan kreatörer och marknadsförare när det gäller att skapa innehåll. Kreatörer kan komma åt innehåll som lagras i [!DNL Experience Manager Assets] utan att lämna de appar de är mest bekanta med. Med hjälp av panelen i appen [!DNL Adobe Photoshop], [!DNL Adobe Illustrator] och [!DNL Adobe InDesign] kan du enkelt söka efter, checka ut och checka in resurser.
 
-[!DNL Adobe Asset Link] ingår i erbjudandet [Creative Cloud for enterprise](https://www.adobe.com/creativecloud/business/enterprise.html). Mer information om den, inklusive nödvändig konfiguration av din [!DNL Experience Manager]-distribution, finns i [Adobe Asset Link](https://helpx.adobe.com/enterprise/using/adobe-asset-link.html).
+[!DNL Adobe Asset Link] ingår i erbjudandet [Creative Cloud for enterprise](https://www.adobe.com/creativecloud/business/enterprise.html). Mer information om den, inklusive nödvändig konfiguration av din [!DNL Experience Manager]-distribution, finns i [Adobe Asset Link](https://helpx.adobe.com/se/enterprise/using/adobe-asset-link.html).
 
 ![Söka efter resurser i Adobe Photoshop](/help/release-notes/assets/asset_search_photoshop.png)
 
@@ -360,7 +360,7 @@ Mer information finns i [Använda Adobe Stock-resurser i Experience Manager Asse
 
 [!DNL Experience Manager Assets Brand Portal] hjälper dig att enkelt skaffa, effektivt kontrollera och på ett säkert sätt distribuera godkända resurser till externa leverantörer/byråer och interna företagsanvändare på olika enheter. Det bidrar till att effektivisera tillgångsdelningen, snabbar upp time-to-market för tillgångar och eliminerar risken för otillåten användning och obehörig åtkomst.
 
-Mer information finns i [Nyheter i Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html).
+Mer information finns i [Nyheter i Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=sv-SE).
 
 #### Uppkopplad Assets {#connectedassets}
 
@@ -376,7 +376,7 @@ I stora företag kan den infrastruktur som krävs för att skapa webbplatser dis
 
 [!DNL Dynamic Media] erbjuder förbättrad multimediaredigering och leverans i [!DNL Experience Manager Assets] för att skapa avancerade upplevelser som är engagerande och personaliserade. Genom att ladda upp en primär resurs av hög kvalitet och använda Adobe avancerade molnrendering och visningsprogram kan ni leverera vilken kombination av renderingar som helst direkt för att stödja er organisations mediestrategi.
 
-Mer information om nya [!DNL Dynamic Media]-funktioner finns i [Versionsinformation för dynamiska media](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html).
+Mer information om nya [!DNL Dynamic Media]-funktioner finns i [Versionsinformation för dynamiska media](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/release-notes/s7rn2017.html?lang=sv-SE).
 
 ##### Stöd för 360-video {#video-support}
 
@@ -388,7 +388,7 @@ Nu kan du anpassa miniatyrbilderna för videomaterialet med hjälp av bildrutor 
 
 ##### Förbättringar av hjälpmedel {#accessibility-enhancements}
 
-[!DNL Dynamic Media]-visningsprogram har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i [Referenshandbok för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html).
+[!DNL Dynamic Media]-visningsprogram har nu stöd för förbättrade hjälpmedelsfunktioner som Aria-support, skärmläsare och Alt-text. Mer information finns i [Referenshandbok för visningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/homeviewers.html?lang=sv-SE).
 
 #### Förbättrad sökupplevelse {#experience-enhancement-for-searching}
 
@@ -435,7 +435,7 @@ I [Sammanfattning av nya funktioner och förbättringar i AEM 6.5 Forms](/help/f
 
 Adobe använder en kundfokuserad utvecklingsmodell som gör det möjligt för kunderna att bidra till alla faser i utvecklingsprocessen, under specifikation, utveckling och testning. Tack till alla kunder och partners som deltar i den här processen.
 
-Adobe har de rutiner och processer som behövs för att kunna samla in, prioritera och spåra kundfokuserade fellösningar och utveckla förbättringsförfrågningar. [Experience Manager supportportal](https://experienceleague.adobe.com/?support-solution=Experience+Manager#support) är integrerad med Adobe Enhancement and Defect Tracking System. Kundfrågor identifieras och löses av kundsupportteamet där det är möjligt. När den eskaleras till FoU hämtas all kundinformation in och används för prioritering och rapportering. Vid utveckling av betald support, garantifrågor och kundbetalda förbättringar prioriteras.
+Adobe har de rutiner och processer som behövs för att kunna samla in, prioritera och spåra kundfokuserade fellösningar och utveckla förbättringsförfrågningar. [Experience Manager supportportal](https://experienceleague.adobe.com/sv?support-solution=Experience+Manager#support) är integrerad med Adobe Enhancement and Defect Tracking System. Kundfrågor identifieras och löses av kundsupportteamet där det är möjligt. När den eskaleras till FoU hämtas all kundinformation in och används för prioritering och rapportering. Vid utveckling av betald support, garantifrågor och kundbetalda förbättringar prioriteras.
 
 Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändringar som korrigerats i AEM 6.5.
 
@@ -445,7 +445,7 @@ Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändrin
 
 * Fristående Quickstart: `cq-quickstart-6.5.0.jar`.
 * Snabbstart för programserver: `cq-quickstart-6.5.0.war`.
-* Dispatcher 4.3.2 eller senare för olika webbservrar och plattformar. Se [länken för hämtning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html)
+* Dispatcher 4.3.2 eller senare för olika webbservrar och plattformar. Se [länken för hämtning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/release-notes.html?lang=sv-SE)
 * Plugin-program för Eclipse IDE ([läs mer och ladda ned](/help/sites-developing/aem-eclipse.md))
 
 * Tillägg för Brackets Code Editor ([läs mer och ladda ned](/help/sites-developing/aem-brackets.md))
@@ -478,7 +478,7 @@ Denna prioriteringsprocess har resulterat i över 750 kundfokuserade förändrin
 
 **Forms**
 
-* [Paket för AEM Forms-funktioner](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html)
+* [Paket för AEM Forms-funktioner](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE)
 * [AEM Forms OSGi Client SDK](https://repo1.maven.org/maven2/com/adobe/aemfd/aemfd-client-sdk/)
 
 ## Språk {#languages}
@@ -597,4 +597,4 @@ Följande webbplatser är bara tillgängliga för kunder. Kontakta din kontoansv
 
 * Produktuppdateringar, korrigeringar och paket för ytterligare funktionalitet i [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html).
 
-* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [Ny Adobe kundsupport](https://experienceleague.adobe.com/docs/customer-one/using/home.html).
+* [Kundsupport via Admin Console](https://adminconsole.adobe.com/). Mer information finns i [Ny Adobe kundsupport](https://experienceleague.adobe.com/docs/customer-one/using/home.html?lang=sv-SE).
