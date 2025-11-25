@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 6079431d-7d08-4973-8bb4-a8d10626a795
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 4%
@@ -71,7 +71,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Visa skrivbordsåtgärder för Assets**
 
-  Det här alternativet kräver ett AEM datorprogram för att kunna användas.
+  För det här alternativet krävs ett AEM-datorprogram.
 
 * **Anteckningsfärg**
 
@@ -99,7 +99,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Aktivera kortkommandon**
 
-  AEM har stöd för flera kortkommandon som gör redigeringen effektivare.
+  AEM stöder flera kortkommandon som gör redigeringen effektivare.
 
    * [Kortkommandon för redigering av sidor](/help/sites-authoring/page-authoring-keyboard-shortcuts.md)
    * [Kortkommandon för konsoler](/help/sites-authoring/keyboard-shortcuts.md)
@@ -108,7 +108,7 @@ Varje användare kan ange vissa egenskaper för sig själv.
 
 * **Använd klassisk redigeringsmiljö**
 
-  Med det här alternativet aktiveras [klassisk gränssnittsbaserad &#x200B;](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)-sidredigering. Standardgränssnittet används som standard.
+  Med det här alternativet aktiveras [klassisk gränssnittsbaserad ](/help/sites-classic-ui-authoring/classic-page-author-first-steps.md)-sidredigering. Standardgränssnittet används som standard.
 
 * **Aktivera Assets hemsida**
 

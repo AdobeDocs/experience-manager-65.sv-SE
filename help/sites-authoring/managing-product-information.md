@@ -1,6 +1,6 @@
 ---
-title: Kreativt projekt- och PIM-integrering
-description: Creative Project effektiviserar hela arbetsflödet för fotografering, inklusive generering av en fotoplåtningsförfrågan, överföring av en fotoplåtning, samarbete i en fotoplåtning och paketering av godkända mediefiler
+title: Integrering av Creative Project och PIM
+description: 'Creative Project effektiviserar hela arbetsflödet för fotografering: skapa en bildplåtningsförfrågan, ladda upp en fotoplåtning, samarbeta i en fotoplåtning och paketera godkända mediefiler'
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 topic-tags: projects
@@ -8,8 +8,8 @@ content-type: reference
 exl-id: c4eff50e-0d55-4a61-98fd-cc42138656cb
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 0%
@@ -17,11 +17,11 @@ ht-degree: 0%
 ---
 
 
-# Kreativt projekt- och PIM-integrering {#creative-project-and-pim-integration}
+# Integrering av Creative Project och PIM {#creative-project-and-pim-integration}
 
-Om du är marknadsförare eller kreatör kan du använda verktygen i Adobe Experience Manager (AEM) för att hantera e-handelsrelaterade produktfotografier och tillhörande kreativa processer inom organisationen.
+Om du är marknadsförare eller kreatör kan du använda Creative Project-verktygen i Adobe Experience Manager (AEM) för att hantera e-handelsrelaterade produktfotografier och tillhörande kreativa processer inom organisationen.
 
-Du kan använda Creative Project för att effektivisera följande uppgifter i arbetsflödet för fotografering:
+Du kan använda Creative Project till att effektivisera följande uppgifter i arbetsflödet för fotografering:
 
 * Generera en begäran om fotofotografering
 * Överföra en fototagning
@@ -34,7 +34,7 @@ Du kan använda Creative Project för att effektivisera följande uppgifter i ar
 
 ## Fotofotograferingsarbetsflöden  {#exploring-product-photo-shoot-workflows}
 
-Creative Project innehåller olika projektmallar som uppfyller olika projektkrav. Mallen **Produktfotoprojekt** är tillgänglig direkt. Den här mallen innehåller arbetsflöden för fotoplåtning där du kan initiera och hantera begäranden om produktfotografering. Det innehåller även en rad uppgifter som gör att du kan få digitala bilder för produkter genom lämpliga gransknings- och godkännandeprocesser.
+Creative Project innehåller olika projektmallar för olika projektbehov. Mallen **Produktfotoprojekt** är tillgänglig direkt. Den här mallen innehåller arbetsflöden för fotoplåtning där du kan initiera och hantera begäranden om produktfotografering. Det innehåller även en rad uppgifter som gör att du kan få digitala bilder för produkter genom lämpliga gransknings- och godkännandeprocesser.
 
 ## Skapa ett produktfotoprojekt {#create-a-product-photo-shoot-project}
 
@@ -64,7 +64,7 @@ Ett **produktfotoprojekt** innehåller följande färdiga arbetsflöden:
 * **Arbetsflöde för produktfototagning (Commerce Integration)**: Det här arbetsflödet använder handelsintegrering med PIM-systemet (Product Information Management) för att automatiskt generera en tagningslista för de valda produkterna (hierarki). Du kan visa produktdata som en del av resursmetadata när arbetsflödet är klart.
 * **Arbetsflöde för produktfoto**: Med det här arbetsflödet kan du skapa en lista i stället för att använda den beroende på e-handelsintegrering. Den mappar de överförda bilderna till en CSV-fil i projektresursmappen.
 
-Använd arbetsflödet **Produktfototagning (Commerce-integrering)** för att mappa bildresurser med produkterna i AEM. Det här arbetsflödet använder handelsintegrering för att länka de godkända bilderna till befintliga produktdata på platsen `/etc/commerce`.
+Använd arbetsflödet **Produktfototagning (Commerce-integrering)** för att mappa bildresurser till produkterna i AEM. Det här arbetsflödet använder handelsintegrering för att länka de godkända bilderna till befintliga produktdata på platsen `/etc/commerce`.
 
 Arbetsflödet för **produktfototagning (Commerce-integrering)** innehåller följande uppgifter:
 
@@ -74,7 +74,7 @@ Arbetsflödet för **produktfototagning (Commerce-integrering)** innehåller fö
 * Granska och godkänn
 * Flytta till produktionsuppgift
 
-Om produktinformation inte är tillgänglig i AEM kan du använda arbetsflödet **Produktfototagning** för att mappa bildresurser med produkterna baserat på den information som du överför i en CSV-fil. CSV-filen måste innehålla grundläggande produktinformation, t.ex. produkt-ID, kategori och beskrivning. Arbetsflödet hämtar godkända resurser för produkterna.
+Om produktinformation inte är tillgänglig i AEM kan du använda arbetsflödet **Produktfototagning** för att mappa bildresurser med produkterna baserat på den information du överför i en CSV-fil. CSV-filen måste innehålla grundläggande produktinformation, t.ex. produkt-ID, kategori och beskrivning. Arbetsflödet hämtar godkända resurser för produkterna.
 
 Det här arbetsflödet innehåller följande uppgifter:
 
@@ -195,7 +195,7 @@ Aktiviteten **Skapa lista över scenbilder** gör det möjligt för projektägar
 
    ![Visa tagningslista](assets/chlimage_1-148a.png)
 
-   Om du vill redigera befintliga data eller lägga till nya data klickar du på **Redigera** i verktygsfältet. Endast fälten **Product &#x200B;** och **Description** kan redigeras.
+   Om du vill redigera befintliga data eller lägga till nya data klickar du på **Redigera** i verktygsfältet. Endast fälten **Product **och **Description** kan redigeras.
 
    ![Redigera tagningslista](assets/chlimage_1-149a.png)
 
@@ -297,7 +297,7 @@ Du kan navigera till projektresurser med Assets-gränssnittet och verifiera godk
 
 Klicka på nästa nivå om du vill visa produkter enligt din produktdatahierarki.
 
-Creative Project associerar godkända resurser med den refererade produkten. Metadata för resursen uppdateras med produktreferensen och grundläggande information på fliken **Produktdata** under resursegenskaper som visas i avsnittet AEM.
+Creative Project associerar godkända resurser med den refererade produkten. Metadata för resursen uppdateras med produktreferensen och grundläggande information på fliken **Produktdata** under resursegenskaper som visas i avsnittet Metadata för AEM-resurser.
 
 >[!NOTE]
 >
@@ -334,7 +334,7 @@ Klicka på länken som visas för att navigera till respektive produktinformatio
 
 Du kan anpassa arbetsflödena för **Project Photo Shoot** utifrån dina behov. Detta är en valfri rollbaserad uppgift som du utför för att ange värdet för en variabel i projektet. Senare kan du använda det konfigurerade värdet för att komma fram till ett beslut.
 
-1. Klicka på AEM logotyp och navigera sedan till **Verktyg** > **Arbetsflöde** > **Modeller** för att öppna sidan **Arbetsflödesmodeller**.
+1. Klicka på AEM logotyp och gå sedan till **Verktyg** > **Arbetsflöde** > **Modeller** för att öppna sidan **Arbetsflödesmodeller**.
 1. Välj arbetsflödet för **produktfototagning (Commerce-integrering)** eller arbetsflödet för **produktfototagning** och klicka på **Redigera** i verktygsfältet för att öppna arbetsflödet i redigeringsläge.
 1. Öppna sidopanelen och leta upp steget **Skapa rollbaserad projektuppgift** och dra det till arbetsflödet.
 

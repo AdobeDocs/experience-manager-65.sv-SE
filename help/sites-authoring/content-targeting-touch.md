@@ -9,8 +9,8 @@ docset: aem65
 exl-id: edde225d-0be7-4306-8dda-d18d46fae977
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '5284'
 ht-degree: 5%
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 # Skapa riktat innehåll med målläge{#authoring-targeted-content-using-targeting-mode}
 
-Skapa riktat innehåll med målläget AEM. Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser:
+Skapa riktat innehåll med målinriktat läge i AEM. Målinriktningsläget och Target-komponenten innehåller verktyg för att skapa innehåll för upplevelser:
 
 * Identifiera enkelt målinnehållet på sidan. En prickad linje bildar en kant runt allt innehåll som är avsett för det.
 * Välj ett varumärke och en aktivitet för att se upplevelserna.
@@ -104,7 +104,7 @@ Så här lägger du till en aktivitet:
 
 1. Välj antingen **Upplevelsemål** eller **A/B-test** på menyn Aktivitet.
 
-   * Målinriktning - hantera Adobe Target-aktiviteter från AEM.
+   * Upplevelseanpassning - hantera Adobe Target-aktiviteter från AEM.
    * A/B-test - skapa/hantera A/B-testaktiviteter i Adobe Target från AEM.
 
 ## Målprocessen: Skapa, Mål och Mål och inställningar {#the-targeting-process-create-target-and-goals-settings}
@@ -297,7 +297,7 @@ Om du redigerar målinnehåll måste du klicka på **Starta målanpassning** inn
    >Administratörer kan bestämma om den här konfigurationen måste anges på **https://&lt;värd>:&lt;port>/system/console/configMgr/com.day.cq.personalization.impl.servlets.TargetingConfigurationServlet**
    >
    >
-   >Om du vill att användare ska ange en plats markerar du kryssrutan **Tvinga plats &#x200B;**.
+   >Om du vill att användare ska ange en plats markerar du kryssrutan **Tvinga plats **.
 
 1. Välj den upplevelse som du vill skapa erbjudandet för.
 1. Skapa erbjudandet:
@@ -399,13 +399,13 @@ Konvertera ett bibliotekserbjudande till ett anpassat erbjudande för att ändra
 
 Målsteget i [målprocessen](/help/sites-authoring/content-targeting-touch.md#the-targeting-process-create-target-and-goals-settings) innebär att mappa målgrupper med de upplevelser du arbetade med i steget Skapa. Målsidan visar vilka målgrupper varje upplevelse riktar sig till. Ni kan ange eller ändra målgruppen för varje upplevelse. Om du använder Adobe Target kan du även skapa A/B-tester som gör att du kan ange en procentandel av trafiken för en viss målgrupp för en viss upplevelse.
 
-### Om du använder AEM målinriktning eller Adobe Target (upplevelseanpassning) ... {#if-you-are-using-aem-targeting-or-adobe-target-experience-targeting}
+### Om du använder AEM för målinriktning eller Adobe Target (målinriktning mot upplevelser) ... {#if-you-are-using-aem-targeting-or-adobe-target-experience-targeting}
 
 Publiken visas till vänster i mappningsdiagrammet, och upplevelserna visas till höger.
 
 ![chlimage_1-28](assets/chlimage_1-28.png)
 
-Definiera en målgrupp med ett segment. Molnkonfigurationen för sidan avgör vilka segment som är tillgängliga för dig. När sidan inte är kopplad till en molnkonfiguration från Adobe Target finns AEM segment tillgängliga för att definiera målgrupper. När sidan är kopplad till en Adobe Target-molnkonfiguration använder du målsegment.
+Definiera en målgrupp med ett segment. Molnkonfigurationen för sidan avgör vilka segment som är tillgängliga för dig. När sidan inte är kopplad till en molnkonfiguration från Adobe Target är AEM-segment tillgängliga för att definiera målgrupper. När sidan är kopplad till en Adobe Target-molnkonfiguration använder du målsegment.
 
 Mer information om målmotorer finns i [Målmotor](/help/sites-authoring/personalization.md#targeting-engine).
 
@@ -415,7 +415,7 @@ Använd inte en publik mer än en upplevelse. En varningssymbol visas bredvid en
 
 ### Associera upplevelser med målgrupper (AEM eller Adobe Target) {#associating-experiences-with-audiences-aem-or-adobe-target}
 
-Använd följande procedur för att associera en upplevelse med en målgrupp när du använder AEM (eller Adobe Target Experience targeting):
+Använd följande procedur för att associera en upplevelse med en målgrupp när du använder AEM-målinriktning (eller Adobe Target Experience targeting):
 
 1. Klicka på listrutepilen bredvid rutan som är kopplad till upplevelsen.
 1. (Valfritt) Klicka på **Redigera** och ange sedan ett nyckelord för att söka efter det önskade segmentet.
@@ -530,11 +530,11 @@ Använd de avancerade inställningarna för att avgöra vad som händer **efter*
  </tbody>
 </table>
 
-Mer information om framgångsmått finns i [Adobe Target-dokumentationen](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=sv-SE).
+Mer information om framgångsmått finns i [Adobe Target-dokumentationen](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html).
 
-### Konfigurera inställningar (AEM) {#configuring-settings-aem-targeting}
+### Konfigurera inställningar (AEM Targeting) {#configuring-settings-aem-targeting}
 
-Så här konfigurerar du inställningar om du använder AEM mål:
+Så här konfigurerar du inställningar om du använder AEM som mål:
 
 1. Om du vill ange när aktiviteten startar använder du den nedrullningsbara menyn **Start** och väljer något av följande värden:
 
@@ -569,13 +569,13 @@ Så här konfigurerar du mål och inställningar för Adobe Target:
 
    ![chlimage_1-33](assets/chlimage_1-33.png)
 
-1. I området **Målmått**, under **Mitt primära mål** väljer du det framgångsmått som du vill spåra – som konvertering, intäkter eller engagemang – och anger hur mätningen görs (eller vilka åtgärder målgruppen vidtar för att ange att ett mål har nåtts). Definitioner av målmått anges i föregående tabell och [Adobe Target-dokumentationen](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=sv-SE) innehåller mer information om framgångsmått.
+1. I området **Målmått**, under **Mitt primära mål** väljer du det framgångsmått som du vill spåra – som konvertering, intäkter eller engagemang – och anger hur mätningen görs (eller vilka åtgärder målgruppen vidtar för att ange att ett mål har nåtts). Definitioner av målmått anges i föregående tabell och [Adobe Target-dokumentationen](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) innehåller mer information om framgångsmått.
 
    Du kan byta namn på målet genom att klicka på de tre punkterna i det övre högra hörnet och välja **Byt namn**.
 
    Om du vill rensa alla fält klickar du på de tre punkterna i det övre högra hörnet och väljer **Rensa alla fält**.
 
-   Alla mätvärden har också avancerade inställningar som du kan definiera. Välj **Avancerade inställningar** för att komma åt dem. Se en definition av hur framgångsmått räknas i föregående tabell och se [Adobe Target-dokumentation](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=sv-SE).
+   Alla mätvärden har också avancerade inställningar som du kan definiera. Välj **Avancerade inställningar** för att komma åt dem. Se en definition av hur framgångsmått räknas i föregående tabell och se [Adobe Target-dokumentation](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html).
 
    >[!NOTE]
    >
@@ -644,7 +644,7 @@ Du kan anpassa Target-komponenten genom att komma åt komponentens alternativ p�
 
    ![Målkomponentmeny](do-not-localize/chlimage_1-8.png)
 
-   AEM visar fönstret Alternativ för målkomponent.
+   AEM visar fönstret för alternativ för målkomponent.
 
    ![chlimage_1-37](assets/chlimage_1-37.png)
 
@@ -691,7 +691,7 @@ Om du väljer Adobe Target som motor:
   </tr>
   <tr>
    <td><strong>Inkludera lösta segment</strong></td>
-   <td><p>Om du markerar den här kryssrutan inkluderas alla lösta segment i mbox-anropet och alla parametrar som har konfigurerats på sidan och i ramverket.</p> <p>Detta fungerar bara i situationer med XML API där du synkroniserar AEM segment. Om du har segment i AEM som inte hanteras av Adobe Target (som skriptsegment) kan du med det här alternativet lösa segmentet i AEM och skicka information till Adobe Target om att segmentet är aktivt.</p> </td>
+   <td><p>Om du markerar den här kryssrutan inkluderas alla lösta segment i mbox-anropet och alla parametrar som har konfigurerats på sidan och i ramverket.</p> <p>Detta fungerar bara i situationer med XML API där du synkroniserar AEM-segment. Om du har segment i AEM som inte hanteras av Adobe Target (som skriptsegment) kan du med det här alternativet lösa segmentet i AEM och skicka information till Adobe Target om att segmentet är aktivt.</p> </td>
   </tr>
   <tr>
    <td><strong>Ärvda kontextparametrar</strong></td>

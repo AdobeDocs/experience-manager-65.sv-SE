@@ -1,5 +1,5 @@
 ---
-title: Kortkommandon för AEM
+title: Kortkommandon för konsoler i AEM
 description: Spara tid när du arbetar med kortkommandon.
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,8 +8,8 @@ content-type: reference
 exl-id: c58981a0-cdde-4593-b633-7f6898f8f5f5
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 0%
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Kortkommandon för konsoler{#keyboard-shortcuts-for-consoles}
 
-Olika kortkommandon finns i hela AEM. Vissa gäller för användning av konsoler, andra för [sidredigering](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
+Det finns olika kortkommandon i hela AEM. Vissa gäller för användning av konsoler, andra för [sidredigering](/help/sites-authoring/page-authoring-keyboard-shortcuts.md).
 
 >[!NOTE]
 >
->De [modifieringstangenter](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM kortkommandon varierar beroende på operativsystem.
+>De [modifieringstangenter](/help/sites-authoring/keyboard-shortcuts.md#os-specific-modifier-keys) som krävs för AEM-kortkommandon varierar beroende på operativsystem.
 
 ## Kortkommandon {#keyboard-shortcuts}
 
@@ -64,25 +64,25 @@ De modifieringstangenter som används för kortkommandon varierar beroende på v
 
 ## Webbläsare och kortkommandon {#browsers-and-keyboard-shortcuts}
 
-AEM undviker vanliga kortkommandon som redan används av vanliga webbläsare, men webbläsarens standardbeteende åsidosätts inte av AEM kortkommandon.
+AEM undviker vanliga genvägar som redan används av vanliga webbläsare, men standardwebbläsarbeteendet åsidosätts inte av AEM genvägar.
 
 Dessutom är kortkommandon samma för alla språk och tangentbordslayouter.
 
 >[!NOTE]
 >
->AEM åsidosätter inte webbläsarens standardbeteende.
+>AEM kortkommandon åsidosätter inte webbläsarens standardbeteende.
 >
->Om det uppstår konflikter mellan AEM och webbläsargenvägar fungerar inte AEM, vilket ger webbläsarfunktionaliteten.
+>Om det uppstår konflikter mellan genvägar i AEM och webbläsare kommer AEM genvägar inte att fungera, vilket resulterar i webbläsarfunktioner.
 
 >[!CAUTION]
 >
 >AEM kortkommandon kan störa skärmläsare, vissa webbläsarfunktioner och andra tillgänglighetsverktyg.
 >
->Adobe rekommenderar [att du inaktiverar AEM kortkommandon](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts) när du använder en skärmläsare.
+>Adobe rekommenderar [att AEM kortkommandon ](/help/sites-authoring/keyboard-shortcuts.md#deactivating-keyboard-shortcuts) inaktiveras när en skärmläsare används.
 
 ## Inaktivera kortkommandon {#deactivating-keyboard-shortcuts}
 
-AEM innehåller kortkommandon för några av de vanligaste funktionerna (redigering, egenskaper, kopiera/klistra in, med olika sidospetsmenyer och så vidare).
+AEM har kortkommandon för några av de vanligaste funktionerna (redigering, egenskaper, kopiera/klistra in, med olika sidorsmenyer osv.).
 
 För användare som inte använder kortkommandon eller har vissa tillgänglighetskrav kan alla kortkommandon inaktiveras.
 

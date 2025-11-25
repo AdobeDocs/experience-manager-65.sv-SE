@@ -1,5 +1,5 @@
 ---
-title: De bästa sätten att använda AEM
+title: De bästa sätten att använda AEM Authoring
 description: Så här använder du AEM på det mest effektiva och effektiva sättet.
 contentOwner: Chris Bohnert
 products: SG_EXPERIENCEMANAGER/6.5/SITES
@@ -8,8 +8,8 @@ content-type: reference
 exl-id: 9994c63b-65ca-4974-a48d-992f5f8f3f01
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 2%
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # Bästa praxis{#best-practices}
 
-De effektivaste sätten att skapa beskriver hur du använder AEM på det mest effektiva och mest effektiva sättet. Den här växande listan med ämnen innehåller en mängd olika områden i AEM.
+De effektivaste sätten att skapa beskriver hur du använder AEM på det mest effektiva och mest effektiva sättet. Den här växande ämneslistan innehåller en rad olika områden i AEM.
 
 Följande områden har dokumentation om bästa praxis:
 
@@ -53,12 +53,12 @@ De effektivaste strategierna för Assets, inklusive Dynamic Media-funktioner och
   <tr>
    <td>Dynamic Imaging</td>
    <td><a href="/help/assets/best-practices-for-optimizing-the-quality-of-your-images.md">Dynamic Imaging bästa praxis</a></td>
-   <td><p>Beskriver hur du kan förbättra skärpan i en bild och det bästa sättet att optimera bildkvaliteten om du använder Dynamic Media eller integrerar med Dynamic Media Classic. </p> </td>
+   <td><p>Beskriver hur du kan göra en bild skarpare för bästa resultat och det bästa sättet att optimera bildkvaliteten om du använder funktionen Dynamic Media eller integrerar med Dynamic Media Classic. </p> </td>
   </tr>
   <tr>
    <td>Flerspråkig Assets</td>
    <td><a href="/help/assets/best-practices-for-translating-assets-efficiently.md">Bästa praxis för översättning</a></td>
-   <td>Beskriver de bästa sätten att effektivt översätta AEM resurser.</td>
+   <td>Beskriver de bästa sätten att effektivt översätta AEM-resurser.</td>
   </tr>
  </tbody>
 </table>

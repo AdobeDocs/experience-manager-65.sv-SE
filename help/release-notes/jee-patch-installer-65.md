@@ -7,8 +7,8 @@ hide: true
 hidefromtoc: true
 solution: Experience Manager
 feature: Release Information
-role: User,Admin,Architect,Developer
-source-git-commit: 10268f617b8a1bb22f1f131cfd88236e7d5beb47
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '552'
 ht-degree: 0%
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->[Kontakta support](https://experienceleague.adobe.com/sv?support-solution=General&support-tab=home#support) om du vill ha mer information eller vill hämta korrigeringen.
+>[Kontakta support](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support) om du vill ha mer information eller vill hämta korrigeringen.
 
 ## Om patch-installationsprogrammet {#about-the-patch-installer}
 
-Installationsprogrammet för AEM 6.5 Forms JEE patch innehåller alla åtgärdade fel för alla komponenter i AEM 6.5 Forms JEE som är tillgängliga till dess att den här korrigeringen släppts. I den senaste [Service Pack-versionsinformationen](release-notes.md) finns en fullständig lista över åtgärdade problem.
+Installationsprogrammet för AEM 6.5 Forms JEE-korrigeringsfiler innehåller alla åtgärdade problem för alla komponenter i AEM 6.5 Forms JEE som är tillgängliga till dess att den här korrigeringsfilen släpps. I den senaste [Service Pack-versionsinformationen](release-notes.md) finns en fullständig lista över åtgärdade problem.
 
 ## Krav för att installera korrigeringen {#prerequisites-to-installing-the-patch}
 
@@ -50,7 +50,7 @@ Navigera till rätt katalog och skriv `./aem65_cfp_install.bin` från en kommand
    Då startas en installationsguide som vägleder dig genom installationen.
 
 1. Klicka på **[!UICONTROL Next]** på introduktionspanelen.
-1. På skärmen **Välj installationsmapp** kontrollerar du att den standardplats som visas är korrekt för den befintliga installationen. Du kan också klicka på **[!UICONTROL Browse]** och välja en alternativ mapp där AEM har installerats. Klicka sedan på **[!UICONTROL Next]**.
+1. På skärmen **Välj installationsmapp** kontrollerar du att den standardplats som visas är korrekt för den befintliga installationen. Du kan också klicka på **[!UICONTROL Browse]** och välja en alternativ mapp där AEM-formulär är installerade. Klicka sedan på **[!UICONTROL Next]**.
 1. Läs Quick Fix Patch Summary-informationen och klicka på **[!UICONTROL Next]**.
 1. Läs informationen om sammanfattning av förinstallation och klicka på **[!UICONTROL Install]**.
 1. När installationen är klar klickar du på **[!UICONTROL Next]** för att tillämpa snabbkorrigeringsuppdateringarna på de installerade filerna.
@@ -58,7 +58,7 @@ Navigera till rätt katalog och skriv `./aem65_cfp_install.bin` från en kommand
 1. **[För endast Windows]:** Gör följande:
    * Avmarkera alternativet **Starta Configuration Manager** innan du klickar på **[!UICONTROL Done]**. Kör **Configuration Manager** med filen **ConfigurationManager.bat** i `[aem-forms root]\configurationManager\bin`.
 
-   * Du kan också avmarkera alternativet **Starta Configuration Manager** innan du klickar på **[!UICONTROL Done]**. Innan du kör **Configuration Manager** med **ConfigurationManager.exe** eller **ConfigurationManager_IPv6.exe** navigerar du till katalogen *`<AEMForms_Install_Dir>\configurationManager\bin`* och ersätter katalogen **ConfigurationManager.lax** och **ConfigurationManager_IPV6.lax** med den senaste [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) och [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) -filer söker du efter och ersätter **axis-1.4.1.1.jar** med **axis-1.4.1.2.jar** i dessa två filer.
+   * Du kan också avmarkera alternativet **Starta Configuration Manager** innan du klickar på **[!UICONTROL Done]**. Innan du kör **Configuration Manager** med **ConfigurationManager.exe** eller **ConfigurationManager_IPv6.exe** navigerar du till katalogen *`<AEMForms_Install_Dir>\configurationManager\bin`* och ersätter katalogen **ConfigurationManager.lax** och **ConfigurationManager_IPV6.lax** med den senaste [ConfigurationManager.lax](/help/assets/ConfigurationManager.lax) och [ConfigurationManager_IPV6.lax](/help/assets/ConfigurationManager_IPv6.lax) -filer, söker och ersätter **axis-1.4.1.1.jar** med **axis-1.4.1.2.jar** i dessa två filer.
 
    >[!NOTE]
    >
@@ -69,14 +69,14 @@ Navigera till rätt katalog och skriv `./aem65_cfp_install.bin` från en kommand
 
    * Kryssrutan **Starta Configuration Manager** är markerad som standard. Klicka på **[!UICONTROL Done]** om du vill köra Configuration Manager direkt eller **Configuration Manager** senare, avmarkera alternativet **Starta Configuration Manager** innan du klickar på **[!UICONTROL Done]**. Du kan starta **Configuration Manager** senare med lämpligt skript i katalogen `[AEM_forms_root]/configurationManager/bin`.
 
-1. Beroende på vilken programserver du använder väljer du något av följande dokument och följer instruktionerna i avsnittet *Konfigurera och distribuera AEM formulär*.
+1. Beroende på vilken programserver du använder väljer du något av följande dokument och följer instruktionerna i avsnittet *Konfigurera och distribuera AEM-formulär*.
 
-   * [Installera och distribuera AEM formulär för JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
-   * [Installera och distribuera AEM formulär för WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
+   * [Installera och distribuera AEM-formulär för JBoss®](https://www.adobe.com/go/learn_aemforms_installJBoss_65)
+   * [Installera och distribuera AEM-formulär för WebSphere®](https://www.adobe.com/go/learn_aemforms_installWebSphere_65)
 
 1. (Endast JBoss®) När du har installerat korrigeringen och konfigurerat servern tar du bort tmp och arbetskataloger för JBoss®-programservern.
 
-## Konfigurationer för Post-driftsättning {#post-deployment-configurations}
+## Konfigurationer efter distributionen {#post-deployment-configurations}
 
 ### SAML-konfigurationer {#saml-configurations}
 
@@ -89,7 +89,7 @@ Om du har konfigurerat SAML-autentisering och har problem med stora IDP-metadata
 
 >[!NOTE]
 >
-> Du bör använda kommandot Ctrl + C för att starta om SDK:n. Om du startar om AEM SDK med alternativa metoder, till exempel genom att stoppa Java-processer, kan det leda till inkonsekvenser i den AEM utvecklingsmiljön.
+> Du bör använda kommandot Ctrl + C för att starta om SDK. Om du startar om AEM SDK med alternativa metoder, till exempel att stoppa Java-processer, kan det leda till inkonsekvenser i AEM utvecklingsmiljö.
 
 ## Påverkade moduler {#impacted-modules}
 
@@ -97,4 +97,4 @@ Om du har konfigurerat SAML-autentisering och har problem med stora IDP-metadata
 * Dokumentsäkerhet
 * Foundation JEE
 
-[Kontakta support](https://experienceleague.adobe.com/sv?support-solution=General&support-tab=home#support)
+[Kontakta support](https://experienceleague.adobe.com/?support-solution=General&support-tab=home#support)

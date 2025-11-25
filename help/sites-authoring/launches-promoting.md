@@ -10,8 +10,8 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: f59f12a2-ecd6-49cf-90ad-621719fe51bf
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Du måste befordra startsidor för att kunna flytta tillbaka innehållet till k�
 
 >[!NOTE]
 >
->När du har befordrat startsidorna till målet (**Produktion**) kan du aktivera **Produktion** -sidorna som en entitet (så att processen går snabbare). Lägg till sidorna i ett arbetsflödespaket och använd det som nyttolast för ett arbetsflöde som aktiverar ett sidpaket. Du måste skapa arbetsflödespaketet innan du befordrar starten. Se [Bearbeta befordrade sidor med AEM &#x200B;](#processing-promoted-pages-using-aem-workflow).
+>När du har befordrat startsidorna till målet (**Produktion**) kan du aktivera **Produktion** -sidorna som en entitet (så att processen går snabbare). Lägg till sidorna i ett arbetsflödespaket och använd det som nyttolast för ett arbetsflöde som aktiverar ett sidpaket. Du måste skapa arbetsflödespaketet innan du befordrar starten. Se [Bearbeta befordrade sidor med AEM Workflow](#processing-promoted-pages-using-aem-workflow).
 
 >[!CAUTION]
 >
@@ -146,7 +146,7 @@ Här kan du välja om du vill befordra hela starten eller bara sidor som faktisk
 
    ![Startar konsolen](assets/chlimage_1-107.png)
 
-## Bearbeta befordrade sidor med AEM arbetsflöde {#processing-promoted-pages-using-aem-workflow}
+## Bearbeta befordrade sidor med AEM Workflow {#processing-promoted-pages-using-aem-workflow}
 
 Använd arbetsflödesmodeller för att utföra massbearbetning av befordrade startsidor:
 

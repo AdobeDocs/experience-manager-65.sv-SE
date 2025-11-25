@@ -9,8 +9,8 @@ docset: aem65
 exl-id: ef1a3997-feb4-4cb0-9396-c8335b69bb10
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 25bf0d64b6839afec0112ea8c9fde0510e56ccf4
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '2965'
 ht-degree: 1%
@@ -122,7 +122,7 @@ Följande konsoler finns i Navigation:
   </tr>
   <tr>
    <td>Screens</td>
-   <td>Med <a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html?lang=sv-SE">Screens</a> kan du hantera alla kundriktade skärmar, oavsett storlek och plats.</td>
+   <td>Med <a href="https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/authoring/setting-up-projects/creating-a-screens-project.html">Screens</a> kan du hantera alla kundriktade skärmar, oavsett storlek och plats.</td>
   </tr>
   <tr>
    <td>Sites</td>
@@ -155,7 +155,7 @@ Rubriken visas alltid längst upp på skärmen. De flesta alternativen i huvudet
 
   Du kan också använda [kortkommandot](/help/sites-authoring/keyboard-shortcuts.md) `/` (snedstreck) för att starta sökningen från en konsol.
 
-* [Lösningar](https://business.adobe.com/se/)
+* [Lösningar](https://business.adobe.com/)
 
   ![Lösningar](do-not-localize/screen_shot_2018-03-23at103552.png)
 
@@ -568,7 +568,7 @@ De här alternativen är tillgängliga via markeringen bredvid fältet **Komment
 
 ### Referenser {#references}
 
-**Referenser** visar anslutningar till den valda resursen. I **Platser**-konsolen [&#128279;](/help/sites-authoring/author-environment-tools.md#showingpagereferences) visar till exempel referenser för sidor:
+**Referenser** visar anslutningar till den valda resursen. I **Platser**-konsolen [ ](/help/sites-authoring/author-environment-tools.md#showingpagereferences) visar till exempel referenser för sidor:
 
 * [Ritningar](/help/sites-administering/msm.md)
 * [Launches](/help/sites-authoring/launches.md#launches-in-references-sites-console)

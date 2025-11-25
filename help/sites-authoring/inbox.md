@@ -4,8 +4,8 @@ description: Hantera dina uppgifter med inkorgen i Adobe Experience Manager 6.5.
 exl-id: 80b7f179-b011-4f90-b5ab-9ef8a669d271
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 6%
@@ -14,11 +14,11 @@ ht-degree: 6%
 
 # Din inkorg{#your-inbox}
 
-Du kan få meddelanden från olika AEM, inklusive arbetsflöden och projekt, t.ex. om:
+Du kan få meddelanden från olika områden i AEM, inklusive arbetsflöden och projekt, t.ex. om:
 
 * Uppgifter:
 
-   * dessa kan också skapas vid olika punkter i AEM, till exempel under **Projekt**,
+   * dessa kan också skapas vid olika tillfällen i AEM-gränssnittet, till exempel under **Projekt**,
    * dessa kan vara produkten av ett **Skapa uppgift**- eller **Skapa projektuppgift**-steg i ett arbetsflöde.
 
 * Arbetsflöden:
@@ -33,7 +33,7 @@ Du får dessa meddelanden i din egen Inkorg där du kan visa dem och vidta åtg�
 
 >[!NOTE]
 >
->AEM levereras förinläst med administrativa uppgifter som tilldelats administratörsanvändargruppen. Mer information finns i [Administrativa åtgärder som inte är tillgängliga](#out-of-the-box-administrative-tasks).
+>Körklar AEM levereras med administrativa uppgifter som tilldelats administratörsanvändargruppen. Mer information finns i [Administrativa åtgärder som inte är tillgängliga](#out-of-the-box-administrative-tasks).
 
 >[!NOTE]
 >
@@ -57,20 +57,20 @@ Från någon av konsolerna visas det aktuella antalet objekt i din inkorg i sidh
 
 ## Administrativa arbetsmoment som inte går att köra  {#out-of-the-box-administrative-tasks}
 
-Färdiga AEM levereras förinläst med fyra uppgifter tilldelade till administratörsanvändargruppen.
+Enkel AEM levereras med fyra uppgifter som tilldelats administratörsanvändargruppen.
 
 * [Konfigurera analys och målanpassning](/help/sites-administering/opt-in.md)
-* [Använd AEM checklista](/help/sites-administering/security-checklist.md)
+* [Använd checklistan för AEM-säkerhet](/help/sites-administering/security-checklist.md)
 * Aktivera insamling av aggregerad användningsstatistik
 * [Konfigurera HTTPS](/help/sites-administering/ssl-by-default.md)
 
 ## Öppna Inkorgen {#opening-the-inbox}
 
-Så här öppnar du AEM inkorg:
+Så här öppnar du AEM inkorg för meddelanden:
 
 1. Klicka på indikatorn i verktygsfältet.
 
-1. Välj **Visa alla**. Inkorgen **AEM** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
+1. Välj **Visa alla**. **AEM Inbox** öppnas. I inkorgen visas objekt från arbetsflöden, projekt och uppgifter.
 1. Standardvyn är [Listvy](#inbox-list-view), men du kan även växla till [Kalendervy](#inbox-calendar-view). Detta görs med vyväljaren (verktygsfält, överst till höger).
 
    För båda vyerna kan du även definiera [visningsinställningar](#inbox-view-settings). Vilka alternativ som är tillgängliga beror på den aktuella vyn.
@@ -131,7 +131,7 @@ För båda vyerna (List och Calendar) kan du definiera inställningar:
 
 Med alternativet Admin Control kan administratörer:
 
-* Anpassa kolumnerna AEM Inkorgen
+* Anpassa AEM Inbox-kolumnerna
 
 * Anpassa rubriktext och logotyp
 
@@ -139,11 +139,11 @@ Med alternativet Admin Control kan administratörer:
 
 Alternativet Admin Control är bara synligt för medlemmarna i gruppen `administrators` eller `workflow-administrators`.
 
-* **Kolumnanpassning**: Anpassa en AEM inkorg om du vill ändra standardtiteln för en kolumn, ändra ordning på en kolumns position och visa ytterligare kolumner baserat på data i ett arbetsflöde.
-   * **Lägg till kolumn**: Markera en kolumn som ska läggas till AEM Inkorgen.
+* **Kolumnanpassning**: Anpassa en AEM Inbox för att ändra standardrubriken för en kolumn, ändra ordning på en kolumns position och visa ytterligare kolumner baserat på data i ett arbetsflöde.
+   * **Lägg till kolumn**: Markera en kolumn som ska läggas till i AEM Inbox.
    * **Redigera kolumn**: Håll musen över kolumnrubriken och välj ikonen ![redigera](assets/edit.svg) för att ange ett kolumnvisningsnamn.
-   * **Ta bort kolumn**: Markera ikonen ![ta bort](assets/delete_updated.svg) om du vill ta bort kolumnen från AEM.
-   * **Flytta kolumn**: Dra ikonen ![move](assets/move_updated.svg) om du vill flytta en kolumn till en ny plats i AEM.
+   * **Ta bort kolumn**: Markera ikonen ![ta bort](assets/delete_updated.svg) om du vill ta bort kolumnen från AEM Inbox.
+   * **Flytta kolumn**: Dra ikonen ![move](assets/move_updated.svg) för att flytta en kolumn till en ny plats i AEM Inbox.
 
   ![admin-control](assets/admin-control-column-customize.png)
 
@@ -270,7 +270,7 @@ För vissa uppgifter kan du skapa ett [projekt](/help/sites-authoring/projects.m
 
 Du kan filtrera objekten i listan:
 
-1. Öppna **AEM Inkorg**.
+1. Öppna **AEM Inbox**.
 
 1. Öppna filterväljaren:
 

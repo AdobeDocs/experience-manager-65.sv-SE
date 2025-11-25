@@ -4,8 +4,8 @@ description: Lär dig publicera innehållssidor i Adobe Experience Manager 6.5.
 exl-id: 61144bbe-6710-4cae-a63e-e708936ff360
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 2a843cefdd881e3cab60b2ddba12a26d0a498d13
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1701'
 ht-degree: 5%
@@ -25,13 +25,13 @@ Du kan även publicera/avpublicera en sida direkt eller vid ett fördefinierat d
 >Vissa termer om publicering kan vara förvirrade:
 >
 >* **Publicera/avpublicera**
->  &#x200B;>  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
+>  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
 >
 >* **Aktivera/inaktivera**
->  &#x200B;>  Dessa termer är synonyma med publicera/avpublicera.
+>  Dessa termer är synonyma med publicera/avpublicera.
 >
 >* **Replikera/replikera**
->  &#x200B;>  Detta är de tekniska termer som beskriver hur data flyttas (till exempel sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan, till exempel när användarkommentarer publiceras eller replikeras om.
+>  Detta är de tekniska termer som beskriver hur data flyttas (till exempel sidinnehåll, filer, kod, användarkommentarer) från en miljö till en annan, till exempel när användarkommentarer publiceras eller replikeras om.
 
 ## Otillräckliga privilegier {#insufficient-privileges}
 
@@ -141,7 +141,7 @@ Så här publicerar eller avpublicerar du en sida med Hantera publikation:
 
    Om du klickar på knappen Lägg till innehåll startas [sökvägsläsaren](/help/sites-authoring/author-environment-tools.md#path-browser) så att innehållet kan markeras.
 
-   Markera önskade sidor och klicka sedan på **Välj** för att lägga till innehållet i guiden eller **Avbryt &#x200B;** för att avbryta valet och återgå till guiden.
+   Markera önskade sidor och klicka sedan på **Välj** för att lägga till innehållet i guiden eller **Avbryt **för att avbryta valet och återgå till guiden.
 
    I guiden kan du markera ett objekt i listan för att konfigurera ytterligare alternativ, till exempel:
 
@@ -272,7 +272,7 @@ Du kan ange en sidas publiceringsstatus:
 
   Publikationsstatusen visas i [kort](/help/sites-authoring/basic-handling.md#card-view)-, [kolumn](/help/sites-authoring/basic-handling.md#column-view)- och [list](/help/sites-authoring/basic-handling.md#list-view)vyerna i Sites-konsolen.
 
-* På tidslinjen [&#128279;](/help/sites-authoring/basic-handling.md#timeline)
+* På tidslinjen [](/help/sites-authoring/basic-handling.md#timeline)
 
   ![screen_shot_2018-03-21at154420](assets/screen_shot_2018-03-21at154420.png)
 

@@ -8,8 +8,8 @@ topic-tags: site-features
 exl-id: 187f3cde-a0db-4c02-9e8b-08272987a67d
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '537'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Layouten på sidan Content Insight ändras så att den passar skärmdimensionern
 
 På Content Insight-sidan finns rapporter som använder Adobe SiteCatalyst-, Adobe Target-, Adobe Social- och BrightEdge-data:
 
-* SiteCatalyst: Det finns rapporter om följande mätvärden:
+* SiteCatalyst: Det finns rapporter om följande mått:
 
    * Sidvyer
    * Genomsnittlig tid på sidan
@@ -37,7 +37,7 @@ På Content Insight-sidan finns rapporter som använder Adobe SiteCatalyst-, Ado
 * Mål: Rapporter om kampanjaktiviteter som din sida innehåller erbjudanden för.
 * BrightEdge: Rapporterar på sidan funktioner som gör sidan mer synlig för sökmotorer och rekommenderar funktioner som bör implementeras.
 
-Gå till [Öppnar Analytics och Recommendations för en sida](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page).
+Se [Öppnar analyser och rekommendationer för en sida](/help/sites-authoring/ci-analyze.md#opening-analytics-and-recommendations-for-a-page).
 
 ## Rapporteringsperiod
 
@@ -94,10 +94,10 @@ För varje kampanj som sidan är aktiv för visas en rapport med namnet *Kampanj
 
 ![chlimage_1-316](assets/chlimage_1-316.png)
 
-## SEO Recommendations Report {#the-seo-recommendations-report}
+## SEO-rekommendationsrapporten {#the-seo-recommendations-report}
 
-SEO Recommendations-rapporten innehåller resultaten av BrightEdge-analysen för sidan. Rapporten är en checklista med sidfunktioner som anger vilka funktioner sidan innehåller och inte innehåller för att maximera sökbarheten med sökmotorer.
+SEO-rekommendationsrapporten innehåller resultaten av BrightEdge-analysen för sidan. Rapporten är en checklista med sidfunktioner som anger vilka funktioner sidan innehåller och inte innehåller för att maximera sökbarheten med sökmotorer.
 
-I rapporten kan du skapa uppgifter så att det görs förbättringar för att förbättra sidans sökbarhet. Recommendations anger att uppgifter har skapats för att implementera rekommendationen. Se [Tilldela uppgifter för SEO Recommendations](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations).
+I rapporten kan du skapa uppgifter så att det görs förbättringar för att förbättra sidans sökbarhet. Rekommendationer indikerar att åtgärder har skapats för att implementera rekommendationen. Se [Tilldela uppgifter för SEO-rekommendationer](/help/sites-authoring/ci-analyze.md#assigning-tasks-for-seo-recommendations).
 
 ![chlimage_1-317](assets/chlimage_1-317.png)

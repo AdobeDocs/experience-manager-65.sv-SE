@@ -4,8 +4,8 @@ description: Med projekt kan du gruppera resurser i en enhet vars gemensamma, de
 exl-id: 632c0608-2ab8-4a5b-8251-cd747535449b
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Projects
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 # Projekt {#projects}
 
-Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas för Plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor.](#project-tiles)
+Med projekt kan du gruppera resurser i en enhet. En gemensam, delad miljö gör det enkelt att hantera projekt. De typer av resurser som du kan associera med ett projekt kallas plattor i AEM. Rutorna kan innehålla projekt- och teaminformation, resurser, arbetsflöden och andra typer av information, vilket beskrivs i detalj i [Projektrutor.](#project-tiles)
 
 Som användare kan du:
 
@@ -25,7 +25,7 @@ Som användare kan du:
 
 ## Åtkomstkrav {#access-requirements}
 
-Projicerar en AEM och kräver ingen ytterligare konfiguration.
+Projicerar en standardfunktion i AEM och kräver ingen ytterligare konfiguration.
 
 För användare i projekt som vill se andra användare/grupper medan de använder projekt, till exempel när de skapar projekt, skapar uppgifter/arbetsflöden eller visar och hanterar teamet, måste dessa användare ha läsåtkomst på `/home/users` och `/home/groups`.
 
@@ -33,7 +33,7 @@ Det enklaste sättet att göra detta är att ge gruppen **projects-users** läs�
 
 ## Projektkonsol {#projects-console}
 
-Projektkonsolen är den plats där du får åtkomst till och hanterar dina projekt i AEM.
+Projektkonsolen är där du kommer åt och hanterar dina projekt i AEM.
 
 ![Projektkonsolen](assets/screen-shot_2019-03-05at125110.png)
 
@@ -196,12 +196,12 @@ Med uppgifter kan du övervaka status för projektrelaterade uppgifter, inklusiv
 
 ## Projektmallar {#project-templates}
 
-Mallar är grunden för ditt projekt. AEM innehåller dessa standardprojektmallar.
+Mallar är grunden för ditt projekt. AEM tillhandahåller dessa standardprojektmallar.
 
 * **Medieprojekt** - Detta är ett referensexempelprojekt för medierelaterade aktiviteter. Den innehåller flera medierelaterade projektroller och innehåller även arbetsflöden för medieinnehåll.
 * **[Produktfotoprojekt](/help/sites-authoring/managing-product-information.md)** - Detta är ett referensexempel för hantering av produktfotografi i eCommerce.
 * **[Översättningsprojekt](/help/sites-administering/translation.md)** - Detta är ett referensexempel för hantering av översättningsrelaterade aktiviteter. Det innehåller grundläggande roller och arbetsflöden för hantering av översättning.
-* **Enkelt projekt** - Detta är ett referensexempel för projekt som inte passar in i andra kategorier. Det innehåller tre grundläggande roller och fyra allmänna AEM arbetsflöden.
+* **Enkelt projekt** - Detta är ett referensexempel för projekt som inte passar in i andra kategorier. Det innehåller tre grundläggande roller och fyra allmänna AEM-arbetsflöden.
 
 Beroende på vilken mall du väljer kan du välja mellan olika alternativ i projektet, t.ex. användarroller och arbetsflöden.
 
@@ -228,7 +228,7 @@ När du skapar projektet och lägger till användare till de olika rollerna skap
 
 Ett projekt med namnet Myproject skulle till exempel ha tre grupper, **MyProject Owners**, **MyProject Editors**, **MyProject Observers**.
 
-Om projektet tas bort tas dessa grupper endast bort om du väljer lämpligt alternativ [&#x200B; när du tar bort projektet.](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project) En administratör kan även ta bort grupper manuellt i **Verktyg** > **Dokumentskydd** > **Grupper**.
+Om projektet tas bort tas dessa grupper endast bort om du väljer lämpligt alternativ [ när du tar bort projektet.](/help/sites-authoring/touch-ui-managing-projects.md#deleting-a-project) En administratör kan även ta bort grupper manuellt i **Verktyg** > **Dokumentskydd** > **Grupper**.
 
 ## Ytterligare resurser {#additional-resources}
 
@@ -237,4 +237,4 @@ Mer information om hur du använder projekt finns i följande ytterligare dokume
 * [Hantera projekt](/help/sites-authoring/touch-ui-managing-projects.md)
 * [Arbeta med uppgifter](/help/sites-authoring/task-content.md)
 * [Arbeta med projektarbetsflöden](/help/sites-authoring/projects-with-workflows.md)
-* [Kreativt projekt- och PIM-integrering](/help/sites-authoring/managing-product-information.md)
+* [Integrering av Creative Project och PIM](/help/sites-authoring/managing-product-information.md)

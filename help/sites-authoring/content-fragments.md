@@ -9,8 +9,8 @@ docset: aem65
 exl-id: d5dad844-80ca-4ace-a082-38d892d9ffe2
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Content Fragments
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1138'
 ht-degree: 2%
@@ -23,7 +23,7 @@ Innehållsfragment i Adobe Experience Manager (AEM) [skapas och hanteras som sid
 
 Med dem kan du skapa kanalneutralt innehåll tillsammans med (eventuellt kanalspecifika) variationer. Du kan sedan använda dessa fragment och deras variationer när du redigerar innehållssidorna.
 
-Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfragment även användas för att leverera AEM innehåll via Content Services till andra kanaler än AEM.
+Tillsammans med den uppdaterade JSON-exporteraren kan strukturerade innehållsfragment även användas för att leverera AEM-innehåll via Content Services till andra kanaler än AEM-sidor.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ Innehållsfragmenten aktiverar:
 
 * **Kopiera författare**
 
-   * Skriv i AEM innehållsfragmentredigerare.
+   * Skriv i AEM Content Frment Editor.
    * Kan skapa innehållsvariationer.
    * Kan associera relevant innehåll med innehållsfragmentet.
    * Kan använda versionshantering/arbetsflöde.
@@ -59,7 +59,7 @@ Innehållsfragmenten aktiverar:
 
 * **Producenter och reseansvariga**
 
-   * Välj bland fördefinierade fragment och variationer med AEM.
+   * Välj bland fördefinierade fragment och variationer med redigering i AEM.
    * Kan förlita sig på att fragment och tillhörande innehåll alltid är uppdaterade när kopieringsförfattare och kreatörer uppdaterar centralt hanterade fragment och resurser.
    * Kan lita på att tillhörande medieinnehåll kurateras för relevans.
    * Kan skapa tillfälliga innehållsvariationer direkt samtidigt som dessa variationer förblir centralt hanterade i fragmentet.

@@ -9,8 +9,8 @@ docset: aem65
 exl-id: a7e16555-9bbe-4da2-817c-4495a0193f3f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1540'
 ht-degree: 4%
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 # Snabbguide till framtagning av sidor{#quick-guide-to-authoring-pages}
 
-De här procedurerna är avsedda som en snabbguide (på hög nivå) till de viktigaste åtgärderna för att skapa sidinnehåll i AEM.
+Dessa procedurer är avsedda som en snabbguide (på hög nivå) till de viktigaste åtgärderna vid framtagning av sidinnehåll i AEM.
 
 De ska:
 
@@ -126,7 +126,7 @@ Hur du väljer en sida beror på vilken vy du använder i konsolen:
 
 [Snabbåtgärder](/help/sites-authoring/basic-handling.md#quick-actions) är tillgängliga:
 
-1. [Navigera till sidan &#x200B;](#finding-your-page) som du vill vidta åtgärder på.
+1. [Navigera till sidan ](#finding-your-page) som du vill vidta åtgärder på.
 1. Håll muspekaren över kortet som representerar den resurs du behöver. Snabbåtgärderna visas:
 
    ![screen_shot_2018-03-21at160503-1](assets/screen_shot_2018-03-21at160503-1.png)
@@ -230,17 +230,17 @@ Det finns två huvudmetoder för att [publicera sidan](/help/sites-authoring/pub
 * Från konsolen **Platser**:
 
    1. [Navigera till sidan](#finding-your-page) som du vill publicera.
-   1. Välj ikonen **Snabb Publish** på något av följande sätt:
+   1. Välj ikonen **Snabbpublicering** på något av följande sätt:
 
       * [Snabbåtgärder (endast kortvyn/skrivbordet)](#quick-actions-card-view-desktop-only) för lämplig resurs.
-      * Verktygsfältet när [sidan har valts](#selectiingyourpageforfurtheraction) (ger även åtkomst till [Publish SENARE](/help/sites-authoring/publishing-pages.md#main-pars-title-12)).
+      * Verktygsfältet när [sidan har valts](#selectiingyourpageforfurtheraction) (ger även åtkomst till [Publicera senare](/help/sites-authoring/publishing-pages.md#main-pars-title-12)).
 
   ![screen_shot_2018-03-21at160957](assets/screen_shot_2018-03-21at160957.png)
 
 * När du [redigerar sidan](#editing-your-page-content):
 
    1. Öppna menyn **Sidinformation**.
-   1. Välj **Publish Page**.
+   1. Välj **Publicera sida**.
 
   ![screen_shot_2018-03-21at161026](assets/screen_shot_2018-03-21at161026.png)
 

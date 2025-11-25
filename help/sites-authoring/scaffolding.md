@@ -8,8 +8,8 @@ topic-tags: site-features
 exl-id: e3488c9d-035f-4165-ad32-21103ec7e581
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '151'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Ställning{#scaffolding}
 
-Ibland kan du behöva skapa en stor uppsättning sidor som har samma struktur men olika innehåll. Genom det AEM standardgränssnittet skulle du behöva skapa varje sida, dra lämpliga komponenter till sidan och fylla i varje sida separat.
+Ibland kan du behöva skapa en stor uppsättning sidor som har samma struktur men olika innehåll. Med AEM standardgränssnitt måste du skapa varje sida, dra de relevanta komponenterna till sidan och fylla i varje sida separat.
 
 Med hjälp av ställningar kan du skapa ett formulär (en struktur) med fält som motsvarar den struktur du vill ha för sidorna och sedan använda det här formuläret för att enkelt skapa sidor som baseras på den strukturen.
 

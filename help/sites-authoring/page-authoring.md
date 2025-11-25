@@ -4,8 +4,8 @@ description: Vilka uppgifter som ska utföras när en innehållssida redigeras i
 exl-id: 07528cf0-e67a-46b5-a3b2-d1b74ad2228f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '317'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Redigeringssidor{#authoring-pages}
 
-Här följer två typer av översiktstyper för att skapa med AEM:
+Här följer två typer av översikt som du kan använda för att skapa med AEM:
 
 * [Första steget för författare](/help/sites-authoring/first-steps.md) - en introduktion för nya författare
 
@@ -50,4 +50,4 @@ Både en enkel eller en långsam dubbelklickning visar rätt verktygsfält (en f
 Detta ger ett styckesystem där du kan placera komponenter i ett responsivt rutnät.
 
 * **Sök medan du skriver**
-I vissa scenarier (t.ex. sökvägsval i redigeringsdialogrutor) visas dynamiska matchningar när du skriver frågan när du söker efter innehåll via AEM.
+I vissa scenarier (t.ex. sökvägsval i redigeringsdialogrutor) visas dynamiska matchningar när du skriver frågan när du söker efter innehåll via AEM-gränssnittet.

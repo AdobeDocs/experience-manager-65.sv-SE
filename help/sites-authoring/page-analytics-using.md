@@ -10,10 +10,10 @@ legacypath: /content/help/en/experience-manager/6-4/help/sites-authoring/pa-usin
 exl-id: 2e406512-47fb-451d-b837-0a3898ae1f08
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -80,14 +80,14 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites-konsolen för att ytterligare undersöka hur effektiva sidorna är.
 
 1. I webbplatskonsolen väljer du den sida som du vill se innehållsinsikter för.
-1. Klicka på ikonen Analytics (Analyser) och Recommendations () i verktygsfältet.
+1. Klicka på ikonen Analytics (Analyser och rekommendationer) i verktygsfältet.
 
-   ![Analyser och Recommendations-ikon](do-not-localize/chlimage_1-14.png)
+   ![Ikon för analyser och rekommendationer](do-not-localize/chlimage_1-14.png)
 
-## Synliga analyser från sidredigeraren (Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
+## Analyser visas från sidredigeraren (Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
 
 >[!CAUTION]
 >
 >På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM.
 >
->Plugin-programmet [ActivityMap som tillhandahålls av Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=sv-SE) bör nu användas.
+>Plugin-programmet [ActivityMap som tillhandahålls av Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html) bör nu användas.

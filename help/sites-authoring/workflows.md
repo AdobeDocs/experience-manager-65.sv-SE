@@ -8,8 +8,8 @@ topic-tags: site-features
 exl-id: 7383d590-c6b7-440a-a33d-196dce9736ef
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Workflow
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Arbeta med arbetsflöden{#working-with-workflows}
 
-AEM arbetsflöden gör att du kan automatisera en serie steg som utförs på (en eller flera) sidor och/eller resurser.
+Med AEM Workflows kan du automatisera en serie steg som utförs på (en eller flera) sidor och/eller resurser.
 
 Vid publicering måste till exempel en redigerare granska innehållet innan en webbplatsadministratör aktiverar sidan. Ett arbetsflöde som automatiserar det här exemplet meddelar varje deltagare när det är dags att utföra det arbete de behöver:
 

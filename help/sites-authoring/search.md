@@ -9,8 +9,8 @@ docset: aem65
 exl-id: dd65b308-c449-4f64-9f46-0797b922910f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 5%
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 # Sök{#searching}
 
-I författarmiljön i AEM finns olika sätt att söka efter innehåll, beroende på resurstypen.
+I AEM redigeringsmiljö finns olika metoder för att söka efter innehåll, beroende på resurstypen.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Så här söker och filtrerar du resurser:
    * Sparade sökningar
    * Sökkatalog
    * Taggar
-   * Sökvillkor, till exempel Ändrade datum, Publish-status, LiveCopy-status.
+   * Sökvillkor, till exempel Ändrade datum, Publiceringsstatus, LiveCopy-status.
 
    >[!NOTE]
    >

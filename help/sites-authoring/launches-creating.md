@@ -9,10 +9,10 @@ legacypath: /content/docs/en/aem/6-0/author/site-page-features/launches
 exl-id: bc7897da-15f6-4de4-a9fd-9dd84e6c7eed
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Launches
-role: User,Admin,Architect,Developer
-source-git-commit: 82597d52ed774f08ce7136d271148e720b56fcf1
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1096'
 ht-degree: 12%
 
 ---
@@ -69,7 +69,7 @@ Du kan skapa en start från Sites- eller Launches-konsolen:
    >
    >Om en webbplats innehåller språkrötter under den översta nivån måste sidorna och grenarna för en start ligga under en gemensam språkrot.
    >
-   >Om du försöker skapa en start med en överordnad eller underordnad sida i källsökvägen misslyckas den och returnerar felet&quot;Målet finns redan vid :path till sidan&quot;.
+   >Om du försöker skapa en start med en överordnad eller underordnad sida i källsökvägen misslyckas den och returnerar felet&quot;Målet finns redan på :path till sidan.&quot;
 
 1. För varje tävlingsbidrag kan du ange om du vill:
 

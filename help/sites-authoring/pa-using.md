@@ -8,10 +8,10 @@ topic-tags: site-features
 exl-id: 554b10c2-6157-4821-a6a7-f2fb6666cdff
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Integration
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
@@ -77,11 +77,11 @@ Medlemmar i användargruppen analytics-administrators kan konfigurera konsolen S
 Öppna [Content Insight](/help/sites-authoring/content-insights.md) från Sites-konsolen för att ytterligare undersöka hur effektiva sidorna är.
 
 1. I webbplatskonsolen väljer du den sida som du vill se innehållsinsikter för.
-1. Klicka på ikonen Analytics (Analyser) och Recommendations () i verktygsfältet.
+1. Klicka på ikonen Analytics (Analyser och rekommendationer) i verktygsfältet.
 
-   ![Analyser och Recommendations-ikon](do-not-localize/chlimage_1-16a.png)
+   ![Ikon för analyser och rekommendationer](do-not-localize/chlimage_1-16a.png)
 
-## Synliga analyser från sidredigeraren (Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
+## Analyser visas från sidredigeraren (Activity Map) {#analytics-visible-from-the-page-editor-activity-map}
 
 >[!NOTE]
 >
@@ -97,7 +97,7 @@ När din webbplats har [konfigurerats för Adobe Analytics](/help/sites-administ
 
 ### Åtkomst till Activity Map {#accessing-the-activity-map}
 
-När du har valt läget [Activity Map](/help/sites-authoring/author-environment-tools.md#page-modes) ombeds du ange dina Adobe Analytics-autentiseringsuppgifter.
+När du har valt läget [Activity Map](/help/sites-authoring/author-environment-tools.md#page-modes) ombeds du ange dina inloggningsuppgifter för Adobe Analytics.
 
 ![aa-03](assets/aa-03.png)
 
@@ -105,7 +105,7 @@ Det flytande verktygsfältet **Analytics** visas. Här kan du:
 
 * ändra verktygsfältets format med hjälp av dubbelpilarna (**>>**)
 * Växla sidinformation (ögonikon)
-* Konfigurera inställningar för Activity Map (cog-ikon)
+* Konfigurera Activity Map-inställningar (kodningsikonen)
 * Välj den analys som ska visas (olika nedrullningsbara väljare)
 * Avsluta Activity Map och stäng verktygsfältet (x)
 

@@ -8,8 +8,8 @@ content-type: reference
 exl-id: de1ae7e3-db3a-4b5e-8a4f-ae111227181f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 0%
@@ -85,7 +85,7 @@ I anteckningsläget kan du skapa, redigera, flytta eller ta bort anteckningar i 
 
      Markören ändras till en korstråd när du skapar en skiss. Du kan rita flera distinkta linjer. Skisslinjen återspeglar anteckningsfärgen och kan vara en pil, cirkel eller oval.
 
-     ![Sketch](do-not-localize/screen_shot_2018-03-22at110640.png)
+     ![Skiss](do-not-localize/screen_shot_2018-03-22at110640.png)
 
    * Välj/ändra färg:
 

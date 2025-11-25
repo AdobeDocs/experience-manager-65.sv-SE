@@ -9,10 +9,10 @@ docset: aem65
 exl-id: 363b8fab-6ce7-4338-8478-3f25f2a1f117
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
-source-wordcount: '4825'
+source-wordcount: '4832'
 ht-degree: 7%
 
 ---
@@ -56,7 +56,7 @@ Följande punkter är viktiga att tänka på innan du börjar:
 
 * Att skapa en mall kräver samarbete. Därför anges [rollen](#roles) för varje uppgift.
 
-* Beroende på hur din instans är konfigurerad innehåller AEM nu [två grundläggande typer av mall](/help/sites-authoring/templates.md#editable-and-static-templates). Det här påverkar inte hur du [använder en mall för att skapa en sida](#using-a-template-to-create-a-page), men det påverkar malltypen som du kan skapa och hur en sida relaterar till dess mall.
+* Beroende på hur din instans är konfigurerad tillhandahåller AEM nu [två grundläggande typer av mall](/help/sites-authoring/templates.md#editable-and-static-templates). Det här påverkar inte hur du [använder en mall för att skapa en sida](#using-a-template-to-create-a-page), men det påverkar malltypen som du kan skapa och hur en sida relaterar till dess mall.
 
 ### Roller {#roles}
 
@@ -105,7 +105,7 @@ AEM har nu två grundläggande typer av mallar:
 
 * Statiska mallar
 
-   * Statiska mallar har varit tillgängliga för flera versioner av AEM.
+   * Statiska mallar har funnits för flera versioner av AEM.
    * De [tillhandahålls av dina utvecklare](/help/sites-developing/page-templates-static.md), så de kan inte skapas eller redigeras av författare.
    * Kopieras för att skapa den nya sidan, men det finns ingen dynamisk anslutning efter detta (även om mallnamnet är registrerat för information).
    * Använd [designläge](/help/sites-authoring/default-components-designmode.md) om du vill behålla designegenskaper.
@@ -138,7 +138,7 @@ När du skapar en redigerbar mall:
 
 * [Aktivera mallen](#enablingatemplateauthor) för användning när du skapar en sida
 * [Tillåt mallen](#allowing-a-template-author) för den begärda sidan eller grenen på din webbplats
-* [Publish mallen](#publishingatemplateauthor) för att göra den tillgänglig i publiceringsmiljön
+* [Publicera mallen](#publishingatemplateauthor) för att göra den tillgänglig i publiceringsmiljön
 
 >[!NOTE]
 >
@@ -146,7 +146,7 @@ När du skapar en redigerbar mall:
 
 >[!CAUTION]
 >
->Ange aldrig någon information som behöver [internationaliseras](/help/sites-developing/i18n.md) i en mall. För internalisering rekommenderas [lokaliseringsfunktionerna för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=sv-SE).
+>Ange aldrig någon information som behöver [internationaliseras](/help/sites-developing/i18n.md) i en mall. För internalisering rekommenderas [lokaliseringsfunktionerna för kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
 
 ### Skapa en mallmapp - administratör {#creating-a-template-folder-admin}
 
@@ -158,7 +158,7 @@ Du bör skapa en mallmapp för ditt projekt för dina projektspecifika mallar. D
 
    >[!NOTE]
    >
-   >I en AEM finns mappen **global** redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen.
+   >I en standardinstans av AEM finns mappen **global** redan i mallkonsolen. Detta innehåller standardmallar och fungerar som reserv om inga principer och/eller malltyper hittas i den aktuella mappen.
    >
    >
    >Vi rekommenderar att du använder en [mallmapp som skapats för ditt projekt](/help/sites-developing/page-templates-editable.md#template-folders).
@@ -211,7 +211,7 @@ Så här visar och/eller redigerar du egenskaperna:
 >
 >Mallar är kraftfulla verktyg som effektiviserar arbetsflödet för att skapa sidor. Alltför många mallar kan överbelasta författarna och göra det förvirrande att skapa sidor. En bra tumregel är att hålla antalet mallar under 100.
 >
->Adobe rekommenderar inte att ha fler än 1 000 mallar på grund av potentiella prestandaeffekter.
+>Adobe rekommenderar inte att man har fler än 1 000 mallar på grund av potentiella prestandaeffekter.
 
 >[!NOTE]
 >
@@ -290,10 +290,10 @@ En mall kan göras tillgänglig eller otillgänglig för vissa sidgrenar.
 När det refereras till mallen när en sida återges måste den fullständigt konfigurerade mallen publiceras så att den är tillgänglig i publiceringsmiljön.
 
 1. Välj mallen i **Mallkonsolen**.
-1. Välj **Publish** i verktygsfältet för att öppna guiden.
+1. Välj **Publicera** i verktygsfältet för att öppna guiden.
 1. Markera de **innehållsprinciper** som ska publiceras tillsammans.
 
-1. Välj **Publish** i verktygsfältet för att slutföra åtgärden.
+1. Välj **Publicera** i verktygsfältet för att slutföra åtgärden.
 
 ## Redigera mallar - mallskapare {#editing-templates-template-authors}
 
@@ -486,11 +486,11 @@ I **strukturläge** i mallredigeraren:
 
   >[!CAUTION]
   >
-  >Observera att AEM beskärningsproportioner definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av bakåtkompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **namnet** tydligt eftersom det är det som visas i användargränssnittet.
+  >Observera att beskärningsproportionerna i AEM definieras som **höjd/bredd**. Detta skiljer sig från den vanliga definitionen av bredd/höjd och görs av bakåtkompatibilitetsskäl. Sidredigeringsanvändarna kommer inte att vara medvetna om några skillnader förutsatt att du definierar **namnet** tydligt eftersom det är det som visas i användargränssnittet.
 
   >[!NOTE]
   >
-  >[Innehållsprinciper för komponenter som implementerar textredigeraren](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638) kan bara definieras för alternativ som är tillgängliga för textredigeraren via dess gränssnittsinställningar. [&#128279;](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [&#128279;](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
+  >[Innehållsprinciper för komponenter som implementerar textredigeraren](/help/sites-administering/rich-text-editor.md#main-pars-header-206036638) kan bara definieras för alternativ som är tillgängliga för textredigeraren via dess gränssnittsinställningar. [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638) [](/help/sites-administering/rich-text-editor.md#main-pars_header_206036638)
 
 * **Princip och egenskaper (layoutbehållare)**
 
@@ -530,7 +530,7 @@ I **strukturläge** i mallredigeraren:
 
   *Standardkomponenter*
 
-  På fliken **Standardkomponenter** definierar du vilka komponenter som automatiskt kopplas till de angivna medietyperna så att AEM vet vilken komponent som ska associeras när en författare drar en resurs från resursläsaren. Observera att endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
+  På fliken **Standardkomponenter** definierar du vilka komponenter som automatiskt associeras med de angivna medietyperna så att AEM vet vilken komponent som ska associeras när en författare drar en resurs från resursläsaren. Observera att endast komponenter med släppzoner är tillgängliga för sådan konfiguration.
 
   Klicka på **Lägg till mappning** för att lägga till en helt ny komponent och MIME-typmappning.
 
@@ -582,7 +582,7 @@ I **strukturläge** i mallredigeraren:
 
 >[!NOTE]
 >
->**Inledande innehåll** kan användas för redigeringsläge för sidor som skapas med den mallen. Profiler definieras därför inte i **Inledande innehåll** utan i [**Struktur** &#x200B;](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) .
+>**Inledande innehåll** kan användas för redigeringsläge för sidor som skapas med den mallen. Profiler definieras därför inte i **Inledande innehåll** utan i [**Struktur** ](/help/sites-authoring/templates.md#editing-a-template-structure-template-author) .
 
 * Olåsta komponenter som är tillgängliga för redigering markeras. När de är markerade har de en blå kantlinje:
 
@@ -604,7 +604,7 @@ I **strukturläge** i mallredigeraren:
 >
 >Ursprungligt innehåll är avsett för att förbereda komponenter och den sidlayout som fungerar som en startpunkt för att skapa innehållet. Det är inte avsett att vara det faktiska innehåll som skulle förbli som det är. Därför går det inte att översätta det ursprungliga innehållet.
 >
->Om du behöver inkludera översättningsbar text i mallen, t.ex. i sidhuvuden eller sidfötter, kan du använda [lokaliseringsfunktionerna i kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html?lang=sv-SE).
+>Om du behöver inkludera översättningsbar text i mallen, t.ex. i sidhuvuden eller sidfötter, kan du använda [lokaliseringsfunktionerna i kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/get-started/localization.html).
 
 ### Redigera en mall - Layout - mallskapare {#editing-a-template-layout-template-author}
 
@@ -735,4 +735,4 @@ När du skapar mallar bör du tänka på följande:
    >AEM ger uttryckliga varningar när komponenternas låsstatus ändras i mallar som inte längre är utkast.
 
 1. [Skapar egna mappar](#creatingatemplatefolderdeveloper) för dina platsspecifika mallar.
-1. [Publish dina mallar](#publishingatemplateauthor) från konsolen **Mallar**.
+1. [Publicera dina mallar](#publishingatemplateauthor) från konsolen **Mallar**.

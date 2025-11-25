@@ -1,6 +1,6 @@
 ---
 title: Arbeta med riktat innehåll på flera webbplatser
-description: Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni dra nytta av AEM inbyggda stöd för flera webbplatser för riktat innehåll
+description: Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM inbyggda stöd för flera webbplatser för riktat innehåll
 contentOwner: Guillaume Carlino
 products: SG_EXPERIENCEMANAGER/6.5/SITES
 content-type: reference
@@ -8,8 +8,8 @@ topic-tags: personalization
 exl-id: 5e345ffd-4e9c-467f-8ebb-c798eeb61dea
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization,Multi Site Manager
-role: User,Admin,Architect,Developer
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '2838'
 ht-degree: 5%
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 # Arbeta med riktat innehåll på flera webbplatser{#working-with-targeted-content-in-multisites}
 
-Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni dra nytta av AEM inbyggda stöd för flera webbplatser för riktat innehåll.
+Om ni behöver hantera riktat innehåll, till exempel aktiviteter, upplevelser och erbjudanden mellan era webbplatser, kan ni utnyttja AEM inbyggda stöd för flera webbplatser för riktat innehåll.
 
 >[!NOTE]
 >
@@ -143,7 +143,7 @@ I följande diagram finns fyra platser där två delar huvudområdet (och alla a
 
 ![chlimage_1-276](assets/chlimage_1-276.png)
 
-För att uppnå detta i AEM gör du följande:
+Så här gör du i AEM:
 
 * Plats A länkar till mallområdet - inget område behöver skapas. Mallområde är markerat som standard i AEM. Delningsaktiviteter för webbplats A och B osv.
 * Plats B länkar till mallområdet - inget område behöver skapas. Mallområde är markerat som standard i AEM. Delningsaktiviteter för webbplats A och B osv.
@@ -169,7 +169,7 @@ Så här skapar du ett område:
 1. Ange ett namn för det nya området i fältet **Titel**. Du kan också välja taggar.
 1. Klicka på **Skapa**.
 
-   AEM omdirigeras till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt i varumärkeskonsolen.
+   AEM dirigerar om till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt i varumärkeskonsolen.
 
    ![chlimage_1-278](assets/chlimage_1-278.png)
 
@@ -204,7 +204,7 @@ Så här skapar du ett område som en livecopy:
 
 1. Klicka på **Skapa**.
 
-   AEM omdirigeras till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt från varumärkesfönstret.
+   AEM dirigerar om till varumärkesfönstret, där alla områden som skapas listas. Om det finns ett annat område förutom mallområdet kan du skapa områden direkt från varumärkesfönstret.
 
    ![chlimage_1-282](assets/chlimage_1-282.png)
 

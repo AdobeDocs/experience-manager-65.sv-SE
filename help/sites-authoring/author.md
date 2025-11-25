@@ -4,8 +4,8 @@ description: Begrepp som redigering och publicering i Adobe Experience Manager 6
 exl-id: dcda537a-1bb2-4ce3-9904-40d158b47556
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '547'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 AEM har två miljöer:
 
 * Författare
-* Publish
+* Publicera
 
 Dessa interagerar så att ni kan göra innehåll tillgängligt på er webbplats så att besökarna kan läsa det.
 
@@ -30,7 +30,7 @@ I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska inne
 
 ![Översikt över miljöer](assets/chlimage_1-132.png)
 
-I redigeringsmiljön är AEM funktionalitet tillgänglig via två gränssnitt. I publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
+I författarmiljön görs AEM-funktionerna tillgängliga via två användargränssnitt. I publiceringsmiljön utformar du hela det gränssnitt som är tillgängligt för användarna.
 
 ### Författarmiljö {#author-environment}
 
@@ -60,19 +60,19 @@ Det finns även administrativa uppgifter som hjälper dig att hantera ditt inneh
 >
 >AEM [administreras](/help/sites-administering/home.md) (för de flesta uppgifter) från författarmiljön.
 
-#### Publish Environment {#publish-environment}
+#### Publiceringsmiljö {#publish-environment}
 
-När AEM är klar publiceras webbplatsens innehåll i **publiceringsmiljön**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
+När det är klart publiceras AEM-webbplatsens innehåll i **publiceringsmiljön**. Här blir webbplatsens sidor tillgängliga för den avsedda publiken i enlighet med det gränssnitt som har utformats.
 
 Normalt ligger publiceringsmiljön innanför den demilitariserade zonen, dvs. är tillgänglig via Internet, men inte längre under det interna nätverkets fulla skydd.
 
-När den AEM webbplatsen är en [communitywebbplats](/help/communities/overview.md), eller innehåller [communitykomponenter](/help/communities/author-communities.md), kan besökare på den inloggade webbplatsen (medlemmar) interagera med communityfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan beviljas tillstånd att utföra aktiviteter som normalt bara är begränsade till författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
+När AEM webbplats är en [communitywebbplats](/help/communities/overview.md), eller innehåller [communitykomponenter](/help/communities/author-communities.md), kan besökare på den inloggade webbplatsen (medlemmar) interagera med communityfunktioner. De kan till exempel publicera på ett forum, publicera en kommentar eller följa andra medlemmar. Medlemmar kan beviljas tillstånd att utföra aktiviteter som normalt bara är begränsade till författarmiljön, t.ex. skapa nya sidor (communitygrupper), bloggartiklar och moderata inlägg från andra medlemmar.
 
 >[!NOTE]
 >
 >Tyvärr förekommer ibland en överlappning i den terminologi som används. Detta kan inträffa med:
 >
->* **Publish/Avpublicera**
+>* **Publicera/avpublicera**
 >  Detta är de primära villkoren för de åtgärder som gör innehållet tillgängligt för allmänheten i publiceringsmiljön (eller inte).
 >
 >* **Aktivera/inaktivera**
@@ -84,4 +84,4 @@ När den AEM webbplatsen är en [communitywebbplats](/help/communities/overview.
 
 #### Dispatcher {#dispatcher}
 
-**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE)** implementerar belastningsutjämning och cachning för att optimera prestanda för besökare på din webbplats.
+**[Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)** implementerar belastningsutjämning och cachning för att optimera prestanda för besökare på din webbplats.

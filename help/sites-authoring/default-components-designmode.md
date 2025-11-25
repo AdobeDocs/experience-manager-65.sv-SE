@@ -4,8 +4,8 @@ description: Konfigurera Adobe Experience Manager-komponenter i designläge.
 exl-id: 5e232886-75c1-4f0f-b359-4739ae035fd3
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '905'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Konfigurera standardkomponenter i designläge{#configuring-components-in-design-mode}
 
-När AEM är installerad i körklart läge är ett urval av komponenter omedelbart tillgängliga i komponentwebbläsaren.
+När AEM-instansen är installerad i en körklar version är ett urval av komponenter omedelbart tillgängliga i komponentwebbläsaren.
 
 Förutom dessa finns även andra komponenter tillgängliga. Du kan använda designläget för att [aktivera/inaktivera sådana komponenter](#enable-disable-components). När det är aktiverat och finns på sidan kan du sedan använda designläget för att [konfigurera komponentens design](#configuring-the-design-of-a-component) genom att redigera attributparametrarna.
 
@@ -43,7 +43,7 @@ Innehållet på en produktsida kan till exempel innehålla ett styckesystem som 
 
 >[!NOTE]
 >
->Mer information om `parsys` finns i [Utveckla komponenter](/help/sites-developing/components.md) och [Riktlinjer för användning av mallar och komponenter](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components).
+>Mer information om [ finns i ](/help/sites-developing/components.md)Utveckla komponenter[ och ](/help/sites-developing/dev-guidelines-bestpractices.md#guidelines-for-using-templates-and-components)Riktlinjer för användning av mallar och komponenter`parsys`.
 
 >[!CAUTION]
 >

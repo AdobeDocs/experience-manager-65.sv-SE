@@ -4,8 +4,8 @@ description: Läs om hur Adobe Experience Manager 6.5 kan skapa personaliserat i
 exl-id: be34760a-875b-419d-9fa4-2359b314a3b7
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Personalization
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 0%
@@ -34,9 +34,9 @@ Använd [aktivitetskonsolen](/help/sites-authoring/activitylib.md) för att skap
 
 ## Erfarenheter {#experiences}
 
-För varje aktivitet definierar ni en eller flera upplevelser som identifierar målgrupperna som ni riktar in er mot. AEM gör det möjligt att styra innehållet som omfattar varje upplevelse.
+För varje aktivitet definierar ni en eller flera upplevelser som identifierar målgrupperna som ni riktar in er mot. Med AEM kan ni styra innehållet som omfattar varje upplevelse.
 
-Målgrupperna bygger på marknadsföringssegment som skapats i AEM eller Adobe Target. När en besökare öppnar en webbsida avgör sidlogiken vilken målgrupp de tillhör och visar det innehåll som du har skapat för den målgruppen.
+Målgrupperna bygger på marknadsföringssegment som skapats antingen i AEM eller Adobe Target. När en besökare öppnar en webbsida avgör sidlogiken vilken målgrupp de tillhör och visar det innehåll som du har skapat för den målgruppen.
 
 En aktivitet definierar till exempel upplevelser för två olika målgrupper: kvinnor över 30 år och kvinnor under 30 år. Kvinnors sida på webbplatsen We.Retail visar olika produkter för varje upplevelse.
 
@@ -56,7 +56,7 @@ Målmotorn är den mekanism som driver logiken för riktat innehåll. [Aktivitet
 
 ### AEM {#aem}
 
-AEM har en inbyggd motor för målinriktning som bearbetar sidförfrågningar och avgör vilket innehåll som ska visas. När ni använder den AEM målgruppsmotorn begränsas ni till att använda segment som skapas i AEM för att definiera målgrupperna för era upplevelser.
+AEM har en inbyggd motor för målinriktning som hanterar sidförfrågningar och avgör vilket innehåll som ska visas. När ni använder AEM målgruppsmotor begränsas ni till att använda segment som skapats i AEM för att definiera målgrupperna för era upplevelser.
 
 ### Adobe Target {#adobe-target}
 

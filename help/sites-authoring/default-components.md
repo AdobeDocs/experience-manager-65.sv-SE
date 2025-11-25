@@ -4,8 +4,8 @@ description: Adobe Experience Manager innehåller ett antal färdiga komponenter
 exl-id: 85463610-8461-4c1f-bfe7-72229a31ea40
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Komponenter{#components}
 
-Adobe Experience Manager (AEM) innehåller olika färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när [en sida redigeras](/help/sites-authoring/editing-content.md) och grupperas efter huvudfunktionsområdet (kallas komponentgrupp) för att underlätta filtreringen.
+Adobe Experience Manager (AEM) innehåller flera färdiga komponenter som ger omfattande funktionalitet för webbplatsförfattare. De är tillgängliga när [en sida redigeras](/help/sites-authoring/editing-content.md) och grupperas efter huvudfunktionsområdet (kallas komponentgrupp) för att underlätta filtreringen.
 
 Komponenterna är tillgängliga när du [redigerar en sida](/help/sites-authoring/editing-content.md). För att underlätta filtreringen grupperas komponenterna efter huvudfunktionsområdet (det vill säga komponentgruppen).
 
 >[!NOTE]
 >
->I det här avsnittet behandlas endast komponenter som är tillgängliga i en AEM.
+>I det här avsnittet behandlas endast komponenter som finns i en färdig AEM-standardinstallation.
 >
 >Beroende på vilken instans du har kan du ha utvecklat anpassade komponenter som är särskilt anpassade för dina behov. De kan till och med ha samma namn som vissa av de komponenter som beskrivs här.
 
@@ -46,13 +46,13 @@ Komponenterna sorteras efter olika kategorier som kallas komponentgrupper. Exemp
 
 ## Översikt över alla komponenter {#overview-of-all-components}
 
-[Komponentkonsolen](/help/sites-authoring/default-components-console.md) ger en översikt över komponentgrupperna och komponenterna som tillhandahålls av din AEM. Du kan visa viktig information om de enskilda komponenterna och deras användning.
+[Komponentkonsolen](/help/sites-authoring/default-components-console.md) ger en översikt över komponentgrupperna och komponenterna som tillhandahålls av din AEM-installation. Du kan visa viktig information om de enskilda komponenterna och deras användning.
 
 ## Komponenter - större områden {#components-major-areas}
 
 På följande sidor finns länkar till ytterligare viktig information om komponenter:
 
-* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) - Core-komponenterna erbjuder flexibla och funktionsrika redigeringsfunktioner, som tillhandahåller viktiga innehållstyper för att skapa sidor.
+* [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) - Core-komponenterna erbjuder flexibla och funktionsrika redigeringsfunktioner, som tillhandahåller viktiga innehållstyper för att skapa sidor.
 
 * [Communities](/help/communities/author-communities.md) - Komponenterna innehåller interaktiva funktioner för en webbplats, till exempel forum och kommentarer. Många av dessa komponenter inkluderas när en [community](/help/communities/overview.md) skapas.
 

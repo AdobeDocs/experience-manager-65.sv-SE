@@ -4,8 +4,8 @@ description: Konfigurera vilket gränssnitt du använder för Adobe Experience M
 exl-id: 01cab3c3-4c0d-44d9-b47c-034de9a08cb1
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Välja användargränssnitt{#selecting-your-ui}
 
-Adobe Experience Manager (AEM) touch-enabled UI är nu standardgränssnitt och funktionsparitet har nästan uppnåtts när det gäller administration och redigering av webbplatser. Det kan dock finnas tillfällen då användaren vill växla till det [klassiska användargränssnittet](/help/sites-classic-ui-authoring/classicui.md). Det finns flera alternativ för att göra detta.
+Adobe Experience Manager (AEM) pekaktiverat gränssnitt är nu standardgränssnitt och funktionsparitet har nästan uppnåtts när man administrerar och redigerar webbplatser. Det kan dock finnas tillfällen då användaren vill växla till det [klassiska användargränssnittet](/help/sites-classic-ui-authoring/classicui.md). Det finns flera alternativ för att göra detta.
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ Detta anger att användargränssnittet ska vara standard när sidor redigeras, m
 * [Växlar till det klassiska användargränssnittet för den aktuella sessionen](#switching-to-classic-ui-for-the-current-session)
 Växlar till det klassiska användargränssnittet för den aktuella sessionen.
 
-* När det gäller [sidredigering gör systemet vissa åsidosättningar i relation till användargränssnittet &#x200B;](#ui-overrides-for-the-editor).
+* När det gäller [sidredigering gör systemet vissa åsidosättningar i relation till användargränssnittet ](#ui-overrides-for-the-editor).
 
 >[!CAUTION]
 >
@@ -108,11 +108,9 @@ De inställningar som definieras av en användare eller systemadministratör kan
 * När du redigerar sidor:
 
    * Den klassiska redigeraren måste användas när sidan öppnas med `cf#` i URL:en. Till exempel:
-
      `https://localhost:4502/cf#/content/geometrixx/en/products/triangle.html`
 
    * Användning av den pekaktiverade redigeraren är tvingad när `/editor.html` används i URL:en eller när en pekenhet används. Till exempel:
-
      `https://localhost:4502/editor.html/content/geometrixx/en/products/triangle.html`
 
 * Alla tvång är tillfälliga och gäller endast för webbläsarsessionen

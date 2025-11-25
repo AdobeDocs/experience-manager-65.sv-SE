@@ -8,8 +8,8 @@ content-type: reference
 exl-id: 407fc164-291d-42f6-8c46-c1df9ba3d454
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Workflow
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '783'
 ht-degree: 0%
@@ -39,12 +39,12 @@ Beroende på vilken projektmall du väljer finns det vissa arbetsflöden:
 | Begär start | x |  |  |  |
 | Begär landningssida | x |  |  |  |
 | Begär e-post | x |  |  |  |
-| DAM - skapa språkkopia&ast; |  |  |  | x |
-| DAM Skapa och översätt språkkopia&ast; |  |  |  | x |
+| DAM - skapa språkkopia&amp;ast; |  |  |  | x |
+| DAM Skapa och översätt språkkopia&amp;ast; |  |  |  | x |
 
 >[!NOTE]
 >
->&ast; dessa arbetsflöden startas inte från rutan **Arbetsflöde** i Projekt. Se [Skapa språkkopior för Assets.](/help/sites-administering/tc-manage.md)
+>&amp;ast; dessa arbetsflöden startas inte från rutan **Arbetsflöde** i Projekt. Se [Skapa språkkopior för Assets.](/help/sites-administering/tc-manage.md)
 
 Stegen för att starta och slutföra arbetsflöden är desamma oavsett vilket arbetsflöde du väljer. Bara stegen ändras.
 

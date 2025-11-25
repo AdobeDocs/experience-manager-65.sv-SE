@@ -4,8 +4,8 @@ description: Med komponentkonsolen kan du bläddra igenom alla komponenter som d
 exl-id: d79107b9-dfa4-4e80-870e-0b7ea72f0bc7
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 15%
@@ -41,7 +41,7 @@ Om du vill visa information om en viss komponent klickar du på den önskade res
   På fliken Egenskaper kan du:
 
    * Visa komponentens allmänna egenskaper.
-   * Visa hur ikonen eller förkortningen [&#x200B; har definierats &#x200B;](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) för komponenten.
+   * Visa hur ikonen eller förkortningen [ har definierats ](/help/sites-developing/components-basics.md#component-icon-in-touch-ui) för komponenten.
 
       * Om du klickar på ikonens källa kommer du till den komponenten.
 

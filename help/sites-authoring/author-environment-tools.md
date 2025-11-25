@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 3b3c118b-ca35-484b-a62e-7bec98953123
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '2246'
 ht-degree: 3%
@@ -275,7 +275,7 @@ Knappen Sidinformation (utjämningsikon) öppnar en meny som även innehåller i
 * [Utrullningssida](/help/sites-administering/msm.md#msm-from-the-ui)
 * [Starta arbetsflöde](/help/sites-authoring/workflows-applying.md#starting-a-workflow-from-the-page-editor)
 * [Lås sida](/help/sites-authoring/editing-content.md#locking-a-page)
-* [Publish Page](/help/sites-authoring/publishing-pages.md#main-pars-title-10)
+* [Publicera sida](/help/sites-authoring/publishing-pages.md#main-pars-title-10)
 * [Avpublicera sida](/help/sites-authoring/publishing-pages.md#main-pars-title-5)
 * [Redigera mall](/help/sites-authoring/templates.md); när sidan är baserad på en [redigerbar mall](/help/sites-authoring/templates.md#editable-and-static-templates)
 
@@ -337,7 +337,7 @@ Om du klickar på knappen **Öppna dialogruta för markering** i sökvägsfälte
 
 ![Öppna dialogrutan Markering](do-not-localize/screen_shot_2018-03-22at154427.png)
 
-Du kan också börja skriva i sökvägsfältet och AEM erbjuder matchande sökvägar när du skriver.
+Du kan också börja skriva i sökvägsfältet så att AEM erbjuder matchande sökvägar när du skriver.
 
 ![ateat-19](assets/ateat-19.png)
 

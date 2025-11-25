@@ -9,8 +9,8 @@ docset: aem65
 exl-id: d5cf4478-51e4-4ca8-b3f8-6d7caed7d515
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '3015'
 ht-degree: 2%
@@ -27,7 +27,7 @@ Innehåll läggs till med [komponenter](/help/sites-authoring/default-components
 >
 >Ditt konto behöver [lämpliga åtkomsträttigheter](/help/sites-administering/security.md) och [behörigheter](/help/sites-administering/security.md#permissions) för att kunna redigera sidor.
 >
->Om du råkar ut för några problem föreslår Adobe att du kontaktar systemadministratören.
+>Om du råkar ut för problem föreslår Adobe att du kontaktar systemadministratören.
 
 >[!NOTE]
 >
@@ -201,7 +201,7 @@ Detta gäller för följande tillgångstyper (vissa är beroende av sidan/stycke
 
 >[!NOTE]
 >
->Det här beteendet kan konfigureras för din installation. Mer information finns i [Konfigurera ett styckesystem så att en komponentinstans skapas när du drar en resurs &#x200B;](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance).
+>Det här beteendet kan konfigureras för din installation. Mer information finns i [Konfigurera ett styckesystem så att en komponentinstans skapas när du drar en resurs ](/help/sites-developing/developing-components.md#configuring-a-paragraph-system-so-that-dragging-an-asset-creates-a-component-instance).
 
 Så här skapar du en komponent genom att dra en av resurstyperna ovan:
 
@@ -508,7 +508,7 @@ Alternativet **Visa som publicerad** finns på menyn [Sidinformation](/help/site
 
 ## Låsa en sida {#locking-a-page}
 
-AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Detta är användbart när du gör flera ändringar på en viss sida eller när du måste frysa en sida en kort stund.
+Med AEM kan du låsa en sida så att ingen annan kan ändra innehållet. Detta är användbart när du gör flera ändringar på en viss sida eller när du måste frysa en sida en kort stund.
 
 En sida kan låsas från:
 
@@ -568,7 +568,7 @@ Med följande ikoner kan du ångra eller göra om en åtgärd. Dessa visas i ver
 
 >[!NOTE]
 >
->Systemadministratören kan [konfigurera olika aspekter av funktionerna Ångra/Gör om &#x200B;](/help/sites-administering/config-undo.md) enligt kraven för din instans.
+>Systemadministratören kan [konfigurera olika aspekter av funktionerna Ångra/Gör om ](/help/sites-administering/config-undo.md) enligt kraven för din instans.
 
 AEM lagrar en historik över åtgärder som du utför och i vilken ordning du utförde dem. Den här funktionen innebär att du kan ångra flera åtgärder i den ordning som du utförde dem och göra om dem för att återanvända en eller flera av åtgärderna, om det behövs.
 

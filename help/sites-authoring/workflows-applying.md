@@ -9,8 +9,8 @@ docset: aem65
 exl-id: e00da2b3-046a-4d93-aed0-07dd8c66899f
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Workflow
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 5%
@@ -43,7 +43,7 @@ Arbetsflöden kan startas från:
 
 >[!NOTE]
 >
->AEM kan [starta arbetsflöden med flera andra metoder](/help/sites-administering/workflows-starting.md).
+>AEM-administratörer kan [starta arbetsflöden med flera andra metoder](/help/sites-administering/workflows-starting.md).
 
 ## Starta ett arbetsflöde från platskonsolen {#starting-a-workflow-from-the-sites-console}
 

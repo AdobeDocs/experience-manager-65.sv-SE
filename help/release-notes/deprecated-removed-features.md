@@ -4,8 +4,8 @@ description: Versionsinformation om borttagna funktioner i Adobe Experience Mana
 exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
 solution: Experience Manager
 feature: Release Information
-role: User,Admin,Architect,Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 2%
@@ -68,9 +68,9 @@ I det här avsnittet visas funktioner som har tagits bort från AEM 6.5. Tidigar
 
 | Område | Funktion | Ersättning | Version (SP) |
 |--- |--- |--- |--- |
-| Commerce | AEM CIF Classic har tagits bort. | Du bör migrera till [AEM CIF](/help/commerce/cif/migration.md). Om du fortfarande behöver CIF Classic har ett kompatibilitetspaket skapats, [kontakta Adobe kundsupport](https://experienceleague.adobe.com/sv?support-solution=General#support). | 6.5.22.0 |
-| Integrering med [!DNL Experience Cloud] | Du kan synkronisera dina resurser med [!DNL Experience Cloud] genom att konfigurera via [!DNL Adobe I/O]. [!DNL Adobe Experience Cloud] kallades tidigare [!DNL Adobe Experience Cloud]. | [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/sv?support-solution=General#support) om du har frågor. |  |
-| Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Använd plugin-programmet [ActivityMap från Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=sv-SE). |  |
+| Commerce | AEM CIF Classic har tagits bort. | Du bör migrera till [AEM CIF](/help/commerce/cif/migration.md). Om du fortfarande behöver CIF Classic har ett kompatibilitetspaket skapats, [kontakta Adobe kundsupport](https://experienceleague.adobe.com/?support-solution=General#support). | 6.5.22.0 |
+| Integrering med [!DNL Experience Cloud] | Du kan synkronisera dina resurser med [!DNL Experience Cloud] genom att konfigurera via [!DNL Adobe I/O]. [!DNL Adobe Experience Cloud] kallades tidigare [!DNL Adobe Experience Cloud]. | [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/?support-solution=General#support) om du har frågor. |  |
+| Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Använd plugin-programmet [ActivityMap från Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html). |  |
 | Integreringar | ExactTarget-integrering har tagits bort från standarddistributionen (Quickstart) och är inte längre tillgänglig. | Ingen ersättning. |  |
 | Integreringar | Integreringen av Salesforce Force API har tagits bort från standarddistributionen (Quickstart) och är nu ett extra paket att installera från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). | Funktionen är fortfarande tillgänglig. |  |
 | Forms | Stöd för Bridge-tjänsten Adobe Central Migration har tagits bort eftersom Adobe Central inte längre stöds. | Ingen ersättning. |  |

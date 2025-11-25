@@ -9,8 +9,8 @@ docset: aem65
 exl-id: 49f95b31-92cd-4124-8c0f-c9802099fd0b
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring
-role: User,Admin,Architect,Developer
-source-git-commit: 9a3008553b8091b66c72e0b6c317573b235eee24
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 0%
@@ -35,8 +35,8 @@ Taggar är ett snabbt och enkelt sätt att klassificera innehåll på en webbpla
 1. **Förbättrad sökning** - Standardsökkomponenten i AEM innehåller i stort sett skapade taggar och tillämpade taggar som kan användas för att begränsa resultaten till de som är relevanta.
 1. **SEO-aktivering** - Taggar som används som sidegenskaper visas automatiskt i de metataggar på sidan som gör den synlig för sökmotorer.
 1. **Enkel sofistikering** - Du kan skapa taggar från ett ord och trycka på en knapp. Därefter kan en titel, beskrivning och ett obegränsat antal etiketter läggas till för att ge taggen mer semantik.
-1. **Kärnkonsekvens** - Taggsystemet är en huvudkomponent i AEM och används av alla AEM funktioner för att kategorisera innehåll. Programmeringsgränssnittet för taggning är även tillgängligt för utvecklare som skapar taggningsaktiverade program med tillgång till samma taxonomier.
-1. **Kombinerar struktur och flexibilitet** - AEM är idealiskt för arbete med strukturerad information på grund av inkapsling av sidor och sökvägar. Det är lika kraftfullt när du arbetar med ostrukturerad information på grund av den inbyggda textsökningen. Taggning kombinerar styrkan hos både strukturen och flexibiliteten.
+1. **Kärnkonsekvens** - Taggsystemet är en huvudkomponent i AEM och används av alla AEM-funktioner för att kategorisera innehåll. Programmeringsgränssnittet för taggning är även tillgängligt för utvecklare som skapar taggningsaktiverade program med tillgång till samma taxonomier.
+1. **Kombinerar struktur och flexibilitet** - AEM är idealiskt för att arbeta med strukturerad information på grund av inkapsling av sidor och sökvägar. Det är lika kraftfullt när du arbetar med ostrukturerad information på grund av den inbyggda textsökningen. Taggning kombinerar styrkan hos både strukturen och flexibiliteten.
 
 När du utformar innehållsstrukturen för en plats och metadatarammet för resurser bör du tänka på att taggningen är enkel och tillgänglig.
 

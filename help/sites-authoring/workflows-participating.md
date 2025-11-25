@@ -9,8 +9,8 @@ docset: aem65
 exl-id: e47270e8-bace-4d0f-a088-7269b6356315
 solution: Experience Manager, Experience Manager Sites
 feature: Authoring,Workflow
-role: User,Admin,Architect,Developer
-source-git-commit: a28883778c5e8fb90cbbd0291ded17059ab2ba7e
+role: User,Admin,Developer
+source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 1%
@@ -82,7 +82,7 @@ Du kan slutföra ett deltagarsteg från:
 
 Gör så här för att slutföra arbetsuppgiften:
 
-1. Öppna **[AEM Inkorg](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM Inbox](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (klicka på miniatyrbilden).
 1. Välj **Fullständig** i verktygsfältet.
 1. Dialogrutan **Fullständigt arbetsobjekt** öppnas. Välj **Nästa steg** i listrutan och lägg till en **kommentar** om det behövs.
@@ -141,7 +141,7 @@ Du kan delegera ett deltagarsteg från antingen:
 
 Använd följande procedur för att delegera en arbetsuppgift:
 
-1. Öppna **[AEM Inkorg](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM Inbox](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (klicka på miniatyrbilden).
 1. Välj **Delegera** i verktygsfältet.
 1. Dialogrutan öppnas. Ange **användaren** i listrutan (det kan också vara en grupp) och lägg till en **kommentar** om det behövs.
@@ -191,7 +191,7 @@ Du kan utföra steg tillbaka för ett deltagarsteg från antingen:
 
 Använd följande procedur för att stega bakåt:
 
-1. Öppna **[AEM Inkorg](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM Inbox](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (klicka på miniatyrbilden).
 1. Välj **Stega bakåt** för att öppna dialogrutan.
 
@@ -253,7 +253,7 @@ Du kan öppna information om arbetsobjekt från:
 
 Så här öppnar du ett arbetsflödesobjekt och visar information:
 
-1. Öppna **[AEM Inkorg](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM Inbox](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (klicka på miniatyrbilden).
 1. Välj **Öppna** för att öppna informationsflikarna.
 
@@ -276,7 +276,7 @@ Du kan visa information om nyttolasten som är kopplad till arbetsflödesinstans
 
 Så här visar du arbetsflödesinstansens nyttolast och resurser:
 
-1. Öppna **[AEM Inkorg](/help/sites-authoring/inbox.md)**.
+1. Öppna **[AEM Inbox](/help/sites-authoring/inbox.md)**.
 1. Markera det arbetsflödesobjekt som du vill utföra åtgärden på (klicka på miniatyrbilden).
 1. Välj **Visa nyttolast** i verktygsfältet för att öppna dialogrutan.
 
