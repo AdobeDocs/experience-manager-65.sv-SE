@@ -1,20 +1,20 @@
 ---
 title: Variationer - innehåll för redigeringsfragment
-description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att du kan skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
+description: Förstå hur variationer kan göra ert headless-innehåll i AEM ännu mer flexibelt genom att låta er skapa innehåll för fragmentet och sedan skapa variationer av innehållet utifrån syfte.
 feature: Content Fragments
 role: User
 exl-id: 50982ede-7ccf-45b2-b0dd-a49d23e0f971
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: b611d044c9dab5aa25a3e58cf2447faa42b4b7b6
 workflow-type: tm+mt
-source-wordcount: '2309'
+source-wordcount: '2350'
 ht-degree: 4%
 
 ---
 
 # Variationer - innehåll för redigeringsfragment{#variations-authoring-fragment-content}
 
-[Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig funktion för att AEM innehållsfragment, eftersom du kan skapa och redigera kopior av huvudinnehållet för användning i vissa kanaler och/eller scenarier, vilket gör headless-innehållsleverans ännu mer flexibel.
+[Variationer](/help/assets/content-fragments/content-fragments.md#constituent-parts-of-a-content-fragment) är en viktig funktion i AEM innehållsfragment, eftersom du kan skapa och redigera kopior av huvudinnehållet för användning i vissa kanaler och/eller scenarier, vilket gör headless-innehållsleverans ännu mer flexibel.
 
 På fliken **Variationer** kan du göra följande:
 
@@ -37,7 +37,7 @@ Utför en mängd andra åtgärder beroende på vilken datatyp som redigeras, til
 
 >[!CAUTION]
 >
->När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
+>När ett fragment har publicerats och/eller refererats visas en varning i AEM när en författare öppnar fragmentet för redigering igen. Detta för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
 
 ## Redigera ditt innehåll {#authoring-your-content}
 
@@ -407,6 +407,12 @@ Med variationer kan du ta **mallinnehållet** och ändra det efter syfte (om det
 
 Så här skapar du en variant:
 
+>[!NOTE]
+>
+>Variationer lägger till bearbetningstid i ett innehållsfragment, i författarmiljön och även vid leverans. Vi rekommenderar att du håller antalet variationer till ett hanterbart minimum.
+>
+>Ett tips är att inte överskrida tio varianter per innehållsfragment.
+
 1. Öppna fragmentet och se till att sidopanelen är synlig.
 1. Välj **Variationer** i ikonfältet på sidpanelen.
 1. Välj **Skapa variant**.
@@ -468,7 +474,7 @@ När du redigerar en variant har du tillgång till åtgärden för att synkronis
 
 >[!CAUTION]
 >
->Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**&#x200B;till varianten*.
+>Synkronisering är bara tillgängligt för att kopiera ändringar *från **mastern**till varianten*.
 >
 >Endast varianternas aktuella element synkroniseras.
 >
