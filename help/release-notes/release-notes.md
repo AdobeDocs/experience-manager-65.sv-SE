@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: c77849740fab51377ce60aff5f611e0408dca728
+source-git-commit: 6aba1c1d5451adcaa139c15adc2a7056419b8341
 workflow-type: tm+mt
-source-wordcount: '6744'
+source-wordcount: '8925'
 ht-degree: 0%
 
 ---
@@ -26,481 +26,424 @@ ht-degree: 0%
 
 | Produkt | [!DNL Adobe Experience Manager] 6.5 |
 | -------- | ---------------------------- |
-| Version | 6.5.23.0, snabbkorrigering för GRANITE-61551 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| Version | 6.5.24.0 <!-- UPDATE FOR EACH NEW RELEASE --> |
 | Typ | Service Pack-version |
-| Datum | 9 september 2025 <!-- UPDATE FOR EACH NEW RELEASE --> |
-| Hämta URL | [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=%2Fcontent%2Fsoftware-distribution%2Fen%2Fdetails.html%2Fcontent%2Fdam%2Faem%2Fpublic%2Fadobe%2Fpackages%2Fcq650%2Fhotfix%2Fcq-6.5.0-hotfix-GRANITE-61551-SP23-1.2.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
+| Datum | 20 november 2025 <!-- UPDATE FOR EACH NEW RELEASE --> |
+| Hämta URL | [Programdistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.24.0.zip) <!-- UPDATE FOR EACH NEW RELEASE --> |
 
 <!-- OLD DOWNLOAD URL
 (https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.23.0.zip) -->
 
-## Vad ingår i [!DNL Experience Manager] 6.5.23.0 {#what-is-included-in-aem-6523}
+## Vad ingår i [!DNL Experience Manager] 6.5.24.0 {#what-is-included-in-aem-6524}
 
-[!DNL Experience Manager] 6.5.23.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat samt felkorrigeringar. Det innehåller även förbättringar av prestanda, stabilitet och säkerhet som släppts sedan den första tillgängligheten av 6.5 i april 2019. [Installera detta Service Pack](#install) på [!DNL Experience Manager] 6.5.
+[!DNL Experience Manager] 6.5.24.0 innehåller nya funktioner, viktiga förbättringar som kunderna efterfrågat samt felkorrigeringar. Det innehåller även förbättringar av prestanda, stabilitet och säkerhet som släppts sedan den första tillgängligheten av 6.5 i april 2019. [Installera detta Service Pack](#install) på [!DNL Experience Manager] 6.5.
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
-## Viktiga funktioner och förbättringar
-
-<!--### Sites {#sites}
-
-* A () -->
-
 <!--
-### [!DNL Assets]
-
-* A ()
+## Key features and enhancements
 -->
 
-### Forms {#forms-sp23}
-
-Bland huvudfunktionerna och förbättringarna i den här versionen finns följande:
-
-* [Tillgängliga hyperlänkar med blandad textformatering i statiska PDF-filer](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-5/forms/pdf/using-designer.pdf): Hyperlänkar som innehåller blandade textformat i statiska PDF-filer är nu taggade som ett enda tillgängligt element. Den här förbättringen förenklar taggträdets struktur, förbättrar skärmläsarnavigeringen och stöder bättre tillgänglighet.
-
-* [Uppdaterad plattformsmatris som stöds](/help/forms/using/aem-forms-jee-supported-platforms.md)
-
-  Den senaste versionen innehåller uppdateringar av den plattformsmatris som stöds, vilket säkerställer kompatibilitet med nyare tekniker.
-
-   * IBM® Content Manager Client 8.7
-
-   * MongoDB Enterprise 7.0
-
-   * MySQL 8.4
-
-   * Microsoft® SQL Server 2022
-
-   * Microsoft® SQL Server JDBC Driver 12.8
-
-   * Red Hat® Enterprise Linux® 9 (Kernel 4.x, 64 bitar) 
-
-* [Komponenten för bifogad fil &#x200B;](https://experienceleague.adobe.com/sv/docs/experience-manager-core-components/using/adaptive-forms/adaptive-forms-components/file-attachment) med hög densitet: Komponenten förhindrar nu att filer skickas med ändrade tillägg som försöker kringgå tillåtna filtypskontroller. Sådana filer blockeras under överföringen för att säkerställa att endast giltiga filtyper accepteras.
-
-* FORMS-20533, FORMS-20532: AEM Forms innehåller nu en uppgradering av Struts-versionen från 2.5.33 till 6.x. Stödet lades till via en [hotfix](/help/release-notes/aem-forms-hotfix.md) som du kan [hämta och installera](/help/release-notes/aem-forms-hotfix.md) för att lägga till stöd för den senaste versionen av Struts.
-
-* **LC-3922769**: Vissa AEM Forms-funktioner kräver nu att OpenSSL 3 fungerar korrekt. Systemet måste ha OpenSSL 3 installerat, tillsammans med biblioteken `libcrypto.so.3` och `libssl.so.3`. Eftersom säkerhetsuppdateringar endast är tillgängliga i version 3.0.14 och senare, och SafeLogic-stödet upphör i februari 2025, har BSAFE tagits bort och OpenSSL 3 används nu för att uppfylla säkerhetskraven.  Mer information om plattformskompatibilitet och detaljerade krav finns i [Plattformar som stöds för AEM Forms i JEE](/help/forms/using/aem-forms-jee-supported-platforms.md) och [Tekniska krav](/help/sites-deploying/technical-requirements.md).
-
-
-  **Så här verifierar du installationen av OpenSSL 3:**
-
-   * **RHEL/CentOS/Fedora-baserade system**: `rpm -qa | grep   openssl3`
-   * **Ubuntu/Debian-baserade system**: `dpkg -l | grep openssl3`
-   * **Alternativ verifiering**: `ldd /path/to/XMLForm |   grep -E 'libcrypto.so.3|libssl.so.3'` (om bibliotek finns i LD_LIBRARY_PATH)
 
 
 
+## Åtgärdade problem i Service Pack 24 {#fixed-issues}
 
-
-<!--* **Two-Factor authentication with SAML for AdminUI** 
-
-  AdminUI in AEM Forms JEE now supports two-factor authentication using Security Assertion Markup Language (SAML) single sign-on (SSO), providing stronger security and a seamless login experience for administrators, similar to what is available in HTML Workspace. 
-
-#### New GA features in AEM Forms {#ga-aem-forms-sp23}
-
-* A ()
-
-#### New Beta features in AEM Forms {#beta-aem-forms-sp23}
--->
-
-## Åtgärdade problem i Service Pack 23 {#fixed-issues}
-
-<!-- 6.5.23.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE? -->
+<!-- 6.5.24.0 REVIEWERS: WHAT ARE THE KEY FEATURES AND ENHANCEMENTS THAT YOU WANT TO HIGHLIGHT IN THIS RELEASE? -->
 
 <!-- UPDATE BELOW FOR EACH NEW RELEASE -->
 
-### [!DNL Sites]{#sites-6523}
+### [!DNL Assets] {#assets-sp24}
+
+* Efter uppdatering till version 6.5.23.0 orsakade sortering av mappar efter ändringsdatum i kortvyn svårigheter med att hitta nyligen ändrade resurser för anläggningsdistributioner. (ASSETS-56946)
+* Upprepade varningsloggposter genereras vid körning av schemaläggare. (ASSETS-5254)
+* Titelsortering fungerar inte i listvyn. (ASSETS-50716)
+* Fönstret Samlingsegenskaper stängs inte ens när du klickat på Avbryt. (ASSETS-48504)
+
+* Ett *ogiltigt URL*-fel inträffar vid försök att kommentera resurser i AEM 6.5.22. (NPR-42684)
+* Formuläret för Assets-metadataredigeraren initieras inte om efter att relaterade eller orelaterade åtgärder har utförts. (ASSETS-5207)
+* När resurser från fjärr-DAM synkroniseras om till platsens lokala plats, uppdateras resursernas publiceringsstatus felaktigt till `Not published`. (ASSETS-48958)
+* Problem uppstod vid uppgradering från SP23 till 6.5 LTS-versionen. (ASSETS-50541)
+
+### [!DNL Sites]{#sites-6524}
+
+#### Tillgänglighet {#sites-accessibility-6524}
+
+* Dialogrutan **Växla visningsformat** har nu stöd för en fullständig tangentbordsåtgärd. Fokus hoppar inte längre över knappen **Visa inställningar** och standardtangenterna (`Tab`, `Enter`, `Space`) fungerar konsekvent. (SITES-24306)
+* Tangentbordsanvändare kan ta bort de publicerade statustaggarna utan en mus. Fokusmarkeringar på varje tagg och aktivering fungerar med `Enter`/`Space` och Backsteg/Delete. Taggkontrollen fungerar nu som en knapp som förbättrar skärmläsarfeedback och uppfyller WCAG 2.1.1-tangentbordet. (SITES-24491)
+* Filterfältet flödar om snabbt i smala visningsrutor. Markeringskontroller och resultat ligger kvar i visningsrutan med 400 % zoom, vilket eliminerar vågrät rullning och innehållets skärpa. (SITES-24708)
+* AEM återställer fullständig tangentbordsåtkomst till knapparna ContextHub Reset, Persona och Device. Tabb- och piltangenterna når varje kontroll, visar en synlig fokusindikator och aktiverar åtgärder med `Enter` eller `Space`. Skärmläsare meddelar tydliga etiketter. (SITES-24939)
+* Datumindata och väljaren är helt synliga vid 320 px. Den modala förvrängningen för Timewarp använder responsiv storlek, vilket innebär att kontrollen inte längre försvinner eller försvinner på den minsta visningsrutan. (SITES-24962)
+* Referenslisten har nu stöd för 400 % webbläsarzoom utan att förlora åtkomsten till innehållet. Rälen använder responsiv storlek i stället för en fast bredd, så objekten förblir synliga och kan markeras med 1280 × 1024. (SITES-24972)
+* Filters Rail fungerar nu med 400 % zoom. Rälens storlek ändras med relativa enheter och varken blockerar eller döljer filterkontroller. Användarna kan visa och välja alla filteralternativ utan vågrät rullning eller bortfallsmål. (SITES-24981)
+* Tangentbordsanvändare kan använda formateringsmenyer i det modala Teaser-läget. Om du trycker på `Enter` eller `Space` på **List** eller **Paragraph Format** öppnas popup-fönstret, piltangenterna navigerar och `Enter` tillämpar markeringen. `Escape` stänger menyn och återställer fokus till den utlösande kontrollen, vilket ger ett konsekvent verktygsfältsarbetsflöde. (SITES-25235)
+* Färgväljaren för färgrutor ligger nu kvar i visningsrutan vid 320 px. I pekaren visas alla färgrader och det finns stöd för bläddring, så att författare kan välja en färgruta på små skärmar. (SITES-25274)
+* Demografiska verktygsfältets listrutor fungerar nu helt med tangentbordet. När du öppnar en meny flyttas fokus till det första alternativet, piltangenterna navigerar i listan och Esc/Tabb stängs eller flyttas framåt utan att dumpa fokus till verktygsfältet. Interaktiva objekt använder rätt semantik så att NVDA och andra läsare kan meddela alternativ korrekt. (SITES-25310)
+* Add Component in the Content tree works as DESIGN on AEM 6.5 SP24. Det första felet uppstod när författarbehörigheter saknades i en lokal konfiguration, inte från AEM. Författare med redigeringsbehörighet kan aktivera knappen och lägga till komponenter via tangentbordet eller musen. (SITES-25312)
+* Tangentbords- och skärmläsaråtkomst i det demografiska verktygsfältet fungerar nu tillförlitligt. Författare som använder NVDA kan gå igenom **Commerce**, **Persona** och 88 med pilar, följa tydlig fokusfeedback och förstå vilken flik som är aktiv. (SITES-25326)
+
+* Länken **Hoppa till innehåll** flyttar nu tangentbordsfokus till rubriken för huvudinnehållet. Fokus förblir synligt på ett unikt identifierat mål, så skärmläsare kan presentera rätt avsnitt. Ändringen uppfyller WCAG 2.4.1 och 2.4.3. (SITES-24061)
+* Tangentbordsnavigering i trädet för webbplatsens hemsida följer en logisk sekvens när **Markera alla** har använts. Fokuset flyttas från **Markera allt** till nästa kontroll (vänster rälsknapp) i stället för att hoppa tillbaka till början av sidan. (SITES-24307)
+* Avsnittsrubriker och redigeringskontroller i Sites editor svarar på tangentbordsfokus och aktivering. Tangentbordsanvändare visar samma titel och åtgärder som tidigare bara visades vid hovring. (SITES-24479)
+* Knappar i Sites Editor visar beskrivande namn i stället för generiska eller saknade etiketter. Hjälpmedelstekniker lanserar rätt åtgärd, vilket ökar klarheten och minskar antalet felklick. (SITES-24480)
+* Skärmläsare får ett tal om att&quot;läsa in&quot; medan platsvyn uppdateras. Uppdateringen lägger till en dedikerad statusregion och skriver meddelandet i den programmatiskt, vilket bekräftar förloppet utan att flytta fokus. (SITES-24481)
+* Assets sidospår har nu en rensad **Close**-kontroll och återgår till växlingsknappen. Användare av tangentbord och skärmläsare stänger av panelen direkt i stället för att tabba igenom alla kontroller. Ändringen minskar antalet tangenttryckningar och matchar det förväntade panelbeteendet. (SITES-24489)
+* Fliklistan ARIA i Sites Page Editor innehåller ett beskrivande namn. Skärmläsare identifierar nu kontrollen som en fliklista och läser rätt etikett, så att användarna kan hitta rätt uppsättning flikar och flytta mellan dem på ett tillförlitligt sätt. (SITES-24492)
+* Sökfunktionen i redigeraren visar nu resultat för skärmläsare. När användare skriver rapporterar ett live-statusmeddelande antalet träffar och uppdateringar utan att flytta fokus. Tangentbordsanvändare upptäcker resultatet direkt. (SITES-24506)
+* Val av rader i listvyn förbättras för användare med hjälpfunktioner. Kryssrutan visar ett beskrivande namn som härleds från radrubriken, så meddelandena är korta och beskriver åtgärden korrekt. (SITES-24514)
+* Korrigerade tillgänglighetsnamn för listvyn. Tabellen tar bort `aria-label` från icke-interaktiva element och tilldelar etiketten till den användbara länken eller knappen. Nu kan skärmläsaranvändare höra korrekta, icke-duplicerade etiketter i hela kolumnen. (SITES-24515)
+* Den klibbiga rubriken dolde inte dialogrutan för teaser vid användning med hög zoom. Innehållet förblir läsbart och kan användas vid zoomning i 200 % och 400 %, med lodrätt flöde och utan bortfall. (SITES-24523)
+* När du skriver i sökfältet aktiveras inte längre ett för tidigt meddelande om det första resultatet eller en oavsiktlig aktivering. Nu visas ett kort statusmeddelande med resultatantal, medan fokus ligger kvar i fältet tills användaren navigerar till listan. (SITES-24658)
+* Alternativtextfältet i textredigerarens hyperlänksdialogruta visar nu en programmatisk etikett. Skärmläsare meddelar &quot;Alternativ text&quot; för fältet och fokus hamnar på den namngivna kontrollen. Den här korrigeringen förbättrar navigeringen för tangentbords- och talanvändare. (SITES-24675)
+* Ett live-statusmeddelande har lagts till i referensfältet så att hjälpmedelstekniken omedelbart kan meddela ändringar. Om du markerar flera objekt visas ett tydligt meddelande om referenstillgänglighet, vilket förhindrar tysta lägesändringar och minskar antalet upprepade åtgärder. (SITES-24678)
+* Dialogrutan Bild meddelar nu inläsningsstatus via en ARIA-region. Skärmläsare hör meddelandet&quot;Läser in, vänta&quot; medan rotationsrutan visas. Och en klar uppdatering när innehållet är klart, så att användarna vet när de kan interagera. (SITES-24697)
+* Dialogrutan Länkval visar nu en aktiv region med sökresultat. Skärmläsare hör statusen&quot;resultaten har uppdaterats&quot; efter varje sökning utan att flytta fokus, så användarna får en tydlig bekräftelse på att sökningen har slutförts. (SITES-24700)
+* Dialogrutan Länkval omformas nu till 320 px. Alla fält och åtgärder förblir synliga och användbara, och den vågräta rullningslisten visas inte längre. (SITES-24709)
+* Dialogrutan Länkmarkering använder nu samma etikett för både texten på skärmen och hjälpmedelsnamnet för varje trädobjekt. Skärmläsare meddelar varje objekt medan de flyttar med piltangenterna, inklusive den sista nivån, så att tysta noder och felmatchade namn tas bort. (SITES-24710)
+* Ändra filter rapporterar nu status som expanderat eller komprimerat. Knappen växlar `aria-expanded` synkroniserat med filterpanelen och visar ett enda tydligt namn (&quot;Ändra filter&quot;), vilket tar bort det förvirrande&quot;filtret?&quot; meddelande. Skärmläsaranvändare kan förutsäga resultatet av att aktivera kontrollen. (SITES-24713)
+* Modala sidhuvuden täcker inte längre innehåll med bredden 320 px. Rubriken frigörs från sitt klisterläge och dialogrutans brödtext rullas så att alla fält och åtgärdsknappar förblir synliga och användbara. Tangentbordsanvändare kan nå alla kontroller utan att förlora fokus. (SITES-24718)
+* Länkarna för appnavigering visar nu rätt länksemantik. Skärmläsare annonserar varje objekt som en länk i stället för som ett listobjekt, vilket förbättrar tangentbordsnavigering och röstkontroll. Listbehållaren innehåller semantik för listor, medan länkar fortfarande är de mål som kan fokuseras. (SITES-24719)
+* Resultatstatusen visas nu för skärmläsare när filtren ändras. NVDA läser både antalet &quot;X av Y-resultat&quot; och meddelandet &quot;inga resultat&quot;. Sidindelningsstatusen använder en aktiv region som uppdateras på plats, så att användarna får en bekräftelse utan att flytta fokus. (SITES-24720)
+* Rotationsknappen i Carousel-dialogrutan meddelar nu ett enda kortfattat namn för skärmläsare. Kontrollen upprepas inte längre både gruppetiketten och indataetiketten, vilket minskar komplexiteten och förvirringen för NVDA-användare. (SITES-24725)
+* Söklistan på hjälpmenyn innehåller rätt semantik. Behållaren visar en lista och varje resultat behåller en länk utan att rollen är i konflikt. NVDA och JAWS meddelar länkar korrekt och navigeringen är konsekvent. (SITES-24729)
+* Adobe har korrigerat popup-fönstret för färgrutor i användarinställningarna så att NVDA meddelar färgrutan som är i fokus, inte den tidigare markerade färgrutan. Tangentbordsanvändare får korrekta färgnamn när de går igenom listan och kan bekräfta att du valt rätt färg. (SITES-24739)
+* NVDA läser nu den fullständiga beskrivningen i trädkatalogen. På informationspanelen visas text med flera rader som ett värde och den länkas till fältetiketten. Tangentbordsanvändare hör hela texten när de tabbar sig igenom skrivskyddade fält. (SITES-24780)
+* Trädkatalogen meddelar nu datumet Ändrat. NVDA läser det datum då fokus flyttas till kolumnen Ändrad. Rutnätet kopplar varje datum till objektnamnet så att användarna kan höra både filen och den senaste uppdateringen. (SITES-24782)
+* Förhandsgranskningsläget följer nu inställningarna för textavstånd. Arbetsytan återspeglar ändringar av bokstaven, ordet och radhöjden i allt förhandsgranskat innehåll. Texten förblir inte längre fast eller klippen när mellanrummet ökar. Tangentbordsanvändare och användare med nedsatt syn kan läsa innehåll utan layoutbrytningar. (SITES-24936)
+* AEM korrigerar tabbordningen på Assets Editor-sidorna. Tabbningen går nu från rubrikkontrollerna till kontaktnavknapparna och slutligen in på arbetsytans verktyg i en tydlig sekvens. Skärmläsare följer samma ordning, vilket tar bort förvirring och snabbar upp tangentbordsnavigeringen. (SITES-24937)
+* AEM lägger till ett programmatiskt namn i menyraden för kortåtgärder. Skärmläsare meddelar kontrollen korrekt och talanvändare kan ange den som namn. Tangentbordsnavigering och fokus ändras inte. (SITES-24938)
+* Kortvymenyerna har bättre textavstånd. Objektet Fler åtgärder växer och trunkerar inte längre etiketter, inklusive Snabbpublicering. Användare som höjer bokstaven, ordet eller radavståndet har full etikett och tangentbordsåtkomst. (SITES-24941)
+* Den presentationsroll som dolde tabellen för webbplatsens hemsida har tagits bort från hjälpmedelsträdet. Tabellen läses korrekt igen. NVDA och JAWS identifierar tabellen, känner igen rubriker och meddelar rubrikrelationer under rad- och kolumnnavigering. (SITES-24942)
+* Sortering av feedback i listvyn är explicit och konsekvent. Efter en sortering visar rubriken ordningen via `aria-sort`. Ändringen tillkännages, medan osorterade rubriker inte längre gör anspråk på ett läge, vilket hjälper skärmläsaranvändare att spåra vilka kolumner som styr sorteringen. (SITES-24943)
+* Sidhuvudet Redigera layout visar inte längre en **Redigera**-knapp som inte fungerar. Kontrollen fungerar nu som en statisk statusetikett och ligger utanför tabbordningen, så att tangentbordsanvändare inte slösar bort en tangenttryckning. Använd **Välj ett annat läge** om du vill ändra läge, med tydlig skärmläsarfeedback. (SITES-24950)
+* Emulatorverktygsfältet visar fullständiga enhetsnamn som standard. Etiketten trunkeras inte längre vid inläsning, så användare kan läsa och välja enheter utan att gissa. Texten skalas jämnt över zoomnivåer och smala bredder. (SITES-24952)
+* Emulatorverktygsfältet passar för små visningsrutor. Vid 320 pixlar visas enhetslistan och skärmen kontrolleras utan urklipp, så att användare kan välja Galaxy S7 och nyare modeller. Layouten skalas och bryts för att undvika vågrät rullning även vid 400 % zoom. (SITES-24953)
+* Skärmläsare meddelar den valda enheten och dess mått i emulatorn. NVDA stoppar läsningen av linjalströmmen. Enhetsknappen använder en bifogad beskrivning för verktygstipstexten, vilket minskar brus och navigering i stödlinjer. (SITES-24955)
+* Filterfältet hanterar nu varje markerad tagg som en åtgärdsknapp. Rensa tillgängliga namn och fokushantering förbättrar meddelanden och tangentbordskontroll. (SITES-24980)
+* Statusuppdateringar i filtret Platsadministratörer meddelar skärmläsare. När användare byter kort/lista medan objekt läses in talar NVDA nu meddelandet&quot;Vänta&quot; via en aktiv region. Den här vägledningen förhindrar extra klick och förvirring. (SITES-24992)
+* Tangentbordsfokus flyttas nu i en logisk ordning när användaren expanderar den vänstra listen. Fokuseringen växlar direkt från den vänstra knappen till det utökade innehållet, vilket eliminerar behovet av att bakåt spåra eller hoppa över element. Den här ändringen förbättrar tillgängligheten för skärmläsare och tangentbordsanvändare. (SITES-24998)
+* Skärmläsarfeedback för knappen **Redigera** matchar nu kontrollen. När du aktiverar knappen meddelas redigeringsåtgärden i stället för ett förhandsgranskningsmeddelande, vilket förbättrar klarheten och minskar indatafel för användare som inte använder musen. (SITES-25208)
+* Åtgärden för att bekräfta i dialogrutan Teaser meddelar skärmläsare korrekt. Kontrollen rapporterar&quot;Bekräfta&quot;, inte ikonbeskrivningen, vilket ger användare av tangentbord och skärmläsare tydliga riktlinjer. (SITES-25223)
+* Hjälpknappen visar nu ett tydligt namn. Skärmläsare skriver &quot;Help&quot; i stället för en detaljerad beskrivning. Användarna förstår åtgärden och kan få hjälp snabbare. (SITES-25224)
+* Den spärrade funktionen för Timewarp visar en tydlig fokusring på länkarna **`Set Date`** och **Avsluta Timewarp**. Användare som ser exakt var fokus hamnar och undviker oavsiktliga åtgärder. Ringen bibehåller minst 3:1 kontrast mot bakgrunden. (SITES-25232)
+* Skärmläsare meddelar nu kontrollerna Anteckna och Stäng anteckningar korrekt i verktygsfältet Anteckningar. NVDA säger inte längre &quot;Förhandsgranskningsknappen trycktes ned&quot;, som vilseleda författare och föreslog fel åtgärd. Meddelandet matchar knappen som trycktes ned och håller arbetsflödet tydligt. (SITES-25234)
+* Tangentbordsnavigeringen i verktygsfältet för anteckningar fungerar på ett enhetligt sätt. Fokus hoppar inte längre till Avsluta när du öppnar läget utan flyttas till startkontrollen för att lägga till anteckningar. Användarna navigerar i kontrollerna sekventiellt utan omvänd tabbning. (SITES-25241)
+* Liten skärmvisning fungerar som väntat i Teaser modal. Dialogrutan skapar inte längre en vågrät rullningslist med 320 px, och verktygsfältet förblir tillgängligt utan att panorera åt sidan. Uppdateringen hjälper synskadade användare som zoomar sidan. (SITES-25242)
+* Liten skärmvisning fungerar som väntat i det modala bildläget. Dialogrutan skapar inte längre en vågrät rullningslist med 320 px, och bildverktygen är fortfarande tillgängliga utan panorering åt sidan. Den här uppdateringen förbättrar navigeringen för användare med nedsatt syn som zoomar sidan. (SITES-25244)
+* Sökning spärrar inställningarna för användartextavstånd. Om du ökar radhöjden, styckeavståndet, bokstavsmellanrummet eller ordmellanrummet klipps inte längre texten bort eller överlappar trädet. Innehållet flödar om vid WCAG 1.4.12-värden och förblir fullt läsbart. (SITES-25245)
+* Sökning modal passar nu in på små skärmar utan att överlappa trädkatalogen vid 320 px. Innehållet flödar om inuti dialogrutan, behåller endast lodrät rullning och gör kontrollerna synliga. Den här korrigeringen förbättrar läsbarheten och tangentbordsnavigeringen och anpassar sig till WCAG-flödesomformningen. (SITES-25246)
+* Carousel modal overflow medför inte längre vågrät rullning vid telefonbredder. Komponenten anpassas till 320 px, bevarar det lodräta flödet och ger kontroll synlig. Ändringen förbättrar läsbarheten och tangentbordsåtkomsten vid redigering. (SITES-25254)
+* Anteckningsarbetsflöden förlorar inte längre fokus. Den modala placerar det inledande fokus på en meningsfull rubrik, förhindrar att fokus hoppar utanför dialogrutan och återställer fokus till utlösaren efter stängningen. Skärmläsarutdata förblir koncisa och relevanta. (SITES-25257)
+* Dialogrutan **Ta bort anteckning** hanterar nu tangentbordsfokus korrekt. Om du öppnar dialogrutan flyttas fokus till rubriken för skärmläsarkontext och om du stänger den flyttas fokus tillbaka till knappen **Ta bort anteckning** som startade den. Användare landar inte längre på icke-relaterade kontroller eller bakom modala kontroller. (SITES-25258)
+* Tidsförvrängningsdatumväljaren hanterar nu fokus korrekt. Om du trycker på `Esc` återgår fokus till knappen **Datumväljaren** och om du väljer ett datum flyttas fokus till det länkade inmatningsfältet. Tangentbords- och skärmläsaranvändare behåller sitt sammanhang och hamnar inte bakom det modala. (SITES-25264)
+* Skärmläsare meddelar de rätta åtgärderna för knapparna **Anteckning** och **Stäng anteckning**. NVDA säger inte längre &quot;Förhandsgranskningsknappen trycks ned&quot;. Det meddelar knappnamnet så att användarna vet när anteckningsläget startar eller avslutas. (SITES-25268)
+* Anteckningens modala visar nu en tydlig **Skicka**-åtgärd. Författare kan lägga till en kommentar och skicka den med pennikonknappen eller stänga spärren med `Esc`, utan att gissa flödet. (SITES-25269)
+* Anteckningsposten innehåller explicita åtgärdsknappar. I dialogrutan visas **Skicka** för att spara anteckningen och **Avbryt** för att stänga den. Både tangentbordet är tillgängligt och hjälpmedlet har meddelat dig. Författare behöver inte längre förlita sig på att du klickar utanför dialogrutan eller bara trycker på `Esc` för att slutföra. (SITES-25281)
+* Anteckningsläget behåller nu tangentbordsfokus på övertäckningen och dess verktygsfält. Sidan bakom övertäckningen får inte längre fokus när författare trycker på Tabb, så användarna behåller sin orientering och kan navigera i anteckningar utan att hoppa till underliggande innehåll. (SITES-25282)
+* Enhetsväljaren i Redigera layout fungerar som den ska. När två enhetsalternativ har liknande bredd (t.ex. iPhone 8 Plus bredvid Galaxy 7) visar den markerade knappen ett verktygstips som visar hela etiketten medan båda knapparna är synliga och tillgängliga. (SITES-25285)
+* Vid 200 % zoomning kommer Redigera layout inte längre att åsidosätta sidan. Verktygsfältet återger helt och visar vågrät rullning vid behov, vilket återställer åtkomst till tidigare dolda kontroller för användare med nedsatt syn. (SITES-25288)
+* Tabbordningen i förhandsvisningen av layout går nu direkt från det primära verktygsfältet till det demografiska verktygsfältet. Användare av tangentbord och skärmläsare kan gå igenom kontrollerna i en förutsägbar sekvens i stället för att hoppa till det sekundära verktygsfältet. Ändringen överensstämmer med WCAG 2.4.3 Fokusordning. (SITES-25305)
+* När du zoomar sidan till 200 % döljs inte längre en del av det demografiska verktygsfältet. Verktygsfältsavsnittet hanterar spill och ger rullning i sitt eget område, vilket gör att alla kontroller är synliga och kan användas med hög förstoring. (SITES-25309)
+* Textinmatningar i verktygsfältet Demografi visar nu tillgängliga namn. Varje fält innehåller ett unikt ID med en programmatisk etikett, så skärmläsare meddelar syftet med fältet och användarna kan navigera efter etikett. Den synliga etiketten sitter nära kontrollen för att förbättra läsbarheten vid låga visioner. (SITES-25316)
+* Knappen Redigera meddelar nu skärmläsare i det sekundära verktygsfältet rätt åtgärd. När du aktiverar den läses&quot;Redigera&quot; i stället för den orelaterade&quot;Förhandsgranska&quot;-knappen som trycks ned, vilket tar bort förvirring vid tangentbordsnavigering. (SITES-25320)
+* Nu visas ett lämpligt namn i diagramreglaget för demografi. Skärmläsare meddelar&quot;Summa av kundvagn&quot; och inmatningsverktyg kan rikta kontrollen efter namn, vilket förbättrar kompatibiliteten med WCAG 4.1.2 (Namn, Roll, Värde). (SITES-25322)
+* Verktygsfältets skjutreglage för demografiska data behåller nu fokus när författare ändrar värdet med piltangenterna. Fokus hoppar inte längre till knappen Cart, så kortkommandoanvändare justerar värdet kontinuerligt och skärmläsare meddelar varje ändring. (SITES-25324)
+* Sök efter Assets Reflow jämnt i 320 pixlar (cirka 400 % zoom). Den spärrade funktionen gör att rubriker, fält och åtgärder kan läsas och inte överlappas, så att författare kan söka utan vågrät rullning. (SITES-25330)
+* Assets-panelen i redigeraren följer en sekvens med logiskt fokus. Tangentbordsanvändare har flikar över varje miniatyrbild och kan komma åt panelens avslutningskontroller. Ändringen tar bort hopp och förbättrar efterlevnaden av WCAG 2.4.3. (SITES-25360)
+* AEM uppdaterar knapparna **Listor** och **Stycken** i Teaser modal textredigerare för att visa deras utökade och komprimerade läge. Knapparna växlar nu `aria-expanded` och meddelar skärmläsarna om statusändringen. Författare får tydlig feedback och slipper gissa innan de öppnar eller stänger formatmenyerna. (SITES-25365)
+* AEM presenterar inläsningsstatus i Teaser modal. modal visar nu ett live-statusmeddelande medan innehållet läses in, så NVDA och JAWS talar&quot;Loading, please wait.&quot; Författare bör få tydlig feedback och undvika att interagera med dialogrutan innan den är klar. (SITES-25366)
+* Förbättrar statusmeddelanden på fliken Resurser i dialogrutan Länkval. När ett fel inträffar injicerar komponenten en läsbar statusuppdatering och håller tangentbordsfokus stabilt, vilket gör att NVDA/JAWS informerar användarna direkt. (SITES-25368)
+* Ett korrigerat gränssnittsbeteende på anteckningspanelen för mycket smala visningsrutor. Vid 320 px formas rubriken och Lägg till-kontrollen tidigare. Verktygsfältet flödar nu om och behåller tydlig separation mellan elementen. Författare kan använda kontrollerna utan att förlora information eller funktion. (SITES-25376)
+* Korrigerade ett kvarvarande feltillstånd på fliken **Länkar och åtgärder** i dialogrutan **Teaser** . När författarna har aktiverat **Call to action** och korrigerat tomma eller ogiltiga fält rensas felformateringen och ikonen på fliken och `aria-invalid` tas bort. Skärmläsare meddelar inte längre något fel när fälten har validerats. (SITES-25527)
+* Felhanteringen i webbplatsadministratörsformulär uppfyller nu förväntningarna på tillgänglighet. När valideringen misslyckas visas felet omedelbart på sidan, fokus flyttas till ett användbart meddelandemål och texten visas för skärmläsare som JAWS. (SITES-27138)
+* När du skapar en mapp i Sites visas nu en tydlig bekräftelsetagg. JAWS presenterar budskapet i hela regionen, så författarna får direkt och åtkomlig feedback efter åtgärden. (SITES-27141)
+* Korrigerade ett hjälpmedelsgap där bilder i redigeringsdialogrutor återges utan Alt-text. Dialogrutan innehåller nu beskrivande alternativ text vid behov och tomt alt för enbart visuella element, vilket återställer kompatibelt beteende för JAWS och andra skärmläsare. (SITES-27153)
+* Förbättrad felhantering i redigeringsdialogrutor. När ett konfigurationsfel inträffar visar gränssnittet explicit text och utlöser ett skärmläsarmeddelande via ett varningsområde. Författarna får direkt feedback och kan åtgärda problemet utan att tappa sitt sammanhang. (SITES-27155)
+* Korrigerade ett fel i flödesomformningstillgänglighet i Platsadministratör. Vid zoomning med 400 % webbläsare kontrollerar verktygsfältet och rutnätet överlappande och push-knappar utanför skärmen, vilket blockerar tangentbordsnavigering och skärmläsaranvändning. Layouten flödar nu korrekt så att sök-, filter- och åtgärdsknapparna förblir synliga och kan användas med 400 % zoomning. (SITES-27238)
+* Låg kontrast i låsstatusmeddelandet som visas i arbetsflödet Lås/Lås upp sida har korrigerats. Meddelandet uppfyller nu 4,5 :1-kvoten, vilket förbättrar läsbarheten och ADA-kompatibiliteten för författare. (SITES-27270)
+* Tillgängliga namn har lagts till i bockmarkeringsikonerna i dialogrutan **Effektiva behörigheter**. JAWS presenterar nu ikonerna och deras innebörd, vilket förbättrar tangentbordsnavigering och ADA-kompatibilitet. (SITES-27272)
+* Navigering med dolda rubriker accepterade fokus och förvirrade användare med både synkning och skärmläsare. Uppdateringen inaktiverar fokus på komprimerade kontroller och visar endast synliga objekt. Navigeringen är förutsägbar och uppfyller WCAG 2.4.3. (SITES-35224)
 
-#### Tillgänglighet {#sites-accessibility-6523}
+* Mappens miniatyrbildikoner i Sites Admin har åtgärdats så att de fungerar som dekorativa bilder. Uppdateringen tar bort bildrollen och använder tom alternativ text, så hjälpmedelstekniken ignorerar ikonerna och läser bara meningsfulla etiketter. (SITES-2852)
+* Adobe ökade färgkontrasten för referenstexten på webbplatsens hemsida. Texten uppfyller nu WCAG 2.1 AA med en kvot på minst 4,5:1 och kan läsas tydligt på ljusa teman och ljusa skärmar. (SITES-24755)
+* Med referensmarkeringen för järnväg visas nu namnet för skärmläsare. Regionen visar en unik `aria-label` (&quot;Reference rail&quot;), som förbättrar navigeringen för landmärken och särskiljer den från andra regioner. (SITES-24973)
+* Beskrivningshastigheten blockerade navigering på fliken framåt och bröt dialogflödet. Korrigeringen återställer standardtangentbordsrörelsen. Författare fortsätter förbi fältet med en enda tabb och behåller markeringsordningen förutsägbar. (SITES-35228)
+* Redigeringskontrollerna saknade hjälpmedelsnamn och exponerad Raw-ikontext, vilket förvirrade JAWS. Korrigeringen lägger till explicita ARIA-etiketter och standardroller. Meddelandena låter korrekta och överensstämmer med förväntningarna på tillgänglighet. (SITES-35227)
+* Listrutan Kategorier saknade en specifik etikett, så JAWS talade om en allmän&quot;bildknappsmeny&quot;. Uppdateringen namnger kontrollen &quot;Kategorier&quot; och definierar dess roll. Skärmläsaranvändare hör en korrekt etikett och förstår vilka alternativ som är tillgängliga. (SITES-35226)
+* I dialogrutan Egenskaper visas ett datarutnät som skärmläsare behandlas som oformaterad text. JAWS och NVDA missade fokus och kunde inte meddela rader och kolumner. Korrigeringen lägger till riktiga tabellsemantik och ARIA-roller. Skärmläsare känner nu igen tabellen och spårar fokus korrekt. (SITES-35225)
+* Textredigeraren för innehållsfragment som läses in med ett trunkerat åtgärdsfält. Ikonerna klipptes av och det gick inte att komma åt spillmenyn. Uppdateringen åtgärdar layouten så att hela verktygsfältet förblir synligt och tillgängligt. (SITES-33005)
+* Formulärfält på fliken Grundläggande kunde inte visa användbar feltext. Formuläret visar nu tydliga, textbundna meddelanden och länkar dem till fältet för skärmläsare. Användare av tangentbord och hjälpmedel får omedelbar vägledning för att åtgärda inmatningar. (SITES-32480)
+* Det multifält som används i en anpassad komponent som visas med ikonknappar utan etikett och med inkonsekvent tabbordning. JAWS/NVDA meddelade endast att det fanns&quot;knappar&quot; eller överhoppade kontroller som blockerade tangentbordsåtgärder. Uppdateringen innehåller beskrivande namn för Lägg till, Ta bort och Flytta, normaliserar tabbstopp och meddelar listuppdateringar för att uppfylla ADA:s förväntningar. (SITES-30660)
+* Snabbpublicering returnerar nu ett tydligt meddelande om att åtgärden lyckades. Dialogrutan stängs, en popup-bild bekräftar åtgärden och skärmläsarna meddelar meddelandet så att författarna inte missar resultatet. (SITES-26912)
+* Ingen ändring krävs. Adobe granskade påståendet att sökikonen överlappar närliggande text. Rubriken innehöll en etikett som kunden lagt till. Vanilla AEM återger bara ikonen. En ren instans visar den korrekta layouten vid 100 % zoom, så felet stängdes som utanför omfånget. (SITES-26910)
+* Skapa sidteman döljer inte längre fokusläget. Akvatiska format och designformat återger en konsekvent markering på fliken **Grundläggande** och intilliggande flikar under tangentbordsnavigering. Den här ändringen återställer förutsägbar och förutsägbar fokusåterkoppling för användare med nedsatt syn. (SITES-26907)
 
-* Avsnitten på arbetsytan på AEM Editor har nu stöd för fullständig tangentbordstillgänglighet. Användarna kan bara aktivera avsnittsrubriker och redigera knappar med hjälp av tangentbordet, utan att behöva använda muspekaren. Uppdateringen säkerställer överensstämmelse med WCAG 2.1.1 och förbättrar användbarheten i alla komponenter (t.ex. Teaser, Image, Carousel, Layout, Timewarp och Annotation). (SITES-25256) <!-- 6.5 LTS SP1 -->
-* Korrigerade ett tillgänglighetsproblem i AEM Page Editor där tangentbordsfokus oväntat återställs till början av det demografiska verktygsfältet efter att knappar som Persona, Kundvagn eller Borttagen har aktiverats. Fokus ligger nu kvar på den aktiverade knappen för att ge stöd för enhetlig tangentbordsnavigering och arbetsflöden för skärmläsare. (SITES-25306)
-* Korrigerade ett kritiskt hjälpmedelsproblem i AEM Page Editor där Canvas-element i flera dialogrutor och moduler (t.ex. Resursrand eller Layoutförhandsvisning) inte kunde användas med bara ett tangentbord. Alla interaktiva element på arbetsytan har nu stöd för navigering endast via tangentbordet, vilket säkerställer överensstämmelse med WCAG 2.1.1 (SITE-25256)
-* Korrigerade ett tillgänglighetsproblem i användargränssnittet för Sites Admin där interaktiva listobjekt i popup-fönstret Skapa använde felaktiga ARIA-roller. Element som betedde sig som länkar tilldelades `role="listitem"` i stället för `role="menuitem"`, bröt mot ARIA-designmönstren och förvirrade skärmläsare. Uppdateringarna ser till att alla listkomponenter har rätt semantiska roller för förbättrat stöd för tangentbords- och hjälpfunktioner. (SITES-24493)
-* Ett problem med associationen för hjälpmedelsetiketter för sidrubrik- och taggfält har åtgärdats. AEM-gränssnittet kopplar nu hjälpmedelsetiketter korrekt till fälten Rubrik och Sidtitel när du använder skärmläsare som JAWS. Korrigeringen säkerställer korrekt läsning av etiketter och förbättrar ADA-kompatibiliteten för sidgenerering, egenskaper och arbetsflöden. (SITES-27149)
-* Korrigerade ett tillgänglighetsproblem med tabellidentifiering i dialogrutan för behörigheter. Behörighetstabellen i AEM använder nu korrekta ARIA-roller och -attribut för att säkerställa att skärmläsare som JAWS identifierar den som en tabell. Korrigeringen förbättrar tillgängligheten och säkerställer att användarna får rätt navigerings- och innehållsinformation. (SITES-27140)
-* Korrigerat saknad visuell etikett för kommentarinmatningsfält på tidslinjen. Korrigerade saknade visuella etiketter för inmatningsfält för kommentarer under tidslinjen för att förbättra tillgängligheten. Uppdateringen ser till att skärmläsare kan meddela fältetiketterna korrekt. Den här upplevelsen förbättrar formulärnavigering och överföring för alla användare, särskilt de som använder hjälpmedelstekniker. (SITES-26903)
-* Korrigerad tangentbordstillgänglighet för ellipsknappen i tidslinjekommentarer. Aktiverad tangentbordsnavigering för ellipsknappen (tre punkter) bredvid kommentarer under tidslinjeavsnittet. Användarna kan nu komma åt och interagera med knappen med tabbtangenten, vilket förbättrar tillgängligheten för användare som bara använder tangentbordsnavigering. (SITES-26891)
-* Förbättrade NVDA-/Skärmläsarmeddelanden för sökresultat i urvalsdialogrutor. Uppdaterade dialogrutan Öppna markering för att meddela om sökresultat hittas eller inte när du använder skärmläsare, t.ex. NVDA eller Skärmläsaren. Denna förbättring hjälper användare som förlitar sig på hjälpmedelstekniker att förstå resultatet av sina sökåtgärder utan att behöva någon visuell bekräftelse. (SITES-26883)
-* ARIA-rollen för ellipsikonen har korrigerats bredvid kommentarinmatningsfältet. Ellipsikonen (tre punkter) bredvid kommentarinmatningsfältet har uppdaterats så att rätt ARIA-roll används, vilket gör att skärmläsare kan identifiera elementet korrekt. Den här förbättringen förbättrar tillgängligheten och förbättrar upplevelsen för användare som använder hjälpmedelstekniker. (SITES-26881)
-* Ogiltiga ARIA-attribut i Coral UI-komponenter har korrigerats. Uppdaterade Coral UI-komponenter för att säkerställa att alla ARIA-attribut använder giltiga värden, vilket förbättrar tillgängligheten. I synnerhet har fall där ogiltiga värden som `aria-modal="dialog"` har tilldelats felaktigt åtgärdats. Den här förbättringen gör att skärmläsare kan tolka element i dialogrutor korrekt, vilket förbättrar tillgängligheten för användare som använder hjälpmedelstekniker. (SITES-26873)
-* Förbättrad synlighet och verktygstips för ikoner i Reflow-scenarier. Förbättrat Reflow-beteende för att verktygstipsen ska visas korrekt för ikonerna **Hämta**, **Bearbeta resurser** och **Checka ut**. Fokuseras på ett hjälpmedelsproblem där ikoner och deras etiketter blev osynliga när visningsrutans storlek ändrades eller webbläsarens zoominställningar ändrades. Den här korrigeringen stöder användare med nedsatt syn genom att bibehålla synligheten och tillhandahålla korrekta ikonbeskrivningar under Reflow. (SITES-26871)
 
-#### Administratörsgränssnitt{#sites-adminui-6523}
 
-Ett undantagsfel i URL-tjänsten för Universal Editor har korrigerats och Externalizer-slutpunkter saknas. URL-tjänsten för Universal Editor hanterar nu saknade författare, publiceringspunkter eller lokala Externalizer-slutpunkter utan att ge några undantag. Administratörsanvändare kan öppna sidredigeraren även när vissa Externalizer-konfigurationer är ofullständiga. (SITES-28877) <!-- LTS -->
+#### Administratörsgränssnitt{#sites-adminui-6524}
 
-#### Klassiskt användargränssnitt{#sites-classicui-6523}
+Skärmläsaranvändare fick ingen navigeringshjälp i rutnätet **Catalog System Blueprint** . JAWS meddelade bara cellpositionen och blev sedan tyst. I den här versionen läggs hjälpmedelsförberedda riktlinjer och roller till, vilket gör att JAWS kan läsa listkontexten, det markerade objektet och de obligatoriska pil-/mellanrumskontrollerna. (SITES-30661)
 
-* Ett problem i dialogrutor för klassiskt användargränssnitt där en knapp skulle dölja ett textområde och inte visas igen vid efterföljande klick. Med korrigeringen ser du till att textområdet visas igen när du växlar, vilket återställer förväntat beteende och förhindrar avbrott i dynamiska dialogrutearbetsflöden. (SITES-30230)
-* Korrigerad funktion för avbildning av trasiga Classic UI-bilder efter uppgradering av Service Pack 2. I den klassiska sökaren för användargränssnittsbildresurser hanteras nu resursnamn som innehåller mellanslag eller specialtecken korrekt. Den här uppdateringen ser till att filnamnen kodas korrekt i resurssökaren, vilket förhindrar sökfel och gör att författare kan hitta och välja bildresurser utan fel. (SITES-29151)
+#### Klassiskt användargränssnitt{#sites-classicui-6524}
 
-#### [!DNL Content Fragments]{#sites-contentfragments-6523}
+Klassiskt användargränssnitt förlorade etiketter och visade tomma alternativ. Dialogrutor visas även med kodade HTML-filer, t.ex. `<br>`. Uppdateringen återställer kryssruteetiketter och avkodningskoder, så att dialogrutorna läses korrekt. (SITES-31822)
 
-* Ett valideringstestfel för `DeleteVariationIT.testUpdateBasic` har korrigerats. `DeleteVariationIT.testUpdateBasic`-testet misslyckas inte längre när Service Pack-valideringen körs. Korrigeringen åtgärdar ett textmappningsfel som saknas i JSON-hanteringslogiken, vilket säkerställer teststabilitet och undviker onödiga testavbrott. (SITES-28022)
-* AEM förhindrar nu prestandaförsämring på grund av felaktiga XMP-metadata i bildresurser. Assets som innehåller ogiltiga eller icke-kompatibla egenskapsnamn för XMP, t.ex. de med numeriska segment eller okvalificerade strukturer, utlöser inte längre upprepade varningsloggar under bearbetningen. Systemet filtrerar bort problematiska metadata för att säkerställa att inmatning och validering av resurser är slutförd utan fel. (SITES-30683) <!-- AEM 6.5 LTS SP1 -->
+<!--
+#### [!DNL Content Fragments]{#sites-contentfragments-6524}
+-->
 
+#### [!DNL Content Fragments] - Admin{#sites-admin-6524}
 
-<!-- #### [!DNL Content Fragments] - Admin{#sites-admin-6523}
+Parenteser i ett innehållets fragmentnamn orsakade att referenspanelen felaktigt rapporterade användningen. Författare såg 0 även när andra fragment refererade till det. Med korrigeringen korrigeras sökvägsparsningen för&quot;(&quot; och&quot;)&quot; och rätt antal och poster som inte är noll visas. (SITES-35078)
 
-* A () -->
 
+#### [!DNL Content Fragments] - Fragmentredigeraren{#sites-fragments-editor-6524}
 
-#### [!DNL Content Fragments] - Fragmentredigeraren{#sites-fragments-editor-6523}
+* Avpubliceringen misslyckades för innehållsfragment vars DAM-sökväg innehöll parenteser. Guiden Hantera publikation skrev om &quot;(&quot; och &quot;)&quot; och bröt resurssökvägen. Korrigeringen bevarar tecknen och åtgärdar rätt objekt, så avpubliceringsåtgärden slutförs. (SITES-35077)
+* När du redigerar ett innehållsfragment och går tillbaka till Assets-listan doldes fragmentet eller hela mappen. Det gick inte att uppdatera listan efter att redigeraren stängts. Korrigeringen uppdaterar nu listan på ett tillförlitligt sätt och gör det redigerade fragmentet synligt utan att behöva läsas in på nytt. (SITES-35374)
 
-Andra författare kan fortfarande publicera innehållsfragment även när en annan författare checkar ut dem, vilket strider mot det avsedda beteendet för utcheckningsfunktionen. Den här korrigeringen förhindrar att andra användare ser eller använder publiceringsknapparna i redigeringsgränssnittet när ett innehållsfragment är utcheckat. (SITES-30578) <!-- LTS -->
+* Det gick inte att öppna väljaren för polarisresurser eftersom nödvändiga IMS-omfattningar har tagits bort. Med korrigeringen återställs minimala scope och leveransanslutningen återupprättas. Bläddra efter resurser och markera objekt igen, utan HTTP 500-fel. (SITES-35837)
 
-#### [!DNL Content Fragments] - GraphQL API {#sites-graphql-api-6523}
+#### [!DNL Content Fragments] - GraphQL API {#sites-graphql-api-6524}
 
-Korrigerat GraphQL QueryValidationError med Content Fragment-scheman. Uppdatering av paketet `cq-dam-cfm-graphql` åtgärdar schemavalideringsfel när Content Fragment-referenser används. Korrigeringen ser till att GraphQL-frågor fungerar korrekt utan manuell schemajustering eller ompublicering efter paketdistributioner. (SITES-27001) <!-- LTS -->
+Efter varje distribution har giltiga GraphQL-frågor börjat returnera `GraphQL_QueryValidationError`. Slutpunkten behöll ett inaktuellt schema tills teamen tömde caches eller startade om. Korrigeringen uppdaterar GraphQL-schemat och registret för beständiga frågor under distributionen och återställer normala svar omedelbart. (SITES-34301)
 
+<!--
+#### [!DNL Content Fragments] - GraphQL Query Editor{#sites-graphql-query-editor-6524}
 
-<!-- #### [!DNL Content Fragments] - GraphQL Query Editor{#sites-graphql-query-editor-6523}
 
-* A () -->
+#### [!DNL Content Fragments] - REST API{#sites-restapi-6524}
 
-<!-- #### [!DNL Content Fragments] - REST API{#sites-restapi-6523}
 
-* A () -->
+#### Component Console{#sites-component-console-6524}
 
 
-#### Komponentkonsol{#sites-component-console-6523}
+#### Core Backend{#sites-core-backend-6524}
 
-Förbättringar av sidinläsning för&quot;Component Live Usage&quot;. Optimerar sidan&quot;Använda komponenter direkt&quot; i AEM för att förhindra att tomma rader visas när du bläddrar igenom stora datauppsättningar. Användare som läser in komponenter med omfattande användningsreferenser kan nu få kontinuerlig datainläsning utan onödiga luckor eller tomma poster. Den här upplevelsen förbättrar sidnavigering, noggrannhet i spårningen och effektiviteten i hanteringen av rapporter om komponentanvändning. (SITES-26454)
 
-#### Core Backend{#sites-core-backend-6523}
+#### Core Components{#sites-core-components-6524}
 
-* Det gick inte att visa objekt i Finder för fast innehåll på grund av ogiltiga resursnamn. Innehållssökaren hanterar nu resursnamn med icke-kodade tecken korrekt. Resurslista i sidredigeraren misslyckas inte längre eller utlöser undantag när resurser med problematiska namn påträffas. (SITES-28722)
-* Ett problem där komponenten `SearchPathLimiter` genererade för stora loggposter genom att skriva ut meddelanden på FEL-nivå för varje anrop. Detta beteende började efter Service Pack 17 och ledde till prestandaproblem på grund av extremt stora loggvolymer. Med korrigeringen nedgraderas loggnivån till DEBUG, vilket avsevärt minskar loggbruset och förbättrar systemövervakning och diagnostikeffektivitet. (SITES-29835)
-* Felaktigt formaterade XMP-metadata utlöste ett fel vid bearbetning av bildresurser i `ValidationDataServlet`. Korrigeringen säkerställer kompatibel metadatahantering och undviker redundant parsning av ogiltiga egenskaper. (SITE-30683) <!-- LTS -->
 
+#### Campaign integration{#sites-campaign-integration-6524}
+-->
 
-<!-- #### Core Components{#sites-core-components-6523}
 
-* A () -->
+#### ContentHub {#sites-contenthub-6524}
 
-<!-- #### Campaign integration{#sites-campaign-integration-6523}
+ContextHub injicerar inte längre en andra jQuery-kopia på publiceringssidor. Klientbiblioteket för segmentmotorn tar bort cq.shared-beroendet som tog jQuery 1.12.4, så att webbplatser läser in en konsekvent jQuery- och front-end-kod fungerar tillförlitligt. (SITES-30404)
 
-* A () -->
+#### Upplevelsefragment{#sites-experiencefragments-6524}
 
-<!-- #### Experience Fragments{#sites-experiencefragments-6523}
+* Experience Fragments lokaliserar nu varningen som visas när det inte finns någon Adobe Target-konfiguration. Meddelandet visas på författarens språkområde i stället för på engelska, så export- och aktiveringsstegen läses korrekt för globala team. (SITES-11868)
+* När du publicerar en Experience Fragment-variant visas nu ett lokaliserat felmeddelande när ingen molntjänst är kopplad till variationen. Meddelandet visas i användargränssnittet på användarens språk i stället för i en sträng som bara är för engelska. (SITES-20293)
+* Exporteringen av en Experience Fragment till Target kraschade med `Attempt to modify attribute at illegal index: -1`. Instrumentationen för webbinspiraler är i konflikt med exporteraren och attributhanteringen är skadad. Korrigeringen gör att attributbearbetning blir svårare och den konflikten tas bort. Exporten lyckades och fragmentet återges i Target. (SITES-31891)
 
-* A () -->
+* Experience Fragment-egenskaper översätter nu fliken **Referenser**. Etiketter och kolumnrubriker som &quot;Sida&quot;, &quot;Sidsökväg&quot; och &quot;Varianttitel&quot; visas på författarens språk. Den här ändringen tar bort strängar som bara är för engelska och gör egenskapsvyn konsekvent för globala team. (SITES-11203)
+* **Variationer** > **Skapa arbetsflöde** visar nu fullständig översättningstext. I dialogrutan hanteras långa språksträngar genom att innehållet radbryts och storleksändras på rätt sätt, vilket eliminerar urklipps- eller brytningsetiketter. (SITES-19304)
+* Experience Fragment-egenskaper översätter nu statusetiketterna för sociala medier. Författare ser statusvärden som Bokfört och Inte bokfört på det valda språket för alla språk. Den här ändringen tar bort strängar som bara är för engelska och som orsakade förvirring under granskningen. (SITES-2014)
 
-<!-- #### Foundation Components (Legacy){#sites-foundation-components-legacy-6523}
+<!--
+#### Foundation Components (Legacy){#sites-foundation-components-legacy-6524}
+-->
 
-* A () -->
+#### Launches{#sites-launches-6524}
 
+* Om du tar bort en mycket stor Launch låstes databasen. Jobbet köade för många borttagningar och utlöste andra begäranden. Korrigeringen tar nu bort batchar och ger upphov till genvägar mellan segment, så rensningen slutförs medan systemet förblir responsivt. (SITES-32004)
 
-#### Launches{#sites-launches-6523}
+* Öppna Konfiguration > Egenskaper visar listrutorna Företag och Egenskap. **Spara** och **Stäng** bevarar slutförda fält, och verifieringen av titeln utlöser inte längre fel på företag eller egenskap. (CQ-4359853)
+* Nödvändiga kontroller i IMS-konfigurationen körs vid uppdatering, inte bara när den skapas. Tomma värden i fält som klient-ID eller Klienthemlighet visar ett fel och stoppar sparandet tills ett giltigt värde anges, vilket förhindrar återanvändning av det tidigare värdet. (CQ-4359938)
+* När du startar projektet visas översatta validerings- och felsträngar. Meddelanden som bara innehåller engelska för fel vid skapande och saknade källsidor visas inte längre. Författarna ser tydlig och språklig feedback under installationen av Launch. (SITES-13085)
+* Starta kampanj uppdaterar sidegenskaperna `jcr:title`, `jcr:description` och `cq:redirectTarget` på källsidan. Ändringen tar bort egenskapsundantag i MSM-utrullningskonfigurationen och arbetsflödeslogiken. Kampanjer, översättningar och SEO håller enhetliga titlar, beskrivningar och omdirigeringar. (SITES-34509)
+* Launch-åtgärden ignorerade omfånget och inkluderade sidor som delade samma överordnade som målavsnittet. Uppdateringen tvingar underträdets gränser och befordrar bara den valda sidan och dess underordnade sidor. Ej relaterade sidor behåller sitt befintliga innehåll. (SITES-34344)
+* En automatisk befordran för kapslad start som stoppades vid författaren och hoppade över publiceringsnivån har åtgärdats. Den automatiska kampanjen för en underordnad start publicerar de uppdaterade sidorna till de konfigurerade utgivarna och slutför den fullständiga starten enligt schemat. (SITES-30420)
 
-* Korrigerat felaktigt startdatum mellan 25 december och 31 december. Startgränssnittet visar nu datum mellan 25 december och 31 december med rätt år. Programfixen säkerställer att datum inte längre visas felaktigt nästa år, vilket undviker förvirring under kampanjplanering och schemaläggning. (SITES-28706)
-* Åtgärdade brutna AEM Launch-mallar efter uppgraderingen av Service Pack 2. AEM Launch-mallar läses nu in korrekt efter en uppgradering av Service Pack 2. Korrigeringen åtgärdar ogiltiga data i interna startkonfigurationer, vilket gör att användare kan visa, redigera och skapa startprogram utan fel eller fält som saknas. (SITES-28504)
+<!--
+#### Link Checker{#sites-link-checker-6524}
+-->
 
+#### MSM - Live-kopior{#sites-msm-live-copies-6524}
 
-<!-- #### Link Checker{#sites-link-checker-6523}
+* En utrullning på mappnivå kunde inte skapa live-kopior för Experience Fragments under den mappen. Enskilda rollouts fungerade, vilket bröt arbetsflödena. Ändringen justerar mapplanseringen med sidbeteendet och sprider relationer och referenser i underträdet. (SITES-35161)
+* När du har tagit bort en komponent i en Live-kopia gick **Aktivera arv** sönder med ett JavaScript-fel och komponenten saknades tills ett andra försök gjordes. Uppdateringen åtgärdar den efterborttagna inläsningen så att den innehåller rätt parametrar och ersätter det föråldrade varningsanropet. Dialogrutan öppnas korrekt och arv återställs vid det första försöket. (SITES-31387)
+* Utrullningsguiden accepterade **senare** utan datum. Författare utvecklade och skapade en utrullning utan schema. Uppdateringen framtvingar datumval och visar en tydlig uppmaning. Åtgärden **Fortsätt** är inaktiverad tills ett datum finns. (SITES-31374)
 
-* A () -->
 
-<!-- #### MSM - Live Copies{#sites-msm-live-copies-6523}
+#### Page Editor{#sites-pageeditor-6524}
 
-* A () -->
+* När innehållsträdet öppnades på en sida med en Personalization-behållare returnerades en tom panel och ett null-referensfel för konsolen. Författare kunde inte välja eller konfigurera komponenter. Uppdateringen tar bort felet och aktiverar samspelet mellan träd och komponenter på nytt. (SITES-34336)
+* AEM 6.5 SP23, växling till paus i sidredigeraren. Om du klickar på **Layout**, **Utvecklare** eller **Mål** låstes redigeraren i läget **Redigera** och en konsol `TypeError` utlöstes. Uppdateringen återställer ändringar i verktygsfältsläget och rensar felet. (SITES-34536)
+* Sidredigeraren hoppade bort från insättningspunkten när författare lade till komponenter i långa behållare. Uppdateringen justerar övertäckningstidpunkten och rullningshanteringen. Vyn behåller sin plats och den nya komponenten är synlig och klar att konfigureras. (SITES-32621)
+* Anpassade taggetiketter misslyckades i sidredigeraren och användargränssnittet visade alltid&quot;taggar&quot;. Predikatet utvärderar nu `fieldLabel` först och `labelText` sekund, och sedan används standardvärdet. Författare ser etiketten som de anger. (SITES-32278)
+* Om du avbryter platsfiltret i Platser har OmniSearch-ikonen felaktigt justerats och överlappat den med platshållartexten. Ikonen blev oklickbar. Korrigeringen justerar ikonen och återställer träffområdet så att både musen och tangentbordet aktiverar sökningen. (SITES-30946)
+* När du valde Utvecklare befann du sidan i ett felaktigt läge och blockerade redigering på den sidan. Panelen stängdes och gränssnittet slutade svara. Uppdateringen reparerar logiken för växling mellan lägen och hantering av cache, vilket gör sidan redigerbar och visar utvecklardata direkt. (SITES-30922)
+* Sökfrågan togs inte bort när du klickade på **Rensa** i **Infoga ny komponent** och listan lämnades filtrerad till ett enskilt objekt (dragspel). Korrigeringen återställer frågan och uppdaterar listan. Alla tillåtna komponenter visas igen. (SITES-30921)
 
+<!--
+#### Replication{#sites-replication-6524}
+-->
 
-#### Page Editor{#sites-pageeditor-6523}
+#### RTF-redigerare{#sites-rte-6524}
 
-* Ett problem med att läsa in AssetPicker med lägre skärmupplösning har åtgärdats. AssetPicker läser nu in resurser korrekt när användare rullar med lägre skärmupplösning (1 728 × 1 117 eller lägre). Användarna upplever inte längre att resurser saknas vid bläddring, vilket förbättrar resurshanteringen över olika brytpunkter på enheten. (SITES-28065)
-* Ett meddelande om att skärmläsaren saknas för åtgärder för att låsa och låsa upp sidor har åtgärdats. Sidredigeraren meddelar nu meddelandet&quot;Info: Sidan har låsts/låsts upp&quot; korrekt när användaren aktiverar knappen för lås/lås upp. Korrigeringen förbättrar tillgängligheten och ser till att skärmläsaranvändare får dynamiska uppdateringar under sidredigering. (SITES-27143)
-* Förbättrat tangentbordsfokus för komponentåtgärder i AEM Authoring. Förbättrad tangentbordsnavigering i AEM Author-verktyget för att säkerställa att fokus ligger kvar på den nyskapade eller markerade komponenten efter åtgärder som Konfigurera, Ta bort eller Konvertera. Tidigare flyttades fokus till sidans överkant, vilket orsakade problem med kompatibiliteten. Den här uppdateringen förbättrar användarupplevelsen för användare av tangentbord och hjälpmedel. Det gör det genom att bibehålla det logiska fokusets förlopp i redigeringsarbetsflödet. (SITES-26549)
-* Förbättrad tabbnavigering i redigeringsdialogrutor. Förbättrar tangentbordsnavigeringen i dialogrutorna för AEM Author genom att låta användare fortsätta att tabba framåt när redigeringsrutan Beskrivning har nåtts. Tidigare blockerade fokussvällning i fältet Beskrivning ytterligare navigering utan specialtangentkombinationer. Uppdateringen ser till att användarna smidigt kan navigera i fälten med bara tabbtangenten, vilket förbättrar tillgängligheten och användarupplevelsen. (SITES-26524)
-* En regression introducerades i AEM 6.5 Service Pack 2 som förhindrade användare från att inkludera mellanslag i Launch-titlar. Med korrigeringen återställs möjligheten att använda blanksteg så att team kan definiera och organisera startnamnen mer flexibelt, i linje med förväntat beteende. (SITES-29414)
-* Ett problem med storleksändring för komponenter i layoutbehållare har korrigerats efter dolda/visade åtgärder. Page Editor beräknar nu kolumnvärden korrekt efter att en layoutbehållare har dolts och tagits bort. Användare kan ändra storlek på komponenter utan fel, och kolumner visas korrekt vid storleksändring. (SITES-28463)
-* Knappfel för fast innehållsträd i sidredigeraren. Sidredigeraren placerar nu konfigurationsknappen för innehållsträdet korrekt under den avsedda dialogrutan &quot;Head Teaser&quot; i stället för i fel avsnitt. Korrigeringen uppdaterar CSS för dialogrutan Innehållsträd så att den använder `top:0` i stället för `bottom:0`, vilket säkerställer korrekt placering av knapparna. (SITES-28448)
+* I helskärmsläge dolde textredigeraren resultatet av stavningskontrollen bakom dialogrutan när det inte fanns några fel. Uppdateringen placerar resultatpanelen längst fram och håller meddelanden och förslag synliga. Författare granskar och godkänner korrigeringar utan att behöva lämna helskärmsläget. (SITES-32366)
+* RTF-redigeringsbilder följer nu den valda justeringen. Författare anger vänster, mitten eller höger i bilddialogrutan så använder redigeraren det alternativet konsekvent i utdata. Ändringen stabiliserar även dialogrutan Alt-text så att Alt-text och justering sparas och behålls vid redigering. (SITES-30634)
 
+#### Universell redigerare {#sites-universal-editor-6524}
 
-<!-- #### Replication{#sites-replication-6523}
+När autentiseringshanteraren för frågetoken konfigurerades blandades användarna eftersom etiketterna inte matchade fälten. Gränssnittet tog bort text från sökvägen och visade fel namn. Korrigeringen återställer tydliga och korrekta etiketter för tjänstrankning och frågetokenalternativ. (SITES-31305)
 
-* A () -->
 
+### [!DNL Assets]{#assets-6524}
 
-#### RTF-redigerare{#sites-rte-6523}
 
-Åtgärda oväntade `<br>`-taggar i RTF-redigeraren med inklistringsläge. RTF-redigeraren hanterar nu klipp ut och klistra in-åtgärder korrekt när du använder klartext `defaultPasteMode`. Korrigeringen förhindrar infogning av oväntade `<br>`-taggar när användare klipper ut och klistrar in text i RTE-fält, vilket ger en ren formatering vid redigering av innehåll. (SITES-27780)
+#### [!DNL Dynamic Media]{#assets-dm-6524}
 
-#### Universell redigerare {#sites-universal-editor-6523}
+* Alternativet **Välj miniatyrbild** för videofilmer fungerar nu korrekt i AEM Assets - Dynamic Media. När du klickar öppnas dialogrutan där du kan välja en miniatyrbild från Assets, vilket eliminerar beteendet att klickningen inte fungerade tidigare och endast tar bort begränsningen till extrahering av videobildrutor. (ASSETS-58926)
 
-* När flera begäranden som innehåller frågeparametern skickas till AEM, kan cookie-filen för inloggningstoken inte returneras i tid, vilket kan leda till en misslyckad inloggning. (SITES-30659) <!-- LTS -->
-* För att säkerställa kompatibilitet och stöd med SAML-hanterare måste du konfigurera egenskapen `service.ranking` så att `Query Token Auth`-hanteraren kör *före* `SAML Auth`-hanteraren. (SITES-29684)
 
-### [!DNL Assets]{#assets-6523}
+### [!DNL Forms]{#forms-6524}
 
-* Följande problem kan uppstå på navigeringssidan [!DNL AEM] lokalt (6.5.22.0) när du har valt ![Assets &#x200B;](/help/assets/assets/Smock_Asset_18_N.svg)**[!UICONTROL Assets]**, navigerat till mappen **[!UICONTROL Search Adobe Stock]**&#x200B;och valt en stockbild:
-   * Den valda stockbilden kan inte licensieras och sparas eftersom en tom listruta visas när du klickar på **[!UICONTROL License & Save]**.
-   * Om du väljer Stock-bilden eller anger URL:en för Stock-sidan igen dirigeras den till hemsidan [!DNL AEM], vilket förhindrar åtkomst till Adobe Stock-bilden. (ASSETS-48687)
-* Problem vid hantering av mappar om namnet på mappen innehåller `/` i namnet på navigeringssidan [!DNL AEM] On-Premise (6.5.22.0). (ASSETS-46740)
-* På [!DNL AEM] 6.5 läses sidan med resursinformation inte in från vyn ![&#x200B; Samling &#x200B;](/help/assets/assets/Smock_Collection_18_N.svg)**[!UICONTROL Collections]**&#x200B;på grund av hög minnesanvändning. (ASSETS-46738)
-* Integrationsproblem med [!DNL InDesign] som `Day CQ DAM Mime Type OSGI`-tjänst identifierar felaktigt [!DNL InDesign]-filer som `x-adobe-indesign` i stället för `x-indesign`. (ASSETS-4953)
-* Sessionsläckan [!DNL AEM 6.5.21] spårade till det körklara **[!UICONTROL Scheduled publish to Brand Portal]**-arbetsflödessteget. (ASSETS-44104)
-* **[!UICONTROL Out of Memory (OOM)]** fel visas i [!DNL AEM] vid bearbetning och publicering av bilder. Det här problemet berodde på föråldrade metoder i arbetsflöden, som **[!DNL Dam Asset update]** och **[!DNL Dynamic Media: Reprocess assets]**. (ASSETS-4343)
-* När du har gjort en mindre ändring, till exempel uppdaterat titeln, öppnar du **[!DNL Connected Assets configuration]** igen och sparar om den på den lokala platsinstansen. Fjärrinstansen förlorar sedan anslutningen till den lokala instansen. Det innebär att det inte går att upprätta kommunikation med den lokala platsinstansen. (ASSETS-4484)
-* I [!DNL AEM 6.5.21] visas ett [!DNL AEM]-fel när en överföring av en resurs i listvyn avbryts och en andra överföring utförs. **[!UICONTROL 0 of NaN assets uploaded]** (ASSETS-44124)
+>[!NOTE]
+>
+>Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tilläggspaket en vecka efter den schemalagda versionen av [!DNL Experience Manager] Service Pack. I detta fall kommer tilläggspaketen att släppas torsdagen den 4 december 2025. Dessutom har en lista med korrigeringar och förbättringar för Forms lagts till i det här avsnittet.
 
-#### [!DNL Dynamic Media]{#assets-dm-6523}
-
-En metadataegenskap (`jcr:content/metadata/dam:scene7SmartCropStatus`) har lagts till i resurser för identifiering av misslyckade Smart Crop-generationer. Möjliggör effektiv sökning, filtrering och ombearbetning av resurser med problem med Smart Crop via manuella eller automatiserade arbetsflöden. (ASSETS-46237)
-
-#### [!DNL Dynamic Media] - hybridläge {#assets-dm-hybrid-6523}
-
-##### Dynamic Media - tilläggspaket för hybrid (AEM 6.5.23 och senare)
-
-Från och med AEM 6.5 Service Pack 23 finns ett nytt tilläggspaket för Dynamic Media - hybrid-läge. Det här paketet innehåller paketet `cq-scene7-imaging` som är specifikt kompatibelt med körningsläget Dynamic Media - Hybrid.
-
-**Nyckelkorrigering ingår**
-
-Korrigerade ett problem i Dynamic Media - Hybrid-distributioner där uppdateringar av parametern `catalog.expiration` under `/conf/global/settings/dam/dm/imageserver` inte reflekterades på server- eller författarens URL:er, trots att replikeringen lyckades utan fel. Uppdateringen säkerställer enhetliga utgångsvärden mellan CRX/DE, serversvar och URL:er för offentlig leverans. I sin tur förbättras funktionen för cache-lagring och tillförlitligheten i bildomvandlingar. (ASSETS-4837)
-
-**Viktiga överväganden**
-
-* Paketet `cq-scene7-imaging` i den grundläggande AEM 6.5.23-installationen (och senare) är *inte kompatibelt* med körläget Dynamic Media - Hybrid.
-* Endast installation av Service Pack 23 (och senare) uppdaterar *inte automatiskt* befintligt `cq-scene7-imaging`-paket på AEM-instanser som konfigurerats för Dynamic Media - Hybrid (`-r dynamicmedia` körningsläge).
-
-**När tilläggspaketet Hybrid ska installeras**
-
-* Vid uppgradering direkt till AEM 6.5.23 (och senare) från AEM 6.5.19 eller tidigare.
-* När du behöver korrigeringar som är specifika för Dynamic Media - Hybrid-funktionen.
-* Vid driftsättning av nya Dynamic Media - Hybrid-instanser direkt från AEM 6.5 GA (General Availability) till Service Pack 23 (och senare).
-
-**Hämta tilläggspaket för hybrid**
-
-Tilläggspaketet Hybrid är öppet för distribution av Adobe-program från och med torsdagen den 22 maj 2025, med den officiella versionen av AEM 6.5.23. Användare kan hitta det genom att söka efter **AEM 6.5 Dynamic Media Hybrid Add-on Package** i Software Distribution.
-
-
-### [!DNL Forms]{#forms-6523}
-
-#### Forms Designer
-
-* När en användare exporterar data för en XFA-baserad PDF med exportDataAPI visar XML-resultatet avvikelser när de jämförs med XML-data som exporteras manuellt med Acrobat Reader. Värden för vissa fält saknades i utdata jämfört med utdata som genererats från Acrobat Reader. (LC-3922791)
-
-* I AEM Forms 6.5.22.0 lägger en taggad PDF med utdatatjänsten i Workbench till en oväntad etiketttagg under referenstaggen i ett innehållsobjekt. (LC-3922756)
-
-* När en användare placerar fältbeskrivningar med justering längst ned eller till höger i AEM Forms Designer, innehåller taggträdet endast bildtexten utan motsvarande värde, vilket leder till ofullständig taggning av hjälpmedel. (LC-3922619)
-
-* Vid uppgradering från AEM Forms 6.5 Service Pack 6 till AEM Forms Service Pack 20 blir QR-koderna i genererade PDF-filer oläsbara. Den alternativa texten för QR-koderna misslyckas också i hjälpmedelstestningen, vilket påverkar skärmläsarkompatibiliteten. (LC-3922551)
-
-* När en användare återger ett brev i agentgränssnittet i AEM Forms Service Pack 18 visas inte innehållet korrekt på grund av API:t FormService.render(). (LC-3922461)
+<!--
+#### Forms Designer 
 
 #### Forms
 
-* Om du aktiverar&quot;Tillåt RTF-text för rubrik&quot; i rotpanelen i AEM Forms döljs rotpanelens rubrik felaktigt av&quot;Uteslut namn från postdokument&quot; på en kapslad panel. Det gör det i det genererade postdokumentet. (FORMS-19696)
+#### Forms JEE 
 
-* Systemet ignorerar den anpassade `sling:resourceType` som tilldelats via `aem:afProperties` i ett JSON-schema på AEM 6.5. Den anpassade resurstypen ignoreras under återgivningen. (FORMS-19691)
+#### Forms Captcha {#forms-captcha-6524} 
 
-* När en användare skickar ett adaptivt formulär med förifyllda bilagor med URI:er, misslyckas formuläröverföringen med ett NullPointerException på grund av att binära data saknas. (FORMS-19371) (FORMS-19486)
+#### XMLFM {#forms-xmlfm-6524}
 
-* När en användare överför en PDF under avsnittet &quot;Forms and Documents&quot; i AEM 6.5 Forms slutar tidslinjefunktionen att fungera. (FORMS-19407)(FORMS-19234)
+#### [!DNL Forms Designer] {#forms-designer-6524}
 
-* När en användare överför filer med OTB-komponenten (OOTB) för bifogade filer i AEM Forms identifieras säkerhetsproblem. Detta kan leda till att oauktoriserade enheter kan komma att avbryta inlämningsprocessen. (FORMS-19271)
+-->
 
-* När en användare konfigurerar ett anpassat formulär i AEM Forms så att det automatiskt genererar ett dokument för inspelning (DoR), visas inte den hämtade DoR-titeln i fältet Titel i Acrobat Reader dokumentegenskaper. Som standard visas inte formulärtiteln i stället för filnamnet. (FORMS-19263)
 
-* När en användare öppnar en interaktiv kommunikation i agentens användargränssnitt kan de förfyllda data inte raderas helt. När de tas bort fylls de automatiskt i med samma data. (FORMS-19151)
+### Foundation {#foundation-6524}
 
-* När en användare förhandsgranskar ett datumfält i agentgränssnittet ändras datumet oväntat. Problemet inträffar på grund av tidszonsavvikelser mellan den virtuella datorns UTC-inställning och systemets tolkning av datumet. (FORMS-19115)
 
-* När en användare skickar ett formulär kan bifogade filer dupliceras, vilket leder till flera överföringar av samma fil. (FORMS-19045)(FORMS-19051)
+#### Apache Felix {#foundation-apachefelix-6524}
 
-* Det går inte att lägga till koordinatorer i principuppsättningar i AEM 6.5 Document Security i både produktions- och undermiljöer. (FORMS-18603, FORMS-18212, FORMS-19697)
-
-* När en användare klickar på ikonen&quot;datepicker-calendar-icon&quot; i skrivbordsläge med ett tomt fält i AEM Forms Service Pack 2 inträffar ett fel på grund av den odefinierade variabeln _$focusedDate, som stör associerade anpassade skript. (FORMS-18483)(FORMS-18268)
-
-* När en kund förhandsgranskar ett brev i AEM Forms Service Pack 19 (6.5.19.0) visas inte nummervärden eller uppdateras felaktigt i fältet Belopp i ord, vilket leder till felpassning och att blanksteg saknas i innehållet. (FORMS-18437, FORMS-17330, FORMS-18209, FORMS-18557, CTG-4150848, FORMS-19614, LC-3922004)
-
-* När en kund förhandsgranskar ett sparat brev i AEM Forms 6.5 SP19 på RHEL, saknas innehållets justering, blanksteg och oväntade tecken som x visas. (FORMS-18422)(FORMS-17641)
-
-* När en användare navigerar mellan flikar i AEM Forms svarar inte komponenterna på den första fliken. (FORMS-18345)
-
-* När en användare konverterar en HTML-fil till PDF med alternativet WebToPDF i AEM Forms 6.5.21.0 saknas sidhuvudsavsnittet, inklusive metadata- och titeltaggar, i utdata-PDF. (FORMS-18223, FORMS-17835, FORMS-19642, FORMS-18224)
-
-* När en användare anropar metoden retryAction(long actionOid) i AEM JEE Process Manager SDK försöker systemet felaktigt den första åtgärden som hittas i tabellen tb_action_instance. Det här arbetsflödet inträffar även när ett visst åtgärds-ID anges eller när ID:t är null, vilket resulterar i ett oväntat beteende. (FORMS-18187)
-
-* När en användare har uppdaterat till SP22 uppstår problem där de sparade utkasts- och överföringsfunktionerna misslyckas utan att visa något felmeddelande. (FORMS-18069)
-
-* I AEM 6.5.21.0 förhindrar en övergång från XSD-baserade grundkomponenter till kärnkomponenter implementering av korsfilsreferenser i JSON-scheman, vilket påverkar den adaptiva Forms-migreringen. (FORMS-18065)
-
-* När en användare förhandsgranskar en bokstav i agentanvändargränssnittet visas ett felaktigt värde i datumfältet på grund av problem med konc-tidskonvertering. Skillnaderna beror på skillnader i tidszon mellan den virtuella datormiljön och systemets tolkning av tid (UTC kontra lokal tid). (FORMS-17988) (FORMS-17248)
-
-* När en användare förhandsgranskar brev med hjälp av mallar för e-postmeddelanden i AEM Forms varierar PDF-genereringstiderna avsevärt, från 1,5 sekunder till mer än 10 sekunder, även på samma server. Inkonsekvensen påverkar verksamhetskritiska arbetsflöden. (FORMS-17951)
-
-* När en användare binder ett klottersigneringsobjekt i ett adaptivt formulär till en XDP-fil med alternativet Datakällor, kan ändringarna inte sparas. Orsaken beror på beständiga valideringsfel för proportioner, även när giltiga värden används. (FORMS-17587)
-
-* När en användare använder en viss XDP-fil med många dolda fält för dokumentfragment, skapar AEM CRX-noder med egenskapen `cm:optional` inställd på false, vilket gör att överföringen av interaktiv kommunikation (IC) misslyckas. (FORMS-17538)
-
-* När en kund förhandsgranskar en bokstav i AEM Forms 6.5.19.0 lyckas inte det numeriska fältet hantera negativa värden korrekt när siffergränserna för Lead och Frac definieras. Problemet inträffar på grund av användningen av parseFloat, som hanterar minustecknet som en del av talet. (FORMS-17451)
-
-* När ett brev förhandsgranskas i AEM Forms 6.5 uppmärksammas användningen av jokertecknet &quot;*&quot; i filen Adobe.json, vilket ger anledning till oro och kan komma att ändras. (FORMS-17317)
-
-* När en användare använder en skärmläsare på `Apply for a Fixed Rate Saver joint account` annonseras rubrikerna felaktigt som `clickable`, vilket orsakar tillgänglighetsproblem. (FORMS-17038)
-
-* När ett formulär är inbäddat saknar den genererade iframe-funktionen ett rubrikattribut, vilket leder till ett kompatibilitetsproblem. (FORMS-17010)
-
-* När du hämtar ett formulär med användargränssnittet i Forms Manager ingår alltid associerade beroenden, som teman och fragment. (FORMS-1581)
-
-* När en användare öppnar formuläret på mobila enheter (iOS och Android™) inaktiveras knapparna &quot;next&quot; och &quot;previous&quot; på den första sidan. Skärmläsaren identifierar dem dock inte som inaktiverade. (FORMS-15773)
-
-* När en användare sparar ett stort formulär med fragment och lazy loading aktiverat, kan han/hon inte hämta utkast, vilket stör arbetsflödet. (FORMS-19890, FORMS-19808)
-
-#### Forms JEE
-
-* När en användare konfigurerar om databasen i AEM Forms misslyckas anslutningen på grund av hårdkodade parametrar. (FORMS-19568, FORMS-17621)
-
-* När en användare konfigurerar AEM 6.5 med MySQL 8.4 med hjälp av den partiella körningsmetoden känner inte LiveCycle Configuration Manager (LCM) igen den nödvändiga drivrutinen för MySQL-anslutningen. Detta gör att databasanslutningstestet och -konfigurationen misslyckas. (FORMS-19442)
-
-* När en användare kör LCM med JDBC 12.8.1 på JRE 11 i en JEE-miljö misslyckas installationen på grund av inkompatibilitetsproblem. (FORMS-19276)
-
-* När en användare öppnar en uppgift i AEM On-Premise kör systemet Workspace Start Action Profile i stället för AssignedUserProfile. (FORMS-19065)
-
-* När en användare använder metoden retryAction(long actionOid) i AEM JEE Process Manager inträffar ett oväntat beteende. (FORMS-18357)(FORMS-18187)
-
-* På AEM Forms 6.5.21.0 misslyckas PDFG-konverteringen med följande fel: (FORMS-16851)(FORMS-14613)
-
-* I AEM Forms 6.5.23.0 misslyckades konverteringen av PS till PDF och HTML till PDF (WebKit). Du löser problemet genom att hämta och installera programfixen från [Adobe Experience Manager Forms Hotfixes](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) (FORMS-21721)
-
-* I AEM Forms 6.5.23.0 misslyckas konverteringen av bild till PDF. Du löser problemet genom att hämta och installera programfixen från [Adobe Experience Manager Forms Hotfixes](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/release-notes/aem-forms-hotfix) (FORMS-2029)
-
-#### Forms Captcha {#forms-captcha-6523}
-
-* Förbättrade reCAPTCHA-varningar i Adaptive Forms genom att uppdatera skicka-felkoder till 400. Du kan även förfina loggvarningar för att skilja mellan tidsgränser, förfallodatum och fel vid robotidentifiering, vilket förbättrar felsökningsnoggrannheten och systemobserverbarheten. (FORMS-19240)
-* En oavslutad `ResourceResolver`-instans i `ReCaptchaConfigurationServiceImpl` stängdes för att förhindra potentiella resursläckor och förbättra systemstabiliteten när du använder reCAPTCHA-integreringar i AEM Forms. (FORMS-1924)
-* Förbättrad CAPTCHA-konfigurationshantering för AEM Forms genom att se till att rätt konfigurations-binder till varje formulär när det finns flera poster i mappen `/conf/global`. Förhindrar oavsiktlig användning av felaktiga CAPTCHA-inställningar när konfigurationsbehållaren inte uttryckligen har valts. (FORMS-19239)
+Felix Web Console-paketet med FELIX-6747 har uppdaterats. Den här korrigeringen åtgärdar svarshantering som tidigare har brutit sidåtergivning och autentisering i OSGi Web Console. Konsolen läses in konsekvent och genererar inte längre IllegalStateException-poster i loggarna. (NPR-42730)
 
 <!--
-#### XMLFM {#forms-xmlfm-6523}
+#### Campaign{#foundation-campaign-6524}
 
-* A () -->
+#### Cloud Services{#foundation-cloudservices-6524}
 
-<!--
-#### [!DNL Adaptive Forms] {#adaptive-forms-6523}
+#### Communities {#foundation-communities-6524}
 
-* A () -->
+#### Content distribution{#foundation-content-distribution-6524}
 
-<!--
-#### [!DNL Forms Designer] {#forms-designer-6523}
+#### CRX {#foundation-crx-6524}
+-->
 
-* A () -->
+#### Granit{#foundation-granite-6524}
 
+* Raw- eller engelskskrivna strängar visas inte längre i dialogrutan **Ta bort åtkomstkontroll** . I dialogrutan visas helt lokaliserat innehåll för olika språk som stöds, vilket ger en konsekvent tillgänglighet. (GRANITE-48479)
+* Hjälpikonen visar nu en kortfattad etikett för hjälpmedelstekniker. JAWS läser&quot;hjälpknapp&quot; och lägger inte längre till överflödiga&quot;menyord&quot;. Den här uppdateringen gör att kontrollen överensstämmer med WCAG 4.1.2 och förenklar användningen av tangentbord och skärmläsare. GRANITE-55360
+* Återställ HTL-skriptmotorfabriken efter att ha eliminerat en beroendeloop i OSGi-tjänster. Miljöerna börjar som de ska, HTML-återgivning fungerar över alla redigeringspunkter och administratörer stöter inte längre på startfel eller saknade skripttjänster. (GRANITE-58276)
 
-### Foundation {#foundation-6523}
+* Rutan Sök i sidhuvudet täcker inte längre förstoringsglaset på platshållartexten. Platshållaren visas med rätt utfyllnad och är fortfarande fullt läsbar i olika webbläsare. (GRANITE-54391)
+* Författare ser läsbara etiketter i fält för automatisk komplettering i stället för råvärden i dialogrutan. Implementeringen bevarar värdet i JCR och förbättrar klarheten för en- och flervalskonfigurationer som källalternativ dynamiskt. (GRANITE-57615)
+* Redigeringsläget fungerar inte när htmlLibraryManager.debug är inställt på true. Ändringen återställer korrekt klientlibbupplösning och inläsning, vilket gör att utvecklare kan använda felsökningsverktygen i HTML Library Manager vid redigeringen. GRANITE-58002
+* Redigeringssidan för replikeringsagenten genererar inte längre ett JavaScript-fel i det klassiska användargränssnittet. Sidan öppnas, visar alla flikar och sparar agentinställningar utan konsolfel. GRANITE-58302
+* Hälsostatusaggregering har korrigerats i Systemöversikt. Vyn uppdateras nu när enskilda kontroller har körts och rätt antal visas. Operatörerna ser&quot;OK&quot; när säkerhets- och underhållskontroller godkänns, i stället för en felaktig banderoll med&quot;2 fel&quot;. GRANITE-61482
+* `CodeUpgradeTasks` har stoppats från att köras under uppgraderingar av AEM 6.5 LTS (Long Term Support). Uppgraderingen fortsätter nu utan uppgiftsutlösta databasändringar eller omkonfigurationer. Med den här programfixen minskas uppgraderingsriskerna och driftstopp undviks. GRANITE-61486
+* I redigeringsdialogrutor visas nu ett enda exakt valideringsfel i obligatoriska fält. Meddelandet använder fältets egen etikett när det finns, och återgår till en allmän fråga när det inte finns någon etikett. Dubblerade och felmatchade meddelanden i olika fält visas inte längre. (GRANITE-59531)
+* Dialogrutan för att skapa sidor verifierar nu obligatoriska fält på nytt vid varje interaktion, inklusive tabbändringar och redigering av flera fält. Knappen **Skapa** är inaktiverad tills författarna har slutfört alla nödvändiga indata och guiden visar infogade fel för saknade värden. GRANITE-58826
 
-* Korrigerade ett fel i Coral Alert Banners där textfärgen ser vit ut i stället för svart efter uppgradering till Service Pack 21. Ser till att rätt formatering används för att upprätthålla korrekt kontrast och läsbarhet för varningsmeddelanden i hela gränssnittet. (NPR-42359)
-* Stöd för OAuth-integrering i konfigurationen av smarta taggar har lagts till för anpassning till borttagningen av JWT (JSON Web Token). Säkerställer fortsatt funktionalitet för smarta taggar med uppdaterade autentiseringsmetoder. (NPR-42296)
+#### Integreringar{#foundation-integrations-6524}
 
-#### Apache Felix {#foundation-apachefelix-6523}
-
-Korrigerade ett NullPointerException som inträffade när privata nyckelfiler överfördes till ett egenskapsfält av binär typ i CRX, vilket återställde kompatibiliteten som fanns i Service Pack 16. Möjliggör säkra arbetsflöden för överföring av nyckelfiler i AEM Managed Services utan serverfel eller avbrott i certifikatförnyelseprocessen. (CQ-4359178)
-
-
-<!--
-#### Campaign{#foundation-campaign-6523}
-
-* A () -->
-
-<!--
-#### Cloud Services{#foundation-cloudservices-6523}
-
-* A () -->
+Publicering av AEM Target-aktiviteter misslyckas inte längre när författare anger start- och slutdatum. Integreringen skickar standardkompatibla tidsstämplar som innehåller tidszonen, så Target bearbetar aktivitetens nyttolast och slutför synkroniseringen som förväntat. (CQ-4360733)
 
 <!--
-#### Communities {#foundation-communities-6523}
+#### Jetty{#foundation-jetty-6524}
+-->
 
-* A () -->
+#### Lokalisering{#foundation-localization-6524}
+
+* Lokalisering i zh-CN tar bort en tvetydig fras i referensinsamlingsstatusen som visas vid tillgångsåtgärder som Flytta. Gränssnittet visar nu `正在获取对 [[0]] 项的引用`, vilket ger korrekt innebörd och konsekvent terminologi. (CQ-4354648)
+* När du skapar en smart samling översätts inte längre sparade söknyckelord vid uppdatering. Författare som anger engelska termer ser att samma termer behålls och att samlingen fortsätter att returnera konsekventa resultat. (NPR-43158)
+* Korrigerad trunkerad knappbeskrivningstext på panelen Bild. Beskrivningen &quot;Visa bildtext som popup-fönster&quot; återges fullständigt på alla språk som stöds, vilket förbättrar vägledningen för författare som inte är engelska. (SITES-10490)
+* Spaltvyn Webbplatsadministration trunkerade lokaliserade etiketter på franska och spanska. &quot;Sluttid&quot; och &quot;Inte tid&quot; verkade trunkerade och visade inget verktygstips. Adobe korrigerade översättningarna och återställde verktygstipset vid hovring, så etiketterna lästes in fullständigt. (SITES-31318)
+* Dialogrutan **Flytta** på platser visade i18n-nycklar i Raw-format i stället för läsbara etiketter. Objekt som &quot;Refererande sidor&quot;, &quot;Skapad den&quot;, &quot;Skapad av&quot; och &quot;Sökväg&quot; förvanskades. Korrigeringen kopplar dialogrutan till rätt ordlistor och förser översättningarna med en engelsk reservtext. (SITES-30881)
 
 <!--
-#### Content distribution{#foundation-content-distribution-6523}
+#### Oak {#foundation-oak-6524}
+-->
 
-* A () -->
+#### Plattform{#foundation-platform-6524}
+
+* Valideringsfel visar nu tydlig och beskrivande text i stället för bara en ikon. Skärmläsarna meddelar meddelandet automatiskt när det visas, så att användarna inte behöver navigera till en ikon för att ta reda på vad som gick fel. (CQ-4359152)
+
+
+* Hovringsetiketter i navigeringsfältet finns inte längre kvar på skärmen när markören flyttas bort från kontrollen. Gränssnittet döljer dessa verktygstips omedelbart när du gör oskärpa eller klickar med musen, vilket förhindrar att det blir rörigt och att användaren klickar fel. (CQ-4360030)
+* I Platser slutar verktygsfältåtgärder att skapa ett andra popup-fönster när användaren upprepar klickningar. Den andra klickningen stänger det befintliga popup-fönstret och lämnar bara en instans synlig, vilket eliminerar överlappning och störning. (CQ-4360038)
+* Den gamla copyrighttexten för 2024 visas inte längre. Inloggningssidan och **Hjälp** > **Om AEM** 2025-popup-programmet, och AEM läser året programmatiskt för att undvika manuella redigeringar. (CQ-4360042)
+* När du klickar på ett verktygstips i AEM rubrikfält aktiveras inte längre den underliggande åtgärden. Popup-fönster öppnas bara när användaren klickar på den faktiska knappen, vilket förhindrar att dialogrutor av misstag visas när användaren interagerar med verktygstipstexten. (CQ-4360105)
+* Årets överrullning lämnar inte längre föråldrad copyrighttext. Inloggningsskärmen och dialogrutan **Hjälp** > **Om AEM** hämtar året från systemklockan och återger det aktuella värdet varje gång användargränssnittet läses in. (CQ-4360173)
+* Popup-fönster för rubrikfält visas nu korrekt. Om du klickar på samma åtgärd (till exempel **Sök** eller **Filter**) stängs popup-fönstret som är öppet i stället för att något annat överlägg öppnas. Ändringen förhindrar staplade popup-fönster och återställer fokus till rubrikkontrollen. (NPR-42891)
+* Projekt och kalendervyn i Inkorgen återges korrekt. När du växlar vy blir sidan inte längre tom. Kalendern läses in och visar schemalagda objekt. (NPR-42968)
 
 <!--
-#### CRX {#foundation-crx-6523}
+#### Security{#foundation-security-6524}
+-->
 
-* A () -->
+
+#### Sling{#foundation-sling-6524}
+
+* Cachelagring på SAML-skyddade sidor har korrigerats. AEM lägger till rätt cachekontroll och varierar metadata för autentiserade sessioner, så proxies och Dispatcher hoppar över cachelagring av personaliserade svar. Anonymt innehåll cachelagras fortfarande normalt medan inloggade vyer är användarspecifika. (NPR-42640)
+
+* Plattformen uppgraderar kärnmotorn från 2.16.2 till 2.16.6. Den nyare motorn härdar indatavalideringen och stabiliserar bearbetningen av begäranden under belastning. (NPR-43105)
+
+#### SPA-redigerare {#foundation-spa-editor-6524}
+
+Aktiverar Sling Main Servlet **Check Content-Type** åsidosätter brutna `.model.json` exporter i AEM 6.5 SP21/22. Begäranden returnerade HTML eller fel eftersom exporteraren bytte typ efter mittkedjan. Korrigeringen genererar JSON med rätt typ från början, så `.model.json` fungerar i redigerings- och publiceringsmiljöer. (SITES-32634)
 
 
-#### Granit{#foundation-granite-6523}
+#### Översättning{#foundation-translation-6524}
 
-* Löste OSGi-beroendecykler mellan Apache Sling-skripttjänster som orsakade fördröjningar eller fel vid inläsning av HTML-sidor efter uppgradering till Service Pack 21. Uppdaterade interna tjänstreferenser för att ta bort cykliska beroenden som inbegriper `SightlyScriptingEngineFactory` och relaterade komponenter, vilket förbättrar skriptmotorns tillförlitlighet och startbeteende. GRANITE-56808
-* Uppdaterade JS använder skript i Apache Sling för att endast läsa in On-demand i stället för att vara snabbt igång, vilket eliminerar trådproblem och minskar risken för att publiceringsservrar inte svarar under inläsning. Den här ändringen förbättrar serverstabiliteten och svarstiderna under högtrafikscenarier genom att förhindra resurslås som orsakas av tidig skriptupplösning. (GRANITE-56611)
-* Ett problem har korrigerats i AEM Omnissearch där platshållare för inmatningsfält felaktigt visas som etiketter, vilket leder till visuell förvirring. Säkerställer korrekt återgivning av platshållare över filterfält, vilket ger ett konsekvent och tillgängligt formulärbeteende. (GRANITE-51791)
-* Löste ett serverfel som utlöstes när fler än 30 CFM:er (Content Fragment Models) valdes med multifältsreferenser i modellredigeraren för innehållsfragment. Förbättrade filterförslagskomponenten som stöder POST-åtgärder. Denna funktion gör att stora referensuppsättningar kan hanteras på rätt sätt när innehållsfragment skapas och att stabiliteten för modellkonfigurationer med stora volymer förbättras. (GRANITE-57164)
-* Löste ett problem i CFM:er där användaren oavsiktligt växlade läget genom att klicka nära en kryssruta. Uppdaterade format som begränsar klickaktiveringen till kryssruteelementet, förhindrar oavsiktliga användarinteraktioner och förbättrar formuläranvändbarheten och tillgängligheten. GRANITE-52384
+* En omindexeringsåtgärd för översättningsprojektstatus har lagts till. Administratörer kan återskapa säkerhetskopieringsindexet när statusvyn inte är synkroniserad, återställa resultat och eliminera Oak traversal-varningar. Sidan läses in snabbare och visar aktuella jobbtillstånd. (NPR-42699)
+* Korrigerade en regression där XLIFF-import rapporterade att det lyckades men lämnade JSON-ordlistefilerna oförändrade. Importerna har nu rätt i18n-sökväg som mål och beständiga översättningar så att lokaliseringsrundorna är slutförda utan manuella redigeringar. (NPR-42989)
+
+
+* XML för översättningsregler fungerar nu som konfigurerats. Översättningsramverket följer undantagsreglerna och gäller för `include`- och `exclude`-mönster korrekt när jobb skapas. Översättningsbegäranden skickar inte längre utelämnat innehåll. (NPR-42761)
+
+
+
+#### Användargränssnitt{#foundation-ui-6524}
+
+* Korrigerade en gränssnittsregression som inaktiverade indata i dialogrutan Adobe Stock License. Dialogrutan fungerar nu som den ska, accepterar text i obligatoriska fält och slutför licensieringsflödet för Stock-mediefiler från vyn Resursinformation. (NPR-42748)
+
+* Korrigerad gruppsynlighet i författarmiljön. Grupper-konsolen slutar inte längre med cirka 41 resultat och returnerar alla medlemskap för varje användare. Med den här korrigeringen återställs konsekvent beteende efter kumulativa korrigeringar och den aktuella säkerhetshärdningen behålls. (NPR-42749)
 
 
 <!--
-#### Integrations{#foundation-integrations-6523}
-
-* A () -->
+#### WCM{#foundation-wcm-6524}
 
 
-#### Jetty{#foundation-jetty-6523}
 
-Löste ett problem där SNI-validering blockerade API-anrop via HTTPS för AEM-kunder som använder Dispatcher SSL-konfigurationer med anpassade värdhuvuden. Introducerar ett alternativ för att inaktivera SNI-validering som en del av Jetty-konfigurationen, vilket möjliggör kompatibilitet med specifika omvända proxyinställningar där `mod_proxy` inte är möjligt. (NPR-42614)
-
-
-<!--
-#### Localization{#foundation-localization-6523}
-
-* A () -->
-
-<!--
-#### Oak {#foundation-oak-6523}
-
-* A () -->
+#### Workflow{#foundation-workflow-6524}
+-->
 
 
-#### Plattform{#foundation-platform-6523}
-
-* Ett inkonsekvent beteende för taggsammanfogning har åtgärdats genom att det sammanslagna taggvärdet alltid visas korrekt i alla resurser, oavsett om taggarna skapas inline eller med standardmetoden för att skapa taggar. Förhindrar att restvärden från `EN:title`-fält åsidosätter visningen av sammanfogade taggar. (CQ-4358812)
-* Korrigerad upprepad kodning av et-tecken i taggvärden i dialogrutan för taggredigering. Förhindrar att extra &quot;&amp;&quot;-entiteter läggs till varje gång du sparar, vilket säkerställer att taggvärdena förblir rena och konsekventa vid redigeringar och att fel i det redigerade innehållet undviks. (CQ-4359048)
-* Ett `ClassCastException`-fel som förhindrar e-postleverans vid sändning av adaptiva formulär i AEM 6.5 som körs på WebSphere® har åtgärdats. Korrigeringen möjliggör e-postöverföring genom att säkerställa kompatibilitet mellan `com.sun.mail.handlers.text_plain` och `java.activation.DataContentHandler`, i enlighet med den e-posthanterarkonfiguration som förväntas av WebSphere®-miljöer. (NPR-42500)
-* Förbättrad felhantering i Package Manager genom att säkerställa att AEM får ett tydligt meddelande när installationen misslyckas och att felsvaret annars är tomt. Den här korrigeringen förhindrar tysta fel och hjälper till att felsöka snabbare vid paketdistribution. (NPR-42375)
-
-<!--
-#### Security{#foundation-security-6523}
-
-* A -->
-
-<!--
-#### Sling{#foundation-sling-6523}
-
-* A () -->
 
 
-#### Översättning{#foundation-translation-6523}
-
-Korrigerade ett NullPointerException-problem (NPE) som utlöstes vid uppdatering av innehållsfragment i arbetsflöden med **Uppdatera språkkopia**. Med den här korrigeringen kan du säkerställa att arbetsflöden inte försätts i ett feltillstånd eller fastnar i ett körningsläge när du redigerar innehåll som är kopplat till översättningsreferenser. (NPR-42115)
-
-#### Användargränssnitt{#foundation-ui-6523}
-
-Lägger till saknade `title`-attribut i dialogruteknappar för korallgränssnitt, till exempel **Klar** och **Avbryt**, i dialogrutorna för komponentredigering för att förbättra tillgängligheten och aktivera automatisk validering. Ser till att knappar behåller förväntade attribut vid markeringsåtergivning och förhindrar fel i självbaserade gränssnittstester. (NPR-42412)
-
-#### WCM{#foundation-wcm-6523}
-
-Korrigerade ett problem som förhindrar att sidor läggs till i översättningsjobb när **Uppdatera språkkopia** används i miljöer med Service Pack 19 eller senare. Ser till att översättningsarbetsflöden fortsätter som förväntat, vilket möjliggör korrekt sidöverföring mellan språkkopior utan manuell åtgärd. (CQ-4357929)
-
-#### Arbetsflöde{#foundation-workflow-6523}
-
-Löste ett problem i `EmailNotificationServiceProcessor` där metoden `getSegmentId` returnerar `null` efter snabbkorrigeringsdistributionen, vilket medförde att e-postutlösare misslyckades under arbetsflödesbearbetningen. Återställer korrekt logik för segment-ID-matchning genom att se till att processorn hämtar de `SegmentInfo` värden som krävs för att stödja arbetsflöden för e-postmeddelanden i alla AEM-instanser. (CQ-4359755)
-
-
-## Installera [!DNL Experience Manager] 6.5.23.0{#install}
+## Installera [!DNL Experience Manager] 6.5.24.0{#install}
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.23.0 kräver [!DNL Experience Manager] 6.5. Mer information finns i [&#x200B; uppgraderingsdokumentationen &#x200B;](/help/sites-deploying/upgrade.md) . <!-- UPDATE FOR EACH NEW RELEASE -->
-* Hämtningen av Service Pack är tillgänglig på Adobe [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.23.0.zip).
-* Installera [!DNL Experience Manager] 6.5.23.0 på en av författarinstanserna med Package Manager på en distribution med MongoDB och flera instanser.<!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.24.0 kräver [!DNL Experience Manager] 6.5. Mer information finns i [ uppgraderingsdokumentationen ](/help/sites-deploying/upgrade.md) . <!-- UPDATE FOR EACH NEW RELEASE -->
+* Hämtningen av Service Pack är tillgänglig på Adobe [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.24.0.zip).
+* Installera [!DNL Experience Manager] 6.5.24.0 på en av författarinstanserna med Package Manager på en distribution med MongoDB och flera instanser.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 >[!IMPORTANT]
 >
-> Adobe rekommenderar inte att du tar bort eller avinstallerar paketet [!DNL Experience Manager] 6.5.23.0. Därför bör du skapa en säkerhetskopia av `crx-repository` innan du installerar paketet, ifall du måste återställa det. <!-- UPDATE FOR EACH NEW RELEASE -->
+> Adobe rekommenderar inte att du tar bort eller avinstallerar paketet [!DNL Experience Manager] 6.5.24.0. Därför bör du skapa en säkerhetskopia av `crx-repository` innan du installerar paketet, ifall du måste återställa det. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 <!-- FORMS For instructions to install Service Pack for Experience Manager Forms, see [Experience Manager Forms Service Pack installation instructions](/help/release-notes/aem-forms-current-service-pack-installation-instructions.md). -->
 
@@ -510,7 +453,7 @@ Löste ett problem i `EmailNotificationServiceProcessor` där metoden `getSegmen
 
 1. Ta en ögonblicksbild eller en ny säkerhetskopia av din [!DNL Experience Manager]-instans innan du installerar.
 
-1. Hämta Service Sack från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.23.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
+1. Hämta Service Sack från [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.24.0.zip). <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. Öppna Pakethanteraren och välj sedan **[!UICONTROL Upload Package]** för att överföra paketet. Mer information finns i [Pakethanteraren](/help/sites-administering/package-manager.md).
 
@@ -524,20 +467,20 @@ Löste ett problem i `EmailNotificationServiceProcessor` där metoden `getSegmen
 
 **Automatisk installation**
 
-Det finns två olika metoder att använda för att installera [!DNL Experience Manager] 6.5.23.0.<!-- UPDATE FOR EACH NEW RELEASE -->
+Det finns två olika metoder att använda för att installera [!DNL Experience Manager] 6.5.24.0.<!-- UPDATE FOR EACH NEW RELEASE -->
 
 * Placera paketet i mappen `../crx-quickstart/install` när servern är tillgänglig online. Paketet installeras automatiskt.
 * Använd [HTTP-API:t från Package Manager](/help/sites-administering/package-manager.md#package-share). Använd `cmd=install&recursive=true` så att kapslade paket installeras.
 
 >[!NOTE]
 >
->Experience Manager 6.5.23.0 stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
+>Experience Manager 6.5.24.0 stöder inte installation av Bootstrap. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 **Verifiera installationen**
 
 Information om vilka plattformar som är certifierade för att fungera med den här versionen finns i [tekniska krav](/help/sites-deploying/technical-requirements.md).
 
-1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (6.5.23.0)` under [!UICONTROL Installed Products]. <!-- UPDATE FOR EACH NEW RELEASE -->
+1. Produktinformationssidan (`/system/console/productinfo`) visar den uppdaterade versionssträngen `Adobe Experience Manager (6.5.24.0)` under [!UICONTROL Installed Products]. <!-- UPDATE FOR EACH NEW RELEASE -->
 
 1. Alla OSGi-paket är antingen **[!UICONTROL ACTIVE]** eller **[!UICONTROL FRAGMENT]** i OSGi-konsolen (använd webbkonsol: `/system/console/bundles`).
 
@@ -549,7 +492,7 @@ Instruktioner om hur du installerar Service Pack på Experience Manager Forms fi
 
 >[!NOTE]
 >
->Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/deploying/deploy), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
+>Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
 
 ### Installera GraphQL Index Package för Experience Manager Content Fragments{#install-aem-graphql-index-add-on-package}
 
@@ -565,7 +508,7 @@ Om du inte installerar det här paketet kan GraphQL-frågor bli långsamma eller
 
 ### UberJar{#uber-jar}
 
-UberJar för [!DNL Experience Manager] 6.5.23.0 är tillgänglig i [Maven Central-databasen](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.22/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
+UberJar för [!DNL Experience Manager] 6.5.24.0 är tillgänglig i [Maven Central-databasen](https://repo.maven.apache.org/maven2/com/adobe/aem/uber-jar/6.5.22/). <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
 Om du vill använda UberJar i ett Maven-projekt ska du läsa [Använda UberJar](/help/sites-developing/ht-projects-maven.md) och inkludera följande beroende i projektstrukturen: <!-- CHECK FOR UPDATE EACH NEW RELEASE -->
 
@@ -573,7 +516,7 @@ Om du vill använda UberJar i ett Maven-projekt ska du läsa [Använda UberJar](
   <dependency>
   <groupId>com.adobe.aem</groupId>
   <artifactId>uber-jar</artifactId>
-  <version>6.5.23</version>
+  <version>6.5.24</version>
   <scope>provided</scope>          
   </dependency>
 ```
@@ -590,7 +533,7 @@ Se [Inaktuella och borttagna funktioner](/help/release-notes/deprecated-removed-
 
 ### SPA Editor {#spa-editor}
 
-[SPA-redigeraren](/help/sites-developing/spa-overview.md) har tagits bort för nya projekt från och med version 6.5.23 av AEM 6.5. SPA-redigeraren stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt.
+[SPA-redigeraren](/help/sites-developing/spa-overview.md) har tagits bort för nya projekt från och med version 6.5.24 av AEM 6.5. SPA-redigeraren stöds fortfarande för befintliga projekt, men bör inte användas för nya projekt.
 
 De redigerare som rekommenderas för hantering av headless-innehåll i AEM är nu:
 
@@ -601,8 +544,8 @@ De redigerare som rekommenderas för hantering av headless-innehåll i AEM är n
 
 <!-- THESE KNOWN ISSUES CARRY OVER EACH RELEASE. THE "PRODUCT UPDATES TEAM" IS SUPPOSED TO VERIFY EACH ISSUE AND LET YOU KNOW IF ANYTHING NEEDS TO BE ADDED, DELETED, OR CHANGED IN THIS LIST. -->
 
-* **Problem med JSP-skriptpaket i AEM 6.5.21-6.5.23 och AEM 6.5 LTS GA**
-AEM 6.5.21, 6.5.22, 6.5.23 och AEM 6.5 LTS GA levereras tillsammans med `org.apache.sling.scripting.jsp:2.6.0` -paketet, som innehåller ett känt fel. Problemet är vanligtvis under hög belastning när AEM-instansen hanterar många samtidiga begäranden.
+* **Problem med JSP-skriptpaket i AEM 6.5.21-6.5.24 och AEM 6.5 LTS GA**
+AEM 6.5.21 till 6.5.24 och AEM 6.5 LTS GA levereras tillsammans med `org.apache.sling.scripting.jsp:2.6.0` -paketet, som innehåller ett känt fel. Problemet är vanligtvis under hög belastning när AEM-instansen hanterar många samtidiga begäranden.
 
   När det här problemet inträffar kan ett av följande undantag visas i felloggarna tillsammans med referenser till `org.apache.sling.scripting.jsp:2.6.0`:
 
@@ -613,7 +556,7 @@ AEM 6.5.21, 6.5.22, 6.5.23 och AEM 6.5 LTS GA levereras tillsammans med `org.apa
 
   När det här felet inträffar är den enda återställningsmetoden att starta om AEM-instansen.
 
-  Kontakta Adobe kundsupport och läs den här versionsinformationen för att få en lösning.
+  Kontakta kundsupporten på Adobe och läs den här versionsinformationen för en lösning.
 
 * **Relaterat till Oak**
 Från Service Pack 13 och senare har följande fellogg börjat visas som påverkar persistence-cachen:
@@ -692,15 +635,15 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 
 * Om du installerar taggning av relaterat innehåll som inte finns i kartongen med hjälp av ett officiellt uppdateringspaket återställs språkegenskapen för noden `/content/cq:tags` till standardvärdet. Den här åtgärden gäller för Service Packs, Security Service Pack, Extended Feature Packs, Cumulative Feature Packs, Patches osv. Det är därför nödvändigt att lägga till den från egenskaperna före installationen.
 
-### Känt problem för AEM Sites {#known-issues-aem-sites-6523}
+### Känt problem för AEM Sites {#known-issues-aem-sites-6524}
 
-Content Fragments-Preview misslyckas på grund av DoS-skydd för ett stort träd med fragment. Se artikeln [KB om standardkonfigurationsalternativ för GraphQL Query Executor](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-23945) (SITES-17934)
+Content Fragments-Preview misslyckas på grund av DoS-skydd för ett stort träd med fragment. Se artikeln [KB om standardkonfigurationsalternativ för GraphQL Query Executor](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23945) (SITES-17934)
 
-### Kända fel för AEM Forms {#known-issues-aem-forms-6523}
+### Kända fel för AEM Forms {#known-issues-aem-forms-6524}
 
 >[!NOTE]
 >
-> Uppgradera inte till Service Pack 6.5.23.0 för problem som inte har snabbkorrigeringar tillgängliga eftersom det kan leda till oväntade fel. Uppgradera till Service Pack 6.5.23.0 först när de nödvändiga snabbkorrigeringarna har släppts.
+>Undvik att uppgradera till Service Pack 6.5.24.0 för problem utan en tillgänglig snabbkorrigering. Det kan leda till oväntade fel. Uppgradera till Service Pack 6.5.24.0 först när de nödvändiga snabbkorrigeringarna har släppts.
 
 #### Problem med tillgängliga snabbkorrigeringar {#aem-forms-issues-with-hotfixes}
 
@@ -708,14 +651,14 @@ Följande problem har en hotfix som kan hämtas och installeras. Du kan [hämta 
 
 * **FORMS-20203**: När en användare uppgraderar Struts-ramverket från version 2.5.x till 6.x, visas inte alla konfigurationer i principgränssnittet i AEM Forms, t.ex. alternativet att lägga till en vattenstämpel.
 
-* **FORMS-20360**: Efter uppgradering till AEM Forms Service Pack 6.5.23.0 misslyckas ImageToPDF-konverteringstjänsten med följande fel:
+* **FORMS-20360**: Efter uppgradering till AEM Forms Service Pack 6.5.24.0 misslyckas ImageToPDF-konverteringstjänsten med följande fel:
   ```17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp```
 
 * **FORMS-20478**: När du försöker konvertera TIFF-filer av typen 7/8 till PDF misslyckas konverteringsprocessen. Felkod:&quot;ALC-PDG-001-000-Image2Pdf-konverteringen misslyckades. Orsaken är: com/sun/image/codec/jpeg/JPEGCodec&quot; och&quot;ALC-PDG-0 16-003-Ett okänt/oväntat fel uppstod under efterbearbetningen av PDF.&quot; Systemet försöker att försöka igen med att använda TM ImageIO TIFF-avkodare, men misslyckas i slutändan med att slutföra jobbet.
 
 * **FORMS-14521**: Om en användare försöker förhandsgranska ett utkast med sparade XML-data fastnar den i läget `Loading` för vissa specifika bokstäver.
 
-* AEM Forms innehåller nu en uppgradering av Struts-versionen från 2.5.33 till 6.x för formulärkomponenten. Detta ger tidigare missade strängändringar som inte ingick i SP23. Stödet lades till via en [hotfix](/help/release-notes/aem-forms-hotfix.md) som du kan hämta och installera för att lägga till stöd för den senaste versionen av Struts.
+* AEM Forms innehåller nu en uppgradering av Struts-versionen från 2.5.33 till 6.x för formulärkomponenten. Uppgraderingen innehåller tidigare missade strängändringar som inte ingick i SP24. Stödet lades till via en [hotfix](/help/release-notes/aem-forms-hotfix.md) som du kan hämta och installera för att lägga till stöd för den senaste versionen av Struts.
 
 #### Andra kända fel {#aem-forms-other-known-issues}
 
@@ -751,7 +694,7 @@ Följande problem har en hotfix som kan hämtas och installeras. Du kan [hämta 
   have different Class objects for the type org/slf4j/ILoggerFactory used in the signature.
   ```
 
-* FORMS-21378: När SSV (Server-Side Validation) är aktiverat kan det hända att det inte går att skicka formulär. Kontakta Adobe Support om du råkar ut för problemet.
+* FORMS-21378: När serversidesvalidering (SSV) är aktiverat kan det hända att formulärskickning misslyckas. Kontakta Adobe Support om du råkar ut för problemet.
 
 
 
@@ -759,18 +702,18 @@ Följande problem har en hotfix som kan hämtas och installeras. Du kan [hämta 
 
 Följande textdokument innehåller en lista över de OSGi-paket och innehållspaket som ingår i den här versionen av [!DNL Experience Manager] 6.5 Service Pack:
 
-* [Lista över OSGi-paket som ingår i Experience Manager 6.5.23.0](/help/release-notes/assets/65230-bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
-* [Lista över innehållspaket som ingår i Experience Manager 6.5.23.0](/help/release-notes/assets/65230-packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Lista över OSGi-paket som ingår i Experience Manager 6.5.24.0](/help/release-notes/assets/65240-bundles.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
+* [Lista över innehållspaket som ingår i Experience Manager 6.5.24.0](/help/release-notes/assets/65240-packages.txt) <!-- UPDATE FOR EACH NEW RELEASE -->
 
 ## Begränsade webbplatser{#restricted-sites}
 
 Dessa webbplatser är endast tillgängliga för kunder. Kontakta din kontoansvarige på Adobe om du är kund och behöver åtkomst.
 
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/)
-* [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/sv/docs/customer-one/using/home).
+* [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/en/docs/customer-one/using/home).
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] produktsida](https://business.adobe.com/se/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/sv/docs/experience-manager-65)
+>* [[!DNL Experience Manager] produktsida](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [Prenumerera på Adobe Priority-produktuppdateringar](https://www.adobe.com/subscription/priority-product-update.html)
