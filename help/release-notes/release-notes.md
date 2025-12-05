@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: f852fa8d682241ffdddc60148fcd9dce7b89fed4
+source-git-commit: ae66b28497bfb12686152b324e1758ad2d8592ee
 workflow-type: tm+mt
-source-wordcount: '8802'
+source-wordcount: '9444'
 ht-degree: 0%
 
 ---
@@ -40,11 +40,12 @@ ht-degree: 0%
 
 <!-- UPDATE FOR EACH NEW RELEASE -->
 
-<!--
-## Key features and enhancements
--->
 
+## Viktiga funktioner och förbättringar
 
+### Forms
+
+* **Stöd för att skicka anpassad XCI:** Stöd har lagts till för att skicka anpassad XCI i parametrar för cmdline-programmet xmlformcmd. Detta gör att användarna kan ange anpassade XCI-filer för testning, vilket ger större flexibilitet och kontroll över testprocessen. (LC-3923248)
 
 
 ## Åtgärdade problem i Service Pack 24 {#fixed-issues}
@@ -302,25 +303,40 @@ När autentiseringshanteraren för frågetoken konfigurerades blandades använda
 
 ### [!DNL Forms]{#forms-6524}
 
+<!--
 >[!NOTE]
 >
->Korrigeringar i [!DNL Experience Manager] Forms levereras via ett separat tilläggspaket en vecka efter den schemalagda versionen av [!DNL Experience Manager] Service Pack. I detta fall kommer tilläggspaketen att släppas torsdagen den 4 december 2025. Dessutom har en lista med korrigeringar och förbättringar för Forms lagts till i det här avsnittet.
-
-<!--
-#### Forms Designer 
-
-#### Forms
-
-#### Forms JEE 
-
-#### Forms Captcha {#forms-captcha-6524} 
-
-#### XMLFM {#forms-xmlfm-6524}
-
-#### [!DNL Forms Designer] {#forms-designer-6524}
-
+>Fixes in [!DNL Experience Manager] Forms are delivered through a separate add-on package one week after the scheduled [!DNL Experience Manager] Service Pack release date. In this case, the add-on packages release Thursday, December 4, 2025. In addition, a list of Forms fixes and enhancements is added to this section.
 -->
 
+#### Forms Designer
+
+* Användare råkade ut för problem med att hyperlänkar inte var klickbara i specifika testfall, vilket påverkade deras möjlighet att navigera och verifiera länkar i programmet. (LC-3923505)
+* Användare har stött på tillgänglighetsproblem med PDF-filer som genererats med AEM Forms Designer 6.5.23 för icke-latinska språk. Bantaggar placerades inte i en Artifact-behållare, vilket orsakade fel i PAC- och skärmläsarkontroller. (LC-3923295)
+* Användare fick brutna hyperlänkar i textrutor i PDF (Portable Document Format) efter att ha korrigerat från version 6.5.21 till 6.5.23 med hjälp av Output Service. (LC-3923290)
+* Användarna fick problem med tillgängligheten i DoR-formulär (Document of Record). När indatafälten är tomma läser skärmläsare bara upp fälten och inte värdena, vilket gör det svårt för användare med funktionshinder att navigera effektivt i formulären. (LC-3923234)
+* Användare stötte på tillgänglighetsproblem i DoR PDF forms där NVDA felaktigt läste&quot;inte tillgängligt&quot; för kryssrutor, alternativknappar och textfält, vilket ofta upprepade meddelandet och skapade förvirring för skärmläsaranvändare. (LC-3923201)
+* Användarna råkade ut för en tabbordningsdiskrepans i XDP när de lade till nya fält. Den befintliga tabbordningen ändrades oväntat, vilket påverkar formulärnavigeringen. (LC-3923183, LC-3922630)
+* Användarna har fått problem med HTML rendering. När händelsen `docReady` användes utlöstes den inte korrekt i HTML, vilket medförde att skript inte kördes som förväntat. (LC-3923118)
+* Användare fick problem med PDF renderingsskript som inte fungerar i AEM Forms Cloud-produktionsmiljön. (LC-3923082)
+* Användarna fick problem med flytande fält i formulär. När du använder olika datafiler återges odockade fält korrekt med en fil men inte med den andra, trots mindre skillnader som inte hör till fälten. (LC-3923056)
+* Användare fick en tom spanska mallsida när endast engelskt innehåll valdes i ett XDP-paket (XML Data Package) med flera mallsidor. (LC-3923009)
+* Användare observerade föråldrad information om copyright-år i AEM Designer. Detta inträffade i popup-rutan vid start, avsnittet Om och i avsnittet Juridiska meddelanden, som visade 2003-2024 i stället för 2003-2025. (LC-3923005)
+* En tom PDF-sida påträffades när sidnumreringen användes i AEM Forms Designer. Problemet uppstod när&quot;Top of the Next Page/Top of Page&quot; valdes för WireAdviceHeader, vilket stör layouten för dataregistreringar. (LC-3922997, LC-3922830)
+* Ett problem uppstod där filedigest-värdet för XML-schemadefinitionen (XSD) för Extensible Markup Language (XML) inte kunde sparas i 64-bitarsversionen av AEM Forms Designer. (LC-3922924)
+* Användare upplevde instabil hyperlänksformatering i AEM Designer 6.5.19, där hyperlänkar i en textruta felaktigt använde format från omgivande text, till exempel det första tecknets formatering. (LC-3922376)
+* Användare fick problem med att återge HTML-formulär via mobil återgivning i MAC med AEM Forms OSGI v6.5.22. (LC-3923058)
+* Användare råkade ut för&quot;path object not tagged&quot;-fel i PDF-filer (Portable Document Format) när de använde kanterade eller bakgrundsbeskurna fält i XDP-mallar som skapats med Designer 6.5.23 och analyserats med PAC 2024. (LC-3923013)
+* Ett fel uppstod med bakgrundsfärgen för rubriken&quot;Dati Richiedente&quot; i PAC (Portable Application Component) som fick meddelandet&quot;path object not tagged&quot;. (LC-3922912)
+* Användare råkade ut för ett problem där specifika mallar ersatte det avsedda teckensnittet med ett komprimerat teckensnitt. (LC-3922330)
+
+#### Adaptiv Forms
+
+* Användare upplevde saknade alternativ i regelredigeraren. När författare skrev regler för talindata var alternativen Fråga, UTM och Webbläsarinformation inte tillgängliga. (FORMS-21660)
+* Programmet kraschar vid interaktion med OdataResponse på grund av ett null-pekarundantag. (FORMS-20344)
+* Användarna fick problem när de skapade regler för att visa en panel och sätta fokus på ett element i den. Regeln setFocus kördes före synlighetsuppdateringen, vilket medförde att fokusåtgärden misslyckades. (FORMS-19563)
+* Användare fick problem med att välja komponenter i AEM Forms Author. När du navigerade mellan flikar i redigeringsläge kunde vissa behållare inte markeras, vilket förhindrar enkel identifiering och interaktion. (FORMS-1825)
+* Användarna råkade ut för ett &quot;Ogiltig URL&quot;-fel när de försökte kommentera resurser i AEM 6.5.22. (NPR-42684)
 
 ### Foundation {#foundation-6524}
 
@@ -435,7 +451,7 @@ Aktiverar Sling Main Servlet **Check Content-Type** åsidosätter brutna `.model
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.24.0 kräver [!DNL Experience Manager] 6.5. Mer information finns i [&#x200B; uppgraderingsdokumentationen &#x200B;](/help/sites-deploying/upgrade.md) . <!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.24.0 kräver [!DNL Experience Manager] 6.5. Mer information finns i [ uppgraderingsdokumentationen ](/help/sites-deploying/upgrade.md) . <!-- UPDATE FOR EACH NEW RELEASE -->
 * Hämtningen av Service Pack är tillgänglig på Adobe [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.24.0.zip).
 * Installera [!DNL Experience Manager] 6.5.24.0 på en av författarinstanserna med Package Manager på en distribution med MongoDB och flera instanser.<!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -490,7 +506,7 @@ Instruktioner om hur du installerar Service Pack på Experience Manager Forms fi
 
 >[!NOTE]
 >
->Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/deploying/deploy), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
+>Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
 
 ### Installera GraphQL Index Package för Experience Manager Content Fragments{#install-aem-graphql-index-add-on-package}
 
@@ -621,7 +637,7 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 
 ### Känt problem för AEM Sites {#known-issues-aem-sites-6524}
 
-Content Fragments-Preview misslyckas på grund av DoS-skydd för ett stort träd med fragment. Se artikeln [KB om standardkonfigurationsalternativ för GraphQL Query Executor](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-23945) (SITES-17934)
+Content Fragments-Preview misslyckas på grund av DoS-skydd för ett stort träd med fragment. Se artikeln [KB om standardkonfigurationsalternativ för GraphQL Query Executor](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23945) (SITES-17934)
 
 ### Kända fel för AEM Forms {#known-issues-aem-forms-6524}
 
@@ -694,10 +710,10 @@ Följande textdokument innehåller en lista över de OSGi-paket och innehållspa
 Dessa webbplatser är endast tillgängliga för kunder. Kontakta din kontoansvarige på Adobe om du är kund och behöver åtkomst.
 
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/)
-* [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/sv/docs/customer-one/using/home).
+* [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/en/docs/customer-one/using/home).
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] produktsida](https://business.adobe.com/se/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/sv/docs/experience-manager-65)
+>* [[!DNL Experience Manager] produktsida](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [Prenumerera på Adobe Priority-produktuppdateringar](https://www.adobe.com/subscription/priority-product-update.html)
