@@ -5,9 +5,9 @@ feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 73ec9a0420206ef2cc60a12d316073a443c1d20d
+source-git-commit: e71050fe23cc4c436859776918637158098864ef
 workflow-type: tm+mt
-source-wordcount: '2329'
+source-wordcount: '2331'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,9 @@ Med Adobe Experience Manager (AEM) kan du utforma, skapa, strukturera och [publi
 Innehållsfragment innehåller strukturerat innehåll:
 
 * De är baserade på en [Content Fragment Model](/help/assets/content-fragments/content-fragments-models.md) som fördefinierar en struktur för det resulterande fragmentet.
+
 * Strukturen kan variera mellan:
+
    * Grundläggande
       * Ett enda textfält med flera rader.
       * Används för att förbereda okomplicerat innehåll för sidredigering.
@@ -44,7 +46,7 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhål
 * [Markering](/help/assets/content-fragments/content-fragments-markdown.md) - använder markeringssyntax för ditt fragment
 * [Använder associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) - lägger till associerat innehåll
 * [Metadata - Fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md) - visa och redigera fragmentegenskaperna
-* Använd [Content Fragments tillsammans med GraphQL för att leverera innehåll &#x200B;](/help/assets/content-fragments/content-fragments-graphql.md) som kan användas i dina program. Om du vill ha hjälp med detta kan du förhandsgranska [JSON-utdata](/help/assets/content-fragments/content-fragments-json-preview.md).
+* Använd [Content Fragments tillsammans med GraphQL för att leverera innehåll ](/help/assets/content-fragments/content-fragments-graphql.md) som kan användas i dina program. Om du vill ha hjälp med detta kan du förhandsgranska [JSON-utdata](/help/assets/content-fragments/content-fragments-json-preview.md).
 
 >[!NOTE]
 >
@@ -84,7 +86,7 @@ Dessa innehållsfragment kan sedan sammanställas för att ge upplevelser över 
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE#content-fragments).
+>Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 >[!NOTE]
 >
@@ -199,7 +201,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
    * Assets (bilder) infogade i det faktiska fragmentet och används som det interna innehållet i ett fragment.
    * Är inbäddade i fragmentets styckesystem.
-   * Kan formateras när [fragmentet används/refereras på en sida &#x200B;](/help/sites-authoring/content-fragments.md).
+   * Kan formateras när [fragmentet används/refereras på en sida ](/help/sites-authoring/content-fragments.md).
    * Kan endast läggas till, tas bort från eller flyttas inom ett fragment med fragmentredigeraren. Dessa åtgärder kan inte utföras i sidredigeraren.
    * Det går bara att lägga till, ta bort eller flytta inom ett fragment med formatet [RTF i fragmentredigeraren](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
    * Kan endast läggas till i flerradiga textelement (alla fragmenttyper).
