@@ -5,16 +5,16 @@ feature: Content Fragments
 role: User
 exl-id: 6fd1fdb2-d1d3-4f97-b119-ecfddcccec9e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: e3a35099a48088d5746aa23be45c3e81a1a8b02e
+source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
 workflow-type: tm+mt
-source-wordcount: '2339'
+source-wordcount: '2355'
 ht-degree: 1%
 
 ---
 
 # Modeller för innehållsfragment {#content-fragment-models}
 
-Content Fragment Models i AEM definierar innehållsstrukturen för dina [innehållsfragment, &#x200B;](/help/assets/content-fragments/content-fragments.md) som en grund för ditt headless-innehåll.
+Content Fragment Models i AEM definierar innehållsstrukturen för dina [innehållsfragment, ](/help/assets/content-fragments/content-fragments.md) som en grund för ditt headless-innehåll.
 
 Om du vill använda modeller för innehållsfragment kan du:
 
@@ -22,6 +22,10 @@ Om du vill använda modeller för innehållsfragment kan du:
 1. [Skapa](#creating-a-content-fragment-model) och [konfigurera](#defining-your-content-fragment-model), dina modeller för innehållsfragment.
 1. [Aktivera Content Fragment Models](#enabling-disabling-a-content-fragment-model) för användning när du skapar innehållsfragment.
 1. [Tillåt dina modeller för innehållsfragment i de nödvändiga Assets-mapparna](#allowing-content-fragment-models-assets-folder) genom att konfigurera **Profiler**.
+
+>[!NOTE]
+>
+>Observera [Bästa praxis](/help/assets/content-fragments/content-fragments.md#best-practices) när du arbetar med modeller för innehållsfragment och innehållsfragment.
 
 ## Skapa en innehållsfragmentmodell {#creating-a-content-fragment-model}
 
@@ -240,10 +244,10 @@ Innehållsfragment kan skapa kapslat innehåll med någon av följande datatyper
 >AEM har ett upprepningsskydd för:
 >
 >* Innehållsreferenser
->Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
+>  Detta förhindrar att användaren lägger till en referens till det aktuella fragmentet. Detta kan leda till en tom dialogruta för fragmentreferensväljaren.
 >
 >* Fragmentreferenser i GraphQL
->Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
+>  Om du skapar en djup fråga som returnerar flera innehållsfragment som refereras av varandra, returneras null vid den första förekomsten.
 
 ### Innehållsreferens {#content-reference}
 

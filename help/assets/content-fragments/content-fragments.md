@@ -1,20 +1,20 @@
 ---
 title: Arbeta med innehållsfragment
-description: Lär dig hur du med Content Fragments i Adobe Experience Manager (AEM) kan designa, skapa, strukturera och använda sidoberoende innehåll, idealiskt för headless-leverans.
+description: Läs om hur du med Content Fragments i Adobe Experience Manager (AEM) kan designa, skapa, strukturera och använda sidoberoende innehåll, idealiskt för headless-leverans.
 feature: Content Fragments
 role: User
 exl-id: 0ee883c5-0cea-46b7-a759-600b8ea3bc3e
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
 workflow-type: tm+mt
-source-wordcount: '1966'
-ht-degree: 3%
+source-wordcount: '2295'
+ht-degree: 2%
 
 ---
 
 # Arbeta med innehållsfragment {#working-with-content-fragments}
 
-Med Adobe Experience Manager (AEM) kan du utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-authoring/content-fragments.md). De gör att du kan förbereda innehåll för användning på flera platser/i flera kanaler, idealiskt för headless-leverans.
+Med Adobe Experience Manager (AEM) kan du utforma, skapa, strukturera och [publicera sidoberoende innehåll](/help/sites-authoring/content-fragments.md) i innehållsfragment. De gör att du kan förbereda innehåll för användning på flera platser/i flera kanaler, idealiskt för headless-leverans.
 
 Innehållsfragment innehåller strukturerat innehåll:
 
@@ -30,7 +30,7 @@ Innehållsfragment innehåller strukturerat innehåll:
       * Med de tillgängliga referensdatatyperna kan du kapsla in ditt innehåll.
       * Tender som ska användas för leverans till ditt program.
 
-Innehållsfragment kan också levereras i JSON-format med exportfunktionerna i Sling Model (JSON) AEM kärnkomponenterna. Leveranssätt:
+Innehållsfragment kan också levereras i JSON-format med exportfunktionerna för Sling Model (JSON) i AEM kärnkomponenter. Leveranssätt:
 
 * gör att du kan använda komponenten för att hantera vilka element i ett fragment som ska levereras
 * tillåter massleverans genom att lägga till flera kärnkomponenter för innehållsfragment på sidan som används för API-leverans
@@ -44,7 +44,7 @@ På den här och följande sidor beskrivs hur du skapar, konfigurerar, underhål
 * [Markering](/help/assets/content-fragments/content-fragments-markdown.md) - använder markeringssyntax för ditt fragment
 * [Använder associerat innehåll](/help/assets/content-fragments/content-fragments-assoc-content.md) - lägger till associerat innehåll
 * [Metadata - Fragmentegenskaper](/help/assets/content-fragments/content-fragments-metadata.md) - visa och redigera fragmentegenskaperna
-* Använd [Content Fragments tillsammans med GraphQL för att leverera innehåll &#x200B;](/help/assets/content-fragments/content-fragments-graphql.md) som kan användas i dina program. Om du vill ha hjälp med detta kan du förhandsgranska [JSON-utdata](/help/assets/content-fragments/content-fragments-json-preview.md).
+* Använd [Content Fragments tillsammans med GraphQL för att leverera innehåll ](/help/assets/content-fragments/content-fragments-graphql.md) som kan användas i dina program. Om du vill ha hjälp med detta kan du förhandsgranska [JSON-utdata](/help/assets/content-fragments/content-fragments-json-preview.md).
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ Dessa innehållsfragment kan sedan sammanställas för att ge upplevelser över 
 >
 >Upplevelsefragment kan innehålla innehåll i form av innehållsfragment, men inte tvärtom.
 >
->Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE#content-fragments).
+>Mer information finns i [Om innehållsfragment och upplevelsefragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html#content-fragments).
 
 >[!NOTE]
 >
@@ -92,19 +92,19 @@ Dessa innehållsfragment kan sedan sammanställas för att ge upplevelser över 
 
 ## Innehållsfragment och innehållstjänster {#content-fragments-and-content-services}
 
-AEM Content Services är utformat för att generera beskrivning och leverans av innehåll i/från AEM utöver fokus på webbsidor.
+AEM Content Services är utformat för att generalisera beskrivningen och leveransen av innehåll i/från AEM utöver fokus på webbsidor.
 
 De levererar innehåll till kanaler som inte är traditionella AEM webbsidor, med standardiserade metoder som kan användas av alla kunder. Dessa kanaler kan omfatta:
 
 * Enkelsidiga program
 * Inbyggda mobilprogram
-* andra kanaler och kontaktpunkter externt för AEM
+* andra kanaler och kontaktpunkter utanför AEM
 
 Leveransen görs i JSON-format med JSON-exporteraren.
 
-AEM kan användas för att beskriva och hantera strukturerat innehåll. Strukturerat innehåll definieras i modeller som kan innehålla olika innehållstyper, bland annat text, numeriska data, boolesk information, datum och tid.
+AEM Content Fragments kan användas för att beskriva och hantera strukturerat innehåll. Strukturerat innehåll definieras i modeller som kan innehålla olika innehållstyper, bland annat text, numeriska data, boolesk information, datum och tid.
 
-Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta strukturerade innehåll sedan användas för att leverera AEM till andra kanaler än AEM.
+Tillsammans med JSON-exportfunktionerna i AEM kärnkomponenter kan detta strukturerade innehåll sedan användas för att leverera AEM-innehåll till andra kanaler än AEM-sidor.
 
 <!--
 >[!NOTE]
@@ -199,7 +199,7 @@ Resurserna för innehållsfragmentet består av följande delar (antingen direkt
 
    * Assets (bilder) infogade i det faktiska fragmentet och används som det interna innehållet i ett fragment.
    * Är inbäddade i fragmentets styckesystem.
-   * Kan formateras när [fragmentet används/refereras på en sida &#x200B;](/help/sites-authoring/content-fragments.md).
+   * Kan formateras när [fragmentet används/refereras på en sida ](/help/sites-authoring/content-fragments.md).
    * Kan endast läggas till, tas bort från eller flyttas inom ett fragment med fragmentredigeraren. Dessa åtgärder kan inte utföras i sidredigeraren.
    * Det går bara att lägga till, ta bort eller flytta inom ett fragment med formatet [RTF i fragmentredigeraren](/help/assets/content-fragments/content-fragments-variations.md#inserting-assets-into-your-fragment).
    * Kan endast läggas till i flerradiga textelement (alla fragmenttyper).
@@ -300,3 +300,47 @@ Om du vill använda dina innehållsfragment för att skapa sidor behöver du ock
 ## Exempel på användning {#example-usage}
 
 Ett fragment, med dess element och variationer, kan användas för att skapa sammanhängande innehåll för flera kanaler. När du utformar ditt fragment måste du tänka på vad som används och var det används.
+
+## Bästa praxis {#best-practices}
+
+Innehållsfragment kan användas för att skapa komplexa strukturer. Adobe ger rekommendationer för bästa praxis när det gäller att definiera och använda både modeller och fragment.
+
+### Behåll det enkelt {#keep-it-simple}
+
+När du utformar strukturerat innehåll i AEM ska du hålla innehållsstrukturerna så enkla som möjligt för att säkerställa starka systemprestanda och effektiv styrning.
+
+### Antal modeller {#number-of-models}
+
+Skapa så många innehållsmodeller som behövs, men inte mer.
+
+För många modeller komplicerar styrningen och kan göra GraphQL-frågor långsammare. En liten uppsättning modeller, som är högst tio, är vanligtvis tillräckliga. Om du närmar dig de tiotals eller fler höga nivåerna bör du tänka om din modelleringsstrategi.
+
+### Kapslingsmodeller och fragment (mycket viktigt) {#nesting-models-and-fragments}
+
+Undvik djup eller överdriven kapsling av innehållsfragment med Content Fragment Reference, som gör att fragment kan referera till andra fragment, ibland på flera nivåer.
+
+Omfattande användning av Content Fragment-referenser kan i hög grad påverka systemets prestanda, användargränssnittets svarstider och körningen av GraphQL-frågor. Målet är att inte kapsla mer än tio nivåer.
+
+### Antal datafält och datatyper per per modell  {#number-of-data-fields-and-types-per-model}
+
+Inkludera endast de datafält och datatyper som modellen verkligen behöver.
+
+Överdrivet komplexa modeller leder till alltför komplexa fragment som kan göra redigeringen svår och minska redigeringsprestanda.
+
+### RTF-fält {#rich-text-fields}
+
+Använd RTF-fält (datatypen **Flera rader**) med hänsyn till detta.
+
+Begränsa antalet RTF-fält per modell. Även mängden text som lagras i varje fragment och mängden HTML-formatering. Mycket stort RTF-innehåll kan påverka systemets prestanda negativt.
+
+### Antal variationer {#number-of-variations}
+
+Skapa så många fragmentvariationer som behövs, men inte mer.
+
+Variationer lägger till bearbetningstid i ett innehållsfragment, i författarmiljön och även vid leverans. Vi rekommenderar att du håller antalet variationer till ett hanterbart minimum.
+
+Ett tips är att inte överskrida tio varianter per innehållsfragment.
+
+### Testa före produktion {#test-before-production}
+
+När du är osäker kan du skapa prototyper för de avsedda innehållsstrukturerna innan du distribuerar dem till produktionen. Tidiga korrekturrundor och lämplig testning, både för tekniska frågor och för användaren, kan hjälpa dig att undvika problem senare när du måste klara deadlines i produktionen.

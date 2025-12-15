@@ -1,20 +1,20 @@
 ---
 title: Hantera innehållsfragment
-description: Lär dig hur du använder Assets Console för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
+description: Lär dig hur du använder Assets Console för att hantera dina AEM Content Fragments, som är grunden för ditt headless-innehåll.
 feature: Content Fragments
 role: User
 exl-id: 25c91a85-06ff-4666-a809-46778a689e25
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 11a8181e860c724c817dd549b351df079c8227e2
 workflow-type: tm+mt
-source-wordcount: '1712'
+source-wordcount: '1728'
 ht-degree: 6%
 
 ---
 
 # Hantera innehållsfragment {#managing-content-fragments}
 
-Lär dig hur du använder Assets Console för att hantera AEM innehållsfragment, som utgör grunden för ditt headless-innehåll.
+Lär dig hur du använder Assets Console för att hantera dina AEM Content Fragments, som är grunden för ditt headless-innehåll.
 
 När du har definierat dina [modeller för innehållsfragment](#creating-a-content-model) kan du använda dessa för att [skapa dina innehållsfragment](#creating-a-content-fragment).
 
@@ -34,6 +34,10 @@ När du har definierat dina [modeller för innehållsfragment](#creating-a-conte
 >
 >* när du redigerar sidor, se [Sidredigering med innehållsfragment](/help/sites-authoring/content-fragments.md).
 >* för [Headless Content Delivery med Content Fragments with GraphQL](/help/assets/content-fragments/content-fragments-graphql.md).
+
+>[!NOTE]
+>
+>Observera [Bästa praxis](/help/assets/content-fragments/content-fragments.md#best-practices) när du arbetar med modeller för innehållsfragment och innehållsfragment.
 
 >[!NOTE]
 >
@@ -117,13 +121,13 @@ Markera fragmentet för att visa verktygsfältet med tillämpliga åtgärder:
 * **Till samling**
 * **Kopiera** (och **Klistra in**)
 * **Flytta**
-* **Snabb Publish**
+* **Snabbpublicering**
 * **Hantera publikation**
 * **Ta bort**
 
 >[!NOTE]
 >
->Många av dessa är [standardåtgärder för Assets](/help/assets/manage-assets.md) och/eller [AEM skrivbordsappen](https://helpx.adobe.com/se/experience-manager/desktop-app/aem-desktop-app.html).
+>Många av dessa är [standardåtgärder för Assets](/help/assets/manage-assets.md) och/eller [AEM-datorprogrammet](https://helpx.adobe.com/experience-manager/desktop-app/aem-desktop-app.html).
 
 ## Öppna fragmentredigeraren {#opening-the-fragment-editor}
 
@@ -244,9 +248,9 @@ Redigeraren har olika alternativ:
 
   Avslutar redigeraren utan att spara de senaste ändringarna (d.v.s. har gjorts sedan den senaste **Spara**).
 
-När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du avbryter dina ändringar (med **Stäng** utan att spara):
+När du redigerar ditt innehållsfragment skapar AEM automatiskt versioner för att säkerställa att tidigare innehåll kan återställas om du avbryter ändringarna (med **Stäng** utan att spara):
 
-1. När ett innehållsfragment öppnas för redigering AEM söker efter den cookie-baserade token som anger om det finns en *redigeringssession*:
+1. När ett innehållsfragment öppnas för redigering söker AEM efter den cookie-baserade token som anger om det finns en *redigeringssession*:
 
    1. Om token hittas betraktas fragmentet som en del av den befintliga redigeringssessionen.
    2. Om token är *inte* tillgänglig och användaren börjar redigera innehåll, skapas en version och en token för den nya redigeringssessionen skickas till klienten, där den sparas i en cookie.
@@ -366,11 +370,11 @@ Innehållsfragment måste publiceras för användning i publiceringsmiljön. De 
 
 * Efter skapande; använder [åtgärder som är tillgängliga i Assets-konsolen](#actions-for-a-content-fragment-assets-console).
 * Från [redigeraren för innehållsfragment](#toolbar-actions-in-the-content-fragment-editor).
-* När du [publicerar en sida som använder fragmentet &#x200B;](/help/sites-authoring/content-fragments.md#publishing) visas fragmentet i sidreferenserna.
+* När du [publicerar en sida som använder fragmentet ](/help/sites-authoring/content-fragments.md#publishing) visas fragmentet i sidreferenserna.
 
 >[!CAUTION]
 >
->När ett fragment har publicerats och/eller refererats visar AEM en varning när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
+>När ett fragment har publicerats och/eller refererats visas en varning i AEM när en författare öppnar fragmentet för redigering igen. Detta är för att varna för att ändringar i fragmentet även påverkar de refererade sidorna.
 
 ## Ta bort ett fragment {#deleting-a-fragment}
 
