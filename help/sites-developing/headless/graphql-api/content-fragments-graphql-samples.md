@@ -5,7 +5,7 @@ feature: Content Fragments,GraphQL API
 exl-id: 91c5f61c-9c15-4d72-9b9b-0c23f31e7cdc
 solution: Experience Manager, Experience Manager Sites
 role: Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: 3a38a2f1e753e33d9d3d4d4e7ebc24f16f795966
 workflow-type: tm+mt
 source-wordcount: '1577'
 ht-degree: 0%
@@ -229,7 +229,7 @@ Den här exempelfrågan är en enkel fråga som returnerar `name` av alla poster
 
 **Exempelfråga**
 
-```xmgraphqll
+```graphql
 query {
   cityList {
     items {
