@@ -7,7 +7,7 @@ feature: Asset Management,Search
 exl-id: d6f815b5-e4fc-4f8c-a6c1-9e50035ab9f2
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 76fffb11c56dbf7ebee9f6805ae0799cd32985fe
+source-git-commit: 7c1aeec18f35b019a63d0385ada248b26a0df9de
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| Adobe Experience Manager (AEM) as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/organize-assets.html?lang=sv-SE) |
+| Adobe Experience Manager (AEM) as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/organize-assets.html?lang=en) |
 | AEM 6.5 | Den här artikeln |
 
 Alla digitala resurser, metadata och innehåll i Microsoft® Office- och PDF-dokument extraheras och blir sökbara. Sökning möjliggör avancerad filtrering av resurser och respekterar fullt ut rätt behörigheter. Metadata beskrivs i detalj i metadata i Digital Asset Management.
@@ -47,9 +47,9 @@ Det mest grundläggande sättet att ordna resurser är att spara dessa i mappar.
 
 ## Ordna resurser med hjälp av taggar {#use-tags-to-organize-assets}
 
-Med taggar, som metadata, kan du enkelt söka efter resurser, skapa samlingar med hjälp av sökresultaten, öka rankningen för vissa resurser och använda artificiella intelligensalgoritmer i Adobe Sensei för tillgångsidentifiering.
+Med taggar, som metadata, kan du enkelt söka efter resurser, skapa samlingar med hjälp av sökresultaten, öka rankningen för vissa resurser och använda artificiella intelligensalgoritmer i Adobe AI för tillgångsidentifiering.
 
-[!DNL Adobe Experience Manager Assets] använder en självlärande algoritm för att skapa väldigt beskrivande taggar som gör att du kan hitta rätt resurs med bara några klick. Smart taggning använder Adobe Sensei, Adobe artificiella intelligens och maskininlärningsmiljö, som kan utbildas för att känna igen och använda både standard- och företagsspecifika taggar på bilder. Smarta taggar kan även identifiera innehåll, enskilda ord eller fraser och automatiskt använda beskrivande taggar på resurser
+[!DNL Adobe Experience Manager Assets] använder en självlärande algoritm för att skapa väldigt beskrivande taggar som gör att du kan hitta rätt resurs med bara några klick. Smart taggning använder Adobe AI, Adobe ramverk för artificiell intelligens och maskininlärning, som kan utbildas för att känna igen och använda både standard- och företagsspecifika taggar på bilder. Smarta taggar kan även identifiera innehåll, enskilda ord eller fraser och automatiskt använda beskrivande taggar på resurser
 
 Mer information finns i följande artiklar:
 
@@ -79,4 +79,4 @@ Genom att standardisera metadataanvändning, filnamngivning och mappstruktur sä
 >* [Profiler för att bearbeta metadata, bilder och videor](processing-profiles.md).
 >* [Metadataprofiler](/help/assets/metadata-config.md#metadata-profiles).
 >* [Videoprofiler](video-profiles.md).
->* [Dynamic Media bildprofiler](image-profiles.md).
+>* [Profiler för dynamiska mediabilder](image-profiles.md).

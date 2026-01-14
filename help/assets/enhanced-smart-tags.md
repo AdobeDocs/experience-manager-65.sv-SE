@@ -7,7 +7,7 @@ role: User
 exl-id: 5eff4a0f-30b1-4753-ad0b-002656eed972
 hide: true
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 5aff321eb52c97e076c225b67c35e9c6d3371154
+source-git-commit: 7c1aeec18f35b019a63d0385ada248b26a0df9de
 workflow-type: tm+mt
 source-wordcount: '1545'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/smart-tags.html?lang=sv-SE) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/smart-tags.html?lang=en) |
 | AEM 6.5 | Den här artikeln |
 
 Organisationer som hanterar digitalt material använder i allt högre grad taxonomistyrd vokabulär i metadata. Det innehåller i själva verket en lista med nyckelord som anställda, partners och kunder vanligtvis använder för att referera till och söka efter digitala resurser i en viss klass. Genom att tagga resurser med taxonomistyrd vokabulär ser du till att resurserna är lätta att identifiera och hämta.
@@ -31,7 +31,7 @@ För att Smart Content Service ska kunna använda rätt taggar måste du träna 
 
 När en tagg har tränats och är klar kan tjänsten nu använda dessa taggar på resurser via ett taggningsarbetsflöde.
 
-I bakgrunden använder Smart Content Service Adobe Sensei AI-ramverket för att träna sin bildigenkänningsalgoritm i er taggstruktur och affärsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser.
+I bakgrunden använder Smart Content Service Adobe AI-ramverket för att träna sin bildigenkänningsalgoritm i er taggstruktur och affärsklonomi. Den här innehållsintelligensen används sedan för att tillämpa relevanta taggar på en annan uppsättning resurser.
 
 Smart Content Service är en molntjänst som finns på [!DNL Adobe Developer Console]. Om du vill använda den i [!DNL Adobe Experience Manager] måste systemadministratören integrera din [!DNL Experience Manager]-distribution med [!DNL Adobe Developer Console].
 
@@ -97,7 +97,7 @@ Lägg till resurserna i en mapp och använd taggarna på varje resurs från egen
 
 >[!NOTE]
 >
->1. Utbildning är en oåterkallelig process. Adobe rekommenderar att du granskar taggarna i den välstrukturerade resursuppsättningen innan du utbildar Smart Content Service på taggarna.
+>1. Utbildning är en oåterkallelig process. Adobe rekommenderar att du granskar taggarna i den välstrukturerade resursuppsättningen innan du utbildar Smart Content Service om taggarna.
 >1. Innan du utbildar dig för en tagg ska du läsa [Riktlinjer för utbildning i smarta innehållstjänster](/help/assets/config-smart-tagging.md#training-the-smart-content-service).
 >1. När du utbildar Smart Content Service för första gången rekommenderar Adobe att du utbildar den på minst två distinkta taggar.
 
@@ -133,7 +133,7 @@ Du kan köra taggningsarbetsflödet periodiskt eller när det behövs.
 
 Du kan aktivera tjänsten Smart Content Service för att regelbundet tagga resurser i en mapp. Öppna egenskapssidan för resursmappen, välj **[!UICONTROL Enable Smart Tags]** på fliken **[!UICONTROL Details]** och spara ändringarna.
 
-När det här alternativet har valts för en mapp taggar tjänsten Smart Content Service automatiskt resurserna i mappen. Som standard körs taggningsarbetsflödet varje dag kl. 12.00.
+När det här alternativet har valts för en mapp taggar tjänsten Smart Content Service automatiskt resurserna i mappen. Som standard körs taggningsarbetsflödet varje dag kl. 12:00.:00
 
 ### On-demand-taggning {#on-demand-tagging}
 
@@ -146,7 +146,7 @@ Du kan utlösa taggningsarbetsflödet från arbetsflödeskonsolen eller från ti
 #### Tagga resurser från arbetsflödeskonsolen {#tagging-assets-from-the-workflow-console}
 
 1. I gränssnittet [!DNL Experience Manager] går du till **[!UICONTROL Tools]** > **[!UICONTROL Workflow]** > **[!UICONTROL Models]**.
-1. Välj arbetsflödet **[!UICONTROL DAM Smart Tags Assets]** på sidan **[!UICONTROL Workflow Models]** och klicka sedan på **[!UICONTROL Start Workflow]** i verktygsfältet.
+1. Välj arbetsflödet **[!UICONTROL Workflow Models]** på sidan **[!UICONTROL DAM Smart Tags Assets]** och klicka sedan på **[!UICONTROL Start Workflow]** i verktygsfältet.
 
    ![dam_smart_tag_workflow](assets/dam_smart_tag_workflow.png)
 
@@ -200,4 +200,4 @@ Du kan också tilldela en tagg en högre rankning för att öka dess relevans f�
 >* [Översikt och utbildning av smarta taggar](enhanced-smart-tags.md)
 >* [Konfigurera smart taggning](config-smart-tagging.md)
 >* [Felsökning av smarta taggar för OAuth-autentiseringsuppgifter](config-oauth.md)
->* [Videosjälvstudiekurs om smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=sv-SE)
+>* [Videosjälvstudiekurs om smarta taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)

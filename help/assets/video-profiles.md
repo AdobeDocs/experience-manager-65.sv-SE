@@ -11,7 +11,7 @@ role: User, Admin
 mini-toc-levels: 3
 exl-id: b290fac2-7259-45d7-b733-70419d632b07
 solution: Experience Manager, Experience Manager Assets
-source-git-commit: 54b508809733ed86798558aee50f8c7b5de00af9
+source-git-commit: 7c1aeec18f35b019a63d0385ada248b26a0df9de
 workflow-type: tm+mt
 source-wordcount: '3548'
 ht-degree: 6%
@@ -99,7 +99,7 @@ I följande tabell visas kodningsprofiler med bästa praxis för adaptiv videost
 
 ## Använda smart beskärning i videoprofiler {#about-smart-crop-video}
 
-Smart beskärning för video - en valfri funktion i videoprofiler - är ett verktyg som utnyttjar intelligensen i Adobe Sensei. Fokalpunkten identifieras och beskärs automatiskt i alla adaptiva videoklipp och progressiva videoklipp som du har överfört, oavsett storlek.
+Smart beskärning för video - en valfri funktion i videoprofiler - är ett verktyg som utnyttjar intelligensen i Adobe AI. Fokalpunkten identifieras och beskärs automatiskt i alla adaptiva videoklipp och progressiva videoklipp som du har överfört, oavsett storlek.
 
 De videoformat som stöds för smart beskärning är MP4, MKV, MOV, AVI, FLV och WMV.
 
@@ -109,7 +109,7 @@ Den största videofilstorleken som stöds för smart beskärning är följande k
 * 30 bildrutor per sekund (FPS).
 * 300 MB filstorlek.
 
-Adobe Sensei är begränsat till 9 000 bildrutor. Fem minuter vid 30 bildrutor/s. Om videon har en högre bildrutefrekvens minskar den maximala videouppspelningstiden. Exempelvis måste en 60 bildrutevideo vara två och en halv minut lång för att kunna hanteras av Adobe Sensei och smart beskärning.
+Adobe AI är begränsat till 9 000 bildrutor. Fem minuter vid 30 bildrutor/s. Om videon har en högre bildrutefrekvens minskar den maximala videouppspelningstiden. Exempelvis måste en 60 bildrutevideo vara två och en halv minut lång för att kunna hanteras av Adobe AI och smart beskärning.
 
 ![Smart beskärning för video](assets/smart-crop-video.png)
 
@@ -170,7 +170,7 @@ Välj informationsikonen bredvid varje alternativ för ytterligare beskrivningar
 
 1. Gör något av följande:
 
-   * Ange **[!UICONTROL auto]** i fältet **[!UICONTROL Width]**. Ange ett värde i pixlar i fältet **[!UICONTROL Height]**.
+   * Ange **[!UICONTROL Width]** i fältet **[!UICONTROL auto]**. Ange ett värde i pixlar i fältet **[!UICONTROL Height]**.
 
    * Om du vill få hjälp med att visualisera storleken på videon väljer du informationsikonen (i) till höger om **[!UICONTROL Height]** för att öppna sidan för storlekskalkylatorn. Använd **[!UICONTROL Size Calculator]** för att ange de videodimensioner (som representeras av den blå rutan) som du vill använda. Välj **[!UICONTROL X]** i det övre högra hörnet när du är klar.
 
@@ -219,7 +219,7 @@ Mer information om hur du definierar avancerade bearbetningsparametrar för andr
 Välj informationsikonen bredvid varje alternativ för ytterligare beskrivningar eller rekommenderade inställningar baserat på den valda videoformatskoden.
 1. (Valfritt) Avmarkera **[!UICONTROL Keep aspect ratio]** under rubriken Videostorlek.
 1. Gör följande:
-   * Ange **[!UICONTROL auto]** i fältet **[!UICONTROL Width]**.
+   * Ange **[!UICONTROL Width]** i fältet **[!UICONTROL auto]**.
    * Ange ett värde i pixlar i fältet **[!UICONTROL Height]**.
 Om du vill få hjälp med att visualisera storleken på videon väljer du informationsikonen för höjden för att öppna sidan **[!UICONTROL Size Calculator]**. Använd sidan **[!UICONTROL Size Calculator]** för att ytterligare ange videodimensionen (blå ruta) som du vill ha den. När du är klar väljer du **[!UICONTROL X]** i dialogrutans övre högra hörn.
 1. (Valfritt) Gör något av följande:
