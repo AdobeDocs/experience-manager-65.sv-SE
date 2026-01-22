@@ -5,22 +5,25 @@ feature: Transaction Reports
 exl-id: 77e95631-6b0d-406e-a1b8-78f8d9cceb63
 role: Admin, User, Developer
 solution: "Experience Manager, Experience Manager Forms"
-source-git-commit: 9f59606bb58b9e90f07bd22e89f3213afb54a697
+source-git-commit: eb059bc4c9f4b5064b8038a2b037670086a9139b
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
 
+
 # Aktivera och visa transaktionsrapporter för AEM Forms i JEE {#transaction-reports-overview}
 
-<!--Transaction reports in AEM Forms on JEE let you keep a count of all transactions taken place on your AEM Forms deployment. The objective is to provide information about product usage and helps business stakeholders understand their digital processing volumes. Examples of a transaction include:
+<span> Funktionen för transaktionsrapportering introduceras för AEM Forms på JEE från AEM Forms 6.5.20.0. Den här funktionen är inaktiverad som standard och kan aktiveras från administratörsgränssnittet.</span>
 
-* Submission of a document
-* Rendition of a document
-* Conversion of a document from one file format to another 
+Med transaktionsrapporter i AEM Forms på JEE kan du räkna med alla transaktioner som utförs i din AEM Forms-distribution. Målet är att tillhandahålla information om produktanvändning och hjälpa företagsintressenter att förstå sina digitala bearbetningsvolymer. Exempel på transaktioner:
 
-For more information on what is considered a transaction, see [Billable APIs](../../forms/using/transaction-reports-billable-apis-jee.md). Transaction log helps you to gain information about the number of documents submitted, rendered, and converted.-->
+* Inlämning av en handling
+* Återgivning av ett dokument
+* Konvertering av ett dokument från ett filformat till ett annat
+
+Mer information om vad som betraktas som en transaktion finns i [Fakturerbara API:er](../../forms/using/transaction-reports-billable-apis-jee.md).
 
 ## Aktivera transaktionsrapportering {#enable-transaction-reporting}
 
@@ -53,7 +56,7 @@ Transaktionsrapport via kontrollpanelen ger totalt antal transaktioner för varj
 1. Navigera till `/adminui` på din AEM Forms på JEE, till exempel: `http://10.13.15.08:8080/adminui`.
 1. Logga in som **administratör**.
 1. Klicka på Hälsoövervakning.
-1. Navigera till fliken **Transaktionsrapportör**, klicka på **Beräkna totala transaktioner**, nu ser du att ett cirkeldiagram representerar antalet PDF forms som har skickats, återgetts eller konverterats.
+1. Gå till fliken **Transaktionsrapportör**, klicka på **Beräkna totala transaktioner**, nu ser du att ett cirkeldiagram representerar antalet PDF forms - inskickade, återgivna eller konverterade.
 
 ![sample-transaction-report-jee](assets/transaction-piechart.png)
 
