@@ -5,7 +5,7 @@ feature: Transaction Reports
 exl-id: 77e95631-6b0d-406e-a1b8-78f8d9cceb63
 role: Admin, User, Developer
 solution: "Experience Manager, Experience Manager Forms"
-source-git-commit: eb059bc4c9f4b5064b8038a2b037670086a9139b
+source-git-commit: 5699f5814daf16a397eb6129b881ac2035456e39
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Aktivera och visa transaktionsrapporter för AEM Forms i JEE {#transaction-reports-overview}
 
-<span> Funktionen för transaktionsrapportering introduceras för AEM Forms på JEE från AEM Forms 6.5.20.0. Den här funktionen är inaktiverad som standard och kan aktiveras från administratörsgränssnittet.</span>
+<span> Funktionen för transaktionsrapportering introduceras för [AEM Forms på JEE från AEM Forms 6.5.20.0](/help/release-notes/previous/6-5-20.md#forms). Den här funktionen är inaktiverad som standard och kan aktiveras från administratörsgränssnittet.</span>
 
 Med transaktionsrapporter i AEM Forms på JEE kan du räkna med alla transaktioner som utförs i din AEM Forms-distribution. Målet är att tillhandahålla information om produktanvändning och hjälpa företagsintressenter att förstå sina digitala bearbetningsvolymer. Exempel på transaktioner:
 
