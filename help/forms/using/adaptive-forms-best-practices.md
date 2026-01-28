@@ -7,16 +7,16 @@ feature: Adaptive Forms,Foundation Components,Core Components
 exl-id: 5c75ce70-983e-4431-a13f-2c4c219e8dde
 solution: Experience Manager, Experience Manager Forms
 role: Admin, User, Developer
-source-git-commit: 6ec4eca0c0ad5ecfe18ffc766e6415a0f48506a9
+source-git-commit: 5699f5814daf16a397eb6129b881ac2035456e39
 workflow-type: tm+mt
-source-wordcount: '5963'
+source-wordcount: '5888'
 ht-degree: 0%
 
 ---
 
 # Bästa tillvägagångssätt för arbete med anpassningsbara formulär {#best-practices-for-working-with-adaptive-forms}
 
-<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE)  för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md)  eller [lägga till Adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html)  för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md)  eller [lägga till Adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
 ## Ökning {#overview}
 
@@ -99,15 +99,15 @@ Mer information finns i [Skapa ett anpassat formulär](/help/forms/using/creatin
 
 ### Skapa formulärmallar
 
-Du kan skapa ett anpassat formulär med formulärmallarna som är aktiverade i **Konfigurationsläsaren**. Information om hur du aktiverar formulärmallarna finns i [Skapa anpassad formulärmall](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template.html?lang=sv-SE).
+Du kan skapa ett anpassat formulär med formulärmallarna som är aktiverade i **Konfigurationsläsaren**. Information om hur du aktiverar formulärmallarna finns i [Skapa anpassad formulärmall](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-adaptive-form/create-adaptive-form-template.html?lang=en).
 
-Formulärmallarna kan också laddas upp från adaptiva formulärpaket som skapats på en annan författardator. Formulärmallar är tillgängliga genom att installera [aemforms-references-*-paket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE). Några av de bästa metoderna som rekommenderas är:
+Formulärmallarna kan också laddas upp från adaptiva formulärpaket som skapats på en annan författardator. Formulärmallar är tillgängliga genom att installera [aemforms-references-*-paket](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en). Några av de bästa metoderna som rekommenderas är:
 
 * Körningsläget **nosample content** rekommenderas endast för författaren och inte för publiceringsnoderna.
 * Redigering av resurser som anpassningsbara formulär, teman, mallar eller molnkonfigurationer utförs endast via redigeringsnoder, som kan publiceras på de konfigurerade publiceringsnoderna.
-Mer information finns i [Publicera och avpublicera formulär och dokument](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=sv-SE)
+Mer information finns i [Publicera och avpublicera formulär och dokument](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en)
 * Forms-tilläggspaket krävs för redigering och publicering för att dokumenttjänståtgärderna ska kunna hanteras. Det kan därför anses vara ett beroende.
-Om du bara vill ha Forms-relaterade exempelmallar, teman och DOR-paket kan du hämta dem från [aemforms-references-*-paket](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=sv-SE).
+Om du bara vill ha Forms-relaterade exempelmallar, teman och DOR-paket kan du hämta dem från [aemforms-references-*-paket](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/publishing-unpublishing-forms.html?lang=en).
 
 Mer information finns i [Introduktion till redigering av adaptiva formulär](/help/forms/using/introduction-forms-authoring.md).
 
@@ -296,17 +296,17 @@ Ett urkunder är en förenklad PDF-version av ett adaptivt formulär som du kan 
 * Uteslut dolda fält från DoR.
 * Använd parametern `afAcceptLang` request för att visa DoR i en annan språkinställning.
 
-### Felsöka och testa anpassningsbara formulär {#debugging-and-testing-adaptive-forms}
+<!--### Debugging and testing adaptive forms {#debugging-and-testing-adaptive-forms}
 
-[AEM Chrome Plug-in](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/) är ett webbläsartillägg för Google Chrome som innehåller verktyg för att felsöka adaptiva formulär. Formulärförfattare och utvecklare kan använda dessa verktyg för att:
+[AEM Chrome Plug-in](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/) is a browser extension for Google Chrome that provides tools for debugging adaptive forms. Form authors and developers can use these tools to:
 
-* Identifiera flaskhalsar och optimera formuläråtergivningens prestanda
-* Felsöka nyckelord och bindRef-fel i formuläret
-* Aktivera och konfigurera loggar
-* Felsöka regler och skript i formuläret
-* Utforska och lär dig mer om guideBridge API:er
+* Identify bottlenecks and optimize performance of form rendering
+* Debug keywords and bindRef errors in the form
+* Enable and configure logs
+* Debug rules and scripts in the form
+* Explore and learn about guideBridge APIs
 
-Mer information finns i [AEM Chrome Plug-in - Adaptiv form](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/).
+For more information, see [AEM Chrome Plug-in - Adaptive Form](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/adaptive-form/).-->
 
 ### Validerar anpassningsbara formulär på AEM-servern {#validating-adaptive-forms-on-aem-server}
 
@@ -354,13 +354,13 @@ Du behöver ofta flytta dina AEM-projekt från en miljö till en annan. Några a
 Nedan beskrivs några tips om hur du konfigurerar AEM för att förbättra prestandan generellt:
 
 * Aktivera HTML-klientbibliotekskomprimering för JavaScript och CSS från Felix Console.
-* Cachelagra alla klientbibliotek på `/etc.clientlibs/fd` och eventuella ytterligare anpassade klientbibliotek på AEM Dispatcher för att öka svarstiden och säkerheten för dina publicerade formulär. Mer information finns i [Dispatcher](https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher.html).
+* Cachelagra alla klientbibliotek på `/etc.clientlibs/fd` och eventuella ytterligare anpassade klientbibliotek på AEM Dispatcher för att öka svarstiden och säkerheten för dina publicerade formulär. Mer information finns i [Dispatcher](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html).
 
 * Cachelagra inte `/content/forms/af/`- och `/content/dam/formsanddocuments/*`-sökvägar. Mer information om hur du konfigurerar cachning för adaptiva formulär finns i [Cachelagra adaptiva formulär](/help/forms/using/configure-adaptive-forms-cache.md).
 
 * Aktivera HTML via webbserverkomprimeringsmodulen. Mer information finns i [Prestandajustering av AEM Forms-server](/help/forms/using/performance-tuning-aem-forms.md).
 * Öka antalet anrop per begäran för stora formulär. Se [Optimera prestanda för stora och komplexa formulär](/help/forms/using/adaptive-forms-best-practices.md#optimizing-performance-of-large-and-complex-forms).
-* Skapa [anpassade felsidor som visas av felhanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/customizing-errorhandler-pages.html?lang=sv-SE).
+* Skapa [anpassade felsidor som visas av felhanteraren](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/customizing-errorhandler-pages.html).
 * Säker AEM Forms-server.
 
    * Använd körningsläget `nosamplecontent` för att kontrollera att det inte finns något exempelinnehåll och exempelanvändare distribuerade på produktionsservern. Se [Köra AEM i produktionsklart läge](/help/sites-administering/production-ready.md).
@@ -397,11 +397,11 @@ En av de största utmaningarna för organisationer är att hantera personligt id
 
 Regelredigeraren i AEM Forms har ett visuellt gränssnitt för att skapa och hantera regler, vilket minskar behovet av omfattande kodning. Det kan vara särskilt användbart för företagsanvändare eller formulärdesigners som inte har avancerade programmeringskunskaper men behöver definiera och underhålla affärsregler i formulären, här diskuterar vi få användningsfall där regelredigeraren tillåter dig:
 
-* &#x200B;<!-- Allows you --> Definiera affärsregler för formulären utan behov av omfattande programmering.
-* &#x200B;<!-- Use the Rule Editor when you need --> Använda villkorsstyrd logik i formulären. Detta inkluderar att visa eller dölja formulärelement, ändra fältvärden baserat på vissa villkor eller dynamiskt ändra formulärens beteende.
-* &#x200B;<!--When you want --> Regelredigeraren kan användas för att definiera valideringsvillkor om du vill tillämpa datavalideringsregler för formulärinskickade formulär.
-* &#x200B;<!-- When you need --> För att integrera formulären med externa datakällor (FDM) eller tjänster kan regelredigeraren hjälpa dig att definiera regler för hämtning, visning och ändring av data under formulärinteraktioner.
-* &#x200B;<!-- If you want -->Om du vill skapa dynamiska och interaktiva formulär som svarar på användaråtgärder kan du definiera regler som styr formulärelementens beteende i realtid i regelredigeraren.
+* <!-- Allows you --> Definiera affärsregler för formulären utan behov av omfattande programmering.
+* <!-- Use the Rule Editor when you need --> Använda villkorsstyrd logik i formulären. Detta inkluderar att visa eller dölja formulärelement, ändra fältvärden baserat på vissa villkor eller dynamiskt ändra formulärens beteende.
+* <!--When you want --> Regelredigeraren kan användas för att definiera valideringsvillkor om du vill tillämpa datavalideringsregler för formulärinskickade formulär.
+* <!-- When you need --> För att integrera formulären med externa datakällor (FDM) eller tjänster kan regelredigeraren hjälpa dig att definiera regler för hämtning, visning och ändring av data under formulärinteraktioner.
+* <!-- If you want -->Om du vill skapa dynamiska och interaktiva formulär som svarar på användaråtgärder kan du definiera regler som styr formulärelementens beteende i realtid i regelredigeraren.
 
 Regelredigeraren är tillgänglig för både AEM Forms Foundation-komponenter och Core-komponenter.
 
