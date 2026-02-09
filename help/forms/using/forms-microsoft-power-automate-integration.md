@@ -6,9 +6,9 @@ feature: Adaptive Forms,Foundation Components
 exl-id: 3fd26ddb-d247-462f-a0f6-8af6166516c1
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: 0487a5669fbaab35974eb85eb099b82e0847a4f9
+source-git-commit: 385803015a09a11bcc97fed979d529d85f7facb8
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1183'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 | Version | Artikellänk |
 | -------- | ---------------------------- |
 | AEM 6.5 | Den här artikeln |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/integrate/set-submit-action/forms-microsoft-power-automate-integration) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/set-submit-action/forms-microsoft-power-automate-integration) |
 
 Du kan konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power Automate Cloud-flöde när du skickar in det. Den konfigurerade adaptiva formen skickar inhämtade data, bilagor och arkivdokument till Power Automate Cloud Flow för bearbetning. Det hjälper er att bygga upp en anpassad datainhämtningsupplevelse och samtidigt utnyttja kraften i Microsoft® Power Automate för att skapa affärslogik kring insamlade data och automatisera kundarbetsflöden. Här är några exempel på vad du kan göra efter att ha integrerat ett adaptivt formulär med Microsoft® Power Automate:
 
@@ -27,7 +27,7 @@ Du kan konfigurera ett adaptivt formulär så att det kör ett Microsoft® Power
 * Utför komplexa beräkningar på inhämtade data
 * Spara adaptiva Forms-data i lagringssystemen enligt ett fördefinierat schema
 
-Den adaptiva Forms-redigeraren tillhandahåller **Anropa ett Microsoft® Power Automate-flöde** för att skicka adaptiva formulärdata, bilagor och arkivdokument som skickas till Power Automate Cloud Flow. Om du vill använda åtgärden Skicka för att skicka hämtade data till Microsoft® Power Automate [ansluter du din instans av AEM Forms Author med Microsoft® Power Automate] (#connect-your-aem-forms-instance-with-microsoft&reg;-power-automate)
+Den adaptiva Forms-redigeraren tillhandahåller **Anropa ett Microsoft® Power Automate-flöde** för att skicka adaptiva formulärdata, bilagor och arkivdokument som skickas till Power Automate Cloud Flow. Om du vill använda åtgärden Skicka för att skicka hämtade data till Microsoft® Power Automate [ansluter du din instans av AEM Forms Author med Microsoft® Power Automate](#connect-your-aem-forms-instance-with-microsoft&reg;-power-automate)
 
 ## Förutsättningar
 
@@ -118,6 +118,14 @@ Utför följande åtgärder för att ansluta AEM Forms Author-instansen till Mic
 1. På sidan Publicera väljer du **[!UICONTROL All Configurations]** och sedan **[!UICONTROL Publish]**. Publicera både Power Automate Dataverse och Power Automate Flow Service Cloud-konfigurationer.
 
 Din instans av AEM Forms Author är nu ansluten till Microsoft® Power Automate. Nu kan du skicka adaptiva Forms-data till ett Power Automate-flöde.
+
+>[!IMPORTANT]
+>
+>Token som används för Microsoft® Power Automate-anslutningen upphör att gälla efter 90 dagar.
+>
+> Om du vill att integreringen ska fungera, autentiseras och publiceras på nytt, både Microsoft® Power Automate Dataverse och Microsoft® Power Automate Flow Service, innan eller när token upphör att gälla, ska du följa de steg som beskrivs i [Publicera både Microsoft® Power Automate Dataverse och Microsoft® Power Automate Flow Service Cloud-konfigurationer](#publish-microsoft-power-automate-dataverse-cloud-configuration).
+>
+> Mer information om principer för token-livstid finns i [Microsoft Entra-dokumentationen om konfigurerbara token-livstider](https://learn.microsoft.com/en-us/entra/identity-platform/configurable-token-lifetimes#token-lifetime-policies-for-refresh-tokens-and-session-tokens). Om token inte förnyas kan det hända att formulärinskickning till Power Automate misslyckas.
 
 ## Skicka data till ett Power Automate-flöde med Anropa en Microsoft® Power Automate-åtgärd {#use-the-invoke-microsoft-power-automate-flow-submit-action}
 
