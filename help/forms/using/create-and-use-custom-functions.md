@@ -3,9 +3,10 @@ title: Skapa och lägga till anpassade funktioner i ett adaptivt formulär
 description: AEM Forms stöder anpassade funktioner som gör att användare kan skapa och använda sina egna funktioner i regelredigeraren.
 feature: Adaptive Forms, Foundation Components
 role: Admin, User, Developer
-source-git-commit: f63dcd7edca640cee47c8f615d1675ef5052953c
+exl-id: 14a52bc1-c1b4-4a12-b8e1-54523e5f30bd
+source-git-commit: a0ef9925d1bcb84ea5bf733221875d0322cc6df1
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1108'
 ht-degree: 0%
 
 ---
@@ -13,6 +14,10 @@ ht-degree: 0%
 # Anpassade funktioner i Adaptive Forms
 
 ## Introduktion
+
+>[!NOTE]
+>
+> Anpassade funktioner måste vara kompatibla med ECMAScript 5 (ES5). Foundation Forms har endast stöd för ES5. Användning av nyare ECMAScript-versioner (ES6 och senare) stöds inte och kan leda till fel eller oväntade beteenden.
 
 I AEM Forms 6.5 introducerades möjligheten att definiera JavaScript-funktioner som kan användas för att definiera komplexa affärsregler med regelredigeraren. AEM Forms har ett antal anpassade funktioner som du kan använda, men du måste definiera egna funktioner och använda dem i flera formulär.
 
@@ -87,7 +92,7 @@ Visar parametrar som används av funktionen. En funktion kan ha flera parametert
 Syntax: `@return {type}`
 Du kan också använda `@returns {type}` .
 Lägger till information om funktionen, till exempel dess mål.
-{type} representerar funktionens returtyp. Följande returtyper tillåts:
+  {type} representerar funktionens returtyp. Följande returtyper tillåts:
 
    1. string
    1. tal
@@ -240,7 +245,7 @@ Låt oss lägga till följande kod i JavaScript-filen för att beräkna ålder b
 
 1. Spara filen `js.txt`.
 
-Du kan referera till följande [anpassade funktionsmapp](/help/forms/using/assets/customfunction.zip). Hämta och installera den här mappen i AEM.
+Du kan referera till följande [anpassade funktionsmapp](/help/forms/using/assets/customfunction.zip). Hämta och installera den här mappen i din AEM-instans.
 
 Nu kan du använda den anpassade funktionen i ditt adaptiva formulär genom att lägga till klientbiblioteket.
 

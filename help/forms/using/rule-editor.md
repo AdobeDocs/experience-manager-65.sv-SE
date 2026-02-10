@@ -9,23 +9,23 @@ docset: aem65
 exl-id: c611a1f8-9d94-47f3-bed3-59eef722bf98
 solution: Experience Manager, Experience Manager Forms
 role: User, Developer
-source-git-commit: d7b9e947503df58435b3fee85a92d51fae8c1d2d
+source-git-commit: a0ef9925d1bcb84ea5bf733221875d0322cc6df1
 workflow-type: tm+mt
-source-wordcount: '6553'
+source-wordcount: '6585'
 ht-degree: 0%
 
 ---
 
 # Anpassad formulärregelredigerare{#adaptive-forms-rule-editor}
 
-<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html?lang=sv-SE) för [att skapa nya adaptiva Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till adaptiva Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
+<span class="preview"> Adobe rekommenderar att du använder den moderna och utbyggbara datainhämtningen [Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/adaptive-forms/introduction.html) för [att skapa en ny adaptiv Forms](/help/forms/using/create-an-adaptive-form-core-components.md) eller [att lägga till Adaptiv Forms på AEM Sites-sidor](/help/forms/using/create-or-add-an-adaptive-form-to-aem-sites-page.md). De här komponenterna utgör ett betydande framsteg när det gäller att skapa adaptiva Forms-filer, vilket ger imponerande användarupplevelser. I den här artikeln beskrivs det äldre sättet att skapa Adaptiv Forms med baskomponenter. </span>
 
-| Version | Länk till artikel |
+| Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html?lang=sv-SE) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-foundation-components/add-rules-and-use-expressions-in-an-adaptive-form/rule-editor.html) |
 | AEM 6.5 | Den här artikeln |
 
-## Överblick {#overview}
+## Ökning {#overview}
 
 Regelredigeringsfunktionen i Adobe Experience Manager Forms gör det möjligt för användare och utvecklare av formulär att skriva regler för anpassningsbara formulärobjekt. Dessa regler definierar åtgärder som ska utlösas av formulärobjekt baserat på förinställda villkor, användarindata och användaråtgärder i formuläret. Det effektiviserar formulärifyllningen ytterligare och ger större precision och snabbhet.
 
@@ -105,11 +105,11 @@ Regelredigeraren innehåller en uppsättning fördefinierade regeltyper som du k
 
 ### När {#whenruletype}
 
-Regeltypen **When** följer regelkonstruktionen **condition-action-alternate action** eller ibland bara **condition-action** -konstruktionen. I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret uppfylls ( `True`). När du använder regeltypen When kan du använda flera AND- och OR-operatorer för att skapa [kapslade uttryck.](#nestedexpressions)
+Regeltypen **When** följer regelkonstruktionen **condition-action-alternate action** eller ibland bara **condition-action** -konstruktionen. I den här regeltypen anger du först ett villkor för utvärdering följt av en åtgärd som ska utlösas om villkoret är uppfyllt ( `True`). När du använder regeltypen When kan du använda flera AND- och OR-operatorer för att skapa [kapslade uttryck](#nestedexpressions).
 
-Med hjälp av regeltypen När kan du utvärdera ett villkor för ett formulärobjekt och utföra åtgärder på ett eller flera objekt.
+Med regeltypen När kan du utvärdera ett villkor i ett formulärobjekt och utföra åtgärder på ett eller flera objekt.
 
-I klartext är en typisk When-regel strukturerad på följande sätt:
+Med enkla ord är en vanlig When-regel strukturerad enligt följande:
 
 `When on Object A:`
 
@@ -117,9 +117,9 @@ I klartext är en typisk When-regel strukturerad på följande sätt:
 
 `Then, do the following:`
 
-Åtgärd 2 om objekt B;
+Åtgärd 2 på objekt B.
 OCH
-Åtgärd 3 om objekt C;
+Åtgärd 3 om objekt C.
 
 _
 
@@ -129,7 +129,7 @@ En lista har till exempel fyra alternativ: Röd, Blå, Grön och Gul. När regel
 
 ![multivaluefcdisplayalternativ](assets/multivaluefcdisplaysoptions.png)
 
-När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Åtgärden Rensa värde för rensar värdet för det angivna objektet. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält.
+När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Med åtgärden Clear Value Of rensas det angivna objektets värde. Med alternativet Radera värde för i programsatsen When kan du skapa komplexa villkor med flera fält.
 
 ![clearValue för](assets/clearvalueof.png)
 
@@ -141,13 +141,13 @@ När du skriver en When-regel kan du utlösa åtgärden Clear Value Of. Åtgärd
 
 **Inaktivera** Inaktiverar det angivna objektet.
 
-**Anropa tjänsten** Anropar en tjänst som konfigurerats i en formulärdatamodell. När du väljer åtgärden Anropa tjänst visas ett fält. När användaren knackar på fältet visas alla tjänster som konfigurerats i alla formulärdatamodeller i AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten. Se exempelregel för att anropa datamodelltjänster för formulär.
+**Anropa tjänsten** Anropar en tjänst som konfigurerats i en formulärdatamodell. När du väljer åtgärden Anropa tjänst visas ett fält. När användaren knackar på fältet visas alla tjänster som konfigurerats i alla formulärdatamodeller på din AEM-instans. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten. Se exempelregel för att anropa datamodelltjänster för formulär.
 
 Utöver formulärdatamodelltjänsten kan du ange en direkt WSDL-URL för att anropa en webbtjänst. En datamodelltjänst för formulär har dock många fördelar och det rekommenderade sättet att anropa en tjänst.
 
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
 
-**Ange värdet** beräknar och ställer in värdet för det angivna objektet. Du kan ställa in objektvärdet på en sträng, värdet för ett annat objekt, det beräknade värdet med hjälp av matematiska uttryck eller funktioner, värdet för ett objekts egenskap eller utdatavärdet från en konfigurerad datamodelltjänst för formulär. När du väljer webbtjänstalternativet visas alla tjänster som är konfigurerade i alla formulärdatamodeller på din AEM. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten.
+**Ange värdet** beräknar och ställer in värdet för det angivna objektet. Du kan ställa in objektvärdet på en sträng, värdet för ett annat objekt, det beräknade värdet med hjälp av matematiska uttryck eller funktioner, värdet för ett objekts egenskap eller utdatavärdet från en konfigurerad datamodelltjänst för formulär. När du väljer webbtjänstalternativet visas alla tjänster som konfigurerats i alla formulärdatamodeller på din AEM-instans. När du väljer en datamodelltjänst för ett formulär visas ytterligare fält där du kan mappa formulärobjekt med in- och utdataparametrar för den angivna tjänsten.
 
 Mer information om hur du konfigurerar tjänster i formulärdatamodellen finns i [AEM Forms-dataintegrering](/help/forms/using/data-integration.md).
 
@@ -202,25 +202,25 @@ I följande bild visas ett exempel på hur du dynamiskt lägger till kryssrutor 
 
 Med regeltypen **[!UICONTROL Set Value of]** kan du ange värdet för ett formulärobjekt beroende på om det angivna villkoret är uppfyllt eller inte. Värdet kan anges till ett värde för ett annat objekt, en stränglitteral, ett värde som härleds från ett matematiskt uttryck eller en funktion, ett värde för en egenskap för ett annat objekt eller utdata från en datamodelltjänst för ett formulär. På samma sätt kan du söka efter ett villkor för en komponent, en sträng, en egenskap eller värden som härletts från en funktion eller ett matematiskt uttryck.
 
-Regeltypen Ange värde för är inte tillgänglig för alla formulärobjekt, t.ex. paneler och knappar i verktygsfält. En standardregel för uppsättningsvärde för har följande struktur:
+Regeltypen Ange värde för är inte tillgänglig för alla formulärobjekt, t.ex. paneler och knappar i verktygsfält. En standarduppsättningsvärde för regel har följande struktur:
 
 
 
 Ange värdet för objekt A till:
 
-(sträng ABC) ELLER
-(objektegenskap X för objekt C) ELLER
-(värde från en funktion) ELLER
-(värde från ett matematiskt uttryck) ELLER
-(utdatavärde för en datamodellstjänst eller webbtjänst)
+(sträng ABC) OR
+(objektegenskap X för objekt C) OR
+(värde från en funktion) OR
+(värde från ett matematiskt uttryck) OR
+(datavärdet för en datamodelltjänst eller webbtjänst),
 
 När (valfritt):
 
-(Villkor 1 OCH Villkor 2 OCH Villkor 3) är SANT;
+(Villkor 1 OCH villkor 2 OCH villkor 3) är SANT.
 
 
 
-I följande exempel används värdet i fältet som indata och fältets värde `Relation` anges till utdata från `Relation` argumentet `getDependent` i `dependentid` formulärdatamodelltjänsten.
+I följande exempel används värdet i fältet `dependentid` som indata och värdet i fältet `Relation` anges som utdata för argumentet `Relation` i formulärdatamodelltjänsten `getDependent`.
 
 ![set-value-web-service](assets/set-value-web-service.png)
 
@@ -372,11 +372,11 @@ Visar titeln på det adaptiva formulärobjektet genom vilket du startade regelre
 
 Panelen till vänster i regelredigerarens användargränssnitt innehåller två flikar - **[!UICONTROL Forms Objects]** och **[!UICONTROL Functions]**.
 
-På fliken Formulärobjekt visas en hierarkisk vy över alla objekt som finns i det anpassade formuläret. Där visas objektens namn och typ. När du skriver en regel kan du dra och släppa formulärobjekt till regelredigeraren. När du skapar eller redigerar en regel och drar och släpper ett objekt eller en funktion i en platshållare, får platshållaren automatiskt rätt värdetyp.
+På fliken Formulärobjekt visas en hierarkisk vy över alla objekt som finns i det anpassade formuläret. Där visas objektens namn och typ. När du skriver en regel kan du dra och släppa formulärobjekt till regelredigeraren. När du skapar eller redigerar en regel när du drar och släpper ett objekt eller en funktion till en platshållare, får platshållaren automatiskt rätt värdetyp.
 
-De formulärobjekt som har en eller flera giltiga regler markerade med en grön prick. Om någon av de regler som tillämpas på ett formulärobjekt är ogiltig markeras formulärobjektet med en gul prick.
+De formulärobjekt som har en eller flera giltiga regler markerade med en grön punkt. Om någon av reglerna som tillämpas på ett formulärobjekt är ogiltig markeras formulärobjektet med en gul punkt.
 
-Fliken Funktioner innehåller en uppsättning inbyggda funktioner, till exempel Summa av, Min av, Max av, Medelvärde av, Antal av och Validera formulär. Du kan använda dessa funktioner för att beräkna värden i repeterbara paneler och tabellrader och använda dem i åtgärds- och villkorssatser när du skriver regler. Du kan dock också skapa [anpassade funktioner](#custom-functions) .
+Fliken Funktioner innehåller en uppsättning inbyggda funktioner, till exempel summan av, Min av, Max av, Medel av, Antal, och Validera formulär. Du kan använda de här funktionerna för att beräkna värden i repeterbara paneler och tabellrader och använda dem i action- och condition-satser när du skriver regler. Du kan dock även skapa [anpassade funktioner](#custom-functions).
 
 ![Fliken Funktioner](assets/functions.png)
 
@@ -402,7 +402,7 @@ Användare i gruppen för formuläranvändare har åtkomst till kodredigeraren. 
 
 AEM Forms spårar det regelredigeringsläge som du använde när du skrev en regel sist. När du startar regelredigeraren nästa gång öppnas den i det läget. Du kan dock konfigurera ett standardläge så att regelredigeraren öppnas i det angivna läget. Så här gör du:
 
-1. Gå till AEM på `https://[host]:[port]/system/console/configMgr`.
+1. Gå till AEM webbkonsol på `https://[host]:[port]/system/console/configMgr`.
 1. Klicka för att redigera **[!UICONTROL Adaptive Form and Interactive Communication Web Channel Configuration]**.
 1. välj **[!UICONTROL Visual Editor]** eller **[!UICONTROL Code Editor]** i listrutan **[!UICONTROL Default Mode for Rule Editor]**
 
@@ -549,7 +549,7 @@ Utför följande steg för att skriva regler:
 
 Användare som läggs till i gruppen för formuläranvändare kan använda kodredigeraren. Regelredigeraren genererar automatiskt JavaScript-koden för alla regler som du skapar med den visuella redigeraren. Du kan växla från den visuella redigeraren till kodredigeraren för att visa den genererade koden. Men om du ändrar regelkoden i kodredigeraren kan du inte växla tillbaka till den visuella redigeraren. Om du föredrar att skriva regler i kodredigeraren i stället för i den visuella redigeraren kan du skriva reglerna på nytt i kodredigeraren. Med den visuella kodredigeraren kan du växla mellan de två lägena.
 
-Kodredigeraren JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för adaptiva formulär. Dessa uttryck returnerar värden av vissa typer. En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns i [API-referens för JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/se/experience-manager/6-5/forms/javascript-api/index.html).
+Kodredigeraren JavaScript är uttrycksspråket i adaptiva formulär. Alla uttryck är giltiga JavaScript-uttryck och använder API:er för adaptiva formulär. Dessa uttryck returnerar värden av vissa typer. En fullständig lista över adaptiva formulärklasser, händelser, objekt och offentliga API:er finns i [API-referens för JavaScript-bibliotek för adaptiva formulär](https://helpx.adobe.com/experience-manager/6-5/forms/javascript-api/index.html).
 
 Mer information om riktlinjer för att skriva regler i kodredigeraren finns i [Adaptiva formuläruttryck](/help/forms/using/adaptive-form-expressions.md).
 
@@ -563,6 +563,10 @@ När du skriver JavaScript-kod i regelredigeraren hjälper följande visuella te
 ![javascriptruleeditor](assets/javascriptruleeditor.png)
 
 #### Anpassade funktioner i regelredigeraren {#custom-functions}
+
+>[!NOTE]
+>
+> Anpassade funktioner måste vara kompatibla med ECMAScript 5 (ES5). Foundation Forms har endast stöd för ES5. Användning av nyare ECMAScript-versioner (ES6 och senare) stöds inte och kan leda till fel eller oväntade beteenden.
 
 Förutom användningsklara funktioner som *Summan av* som listas under Funktioner Output, kan du skriva anpassade funktioner som du ofta behöver. Kontrollera att den funktion du skriver åtföljs av `jsdoc` ovan.
 
@@ -608,7 +612,7 @@ Visar parametrar som används av funktionen. En funktion kan ha flera parametert
 Syntax: `@return {type}`
 Du kan också använda `@returns {type}` .
 Lägger till information om funktionen, till exempel dess mål.
-{type} representerar funktionens returtyp. Följande returtyper tillåts:
+  {type} representerar funktionens returtyp. Följande returtyper tillåts:
 
    1. string
    1. tal
@@ -820,7 +824,7 @@ När användaren uppger att han/hon har bott på sin nuvarande adress i mindre �
 
 ## Regelredigerarens effekt på befintliga skript {#impact-of-rule-editor-on-existing-scripts}
 
-I AEM Forms-versioner före AEM 6.1 av Forms funktionspaket 1 använde formulärförfattare och utvecklare för att skriva uttryck på fliken Skript i dialogrutan Redigera komponent för att lägga till dynamiskt beteende i adaptiva formulär. Fliken Skript har ersatts av regelredigeraren.
+I AEM Forms-versioner före AEM 6.1 Forms funktionspaket 1 använde formulärförfattare och utvecklare för att skriva uttryck på fliken Skript i dialogrutan Redigera komponent för att lägga till dynamiskt beteende i adaptiva formulär. Fliken Skript har ersatts av regelredigeraren.
 
 Alla skript och uttryck som du måste ha skrivit på fliken Skript är tillgängliga i regelredigeraren. Du kan inte visa eller redigera dem i den visuella redigeraren, men om du är en del av gruppen för användare med funktionshinder kan du redigera skript i kodredigeraren.
 
@@ -844,7 +848,7 @@ Anropa formulärdatamodelltjänst med hjälp av regel för anpassningsbara formu
 
 I en låneansökan vill du ta reda på om lånesökanden är en befintlig kund eller inte. Baserat på den information som användaren anger, bör fältet för kund-ID visas eller döljas. Du vill också fokusera på fältet för kund-ID om användaren är en befintlig kund. Formuläret för låneansökan innehåller följande komponenter:
 
-* En alternativknapp, **Är du en befintlig Geometrixx?**, som innehåller alternativen Ja och Nej. Värdet för Ja är **0** och Nej är **1**.
+* En alternativknapp, **Är du en befintlig Geometrixx-kund?**, som innehåller alternativen Ja och Nej. Värdet för Ja är **0** och Nej är **1**.
 
 * Ett textfält, **Geometrixx kund-ID**, som anger kund-ID:t.
 
