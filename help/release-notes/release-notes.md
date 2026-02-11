@@ -6,9 +6,9 @@ solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
 exl-id: 811fccbc-6f63-4309-93c8-13b7ace07925
-source-git-commit: a0ef9925d1bcb84ea5bf733221875d0322cc6df1
+source-git-commit: a750a6093ae8ba6b43c46af52077ed3773d59a20
 workflow-type: tm+mt
-source-wordcount: '9725'
+source-wordcount: '9588'
 ht-degree: 0%
 
 ---
@@ -451,7 +451,7 @@ Aktiverar Sling Main Servlet **Check Content-Type** åsidosätter brutna `.model
 
 <!-- Remaining content from here to bottom stays the same except for version updating as needed as per update team feedback. -->
 
-* [!DNL Experience Manager] 6.5.24.0 kräver [!DNL Experience Manager] 6.5. Mer information finns i [&#x200B; uppgraderingsdokumentationen &#x200B;](/help/sites-deploying/upgrade.md) . <!-- UPDATE FOR EACH NEW RELEASE -->
+* [!DNL Experience Manager] 6.5.24.0 kräver [!DNL Experience Manager] 6.5. Mer information finns i [ uppgraderingsdokumentationen ](/help/sites-deploying/upgrade.md) . <!-- UPDATE FOR EACH NEW RELEASE -->
 * Hämtningen av Service Pack är tillgänglig på Adobe [Software Distribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/servicepack/aem-service-pkg-6.5.24.0.zip).
 * Installera [!DNL Experience Manager] 6.5.24.0 på en av författarinstanserna med Package Manager på en distribution med MongoDB och flera instanser.<!-- UPDATE FOR EACH NEW RELEASE -->
 
@@ -506,7 +506,7 @@ Instruktioner om hur du installerar Service Pack på Experience Manager Forms fi
 
 >[!NOTE]
 >
->Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/deploying/deploy), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
+>Den adaptiva Forms-funktionen, som finns i [AEM 6.5 QuickStart](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy), är endast avsedd för utforsknings- och utvärderingsändamål. För produktion krävs en giltig licens för AEM Forms, eftersom Adaptive Forms-funktionaliteten kräver rätt licensiering.
 
 ### Installera GraphQL Index Package för Experience Manager Content Fragments{#install-aem-graphql-index-add-on-package}
 
@@ -637,30 +637,30 @@ För att säkerställa korrekt åtgärd måste du lägga till följande egenskap
 
 ### Känt problem för AEM Sites {#known-issues-aem-sites-6524}
 
-Content Fragments-Preview misslyckas på grund av DoS-skydd för ett stort träd med fragment. Se artikeln [KB om standardkonfigurationsalternativ för GraphQL Query Executor](https://experienceleague.adobe.com/sv/docs/experience-cloud-kcs/kbarticles/ka-23945) (SITES-17934)
+Content Fragments-Preview misslyckas på grund av DoS-skydd för ett stort träd med fragment. Se artikeln [KB om standardkonfigurationsalternativ för GraphQL Query Executor](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-23945) (SITES-17934)
 
 ### Kända fel för AEM Forms {#known-issues-aem-forms-6524}
+
+* **FORMS-14521** Om en användare försöker förhandsgranska ett utkast med sparade XML-data fastnar den i läget `Loading` för vissa specifika bokstäver.
+* **FORMS-16603** Vissa beräknade värden visas inte korrekt i förhandsvisningen av gränssnittet för den interaktiva kommunikationsagenten.
+* **FORMS-15681** När brevet visas i Förhandsgranska utskrift ändras innehållet. Vissa blanksteg försvinner och vissa bokstäver ersätts med `x`.
+* **FORMS-15428**: Efter uppdatering till AEM Forms Service Pack 20 (6.5.20.0) med Forms Add-On slutar konfigurationer som är beroende av den äldre Adobe Analytics Cloud-tjänsten med inloggningsbaserad autentisering att fungera. Det här problemet förhindrade att analysreglerna kördes korrekt.
+* **FORMS-16557** I förhandsvisningen av gränssnittet för Interactive Communications Agent visas valutasymbolen (till exempel dollartecknet $) inkonsekvent för alla fältvärden. Den visas för värden upp till 999 men saknas för värden över 1 000.
+* **FORMS-16575** Alla ändringar i det kapslade layoutfragmentets XDP i en interaktiv kommunikation återspeglas inte i IC-redigeraren.
+* **FORMS-21378** När serversidesvalidering (SSV) är aktiverat kan det hända att det inte går att skicka formulär. Kontakta Adobe Support om du råkar ut för problemet.
+* **FORMS-23722** (Bifogade filer saknas i Tilldela uppgift): När ett formulär med fältet **Bifogad fil** som använder bindef skickas till ett AEM-arbetsflöde som använder ett **Tilldela uppgift** -steg visas inte de bifogade filerna när uppgiften öppnas från Inkorgen. Filerna sparas korrekt i databasen, men användargränssnittet för Tilldela uppgift kan inte visa de bifogade filerna.
+
+#### Problem med tillgängliga snabbkorrigeringar {#aem-forms-issues-with-hotfixes}
 
 >[!NOTE]
 >
 >Undvik att uppgradera till Service Pack 6.5.24.0 för problem utan en tillgänglig snabbkorrigering. Det kan leda till oväntade fel. Uppgradera till Service Pack 6.5.24.0 först när de nödvändiga snabbkorrigeringarna har släppts.
 
-#### Problem med tillgängliga snabbkorrigeringar {#aem-forms-issues-with-hotfixes}
-
 Följande problem har en hotfix som kan hämtas och installeras. Du kan [hämta och installera programfixen](/help/release-notes/aem-forms-hotfix.md) för att lösa dessa problem:
-
-* **FORMS-20203**: När en användare uppgraderar Struts-ramverket från version 2.5.x till 6.x, visas inte alla konfigurationer i principgränssnittet i AEM Forms, t.ex. alternativet att lägga till en vattenstämpel.
-
-* **FORMS-20360**: Efter uppgradering till AEM Forms Service Pack 6.5.24.0 misslyckas ImageToPDF-konverteringstjänsten med följande fel:
-  ```17:15:44,468 ERROR [com.adobe.pdfg.GeneratePDFImpl] (default task-49) ALC-PDG-001-000-ALC-PDG-011-028-Error occurred while converting the input image file to PDF. com/adobe/internal/pdftoolkit/core/encryption/EncryptionImp```
-
-* **FORMS-20478**: När du försöker konvertera TIFF-filer av typen 7/8 till PDF misslyckas konverteringsprocessen. Felkod:&quot;ALC-PDG-001-000-Image2Pdf-konverteringen misslyckades. Orsaken är: com/sun/image/codec/jpeg/JPEGCodec&quot; och&quot;ALC-PDG-0 16-003-Ett okänt/oväntat fel uppstod under efterbearbetningen av PDF.&quot; Systemet försöker att försöka igen med att använda TM ImageIO TIFF-avkodare, men misslyckas i slutändan med att slutföra jobbet.
-
-* **FORMS-14521**: Om en användare försöker förhandsgranska ett utkast med sparade XML-data fastnar den i läget `Loading` för vissa specifika bokstäver.
 
 * AEM Forms innehåller nu en uppgradering av Struts-versionen från 2.5.33 till 6.x för formulärkomponenten. Uppgraderingen innehåller tidigare missade strängändringar som inte ingick i SP24. Stödet lades till via en [hotfix](/help/release-notes/aem-forms-hotfix.md) som du kan hämta och installera för att lägga till stöd för den senaste versionen av Struts.
 
-* När du har installerat AEM Forms JEE Service Pack 21 (6.5.21.0) utför du följande steg för att lösa problemet om du hittar dubblettposter för Geode jars `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` i mappen `<AEM_Forms_Installation>/lib/caching/lib` (FORMS-14926):
+* **FORMS-14926** När du har installerat AEM Forms JEE Service Pack 21 (6.5.21.0) kan du lösa problemet genom att utföra följande steg om du hittar dubblettposter för Geode-jars `(geode-*-1.15.1.jar and geode-*-1.15.1.2.jar)` under mappen `<AEM_Forms_Installation>/lib/caching/lib`:
 
    1. Stoppa positionerarna om de är igång.
    2. Stoppa AEM Server.
@@ -669,32 +669,14 @@ Följande problem har en hotfix som kan hämtas och installeras. Du kan [hämta 
    5. Öppna kommandotolken i administratörsläge.
    6. Installera Geode-korrigeringen med filen `geode-*-1.15.1.2.jar`.
 
-* När användare uppgraderade från AEM 6.5 Forms Service Pack 18 eller 19 till Service Pack 20 eller 21 uppstod ett JSP-kompileringsfel. Det här felet hindrade dem från att öppna eller skapa anpassade formulär. Den orsakade även problem med andra AEM-gränssnitt. Gränssnitten innehåller sidredigeraren, användargränssnittet i AEM Forms, arbetsflödesredigeraren och användargränssnittet för systemöversikt. (FORMS-1256)
+* **FORMS-15256** När användare uppgraderade från AEM 6.5 Forms Service Pack 18 eller 19 till Service Pack 20 eller 21 uppstod ett JSP-kompileringsfel. Det här felet hindrade dem från att öppna eller skapa anpassade formulär. Den orsakade även problem med andra AEM-gränssnitt. Gränssnitten innehåller sidredigeraren, användargränssnittet i AEM Forms, arbetsflödesredigeraren och användargränssnittet för systemöversikt.
 
   Om du råkar ut för ett sådant problem följer du de här stegen för att lösa det:
    1. Navigera till katalogen `/libs/fd/aemforms/install/` i CRXDE.
    2. Ta bort paketet med namnet `com.adobe.granite.ui.commons-5.10.26.jar`.
    3. Starta om AEM Server.
 
-* I förhandsgranskningen av gränssnittet för Interactive Communications Agent visas valutasymbolen (till exempel dollartecknet $) inkonsekvent för alla fältvärden. Den visas för värden upp till 999 men saknas för värden över 1 000. (FORMS-1657)
-* Eventuella ändringar av det kapslade layoutfragmentets XDP i en interaktiv kommunikation återspeglas inte i IC-redigeraren. (FORMS-16575)
-* I förhandsgranskningen av gränssnittet för den interaktiva kommunikationsagenten visas vissa beräknade värden inte korrekt. (FORMS-16603)
-* När brevet visas i Förhandsgranska utskrift ändras innehållet. Vissa blanksteg försvinner och vissa bokstäver ersätts med `x`. (FORMS-15681)
-* **FORMS-15428**: Efter uppdatering till AEM Forms Service Pack 20 (6.5.20.0) med Forms Add-On slutar konfigurationer som är beroende av den äldre Adobe Analytics Cloud-tjänsten med inloggningsbaserad autentisering att fungera. Det här problemet förhindrade att analysreglerna kördes korrekt.
-
-* När en användare konfigurerar en WebLogic 14c-instans misslyckas PDFG-tjänsten i AEM Forms Service Pack 21 (6.5.21.0) på JEE som körs på JBoss® på grund av klassinläsarkonflikter i SLF4J-biblioteket. Felet visas enligt följande (CQDOC-22178):
-
-  ```java
-  Caused by: java.lang.LinkageError: loader constraint violation: when resolving method "org.slf4j.impl.StaticLoggerBinder.getLoggerFactory()Lorg/slf4j/ILoggerFactory;"
-  the class loader org.ungoverned.moduleloader.ModuleClassLoader @404a2f79 (instance of org.ungoverned.moduleloader.ModuleClassLoader, child of 'deployment.adobe-livecycle-jboss.ear'
-  @7e313f80 org.jboss.modules.ModuleClassLoader) of the current class, org/slf4j/LoggerFactory, and the class loader 'org.slf4j.impl@1.1.0.Final-redhat-00001' @506ab52
-  (instance of org.jboss.modules.ModuleClassLoader, child of 'app' jdk.internal.loader.ClassLoaders$AppClassLoader) for the method's defining class, org/slf4j/impl/StaticLoggerBinder,
-  have different Class objects for the type org/slf4j/ILoggerFactory used in the signature.
-  ```
-
-* **FORMS-21378**: När serversidesvalidering (SSV) är aktiverat kan det hända att det inte går att skicka formulär. Kontakta Adobe Support om du råkar ut för problemet.
-
-* **FORMS-23703**: När regeln `contains` är konfigurerad utan ett standardvärde misslyckas serversidans validering för ett adaptivt formulär. Du kan installera den senaste versionen av [AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) för att åtgärda problemet.
+* **FORMS-23703** När regeln `contains` har konfigurerats utan ett standardvärde misslyckas serversidans validering för ett adaptivt formulär. Du kan installera den senaste versionen av [AEM Forms 6.5.24.0 Service Pack](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases) för att åtgärda problemet.
 
 * Kopplingar till formulärdatamodellen kan misslyckas med autentiseringen eftersom de nödvändiga nyckelorden och regex-mönstret inte tillåts som standard. Lös problemet genom att lägga till följande via Configuration Manager (`/system/console/configmgr`):
 
@@ -703,15 +685,13 @@ Följande problem har en hotfix som kan hämtas och installeras. Du kan [hämta 
 
      >[!VIDEO](https://video.tv.adobe.com/v/3479697)
 
-* **FORMS-23979.**: HTML-till-PDF-konvertering (PDFG) kan få tillfälliga timeout. En nyare version av Forms-tillägget för SP24 släpptes sedan som innehåller korrigeringen. Om du råkar ut för det här problemet uppdaterar du miljön till det [senaste släppta Forms-tillägget för 6.5.24.0](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases).
-
-* **FORMS-23722** (Bifogade filer saknas i Tilldela uppgift): När ett formulär med fältet **Bifogad fil** skickas till ett AEM-arbetsflöde där ett **Tilldela uppgift**-steg används, visas inte de bifogade filerna när uppgiften öppnas från Inkorgen. Filerna sparas korrekt i databasen och visas i CRX. Det är bara gränssnittet Tilldela uppgift som inte visar dem.
-
-* **FORMS-23717** Vid sökning efter formulärdatamodell visas en HTML-tagg i användargränssnittet även om det inte finns någon relevant entitet.
+* **FORMS-23979** HTML-till-PDF-konvertering (PDFG) kan få tillfälliga timeout. En nyare version av Forms-tillägget för SP24 släpptes sedan som innehåller korrigeringen. Om du råkar ut för det här problemet uppdaterar du miljön till det [senaste släppta Forms-tillägget för 6.5.24.0](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases#aem-65-forms-releases).
 
 * **FORMS-23717** Efter uppgradering till **AEM Forms6.5.24.0**, `server.log` och `error.log` kan översvämmas av upprepade WARN-meddelanden, t.ex. *Det gick inte att skapa en säker parserfabrik* eller *Säkerhetsattribut ... stöds inte*. Loggar kan växa med cirka **5-10 rader per sekund** (hundratals MB per timme), vilket kan fylla i driftsättningen av disk- och blockproduktion. **Korrigera:** Ingår i AEM Forms **6.5.25.0**. **Till dess:**
 
   Om du vill minska loggvolymen anger du loggningsnivån för `com.adobe.util.XMLSecurityUtil` till `ERROR` i programserverkonfigurationen eller via JVM-argument `-Dlogging.level.com.adobe.util.XMLSecurityUtil=ERROR`. Detta döljer bara meddelandena och löser inte den underliggande orsaken.
+
+* **FORMS-23875** Vid sökning efter formulärdatamodell visas en HTML-tagg i användargränssnittet även om det inte finns någon relevant entitet. Lös problemet genom att hämta och installera snabbkorrigeringen från [länken](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/cq650/featurepack/bb-expressionmanager-pkg-10.0.48.zip).
 
 ## OSGi-paket och innehållspaket som ingår{#osgi-bundles-and-content-packages-included}
 
@@ -725,10 +705,10 @@ Följande textdokument innehåller en lista över de OSGi-paket och innehållspa
 Dessa webbplatser är endast tillgängliga för kunder. Kontakta din kontoansvarige på Adobe om du är kund och behöver åtkomst.
 
 * [Nedladdning av produkt på licensing.adobe.com](https://licensing.adobe.com/)
-* [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/sv/docs/customer-one/using/home).
+* [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/en/docs/customer-one/using/home).
 
 >[!MORELIKETHIS]
 >
->* [[!DNL Experience Manager] produktsida](https://business.adobe.com/se/products/experience-manager/adobe-experience-manager.html)
->* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/sv/docs/experience-manager-65)
+>* [[!DNL Experience Manager] produktsida](https://business.adobe.com/products/experience-manager/adobe-experience-manager.html)
+>* [[!DNL Experience Manager] 6.5-dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-65)
 >* [Prenumerera på Adobe Priority-produktuppdateringar](https://www.adobe.com/subscription/priority-product-update.html)
