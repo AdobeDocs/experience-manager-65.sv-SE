@@ -5,9 +5,9 @@ exl-id: d9b6140a-c37d-4b90-a60c-01f471d65621
 solution: Experience Manager
 feature: Release Information
 role: User,Admin,Developer
-source-git-commit: 30137e36b60c3ada70240e1442390f9fdd26f3b9
+source-git-commit: 5a851bf013a4ef7e6097bf32bd3fa8fe4d635f28
 workflow-type: tm+mt
-source-wordcount: '1766'
+source-wordcount: '1829'
 ht-degree: 2%
 
 ---
@@ -34,6 +34,7 @@ Kunderna rekommenderas att granska om de använder funktionen/funktionen i den a
 
 | Område | Funktion | Ersättning | Version (SP) |
 |---|---|---|---|
+| Sites | Stöd för innehållsfragment i AEM Assets REST API | AEM 6.5 LTS SP2 innehåller moderna OpenAPI:er för Content Fragment och Model Management, så de äldre slutpunkterna för Content Fragment Support i AEM Assets REST API är nu inaktuella.<br>Adobe har för avsikt att hålla dessa äldre slutpunkter tillgängliga tills ett meddelande om att de har upphört att gälla. Adobe planerar inga ytterligare förbättringar för de borttagna slutpunkterna. | 6.5.24 |
 | Sites | [SPA-redigerare](/help/sites-developing/spa-editor-deprecation.md) | Använd [Universal Editor](/help/sites-developing/universal-editor/introduction.md) för visuell redigering eller [Content Fragment Editor](/help/sites-developing/universal-editor/introduction.md) för formulärbaserad redigering för headless-användning. | 6.5.23 |
 | Sites | Tjänsten **Hanterad avsökningskonfiguration för Adobe AEM**: `com.day.cq.polling.importer.impl.ManagedPollConfigImpl` | Tjänsten **Adobe AEM Analytics Report Sling Importer**. Se Ansluta till Adobe Analytics och skapa bildrutor - [Konfigurera importintervallet](/help/sites-administering/adobeanalytics-connect.md#configuring-the-import-interval) | 6.5.19.0 |
 | Screens | ActiveMQ i Adobe Experience Manager (AEM). ActiveMQ användes för kommunikation mellan två AEM Publish-instanser. | Adobe rekommenderar att kunderna nu använder en belastningsutjämnare. | 6.5.18.0 |
@@ -69,9 +70,9 @@ I det här avsnittet visas funktioner som har tagits bort från AEM 6.5. Tidigar
 
 | Område | Funktion | Ersättning | Version (SP) |
 |--- |--- |--- |--- |
-| Commerce | AEM CIF Classic har tagits bort. | Du bör migrera till [AEM CIF](/help/commerce/cif/migration.md). Om du fortfarande behöver CIF Classic har ett kompatibilitetspaket skapats, [kontakta Adobe kundsupport](https://experienceleague.adobe.com/sv?support-solution=General#support). | 6.5.22.0 |
-| Integrering med [!DNL Experience Cloud] | Du kan synkronisera dina resurser med [!DNL Experience Cloud] genom att konfigurera via [!DNL Adobe I/O]. [!DNL Adobe Experience Cloud] kallades tidigare [!DNL Adobe Experience Cloud]. | [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/sv?support-solution=General#support) om du har frågor. |  |
-| Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Använd plugin-programmet [ActivityMap från Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html?lang=sv-SE). |  |
+| Commerce | AEM CIF Classic har tagits bort. | Du bör migrera till [AEM CIF](/help/commerce/cif/migration.md). Om du fortfarande behöver CIF Classic har ett kompatibilitetspaket skapats, [kontakta Adobe kundsupport](https://experienceleague.adobe.com/?support-solution=General#support). | 6.5.22.0 |
+| Integrering med [!DNL Experience Cloud] | Du kan synkronisera dina resurser med [!DNL Experience Cloud] genom att konfigurera via [!DNL Adobe I/O]. [!DNL Adobe Experience Cloud] kallades tidigare [!DNL Adobe Experience Cloud]. | [Kontakta Adobe kundsupport](https://experienceleague.adobe.com/?support-solution=General#support) om du har frågor. |  |
+| Analytics Activity Map | Den version av Activity Map som ingår i AEM. | På grund av säkerhetsändringar i Adobe Analytics API är det inte längre möjligt att använda den version av Activity Map som ingår i AEM. Använd plugin-programmet [ActivityMap från Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/getting-started/get-started-users/activitymap-install.html). |  |
 | Integreringar | ExactTarget-integrering har tagits bort från standarddistributionen (Quickstart) och är inte längre tillgänglig. | Ingen ersättning. |  |
 | Integreringar | Integreringen av Salesforce Force API har tagits bort från standarddistributionen (Quickstart) och är nu ett extra paket att installera från [Programvarudistribution](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html). | Funktionen är fortfarande tillgänglig. |  |
 | Forms | Stöd för Bridge-tjänsten Adobe Central Migration har tagits bort eftersom Adobe Central inte längre stöds. | Ingen ersättning. |  |
