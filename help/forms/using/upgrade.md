@@ -20,7 +20,7 @@ ht-degree: 1%
 
 | Version | Artikellänk |
 | -------- | ---------------------------- |
-| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/migrate-to-forms-as-a-cloud-service.html) |
+| AEM as a Cloud Service | [Klicka här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/migrate-to-forms-as-a-cloud-service.html?lang=sv-SE) |
 | AEM 6.5 | Den här artikeln |
 
 
@@ -61,7 +61,7 @@ Du kan också utföra en uppgradering från
 * AEM 6.1 Forms on JEE
 * AEM 6.2 Forms i JEE
 
-AEM 6.5.18.0 Forms på JEE innehåller två typer av installationsprogram: [Fullständigt installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html) och [Programfix](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html).
+AEM 6.5.18.0 Forms på JEE innehåller två typer av installationsprogram: [Fullständigt installationsprogram](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE) och [Programfix](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=sv-SE).
 
 **Fullständigt installationsprogram**: Du kan använda det fullständiga installationsprogrammet för att konfigurera nya AEM Forms-instanser eller utföra uppgraderingar från AEM 6.5.x.x Forms på JEE till AEM 6.5.18.0 Forms på JEE.
 
@@ -71,7 +71,7 @@ I följande bild visas avsändare som använder det fullständiga installationsp
 
 ![Fullständigt installationsprogram och korrigeringsinstallationsprogram](/help/forms/using/assets/full-and-patch-installer.png)
 
-Läs artikeln [Installationsanvisningar för AEM 6.5 Forms Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html) om du vill installera den senaste Service Pack-versionen för JEE-miljön.
+Läs artikeln [Installationsanvisningar för AEM 6.5 Forms Service Pack](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/aem-forms-current-service-pack-installation-instructions.html?lang=sv-SE) om du vill installera den senaste Service Pack-versionen för JEE-miljön.
 
 <!--
 [Work in Progress]
