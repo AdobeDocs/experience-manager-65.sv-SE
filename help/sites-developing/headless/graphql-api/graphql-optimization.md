@@ -5,7 +5,7 @@ exl-id: 47d0570b-224e-4109-b94e-ccc369d7ac5f
 solution: Experience Manager, Experience Manager Sites
 feature: Headless,Content Fragments,GraphQL,Persisted Queries,Developing
 role: Admin,Developer
-source-git-commit: 07289e891399a78568dcac957bc089cc08c7898c
+source-git-commit: 9278eb7dab4a764403fa0769f6e80dd7e8fb0cb9
 workflow-type: tm+mt
 source-wordcount: '1949'
 ht-degree: 0%
@@ -66,7 +66,7 @@ Olika metoder för cachning kan också användas för optimering.
 
 **Rekommendation**
 
-[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE) är den första nivån i AEM-tjänsten, före CDN-cache.
+[AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) är den första nivån i AEM-tjänsten, före CDN-cache.
 
 **Ytterligare referens**
 
@@ -84,7 +84,7 @@ GraphQL-frågor och deras JSON-svar kan cachelagras om de är riktade som `GET`-
 
 Se:
 
-* [Använda CDN i AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE#using-dispatcher-with-a-cdn)
+* [Använda CDN i AEM](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html#using-dispatcher-with-a-cdn)
 
 #### Ange rubriker för HTTP-cachekontroll {#set-http-cache-control-headers}
 
@@ -98,7 +98,7 @@ De kan också anges med kommandoradsverktyget **cURL**. Använd till exempel en 
 
 ```shell
 $ curl -X PUT \
-    -H 'authorization: Basic YWRtaW46YWRtaW4=' \
+    -H 'authorization: Basic yourauthorizationcode' \
     -H "Content-Type: application/json" \
     "http://localhost:4502/graphql/persist.json/wknd/plain-article-query-max-age" \
     -d \
