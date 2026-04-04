@@ -790,7 +790,7 @@ AEM Forms finns på följande plattformar:
 ### Adobe Document Security Extension for Microsoft® Office {#adobe-rights-management-extension-for-microsoft-office}
 
 
-Klicka [här](https://www.adobe.com/products/livecycle/rightsmanagement/extension/downloads.html) för att se systemkraven för Adobe Document Security Extension för Microsoft® Office.
+Klicka [här](https://www.adobe.com/se/products/livecycle/rightsmanagement/extension/downloads.html) för att se systemkraven för Adobe Document Security Extension för Microsoft® Office.
 
 
 ### Undantag från klientsupport {#exceptions-to-client-support}
